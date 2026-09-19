@@ -2,15 +2,15 @@
  "snapshot_version": "0",
  "api_version": "0",
  "date": "2026-09-19",
- "commit": "d02401aa615fca46615cb2a51db96f6f9a970058",
+ "commit": "f665fbbb5f6ba23a69870fc909e3df9e6486c9ab",
  "tree": "clean",
- "records_sha256": "112b0be7539e624d4cb7afed575b2d6c3f5db680f11d9dccd49fffa64d800b52",
+ "records_sha256": "1003ed377484ca67825e61629a64be81e96ac05ade7815a39809065542dab3c9",
  "llms_sha256": "3facc268dcfaeba2f70055e0bdc1beb7999895a5de7ecdfbf2d4a574e748736f",
  "record_count": 133,
  "files": {
   "api/v1/records.json": {
-   "sha256": "112b0be7539e624d4cb7afed575b2d6c3f5db680f11d9dccd49fffa64d800b52",
-   "bytes": 2560200
+   "sha256": "1003ed377484ca67825e61629a64be81e96ac05ade7815a39809065542dab3c9",
+   "bytes": 2578526
   },
   "api/v1/sites.json": {
    "sha256": "fe7cf1ecc6ae2a7991c474cd6df93b6fdf2f3a54e69e276dbdf6c4b7c36809c9",
@@ -21,16 +21,16 @@
    "bytes": 1110618
   },
   "api/v1/changes.json": {
-   "sha256": "69ea99c7a01ba065a1d63ef82f9cb2f57958cd4787883a8513073fdcd5bb82fb",
-   "bytes": 51480
+   "sha256": "89b4d3c96b585b914be12e9f0c5a08a9bf168a8fd8118d2d906e1d1f4d44252b",
+   "bytes": 57647
   },
   "api/v1/feed.xml": {
-   "sha256": "a32ed504ef578ecbdb03b69091e3b5c32cb7a4b20c8c010fca34bfe0a33a9923",
-   "bytes": 95623
+   "sha256": "6470dc5e633e10ae76db8a592d4783d6a639b1f1c6323065564ec29cf5a0e893",
+   "bytes": 95158
   },
   "api/v1/pierandpoint.sqlite": {
-   "sha256": "ac5682af13a6c3c4200cb662959a29c9c09a2a96c384ce223b0fbd6522d243fe",
-   "bytes": 1593344
+   "sha256": "d01f732185f97bd5a574ce0957a3b133e874111d4070f4754b82affca1054149",
+   "bytes": 1601536
   },
   "llms.txt": {
    "sha256": "3facc268dcfaeba2f70055e0bdc1beb7999895a5de7ecdfbf2d4a574e748736f",
@@ -44,6 +44,16 @@
  "verify": "https://github.com/pierandpoint/record/blob/main/docs/verify.md",
  "note": "commit is git HEAD when this build ran, in the private pipeline repository; it is not itself published. records_sha256 and llms_sha256 are the hashes pierandpoint/record's attest workflow signs on publish; reproduce them by rebuilding this commit with PP_TODAY=date.",
  "signature": null,
- "recent_publishes": null,
- "recent_publishes_status": "ledger unavailable at build time"
+ "recent_publishes": [
+  {
+   "date": "2026-09-19",
+   "commit": "9cdf6e812a8963635d92ff226b1cf0579abbea3a",
+   "tree": "fc33624bf7a3fba8bfdba5a9275c1118fe131376",
+   "records_sha256": "112b0be7539e624d4cb7afed575b2d6c3f5db680f11d9dccd49fffa64d800b52",
+   "llms_sha256": "3facc268dcfaeba2f70055e0bdc1beb7999895a5de7ecdfbf2d4a574e748736f",
+   "records": "133",
+   "bundle": "https://github.com/pierandpoint/record/blob/main/attestations/2026-09-19-9cdf6e8.sigstore.json"
+  }
+ ],
+ "recent_publishes_status": "ok"
 }
