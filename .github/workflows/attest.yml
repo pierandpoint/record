@@ -1,0 +1,144 @@
+name: Attest
+
+# Signs every publish to main with a keyless cosign signature and records it
+# in the append-only ledger (snapshots.csv). Re-runs for a commit that has
+# already been attested are a no-op: the attestation file for a given
+# (date, commit) is written once and never overwritten.
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'attestations/**'
+      - 'snapshots.csv'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  id-token: write
+
+concurrency:
+  group: attest
+
+jobs:
+  attest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Verify published hashes and prepare attestation
+        id: prepare
+        run: |
+          set -euo pipefail
+
+          if [ ! -f api/v1/snapshot.json ]; then
+            echo "::error::api/v1/snapshot.json is missing; nothing to attest."
+            exit 1
+          fi
+          if [ ! -f api/v1/records.json ]; then
+            echo "::error::api/v1/records.json is missing; nothing to attest."
+            exit 1
+          fi
+          if [ ! -f api/v1/llms.txt ]; then
+            echo "::error::api/v1/llms.txt is missing; nothing to attest."
+            exit 1
+          fi
+
+          records_sha_expected=$(jq -r '.records_sha256 // empty' api/v1/snapshot.json)
+          llms_sha_expected=$(jq -r '.llms_sha256 // empty' api/v1/snapshot.json)
+
+          if [ -z "$records_sha_expected" ]; then
+            echo "::error::api/v1/snapshot.json has no records_sha256 key."
+            exit 1
+          fi
+          if [ -z "$llms_sha_expected" ]; then
+            echo "::error::api/v1/snapshot.json has no llms_sha256 key."
+            exit 1
+          fi
+
+          records_sha_actual=$(sha256sum api/v1/records.json | cut -d' ' -f1)
+          llms_sha_actual=$(sha256sum api/v1/llms.txt | cut -d' ' -f1)
+
+          if [ "$records_sha_actual" != "$records_sha_expected" ]; then
+            echo "::error::api/v1/records.json sha256 ($records_sha_actual) does not match api/v1/snapshot.json ($records_sha_expected)."
+            exit 1
+          fi
+          if [ "$llms_sha_actual" != "$llms_sha_expected" ]; then
+            echo "::error::api/v1/llms.txt sha256 ($llms_sha_actual) does not match api/v1/snapshot.json ($llms_sha_expected)."
+            exit 1
+          fi
+
+          record_count=$(jq 'if type == "array" then length elif has("records") and (.records | type) == "array" then (.records | length) else empty end' api/v1/records.json)
+          if [ -z "$record_count" ]; then
+            echo "::error::Could not determine a record count from api/v1/records.json (expected a top-level array or a 'records' array)."
+            exit 1
+          fi
+
+          date=$(date -u +%Y-%m-%d)
+          full_sha="${GITHUB_SHA}"
+          short_sha="${full_sha:0:7}"
+          tree_sha=$(git rev-parse HEAD^{tree})
+          base="attestations/${date}-${short_sha}"
+          json_file="${base}.json"
+          bundle_file="${base}.sigstore.json"
+
+          if [ -f "$json_file" ]; then
+            echo "Attestation $json_file already exists; skipping (no second signature for this date and commit)."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          mkdir -p attestations
+          jq -n \
+            --arg date "$date" \
+            --arg commit "$full_sha" \
+            --arg tree "$tree_sha" \
+            --arg records_sha256 "$records_sha_actual" \
+            --arg llms_sha256 "$llms_sha_actual" \
+            --argjson records "$record_count" \
+            '{date: $date, commit: $commit, tree: $tree, records_sha256: $records_sha256, llms_sha256: $llms_sha256, records: $records}' \
+            > "$json_file"
+
+          echo "skip=false" >> "$GITHUB_OUTPUT"
+          echo "date=$date" >> "$GITHUB_OUTPUT"
+          echo "full_sha=$full_sha" >> "$GITHUB_OUTPUT"
+          echo "short_sha=$short_sha" >> "$GITHUB_OUTPUT"
+          echo "tree_sha=$tree_sha" >> "$GITHUB_OUTPUT"
+          echo "records_sha256=$records_sha_actual" >> "$GITHUB_OUTPUT"
+          echo "llms_sha256=$llms_sha_actual" >> "$GITHUB_OUTPUT"
+          echo "record_count=$record_count" >> "$GITHUB_OUTPUT"
+          echo "json_file=$json_file" >> "$GITHUB_OUTPUT"
+          echo "bundle_file=$bundle_file" >> "$GITHUB_OUTPUT"
+
+      - name: Install cosign
+        if: steps.prepare.outputs.skip != 'true'
+        uses: sigstore/cosign-installer@v3
+
+      - name: Sign attestation (keyless)
+        if: steps.prepare.outputs.skip != 'true'
+        run: |
+          set -euo pipefail
+          cosign sign-blob --yes \
+            --bundle "${{ steps.prepare.outputs.bundle_file }}" \
+            "${{ steps.prepare.outputs.json_file }}"
+
+      - name: Append to ledger and push
+        if: steps.prepare.outputs.skip != 'true'
+        run: |
+          set -euo pipefail
+
+          if [ ! -f snapshots.csv ]; then
+            echo "date,commit,tree,records_sha256,llms_sha256,records,bundle" > snapshots.csv
+          fi
+
+          echo "${{ steps.prepare.outputs.date }},${{ steps.prepare.outputs.full_sha }},${{ steps.prepare.outputs.tree_sha }},${{ steps.prepare.outputs.records_sha256 }},${{ steps.prepare.outputs.llms_sha256 }},${{ steps.prepare.outputs.record_count }},${{ steps.prepare.outputs.bundle_file }}" >> snapshots.csv
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "${{ steps.prepare.outputs.json_file }}" "${{ steps.prepare.outputs.bundle_file }}" snapshots.csv
+          git commit -m "Attest ${{ steps.prepare.outputs.date }} ${{ steps.prepare.outputs.short_sha }} [skip ci]"
+          git push origin HEAD:main

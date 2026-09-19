@@ -1,0 +1,38 @@
+name: Missing record
+description: Report a parcel, park, or building that isn't tracked yet.
+title: "[Missing record]: "
+labels:
+  - missing-record
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to flag a parcel, park, or building within Mission
+        Rock, Mission Bay, Pier 70, or Potrero Power Station that isn't
+        showing up in the record at all.
+
+        This repository's data is replaced wholesale on every publish, so
+        this issue is a report for the record to pick up — not something
+        you'd add via a pull request here.
+  - type: input
+    id: location
+    attributes:
+      label: Address or parcel
+      description: The address or parcel identifier of what's missing.
+    validations:
+      required: true
+  - type: textarea
+    id: whats-being-built
+    attributes:
+      label: What is being built (or proposed)
+      description: A brief description of the project, use, or status you're aware of.
+    validations:
+      required: true
+  - type: input
+    id: source-url
+    attributes:
+      label: Source
+      description: A link to a filing, plan, article, or agency page describing it.
+      placeholder: https://
+    validations:
+      required: true

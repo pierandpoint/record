@@ -1,0 +1,65 @@
+name: Correction
+description: Report something in the record that is wrong.
+title: "[Correction]: "
+labels:
+  - correction
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep the record accurate. This form is for
+        pointing out an error in existing data — not for reporting a
+        parcel or project that's missing entirely (use the "Missing
+        record" template for that).
+
+        Corrections aren't applied by editing this repository directly;
+        the data here is replaced wholesale on every publish. Once
+        verified and applied, your correction will show up in
+        `data/changelog.csv`.
+  - type: input
+    id: record
+    attributes:
+      label: Record ID or address
+      description: The record's ID (as used in data/records/) or the parcel/building address.
+      placeholder: e.g. "mission-rock-block-4" or "500 Terry A Francois Blvd"
+    validations:
+      required: true
+  - type: textarea
+    id: whats-wrong
+    attributes:
+      label: What's wrong
+      description: What does the record currently say that's incorrect?
+    validations:
+      required: true
+  - type: textarea
+    id: should-say
+    attributes:
+      label: What it should say
+      description: What is the correct information?
+    validations:
+      required: true
+  - type: input
+    id: source-url
+    attributes:
+      label: Source URL
+      description: A link to a document, filing, or page that supports the correction.
+      placeholder: https://
+    validations:
+      required: true
+  - type: input
+    id: source-page
+    attributes:
+      label: Page or section
+      description: Where in that source the supporting information appears.
+    validations:
+      required: false
+  - type: dropdown
+    id: affiliation
+    attributes:
+      label: Are you connected to this project?
+      description: For example, as a developer, owner, tenant, consultant, or public agency staff member for this site.
+      options:
+        - "No"
+        - "Yes"
+    validations:
+      required: true
