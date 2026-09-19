@@ -1,0 +1,9 @@
+# How a record is drawn on the maps. Default is a filled shape.
+#   mode: outline = draw the boundary only, no fill
+# Use outline for Assessor lots that group several separate buildings: filling them paints a
+# large block of colour over a whole city block and hides the granular parcels around them.
+# 2026-09-17: the three grouped Pier 70 Assessor lots (4046001, 4111004, 4052001) that used to be
+# listed here as outlines were removed from status.csv and replaced by one record per building
+# (pier70_building_101/102/104, pier70_building_113_116, pier70_building_14), each drawn from its
+# own real DataSF building footprint -- so nothing needs outline mode at the moment.
+record_id,mode,reason

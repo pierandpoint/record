@@ -1,0 +1,224 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-19",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "mission_bay_one_mission_bay",
+  "slug": "one-mission-bay",
+  "name": "One Mission Bay",
+  "permalink": "https://pierandpoint.org/parcels/one-mission-bay/",
+  "api": "https://pierandpoint.org/api/v1/records/one-mission-bay.json",
+  "names": [
+   "One Mission Bay"
+  ],
+  "site": {
+   "slug": "mission-bay",
+   "name": "Mission Bay",
+   "short": "Mission Bay",
+   "url": "https://pierandpoint.org/sites/mission-bay/"
+  },
+  "status": "complete",
+  "status_label": "Complete",
+  "use": "residential",
+  "address": null,
+  "summary": null,
+  "summary_sources": [],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same real-geometry-without-a-single-parcel pattern already used for several Pier 70 buildings (DataSF Building Footprints) and for Mission Bay's own real park polygons.",
+    "digitized_from": "OpenStreetMap (way 563104192, name=One Mission Bay)"
+   }
+  },
+  "centroid": {
+   "lon": -122.390749,
+   "lat": 37.775157
+  },
+  "facts": [],
+  "costs": [],
+  "milestones": [
+   {
+    "date": "2018-06",
+    "date_label": "~2018",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "One Mission Bay (110 Channel St/1000 3rd St) completed",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "title": "stradasf.com"
+     }
+    ],
+    "source": "stradasf.com",
+    "origin": "csv",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_one_mission_bay",
+     "slug": "one-mission-bay",
+     "name": "One Mission Bay",
+     "permalink": "https://pierandpoint.org/parcels/one-mission-bay/",
+     "api": "https://pierandpoint.org/api/v1/records/one-mission-bay.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
+  "changes": [],
+  "images": [],
+  "open_questions": [],
+  "sources": [
+   {
+    "id": null,
+    "title": "openstreetmap.org/way/563104192",
+    "url": "https://www.openstreetmap.org/way/563104192"
+   },
+   {
+    "id": null,
+    "title": "stradasf.com/what-we-do/development/one-mission-bay",
+    "url": "https://stradasf.com/what-we-do/development/one-mission-bay/"
+   }
+  ],
+  "notes": "This footprint is the taller tower component only (OSM way 563104192); the lower 6-story perimeter building is not separately mapped with a name tag in the data fetched here.",
+  "has_record_file": false,
+  "last_verified": null,
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.3903181,
+      37.7751066
+     ],
+     [
+      -122.3903476,
+      37.7753948
+     ],
+     [
+      -122.3903569,
+      37.7754854
+     ],
+     [
+      -122.3904486,
+      37.7754144
+     ],
+     [
+      -122.3906751,
+      37.775239
+     ],
+     [
+      -122.390787,
+      37.7753294
+     ],
+     [
+      -122.3908868,
+      37.7752521
+     ],
+     [
+      -122.3907627,
+      37.7751521
+     ],
+     [
+      -122.3911971,
+      37.7748157
+     ],
+     [
+      -122.3911911,
+      37.7748067
+     ],
+     [
+      -122.3907033,
+      37.7748345
+     ],
+     [
+      -122.3906856,
+      37.7746408
+     ],
+     [
+      -122.3909401,
+      37.7746263
+     ],
+     [
+      -122.3913462,
+      37.7746012
+     ],
+     [
+      -122.3915421,
+      37.7745891
+     ],
+     [
+      -122.3916905,
+      37.7747061
+     ],
+     [
+      -122.3916337,
+      37.7747511
+     ],
+     [
+      -122.3915029,
+      37.7748546
+     ],
+     [
+      -122.3909425,
+      37.7752982
+     ],
+     [
+      -122.390923,
+      37.7752828
+     ],
+     [
+      -122.3908282,
+      37.7753576
+     ],
+     [
+      -122.3908479,
+      37.7753731
+     ],
+     [
+      -122.3906223,
+      37.7755517
+     ],
+     [
+      -122.3903524,
+      37.7757653
+     ],
+     [
+      -122.3901746,
+      37.7759061
+     ],
+     [
+      -122.3901424,
+      37.7756657
+     ],
+     [
+      -122.3901162,
+      37.7754098
+     ],
+     [
+      -122.3901021,
+      37.7752728
+     ],
+     [
+      -122.3900866,
+      37.7751214
+     ],
+     [
+      -122.3903181,
+      37.7751066
+     ]
+    ]
+   ]
+  }
+ }
+}

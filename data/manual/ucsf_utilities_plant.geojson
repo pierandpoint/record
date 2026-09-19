@@ -1,0 +1,58 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "project_name": "Mission Bay Preliminary Utilities Plant",
+    "site": "Mission Bay South",
+    "status": "complete",
+    "use": "institutional",
+    "geometry_type": "real",
+    "digitized_from": "OpenStreetMap (way 135103720, operator=UCSF Mission Bay, 1480 4th St)",
+    "digitization_method": "ADDED 2026-09-18 for Mission Bay's UCSF campus pass: real OSM building footprint for the campus's central utility plant.",
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against data/raw/parcels.geojson and DataSF's Assessor tax roll -- e.g. blklot 8711507 at 675 Nelson Rising Lane alone is ~13 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
+    "notes": "Existence confirmed (CEQA filings reference a UCSF Mission Bay utility plant/distribution system on Block 16B), but construction date, architect and size were not found in any source checked. One CEQA record gives its address as 1500 Owens St, which does not match this feature's OSM address tag (1480 4th St) -- these may be the same facility under different address conventions, or two different plants from different construction phases; not merged or resolved here, per the project's never-fabricate rule.",
+    "source_doc_urls": [
+     "https://www.openstreetmap.org/way/135103720",
+     "https://ceqanet.lci.ca.gov/2013092047/15"
+    ]
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -122.3916626,
+       37.7697327
+      ],
+      [
+       -122.3913666,
+       37.7697515
+      ],
+      [
+       -122.3912888,
+       37.7697564
+      ],
+      [
+       -122.3912703,
+       37.7697576
+      ],
+      [
+       -122.3913189,
+       37.7703903
+      ],
+      [
+       -122.3917193,
+       37.7703658
+      ],
+      [
+       -122.3916626,
+       37.7697327
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

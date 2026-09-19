@@ -1,0 +1,1227 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-19",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "potrero_waterfront_park",
+  "slug": "waterfront-park",
+  "name": "Waterfront Park",
+  "permalink": "https://pierandpoint.org/parcels/waterfront-park/",
+  "api": "https://pierandpoint.org/api/v1/records/waterfront-park.json",
+  "names": [
+   "Waterfront Park",
+   "Waterfront Open Spaces",
+   "The Point (southern end)",
+   "Stack Plaza (within the waterfront open spaces)"
+  ],
+  "site": {
+   "slug": "potrero",
+   "name": "Potrero Power Station",
+   "short": "Potrero Station",
+   "url": "https://pierandpoint.org/sites/potrero/"
+  },
+  "status": "planned",
+  "status_label": "Planned",
+  "use": "park",
+  "address": null,
+  "summary": "Planned shoreline park along the site's Bay frontage: the D4D's ~3.6-acre 'Waterfront Open Spaces' (Waterfront Park with the Blue Greenway, The Point, Stack Plaza, Block 9 plazas and Humboldt Street Plaza), which SF Planning summarizes as a ~3-acre waterfront park opening over 1,000 linear feet of shoreline. Largely on Port land leased under L-16662 (66 years, $1/year), with BCDC permit 2019.006 issued July 2021. Delivery is phased (Waterfront Park South before the certificate of occupancy for 3 million sq ft; The Point before 500,000 sq ft; North/West with Block 4); The Point's design review has been pending since Dec 2021, and the interim Prequel Park precedes the permanent park.",
+  "summary_sources": [
+   "src-d4d",
+   "src-sfplanning-pps",
+   "src-port-memo-10a",
+   "src-ar-2024",
+   "src-phase1-2020"
+  ],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "APPROXIMATE -- Figure 6.2.3 labels this as a long, curving shoreline strip running the full length of the site's bay frontage (continuing north and south beyond this figure's own page crop in the source PDF). This polygon traces only the portion visible on Figure 6.2.3 itself as a simplified strip (not the full shoreline extent, and not precisely following the actual curving shore/site-boundary line, which was simplified to a handful of vertices). Treat as directionally correct but incomplete and shape-approximate. Same 15-25m positional tolerance as this site's other entries. Position corrected 2026-09-15 (12m uniform shift onto the real shoreline, see digitization_method) -- the strip's own curve/shape still was not independently re-verified vertex-by-vertex against the coastline, only its overall position. Second position correction 2026-09-15: re-traced directly from satellite imagery color (water vs. land pixel classification), not the diagram transform -- now an 8m-wide ribbon on the real shoreline, including the southern point/breakwater curve. Still simplified (does not capture the D4D-labeled strips full north-south extent beyond what is visible here) and the exact width (8m) is an assumption, not measured from any park-design source. NOTE 2026-09-16: this feature's own outer-shoreline trace turned out to substantially overlap the newly-added 'Prequel Park (Power Station sub-area)' -- evidence (a Spring 2026 construction-pipeline document independently describing the same corridor as a '2-acre Waterfront Park') suggests both features describe the same physical shoreline strip: this one as the D4D's own long-term planning label, Prequel Park as the actual interim-construction project now underway. The overlap is expected, not a tracing error -- see Prequel Park (Power Station sub-area)'s own digitization_method. Not merged into one feature since the two have different sourcing/status and either could be independently corrected later.",
+    "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
+    "why_no_real_parcel": "Open space with no subdivided Assessor parcel of its own within the largely unaddressed former power-station site.",
+    "regulatory_context": "The site's shoreline public-access open space, per the D4D's own Figure 6.2.3 label, running along the bay side of Blocks 9 and the Stack, connecting toward Warm Water Cove Park to the south (shown on the same figure, outside the project site boundary)."
+   }
+  },
+  "centroid": {
+   "lon": -122.381412,
+   "lat": 37.756715
+  },
+  "facts": [
+   {
+    "key": "developer",
+    "value": "California Barrel Company LLC (Port lessee, project sponsor); now Fifth Space (formerly Associate Capital)",
+    "sources": [
+     "src-port-memo-10a",
+     "src-sfyimby-2025-10-24"
+    ]
+   },
+   {
+    "key": "landscape_architect",
+    "value": "CMG Landscape Architecture (D4D open-space concept plans and image credits; CMG's own page describes 'The Point' as its one-acre waterfront park with a bay overlook pier on the former intake structure)",
+    "sources": [
+     "src-d4d",
+     "src-cmg"
+    ]
+   },
+   {
+    "key": "lot_area",
+    "value": "Waterfront Open Spaces approximately 3.6 acres (D4D 4.1; DA recital '3.6-acre Waterfront Park'; DEIR 3.6 acres); SF Planning '~3-acre waterfront park' with 'over 1,000 linear feet of shoreline'; IMP 'approximately 4.0-acre waterfront park'; The Point approximately 0.98 acre (Phase 1 application); Stack Plaza ~0.6 acre (SF Planning, Phase 1 application)",
+    "sources": [
+     "src-d4d",
+     "src-da-2020",
+     "src-deir",
+     "src-sfplanning-pps",
+     "src-imp",
+     "src-phase1-2020"
+    ]
+   },
+   {
+    "key": "use",
+    "value": "Blue Greenway (20-foot minimum at The Point), Bay Trail extension, Bay overlook terraces at Unit 3 and at Humboldt Street Plaza, multi-purpose lawn east of Block 9, Bay shore planting, outdoor food service area in front of Block 4, potential recreational dock; The Point: natural planting, discovery play, picnic areas with grills, Bay overlook on the former intake structure",
+    "sources": [
+     "src-d4d"
+    ]
+   },
+   {
+    "key": "components",
+    "value": "Waterfront Park South (Phase 2, 3M sq ft trigger), Waterfront Park North and West (Phase 2, with Block 4), The Point (Phase 1, 500,000 sq ft trigger), Stack Plaza (Phase 2, with Block 9), Block 9 POPO with Turbine Plaza and restroom (Phase 2, Block 9), Humboldt Street Plaza (Phase 2, 3M sq ft trigger)",
+    "sources": [
+     "src-ar-2021",
+     "src-phase1-2020"
+    ]
+   },
+   {
+    "key": "optional_elements",
+    "value": "Recreational dock: 'Developer is not required to construct the Recreational Dock in any phase'; Bay Overlook at 23rd Street: not required in any phase",
+    "sources": [
+     "src-ar-2021",
+     "src-phase1-2020"
+    ]
+   },
+   {
+    "key": "ownership",
+    "value": "Portions of The Point and Waterfront Park on Port land remain Port-owned but are maintained by the Project Master Association; Port lands subject to the Public Trust; 2020 Port memo Exhibit 5: 'Port Lands = 1.6 acres', Public Trust Easement Parcel 2.0 acres (0.9 acre waterfront open spaces, 0.9 acre 23rd Street ROW, 0.2 other)",
+    "sources": [
+     "src-imp",
+     "src-port-memo-13b",
+     "src-port-memo-13b-exhibits"
+    ]
+   },
+   {
+    "key": "sea_level_rise_design",
+    "value": "Shoreline elevated to accommodate 90 inches SLR plus 42 inches storm surge, 132 inches above current MHHW, adaptable beyond (2020 memo); 'projected sea level rise of 66 inches' (2025 memo)",
+    "sources": [
+     "src-port-memo-13b",
+     "src-port-memo-10a"
+    ]
+   },
+   {
+    "key": "bcdc_permit",
+    "value": "Project permit issued July 2021 (Port memo); BCDC listed as state reviewing agency on the EIR; Non-Material Amendment 2019.006.02 (interim park) received 2025-06-19, issued 2026-06-26",
+    "sources": [
+     "src-port-memo-10a",
+     "src-bcdc-tracker"
+    ]
+   },
+   {
+    "key": "ground_lease_term",
+    "value": "66 years, $1/year, through March 2087 (Port Lease L-16662)",
+    "sources": [
+     "src-port-memo-10a"
+    ]
+   },
+   {
+    "key": "phase",
+    "value": "Split: The Point in Phase 1 (design review pending since Dec 3, 2021); Waterfront Park South, North and West in Phase 2; permanent park tied to vertical development 'expected to be phased over the next 10-15 years'",
+    "sources": [
+     "src-ar-2024",
+     "src-port-memo-10a",
+     "src-phase1-2020"
+    ]
+   },
+   {
+    "key": "interim_use",
+    "value": "Prequel Park (~2 acres, ~0.4 acre on Port land) to occupy part of the waterfront for at least five years from 2027 before the permanent park and hotel",
+    "sources": [
+     "src-port-memo-10a"
+    ]
+   }
+  ],
+  "costs": [
+   {
+    "amount_usd": 1,
+    "what": "Annual rent under Port Lease L-16662 for the Port shoreline premises ($1/year, 66 years); developer improves, maintains and operates at its cost",
+    "date": "2025-11-14",
+    "approximate": false,
+    "sources": [
+     "src-port-memo-10a"
+    ]
+   },
+   {
+    "amount_usd": 39000000,
+    "what": "DeSilva Gates contract for the Phase 1 Street Improvement Project (site-wide streets and utilities, June 2023-Q4 2025; not park-specific)",
+    "date": "2023",
+    "approximate": true,
+    "sources": [
+     "src-ar-2024"
+    ]
+   }
+  ],
+  "milestones": [
+   {
+    "date": "2018-10",
+    "date_label": "Oct 2018",
+    "status": null,
+    "status_label": null,
+    "text": "Draft EIR: 'proposed approximately 3.6-acre waterfront park' extending the Blue Greenway and Bay Trail from Pier 70 through the site, with viewing terraces, possible trellis structures, a recreational dock and public art",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-deir",
+      "title": "Potrero Power Station Mixed-Use Development Project Draft EIR, Volume 1 (Case No. 2017-011878ENV)",
+      "publisher": "SF Planning",
+      "date": "2018-10",
+      "url": "https://sfmea.sfplanning.org/2017-011878ENV_DEIR_Volume_1.pdf",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "SF Planning, 2018-10",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_waterfront_park",
+     "slug": "waterfront-park",
+     "name": "Waterfront Park",
+     "permalink": "https://pierandpoint.org/parcels/waterfront-park/",
+     "api": "https://pierandpoint.org/api/v1/records/waterfront-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2020-01-30",
+    "date_label": "Jan 30, 2020",
+    "status": null,
+    "status_label": null,
+    "text": "Planning Commission certifies the EIR and recommends approval; D4D (Feb 26, 2020) sets the Waterfront Open Spaces at approximately 3.6 acres",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfplanning-pps",
+      "title": "Potrero Power Station project page (program elements, approval timeline, implementation milestones)",
+      "publisher": "SF Planning",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     },
+     {
+      "id": "src-d4d",
+      "title": "Potrero Power Station Design for Development (final, dated February 26, 2020)",
+      "publisher": "SF Planning / California Barrel Company",
+      "date": "2020-02-26",
+      "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "SF Planning; SF Planning / California Barrel Company, 2020-02-26",
+    "origin": "record",
+    "category": "retail",
+    "category_label": "Retail",
+    "record": {
+     "id": "potrero_waterfront_park",
+     "slug": "waterfront-park",
+     "name": "Waterfront Park",
+     "permalink": "https://pierandpoint.org/parcels/waterfront-park/",
+     "api": "https://pierandpoint.org/api/v1/records/waterfront-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2020-02-25",
+    "date_label": "Feb 25, 2020",
+    "status": null,
+    "status_label": null,
+    "text": "Port Commission adopts Resolution 20-12: Lease L-16662 (66 years) of Port shoreline lands for publicly accessible open space and potentially a public recreational dock; option to impress the Public Trust on ~1.97 acres of developer shoreline and 23rd Street land",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-port-memo-13b",
+      "title": "Port Commission memo, Item 13B (Feb 20, 2020; meeting Feb 25, 2020): approval of Potrero Power Station transaction documents including Port Lease L-16662 (Resolution 20-12)",
+      "publisher": "Port of San Francisco",
+      "date": "2020-02-20",
+      "url": "https://www.sfport.com/sites/default/files/Commission/Documents/Item%2013B%20Approval%20Potrero%20Power%20Station%20rev.pdf",
+      "accessed": "2026-09-17"
+     },
+     {
+      "id": "src-port-memo-10a",
+      "title": "Port Commission memo, Calendar Item 10A (Nov 14, 2025): amendment to Lease L-16662 to allow interim open space improvements (Prequel Park); with Resolution No. 25-70 adopted Nov 18, 2025; Exhibits 1-3",
+      "publisher": "Port of San Francisco",
+      "date": "2025-11-14",
+      "url": "https://www.sfport.com/sites/default/files/2025-11/111825_10a_potrero_power_station_lease_amendment_0.pdf",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "Port of San Francisco, 2020-02-20; Port of San Francisco, 2025-11-14",
+    "origin": "record",
+    "category": "retail",
+    "category_label": "Retail",
+    "record": {
+     "id": "potrero_waterfront_park",
+     "slug": "waterfront-park",
+     "name": "Waterfront Park",
+     "permalink": "https://pierandpoint.org/parcels/waterfront-park/",
+     "api": "https://pierandpoint.org/api/v1/records/waterfront-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2020-09-22",
+    "date_label": "Sep 22, 2020",
+    "status": null,
+    "status_label": null,
+    "text": "Development Agreement recital: 'creation of a 3.6-acre Waterfront Park' with extension of the Blue Greenway and Bay Trail",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-da-2020",
+      "title": "Development Agreement (September 2020), recorded, with exhibits",
+      "publisher": "City and County of San Francisco; posted by SF Planning (M-Files: 'Development Agreement (September 2020)')",
+      "date": "2020-09-22",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     },
+     {
+      "id": "src-legistar-260724",
+      "title": "BOS File No. 260724: Amended and Restated Development Agreement - California Barrel Company LLC (introduced June 30, 2026; noticed Sept 11, 2026) and its Legislative Digest",
+      "publisher": "SF Board of Supervisors (Legistar)",
+      "date": "2026-09-11",
+      "url": "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8127453&GUID=CC4AC1DD-BF51-4585-86E8-0A5D44AA3745",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "City and County of San Francisco; posted by SF Planning (M-Files: 'Development Agreement (September 2020)'), 2020-09-22; SF Board of Supervisors (Legistar), 2026-09-11",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_waterfront_park",
+     "slug": "waterfront-park",
+     "name": "Waterfront Park",
+     "permalink": "https://pierandpoint.org/parcels/waterfront-park/",
+     "api": "https://pierandpoint.org/api/v1/records/waterfront-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2020-10-07",
+    "date_label": "Oct 7, 2020",
+    "status": null,
+    "status_label": null,
+    "text": "Phasing Plan amendment approved with the Phase 1 application: Waterfront Park South moved from DA Phase 1 to Phase 2, due before the first certificate of occupancy for the building representing 3 million sq ft of total development; Waterfront Park North and West moved from Phase 3 to Phase 2 with Block 4; The Point in Phase 1 (0.98 acre) due before the 500,000 sq ft certificate of occupancy; recreational dock and 23rd Street Bay overlook not required in any phase",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-phase1-2020",
+      "title": "Potrero Power Station Phase 1 and Phasing Plan Amendment Applications (October 2020), approval document",
+      "publisher": "California Barrel Company / SF Planning (M-Files: 'Potrero Power Station Phase 1 and Phasing Plan Amendment Applications')",
+      "date": "2020-10",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     },
+     {
+      "id": "src-ar-2021",
+      "title": "2021 Annual Report (March 2022), DA annual compliance review",
+      "publisher": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files)",
+      "date": "2022-03",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "California Barrel Company / SF Planning (M-Files: 'Potrero Power Station Phase 1 and Phasing Plan Amendment Applications'), 2020-10; California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files), 2022-03",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_waterfront_park",
+     "slug": "waterfront-park",
+     "name": "Waterfront Park",
+     "permalink": "https://pierandpoint.org/parcels/waterfront-park/",
+     "api": "https://pierandpoint.org/api/v1/records/waterfront-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2021-07",
+    "date_label": "Jul 2021",
+    "status": null,
+    "status_label": null,
+    "text": "BCDC issues the project permit ('BCDC issued a permit in July 2021')",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-port-memo-10a",
+      "title": "Port Commission memo, Calendar Item 10A (Nov 14, 2025): amendment to Lease L-16662 to allow interim open space improvements (Prequel Park); with Resolution No. 25-70 adopted Nov 18, 2025; Exhibits 1-3",
+      "publisher": "Port of San Francisco",
+      "date": "2025-11-14",
+      "url": "https://www.sfport.com/sites/default/files/2025-11/111825_10a_potrero_power_station_lease_amendment_0.pdf",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "Port of San Francisco, 2025-11-14",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_waterfront_park",
+     "slug": "waterfront-park",
+     "name": "Waterfront Park",
+     "permalink": "https://pierandpoint.org/parcels/waterfront-park/",
+     "api": "https://pierandpoint.org/api/v1/records/waterfront-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2021-12-03",
+    "date_label": "Dec 3, 2021",
+    "status": null,
+    "status_label": null,
+    "text": "Design Review Application for The Point submitted; still 'Under Review' in every annual report through March 2025",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ar-2021",
+      "title": "2021 Annual Report (March 2022), DA annual compliance review",
+      "publisher": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files)",
+      "date": "2022-03",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     },
+     {
+      "id": "src-ar-2024",
+      "title": "2024 Annual Report (March 2025), DA annual compliance review",
+      "publisher": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files)",
+      "date": "2025-03",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files), 2022-03; California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files), 2025-03",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_waterfront_park",
+     "slug": "waterfront-park",
+     "name": "Waterfront Park",
+     "permalink": "https://pierandpoint.org/parcels/waterfront-park/",
+     "api": "https://pierandpoint.org/api/v1/records/waterfront-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2023-05",
+    "date_label": "May 2023",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Phase 1 horizontal construction (DeSilva Gates: demolition, excavation, abatement, pile driving, deep soil mixing) substantially complete; the Phase 1 application describes early work as 'geotechnical improvements along the shoreline and in areas of fill'",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ar-2024",
+      "title": "2024 Annual Report (March 2025), DA annual compliance review",
+      "publisher": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files)",
+      "date": "2025-03",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     },
+     {
+      "id": "src-phase1-2020",
+      "title": "Potrero Power Station Phase 1 and Phasing Plan Amendment Applications (October 2020), approval document",
+      "publisher": "California Barrel Company / SF Planning (M-Files: 'Potrero Power Station Phase 1 and Phasing Plan Amendment Applications')",
+      "date": "2020-10",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files), 2025-03; California Barrel Company / SF Planning (M-Files: 'Potrero Power Station Phase 1 and Phasing Plan Amendment Applications'), 2020-10",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_waterfront_park",
+     "slug": "waterfront-park",
+     "name": "Waterfront Park",
+     "permalink": "https://pierandpoint.org/parcels/waterfront-park/",
+     "api": "https://pierandpoint.org/api/v1/records/waterfront-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2025-10",
+    "date_label": "~2025",
+    "status": null,
+    "status_label": null,
+    "text": "Potrero View quotes Enrique Landa: Phase 1 infrastructure 'comes after building the seawall a few years ago' (no date given for the seawall)",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-pv-2025-10",
+      "title": "Power Station Coming to Life (Jessica Zimmer)",
+      "publisher": "Potrero View",
+      "date": "2025-10",
+      "url": "https://www.potreroview.net/power-station-coming-to-life/",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "Potrero View, 2025-10",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_waterfront_park",
+     "slug": "waterfront-park",
+     "name": "Waterfront Park",
+     "permalink": "https://pierandpoint.org/parcels/waterfront-park/",
+     "api": "https://pierandpoint.org/api/v1/records/waterfront-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2025-11-18",
+    "date_label": "Nov 18, 2025",
+    "status": null,
+    "status_label": null,
+    "text": "Port Commission Resolution 25-70 allows interim improvements (Prequel Park) on the leased shoreline premises pending the permanent park",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-port-minutes-2025-11-18",
+      "title": "Port Commission minutes, November 18, 2025 (consent calendar item 10A, Resolution 25-70)",
+      "publisher": "Port of San Francisco",
+      "date": "2025-11-18",
+      "url": "https://www.sfport.com/media/10953/download?inline",
+      "accessed": "2026-09-17"
+     },
+     {
+      "id": "src-port-memo-10a",
+      "title": "Port Commission memo, Calendar Item 10A (Nov 14, 2025): amendment to Lease L-16662 to allow interim open space improvements (Prequel Park); with Resolution No. 25-70 adopted Nov 18, 2025; Exhibits 1-3",
+      "publisher": "Port of San Francisco",
+      "date": "2025-11-14",
+      "url": "https://www.sfport.com/sites/default/files/2025-11/111825_10a_potrero_power_station_lease_amendment_0.pdf",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "Port of San Francisco, 2025-11-18; Port of San Francisco, 2025-11-14",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_waterfront_park",
+     "slug": "waterfront-park",
+     "name": "Waterfront Park",
+     "permalink": "https://pierandpoint.org/parcels/waterfront-park/",
+     "api": "https://pierandpoint.org/api/v1/records/waterfront-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2026-06-26",
+    "date_label": "Jun 26, 2026",
+    "status": null,
+    "status_label": null,
+    "text": "BCDC issues Non-Material Amendment 2019.006.02 for the interim park improvements within the shoreline band",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-bcdc-tracker",
+      "title": "Permit application tracker (applications received since January 1, 2022): row for Non-Material Amendment 2019.006.02, California Barrel Company, LLC and Port of San Francisco",
+      "publisher": "San Francisco Bay Conservation and Development Commission",
+      "url": "https://www.bcdc.ca.gov/programs/permits/permit-application-tracker/",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "San Francisco Bay Conservation and Development Commission",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_waterfront_park",
+     "slug": "waterfront-park",
+     "name": "Waterfront Park",
+     "permalink": "https://pierandpoint.org/parcels/waterfront-park/",
+     "api": "https://pierandpoint.org/api/v1/records/waterfront-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2087-03",
+    "date_label": "Mar 2087",
+    "status": null,
+    "status_label": null,
+    "text": "Port Lease L-16662 term ends (March 2087)",
+    "expected": true,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-port-memo-10a",
+      "title": "Port Commission memo, Calendar Item 10A (Nov 14, 2025): amendment to Lease L-16662 to allow interim open space improvements (Prequel Park); with Resolution No. 25-70 adopted Nov 18, 2025; Exhibits 1-3",
+      "publisher": "Port of San Francisco",
+      "date": "2025-11-14",
+      "url": "https://www.sfport.com/sites/default/files/2025-11/111825_10a_potrero_power_station_lease_amendment_0.pdf",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "Port of San Francisco, 2025-11-14",
+    "origin": "record",
+    "category": "coming_up",
+    "category_label": "Coming up",
+    "record": {
+     "id": "potrero_waterfront_park",
+     "slug": "waterfront-park",
+     "name": "Waterfront Park",
+     "permalink": "https://pierandpoint.org/parcels/waterfront-park/",
+     "api": "https://pierandpoint.org/api/v1/records/waterfront-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   }
+  ],
+  "changes": [
+   {
+    "date": "2026-09-15",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Waterfront Park shifted about 12 m onto the real shoreline; it had been drawn mostly in the water.",
+    "source": "Satellite imagery review",
+    "sources": [
+     {
+      "title": "Satellite imagery review"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_waterfront_park",
+     "slug": "waterfront-park",
+     "name": "Waterfront Park",
+     "permalink": "https://pierandpoint.org/parcels/waterfront-park/",
+     "api": "https://pierandpoint.org/api/v1/records/waterfront-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
+  "images": [
+   {
+    "path": "data/manual/images/potrero_waterfront_park_d4d_fig4191.jpg",
+    "kind": "document",
+    "taken": "2020-02-26",
+    "credit": "Figure 4.19.1 'Waterfront Park Enlargement Concept Plan', Potrero Power Station Design for Development, Feb 26 2020, printed p.99 (PDF p.101) (public record)",
+    "license": "public-record",
+    "source_url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+    "license_evidence": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+    "license_note": "Figure or photograph from an adopted Port/Planning regulatory document (a Design for Development, SUD Land Use Plan or Design Controls) or a Port Commission agenda exhibit, published by the agency itself at its own domain as the public record of the adopted plan or noticed meeting item. Read 2026-09-18.",
+    "figure": "illustrative",
+    "appeal": 5,
+    "appeal_note": "Vivid, detailed concept plan with a numbered legend covering the lawn, dock, plazas and shoreline planting -- the clearest and most colorful of the D4D open-space sheets.",
+    "url": "https://pierandpoint.org/assets/img/potrero_waterfront_park_d4d_fig4191.jpg"
+   }
+  ],
+  "open_questions": [
+   "The brief's note that the BCDC permit application 2019.006.00 was 'filed complete June 2, 2020 per ceqanet' could not be verified: the CEQAnet entries (2017112005/2 and /3) show only the DEIR receipt (10/3/2018) and Final EIR receipt (12/11/2019) with BCDC as a reviewing agency. The original BCDC permit document (issued July 2021 per the Port memo) was not found on bcdc.ca.gov; the 2018-2019 DRB and Commission pages now return 404. Only the tracker row for amendment .02 was found.",
+   "No design review approval for The Point was found after the Dec 3, 2021 submittal; every annual report through March 2025 says 'Under Review'.",
+   "Seawall/shoreline construction: the only statement is Landa's 'building the seawall a few years ago' (Potrero View, Oct 2025); the Phase 1 horizontal work (pile driving, deep soil mixing) was substantially complete May 2023 but the annual report does not itemize shoreline protection.",
+   "Area: 3.6 acres (D4D, DA, DEIR) vs ~3 acres and '1,000 linear feet' (SF Planning page only) vs 4.0 acres (IMP); the geometry file traces only the visible strip. Not reconciled.",
+   "The geometry file's 'Waterfront Park' overlaps the newly added Prequel Park (Power Station sub-area); the sources agree the interim park sits within the future waterfront open space, but no drawing on file shows the interim footprint at scale.",
+   "No construction cost or delivery date for the permanent park; the 3-million-sq-ft trigger is not dated by any source.",
+   "Port Commission Feb 25, 2020 minutes: the local file is the agenda text; the adoption of Resolution 20-12 is taken from the Nov 2025 memo's recital."
+  ],
+  "sources": [
+   {
+    "id": "src-ar-2021",
+    "title": "2021 Annual Report (March 2022), DA annual compliance review",
+    "publisher": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files)",
+    "date": "2022-03",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-ar-2024",
+    "title": "2024 Annual Report (March 2025), DA annual compliance review",
+    "publisher": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files)",
+    "date": "2025-03",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-bcdc-tracker",
+    "title": "Permit application tracker (applications received since January 1, 2022): row for Non-Material Amendment 2019.006.02, California Barrel Company, LLC and Port of San Francisco",
+    "publisher": "San Francisco Bay Conservation and Development Commission",
+    "url": "https://www.bcdc.ca.gov/programs/permits/permit-application-tracker/",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-cmg",
+    "title": "Potrero Power Station project page",
+    "publisher": "CMG Landscape Architecture (landscape architect's own material)",
+    "url": "https://www.cmgsite.com/places/potrero-power-station/",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-d4d",
+    "title": "Potrero Power Station Design for Development (final, dated February 26, 2020)",
+    "publisher": "SF Planning / California Barrel Company",
+    "date": "2020-02-26",
+    "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-da-2020",
+    "title": "Development Agreement (September 2020), recorded, with exhibits",
+    "publisher": "City and County of San Francisco; posted by SF Planning (M-Files: 'Development Agreement (September 2020)')",
+    "date": "2020-09-22",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-deir",
+    "title": "Potrero Power Station Mixed-Use Development Project Draft EIR, Volume 1 (Case No. 2017-011878ENV)",
+    "publisher": "SF Planning",
+    "date": "2018-10",
+    "url": "https://sfmea.sfplanning.org/2017-011878ENV_DEIR_Volume_1.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-imp",
+    "title": "Potrero Power Station Infrastructure Master Plan (final)",
+    "publisher": "California Barrel Company / CBG Civil Engineers (project sponsor's plan document approved with the DA)",
+    "date": "2020",
+    "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_Infrastructure_Master_Plan_final.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-legistar-260724",
+    "title": "BOS File No. 260724: Amended and Restated Development Agreement - California Barrel Company LLC (introduced June 30, 2026; noticed Sept 11, 2026) and its Legislative Digest",
+    "publisher": "SF Board of Supervisors (Legistar)",
+    "date": "2026-09-11",
+    "url": "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8127453&GUID=CC4AC1DD-BF51-4585-86E8-0A5D44AA3745",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-phase1-2020",
+    "title": "Potrero Power Station Phase 1 and Phasing Plan Amendment Applications (October 2020), approval document",
+    "publisher": "California Barrel Company / SF Planning (M-Files: 'Potrero Power Station Phase 1 and Phasing Plan Amendment Applications')",
+    "date": "2020-10",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-port-memo-10a",
+    "title": "Port Commission memo, Calendar Item 10A (Nov 14, 2025): amendment to Lease L-16662 to allow interim open space improvements (Prequel Park); with Resolution No. 25-70 adopted Nov 18, 2025; Exhibits 1-3",
+    "publisher": "Port of San Francisco",
+    "date": "2025-11-14",
+    "url": "https://www.sfport.com/sites/default/files/2025-11/111825_10a_potrero_power_station_lease_amendment_0.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-port-memo-13b",
+    "title": "Port Commission memo, Item 13B (Feb 20, 2020; meeting Feb 25, 2020): approval of Potrero Power Station transaction documents including Port Lease L-16662 (Resolution 20-12)",
+    "publisher": "Port of San Francisco",
+    "date": "2020-02-20",
+    "url": "https://www.sfport.com/sites/default/files/Commission/Documents/Item%2013B%20Approval%20Potrero%20Power%20Station%20rev.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-port-memo-13b-exhibits",
+    "title": "Item 13B exhibits: site location, land use program, property ownership, phasing plan, public trust easement option",
+    "publisher": "Port of San Francisco",
+    "date": "2020-02",
+    "url": "https://www.sfport.com/sites/default/files/Commission/Documents/Item%2013B_PPS%20Exhibits.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-port-minutes-2025-11-18",
+    "title": "Port Commission minutes, November 18, 2025 (consent calendar item 10A, Resolution 25-70)",
+    "publisher": "Port of San Francisco",
+    "date": "2025-11-18",
+    "url": "https://www.sfport.com/media/10953/download?inline",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-pv-2025-10",
+    "title": "Power Station Coming to Life (Jessica Zimmer)",
+    "publisher": "Potrero View",
+    "date": "2025-10",
+    "url": "https://www.potreroview.net/power-station-coming-to-life/",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-sfplanning-pps",
+    "title": "Potrero Power Station project page (program elements, approval timeline, implementation milestones)",
+    "publisher": "SF Planning",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-sfyimby-2025-10-24",
+    "title": "Sophie Maxwell Affordable Housing Opens in Potrero Power Station, San Francisco (Andrew Nelson)",
+    "publisher": "SF YIMBY",
+    "date": "2025-10-24",
+    "url": "https://sfyimby.com/2025/10/sophie-maxwell-affordable-housing-opens-in-potrero-power-station-san-francisco.html",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": null,
+    "title": "default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf",
+    "url": "https://default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf"
+   }
+  ],
+  "notes": "Simplified partial trace of a long shoreline open space -- see accuracy_caveat; does not capture the strip's full north-south extent.",
+  "has_record_file": true,
+  "last_verified": "2026-09-17",
+  "geometry": {
+   "type": "MultiPolygon",
+   "coordinates": [
+    [
+     [
+      [
+       -122.3813250660896,
+       37.758119672804156
+      ],
+      [
+       -122.38134384155272,
+       37.75805181478993
+      ],
+      [
+       -122.38140821456909,
+       37.75798395671346
+      ],
+      [
+       -122.38143235445021,
+       37.757916098574746
+      ],
+      [
+       -122.3816442489624,
+       37.75784824037379
+      ],
+      [
+       -122.3816442489624,
+       37.75778038211058
+      ],
+      [
+       -122.38168448209763,
+       37.75771252378514
+      ],
+      [
+       -122.3816442489624,
+       37.75764466539744
+      ],
+      [
+       -122.38154232501982,
+       37.757576806947505
+      ],
+      [
+       -122.38143235445021,
+       37.757508948435316
+      ],
+      [
+       -122.38143235445021,
+       37.75744108986089
+      ],
+      [
+       -122.38144308328629,
+       37.75737323122423
+      ],
+      [
+       -122.38148599863052,
+       37.7573053725253
+      ],
+      [
+       -122.38148599863052,
+       37.75723751376414
+      ],
+      [
+       -122.38145381212234,
+       37.75716965494073
+      ],
+      [
+       -122.38140553236008,
+       37.757101796055075
+      ],
+      [
+       -122.38140016794202,
+       37.75703393710718
+      ],
+      [
+       -122.38139480352402,
+       37.75696607809704
+      ],
+      [
+       -122.38139480352402,
+       37.756898219024656
+      ],
+      [
+       -122.38137066364288,
+       37.75683035989002
+      ],
+      [
+       -122.38137066364288,
+       37.75676250069315
+      ],
+      [
+       -122.38136529922483,
+       37.756694641434024
+      ],
+      [
+       -122.38136798143387,
+       37.75662678211266
+      ],
+      [
+       -122.38160114205778,
+       37.756591877260995
+      ],
+      [
+       -122.38160199860435,
+       37.75660093524104
+      ],
+      [
+       -122.3814587,
+       37.7566224
+      ],
+      [
+       -122.381456,
+       37.7566903
+      ],
+      [
+       -122.3814614,
+       37.7567581
+      ],
+      [
+       -122.3814614,
+       37.756826
+      ],
+      [
+       -122.3814855,
+       37.7568938
+      ],
+      [
+       -122.3814855,
+       37.7569617
+      ],
+      [
+       -122.3814909,
+       37.7570295
+      ],
+      [
+       -122.3814963,
+       37.7570974
+      ],
+      [
+       -122.3815445,
+       37.7571653
+      ],
+      [
+       -122.3815767,
+       37.7572331
+      ],
+      [
+       -122.3815767,
+       37.757301
+      ],
+      [
+       -122.3815338,
+       37.7573688
+      ],
+      [
+       -122.3815231,
+       37.7574367
+      ],
+      [
+       -122.3815231,
+       37.7575046
+      ],
+      [
+       -122.3816331,
+       37.7575724
+      ],
+      [
+       -122.381735,
+       37.7576403
+      ],
+      [
+       -122.3817752,
+       37.7577081
+      ],
+      [
+       -122.381735,
+       37.757776
+      ],
+      [
+       -122.381735,
+       37.7578439
+      ],
+      [
+       -122.3815231,
+       37.7579117
+      ],
+      [
+       -122.3814989,
+       37.7579796
+      ],
+      [
+       -122.3814346,
+       37.7580474
+      ],
+      [
+       -122.3814158,
+       37.7581153
+      ],
+      [
+       -122.3814024,
+       37.7581831
+      ],
+      [
+       -122.38131165504457,
+       37.75818753075613
+      ],
+      [
+       -122.3813250660896,
+       37.758119672804156
+      ]
+     ]
+    ],
+    [
+     [
+      [
+       -122.38136529922483,
+       37.75628748457218
+      ],
+      [
+       -122.38136529922483,
+       37.756219624877346
+      ],
+      [
+       -122.38134920597075,
+       37.756151765120265
+      ],
+      [
+       -122.38134920597075,
+       37.756083905300954
+      ],
+      [
+       -122.38134384155272,
+       37.75601604541939
+      ],
+      [
+       -122.38132774829865,
+       37.75594818547559
+      ],
+      [
+       -122.38129556179045,
+       37.75588032546954
+      ],
+      [
+       -122.3812472820282,
+       37.75581246540124
+      ],
+      [
+       -122.38116949796677,
+       37.7557446052707
+      ],
+      [
+       -122.38116949796677,
+       37.75567674507792
+      ],
+      [
+       -122.38139748573302,
+       37.75560888482289
+      ],
+      [
+       -122.38139748573302,
+       37.75554102450562
+      ],
+      [
+       -122.38094687461854,
+       37.75547316412611
+      ],
+      [
+       -122.38091468811035,
+       37.75540530368435
+      ],
+      [
+       -122.38095492124557,
+       37.75533744318036
+      ],
+      [
+       -122.38099783658981,
+       37.75526958261411
+      ],
+      [
+       -122.38134652376174,
+       37.75520172198563
+      ],
+      [
+       -122.3814372,
+       37.7551973
+      ],
+      [
+       -122.3810886,
+       37.7552652
+      ],
+      [
+       -122.3810456,
+       37.7553331
+      ],
+      [
+       -122.3810054,
+       37.7554009
+      ],
+      [
+       -122.3810376,
+       37.7554688
+      ],
+      [
+       -122.3814882,
+       37.7555366
+      ],
+      [
+       -122.3814882,
+       37.7556045
+      ],
+      [
+       -122.3812602,
+       37.7556724
+      ],
+      [
+       -122.3812602,
+       37.7557402
+      ],
+      [
+       -122.381338,
+       37.7558081
+      ],
+      [
+       -122.3813863,
+       37.7558759
+      ],
+      [
+       -122.3814185,
+       37.7559438
+      ],
+      [
+       -122.3814346,
+       37.7560117
+      ],
+      [
+       -122.3814399,
+       37.7560795
+      ],
+      [
+       -122.3814399,
+       37.7561474
+      ],
+      [
+       -122.381456,
+       37.7562152
+      ],
+      [
+       -122.381456,
+       37.7562831
+      ],
+      [
+       -122.38160082613037,
+       37.75630259969116
+      ],
+      [
+       -122.38160245651763,
+       37.75631939976855
+      ],
+      [
+       -122.38136529922483,
+       37.75628748457218
+      ]
+     ]
+    ]
+   ]
+  }
+ }
+}

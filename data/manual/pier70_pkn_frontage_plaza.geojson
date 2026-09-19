@@ -1,0 +1,52 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "PKN Frontage Open Space (20th Street) -- approximate",
+        "site": "Pier 70",
+        "status": "planned",
+        "use": "park",
+        "geometry_type": "approximate",
+        "digitized_from": "Pier 70 Design for Development, Figure 3.3.1 - Illustrative Open Space Plan (p.51).",
+        "digitization_method": "ADDED 2026-09-16 (Pier 70 systematic feature-by-feature pass): Figure 3.3.1 shows a landscaped strip along Parcel K North (PKN)'s own 20th Street frontage -- a hardscape/lawn/seating area distinct from PKN's own building footprint -- that was not yet tracked in this dataset at all (this dataset had zero Pier 70 open-space features before this pass, unlike Potrero which has four). Confirmed Figure 3.3.1 shares the exact same page layout/pixel grid as Figure 6.4.2 (verified by overlaying already-traced parcel boundaries from 6.4.2 directly onto 3.3.1 -- they align pixel-for-pixel), so this site's already-validated 6-point affine transform (see Pier 70 Parcel A's digitization_method) was reused directly rather than re-deriving a new one. Traced this strip's bounding box directly: pixel x 420-665 (matching PKN's own east-west extent exactly, so this shares an exact boundary with PKN and cannot overlap it), y 401-475 (from the site's own Project Site Boundary line at 20th St down to where PKN's own building fill begins). This is a simplified bounding-box trace of an illustrative (non-dimensioned) rendering -- Figure 3.3.1 shows internal detail (a gated courtyard-like area, lawn panels, and a seating/game-court area) that this polygon does not attempt to subdivide. CORRECTED 2026-09-17 (streets/block-alignment review): both pixel values above ('x 420-665', 'y...475') were inherited directly from PKN's own 2376x1836-resolution measurement, which turned out to have been run through the 2200x1700-calibrated affine transform unrescaled -- a confirmed bug (see pier70_pkn.geojson's digitization_method) that also mismeasured PKN's east edge independent of the scale error. Since this plaza was defined to share PKN's exact x-range by construction, it inherited both problems. Corrected to match PKN's newly-retraced, correct-resolution contour exactly: x 389-578 (PKN's real east-west extent), y 371-440 (440 = PKN's corrected north edge, matched exactly so the shared boundary still can't overlap; 371 = 401/1.08, rescaling the south-boundary-line pixel reading since it comes from Figure 3.3.1, not 6.4.2, and there is no independent legend-color fill to re-detect there). Confirmed 0m gap / 0 overlap against the corrected PKN. EXEMPTED FROM STREET CLIPPING 2026-09-17 (user-flagged: 'tiny and divided by the road'): join_approximate.py's automatic real-street clip was silently discarding ~69% of this feature (leaving a ~384 sq m sliver of the traced ~1,255 sq m, and splitting it into disconnected fragments where the real street's buffer cut through it) -- which is exactly what 'tiny and divided by the road' looks like. Investigated whether this was the same kind of mispositioning bug found on C1/PKS: it is not. This strip's whole purpose (per Figure 3.3.1) is to replace part of TODAY's wider real 20th Street with tomorrow's narrower street + landscaped frontage -- the same 'the diagram's plan overrides today's satellite imagery' principle already hard-won on PKN itself (see that file's own extensive revert history, where satellite-snapping this exact frontage was tried and explicitly reverted for the same reason). Real curb data here doesn't cleanly separate 'street' from 'lot' anyway (this whole area is currently one undifferentiated surface parking lot, same ambiguity documented on PKS before its own unrelated positioning bug was found). Set street_clip_exempt so this feature renders at its full traced size against the real, planned frontage depth Figure 3.3.1 shows, rather than being cut down to whatever survives clipping against a street this plan is meant to narrow. REVERSED 2026-09-17, SAME DAY (user-flagged: 'not on 20th street? Should be south of 20th'): wrong call -- checked where this polygon's north edge actually sits relative to the real 20th St centerline (not just the buffer) and found it extends 70-95m PAST the centerline, onto the north side of 20th Street entirely (into the block containing Buildings 102/104), not just a modest planned narrowing of the near curb. The 'illustrative rendering, rescaled pixel estimate' north edge (see above) was simply wrong, not a legitimate planned encroachment -- removed street_clip_exempt and properly ground-truthed this edge instead: interpolated the real 20th St centerline's latitude at this polygon's own two longitudes and set the north edge 6.8m south of it (this project's standard real curb-to-centerline half-width). Available real depth here is thin (4-6m, similar to PKN's own south-edge finding against 21st St) -- resulting area is ~305 sq m, much smaller than the original ~1,255 sq m illustrative-bbox trace. This is a real, if narrow, sidewalk-scale frontage strip, not the deeper plaza Figure 3.3.1's illustrative (non-dimensioned) rendering suggested -- treat the diagram's own depth for this specific feature as unreliable rather than assume more real room exists than the confirmed street position allows. EXTENDED 2026-09-17 (user-flagged: since PKN grew, shrink it on the north side to give this plaza more depth): south edge (matching PKN's own north edge) moved south by 10m to match PKN's own north-edge adjustment -- see that file. This plaza's own north/east/west edges (already ground-truthed against the real 20th St corner) are unchanged; only the depth grows. EXTENDED 2026-09-17 (user-flagged: 'should expand to Michigan just like PKN'): this plaza's own east edge had never been extended to Michigan St when PKN's was (PKN's own east edge extension to Michigan, described in that file's digitization_method, was never propagated here) -- it stopped ~20-27m short. SE corner snapped exactly onto PKN's own NE corner (the shared boundary, now consistent to the last digit); NE corner (this plaza's own northern extent, where PKN doesn't reach) computed the same way as PKN's own east edge: 9.8m west of real Michigan St's centerline (CNN 8999000) at this corner's own latitude. Area grows from ~305 to ~1,094 sq m.",
+        "accuracy_caveat": "LOW-MODERATE CONFIDENCE -- Figure 3.3.1 is an illustrative, non-dimensioned rendering (no scale-accurate internal boundaries, unlike the D4D's own numbered-parcel figures), so this is a simplified bounding-box trace, not a precise outline. No specific proper name was found for this feature in the D4D text found so far (unlike Irish Hill Remnant, Waterfront Terrace, Slipways Commons, and the Waterfront Promenade, which are each the subject of their own named, detailed sub-figure elsewhere in the document) -- treat this name as a neutral, location-based placeholder pending a better source, not a confirmed D4D name. Its south/east/west edges match PKN's newly-retraced boundary (see digitization_method); its north edge is now ground-truthed against the real 20th St centerline (6.8m curb offset) rather than Figure 3.3.1's own illustrative depth, which turned out to extend past the real street entirely. Resulting strip is real but thin (~305 sq m) -- narrower than the diagram's own illustrative rendering implies.",
+        "why_no_real_parcel": "Open space with no subdivided Assessor parcel of its own within Brookfield's largely unaddressed 28-acre site.",
+        "regulatory_context": "Part of the Pier 70 D4D's Open Space Network (Section 3), shown on Figure 3.3.1 as landscaped open space along Parcel K North's 20th Street frontage. No further detail (name, area, specific program) found in the D4D text located so far.",
+        "notes": "Newly added 2026-09-16 as part of a systematic pass adding this site's previously-untracked open space -- see accuracy_caveat.",
+        "images": [],
+        "source_doc_urls": [
+          "https://www.sfport.com/media/8123/download?inline="
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.387507116947,
+              37.760492819342
+            ],
+            [
+              -122.38749408074938,
+              37.7603473121985
+            ],
+            [
+              -122.386689,
+              37.76040431788392
+            ],
+            [
+              -122.38669288982496,
+              37.76053173613666
+            ],
+            [
+              -122.387507116947,
+              37.760492819342
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

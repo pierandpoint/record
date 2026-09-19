@@ -1,0 +1,981 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-19",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "pier70_building_102",
+  "slug": "pier-70-building-102-former-power-house",
+  "name": "Pier 70 Building 102 (former Power House)",
+  "permalink": "https://pierandpoint.org/parcels/pier-70-building-102-former-power-house/",
+  "api": "https://pierandpoint.org/api/v1/records/pier-70-building-102-former-power-house.json",
+  "names": [
+   "Building 102",
+   "Powerhouse",
+   "Power House No. 1",
+   "Compressor House"
+  ],
+  "site": {
+   "slug": "pier-70",
+   "name": "Pier 70",
+   "short": "Pier 70",
+   "url": "https://pierandpoint.org/sites/pier-70/"
+  },
+  "status": "complete",
+  "status_label": "Complete",
+  "use": "commercial",
+  "address": null,
+  "summary": "The 1912 Classical Revival powerhouse on 20th Street between Buildings 101 and 104, designed by Charles Peter Weeks, which generated compressed air and distributed electricity for the shipyard and still housed BAE Systems' electrical service when rehabilitation began. Orton rebuilt it as office space with a mezzanine and a rear addition (about 15,300-18,000 sq ft) and subleased it to JUUL Labs for ten years; the current occupant is unknown.",
+  "summary_sources": [
+   "src-nrhp-2014",
+   "src-port-hc-2019",
+   "src-retrofit-2020"
+  ],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "Real, surveyed building footprint -- high confidence in the outline itself. This footprint's area (~1955 m2 / ~21,043 sqft) is roughly double the '11,266 sf' figure this project's own earlier research attached to 'Building 102 (former Compressor House)' -- that figure was not independently re-verified this pass, and could describe interior/leasable area rather than the full building footprint, or could itself be imprecise. Flagging this discrepancy rather than silently picking one number; treat the footprint geometry (real, surveyed) as more reliable than the previously-cited sqft figure.",
+    "digitized_from": "DataSF Building Footprints dataset (real, surveyed building outline; not tied to an Assessor parcel).",
+    "why_no_real_parcel": "This parcel (blklot 4046001) has no street address in DataSF's Assessor roll. The real Assessor lot groups 5 named buildings into one polygon with no further official subdivision -- this feature uses the real building footprint instead, extracted and matched individually.",
+    "regulatory_context": "The former Power House, built 1912, part of the same 20th Street Historic Core rehabilitation by Orton Development Inc. (ODI) as Building 101 (HPC packet 2013.1168E, Nov 26 2013 review). Per that packet, Building 102 was 'in fairly good condition' at the time and in use as the powerhouse facility. No confirmed real-world tenant identified by any source found."
+   }
+  },
+  "centroid": {
+   "lon": -122.385235,
+   "lat": 37.760942
+  },
+  "facts": [
+   {
+    "key": "developer",
+    "value": "Orton Development, Inc. through Historic Pier 70, LLC (66-year master lease L-15814 from the Port of San Francisco)",
+    "sources": [
+     "src-port-hc-2019"
+    ]
+   },
+   {
+    "key": "landowner",
+    "value": "Port of San Francisco",
+    "sources": [
+     "src-port-hc-2019"
+    ]
+   },
+   {
+    "key": "architect",
+    "value": "Marcy Wong Donn Logan Architects (design architect); Mark Hulbert, Preservation Architecture (historic architect)",
+    "sources": [
+     "src-structuremag",
+     "src-retrofit-2020"
+    ]
+   },
+   {
+    "key": "structural_engineer",
+    "value": "Nabih Youssef Structural Engineers",
+    "sources": [
+     "src-structuremag",
+     "src-retrofit-2020"
+    ]
+   },
+   {
+    "key": "financing",
+    "value": "Developer equity up to $14 million plus loans; Port participation rent of 50% of revenues above debt and a 14% equity return; sources in 2018: Port capital $1.8M, Seismic Safety Loan $23.6M, historic tax credit equity $20.4M, private debt and equity $81.2M",
+    "sources": [
+     "src-port-hc-2019"
+    ]
+   },
+   {
+    "key": "historic_district",
+    "value": "Contributing resource to the Union Iron Works Historic District (NRHP, listed April 17, 2014)",
+    "sources": [
+     "src-nrhp-2014"
+    ]
+   },
+   {
+    "key": "year_built",
+    "value": "1912",
+    "sources": [
+     "src-nrhp-2014"
+    ]
+   },
+   {
+    "key": "original_architect",
+    "value": "Charles Peter Weeks",
+    "sources": [
+     "src-nrhp-2014"
+    ]
+   },
+   {
+    "key": "style",
+    "value": "Tall rectangular concrete building with hipped mission-tile roof, five arched bays, terra cotta shell frieze and copper cornice",
+    "sources": [
+     "src-nrhp-2014"
+    ]
+   },
+   {
+    "key": "dimensions",
+    "value": "128 ft 6 in by 42 ft 4 in by 48 ft tall",
+    "sources": [
+     "src-nrhp-2014"
+    ]
+   },
+   {
+    "key": "gross_sqft",
+    "value": "8,428 (NRHP, first floor and basement); 11,266 before and 15,331 after rehabilitation (Port 2019 Table 1); 15,500 original and just over 18,000 after per Retrofit magazine",
+    "sources": [
+     "src-nrhp-2014",
+     "src-port-hc-2019",
+     "src-retrofit-2020"
+    ]
+   },
+   {
+    "key": "use",
+    "value": "Office (subleased to JUUL Labs, 10-year term, entire building less the Port's basement electrical room)",
+    "sources": [
+     "src-port-hc-2019"
+    ]
+   },
+   {
+    "key": "tenant_history",
+    "value": "JUUL Labs subleased Building 102 (and 104); the presence of an e-cigarette maker on Port land drew public objection in 2018-2019",
+    "sources": [
+     "src-port-hc-2019",
+     "src-potreroview-2018-06",
+     "src-potreroview-2019-03"
+    ]
+   },
+   {
+    "key": "prior_use",
+    "value": "Powerhouse No. 1 Electric: offices, four air compressors, three rotary converters, switchboard and transformers on the main floor; still serving some of BAE Systems' electrical needs in 2013",
+    "sources": [
+     "src-nrhp-2014"
+    ]
+   },
+   {
+    "key": "public_access",
+    "value": "'Building 102 key historic features' listed by the Port as publicly accessible",
+    "sources": [
+     "src-port-hc-2019"
+    ]
+   }
+  ],
+  "costs": [
+   {
+    "amount_usd": 127000000,
+    "what": "Estimated total cost of the eight-building Historic Core rehabilitation at completion in 2020 (up from $81.9M at 2014 approvals); hard costs $102.2M, soft costs $24.8M",
+    "date": "2019-01",
+    "approximate": true,
+    "sources": [
+     "src-port-hc-2019"
+    ]
+   },
+   {
+    "amount_usd": 6700000,
+    "what": "Estimated hard cost of the Building 102 rehabilitation (future expenditure estimate in 2018; $3.1M at 2014 approvals)",
+    "date": "2019-01",
+    "approximate": true,
+    "sources": [
+     "src-port-hc-2019"
+    ]
+   }
+  ],
+  "milestones": [
+   {
+    "date": "1912",
+    "date_label": "1912",
+    "status": "existing",
+    "status_label": "Existing, not yet redeveloped",
+    "text": "Built as the Union Iron Works powerhouse to Charles Peter Weeks's design; equipment dating from 1913-1914 remained in 2013",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-nrhp-2014",
+      "title": "Union Iron Works Historic District, National Register of Historic Places registration form (NRIS 14000150, listed April 17, 2014)",
+      "publisher": "National Park Service / California Office of Historic Preservation (nomination prepared for the Port of San Francisco by Carey & Co.)",
+      "url": "https://npgallery.nps.gov/GetAsset/99f11ae6-3834-4f99-840a-0e8a097398e6",
+      "accessed": "2026-09-17",
+      "date": "2014-04-17",
+      "note": "236-page PDF; Section 7 building descriptions (dates, architects, dimensions, square footage) and 40 photographs taken October 2013."
+     }
+    ],
+    "source": "National Park Service / California Office of Historic Preservation (nomination prepared for the Port of San Francisco by Carey & Co.), 2014-04-17",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "pier70_building_102",
+     "slug": "pier-70-building-102-former-power-house",
+     "name": "Pier 70 Building 102 (former Power House)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-102-former-power-house/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-102-former-power-house.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2010-05-11",
+    "date_label": "May 11, 2010",
+    "status": null,
+    "status_label": null,
+    "text": "Port Commission endorses the Pier 70 Preferred Master Plan (Resolution 10-27), which calls for a National Register district and rehabilitation of the 20th Street buildings",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-port-hc-2019",
+      "title": "Port Commission staff report, Item 12A: Project Update for the Pier 70 Historic Core pursuant to the Port's LDDA and Master Lease L-15814 with Historic Pier 70, LLC (Orton Development, Inc.)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/media/4465/download",
+      "accessed": "2026-09-17",
+      "date": "2019-01-04",
+      "note": "Per-building status, certificates of occupancy, subleases (Table 1), and the 2014-vs-2018 cost comparison (Table 2)."
+     }
+    ],
+    "source": "Port of San Francisco, 2019-01-04",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_building_102",
+     "slug": "pier-70-building-102-former-power-house",
+     "name": "Pier 70 Building 102 (former Power House)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-102-former-power-house/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-102-former-power-house.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2012-02",
+    "date_label": "~2012",
+    "status": null,
+    "status_label": null,
+    "text": "Port Commission awards the 20th Street Historic Buildings opportunity to Orton Development after a 2011 RFP; Exclusive Negotiating Agreement approved April 2012; term sheet endorsed October 2012 (Board of Supervisors December 2012)",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-port-hc-2019",
+      "title": "Port Commission staff report, Item 12A: Project Update for the Pier 70 Historic Core pursuant to the Port's LDDA and Master Lease L-15814 with Historic Pier 70, LLC (Orton Development, Inc.)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/media/4465/download",
+      "accessed": "2026-09-17",
+      "date": "2019-01-04",
+      "note": "Per-building status, certificates of occupancy, subleases (Table 1), and the 2014-vs-2018 cost comparison (Table 2)."
+     },
+     {
+      "id": "src-hpc-2013",
+      "title": "Informational presentation to the Historic Preservation Commission on the proposed rehabilitation of the Pier 70 20th Street Historic Buildings (case 2013.1168E)",
+      "publisher": "Port of San Francisco / SF Planning",
+      "url": "https://default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf",
+      "accessed": "2026-09-17",
+      "date": "2013-11-26"
+     }
+    ],
+    "source": "Port of San Francisco, 2019-01-04; Port of San Francisco / SF Planning, 2013-11-26",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_building_102",
+     "slug": "pier-70-building-102-former-power-house",
+     "name": "Pier 70 Building 102 (former Power House)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-102-former-power-house/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-102-former-power-house.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2013-11-26",
+    "date_label": "Nov 26, 2013",
+    "status": null,
+    "status_label": null,
+    "text": "Historic Preservation Commission informational hearing on the rehabilitation of the ten 20th Street Historic Buildings (case 2013.1168E): ~270,000 gsf existing plus ~69,000 gsf of new mezzanines, ~334,000 gsf total",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-hpc-2013",
+      "title": "Informational presentation to the Historic Preservation Commission on the proposed rehabilitation of the Pier 70 20th Street Historic Buildings (case 2013.1168E)",
+      "publisher": "Port of San Francisco / SF Planning",
+      "url": "https://default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf",
+      "accessed": "2026-09-17",
+      "date": "2013-11-26"
+     }
+    ],
+    "source": "Port of San Francisco / SF Planning, 2013-11-26",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_building_102",
+     "slug": "pier-70-building-102-former-power-house",
+     "name": "Pier 70 Building 102 (former Power House)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-102-former-power-house/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-102-former-power-house.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2013-11-26",
+    "date_label": "Nov 26, 2013",
+    "status": null,
+    "status_label": null,
+    "text": "2013 plan: ODI to redevelop the 11,266 sq ft former Compressor House as a restaurant with an exterior dining deck, after the Port removes BAE's electrical facilities",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-hpc-2013",
+      "title": "Informational presentation to the Historic Preservation Commission on the proposed rehabilitation of the Pier 70 20th Street Historic Buildings (case 2013.1168E)",
+      "publisher": "Port of San Francisco / SF Planning",
+      "url": "https://default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf",
+      "accessed": "2026-09-17",
+      "date": "2013-11-26"
+     }
+    ],
+    "source": "Port of San Francisco / SF Planning, 2013-11-26",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_building_102",
+     "slug": "pier-70-building-102-former-power-house",
+     "name": "Pier 70 Building 102 (former Power House)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-102-former-power-house/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-102-former-power-house.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2014-04-17",
+    "date_label": "Apr 17, 2014",
+    "status": null,
+    "status_label": null,
+    "text": "Union Iron Works Historic District listed in the National Register of Historic Places (NRIS 14000150), giving the project access to federal historic tax credits",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-nrhp-2014",
+      "title": "Union Iron Works Historic District, National Register of Historic Places registration form (NRIS 14000150, listed April 17, 2014)",
+      "publisher": "National Park Service / California Office of Historic Preservation (nomination prepared for the Port of San Francisco by Carey & Co.)",
+      "url": "https://npgallery.nps.gov/GetAsset/99f11ae6-3834-4f99-840a-0e8a097398e6",
+      "accessed": "2026-09-17",
+      "date": "2014-04-17",
+      "note": "236-page PDF; Section 7 building descriptions (dates, architects, dimensions, square footage) and 40 photographs taken October 2013."
+     },
+     {
+      "id": "src-port-hc-2019",
+      "title": "Port Commission staff report, Item 12A: Project Update for the Pier 70 Historic Core pursuant to the Port's LDDA and Master Lease L-15814 with Historic Pier 70, LLC (Orton Development, Inc.)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/media/4465/download",
+      "accessed": "2026-09-17",
+      "date": "2019-01-04",
+      "note": "Per-building status, certificates of occupancy, subleases (Table 1), and the 2014-vs-2018 cost comparison (Table 2)."
+     }
+    ],
+    "source": "National Park Service / California Office of Historic Preservation (nomination prepared for the Port of San Francisco by Carey & Co.), 2014-04-17; Port of San Francisco, 2019-01-04",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_building_102",
+     "slug": "pier-70-building-102-former-power-house",
+     "name": "Pier 70 Building 102 (former Power House)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-102-former-power-house/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-102-former-power-house.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2014-05-09",
+    "date_label": "May 9, 2014",
+    "status": null,
+    "status_label": null,
+    "text": "Port Commission Resolution 14-33 approves the Lease Disposition and Development Agreement and 66-year Master Lease (L-15814) with Historic Pier 70, LLC (Orton) and adopts CEQA findings",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-port-hc-2019",
+      "title": "Port Commission staff report, Item 12A: Project Update for the Pier 70 Historic Core pursuant to the Port's LDDA and Master Lease L-15814 with Historic Pier 70, LLC (Orton Development, Inc.)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/media/4465/download",
+      "accessed": "2026-09-17",
+      "date": "2019-01-04",
+      "note": "Per-building status, certificates of occupancy, subleases (Table 1), and the 2014-vs-2018 cost comparison (Table 2)."
+     }
+    ],
+    "source": "Port of San Francisco, 2019-01-04",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_building_102",
+     "slug": "pier-70-building-102-former-power-house",
+     "name": "Pier 70 Building 102 (former Power House)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-102-former-power-house/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-102-former-power-house.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2015-07",
+    "date_label": "~2015",
+    "status": "under_construction",
+    "status_label": "Under construction",
+    "text": "Master lease approved by the Board of Supervisors and fully executed, giving Orton site control; construction commences thereafter (September 2015 per the National Trust)",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-port-hc-2019",
+      "title": "Port Commission staff report, Item 12A: Project Update for the Pier 70 Historic Core pursuant to the Port's LDDA and Master Lease L-15814 with Historic Pier 70, LLC (Orton Development, Inc.)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/media/4465/download",
+      "accessed": "2026-09-17",
+      "date": "2019-01-04",
+      "note": "Per-building status, certificates of occupancy, subleases (Table 1), and the 2014-vs-2018 cost comparison (Table 2)."
+     },
+     {
+      "id": "src-savingplaces-2016",
+      "title": "Transitions: Saved, Pier 70 Historic Core",
+      "publisher": "National Trust for Historic Preservation (Katherine Flynn)",
+      "url": "https://savingplaces.org/stories/transitions-saved-pier-70-historic-core",
+      "accessed": "2026-09-17",
+      "date": "2016"
+     }
+    ],
+    "source": "Port of San Francisco, 2019-01-04; National Trust for Historic Preservation (Katherine Flynn), 2016",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "pier70_building_102",
+     "slug": "pier-70-building-102-former-power-house",
+     "name": "Pier 70 Building 102 (former Power House)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-102-former-power-house/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-102-former-power-house.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2018-10",
+    "date_label": "~2018",
+    "status": null,
+    "status_label": null,
+    "text": "Permanent financing for the Historic Core project achieved",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-port-hc-2019",
+      "title": "Port Commission staff report, Item 12A: Project Update for the Pier 70 Historic Core pursuant to the Port's LDDA and Master Lease L-15814 with Historic Pier 70, LLC (Orton Development, Inc.)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/media/4465/download",
+      "accessed": "2026-09-17",
+      "date": "2019-01-04",
+      "note": "Per-building status, certificates of occupancy, subleases (Table 1), and the 2014-vs-2018 cost comparison (Table 2)."
+     }
+    ],
+    "source": "Port of San Francisco, 2019-01-04",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_building_102",
+     "slug": "pier-70-building-102-former-power-house",
+     "name": "Pier 70 Building 102 (former Power House)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-102-former-power-house/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-102-former-power-house.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2019",
+    "date_label": "~2019",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Rehabilitation and tenant improvements scheduled for completion (Port's 2019 milestone list)",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-port-hc-2019",
+      "title": "Port Commission staff report, Item 12A: Project Update for the Pier 70 Historic Core pursuant to the Port's LDDA and Master Lease L-15814 with Historic Pier 70, LLC (Orton Development, Inc.)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/media/4465/download",
+      "accessed": "2026-09-17",
+      "date": "2019-01-04",
+      "note": "Per-building status, certificates of occupancy, subleases (Table 1), and the 2014-vs-2018 cost comparison (Table 2)."
+     }
+    ],
+    "source": "Port of San Francisco, 2019-01-04",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "pier70_building_102",
+     "slug": "pier-70-building-102-former-power-house",
+     "name": "Pier 70 Building 102 (former Power House)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-102-former-power-house/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-102-former-power-house.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2019-01",
+    "date_label": "Jan 2019",
+    "status": null,
+    "status_label": null,
+    "text": "Building abated of PCB electrical equipment; new shipyard electrical service occupies part of the basement; rehabilitation of the remainder under way with completion anticipated in 2019; public disappointment noted that it will be office, not a restaurant",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-port-hc-2019",
+      "title": "Port Commission staff report, Item 12A: Project Update for the Pier 70 Historic Core pursuant to the Port's LDDA and Master Lease L-15814 with Historic Pier 70, LLC (Orton Development, Inc.)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/media/4465/download",
+      "accessed": "2026-09-17",
+      "date": "2019-01-04",
+      "note": "Per-building status, certificates of occupancy, subleases (Table 1), and the 2014-vs-2018 cost comparison (Table 2)."
+     }
+    ],
+    "source": "Port of San Francisco, 2019-01-04",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_building_102",
+     "slug": "pier-70-building-102-former-power-house",
+     "name": "Pier 70 Building 102 (former Power House)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-102-former-power-house/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-102-former-power-house.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2019-01-08",
+    "date_label": "Jan 8, 2019",
+    "status": null,
+    "status_label": null,
+    "text": "Port Commission update: six of eight buildings complete, Buildings 101 and 102 still under construction, project 100% subleased except two atrium retail spaces; total cost revised from $81.9M to an estimated $127.0M",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-port-hc-2019",
+      "title": "Port Commission staff report, Item 12A: Project Update for the Pier 70 Historic Core pursuant to the Port's LDDA and Master Lease L-15814 with Historic Pier 70, LLC (Orton Development, Inc.)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/media/4465/download",
+      "accessed": "2026-09-17",
+      "date": "2019-01-04",
+      "note": "Per-building status, certificates of occupancy, subleases (Table 1), and the 2014-vs-2018 cost comparison (Table 2)."
+     }
+    ],
+    "source": "Port of San Francisco, 2019-01-04",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_building_102",
+     "slug": "pier-70-building-102-former-power-house",
+     "name": "Pier 70 Building 102 (former Power House)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-102-former-power-house/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-102-former-power-house.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2019-03",
+    "date_label": "~2019",
+    "status": null,
+    "status_label": null,
+    "text": "Port commissioners discuss shortening or ending JUUL Labs' ten-year sublease of Building 102 (and 104); no action taken",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-potreroview-2019-03",
+      "title": "City Ponders Ways to Oust JUUL from Pier 70",
+      "publisher": "The Potrero View (Rebekah Moan)",
+      "url": "https://www.potreroview.net/city-ponders-ways-to-oust-juul-from-pier-70/",
+      "accessed": "2026-09-17",
+      "date": "2019-03"
+     }
+    ],
+    "source": "The Potrero View (Rebekah Moan), 2019-03",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_building_102",
+     "slug": "pier-70-building-102-former-power-house",
+     "name": "Pier 70 Building 102 (former Power House)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-102-former-power-house/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-102-former-power-house.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2020-11-09",
+    "date_label": "Nov 9, 2020",
+    "status": null,
+    "status_label": null,
+    "text": "Rehabilitation profiled: seismic bracing, mezzanine, 2,600 sq ft rear addition with rooftop deck, one of four historic compressors retained; Marcy Wong Donn Logan wins a Metamorphosis Award for it",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-retrofit-2020",
+      "title": "Rejuvenation of a Historic Powerhouse Brings New Energy to San Francisco's Pier 70",
+      "publisher": "Retrofit magazine (KJ Fields)",
+      "url": "https://retrofithomemagazine.com/2020/11/rejuvenation-of-a-historic-powerhouse-brings-new-energy-to-san-franciscos-pier-70/",
+      "accessed": "2026-09-17",
+      "date": "2020-11-09"
+     }
+    ],
+    "source": "Retrofit magazine (KJ Fields), 2020-11-09",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_building_102",
+     "slug": "pier-70-building-102-former-power-house",
+     "name": "Pier 70 Building 102 (former Power House)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-102-former-power-house/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-102-former-power-house.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2020-12",
+    "date_label": "~2020",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Rehab of Buildings 101, 102, 104, 122 and 123 completed in stages, ~2017–2020",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "title": "SF Planning HPC packet 2013.1168E"
+     }
+    ],
+    "source": "SF Planning HPC packet 2013.1168E",
+    "origin": "csv",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "pier70_building_102",
+     "slug": "pier-70-building-102-former-power-house",
+     "name": "Pier 70 Building 102 (former Power House)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-102-former-power-house/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-102-former-power-house.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2023",
+    "date_label": "~2023",
+    "status": null,
+    "status_label": null,
+    "text": "Historic Shipyard at Pier 70 Rehabilitation receives a Governor's Historic Preservation Award",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-ohp-2023",
+      "title": "2023 Governor's Historic Preservation Awards: Historic Shipyard at Pier 70 Rehabilitation",
+      "publisher": "California Office of Historic Preservation",
+      "url": "https://ohp.parks.ca.gov/pages/1054/files/2023-Historic-Shipyard-Pier70.pdf",
+      "accessed": "2026-09-17",
+      "date": "2023"
+     }
+    ],
+    "source": "California Office of Historic Preservation, 2023",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_building_102",
+     "slug": "pier-70-building-102-former-power-house",
+     "name": "Pier 70 Building 102 (former Power House)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-102-former-power-house/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-102-former-power-house.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   }
+  ],
+  "changes": [],
+  "images": [
+   {
+    "path": "data/manual/images/pier70/20th_st_historic_buildings_siteplan_2013.jpg",
+    "kind": "document",
+    "scope": "area",
+    "taken": "2013-09-18",
+    "credit": "Pier 70 20th Street Historic Buildings site plan, Orton Development, Inc. (presentation to the Central Waterfront Advisory Group, Sept. 18, 2013), in the SF Historic Preservation Commission informational packet, case 2013.1168E, p.25",
+    "license": "public-record",
+    "source_url": "https://default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf#page=25",
+    "license_evidence": "https://default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf",
+    "license_note": "Exhibit within the SF Historic Preservation Commission's public hearing packet for case 2013.1168E (Nov. 26, 2013 informational presentation); a commission hearing packet is public record. Read 2026-09-19.",
+    "source_crop": "python3 src/extract_pdf_figure.py https://default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf 25 data/manual/images/pier70/20th_st_historic_buildings_siteplan_2013.jpg --rect auto",
+    "focus": [
+     0.2531,
+     0.255,
+     0.0781,
+     0.0996
+    ],
+    "figure": "positioning",
+    "appeal": 3,
+    "appeal_note": "A black-and-white 2013 site plan with Building 102 highlighted in green between 101 and 104 -- clean line work, plain but legible.",
+    "url": "https://pierandpoint.org/assets/img/20th_st_historic_buildings_siteplan_2013.jpg"
+   }
+  ],
+  "open_questions": [
+   "Current tenant: JUUL's sublease was to run ten years from completion (2019), but no source after 2020 confirms JUUL is still in Building 102 or names a successor.",
+   "Completion / certificate of occupancy date: the Port anticipated 2019; the November 2020 profile describes the finished building without a date.",
+   "The square-footage figures disagree by source (8,428 NRHP floor area vs 11,266 Port pre-rehab vs 15,500 magazine); the NRHP figure may exclude the basement."
+  ],
+  "sources": [
+   {
+    "id": "src-hpc-2013",
+    "title": "Informational presentation to the Historic Preservation Commission on the proposed rehabilitation of the Pier 70 20th Street Historic Buildings (case 2013.1168E)",
+    "publisher": "Port of San Francisco / SF Planning",
+    "url": "https://default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf",
+    "accessed": "2026-09-17",
+    "date": "2013-11-26"
+   },
+   {
+    "id": "src-nrhp-2014",
+    "title": "Union Iron Works Historic District, National Register of Historic Places registration form (NRIS 14000150, listed April 17, 2014)",
+    "publisher": "National Park Service / California Office of Historic Preservation (nomination prepared for the Port of San Francisco by Carey & Co.)",
+    "url": "https://npgallery.nps.gov/GetAsset/99f11ae6-3834-4f99-840a-0e8a097398e6",
+    "accessed": "2026-09-17",
+    "date": "2014-04-17",
+    "note": "236-page PDF; Section 7 building descriptions (dates, architects, dimensions, square footage) and 40 photographs taken October 2013."
+   },
+   {
+    "id": "src-ohp-2023",
+    "title": "2023 Governor's Historic Preservation Awards: Historic Shipyard at Pier 70 Rehabilitation",
+    "publisher": "California Office of Historic Preservation",
+    "url": "https://ohp.parks.ca.gov/pages/1054/files/2023-Historic-Shipyard-Pier70.pdf",
+    "accessed": "2026-09-17",
+    "date": "2023"
+   },
+   {
+    "id": "src-port-hc-2019",
+    "title": "Port Commission staff report, Item 12A: Project Update for the Pier 70 Historic Core pursuant to the Port's LDDA and Master Lease L-15814 with Historic Pier 70, LLC (Orton Development, Inc.)",
+    "publisher": "Port of San Francisco",
+    "url": "https://www.sfport.com/media/4465/download",
+    "accessed": "2026-09-17",
+    "date": "2019-01-04",
+    "note": "Per-building status, certificates of occupancy, subleases (Table 1), and the 2014-vs-2018 cost comparison (Table 2)."
+   },
+   {
+    "id": "src-potreroview-2018-06",
+    "title": "E-Cigarette Maker JUUL, Popular with High School Students, Subleases Space at Pier 70",
+    "publisher": "The Potrero View (Jacob Bourne)",
+    "url": "https://www.potreroview.net/e-cigarette-maker-juul-popular-with-high-school-students-subleases-space-at-pier-70/",
+    "accessed": "2026-09-17",
+    "date": "2018-06"
+   },
+   {
+    "id": "src-potreroview-2019-03",
+    "title": "City Ponders Ways to Oust JUUL from Pier 70",
+    "publisher": "The Potrero View (Rebekah Moan)",
+    "url": "https://www.potreroview.net/city-ponders-ways-to-oust-juul-from-pier-70/",
+    "accessed": "2026-09-17",
+    "date": "2019-03"
+   },
+   {
+    "id": "src-retrofit-2020",
+    "title": "Rejuvenation of a Historic Powerhouse Brings New Energy to San Francisco's Pier 70",
+    "publisher": "Retrofit magazine (KJ Fields)",
+    "url": "https://retrofithomemagazine.com/2020/11/rejuvenation-of-a-historic-powerhouse-brings-new-energy-to-san-franciscos-pier-70/",
+    "accessed": "2026-09-17",
+    "date": "2020-11-09"
+   },
+   {
+    "id": "src-savingplaces-2016",
+    "title": "Transitions: Saved, Pier 70 Historic Core",
+    "publisher": "National Trust for Historic Preservation (Katherine Flynn)",
+    "url": "https://savingplaces.org/stories/transitions-saved-pier-70-historic-core",
+    "accessed": "2026-09-17",
+    "date": "2016"
+   },
+   {
+    "id": "src-structuremag",
+    "title": "Pier 70 Building 113/114 Renovation",
+    "publisher": "STRUCTURE magazine (Michael Gemmill, S.E., Nabih Youssef Structural Engineers)",
+    "url": "https://www.structuremag.org/article/pier-70-building-113-114-renovation/",
+    "accessed": "2026-09-17"
+   }
+  ],
+  "notes": "Split 2026-09-16 from the combined 'Historic Core, north side' entry -- see digitization_method and accuracy_caveat (sqft discrepancy).",
+  "has_record_file": true,
+  "last_verified": "2026-09-18",
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.3847664,
+      37.7610638
+     ],
+     [
+      -122.3847474,
+      37.7608954
+     ],
+     [
+      -122.3847399,
+      37.7608098
+     ],
+     [
+      -122.3855139,
+      37.760764
+     ],
+     [
+      -122.3855139,
+      37.760764
+     ],
+     [
+      -122.3855204,
+      37.7608496
+     ],
+     [
+      -122.3855191,
+      37.7608496
+     ],
+     [
+      -122.3855249,
+      37.7609118
+     ],
+     [
+      -122.3855251,
+      37.7609118
+     ],
+     [
+      -122.3855251,
+      37.7609119
+     ],
+     [
+      -122.3855293,
+      37.7609571
+     ],
+     [
+      -122.3855292,
+      37.7609571
+     ],
+     [
+      -122.3855353,
+      37.7610224
+     ],
+     [
+      -122.3852385,
+      37.7610399
+     ],
+     [
+      -122.3851938,
+      37.7610426
+     ],
+     [
+      -122.3847668,
+      37.7610678
+     ],
+     [
+      -122.3847668,
+      37.7610677
+     ],
+     [
+      -122.3847664,
+      37.7610638
+     ]
+    ]
+   ]
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Pier 70 Building 102 (former Power House)",
+        "site": "Pier 70",
+        "status": "complete",
+        "use": "commercial",
+        "geometry_type": "real",
+        "digitized_from": "DataSF Building Footprints dataset (real, surveyed building outline; not tied to an Assessor parcel).",
+        "digitization_method": "SPLIT 2026-09-16 from the combined blklot 4046001 row (see Building 101's digitization_method for the full context of that split). Matched to this building using the same method: Figure 6.4.2's own '102' label position, transformed via this site's validated 6-point affine transform, matched to the nearest real footprint in the lot (23.2m away -- clearly the best match; the next-nearest candidate was over 70m away). Confirmed spatially distinct from Building 101's own footprint (which ends about 88m to the west) rather than one merged structure, despite the two being described as closely adjacent (a 2013 HPC packet notes 'an access ramp or stairs would be provided between Buildings 101 and 102 to navigate the grade change'). This is a REAL surveyed building outline, not a diagram trace.",
+        "accuracy_caveat": "Real, surveyed building footprint -- high confidence in the outline itself. This footprint's area (~1955 m2 / ~21,043 sqft) is roughly double the '11,266 sf' figure this project's own earlier research attached to 'Building 102 (former Compressor House)' -- that figure was not independently re-verified this pass, and could describe interior/leasable area rather than the full building footprint, or could itself be imprecise. Flagging this discrepancy rather than silently picking one number; treat the footprint geometry (real, surveyed) as more reliable than the previously-cited sqft figure.",
+        "why_no_real_parcel": "This parcel (blklot 4046001) has no street address in DataSF's Assessor roll. The real Assessor lot groups 5 named buildings into one polygon with no further official subdivision -- this feature uses the real building footprint instead, extracted and matched individually.",
+        "regulatory_context": "The former Power House, built 1912, part of the same 20th Street Historic Core rehabilitation by Orton Development Inc. (ODI) as Building 101 (HPC packet 2013.1168E, Nov 26 2013 review). Per that packet, Building 102 was 'in fairly good condition' at the time and in use as the powerhouse facility. No confirmed real-world tenant identified by any source found.",
+        "notes": "Split 2026-09-16 from the combined 'Historic Core, north side' entry -- see digitization_method and accuracy_caveat (sqft discrepancy).",
+        "images": [],
+        "source_doc_urls": [
+          "https://default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [[-122.3847664, 37.7610638], [-122.3847474, 37.7608954], [-122.3847399, 37.7608098], [-122.3855139, 37.760764], [-122.3855139, 37.760764], [-122.3855204, 37.7608496], [-122.3855191, 37.7608496], [-122.3855249, 37.7609118], [-122.3855251, 37.7609118], [-122.3855251, 37.7609119], [-122.3855293, 37.7609571], [-122.3855292, 37.7609571], [-122.3855353, 37.7610224], [-122.3852385, 37.7610399], [-122.3851938, 37.7610426], [-122.3847668, 37.7610678], [-122.3847668, 37.7610677], [-122.3847664, 37.7610638]]
+        ]
+      }
+    }
+  ]
+}

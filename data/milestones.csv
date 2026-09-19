@@ -1,0 +1,84 @@
+# Dated milestones shown on the site's timeline and on each record's page.
+# One row per dated event. Every row needs a source.
+#   record_id: status.csv parcel_label, or an approximate project's geometry file stem (e.g. prequel_park_port_subarea)
+#   date:      YYYY-MM or YYYY-MM-DD
+#   status:    optional; set it when the event changes the record's status (complete, under_construction, planned, existing, being_removed)
+#   expected:  yes = a planned/targeted date, not yet happened
+#   approximate: yes = only the year (or a range) is sourced; shown as "~YYYY"
+record_id,date,status,text,source,expected,approximate
+mission_rock_china_basin_park,2024-04-26,complete,"China Basin Park opens, the first of Mission Rock's open spaces",sfyimby.com,no,no
+pier70_building_101,2020-12,complete,"Rehab of Buildings 101, 102, 104, 122 and 123 completed in stages, ~2017–2020",SF Planning HPC packet 2013.1168E,no,yes
+pier70_building_102,2020-12,complete,"Rehab of Buildings 101, 102, 104, 122 and 123 completed in stages, ~2017–2020",SF Planning HPC packet 2013.1168E,no,yes
+pier70_building_104,2020-12,complete,"Rehab of Buildings 101, 102, 104, 122 and 123 completed in stages, ~2017–2020",SF Planning HPC packet 2013.1168E,no,yes
+potrero_block_15,2020-10-22,,Planning Commission approves adaptive reuse of the 1901 turbine hall,SF Planning Commission approval packet,no,no
+pier70_building_101,2022-05,,RH San Francisco opens in Building 101,en.wikipedia.org/wiki/Building_101_(San_Francisco),no,no
+8719A008,2023-01,complete,Temporary certificate of occupancy issued,"Port of SF memo, Oct 2023",no,no
+8719C003,2023-06,complete,Temporary certificate of occupancy issued,"Port of SF memo, Oct 2023",no,no
+8719C001,2024-04,,Leasing starts,sfyimby.com,no,no
+8719A008,2024-04,,"Visa moves in, up to 1,500 employees",henninglarsen.com,no,no
+8719C001,2024-06,complete,Opens: 254 homes,sfyimby.com,no,no
+8719B002,2024-06-24,complete,Opening ceremony marks Mission Rock’s official opening,mvrdv.com,no,no
+# Noonan Building was taken off the active maps 2026-09-16 (existing building slated for demolition, no
+# future-state parcel of its own -- see approximate_projects.csv). Its dated event is kept here, commented
+# out, so it can be restored with the record rather than lost:
+# noonan_building,2024-12,,About 40 working artists leave the building,sfchronicle.com,no,yes
+prequel_park_port_subarea,2025-06-19,,BCDC permit amendment issued,BCDC Application 2019.006.02,no,no
+4232020,2025-08,complete,Construction completed,"Port of SF, Calendar Item 10A",no,no
+4232020,2025-10,,Residents move in: 105 affordable homes,sfyimby.com,no,no
+prequel_park_port_subarea,2025-11-18,,Port Commission approves lease amendment (Res. 25-70),sfport.com,no,no
+4114010,2026-01-27,,"General Catalyst signs a 70,000 sq ft office lease",therealdeal.com,no,no
+4175027,2026-02,under_construction,Foundation excavation underway,sfyimby.com,no,no
+8719C003,2026-03,,"Nvidia’s 45,000 sq ft lease begins","The Real Deal, Nov 2025",no,yes
+pier70_e3,2026-09-19,,Elevation Sky Park public opening event scheduled,businesswire.com,yes,no
+8711029B,2027-02,under_construction,Phase I construction targeted to start,SF Spring 2026 Development Forecast,yes,yes
+prequel_park_port_subarea,2027-08,complete,Public opening targeted (Q3 2027),"Port of SF, Calendar Item 10A",yes,yes
+8711029B,2028-01,,Phase II construction targeted,SF Spring 2026 Development Forecast,yes,yes
+4175027,2028-10,complete,Completion expected (late 2028),sfyimby.com,yes,yes
+8722025,2019-09-06,complete,Chase Center opens,en.wikipedia.org/wiki/Chase_Center,no,no
+8719007,2015-04-16,complete,Grand opening of the Public Safety Building,sfpublicworks.org,no,no
+8719003,2020-11,under_construction,HomeRise at Mission Bay breaks ground,homerisesf.org,no,no
+8719003,2022-11,complete,"Opens (""opened in late 2022"" per sfchronicle.com): 141 units of permanent supportive housing",sfchronicle.com,no,yes
+8719008,2023-02,under_construction,Construction begins on 148 affordable homeownership units,sfyimby.com,no,no
+8719008,2025-10-02,complete,Ribbon-cutting for 400 China Basin Street,sfyimby.com,no,no
+8709025,2026-01,,Construction completed,sfusd.edu,no,yes
+8709025,2026-08-17,complete,Mission Bay School welcomes its first students,sfusd.edu,no,no
+8710006,2026-08-13,,OCII Commission MOU/RFP item on subdividing Block 12 West for affordable and market-rate housing,sfocii.org Mission Bay CAC agenda 8-13-26,no,no
+mission_bay_commons_interim_west,2028-10,,"Mission Bay Future Parks Project construction targeted to begin (""late 2028"" per sfrecpark.org)",sfrecpark.org/1832/Mission-Bay-Future-Parks-Project,yes,yes
+mission_bay_commons_interim_west,2030-02,complete,"Mission Bay Future Parks Project public opening targeted (""early 2030"" per sfrecpark.org)",sfrecpark.org/1832/Mission-Bay-Future-Parks-Project,yes,yes
+8727008,2018-01,complete,The Exchange on 16th (1800 Owens St) completed by Kilroy Realty as Dropbox's headquarters,businesswire.com,no,yes
+8721035,2021-06,complete,Uber Mission Bay 1 (1455 3rd St) completed,archdaily.com,no,yes
+8721029,2021-06,complete,Uber Mission Bay 2 (1515 3rd St) completed,archdaily.com,no,yes
+8722063,2021-06,complete,"Uber Mission Bay 3 & 4 (1655 & 1725 3rd St) completed, LEED Gold",commercialsearch.com,no,yes
+8721035,2023-10,complete,"OpenAI subleases 1455 & 1515 3rd St from Uber (~486,600 sq ft combined), the largest SF office lease since 2018",sfstandard.com,no,no
+8711013,2015-04,complete,"Azure Apartments (690 Long Bridge St) opens (""spring 2015"")",multifamilybiz.com,no,yes
+8715008,2022-06,complete,"LUMA Hotel San Francisco (100 Channel St) opens, Mission Bay's first hotel",hospitalitynet.org,no,yes
+mission_bay_the_beacon,2004-06,complete,The Beacon (250/260 King St) completed,wzarc.com,no,yes
+mission_bay_avalon_phase_i,2003-06,complete,Avalon at Mission Bay I (255 King St) completed,arquitectonica.com,no,yes
+mission_bay_avalon_phase_ii,2006-06,complete,Avalon at Mission Bay II (301 King St) completed,arquitectonica.com,no,yes
+mission_bay_avalon_phase_iii,2009-06-18,complete,Avalon at Mission Bay III (353 King St) grand opening,investors.avalonbay.com,no,no
+mission_bay_madrone,2011-06,complete,Madrone (420/435/480 Mission Bay Blvd N) completed,bosadevelopment.com,no,yes
+mission_bay_arden,2016-06,complete,Arden (708-718 Long Bridge St) completed,kinokorealestate.com,no,yes
+mission_bay_one_mission_bay,2018-06,complete,One Mission Bay (110 Channel St/1000 3rd St) completed,stradasf.com,no,yes
+mission_bay_radiance,2008-09,complete,"Radiance (325 China Basin St) offers its first homes, among the first major US condo developments to open after the 2008 financial crisis",sfgate.com,no,yes
+ucsf_mission_bay_hospital,2015-02-01,complete,"UCSF Medical Center at Mission Bay opens (289 beds: Benioff Children's Hospital, Bakar Cancer Hospital, Betty Irene Moore Women's Hospital)",ucsf.edu,no,no
+ucsf_genentech_hall,2003-01,complete,Genentech Hall opens -- UCSF's first Mission Bay building,tradelineinc.com; history.library.ucsf.edu,no,yes
+ucsf_rock_hall,2004-06,complete,Arthur and Toni Rembe Rock Hall opens (opening year contested across sources: 2002/2004/2005; 2004 is best-supported),history.library.ucsf.edu,no,yes
+ucsf_byers_hall,2005-06,complete,"Byers Hall opens, home to QB3",history.library.ucsf.edu,no,yes
+ucsf_sandler_neurosciences,2010-05,under_construction,Construction begins on Sandler Neurosciences Center,som.com,no,no
+ucsf_sandler_neurosciences,2012-05,complete,Sandler Neurosciences Center opens,tradelineinc.com; som.com,no,no
+ucsf_smith_cardiovascular,2010-06,complete,Smith Cardiovascular Research Building opens,history.library.ucsf.edu,no,yes
+ucsf_helen_diller_cancer_research,2006-06,under_construction,Groundbreaking for Helen Diller Family Cancer Research Building,ucsf.edu,no,yes
+ucsf_helen_diller_cancer_research,2009-06,complete,Helen Diller Family Cancer Research Building grand opening,ucsf.edu,no,no
+ucsf_mission_hall,2014-09,complete,Mission Hall (Global Health & Clinical Sciences Building) opens for occupancy,ucsf.edu,no,no
+ucsf_mission_hall,2014-10,complete,Ribbon-cutting celebrates the opening of Mission Hall,ucsf.edu,no,no
+ucsf_rutter_community_center,2005-06,complete,William J. Rutter Community Center opens,legorreta.mx; forell.com,no,yes
+ucsf_hearst_tower,2005-06,complete,Hearst Tower opens as part of UCSF's Mission Bay student/faculty housing complex,langan.com; campuslifeserviceshome.ucsf.edu,no,yes
+ucsf_housing_north,2005-06,complete,UCSF Mission Bay Housing North Building opens,langan.com; campuslifeserviceshome.ucsf.edu,no,yes
+ucsf_housing_west,2005-06,complete,UCSF Mission Bay Housing West Building opens,langan.com; campuslifeserviceshome.ucsf.edu,no,yes
+ucsf_student_housing,2005-06,complete,UCSF student housing (likely the South Building) opens as part of the Mission Bay housing complex,langan.com; campuslifeserviceshome.ucsf.edu,no,yes
+8709020,2016-03,complete,Kaiser Permanente Mission Bay Medical Offices opens to patients,potrerview.net; studios.com,no,no
+8708110,2005,complete,Mission Bay Branch Library opens,DataSF Assessor Historical Secured Property Tax Roll,no,yes
+mission_bay_arterra,2009,complete,Arterra opens,socketsite.com,no,yes
+mission_bay_park_terrace,2007,complete,Park Terrace opens,OpenStreetMap-tagged address match; year from real-estate listing sources,no,yes
+mission_bay_235_berry,2007,complete,235 Berry (Signature Development Group) opens,lmsarch.com; skyboxrealty.com,no,yes
+mission_bay_255_berry,2004,complete,255 Berry (Signature Development Group) opens,web search of real-estate listing sources,no,yes

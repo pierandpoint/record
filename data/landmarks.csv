@@ -1,0 +1,10 @@
+# Well-known places drawn on the maps purely as orientation. They are NOT tracked records:
+# no status, no counts, not clickable. Each one needs a source for how it was identified.
+#   blklot: a real DataSF Assessor parcel (data/raw/parcels.geojson)
+#   label_dx / label_dy: nudge the label in map units if it collides (optional)
+name,blklot,source,note,label_dx,label_dy
+Oracle Park,3794028,"DataSF Registered Business Locations (San Francisco Giants Baseball Club LLC, 24 Willie Mays Plaza) joined to the DataSF Assessor parcel containing it","Sits at the north edge of the mapped area, so the shape is cut off there",0,0
+# Chase Center REMOVED as a landmark 2026-09-18: promoted to a tracked record (status.csv blklot 8722025)
+# now that Mission Bay is a real site -- see docs/briefs/mission-bay-geometry.md. Its old landmark row here
+# had pointed at blklot 8722001, since found to be a retired/superseded Assessor parcel; the new status.csv
+# row uses the parcel's current active blklot (8722025) instead.

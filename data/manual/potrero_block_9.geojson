@@ -1,0 +1,76 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Potrero Power Station Block 9",
+        "site": "Potrero Power Station",
+        "status": "planned",
+        "use": "mixed",
+        "geometry_type": "approximate",
+        "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
+        "digitization_method": "Traced from the Potrero Power Station Design for Development's own Figure 6.2.3 (Building Height Plan, p.245) -- an adopted regulatory diagram with a printed scale bar, north arrow, and real street labels (Illinois St, Georgia St, Louisiana St, Maryland St, Delaware St, 22nd St, Humboldt St, 23rd St), not an illustrative rendering. Georeferenced using 9 real street-intersection control points fetched from OpenStreetMap via this project's own src/fetch_streets.py, fit as a least-squares affine transform. NOTE: an initial attempt also used the real, confirmed positions of the Sophie Maxwell Building and the UCSF Block 2 building as anchors, but they produced 50-60m of error against the street-only fit -- this diagram is dated Feb 26, 2020, predating UCSF's ~2023-24 arrival as a life-science anchor tenant, so those two real buildings likely do not sit where this 2020 figure's own numbered blocks would place them (their own real parcels are used directly elsewhere in this dataset and were NOT re-derived from this diagram). The final transform here uses street intersections only. Residual error against those control points is roughly 8-24m. Traced polygons were additionally clipped against the real, confirmed Sophie Maxwell and UCSF Block 2 parcels (and against Prequel Park's approximate geometry) so this speculative tracing never overrides real or better-sourced geometry. REBUILT 2026-09-16: this block was the one Potrero feature never re-transformed during this site's GDAL/TPS overhaul (see Block 1/3/4/etc.'s own digitization_method), and a user-flagged visual check (Humboldt Street Plaza appearing to sit 'east of Block 9' instead of between Block 4 and Block 9) traced back to Block 9 still using the old, less accurate transform -- it had drifted enough to overlap Block 4 (97 m2) after Block 4's own GDAL/TPS correction. Re-traced this block's actual notched building outline (10 vertices, following the real jogs in the diagram's own thin-line outline -- a stepped-out notch on the NE side, a stepped-in notch on the SW side) via programmatic black-pixel detection, then ran it through the same (GCP-corrected) TPS transform as the rest of the site.",
+        "accuracy_caveat": "APPROXIMATE -- this block is not yet built and does not correspond to any subdivided Assessor parcel: it currently sits on vacant/graded land within the former power station site (unaddressed in DataSF's Assessor roll). Traced from an adopted regulatory diagram via multi-point real-street georeferencing (see digitization_method), but this diagram is dated 2020 and may not reflect later design changes (as already found for the UCSF/Sophie Maxwell area -- see digitization_method). Treat vertex positions as accurate to roughly 10-15m (rebuilt 2026-09-16 via the site's GDAL/TPS pass -- see digitization_method), and treat the block's applicability itself as somewhat more provisional than Mission Rock's or Pier 70's equivalent entries. Its overlap with the real, under-construction UCSF Block 2 area (a separate, better-sourced feature elsewhere in this dataset) has not been independently re-checked in this pass.",
+        "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead.",
+        "regulatory_context": "Flexible commercial/hotel/residential per the D4D. Figure 6.2.3's own 'Block 9 Building Configurations' inset shows heights up to 177 ft max (in the 'with Unit 3' configuration) -- exceeding an 85-145 ft range sometimes cited secondhand. This block's real-world area overlaps where Unit 3 and the Stack physically stand (mapped separately, both real/existing) and where Prequel Park's approximate interim-park geometry sits (also mapped separately, and excluded here via clipping) -- treat this polygon as the block's outer development envelope, not a claim that all of it is buildable independent of those other real features.",
+        "notes": "Approximate polygon for a real, D4D-adopted block -- see accuracy_caveat.",
+        "images": [],
+        "source_doc_urls": [
+          "https://default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.38229,
+              37.757015
+            ],
+            [
+              -122.381751,
+              37.757038
+            ],
+            [
+              -122.381723,
+              37.756744
+            ],
+            [
+              -122.381616,
+              37.756749
+            ],
+            [
+              -122.381576,
+              37.756326
+            ],
+            [
+              -122.381603,
+              37.756325
+            ],
+            [
+              -122.38158,
+              37.756088
+            ],
+            [
+              -122.382024,
+              37.75606
+            ],
+            [
+              -122.382062,
+              37.75645
+            ],
+            [
+              -122.382234,
+              37.75644
+            ],
+            [
+              -122.38229,
+              37.757015
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

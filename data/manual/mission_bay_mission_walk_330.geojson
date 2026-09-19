@@ -1,0 +1,106 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Mission Walk (330 Berry St)",
+        "site": "Mission Bay North",
+        "status": "complete",
+        "use": "residential",
+        "geometry_type": "real",
+        "digitized_from": "DataSF Building Footprints (mblr SF8704278); name/address from OpenStreetMap way 56656119 (330 Berry St)",
+        "digitization_method": "ADDED 2026-09-19 for Mission Bay's third real-buildings pass (remaining uncovered footprints inside the official Mission Bay North/South redevelopment-area boundary): Mission Walk Condos, a residential condominium building at 330 Berry St. Its DataSF Building Footprints outline (mblr SF8704278) originally overlapped the already-committed Arterra building (300 Berry St, mission_bay_arterra.geojson) by 712 sq m -- check_geometry_quality.py --strict correctly flagged this as two approximate blocks at the same site overlapping. Trimmed to the geometric difference against Arterra's committed polygon (kept the larger resulting piece) rather than leaving the overlap or guessing a boundary: the two buildings evidently share a party wall/adjacent footprint in the LIDAR source, and this is the non-overlapping remainder, not necessarily this building's true full outline.",
+        "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8704278), cross-referenced by position against an OpenStreetMap building/address point (way 56656119) for the name and street address, but trimmed against the adjacent, already-committed Arterra footprint to remove a 712 sq m overlap (see digitization_method). The trimmed shape may understate this building's true footprint along the shared edge with Arterra; not a hand trace or plan estimate otherwise.",
+        "notes": "This footprint's east edge originally overlapped the already-tracked Arterra building (300 Berry St) in DataSF's own footprint layer -- the two buildings sit immediately adjacent/share a party wall. Trimmed to the non-overlapping remainder rather than guessed; a future pass could re-verify the true shared boundary against a site plan or higher-resolution imagery. Opening year and unit count not confirmed.",
+        "source_doc_urls": [
+          "https://www.apartmenthomeliving.com/apartment-finder/Mission-Walk-Condos-San-Francisco-CA-94158-18289912",
+          "https://www.openstreetmap.org/way/56656119"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.3964448,
+              37.773457
+            ],
+            [
+              -122.3964354,
+              37.773449
+            ],
+            [
+              -122.3964526,
+              37.7734331
+            ],
+            [
+              -122.3964738,
+              37.7734485
+            ],
+            [
+              -122.3964969,
+              37.7734307
+            ],
+            [
+              -122.3964858,
+              37.7734219
+            ],
+            [
+              -122.3964858,
+              37.7734218
+            ],
+            [
+              -122.3967606,
+              37.773204
+            ],
+            [
+              -122.3969047,
+              37.7733184
+            ],
+            [
+              -122.3969047,
+              37.7733185
+            ],
+            [
+              -122.3969035,
+              37.7733194
+            ],
+            [
+              -122.3969089,
+              37.7733236
+            ],
+            [
+              -122.3969117,
+              37.7733258
+            ],
+            [
+              -122.3965146,
+              37.7736484
+            ],
+            [
+              -122.3964891,
+              37.7736317
+            ],
+            [
+              -122.3964863,
+              37.7736339
+            ],
+            [
+              -122.3964829,
+              37.7736312
+            ],
+            [
+              -122.3963542,
+              37.7735289
+            ],
+            [
+              -122.3964448,
+              37.773457
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "China Basin Park",
+        "site": "Pier 50 / Mission Rock",
+        "status": "complete",
+        "use": "park",
+        "geometry_type": "real",
+        "digitized_from": "DataSF Parcels (acdm-wktn), lot 8719A005 (recorded 2020-06-12, mapped 2021-04-13, active), minus the lobe the plan's Block K occupies; cross-checked against OpenStreetMap way 27656676 (leisure=park, name=China Basin Park) and Mission Rock Design Controls Figures 1.1 (p.10) and 3.2.1 (p.47).",
+        "digitization_method": "ADDED 2026-09-17. China Basin Park (the Design Controls' name; 'Mission Rock Park' in the 2012 proposal) opened April 2024 with Phase 1 (sfyimby.com, 2024-04-26). Its real Assessor lot is 8719A005: 18,975 m2 / 4.69 ac, created when Seawall Lot 337 was subdivided in 2020. That lot still includes a 139 x 143 ft lobe south of the park's recorded south line, between the Bridgeview paseo lot 8719A007 and the TAFB lot 8719A003, which is exactly Block K's site (the Figure 6.2 trace of K lands on the lobe's four corners within 0.7-1.3 m; see mission_rock_block_k.geojson) and reads as paved staging on satellite imagery, not park. The lot has not been split, so this feature is the recorded lot geometry (223 vertices, simplified to 2e-7 deg / ~2 cm) minus that lobe, cut exactly along the lobe's recorded north line so the park and Block K touch with no gap; a 99 m2 sliver left along the paseo lot line by the cut was dropped. Area 186,359 sf (4.28 ac) vs 204,246 sf for the whole lot; the Design Controls and Phase 1 submittal describe the park as ~5 acres, the 2012 parcel table as 5.12 ac including Block K's frontage. OpenStreetMap's park polygon (way 27656676, 19,480 m2) has IoU 0.76 with the whole lot and also includes the K lobe; the recorded lot is used as the higher-authority boundary, per the definition of done. Routed through approximate_projects.csv rather than status.csv (like Crane Cove Park and the Pier 70 building footprints) only because the K lobe had to be carved out; if the Assessor splits Block K off, replace this file with a status.csv row on the park's new lot.",
+        "accuracy_caveat": "REAL lot geometry (DataSF Assessor lot 8719A005) with one documented exclusion: the ~1,660 m2 Block K lobe, cut along the lot's own recorded vertices. High confidence on the boundary; the K cut is the only edited edge.",
+        "why_no_real_parcel": "The park's lot 8719A005 exists and is active, but it still contains the unbuilt Block K's land; joining status.csv to it would draw the park over a planned block.",
+        "regulatory_context": "Dedicated public open space, Design Controls Section 3.2: three programme 'rooms' (Plaza, Play Area, Great Lawn) linked by a Waterfront Promenade carrying the Bay Trail / Blue Greenway; Public Trust use; a Park Promenade at least 24 ft wide in front of Blocks A, G and K.",
+        "notes": "Opened April 2024 with Phase 1. Real Assessor lot, less the planned Block K lobe.",
+        "images": [],
+        "source_doc_urls": [
+          "https://sfyimby.com/2024/04/mision-rock-opens-waterfront-park-starts-leasing-for-verde-san-francisco.html",
+          "https://www.sfport.com/sites/default/files/2025-07/Mission%20Rock%20Design%20Controls%204.24.18_FINAL_Reduced%20File.pdf"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.3897821,
+              37.7765481
+            ],
+            [
+              -122.3897975,
+              37.7765675
+            ],
+            [
+              -122.3897877,
+              37.7765742
+            ],
+            [
+              -122.3897755,
+              37.7765816
+            ],
+            [
+              -122.3897626,
+              37.7765884
+            ],
+            [
+              -122.3897493,
+              37.7765945
+            ],
+            [
+              -122.3897354,
+              37.7765999
+            ],
+            [
+              -122.3897212,
+              37.7766046
+            ],
+            [
+              -122.3897066,
+              37.7766086
+            ],
+            [
+              -122.3896917,
+              37.7766118
+            ],
+            [
+              -122.3896766,
+              37.7766142
+            ],
+            [
+              -122.3896613,
+              37.7766158
+            ],
+            [
+              -122.3896459,
+              37.7766167
+            ],
+            [
+              -122.3896305,
+              37.7766168
+            ],
+            [
+              -122.3877011,
+              37.776731
+            ],
+            [
+              -122.3876782,
+              37.7767366
+            ],
+            [
+              -122.3876577,
+              37.7767404
+            ],
+            [
+              -122.387637,
+              37.7767432
+            ],
+            [
+              -122.3876161,
+              37.7767449
+            ],
+            [
+              -122.3875951,
+              37.7767455
+            ],
+            [
+              -122.3875711,
+              37.7767449
+            ],
+            [
+              -122.3875502,
+              37.7767432
+            ],
+            [
+              -122.3875265,
+              37.77674
+            ],
+            [
+              -122.3875119,
+              37.7767372
+            ],
+            [
+              -122.3875003,
+              37.7767347
+            ],
+            [
+              -122.3874861,
+              37.776731
+            ],
+            [
+              -122.3874748,
+              37.7767277
+            ],
+            [
+              -122.3874609,
+              37.7767232
+            ],
+            [
+              -122.3874501,
+              37.7767191
+            ],
+            [
+              -122.3874367,
+              37.7767136
+            ],
+            [
+              -122.3874237,
+              37.7767077
+            ],
+            [
+              -122.3874111,
+              37.7767013
+            ],
+            [
+              -122.3873988,
+              37.7766944
+            ],
+            [
+              -122.387387,
+              37.7766871
+            ],
+            [
+              -122.3873778,
+              37.7766809
+            ],
+            [
+              -122.3873668,
+              37.7766728
+            ],
+            [
+              -122.3873562,
+              37.7766644
+            ],
+            [
+              -122.3873461,
+              37.7766556
+            ],
+            [
+              -122.3873385,
+              37.7766482
+            ],
+            [
+              -122.3872662,
+              37.7763194
+            ],
+            [
+              -122.3871044,
+              37.7763244
+            ],
+            [
+              -122.3870847,
+              37.7761065
+            ],
+            [
+              -122.3873885,
+              37.7760717
+            ],
+            [
+              -122.3873675,
+              37.7758516
+            ],
+            [
+              -122.3876271,
+              37.7758813
+            ],
+            [
+              -122.3876271,
+              37.775881
+            ],
+            [
+              -122.3881156,
+              37.7759371
+            ],
+            [
+              -122.3898245,
+              37.7761323
+            ],
+            [
+              -122.3898607,
+              37.7765111
+            ],
+            [
+              -122.3897821,
+              37.7765481
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-19",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "mission_bay_avalon_phase_i",
+  "slug": "avalon-at-mission-bay-i",
+  "name": "Avalon at Mission Bay I",
+  "permalink": "https://pierandpoint.org/parcels/avalon-at-mission-bay-i/",
+  "api": "https://pierandpoint.org/api/v1/records/avalon-at-mission-bay-i.json",
+  "names": [
+   "Avalon at Mission Bay I"
+  ],
+  "site": {
+   "slug": "mission-bay",
+   "name": "Mission Bay",
+   "short": "Mission Bay",
+   "url": "https://pierandpoint.org/sites/mission-bay/"
+  },
+  "status": "complete",
+  "status_label": "Complete",
+  "use": "residential",
+  "address": null,
+  "summary": null,
+  "summary_sources": [],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same real-geometry-without-a-single-parcel pattern already used for several Pier 70 buildings (DataSF Building Footprints) and for Mission Bay's own real park polygons.",
+    "digitized_from": "OpenStreetMap (way 945538326, 255 King St)"
+   }
+  },
+  "centroid": {
+   "lon": -122.393173,
+   "lat": 37.776504
+  },
+  "facts": [],
+  "costs": [],
+  "milestones": [
+   {
+    "date": "2003-06",
+    "date_label": "~2003",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Avalon at Mission Bay I (255 King St) completed",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "title": "arquitectonica.com"
+     }
+    ],
+    "source": "arquitectonica.com",
+    "origin": "csv",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_avalon_phase_i",
+     "slug": "avalon-at-mission-bay-i",
+     "name": "Avalon at Mission Bay I",
+     "permalink": "https://pierandpoint.org/parcels/avalon-at-mission-bay-i/",
+     "api": "https://pierandpoint.org/api/v1/records/avalon-at-mission-bay-i.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
+  "changes": [],
+  "images": [],
+  "open_questions": [],
+  "sources": [
+   {
+    "id": null,
+    "title": "openstreetmap.org/way/945538326",
+    "url": "https://www.openstreetmap.org/way/945538326"
+   },
+   {
+    "id": null,
+    "title": "arquitectonica.com/architecture/project/avalon-mission-bay",
+    "url": "https://arquitectonica.com/architecture/project/avalon-mission-bay/"
+   }
+  ],
+  "notes": "First of three AvalonBay phases along King St; a companion OSM landuse way (867565682) covers the same site but the building way used here is the actual footprint.",
+  "has_record_file": false,
+  "last_verified": null,
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.3932098,
+      37.7766685
+     ],
+     [
+      -122.3928519,
+      37.7769472
+     ],
+     [
+      -122.3928325,
+      37.7769316
+     ],
+     [
+      -122.3928079,
+      37.7769508
+     ],
+     [
+      -122.3924295,
+      37.7766463
+     ],
+     [
+      -122.3932816,
+      37.7759846
+     ],
+     [
+      -122.393397,
+      37.7760774
+     ],
+     [
+      -122.3933362,
+      37.7761245
+     ],
+     [
+      -122.3934309,
+      37.7762008
+     ],
+     [
+      -122.3934871,
+      37.7761573
+     ],
+     [
+      -122.3936757,
+      37.7763094
+     ],
+     [
+      -122.3932714,
+      37.7766226
+     ],
+     [
+      -122.3932428,
+      37.7765995
+     ],
+     [
+      -122.393218,
+      37.7765657
+     ],
+     [
+      -122.3932186,
+      37.7765284
+     ],
+     [
+      -122.3931237,
+      37.7764571
+     ],
+     [
+      -122.3930939,
+      37.7765194
+     ],
+     [
+      -122.3931642,
+      37.7766217
+     ],
+     [
+      -122.3932098,
+      37.7766685
+     ]
+    ]
+   ]
+  }
+ }
+}

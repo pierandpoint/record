@@ -1,0 +1,66 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Crane Cove Park",
+        "site": "Pier 70",
+        "status": "complete",
+        "use": "park",
+        "geometry_type": "real",
+        "digitized_from": "OpenStreetMap (way 853562207, leisure=park, operator=Port of San Francisco, wikidata=Q108550863) -- a real, community-surveyed park boundary, not a diagram trace.",
+        "digitization_method": "ADDED 2026-09-17 (user-prompted site-completeness check): while confirming this map covers the full extent of the Pier 70 D4D, found that Figure 6.4.2 (the diagram this whole Pier 70 layer is built from) only depicts Brookfield's 28-acre leased parcel -- one of four components of the Port's 69-acre Pier 70 Preferred Master Plan (the others being Orton Development's ~5-acre historic core, already fully covered by this project's Building 101/102/104/113-116/2/12/14/21 features; Crane Cove Park itself, ~8 acres; and BAE Systems' ~28-acre active ship-repair yard/dry docks, left out of this map as continuing industrial use with no development status to track, the same reasoning already applied to Potrero's PG&E Switchyard). Crane Cove Park was never on Figure 6.4.2 at all since it's a separate, Port-led public capital project (funded by 2008/2012 Parks Bonds + grants, opened 2020) rather than part of Brookfield's D4D. Fetched its real boundary from OpenStreetMap (Overpass API, name~'Crane Cove', tagged leisure=park / operator=Port of San Francisco / wikidata=Q108550863 -- confirms this is the right feature, not a guess) rather than hand-tracing or estimating a bounding box. Real, closed-ring polygon, 34 vertices, ~6.26 acres (OSM's own traced boundary; public sources cite 7-8 acres for the overall park including areas like the boat launch/beach this specific way may not fully enclose -- treating the smaller OSM figure as what's confirmed rather than inflating to match the citation).",
+        "accuracy_caveat": "HIGH CONFIDENCE -- real, community-surveyed OSM polygon (not a hand trace or estimate), independently confirmed via its own leisure=park/operator/wikidata tags. Its area (~6.26 acres) is somewhat smaller than the ~7-8 acres commonly cited for the park in press/Port sources -- likely because this specific traced way covers the core landscaped park and not every associated feature (e.g. the boat launch apron or beach edge); not adjusted to match the citation since the citation isn't itself a boundary.",
+        "why_no_real_parcel": "Port-owned public open space with no subdivided Assessor parcel of its own.",
+        "regulatory_context": "Delivered under the Port of San Francisco's Pier 70 Preferred Master Plan (2010) as the public-open-space component of the overall 69-acre Pier 70 site, distinct from and adjacent to Brookfield's 28-acre D4D redevelopment parcel this project's other Pier 70 features are drawn from. Centered on two restored historic shipyard cranes; includes a human-powered boating center and public waterfront/beach access.",
+        "notes": "Added 2026-09-17 after a user question about whether this map covers the full Pier 70 master plan surfaced that Figure 6.4.2 only covers Brookfield's 28 of the site's 69 acres.",
+        "images": [],
+        "source_doc_urls": [
+          "https://www.sfport.com/projects-programs/crane-cove-park-project-information"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-122.3876093, 37.7619188],
+            [-122.3875676, 37.7618912],
+            [-122.3875117, 37.7618818],
+            [-122.3874395, 37.7618824],
+            [-122.387317, 37.7618627],
+            [-122.3872614, 37.761849],
+            [-122.3871783, 37.761825],
+            [-122.3871016, 37.7617998],
+            [-122.3870398, 37.7617739],
+            [-122.3869806, 37.7617443],
+            [-122.3868777, 37.7616903],
+            [-122.3868535, 37.7616785],
+            [-122.386646, 37.7616089],
+            [-122.3867057, 37.7620427],
+            [-122.3867126, 37.7620828],
+            [-122.3867446, 37.7621311],
+            [-122.3861525, 37.7633456],
+            [-122.3864283, 37.7634108],
+            [-122.3863392, 37.7636125],
+            [-122.386715, 37.7639243],
+            [-122.3867223, 37.7640598],
+            [-122.3876775, 37.7640107],
+            [-122.3877857, 37.7640037],
+            [-122.3877797, 37.7639148],
+            [-122.3873338, 37.7639424],
+            [-122.3873174, 37.7637125],
+            [-122.3876162, 37.7636227],
+            [-122.3876164, 37.7636634],
+            [-122.3877392, 37.7636603],
+            [-122.3877299, 37.763582],
+            [-122.3877218, 37.7629717],
+            [-122.3876367, 37.7620199],
+            [-122.3876269, 37.7619544],
+            [-122.3876093, 37.7619188]
+          ]
+        ]
+      }
+    }
+  ]
+}

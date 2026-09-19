@@ -1,0 +1,52 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Potrero Power Station Block 8",
+        "site": "Potrero Power Station",
+        "status": "planned",
+        "use": "residential",
+        "geometry_type": "approximate",
+        "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
+        "digitization_method": "Traced from the Potrero Power Station Design for Development's own Figure 6.2.3 (Building Height Plan, p.245) -- an adopted regulatory diagram with a printed scale bar, north arrow, and real street labels (Illinois St, Georgia St, Louisiana St, Maryland St, Delaware St, 22nd St, Humboldt St, 23rd St), not an illustrative rendering. Georeferenced using 9 real street-intersection control points fetched from OpenStreetMap via this project's own src/fetch_streets.py, fit as a least-squares affine transform (the same transform used for this site's other blocks -- see e.g. Block 11's entry for the full discussion of why real-building anchors were tried and discarded for this particular site). Residual error against the fitted control points is roughly 8-24m. ADDED 2026-09-14: this block was accidentally omitted from the initial pass through Figure 6.2.3 -- Blocks 1, 3, 4, 5, 9, 11, 12, 13, 14, 15, and the remainder of Block 7 were traced and added, but Block 8 (positioned between them, south of Humboldt St) was skipped by oversight. Traced polygon additionally clipped against the real, confirmed Sophie Maxwell and UCSF Block 2 parcels and Prequel Park's approximate geometry, per this project's standard practice. CORRECTED 2026-09-16: user-flagged pattern of blocks encroaching on real streets across the site (Block 3, Block 11, Block 12) led to rebuilding this whole block layer from scratch using proper GCP-based georeferencing (GDAL's gdaltransform with a thin-plate-spline transform, the same technique QGIS's Georeferencer uses) instead of patching individual curbs. Installed GDAL, computed 8 real street-intersection ground control points from OpenStreetMap data (Craig Lane x Maryland St, 22nd St x Maryland/Louisiana St, Humboldt St x Maryland/Delaware/Georgia Lane, 23rd St x Maryland/Georgia Lane), precisely located each in the source diagram (Figure 6.2.3) via programmatic black-pixel border detection cross-checked with visual ruler crops, and fit a TPS transform. Re-traced this block's own corner pixels the same way and ran them through the new transform. This corrected transform disagrees with the original 9-point affine transform by tens of meters in places -- e.g. it revealed the original trace had Blocks 3/4 shifted east into the excavation pit/street area, and Blocks 11/12 roughly 2x too deep -- and the new positions now land within real, distinct site features (buildings, graded lots) visible in satellite imagery rather than straddling roads. Known residual limitation: GCP street positions are centerline-based (matching OSM convention), while a block boundary should sit at the near curb, so any edge close to a GCP street can land a few meters into that street after transformation -- checked for and corrected on this block's street-facing edge(s) where applicable using this project's already-established grid bearing (356.5 deg) and, where available, an independently diagram-measured depth/width. Treat corrected vertex positions as accurate to roughly 10-15m (tighter than the original 8-24m transform, but still not survey-grade). RE-CORRECTED 2026-09-16 (same day, third pass): the independent per-block TPS re-trace (see above) still measured each block's own 4 corners in isolation, which -- despite using the same transform -- left small (3-12m) spurious gaps or misalignments at boundaries the diagram actually draws as shared or tightly-spaced between adjacent blocks (caught after the user pointed out the diagram itself has ~zero wasted space and specifically that the PG&E switchyard polygon sits directly against Block 5 in the diagram, not ~60m away as this dataset had it). Re-measured EVERY block's corners in a single consistent pass using programmatic black-pixel border detection (long contiguous runs = real borders, filtered from text/dimension-arrow strokes by requiring the run to span nearly the full block height/width), cross-validated with fine-pixel-gridline crops, so that shared or consistently-measured boundaries between neighboring blocks now come from the same underlying pixel measurements rather than independent eyeball estimates. Batch-transformed through the same GDAL/TPS fit as before. This pass also corrected several block extents that were measured imprecisely in the prior pass (e.g. Block 5's real stepped/notched south edge, Block 11's true position -- it does NOT sit flush against Block 15, there is real Power Station Park open space between them). GCP CORRECTION 2026-09-16 (fourth pass): user flagged that Block 8/12 should touch Delaware Street with park space between them, and that Block 3/4's shapes looked off -- investigation found the root cause was a single mis-measured ground control point. The 'Delaware St x Humboldt St' GCP used for the whole site's TPS transform had been placed at pixel (2227, 986), which is actually deep inside Building 9's own footprint in the diagram, not on Delaware Street at all -- confirmed by comparing pixel spacing between the three Humboldt-row GCPs (Maryland/Delaware/Georgia Lane): Maryland-to-Georgia-Lane's pixel:real-world ratio implied Delaware should sit at roughly pixel x=2020, not 2227, and a direct color-transition scan at y=986 confirmed the real street gap is at x=1994-2035. Corrected the GCP to (2015, 986) (same real-world coordinate, just the right pixel) and re-ran the TPS transform for the whole site. This produced large corrections concentrated exactly where the user's complaint pointed -- Block 4 shifted 33-60m, Block 3's east corners ~28-33m, Block 8's east corners ~29-31m, Block 12's east corners ~26-27m -- while blocks far from the error (5, 15, 7, 11, PG&E) shifted well under 5m, consistent with a localized GCP error rather than a global transform problem.",
+        "accuracy_caveat": "APPROXIMATE -- this block is not yet built and does not correspond to any subdivided Assessor parcel: it currently sits on vacant/graded land within the former power station site (unaddressed in DataSF's Assessor roll). Traced from an adopted regulatory diagram via multi-point real-street georeferencing (see digitization_method), but this diagram is dated Feb 2020 and may not reflect later design changes (as already found for the adjacent UCSF/Sophie Maxwell area). Treat vertex positions as accurate to roughly 10-25m, not survey-grade. Rebuilt 2026-09-16 via GDAL GCP/TPS georeferencing -- see digitization_method. Re-measured 2026-09-16 (third pass) in a single consistent pixel-detection pass across the whole block layout -- see digitization_method. Re-corrected 2026-09-16 (fourth pass) after fixing a mis-measured GCP -- see digitization_method.",
+        "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead.",
+        "regulatory_context": "Figure 6.2.3 shows Block 8 with a split height: 90 ft (base, small corner) / 125 ft / 85 ft across its width -- the D4D's Permitted Uses table confirms residential is permitted here. Foster + Partners-designed residential building per press coverage, warm metallic patina and rhythmic facade modulation facing Power Station Park per some sources; unit count reported inconsistently across sources (249 vs. 339 vs. a separately-cited 355 units in one SF OEWD pipeline-forecast document, est. start Mar 2027-end May 2029, ~$275M) and height reported inconsistently too (140 ft vs. 156 ft in different press articles) -- confirmed as of a Feb 2026 source that construction had not started.",
+        "notes": "Approximate polygon for a real, D4D-adopted block -- see accuracy_caveat.",
+        "images": [],
+        "source_doc_urls": [
+          "https://default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.383351,
+              37.756954
+            ],
+            [
+              -122.3825,
+              37.757005
+            ],
+            [
+              -122.382443,
+              37.756421
+            ],
+            [
+              -122.383291,
+              37.756365
+            ],
+            [
+              -122.383351,
+              37.756954
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

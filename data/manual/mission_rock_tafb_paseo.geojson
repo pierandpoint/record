@@ -1,0 +1,52 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Mission Rock Terry A Francois Boulevard Paseo (Pier 48 entry)",
+        "site": "Pier 50 / Mission Rock",
+        "status": "planned",
+        "use": "park",
+        "geometry_type": "approximate",
+        "digitized_from": "DataSF Assessor lot lines: the north end of the Terry A Francois Boulevard lot 8719A003 between Block K, the Pier 48 lot 8719A001 and the China Basin Park lot 8719A005; named as a paseo in Mission Rock Design Controls Figure 3.1.1 (p.45), Section 4.3 (p.90) and Figure 3.6.1 (p.71).",
+        "digitization_method": "ADDED 2026-09-17 (site-completeness pass against Design Controls Figure 3.1.1, which marks three paseos: Shared Public Way 4.2, Terry A Francois Boulevard 4.3 and Bridgeview Street 4.4). The first two paseos north of Exposition Street were built with Phase 1 and are their own real lots (8719B001 and 8719A007, now status.csv rows). This third one -- the stub of TAFB between Block K and Pier 48 that Figure 3.6.1 draws as a paseo with a vehicular turnaround plaza serving the pier -- has no lot of its own: it is the north tip of the TAFB right-of-way lot 8719A003. The polygon uses that lot's recorded vertices for its west (Block K / park-lot lobe), north (park lot) and east (Pier 48 lot) edges, and closes on the south by extending the north lot line of the Exposition Street lot 8719A010 east to the Pier 48 lot line. Area 7,783 sf. Not registered in verify_block_fill.py (no fill on Figure 6.2). Satellite imagery shows it as the paved road to the Pier 48 gate today.",
+        "accuracy_caveat": "APPROXIMATE but high confidence on three edges (recorded lot lines); the south edge is the Exposition Street lot line extended ~23 m east, which is where the plan's Exposition Street right-of-way ends at TAFB. Planned; today an interim roadway. ANGLE CHECK: check_geometry_quality.py flags a 12.3-12.6 deg corner here (its tolerance is 12 deg). Every vertex of this polygon is a real, recorded DataSF Assessor lot corner (see digitization_method) -- the deviation is the real lot's own shape (Bridgeview Way's paseo lot 8719A007 and the Exposition Street lot 8719A010 meet the park lot 8719A005 at a corner that is not exactly square), not a shear or a misread trace. Accepted; see docs/site-definition-of-done.md.",
+        "why_no_real_parcel": "Part of the Terry A Francois Boulevard right-of-way lot 8719A003 (which also carries the roadway south of here and Channel Wharf); joining status.csv to it would paint the whole boulevard.",
+        "regulatory_context": "Design Controls Section 4.3 / 3.6: the TAFB terminus is a paseo facilitating park and water-oriented access to Pier 48, with a kiosk and picnic area connecting the pier apron to China Basin Park (Figure 3.6.1).",
+        "notes": "Planned paseo at the north end of Terry A Francois Boulevard between Block K and Pier 48; interim roadway today.",
+        "images": [],
+        "source_doc_urls": [
+          "https://www.sfport.com/sites/default/files/2025-07/Mission%20Rock%20Design%20Controls%204.24.18_FINAL_Reduced%20File.pdf"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.387598,
+              37.775572
+            ],
+            [
+              -122.387342,
+              37.7755873
+            ],
+            [
+              -122.387367,
+              37.775852
+            ],
+            [
+              -122.387627,
+              37.775881
+            ],
+            [
+              -122.387598,
+              37.775572
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

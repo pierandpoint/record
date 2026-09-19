@@ -1,0 +1,60 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Louisiana Paseo",
+        "site": "Potrero Power Station",
+        "status": "planned",
+        "use": "park",
+        "geometry_type": "approximate",
+        "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
+        "digitization_method": "NEWLY ADDED 2026-09-16 -- user-flagged that this feature, though already referenced in this dataset's own text (an earlier Block 3 note calls it 'a separate, physically distant open space between Blocks 15 and 7'), was never actually digitized as its own tracked polygon. Figure 6.2.3 labels 'LOUISIANA PASEO' directly as a landscaped pedestrian path running the full north-south length between Block 15 (west) and Blocks 7/11 (east), from Humboldt Street down to 23rd Street, opening into Power Station Park where Block 7 ends. Built here as a 6-vertex polygon using this project's own already-committed, GDAL/TPS-corrected corners for Block 15's east edge and Block 7/Block 11's west edges directly (not independently re-measured), so it shares an exact boundary with all three blocks by construction -- zero gap, zero overlap -- and its south end sits flush with Power Station Park's own west edge (also built from Block 11's same NW corner), so the two connect exactly as the diagram shows.",
+        "accuracy_caveat": "APPROXIMATE -- a simplified straight-sided approximation of a landscaped pedestrian paseo; the diagram does not show this as a simple rectangle (it likely has planting/path detail not captured here). Positional accuracy matches whatever the adjoining Block 15/7/11 files currently carry (see their own accuracy_caveat) since this polygon is built directly from their vertices.",
+        "why_no_real_parcel": "Open space with no subdivided Assessor parcel of its own within the largely unaddressed former power-station site.",
+        "regulatory_context": "A landscaped pedestrian paseo per the D4D's own Figure 6.2.3 label, connecting Humboldt Street to 23rd Street and opening into Power Station Park.",
+        "notes": "Newly added 2026-09-16; previously mentioned only in passing in other blocks' notes, never tracked as its own feature.",
+        "images": [],
+        "source_doc_urls": [
+          "https://default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.384656,
+              37.756883
+            ],
+            [
+              -122.384451,
+              37.756894
+            ],
+            [
+              -122.384389,
+              37.756303
+            ],
+            [
+              -122.384356,
+              37.755971
+            ],
+            [
+              -122.384325,
+              37.755624
+            ],
+            [
+              -122.384534,
+              37.755593
+            ],
+            [
+              -122.384656,
+              37.756883
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

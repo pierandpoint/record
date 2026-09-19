@@ -1,0 +1,52 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Mission Rock Channel Lane",
+        "site": "Pier 50 / Mission Rock",
+        "status": "planned",
+        "use": "park",
+        "geometry_type": "approximate",
+        "digitized_from": "Mission Rock Design Controls, Figure 6.2 (p.151), Figure 3.1.1 - Location Map of Open Spaces (p.45) and Section 3.4 Channel Lane (p.66).",
+        "digitization_method": "ADDED 2026-09-17 (site-completeness pass against Design Controls Figure 3.1.1, which names six open spaces; this one was missing). Channel Lane is the pedestrian open space between Blocks J and I, from Bridgeview Street to Terry A Francois Boulevard, continuing the Channel Street / Mission Rock Square axis to Channel Wharf. Figures 1.1 and 3.1.1 fill exactly the J-to-I gap, so the polygon is Block J's two traced southern corners and Block I's two traced northern corners (both traced through the Figure 6.2 transform described in mission_rock_block_c.geojson: 0.7 m RMS on 16 real lot corners), touching both blocks exactly. Gap 21.8 m = 71 ft, matching Standard 3.4.1 (10 ft active edges along J and I plus a 50 ft maximum plaza). Area 10,272 sf. Not registered in verify_block_fill.py: no fill colour on Figure 6.2; it is derived from the registered J and I traces.",
+        "accuracy_caveat": "APPROXIMATE (planned, unbuilt) on the undivided remainder lot 8719A006; edges are Blocks J's and I's traced edges (~1-3 m) and the TAFB property line / unbuilt Bridgeview Street line.",
+        "why_no_real_parcel": "A real Assessor lot exists under this open space -- 8719A006, the undivided remainder of Seawall Lot 337 recorded 2020-06-12 -- but it has not been subdivided per block, so joining status.csv to it would paint the same ~9-acre parking-lot shape for every unbuilt block. Hand-derived geometry is used instead, with the lot's own lines wherever this open space touches them.",
+        "regulatory_context": "Dedicated open space, Design Controls Section 3.4: a 50 ft maximum plaza with a 12 ft pedestrian throughway, not accessible by vehicles, a protected view corridor from Mission Rock Square to the Bay, connecting across Terry A Francois Boulevard to Channel Wharf.",
+        "notes": "Planned pedestrian lane between Blocks J and I, not yet built (surface parking today).",
+        "images": [],
+        "source_doc_urls": [
+          "https://www.sfport.com/sites/default/files/2025-07/Mission%20Rock%20Design%20Controls%204.24.18_FINAL_Reduced%20File.pdf"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.3880108,
+              37.7747602
+            ],
+            [
+              -122.3875227,
+              37.7747891
+            ],
+            [
+              -122.3875036,
+              37.7745889
+            ],
+            [
+              -122.3879951,
+              37.7745646
+            ],
+            [
+              -122.3880108,
+              37.7747602
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

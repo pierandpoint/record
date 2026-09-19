@@ -1,0 +1,55 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Pier 70 Parcel E3",
+        "site": "Pier 70",
+        "status": "existing",
+        "use": "entertainment",
+        "geometry_type": "approximate",
+        "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
+        "digitization_method": "REDONE 2026-09-14: the previous version of this polygon was traced using a transform fit from 5 street intersections plus Historic Building 12's real footprint as a 6th anchor. A user-flagged visual comparison against satellite imagery showed the resulting blocks were systematically rotated/sheared (~13-14 degrees off, and not even mutually orthogonal) relative to the real street grid -- confirmed by comparing traced block bearings against the real, independently-surveyed Building 14 footprint (DataSF Building Footprints, blklot 4052001), which sits at the real street grid's true orientation (~356/86 degrees, consistent with SF's known ~4-degree grid skew). Root cause: an error in the original corner-correspondence matching, not a diagram-scan distortion. REBUILT using a fresh 6-point affine transform: 5 real street-intersection control points (20th St x Illinois St, 20th St x Michigan St, 21st St x Illinois St, 21st St x Michigan St, 22nd St x Illinois St -- fetched from OpenStreetMap via this project's own src/fetch_streets.py) plus the real, independently-confirmed centroid of Historic Building 12's own Assessor parcel (blklot 4114010) as a 6th, spatially-distant anchor. This fit has a residual error of 1-8m against its own 6 control points (far tighter than the previous transform), AND was validated by checking that it reproduces the correct real-world bearing (independently confirmed via Building 14's footprint) rather than just checking point-position error, which is what let the previous version's shear go undetected. Pixel corners for this block were re-read directly from Figure 6.4.2 with fresh, fine-grained crops. Residual error against the 6 control points is roughly 1-8m; treat vertex positions as accurate to roughly 5-15m given the additional (small) error from reading this specific block's own corners off the diagram. CORRECTED 2026-09-14 (third pass): user-flagged overlap between HDY3/HDY1-2 and between E2/H1 and E3/H2 -- both were transcription errors (HDY1/2's diagonal notch was oversimplified into a plain rectangle that re-overlapped HDY3; E2/E3's bottom edge was misread as the row further south, landing on top of H1/H2). Re-read against the diagram's own gridlines and confirmed zero geometric overlap with the adjacent block this time. CORRECTED 2026-09-16 (Pier 70 systematic feature-by-feature pass): a batch color-region check found this block's committed shape extended roughly 140px/100m too far east versus the diagram's actual fill (into what should be open water/shoreline area). Re-measured programmatically instead of by eye: isolated this legend color (RGB [106,136,169], '70ft Max'), located the real gap at Maryland St separating this block from E2, and extracted a clean rectangular contour (OpenCV) at pixel (1746,1016)-(1979,1233). Converted via the same validated 6-point affine transform. Confirmed zero overlap with E2 or H1/H2; still overlaps Elevation Sky Park by ~2403 m2 (an already-documented, expected overlap given ESP's own low-confidence placement, larger now that this block's own east edge pulled back to its correct, smaller position). MERGED 2026-09-17 (explicit user call): the separate 'Elevation Sky Park -- approximate, low-confidence placement' entry (data/manual/elevation_sky_park.geojson) was a directional-only placeholder (no scaled site plan exists for it anywhere) that overlapped this parcel's own diagram-traced boundary by ~2,411 sq m -- the largest of its three parcel overlaps (also E2 853 sq m, E4 1,137 sq m). After reviewing a rendering (SFGATE article photo of the domes) that corroborated the shoreline-adjacent siting but still had no scale/street references precise enough to confirm parcel-level alignment on its own, the user made the explicit call to treat ESP as occupying this parcel specifically, for mapping purposes, rather than leave it as a separately-plotted overlapping block. use/status changed from the D4D's original 'residential'/'planned' to 'entertainment'/'existing' to reflect ESP as the real, current occupant. The original elevation_sky_park.geojson file is kept for its research/sourcing but excluded from active maps (commented out in approximate_projects.csv) -- see accuracy_caveat for what happens after ESP's lease ends.",
+        "accuracy_caveat": "APPROXIMATE -- this block's boundary is a hand-traced D4D diagram parcel, not a surveyed lot; treat vertex positions as accurate to roughly 5-15m, not survey-grade (see digitization_method for the transform's validation). EXTENDED SOUTH 2026-09-17 (user-flagged): this block's south edge fell ~22m short of the real sidewalk visible in satellite imagery, part of the same local scale error documented on Parcel A/E2 (parcels far from the transform's Illinois/Michigan St anchors land short of their true extent). Extended both south vertices by 22m to reach the sidewalk. Note this is still the D4D diagram's original 'E3' boundary, not a re-survey of ESP's own real tent/dome footprint -- see the ESP-merge note below for that separate uncertainty. CURRENT USE, POST-LEASE FUTURE UNCLEAR (added 2026-09-17): this parcel is being treated as the site of Elevation Sky Park, a real interim entertainment venue confirmed to be under a 5-year lease (see regulatory_context) -- that part is sourced fact. What is NOT known, and should not be assumed, is what happens here after that lease ends: the D4D's original masterplan designates this parcel 70ft-max residential, but that plan was adopted years before ESP's interim lease existed, and no source found ties ESP's lease expiration to an actual scheduled residential construction start, or confirms the D4D's original boundary/use for this specific parcel will still be pursued unchanged by then. Do not read the 'entertainment' use here as a permanent reclassification, or assume 'residential' will automatically resume -- both are open questions. The parcel-level match to ESP itself is also still an approximation: a rendering (SFGATE, Sept 2026) corroborated the general siting (shoreline-adjacent, near the historic warehouse core) but is an unscaled marketing image, not a site plan -- ESP's real footprint may still extend slightly into neighboring E2/E4, as the pre-merge overlap analysis found.",
+        "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of Brookfield's larger, largely unaddressed 28-acre site), but it has not been subdivided per the masterplan's individual named parcels -- this uses hand-traced approximate geometry instead.",
+        "regulatory_context": "D4D-designated use: residential, 70 ft max per Figure 6.4.2 (no construction-start source ever found for that plan). CURRENT REAL USE: Elevation Sky Park (Elevation XR, in partnership with Brookfield Properties), a 165,000 sq ft interim entertainment venue (3 geodesic domes + a pyramid) under a 5-year lease, fully permitted through the Port of San Francisco, opened to the public September 19, 2026 ('Pier Play San Francisco'). Port materials describe it as an 'interim activation on Phase 2/3 sites within Pier 70 development zone' -- confirming it is temporary by design, though not tied to a specific successor project or date.",
+        "notes": "Approximate polygon for a real, D4D-adopted parcel. MERGED 2026-09-17 with the separate Elevation Sky Park entry per explicit user decision -- see digitization_method and accuracy_caveat.",
+        "images": [],
+        "source_doc_urls": [
+          "https://www.sfport.com/media/8123/download?inline=",
+          "https://www.sfport.com/sites/default/files/2025-06/Community%20Engagement%20Deck%20(SHORT)%206.25.25_ESP%20SF%20(1).pdf",
+          "https://www.sfchronicle.com/bayarea/article/entertainment-complex-pier-70-20368547.php",
+          "https://www.businesswire.com/news/home/20260723971049/en/"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.382691,
+              37.7592194
+            ],
+            [
+              -122.381885,
+              37.7592897
+            ],
+            [
+              -122.381844,
+              37.7584792
+            ],
+            [
+              -122.38265,
+              37.7584089
+            ],
+            [
+              -122.382691,
+              37.7592194
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

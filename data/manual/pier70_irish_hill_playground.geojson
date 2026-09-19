@@ -1,0 +1,121 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Irish Hill Playground and Irish Hill Corner Plaza -- combined, approximate",
+        "site": "Pier 70",
+        "status": "planned",
+        "use": "park",
+        "geometry_type": "approximate",
+        "street_clip_exempt": true,
+        "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155); named per Figure 3.4.1 - Overview of Public Spaces (p.52), zones 7 and 8.",
+        "digitization_method": "ADDED 2026-09-17 in response to a user-caught gap: this project's whole open-space network for Pier 70 (Figure 3.4.1, p.52) lists 8 named zones, but only 6 had been traced -- Irish Hill Playground (zone 8, ~2.0 acres per the D4D text, 'an open space adjacent to the existing remnant of Irish Hill') and Irish Hill Corner Plaza (zone 7, no acreage given) were missing entirely. FIRST PASS: traced the green 'Public Open Space' fill (RGB [194,218,106]) directly from Figure 6.4.2's pixels, then clipped it against PKS/HDY3/C1/C2/HDY1-2's own committed geometries -- this ceded roughly 45% of the raw trace back to those neighbors and left an underestimate (~0.68 acres) that didn't visually touch several of the surrounding parcels. SECOND PASS same day: switched to the real, street-polygonized block (src/block_fit.py) bounded by Illinois St and 22nd St, unioned with PKS/HDY3/C1/C2/HDY1-2's own geometries, minus those same 5 parcels -- fixed the touching problem for PKS/HDY3/HDY1-2 but the user caught two remaining defects: it still had small (2.5m and 9.8m) gaps against C1 and C2 (the real street-block polygon's own edges don't line up exactly with C1/C2's independently-traced boundaries), and it incorrectly extended ~13m south of HDY1/2's own south edge (the real block reaches all the way to 22nd St's actual curb, which is slightly further south than HDY1/2's own, separately-traced south edge -- creating a sliver of 'phantom' park space south of a parcel that the diagram shows going straight to 22nd St). THIRD PASS: re-included the original diagram-traced raw contour (see first pass) in the union alongside the real block and the 5 parcels -- since that raw trace independently overlapped C1 by 1,142 sq m and C2 by 74 sq m, unioning it in extends the combined shape properly into contact with both (0m gap, confirmed) without the crude 'buffer everything outward' approach tried and rejected first (which fixed the C1/C2 gap but ballooned the total area to 3.3+ acres by reaching past C1/C2 in directions that had nothing to do with Irish Hill). Then explicitly clipped the whole result to never extend south of HDY1/2's own southernmost latitude, fixing the second defect directly rather than hoping the union wouldn't overreach. Also dropped one degenerate near-zero-area sliver piece (9e-6 sq m) left over from the boolean operations. Resulting area ~7,831 sq m (~1.94 acres). FOURTH PASS 2026-09-17 (streets/block-alignment review): PKS and HDY3 were both re-traced this same pass after a confirmed pixel-resolution bug moved them (see those files' digitization_method) -- HDY3 shifted to stay attached, but PKS moved further away, reopening a ~23m gap between this feature and PKS. The real, street-polygonized block (from the third pass) fell just 2.6m short of the newly-corrected PKS on its own -- a small, plausible real gap between the block-polygonization tool's edge and PKS's own diagram-traced edge, not the ~23m the raw union produced -- so the block polygon (only, not the parcels) was buffered outward by 6m before unioning, closing most of it; a residual 1.26m gap remains against PKS specifically, accepted as within this project's already-documented 5-15m trace precision rather than chased further with more buffering (which was tried at 15m earlier in this file's history and caused an unrelated overreach). Re-verified 0m distance / 0 overlap against HDY3, C1, C2, and HDY1/2, and 0 overlap with PKN and the 20th Street Plaza. Dropped a new degenerate sliver piece (~12 sq m) from this pass's boolean ops. Resulting area ~10,338 sq m (~2.55 acres) -- larger than the D4D's ~2.0-acre citation, mostly from the corrected PKS/HDY3 positions genuinely opening up more real space here than the earlier (buggy, too-far-south) PKS/HDY3 traces implied; not re-shrunk to hit the citation, since the citation was never used as a target, only a plausibility check. FIFTH PASS 2026-09-17 (REPLACED, user-flagged 'Irish Hill Playground seems misplaced'): the block_fit/union approach above was abandoned entirely. Looking at the actual diagram again, this green area is not just 'whatever real block Irish Hill roughly sits near' -- Figure 6.4.2 draws its exact boundary directly, including the hill's own contour-line hatching. Re-traced it the same way Waterfront Open Space was traced: isolated the 'Public Open Space' fill color (RGB [194,218,106]) in a crop covering the PKS/HDY3/C1/C2/HDY1-2 area, morphological close+open to bridge hatching/text gaps, OpenCV contour extraction (simplified to 15 vertices), converted via the validated 6-point affine transform. This raw trace overlapped HDY3/HDY1-2/C1/C2 by small amounts (each block's own black border stroke sits a couple pixels inside where the flat green fill visually ends), so it was clipped via shapely difference() against all four of those committed geometries -- same pattern as Waterfront Open Space's own clip against E1/E4/E3/H2. While investigating the C1 overlap specifically, found C1 itself carried the same 2376x1836-vs-2200x1700 resolution-mismatch bug already fixed on PKN/PKS/HDY3 (see pier70_c1.geojson's digitization_method) -- its true south edge is ~26m further north than previously recorded, which had been silently eating into this exact area. Fixed C1 first, then re-ran this clip. Result: 0m gap/overlap against HDY3, HDY1/2, and C2; 0.9m gap against the corrected C1 (within normal trace precision); the ~23m distance to PKS is NOT a gap to close -- the diagram shows PKS separated from this open space by the full width of HDY3, they were never meant to touch. This new trace does NOT surround HDY1/2 (no interior hole) -- the diagram simply doesn't show Irish Hill wrapping around it; the previous approach's 'surrounds on 3 sides' shape was an artifact of the block-fit/union method, not something Figure 6.4.2 actually draws. Area ~4,862 sq m (~1.20 acres), smaller than the D4D's ~2.0-acre citation -- as with the citation-vs-trace gaps already documented elsewhere in this project (e.g. Mission Rock Square), the citation is treated as a plausibility check, not a target; matching what the diagram itself draws, and touching real neighboring parcels correctly, takes priority. RE-CLIPPED 2026-09-17 (same day): C1 itself was found to be significantly mispositioned (overlapping the real 21st St by over 100m of its length -- see pier70_c1.geojson) and was moved south by ~28-31m to ground-truth against the real street. Re-ran this file's own clip against C1's corrected position; area dropped further to ~3,249 sq m (~0.80 acres). Confirmed 0m gap/overlap against HDY3, HDY1/2, C1, and C2. EXEMPTED FROM STREET CLIPPING 2026-09-17 (user-flagged: shape looked disproportionate/weird, 'as if leaving room for an expansion of Michigan street south which is nowhere in drawing'): exactly right -- Michigan St's real centerline (CNN 8999000) runs through this feature's own interior (same segment found splitting HDY1/2 into two pieces, see that file's digitization_method), and join_approximate.py's auto-clip was silently cutting this feature into a MultiPolygon around it (raw 3,249 sq m -> processed 2,782 sq m, a real but not obviously 'major' percentage that still produced a visibly wrong disconnected shape). Figure 6.4.2 draws this as one continuous green space with no street through it. Exempted from street clipping for the same reason as HDY1/2: this ambiguous, likely-informal site track (not a real curbed street at this latitude) shouldn't carve up a planned open space the diagram shows as whole. RE-TRACED 2026-09-17 (same day, user-flagged: 'the diagonal between HDY buildings seems disproportionate compared to HDY3'): correct -- overlaying the raw color-mask trace directly on page171.png showed a spurious deep V-shaped spike cutting into the middle of the green area, with no corresponding line or color break in the diagram at all (the green fill is fully continuous there). Root cause: a small tree/planting icon drawn within the green space broke the color mask into two blobs that a too-small morphological closing kernel (13px) bridged incorrectly, inventing a notch neither the diagram nor any real feature shows. Re-extracted with a larger closing kernel (25px, still small relative to the icon-to-real-boundary distance) to bridge the icon gap correctly; the resulting shape follows HDY3's own diagonal edge much more closely, with only a small, shallow, plausible dent remaining (matching a slightly darker hatching band visible in the diagram alongside HDY3's slope, not a hard error). Re-clipped against HDY3/HDY1-2/C1/C2; final area ~3,230 sq m (~0.80 acres, effectively unchanged from before -- this was a shape-accuracy fix, not a size fix). CHECKED 2026-09-17 (user-flagged: 'should fill the space touching HYD3, HYD1/2, C1/C2, and 21st street'): re-verified this feature's touching relationships directly -- confirmed 0m gap/overlap against C1, C2, and HDY3, and a 3.7m gap against HDY1/2 and PKS (both within this project's already-documented 5-15m trace precision, not a real gap to close). The 'and 21st street' part does not hold as a literal requirement: this feature does not (and per the diagram should not) touch 21st St directly -- Parcel C1 (west portion) and Parcel K South (PKS, further west) occupy the FULL frontage between this open space and 21st St along this feature's entire north edge, confirmed by checking that C1's own north edge (ground-truthed against the real 21st St curb line) sits ~26-38m further north than this feature's own northernmost point, with no gap in that C1/PKS wall for this feature to reach through. This matches Figure 6.4.2, which draws Irish Hill Playground one row south of the C1/PKS/21st-St row, not fronting the street itself. RE-TRACED 2026-09-17 (same day, after PKN/PKS/C1/HDY3 were restored to their pure diagram positions -- see those files -- following confirmation that the '21st St ground-truth shift' premise was wrong, a paper-street issue, not a planned relocation): re-did this feature's raw color trace with a taller crop (extending north to y=740 instead of stopping at y=850-890) to check whether the green 'Public Open Space' fill extends further north than previously captured. It does: the fill runs continuously from y=775 (the same row as PKS/C1's restored, true north edge -- i.e. immediately south of '21ST ST (NEW)' itself) down through this site's full extent, confirmed by direct pixel scans at x=560/590/620 (the gap between PKS/HDY3's east edge and C1's west edge) showing the green fill starting at y=775-776 with no other color in between. This matches the user's own read of the diagram: this open space fills the space between PKS, C1, and 21st St. Extracted via the same method as before (isolate RGB [194,218,106], 25px morphological close+open, OpenCV contour), producing a 12-vertex main contour plus a separate ~158 sq m piece near Illinois St/HDY3's SW corner (the Irish Hill Corner Plaza zone). Clipped via shapely difference() against the restored PKS/HDY3/C1 and the separately-corrected C2 (see that file), plus HDY1/2 (unchanged). Result is a MultiPolygon: main piece ~6,299 sq m, corner piece ~158 sq m, total ~6,458 sq m (~1.60 acres). Confirmed within 1-1.6m (normal trace precision) of PKS, HDY3, C1, and C2, and 0.06m of HDY1/2. RE-CLIPPED 2026-09-17 (same day, after C1 was independently clipped against the real Building 113-116 footprint -- see that file -- shrinking it slightly from its pure-diagram size): re-ran this feature's own clip against C1's updated shape. Total area now ~6,458 sq m (effectively unchanged, C1's own change was on its north side, away from this shared boundary). RE-CLIPPED 2026-09-17 (same day, after PKN/PKS/C1/C2/HDY3/HDY1-2 were all repositioned against the corrected, real-anchored '21st St (NEW)' line and HDY3/HDY1-2 were both extended to the real 22nd St curb -- see those files): re-ran this feature's own raw diagram color-trace against all six updated neighbor positions. Total area drops from ~6,458 to ~4,258 sq m (main piece ~4,138 + corner piece ~120), mostly because HDY1/2's own growth (extending to the real 22nd St curb) now consumes much of what was previously open space south of HDY3. Confirmed touching (0-3.5m gaps, within normal trace precision) against HDY3, PKS, C1, C2, and HDY1/2. RE-CLIPPED 2026-09-17 (same pass, found via check_geometry_quality.py): also overlapped the repositioned (grown-south) PKN by 72 sq m along this feature's own north edge -- clipped that too. Final area ~4,186 sq m total (main ~4,066 + corner ~120). RE-CLIPPED 2026-09-17 (same pass as HDY3/HDY1-2/C2/PKN adjustments above): found this feature's own north edge crossed to the NORTH side of the '21st St (NEW)' reference line (data/manual/pier70_21st_street.geojson) by up to ~20m -- the raw diagram trace's own northern extent (unchanged since it was first color-extracted) was never re-clipped after PKS/C1 moved south in the prior round, since it had stopped overlapping them entirely. Added an explicit clip against a half-plane north of the '21st St (NEW)' line, plus re-clipped against the now-touching HDY3/HDY1-2 and the grown PKN. Area now ~3,673 sq m (main ~3,552 + corner ~120). RE-CLIPPED 2026-09-17 (same pass as HDY3/HDY1-2's redesign): with a real gap restored between HDY3 and HDY1/2 (see those files), this feature now fills that corridor down toward 22nd St, reconnecting into a single polygon (the separate ~120 sq m 'corner plaza' sliver from the prior round merges into the main body through this corridor). Area now ~2,615 sq m. Confirmed 0-5m gaps (normal trace precision) against all six neighbors. RE-CLIPPED 2026-09-17 (same day, after HDY3 and HDY1/2 were rebuilt a second time from the user's own hand-drawn sketch -- see those files' digitization_method): re-ran this feature's own clip against both blocks' new shapes. HDY3 now reaches further into this corridor than the previous round (322 sq m new overlap), HDY1/2 pulled back and no longer overlaps this feature at all (0 sq m, was already 0). Area now ~2,293 sq m, still a single Polygon (no fragmentation) and still 0m gap/overlap against C1, C2, PKS, and PKN. REBUILT 2026-09-17 (user-flagged: 'playground should fill the spaces between buildings as shown in drawing'): abandoned the raw-diagram-color-trace-plus-clip approach entirely (it had been producing a string of small, repeatedly-drifting gaps against one neighbor or another every time any neighbor moved, since the trace's own boundary was never actually defined IN TERMS OF those neighbors' edges). Rebuilt this feature directly as the walk around its neighbors' own already-committed boundaries, so it touches all of them by construction rather than by incidental proximity: HDY3's own NE corner (shared with PKS) -> C1's own SW and SE corners (its south edge) -> C2's own NE and NW corners (its north and west edges) -> HDY1/2's own NE corner (v1) and its newly-recomputed north corner (v0, see that file) -> HDY3's own corridor point -> close. Every edge of this polygon except one (the short HDY3_NE-to-C1_SW gap-filler, ~7m, since those two blocks don't quite touch) is now an EXACT shared boundary (0m gap by construction, not by measurement) with a real neighboring parcel. Area drops from ~2,293 to ~1,888 sq m, mostly because HDY1/2's own north corner moved east/north (see that file's own parallel-edge fix), shrinking the gap it leaves for this feature to fill. REBUILT AGAIN 2026-09-17 (same day, user-flagged with a hand-drawn overlay on the rendered map: 'playground should fill the spaces between buildings as shown in drawing... where I see the color missing'): the rebuild above only walked the 'upper gap' (C1/C2 vs the HDY3/HDY1-2 row) and left three real, satellite-visible open areas uncovered, all confirmed against the user's own marked-up screenshot (digitized via the same ORB-feature-matching + marker-calibration pipeline used for HDY3/HDY1-2's own hand sketch): (1) the HDY3-to-HDY1/2 CORRIDOR itself, from the shared top corner down to near 22nd St, was never actually added to this feature after being carved out as a gap between those two blocks -- added it back as the quadrilateral bounded by HDY3's own corridor edge (D to its 22nd-St/SW corner) and HDY1/2's own corridor edge (v0 to v3), which are parallel by construction (see those files). (2) A real, ~15-18m gap between HDY1/2's own east edge (v1-v2) and C2's own west edge (v0-v1/SW) -- the two blocks' side-by-side edges never actually touch -- confirmed geometrically (not just from the user's sketch) by comparing their longitudes directly. Added as the strip between them. (3) A smaller gap on the WEST side of C1 (between C1's own west edge and PKS's own east edge/the HDY3-PKS shared corner), which the user's sketch marked as a distinct notch reaching further north than this feature's previous extent -- taken directly from the user's own traced coordinates (no clean existing-polygon edges define this one), then clipped via shapely difference() against C1 and PKS since the raw traced notch initially overlapped both by a modest amount. All three additions unioned into one shape (still a single simple Polygon, not a MultiPolygon) and simplified to drop redundant near-duplicate vertices from the boolean ops. Re-verified: 0 overlap with HDY1/2, C1, C2, and PKS; a negligible ~1 sq m residual against HDY3 (rounding from the simplify step, not a real encroachment). Area grows from ~1,888 to ~4,236 sq m. CORRECTED 2026-09-17 (same day, user-flagged again: 'you left out part of the space between PKS and C1'): root cause of the shortfall -- the notch above was clipped against C1's RAW, pre-street-clip geometry (data/manual/pier70_c1.geojson), which is NOT what actually renders on the map. C1 itself loses ~15m off its own west edge to a real-street clip in join_approximate.py (documented in that file's own digitization_method as '11.7% of this block's area... in the buffered real-street layer'), so the ACTUAL rendered C1 sits well east of its own raw west edge. Clipping this feature's notch against the raw file made it discard ~466 sq m that is genuinely open (uncolored) on the rendered map, not actually inside C1 at all -- confirmed by pixel-sampling the rendered PNG directly and by comparing against C1's own post-clip geometry in data/processed/approximate_projects.geojson (whose west edge sits at -122.38634 to -122.38637, ~15m east of the raw file's -122.38652). Re-clipped the notch against C1's PROCESSED shape instead (now a negligible ~3 sq m residual) while keeping the PKS clip (PKS isn't meaningfully street-clipped, so its raw and processed shapes already agree). Also swapped this feature's own touching point on C1's south edge from C1's raw SW corner to C1's actual post-clip corner, for the same reason. Re-verified 0 overlap against HDY1/2, C2, PKS, and C1's own processed shape. Area grows from ~4,236 to ~4,734 sq m -- this whole increase is the space that was wrongly ceded to C1's raw (non-rendered) footprint.",
+        "accuracy_caveat": "APPROXIMATE -- traced directly from Figure 6.4.2's own 'Public Open Space' fill color (programmatic color-region contour extraction), then clipped against PKS/HDY3/C1/C2/HDY1-2's own committed geometries. Now extends north to touch '21ST ST (NEW)' directly in the gap between PKS and C1, matching the diagram's own drawn fill. Rendered as a MultiPolygon: a small, genuinely separate piece near Illinois St (the Irish Hill Corner Plaza zone) does not touch the main body in the diagram.",
+        "why_no_real_parcel": "Open space with no subdivided Assessor parcel of its own within Brookfield's largely unaddressed 28-acre site.",
+        "regulatory_context": "Part of the Pier 70 D4D's Open Space Network (Section 3.4): Irish Hill Playground (Section 3.12, ~2.0 acres), described as an open space adjacent to the existing remnant of Irish Hill (Section 3.2) -- a small rock outcrop, the last visible remnant of a larger hill largely quarried away in the early 20th century for shipyard construction. Irish Hill Corner Plaza (Section 3.11) is a separate, smaller named zone at the southwest corner of this same open area, near the Illinois St/22nd St corner.",
+        "notes": "Newly added 2026-09-17 as part of closing a gap the user pointed out: not all of Figure 3.4.1's 8 named open-space zones had been traced onto the map. Geometry redone multiple times the same day -- see digitization_method for the full history, including a full replacement after a user flagged this shape as looking misplaced.",
+        "images": [],
+        "source_doc_urls": [
+          "https://www.sfport.com/media/8123/download?inline="
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.385668351663,
+              37.75898724313272
+            ],
+            [
+              -122.3856296209309,
+              37.75826993313085
+            ],
+            [
+              -122.38574850144536,
+              37.758262792967635
+            ],
+            [
+              -122.38576984358319,
+              37.75888068368881
+            ],
+            [
+              -122.38650020961933,
+              37.758845659047154
+            ],
+            [
+              -122.3870927091811,
+              37.758181973612544
+            ],
+            [
+              -122.38721684202655,
+              37.75830740136974
+            ],
+            [
+              -122.38664254280157,
+              37.7589506997877
+            ],
+            [
+              -122.38656279383227,
+              37.75905489503835
+            ],
+            [
+              -122.38656819159526,
+              37.75905604693485
+            ],
+            [
+              -122.38656904466762,
+              37.75906570327805
+            ],
+            [
+              -122.386554,
+              37.75906638453553
+            ],
+            [
+              -122.386576,
+              37.75929800422032
+            ],
+            [
+              -122.38658951291238,
+              37.75929739334752
+            ],
+            [
+              -122.38659160730182,
+              37.75932110076565
+            ],
+            [
+              -122.38636979172678,
+              37.75930983941325
+            ],
+            [
+              -122.38636156404584,
+              37.759223197841045
+            ],
+            [
+              -122.38636014874906,
+              37.759018903726115
+            ],
+            [
+              -122.38634173552909,
+              37.75901439369802
+            ],
+            [
+              -122.38495070360933,
+              37.75908110051639
+            ],
+            [
+              -122.38494354153194,
+              37.75901018314145
+            ],
+            [
+              -122.385668351663,
+              37.75898724313272
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

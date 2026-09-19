@@ -1,0 +1,52 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "The Stack (Unit 3 smokestack) -- existing structure",
+        "site": "Potrero Power Station",
+        "status": "existing",
+        "use": "entertainment",
+        "geometry_type": "approximate",
+        "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
+        "digitization_method": "Traced from the Potrero Power Station Design for Development's own Figure 6.2.3 (Building Height Plan, p.245), which labels this feature directly (not inferred). Georeferenced using an affine transform fit from 8 control points -- the 4 real-world corners of Block 1 and the 4 real-world corners of Block 12 (both already independently traced and committed elsewhere in this dataset), matched to their pixel positions in this same diagram. Residual error against those 8 control points is roughly 15-24m, consistent with this site's other entries. This is a DIFFERENT (but equivalent-precision) point set than the 9 street-intersection points used for Blocks 1-15 -- both were derived from the same source diagram. CORRECTED 2026-09-16: user-flagged visual check found this marker sitting in the bay, roughly 120m from the real stack -- far beyond this entry's own stated 15-25m transform tolerance, so likely a control-point or corner-reading error rather than ordinary transform noise. Located the real stack directly in satellite imagery instead of trusting the diagram transform: at this zoom/provider, the ~300ft stack is tall enough that Esri's imagery (not true-nadir here) shows it 'leaning' -- a long tapering dark shape roughly 100m long running from its true ground base (against the old Unit 3 power block's surviving equipment/frames) to its own flue opening, which is directly visible as a distinct circular rim at the far end of that lean. Identified the ground base as the point where the lean originates at the equipment cluster, at (-122.3818588, 37.7564147), and centered a new same-size (~20m) marker square there. This is a materially larger correction (~120m) than this dataset's usual 15-25m tolerance band, so don't assume other entries sharing this same 8-point transform have similarly large errors -- this one was caught precisely because the stack is visually unmistakable (a literal hole in the roof of the imagery), which most other traced features are not. RE-CORRECTED 2026-09-16 (same day, second pass): user pushed back on the 'leaning tower/parallax' explanation above with a fresh screenshot pointing directly at the visible feature, identifying it as a fallen/lowered stack lying on the ground -- not an upright tower photographed at an angle. On closer inspection this reading fits the image better: the elongated shape has a consistent width along its whole length, a distinct rounded rim at its far (south) end matching a flue opening now lying at grade, and no consistent shadow offset you'd expect from a true parallax lean. Rebuilt this polygon as a long, narrow quadrilateral tracing the full visible fallen structure (via a precise lon/lat grid overlaid on the same satellite render) from where it emerges near the old equipment cluster (~-122.38196, 37.75608) down to the round open end (~-122.38178, 37.75570) -- roughly 45m long -- rather than a small square at one end. This supersedes the previous pass's 'base point' reasoning; if this is later found to be wrong too, don't re-derive a base/lean theory again without directly consulting current, high-resolution satellite imagery.",
+        "accuracy_caveat": "APPROXIMATE -- Figure 6.2.3 marks this with a single point symbol and the label 'STACK / EXISTING STRUCTURE (~300')', not a footprint outline, but this polygon has been rebuilt 2026-09-16 (second pass) to trace the structure's actual visible footprint in satellite imagery (a fallen/lowered stack lying on the ground) rather than a diagram-derived placeholder. Treat as accurate to roughly 5-10m -- limited mainly by how precisely the lon/lat grid overlay could be read against the image, not by diagram-transform error.",
+        "why_no_real_parcel": "This is an existing structure without its own subdivided Assessor parcel -- it sits within the larger, largely unaddressed former power-station site.",
+        "regulatory_context": "The historic ~300 ft tall smokestack from the power station's Unit 3 generating block, explicitly called out on the D4D's own Figure 6.2.3 as an 'Existing Structure' the plan retains (unlike the rest of the demolished power block) -- a literal, physical landmark left standing amid the redevelopment, sitting within Block 9's mapped development envelope (see potrero_block_9.geojson) at the site's waterfront edge. The Block 9 Building Configurations inset on the same figure shows two alternate massing options labeled 'WITH UNIT 3' and 'WITHOUT UNIT 3' -- suggesting the adjacent Unit 3 power block building (distinct from the Stack itself) may or may not be retained; the diagram does not draw Unit 3's own footprint distinctly enough to trace separately, so it is not mapped here as its own feature.",
+        "notes": "Point/marker feature traced from Figure 6.2.3 -- see accuracy_caveat. Not a true footprint.",
+        "images": [],
+        "source_doc_urls": [
+          "https://default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.382,
+              37.75606
+            ],
+            [
+              -122.38191,
+              37.75609
+            ],
+            [
+              -122.38175,
+              37.7557
+            ],
+            [
+              -122.38183,
+              37.75568
+            ],
+            [
+              -122.382,
+              37.75606
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

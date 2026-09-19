@@ -1,0 +1,56 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Pier 70 Parcel B",
+        "site": "Pier 70",
+        "status": "planned",
+        "use": "commercial",
+        "geometry_type": "approximate",
+        "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
+        "digitization_method": "REDONE 2026-09-14: the previous version of this polygon was traced using a transform fit from 5 street intersections plus Historic Building 12's real footprint as a 6th anchor. A user-flagged visual comparison against satellite imagery showed the resulting blocks were systematically rotated/sheared (~13-14 degrees off, and not even mutually orthogonal) relative to the real street grid -- confirmed by comparing traced block bearings against the real, independently-surveyed Building 14 footprint (DataSF Building Footprints, blklot 4052001), which sits at the real street grid's true orientation (~356/86 degrees, consistent with SF's known ~4-degree grid skew). Root cause: an error in the original corner-correspondence matching, not a diagram-scan distortion. REBUILT using a fresh 6-point affine transform: 5 real street-intersection control points (20th St x Illinois St, 20th St x Michigan St, 21st St x Illinois St, 21st St x Michigan St, 22nd St x Illinois St -- fetched from OpenStreetMap via this project's own src/fetch_streets.py) plus the real, independently-confirmed centroid of Historic Building 12's own Assessor parcel (blklot 4114010) as a 6th, spatially-distant anchor. This fit has a residual error of 1-8m against its own 6 control points (far tighter than the previous transform), AND was validated by checking that it reproduces the correct real-world bearing (independently confirmed via Building 14's footprint) rather than just checking point-position error, which is what let the previous version's shear go undetected. Pixel corners for this block were re-read directly from Figure 6.4.2 with fresh, fine-grained crops. Residual error against the 6 control points is roughly 1-8m; treat vertex positions as accurate to roughly 5-15m given the additional (small) error from reading this specific block's own corners off the diagram. CORRECTED 2026-09-14 (fourth pass): a user-flagged visual check found this block's west edge still sitting on real pavement/curbside parking even after the transform and buffer fixes above. Root-caused: this part of the site (A/B/D/E1-E4 cluster, farthest from this transform's anchor points near Illinois/Michigan St) has a real residual scale/shear error -- confirmed by comparing the pixel gap between Blocks A and B (50px) against the real-world distance the transform produces for it (~17.6m, implying a ~2.84 px/m local scale) versus the transform's own Illinois-Michigan calibration (~3.4 px/m) -- a ~20% local discrepancy. Rather than keep tuning the transform, the west edge was instead measured directly against georeferenced ESRI World Imagery (the same satellite basemap used elsewhere in this project for visual validation): the real paved curb/parking-lot edge was located by eye against a fine lon/lat grid overlaid on the orthophoto, and this edge's coordinate was moved to match it, leaving the rest of the diagram-derived shape unchanged. This is a targeted, ground-truthed fix for this one edge, not a re-validated transform -- other edges of this block still come from the diagram transform and carry that same residual uncertainty. REPLACED 2026-09-14 (ninth pass): user pointed out this block's real boundary is directly visible on the satellite orthophoto as a light-toned perimeter path/access road (with a chain-link fence visible at the NE corner matching the D4D diagram's angled, shoreline-following cut there). Abandoned the diagram-transform derivation entirely for this block and traced the visible path directly against a fine lon/lat grid overlay -- this is ground truth, not a transformed estimate, and should be treated as more reliable than the other Pier 70 blocks that still rely on the diagram transform. CORRECTED 2026-09-14 (tenth pass): the direct satellite trace above had forced axis-aligned (horizontal/vertical) edges, but the real site grid runs ~4 degrees off true north/east (confirmed earlier via Building 14's real surveyed footprint: edges at bearing 86.4/356.5 degrees, not 90/0). Rebuilt the polygon from one anchor corner (SW) using the real bearings 86.4 deg (east-ish edges) and 356.5 deg (north-ish edges) with distances measured off the visible perimeter path, instead of independently-read corners that accidentally forced flat/vertical edges not parallel to the real curb. CORRECTED 2026-09-14 (eleventh pass): the bearing-forced version above made the bottom edge visibly wrong -- direct inspection shows the real bottom edge is nearly flat/horizontal and the west edge nearly vertical, not tilted ~4 deg like Building 14's bearing would imply. Reverted to directly-read, independent corners (west edge read as near-vertical, bottom edge as near-horizontal, NE corner keeping its visible angled fence cut) rather than forcing a uniform site-grid rotation that doesn't hold locally here. CORRECTED 2026-09-14 (twelfth pass): user confirmed the east edge and angled NE corner were correctly aligned to the real road/fence, but the other three edges were not -- rebuilt the whole polygon from those two confirmed-correct points (NE_cut, SE), deriving the site's real bearing directly from the confirmed east edge itself (not from Building 14 or an independent visual read) and constructing the west, top, and bottom edges as exactly parallel/perpendicular to it, using the previously-measured edge lengths for scale only. RE-VERIFIED 2026-09-16 (full Pier 70 geometry restart): cross-checked against a fresh programmatic color-trace of this block's Figure 6.4.2 fill (RGB [128,193,219]) -- the two disagree by more than expected (~53% IoU, diagram-trace area ~35% larger). Unlike most other Pier 70 blocks, this file's own geometry comes from real, ground-truthed satellite tracing (a visible perimeter path and fence line), not the diagram transform, and that satellite trace was validated through twelve iterative correction passes -- see the extensive history above. Rather than discard that validated ground truth for a single, less-scrutinized diagram color-trace, kept this file's existing satellite-based geometry unchanged and flagged the discrepancy honestly rather than silently picking one.",
+        "accuracy_caveat": "APPROXIMATE -- this block is not yet built and does not correspond to any subdivided Assessor parcel: it currently sits on vacant/graded land, surface parking, or an existing industrial building slated for demolition within Brookfield's 28-acre district (unaddressed in DataSF's Assessor roll). Redone 2026-09-14 with a corrected, shear-free transform (see digitization_method) -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects this transform's 1-8m residual error, not a deliberate encroachment.",
+        "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of Brookfield's larger, largely unaddressed 28-acre site), but it has not been subdivided per the masterplan's individual named parcels -- this uses hand-traced approximate geometry instead.",
+        "regulatory_context": "Office (not residential/mixed-use, per Brookfield's own leasing brochure), 90 ft max per Figure 6.4.2 (6-story cap per D4D Section 6.4.2, not the sometimes-cited '6-8 stories'). ~500,000 RSF, Phase 3. No construction-start source found.",
+        "notes": "Approximate polygon for a real, D4D-adopted parcel -- see accuracy_caveat.",
+        "images": [],
+        "source_doc_urls": [
+          "https://www.sfport.com/media/8123/download?inline="
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.3836219,
+              37.7599972
+            ],
+            [
+              -122.3836815,
+              37.7605332
+            ],
+            [
+              -122.3827081,
+              37.7606008
+            ],
+            [
+              -122.38248,
+              37.76053
+            ],
+            [
+              -122.38243,
+              37.76008
+            ],
+            [
+              -122.3836219,
+              37.7599972
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

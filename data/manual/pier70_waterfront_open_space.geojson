@@ -1,0 +1,192 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Pier 70 Waterfront Open Space (Waterfront Terrace / Slipways Commons / Waterfront Promenade / Pier 70 Shoreline) -- combined, approximate",
+        "site": "Pier 70",
+        "status": "planned",
+        "use": "park",
+        "geometry_type": "approximate",
+        "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155); named/numbered per Figure 3.4.1 - Overview of Public Spaces (p.52).",
+        "digitization_method": "ADDED 2026-09-16 (Pier 70 systematic feature-by-feature pass): the D4D names four separate open spaces along this site's waterfront -- Waterfront Terrace (Fig 3.4.1 zone 1, near Parcel B), Slipways Commons (zone 2, the plaza between E1/E4 and E2/E3), Waterfront Promenade (zone 3, the shoreline path), and Pier 70 Shoreline (zone 4, near the point north of E4) -- but Figure 3.4.1 itself (and Figure 6.4.2's own 'Public Open Space' fill, used here) renders all four as ONE continuous, undivided green area with no internal boundary line drawn anywhere between them. Rather than fabricate a specific dividing line that no source shows, this is tracked as one combined feature covering all four. Traced via programmatic pixel-color detection (isolating Figure 6.4.2's 'Public Open Space' fill color, RGB [194,218,106], with morphological closing to bridge small text/icon gaps, then an OpenCV contour extraction simplified to ~35 vertices) rather than hand-clicking, since this is a long, irregularly-shaped (and intentionally jagged/riprap-shore-like, per the diagram's own hatching) strip. Converted via this site's validated 6-point affine transform. Clipped against Parcels E1, E4, E3, and H2's own already-committed geometries via shapely difference() (the raw pixel trace overlapped each by a small amount, and building parcels take priority over this open-space trace) -- this produced a MultiPolygon with one large piece (~3.0 acres) and a smaller ~0.23-acre piece separated by H2. NOT clipped against Building 21 or Elevation Sky Park (this site's own already-acknowledged low-confidence markers) for the same reason those aren't clipped against E1-E4 elsewhere in this dataset. GAP FILLED 2026-09-17 (user-flagged): a ~31m gap existed directly east of Parcel E3 -- this polygon's two pieces each nearly touched E3 near its NW and SW corners (per the earlier clip against E1/E4/E3/H2) but nothing filled the shoreline strip along E3's own east edge in between, even though Figure 6.4.2 shows this whole shoreline band as one continuous Public Open Space area with no break at E3. Added a connecting piece along E3's east edge, bounded on the east by the real Port Jurisdiction boundary (data/raw/port_jurisdiction.geojson, the same authoritative shoreline/bulkhead line already used elsewhere in this project) rather than an invented shoreline shape, and clipped against E3's current (2026-09-17, extended-south) geometry so it doesn't overlap it.",
+        "accuracy_caveat": "APPROXIMATE, AND KNOWINGLY UNSUBDIVIDED -- combines four D4D-named open spaces (Waterfront Terrace, Slipways Commons, Waterfront Promenade, Pier 70 Shoreline) into one polygon because no source found draws a boundary between them; do not treat this as a single named place. Total traced area (~4.0-4.3 acres before/after clipping) is a reasonable match to the D4D's own combined figures (a ~5.0-acre waterfront area covering the first three, plus part of a ~1,300-linear-foot shoreline) but is not a precise subdivision or survey. Programmatically traced from a diagram's fill color, not hand-verified vertex-by-vertex.",
+        "why_no_real_parcel": "Open space with no subdivided Assessor parcel of its own within Brookfield's largely unaddressed 28-acre site.",
+        "regulatory_context": "Part of the Pier 70 D4D's Open Space Network (Section 3) -- specifically Sections 3.5 (Waterfront Terrace), 3.6 (Slipways Commons), 3.7 (Waterfront Promenade), and 3.8 (Pier 70 Shoreline, ~1,300 linear feet). Together with Building 12 Plaza/Market Square, 20th Street Plaza, Irish Hill Corner Plaza, and Irish Hill Playground, these comprise the D4D's total nine acres of public open space (Section 3.4).",
+        "notes": "Newly added 2026-09-16 as part of a systematic pass adding this site's previously-untracked open space -- see accuracy_caveat for why this combines four named D4D spaces into one polygon.",
+        "images": [],
+        "source_doc_urls": [
+          "https://www.sfport.com/media/8123/download?inline="
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.38151,
+              37.7582883
+            ],
+            [
+              -122.3818834,
+              37.7582679
+            ],
+            [
+              -122.3818224,
+              37.7584059
+            ],
+            [
+              -122.3818279,
+              37.7584982
+            ],
+            [
+              -122.38187471233988,
+              37.75929031041109
+            ],
+            [
+              -122.3818754,
+              37.7593019
+            ],
+            [
+              -122.3827022,
+              37.7592298
+            ],
+            [
+              -122.3827009,
+              37.7591589
+            ],
+            [
+              -122.3836699,
+              37.7590801
+            ],
+            [
+              -122.3836931,
+              37.7594275
+            ],
+            [
+              -122.383536,
+              37.7594412
+            ],
+            [
+              -122.3835203,
+              37.7592944
+            ],
+            [
+              -122.3832722,
+              37.7593142
+            ],
+            [
+              -122.3832881,
+              37.7594628
+            ],
+            [
+              -122.3827882,
+              37.7595064
+            ],
+            [
+              -122.3827691,
+              37.7593275
+            ],
+            [
+              -122.3824308,
+              37.759417
+            ],
+            [
+              -122.3824486,
+              37.7595835
+            ],
+            [
+              -122.3823178,
+              37.7596213
+            ],
+            [
+              -122.3823467,
+              37.7600535
+            ],
+            [
+              -122.3821877,
+              37.7600702
+            ],
+            [
+              -122.3822273,
+              37.7606094
+            ],
+            [
+              -122.3826694,
+              37.7610283
+            ],
+            [
+              -122.3824803,
+              37.7609595
+            ],
+            [
+              -122.3822375,
+              37.7611256
+            ],
+            [
+              -122.3820351,
+              37.7608051
+            ],
+            [
+              -122.3819651,
+              37.7598623
+            ],
+            [
+              -122.3814333,
+              37.7598717
+            ],
+            [
+              -122.3814286,
+              37.7598011
+            ],
+            [
+              -122.3815416,
+              37.7597742
+            ],
+            [
+              -122.3814939,
+              37.7595284
+            ],
+            [
+              -122.3813969,
+              37.7594828
+            ],
+            [
+              -122.3815073,
+              37.7594164
+            ],
+            [
+              -122.38149641875717,
+              37.75930329362839
+            ],
+            [
+              -122.3814467,
+              37.759305
+            ],
+            [
+              -122.38144687568196,
+              37.758518998901366
+            ],
+            [
+              -122.3814322,
+              37.7585198
+            ],
+            [
+              -122.3813091,
+              37.7584308
+            ],
+            [
+              -122.3814469,
+              37.7584102
+            ],
+            [
+              -122.38151,
+              37.7582883
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

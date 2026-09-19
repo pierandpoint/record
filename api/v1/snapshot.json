@@ -1,0 +1,49 @@
+{
+ "snapshot_version": "0",
+ "api_version": "0",
+ "date": "2026-09-19",
+ "commit": "d02401aa615fca46615cb2a51db96f6f9a970058",
+ "tree": "clean",
+ "records_sha256": "112b0be7539e624d4cb7afed575b2d6c3f5db680f11d9dccd49fffa64d800b52",
+ "llms_sha256": "3facc268dcfaeba2f70055e0bdc1beb7999895a5de7ecdfbf2d4a574e748736f",
+ "record_count": 133,
+ "files": {
+  "api/v1/records.json": {
+   "sha256": "112b0be7539e624d4cb7afed575b2d6c3f5db680f11d9dccd49fffa64d800b52",
+   "bytes": 2560200
+  },
+  "api/v1/sites.json": {
+   "sha256": "fe7cf1ecc6ae2a7991c474cd6df93b6fdf2f3a54e69e276dbdf6c4b7c36809c9",
+   "bytes": 45364
+  },
+  "api/v1/milestones.json": {
+   "sha256": "deb09f888a406300e69e90130d8659bbdea56c9760fa3fb41e23aa1dc5ae0ea5",
+   "bytes": 1110618
+  },
+  "api/v1/changes.json": {
+   "sha256": "69ea99c7a01ba065a1d63ef82f9cb2f57958cd4787883a8513073fdcd5bb82fb",
+   "bytes": 51480
+  },
+  "api/v1/feed.xml": {
+   "sha256": "a32ed504ef578ecbdb03b69091e3b5c32cb7a4b20c8c010fca34bfe0a33a9923",
+   "bytes": 95623
+  },
+  "api/v1/pierandpoint.sqlite": {
+   "sha256": "ac5682af13a6c3c4200cb662959a29c9c09a2a96c384ce223b0fbd6522d243fe",
+   "bytes": 1593344
+  },
+  "llms.txt": {
+   "sha256": "3facc268dcfaeba2f70055e0bdc1beb7999895a5de7ecdfbf2d4a574e748736f",
+   "bytes": 21965
+  }
+ },
+ "records_url": "https://pierandpoint.org/api/v1/records.json",
+ "public_repo": "https://github.com/pierandpoint/record",
+ "ledger": "https://github.com/pierandpoint/record/blob/main/snapshots.csv",
+ "attestations_dir": "https://github.com/pierandpoint/record/tree/main/attestations",
+ "verify": "https://github.com/pierandpoint/record/blob/main/docs/verify.md",
+ "note": "commit is git HEAD when this build ran, in the private pipeline repository; it is not itself published. records_sha256 and llms_sha256 are the hashes pierandpoint/record's attest workflow signs on publish; reproduce them by rebuilding this commit with PP_TODAY=date.",
+ "signature": null,
+ "recent_publishes": null,
+ "recent_publishes_status": "ledger unavailable at build time"
+}

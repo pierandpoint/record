@@ -1,0 +1,58 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Noonan Building (Building 11) -- approximate",
+        "site": "Pier 70",
+        "status": "being_removed",
+        "use": "mixed",
+        "geometry_type": "approximate",
+        "digitized_from": "SUPERSEDED 2026-09-13 -- previously Pier 70 D4D Figure 1.5.5 (see digitization_method for why that was dropped). Now: Central Waterfront Advisory Group meeting notice, March 19 2014 (sfport.com/sites/default/files/docs/CWAG%20Agenda%2003%2019%2014.pdf), which states \"The Noonan Building (aka Building 11)... Eastern End of 20th Street\" and includes, on page 2, an actual annotated AERIAL PHOTOGRAPH (not an illustrative diagram) marking the building's location with a star relative to real, labeled streets (Illinois St, Third St, 20th St).",
+        "digitization_method": "REPLACED 2026-09-13 -- a user directly observed the previous Figure-1.5.5-derived position (west of Building 12, near Michigan St) was wrong. Re-researching turned up a real dated aerial photo (see digitized_from) placing the Noonan Building at the EASTERN end of 20th St, at the shoreline -- well east of Illinois St and well east of Building 12, i.e. roughly the opposite direction from the old placement. That photo is hand-annotated, not a scaled engineering drawing, so it doesn't support a precise pixel trace; rather than force one, this polygon is now a directional placement in real-world units: a 300ft x 300ft box centered near the real-world eastern terminus of 20th St (lon/lat picked to sit safely on documented real land -- DataSF Building Footprints has real structures as far east as lon -122.382746 at this exact latitude band, so this box's east edge is kept a conservative ~90m short of that to avoid overclaiming precision it doesn't have). This downgrades the confidence tier from \"traced from a scaled drawing\" to \"directional only,\" the same tier as this project's Elevation Sky Park entry -- an honest downgrade, not an upgrade, since the earlier scaled-looking trace turned out to be based on a miscalibrated reading of an ambiguous figure. PRIOR (WRONG) METHOD, kept for the record: traced a \"113-116\"-labeled block on Figure 1.5.5 west of Building 12, using a Building-12-anchored scale of 2.414 ft/px cross-validated against Building 113's documented width -- the cross-validation was real, but the underlying premise (that Figure 1.5.5's block positions could be trusted at this precision) was not; the whole trace, and its direction (west of Building 12), is now understood to be wrong. ROTATED 2026-09-13: block_fit.py's earlier version always produced a true-north-aligned box, which looked visibly wrong once rendered -- this area's real street grid (Maryland/Louisiana/Delaware St etc.) is rotated relative to true north, and an axis-aligned box in a rotated block wastes space and doesn't match its neighbors' orientation. fit_box now rotates the box to match the bearing of the nearest real street segment before fitting/shrinking it. OVERLAP NOTE 2026-09-14 (project-wide overlap audit): Overlaps Pier 70 Parcel A (higher-confidence, diagram-transform-derived) -- expected given this marker's own low-confidence, directional-only placement; not clipped, since doing so would erase the marker entirely rather than usefully correct it. RE-VERIFIED 2026-09-16 (Pier 70 deep pass): checked whether this entry could be upgraded the same way Building 21 was (re-traced directly from D4D Figure 6.4.2's own labeled boxes, using this site's validated 6-point affine transform) -- unlike Building 21 (explicitly labeled '21' in a gray Historic Buildings box on that figure), Figure 6.4.2 has no box labeled 'Noonan' or 'Building 11' anywhere. It DOES still show the '113-116' box (northwest of Building 12, near Michigan St) that the original, since-rejected Figure-1.5.5 trace mistakenly used for Noonan -- its position there (well west of the shoreline, nowhere near the eastern end of 20th St) independently corroborates the 2026-09-13 correction that 113-116 is a different real building, not Noonan. No box on Figure 6.4.2 corresponds to the aerial-photo-sourced 'eastern end of 20th St, at the shoreline' location, so there is nothing more precise to trace this entry to -- kept the existing directional placeholder box unchanged rather than force a guess at which unlabeled shape (if any) is Noonan. IMAGE NOTE 2026-09-18: the hosted photo (noonan_building.jpg) was cropped at the source file to remove a rotated 'Photo Credit' strip baked into the right edge of the scan (docs/briefs/sharing-card-images.md) -- the geometry and every other property here are unchanged; see the images[0].note added alongside this entry.",
+        "accuracy_caveat": "LOW CONFIDENCE, DIRECTIONAL ONLY -- same caution tier as Elevation Sky Park. Building identity and general area (eastern end of 20th St, at the shoreline) are sourced from a real, dated, official document, but from a hand-annotated aerial photo, not a scaled plan -- no address, no cross-street-and-distance, and no confirmed footprint size were found (the 482x374ft size from the old Figure-1.5.5 trace is DISCARDED along with the trace itself, not carried over -- this box's 300x300ft size is a round placeholder, not a measurement). REFIT 2026-09-13 with src/block_fit.py: the box originally straddled 20th St itself (a user screenshot of the rendered map showed it visibly crossing the real street), and a first hand-computed refit (setback from 20th/21st St, computed by hand) turned out to still cross 21st St -- the same class of error, just moved. Rather than hand-compute a third correction, built a repeatable tool: src/fetch_streets.py fetches real OSM street centerlines for the whole project area once (cached to data/raw/streets.geojson), and src/block_fit.py polygonizes them (plus the Port jurisdiction boundary, to close off blocks whose other edge is the shoreline) into real block polygons, then fits a box of the requested size inside the correct block, shrinking only as much as needed and verifying programmatically (not just visually) that it doesn't cross any street. This box's real block (between 20th and 21st St) is narrower (~200ft) than the original 300ft placeholder height, so block_fit.py fit it as 300ft x 180ft (60% scale), not a 300ft square. Treat this as \"somewhere in this shoreline-adjacent area, east of the historic core, between 20th and 21st St,\" not as a real building outline.",
+        "why_no_real_parcel": "No DataSF Assessor parcel record was found that matches the Noonan Building's known real-world location and size -- the nearest real blklot candidates in this vicinity (block 4045) are address-less slivers with sizes inconsistent with a large standalone building, more likely unrelated utility/access lots than a match, so no status.csv row was created.",
+        "regulatory_context": "The Noonan Building (Building 11), a 1941 wood-framed WWII-era shipyard administrative building and, until 2024, home to ~40 working artists, is confirmed as NOT a designated historic resource and is planned for demolition as part of the Pier 70 Mixed-Use District redevelopment (sfchronicle.com/style/article/The-waning-days-of-a-Dogpatch-artists-enclave-12832191.php; cast-sf.org/the-future-of-noonan-preserving-their-legacy-building-a-vision-for-pier-70). Displaced artists are slated for new permanently-affordable studio space elsewhere on-site. Status recorded as being_removed, not complete/under_construction, since the building itself is the subject being removed (not a new structure being built).",
+        "notes": "Approximate polygon for a real, sourced, but structurally-unconfirmed building location -- see accuracy_caveat. EXCLUDED FROM ACTIVE MAPS 2026-09-16 (user decision, commented out in approximate_projects.csv): this project maps each site's future/planned state, and Noonan is an existing building slated for demolition with no distinct D4D parcel of its own standing in for it (its position overlaps Parcel A, suggesting -- not confirmed -- that Parcel A supersedes it; see regulatory_context and accuracy_caveat). Flagged as a candidate for a future 'existing building being demolished' status/treatment rather than being shown as if it persists into the planned future. To restore it to the maps, uncomment its row in approximate_projects.csv.",
+        "images": [
+          {
+            "path": "data/manual/images/noonan_building.jpg",
+            "credit": "Photo Credit: Forest City / Shae Rocco, from Pier 70 Design for Development (Port of San Francisco, adopted planning document) -- captioned 'Wood Siding at Noonan Building'",
+            "note": "Cropped 2026-09-18 to remove a rotated Photo Credit strip baked into the right edge of the D4D scan; the credit above is unchanged and is this image's canonical credit."
+          }
+        ],
+        "source_doc_urls": [
+          "https://www.sfport.com/media/8123/download?inline="
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.38388635712577,
+              37.76001449610541
+            ],
+            [
+              -122.38393839428099,
+              37.76053238278878
+            ],
+            [
+              -122.38459346628225,
+              37.76049124339826
+            ],
+            [
+              -122.38454142912704,
+              37.75997335642686
+            ],
+            [
+              -122.38388635712577,
+              37.76001449610541
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

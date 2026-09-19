@@ -1,0 +1,52 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Elevation Sky Park -- approximate, low-confidence placement",
+        "site": "Pier 70",
+        "status": "under_construction",
+        "use": "entertainment",
+        "geometry_type": "approximate",
+        "digitized_from": "NOT traced from any scaled drawing or plan (none was found -- the Port's own Community Engagement Deck, sfport.com/sites/default/files/2025-06/Community Engagement Deck (SHORT) 6.25.25_ESP SF (1).pdf, has only an unscaled marketing rendering with no visible streets or landmarks). Positioned from a verbal spatial description in SF Chronicle reporting: \"a site between the bay and a historic building that was recently renovated and opened to the public\" and \"adjacent to the entertainment venue is Brookfield's restored historic Building 12\" (sfchronicle.com/bayarea/article/entertainment-complex-pier-70-20368547.php, syndicated via wjhl.com/business/press-releases/cision/20250925LA83022 and others). SIZE CORRECTED 2026-09-13: the same Community Engagement Deck states the real footprint as \"Elevation Sky Park (165K sq. ft. / 200+ parking spaces)\" and \"LOCATION: Interim activation on Phase 2/3 sites within Pier 70 development zone, away from waterfront buffer zone\" -- both missed on first read of that same document.",
+        "digitization_method": "REFIT 2026-09-13 with src/block_fit.py, on top of three prior corrections. (1) The original fix was anchored on a wrong Building 12 position (status.csv had it joined to blklot 4045017, an unrelated residential condo building over 500m away) -- corrected to the real Building 12 (1070 Maryland St, blklot 4114010); see status.csv. (2) The next version placed this box WEST of Building 12 (misreading the Port deck's \"away from waterfront buffer zone\" as \"inland\") -- the user corrected this directly: Elevation Sky Park is EAST of Building 12, between it and the water, confirmed against satellite imagery. (3) That east-side box was a hand-computed rectangle, and a user screenshot showed it still crossing a real street (22nd St) -- the hand-computed setback was not reliable. Replaced hand computation with a repeatable tool: src/fetch_streets.py fetches real OSM street centerlines for the whole project area once (cached to data/raw/streets.geojson), and src/block_fit.py polygonizes them (plus the Port jurisdiction boundary) into real block polygons, then fits a box of the requested size inside the correct one, checked programmatically against every nearby street. This box occupies the northern/larger part of the real block bounded by Maryland St (west) and 21st/22nd St (Building 21 takes the southern part, nearer Building 12); block_fit.py fit it at 84% of the requested 406ft x 406ft (165,000 sqft) size -- ~341ft x 341ft -- since the full size didn't clear 21st St from this position. ROTATED 2026-09-13: block_fit.py's earlier version always produced a true-north-aligned box, which looked visibly wrong once rendered -- this area's real street grid (Maryland/Louisiana/Delaware St etc.) is rotated relative to true north, and an axis-aligned box in a rotated block wastes space and doesn't match its neighbors' orientation. fit_box now rotates the box to match the bearing of the nearest real street segment before fitting/shrinking it. OVERLAP NOTE 2026-09-14 (project-wide overlap audit): Overlaps Pier 70 Parcels E1, E2, E3, and E4 -- expected given this marker's own low-confidence, directional-only placement; not clipped, since doing so would erase most of the marker rather than usefully correct it. RESOLVED (E1 ONLY) 2026-09-16 (Pier 70 systematic feature-by-feature pass): E1's own traced shape was found to be badly wrong (see pier70_e1.geojson's digitization_method) and was re-traced from its own two legend colors -- after that fix, this file's overlap with E1 dropped from 218 m2 to 0 m2. This entry's own placement did not change; the overlap was entirely an artifact of E1's bad shape. Overlaps with E2, E3, and E4 are unaffected and still stand, for the reason already stated above. RE-VERIFIED 2026-09-16 (Pier 70 deep pass): checked whether this entry could be upgraded the same way Building 21 was (re-traced from D4D Figure 6.4.2's own labeled boxes via this site's validated 6-point affine transform) -- not applicable here. Figure 6.4.2 depicts the D4D's own original numbered/lettered development parcels and historic buildings; Elevation Sky Park is a much later interim lease (5-year term, permitted well after the D4D was adopted) with no footprint shown on that or any other D4D figure, consistent with this entry's own digitized_from note that no scaled drawing of it was ever found. No better source surfaced -- kept the existing directional placeholder unchanged. NEW OVERLAP 2026-09-16: Building 21's own re-trace (see that file) moved it into this block's E1 area, creating a new 275 m2 overlap between these two low-confidence placeholders -- expected side effect of both being directional-only placements in the same vicinity, not clipped for the same reason as the existing E1-E4 overlaps.",
+        "accuracy_caveat": "LOW CONFIDENCE, DIRECTIONAL ONLY -- this is a materially weaker approximation than this project's other approximate entries, which have at least some site-plan basis. This one has no drawing at all behind it -- only a verbal \"adjacent to Building 12, between it and the bay\" description and a real total-square-footage figure. This version is fit inside a real, verified block polygon via src/block_fit.py rather than a hand-offset rectangle, and confirmed programmatically not to cross Maryland St, 21st St, or 22nd St, or overlap Building 12 or Building 21. The true site could still be a different shape (165,000 sqft including a large parking lot is unlikely to be a clean square, and this version is ~341ft square, smaller than the real total to clear 21st St) or a different position within this block. Treat position as \"somewhere in this real block, east of Building 12, between it and the shoreline,\" not as a real site boundary.",
+        "why_no_real_parcel": "No DataSF Assessor parcel distinct from Building 12 itself was found immediately east of it toward the shoreline -- the area appears to be un-subdivided/not-yet-platted open space or shoreline promenade land (consistent with the D4D's \"Slipways Commons\" waterfront open-space concept for this part of the site), so there is no candidate blklot to check at all, unlike Noonan/Building 21 where specific (rejected) candidates existed.",
+        "regulatory_context": "Elevation Sky Park (Elevation XR, in partnership with Brookfield Properties) is a real, 165,000 sq ft interim entertainment venue (3 geodesic domes + a pyramid) under a 5-year lease, fully permitted through the Port of San Francisco. It opened to the public September 19, 2026 with the \"Pier Play San Francisco\" debut event -- status recorded as under_construction rather than complete since this record predates confirming the opening event actually occurred as planned. CHECKED 2026-09-13: a secondary source (SF Standard tweet, sourced from a June 2025 article) claimed the venue was \"slated to open in 2026\" without a specific date, and a follow-up research pass surfaced a separate claim that it \"opened early 2026.\" Verified against a Businesswire press release (businesswire.com/news/home/20260723971049/en/) confirming the actual public-opening festival is the September 19, 2026 \"Pier Play San Francisco\" event named above -- the \"early 2026\" claim traces to a pre-delay announcement; installation of the geodesic domes was reportedly pushed back due to tariffs and supply-chain disruption. No change to status needed -- this corroborates, rather than contradicts, the September 19, 2026 date this row was already built on.",
+        "notes": "Approximate square placed by direction/adjacency from prose description, not traced from any drawing -- see accuracy_caveat. EXCLUDED FROM ACTIVE MAPS 2026-09-17 (user decision, commented out in approximate_projects.csv): merged into Pier 70 Parcel E3's own row instead, per the user's explicit call to treat ESP as occupying E3 specifically rather than keep it as a separate, overlapping low-confidence block -- see pier70_e3.geojson's digitization_method and accuracy_caveat (which also covers what is and isn't known about E3's future after ESP's lease ends). This file's own research/sourcing is kept as-is and can be restored by uncommenting its row in approximate_projects.csv.",
+        "images": [],
+        "source_doc_urls": [
+          "https://www.sfport.com/sites/default/files/2025-06/Community%20Engagement%20Deck%20(SHORT)%206.25.25_ESP%20SF%20(1).pdf"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.38201443380562,
+              37.75888540986928
+            ],
+            [
+              -122.38207559560732,
+              37.75976294144081
+            ],
+            [
+              -122.38318556619437,
+              37.759714587807125
+            ],
+            [
+              -122.3831244043927,
+              37.758837055662
+            ],
+            [
+              -122.38201443380562,
+              37.75888540986928
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

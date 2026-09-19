@@ -1,0 +1,69 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "PG&E Switchyard (retained, not part of redevelopment)",
+        "site": "Potrero Power Station",
+        "status": "existing",
+        "use": "commercial",
+        "geometry_type": "approximate",
+        "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
+        "digitization_method": "Figure 6.2.3 itself labels a large blank area west of Illinois Street, outside its own dash-dot 'Project Site Boundary' line, as 'SWITCHYARDS (PG&E)' -- explicitly marking it as PG&E-retained land excluded from the D4D redevelopment (consistent with public reporting that PG&E retains an active electrical switchyard here and it was not included in the site sale). This polygon traces the full blank rectangular area shown on the diagram (bounded by 3rd St, Illinois St, 22nd St, and 23rd St), georeferenced using the same 8-point affine transform used for this site's open-space entries (Block 1 and Block 12 corners; residual error 15-24m). OVERLAP FIX 2026-09-14: Clipped against Block 13 -- resolved a 5225 m2 overlap found in a project-wide overlap audit; Block 13 (a numbered D4D block) takes priority over this switchyard marker's own already-acknowledged low-confidence placement. OVERLAP RE-FIX 2026-09-16: Block 13 was rebuilt via GDAL GCP/TPS georeferencing (see that block's own digitization_method) and its west edge shifted, re-creating a small (~143 m2) overlap with this polygon at Block 13's SW corner. Re-clipped against Block 13's new geometry -- same precedence rule as the 2026-09-14 fix (Block 13, a numbered D4D block, takes priority over this switchyard marker's own already-acknowledged low-confidence placement). Removed 0.24% of this polygon's area. REPOSITIONED 2026-09-16: the user flagged that the D4D diagram shows the switchyards directly adjacent to Block 5 (sharing a boundary, not separated by any street), while this polygon's east edge sat roughly 60m west of Block 5's new TPS-derived position -- a real positioning error, not just a scale issue. Went back to the diagram with precise pixel measurement (programmatic black-pixel border detection): the 'SWITCHYARDS (PG&E)' label and its dash-dot Project Site Boundary actually start at the same north-south line as Humboldt Street (aligned with Block 13's south edge), NOT as far north as 22nd Street as the original digitization_method claimed -- that over-extension northward is also why this polygon kept needing to be re-clipped against Block 13 after every Block 13 geometry update. The diagram's true switchyard boundary is a small notched/stepped shape hugging Block 5's own west and south edges; simplified here to a clean rectangle sharing Block 5's exact west edge (so they genuinely touch, matching the diagram) and bounded north by the Humboldt St line, south by 23rd St, west by Illinois St -- dropping a ~15m-wide, minor notch near the NW corner for simplicity. This also shrinks the polygon from the previous ~13-acre box down to roughly the diagram's true footprint (closer to the ~4.8-acre real switchyard size cited in public reporting -- see below), so it should now double as a materially better area estimate too, though it's still a diagram-shaped placeholder, not a surveyed fenceline. RE-RUN 2026-09-16 (fourth pass) after correcting a mis-measured GCP elsewhere on this site (see Block 8/12's digitization_method) -- this polygon shifted a few meters, well within its already-stated low-confidence tolerance; Block 5 shifted by a similar small amount, so they remain in contact. RESHAPED 2026-09-16 (fifth pass): user pointed out the switchyard should stretch to the corner of 23rd Street and Georgia Lane per the diagram -- re-examining the same pixel crop used for the fourth-pass reposition showed the dash-dot Project Site Boundary does NOT stop at Block 5's own south edge (where the prior pass's simplified rectangle stopped); it continues south along Block 5's east edge all the way to 23rd Street, meaning the switchyard also wraps around Block 5's south side, not just its west side. Rebuilt as a 9-vertex polygon: the north and west edges are unchanged, but it now follows Block 5's own west-then-south boundary (reusing Block 5's already-committed vertices directly, so it shares an exact edge and cannot overlap Block 5) out to Block 5's own SE corner, then drops straight down to 23rd Street, then back west to close. Block 5's SE corner lands within real Georgia Lane's own OSM-measured longitude range, confirming this reaches that corner as the user described. This also happens to bring the polygon's area to ~4.6 acres, very close to the ~4.8-acre real switchyard size cited in public reporting -- a good independent sanity check, though still coincidental rather than a survey match.",
+        "accuracy_caveat": "LOW CONFIDENCE, DIRECTIONAL ONLY -- this is a materially weaker approximation than this site's numbered blocks. Public reporting describes PG&E's retained switchyard as a ~4.8 acre parcel at the corner of 22nd and Illinois; earlier passes of this polygon ranged from ~13 acres down to a simplified ~rectangle -- this reshaped version (see digitization_method) is now ~4.6 acres, close to that figure. The D4D diagram does not further subdivide this area (it is entirely outside the project site boundary, so the D4D had no reason to draw its actual fenceline), so the true switchyard footprint may still differ in detail from this trace. Treat this polygon as marking the correct general block and rough shape (including wrapping around Block 5's south side to 23rd St/Georgia Lane), not the switchyard's real surveyed boundary.",
+        "why_no_real_parcel": "No DataSF Assessor parcel search (by address, by zoning code, or by proximity) turned up a distinctly-shaped, plausibly-switchyard-sized real parcel here -- parcels.geojson's records in this area are either large undifferentiated placeholder shapes (shared across many of this site's D4D blocks, per this dataset's other Potrero entries) or small unrelated lots. Real ownership and the 'not part of the sale' status are well-documented in secondary sources, but a precise Assessor-parcel-level boundary was not found.",
+        "regulatory_context": "PG&E's electrical switchyard, serving the wider grid, at approximately 22nd St and Illinois St. Explicitly NOT part of the Potrero Power Station redevelopment site or its 2020 D4D -- retained by PG&E when the former power plant property was sold for redevelopment. Recorded as status='existing' (a real, active utility use, not something this masterplan touches).",
+        "notes": "Directional placeholder only -- see accuracy_caveat. Do not treat the polygon shape as the switchyard's real fenceline.",
+        "images": [],
+        "source_doc_urls": [
+          "https://default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf",
+          "https://ia.cpuc.ca.gov/environment/info/esa/divest-pge-two/eir/chapters/02-projd.htm"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.387127,
+              37.756686
+            ],
+            [
+              -122.38604,
+              37.756772
+            ],
+            [
+              -122.385963,
+              37.756091
+            ],
+            [
+              -122.385432,
+              37.756128
+            ],
+            [
+              -122.385423,
+              37.756024
+            ],
+            [
+              -122.385118,
+              37.756043
+            ],
+            [
+              -122.385118,
+              37.75545
+            ],
+            [
+              -122.386984,
+              37.75545
+            ],
+            [
+              -122.387127,
+              37.756686
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

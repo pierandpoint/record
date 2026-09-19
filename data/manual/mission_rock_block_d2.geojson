@@ -1,0 +1,60 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Mission Rock Block D2",
+        "site": "Pier 50 / Mission Rock",
+        "status": "planned",
+        "use": "parking",
+        "geometry_type": "approximate",
+        "digitized_from": "Mission Rock Design Controls (Port of San Francisco / Mission Rock Partners, adopted April 24, 2018), Figure 6.2 - Maximum Height Plan (p.151); land use from Figure 1.1 - Land Use Plan (p.10); block corners snapped to the recorded DataSF Assessor lot lines of the 2020 Seawall Lot 337 subdivision where they fall within 3 m. D1/D2 split from Figure 1.1 (p.10) and the Block D standards sheet (Appendix p.190).",
+        "digitization_method": "Traced from the Mission Rock Design Controls' own Figure 6.2 (Maximum Height Plan, p.151) -- an adopted regulatory diagram with a printed scale bar and street grid, not an illustrative rendering. Georeferenced using 5 real street-intersection control points (3rd St x Channel St, 3rd St x Long Bridge St, 3rd St x Mission Rock St, Bridgeview Way x Mission Rock St, Terry A. Francois Blvd x Mission Rock St), fetched from OpenStreetMap via this project's own src/fetch_streets.py and matched to their pixel positions in the diagram, then fit as a least-squares affine transform (never fewer than 5 points spanning the whole site, not just 1-2 nearby anchors). Cross-validated against the diagram's own printed scale bar and against the real, independently-confirmed positions of Verde, The Canyon, Building B, and Visa HQ (Building G) -- all four fell inside their correct named blocks under this transform, which is what caught and fixed an earlier, much worse-fitting 4-point version of this same transform (a block letter read one row off, producing 75m of error) before it was used for anything. Residual error against the 5 control points is roughly 3-13m. RETRACED 2026-09-17 (brief docs/briefs/mission-rock-geometry.md; definition of done in docs/site-definition-of-done.md). (1) SOURCE. This file's source_doc_urls pointed at the March 2012 'Design + Development Revised Proposal' (90 pages, no Figure 6.2) while the text cited the Design Controls, so the original pixel measurements could not be reproduced. Redone from the adopted Mission Rock Design Controls (April 24, 2018, sfport.com), Figure 6.2 - Maximum Height Plan (p.151), rendered ONCE at 300 dpi to data/manual/_reference/mission_rock_dc_p151.png (3300x2550 px, full page). Every pixel measurement below is from that one render. (2) TRANSFORM (one for the whole figure). Since this file was first traced, the Assessor subdivided Seawall Lot 337 (recorded 2020-06-12, mapped 2021-04-13): the four Phase 1 blocks are real lots -- A/The Canyon 8719B002, G/Visa 8719A008, B 8719C003, F/Verde 8719C001 -- whose recorded areas match the plan's block areas within 3%. The figure's drawn corners of A, B, F and G (colour contours, OpenCV) were matched to those 16 real lot corners and a least-squares affine transform fitted: RMS residual 0.67 m, worst corner 1.39 m (n=16); scale 0.2570 m/px (x) and 0.2598 m/px (y), ratio 0.989; axis angle 89.88 deg, i.e. no shear. The figure's own printed 200 ft scale bar measures 239 px on the same render = 0.255 m/px, agreeing within 2%. lon = 2.9127666757282e-06*px + 2.2156884853242e-07*py + (-122.39479060102); lat = 1.6823215817497e-07*px + -2.3273617315092e-06*py + 37.77752553008. (3) VALIDATION on real lines NOT used in the fit: traced C and D west corners fall 0.2-2.4 m from the 3rd Street property line (west edge of the undivided remainder lot 8719A006); D and H south corners 0.1-1.5 m from the Mission Rock Street property line (south edge of 8719A006); J, I and H east corners 1.1-2.8 m from the Terry A Francois Boulevard property line (east edge of 8719A006 / west edge of the TAFB lot 8719A003); the traced Block K corners fall 0.7-1.3 m from the corners of the lobe of the park lot 8719A005 that K occupies. Bearing check, the shear test that Pier 70's point check missed: real 3rd St property line 355.6 deg vs figure 355.3; real TAFB property line 355.7 vs figure 356.1; DataSF Exposition Street (Toni Stone Crossing) centerline 85.7 deg vs the figure's Exposition axis 84.9 deg, with 0.2 m offset at mid-block. (4) METHOD. Each block's fill (base colour plus hatched upper-building zone) was isolated by colour saturation inside a pixel window, its outer contour extracted and simplified (approxPolyDP, 1% of perimeter), transformed, and then any vertex within 3 m of a recorded lot line of 8719A006, 8719A003, 8719A005, 8719A007, 8719A009, 8719A010, 8719C001, 8719C002, 8719C004 or 8719D001 was snapped onto that line, so street frontages and shared edges are the Assessor's lines rather than the figure's 1-3 m of contour noise. Cross-checked against an independent trace of the same block on Figure 1.1 (p.10) through its own transform fitted the same way (RMS 1.1 m). (5) CHECKER. Registered in src/verify_block_fill.py under site 'mission_rock' (pixel window and colour rule recorded there); CI prints the IoU against the figure's own fill on every run. D2 SPECIFICS: D2 = Block D minus D1 (see mission_rock_block_d1.geojson for how the L-shaped D1 zone was read); area 73,176 sf, 6 vertices; south edge on the Mission Rock Street property line, north edge against unbuilt Long Bridge Street, east edge against unbuilt Bridgeview Street. Cross-check: IoU 0.90 against the grey Structured Parking fill traced independently on Figure 1.1.",
+        "accuracy_caveat": "APPROXIMATE (planned, unbuilt block): no Assessor lot of its own yet. It sits on lot 8719A006, the ~37,400 m2 undivided remainder of Seawall Lot 337 that also holds Blocks C, D, E, H, I, J, Mission Rock Square, Channel Lane and the unbuilt internal streets. Traced 2026-09-17 from the adopted Design Controls' Figure 6.2 through a transform with 0.7 m RMS residual on 16 real lot corners, with vertices snapped to recorded lot lines where the figure draws the block against one (see digitization_method): treat street-facing and lot-line edges as accurate to ~1 m and interior edges (against unbuilt streets and open spaces) to ~1-3 m. The block's shape is the Design Controls' block, not a building footprint; a building may sit back from these lines. The D1/D2 line is a land-use zone boundary inside one Design Controls block, not a lot line; the Appendix marks Block D's parcel dimensions as illustrative.",
+        "why_no_real_parcel": "A real Assessor lot exists under this block -- 8719A006, the undivided remainder of Seawall Lot 337 recorded 2020-06-12 -- but it has not been subdivided per block, so joining status.csv to it would paint the same ~9-acre parking-lot shape for every unbuilt block. Hand-derived geometry is used instead, with the lot's own lines wherever this block touches them.",
+        "regulatory_context": "Structured Parking per the D4D's Land Use Plan -- a flat 100 ft max height (not a 90-110 ft range as sometimes described), with no upper/tower zone. Occupies the larger, eastern portion of the combined Block D parcel (D1 is the smaller residential tower at the 3rd St corner; see that entry). A 2016 EIR cites roughly 2,300 parking spaces project-wide across two garages (not confirmed as D2 alone). The Central District Energy System was tentatively planned for Parcel A, not Block D, per a 2019 Mission Rock Partners submittal to the Port -- despite some secondary summaries placing it here.",
+        "notes": "Approximate polygon for a real, D4D-adopted future block -- not yet built, no distinct real parcel yet. See accuracy_caveat.",
+        "images": [],
+        "source_doc_urls": [
+          "https://www.sfport.com/sites/default/files/2025-07/Mission%20Rock%20Design%20Controls%204.24.18_FINAL_Reduced%20File.pdf"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.3881219,
+              37.7737429
+            ],
+            [
+              -122.3880709,
+              37.7731149
+            ],
+            [
+              -122.3890654,
+              37.7730551
+            ],
+            [
+              -122.3891026,
+              37.7734464
+            ],
+            [
+              -122.3893536,
+              37.7734319
+            ],
+            [
+              -122.3893873,
+              37.7736715
+            ],
+            [
+              -122.3881219,
+              37.7737429
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

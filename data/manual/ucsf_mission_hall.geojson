@@ -1,0 +1,67 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "project_name": "Mission Hall (Global Health & Clinical Sciences Building)",
+    "site": "Mission Bay South",
+    "status": "complete",
+    "use": "institutional",
+    "geometry_type": "real",
+    "digitized_from": "OpenStreetMap (way 255652151, official_name=Global Health & Clinical Sciences Building, 500 16th St)",
+    "digitization_method": "ADDED 2026-09-18 for Mission Bay's UCSF campus pass: real OSM building footprint.",
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against data/raw/parcels.geojson and DataSF's Assessor tax roll -- e.g. blklot 8711507 at 675 Nelson Rising Lane alone is ~13 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
+    "notes": "Consolidates ~1,500 UCSF global health faculty/staff/students plus the Office of the Chancellor in one seven-story, 266,000 sq ft building. Architect WRNS Studio (design-builder Rudolph and Sletten; landscape Andrea Cochran Landscape Architecture). Opened for occupancy September 2014, ribbon-cutting October 2014. Address note: this project's geometry is tagged 500 16th St from OpenStreetMap's own addr:housenumber, but every other source found (UCSF's own press release, the architect's project page) gives 550 16th St -- flagging the discrepancy rather than silently picking one.",
+    "source_doc_urls": [
+     "https://www.openstreetmap.org/way/255652151",
+     "https://www.ucsf.edu/news/2014/10/118666/ribbon-cutting-celebrates-opening-mission-hall",
+     "https://wrnsstudio.com/projects/mission-hall-at-ucsf/"
+    ]
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -122.3907172,
+       37.7670855
+      ],
+      [
+       -122.3903615,
+       37.7671053
+      ],
+      [
+       -122.3903831,
+       37.7673468
+      ],
+      [
+       -122.390047,
+       37.7673656
+      ],
+      [
+       -122.3900383,
+       37.7672687
+      ],
+      [
+       -122.3898653,
+       37.7672783
+      ],
+      [
+       -122.3899079,
+       37.7677554
+      ],
+      [
+       -122.3907727,
+       37.7677072
+      ],
+      [
+       -122.3907172,
+       37.7670855
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

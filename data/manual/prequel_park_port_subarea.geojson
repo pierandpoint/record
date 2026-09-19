@@ -1,0 +1,84 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "_comment": "Hand-digitized APPROXIMATE geometry -- see project_name feature properties for full sourcing/accuracy notes. Not from an assessed parcel or survey record."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Prequel Park (Port sub-area)",
+        "site": "Potrero Power Station",
+        "status": "planned",
+        "use": "park",
+        "geometry_type": "approximate",
+        "digitized_from": "Draft EIR Figure 2-2, \"Project Site Sub-Areas and Ownership\" (Potrero Power Station Mixed-Use Development Project Draft EIR, Case No. 2017-011878ENV, October 2018, p. 2-6), which shows the Port-owned \"Port sub-area\" (SF Port ownership, ~2.9 acres total in 3 non-contiguous pieces) at true scale with a north arrow and a 400-ft scale bar.",
+        "digitization_method": "Georeferenced by matching one high-confidence real-world corner (the Illinois St / 22nd St property corner, matched to this project's own fetched data.raw/parcels.geojson block 4175 boundary vertex at lon -122.387166171, lat 37.757917868) plus the figure's printed scale bar, assuming north-up with no rotation. CORRECTED 2026-09-13: the original scale-bar reading (400 ft measured at 516 px = 0.7752 ft/px) placed this polygon's centroid essentially on top of the real Sophie Maxwell Building address on Maryland St -- geographically implausible for a bay-side open space parcel, and flagged as wrong by direct user review. Re-derived the scale independently via OpenStreetMap Overpass API ground truth (real distance 934.7 ft between the 22nd St/Illinois St and 23rd St/Illinois St intersections, measured at 733 px between the same two intersections in the source figure) = 1.2752 ft/px, ~1.64x the original reading. CLIPPED TO REAL SHORELINE 2026-09-13: the rescaled convex-hull trace was a 6.4-acre pointed/diamond shape that visibly didn't follow the real waterfront's curve (flagged by the user) and overshot the EIR's stated ~1.6 acres for this piece by 4x -- a size error the rescale introduced and this project failed to re-check at the time. Clipped the traced polygon against the real Port jurisdiction boundary (data/raw/port_jurisdiction.geojson, via src/block_fit.py's clip_to_jurisdiction()), which traces the actual property/water line -- the same real-boundary-fitting approach block_fit.py already applies to streets, applied here to the shoreline. DE-SPIKED 2026-09-13: the raw clip left a ~90m thin spike where the hand-traced land-side edge grazed a real kink in the jurisdiction boundary at a shallow angle -- confirmed against real satellite imagery (ESRI World Imagery) that no real point of land exists there, just a straight riprap shoreline. Rather than hand-edit that one vertex, generalized clip_to_jurisdiction() itself to apply a morphological opening (erode 10m, dilate 10m back, in EPSG:3857) after the intersection, which erases any sliver narrower than ~20m while leaving the real boundary-following edge untouched -- a fix to the shared tool, not a one-off patch, so any future shoreline clip gets the same spike protection. Final shape simplified (tolerance 0.00003 deg) to 10 vertices, 1.56 acres -- within a few percent of the EIR's ~1.6 acres.",
+        "accuracy_caveat": "APPROXIMATE ONLY -- digitized from an illustrative planning figure, not a surveyed record, then clipped to the real Port jurisdiction boundary on its water-facing side and opened to remove a spike artifact (see digitization_method). The corrected centroid falls east of the real Sophie Maxwell and UCSF Block 2 parcels, consistent with a bay-side location, and area now closely matches the EIR's stated ~1.6 acres for this piece. Treat vertex positions as accurate to roughly tens of meters on the land-facing sides (still convex-hull-smoothed over the true shape there), but the water-facing edge is now a real boundary, not hand-traced. Do not use for anything requiring exact boundaries.",
+        "why_no_real_parcel": "This land has no Assessor's Block/Lot number at all -- confirmed directly in the same Draft EIR, footnote 1, p. 2-5: \"The Port sub-area, and City sub-area described below, are not assessed properties, and therefore do not have assigned Assessor's Block numbers.\" It therefore cannot appear in DataSF's Parcels - Active and Retired dataset and cannot be joined via status.csv/blklot.",
+        "regulatory_context": "Prequel Park is the ~2-acre interim open-space project (BCDC Application 2019.006.02, a non-material amendment issued June 19, 2025; SF Port Commission Resolution 25-70, Nov 18, 2025, amending Lease L-16662 with California Barrel Company LLC) of which ~0.4 acres sits on this Port sub-area land near the future recreational dock. Construction targeted Q3 2026, public opening targeted Q3 2027 per the Port's Nov 14 2025 memo (Calendar Item 10A).",
+        "notes": "Approximate polygon representing the Port-owned bay-side open-space parcel (not the precise ~0.4-acre interim-improvement footprint within it, which would require a second, compounding approximation from the Port's own non-scaled Exhibit 1 rendering).",
+        "images": [
+          {
+            "path": "data/manual/images/prequel_park_exhibit2.jpg",
+            "credit": "Exhibit 2 (sunset view), SF Port Commission memo (Calendar Item 10A, Nov 14 2025) -- official public record"
+          },
+          {
+            "path": "data/manual/images/prequel_park_aerial.jpg",
+            "credit": "Exhibit 2 (aerial/city-context view), SF Port Commission memo (Calendar Item 10A, Nov 14 2025) -- official public record"
+          }
+        ],
+        "source_doc_urls": [
+          "https://www.sfport.com/sites/default/files/2025-11/111825_10a_potrero_power_station_lease_amendment_0.pdf"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.38137344664453,
+              37.75581188341765
+            ],
+            [
+              -122.38129360541038,
+              37.75587449807428
+            ],
+            [
+              -122.38107489194185,
+              37.75582927254214
+            ],
+            [
+              -122.38103200486356,
+              37.755742620223714
+            ],
+            [
+              -122.38077005795282,
+              37.75555849176797
+            ],
+            [
+              -122.38072151657452,
+              37.755375934109914
+            ],
+            [
+              -122.380770486486,
+              37.75523098379109
+            ],
+            [
+              -122.38134304259663,
+              37.755076906885726
+            ],
+            [
+              -122.38144975612204,
+              37.75510857390683
+            ],
+            [
+              -122.38137344664453,
+              37.75581188341765
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

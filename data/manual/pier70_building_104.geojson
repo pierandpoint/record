@@ -1,0 +1,31 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Pier 70 Building 104 (UIW Headquarters)",
+        "site": "Pier 70",
+        "status": "complete",
+        "use": "commercial",
+        "geometry_type": "real",
+        "digitized_from": "DataSF Building Footprints dataset (real, surveyed building outline; not tied to an Assessor parcel).",
+        "digitization_method": "SPLIT 2026-09-16 from the combined blklot 4046001 row (see Building 101's digitization_method for the full context). Matched using Figure 6.4.2's own '104' label position, transformed via this site's validated 6-point affine transform, matched to the nearest real footprint (39.2m away, clearly the best match) -- confirmed by direct visual overlay showing this footprint sitting right under the diagram's '104' box. This is a REAL surveyed building outline, not a diagram trace.",
+        "accuracy_caveat": "Real, surveyed building footprint -- high confidence in the outline itself and its match to Building 104. Buildings 122 and 123 (two small one-story 'check house' buildings flanking Building 104, per the 2013 HPC packet -- 774 GSF and 400 GSF respectively) are NOT separately represented here or anywhere else in this dataset: no footprint of a matching small size was found immediately adjacent to this one, most likely because DataSF's building-footprint extraction merged them into this building's outline (or Building 102's) given how small and closely attached they are. Their combined ~1,174 GSF (~109 m2) is a small fraction of this footprint's ~1,080 m2 total, so if merged in, they would not meaningfully distort this shape -- but their own individual positions are not confirmed and are not claimed here.",
+        "why_no_real_parcel": "This parcel (blklot 4046001) has no street address in DataSF's Assessor roll. The real Assessor lot groups 5 named buildings into one polygon with no further official subdivision -- this feature uses the real building footprint instead, extracted and matched individually.",
+        "regulatory_context": "UIW (Union Iron Works) Headquarters, Building 104, a Renaissance Revival structure built in 1896 with a distinctive clerestory top floor, unreinforced masonry construction. Per the 2013 HPC packet (2013.1168E), it was previously used as a naval hospital/medical office (WWII-era conversion) and was a 'red-tagged,' seismically challenged building at review time; rehab included demolishing demising walls from the WWII conversion. Part of the same 20th Street Historic Core rehabilitation by Orton Development Inc. as Buildings 101/102. ~30,000 sf usable (likely gross floor area across multiple levels, not this footprint's own area). Now houses a confidential corporate office tenant, 300+ employees.",
+        "notes": "Split 2026-09-16 from the combined 'Historic Core, north side' entry -- see accuracy_caveat re: Buildings 122/123.",
+        "images": [],
+        "source_doc_urls": [
+          "https://default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [[-122.3857244, 37.7608648], [-122.3857244, 37.7608648], [-122.3857845, 37.7608613], [-122.3857798, 37.7608112], [-122.3856946, 37.7608168], [-122.3856929, 37.7608022], [-122.3856905, 37.7608023], [-122.3856868, 37.7607554], [-122.3856877, 37.7607553], [-122.3856866, 37.7607459], [-122.3856931, 37.7607401], [-122.3857817, 37.7607358], [-122.3857837, 37.7607453], [-122.386308, 37.760714], [-122.386308, 37.760714], [-122.386322, 37.7608617], [-122.3863161, 37.7608621], [-122.3863197, 37.7608989], [-122.3860832, 37.7609132], [-122.3860836, 37.760919], [-122.3859578, 37.7609257], [-122.3859578, 37.7609256], [-122.3859574, 37.7609208], [-122.3857994, 37.7609304], [-122.3857994, 37.7609303], [-122.3857994, 37.7609299], [-122.3857307, 37.7609338], [-122.3857307, 37.7609338], [-122.3857244, 37.7608648]]
+        ]
+      }
+    }
+  ]
+}

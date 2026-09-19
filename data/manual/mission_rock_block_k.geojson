@@ -1,0 +1,52 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Mission Rock Block K",
+        "site": "Pier 50 / Mission Rock",
+        "status": "planned",
+        "use": "residential",
+        "geometry_type": "approximate",
+        "digitized_from": "DataSF Assessor lot lines (lots 8719A005, 8719A007, 8719A010, 8719A003) bounding the lobe the plan's Block K occupies, cross-checked against Mission Rock Design Controls Figure 6.2 (p.151) and the Block K standards sheet (Appendix p.198).",
+        "digitization_method": "Traced from the Mission Rock Design Controls' own Figure 6.2 (Maximum Height Plan, p.151) -- an adopted regulatory diagram with a printed scale bar and street grid, not an illustrative rendering. Georeferenced using 5 real street-intersection control points (3rd St x Channel St, 3rd St x Long Bridge St, 3rd St x Mission Rock St, Bridgeview Way x Mission Rock St, Terry A. Francois Blvd x Mission Rock St), fetched from OpenStreetMap via this project's own src/fetch_streets.py and matched to their pixel positions in the diagram, then fit as a least-squares affine transform (never fewer than 5 points spanning the whole site, not just 1-2 nearby anchors). Cross-validated against the diagram's own printed scale bar and against the real, independently-confirmed positions of Verde, The Canyon, Building B, and Visa HQ (Building G) -- all four fell inside their correct named blocks under this transform, which is what caught and fixed an earlier, much worse-fitting 4-point version of this same transform (a block letter read one row off, producing 75m of error) before it was used for anything. Residual error against the 5 control points is roughly 3-13m. RETRACED 2026-09-17 (brief docs/briefs/mission-rock-geometry.md; definition of done in docs/site-definition-of-done.md). (1) SOURCE. This file's source_doc_urls pointed at the March 2012 'Design + Development Revised Proposal' (90 pages, no Figure 6.2) while the text cited the Design Controls, so the original pixel measurements could not be reproduced. Redone from the adopted Mission Rock Design Controls (April 24, 2018, sfport.com), Figure 6.2 - Maximum Height Plan (p.151), rendered ONCE at 300 dpi to data/manual/_reference/mission_rock_dc_p151.png (3300x2550 px, full page). Every pixel measurement below is from that one render. (2) TRANSFORM (one for the whole figure). Since this file was first traced, the Assessor subdivided Seawall Lot 337 (recorded 2020-06-12, mapped 2021-04-13): the four Phase 1 blocks are real lots -- A/The Canyon 8719B002, G/Visa 8719A008, B 8719C003, F/Verde 8719C001 -- whose recorded areas match the plan's block areas within 3%. The figure's drawn corners of A, B, F and G (colour contours, OpenCV) were matched to those 16 real lot corners and a least-squares affine transform fitted: RMS residual 0.67 m, worst corner 1.39 m (n=16); scale 0.2570 m/px (x) and 0.2598 m/px (y), ratio 0.989; axis angle 89.88 deg, i.e. no shear. The figure's own printed 200 ft scale bar measures 239 px on the same render = 0.255 m/px, agreeing within 2%. lon = 2.9127666757282e-06*px + 2.2156884853242e-07*py + (-122.39479060102); lat = 1.6823215817497e-07*px + -2.3273617315092e-06*py + 37.77752553008. (3) VALIDATION on real lines NOT used in the fit: traced C and D west corners fall 0.2-2.4 m from the 3rd Street property line (west edge of the undivided remainder lot 8719A006); D and H south corners 0.1-1.5 m from the Mission Rock Street property line (south edge of 8719A006); J, I and H east corners 1.1-2.8 m from the Terry A Francois Boulevard property line (east edge of 8719A006 / west edge of the TAFB lot 8719A003); the traced Block K corners fall 0.7-1.3 m from the corners of the lobe of the park lot 8719A005 that K occupies. Bearing check, the shear test that Pier 70's point check missed: real 3rd St property line 355.6 deg vs figure 355.3; real TAFB property line 355.7 vs figure 356.1; DataSF Exposition Street (Toni Stone Crossing) centerline 85.7 deg vs the figure's Exposition axis 84.9 deg, with 0.2 m offset at mid-block. (4) METHOD. Each block's fill (base colour plus hatched upper-building zone) was isolated by colour saturation inside a pixel window, its outer contour extracted and simplified (approxPolyDP, 1% of perimeter), transformed, and then any vertex within 3 m of a recorded lot line of 8719A006, 8719A003, 8719A005, 8719A007, 8719A009, 8719A010, 8719C001, 8719C002, 8719C004 or 8719D001 was snapped onto that line, so street frontages and shared edges are the Assessor's lines rather than the figure's 1-3 m of contour noise. Cross-checked against an independent trace of the same block on Figure 1.1 (p.10) through its own transform fitted the same way (RMS 1.1 m). (5) CHECKER. Registered in src/verify_block_fill.py under site 'mission_rock' (pixel window and colour rule recorded there); CI prints the IoU against the figure's own fill on every run. K SPECIFICS: the traced Figure 6.2 corners of K fall 0.7-1.3 m from the four corners of a lobe of the park lot 8719A005 that lies south of the park's recorded south line, between the Bridgeview paseo lot 8719A007 (west), the Exposition Street lot 8719A010 (south) and the Terry A Francois Boulevard lot 8719A003 (east) -- a lobe measuring 139 ft x 143 ft, exactly Block K's dimensions on Appendix p.198. So Block K is written as that lobe, using the lots' own recorded vertices (17,880 sf vs 17,829 sf in the 2012 parcel table and 17,384 sf for the raw figure trace). China Basin Park (mission_rock_china_basin_park.geojson) is the same lot minus this lobe, so the two touch exactly and the park's fill no longer hides a planned block. Satellite imagery (Esri World Imagery, 2024 or later: Phase 1 towers and the park are present) shows the lobe as paved staging/turnaround space, not lawn.",
+        "accuracy_caveat": "APPROXIMATE but high confidence: every edge is a recorded DataSF lot line (the Assessor has not made Block K its own lot; it is still part of the China Basin Park lot 8719A005 as of the parcels fetch), and the Design Controls figure trace agrees with those lines within 1.3 m at every corner. Planned, unbuilt residential block (120 ft maximum height). ANGLE CHECK: check_geometry_quality.py flags a 12.3-12.6 deg corner here (its tolerance is 12 deg). Every vertex of this polygon is a real, recorded DataSF Assessor lot corner (see digitization_method) -- the deviation is the real lot's own shape (Bridgeview Way's paseo lot 8719A007 and the Exposition Street lot 8719A010 meet the park lot 8719A005 at a corner that is not exactly square), not a shear or a misread trace. Accepted; see docs/site-definition-of-done.md.",
+        "why_no_real_parcel": "Block K's land is still part of lot 8719A005 (China Basin Park); the lot lines around it exist but the Assessor has not split K off. Joining status.csv to 8719A005 would show the park and the block as one shape.",
+        "regulatory_context": "Residential Mixed Use, fronting China Basin Park and the Pier 48 entry along Terry A. Francois Blvd. Max height 120 ft -- the lowest height limit of any residential block on the site, confirmed by the D4D's own narrative text: 'the shortest residential tower would be on Block K facing Mission Rock Park,' preserving sightlines/stepping the skyline down toward the water. Originally slated for Phase 1 (with A, B, G) before a real, Port-confirmed 2019 swap with Block F -- the sponsors proposed changing Phase 1 from {A, B, G, K} to {A, B, G, F} to accelerate ~100 more units (~40 more affordable) and create a four-corner pedestrian intersection instead of a linear one; an interim-parking-preservation rationale sometimes cited for this swap is not supported by any source found.",
+        "notes": "Approximate polygon for a real, D4D-adopted future block -- not yet built, no distinct real parcel yet. See accuracy_caveat.",
+        "images": [],
+        "source_doc_urls": [
+          "https://www.sfport.com/sites/default/files/2025-07/Mission%20Rock%20Design%20Controls%204.24.18_FINAL_Reduced%20File.pdf"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.388078,
+              37.775544
+            ],
+            [
+              -122.387598,
+              37.775572
+            ],
+            [
+              -122.387627,
+              37.775881
+            ],
+            [
+              -122.388116,
+              37.775937
+            ],
+            [
+              -122.388078,
+              37.775544
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

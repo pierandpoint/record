@@ -1,0 +1,79 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "21st Street (NEW) -- planned, not yet built",
+        "site": "Pier 70",
+        "status": "planned",
+        "feature_type": "street_centerline",
+        "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
+        "digitization_method": "REBUILT 2026-09-17 (user override, second round): the previous version of this line (traced pixel-by-pixel from Figure 6.4.2's own drawn boundary) was rejected by the user as not matching the drawing's shape at all. Per explicit instruction, replaced that reading with the user's own model: today's real Michigan St takes a turn and continues east toward Louisiana St, and the D4D's planned '21st St (NEW)' is that same east-west span, widened/formalized and extended the full width of the site from Louisiana St to Illinois St. Built directly from official, real-world reference points rather than another pixel trace: Michigan St's own real, official centerline (DataSF CNN 8999001) terminates at (-122.386472623, 37.759384676) -- this is also the exact point where DataSF's separate 'paper' 21st St centerline (CNN 15232000/15233000) begins, i.e. Michigan's real endpoint and 21st Street's own recorded west segment already share one point today. Used this shared latitude (37.759384676) as the height for the entire Illinois-to-Louisiana span: interpolated real Illinois St's position (CNN 7169001) and real Louisiana St's position (CNN 15237000) at that same latitude for the two end points. This new line matches Michigan's own real terminus exactly (unlike the previous version, which was a Figure 6.4.2 pixel trace sitting further north than this real reference). Still jogs up at Louisiana St to meet the real, already-built 21st Street continuing east (see the companion 'existing' feature) -- that jog is the one part of the previous version this rebuild keeps, since the user's own description ('lower on the west side of Louisiana than on the east side') describes exactly that transition, and it matches a real, confirmed jog in today's built infrastructure (paper/unbuilt west of Louisiana at this Michigan height, real/paved east of Louisiana at a distinctly higher latitude). CORRECTED 2026-09-17 (same day, user-flagged: 'should be perpendicular to Illinois and Louisiana'): the previous version held a constant latitude (flat east-west), which is not actually perpendicular to Illinois/Louisiana St given SF's known ~4-degree grid skew (both streets run at a real, measured bearing of ~175.5 degrees, not exactly 180/due-south). Recomputed: took the perpendicular bearing (85.5 degrees) to that real measured bearing, drew a line at that bearing through Michigan St's own real terminus point (-122.386472623, 37.759384676), and intersected it with Illinois St (CNN 7169001) and Louisiana St (CNN 15237000/15238000) to get the two endpoints. This is a small correction from the flat version (~18m rise west-to-east over the ~150m span) but the geometrically correct one given the user's own instruction.",
+        "accuracy_caveat": "DRAFT, pending user confirmation -- built from real official reference points (Michigan St's own terminus, Illinois St, Louisiana St), not a diagram pixel trace, per explicit user override. This is a straight-line simplification of today's actual curving driveway/informal route between these points (visible on satellite imagery bending through the PKN-area parking lot), not a survey of that curve's own path -- treat as an illustrative 'new street centerline' consistent with the user's stated model, not a trace of any single existing feature's exact shape. Sent for confirmation before any parcel geometry (PKN/PKS/C1/HDY3) is adjusted to match.",
+        "why_no_real_parcel": "Not a parcel -- a street reference line drawn to answer a user question about street alignment, not part of the parcel/status pipeline.",
+        "regulatory_context": "Per the D4D Section 4.11 (Specific Streets Design Intent): '21st Street primarily serves as an alley from Illinois Street to the waterfront.' No text describes a relocation -- the D4D's own drawn jog near Louisiana St matches a real, existing jog in today's actual 21st Street alignment at that same corner (paper/unbuilt west of Louisiana, real/built east of it), shifted a further ~35-45m north of even that real alignment.",
+        "notes": "Added 2026-09-17 to directly answer a user request to see 21st Street drawn on the map, after a multi-round investigation into this street's real vs. planned position (see pier70_pks.geojson, pier70_c1.geojson, pier70_hdy3.geojson digitization_method entries for the full history).",
+        "images": [],
+        "source_doc_urls": [
+          "https://www.sfport.com/media/8123/download?inline="
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.38744566161603,
+            37.75932413283069
+          ],
+          [
+            -122.386472623,
+            37.759384676
+          ],
+          [
+            -122.38487999724809,
+            37.75948377033085
+          ],
+          [
+            -122.384907579,
+            37.759773271
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "21st Street (existing, built) -- east of Louisiana St",
+        "site": "Pier 70",
+        "status": "existing",
+        "feature_type": "street_centerline",
+        "digitized_from": "DataSF Street Centerline dataset (official_street_centerlines.geojson), CNN 15229000 and 15230000.",
+        "digitization_method": "ADDED 2026-09-17 (user request), for comparison against the planned '21ST ST (NEW)' line in this same file. These are DataSF's own official centerline coordinates (not diagram-traced), confirmed via satellite imagery to be real, fully-built pavement with sidewalks, crosswalks, and street trees -- unlike the unbuilt paper alignment (CNN 15232000/15233000) west of Louisiana St. This real alignment sits at a distinctly higher (more northern) latitude than that unbuilt west segment -- a real, pre-existing jog in 21st Street at Louisiana St that the D4D's planned alignment appears to extend/continue further, shifted an additional ~35-45m further north.",
+        "accuracy_caveat": "HIGH CONFIDENCE -- official DataSF centerline data, independently confirmed as real/built via satellite imagery.",
+        "why_no_real_parcel": "Not a parcel -- a street reference line.",
+        "regulatory_context": "Real, existing city street, unrelated to the D4D's own planned changes west of Louisiana St.",
+        "notes": "Added 2026-09-17 alongside the planned '21ST ST (NEW)' line for direct visual comparison.",
+        "images": [],
+        "source_doc_urls": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.384907579,
+            37.759773271
+          ],
+          [
+            -122.384607482,
+            37.759791292
+          ],
+          [
+            -122.383732819,
+            37.759843811
+          ]
+        ]
+      }
+    }
+  ]
+}

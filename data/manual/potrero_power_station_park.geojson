@@ -1,0 +1,78 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Power Station Park",
+        "site": "Potrero Power Station",
+        "status": "planned",
+        "use": "park",
+        "geometry_type": "approximate",
+        "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
+        "digitization_method": "Traced from the Potrero Power Station Design for Development's own Figure 6.2.3 (Building Height Plan, p.245), which labels this feature directly (not inferred). Georeferenced using an affine transform fit from 8 control points -- the 4 real-world corners of Block 1 and the 4 real-world corners of Block 12 (both already independently traced and committed elsewhere in this dataset), matched to their pixel positions in this same diagram. Residual error against those 8 control points is roughly 15-24m, consistent with this site's other entries. This is a DIFFERENT (but equivalent-precision) point set than the 9 street-intersection points used for Blocks 1-15 -- both were derived from the same source diagram. CORRECTED 2026-09-16: user-flagged visual check found this polygon crossing back and forth over the same real paved road (Maryland Street) identified and fixed on Potrero Power Station Block 3 (see that file's digitization_method for the full curb-finding method) -- a thin north-south finger of this polygon ran right down the middle of the road next to the site office building, and the polygon's southern boundary crossed the road again further south. FIRST PASS (superseded): measured this stretch's own west and east curb points independently (two points per curb, 47m apart) and derived each curb's own bearing from its own two points -- produced curbs 1.7 degrees off-parallel from each other. SECOND PASS (superseded): reused Block 3's own directly-measured curb bearing (168.9 deg), reasoning it was the same physical street. THIRD PASS: user re-flagged the result as still not parallel to the road. Root cause found: Block 3's own 168.9 deg bearing (from the SECOND PASS) was itself wrong -- derived from only a 45m baseline, it violates this project's own bearing_trace.py guidance against narrow-baseline bearings. Checked it against three independent long-baseline references that all agreed with each other within 1 degree: the real OSM Maryland Street geometry itself (already sitting unused in data/raw/streets.geojson, bearing ~355 deg over multiple segments spanning both Block 3's and this polygon's latitude ranges, and ~355.3 deg over its full 220m length), and Pier 70's already-validated site grid bearing (356.5 deg, SITE_BEARINGS in bearing_trace.py) -- both point to ~356 deg, not 168.9/348.9 deg, a real 7-degree miss that the project's own check_bearing_sane() helper would have flagged immediately had it been run. Rebuilt the ribbon using 356.5 deg (this project's established Potrero/Pier 70 grid bearing) through the same directly-measured curb points from the second pass, extended 80m past them, and re-subtracted from the ORIGINAL (pre-any-clip) polygon via shapely's difference() -- removed about 20% of the polygon's area. Lesson for this dataset: added 'potrero': 356.5 to SITE_BEARINGS in bearing_trace.py so future bearing measurements at this site get sanity-checked automatically instead of relying on a fresh, possibly narrow-baseline read. FOURTH PASS: user pointed out the polygon's north and south caps (the two short segments connecting the new street-edge cut back to the rest of the park, next to the site office building and near the bottom of the L-shape) weren't perpendicular to the street -- both were leftover from the original diagram transform and had never been touched by any of the street-crossing passes above. Measured: north cap ran at 80.8 deg, south cap at 260.8 deg, both off by 5.7 deg from the correct perpendicular (86.5/266.5, i.e. 90 deg off the established 356.5 deg grid). Fixed by keeping the street-edge (ribbon-cut) endpoint of each cap fixed and rotating the other endpoint onto the perpendicular bearing, preserving each segment's original length (a 2.6-3.7m shift) -- a targeted local correction rather than a global re-trace, since only these two segments were flagged and the rest of the polygon's shape (against Blocks 7/8/9/11/12) has not been independently re-verified. REBUILT 2026-09-16: user-flagged that the diagram shows this park sharing sides directly with Blocks 7 and 11 (and, per the same diagram crop, 8 and 12 too), with zero gap -- this polygon's prior boundary (itself a MultiPolygon that had accumulated ~200 vertices across four rounds of street-crossing/perpendicularity patches) sat 5-21m away from Blocks 8/11/12 after those blocks were re-measured in the 2026-09-16 pixel pass, since this park file was never touched in that pass. A fresh pixel check of the diagram (crop of the Block 7/8/11/12/park area) confirmed the park is one simple contiguous rectangle bounded exactly by those four blocks -- Maryland Street does not continue south of Humboldt's row into this space in the plan. Replaced the whole accumulated shape with a clean quadrilateral built directly from Block 7's SW corner, Block 8's SE corner, Block 12's NE corner, and Block 11's NW corner (the exact, already-committed coordinates from those four files' own 2026-09-16 re-measurement), so the park now shares an exact vertex with each of the four blocks by construction rather than by a separate, error-prone measurement. This drops the old file's hard-won manual fix for a real paved road (Maryland Street, or a site access road) that currently physically cuts through part of this still-undeveloped area -- rather than re-deriving that by hand again, this now relies on this project's own standard src/join_approximate.py street-clipping step (already applied to every approximate polygon in this dataset) to automatically cut out any real, currently-mapped street from the published layer. The org's own build log should show the resulting clipped percentage. REFINED 2026-09-16 (same day, second pass): the first rebuild (4-corner quadrilateral) created small (20-40 m2) slivers of overlap with Block 7 and Block 8, because a straight line from Block 7's SW corner to Block 8's SE corner cuts across the small real jog between those two blocks' own bottom edges rather than following them. Switched to an 8-vertex polygon that walks Block 7's own SW-to-SE edge, then Block 8's own SW-to-SE edge, then down to Block 12's NE-to-NW edge, then Block 11's own NE-to-NW edge, and back -- using only coordinates already committed in those 4 blocks' own files, so the park's boundary now coincides exactly with each block's real edge with zero overlap and zero gap by construction. REFINED 2026-09-16 (same day, second pass): the first rebuild (4-corner quadrilateral) created small (20-40 m2) slivers of overlap with Block 7 and Block 8, because a straight line from Block 7's SW corner to Block 8's SE corner cuts across the small real jog between those two blocks' own bottom edges rather than following them. Switched to an 8-vertex polygon that walks Block 7's own SW-to-SE edge, then Block 8's own SW-to-SE edge, then down to Block 12's NE-to-NW edge, then Block 11's own NE-to-NW edge, and back -- using only coordinates already committed in those 4 blocks' own files, so the park's boundary now coincides exactly with each block's real edge with zero overlap and zero gap by construction. SPLIT 2026-09-16 (sixth pass): user pointed out this park's east edge (the 7/11 side) was eating into the real street corridor instead of stopping at Block 7/11's own edge, and that the park should continue as a SEPARATE piece east of that street, between Block 8 and Block 12. Checked data/raw/streets.geojson directly: Maryland Street's real OSM geometry does continue south through this exact area (down to lat 37.6557, spanning the full Block 11/12 row), confirming a real street genuinely separates the two halves -- this wasn't just an over-generous single rectangle. Also found and fixed the real bug that had been silently hiding this: src/join_approximate.py's automatic street-clipping discarded whichever fragment was smaller when a street split a polygon into two pieces, assuming any second piece was a tiny corner sliver -- here it was throwing away roughly half the park's real area (the whole Block 8/12 side). Fixed that function to keep any fragment at least 5% of the largest one, and rebuilt this feature from scratch as a MultiPolygon with two parts, each built directly from its own pair of blocks' own already-committed corners (Block 7's SW/SE + Block 11's NW/NE for the west part; Block 8's SW/SE + Block 12's NW/NE for the east part) -- so each part's edges are exact against its own blocks, with no encroachment into Maryland Street between them.",
+        "accuracy_caveat": "APPROXIMATE -- Figure 6.2.3 labels this open space directly but shows it as an irregular, non-rectangular shape woven between Blocks 7, 8, 9, 11, and 12; this is a simplified two-part rectangular approximation (split 2026-09-16 by the real Maryland Street corridor that separates the Block 7/11 side from the Block 8/12 side -- see digitization_method), not a precise trace of the diagram's own organic outline. Each part shares an exact edge with its own two blocks by construction, so accuracy tracks whatever those block files carry.",
+        "why_no_real_parcel": "Open space with no subdivided Assessor parcel of its own within the largely unaddressed former power-station site.",
+        "regulatory_context": "The site's central public open space, per the D4D's own Figure 6.2.3 label -- sits between the Humboldt St row of blocks (7/8/9) and the 23rd St row (11/12). Not yet built (the blocks around it are still 'planned').",
+        "notes": "Simplified rectangular approximation of a labeled but irregularly-shaped open space -- see accuracy_caveat.",
+        "images": [],
+        "source_doc_urls": [
+          "https://default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf"
+        ]
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -122.384389,
+                37.756303
+              ],
+              [
+                -122.383535,
+                37.756348
+              ],
+              [
+                -122.383501,
+                37.75602
+              ],
+              [
+                -122.384356,
+                37.755971
+              ],
+              [
+                -122.384389,
+                37.756303
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -122.383291,
+                37.756365
+              ],
+              [
+                -122.382443,
+                37.756421
+              ],
+              [
+                -122.382408,
+                37.756096
+              ],
+              [
+                -122.383257,
+                37.756038
+              ],
+              [
+                -122.383291,
+                37.756365
+              ]
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

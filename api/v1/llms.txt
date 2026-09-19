@@ -1,0 +1,169 @@
+# Pier & Point
+
+> The cited record of development on San Francisco's central waterfront: what is built, under way and next on four sites (Mission Rock, Mission Bay, Pier 70, Potrero Power Station), parcel by parcel, with a source for every claim and every correction kept visible.
+
+Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not "no activity".
+
+Two levels of confidence: "parcel" records sit on a real DataSF Assessor parcel; "approximate" records are traced from adopted planning figures and carry their own accuracy note. Nothing is fabricated: a missing date or status means no source supports one. Pier & Point takes no money from any developer, landowner or agency whose sites it covers.
+
+Record as of 2026-09-19. Terms: https://pierandpoint.org/terms/
+
+## Machine-readable data (static JSON, no key)
+
+- [All records](https://pierandpoint.org/api/v1/records.json): every record with facts, costs, milestones, images, sources, open questions and GeoJSON geometry
+- [One record](https://pierandpoint.org/api/v1/records/<slug>.json): the same, one file per record; the slug is the permalink's last segment
+- [Sites](https://pierandpoint.org/api/v1/sites.json): the four sites and their records
+- [Milestones](https://pierandpoint.org/api/v1/milestones.json): every dated event, sourced, with expected dates flagged
+- [Changes](https://pierandpoint.org/api/v1/changes.json): every addition and correction Pier & Point made to its own record
+- [Snapshot](https://pierandpoint.org/api/v1/snapshot.json): build date, git commit and SHA-256 of records.json and llms.txt, attested independently at https://github.com/pierandpoint/record
+- [RSS feed](https://pierandpoint.org/api/v1/feed.xml): changes and milestones, newest first
+- [Public data repository](https://github.com/pierandpoint/record): every file above, plus the schema and how to verify a publish's signature
+
+## Sites
+
+- [Mission Rock](https://pierandpoint.org/sites/mission-rock/): Pier 50 · Giants and Tishman Speyer; 21 records
+- [Mission Bay](https://pierandpoint.org/sites/mission-bay/): OCII redevelopment area; 61 records
+- [Pier 70](https://pierandpoint.org/sites/pier-70/): 28-acre site · Brookfield Properties; 29 records
+- [Potrero Power Station](https://pierandpoint.org/sites/potrero/): Former PG&E plant · Associate Capital; 22 records
+
+## Records
+
+- [Bridgeview Street paseo (Bridgeview Way, north segment)](https://pierandpoint.org/parcels/bridgeview-street-paseo-bridgeview-way-north-segment/): Complete; park; Mission Rock; DataSF parcel
+- [Building B](https://pierandpoint.org/parcels/building-b/): Complete; commercial; Mission Rock; DataSF parcel
+- [Building G](https://pierandpoint.org/parcels/building-g/): Complete; commercial; Mission Rock; DataSF parcel
+- [Channel Street (open space)](https://pierandpoint.org/parcels/channel-street-open-space/): Planned; park; Mission Rock; DataSF parcel
+- [China Basin Park](https://pierandpoint.org/parcels/china-basin-park/): Complete; park; Mission Rock; approximate shape
+- [Mission Rock Block C](https://pierandpoint.org/parcels/mission-rock-block-c/): Planned; commercial; Mission Rock; approximate shape
+- [Mission Rock Block D1](https://pierandpoint.org/parcels/mission-rock-block-d1/): Planned; residential; Mission Rock; approximate shape
+- [Mission Rock Block D2](https://pierandpoint.org/parcels/mission-rock-block-d2/): Planned; parking; Mission Rock; approximate shape
+- [Mission Rock Block E](https://pierandpoint.org/parcels/mission-rock-block-e/): Planned; commercial; Mission Rock; approximate shape
+- [Mission Rock Block H](https://pierandpoint.org/parcels/mission-rock-block-h/): Planned; mixed; Mission Rock; approximate shape
+- [Mission Rock Block I](https://pierandpoint.org/parcels/mission-rock-block-i/): Planned; mixed; Mission Rock; approximate shape
+- [Mission Rock Block J](https://pierandpoint.org/parcels/mission-rock-block-j/): Planned; mixed; Mission Rock; approximate shape
+- [Mission Rock Block K](https://pierandpoint.org/parcels/mission-rock-block-k/): Planned; residential; Mission Rock; approximate shape
+- [Mission Rock Channel Lane](https://pierandpoint.org/parcels/mission-rock-channel-lane/): Planned; park; Mission Rock; approximate shape
+- [Mission Rock Channel Wharf](https://pierandpoint.org/parcels/mission-rock-channel-wharf/): Planned; park; Mission Rock; approximate shape
+- [Mission Rock Square](https://pierandpoint.org/parcels/mission-rock-square/): Planned; park; Mission Rock; approximate shape
+- [Mission Rock Terry A Francois Boulevard Paseo (Pier 48 entry)](https://pierandpoint.org/parcels/mission-rock-terry-a-francois-boulevard-paseo-pier-48-entry/): Planned; park; Mission Rock; approximate shape
+- [Pier 48](https://pierandpoint.org/parcels/pier-48/): Existing, not yet redeveloped; entertainment; Mission Rock; DataSF parcel
+- [Shared Public Way paseo (Dr Maya Angelou Lane, north segment)](https://pierandpoint.org/parcels/shared-public-way-paseo-dr-maya-angelou-lane-north-segment/): Complete; park; Mission Rock; DataSF parcel
+- [The Canyon](https://pierandpoint.org/parcels/the-canyon/): Complete; residential; Mission Rock; DataSF parcel
+- [Verde](https://pierandpoint.org/parcels/verde/): Complete; residential; Mission Rock; DataSF parcel
+- [1500 Owens Street](https://pierandpoint.org/parcels/1500-owens-street/): Complete; institutional; Mission Bay; approximate shape
+- [1670 Owens Garage](https://pierandpoint.org/parcels/1670-owens-garage/): Complete; parking; Mission Bay; approximate shape
+- [1700 Owens Street](https://pierandpoint.org/parcels/1700-owens-street/): Complete; institutional; Mission Bay; approximate shape
+- [235 Berry](https://pierandpoint.org/parcels/235-berry/): Complete; residential; Mission Bay; approximate shape
+- [255 Berry](https://pierandpoint.org/parcels/255-berry/): Complete; residential; Mission Bay; approximate shape
+- [500 Terry A. Francois Boulevard](https://pierandpoint.org/parcels/500-terry-a-francois-boulevard/): Complete; commercial; Mission Bay; approximate shape
+- [Arden](https://pierandpoint.org/parcels/arden/): Complete; residential; Mission Bay; approximate shape
+- [Arterra](https://pierandpoint.org/parcels/arterra/): Complete; residential; Mission Bay; approximate shape
+- [Arthur and Toni Rembe Rock Hall](https://pierandpoint.org/parcels/arthur-and-toni-rembe-rock-hall/): Complete; institutional; Mission Bay; approximate shape
+- [Avalon at Mission Bay I](https://pierandpoint.org/parcels/avalon-at-mission-bay-i/): Complete; residential; Mission Bay; approximate shape
+- [Avalon at Mission Bay II](https://pierandpoint.org/parcels/avalon-at-mission-bay-ii/): Complete; residential; Mission Bay; approximate shape
+- [Avalon at Mission Bay III](https://pierandpoint.org/parcels/avalon-at-mission-bay-iii/): Complete; residential; Mission Bay; approximate shape
+- [Azure Apartments](https://pierandpoint.org/parcels/azure-apartments/): Complete; residential; Mission Bay; DataSF parcel
+- [Bayfront Park](https://pierandpoint.org/parcels/bayfront-park/): Complete; park; Mission Bay; approximate shape
+- [Byers Hall](https://pierandpoint.org/parcels/byers-hall/): Complete; institutional; Mission Bay; approximate shape
+- [Channel Mission Bay](https://pierandpoint.org/parcels/channel-mission-bay/): Complete; residential; Mission Bay; approximate shape
+- [Chase Center](https://pierandpoint.org/parcels/chase-center/): Complete; entertainment; Mission Bay; DataSF parcel
+- [Crescent Cove](https://pierandpoint.org/parcels/crescent-cove/): Complete; residential; Mission Bay; approximate shape
+- [Edgewater](https://pierandpoint.org/parcels/edgewater/): Complete; residential; Mission Bay; approximate shape
+- [Genentech Hall](https://pierandpoint.org/parcels/genentech-hall/): Complete; institutional; Mission Bay; approximate shape
+- [Hearst Tower](https://pierandpoint.org/parcels/hearst-tower/): Complete; residential; Mission Bay; approximate shape
+- [Helen Diller Family Cancer Research Building](https://pierandpoint.org/parcels/helen-diller-family-cancer-research-building/): Complete; institutional; Mission Bay; approximate shape
+- [J. David Gladstone Institutes](https://pierandpoint.org/parcels/j-david-gladstone-institutes/): Complete; institutional; Mission Bay; approximate shape
+- [Kaiser Permanente San Francisco Mission Bay Medical Offices](https://pierandpoint.org/parcels/kaiser-permanente-san-francisco-mission-bay-medical-offices/): Complete; institutional; Mission Bay; DataSF parcel
+- [LUMA Hotel San Francisco](https://pierandpoint.org/parcels/luma-hotel-san-francisco/): Complete; commercial; Mission Bay; DataSF parcel
+- [MB360](https://pierandpoint.org/parcels/mb360/): Complete; residential; Mission Bay; approximate shape
+- [MB4E](https://pierandpoint.org/parcels/mb4e/): Planned; residential; Mission Bay; DataSF parcel
+- [Madrone](https://pierandpoint.org/parcels/madrone/): Complete; residential; Mission Bay; approximate shape
+- [Mission Bay Branch Library](https://pierandpoint.org/parcels/mission-bay-branch-library/): Complete; institutional; Mission Bay; DataSF parcel
+- [Mission Bay Commons](https://pierandpoint.org/parcels/mission-bay-commons/): Complete; park; Mission Bay; approximate shape
+- [Mission Bay Kids' Park](https://pierandpoint.org/parcels/mission-bay-kids-park/): Complete; park; Mission Bay; approximate shape
+- [Mission Bay Preliminary Utilities Plant](https://pierandpoint.org/parcels/mission-bay-preliminary-utilities-plant/): Complete; institutional; Mission Bay; approximate shape
+- [Mission Bay School](https://pierandpoint.org/parcels/mission-bay-school/): Complete; institutional; Mission Bay; DataSF parcel
+- [Mission Bay South Block 12 West](https://pierandpoint.org/parcels/mission-bay-south-block-12-west/): Planned; mixed; Mission Bay; DataSF parcel
+- [Mission Bay South Block 9](https://pierandpoint.org/parcels/mission-bay-south-block-9/): Complete; residential; Mission Bay; DataSF parcel
+- [Mission Bay South Block 9A](https://pierandpoint.org/parcels/mission-bay-south-block-9a/): Complete; residential; Mission Bay; DataSF parcel
+- [Mission Creek Park](https://pierandpoint.org/parcels/mission-creek-park/): Complete; park; Mission Bay; approximate shape
+- [Mission Creek Park Pavilion](https://pierandpoint.org/parcels/mission-creek-park-pavilion/): Complete; park; Mission Bay; approximate shape
+- [Mission Hall (Global Health & Clinical Sciences Building)](https://pierandpoint.org/parcels/mission-hall-global-health-and-clinical-sciences-building/): Complete; institutional; Mission Bay; approximate shape
+- [Mission Walk (330 Berry St)](https://pierandpoint.org/parcels/mission-walk-330-berry-st/): Complete; residential; Mission Bay; approximate shape
+- [Mission Walk (335 Berry St)](https://pierandpoint.org/parcels/mission-walk-335-berry-st/): Complete; residential; Mission Bay; approximate shape
+- [One Mission Bay](https://pierandpoint.org/parcels/one-mission-bay/): Complete; residential; Mission Bay; approximate shape
+- [Park Terrace](https://pierandpoint.org/parcels/park-terrace/): Complete; residential; Mission Bay; approximate shape
+- [Parklab Gardens & Mission Bay Commons (interim, west)](https://pierandpoint.org/parcels/parklab-gardens-and-mission-bay-commons-interim-west/): Existing, not yet redeveloped; park; Mission Bay; approximate shape
+- [Radiance](https://pierandpoint.org/parcels/radiance/): Complete; residential; Mission Bay; approximate shape
+- [San Francisco Public Safety Building](https://pierandpoint.org/parcels/san-francisco-public-safety-building/): Complete; institutional; Mission Bay; DataSF parcel
+- [Sandler Neurosciences Center](https://pierandpoint.org/parcels/sandler-neurosciences-center/): Complete; institutional; Mission Bay; approximate shape
+- [Smith Cardiovascular Research Building](https://pierandpoint.org/parcels/smith-cardiovascular-research-building/): Complete; institutional; Mission Bay; approximate shape
+- [Strata at Mission Bay](https://pierandpoint.org/parcels/strata-at-mission-bay/): Complete; residential; Mission Bay; approximate shape
+- [The Beacon](https://pierandpoint.org/parcels/the-beacon/): Complete; residential; Mission Bay; approximate shape
+- [The Exchange on 16th](https://pierandpoint.org/parcels/the-exchange-on-16th/): Complete; commercial; Mission Bay; DataSF parcel
+- [Third Street Garage](https://pierandpoint.org/parcels/third-street-garage/): Complete; parking; Mission Bay; approximate shape
+- [UCSF Medical Center at Mission Bay](https://pierandpoint.org/parcels/ucsf-medical-center-at-mission-bay/): Complete; institutional; Mission Bay; approximate shape
+- [UCSF Mission Bay Housing North Building](https://pierandpoint.org/parcels/ucsf-mission-bay-housing-north-building/): Complete; residential; Mission Bay; approximate shape
+- [UCSF Mission Bay Housing West Building](https://pierandpoint.org/parcels/ucsf-mission-bay-housing-west-building/): Complete; residential; Mission Bay; approximate shape
+- [UCSF Student Housing](https://pierandpoint.org/parcels/ucsf-student-housing/): Complete; residential; Mission Bay; approximate shape
+- [Uber Mission Bay 1](https://pierandpoint.org/parcels/uber-mission-bay-1/): Complete; commercial; Mission Bay; DataSF parcel
+- [Uber Mission Bay 2](https://pierandpoint.org/parcels/uber-mission-bay-2/): Complete; commercial; Mission Bay; DataSF parcel
+- [Uber Mission Bay 3 & 4](https://pierandpoint.org/parcels/uber-mission-bay-3-and-4/): Complete; commercial; Mission Bay; DataSF parcel
+- [Venue](https://pierandpoint.org/parcels/venue/): Complete; residential; Mission Bay; approximate shape
+- [William J. Rutter Community Center](https://pierandpoint.org/parcels/william-j-rutter-community-center/): Complete; institutional; Mission Bay; approximate shape
+- [Building 12 Plaza and Market Square](https://pierandpoint.org/parcels/building-12-plaza-and-market-square/): Planned; park; Pier 70; approximate shape
+- [Crane Cove Park](https://pierandpoint.org/parcels/crane-cove-park/): Complete; park; Pier 70; approximate shape
+- [Historic Building 12](https://pierandpoint.org/parcels/historic-building-12/): Complete; mixed; Pier 70; DataSF parcel
+- [Irish Hill Playground and Irish Hill Corner Plaza](https://pierandpoint.org/parcels/irish-hill-playground-and-irish-hill-corner-plaza/): Planned; park; Pier 70; approximate shape
+- [PKN Frontage Open Space (20th Street)](https://pierandpoint.org/parcels/pkn-frontage-open-space-20th-street/): Planned; park; Pier 70; approximate shape
+- [Pier 70 Building 101 (Bethlehem Steel HQ)](https://pierandpoint.org/parcels/pier-70-building-101-bethlehem-steel-hq/): Complete; commercial; Pier 70; approximate shape
+- [Pier 70 Building 102 (former Power House)](https://pierandpoint.org/parcels/pier-70-building-102-former-power-house/): Complete; commercial; Pier 70; approximate shape
+- [Pier 70 Building 104 (UIW Headquarters)](https://pierandpoint.org/parcels/pier-70-building-104-uiw-headquarters/): Complete; commercial; Pier 70; approximate shape
+- [Pier 70 Building 113/114/115/116 (Union Iron Works Machine Shop)](https://pierandpoint.org/parcels/pier-70-building-113-114-115-116-union-iron-works-machine-shop/): Complete; commercial; Pier 70; approximate shape
+- [Pier 70 Building 14](https://pierandpoint.org/parcels/pier-70-building-14/): Complete; commercial; Pier 70; approximate shape
+- [Pier 70 Building 2 (Warehouse No. 2)](https://pierandpoint.org/parcels/pier-70-building-2-warehouse-no-2/): Existing, not yet redeveloped; commercial; Pier 70; approximate shape
+- [Pier 70 Building 21 (Substation No. 5, relocated)](https://pierandpoint.org/parcels/pier-70-building-21-substation-no-5-relocated/): Existing, not yet redeveloped; mixed; Pier 70; approximate shape
+- [Pier 70 Hoedown Yard 1/2 (HDY1/2)](https://pierandpoint.org/parcels/pier-70-hoedown-yard-1-2-hdy1-2/): Planned; residential; Pier 70; approximate shape
+- [Pier 70 Hoedown Yard 3 (HDY3)](https://pierandpoint.org/parcels/pier-70-hoedown-yard-3-hdy3/): Planned; residential; Pier 70; approximate shape
+- [Pier 70 Parcel A](https://pierandpoint.org/parcels/pier-70-parcel-a/): Planned; commercial; Pier 70; approximate shape
+- [Pier 70 Parcel B](https://pierandpoint.org/parcels/pier-70-parcel-b/): Planned; commercial; Pier 70; approximate shape
+- [Pier 70 Parcel C1](https://pierandpoint.org/parcels/pier-70-parcel-c1/): Planned; residential; Pier 70; approximate shape
+- [Pier 70 Parcel C2](https://pierandpoint.org/parcels/pier-70-parcel-c2/): Planned; residential; Pier 70; approximate shape
+- [Pier 70 Parcel D](https://pierandpoint.org/parcels/pier-70-parcel-d/): Planned; residential; Pier 70; approximate shape
+- [Pier 70 Parcel E1](https://pierandpoint.org/parcels/pier-70-parcel-e1/): Planned; residential; Pier 70; approximate shape
+- [Pier 70 Parcel E2 (block)](https://pierandpoint.org/parcels/pier-70-parcel-e2-block/): Planned; residential; Pier 70; approximate shape
+- [Pier 70 Parcel E3](https://pierandpoint.org/parcels/pier-70-parcel-e3/): Existing, not yet redeveloped; entertainment; Pier 70; approximate shape
+- [Pier 70 Parcel E4](https://pierandpoint.org/parcels/pier-70-parcel-e4/): Planned; mixed; Pier 70; approximate shape
+- [Pier 70 Parcel H1](https://pierandpoint.org/parcels/pier-70-parcel-h1/): Planned; commercial; Pier 70; approximate shape
+- [Pier 70 Parcel H2](https://pierandpoint.org/parcels/pier-70-parcel-h2/): Planned; commercial; Pier 70; approximate shape
+- [Pier 70 Parcel K North (PKN)](https://pierandpoint.org/parcels/pier-70-parcel-k-north-pkn/): Planned; residential; Pier 70; approximate shape
+- [Pier 70 Parcel K South (PKS)](https://pierandpoint.org/parcels/pier-70-parcel-k-south-pks/): Planned; residential; Pier 70; approximate shape
+- [Pier 70 Parcels F/G](https://pierandpoint.org/parcels/pier-70-parcels-f-g/): Planned; commercial; Pier 70; approximate shape
+- [Pier 70 Waterfront Open Space (Waterfront Terrace / Slipways Commons / Waterfront Promenade / Pier 70 Shoreline)](https://pierandpoint.org/parcels/pier-70-waterfront-open-space-waterfront-terrace-slipways-commons-waterfront-promenade-pier-70-shoreline/): Planned; park; Pier 70; approximate shape
+- [Block 2](https://pierandpoint.org/parcels/block-2/): Under construction; commercial; Potrero Station; DataSF parcel
+- [Humboldt Street Plaza](https://pierandpoint.org/parcels/humboldt-street-plaza/): Planned; park; Potrero Station; approximate shape
+- [Louisiana Paseo](https://pierandpoint.org/parcels/louisiana-paseo/): Planned; park; Potrero Station; approximate shape
+- [PG&E Switchyard (retained, not part of redevelopment)](https://pierandpoint.org/parcels/pg-and-e-switchyard-retained-not-part-of-redevelopment/): Existing, not yet redeveloped; commercial; Potrero Station; approximate shape
+- [Potrero Power Station Block 1](https://pierandpoint.org/parcels/potrero-power-station-block-1/): Planned; mixed; Potrero Station; approximate shape
+- [Potrero Power Station Block 11](https://pierandpoint.org/parcels/potrero-power-station-block-11/): Planned; commercial; Potrero Station; approximate shape
+- [Potrero Power Station Block 12](https://pierandpoint.org/parcels/potrero-power-station-block-12/): Planned; commercial; Potrero Station; approximate shape
+- [Potrero Power Station Block 13](https://pierandpoint.org/parcels/potrero-power-station-block-13/): Planned; mixed; Potrero Station; approximate shape
+- [Potrero Power Station Block 14](https://pierandpoint.org/parcels/potrero-power-station-block-14/): Planned; mixed; Potrero Station; approximate shape
+- [Potrero Power Station Block 15 / Station A](https://pierandpoint.org/parcels/potrero-power-station-block-15-station-a/): Existing, not yet redeveloped; commercial; Potrero Station; approximate shape
+- [Potrero Power Station Block 3](https://pierandpoint.org/parcels/potrero-power-station-block-3/): Planned; commercial; Potrero Station; approximate shape
+- [Potrero Power Station Block 4](https://pierandpoint.org/parcels/potrero-power-station-block-4/): Planned; residential; Potrero Station; approximate shape
+- [Potrero Power Station Block 5](https://pierandpoint.org/parcels/potrero-power-station-block-5/): Planned; mixed; Potrero Station; approximate shape
+- [Potrero Power Station Block 7 (remaining portion)](https://pierandpoint.org/parcels/potrero-power-station-block-7-remaining-portion/): Planned; mixed; Potrero Station; approximate shape
+- [Potrero Power Station Block 8](https://pierandpoint.org/parcels/potrero-power-station-block-8/): Planned; residential; Potrero Station; approximate shape
+- [Potrero Power Station Block 9](https://pierandpoint.org/parcels/potrero-power-station-block-9/): Planned; mixed; Potrero Station; approximate shape
+- [Power Station Park](https://pierandpoint.org/parcels/power-station-park/): Planned; park; Potrero Station; approximate shape
+- [Prequel Park (Port sub-area)](https://pierandpoint.org/parcels/prequel-park-port-sub-area/): Planned; park; Potrero Station; approximate shape
+- [Prequel Park (Power Station sub-area)](https://pierandpoint.org/parcels/prequel-park-power-station-sub-area/): Under construction; park; Potrero Station; approximate shape
+- [Sophie Maxwell Building](https://pierandpoint.org/parcels/sophie-maxwell-building/): Complete; residential; Potrero Station; DataSF parcel
+- [The Stack (Unit 3 smokestack)](https://pierandpoint.org/parcels/the-stack-unit-3-smokestack/): Existing, not yet redeveloped; entertainment; Potrero Station; approximate shape
+- [Waterfront Park](https://pierandpoint.org/parcels/waterfront-park/): Planned; park; Potrero Station; approximate shape
+
+## About
+
+- [Method](https://pierandpoint.org/method/): how the record is kept and what the confidence levels mean
+- [Changes](https://pierandpoint.org/changes/): the human-readable changelog
+- [Independence](https://pierandpoint.org/independence/): funding and conflict policy

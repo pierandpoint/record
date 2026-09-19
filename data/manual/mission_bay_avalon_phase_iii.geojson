@@ -1,0 +1,54 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "project_name": "Avalon at Mission Bay III",
+    "site": "Mission Bay North",
+    "status": "complete",
+    "use": "residential",
+    "geometry_type": "real",
+    "digitized_from": "DataSF Parcels -- Active and Retired (blklot 8705006, real cadastral land-parcel boundary)",
+    "digitization_method": "REPLACED 2026-09-18 (second correction, after the owner flagged the first fix was still tracing individual building rooftops rather than the site itself): the real Assessor land parcel 8705006 -- the same one this parcel's condo-style unit lots are all mapped against -- gives the full rectangular site boundary (grounds, courtyard and building together), matching the owner's own sketch of what the shape should look like, rather than a tight building-only outline. Still real, official DataSF cadastral data, not a hand trace.",
+    "accuracy_caveat": "REAL -- official DataSF Assessor parcel boundary (blklot 8705006), ~6093 sq m, not a hand trace or plan estimate. 353-383 King St, 260 units per secondary sources; grand opening June 18, 2009 per AvalonBay's own investor-relations press release. This is the whole site/land parcel, not just the building's rooftop -- it includes any courtyard, landscaping or parking within the lot line. The parcel is condo-mapped for ownership purposes across many individually owned per-unit lots sharing this same footprint (confirmed against data/raw/parcels.geojson), so no single blklot represents one owner and it cannot be joined via status.csv the way a single-owner parcel can.",
+    "notes": "One of three AvalonBay phases along King St.",
+    "source_doc_urls": [
+     "https://investors.avalonbay.com/news-events/press-releases/detail/333/avalonbay-celebrates-grand-opening-of-avalon-at-mission-bay-iii-a-community-committed-to-sustainable-living",
+     "https://data.sfgov.org/Geographic-Locations-and-Boundaries/Parcels-Active-and-Retired/acdm-wktn"
+    ]
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -122.395529124,
+       37.77416256
+      ],
+      [
+       -122.395943399,
+       37.774493019
+      ],
+      [
+       -122.395003518,
+       37.775235374
+      ],
+      [
+       -122.394589245,
+       37.774904913
+      ],
+      [
+       -122.395409562,
+       37.774256997
+      ],
+      [
+       -122.395529124,
+       37.77416256
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

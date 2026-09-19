@@ -1,0 +1,38 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Pier 70 Building 14",
+        "site": "Pier 70",
+        "status": "complete",
+        "use": "commercial",
+        "geometry_type": "real",
+        "digitized_from": "DataSF Building Footprints dataset (real, surveyed building outline; not tied to an Assessor parcel).",
+        "digitization_method": "ADDED 2026-09-17 to fix a major, previously-unaddressed real-vs-approximate overlap: this project's status.csv had 'Building 14' joined to blklot 4052001, a giant (~134,945 sq m / ~33-acre) Assessor lot that turns out to underlie almost the ENTIRE eastern two-thirds of the Pier 70 site -- overlapping essentially every D4D approximate parcel there (A, B, D, E1-E4, 21, F/G, H1, H2, Waterfront Open Space, Building 12 Plaza, even Irish Hill Playground), not just Building 14's own footprint. A user noticed persistent visual overlap on the rendered map and asked directly whether the same validation process was being used as elsewhere; investigating with a from-scratch real-vs-approximate overlap check (which this project's check_geometry_quality.py had never actually performed -- it only ever checked approximate-vs-approximate sibling overlaps) surfaced this. The Pier 70 labeled map had separately excluded 4052001 from its own rendering (2026-09-17, 'Always show Building 12' commit) for being oversized, but that was a rendering-only patch on the Pier70-specific map -- it did nothing for the citywide static/interactive maps, which were still rendering 4052001's full extent, and did nothing about the underlying data conflict. ROOT-CAUSE FIX: matched Building 14 to its own specific real footprint the same way Buildings 101/102/104/113-116/21 were already split out of their own oversized blklots. Figure 6.4.2's own '14' label box (pixel bounds ~(947,505)-(1073,613) on page171.png) transforms to real-world centroid lon -122.38532, lat 37.76029; the nearest candidate footprint under mblr=SF4052001 (1556.6 sq m / ~16,754 sqft) sits 39m away -- and its size is a near-exact match (within 3%) to status.csv's own previously-cited '16,315 gsf double-gable metal warehouse' figure for Building 14, which is strong independent confirmation this is the right footprint. Confirmed 0 overlap against the 113/114/115/116 complex (2.1m gap, essentially touching, consistent with the diagram showing them as adjacent structures), Parcel D, Parcel C1, PKN, the 20th Street Plaza, and the Waterfront Open Space.",
+        "accuracy_caveat": "REAL, surveyed building footprint (DataSF Building Footprints) -- high confidence in the outline itself and its match to Building 14: position matches Figure 6.4.2's own label (39m away, the closest and only plausible candidate among the lot's other footprint pieces once 113/114/115/116's own pieces are excluded) and its area independently matches the previously-cited 16,315 GSF within 3%. As with the other buildings split from oversized Assessor lots this project, the match rests on position and size, not an explicit building-number attribute in the footprint dataset itself (no such attribute exists there).",
+        "why_no_real_parcel": "This structure has no street address in DataSF's Assessor roll and sits on the same huge, largely-unsubdivided Assessor lot (blklot 4052001) as Buildings 101/102/104/113-116/21 and other structures across central Pier 70 -- no distinct blklot exists to join for Building 14 specifically, so this feature uses the real building footprint instead, matched individually.",
+        "regulatory_context": "Building 14, a basic heavy warehouse dated to 1941 (per the 2013 HPC packet, 2013.1168E) with approximately 16,000 GSF of space and a 66 foot height, sits immediately east of the Union Iron Works Machine Shop complex (Buildings 113/114/115/116), framing a shared courtyard with them per the D4D's rehabilitation concept. Rehabbed by Orton Development Inc. (ODI) as part of the same 20th Street Historic Core project; proposed for the same industrial/warehouse/maker-space use (food, tech, life science, biotech, education, arts production) with ancillary office, showroom, and retail as its neighbors.",
+        "notes": "Split 2026-09-17 from the oversized combined blklot 4052001 row -- see digitization_method. This resolves a major real-vs-approximate overlap that had gone undetected because check_geometry_quality.py only ever checked approximate-vs-approximate sibling overlaps, never real-vs-approximate ones.",
+        "images": [],
+        "source_doc_urls": [
+          "https://plantconstruction.com/projects/pier-70-building-14/",
+          "https://default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-122.384741117, 37.760071968], [-122.384739426, 37.760072072], [-122.384739386, 37.760071983],
+            [-122.384724443, 37.759918994], [-122.385211401, 37.75988894], [-122.385211439, 37.759889027],
+            [-122.38522635, 37.760041597], [-122.385227381, 37.760041536], [-122.385227418, 37.760041623],
+            [-122.385243866, 37.760214026], [-122.384757464, 37.760243338], [-122.384757441, 37.76024325],
+            [-122.384741117, 37.760071968]
+          ]
+        ]
+      }
+    }
+  ]
+}

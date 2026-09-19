@@ -1,0 +1,156 @@
+project_name,site,geometry_file
+# Projects that are real and sourced but CANNOT be joined via status.csv
+# because they sit on land with no Assessor's Block/Lot at all (so they can
+# never appear in data/raw/parcels.geojson, no matter how the fetch is
+# tuned). Each row here points to a hand-digitized GeoJSON file under
+# data/manual/ instead of a real blklot.
+#
+# This is the LAST resort, not a shortcut: only add a row here after
+# confirming (from a primary source, not a guess) that the project's land
+# genuinely has no Assessor's Block/Lot -- see README's "Approximate /
+# unassessed projects" section for the full process and the Prequel Park
+# row below as a worked example. All status/use/notes/accuracy fields live
+# as properties inside the geometry_file itself (see
+# data/manual/prequel_park_port_subarea.geojson) so the caveats travel
+# with the geometry and can't be edited out of sync with it.
+Prequel Park (Port sub-area),Potrero Power Station,data/manual/prequel_park_port_subarea.geojson
+Prequel Park (Power Station sub-area),Potrero Power Station,data/manual/prequel_park_power_station_subarea.geojson
+# Noonan Building (Building 11) EXCLUDED from active maps 2026-09-16 (user
+# decision): this project maps the future/planned state of each site, and
+# Noonan is an existing building slated for demolition as part of the Pier
+# 70 redevelopment, with no distinct D4D parcel of its own to represent its
+# replacement (its low-confidence position overlaps Parcel A, suggesting --
+# not confirmed -- that Parcel A supersedes it). Flagged as a candidate for
+# a future "existing building being demolished" status/treatment rather
+# than showing it as if it persists into the planned future this project
+# otherwise depicts. Data kept at data/manual/noonan_building.geojson --
+# uncomment this row to restore it to the maps.
+# Noonan Building (Building 11) -- approximate,Pier 70,data/manual/noonan_building.geojson
+"Pier 70 Building 21 (Substation No. 5, relocated)",Pier 70,data/manual/building21_substation.geojson
+# Elevation Sky Park MERGED 2026-09-17 into Pier 70 Parcel E3's own row
+# (explicit user decision): ESP had no scaled site plan anywhere and was a
+# directional-only placement that overlapped E3 (its largest overlap),
+# E2, and E4. Rather than keep it as a separate, overlapping low-confidence
+# block, the user made the call to treat it as occupying E3 specifically
+# for mapping purposes -- see pier70_e3.geojson's digitization_method and
+# accuracy_caveat (which also documents that E3's post-ESP-lease future is
+# an open question, not assumed to revert to the D4D's original residential
+# plan). Data/sourcing kept at data/manual/elevation_sky_park.geojson --
+# uncomment this row to show it again as a separate block.
+# Elevation Sky Park -- approximate, low-confidence placement,Pier 70,data/manual/elevation_sky_park.geojson
+Mission Rock Block C,Pier 50 / Mission Rock,data/manual/mission_rock_block_c.geojson
+Mission Rock Block D1,Pier 50 / Mission Rock,data/manual/mission_rock_block_d1.geojson
+Mission Rock Block D2,Pier 50 / Mission Rock,data/manual/mission_rock_block_d2.geojson
+Mission Rock Block E,Pier 50 / Mission Rock,data/manual/mission_rock_block_e.geojson
+Mission Rock Block H,Pier 50 / Mission Rock,data/manual/mission_rock_block_h.geojson
+Mission Rock Block I,Pier 50 / Mission Rock,data/manual/mission_rock_block_i.geojson
+Mission Rock Block J,Pier 50 / Mission Rock,data/manual/mission_rock_block_j.geojson
+Mission Rock Block K,Pier 50 / Mission Rock,data/manual/mission_rock_block_k.geojson
+Mission Rock Square,Pier 50 / Mission Rock,data/manual/mission_rock_square.geojson
+# Added 2026-09-17 (Mission Rock geometry brief): the Design Controls' remaining named open spaces. China Basin Park is a REAL
+# Assessor lot (8719A005) minus the unbuilt Block K lobe the lot still contains -- routed through this table only because of that
+# carve-out (see its digitization_method); Channel Lane is derived from Blocks J and I; Channel Wharf and the TAFB paseo are
+# lot-line-bounded sub-areas of the TAFB right-of-way lot 8719A003. Channel Street and the two built paseos are status.csv rows.
+China Basin Park,Pier 50 / Mission Rock,data/manual/mission_rock_china_basin_park.geojson
+Mission Rock Channel Lane,Pier 50 / Mission Rock,data/manual/mission_rock_channel_lane.geojson
+Mission Rock Channel Wharf,Pier 50 / Mission Rock,data/manual/mission_rock_channel_wharf.geojson
+Mission Rock Terry A Francois Boulevard Paseo (Pier 48 entry),Pier 50 / Mission Rock,data/manual/mission_rock_tafb_paseo.geojson
+Pier 70 Parcel A,Pier 70,data/manual/pier70_a.geojson
+Pier 70 Parcel B,Pier 70,data/manual/pier70_b.geojson
+Pier 70 Parcel K North (PKN),Pier 70,data/manual/pier70_pkn.geojson
+"PKN Frontage Open Space (20th Street) -- approximate",Pier 70,data/manual/pier70_pkn_frontage_plaza.geojson
+"Pier 70 Waterfront Open Space (Waterfront Terrace / Slipways Commons / Waterfront Promenade / Pier 70 Shoreline) -- combined, approximate",Pier 70,data/manual/pier70_waterfront_open_space.geojson
+Crane Cove Park,Pier 70,data/manual/pier70_crane_cove_park.geojson
+"Building 12 Plaza and Market Square -- approximate",Pier 70,data/manual/pier70_building12_plaza.geojson
+"Irish Hill Playground and Irish Hill Corner Plaza -- combined, approximate",Pier 70,data/manual/pier70_irish_hill_playground.geojson
+Pier 70 Parcel K South (PKS),Pier 70,data/manual/pier70_pks.geojson
+Pier 70 Hoedown Yard 3 (HDY3),Pier 70,data/manual/pier70_hdy3.geojson
+Pier 70 Hoedown Yard 1/2 (HDY1/2),Pier 70,data/manual/pier70_hdy1_2.geojson
+Pier 70 Parcel C1,Pier 70,data/manual/pier70_c1.geojson
+Pier 70 Parcel C2,Pier 70,data/manual/pier70_c2.geojson
+Pier 70 Parcel D,Pier 70,data/manual/pier70_d.geojson
+Pier 70 Parcel E1,Pier 70,data/manual/pier70_e1.geojson
+Pier 70 Parcel E2 (block),Pier 70,data/manual/pier70_e2.geojson
+Pier 70 Parcel E3,Pier 70,data/manual/pier70_e3.geojson
+Pier 70 Parcel E4,Pier 70,data/manual/pier70_e4.geojson
+Pier 70 Parcels F/G,Pier 70,data/manual/pier70_fg.geojson
+Pier 70 Parcel H1,Pier 70,data/manual/pier70_h1.geojson
+Pier 70 Parcel H2,Pier 70,data/manual/pier70_h2.geojson
+Pier 70 Building 2 (Warehouse No. 2),Pier 70,data/manual/pier70_block2.geojson
+# Individual buildings SPLIT 2026-09-16 from the combined blklot 4046001 and
+# 4111004 rows formerly in status.csv (user decision: "Can we split them
+# then into individual parcels, why keep them grouped"). Each uses a REAL
+# surveyed footprint from DataSF's Building Footprints dataset (geometry_type
+# "real", not "approximate" -- see each file's digitization_method), routed
+# through this approximate-projects table only because that dataset has no
+# per-building Assessor-parcel join, not because the geometry itself is a
+# hand-digitized approximation.
+Pier 70 Building 101 (Bethlehem Steel HQ),Pier 70,data/manual/pier70_building_101.geojson
+Pier 70 Building 102 (former Power House),Pier 70,data/manual/pier70_building_102.geojson
+Pier 70 Building 104 (UIW Headquarters),Pier 70,data/manual/pier70_building_104.geojson
+Pier 70 Building 113/114/115/116 (Union Iron Works Machine Shop),Pier 70,data/manual/pier70_building_113_116.geojson
+Pier 70 Building 14,Pier 70,data/manual/pier70_building_14.geojson
+Potrero Power Station Block 1,Potrero Power Station,data/manual/potrero_block_1.geojson
+Potrero Power Station Block 3,Potrero Power Station,data/manual/potrero_block_3.geojson
+Potrero Power Station Block 4,Potrero Power Station,data/manual/potrero_block_4.geojson
+Potrero Power Station Block 5,Potrero Power Station,data/manual/potrero_block_5.geojson
+Potrero Power Station Block 7 (remaining portion),Potrero Power Station,data/manual/potrero_block_7remaining.geojson
+Potrero Power Station Block 9,Potrero Power Station,data/manual/potrero_block_9.geojson
+Potrero Power Station Block 11,Potrero Power Station,data/manual/potrero_block_11.geojson
+Potrero Power Station Block 12,Potrero Power Station,data/manual/potrero_block_12.geojson
+Potrero Power Station Block 13,Potrero Power Station,data/manual/potrero_block_13.geojson
+Potrero Power Station Block 14,Potrero Power Station,data/manual/potrero_block_14.geojson
+Potrero Power Station Block 15 / Station A,Potrero Power Station,data/manual/potrero_block_15.geojson
+Potrero Power Station Block 8,Potrero Power Station,data/manual/potrero_block_8.geojson
+"PG&E Switchyard (retained, not part of redevelopment) -- low confidence",Potrero Power Station,data/manual/potrero_pge_switchyard.geojson
+The Stack (Unit 3 smokestack) -- existing structure,Potrero Power Station,data/manual/potrero_the_stack.geojson
+Power Station Park,Potrero Power Station,data/manual/potrero_power_station_park.geojson
+Waterfront Park,Potrero Power Station,data/manual/potrero_waterfront_park.geojson
+Louisiana Paseo,Potrero Power Station,data/manual/potrero_louisiana_paseo.geojson
+Humboldt Street Plaza,Potrero Power Station,data/manual/potrero_humboldt_street_plaza.geojson
+Mission Creek Park,Mission Bay South,data/manual/mission_bay_creek_park.geojson
+Mission Bay Commons,Mission Bay South,data/manual/mission_bay_commons.geojson
+Bayfront Park (Mission Bay),Mission Bay South,data/manual/mission_bay_bayfront_park.geojson
+Mission Bay Kids' Park,Mission Bay South,data/manual/mission_bay_kids_park.geojson
+"Parklab Gardens & Mission Bay Commons (interim, west) -- approximate",Mission Bay South,data/manual/mission_bay_commons_interim_west.geojson
+The Beacon,Mission Bay North,data/manual/mission_bay_the_beacon.geojson
+Avalon at Mission Bay I,Mission Bay North,data/manual/mission_bay_avalon_phase_i.geojson
+Avalon at Mission Bay II,Mission Bay North,data/manual/mission_bay_avalon_phase_ii.geojson
+Avalon at Mission Bay III,Mission Bay North,data/manual/mission_bay_avalon_phase_iii.geojson
+Madrone,Mission Bay South,data/manual/mission_bay_madrone.geojson
+Arden,Mission Bay South,data/manual/mission_bay_arden.geojson
+One Mission Bay,Mission Bay South,data/manual/mission_bay_one_mission_bay.geojson
+Radiance,Mission Bay South,data/manual/mission_bay_radiance.geojson
+UCSF Medical Center at Mission Bay,Mission Bay South,data/manual/ucsf_mission_bay_hospital.geojson
+Genentech Hall,Mission Bay South,data/manual/ucsf_genentech_hall.geojson
+Arthur and Toni Rembe Rock Hall,Mission Bay South,data/manual/ucsf_rock_hall.geojson
+Byers Hall,Mission Bay South,data/manual/ucsf_byers_hall.geojson
+Sandler Neurosciences Center,Mission Bay South,data/manual/ucsf_sandler_neurosciences.geojson
+Smith Cardiovascular Research Building,Mission Bay South,data/manual/ucsf_smith_cardiovascular.geojson
+Helen Diller Family Cancer Research Building,Mission Bay South,data/manual/ucsf_helen_diller_cancer_research.geojson
+Mission Hall (Global Health & Clinical Sciences Building),Mission Bay South,data/manual/ucsf_mission_hall.geojson
+William J. Rutter Community Center,Mission Bay South,data/manual/ucsf_rutter_community_center.geojson
+Mission Bay Preliminary Utilities Plant,Mission Bay South,data/manual/ucsf_utilities_plant.geojson
+Hearst Tower,Mission Bay South,data/manual/ucsf_hearst_tower.geojson
+UCSF Mission Bay Housing North Building,Mission Bay South,data/manual/ucsf_housing_north.geojson
+UCSF Mission Bay Housing West Building,Mission Bay South,data/manual/ucsf_housing_west.geojson
+UCSF Student Housing,Mission Bay South,data/manual/ucsf_student_housing.geojson
+Third Street Garage,Mission Bay South,data/manual/ucsf_third_street_garage.geojson
+1670 Owens Garage,Mission Bay South,data/manual/ucsf_1670_owens_garage.geojson
+Arterra,Mission Bay North,data/manual/mission_bay_arterra.geojson
+Park Terrace,Mission Bay North,data/manual/mission_bay_park_terrace.geojson
+Edgewater,Mission Bay North,data/manual/mission_bay_edgewater.geojson
+235 Berry,Mission Bay North,data/manual/mission_bay_235_berry.geojson
+255 Berry,Mission Bay North,data/manual/mission_bay_255_berry.geojson
+MB360,Mission Bay South,data/manual/mission_bay_mb360.geojson
+Channel Mission Bay,Mission Bay South,data/manual/mission_bay_channel.geojson
+Strata at Mission Bay,Mission Bay South,data/manual/mission_bay_strata.geojson
+J. David Gladstone Institutes,Mission Bay South,data/manual/mission_bay_gladstone_institutes.geojson
+Crescent Cove,Mission Bay North,data/manual/mission_bay_crescent_cove.geojson
+Mission Walk (330 Berry St),Mission Bay North,data/manual/mission_bay_mission_walk_330.geojson
+Mission Walk (335 Berry St),Mission Bay North,data/manual/mission_bay_mission_walk_335.geojson
+Venue,Mission Bay South,data/manual/mission_bay_venue.geojson
+500 Terry A. Francois Boulevard,Mission Bay South,data/manual/mission_bay_500_terry_francois.geojson
+1500 Owens Street,Mission Bay South,data/manual/mission_bay_1500_owens.geojson
+1700 Owens Street,Mission Bay South,data/manual/mission_bay_1700_owens.geojson
+Mission Creek Park Pavilion,Mission Bay South,data/manual/mission_bay_creek_park_pavilion.geojson

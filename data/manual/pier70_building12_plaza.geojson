@@ -1,0 +1,49 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Building 12 Plaza and Market Square -- approximate",
+        "site": "Pier 70",
+        "status": "planned",
+        "use": "park",
+        "geometry_type": "approximate",
+        "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155); named per Figure 3.4.1 - Overview of Public Spaces (p.52), zone 5.",
+        "digitization_method": "ADDED 2026-09-16 (Pier 70 systematic feature-by-feature pass); REDONE 2026-09-17 (first pass) after a user-reported visual bug (this plaza appeared to render as a thin diagonal ribbon crossing Maryland St into the E2/H1 area, nowhere near Building 12) -- traced from the diagram's own green pixel fill, clipped tightly against Building 2/D/12, producing a conservative ~0.35-acre result. REDONE AGAIN 2026-09-17 (second pass, same day) after the user pointed out this was still wrong: the D4D drawing shows Buildings 2, D, and 12 coming together with green space to fill the ENTIRE street block (Louisiana St to Maryland St), but the diagram-pixel-clip approach left large unaccounted gaps (~17-18m strips of bare pavement between Building 2/12's real satellite-verified positions and the diagram's own, less precisely-drawn green boundary) that didn't match either the drawing's intent or satellite reality. Switched approach entirely: used this project's own src/block_fit.py (load_blocks() + find_containing_block()) to get the REAL, street-polygonized city block bounded by Louisiana St and Maryland St (the same tool used to place Elevation Sky Park and Building 21's earlier approximations), unioned it with Parcel D's own geometry (D's north edge extends slightly beyond the polygonized block, toward the not-yet-built 21st St (NEW)), then subtracted Building 2's real/satellite-corrected geometry, Parcel D's own geometry, and Building 12's real Assessor parcel (blklot 4114010) via shapely difference(). This directly guarantees the block reads as fully filled -- buildings plus this plaza, no gaps -- rather than depending on how precisely the diagram's own green pixels were drawn relative to each building. Verified via a rendered satellite overlay (with an explicit PathPatch, not a naive geopandas .plot(), to confirm the resulting hole around Building 12 is real and not a plotting artifact) that the result correctly excludes both buildings and covers the rest of the block. Resulting area ~5,590 sq m (~1.38 acres), much closer to the D4D's cited ~1.5 acres than either prior attempt. Confirmed zero overlap with C1, C2, HDY1/2, E1, and PKS.",
+        "accuracy_caveat": "APPROXIMATE -- derived from a real, street-polygonized city block (not a diagram pixel-trace), subtracting Building 2, Parcel D, and Building 12's own committed geometries. This is a deliberate departure from pure diagram-tracing: since Figure 6.4.2's own green fill didn't precisely reach the real (satellite-corrected) edges of Building 2 and Building 12, using the real block boundary instead better matches both the drawing's evident intent (this block reads as fully built-out, buildings plus plaza, no gaps) and the satellite ground truth. The block polygon's north edge stops slightly short of Parcel D's own north edge (~14m, since the not-yet-built '21st St (NEW)' isn't in real street data) -- unioned with D's own extent to avoid an artificial gap there. Area (~1.38 acres) is close to, but still a bit under, the D4D's cited ~1.5 acres for this named space -- the remaining gap most likely reflects the plaza's true extent continuing south past the mid-block passage (labeled '15' on the diagram) into the block south of Building 12, which is not part of this feature.",
+        "why_no_real_parcel": "Open space with no subdivided Assessor parcel of its own within Brookfield's largely unaddressed 28-acre site.",
+        "regulatory_context": "Part of the Pier 70 D4D's Open Space Network (Section 3.9), approximately 1.5 acres, wrapping the historic Building 12 (and Building 2) on their west and south sides between Louisiana St and Maryland St.",
+        "notes": "Newly added 2026-09-16 as part of a systematic pass adding this site's previously-untracked open space; geometry REDONE TWICE 2026-09-17 after user-caught issues -- see digitization_method.",
+        "images": [],
+        "source_doc_urls": [
+          "https://www.sfport.com/media/8123/download?inline="
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-122.3845694, 37.7592119], [-122.38460398340065, 37.75972811052297], [-122.38457972724987, 37.75972962063541],
+            [-122.38445146037776, 37.75973762200864], [-122.3844601, 37.7598664], [-122.3844474, 37.7596771],
+            [-122.3841672, 37.7597015], [-122.3841496, 37.75949], [-122.3839109, 37.7595108],
+            [-122.3839378, 37.7599119], [-122.38392830063574, 37.759770257063096], [-122.38384866615598, 37.75977522471518],
+            [-122.38384581558155, 37.75974034268103], [-122.38380012186293, 37.759162922018746], [-122.38380005383222, 37.759162127352944],
+            [-122.3837276538322, 37.75837592729266], [-122.3837275222394, 37.758375077101725], [-122.38372747296023, 37.7583742214554],
+            [-122.38372641427739, 37.758365399098494], [-122.38373157494395, 37.758365561290695], [-122.3837326200502, 37.758365553560346],
+            [-122.38373366280935, 37.75836560944207], [-122.38373746646981, 37.75836551771277], [-122.38374127173276, 37.75836548956633],
+            [-122.3837423108481, 37.758365400885445], [-122.38374335551424, 37.758365375692215], [-122.38466325551425, 37.75830737575326],
+            [-122.38466724156318, 37.75830696801722], [-122.38467123571652, 37.758306613296476], [-122.38469367401974, 37.75830373315909],
+            [-122.38477540084924, 37.759193943727986], [-122.3845694, 37.7592119]
+          ],
+          [
+            [-122.383821034, 37.758742698], [-122.38385323, 37.759086695], [-122.384458652, 37.759050978],
+            [-122.384458524, 37.759049609], [-122.384736714, 37.759033196], [-122.384719716, 37.758851888],
+            [-122.384693402, 37.758571204], [-122.384672343, 37.758346575], [-122.384230689, 37.758372632],
+            [-122.383788838, 37.7583987], [-122.383821034, 37.758742698]
+          ]
+        ]
+      }
+    }
+  ]
+}

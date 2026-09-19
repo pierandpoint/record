@@ -1,0 +1,219 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-19",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "potrero_pge_switchyard",
+  "slug": "pg-and-e-switchyard-retained-not-part-of-redevelopment",
+  "name": "PG&E Switchyard (retained, not part of redevelopment)",
+  "permalink": "https://pierandpoint.org/parcels/pg-and-e-switchyard-retained-not-part-of-redevelopment/",
+  "api": "https://pierandpoint.org/api/v1/records/pg-and-e-switchyard-retained-not-part-of-redevelopment.json",
+  "names": [
+   "PG&E Switchyard"
+  ],
+  "site": {
+   "slug": "potrero",
+   "name": "Potrero Power Station",
+   "short": "Potrero Station",
+   "url": "https://pierandpoint.org/sites/potrero/"
+  },
+  "status": "existing",
+  "status_label": "Existing, not yet redeveloped",
+  "use": "commercial",
+  "address": null,
+  "summary": "A roughly 4.8-acre electrical switchyard owned and operated by PG&E, shown on the Design for Development's own site-boundary figure as the 'PG&E Northern Switchyard' inside the dashed 29-acre Potrero Power Station planning-area boundary at the corner of 22nd and Illinois Streets, but outside the 21-acre parcel the developer owns and outside the Development Agreement's jurisdiction.",
+  "summary_sources": [
+   "src-sfplanning-pps-switchyard",
+   "src-bos133-23"
+  ],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "LOW CONFIDENCE, DIRECTIONAL ONLY -- this is a materially weaker approximation than this site's numbered blocks. Public reporting describes PG&E's retained switchyard as a ~4.8 acre parcel at the corner of 22nd and Illinois; earlier passes of this polygon ranged from ~13 acres down to a simplified ~rectangle -- this reshaped version (see digitization_method) is now ~4.6 acres, close to that figure. The D4D diagram does not further subdivide this area (it is entirely outside the project site boundary, so the D4D had no reason to draw its actual fenceline), so the true switchyard footprint may still differ in detail from this trace. Treat this polygon as marking the correct general block and rough shape (including wrapping around Block 5's south side to 23rd St/Georgia Lane), not the switchyard's real surveyed boundary.",
+    "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
+    "why_no_real_parcel": "No DataSF Assessor parcel search (by address, by zoning code, or by proximity) turned up a distinctly-shaped, plausibly-switchyard-sized real parcel here -- parcels.geojson's records in this area are either large undifferentiated placeholder shapes (shared across many of this site's D4D blocks, per this dataset's other Potrero entries) or small unrelated lots. Real ownership and the 'not part of the sale' status are well-documented in secondary sources, but a precise Assessor-parcel-level boundary was not found.",
+    "regulatory_context": "PG&E's electrical switchyard, serving the wider grid, at approximately 22nd St and Illinois St. Explicitly NOT part of the Potrero Power Station redevelopment site or its 2020 D4D -- retained by PG&E when the former power plant property was sold for redevelopment. Recorded as status='existing' (a real, active utility use, not something this masterplan touches)."
+   }
+  },
+  "centroid": {
+   "lon": -122.386037,
+   "lat": 37.756148
+  },
+  "facts": [
+   {
+    "key": "owner",
+    "value": "Pacific Gas & Electric Company",
+    "sources": [
+     "src-sfplanning-pps-switchyard",
+     "src-bos133-23"
+    ]
+   },
+   {
+    "key": "use",
+    "value": "existing electrical switchyard",
+    "sources": [
+     "src-sfplanning-pps-switchyard"
+    ]
+   },
+   {
+    "key": "lot_area",
+    "value": "approximately 4.8 acres",
+    "sources": [
+     "src-sfplanning-pps-switchyard",
+     "src-bos133-23"
+    ]
+   },
+   {
+    "key": "relationship_to_project",
+    "value": "Labeled the 'PG&E Northern Switchyard (4.8 acres)' on the D4D's own Figure 1.2.1 (Site Boundaries and Ownership), which shows it inside the dashed boundary of the overall ~29-acre Potrero Power Station planning area (21 developer-owned acres + this 4.8-acre PG&E parcel + 2.8 acres of Port/City land), at the corner of 22nd and Illinois Streets -- distinct from a second, separate 'PG&E Southern Switchyard' shown outside the project boundary near the Transbay Cable site. Included in the project's planning and environmental clearance with PG&E's approval, but not part of the Development Agreement's Developer Property; ultimate build-out depends on the switchyard's relocation and the site coming within the DA's legal jurisdiction.",
+    "sources": [
+     "src-d4d-final-fig121",
+     "src-sfplanning-pps-switchyard"
+    ]
+   },
+   {
+    "key": "remediation",
+    "value": "PG&E has completed remediation of the PG&E sub-area portion of the former power plant site still under its ownership; the DEIR separately identifies 'PG&E switchyards to the west between Humboldt and 22nd streets' as an adjacent area also subject to PG&E remediation, independent of the project",
+    "sources": [
+     "src-deir-vol1-switchyard"
+    ]
+   },
+   {
+    "key": "site_plan_context",
+    "value": "Labeled 'SWITCHYARDS (PG&E)' on the D4D's Land Use Plan (Figure 3.1.1) and Building Height Plan (Figure 6.2.3), shown outside the dashed project site boundary west of Blocks 5, 11 and 15",
+    "sources": [
+     "src-d4d-final-fig623"
+    ]
+   }
+  ],
+  "costs": [],
+  "milestones": [],
+  "changes": [],
+  "images": [
+   {
+    "path": "data/manual/images/potrero_switchyard_d4d_ownership_p14.jpg",
+    "kind": "document",
+    "taken": "2020",
+    "credit": "Potrero Power Station Design for Development, final (Feb 26, 2020), site context figure showing the PG&E switchyard",
+    "license": "public-record",
+    "source_url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+    "license_evidence": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+    "license_note": "Figure or photograph from an adopted Port/Planning regulatory document (a Design for Development, SUD Land Use Plan or Design Controls) or a Port Commission agenda exhibit, published by the agency itself at its own domain as the public record of the adopted plan or noticed meeting item. Read 2026-09-18.",
+    "figure": "positioning",
+    "appeal": 2,
+    "appeal_note": "Full page of body text with a small aerial ownership diagram; the switchyard is legible as one of several color-coded parcels but is a minor part of the page.",
+    "url": "https://pierandpoint.org/assets/img/potrero_switchyard_d4d_ownership_p14.jpg"
+   }
+  ],
+  "open_questions": [
+   "No DataSF Assessor parcel matching the switchyard's shape or address was confirmed in any source found here, consistent with the caveat already recorded in this repository's geometry file for this feature; no source found gives the switchyard an address or APN.",
+   "No source found on the status, timeline, or cost of relocating the switchyard, or on any agreement between PG&E and the developer beyond PG&E's stated approval to include the parcel in planning and environmental review.",
+   "The DEIR's reference to 'PG&E switchyards' (plural, between Humboldt and 22nd Streets) may describe more than one switchyard parcel; this dossier treats it as the same feature described elsewhere as a single ~4.8-acre parcel at 22nd and Illinois, but that identification is not independently confirmed.",
+   "The D4D's Figure 1.2.1 shows a second, separate 'PG&E Southern Switchyard' outside the project boundary near the Transbay Cable site; this record and this repository's geometry file track only the Northern Switchyard (4.8 acres, at 22nd/Illinois). The Southern Switchyard is not tracked here."
+  ],
+  "sources": [
+   {
+    "id": "src-sfplanning-pps-switchyard",
+    "title": "Potrero Power Station project page",
+    "publisher": "SF Planning Department",
+    "date": "2026-09",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-bos133-23",
+    "title": "Resolution No. 133-23, Resolution of Intention to Establish San Francisco Enhanced Infrastructure Financing District No. 1 (Power Station) (File No. 230168)",
+    "publisher": "San Francisco Board of Supervisors",
+    "date": "2023",
+    "url": "https://sfbos.archive.sf.gov/sites/default/files/r0133-23.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-deir-vol1-switchyard",
+    "title": "Draft Environmental Impact Report, Potrero Power Station Mixed-Use Development Project, Volume 1 (Case No. 2017-011878ENV), remediation discussion",
+    "publisher": "SF Planning Department",
+    "date": "2018-10",
+    "url": "https://sfmea.sfplanning.org/2017-011878ENV_DEIR_Volume_1.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-d4d-final-fig623",
+    "title": "Potrero Power Station Design for Development, final (February 26, 2020), Figures 3.1.1 and 6.2.3",
+    "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+    "date": "2020-02-26",
+    "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-d4d-final-fig121",
+    "title": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 1.2.1: Site Boundaries and Ownership",
+    "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+    "date": "2020-02-26",
+    "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": null,
+    "title": "default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf",
+    "url": "https://default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf"
+   },
+   {
+    "id": null,
+    "title": "ia.cpuc.ca.gov/environment/info/esa/divest-pge-two/eir/chapters/02-projd.htm",
+    "url": "https://ia.cpuc.ca.gov/environment/info/esa/divest-pge-two/eir/chapters/02-projd.htm"
+   }
+  ],
+  "notes": "Directional placeholder only -- see accuracy_caveat. Do not treat the polygon shape as the switchyard's real fenceline.",
+  "has_record_file": true,
+  "last_verified": "2026-09-18",
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.387127,
+      37.756686
+     ],
+     [
+      -122.38604,
+      37.756772
+     ],
+     [
+      -122.385963,
+      37.756091
+     ],
+     [
+      -122.385432,
+      37.756128
+     ],
+     [
+      -122.385423,
+      37.756024
+     ],
+     [
+      -122.385118,
+      37.756043
+     ],
+     [
+      -122.385118,
+      37.75545
+     ],
+     [
+      -122.386984,
+      37.75545
+     ],
+     [
+      -122.387127,
+      37.756686
+     ]
+    ]
+   ]
+  }
+ }
+}

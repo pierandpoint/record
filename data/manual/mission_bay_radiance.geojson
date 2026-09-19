@@ -1,0 +1,82 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "project_name": "Radiance",
+    "site": "Mission Bay South",
+    "status": "complete",
+    "use": "residential",
+    "geometry_type": "real",
+    "digitized_from": "OpenStreetMap (way 1258086102, addr:housename=Radiance at Mission Bay, 325 China Basin St)",
+    "digitization_method": "ADDED 2026-09-18 for Mission Bay's second real-site pass: real, address-tagged OpenStreetMap building footprint for Radiance, a 99-unit, 9-story Bosa Development condominium tower at 325 China Basin St/330 Mission Bay Blvd N, completed circa 2008-2009, notable as one of the first major US condo developments to open after the 2008 financial crisis. Shares Assessor Block 8720 with its sister project Madrone. Point-in-polygon checked against DataSF's official redevelopment-area layer: this site falls in Mission Bay South, not Mission Bay North as this project's own brief informally grouped it.",
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same real-geometry-without-a-single-parcel pattern already used for several Pier 70 buildings (DataSF Building Footprints) and for Mission Bay's own real park polygons.",
+    "notes": "Story count is reported as 9 by two independent realtor sources; one outlier source says 16, which appears to conflate Radiance with the taller sister building Madrone -- not used here.",
+    "source_doc_urls": [
+     "https://www.openstreetmap.org/way/1258086102",
+     "https://bosadevelopment.com/project/radiance-madrone-mission-bay/"
+    ]
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -122.3871404,
+       37.7720441
+      ],
+      [
+       -122.3874522,
+       37.7720259
+      ],
+      [
+       -122.3877676,
+       37.7720074
+      ],
+      [
+       -122.387749,
+       37.7718095
+      ],
+      [
+       -122.3877447,
+       37.7717637
+      ],
+      [
+       -122.3877232,
+       37.7715348
+      ],
+      [
+       -122.3877192,
+       37.7714915
+      ],
+      [
+       -122.3876994,
+       37.7712805
+      ],
+      [
+       -122.3873774,
+       37.7712994
+      ],
+      [
+       -122.3870723,
+       37.7713173
+      ],
+      [
+       -122.3870926,
+       37.7715331
+      ],
+      [
+       -122.3871219,
+       37.7718465
+      ],
+      [
+       -122.3871404,
+       37.7720441
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

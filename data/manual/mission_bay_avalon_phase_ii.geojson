@@ -1,0 +1,58 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "project_name": "Avalon at Mission Bay II",
+    "site": "Mission Bay North",
+    "status": "complete",
+    "use": "residential",
+    "geometry_type": "real",
+    "digitized_from": "DataSF Parcels -- Active and Retired (blklot 8705011, real cadastral land-parcel boundary)",
+    "digitization_method": "REPLACED 2026-09-18 (second correction, after the owner flagged the first fix was still tracing individual building rooftops rather than the site itself): the real Assessor land parcel 8705011 -- the same one this parcel's condo-style unit lots are all mapped against -- gives the full rectangular site boundary (grounds, courtyard and building together), matching the owner's own sketch of what the shape should look like, rather than a tight building-only outline. Still real, official DataSF cadastral data, not a hand trace.",
+    "accuracy_caveat": "REAL -- official DataSF Assessor parcel boundary (blklot 8705011), ~6093 sq m, not a hand trace or plan estimate. 301 King St, 313 units per secondary sources, opened 2006, architect Arquitectonica. This is the whole site/land parcel, not just the building's rooftop -- it includes any courtyard, landscaping or parking within the lot line. The parcel is condo-mapped for ownership purposes across many individually owned per-unit lots sharing this same footprint (confirmed against data/raw/parcels.geojson), so no single blklot represents one owner and it cannot be joined via status.csv the way a single-owner parcel can.",
+    "notes": "One of three AvalonBay phases along King St.",
+    "source_doc_urls": [
+     "https://arquitectonica.com/architecture/project/avalon-mission-bay/",
+     "https://data.sfgov.org/Geographic-Locations-and-Boundaries/Parcels-Active-and-Retired/acdm-wktn"
+    ]
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -122.394905414,
+       37.77531286
+      ],
+      [
+       -122.394258484,
+       37.775823818
+      ],
+      [
+       -122.393965489,
+       37.776055227
+      ],
+      [
+       -122.393964048,
+       37.776054078
+      ],
+      [
+       -122.393551216,
+       37.775724762
+      ],
+      [
+       -122.394491141,
+       37.774982398
+      ],
+      [
+       -122.394905414,
+       37.77531286
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

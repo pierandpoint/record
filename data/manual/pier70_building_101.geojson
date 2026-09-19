@@ -1,0 +1,33 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Pier 70 Building 101 (Bethlehem Steel HQ)",
+        "site": "Pier 70",
+        "status": "complete",
+        "use": "commercial",
+        "geometry_type": "real",
+        "digitized_from": "DataSF Building Footprints dataset (real, surveyed building outline; not tied to an Assessor parcel).",
+        "digitization_method": "SPLIT 2026-09-16 from the combined blklot 4046001 row (previously one polygon covering Buildings 101, 102, 104, 122, and 123 together, since the real Assessor lot has no further official subdivision -- see status.csv history). User asked why these were kept grouped; split into individual buildings using DataSF's real, surveyed Building Footprints dataset (field mblr=SF4046001), matched to this specific building by direct visual overlay against Pier 70 D4D Figure 6.4.2's own labeled '101' box (pixel position transformed via this site's validated 6-point affine transform, then matched to the nearest real footprint -- 33.9m away, clearly the best match of any candidate footprint in the lot). This footprint's own shape (an L-plan with a stepped notch) visually matches Figure 6.4.2's '101' outline closely. This is a REAL surveyed building outline, not a diagram trace or hand-digitized approximation -- geometry_type is 'real', not 'approximate'.",
+        "accuracy_caveat": "Real, surveyed building footprint (DataSF Building Footprints) -- high confidence in the outline itself. The match to 'Building 101' specifically (as opposed to a neighboring structure) rests on position (33.9m from the diagram's own label, closest of any candidate) and shape correspondence, not an address or explicit building-number tag in the footprint dataset itself, since no such attribute exists there.",
+        "why_no_real_parcel": "This parcel (blklot 4046001) has no street address in DataSF's Assessor roll, and the building's own press addresses do not resolve to any DataSF parcel either. The real Assessor lot groups 5 named buildings (101, 102, 104, 122, 123) into one polygon with no further official subdivision -- this feature uses the real building footprint instead, extracted and matched individually.",
+        "regulatory_context": "Bethlehem Steel HQ, a 1917 neoclassical office building designed by Frederick H. Meyer, ~80,000 sf, 5 floors plus 2 lower levels and a penthouse. Rehabbed by Orton Development Inc. (ODI) starting after a Nov 26 2013 Historic Preservation Commission review (sfplanning.org HPC packet 2013.1168E); per that packet, the seismic upgrade uses shear walls, and the rehab preserves the historic exterior elevations while adapting the interior. Completed in stages ~2017-2020. Now houses RH San Francisco -- 'The Gallery at the Historic Bethlehem Steel Building' (showroom, Palm Court restaurant, rooftop bar), opened May 2022.",
+        "notes": "Split 2026-09-16 from the combined 'Historic Core, north side' entry -- see digitization_method.",
+        "images": [],
+        "source_doc_urls": [
+          "https://default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf",
+          "https://en.wikipedia.org/wiki/Building_101_(San_Francisco)",
+          "https://ir.rh.com/news-events/detail/18/rh-announces-the-opening-of-rh-san-francisco-the-gallery-at-the-historic-bethlehem-steel-building"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [[-122.3863963, 37.7608559], [-122.3863881, 37.7607684], [-122.3863852, 37.7607375], [-122.3868441, 37.7607104], [-122.3868441, 37.7607105], [-122.3868486, 37.7607587], [-122.3868996, 37.7607557], [-122.3868995, 37.7607533], [-122.3868992, 37.7607494], [-122.3869273, 37.7607471], [-122.386924, 37.7607103], [-122.3869238, 37.7607075], [-122.3873577, 37.7606822], [-122.3874253, 37.7607298], [-122.3874539, 37.7610449], [-122.3874556, 37.7610632], [-122.3874838, 37.7610615], [-122.3874838, 37.7610615], [-122.3874849, 37.7610728], [-122.3875159, 37.7610713], [-122.3875159, 37.7610714], [-122.3875196, 37.7611195], [-122.3875225, 37.7611217], [-122.3875226, 37.7611217], [-122.387525, 37.7611575], [-122.3875253, 37.7611575], [-122.3875253, 37.7611576], [-122.3875409, 37.7613347], [-122.3874366, 37.7613405], [-122.3874366, 37.7613404], [-122.3874299, 37.7612647], [-122.3873879, 37.761267], [-122.3873879, 37.7612669], [-122.3873776, 37.7611495], [-122.3874331, 37.7611464], [-122.3874323, 37.7611267], [-122.3874432, 37.7611164], [-122.3874506, 37.761116], [-122.3874502, 37.7611111], [-122.3874055, 37.7611133], [-122.3874062, 37.7611199], [-122.3873238, 37.761125], [-122.3873238, 37.761125], [-122.3873225, 37.7611119], [-122.3873183, 37.7611121], [-122.3873182, 37.7611109], [-122.3873167, 37.7610788], [-122.3872691, 37.7610806], [-122.3872674, 37.7610625], [-122.3872466, 37.7608359], [-122.3870362, 37.7608488], [-122.3869409, 37.7608551], [-122.3869384, 37.7608195], [-122.3869041, 37.7608215], [-122.386904, 37.7608197], [-122.3868546, 37.7608227], [-122.3868563, 37.7608401], [-122.3863974, 37.7608672], [-122.3863973, 37.7608672], [-122.3863963, 37.7608559]]
+        ]
+      }
+    }
+  ]
+}

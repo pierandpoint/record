@@ -1,0 +1,52 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Mission Rock Channel Wharf",
+        "site": "Pier 50 / Mission Rock",
+        "status": "planned",
+        "use": "park",
+        "geometry_type": "approximate",
+        "digitized_from": "DataSF Assessor lot lines: the notch of the Terry A Francois Boulevard lot 8719A003 east of the roadway, between the Pier 48 lot 8719A001 and Pier 50; cross-checked against Mission Rock Design Controls Figure 1.1 (p.10), Figure 3.1.1 (p.45) and Section 3.5 (p.68).",
+        "digitization_method": "ADDED 2026-09-17 (site-completeness pass against Design Controls Figure 3.1.1). Channel Wharf is the paved waterfront plaza between Piers 48 and 50, east of Terry A Francois Boulevard, at the end of the Channel Street / Square / Channel Lane axis. The 2020 subdivision gave the TAFB right-of-way lot 8719A003 a rectangular notch there -- north edge shared with the Pier 48 lot 8719A001, east edge 27 m out at the wharf face, south edge on Pier 50's north line -- so the polygon is that notch, using the lots' own four recorded vertices (21,142 sf, 0.49 ac). Cross-check: IoU 0.65 against the green Channel Wharf fill traced independently on Figure 1.1 through its own transform (RMS 1.1 m); the figure's fill runs a few metres further east over the water edge than the lot line does, and its west edge is drawn at the TAFB shared zone rather than the lot line, which explains the difference. Not registered in verify_block_fill.py (no fill on Figure 6.2).",
+        "accuracy_caveat": "APPROXIMATE but high confidence: all four edges are recorded DataSF lot lines (the notch of lot 8719A003), agreeing with the Design Controls figures to within a few metres. Planned, unbuilt open space; the notch is a working wharf / staging area today.",
+        "why_no_real_parcel": "The wharf is part of the Terry A Francois Boulevard right-of-way lot 8719A003, which also carries the roadway and its paseo; joining status.csv to that lot would paint the whole boulevard.",
+        "regulatory_context": "Dedicated open space, Design Controls Section 3.5: a paved working-wharf plaza with public access, seating, a large-scale industrial feature, consistent with Public Trust uses; reached from Channel Lane across TAFB.",
+        "notes": "Planned waterfront plaza between Piers 48 and 50, not yet built.",
+        "images": [],
+        "source_doc_urls": [
+          "https://www.sfport.com/sites/default/files/2025-07/Mission%20Rock%20Design%20Controls%204.24.18_FINAL_Reduced%20File.pdf"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.387292,
+              37.775057
+            ],
+            [
+              -122.386992,
+              37.775091
+            ],
+            [
+              -122.38693,
+              37.774431
+            ],
+            [
+              -122.38724,
+              37.774412
+            ],
+            [
+              -122.387292,
+              37.775057
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

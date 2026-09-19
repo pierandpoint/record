@@ -1,0 +1,340 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-19",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "ucsf_mission_bay_hospital",
+  "slug": "ucsf-medical-center-at-mission-bay",
+  "name": "UCSF Medical Center at Mission Bay",
+  "permalink": "https://pierandpoint.org/parcels/ucsf-medical-center-at-mission-bay/",
+  "api": "https://pierandpoint.org/api/v1/records/ucsf-medical-center-at-mission-bay.json",
+  "names": [
+   "UCSF Medical Center at Mission Bay",
+   "UCSF Benioff Children's Hospital",
+   "UCSF Bakar Cancer Hospital",
+   "Betty Irene Moore Women's Hospital"
+  ],
+  "site": {
+   "slug": "mission-bay",
+   "name": "Mission Bay",
+   "short": "Mission Bay",
+   "url": "https://pierandpoint.org/sites/mission-bay/"
+  },
+  "status": "complete",
+  "status_label": "Complete",
+  "use": "institutional",
+  "address": null,
+  "summary": "A 289-bed, six-story integrated hospital complex at 1975 4th St combining UCSF Benioff Children's Hospital, UCSF Bakar Cancer Hospital and Betty Irene Moore Women's Hospital under one roof, which opened February 1, 2015 after roughly 10 years of planning and 5 years of construction.",
+  "summary_sources": [
+   "src-ucsf-2014-11",
+   "src-dpr"
+  ],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against data/raw/parcels.geojson and DataSF's Assessor tax roll -- e.g. blklot 8711507 at 675 Nelson Rising Lane alone is ~13 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
+    "digitized_from": "OpenStreetMap (way 580277612, name=UCSF Medical Center at Mission Bay, amenity=hospital, operator=University of California San Francisco, 1975 4th St)"
+   }
+  },
+  "centroid": {
+   "lon": -122.390731,
+   "lat": 37.765475
+  },
+  "facts": [
+   {
+    "key": "address",
+    "value": "1975 4th St",
+    "sources": [
+     "src-osm-hospital"
+    ]
+   },
+   {
+    "key": "architect",
+    "value": "Anshen+Allen (architect of record, later absorbed into Stantec); design collaborator William McDonough + Partners",
+    "sources": [
+     "src-mcdonough",
+     "src-dpr"
+    ]
+   },
+   {
+    "key": "general_contractor",
+    "value": "DPR Construction",
+    "sources": [
+     "src-dpr"
+    ]
+   },
+   {
+    "key": "gross_sqft",
+    "value": "878,000",
+    "sources": [
+     "src-dpr"
+    ]
+   },
+   {
+    "key": "beds",
+    "value": "289 total (183-bed UCSF Benioff Children's Hospital, 36-bed Betty Irene Moore Women's Hospital, 70-bed UCSF Bakar Cancer Hospital)",
+    "sources": [
+     "src-ucsf-2014-11",
+     "src-dpr"
+    ]
+   },
+   {
+    "key": "stories",
+    "value": "6",
+    "sources": [
+     "src-dpr"
+    ]
+   },
+   {
+    "key": "use",
+    "value": "Acute-care hospital: pediatric, women's, and cancer care",
+    "sources": [
+     "src-ucsf-2014-11"
+    ]
+   }
+  ],
+  "costs": [
+   {
+    "amount_usd": 1520000000,
+    "what": "Total project cost",
+    "date": "2015",
+    "approximate": false,
+    "sources": [
+     "src-ucsf-2014-11"
+    ]
+   }
+  ],
+  "milestones": [
+   {
+    "date": "2015-02-01",
+    "date_label": "Feb 1, 2015",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "UCSF Medical Center at Mission Bay opens",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ucsf-2014-11",
+      "title": "UCSF Medical Center Opens $1.5 Billion, 'Next Generation' Hospital Complex at Mission Bay Campus on Feb. 1, 2015",
+      "publisher": "UCSF",
+      "date": "2014-11",
+      "url": "https://www.ucsf.edu/news/2014/11/121086/ucsf-medical-center-opens-15-billion-next-generation-hospital-complex-mission",
+      "accessed": "2026-09-18"
+     }
+    ],
+    "source": "UCSF, 2014-11",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "ucsf_mission_bay_hospital",
+     "slug": "ucsf-medical-center-at-mission-bay",
+     "name": "UCSF Medical Center at Mission Bay",
+     "permalink": "https://pierandpoint.org/parcels/ucsf-medical-center-at-mission-bay/",
+     "api": "https://pierandpoint.org/api/v1/records/ucsf-medical-center-at-mission-bay.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   },
+   {
+    "date": "2015-02-01",
+    "date_label": "Feb 1, 2015",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "UCSF Medical Center at Mission Bay opens (289 beds: Benioff Children's Hospital, Bakar Cancer Hospital, Betty Irene Moore Women's Hospital)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "title": "ucsf.edu"
+     }
+    ],
+    "source": "ucsf.edu",
+    "origin": "csv",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "ucsf_mission_bay_hospital",
+     "slug": "ucsf-medical-center-at-mission-bay",
+     "name": "UCSF Medical Center at Mission Bay",
+     "permalink": "https://pierandpoint.org/parcels/ucsf-medical-center-at-mission-bay/",
+     "api": "https://pierandpoint.org/api/v1/records/ucsf-medical-center-at-mission-bay.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
+  "changes": [],
+  "images": [
+   {
+    "path": "data/manual/images/mission_bay/ucsf_regents_2008_hospital_siteplan.jpg",
+    "kind": "document",
+    "taken": "2008-09",
+    "credit": "UCSF Medical Center at Mission Bay, Site Plan; presentation to the UC Regents Committee on Grounds and Buildings, September 2008 (design, site plan and financial-plan approval item), p.15",
+    "license": "public-record",
+    "source_url": "https://regents.universityofcalifornia.edu/regmeet/sept08/j1pp.pdf#page=15",
+    "license_evidence": "https://regents.universityofcalifornia.edu/regmeet/sept08/j1pp.pdf",
+    "license_note": "Site plan from the presentation attached to the UC Regents Committee on Grounds and Buildings' September 2008 meeting item approving the UCSF Medical Center at Mission Bay -- a public governing board's meeting record. Read 2026-09-19.",
+    "caption": "Site Plan",
+    "source_crop": "python3 src/extract_pdf_figure.py https://regents.universityofcalifornia.edu/regmeet/sept08/j1pp.pdf 15 data/manual/images/mission_bay/ucsf_regents_2008_hospital_siteplan.jpg --rect 0.14,0.02,0.97,0.97",
+    "figure": "positioning",
+    "appeal": 4,
+    "appeal_note": "Clean, high-resolution key plan labelling the hospital buildings, parking and phase boundary against the street grid and Mariposa Park with a phase legend, legible even shrunk, but it's a grayscale massing/phasing diagram rather than a color-coded program plan.",
+    "url": "https://pierandpoint.org/assets/img/ucsf_regents_2008_hospital_siteplan.jpg"
+   }
+  ],
+  "open_questions": [
+   "UCSF's own official press-kit page and several ucsf.edu archive pages returned HTTP 403 during research and could not be read directly; the figures above come from a UCSF news post plus the contractor's own project page, not the hospital's own current fact sheet.",
+   "No openly licensed image was found; none is hosted here."
+  ],
+  "sources": [
+   {
+    "id": "src-ucsf-2014-11",
+    "title": "UCSF Medical Center Opens $1.5 Billion, 'Next Generation' Hospital Complex at Mission Bay Campus on Feb. 1, 2015",
+    "publisher": "UCSF",
+    "date": "2014-11",
+    "url": "https://www.ucsf.edu/news/2014/11/121086/ucsf-medical-center-opens-15-billion-next-generation-hospital-complex-mission",
+    "accessed": "2026-09-18"
+   },
+   {
+    "id": "src-dpr",
+    "title": "UCSF Medical Center at Mission Bay",
+    "publisher": "DPR Construction (general contractor, own material)",
+    "url": "https://www.dpr.com/projects/ucsf-medical-center-at-mission-bay",
+    "accessed": "2026-09-18"
+   },
+   {
+    "id": "src-mcdonough",
+    "title": "UCSF Medical Center at Mission Bay",
+    "publisher": "William McDonough + Partners (design collaborator, own material)",
+    "url": "https://mcdonoughpartners.com/projects/ucsf-medical-center-at-mission-bay/",
+    "accessed": "2026-09-18"
+   },
+   {
+    "id": "src-osm-hospital",
+    "title": "UCSF Medical Center at Mission Bay (OpenStreetMap way 580277612)",
+    "publisher": "OpenStreetMap",
+    "url": "https://www.openstreetmap.org/way/580277612",
+    "accessed": "2026-09-18"
+   },
+   {
+    "id": "src-ucregents-2008-09-pp",
+    "title": "\"UCSF Medical Center at Mission Bay,\" presentation to the UC Regents Committee on Grounds and Buildings, September 2008 (design, site plan and financial-plan approval item)",
+    "publisher": "The Regents of the University of California",
+    "date": "2008-09",
+    "url": "https://regents.universityofcalifornia.edu/regmeet/sept08/j1pp.pdf",
+    "accessed": "2026-09-19"
+   },
+   {
+    "id": null,
+    "title": "ucsfhealth.org",
+    "url": "https://www.ucsfhealth.org/"
+   }
+  ],
+  "notes": "289-bed hospital complex (183-bed Benioff Children's Hospital, 36-bed Betty Irene Moore Women's Hospital, 70-bed Bakar Cancer Hospital), ~878,000 sq ft, ~$1.52 billion project cost. Architect of record Anshen+Allen (later absorbed into Stantec), design collaborator William McDonough + Partners. Opened Feb 1, 2015 after ~10 years of planning and 5 years of construction.",
+  "has_record_file": true,
+  "last_verified": "2026-09-18",
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.3907074,
+      37.7643772
+     ],
+     [
+      -122.3906699,
+      37.7643645
+     ],
+     [
+      -122.3891223,
+      37.7644917
+     ],
+     [
+      -122.3890954,
+      37.7645256
+     ],
+     [
+      -122.3890793,
+      37.7645786
+     ],
+     [
+      -122.3892586,
+      37.766337
+     ],
+     [
+      -122.3892993,
+      37.7667689
+     ],
+     [
+      -122.3893234,
+      37.7667901
+     ],
+     [
+      -122.3905465,
+      37.7667159
+     ],
+     [
+      -122.3923597,
+      37.7666036
+     ],
+     [
+      -122.392408,
+      37.7665908
+     ],
+     [
+      -122.392424,
+      37.7665527
+     ],
+     [
+      -122.3923516,
+      37.7663279
+     ],
+     [
+      -122.3922817,
+      37.7655498
+     ],
+     [
+      -122.3922296,
+      37.7650324
+     ],
+     [
+      -122.3908415,
+      37.7651151
+     ],
+     [
+      -122.3905358,
+      37.7650218
+     ],
+     [
+      -122.3906511,
+      37.7648034
+     ],
+     [
+      -122.3907208,
+      37.7645807
+     ],
+     [
+      -122.3907074,
+      37.7643772
+     ]
+    ]
+   ]
+  }
+ }
+}

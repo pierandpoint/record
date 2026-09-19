@@ -1,0 +1,79 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "project_name": "UCSF Student Housing",
+    "site": "Mission Bay South",
+    "status": "complete",
+    "use": "residential",
+    "geometry_type": "real",
+    "digitized_from": "OpenStreetMap (way 255649621)",
+    "digitization_method": "ADDED 2026-09-18 for Mission Bay's UCSF campus pass: real OSM building footprint (OSM's own name tag is the generic 'UCSF Student Housing'; a more specific building name was not found).",
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against data/raw/parcels.geojson and DataSF's Assessor tax roll -- e.g. blklot 8711507 at 675 Nelson Rising Lane alone is ~13 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
+    "notes": "Part of a single UCSF Mission Bay student/faculty housing complex (Hearst Tower plus North, West and South/Student Housing buildings) built together in Mission Bay's first development phase and opened together around 2005 -- four connected buildings totaling 298,800 sq ft for 750+ residents, surrounding a shared at-grade courtyard, per UCSF's own housing-office description. Architect Skidmore, Owings & Merrill (SOM) with Fisher Friedman Associates. This building is very likely the South Building (550 Gene Friend Way per UCSF's housing description), though OSM's own generic 'UCSF Student Housing' name tag doesn't confirm that specifically -- not asserted as certain.",
+    "source_doc_urls": [
+     "https://www.openstreetmap.org/way/255649621",
+     "https://www.langan.com/portfolio/ucsf-mission-bay-student-housing",
+     "https://campuslifeserviceshome.ucsf.edu/housing/mission-bay-housing"
+    ]
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -122.3909229,
+       37.7690898
+      ],
+      [
+       -122.3906018,
+       37.7691081
+      ],
+      [
+       -122.3906068,
+       37.7691626
+      ],
+      [
+       -122.3900435,
+       37.7691947
+      ],
+      [
+       -122.3900532,
+       37.7693015
+      ],
+      [
+       -122.3898599,
+       37.7693125
+      ],
+      [
+       -122.389843,
+       37.76913
+      ],
+      [
+       -122.3898371,
+       37.7690623
+      ],
+      [
+       -122.3903751,
+       37.7690317
+      ],
+      [
+       -122.3908947,
+       37.7690021
+      ],
+      [
+       -122.3909148,
+       37.7690009
+      ],
+      [
+       -122.3909229,
+       37.7690898
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

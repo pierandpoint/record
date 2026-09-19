@@ -1,0 +1,52 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Humboldt Street Plaza",
+        "site": "Potrero Power Station",
+        "status": "planned",
+        "use": "park",
+        "geometry_type": "approximate",
+        "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
+        "digitization_method": "Traced from the Potrero Power Station Design for Development's own Figure 6.2.3 (Building Height Plan, p.245), which labels this feature directly (not inferred). Georeferenced using an affine transform fit from 8 control points -- the 4 real-world corners of Block 1 and the 4 real-world corners of Block 12 (both already independently traced and committed elsewhere in this dataset), matched to their pixel positions in this same diagram. Residual error against those 8 control points is roughly 15-24m, consistent with this site's other entries. This is a DIFFERENT (but equivalent-precision) point set than the 9 street-intersection points used for Blocks 1-15 -- both were derived from the same source diagram. RE-CORRECTED 2026-09-16: a user-requested full re-check of block positions against real streets found this polygon sitting ~55m east of Delaware Street/Block 4's own east edge, i.e. past the street entirely -- this file was never re-transformed when Blocks 1-15 were rebuilt earlier the same day via the GDAL/TPS pixel-detection pass (it still referenced Block 1/12's OLD, superseded corners as control points). Re-measured this plaza's own pixel footprint directly from the diagram (a thin strip between Block 4's south edge and Building 9's north edge, bounded west by Delaware Street/Block 4's east edge) and ran it through the same TPS transform as the rest of the site. The plaza's precise east extent (toward Waterfront Park) is not sharply drawn in the diagram -- no hard boundary line separates the two labels, just a continuous green wash -- so the east edge here is a reasonable estimate, not a measured line. RE-RUN 2026-09-16 (fourth pass, same day): the GCP used for this transform (Delaware St x Humboldt St) turned out to be mis-measured by ~190 pixels -- see Block 8/12's digitization_method for the full root-cause. This plaza's own pixel footprint sits close to that GCP, so it moved a further ~60m east after the correction, now sharing an exact vertex with Block 4's own (also corrected) SE corner. RE-INTERPRETED 2026-09-16 (fifth pass, same day): user pointed out the plaza should sit BETWEEN Block 4 and Block 9 (i.e. as a horizontal strip north-to-south), not as a thin vertical strip east of Block 4 as the prior passes modeled it -- that was a real misreading of the diagram on my part, not just a transform issue. Once Block 9 itself was finally re-traced and re-transformed (it had never been touched by the GDAL/TPS pass at all -- see its own digitization_method), it became clear the diagram's Humboldt Street Plaza spans roughly Block 4's own full width, sitting directly in the gap between Block 4's south edge and Block 9's north edge. Rebuilt as a quadrilateral using Block 4's own SW/SE corners (north edge) and Block 9's own NW/NE corners (south edge) directly, so it shares an exact edge with both by construction.",
+        "accuracy_caveat": "APPROXIMATE -- Figure 6.2.3 labels this open space directly, shown as a small plaza area between Block 4 (north) and Block 9 (south). This polygon is a simplified rectangular approximation of that labeled area, built directly from Block 4 and Block 9's own already-committed corners (see digitization_method) so it shares an exact edge with both -- its accuracy now tracks whatever those two files carry.",
+        "why_no_real_parcel": "Open space with no subdivided Assessor parcel of its own within the largely unaddressed former power-station site.",
+        "regulatory_context": "A small public plaza per the D4D's own Figure 6.2.3 label, between Block 4 and Block 9 near the site's waterfront edge.",
+        "notes": "Simplified rectangular approximation of a labeled open space -- see accuracy_caveat.",
+        "images": [],
+        "source_doc_urls": [
+          "https://default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.382378,
+              37.757213
+            ],
+            [
+              -122.381801,
+              37.757235
+            ],
+            [
+              -122.381751,
+              37.757038
+            ],
+            [
+              -122.38229,
+              37.757015
+            ],
+            [
+              -122.382378,
+              37.757213
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

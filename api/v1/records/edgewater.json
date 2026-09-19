@@ -1,0 +1,111 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-19",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "mission_bay_edgewater",
+  "slug": "edgewater",
+  "name": "Edgewater",
+  "permalink": "https://pierandpoint.org/parcels/edgewater/",
+  "api": "https://pierandpoint.org/api/v1/records/edgewater.json",
+  "names": [
+   "Edgewater"
+  ],
+  "site": {
+   "slug": "mission-bay",
+   "name": "Mission Bay",
+   "short": "Mission Bay",
+   "url": "https://pierandpoint.org/sites/mission-bay/"
+  },
+  "status": "complete",
+  "status_label": "Complete",
+  "use": "residential",
+  "address": null,
+  "summary": null,
+  "summary_sources": [],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I/II/III, Madrone, Arden, One Mission Bay, Radiance).",
+    "digitized_from": "OpenStreetMap (way 46264111, 355 Berry St)"
+   }
+  },
+  "centroid": {
+   "lon": -122.396916,
+   "lat": 37.772528
+  },
+  "facts": [],
+  "costs": [],
+  "milestones": [],
+  "changes": [],
+  "images": [],
+  "open_questions": [],
+  "sources": [
+   {
+    "id": null,
+    "title": "openstreetmap.org/way/46264111",
+    "url": "https://www.openstreetmap.org/way/46264111"
+   }
+  ],
+  "notes": "Developer, year built and total unit count not confirmed: sources found were inconsistent (one listing site's '6 units' reads as a floorplan-type count, not the building total) or unsourced. Left out of facts rather than picking one arbitrarily; flagged as an open question for a future record-dossier pass.",
+  "has_record_file": false,
+  "last_verified": null,
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.3967451,
+      37.7729755
+     ],
+     [
+      -122.3968625,
+      37.7728851
+     ],
+     [
+      -122.3972315,
+      37.7726009
+     ],
+     [
+      -122.3975375,
+      37.7723556
+     ],
+     [
+      -122.3976389,
+      37.7722832
+     ],
+     [
+      -122.3971938,
+      37.7719325
+     ],
+     [
+      -122.3968768,
+      37.7721721
+     ],
+     [
+      -122.3965706,
+      37.7724198
+     ],
+     [
+      -122.3963633,
+      37.7725843
+     ],
+     [
+      -122.3963064,
+      37.7726284
+     ],
+     [
+      -122.3967451,
+      37.7729755
+     ]
+    ]
+   ]
+  }
+ }
+}
