@@ -1,0 +1,57 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Mission Bay South Block 15B (UCSF planned)",
+        "site": "Mission Bay South",
+        "status": "planned",
+        "use": "institutional",
+        "geometry_type": "approximate",
+        "digitized_from": "Real block boundary from real street geometry (src/block_fit.py load_blocks(), polygonized from data/raw/official_street_centerlines.geojson); the plan's own A/B internal split has no mapped street, so it's a straight bisection along the block's long axis, not a real line.",
+        "digitization_method": "ADDED 2026-09-19 for the block-by-block plan walk-through (docs/briefs/mission_bay_block_inventory.csv): the owner asked directly why 'confirmed vacant' blocks weren't being traced and registered as planned, per this project's own Mission Rock precedent (docs/briefs/mission-rock-geometry.md) -- an unbuilt block gets the same transform-and-register discipline as a built one, not left as a bare note. same parking lot as 15A, east half. The plan's own Dec 2019 Land Use Map colors this whole row light blue, the same category used for UCSF's other institutional buildings on this campus, but no specific named development or announced project was found for this parcel -- status left as 'planned' per the plan's own land-use designation, not a guessed project name.",
+        "accuracy_caveat": "PARTIALLY REAL -- the outer boundary is a real polygonized city block from real street geometry, not hand-traced; only the internal A/B split line is approximate (a bisection, since no real street divides this block into A and B).",
+        "notes": "No building on this site as of 2026-09-19 (satellite- and building-footprint-confirmed); currently used as surface parking. The OCII plan's own Dec 2019 Land Use Map designates this block for future UCSF institutional use, consistent with the rest of this campus row, but no specific project, developer, or timeline was found in this pass.",
+        "source_doc_urls": [
+          "data/manual/_reference/mission_bay_land_use_map_2019.png"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.39291871948521,
+              37.77013046575435
+            ],
+            [
+              -122.39287195628452,
+              37.769644108691296
+            ],
+            [
+              -122.39305002674614,
+              37.76963349011652
+            ],
+            [
+              -122.39364212934507,
+              37.7695982436709
+            ],
+            [
+              -122.39364212934507,
+              37.77034497801213
+            ],
+            [
+              -122.39294434892385,
+              37.770387029037295
+            ],
+            [
+              -122.39291871948521,
+              37.77013046575435
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

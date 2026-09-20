@@ -1,0 +1,28 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "P11 -- landscaped median strip connecting Mission Bay Circle to P11A",
+        "site": "Mission Bay South",
+        "status": "complete",
+        "use": "park",
+        "geometry_type": "approximate",
+        "digitized_from": "Hand-traced from satellite imagery, guided directly by the owner's own marked-up screenshot (their drawn outline extracted from the photo via ORB feature-matching/homography), then fit to an idealized road-aligned rectangle per the owner's description of the real shape.",
+        "digitization_method": "ADDED 2026-09-19: resolves plan label P11. This session had first wrongly attributed P11 to a distant, already-tracked 'Mission Bay Commons' record near Illinois St, inferred only from a source note that gave build years (not locations) for P11/P16/P17 as a group -- the owner's own drawing showed P11 right here instead, next to P11A, contradicting that location inference (P16/P17 were left as-is per the owner's instruction; only P11 corrected). The owner's blue outline was extracted from their annotated photo via ORB keypoint matching (a homography to the original sent image, chained to a second homography to a freshly-fetched satellite tile with a known exact lon/lat extent), avoiding manual pixel-guessing. The owner then described the real shape as a thin rectangle aligned with the road; a minimum-area rotated rectangle was fit to the extracted outline (4.8m x 63.1m, angle -87.5 deg from east) rather than left as the noisier hand-traced outline. This is the tree-lined median strip connecting the roundabout named 'Mission Bay Circle' in this tracker (near P8/P10/X1) east to the P11A half-circle island. join_approximate.py --strict flagged 100% clip against the real street/curb buffer -- expected and correct here, not a mispositioning: this median sits entirely within the road right-of-way (that's the whole point of a traffic median), so DataSF's curb layer legitimately treats its full footprint as street. The owner granted an explicit exception (same reasoning as P11A) rather than have this shape zeroed out by the generic clip.",
+        "accuracy_caveat": "APPROXIMATE -- owner-guided satellite trace, idealized to a fitted rectangle rather than left as a raw hand-traced outline. Not a surveyed footprint or GIS file from the project team. street_clip_exempt=true: this is a real median strip that sits entirely within the paved road right-of-way by design -- clipping it against the generic street buffer would zero it out entirely, not correct a mispositioning. Owner-approved exception.",
+        "p_number": "P11. Not confirmed by any named source to be part of the 'Mission Bay Commons (P11/P16/P17)' group tracked near Illinois St -- that location inference is now considered unreliable; resolved here by direct owner identification instead.",
+        "notes": "Thin landscaped median strip with a row of trees, connecting the Mission Bay Circle roundabout to the P11A median island.",
+        "source_doc_urls": [],
+        "street_clip_exempt": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [[-122.39557791255591, 37.770560324529306], [-122.39501169502675, 37.770580216900534], [-122.39501361651139, 37.77061439154455], [-122.39557983404053, 37.77059449918251], [-122.39557791255591, 37.770560324529306]]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Mission Bay South Block 22 (park)",
+        "site": "Mission Bay South",
+        "status": "complete",
+        "use": "park",
+        "geometry_type": "approximate",
+        "digitized_from": "Real block boundary from real street geometry (src/block_fit.py load_blocks(), trimmed against src/street_geometry.py's fuller street buffer).",
+        "digitization_method": "ADDED 2026-09-19 for the block-by-block plan walk-through (docs/briefs/mission_bay_block_inventory.csv), per the Mission Rock transform-and-register precedent for unbuilt blocks. Drawn in the plan's own park-green color, distinct from the surrounding blue UCSF blocks -- registered as a future open space, not a building site. Currently a landscaped lawn with trees, satellite-confirmed, not a formally named park in any source found. CORRECTED 2026-09-19 (same day): owner has been on site and confirms this is a completed park, not still-planned open space -- status changed from 'planned' to 'complete'. In hindsight this should have been flagged as a question rather than guessed: the satellite/building-footprint evidence gathered (landscaped lawn with trees, no dirt, no structure) was consistent with either a finished small park or an interim-landscaped future site, and that ambiguity should have gone to the owner instead of being resolved by assumption. A follow-up address/parcel lookup (DataSF Assessor Parcels + Building Footprints) found no building footprint on the site and traced the dominant underlying parcel to a retired 1998 'COMMON_AREAS' placeholder (blklot 8799TBA3, dropped 2005) plus edge fragments of the same scattered UCSF campus parcel already flagged for block 17AB -- consistent with open, non-built land, but that check does not by itself establish 'complete' vs 'planned'; it was the owner's own on-site visit that settled it.",
+        "accuracy_caveat": "PARTIALLY REAL -- the outer boundary is a real polygonized city block from real street geometry, not hand-traced. No internal A/B split needed (this label is a single block).",
+        "notes": "Owner confirmed on site (2026-09-19) that this park is complete. No building footprint here (satellite- and building-footprint-confirmed); the OCII plan's own Dec 2019 Land Use Map designates this block's future land use as park (shown in park-green). No specific project name, developer, or completion date was found in this pass -- if the owner has one, it would be a useful addition.",
+        "source_doc_urls": [
+          "data/manual/_reference/mission_bay_land_use_map_2019.png"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.39159963189788,
+              37.76855361129896
+            ],
+            [
+              -122.39114693416285,
+              37.76858071119199
+            ],
+            [
+              -122.39110856338316,
+              37.76858300944423
+            ],
+            [
+              -122.39109929677541,
+              37.76858356010676
+            ],
+            [
+              -122.39109803065054,
+              37.76857048160421
+            ],
+            [
+              -122.39108463150326,
+              37.76843009062021
+            ],
+            [
+              -122.39103333201383,
+              37.76789559589698
+            ],
+            [
+              -122.39102868031357,
+              37.767847041394454
+            ],
+            [
+              -122.39104922354238,
+              37.767845780120965
+            ],
+            [
+              -122.39175149545798,
+              37.76780298187757
+            ],
+            [
+              -122.3917516883661,
+              37.76780296997105
+            ],
+            [
+              -122.3917580074906,
+              37.76780257502619
+            ],
+            [
+              -122.39195891508432,
+              37.76779028069385
+            ],
+            [
+              -122.39203085325647,
+              37.76778589187075
+            ],
+            [
+              -122.39253822604715,
+              37.76819034587902
+            ],
+            [
+              -122.39256741283606,
+              37.76849557365303
+            ],
+            [
+              -122.3918314255339,
+              37.768539711665944
+            ],
+            [
+              -122.39159963189788,
+              37.76855361129896
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Mission Bay South Block 18B (UCSF planned)",
+        "site": "Mission Bay South",
+        "status": "planned",
+        "use": "institutional",
+        "geometry_type": "approximate",
+        "digitized_from": "Real block boundary from real street geometry (src/block_fit.py load_blocks(), trimmed against src/street_geometry.py's fuller street buffer); the plan's own A/B internal split has no mapped street, so it's a straight bisection along the block's long axis, not a real line.",
+        "digitization_method": "ADDED 2026-09-19 for the block-by-block plan walk-through (docs/briefs/mission_bay_block_inventory.csv), per the Mission Rock transform-and-register precedent for unbuilt blocks. East half of the same parking lot, west of the Owens St curve.",
+        "accuracy_caveat": "PARTIALLY REAL -- the outer boundary is a real polygonized city block from real street geometry, not hand-traced; only the internal A/B split line is approximate (a bisection, since no real street divides this block into A and B).",
+        "notes": "No building on this site as of 2026-09-19 (satellite- and building-footprint-confirmed); currently an operating surface parking lot west of the Owens St curve. The OCII plan's own Dec 2019 Land Use Map designates this block for future UCSF institutional use, consistent with the rest of this campus row, but no specific project, developer, or timeline was found in this pass.",
+        "source_doc_urls": [
+          "data/manual/_reference/mission_bay_land_use_map_2019.png"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.39434083556341,
+              37.769400011488095
+            ],
+            [
+              -122.39418185899416,
+              37.769273282517155
+            ],
+            [
+              -122.39411664,
+              37.768591396
+            ],
+            [
+              -122.394746838,
+              37.768553412
+            ],
+            [
+              -122.394752013,
+              37.768552878
+            ],
+            [
+              -122.394757124,
+              37.768551905
+            ],
+            [
+              -122.39481107426236,
+              37.76853923893674
+            ],
+            [
+              -122.39483283767818,
+              37.76855756126609
+            ],
+            [
+              -122.39483283767818,
+              37.769372072026954
+            ],
+            [
+              -122.3945677665546,
+              37.76938627033655
+            ],
+            [
+              -122.3945251665546,
+              37.76938857033896
+            ],
+            [
+              -122.3945239314868,
+              37.76938864317065
+            ],
+            [
+              -122.39442099514314,
+              37.76939522631584
+            ],
+            [
+              -122.39434083556341,
+              37.769400011488095
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

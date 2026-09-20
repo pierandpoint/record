@@ -1,0 +1,135 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-20",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "mission_bay_block_18a",
+  "slug": "mission-bay-south-block-18a-ucsf-planned",
+  "name": "Mission Bay South Block 18A (UCSF planned)",
+  "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-18a-ucsf-planned/",
+  "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-18a-ucsf-planned.json",
+  "names": [
+   "Mission Bay South Block 18A (UCSF planned)"
+  ],
+  "site": {
+   "slug": "mission-bay",
+   "name": "Mission Bay",
+   "short": "Mission Bay",
+   "url": "https://pierandpoint.org/sites/mission-bay/"
+  },
+  "status": "planned",
+  "status_label": "Planned",
+  "use": "institutional",
+  "address": null,
+  "summary": null,
+  "summary_sources": [],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "PARTIALLY REAL -- the outer boundary is a real polygonized city block from real street geometry, not hand-traced; only the internal A/B split line is approximate (a bisection, since no real street divides this block into A and B).",
+    "digitized_from": "Real block boundary from real street geometry (src/block_fit.py load_blocks(), trimmed against src/street_geometry.py's fuller street buffer); the plan's own A/B internal split has no mapped street, so it's a straight bisection along the block's long axis, not a real line."
+   }
+  },
+  "centroid": {
+   "lon": -122.395199,
+   "lat": 37.769078
+  },
+  "facts": [],
+  "costs": [],
+  "milestones": [],
+  "changes": [],
+  "images": [],
+  "open_questions": [],
+  "sources": [
+   {
+    "id": null,
+    "title": "data/manual/_reference/mission_bay_land_use_map_2019.png",
+    "url": "data/manual/_reference/mission_bay_land_use_map_2019.png"
+   }
+  ],
+  "notes": "No building on this site as of 2026-09-19 (satellite- and building-footprint-confirmed); currently an operating surface parking lot west of the Owens St curve. The OCII plan's own Dec 2019 Land Use Map designates this block for future UCSF institutional use, consistent with the rest of this campus row, but no specific project, developer, or timeline was found in this pass.",
+  "has_record_file": false,
+  "last_verified": null,
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.39487560138858,
+      37.768593563463206
+     ],
+     [
+      -122.39499837851989,
+      37.7686991695865
+     ],
+     [
+      -122.39512097807071,
+      37.768808268219416
+     ],
+     [
+      -122.39520882654891,
+      37.76888812155401
+     ],
+     [
+      -122.39536429461931,
+      37.7690474908538
+     ],
+     [
+      -122.39551635840785,
+      37.769228775019734
+     ],
+     [
+      -122.39554245869677,
+      37.769264196821744
+     ],
+     [
+      -122.39554903535637,
+      37.769274880743886
+     ],
+     [
+      -122.39553544918688,
+      37.769279872635586
+     ],
+     [
+      -122.39542937942848,
+      37.76931703997258
+     ],
+     [
+      -122.39534151262379,
+      37.769340010035165
+     ],
+     [
+      -122.39525121056249,
+      37.769347010889256
+     ],
+     [
+      -122.39519245983676,
+      37.76935094129641
+     ],
+     [
+      -122.39491420811505,
+      37.76936771348862
+     ],
+     [
+      -122.39483283767818,
+      37.769372072026954
+     ],
+     [
+      -122.39483283767818,
+      37.76855756126609
+     ],
+     [
+      -122.39487560138858,
+      37.768593563463206
+     ]
+    ]
+   ]
+  }
+ }
+}

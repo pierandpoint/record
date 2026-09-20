@@ -1,0 +1,34 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Mission Creek Park -- east reach (Pavilion to 4th St bridge)",
+        "site": "Mission Bay South",
+        "status": "complete",
+        "use": "park",
+        "geometry_type": "approximate",
+        "digitized_from": "Hand-traced from satellite imagery (contextily/Esri World Imagery), guided step-by-step by the owner (who knows this stretch directly) rather than the PDF-pixel transform, which repeatedly mis-located this segment.",
+        "digitization_method": "ADDED 2026-09-19: fills the gap between the already-tracked Mission Creek Park (which stops at its own NE corner near 235 Berry St/the 4th St bridge) and the already-tracked Mission Creek Park Pavilion further east -- OCII's plan labels P1 and P3 both fall in this stretch (per the neighboring records' own p_number notes, sourced from OCII's Nov 2024 CAC 'Remaining Mission Bay Open Space Parcels Update'; which built segment is P1 vs P3 is not resolved by that source and is not resolved here either). The owner corrected three successive attempts at locating and sizing this by satellite-derived pixel transform alone (which is exactly the failure mode this project's own header notes already warn about) before switching to owner-guided tracing: first a wrong area entirely (a bad 2-point transform), then a too-narrow shoreline-path-only trace, then a too-wide trace that ate into the paved road on the south side. Final shape: the full visible landscaped extent from the Pavilion to the 4th St bridge, at the width the owner confirmed, trimmed to exclude the Pavilion's own already-tracked footprint (400 sqm overlap removed). Checked against src/street_geometry.py's real street buffer: 0% clipped -- this stretch corresponds to a 'paper' (platted but never built) segment of Channel St, per src/street_geometry.py's own NOT_YET_REAL_CENTERLINE_LAYERS filter, consistent with it being built out as park instead of road.",
+        "accuracy_caveat": "APPROXIMATE -- hand-traced from satellite imagery with the owner's direct, iterative guidance (not a surveyed footprint or GIS file from the project team, and not derived from the PDF-pixel transform, which was unreliable for this specific stretch). Status 'complete' since the landscaping is clearly already built (lawn, paths, trees visible), not a future plan.",
+        "notes": "Covers OCII plan labels P1 and P3 as one combined record -- see digitization_method for why they aren't split.",
+        "p_number": "P1 and P3, per the neighboring Mission Creek Park / Pavilion records' own p_number notes (OCII Nov 2024 CAC 'Remaining Mission Bay Open Space Parcels Update'). Which built segment is P1 vs P3 is not resolved by that source.",
+        "source_doc_urls": [
+          "https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-122.392, 37.7748], [-122.39174, 37.774475], [-122.39359794548555, 37.77312959120012],
+            [-122.3936452, 37.7731669], [-122.3936044, 37.7731995], [-122.3936681, 37.7732636],
+            [-122.3938257, 37.7731386], [-122.3938257, 37.7731379], [-122.3937136558851, 37.773045800910786],
+            [-122.39464, 37.772375], [-122.3949, 37.7727], [-122.392, 37.7748]
+          ]
+        ]
+      }
+    }
+  ]
+}

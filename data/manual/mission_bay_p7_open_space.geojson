@@ -1,0 +1,24 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "P7 -- undeveloped open-space parcel (Mission Bay Circle, southwest side)",
+        "site": "Mission Bay South",
+        "status": "planned",
+        "use": "park",
+        "geometry_type": "approximate",
+        "digitized_from": "Computed from DataSF's official street centerline/curb data (src/street_geometry.py's build_street_buffer(), plus an extra generous buffer around Owens St's own centerline and around the P10 roundabout island) rather than hand-traced pixels. The north edge follows the real Mission Bay Dr street-buffer boundary all the way up to the roundabout; the east edge is held clear of Owens St and of the P10 island by their own dedicated buffers; the south edge is the owner's own drawn line (extracted via the same ORB/homography technique used for P11/P11A), confirming the parcel stops well short of the two real buildings further south.",
+        "digitization_method": "ADDED 2026-09-20 -- see P9's own record (same computation, mirrored at their shared straight boundary) for the full round-by-round history of what was tried and discarded on this pair. Specific to P7: the first street-buffer-only pass left a thin real gap in curb coverage near the roundabout crosswalk connecting through to paved plaza east of Owens St, which briefly (and wrongly) made the shape look like it crossed the street -- fixed with an explicit Owens St buffer and P10 buffer as hard cuts, then a 4m morphological open to remove the resulting thin sliver, rather than shrinking the bounding box (which had also cut the genuine north curve short in an earlier pass -- the two problems look similar but have different fixes: a real gap needs a hard cut at the specific real feature, not a smaller box).",
+        "accuracy_caveat": "APPROXIMATE -- computed from real DataSF street/curb data plus the owner's own marked stopping line (not a surveyed parcel or GIS file from the project team). The north edge is exact real street-buffer boundary; the east edge is held off Owens St and the roundabout island by dedicated buffers rather than the generic street buffer alone. The south edge is the owner's own line, not a mapped street or parcel boundary -- there is real bare ground between it and the two buildings further south that isn't included here. The P9/P7 split is a straight line, not sourced to any drawn plan boundary. No named, funded project (e.g. an SF Rec & Park schematic, unlike P2) has been found specifically naming P7.",
+        "notes": "OCII plan parcel P7. Sits within the same open-space band as P2, P9 and the removed-pending-redo P8, immediately southwest of the Mission Bay Circle roundabout, east of P9. Currently bare, graded ground with construction staging materials visible.",
+        "source_doc_urls": []
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-122.3963973458203, 37.77033319703563], [-122.39638518735268, 37.77033443155069], [-122.39631810909316, 37.7703307253243], [-122.39620641083454, 37.770302003375626], [-122.39618972700914, 37.770302229883015], [-122.39617695742663, 37.7703055303577], [-122.39615630142791, 37.77031536556204], [-122.39614057885818, 37.7703166900689], [-122.39612912029973, 37.770313600297136], [-122.39612220703306, 37.770309719260986], [-122.39611360241858, 37.770301545775745], [-122.39610937145271, 37.770294840954676], [-122.39610569726993, 37.77028355620248], [-122.39609751463922, 37.770199975479535], [-122.39608160002302, 37.77008994457767], [-122.3960602980338, 37.769981195615], [-122.3960353016459, 37.769879634972156], [-122.3960032121093, 37.769771720774784], [-122.39596586412473, 37.76966540253292], [-122.39591982231225, 37.769552674781885], [-122.39590643996284, 37.7695230247167], [-122.39590516325272, 37.76951160137644], [-122.39590857511078, 37.7694967024138], [-122.39591469577907, 37.769486973071025], [-122.39592664920632, 37.769477447555786], [-122.39593376643695, 37.76947456780925], [-122.39594514163488, 37.76947291627561], [-122.39631228288499, 37.76947283404817], [-122.39649569423273, 37.769456146618424], [-122.39658905448277, 37.76945050995114], [-122.39666009109303, 37.76944389267155], [-122.39667168219334, 37.7694456365048], [-122.39668227012501, 37.7694506654474], [-122.3966909456854, 37.769458547656015], [-122.3966952902607, 37.769465061808425], [-122.39669828256798, 37.7694722975263], [-122.3967, 37.76948389256783], [-122.3967, 37.770223078469186], [-122.39669836992653, 37.77023438106792], [-122.39669552687499, 37.77024145892492], [-122.3966888854167, 37.7702507485379], [-122.39667988969082, 37.77025778293863], [-122.39667101448605, 37.77026183973951], [-122.3963973458203, 37.77033319703563]]]
+      }
+    }
+  ]
+}

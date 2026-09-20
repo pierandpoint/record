@@ -1,0 +1,168 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-20",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "mission_bay_block_22",
+  "slug": "mission-bay-south-block-22-park",
+  "name": "Mission Bay South Block 22 (park)",
+  "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-22-park/",
+  "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-22-park.json",
+  "names": [
+   "Mission Bay South Block 22 (park)"
+  ],
+  "site": {
+   "slug": "mission-bay",
+   "name": "Mission Bay",
+   "short": "Mission Bay",
+   "url": "https://pierandpoint.org/sites/mission-bay/"
+  },
+  "status": "complete",
+  "status_label": "Complete",
+  "use": "park",
+  "address": null,
+  "summary": null,
+  "summary_sources": [],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "PARTIALLY REAL -- the outer boundary is a real polygonized city block from real street geometry, not hand-traced. No internal A/B split needed (this label is a single block).",
+    "digitized_from": "Real block boundary from real street geometry (src/block_fit.py load_blocks(), trimmed against src/street_geometry.py's fuller street buffer)."
+   }
+  },
+  "centroid": {
+   "lon": -122.391558,
+   "lat": 37.768203
+  },
+  "facts": [],
+  "costs": [],
+  "milestones": [],
+  "changes": [
+   {
+    "date": "2026-09-19",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Mission Bay South Block 22 (park): status corrected from 'planned' to 'complete'. This block had been traced from real street geometry and registered as a future park based on satellite imagery (a landscaped lawn with trees, no dirt, no structure) -- evidence consistent with either a finished small park or an interim-landscaped future site. The owner has been on site and confirmed it is complete. That ambiguity should have been flagged as a question rather than resolved by assumption; noted for future passes. A follow-up DataSF Assessor/Building-Footprints check found no structure on the site and traced the dominant underlying parcel to a retired 1998 'COMMON_AREAS' placeholder plus edge fragments of the scattered UCSF campus parcel already flagged for block 17AB -- consistent with open land, but it was the owner's on-site visit, not this lookup, that settled 'complete' vs 'planned'.",
+    "source": "docs/briefs/mission-bay-geometry.md",
+    "sources": [
+     {
+      "title": "docs/briefs/mission-bay-geometry.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_block_22",
+     "slug": "mission-bay-south-block-22-park",
+     "name": "Mission Bay South Block 22 (park)",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-22-park/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-22-park.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
+  "images": [],
+  "open_questions": [],
+  "sources": [
+   {
+    "id": null,
+    "title": "data/manual/_reference/mission_bay_land_use_map_2019.png",
+    "url": "data/manual/_reference/mission_bay_land_use_map_2019.png"
+   }
+  ],
+  "notes": "Owner confirmed on site (2026-09-19) that this park is complete. No building footprint here (satellite- and building-footprint-confirmed); the OCII plan's own Dec 2019 Land Use Map designates this block's future land use as park (shown in park-green). No specific project name, developer, or completion date was found in this pass -- if the owner has one, it would be a useful addition.",
+  "has_record_file": false,
+  "last_verified": null,
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.39159963189788,
+      37.76855361129896
+     ],
+     [
+      -122.39114693416285,
+      37.76858071119199
+     ],
+     [
+      -122.39110856338316,
+      37.76858300944423
+     ],
+     [
+      -122.39109929677541,
+      37.76858356010676
+     ],
+     [
+      -122.39109803065054,
+      37.76857048160421
+     ],
+     [
+      -122.39108463150326,
+      37.76843009062021
+     ],
+     [
+      -122.39103333201383,
+      37.76789559589698
+     ],
+     [
+      -122.39102868031357,
+      37.767847041394454
+     ],
+     [
+      -122.39104922354238,
+      37.767845780120965
+     ],
+     [
+      -122.39175149545798,
+      37.76780298187757
+     ],
+     [
+      -122.3917516883661,
+      37.76780296997105
+     ],
+     [
+      -122.3917580074906,
+      37.76780257502619
+     ],
+     [
+      -122.39195891508432,
+      37.76779028069385
+     ],
+     [
+      -122.39203085325647,
+      37.76778589187075
+     ],
+     [
+      -122.39253822604715,
+      37.76819034587902
+     ],
+     [
+      -122.39256741283606,
+      37.76849557365303
+     ],
+     [
+      -122.3918314255339,
+      37.768539711665944
+     ],
+     [
+      -122.39159963189788,
+      37.76855361129896
+     ]
+    ]
+   ]
+  }
+ }
+}

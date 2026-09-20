@@ -1,0 +1,610 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-20",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "mission_bay_p2_creek_channel",
+  "slug": "p2",
+  "name": "P2",
+  "permalink": "https://pierandpoint.org/parcels/p2/",
+  "api": "https://pierandpoint.org/api/v1/records/p2.json",
+  "names": [
+   "P2"
+  ],
+  "site": {
+   "slug": "mission-bay",
+   "name": "Mission Bay",
+   "short": "Mission Bay",
+   "url": "https://pierandpoint.org/sites/mission-bay/"
+  },
+  "status": "under_construction",
+  "status_label": "Under construction",
+  "use": "park",
+  "address": null,
+  "summary": null,
+  "summary_sources": [],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "APPROXIMATE, AND KNOWINGLY DISPLACED -- fragment 9's real digitized position is ~17-22m south of where it's drawn here; the owner directed this shift to close a real gap (a planting/tree strip between two paved features) with a single deliberate translation rather than tracing that gap's own real edges. Fragment 7's kept portion is a real computed shape (street/creek/already-tracked-polygon-bounded), not hand-traced. Overlaps the already-tracked real 'Mission Creek Park' polygon (which the owner has directed be unioned to include this record and P8, per their own framing that Mission Creek Park will evolve to encompass P1+P2+P8) and may overlap the real Mission Creek Park -- east reach (Pavilion to 4th St bridge) record (P1) at its northeast end, near the edge of the analysis window used to generate the candidate fragments -- not reconciled with either. STREET-CLIP EXEMPT: this record deliberately claims area that includes today's real paved road crossing the corridor (a park-corridor concept, not today's satellite extent) -- same class of exception as Pier 70's 20th Street Plaza. Do not treat this as a mispositioned trace; it's an intentional choice to keep the corridor continuous rather than split by a road the park is meant to cross at grade.",
+    "digitized_from": "Real-gap-fragment technique: bbox.difference(street buffer, src/street_geometry.py)..difference(all already-tracked parcels/approx polygons) over the creek corridor between Mission Creek and Channel St yielded a numbered set of disconnected real scraps of unclaimed land; the owner, viewing the numbered map against Esri satellite imagery, picked fragment 7 (the paved/planted strip along the creek's near bank) and fragment 9 (a paved path further southeast, separated from 7 by a landscaping/tree strip not itself captured as its own fragment) and specified how to combine them."
+   }
+  },
+  "centroid": {
+   "lon": -122.395477,
+   "lat": 37.771625
+  },
+  "facts": [],
+  "costs": [],
+  "milestones": [],
+  "changes": [
+   {
+    "date": "2026-09-20",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "P2 status corrected from planned to under_construction per the owner's direct confirmation; P7 and P9 remain planned, P10 remains complete (already correct, no change).",
+    "source": "docs/briefs/mission-bay-geometry.md",
+    "sources": [
+     {
+      "title": "docs/briefs/mission-bay-geometry.md"
+     }
+    ],
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_p2_creek_channel",
+     "slug": "p2",
+     "name": "P2",
+     "permalink": "https://pierandpoint.org/parcels/p2/",
+     "api": "https://pierandpoint.org/api/v1/records/p2.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
+  "images": [],
+  "open_questions": [],
+  "sources": [],
+  "notes": "OCII plan parcel P2. Runs along the near (south/west) bank of Mission Creek between the creek and Channel St, from about where P8 hands off near the Mission Bay Circle roundabout, northeast toward the creek bend.",
+  "has_record_file": false,
+  "last_verified": null,
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.395980047,
+      37.771138721
+     ],
+     [
+      -122.395981248,
+      37.771136487
+     ],
+     [
+      -122.395981565,
+      37.771135889
+     ],
+     [
+      -122.39598181367423,
+      37.77113541389244
+     ],
+     [
+      -122.39624855042904,
+      37.77134804403662
+     ],
+     [
+      -122.396244522,
+      37.771376515
+     ],
+     [
+      -122.39608835168717,
+      37.7715
+     ],
+     [
+      -122.39642533547251,
+      37.7715
+     ],
+     [
+      -122.39452071055558,
+      37.773
+     ],
+     [
+      -122.39448571428572,
+      37.773
+     ],
+     [
+      -122.3949,
+      37.7727
+     ],
+     [
+      -122.39477241490097,
+      37.77254051862621
+     ],
+     [
+      -122.39467440862133,
+      37.77261801077666
+     ],
+     [
+      -122.39464,
+      37.772574999999996
+     ],
+     [
+      -122.39421168824539,
+      37.772885156787815
+     ],
+     [
+      -122.394211062,
+      37.772885191
+     ],
+     [
+      -122.39419908,
+      37.772885518
+     ],
+     [
+      -122.394187094,
+      37.77288552
+     ],
+     [
+      -122.394175117,
+      37.772885193
+     ],
+     [
+      -122.394163159,
+      37.772884540999996
+     ],
+     [
+      -122.394151246,
+      37.772883564
+     ],
+     [
+      -122.394143914,
+      37.77288276
+     ],
+     [
+      -122.39401073,
+      37.772843697
+     ],
+     [
+      -122.394007021,
+      37.772842734
+     ],
+     [
+      -122.393992907,
+      37.77283954
+     ],
+     [
+      -122.393991252,
+      37.77283919
+     ],
+     [
+      -122.393977009,
+      37.772836379
+     ],
+     [
+      -122.393975364,
+      37.772836078
+     ],
+     [
+      -122.393961009,
+      37.772833651
+     ],
+     [
+      -122.393959352,
+      37.772833394
+     ],
+     [
+      -122.393944901,
+      37.772831357
+     ],
+     [
+      -122.393943261,
+      37.772831148
+     ],
+     [
+      -122.393928734,
+      37.7728295
+     ],
+     [
+      -122.393927082,
+      37.772829336
+     ],
+     [
+      -122.39391249,
+      37.772828081
+     ],
+     [
+      -122.393910843,
+      37.772827961
+     ],
+     [
+      -122.393896207,
+      37.7728271
+     ],
+     [
+      -122.393894556,
+      37.772827026
+     ],
+     [
+      -122.393886109,
+      37.772826758
+     ],
+     [
+      -122.39397762,
+      37.772754479
+     ],
+     [
+      -122.393977629,
+      37.772754472
+     ],
+     [
+      -122.39397763,
+      37.772754472
+     ],
+     [
+      -122.3958905,
+      37.771243563
+     ],
+     [
+      -122.395890702,
+      37.771243401999996
+     ],
+     [
+      -122.395892862,
+      37.771241681
+     ],
+     [
+      -122.395893269,
+      37.771241354
+     ],
+     [
+      -122.39589541,
+      37.771239618
+     ],
+     [
+      -122.395895851,
+      37.771239257
+     ],
+     [
+      -122.395897971,
+      37.771237505
+     ],
+     [
+      -122.395898352,
+      37.771237188
+     ],
+     [
+      -122.395900454,
+      37.771235422
+     ],
+     [
+      -122.395900879,
+      37.771235061
+     ],
+     [
+      -122.39590296,
+      37.77123328
+     ],
+     [
+      -122.395903338,
+      37.771232954
+     ],
+     [
+      -122.395905401,
+      37.771231159
+     ],
+     [
+      -122.395905821,
+      37.77123079
+     ],
+     [
+      -122.395907862,
+      37.771228981
+     ],
+     [
+      -122.395908272,
+      37.771228614
+     ],
+     [
+      -122.395910293,
+      37.77122679
+     ],
+     [
+      -122.395910689,
+      37.77122643
+     ],
+     [
+      -122.39591269,
+      37.771224592
+     ],
+     [
+      -122.395913083,
+      37.771224227
+     ],
+     [
+      -122.395915064,
+      37.771222375
+     ],
+     [
+      -122.395915479,
+      37.771221984
+     ],
+     [
+      -122.395917438,
+      37.771220118
+     ],
+     [
+      -122.395917828,
+      37.771219742999996
+     ],
+     [
+      -122.395919767,
+      37.771217863
+     ],
+     [
+      -122.395920144,
+      37.771217494
+     ],
+     [
+      -122.395922062,
+      37.771215602
+     ],
+     [
+      -122.39592246,
+      37.771215206
+     ],
+     [
+      -122.395924358,
+      37.771213299
+     ],
+     [
+      -122.395924754,
+      37.771212898
+     ],
+     [
+      -122.395926629,
+      37.771210979
+     ],
+     [
+      -122.395927034,
+      37.771210561
+     ],
+     [
+      -122.395928887,
+      37.771208628
+     ],
+     [
+      -122.395929255,
+      37.771208238999996
+     ],
+     [
+      -122.395931088,
+      37.771206293
+     ],
+     [
+      -122.395931489,
+      37.771205864
+     ],
+     [
+      -122.395933299,
+      37.771203905
+     ],
+     [
+      -122.395933654,
+      37.771203517
+     ],
+     [
+      -122.395935443,
+      37.771201547
+     ],
+     [
+      -122.395935838,
+      37.771201108
+     ],
+     [
+      -122.395937605,
+      37.771199124
+     ],
+     [
+      -122.395937999,
+      37.771198678
+     ],
+     [
+      -122.395939743,
+      37.771196681
+     ],
+     [
+      -122.395940093,
+      37.771196277
+     ],
+     [
+      -122.395941815,
+      37.77119427
+     ],
+     [
+      -122.395942192,
+      37.771193826
+     ],
+     [
+      -122.395943892,
+      37.771191806
+     ],
+     [
+      -122.395944277,
+      37.771191343
+     ],
+     [
+      -122.395945954,
+      37.77118931
+     ],
+     [
+      -122.395946297,
+      37.771188891
+     ],
+     [
+      -122.395947952,
+      37.771186848
+     ],
+     [
+      -122.395948343,
+      37.77118636
+     ],
+     [
+      -122.395949974,
+      37.771184304
+     ],
+     [
+      -122.395950323,
+      37.77118386
+     ],
+     [
+      -122.395951931,
+      37.771181794
+     ],
+     [
+      -122.395952284,
+      37.771181336
+     ],
+     [
+      -122.39595387,
+      37.771179258
+     ],
+     [
+      -122.395954222,
+      37.771178792
+     ],
+     [
+      -122.395955785,
+      37.771176703
+     ],
+     [
+      -122.395956146,
+      37.771176216
+     ],
+     [
+      -122.395957685,
+      37.771174116
+     ],
+     [
+      -122.395958033,
+      37.771173635
+     ],
+     [
+      -122.395959548,
+      37.771171525
+     ],
+     [
+      -122.395959899,
+      37.771171032
+     ],
+     [
+      -122.395961391,
+      37.77116891
+     ],
+     [
+      -122.395961718,
+      37.771168441
+     ],
+     [
+      -122.395963186,
+      37.771166311
+     ],
+     [
+      -122.39596354,
+      37.771165791
+     ],
+     [
+      -122.395964984,
+      37.771163649
+     ],
+     [
+      -122.395965308,
+      37.771163164
+     ],
+     [
+      -122.395966729,
+      37.771161012
+     ],
+     [
+      -122.395967071,
+      37.771160487
+     ],
+     [
+      -122.395968467,
+      37.771158325
+     ],
+     [
+      -122.395968777,
+      37.77115784
+     ],
+     [
+      -122.39597015,
+      37.771155669
+     ],
+     [
+      -122.395970495,
+      37.771155117
+     ],
+     [
+      -122.395971842,
+      37.771152936
+     ],
+     [
+      -122.395972134,
+      37.771152459
+     ],
+     [
+      -122.395973459,
+      37.771150268999996
+     ],
+     [
+      -122.395973785,
+      37.771149724
+     ],
+     [
+      -122.395975085,
+      37.771147524
+     ],
+     [
+      -122.395975404,
+      37.771146976
+     ],
+     [
+      -122.395976678,
+      37.771144768
+     ],
+     [
+      -122.395976985,
+      37.771144231
+     ],
+     [
+      -122.395978235,
+      37.771142013
+     ],
+     [
+      -122.395978536,
+      37.771141473
+     ],
+     [
+      -122.395979761,
+      37.771139247
+     ],
+     [
+      -122.395980047,
+      37.771138721
+     ]
+    ]
+   ]
+  }
+ }
+}

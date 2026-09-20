@@ -1,0 +1,25 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "P10 -- landscaped center island, Mission Bay Circle roundabout",
+        "site": "Mission Bay South",
+        "status": "complete",
+        "use": "park",
+        "geometry_type": "approximate",
+        "digitized_from": "Hand-traced from satellite imagery (contextily/Esri World Imagery), guided directly by the owner's own marked-up screenshot (their drawn outline extracted from the photo via ORB feature-matching/homography rather than re-estimated by eye) -- same technique used for P11/P11A.",
+        "digitization_method": "ADDED 2026-09-19: corrects this tracker's earlier call (see docs/briefs/mission_bay_block_inventory.csv row P10, dated 2026-09-19) that P10 was 'roadway infrastructure' not worth a record -- on review, P10 is specifically the roundabout's own landscaped center island (grass, trees), a real, already-built park feature distinct from the road pavement around it, consistent with how this tracker already records P11A (the roundabout's half-circle median) and P11 (its connector strip). The owner's green outline was extracted from their annotated photo via ORB keypoint matching (a homography to the sent map image, chained to a second homography to a freshly-fetched satellite tile with a known exact lon/lat extent), avoiding manual pixel-guessing, then visually confirmed to sit cleanly on the real grass island at the center of the roundabout named 'Mission Bay Circle' on the source OCII land use diagram. join_approximate.py --strict flags roughly a quarter of this shape as inside the real street/curb buffer -- expected and correct, not mispositioning: a roundabout's center island is by definition ringed by its own circulating roadway, the same class of case already documented for P11A and Pier 70's 20th Street Plaza. street_clip_exempt set per that documented escape hatch.",
+        "accuracy_caveat": "APPROXIMATE -- owner-guided satellite trace, not a surveyed footprint or GIS file from the project team. street_clip_exempt=true: this is a real roundabout center island, inherently ringed by the circulating roadway in DataSF's curb data -- clipping it against the generic street buffer would cut real, visible parts of the island, not a mispositioning artifact.",
+        "notes": "Center island of the real 'Mission Bay Circle' roundabout at the south end of the Mission Bay Circle/Owens St area, matching plan label P10. Landscaped with grass and trees; the roundabout's own median (P11A) and connector strip (P11) are tracked separately.",
+        "source_doc_urls": [],
+        "street_clip_exempt": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-122.39608428551846, 37.77072098283028], [-122.3961514569111, 37.77069825484848], [-122.39618984203416, 37.77065656371873], [-122.39620903823395, 37.770588329580065], [-122.39620904465392, 37.77050871589956], [-122.3961850615099, 37.77044046691081], [-122.39615627746649, 37.77040633613616], [-122.39604112957737, 37.77036838288861], [-122.39598355171758, 37.770372153845976], [-122.39588278524849, 37.770406241350855], [-122.39582040267818, 37.77044792623109], [-122.3958060049967, 37.770482044837244], [-122.395820394236, 37.77058441888929], [-122.3958731711009, 37.7706754280461], [-122.3959211516005, 37.770713354905546], [-122.39608428551846, 37.77072098283028]]]
+      }
+    }
+  ]
+}

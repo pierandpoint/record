@@ -1,0 +1,37 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Sister Lillian Murphy Community",
+        "site": "Mission Bay South",
+        "status": "complete",
+        "use": "residential",
+        "geometry_type": "real",
+        "digitized_from": "DataSF Assessor real parcel boundary, blklot 8711020 (671-691 China Basin St); name/address from press coverage",
+        "digitization_method": "ADDED 2026-09-19 after the owner flagged missing coverage in this area on review: Sister Lillian Murphy Community, a 152-unit affordable housing development (studios to 5-bedroom units, serving multigenerational households) at 671-691 China Basin St, developer Mercy Housing, celebrated in a City/Mayor London Breed event in April 2022. All 11 DataSF building-footprint pieces that fall within this address's own Assessor lot (blklot 8711020) were unioned into one multipolygon -- a courtyard-style building typically LIDAR-detects as several disconnected roof sections, the same pattern already seen for The Beacon. CORRECTED 2026-09-19: this record's own site field read 'Mission Bay North' since it was added -- wrong; a point-in-polygon check against DataSF's official redevelopment-area boundary (data/raw/redevelopment_project_areas.geojson) places it in 'Mission Bay - South', and it corresponds to the OCII plan's Block 6 West (671-691 China Basin St fronts China Basin St, Block 6's own north boundary per the plan drawing, immediately west of the already-confirmed Block 6 East). Neighboring records added in the same original pass (MB360, MB360 1200 4th St) were correctly tagged Mission Bay South, so this was an isolated mistake, not a systemic one. CORRECTED AGAIN 2026-09-19: the owner flagged this record's shape as visibly funky on the rendered map. The 11-piece footprint union only ever covered the building's separate roof/wing sections (892 sqm total), leaving the courtyard, connecting sections and most of the complex unshaded even though they're part of the same real building. Replaced with blklot 8711020's own real Assessor parcel boundary (7363 sqm, a single clean polygon) -- visually confirmed against satellite to cover the whole real building complex (both wings and the courtyard) while correctly excluding the neighboring building across the internal walkway to its east; checked for overlap against the already-tracked 6E parcel (blklot 8711505) and found none.",
+        "accuracy_caveat": "REAL -- DataSF Assessor real parcel boundary (blklot 8711020), name/address from press coverage; not a hand trace or plan estimate. Exact opening date (vs. the April 2022 event date) not independently confirmed.",
+        "notes": "Exact opening date not independently confirmed beyond the April 2022 celebration event; unit-mix figures (studio-5BR) not verified against a primary developer source.",
+        "source_doc_urls": [
+          "https://sfyimby.com/2022/04/our-city-mayor-london-breed-celebrate-new-housing-at-691-china-basin-street-mission-bay-san-francisco.html",
+          "https://housing.sfgov.org/listings/a0W4U00000HllNMUAZ"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-122.392132376, 37.771001523],
+            [-122.39227184, 37.77099312],
+            [-122.392523367, 37.770977964],
+            [-122.392752484, 37.770964159],
+            [-122.3928245, 37.771717226],
+            [-122.392204386, 37.771754592],
+            [-122.392132376, 37.771001523]
+          ]
+        ]
+      }
+    }
+  ]
+}

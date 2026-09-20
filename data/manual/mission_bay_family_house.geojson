@@ -1,0 +1,92 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Nancy & Stephen Grand Family House",
+        "site": "Mission Bay South",
+        "status": "complete",
+        "use": "institutional",
+        "geometry_type": "real",
+        "digitized_from": "DataSF Building Footprints (mblr SF8711227); address/name confirmed via DataSF Assessor Historical Secured Property Tax Roll (blklot 8711227, property_location '540 MISSION BAY BLVD NOR', use 'Commercial Hotel'/'Hotels - Other', year_property_built 2016, number_of_stories 5, exemption_code 'Welfare') and Family House Inc.'s own site",
+        "digitization_method": "ADDED 2026-09-19 as part of the block-by-block plan reconciliation: found via a real-city-block coverage audit (src/block_fit.py load_blocks() matched against the OCII plan's blocks '7E'/'7W' label positions, which both resolve to the same coarse real-street-bounded block since no mapped internal street separates them) as a genuinely untracked real building. Its own Assessor lot (blklot 8711227, a standalone parcel recorded 2012) is distinct from the neighboring already-tracked buildings (Strata, Madrone) -- confirmed via the DataSF Assessor tax roll API rather than assumed from proximity. CORRECTED 2026-09-19: identifying the true '7W' block (Five88, blklot 8711226, added separately) exposed a 117 sq m overlap between this building's real DataSF footprint and Five88's real Assessor parcel boundary at their shared property line -- trimmed via geom.difference() against the Five88 parcel, same pattern as this project's other real-parcel-vs-real-footprint trims (e.g. Chase Center Parking Garage vs Uber Mission Bay 2). CONFIRMED 2026-09-19: found an independent primary-adjacent source explicitly naming this 'Block 7 East' -- Citizen Portal's report on OCII's own March 18 commission meeting, which approved CEQA findings and the combined basic concept/schematic design for 'Family House's institutional building on Block 7 East in Mission Bay South' (80 guest rooms, 42 parking spaces, architect Richard Stacy), closing the citation gap flagged when this record was first added.",
+        "accuracy_caveat": "REAL -- surveyed DataSF building footprint, not a hand trace or plan estimate; trimmed 117 sq m at the shared boundary with the neighboring Five88 parcel (blklot 8711226) -- see digitization_method.",
+        "notes": "5-story, 80-room nonprofit 'home away from home' for families of children being treated at UCSF Benioff Children's Hospital -- free lodging, low-income-qualified, run by the 501(c)(3) Family House, Inc. (founded 1981). Opened at this Mission Bay location in 2016 after moving from an earlier Judah St. building; accommodates up to 250 people/night, serves 3,000+ families/year. Assessor's welfare exemption on the parcel matches its nonprofit operation.",
+        "source_doc_urls": [
+          "https://familyhouseinc.org/rooms/",
+          "https://www.yelp.com/biz/family-house-san-francisco",
+          "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8711227",
+          "https://citizenportal.ai/articles/7096368/California/San-Francisco-County/San-Francisco-City/Commission-approves-Family-House-schematic-design-for-Mission-Bay-Block-7-East"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.38969967,
+              37.771153814
+            ],
+            [
+              -122.39006830678954,
+              37.771129037831415
+            ],
+            [
+              -122.39008546204172,
+              37.77130849703501
+            ],
+            [
+              -122.390049043,
+              37.771312092
+            ],
+            [
+              -122.390040994,
+              37.771239143
+            ],
+            [
+              -122.389974324,
+              37.771242685
+            ],
+            [
+              -122.389977878,
+              37.771303474
+            ],
+            [
+              -122.389913908,
+              37.771309162
+            ],
+            [
+              -122.389964003,
+              37.771750428
+            ],
+            [
+              -122.39012723617617,
+              37.77174549165432
+            ],
+            [
+              -122.39014003027097,
+              37.771879112963624
+            ],
+            [
+              -122.39018394539251,
+              37.77187680957477
+            ],
+            [
+              -122.390184363,
+              37.771882026
+            ],
+            [
+              -122.389771655,
+              37.771906884
+            ],
+            [
+              -122.38969967,
+              37.771153814
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
