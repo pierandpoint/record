@@ -126,19 +126,35 @@
       function updateLabels() {
         var show = view.w < LABEL_AT;
         var scale = view.w / base.w;
+        if (show) {
+          // A shape must read big enough on screen at the current zoom to earn a label at
+          // all, then the biggest shapes claim it first and any label too close to one
+          // already placed is dropped -- a dense site (Mission Bay's 101 records) would
+          // otherwise pass the size test for nearly everything in view at once and paper it
+          // in overlapping text (docs/briefs/site-ux.md).
+          var candidates = [];
+          labels.forEach(function (entry) {
+            entry.big = false;
+            var shape = svg.querySelector('.rec[data-id="' + entry.el.getAttribute('data-id') + '"]');
+            if (!shape || !shape.getBBox) return;
+            var bb = shape.getBBox();
+            var size = Math.min(bb.width, bb.height);
+            if (size / view.w > 0.045) {
+              entry.size = size; entry.cx = bb.x + bb.width / 2; entry.cy = bb.y + bb.height / 2;
+              candidates.push(entry);
+            }
+          });
+          candidates.sort(function (a, b) { return b.size - a.size; });
+          var placed = [], minDist = view.w * 0.11;
+          candidates.forEach(function (entry) {
+            entry.big = placed.every(function (p) { return Math.hypot(p.cx - entry.cx, p.cy - entry.cy) > minDist; });
+            if (entry.big) placed.push(entry);
+          });
+        }
         labels.forEach(function (entry) {
           var label = entry.el;
           if (!show) { label.style.opacity = ''; return; }
-          // Only a shape that reads big enough at the current zoom gets its label shown, so
-          // zooming in on one corner doesn't paper the view with a crowd of small parcels'
-          // overlapping names (docs/briefs/site-ux.md).
-          var shape = svg.querySelector('.rec[data-id="' + label.getAttribute('data-id') + '"]');
-          var big = true;
-          if (shape && shape.getBBox) {
-            var bb = shape.getBBox();
-            big = Math.min(bb.width, bb.height) / view.w > 0.035;
-          }
-          label.style.opacity = big ? '1' : '0';
+          label.style.opacity = entry.big ? '1' : '0';
           label.style.fontSize = (entry.fontSize * scale).toFixed(2) + 'px';
           label.style.strokeWidth = (entry.strokeWidth * scale).toFixed(2) + 'px';
         });

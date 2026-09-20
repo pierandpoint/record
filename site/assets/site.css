@@ -113,12 +113,17 @@ img { max-width: 100%; display: block; }
 .tracker .bar { height: 10px; }
 .tracker-sites { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin-top: 8px; }
 @media (min-width: 720px) { .tracker-sites { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px; } }
-.tracker-site { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 4px 12px; padding: 10px 0; border-bottom: 1px solid var(--line); color: var(--text-2); }
+/* Explicit rows/placement, not auto-placement: a spanning row (the bar) between two
+   auto-placed siblings is exactly the case grid auto-placement doesn't handle the way it
+   looks like it should (the second column of row 1 goes unused and "detail" drops to its
+   own row 3 instead), which read as the site name and the next site's row visually
+   colliding under some font metrics. */
+.tracker-site { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: auto auto; align-items: center; gap: 4px 12px; padding: 10px 0; border-bottom: 1px solid var(--line); color: var(--text-2); }
 .tracker-site:hover { text-decoration: none; color: var(--text); }
-.tracker-site-name { display: flex; align-items: center; gap: 10px; font-weight: 500; }
+.tracker-site-name { grid-column: 1; grid-row: 1; display: flex; align-items: center; gap: 10px; font-weight: 500; min-width: 0; }
 .tracker-site-name .pin { width: 22px; height: 22px; font-size: 11px; }
-.tracker-site .bar { grid-column: 1 / -1; }
-.tracker-site-detail { font: 12px var(--mono); color: var(--faint); text-align: right; }
+.tracker-site .bar { grid-column: 1 / -1; grid-row: 2; }
+.tracker-site-detail { grid-column: 2; grid-row: 1; font: 12px var(--mono); color: var(--faint); text-align: right; }
 .tracker-curve { margin-top: 8px; }
 .tracker-curve h3 { font: 500 13px var(--mono); letter-spacing: .04em; color: var(--soft); text-transform: uppercase; margin-bottom: 8px; }
 .tracker-curve .curve { display: block; width: 100%; height: auto; }
