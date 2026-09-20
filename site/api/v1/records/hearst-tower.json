@@ -1,0 +1,247 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-20",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "ucsf_hearst_tower",
+  "slug": "hearst-tower",
+  "name": "Hearst Tower",
+  "permalink": "https://pierandpoint.org/parcels/hearst-tower/",
+  "api": "https://pierandpoint.org/api/v1/records/hearst-tower.json",
+  "names": [
+   "Hearst Tower"
+  ],
+  "site": {
+   "slug": "mission-bay",
+   "name": "Mission Bay",
+   "short": "Mission Bay",
+   "url": "https://pierandpoint.org/sites/mission-bay/"
+  },
+  "status": "complete",
+  "status_label": "Complete",
+  "use": "residential",
+  "address": null,
+  "summary": "A 15-story, 431-apartment student/faculty housing tower at 1560 3rd St, one of four connected buildings (with the North, West and South buildings) in UCSF's Mission Bay housing complex, built together and opened together around 2005.",
+  "summary_sources": [
+   "src-langan-housing",
+   "src-ucsf-housing"
+  ],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against data/raw/parcels.geojson and DataSF's Assessor tax roll -- e.g. blklot 8711507 at 675 Nelson Rising Lane alone is ~13 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
+    "digitized_from": "OpenStreetMap (way 135103722)"
+   }
+  },
+  "centroid": {
+   "lon": -122.389635,
+   "lat": 37.769288
+  },
+  "facts": [
+   {
+    "key": "address",
+    "value": "1560 3rd St",
+    "sources": [
+     "src-langan-housing"
+    ]
+   },
+   {
+    "key": "architect",
+    "value": "Skidmore, Owings & Merrill (SOM) with Fisher Friedman Associates",
+    "sources": [
+     "src-arcca-dna"
+    ]
+   },
+   {
+    "key": "stories",
+    "value": "15 (155 ft)",
+    "sources": [
+     "src-langan-housing"
+    ]
+   },
+   {
+    "key": "units",
+    "value": "431 apartments",
+    "sources": [
+     "src-langan-housing"
+    ]
+   },
+   {
+    "key": "use",
+    "value": "UCSF student and faculty housing",
+    "sources": [
+     "src-ucsf-housing"
+    ]
+   },
+   {
+    "key": "complex",
+    "value": "One of four connected buildings (Hearst Tower, North Building, West Building, South Building) totaling 298,800 sq ft for 750+ residents around a shared at-grade courtyard",
+    "sources": [
+     "src-ucsf-housing"
+    ]
+   }
+  ],
+  "costs": [],
+  "milestones": [
+   {
+    "date": "2005",
+    "date_label": "~2005",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Hearst Tower opens as part of UCSF's Mission Bay student/faculty housing complex",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-langan-housing",
+      "title": "UCSF Mission Bay - Student Housing",
+      "publisher": "Langan (engineering firm, own material)",
+      "url": "https://www.langan.com/portfolio/ucsf-mission-bay-student-housing",
+      "accessed": "2026-09-18"
+     }
+    ],
+    "source": "Langan (engineering firm, own material)",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "ucsf_hearst_tower",
+     "slug": "hearst-tower",
+     "name": "Hearst Tower",
+     "permalink": "https://pierandpoint.org/parcels/hearst-tower/",
+     "api": "https://pierandpoint.org/api/v1/records/hearst-tower.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   },
+   {
+    "date": "2005-06",
+    "date_label": "~2005",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Hearst Tower opens as part of UCSF's Mission Bay student/faculty housing complex",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "title": "langan.com; campuslifeserviceshome.ucsf.edu"
+     }
+    ],
+    "source": "langan.com; campuslifeserviceshome.ucsf.edu",
+    "origin": "csv",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "ucsf_hearst_tower",
+     "slug": "hearst-tower",
+     "name": "Hearst Tower",
+     "permalink": "https://pierandpoint.org/parcels/hearst-tower/",
+     "api": "https://pierandpoint.org/api/v1/records/hearst-tower.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
+  "changes": [],
+  "images": [],
+  "open_questions": [
+   "Could not confirm whether all four housing buildings opened in exactly the same month, or whether some phased in slightly later than others.",
+   "No openly licensed image was found; none is hosted here.",
+   "Images: no plan drawing, elevation or openly-licensed photograph was found for this building specifically. Searched: UCSF Real Estate's Mission Bay campus-site and LRDP pages (realestate.ucsf.edu, blocked to automated fetches with a 403); the UCSF 2014 LRDP EIR's CEQAnet filing (SCH 2013092047, whose pre-2016 attachments aren't hosted on CEQAnet itself); a May 2000 Regents Committee on Grounds and Buildings design-approval item for an early Mission Bay building (text-only, no figures); the 2008 \"UCSF Mission Bay Planning Principles\" appendix (a citywide-scale community map, no individual buildings labeled); and a UCSF wayfinding campus map (not an adopted plan, EIR or permit filing, so not eligible as public-record even though found). Not pursued further in this pass; the record's own project sources above remain the citation for the building's history. The same September 2008 Regents presentation (used for Byers Hall, Genentech Hall, Rock Hall and Rutter Center) includes one more photo on its \"Architectural Context\" slide labeled only \"Housing,\" showing what looks like more than one building together; it wasn't used here because it can't be confidently attributed to this specific one."
+  ],
+  "sources": [
+   {
+    "id": "src-langan-housing",
+    "title": "UCSF Mission Bay - Student Housing",
+    "publisher": "Langan (engineering firm, own material)",
+    "url": "https://www.langan.com/portfolio/ucsf-mission-bay-student-housing",
+    "accessed": "2026-09-18"
+   },
+   {
+    "id": "src-ucsf-housing",
+    "title": "Mission Bay Housing",
+    "publisher": "UCSF Campus Life Services (own material)",
+    "url": "https://campuslifeserviceshome.ucsf.edu/housing/mission-bay-housing",
+    "accessed": "2026-09-18"
+   },
+   {
+    "id": "src-arcca-dna",
+    "title": "UC San Francisco: The DNA of a Campus",
+    "publisher": "arcCA Digest (architecture press), naming SOM with Fisher Friedman as the student apartment complex architect",
+    "url": "https://arccadigest.org/uc-san-francisco-dna-campus/",
+    "accessed": "2026-09-18"
+   },
+   {
+    "id": "src-osm-hearst",
+    "title": "Hearst Tower (OpenStreetMap way 135103722)",
+    "publisher": "OpenStreetMap",
+    "url": "https://www.openstreetmap.org/way/135103722",
+    "accessed": "2026-09-18"
+   }
+  ],
+  "notes": "Part of a single UCSF Mission Bay student/faculty housing complex (Hearst Tower plus North, West and South/Student Housing buildings) built together in Mission Bay's first development phase and opened together around 2005 -- four connected buildings totaling 298,800 sq ft for 750+ residents, surrounding a shared at-grade courtyard, per UCSF's own housing-office description. Architect Skidmore, Owings & Merrill (SOM) with Fisher Friedman Associates. This building: Hearst Tower, 1560 3rd St, 15 stories/155 ft, 431 apartments.",
+  "has_record_file": true,
+  "last_verified": "2026-09-18",
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.3897274,
+      37.7694784
+     ],
+     [
+      -122.3896285,
+      37.7694845
+     ],
+     [
+      -122.3896312,
+      37.769512
+     ],
+     [
+      -122.3895572,
+      37.7695165
+     ],
+     [
+      -122.389512,
+      37.7690549
+     ],
+     [
+      -122.3895919,
+      37.76905
+     ],
+     [
+      -122.3895958,
+      37.7690895
+     ],
+     [
+      -122.3896887,
+      37.7690838
+     ],
+     [
+      -122.3896929,
+      37.7691336
+     ],
+     [
+      -122.3897274,
+      37.7694784
+     ]
+    ]
+   ]
+  }
+ }
+}

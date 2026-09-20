@@ -1,0 +1,859 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-20",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "pier70_d",
+  "slug": "pier-70-parcel-d",
+  "name": "Pier 70 Parcel D",
+  "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-d/",
+  "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-d.json",
+  "names": [
+   "Pier 70 Parcel D"
+  ],
+  "site": {
+   "slug": "pier-70",
+   "name": "Pier 70",
+   "short": "Pier 70",
+   "url": "https://pierandpoint.org/sites/pier-70/"
+  },
+  "status": "planned",
+  "status_label": "Planned",
+  "use": "residential",
+  "address": null,
+  "summary": "Phase 1 residential parcel between Building 2 and the new 21st Street, 90 ft under the D4D, designed by Stanley Saitowitz | Natoma Architects as an L-shaped building of seven residential levels over ground-floor retail with loft townhouses along 21st Street. It has not started construction; the Port's proposed 2026 amendments would require closing on it by 2029-2030.",
+  "summary_sources": [
+   "src-d4d",
+   "src-saitowitz-d",
+   "src-port-11a-2026"
+  ],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "APPROXIMATE -- this block is not yet built and does not correspond to any subdivided Assessor parcel: it currently sits on vacant/graded land, surface parking, or an existing industrial building slated for demolition within Brookfield's 28-acre district (unaddressed in DataSF's Assessor roll). Redone 2026-09-14 with a corrected, shear-free transform (see digitization_method) -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects this transform's 1-8m residual error, not a deliberate encroachment. Street-facing edge re-clipped 2026-09-17 against official curb-referenced street data -- see digitization_method.",
+    "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
+    "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of Brookfield's larger, largely unaddressed 28-acre site), but it has not been subdivided per the masterplan's individual named parcels -- this uses hand-traced approximate geometry instead.",
+    "regulatory_context": "Residential (studio-3BR over 7 levels) + ground-floor retail + townhouses along 21st St, designed by Stanley Saitowitz/Natoma Architects. A weak secondary source implied a ~2020 completion, but this directly conflicts with Brookfield's own July 2026 statement that its first market-rate residential building at Pier 70 won't break ground until 2027 -- treat as NOT yet built."
+   }
+  },
+  "centroid": {
+   "lon": -122.384138,
+   "lat": 37.759629
+  },
+  "facts": [
+   {
+    "key": "master_developer",
+    "value": "FC Pier 70, LLC, an affiliate of Brookfield Properties (originally Forest City)",
+    "sources": [
+     "src-port-12b-2020",
+     "src-bos-o224-17"
+    ]
+   },
+   {
+    "key": "landowner",
+    "value": "Port of San Francisco (Seawall Lot 349; option parcels are ground-leased for 99 years except condominium parcels, which may be sold)",
+    "sources": [
+     "src-port-9b-2017"
+    ]
+   },
+   {
+    "key": "d4d_urban_designer",
+    "value": "SITELAB urban studio (lead author); Grimshaw Architecture (commercial), David Baker Architects (residential), James Corner Field Operations (landscape)",
+    "sources": [
+     "src-d4d"
+    ]
+   },
+   {
+    "key": "use",
+    "value": "Residential (D4D land-use plan); the design shows studio to three-bedroom units, ground-floor retail facing Market Square and Maryland Street, and loft townhouses along 21st Street",
+    "sources": [
+     "src-d4d",
+     "src-saitowitz-d"
+    ]
+   },
+   {
+    "key": "max_height_ft",
+    "value": "90 (D4D Figure 6.4.2)",
+    "sources": [
+     "src-d4d"
+    ]
+   },
+   {
+    "key": "architect",
+    "value": "Stanley Saitowitz | Natoma Architects Inc. (architect's own project page; exterior moment frames infilled with glazing and zinc panels)",
+    "sources": [
+     "src-saitowitz-d"
+    ]
+   },
+   {
+    "key": "stories",
+    "value": "seven levels of residential units above ground-floor retail and common spaces (architect's description)",
+    "sources": [
+     "src-saitowitz-d"
+    ]
+   },
+   {
+    "key": "phase",
+    "value": "Phase 1 (Port's proposed 2026 phasing plan, Exhibit A)",
+    "sources": [
+     "src-port-11a-2026"
+    ]
+   },
+   {
+    "key": "adjacent_open_space",
+    "value": "Fronts Market Square and the tree grove of the Building 12 Plaza and Market Square (D4D Section 3.9); a pedestrian opening on 21st Street between Building 2 and Parcel D is one of the four entries to the square",
+    "sources": [
+     "src-d4d"
+    ]
+   }
+  ],
+  "costs": [],
+  "milestones": [
+   {
+    "date": "2017-08-24",
+    "date_label": "Aug 24, 2017",
+    "status": null,
+    "status_label": null,
+    "text": "Planning Commission certifies the Pier 70 Mixed-Use Project Final EIR (Case 2014-001272ENV, Motion 19976) and approves the Design for Development (Resolution 19980)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-port-9b-2017",
+      "title": "Port Commission staff report, Item 9B: Pier 70 Mixed-Use Project approvals (Resolutions 17-43 through 17-52), meeting of September 26, 2017",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/sites/default/files/Item%209B%20Pier%2070%20Approval%20092217.pdf",
+      "accessed": "2026-09-17",
+      "date": "2017-09-22",
+      "note": "184-page memo dated Sept 22, 2017 with the DDA major-terms table (Table 3), the Parcel K North sale process, the affordable housing plan and the financing plan."
+     }
+    ],
+    "source": "Port of San Francisco, 2017-09-22",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_d",
+     "slug": "pier-70-parcel-d",
+     "name": "Pier 70 Parcel D",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-d/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-d.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2017-09-26",
+    "date_label": "Sep 26, 2017",
+    "status": null,
+    "status_label": null,
+    "text": "Port Commission approves the Disposition and Development Agreement with FC Pier 70, LLC (Resolution 17-43), consents to the Pier 70 Special Use District and the D4D (17-45) and the Development Agreement (17-47)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-port-9b-2017",
+      "title": "Port Commission staff report, Item 9B: Pier 70 Mixed-Use Project approvals (Resolutions 17-43 through 17-52), meeting of September 26, 2017",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/sites/default/files/Item%209B%20Pier%2070%20Approval%20092217.pdf",
+      "accessed": "2026-09-17",
+      "date": "2017-09-22",
+      "note": "184-page memo dated Sept 22, 2017 with the DDA major-terms table (Table 3), the Parcel K North sale process, the affordable housing plan and the financing plan."
+     },
+     {
+      "id": "src-port-12b-2020",
+      "title": "Port Commission staff report, Item 12B, and Resolution 20-07: 99-year ground lease option for Parcel E2 at the appraised value of $5,000,000 (185 Maryland St; Block 4116 Lot 008), tied to Parcel A",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/sites/default/files/Documents/Item%2012B%20Pier%2070%20Parcels%20E2%20and%20A.pdf",
+      "accessed": "2026-09-17",
+      "date": "2020-02-11",
+      "note": "Memo dated Feb 7, 2020; resolution adopted Feb 11, 2020."
+     }
+    ],
+    "source": "Port of San Francisco, 2017-09-22; Port of San Francisco, 2020-02-11",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_d",
+     "slug": "pier-70-parcel-d",
+     "name": "Pier 70 Parcel D",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-d/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-d.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2017-11-15",
+    "date_label": "Nov 15, 2017",
+    "status": null,
+    "status_label": null,
+    "text": "Mayor Lee signs the Development Agreement ordinance (Ordinance 224-17) and the rest of the project legislation after Board of Supervisors approval on October 31, 2017",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-bos-o224-17",
+      "title": "Ordinance No. 224-17: Development Agreement between the City and County of San Francisco and FC Pier 70, LLC (File No. 170863)",
+      "publisher": "San Francisco Board of Supervisors",
+      "url": "https://sfbos.org/sites/default/files/o0224-17.pdf",
+      "accessed": "2026-09-17",
+      "date": "2017-11-15"
+     },
+     {
+      "id": "src-port-12b-2020",
+      "title": "Port Commission staff report, Item 12B, and Resolution 20-07: 99-year ground lease option for Parcel E2 at the appraised value of $5,000,000 (185 Maryland St; Block 4116 Lot 008), tied to Parcel A",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/sites/default/files/Documents/Item%2012B%20Pier%2070%20Parcels%20E2%20and%20A.pdf",
+      "accessed": "2026-09-17",
+      "date": "2020-02-11",
+      "note": "Memo dated Feb 7, 2020; resolution adopted Feb 11, 2020."
+     }
+    ],
+    "source": "San Francisco Board of Supervisors, 2017-11-15; Port of San Francisco, 2020-02-11",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_d",
+     "slug": "pier-70-parcel-d",
+     "name": "Pier 70 Parcel D",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-d/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-d.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2018-05-02",
+    "date_label": "May 2, 2018",
+    "status": null,
+    "status_label": null,
+    "text": "Disposition and Development Agreement dated as of May 2, 2018; the Port approves the Phase 1 Submittal the same month",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-port-12b-2020",
+      "title": "Port Commission staff report, Item 12B, and Resolution 20-07: 99-year ground lease option for Parcel E2 at the appraised value of $5,000,000 (185 Maryland St; Block 4116 Lot 008), tied to Parcel A",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/sites/default/files/Documents/Item%2012B%20Pier%2070%20Parcels%20E2%20and%20A.pdf",
+      "accessed": "2026-09-17",
+      "date": "2020-02-11",
+      "note": "Memo dated Feb 7, 2020; resolution adopted Feb 11, 2020."
+     },
+     {
+      "id": "src-port-11a-2026",
+      "title": "Port Commission staff report, Item 11A: Informational presentation on updates to the Pier 70 28-Acre Site Project, including potential amendments to the transaction structure (meeting of August 11, 2026)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/sites/default/files/2026-08/item_11a_p70_project_update_-_term_sheet_overview_-_information.pdf",
+      "accessed": "2026-09-17",
+      "date": "2026-08-07",
+      "note": "Informational only; amendments to the DDA to go to the Port Commission and Board of Supervisors 'by the end of this year or early next year'. Exhibit A is the proposed phasing plan."
+     }
+    ],
+    "source": "Port of San Francisco, 2020-02-11; Port of San Francisco, 2026-08-07",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_d",
+     "slug": "pier-70-parcel-d",
+     "name": "Pier 70 Parcel D",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-d/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-d.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2018-05-10",
+    "date_label": "May 10, 2018",
+    "status": "under_construction",
+    "status_label": "Under construction",
+    "text": "Groundbreaking for Phase 1 (horizontal infrastructure, Building 12, parks) announced by the Port",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-port-news-2018-05",
+      "title": "New Life for Pier 70 Historic Shipyard as Construction Begins on Expansive Waterfront District (news release)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/about/news/new-life-pier-70-historic-shipyard-construction-begins-expansive-waterfront-district",
+      "accessed": "2026-09-17",
+      "date": "2018-05-10"
+     }
+    ],
+    "source": "Port of San Francisco, 2018-05-10",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "pier70_d",
+     "slug": "pier-70-parcel-d",
+     "name": "Pier 70 Parcel D",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-d/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-d.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2018-08",
+    "date_label": "~2018",
+    "status": null,
+    "status_label": null,
+    "text": "Phase 1 site preparation and demolition begin; utility and street construction on 20th, Maryland, Louisiana, 21st and 22nd Streets follows in March 2019",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-port-11a-2026",
+      "title": "Port Commission staff report, Item 11A: Informational presentation on updates to the Pier 70 28-Acre Site Project, including potential amendments to the transaction structure (meeting of August 11, 2026)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/sites/default/files/2026-08/item_11a_p70_project_update_-_term_sheet_overview_-_information.pdf",
+      "accessed": "2026-09-17",
+      "date": "2026-08-07",
+      "note": "Informational only; amendments to the DDA to go to the Port Commission and Board of Supervisors 'by the end of this year or early next year'. Exhibit A is the proposed phasing plan."
+     }
+    ],
+    "source": "Port of San Francisco, 2026-08-07",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_d",
+     "slug": "pier-70-parcel-d",
+     "name": "Pier 70 Parcel D",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-d/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-d.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2021-06",
+    "date_label": "~2021",
+    "status": null,
+    "status_label": null,
+    "text": "Final appraisal of Parcel E2 comes in below its DDA threshold value, triggering a Phase 1 'down market delay' that tolls the developer's deadlines to close on option parcels",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-port-11a-2026",
+      "title": "Port Commission staff report, Item 11A: Informational presentation on updates to the Pier 70 28-Acre Site Project, including potential amendments to the transaction structure (meeting of August 11, 2026)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/sites/default/files/2026-08/item_11a_p70_project_update_-_term_sheet_overview_-_information.pdf",
+      "accessed": "2026-09-17",
+      "date": "2026-08-07",
+      "note": "Informational only; amendments to the DDA to go to the Port Commission and Board of Supervisors 'by the end of this year or early next year'. Exhibit A is the proposed phasing plan."
+     },
+     {
+      "id": "src-port-update-2025-06",
+      "title": "Pier 70 Project Update, June 2025 (slide deck)",
+      "publisher": "Port of San Francisco / Brookfield Properties",
+      "url": "https://www.sfport.com/sites/default/files/2025-06/Pier%2070%20Update%20-%20June%202025%20v3.pdf",
+      "accessed": "2026-09-17",
+      "date": "2025-06"
+     }
+    ],
+    "source": "Port of San Francisco, 2026-08-07; Port of San Francisco / Brookfield Properties, 2025-06",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_d",
+     "slug": "pier-70-parcel-d",
+     "name": "Pier 70 Parcel D",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-d/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-d.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2022-04",
+    "date_label": "~2022",
+    "status": null,
+    "status_label": null,
+    "text": "Brookfield halts construction at the end of Phase 1 horizontal work, citing market conditions",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-bisnow-2022-10",
+      "title": "Brookfield, Port Of San Francisco Want To Restart Pier 70 Project",
+      "publisher": "Bisnow (Joseph Gordon)",
+      "url": "https://www.bisnow.com/san-francisco/news/mixed-use/brookfield-properties-and-port-of-san-francisco-inch-closer-to-pier-70-completion-115959",
+      "accessed": "2026-09-17",
+      "date": "2022-10-20"
+     },
+     {
+      "id": "src-trd-2023-04",
+      "title": "Brookfield leases first seven tenants at Pier 70",
+      "publisher": "The Real Deal (citing SF Business Times)",
+      "url": "https://therealdeal.com/san-francisco/2023/04/17/brookfield-leases-first-seven-tenants-at-pier-70/",
+      "accessed": "2026-09-17",
+      "date": "2023-04-17"
+     }
+    ],
+    "source": "Bisnow (Joseph Gordon), 2022-10-20; The Real Deal (citing SF Business Times), 2023-04-17",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_d",
+     "slug": "pier-70-parcel-d",
+     "name": "Pier 70 Parcel D",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-d/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-d.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2022-11",
+    "date_label": "~2022",
+    "status": null,
+    "status_label": null,
+    "text": "City issues Notice of Completion for the Phase 1 infrastructure, described by Brookfield as a $150 million investment",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-port-update-2025-06",
+      "title": "Pier 70 Project Update, June 2025 (slide deck)",
+      "publisher": "Port of San Francisco / Brookfield Properties",
+      "url": "https://www.sfport.com/sites/default/files/2025-06/Pier%2070%20Update%20-%20June%202025%20v3.pdf",
+      "accessed": "2026-09-17",
+      "date": "2025-06"
+     }
+    ],
+    "source": "Port of San Francisco / Brookfield Properties, 2025-06",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_d",
+     "slug": "pier-70-parcel-d",
+     "name": "Pier 70 Parcel D",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-d/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-d.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2024",
+    "date_label": "~2024",
+    "status": null,
+    "status_label": null,
+    "text": "Phase 1 streets and utilities accepted by the City and Port; streets around Pier 70 opened to the public in May 2024",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-port-11a-2026",
+      "title": "Port Commission staff report, Item 11A: Informational presentation on updates to the Pier 70 28-Acre Site Project, including potential amendments to the transaction structure (meeting of August 11, 2026)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/sites/default/files/2026-08/item_11a_p70_project_update_-_term_sheet_overview_-_information.pdf",
+      "accessed": "2026-09-17",
+      "date": "2026-08-07",
+      "note": "Informational only; amendments to the DDA to go to the Port Commission and Board of Supervisors 'by the end of this year or early next year'. Exhibit A is the proposed phasing plan."
+     },
+     {
+      "id": "src-port-update-2025-06",
+      "title": "Pier 70 Project Update, June 2025 (slide deck)",
+      "publisher": "Port of San Francisco / Brookfield Properties",
+      "url": "https://www.sfport.com/sites/default/files/2025-06/Pier%2070%20Update%20-%20June%202025%20v3.pdf",
+      "accessed": "2026-09-17",
+      "date": "2025-06"
+     }
+    ],
+    "source": "Port of San Francisco, 2026-08-07; Port of San Francisco / Brookfield Properties, 2025-06",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_d",
+     "slug": "pier-70-parcel-d",
+     "name": "Pier 70 Parcel D",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-d/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-d.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2026-06",
+    "date_label": "~2026",
+    "status": null,
+    "status_label": null,
+    "text": "Phase 1 down market delay reaches its 60-month maximum; the parties extend it by six months to December 26, 2026 while DDA amendments are drafted",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-port-11a-2026",
+      "title": "Port Commission staff report, Item 11A: Informational presentation on updates to the Pier 70 28-Acre Site Project, including potential amendments to the transaction structure (meeting of August 11, 2026)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/sites/default/files/2026-08/item_11a_p70_project_update_-_term_sheet_overview_-_information.pdf",
+      "accessed": "2026-09-17",
+      "date": "2026-08-07",
+      "note": "Informational only; amendments to the DDA to go to the Port Commission and Board of Supervisors 'by the end of this year or early next year'. Exhibit A is the proposed phasing plan."
+     }
+    ],
+    "source": "Port of San Francisco, 2026-08-07",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_d",
+     "slug": "pier-70-parcel-d",
+     "name": "Pier 70 Parcel D",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-d/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-d.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2026-08-11",
+    "date_label": "Aug 11, 2026",
+    "status": null,
+    "status_label": null,
+    "text": "Port Commission hears an informational report on proposed DDA amendments: parcel-specific outside dates, a Project-wide affordable rate of no less than 20% (327 stand-alone affordable units kept), 65-to-90 ft height increases on certain residential parcels, developer return cut from 18% to 14%, and a new phasing plan",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-port-11a-2026",
+      "title": "Port Commission staff report, Item 11A: Informational presentation on updates to the Pier 70 28-Acre Site Project, including potential amendments to the transaction structure (meeting of August 11, 2026)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/sites/default/files/2026-08/item_11a_p70_project_update_-_term_sheet_overview_-_information.pdf",
+      "accessed": "2026-09-17",
+      "date": "2026-08-07",
+      "note": "Informational only; amendments to the DDA to go to the Port Commission and Board of Supervisors 'by the end of this year or early next year'. Exhibit A is the proposed phasing plan."
+     }
+    ],
+    "source": "Port of San Francisco, 2026-08-07",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_d",
+     "slug": "pier-70-parcel-d",
+     "name": "Pier 70 Parcel D",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-d/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-d.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2026-12",
+    "date_label": "2026",
+    "status": null,
+    "status_label": null,
+    "text": "Amendments to the DDA, Development Agreement and Master Lease expected before the Port Commission and Board of Supervisors 'by the end of this year or early next year'",
+    "expected": true,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-port-11a-2026",
+      "title": "Port Commission staff report, Item 11A: Informational presentation on updates to the Pier 70 28-Acre Site Project, including potential amendments to the transaction structure (meeting of August 11, 2026)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/sites/default/files/2026-08/item_11a_p70_project_update_-_term_sheet_overview_-_information.pdf",
+      "accessed": "2026-09-17",
+      "date": "2026-08-07",
+      "note": "Informational only; amendments to the DDA to go to the Port Commission and Board of Supervisors 'by the end of this year or early next year'. Exhibit A is the proposed phasing plan."
+     }
+    ],
+    "source": "Port of San Francisco, 2026-08-07",
+    "origin": "record",
+    "category": "coming_up",
+    "category_label": "Coming up",
+    "record": {
+     "id": "pier70_d",
+     "slug": "pier-70-parcel-d",
+     "name": "Pier 70 Parcel D",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-d/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-d.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2029",
+    "date_label": "2029",
+    "status": null,
+    "status_label": null,
+    "text": "Proposed DDA amendment: developer must close escrow on remaining Phase 1 parcels A, C2B and D by 2029-2030 or the Port will publicly offer them",
+    "expected": true,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-port-11a-2026",
+      "title": "Port Commission staff report, Item 11A: Informational presentation on updates to the Pier 70 28-Acre Site Project, including potential amendments to the transaction structure (meeting of August 11, 2026)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/sites/default/files/2026-08/item_11a_p70_project_update_-_term_sheet_overview_-_information.pdf",
+      "accessed": "2026-09-17",
+      "date": "2026-08-07",
+      "note": "Informational only; amendments to the DDA to go to the Port Commission and Board of Supervisors 'by the end of this year or early next year'. Exhibit A is the proposed phasing plan."
+     }
+    ],
+    "source": "Port of San Francisco, 2026-08-07",
+    "origin": "record",
+    "category": "coming_up",
+    "category_label": "Coming up",
+    "record": {
+     "id": "pier70_d",
+     "slug": "pier-70-parcel-d",
+     "name": "Pier 70 Parcel D",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-d/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-d.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   }
+  ],
+  "changes": [],
+  "images": [
+   {
+    "path": "data/manual/images/pier70_d4d_fig_6_4_2_building_height.jpg",
+    "kind": "document",
+    "taken": "2022-04-26",
+    "credit": "Pier 70 Design for Development (Port of San Francisco), Figure 6.4.2 'Building Height Maximum', p.155",
+    "license": "public-record",
+    "source_url": "https://www.sfport.com/media/8123/download?inline=",
+    "license_evidence": "https://www.sfport.com/media/8123/download?inline=",
+    "license_note": "Figure or photograph from an adopted Port/Planning regulatory document (a Design for Development, SUD Land Use Plan or Design Controls) or a Port Commission agenda exhibit, published by the agency itself at its own domain as the public record of the adopted plan or noticed meeting item. Read 2026-09-18.",
+    "figure": "positioning",
+    "appeal": 3,
+    "appeal_note": "A clean, color-coded building-height-maximum diagram across the whole site with a legend -- legible, but a technical zoning diagram rather than a rendered scene.",
+    "url": "https://pierandpoint.org/assets/img/pier70_d4d_fig_6_4_2_building_height.jpg"
+   },
+   {
+    "path": "data/manual/images/pier70_port_2026_08_phasing_exhibit_a.jpg",
+    "kind": "document",
+    "taken": "2026-08-07",
+    "credit": "Port of San Francisco, Port Commission Item 11A (Aug 11, 2026), Exhibit A 'Proposed Phasing Plan' (drawing by SITELAB urban studio)",
+    "license": "public-record",
+    "source_url": "https://www.sfport.com/sites/default/files/2026-08/item_11a_p70_project_update_-_term_sheet_overview_-_information.pdf",
+    "license_evidence": "https://www.sfport.com/sites/default/files/2026-08/item_11a_p70_project_update_-_term_sheet_overview_-_information.pdf",
+    "license_note": "Figure or photograph from an adopted Port/Planning regulatory document (a Design for Development, SUD Land Use Plan or Design Controls) or a Port Commission agenda exhibit, published by the agency itself at its own domain as the public record of the adopted plan or noticed meeting item. Read 2026-09-18.",
+    "figure": "positioning",
+    "appeal": 2,
+    "appeal_note": "A phasing diagram with colored phase outlines over a grayscale hatched base plan -- readable, but visible DocuSign scan artifacts and a page number reduce its polish.",
+    "url": "https://pierandpoint.org/assets/img/pier70_port_2026_08_phasing_exhibit_a.jpg"
+   },
+   {
+    "path": "data/manual/images/pier70_sud_land_use_plan_2018.jpg",
+    "kind": "document",
+    "taken": "2018-03-13",
+    "credit": "Port of San Francisco, Pier 70 SUD Land Use Plan, Exhibit A4-1 (03/13/2018)",
+    "license": "public-record",
+    "source_url": "https://sfport.com/files/2021-11/pier_70_sud_land_use_plan.pdf",
+    "license_evidence": "https://sfport.com/files/2021-11/pier_70_sud_land_use_plan.pdf",
+    "license_note": "Figure or photograph from an adopted Port/Planning regulatory document (a Design for Development, SUD Land Use Plan or Design Controls) or a Port Commission agenda exhibit, published by the agency itself at its own domain as the public record of the adopted plan or noticed meeting item. Read 2026-09-18.",
+    "figure": "positioning",
+    "appeal": 3,
+    "appeal_note": "A clean color-coded land-use plan with a legend of use categories -- legible and well organized, but a technical diagram rather than a rendered plan.",
+    "url": "https://pierandpoint.org/assets/img/pier70_sud_land_use_plan_2018.jpg"
+   }
+  ],
+  "open_questions": [
+   "No construction start, building permit or vertical DDA for this parcel was found in any Port Commission document through the August 11, 2026 informational report, which says the developer 'has not exercised an option of any Phase 1 option parcels'.",
+   "Per-parcel gross square footage and unit counts are not published in the D4D (which sets height, stories and land-use scenarios, not parcel programs); the SUD's per-parcel programs would be in the SUD ordinance (Planning Code Sec. 249.79) or the Phase Submittal, neither of which was retrieved.",
+   "Unit count, square footage and the date of the Saitowitz design are not stated on the architect's page and no Planning vertical design approval for Parcel D is listed on the Planning Department's Pier 70 page.",
+   "A secondary source implying a ~2020 completion is recorded in this parcel's geometry file; every primary source says no Phase 1 vertical building other than Building 12 has been built."
+  ],
+  "sources": [
+   {
+    "id": "src-bisnow-2022-10",
+    "title": "Brookfield, Port Of San Francisco Want To Restart Pier 70 Project",
+    "publisher": "Bisnow (Joseph Gordon)",
+    "url": "https://www.bisnow.com/san-francisco/news/mixed-use/brookfield-properties-and-port-of-san-francisco-inch-closer-to-pier-70-completion-115959",
+    "accessed": "2026-09-17",
+    "date": "2022-10-20"
+   },
+   {
+    "id": "src-bos-o224-17",
+    "title": "Ordinance No. 224-17: Development Agreement between the City and County of San Francisco and FC Pier 70, LLC (File No. 170863)",
+    "publisher": "San Francisco Board of Supervisors",
+    "url": "https://sfbos.org/sites/default/files/o0224-17.pdf",
+    "accessed": "2026-09-17",
+    "date": "2017-11-15"
+   },
+   {
+    "id": "src-d4d",
+    "title": "Pier 70 Special Use District Design for Development (D4D), updated April 26, 2022",
+    "publisher": "Port of San Francisco / SF Planning (adopted planning document; project team SITELAB urban studio)",
+    "url": "https://www.sfport.com/media/8123/download?inline=",
+    "accessed": "2026-09-17",
+    "date": "2022-04-26",
+    "note": "292-page PDF. Figure 6.4.2 (p.155) gives per-parcel height maxima; Sections 3.4-3.13 the open-space zones; S6.6.1 the historic buildings to be rehabilitated."
+   },
+   {
+    "id": "src-port-11a-2026",
+    "title": "Port Commission staff report, Item 11A: Informational presentation on updates to the Pier 70 28-Acre Site Project, including potential amendments to the transaction structure (meeting of August 11, 2026)",
+    "publisher": "Port of San Francisco",
+    "url": "https://www.sfport.com/sites/default/files/2026-08/item_11a_p70_project_update_-_term_sheet_overview_-_information.pdf",
+    "accessed": "2026-09-17",
+    "date": "2026-08-07",
+    "note": "Informational only; amendments to the DDA to go to the Port Commission and Board of Supervisors 'by the end of this year or early next year'. Exhibit A is the proposed phasing plan."
+   },
+   {
+    "id": "src-port-12b-2020",
+    "title": "Port Commission staff report, Item 12B, and Resolution 20-07: 99-year ground lease option for Parcel E2 at the appraised value of $5,000,000 (185 Maryland St; Block 4116 Lot 008), tied to Parcel A",
+    "publisher": "Port of San Francisco",
+    "url": "https://www.sfport.com/sites/default/files/Documents/Item%2012B%20Pier%2070%20Parcels%20E2%20and%20A.pdf",
+    "accessed": "2026-09-17",
+    "date": "2020-02-11",
+    "note": "Memo dated Feb 7, 2020; resolution adopted Feb 11, 2020."
+   },
+   {
+    "id": "src-port-9b-2017",
+    "title": "Port Commission staff report, Item 9B: Pier 70 Mixed-Use Project approvals (Resolutions 17-43 through 17-52), meeting of September 26, 2017",
+    "publisher": "Port of San Francisco",
+    "url": "https://www.sfport.com/sites/default/files/Item%209B%20Pier%2070%20Approval%20092217.pdf",
+    "accessed": "2026-09-17",
+    "date": "2017-09-22",
+    "note": "184-page memo dated Sept 22, 2017 with the DDA major-terms table (Table 3), the Parcel K North sale process, the affordable housing plan and the financing plan."
+   },
+   {
+    "id": "src-port-news-2018-05",
+    "title": "New Life for Pier 70 Historic Shipyard as Construction Begins on Expansive Waterfront District (news release)",
+    "publisher": "Port of San Francisco",
+    "url": "https://www.sfport.com/about/news/new-life-pier-70-historic-shipyard-construction-begins-expansive-waterfront-district",
+    "accessed": "2026-09-17",
+    "date": "2018-05-10"
+   },
+   {
+    "id": "src-port-update-2025-06",
+    "title": "Pier 70 Project Update, June 2025 (slide deck)",
+    "publisher": "Port of San Francisco / Brookfield Properties",
+    "url": "https://www.sfport.com/sites/default/files/2025-06/Pier%2070%20Update%20-%20June%202025%20v3.pdf",
+    "accessed": "2026-09-17",
+    "date": "2025-06"
+   },
+   {
+    "id": "src-saitowitz-d",
+    "title": "Pier 70 Parcel D (architect's project page)",
+    "publisher": "Stanley Saitowitz | Natoma Architects Inc. (architect's claim)",
+    "url": "https://www.saitowitz.com/pier-70-parcel-d",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-trd-2023-04",
+    "title": "Brookfield leases first seven tenants at Pier 70",
+    "publisher": "The Real Deal (citing SF Business Times)",
+    "url": "https://therealdeal.com/san-francisco/2023/04/17/brookfield-leases-first-seven-tenants-at-pier-70/",
+    "accessed": "2026-09-17",
+    "date": "2023-04-17"
+   }
+  ],
+  "notes": "Approximate polygon for a real, D4D-adopted parcel -- see accuracy_caveat.",
+  "has_record_file": true,
+  "last_verified": "2026-09-17",
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.3839109,
+      37.7595108
+     ],
+     [
+      -122.3841496,
+      37.75949
+     ],
+     [
+      -122.3841672,
+      37.7597015
+     ],
+     [
+      -122.3844474,
+      37.7596771
+     ],
+     [
+      -122.3844515835559,
+      37.75973945804195
+     ],
+     [
+      -122.3839283421648,
+      37.7597708762937
+     ],
+     [
+      -122.3839109,
+      37.7595108
+     ]
+    ]
+   ]
+  }
+ }
+}

@@ -1,0 +1,326 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-20",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "pier70_pks",
+  "slug": "pier-70-parcel-k-south-pks",
+  "name": "Pier 70 Parcel K South (PKS)",
+  "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-k-south-pks/",
+  "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-k-south-pks.json",
+  "names": [
+   "Pier 70 Parcel K South",
+   "PKS"
+  ],
+  "site": {
+   "slug": "pier-70",
+   "name": "Pier 70",
+   "short": "Pier 70",
+   "url": "https://pierandpoint.org/sites/pier-70/"
+  },
+  "status": "planned",
+  "status_label": "Planned",
+  "use": "residential",
+  "address": null,
+  "summary": "The southern piece of the Port's 20th/Illinois Street parcel, on Illinois Street south of the new 21st Street, reserved under the 2017 approvals as a 100%-affordable housing site (65 ft under the D4D). The Port's 2026 report assigns it to Phase 2 and says its gap funding is not yet available; no developer has been selected.",
+  "summary_sources": [
+   "src-port-9b-2017",
+   "src-d4d",
+   "src-port-11a-2026"
+  ],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "APPROXIMATE -- this block is not yet built and does not correspond to any subdivided Assessor parcel: it currently sits on vacant/graded land, surface parking, or an existing industrial building slated for demolition within Brookfield's 28-acre district (unaddressed in DataSF's Assessor roll). RE-TRACED 2026-09-17 directly from Figure 6.4.2 at the correct source resolution (see digitization_method) -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. This deliberately does NOT match today's satellite imagery of the parking lot -- this parcel's boundary represents the D4D's planned footprint, including '21ST ST (NEW)', which is not built yet.",
+    "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
+    "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of Brookfield's larger, largely unaddressed 28-acre site), but it has not been subdivided per the masterplan's individual named parcels -- this uses hand-traced approximate geometry instead.",
+    "regulatory_context": "Residential per Brookfield's own leasing brochure, 65 ft max per Figure 6.4.2 -- confirmed as a real, distinct parcel from Parcel K North (both named together, with the Hoedown Yard, in a 2017 Port Commission resolution and reaffirmed in a 2020 resolution). No source found gives a specific unit count, architect, or construction-status beyond this."
+   }
+  },
+  "centroid": {
+   "lon": -122.387018,
+   "lat": 37.759185
+  },
+  "facts": [
+   {
+    "key": "use",
+    "value": "100% affordable housing (one of three stand-alone affordable parcels with C1B and C2A)",
+    "sources": [
+     "src-port-9b-2017",
+     "src-port-11a-2026"
+    ]
+   },
+   {
+    "key": "landowner",
+    "value": "Port of San Francisco (Port-controlled parcel outside the developer's option)",
+    "sources": [
+     "src-port-9b-2017"
+    ]
+   },
+   {
+    "key": "max_height_ft",
+    "value": "65 (D4D Figure 6.4.2)",
+    "sources": [
+     "src-d4d"
+    ]
+   },
+   {
+    "key": "max_stories",
+    "value": "no more than six residential stories (D4D S6.4.2)",
+    "sources": [
+     "src-d4d"
+    ]
+   },
+   {
+    "key": "phase",
+    "value": "Phase 2 (affordable) / Phase 2B in Exhibit A, with C1 (Port's 2026 report)",
+    "sources": [
+     "src-port-11a-2026"
+    ]
+   },
+   {
+    "key": "affordability_framework",
+    "value": "The 2017 Affordable Housing Plan requires at least 30% of units at the 28-Acre Site and Parcel K South be affordable, including 320 or more permanently affordable units in three buildings developed by local nonprofits; the 2026 proposal keeps a 327-unit stand-alone minimum while lowering the project-wide rate to no less than 20%",
+    "sources": [
+     "src-port-9b-2017",
+     "src-port-11a-2026"
+    ]
+   },
+   {
+    "key": "retail_frontage",
+    "value": "The D4D lets the Retail and Service frontage for HDY3 and HDY1/2 be combined on 22nd Street; Irish Hill Corner Plaza sits at the PKS/HDY3 corner of Illinois and 22nd",
+    "sources": [
+     "src-d4d"
+    ]
+   }
+  ],
+  "costs": [],
+  "milestones": [
+   {
+    "date": "2017-09-26",
+    "date_label": "Sep 26, 2017",
+    "status": null,
+    "status_label": null,
+    "text": "Port Commission approves subdividing the 20th/Illinois parcel into the Plaza Parcel, Parcel K North, the 21st Street right-of-way extension and Parcel K South, with PKS 'developed as an affordable housing site' (Resolution 17-52 recitals)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-port-9b-2017",
+      "title": "Port Commission staff report, Item 9B: Pier 70 Mixed-Use Project approvals (Resolutions 17-43 through 17-52), meeting of September 26, 2017",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/sites/default/files/Item%209B%20Pier%2070%20Approval%20092217.pdf",
+      "accessed": "2026-09-17",
+      "date": "2017-09-22",
+      "note": "184-page memo dated Sept 22, 2017 with the DDA major-terms table (Table 3), the Parcel K North sale process, the affordable housing plan and the financing plan."
+     }
+    ],
+    "source": "Port of San Francisco, 2017-09-22",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_pks",
+     "slug": "pier-70-parcel-k-south-pks",
+     "name": "Pier 70 Parcel K South (PKS)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-k-south-pks/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-k-south-pks.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2017-10-24",
+    "date_label": "Oct 24, 2017",
+    "status": null,
+    "status_label": null,
+    "text": "Board of Supervisors public hearing on forming Infrastructure and Revitalization Financing District No. 2 (Hoedown Yard) to finance affordable housing within Pier 70 and Parcel K South",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-port-9b-2017",
+      "title": "Port Commission staff report, Item 9B: Pier 70 Mixed-Use Project approvals (Resolutions 17-43 through 17-52), meeting of September 26, 2017",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/sites/default/files/Item%209B%20Pier%2070%20Approval%20092217.pdf",
+      "accessed": "2026-09-17",
+      "date": "2017-09-22",
+      "note": "184-page memo dated Sept 22, 2017 with the DDA major-terms table (Table 3), the Parcel K North sale process, the affordable housing plan and the financing plan."
+     }
+    ],
+    "source": "Port of San Francisco, 2017-09-22",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_pks",
+     "slug": "pier-70-parcel-k-south-pks",
+     "name": "Pier 70 Parcel K South (PKS)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-k-south-pks/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-k-south-pks.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2026-08-11",
+    "date_label": "Aug 11, 2026",
+    "status": null,
+    "status_label": null,
+    "text": "Port reports Parcel K South as the Phase 2 affordable site; the developer is responsible for horizontal improvements to it under the DDA; gap-funding sources 'currently unavailable'",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-port-11a-2026",
+      "title": "Port Commission staff report, Item 11A: Informational presentation on updates to the Pier 70 28-Acre Site Project, including potential amendments to the transaction structure (meeting of August 11, 2026)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/sites/default/files/2026-08/item_11a_p70_project_update_-_term_sheet_overview_-_information.pdf",
+      "accessed": "2026-09-17",
+      "date": "2026-08-07",
+      "note": "Informational only; amendments to the DDA to go to the Port Commission and Board of Supervisors 'by the end of this year or early next year'. Exhibit A is the proposed phasing plan."
+     }
+    ],
+    "source": "Port of San Francisco, 2026-08-07",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_pks",
+     "slug": "pier-70-parcel-k-south-pks",
+     "name": "Pier 70 Parcel K South (PKS)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-k-south-pks/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-k-south-pks.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   }
+  ],
+  "changes": [],
+  "images": [
+   {
+    "path": "data/manual/images/pier70_d4d_fig_6_4_2_building_height.jpg",
+    "kind": "document",
+    "taken": "2022-04-26",
+    "credit": "Pier 70 Design for Development (Port of San Francisco), Figure 6.4.2 'Building Height Maximum', p.155",
+    "license": "public-record",
+    "source_url": "https://www.sfport.com/media/8123/download?inline=",
+    "license_evidence": "https://www.sfport.com/media/8123/download?inline=",
+    "license_note": "Figure or photograph from an adopted Port/Planning regulatory document (a Design for Development, SUD Land Use Plan or Design Controls) or a Port Commission agenda exhibit, published by the agency itself at its own domain as the public record of the adopted plan or noticed meeting item. Read 2026-09-18.",
+    "figure": "positioning",
+    "appeal": 3,
+    "appeal_note": "A clean, color-coded building-height-maximum diagram across the whole site with a legend -- legible, but a technical zoning diagram rather than a rendered scene.",
+    "url": "https://pierandpoint.org/assets/img/pier70_d4d_fig_6_4_2_building_height.jpg"
+   },
+   {
+    "path": "data/manual/images/pier70_port_2026_08_phasing_exhibit_a.jpg",
+    "kind": "document",
+    "taken": "2026-08-07",
+    "credit": "Port of San Francisco, Port Commission Item 11A (Aug 11, 2026), Exhibit A 'Proposed Phasing Plan' (drawing by SITELAB urban studio)",
+    "license": "public-record",
+    "source_url": "https://www.sfport.com/sites/default/files/2026-08/item_11a_p70_project_update_-_term_sheet_overview_-_information.pdf",
+    "license_evidence": "https://www.sfport.com/sites/default/files/2026-08/item_11a_p70_project_update_-_term_sheet_overview_-_information.pdf",
+    "license_note": "Figure or photograph from an adopted Port/Planning regulatory document (a Design for Development, SUD Land Use Plan or Design Controls) or a Port Commission agenda exhibit, published by the agency itself at its own domain as the public record of the adopted plan or noticed meeting item. Read 2026-09-18.",
+    "figure": "positioning",
+    "appeal": 2,
+    "appeal_note": "A phasing diagram with colored phase outlines over a grayscale hatched base plan -- readable, but visible DocuSign scan artifacts and a page number reduce its polish.",
+    "url": "https://pierandpoint.org/assets/img/pier70_port_2026_08_phasing_exhibit_a.jpg"
+   },
+   {
+    "path": "data/manual/images/pier70_sud_land_use_plan_2018.jpg",
+    "kind": "document",
+    "taken": "2018-03-13",
+    "credit": "Port of San Francisco, Pier 70 SUD Land Use Plan, Exhibit A4-1 (03/13/2018)",
+    "license": "public-record",
+    "source_url": "https://sfport.com/files/2021-11/pier_70_sud_land_use_plan.pdf",
+    "license_evidence": "https://sfport.com/files/2021-11/pier_70_sud_land_use_plan.pdf",
+    "license_note": "Figure or photograph from an adopted Port/Planning regulatory document (a Design for Development, SUD Land Use Plan or Design Controls) or a Port Commission agenda exhibit, published by the agency itself at its own domain as the public record of the adopted plan or noticed meeting item. Read 2026-09-18.",
+    "figure": "positioning",
+    "appeal": 3,
+    "appeal_note": "A clean color-coded land-use plan with a legend of use categories -- legible and well organized, but a technical diagram rather than a rendered plan.",
+    "url": "https://pierandpoint.org/assets/img/pier70_sud_land_use_plan_2018.jpg"
+   }
+  ],
+  "open_questions": [
+   "No developer, unit count, MOHCD solicitation or design for Parcel K South was found (MOHCD's November 2020 nine-site RFQ covered C2A, not PKS).",
+   "The site's exact boundary against the Irish Hill remnant and the 21st Street extension is diagrammatic in every retrieved figure; the geometry here follows D4D Figure 6.4.2."
+  ],
+  "sources": [
+   {
+    "id": "src-d4d",
+    "title": "Pier 70 Special Use District Design for Development (D4D), updated April 26, 2022",
+    "publisher": "Port of San Francisco / SF Planning (adopted planning document; project team SITELAB urban studio)",
+    "url": "https://www.sfport.com/media/8123/download?inline=",
+    "accessed": "2026-09-17",
+    "date": "2022-04-26",
+    "note": "292-page PDF. Figure 6.4.2 (p.155) gives per-parcel height maxima; Sections 3.4-3.13 the open-space zones; S6.6.1 the historic buildings to be rehabilitated."
+   },
+   {
+    "id": "src-port-11a-2026",
+    "title": "Port Commission staff report, Item 11A: Informational presentation on updates to the Pier 70 28-Acre Site Project, including potential amendments to the transaction structure (meeting of August 11, 2026)",
+    "publisher": "Port of San Francisco",
+    "url": "https://www.sfport.com/sites/default/files/2026-08/item_11a_p70_project_update_-_term_sheet_overview_-_information.pdf",
+    "accessed": "2026-09-17",
+    "date": "2026-08-07",
+    "note": "Informational only; amendments to the DDA to go to the Port Commission and Board of Supervisors 'by the end of this year or early next year'. Exhibit A is the proposed phasing plan."
+   },
+   {
+    "id": "src-port-9b-2017",
+    "title": "Port Commission staff report, Item 9B: Pier 70 Mixed-Use Project approvals (Resolutions 17-43 through 17-52), meeting of September 26, 2017",
+    "publisher": "Port of San Francisco",
+    "url": "https://www.sfport.com/sites/default/files/Item%209B%20Pier%2070%20Approval%20092217.pdf",
+    "accessed": "2026-09-17",
+    "date": "2017-09-22",
+    "note": "184-page memo dated Sept 22, 2017 with the DDA major-terms table (Table 3), the Parcel K North sale process, the affordable housing plan and the financing plan."
+   }
+  ],
+  "notes": "Approximate polygon for a real, D4D-adopted parcel -- see accuracy_caveat.",
+  "has_record_file": true,
+  "last_verified": "2026-09-17",
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.387328272,
+      37.759263996562474
+     ],
+     [
+      -122.386576,
+      37.75929800422032
+     ],
+     [
+      -122.386554,
+      37.75906638453553
+     ],
+     [
+      -122.387305014,
+      37.759032376877684
+     ],
+     [
+      -122.387328272,
+      37.759263996562474
+     ]
+    ]
+   ]
+  }
+ }
+}

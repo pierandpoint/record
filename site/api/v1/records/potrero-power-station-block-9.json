@@ -1,0 +1,318 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-20",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "potrero_block_9",
+  "slug": "potrero-power-station-block-9",
+  "name": "Potrero Power Station Block 9",
+  "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-9/",
+  "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-9.json",
+  "names": [
+   "Block 9",
+   "Unit 3 hotel site"
+  ],
+  "site": {
+   "slug": "potrero",
+   "name": "Potrero Power Station",
+   "short": "Potrero Station",
+   "url": "https://pierandpoint.org/sites/potrero/"
+  },
+  "status": "planned",
+  "status_label": "Planned",
+  "use": "mixed",
+  "address": null,
+  "summary": "Planned ~240,000-gsf, 250-room waterfront hotel site incorporating the retained Unit 3 Power Block; as of May 2025 the developer said the hotel 'could be a decade away' and proposed an interim park (Prequel Park) on the land instead.",
+  "summary_sources": [
+   "src-13b-2020",
+   "src-chronicle-2025-05"
+  ],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "APPROXIMATE -- this block is not yet built and does not correspond to any subdivided Assessor parcel: it currently sits on vacant/graded land within the former power station site (unaddressed in DataSF's Assessor roll). Traced from an adopted regulatory diagram via multi-point real-street georeferencing (see digitization_method), but this diagram is dated 2020 and may not reflect later design changes (as already found for the UCSF/Sophie Maxwell area -- see digitization_method). Treat vertex positions as accurate to roughly 10-15m (rebuilt 2026-09-16 via the site's GDAL/TPS pass -- see digitization_method), and treat the block's applicability itself as somewhat more provisional than Mission Rock's or Pier 70's equivalent entries. Its overlap with the real, under-construction UCSF Block 2 area (a separate, better-sourced feature elsewhere in this dataset) has not been independently re-checked in this pass.",
+    "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
+    "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead.",
+    "regulatory_context": "Flexible commercial/hotel/residential per the D4D. Figure 6.2.3's own 'Block 9 Building Configurations' inset shows heights up to 177 ft max (in the 'with Unit 3' configuration) -- exceeding an 85-145 ft range sometimes cited secondhand. This block's real-world area overlaps where Unit 3 and the Stack physically stand (mapped separately, both real/existing) and where Prequel Park's approximate interim-park geometry sits (also mapped separately, and excluded here via clipping) -- treat this polygon as the block's outer development envelope, not a claim that all of it is buildable independent of those other real features."
+   }
+  },
+  "centroid": {
+   "lon": -122.381886,
+   "lat": 37.756568
+  },
+  "facts": [
+   {
+    "key": "use",
+    "value": "Hotel and/or Residential (D4D final Table 3.1.1: Residential is Permitted; Hotel is Permitted per note 10, unlike most other blocks where Hotel is Not Permitted; Laboratory and Life Science uses are Not Permitted)",
+    "sources": [
+     "src-d4d-final-table311"
+    ]
+   },
+   {
+    "key": "gross_sqft",
+    "value": "approximately 240,000 gsf hotel",
+    "sources": [
+     "src-13b-2020",
+     "src-sfplanning-pps"
+    ]
+   },
+   {
+    "key": "rooms",
+    "value": "250 rooms",
+    "sources": [
+     "src-13b-2020",
+     "src-sfplanning-pps"
+    ]
+   },
+   {
+    "key": "height_ft",
+    "value": "The D4D final's Figure 6.2.3 shows a separate 'Block 9 Building Configurations' inset with two alternate massings, 'WITH UNIT 3' and 'WITHOUT UNIT 3', with callouts including 177 ft MAX, 110 ft MAX, 102 ft MAX, 85 ft, 65 ft and 35 ft (with-Unit-3 option) and 125 ft / 85 ft (without-Unit-3 option); Standard 6.2.1 separately states that if Unit 3 is demolished, the height limit for Block 9 would be 125/85 feet",
+    "sources": [
+     "src-d4d-final-fig623",
+     "src-d4d-final-6.2.1"
+    ]
+   },
+   {
+    "key": "existing_structures_on_site",
+    "value": "Unit 3 Power Block (128-ft tall steel-frame boiler structure, highest point 143 ft at the elevator shaft, plus a 40-ft tall turbine-generator-condenser structure and a four-story concrete control room building) and the adjacent 300-ft Boiler Stack (mapped separately in this dataset as potrero_the_stack)",
+    "sources": [
+     "src-deir-vol1-unit3"
+    ]
+   },
+   {
+    "key": "rooftop_bar_limit",
+    "value": "'Only one rooftop bar shall be permitted on Block 9' under the adopted D4D -- the origin of the single-rooftop-bar cap for the whole 29-acre project that the developer sought to remove in its 2026 Development Agreement amendment request (see the Station A/Block 15 and other block records for that amendment)",
+    "sources": [
+     "src-d4d-final-table311-notes"
+    ]
+   }
+  ],
+  "costs": [],
+  "milestones": [
+   {
+    "date": "2020-02-20",
+    "date_label": "Feb 20, 2020",
+    "status": null,
+    "status_label": null,
+    "text": "Port memo (Item 13B) describes the project's program including a 240,000 gsf hotel (250 rooms)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-13b-2020",
+      "title": "Memorandum, Calendar Item No. 13B: Request approval of Port-related transaction documents for the California Barrel Company LLC mixed-use project",
+      "publisher": "Port of San Francisco, Port Commission",
+      "date": "2020-02-20",
+      "url": "https://www.sfport.com/sites/default/files/Commission/Documents/Item%2013B%20Approval%20Potrero%20Power%20Station%20rev.pdf",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "Port of San Francisco, Port Commission, 2020-02-20",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_block_9",
+     "slug": "potrero-power-station-block-9",
+     "name": "Potrero Power Station Block 9",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-9/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-9.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2025-05-22",
+    "date_label": "May 22, 2025",
+    "status": null,
+    "status_label": null,
+    "text": "Developer Enrique Landa says the hotel approved for this site is 'a decade away' given the slow recovery of San Francisco's hospitality sector, and proposes an interim waterfront park (Prequel Park) using the Unit 3/Stack area in the meantime",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-chronicle-2025-05",
+      "title": "Exclusive: S.F. developer to build waterfront park with gardens, amphitheater in emerging neighborhood",
+      "publisher": "San Francisco Chronicle (Laura Waxmann)",
+      "date": "2025-05-22",
+      "url": "https://www.sfchronicle.com/realestate/article/power-station-park-sf-20339020.php",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "San Francisco Chronicle (Laura Waxmann), 2025-05-22",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_block_9",
+     "slug": "potrero-power-station-block-9",
+     "name": "Potrero Power Station Block 9",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-9/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-9.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   }
+  ],
+  "changes": [],
+  "images": [
+   {
+    "path": "data/manual/images/potrero_block9_unit3_deir_2018.jpg",
+    "kind": "before",
+    "taken": "2018",
+    "credit": "Draft EIR, Potrero Power Station Mixed-Use Development Project (Case No. 2017-011878ENV), existing-conditions figure of the Unit 3 Power Block",
+    "license": "public-record",
+    "source_url": "https://sfmea.sfplanning.org/2017-011878ENV_DEIR_Volume_1.pdf",
+    "license_evidence": "https://sfmea.sfplanning.org/2017-011878ENV_DEIR_Volume_1.pdf",
+    "license_note": "CEQA (Cal. Pub. Res. Code Sec. 21000 et seq.) requires a Draft EIR to be made publicly available by the lead agency as part of the statutory environmental review process; this figure is a page of that public document, hosted at SF Planning's own environmental-review site. Read 2026-09-18.",
+    "appeal": 3,
+    "appeal_note": "Clear if workmanlike photo of the Unit 3 power block and boiler stack structure under an overcast sky.",
+    "url": "https://pierandpoint.org/assets/img/potrero_block9_unit3_deir_2018.jpg"
+   }
+  ],
+  "open_questions": [
+   "No source found stating a developer, architect, hotel brand/operator, or construction cost for the Block 9 hotel.",
+   "No design review approval or construction-start date found for Block 9; the 2024 annual compliance report's only mention of Block 9 is site photos of 'Block 9 / Unit 3' as of December 2024, with no described construction activity.",
+   "Whether Unit 3 will ultimately be retained or demolished as part of the hotel project is not settled in any source found; the D4D provides for both configurations."
+  ],
+  "sources": [
+   {
+    "id": "src-13b-2020",
+    "title": "Memorandum, Calendar Item No. 13B: Request approval of Port-related transaction documents for the California Barrel Company LLC mixed-use project",
+    "publisher": "Port of San Francisco, Port Commission",
+    "date": "2020-02-20",
+    "url": "https://www.sfport.com/sites/default/files/Commission/Documents/Item%2013B%20Approval%20Potrero%20Power%20Station%20rev.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-sfplanning-pps",
+    "title": "Potrero Power Station project page",
+    "publisher": "SF Planning Department",
+    "date": "2026-09",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-chronicle-2025-05",
+    "title": "Exclusive: S.F. developer to build waterfront park with gardens, amphitheater in emerging neighborhood",
+    "publisher": "San Francisco Chronicle (Laura Waxmann)",
+    "date": "2025-05-22",
+    "url": "https://www.sfchronicle.com/realestate/article/power-station-park-sf-20339020.php",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-d4d-final-table311",
+    "title": "Potrero Power Station Design for Development, final (February 26, 2020), Table 3.1.1 Permitted Uses",
+    "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+    "date": "2020-02-26",
+    "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-d4d-final-fig623",
+    "title": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 Building Height Plan (Block 9 Building Configurations inset)",
+    "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+    "date": "2020-02-26",
+    "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-d4d-final-6.2.1",
+    "title": "Potrero Power Station Design for Development, final (February 26, 2020), Standard 6.2.1: Height of Existing Structures",
+    "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+    "date": "2020-02-26",
+    "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-deir-vol1-unit3",
+    "title": "Draft Environmental Impact Report, Potrero Power Station Mixed-Use Development Project, Volume 1 (Case No. 2017-011878ENV), Chapter 2 Project Description",
+    "publisher": "SF Planning Department",
+    "date": "2018-10",
+    "url": "https://sfmea.sfplanning.org/2017-011878ENV_DEIR_Volume_1.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-d4d-final-table311-notes",
+    "title": "Potrero Power Station Design for Development, final (February 26, 2020), Table 3.1.1 Permitted Uses, Note 10",
+    "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+    "date": "2020-02-26",
+    "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": null,
+    "title": "default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf",
+    "url": "https://default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf"
+   }
+  ],
+  "notes": "Approximate polygon for a real, D4D-adopted block -- see accuracy_caveat.",
+  "has_record_file": true,
+  "last_verified": "2026-09-18",
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.38229,
+      37.757015
+     ],
+     [
+      -122.381751,
+      37.757038
+     ],
+     [
+      -122.381723,
+      37.756744
+     ],
+     [
+      -122.381616,
+      37.756749
+     ],
+     [
+      -122.381576,
+      37.756326
+     ],
+     [
+      -122.381603,
+      37.756325
+     ],
+     [
+      -122.38158,
+      37.756088
+     ],
+     [
+      -122.382024,
+      37.75606
+     ],
+     [
+      -122.382062,
+      37.75645
+     ],
+     [
+      -122.382234,
+      37.75644
+     ],
+     [
+      -122.38229,
+      37.757015
+     ]
+    ]
+   ]
+  }
+ }
+}

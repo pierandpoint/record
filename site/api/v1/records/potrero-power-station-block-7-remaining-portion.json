@@ -1,0 +1,869 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-20",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "potrero_block_7remaining",
+  "slug": "potrero-power-station-block-7-remaining-portion",
+  "name": "Potrero Power Station Block 7 (remaining portion)",
+  "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-7-remaining-portion/",
+  "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-7-remaining-portion.json",
+  "names": [
+   "Potrero Power Station Block 7A",
+   "Block 7 (remaining portion)",
+   "Power Station Block 7A tower"
+  ],
+  "site": {
+   "slug": "potrero",
+   "name": "Potrero Power Station",
+   "short": "Potrero Station",
+   "url": "https://pierandpoint.org/sites/potrero/"
+  },
+  "status": "planned",
+  "status_label": "Planned",
+  "use": "mixed",
+  "address": null,
+  "summary": "The L-shaped southwestern portion of Block 7 at Humboldt St and Louisiana Paseo, approved March 2, 2022 for a Foster + Partners-designed 27-story, approximately 237-ft market-rate tower with 325 units, ground-floor retail and childcare over a basement garage; the tallest building permitted on the site. No building permit or construction start has been reported as of September 2026.",
+  "summary_sources": [
+   "src-dr-7a-2022",
+   "src-ar-2024",
+   "src-d4d-final"
+  ],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "APPROXIMATE -- this block is not yet built and does not correspond to any subdivided Assessor parcel: it currently sits on vacant/graded land within the former power station site (unaddressed in DataSF's Assessor roll). Traced from an adopted regulatory diagram via multi-point real-street georeferencing (see digitization_method), but this diagram is dated 2020 and may not reflect later design changes (as already found for the UCSF/Sophie Maxwell area -- see digitization_method). Treat vertex positions as accurate to roughly 10-25m, not survey-grade, and treat the block's applicability itself as somewhat more provisional than Mission Rock's or Pier 70's equivalent entries. Rebuilt 2026-09-16 via GDAL GCP/TPS georeferencing -- see digitization_method. Re-measured 2026-09-16 (third pass) in a single consistent pixel-detection pass across the whole block layout -- see digitization_method. Re-corrected 2026-09-16 (fourth pass) after fixing a mis-measured GCP -- see digitization_method. CLIPPED 2026-09-17 (real-vs-approximate overlap audit, prompted by a user question about validation consistency): despite this file's own regulatory_context already stating it was 'clipped to exclude Sophie Maxwell's real footprint,' a from-scratch real-vs-approximate overlap check found this polygon still overlapped Sophie Maxwell (blklot 4232020) by 1,082 sq m -- the clip described in that text was apparently never actually applied to (or was lost from) the committed geometry. Re-clipped now via shapely difference() against blklot 4232020's real parcel boundary; area dropped from ~4,965 to ~3,883 sq m. This overlap had gone undetected because check_geometry_quality.py only ever checks approximate-vs-approximate sibling overlaps, never real-vs-approximate ones.",
+    "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
+    "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead.",
+    "regulatory_context": "Figure 6.2.3 shows Block 7 as ONE combined parcel (150 ft base / 240 ft max upper height on its east side, 150 ft max on its west side) -- 'Block 7A' and 'Block 7B' are informal press/developer labels for the two buildings actually being built on it, not the D4D's own numbering. The Sophie Maxwell Building (informally '7B', real blklot 4232020, already mapped separately in this dataset) occupies part of this block; this polygon is the REMAINING portion, clipped to exclude Sophie Maxwell's real footprint. The remainder is presumed to correspond to the informally-named 'Block 7A' (Foster + Partners-designed rental tower, real press-reported heights of 240-264 ft depending on source, closely matching this figure's 240 ft max) -- design review approved, no construction-start source found."
+   }
+  },
+  "centroid": {
+   "lon": -122.383904,
+   "lat": 37.756694
+  },
+  "facts": [
+   {
+    "key": "developer",
+    "value": "California Barrel Company LLC (Associate Capital; renamed Fifth Space in 2025), project sponsor Enrique Landa",
+    "sources": [
+     "src-dr-7a-2022",
+     "src-yimby-2025-10"
+    ]
+   },
+   {
+    "key": "architect",
+    "value": "Foster + Partners (design architect); Adamson Associates (executive architect), partnering with LBE firm YA Studio for construction documents",
+    "sources": [
+     "src-dr-7a-2022",
+     "src-ar-2021"
+    ]
+   },
+   {
+    "key": "units",
+    "value": "325 (design review approval 2022; unit mix 49 studios, 163 one-bed, 80 two-bed, 33 three-bed). Other stated values: 277 (press, March-June 2021); 319 (2021 and 2022 compliance reports, LBE section); 315 (Planning Commission slide, July 2021); approximately 325 (2021-2024 compliance reports, housing section)",
+    "sources": [
+     "src-dr-7a-2022",
+     "src-yimby-2021-03",
+     "src-yimby-2021-06",
+     "src-ar-2021",
+     "src-ar-2022",
+     "src-cpc-7a-2021",
+     "src-ar-2024"
+    ]
+   },
+   {
+    "key": "affordable_units",
+    "value": "none on site; Block 7's market-rate units are to be covered by in-lieu fee credits (24 unit-equivalents in the 2024 report) and the adjacent 100% affordable Block 7B",
+    "sources": [
+     "src-ar-2024"
+    ]
+   },
+   {
+    "key": "floors",
+    "value": "27 (24 habitable), on a 9-story, 85-ft podium",
+    "sources": [
+     "src-dr-7a-2022",
+     "src-yimby-2021-07"
+    ]
+   },
+   {
+    "key": "height_ft",
+    "value": "approximately 237 to the uppermost structural slab (237 ft 3 in on the plan set), 264 ft to the top of the screened mechanical level (240 ft plus 10% for non-occupied features). Earlier press: 240 ft (March 2021)",
+    "sources": [
+     "src-dr-7a-2022",
+     "src-yimby-2021-07",
+     "src-socketsite-2021-07",
+     "src-yimby-2021-03"
+    ]
+   },
+   {
+    "key": "d4d_max_height_ft",
+    "value": "240 (highrise tower, Block 7; base 85 ft; D4D 6.2.2)",
+    "sources": [
+     "src-d4d-final",
+     "src-dr-7a-2022"
+    ]
+   },
+   {
+    "key": "gross_sqft",
+    "value": "433,630 total per SF YIMBY (417,420 residential); compliance reports give 417,419 GSF residential for Block 7",
+    "sources": [
+     "src-yimby-2021-07",
+     "src-ar-2024"
+    ]
+   },
+   {
+    "key": "retail_sqft",
+    "value": "approximately 9,950 ground-floor retail plus approximately 6,270 childcare",
+    "sources": [
+     "src-dr-7a-2022"
+    ]
+   },
+   {
+    "key": "use",
+    "value": "residential (market-rate rental) with ground-floor retail and a 6,000-GSF childcare facility required by the DA Phasing Plan",
+    "sources": [
+     "src-dr-7a-2022",
+     "src-ar-2024"
+    ]
+   },
+   {
+    "key": "parking",
+    "value": "approximately 153 vehicle spaces in a basement garage extending beneath Power Station Park West; 156 Class I bicycle spaces",
+    "sources": [
+     "src-dr-7a-2022"
+    ]
+   },
+   {
+    "key": "planning_case",
+    "value": "2017-011878PHA-04; parent lots 4175/017, 4175/002, 4232/001, 4232/006; plan sheets label it 'Block 7A, Lot 7'",
+    "sources": [
+     "src-dr-7a-2022"
+    ]
+   },
+   {
+    "key": "location",
+    "value": "L-shaped portion of Block 7 anchored at its southwestern corner, fronting Humboldt St, Louisiana Paseo and Power Station Park West; shares a mid-block passage and courtyard with Block 7B",
+    "sources": [
+     "src-dr-7a-2022"
+    ]
+   },
+   {
+    "key": "construction_status",
+    "value": "no building permit submitted and no construction start reported as of the 2024 compliance report (March 2025) and press through September 2026; July 2021 press had construction 'slated to commence in 2023'",
+    "sources": [
+     "src-ar-2024",
+     "src-socketsite-2021-07"
+    ]
+   }
+  ],
+  "costs": [
+   {
+    "amount_usd": 1940000,
+    "what": "Design/consultant contracts awarded for Block 7A through Q3-2021 ($101k, 5.2%, to LBEs)",
+    "date": "2021",
+    "approximate": false,
+    "sources": [
+     "src-ar-2021"
+    ]
+   }
+  ],
+  "milestones": [
+   {
+    "date": "2020-10-07",
+    "date_label": "Oct 7, 2020",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Phase 1 Development Phase Application approved: Block 7 to include approximately 345 market-rate units plus a 100% affordable building; Phase 1 includes Blocks 2, 7, 8, 11, 12 and 15",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-phase1-2020",
+      "title": "Potrero Power Station Phase 1 and Phasing Plan Amendment Applications: Development Phase Approval (October 7, 2020)",
+      "publisher": "SF Planning",
+      "date": "2020-10-07",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "SF Planning, 2020-10-07",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_block_7remaining",
+     "slug": "potrero-power-station-block-7-remaining-portion",
+     "name": "Potrero Power Station Block 7 (remaining portion)",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-7-remaining-portion/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-7-remaining-portion.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2020-10-11",
+    "date_label": "Oct 11, 2020",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Design review pre-application community meeting for Blocks 7 and 8",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfplanning-pps",
+      "title": "Potrero Power Station project page (implementation milestones)",
+      "publisher": "SF Planning",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "SF Planning",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_block_7remaining",
+     "slug": "potrero-power-station-block-7-remaining-portion",
+     "name": "Potrero Power Station Block 7 (remaining portion)",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-7-remaining-portion/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-7-remaining-portion.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2020-12-18",
+    "date_label": "Dec 18, 2020",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Design Review Application for Block 7A submitted (Case 2017-011878PHA-04)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ar-2021",
+      "title": "2021 Annual Report (March 2022): Potrero Power Station Development Agreement annual compliance review",
+      "publisher": "California Barrel Company LLC, filed with SF Planning",
+      "date": "2022-03",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     },
+     {
+      "id": "src-dr-7a-2022",
+      "title": "Design Review Approval, Block 7A (March 2, 2022): Planning Director approval letter, staff memo of Feb 24, 2022 (Case 2017-011878PHA-04) and Foster + Partners / Adamson plan set",
+      "publisher": "SF Planning",
+      "date": "2022-03-02",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "California Barrel Company LLC, filed with SF Planning, 2022-03; SF Planning, 2022-03-02",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_block_7remaining",
+     "slug": "potrero-power-station-block-7-remaining-portion",
+     "name": "Potrero Power Station Block 7 (remaining portion)",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-7-remaining-portion/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-7-remaining-portion.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2021-03-01",
+    "date_label": "Mar 1, 2021",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Planning filings published by SF YIMBY describe Block 7A as a 240-ft, 25-story tower with 277 apartments (Foster + Partners)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-yimby-2021-03",
+      "title": "Foster + Partners Design Revealed For Potrero Power Station, Dogpatch, San Francisco",
+      "publisher": "SF YIMBY",
+      "date": "2021-03-01",
+      "url": "https://sfyimby.com/2021/03/foster-partners-design-revealed-for-potrero-power-station-hunters-point-san-francisco.html",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "SF YIMBY, 2021-03-01",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_block_7remaining",
+     "slug": "potrero-power-station-block-7-remaining-portion",
+     "name": "Potrero Power Station Block 7 (remaining portion)",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-7-remaining-portion/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-7-remaining-portion.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2021-06-02",
+    "date_label": "Jun 2, 2021",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Site-wide groundbreaking; Foster + Partners releases updated renderings describing Block 7A as 240 ft with 277 units",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-yimby-2021-06",
+      "title": "Potrero Power Station Development Breaks Ground in Dogpatch, San Francisco",
+      "publisher": "SF YIMBY",
+      "date": "2021-06-03",
+      "url": "https://sfyimby.com/2021/06/potrero-power-station-development-breaks-ground-in-dogpatch-san-francisco.html",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "SF YIMBY, 2021-06-03",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_block_7remaining",
+     "slug": "potrero-power-station-block-7-remaining-portion",
+     "name": "Potrero Power Station Block 7 (remaining portion)",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-7-remaining-portion/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-7-remaining-portion.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2021-07-15",
+    "date_label": "Jul 15, 2021",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Planning Commission informational hearing on Block 7A (required for buildings 200 ft or taller); Commission 'commended the project team'; slides show 27 stories, 325 units",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dr-7a-2022",
+      "title": "Design Review Approval, Block 7A (March 2, 2022): Planning Director approval letter, staff memo of Feb 24, 2022 (Case 2017-011878PHA-04) and Foster + Partners / Adamson plan set",
+      "publisher": "SF Planning",
+      "date": "2022-03-02",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     },
+     {
+      "id": "src-cpc-7a-2021",
+      "title": "Planning Commission Block 7A Informational Hearing slides, July 15, 2021",
+      "publisher": "SF Planning Commission packet (developer presentation)",
+      "date": "2021-07-15",
+      "url": "https://commissions.sfplanning.org/cpcpackets/10.%20Potrero%20Power%20Station%20Block%207A.pdf",
+      "accessed": "2026-09-17"
+     },
+     {
+      "id": "src-yimby-2021-07",
+      "title": "New Details for Foster + Partners-designed Potrero Power Station Block 7A, San Francisco",
+      "publisher": "SF YIMBY",
+      "date": "2021-07-14",
+      "url": "https://sfyimby.com/2021/07/new-details-for-foster-partners-designed-potrero-power-station-block-7a-san-francisco.html",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "SF Planning, 2022-03-02; SF Planning Commission packet (developer presentation), 2021-07-15; SF YIMBY, 2021-07-14",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_block_7remaining",
+     "slug": "potrero-power-station-block-7-remaining-portion",
+     "name": "Potrero Power Station Block 7 (remaining portion)",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-7-remaining-portion/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-7-remaining-portion.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2022-03-02",
+    "date_label": "Mar 2, 2022",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Planning Director approves the Block 7A design review with three minor modifications (D4D 6.5.1 floorplate 13,077 sq ft vs 12,000; 6.5.2 diagonal 166 ft 5 in vs 160 ft at levels 9-10; 6.5.4 tower separation 107 ft 4 in vs 115 ft from Block 15)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dr-7a-2022",
+      "title": "Design Review Approval, Block 7A (March 2, 2022): Planning Director approval letter, staff memo of Feb 24, 2022 (Case 2017-011878PHA-04) and Foster + Partners / Adamson plan set",
+      "publisher": "SF Planning",
+      "date": "2022-03-02",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "SF Planning, 2022-03-02",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_block_7remaining",
+     "slug": "potrero-power-station-block-7-remaining-portion",
+     "name": "Potrero Power Station Block 7 (remaining portion)",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-7-remaining-portion/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-7-remaining-portion.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2022-07-26",
+    "date_label": "Jul 26, 2022",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Phase 1 Final Map recorded",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ar-2023",
+      "title": "2023 Annual Report (November 2024): Power Station Development Agreement 2023 Annual Review",
+      "publisher": "California Barrel Company LLC and Found Middle L.P., filed with SF Planning",
+      "date": "2024-11-22",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "California Barrel Company LLC and Found Middle L.P., filed with SF Planning, 2024-11-22",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_block_7remaining",
+     "slug": "potrero-power-station-block-7-remaining-portion",
+     "name": "Potrero Power Station Block 7 (remaining portion)",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-7-remaining-portion/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-7-remaining-portion.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2025-03-28",
+    "date_label": "Mar 28, 2025",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "2024 DA compliance report: 'Developer has submitted no building permits for any market-rate housing projects'; Block 7A still described as approximately 325 market-rate units",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ar-2024",
+      "title": "2024 Annual Report (March 2025): 2024 Annual Compliance Report under the Development Agreement",
+      "publisher": "California Barrel Company LLC and Found Middle LP, filed with SF Planning",
+      "date": "2025-03-28",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "California Barrel Company LLC and Found Middle LP, filed with SF Planning, 2025-03-28",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_block_7remaining",
+     "slug": "potrero-power-station-block-7-remaining-portion",
+     "name": "Potrero Power Station Block 7 (remaining portion)",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-7-remaining-portion/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-7-remaining-portion.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2026-06-30",
+    "date_label": "Jun 30, 2026",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Ordinance for an Amended and Restated Development Agreement (BOS File 260724) introduced, including Housing Plan, Transportation Plan and Phasing Plan amendments",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-legistar-260724",
+      "title": "BOS File 260724: Ordinance approving an Amended and Restated Development Agreement, California Barrel Company LLC, Potrero Power Station (introduced June 30, 2026; noticed Sept 11, 2026)",
+      "publisher": "SF Board of Supervisors (Legistar)",
+      "date": "2026-09-11",
+      "url": "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8127453&GUID=CC4AC1DD-BF51-4585-86E8-0A5D44AA3745",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "SF Board of Supervisors (Legistar), 2026-09-11",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_block_7remaining",
+     "slug": "potrero-power-station-block-7-remaining-portion",
+     "name": "Potrero Power Station Block 7 (remaining portion)",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-7-remaining-portion/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-7-remaining-portion.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2026-07-30",
+    "date_label": "Jul 30, 2026",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Planning Commission recommends the DA amendments 6-0; residential height limits to rise by up to 8 ft, so the tallest residential tower could reach 248 ft (the Chronicle does not name the block; the D4D's 240-ft highrise limit applies to Blocks 5 and 7)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-chron-2026-07",
+      "title": "One of S.F.'s biggest developments is changing its plans, but not its biggest promise",
+      "publisher": "San Francisco Chronicle",
+      "date": "2026-07-29",
+      "url": "https://www.sfchronicle.com/realestate/article/one-s-f-s-biggest-developments-changing-plans-22365461.php",
+      "accessed": "2026-09-17"
+     },
+     {
+      "id": "src-citizenportal-2026-07",
+      "title": "Commission recommends amendments to Potrero Power Station agreement (machine-generated summary of the July 30, 2026 Planning Commission hearing)",
+      "publisher": "Citizen Portal (AI-generated meeting summary; low confidence)",
+      "date": "2026-07-30",
+      "url": "https://citizenportal.ai/articles/9938130/California/San-Francisco-County/San-Francisco-City/Commission-recommends-amendments-to-Potrero-Power-Station-agreement-to-accelerate-buildout-while-preserving-benefits",
+      "accessed": "2026-09-17"
+     },
+     {
+      "id": "src-d4d-final",
+      "title": "Potrero Power Station Design for Development, final (February 26, 2020), Sections 6.2.2 and 6.5, Figure 6.2.3",
+      "publisher": "SF Planning",
+      "date": "2020-02-26",
+      "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "San Francisco Chronicle, 2026-07-29; Citizen Portal (AI-generated meeting summary; low confidence), 2026-07-30; SF Planning, 2020-02-26",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_block_7remaining",
+     "slug": "potrero-power-station-block-7-remaining-portion",
+     "name": "Potrero Power Station Block 7 (remaining portion)",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-7-remaining-portion/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-7-remaining-portion.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2026-09-11",
+    "date_label": "Sep 11, 2026",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Board of Supervisors hearing on the Amended and Restated DA noticed (Land Use and Transportation Committee)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-legistar-260724",
+      "title": "BOS File 260724: Ordinance approving an Amended and Restated Development Agreement, California Barrel Company LLC, Potrero Power Station (introduced June 30, 2026; noticed Sept 11, 2026)",
+      "publisher": "SF Board of Supervisors (Legistar)",
+      "date": "2026-09-11",
+      "url": "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8127453&GUID=CC4AC1DD-BF51-4585-86E8-0A5D44AA3745",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "SF Board of Supervisors (Legistar), 2026-09-11",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_block_7remaining",
+     "slug": "potrero-power-station-block-7-remaining-portion",
+     "name": "Potrero Power Station Block 7 (remaining portion)",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-7-remaining-portion/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-7-remaining-portion.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   }
+  ],
+  "changes": [],
+  "images": [
+   {
+    "path": "data/manual/images/potrero_block7a_rendering_2021.jpg",
+    "kind": "rendering",
+    "taken": "2021-06",
+    "credit": "Foster + Partners / Adamson Associates, sheet G-7a-107-PL 'Indicative view from Humboldt Street' and 'Indicative view from Power Station Park', Block 7A Design Review Approval (SF Planning, March 2, 2022), PDF page 54",
+    "license": "public-record",
+    "source_url": "https://sfplanning.org/potrero-power-station",
+    "license_evidence": "https://sfplanning.org/resource/senate-bill-1214-authorization",
+    "license_note": "Under SB 1214, SF Planning only posts an applicant's full architectural drawings online if the applicant didn't instead submit a reduced massing-diagram-only set for public distribution; when the full drawings are posted, as here in the published Design Review Approval packet, the applicant's permission for public posting is deemed granted and the Department 'shall not be subject to any restrictions on the copying or distribution' of them. Read 2026-09-18.",
+    "appeal": 3,
+    "appeal_note": "One sheet with two smaller indicative-view renderings (Humboldt Street and Power Station Park) side by side on a white background -- each panel is attractive on its own, but the split composition and margins reduce full-bleed card impact.",
+    "url": "https://pierandpoint.org/assets/img/potrero_block7a_rendering_2021.jpg"
+   }
+  ],
+  "open_questions": [
+   "Construction start: none found. Searched the 2021-2024 DA compliance reports (the 2024 report says no market-rate building permits have been submitted), SF YIMBY through Sept 2026, the Chronicle (Jul 29 and Aug 3, 2026), SF Standard (Oct 2025) and Potrero View (Oct 2025). SocketSite (Jul 2021) said construction was 'slated to commence in 2023'; SF YIMBY (Mar 2021) said Block 7 construction was expected to start 'by 2023, with completion by 2026'. Neither happened.",
+   "Whether the July 2026 Chronicle line 'tallest residential tower would be permitted to reach 248 feet' refers to Block 7A: the D4D allows 240-ft highrise towers on both Block 5 and Block 7, and the amendment package also lets Block 5 flip between residential and commercial. Not confirmed for 7A specifically; the Planning Commission packet for July 30, 2026 was not in the corpus.",
+   "Unit count drift: 277 (press 2021) -> 325 (approval 2022) -> 319 (compliance reports' LBE appendix) -> 315 and '420' on Planning Commission slides (the 420 may be Block 7A+7B). Which figure a future permit will carry is unknown.",
+   "SF Standard (Oct 15, 2025) says Associate Capital 'will move on to constructing a 300-unit market-rate apartment building' next; the Aug 2026 Chronicle names Block 8 (342 units) as the next building, so 7A does not appear to be next.",
+   "Ground-floor childcare (6,000 GSF per DA Phasing Plan) is assigned to Block 7 in the compliance reports; the April 2023 childcare/HPP phasing amendment (docs/phasing_childcare_hpp.pdf) was not read for this record and may have moved it.",
+   "No cost, financing, general contractor or ground-lease information exists for Block 7A in any source found; the land is developer-owned (not Port), so no Port lease applies.",
+   "The 'Block 7A' / 'Block 7B' names are the sponsor's; the D4D treats Block 7 as one block with a single 240-ft highrise envelope. The repo's geometry note saying 7A/7B are 'informal press/developer labels' is consistent with the Planning documents, which nonetheless use 7A/7B as case names."
+  ],
+  "sources": [
+   {
+    "id": "src-dr-7a-2022",
+    "title": "Design Review Approval, Block 7A (March 2, 2022): Planning Director approval letter, staff memo of Feb 24, 2022 (Case 2017-011878PHA-04) and Foster + Partners / Adamson plan set",
+    "publisher": "SF Planning",
+    "date": "2022-03-02",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-cpc-7a-2021",
+    "title": "Planning Commission Block 7A Informational Hearing slides, July 15, 2021",
+    "publisher": "SF Planning Commission packet (developer presentation)",
+    "date": "2021-07-15",
+    "url": "https://commissions.sfplanning.org/cpcpackets/10.%20Potrero%20Power%20Station%20Block%207A.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-ar-2021",
+    "title": "2021 Annual Report (March 2022): Potrero Power Station Development Agreement annual compliance review",
+    "publisher": "California Barrel Company LLC, filed with SF Planning",
+    "date": "2022-03",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-ar-2022",
+    "title": "2022 Annual Report (April 2023): Potrero Power Station Development Agreement annual compliance review",
+    "publisher": "California Barrel Company LLC, filed with SF Planning",
+    "date": "2023-04",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-ar-2023",
+    "title": "2023 Annual Report (November 2024): Power Station Development Agreement 2023 Annual Review",
+    "publisher": "California Barrel Company LLC and Found Middle L.P., filed with SF Planning",
+    "date": "2024-11-22",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-ar-2024",
+    "title": "2024 Annual Report (March 2025): 2024 Annual Compliance Report under the Development Agreement",
+    "publisher": "California Barrel Company LLC and Found Middle LP, filed with SF Planning",
+    "date": "2025-03-28",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-phase1-2020",
+    "title": "Potrero Power Station Phase 1 and Phasing Plan Amendment Applications: Development Phase Approval (October 7, 2020)",
+    "publisher": "SF Planning",
+    "date": "2020-10-07",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-d4d-final",
+    "title": "Potrero Power Station Design for Development, final (February 26, 2020), Sections 6.2.2 and 6.5, Figure 6.2.3",
+    "publisher": "SF Planning",
+    "date": "2020-02-26",
+    "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-sfplanning-pps",
+    "title": "Potrero Power Station project page (implementation milestones)",
+    "publisher": "SF Planning",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-legistar-260724",
+    "title": "BOS File 260724: Ordinance approving an Amended and Restated Development Agreement, California Barrel Company LLC, Potrero Power Station (introduced June 30, 2026; noticed Sept 11, 2026)",
+    "publisher": "SF Board of Supervisors (Legistar)",
+    "date": "2026-09-11",
+    "url": "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8127453&GUID=CC4AC1DD-BF51-4585-86E8-0A5D44AA3745",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-yimby-2021-03",
+    "title": "Foster + Partners Design Revealed For Potrero Power Station, Dogpatch, San Francisco",
+    "publisher": "SF YIMBY",
+    "date": "2021-03-01",
+    "url": "https://sfyimby.com/2021/03/foster-partners-design-revealed-for-potrero-power-station-hunters-point-san-francisco.html",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-yimby-2021-06",
+    "title": "Potrero Power Station Development Breaks Ground in Dogpatch, San Francisco",
+    "publisher": "SF YIMBY",
+    "date": "2021-06-03",
+    "url": "https://sfyimby.com/2021/06/potrero-power-station-development-breaks-ground-in-dogpatch-san-francisco.html",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-yimby-2021-07",
+    "title": "New Details for Foster + Partners-designed Potrero Power Station Block 7A, San Francisco",
+    "publisher": "SF YIMBY",
+    "date": "2021-07-14",
+    "url": "https://sfyimby.com/2021/07/new-details-for-foster-partners-designed-potrero-power-station-block-7a-san-francisco.html",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-yimby-2025-10",
+    "title": "Sophie Maxwell Affordable Housing Opens in Potrero Power Station, San Francisco",
+    "publisher": "SF YIMBY",
+    "date": "2025-10-24",
+    "url": "https://sfyimby.com/2025/10/sophie-maxwell-affordable-housing-opens-in-potrero-power-station-san-francisco.html",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-socketsite-2021-07",
+    "title": "Refined Plans for the First Power Station Tower to Rise",
+    "publisher": "SocketSite",
+    "date": "2021-07-12",
+    "url": "https://socketsite.com/archives/2021/07/refined-plans-for-the-first-power-station-tower-to-rise.html",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-chron-2026-07",
+    "title": "One of S.F.'s biggest developments is changing its plans, but not its biggest promise",
+    "publisher": "San Francisco Chronicle",
+    "date": "2026-07-29",
+    "url": "https://www.sfchronicle.com/realestate/article/one-s-f-s-biggest-developments-changing-plans-22365461.php",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-citizenportal-2026-07",
+    "title": "Commission recommends amendments to Potrero Power Station agreement (machine-generated summary of the July 30, 2026 Planning Commission hearing)",
+    "publisher": "Citizen Portal (AI-generated meeting summary; low confidence)",
+    "date": "2026-07-30",
+    "url": "https://citizenportal.ai/articles/9938130/California/San-Francisco-County/San-Francisco-City/Commission-recommends-amendments-to-Potrero-Power-Station-agreement-to-accelerate-buildout-while-preserving-benefits",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": null,
+    "title": "default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf",
+    "url": "https://default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf"
+   }
+  ],
+  "notes": "Approximate polygon for a real, D4D-adopted block -- see accuracy_caveat.",
+  "has_record_file": true,
+  "last_verified": "2026-09-17",
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.38378247599645,
+      37.756927582397374
+     ],
+     [
+      -122.383980813,
+      37.756915671
+     ],
+     [
+      -122.383959748,
+      37.756713125
+     ],
+     [
+      -122.383808977,
+      37.756722181
+     ],
+     [
+      -122.383794802,
+      37.756586011
+     ],
+     [
+      -122.3835606778901,
+      37.75660007128788
+     ],
+     [
+      -122.383535,
+      37.756348
+     ],
+     [
+      -122.384389,
+      37.756303
+     ],
+     [
+      -122.384451,
+      37.756894
+     ],
+     [
+      -122.38378247599645,
+      37.756927582397374
+     ]
+    ]
+   ]
+  }
+ }
+}

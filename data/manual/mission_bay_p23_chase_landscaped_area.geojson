@@ -1,0 +1,43 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "P23 -- landscaped plaza and lawn (north of the pavilion, toward Chase Center)",
+        "site": "Mission Bay South",
+        "status": "complete",
+        "use": "park",
+        "geometry_type": "approximate",
+        "digitized_from": "Real-gap-fragment technique: bbox.difference(street buffer).difference(already-tracked polygons) around the UCSF Wayne and Gladys Valley Center for Vision / 499 Illinois St / Chase Center area (fragment 2, 19,181.78 sqm raw). The owner reviewed a 3-way width-scan split of that fragment (at its two real cross-sectional waists, lat 37.7658 and 37.76665) and then gave a precise construction: P23 is the north piece (piece2, the lawn wedge by the Chase Center roundabout) with its thin building-hugging 'panhandle' dropped, plus the part of the middle piece (piece1, the plaza) that lies east of the seam where piece2's lawn narrows into that panhandle, extended south.",
+        "digitization_method": "ADDED 2026-09-20: the owner corrected the prior resolution (which had P23 'landing exactly inside the already-tracked real footprint of Chase Center, not a separate undeveloped parcel'). Re-derived via the numbered real-gap-fragment technique: fragment 2 (19,181.78 sqm) was first split into 3 pieces at real cross-sectional width-scan waists (piece0 south lawn, piece1 middle plaza, piece2 north lawn -- same nseg/width-minimum method used for P26). The owner then specified P23's exact construction: take piece2, cut off its 'panhandle' (the ~850 sqm sliver hugging the Vision Center building's stepped roofline, cut at the point (lon -122.386948, lat 37.766912) where piece2's cross-section narrows from the open lawn into that sliver), keeping only the wide main lawn body (2,283 sqm); then extend that same narrowing seam (a vertical cut at lon -122.386948) south through piece1, and add the portion of piece1 east of it (4,497 sqm, the open tree-lined plaza around the pavilion, as opposed to the ~4,087 sqm west portion that hugs both buildings and the pavilion itself, which stays unassigned). Result: 6,780 sqm, a continuous landscaped plaza/lawn from the Chase Center roundabout down to the pavilion.",
+        "accuracy_caveat": "APPROXIMATE -- real landscaped/paved open land per Esri satellite imagery and the street/already-tracked-polygon-bounded gap computation, divided at owner-specified cross-sectional seams rather than a surveyed parcel boundary. Name and operator not confirmed by any source found in this pass. The remaining ~5,785 sqm of the original fragment (the building-hugging plaza strip, the panhandle, and P24's own dropped horns) is deliberately left untracked as its own P-number pending further review.",
+        "notes": "OCII plan open-space parcel P23. Landscaped lawn and plaza between the Chase Center roundabout and the pavilion, east of the UCSF Wayne and Gladys Valley Center for Vision.",
+        "source_doc_urls": []
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-122.386302897, 37.766424172],
+            [-122.38661712191846, 37.7658],
+            [-122.386948, 37.7658],
+            [-122.386948, 37.765812268941175],
+            [-122.3868934, 37.7659183],
+            [-122.3868934, 37.7659184],
+            [-122.386948, 37.76592830130776],
+            [-122.386948, 37.766634336435324],
+            [-122.38688650959752, 37.76665],
+            [-122.3868606, 37.7666566],
+            [-122.3869482, 37.7669116],
+            [-122.38638971859933, 37.767],
+            [-122.38619057387052, 37.767],
+            [-122.386165445, 37.766699042],
+            [-122.38618996903313, 37.76665],
+            [-122.386302897, 37.766424172]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-20",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "ucsf_utilities_plant",
+  "slug": "mission-bay-preliminary-utilities-plant",
+  "name": "Mission Bay Preliminary Utilities Plant",
+  "permalink": "https://pierandpoint.org/parcels/mission-bay-preliminary-utilities-plant/",
+  "api": "https://pierandpoint.org/api/v1/records/mission-bay-preliminary-utilities-plant.json",
+  "names": [
+   "Mission Bay Preliminary Utilities Plant"
+  ],
+  "site": {
+   "slug": "mission-bay",
+   "name": "Mission Bay",
+   "short": "Mission Bay",
+   "url": "https://pierandpoint.org/sites/mission-bay/"
+  },
+  "status": "complete",
+  "status_label": "Complete",
+  "use": "institutional",
+  "address": null,
+  "summary": "A central utility plant serving the UCSF Mission Bay campus, on Block 16B per CEQA filings; existence is confirmed but construction date, architect and size were not found in any source checked.",
+  "summary_sources": [
+   "src-ceqa-pup"
+  ],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against data/raw/parcels.geojson and DataSF's Assessor tax roll -- e.g. blklot 8711507 at 675 Nelson Rising Lane alone is ~13 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
+    "digitized_from": "OpenStreetMap (way 135103720, operator=UCSF Mission Bay, 1480 4th St)"
+   }
+  },
+  "centroid": {
+   "lon": -122.39147,
+   "lat": 37.769927
+  },
+  "facts": [
+   {
+    "key": "address",
+    "value": "This project's geometry is tagged 1480 4th St from OpenStreetMap, but a CEQA filing for the campus utility plant gives 1500 Owens St, Block 16B -- these may be the same facility under different address conventions, or two different plants from different construction phases; not merged or resolved",
+    "sources": [
+     "src-osm-pup",
+     "src-ceqa-pup"
+    ]
+   },
+   {
+    "key": "use",
+    "value": "Central utility plant/distribution system for the UCSF Mission Bay campus",
+    "sources": [
+     "src-ceqa-pup"
+    ]
+   }
+  ],
+  "costs": [],
+  "milestones": [],
+  "changes": [],
+  "images": [],
+  "open_questions": [
+   "No construction date, architect, or engineer found in any source checked -- deliberately left undated rather than guessed.",
+   "Address conflict between this feature's OSM tag (1480 4th St) and the one CEQA source with an address (1500 Owens St, Block 16B): may be the same facility described two ways, or two distinct plants (an original 'Preliminary' plant from Phase 1 construction circa 2001-2003, vs. a newer Phase 2 plant). Not resolved -- exactly the kind of ambiguity this project's never-fabricate rule keeps out of the data until it can be confirmed.",
+   "No openly licensed image was found; none is hosted here.",
+   "Images: no plan drawing, elevation or openly-licensed photograph was found for this building specifically. Searched: UCSF Real Estate's Mission Bay campus-site and LRDP pages (realestate.ucsf.edu, blocked to automated fetches with a 403); the UCSF 2014 LRDP EIR's CEQAnet filing (SCH 2013092047, whose pre-2016 attachments aren't hosted on CEQAnet itself); a May 2000 Regents Committee on Grounds and Buildings design-approval item for an early Mission Bay building (text-only, no figures); the 2008 \"UCSF Mission Bay Planning Principles\" appendix (a citywide-scale community map, no individual buildings labeled); and a UCSF wayfinding campus map (not an adopted plan, EIR or permit filing, so not eligible as public-record even though found). Not pursued further in this pass; the record's own project sources above remain the citation for the building's history."
+  ],
+  "sources": [
+   {
+    "id": "src-ceqa-pup",
+    "title": "UCSF Mission Bay Utility Distribution System Extension",
+    "publisher": "CEQAnet (California state environmental filing database, primary/government record)",
+    "url": "https://ceqanet.lci.ca.gov/2013092047/15",
+    "accessed": "2026-09-18"
+   },
+   {
+    "id": "src-osm-pup",
+    "title": "Mission Bay Preliminary Utilities Plant (OpenStreetMap way 135103720)",
+    "publisher": "OpenStreetMap",
+    "url": "https://www.openstreetmap.org/way/135103720",
+    "accessed": "2026-09-18"
+   }
+  ],
+  "notes": "Existence confirmed (CEQA filings reference a UCSF Mission Bay utility plant/distribution system on Block 16B), but construction date, architect and size were not found in any source checked. One CEQA record gives its address as 1500 Owens St, which does not match this feature's OSM address tag (1480 4th St) -- these may be the same facility under different address conventions, or two different plants from different construction phases; not merged or resolved here, per the project's never-fabricate rule.",
+  "has_record_file": true,
+  "last_verified": "2026-09-18",
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.3916626,
+      37.7697327
+     ],
+     [
+      -122.3913666,
+      37.7697515
+     ],
+     [
+      -122.3912888,
+      37.7697564
+     ],
+     [
+      -122.3912703,
+      37.7697576
+     ],
+     [
+      -122.3913189,
+      37.7703903
+     ],
+     [
+      -122.3917193,
+      37.7703658
+     ],
+     [
+      -122.3916626,
+      37.7697327
+     ]
+    ]
+   ]
+  }
+ }
+}

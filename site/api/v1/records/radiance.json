@@ -1,0 +1,156 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-20",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "mission_bay_radiance",
+  "slug": "radiance",
+  "name": "Radiance",
+  "permalink": "https://pierandpoint.org/parcels/radiance/",
+  "api": "https://pierandpoint.org/api/v1/records/radiance.json",
+  "names": [
+   "Radiance"
+  ],
+  "site": {
+   "slug": "mission-bay",
+   "name": "Mission Bay",
+   "short": "Mission Bay",
+   "url": "https://pierandpoint.org/sites/mission-bay/"
+  },
+  "status": "complete",
+  "status_label": "Complete",
+  "use": "residential",
+  "address": null,
+  "summary": null,
+  "summary_sources": [],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same real-geometry-without-a-single-parcel pattern already used for several Pier 70 buildings (DataSF Building Footprints) and for Mission Bay's own real park polygons.",
+    "digitized_from": "OpenStreetMap (way 1258086102, addr:housename=Radiance at Mission Bay, 325 China Basin St)"
+   }
+  },
+  "centroid": {
+   "lon": -122.387446,
+   "lat": 37.771692
+  },
+  "facts": [],
+  "costs": [],
+  "milestones": [
+   {
+    "date": "2008-09",
+    "date_label": "~2008",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Radiance (325 China Basin St) offers its first homes, among the first major US condo developments to open after the 2008 financial crisis",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "title": "sfgate.com"
+     }
+    ],
+    "source": "sfgate.com",
+    "origin": "csv",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_radiance",
+     "slug": "radiance",
+     "name": "Radiance",
+     "permalink": "https://pierandpoint.org/parcels/radiance/",
+     "api": "https://pierandpoint.org/api/v1/records/radiance.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
+  "changes": [],
+  "images": [],
+  "open_questions": [],
+  "sources": [
+   {
+    "id": null,
+    "title": "openstreetmap.org/way/1258086102",
+    "url": "https://www.openstreetmap.org/way/1258086102"
+   },
+   {
+    "id": null,
+    "title": "bosadevelopment.com/project/radiance-madrone-mission-bay",
+    "url": "https://bosadevelopment.com/project/radiance-madrone-mission-bay/"
+   }
+  ],
+  "notes": "Story count is reported as 9 by two independent realtor sources; one outlier source says 16, which appears to conflate Radiance with the taller sister building Madrone -- not used here.",
+  "has_record_file": false,
+  "last_verified": null,
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.3871404,
+      37.7720441
+     ],
+     [
+      -122.3874522,
+      37.7720259
+     ],
+     [
+      -122.3877676,
+      37.7720074
+     ],
+     [
+      -122.387749,
+      37.7718095
+     ],
+     [
+      -122.3877447,
+      37.7717637
+     ],
+     [
+      -122.3877232,
+      37.7715348
+     ],
+     [
+      -122.3877192,
+      37.7714915
+     ],
+     [
+      -122.3876994,
+      37.7712805
+     ],
+     [
+      -122.3873774,
+      37.7712994
+     ],
+     [
+      -122.3870723,
+      37.7713173
+     ],
+     [
+      -122.3870926,
+      37.7715331
+     ],
+     [
+      -122.3871219,
+      37.7718465
+     ],
+     [
+      -122.3871404,
+      37.7720441
+     ]
+    ]
+   ]
+  }
+ }
+}

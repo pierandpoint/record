@@ -1,0 +1,118 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-20",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "mission_rock_tafb_paseo",
+  "slug": "mission-rock-terry-a-francois-boulevard-paseo-pier-48-entry",
+  "name": "Mission Rock Terry A Francois Boulevard Paseo (Pier 48 entry)",
+  "permalink": "https://pierandpoint.org/parcels/mission-rock-terry-a-francois-boulevard-paseo-pier-48-entry/",
+  "api": "https://pierandpoint.org/api/v1/records/mission-rock-terry-a-francois-boulevard-paseo-pier-48-entry.json",
+  "names": [
+   "Mission Rock Terry A Francois Boulevard Paseo (Pier 48 entry)"
+  ],
+  "site": {
+   "slug": "mission-rock",
+   "name": "Mission Rock",
+   "short": "Mission Rock",
+   "url": "https://pierandpoint.org/sites/mission-rock/"
+  },
+  "status": "planned",
+  "status_label": "Planned",
+  "use": "park",
+  "address": null,
+  "summary": null,
+  "summary_sources": [],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "APPROXIMATE but high confidence on three edges (recorded lot lines); the south edge is the Exposition Street lot line extended ~23 m east, which is where the plan's Exposition Street right-of-way ends at TAFB. Planned; today an interim roadway. ANGLE CHECK: check_geometry_quality.py flags a 12.3-12.6 deg corner here (its tolerance is 12 deg). Every vertex of this polygon is a real, recorded DataSF Assessor lot corner (see digitization_method) -- the deviation is the real lot's own shape (Bridgeview Way's paseo lot 8719A007 and the Exposition Street lot 8719A010 meet the park lot 8719A005 at a corner that is not exactly square), not a shear or a misread trace. Accepted; see docs/site-definition-of-done.md.",
+    "digitized_from": "DataSF Assessor lot lines: the north end of the Terry A Francois Boulevard lot 8719A003 between Block K, the Pier 48 lot 8719A001 and the China Basin Park lot 8719A005; named as a paseo in Mission Rock Design Controls Figure 3.1.1 (p.45), Section 4.3 (p.90) and Figure 3.6.1 (p.71).",
+    "why_no_real_parcel": "Part of the Terry A Francois Boulevard right-of-way lot 8719A003 (which also carries the roadway south of here and Channel Wharf); joining status.csv to it would paint the whole boulevard.",
+    "regulatory_context": "Design Controls Section 4.3 / 3.6: the TAFB terminus is a paseo facilitating park and water-oriented access to Pier 48, with a kiosk and picnic area connecting the pier apron to China Basin Park (Figure 3.6.1)."
+   }
+  },
+  "centroid": {
+   "lon": -122.387506,
+   "lat": 37.775693
+  },
+  "facts": [],
+  "costs": [],
+  "milestones": [],
+  "changes": [
+   {
+    "date": "2026-09-17",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "The Terry A Francois Boulevard paseo at the Pier 48 entry added, between Block K and the pier, from the Design Controls' open space plan.",
+    "source": "Mission Rock Design Controls, Figure 3.1.1, Sections 3.6 and 4.3",
+    "sources": [
+     {
+      "title": "Mission Rock Design Controls, Figure 3.1.1, Sections 3.6 and 4.3"
+     }
+    ],
+    "category": "open_space",
+    "category_label": "Open space",
+    "record": {
+     "id": "mission_rock_tafb_paseo",
+     "slug": "mission-rock-terry-a-francois-boulevard-paseo-pier-48-entry",
+     "name": "Mission Rock Terry A Francois Boulevard Paseo (Pier 48 entry)",
+     "permalink": "https://pierandpoint.org/parcels/mission-rock-terry-a-francois-boulevard-paseo-pier-48-entry/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-rock-terry-a-francois-boulevard-paseo-pier-48-entry.json"
+    },
+    "site": {
+     "slug": "mission-rock",
+     "name": "Mission Rock",
+     "short": "Mission Rock",
+     "url": "https://pierandpoint.org/sites/mission-rock/"
+    },
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
+  "images": [],
+  "open_questions": [],
+  "sources": [
+   {
+    "id": null,
+    "title": "sfport.com/sites/default/files/2025-07/Mission%20Rock%20Design%20Controls%204.24.18_FINAL_Reduced%20File.pdf",
+    "url": "https://www.sfport.com/sites/default/files/2025-07/Mission%20Rock%20Design%20Controls%204.24.18_FINAL_Reduced%20File.pdf"
+   }
+  ],
+  "notes": "Planned paseo at the north end of Terry A Francois Boulevard between Block K and Pier 48; interim roadway today.",
+  "has_record_file": false,
+  "last_verified": null,
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.387598,
+      37.775572
+     ],
+     [
+      -122.387342,
+      37.7755873
+     ],
+     [
+      -122.387367,
+      37.775852
+     ],
+     [
+      -122.387627,
+      37.775881
+     ],
+     [
+      -122.387598,
+      37.775572
+     ]
+    ]
+   ]
+  }
+ }
+}

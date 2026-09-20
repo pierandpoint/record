@@ -1,0 +1,271 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-20",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "ucsf_byers_hall",
+  "slug": "byers-hall",
+  "name": "Byers Hall",
+  "permalink": "https://pierandpoint.org/parcels/byers-hall/",
+  "api": "https://pierandpoint.org/api/v1/records/byers-hall.json",
+  "names": [
+   "Byers Hall"
+  ],
+  "site": {
+   "slug": "mission-bay",
+   "name": "Mission Bay",
+   "short": "Mission Bay",
+   "url": "https://pierandpoint.org/sites/mission-bay/"
+  },
+  "status": "complete",
+  "status_label": "Complete",
+  "use": "institutional",
+  "address": null,
+  "summary": "A research building at 1700 4th St, opened 2005, home to QB3 (California Institute for Quantitative Biosciences) director's office and central administration, built as a hub for academia-biotech collaboration.",
+  "summary_sources": [
+   "src-ucsf-history-1990s",
+   "src-qb3-wiki"
+  ],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against data/raw/parcels.geojson and DataSF's Assessor tax roll -- e.g. blklot 8711507 at 675 Nelson Rising Lane alone is ~13 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
+    "digitized_from": "OpenStreetMap (way 135103710, 1700 4th St)"
+   }
+  },
+  "centroid": {
+   "lon": -122.391436,
+   "lat": 37.767398
+  },
+  "facts": [
+   {
+    "key": "address",
+    "value": "1700 4th St",
+    "sources": [
+     "src-osm-byers"
+    ]
+   },
+   {
+    "key": "architect",
+    "value": "Bohlin Cywinski Jackson (corroborated by a former project manager's own portfolio and an architecture-press article, not confirmed directly on a UCSF-owned page)",
+    "sources": [
+     "src-wise-byers",
+     "src-arcca"
+    ]
+   },
+   {
+    "key": "use",
+    "value": "QB3 director's office and central administration; academia-biotech collaboration space",
+    "sources": [
+     "src-qb3-wiki"
+    ]
+   }
+  ],
+  "costs": [],
+  "milestones": [
+   {
+    "date": "2005",
+    "date_label": "~2005",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Byers Hall opens",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-ucsf-history-1990s",
+      "title": "1990-2009",
+      "publisher": "A History of UCSF (UCSF-affiliated historical archive)",
+      "url": "https://history.library.ucsf.edu/1990.html",
+      "accessed": "2026-09-18"
+     }
+    ],
+    "source": "A History of UCSF (UCSF-affiliated historical archive)",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "ucsf_byers_hall",
+     "slug": "byers-hall",
+     "name": "Byers Hall",
+     "permalink": "https://pierandpoint.org/parcels/byers-hall/",
+     "api": "https://pierandpoint.org/api/v1/records/byers-hall.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   },
+   {
+    "date": "2005-06",
+    "date_label": "~2005",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Byers Hall opens, home to QB3",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "title": "history.library.ucsf.edu"
+     }
+    ],
+    "source": "history.library.ucsf.edu",
+    "origin": "csv",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "ucsf_byers_hall",
+     "slug": "byers-hall",
+     "name": "Byers Hall",
+     "permalink": "https://pierandpoint.org/parcels/byers-hall/",
+     "api": "https://pierandpoint.org/api/v1/records/byers-hall.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
+  "changes": [],
+  "images": [
+   {
+    "path": "data/manual/images/mission_bay/ucsf_regents_2008_byers_genentech.jpg",
+    "kind": "now",
+    "scope": "area",
+    "taken": "2008",
+    "credit": "Byers Hall (left) and Genentech Hall (right), UCSF Mission Bay campus; \"UCSF Medical Center at Mission Bay,\" presentation to the UC Regents Committee on Grounds and Buildings, September 2008, \"Architectural Context\" slide",
+    "license": "public-record",
+    "source_url": "https://regents.universityofcalifornia.edu/regmeet/sept08/j1pp.pdf#page=13",
+    "license_evidence": "https://regents.universityofcalifornia.edu/regmeet/sept08/j1pp.pdf",
+    "license_note": "Slide from the presentation attached to the UC Regents Committee on Grounds and Buildings' September 2008 meeting item approving the UCSF Medical Center at Mission Bay -- a public governing board's meeting record. Read 2026-09-19.",
+    "caption": "Byers Hall and Genentech Hall",
+    "source_crop": "python3 src/extract_pdf_figure.py https://regents.universityofcalifornia.edu/regmeet/sept08/j1pp.pdf 13 data/manual/images/mission_bay/ucsf_regents_2008_byers_genentech.jpg --rect 0.5985,0.0745,0.9371,0.3137",
+    "focus": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    "appeal": 4,
+    "appeal_note": "Dusk campus shot showing Byers Hall's glass-and-stone facade at left next to Genentech Hall across a landscaped lawn, warmly lit and well composed even though Byers Hall itself takes up the smaller share of the frame.",
+    "url": "https://pierandpoint.org/assets/img/ucsf_regents_2008_byers_genentech.jpg"
+   }
+  ],
+  "open_questions": [
+   "Architect not confirmed on any UCSF-owned page; sourced only to a former project manager's own portfolio and an architecture-press article.",
+   "Exact opening month and square footage not found in any source checked.",
+   "No openly licensed image was found; none is hosted here.",
+   "Images: the only photograph found of Byers Hall is undated beyond appearing in a September 2008 UC Regents presentation slide (shared with its neighbor); its exact capture date isn't confirmed. No site plan or architectural rendering specific to this building was found in a public-record source."
+  ],
+  "sources": [
+   {
+    "id": "src-ucsf-history-1990s",
+    "title": "1990-2009",
+    "publisher": "A History of UCSF (UCSF-affiliated historical archive)",
+    "url": "https://history.library.ucsf.edu/1990.html",
+    "accessed": "2026-09-18"
+   },
+   {
+    "id": "src-qb3-wiki",
+    "title": "California Institute for Quantitative Biosciences",
+    "publisher": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/California_Institute_for_Quantitative_Biosciences",
+    "accessed": "2026-09-18"
+   },
+   {
+    "id": "src-wise-byers",
+    "title": "Byers Hall",
+    "publisher": "James G. Wise (identifies self as former Bohlin Cywinski Jackson project manager on the job)",
+    "url": "https://www.jamesgwise.com/byers-hall",
+    "accessed": "2026-09-18"
+   },
+   {
+    "id": "src-arcca",
+    "title": "UC San Francisco: The DNA of a Campus",
+    "publisher": "arcCA Digest (architecture press)",
+    "date": "2006",
+    "url": "https://arccadigest.org/uc-san-francisco-dna-campus/",
+    "accessed": "2026-09-18"
+   },
+   {
+    "id": "src-osm-byers",
+    "title": "Byers Hall (OpenStreetMap way 135103710)",
+    "publisher": "OpenStreetMap",
+    "url": "https://www.openstreetmap.org/way/135103710",
+    "accessed": "2026-09-18"
+   },
+   {
+    "id": "src-ucregents-2008-09-pp",
+    "title": "\"UCSF Medical Center at Mission Bay,\" presentation to the UC Regents Committee on Grounds and Buildings, September 2008 (design, site plan and financial-plan approval item)",
+    "publisher": "The Regents of the University of California",
+    "date": "2008-09",
+    "url": "https://regents.universityofcalifornia.edu/regmeet/sept08/j1pp.pdf",
+    "accessed": "2026-09-19"
+   }
+  ],
+  "notes": "Home to QB3 (California Institute for Quantitative Biosciences) director's office and central administration, built as a hub for academia-biotech collaboration. Architect Bohlin Cywinski Jackson (corroborated by a former project manager's own portfolio and an architecture-press article, not confirmed directly on a UCSF-owned page). Opened 2005 (year only; exact month and square footage not found in any source checked).",
+  "has_record_file": true,
+  "last_verified": "2026-09-18",
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.3915819,
+      37.7674402
+     ],
+     [
+      -122.3915982,
+      37.7676118
+     ],
+     [
+      -122.391506,
+      37.7676173
+     ],
+     [
+      -122.3915126,
+      37.7676868
+     ],
+     [
+      -122.3910513,
+      37.7677142
+     ],
+     [
+      -122.3909928,
+      37.7670978
+     ],
+     [
+      -122.3914585,
+      37.7670702
+     ],
+     [
+      -122.3914615,
+      37.7671016
+     ],
+     [
+      -122.3914807,
+      37.7673037
+     ],
+     [
+      -122.3915684,
+      37.7672985
+     ],
+     [
+      -122.3915819,
+      37.7674402
+     ]
+    ]
+   ]
+  }
+ }
+}

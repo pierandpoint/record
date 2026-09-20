@@ -1,0 +1,81 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-20",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "mission_bay_25b_parking_lot",
+  "slug": "25b",
+  "name": "25B",
+  "permalink": "https://pierandpoint.org/parcels/25b/",
+  "api": "https://pierandpoint.org/api/v1/records/25b.json",
+  "names": [
+   "25B"
+  ],
+  "site": {
+   "slug": "mission-bay",
+   "name": "Mission Bay",
+   "short": "Mission Bay",
+   "url": "https://pierandpoint.org/sites/mission-bay/"
+  },
+  "status": "planned",
+  "status_label": "Planned",
+  "use": "parking",
+  "address": null,
+  "summary": null,
+  "summary_sources": [],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "APPROXIMATE -- idealized rectangle (owner-directed, not a hand trace of the lot's own painted edges) anchored on real street-corner intersections and the real, already-tracked Mission Hall footprint. The lot itself is real (visible painted parking stalls in Esri satellite imagery); the exact boundary is idealized to a clean rectangle rather than traced to the pavement's own edges.",
+    "digitized_from": "Real-gap-fragment technique: bbox.difference(street buffer).difference(already-tracked polygons) around the Mission Hall/Byers Hall area, anchored on the real 4th St x 16th St and 3rd St x 16th St street-corner intersections per the owner's direct instruction (earlier attempts using building bounding boxes had repeatedly mis-centered on the wrong block). Fragment 14 (7,505 sqm raw) spans the whole plan block from Mission Hall's own footprint east toward 3rd St; the owner identified it as 25A+25B combined, with Mission Hall itself being 25A and this record -- the part east of Mission Hall, idealized as a clean rectangle -- being 25B."
+   }
+  },
+  "centroid": {
+   "lon": -122.389505,
+   "lat": 37.767273
+  },
+  "facts": [],
+  "costs": [],
+  "milestones": [],
+  "changes": [],
+  "images": [],
+  "open_questions": [],
+  "sources": [],
+  "notes": "OCII plan block 25B. Surface parking lot immediately east of Mission Hall (Global Health & Clinical Sciences Building), between it and 3rd St, north of 16th St. Currently undeveloped/planned per the OCII plan designation.",
+  "has_record_file": false,
+  "last_verified": null,
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.38926497103954,
+      37.76691502453967
+     ],
+     [
+      -122.38926497103954,
+      37.767809899
+     ],
+     [
+      -122.3898653,
+      37.767809899
+     ],
+     [
+      -122.3898653,
+      37.76691502453967
+     ],
+     [
+      -122.38926497103954,
+      37.76691502453967
+     ]
+    ]
+   ]
+  }
+ }
+}

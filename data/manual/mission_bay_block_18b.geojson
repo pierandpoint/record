@@ -10,8 +10,8 @@
         "use": "institutional",
         "geometry_type": "approximate",
         "digitized_from": "Real block boundary from real street geometry (src/block_fit.py load_blocks(), trimmed against src/street_geometry.py's fuller street buffer); the plan's own A/B internal split has no mapped street, so it's a straight bisection along the block's long axis, not a real line.",
-        "digitization_method": "ADDED 2026-09-19 for the block-by-block plan walk-through (docs/briefs/mission_bay_block_inventory.csv), per the Mission Rock transform-and-register precedent for unbuilt blocks. East half of the same parking lot, west of the Owens St curve.",
-        "accuracy_caveat": "PARTIALLY REAL -- the outer boundary is a real polygonized city block from real street geometry, not hand-traced; only the internal A/B split line is approximate (a bisection, since no real street divides this block into A and B).",
+        "digitization_method": "ADDED 2026-09-19 for the block-by-block plan walk-through (docs/briefs/mission_bay_block_inventory.csv), per the Mission Rock transform-and-register precedent for unbuilt blocks. East half of the same parking lot, west of the Owens St curve. REPLACED 2026-09-20: the owner determined via a numbered real-gap-fragment map that the parking-lot polygon previously registered here was actually part of 18A (see that record -- merged there). The real 18B is the UCSF building complex east of that parking lot: union of fragments 7, 11 and 12 from the numbered map (a real, already-built campus building, ~10,023 sqm raw), closed with a small (~4.4m round-trip) morphological buffer to bridge two thin internal walkway strips that split it into 3 pieces in the raw fragment computation -- not a hand-traced or independently sourced boundary.",
+        "accuracy_caveat": "APPROXIMATE -- derived from the numbered real-gap-fragment technique (bbox minus real streets minus already-tracked polygons) rather than a specific real parcel or building-footprint source; the owner picked this union directly off a rendered numbered map. The small morphological closing used to bridge two internal walkway gaps may slightly overstate area at those two seams.",
         "notes": "No building on this site as of 2026-09-19 (satellite- and building-footprint-confirmed); currently an operating surface parking lot west of the Owens St curve. The OCII plan's own Dec 2019 Land Use Map designates this block for future UCSF institutional use, consistent with the rest of this campus row, but no specific project, developer, or timeline was found in this pass.",
         "source_doc_urls": [
           "data/manual/_reference/mission_bay_land_use_map_2019.png"
@@ -22,60 +22,248 @@
         "coordinates": [
           [
             [
-              -122.39434083556341,
-              37.769400011488095
+              -122.39407295955834,
+              37.769418371141
             ],
             [
-              -122.39418185899416,
-              37.769273282517155
+              -122.39407200988214,
+              37.769418476391536
             ],
             [
-              -122.39411664,
-              37.768591396
+              -122.39278676522744,
+              37.76949593025348
             ],
             [
-              -122.394746838,
-              37.768553412
+              -122.39278584681091,
+              37.769495941460576
             ],
             [
-              -122.394752013,
-              37.768552878
+              -122.39278571561856,
+              37.769495032393536
             ],
             [
-              -122.394757124,
-              37.768551905
+              -122.39270752056599,
+              37.76867732036584
             ],
             [
-              -122.39481107426236,
-              37.76853923893674
+              -122.39270747743969,
+              37.768676365858184
             ],
             [
-              -122.39483283767818,
-              37.76855756126609
+              -122.39270842710702,
+              37.76867626060997
             ],
             [
-              -122.39483283767818,
-              37.769372072026954
+              -122.39311586231689,
+              37.76865170732007
             ],
             [
-              -122.3945677665546,
-              37.76938627033655
+              -122.39311690274154,
+              37.76865169918449
             ],
             [
-              -122.3945251665546,
-              37.76938857033896
+              -122.39311776086988,
+              37.7686518746232
             ],
             [
-              -122.3945239314868,
-              37.76938864317065
+              -122.39311986923353,
+              37.76865242678092
             ],
             [
-              -122.39442099514314,
-              37.76939522631584
+              -122.39312384053332,
+              37.768653049742454
             ],
             [
-              -122.39434083556341,
-              37.769400011488095
+              -122.39312785430535,
+              37.76865327096024
+            ],
+            [
+              -122.39313187001225,
+              37.7686530882001
+            ],
+            [
+              -122.39313584709713,
+              37.76865250330779
+            ],
+            [
+              -122.39313974539317,
+              37.7686515221905
+            ],
+            [
+              -122.39314352552928,
+              37.76865015475708
+            ],
+            [
+              -122.39314371585318,
+              37.76865007487965
+            ],
+            [
+              -122.39314466592545,
+              37.768649971526656
+            ],
+            [
+              -122.39335415536934,
+              37.76863734705307
+            ],
+            [
+              -122.39335519579528,
+              37.76863733891754
+            ],
+            [
+              -122.3933560536296,
+              37.768637514296415
+            ],
+            [
+              -122.39335816259683,
+              37.7686380666131
+            ],
+            [
+              -122.39336213389807,
+              37.76863868957632
+            ],
+            [
+              -122.39336614767168,
+              37.76863891079547
+            ],
+            [
+              -122.39337016338031,
+              37.76863872803634
+            ],
+            [
+              -122.39337414046699,
+              37.76863814314472
+            ],
+            [
+              -122.39337803876484,
+              37.76863716202776
+            ],
+            [
+              -122.39338181890272,
+              37.768635794594324
+            ],
+            [
+              -122.39338200957063,
+              37.76863571457255
+            ],
+            [
+              -122.3933829596425,
+              37.768635611219615
+            ],
+            [
+              -122.39399365678446,
+              37.76859880874499
+            ],
+            [
+              -122.39399457519079,
+              37.768598797538246
+            ],
+            [
+              -122.39399470639786,
+              37.76859970659305
+            ],
+            [
+              -122.39404890824343,
+              37.76916640373393
+            ],
+            [
+              -122.39404895340637,
+              37.76916737172157
+            ],
+            [
+              -122.39404881112402,
+              37.7691683240553
+            ],
+            [
+              -122.39404841236995,
+              37.76917032893921
+            ],
+            [
+              -122.39404802770511,
+              37.76917426396105
+            ],
+            [
+              -122.3940480333992,
+              37.76917821773538
+            ],
+            [
+              -122.39404842939659,
+              37.76918215163294
+            ],
+            [
+              -122.3940492118283,
+              37.769186027218645
+            ],
+            [
+              -122.39405037304978,
+              37.76918980662714
+            ],
+            [
+              -122.3940508994944,
+              37.769191062348256
+            ],
+            [
+              -122.3940513309407,
+              37.76919225870288
+            ],
+            [
+              -122.39405147549068,
+              37.769193245101704
+            ],
+            [
+              -122.3940700630033,
+              37.76938758332291
+            ],
+            [
+              -122.39407010816623,
+              37.76938855131033
+            ],
+            [
+              -122.39406996583645,
+              37.76938950396211
+            ],
+            [
+              -122.39406956720562,
+              37.76939150822796
+            ],
+            [
+              -122.39406918254136,
+              37.769395443251284
+            ],
+            [
+              -122.39406918823632,
+              37.76939939702704
+            ],
+            [
+              -122.39406958423484,
+              37.769403330925904
+            ],
+            [
+              -122.39407036666795,
+              37.76940720651277
+            ],
+            [
+              -122.39407152789107,
+              37.76941098592224
+            ],
+            [
+              -122.394072054093,
+              37.76941224106319
+            ],
+            [
+              -122.39407248564473,
+              37.76941343770917
+            ],
+            [
+              -122.39407263019488,
+              37.769414424108895
+            ],
+            [
+              -122.3940729164146,
+              37.76941741662483
+            ],
+            [
+              -122.39407295955834,
+              37.769418371141
             ]
           ]
         ]

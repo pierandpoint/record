@@ -1,0 +1,148 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-20",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "mission_bay_arden",
+  "slug": "arden",
+  "name": "Arden",
+  "permalink": "https://pierandpoint.org/parcels/arden/",
+  "api": "https://pierandpoint.org/api/v1/records/arden.json",
+  "names": [
+   "Arden"
+  ],
+  "site": {
+   "slug": "mission-bay",
+   "name": "Mission Bay",
+   "short": "Mission Bay",
+   "url": "https://pierandpoint.org/sites/mission-bay/"
+  },
+  "status": "complete",
+  "status_label": "Complete",
+  "use": "residential",
+  "address": null,
+  "summary": null,
+  "summary_sources": [],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same real-geometry-without-a-single-parcel pattern already used for several Pier 70 buildings (DataSF Building Footprints) and for Mission Bay's own real park polygons.",
+    "digitized_from": "OpenStreetMap (way 394698460, addr:housenumber=708;718;738, Long Bridge St)"
+   }
+  },
+  "centroid": {
+   "lon": -122.394179,
+   "lat": 37.771702
+  },
+  "facts": [],
+  "costs": [],
+  "milestones": [
+   {
+    "date": "2016-06",
+    "date_label": "~2016",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Arden (708-718 Long Bridge St) completed",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "title": "kinokorealestate.com"
+     }
+    ],
+    "source": "kinokorealestate.com",
+    "origin": "csv",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_arden",
+     "slug": "arden",
+     "name": "Arden",
+     "permalink": "https://pierandpoint.org/parcels/arden/",
+     "api": "https://pierandpoint.org/api/v1/records/arden.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
+  "changes": [],
+  "images": [],
+  "open_questions": [],
+  "sources": [
+   {
+    "id": null,
+    "title": "openstreetmap.org/way/394698460",
+    "url": "https://www.openstreetmap.org/way/394698460"
+   },
+   {
+    "id": null,
+    "title": "kinokorealestate.com/developments/arden",
+    "url": "https://kinokorealestate.com/developments/arden"
+   }
+  ],
+  "notes": "Architect attribution rests on one secondary (realtor) source; would benefit from primary confirmation.",
+  "has_record_file": false,
+  "last_verified": null,
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.3944703,
+      37.7712375
+     ],
+     [
+      -122.3942421,
+      37.7714108
+     ],
+     [
+      -122.3941059,
+      37.7715206
+     ],
+     [
+      -122.3940314,
+      37.7715774
+     ],
+     [
+      -122.3937013,
+      37.7718423
+     ],
+     [
+      -122.3934651,
+      37.7720337
+     ],
+     [
+      -122.3938898,
+      37.7723718
+     ],
+     [
+      -122.3939424,
+      37.7724161
+     ],
+     [
+      -122.3949365,
+      37.7716272
+     ],
+     [
+      -122.3947183,
+      37.7714512
+     ],
+     [
+      -122.3944703,
+      37.7712375
+     ]
+    ]
+   ]
+  }
+ }
+}

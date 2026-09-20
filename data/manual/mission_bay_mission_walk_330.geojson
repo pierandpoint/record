@@ -10,8 +10,8 @@
         "use": "residential",
         "geometry_type": "real",
         "digitized_from": "DataSF Building Footprints (mblr SF8704278); name/address from OpenStreetMap way 56656119 (330 Berry St)",
-        "digitization_method": "ADDED 2026-09-19 for Mission Bay's third real-buildings pass (remaining uncovered footprints inside the official Mission Bay North/South redevelopment-area boundary): Mission Walk Condos, a residential condominium building at 330 Berry St. Its DataSF Building Footprints outline (mblr SF8704278) originally overlapped the already-committed Arterra building (300 Berry St, mission_bay_arterra.geojson) by 712 sq m -- check_geometry_quality.py --strict correctly flagged this as two approximate blocks at the same site overlapping. Trimmed to the geometric difference against Arterra's committed polygon (kept the larger resulting piece) rather than leaving the overlap or guessing a boundary: the two buildings evidently share a party wall/adjacent footprint in the LIDAR source, and this is the non-overlapping remainder, not necessarily this building's true full outline.",
-        "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8704278), cross-referenced by position against an OpenStreetMap building/address point (way 56656119) for the name and street address, but trimmed against the adjacent, already-committed Arterra footprint to remove a 712 sq m overlap (see digitization_method). The trimmed shape may understate this building's true footprint along the shared edge with Arterra; not a hand trace or plan estimate otherwise.",
+        "digitization_method": "ADDED 2026-09-19 for Mission Bay's third real-buildings pass (remaining uncovered footprints inside the official Mission Bay North/South redevelopment-area boundary): Mission Walk Condos, a residential condominium building at 330 Berry St. Its DataSF Building Footprints outline (mblr SF8704278) originally overlapped the already-committed Arterra building (300 Berry St, mission_bay_arterra.geojson) by 712 sq m -- check_geometry_quality.py --strict correctly flagged this as two approximate blocks at the same site overlapping. Trimmed to the geometric difference against Arterra's committed polygon (kept the larger resulting piece) rather than leaving the overlap or guessing a boundary: the two buildings evidently share a party wall/adjacent footprint in the LIDAR source, and this is the non-overlapping remainder, not necessarily this building's true full outline. EXTENDED 2026-09-20: the owner reviewed the same fragment-10/15 split done for Edgewater's N4-3 extension (see that record) and directed that the piece north of the extension of Mission Walk 330's own northeast (N-E corner) edge -- a rectangle matching the building's own width, ~1,893 sqm -- be merged into this record rather than into N4-3, since it continues this building's own footprint alignment northward rather than the open-land strip's.",
+        "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8704278), cross-referenced by position against an OpenStreetMap building/address point (way 56656119) for the name and street address, but trimmed against the adjacent, already-committed Arterra footprint to remove a 712 sq m overlap (see digitization_method). The trimmed shape may understate this building's true footprint along the shared edge with Arterra; not a hand trace or plan estimate otherwise. Updated 2026-09-20: extended north by a real-gap-fragment piece sized to this building's own footprint width, per the owner's direct cut -- not independently sourced or verified against a building footprint of its own.",
         "notes": "This footprint's east edge originally overlapped the already-tracked Arterra building (300 Berry St) in DataSF's own footprint layer -- the two buildings sit immediately adjacent/share a party wall. Trimmed to the non-overlapping remainder rather than guessed; a future pass could re-verify the true shared boundary against a site plan or higher-resolution imagery. Opening year and unit count not confirmed.",
         "source_doc_urls": [
           "https://www.apartmenthomeliving.com/apartment-finder/Mission-Walk-Condos-San-Francisco-CA-94158-18289912",
@@ -22,10 +22,6 @@
         "type": "Polygon",
         "coordinates": [
           [
-            [
-              -122.3964448,
-              37.773457
-            ],
             [
               -122.3964354,
               37.773449
@@ -67,12 +63,28 @@
               37.7733194
             ],
             [
-              -122.3969089,
-              37.7733236
+              -122.3969036717322,
+              37.77331927120085
             ],
             [
-              -122.3969117,
-              37.7733258
+              -122.39720504308436,
+              37.773562763286684
+            ],
+            [
+              -122.397182788,
+              37.773587052
+            ],
+            [
+              -122.396932634,
+              37.773814719
+            ],
+            [
+              -122.39684308907584,
+              37.77389050062129
+            ],
+            [
+              -122.39651504836809,
+              37.77364803575033
             ],
             [
               -122.3965146,
@@ -97,6 +109,10 @@
             [
               -122.3964448,
               37.773457
+            ],
+            [
+              -122.3964354,
+              37.773449
             ]
           ]
         ]

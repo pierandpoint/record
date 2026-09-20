@@ -1,0 +1,400 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-20",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "pier70_irish_hill_playground",
+  "slug": "irish-hill-playground-and-irish-hill-corner-plaza",
+  "name": "Irish Hill Playground and Irish Hill Corner Plaza",
+  "permalink": "https://pierandpoint.org/parcels/irish-hill-playground-and-irish-hill-corner-plaza/",
+  "api": "https://pierandpoint.org/api/v1/records/irish-hill-playground-and-irish-hill-corner-plaza.json",
+  "names": [
+   "Irish Hill Playground",
+   "Irish Hill Corner Plaza",
+   "Irish Hill Park"
+  ],
+  "site": {
+   "slug": "pier-70",
+   "name": "Pier 70",
+   "short": "Pier 70",
+   "url": "https://pierandpoint.org/sites/pier-70/"
+  },
+  "status": "planned",
+  "status_label": "Planned",
+  "use": "park",
+  "address": null,
+  "summary": "The roughly two-acre courtyard park beside the Irish Hill remnant, bounded by Parcels C1, C2, PKS, HDY1/2 and HDY3 (D4D Section 3.12), with the smaller Irish Hill Corner Plaza at Illinois and 22nd Streets (Section 3.11) as its gateway. The 2017 DDA lets the City ask the Hoedown Yard developer to build 'Irish Hill Park' with special-tax proceeds; nothing has been built and its Hoedown Yard neighbors remain in PG&E ownership.",
+  "summary_sources": [
+   "src-d4d",
+   "src-port-9b-2017"
+  ],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "APPROXIMATE -- traced directly from Figure 6.4.2's own 'Public Open Space' fill color (programmatic color-region contour extraction), then clipped against PKS/HDY3/C1/C2/HDY1-2's own committed geometries. Now extends north to touch '21ST ST (NEW)' directly in the gap between PKS and C1, matching the diagram's own drawn fill. Rendered as a MultiPolygon: a small, genuinely separate piece near Illinois St (the Irish Hill Corner Plaza zone) does not touch the main body in the diagram.",
+    "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155); named per Figure 3.4.1 - Overview of Public Spaces (p.52), zones 7 and 8.",
+    "why_no_real_parcel": "Open space with no subdivided Assessor parcel of its own within Brookfield's largely unaddressed 28-acre site.",
+    "regulatory_context": "Part of the Pier 70 D4D's Open Space Network (Section 3.4): Irish Hill Playground (Section 3.12, ~2.0 acres), described as an open space adjacent to the existing remnant of Irish Hill (Section 3.2) -- a small rock outcrop, the last visible remnant of a larger hill largely quarried away in the early 20th century for shipyard construction. Irish Hill Corner Plaza (Section 3.11) is a separate, smaller named zone at the southwest corner of this same open area, near the Illinois St/22nd St corner."
+   }
+  },
+  "centroid": {
+   "lon": -122.38624,
+   "lat": 37.758931
+  },
+  "facts": [
+   {
+    "key": "d4d_sections",
+    "value": "3.12 Irish Hill Playground (zone 8) and 3.11 Irish Hill Corner Plaza (zone 7) of Figure 3.4.1; the Irish Hill remnant itself is Section 3.2 'Historic Landscape'",
+    "sources": [
+     "src-d4d"
+    ]
+   },
+   {
+    "key": "area_acres",
+    "value": "approximately 2.0 for the playground (D4D Section 3.4); Irish Hill landform about 1.5 acres (2013 Port fact sheet)",
+    "sources": [
+     "src-d4d",
+     "src-hpc-2013"
+    ]
+   },
+   {
+    "key": "playground_components",
+    "value": "Playground for all ages (minimum 10,000 sq ft, G3.12.1) with at least two universally accessible entries from Illinois and 22nd Streets, picnic grove (minimum 50 ft wide), seating area along the north edge of HDY1/2, viewing terrace west of the Irish Hill remnant; a small dog run may be added; public restrooms to be considered",
+    "sources": [
+     "src-d4d"
+    ]
+   },
+   {
+    "key": "corner_plaza_components",
+    "value": "Entry plaza at least 40 ft wide along 22nd and Illinois and at least 2,000 sq ft (S3.11.1), with interpretive elements on Irish Hill's history, a seating terrace and a passage to the playground; plantings kept low to preserve the view of the remnant's peak",
+    "sources": [
+     "src-d4d"
+    ]
+   },
+   {
+    "key": "irish_hill_history",
+    "value": "The remnant is what survived of the hill leveled for the shipyard: the 2014 NRHP nomination says Building 12 was constructed 'on newly leveled ground where most of Irish Hill once stood' and that Building 2's land 'was formerly occupied by a portion of Irish Hill'",
+    "sources": [
+     "src-nrhp-2014"
+    ]
+   },
+   {
+    "key": "bounding_parcels",
+    "value": "C1, C2, PKS, HDY1/2 and HDY3",
+    "sources": [
+     "src-d4d"
+    ]
+   },
+   {
+    "key": "delivery",
+    "value": "May be built by the Hoedown Yard developer at the City's request (2017 DDA terms); otherwise part of the developer's park obligations",
+    "sources": [
+     "src-port-9b-2017"
+    ]
+   }
+  ],
+  "costs": [
+   {
+    "amount_usd": 736000,
+    "what": "Estimated annual CFD special taxes from Parcel K North and the Hoedown Yard for maintenance of Irish Hill Park, Michigan Street, Crane Cove Park and other areas north of 20th Street (2017 projection)",
+    "date": "2017-09",
+    "approximate": true,
+    "sources": [
+     "src-port-9b-2017"
+    ]
+   }
+  ],
+  "milestones": [
+   {
+    "date": "2013-07",
+    "date_label": "~2013",
+    "status": null,
+    "status_label": null,
+    "text": "Port fact sheet describes Irish Hill, a 1.5-acre landform, as planned open space, with two development sites beside it to be rezoned with the Waterfront Site",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-hpc-2013",
+      "title": "Informational presentation to the Historic Preservation Commission on the proposed rehabilitation of the Pier 70 20th Street Historic Buildings (case 2013.1168E), with the Port's July 2013 'Pier 70: From Plan to Projects' fact sheet",
+      "publisher": "Port of San Francisco / SF Planning",
+      "url": "https://default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf",
+      "accessed": "2026-09-17",
+      "date": "2013-11-26"
+     }
+    ],
+    "source": "Port of San Francisco / SF Planning, 2013-11-26",
+    "origin": "record",
+    "category": "retail",
+    "category_label": "Retail",
+    "record": {
+     "id": "pier70_irish_hill_playground",
+     "slug": "irish-hill-playground-and-irish-hill-corner-plaza",
+     "name": "Irish Hill Playground and Irish Hill Corner Plaza",
+     "permalink": "https://pierandpoint.org/parcels/irish-hill-playground-and-irish-hill-corner-plaza/",
+     "api": "https://pierandpoint.org/api/v1/records/irish-hill-playground-and-irish-hill-corner-plaza.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   },
+   {
+    "date": "2017-09-26",
+    "date_label": "Sep 26, 2017",
+    "status": null,
+    "status_label": null,
+    "text": "DDA terms approved: the City may ask the Hoedown Yard developer to build Irish Hill Park, with costs paid from special taxes on the Hoedown Yard parcels and the Port's share of tax increment from the 28-Acre Site and Parcel K North; the Port's financing plan also commits its tax-increment share to Irish Hill Park if Hoedown Yard CFD funding falls short",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-port-9b-2017",
+      "title": "Port Commission staff report, Item 9B: Pier 70 Mixed-Use Project approvals (Resolutions 17-43 through 17-52), meeting of September 26, 2017",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/sites/default/files/Item%209B%20Pier%2070%20Approval%20092217.pdf",
+      "accessed": "2026-09-17",
+      "date": "2017-09-22",
+      "note": "184-page memo dated Sept 22, 2017 with the DDA major-terms table (Table 3), the Parcel K North sale process, the affordable housing plan and the financing plan."
+     }
+    ],
+    "source": "Port of San Francisco, 2017-09-22",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_irish_hill_playground",
+     "slug": "irish-hill-playground-and-irish-hill-corner-plaza",
+     "name": "Irish Hill Playground and Irish Hill Corner Plaza",
+     "permalink": "https://pierandpoint.org/parcels/irish-hill-playground-and-irish-hill-corner-plaza/",
+     "api": "https://pierandpoint.org/api/v1/records/irish-hill-playground-and-irish-hill-corner-plaza.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    }
+   }
+  ],
+  "changes": [
+   {
+    "date": "2026-09-17",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "Irish Hill Playground and Irish Hill Corner Plaza added, built to fill the space between PKS, HDY3, HDY1/2, C1 and C2 exactly.",
+    "source": "Pier 70 D4D, Figures 3.4.1 and 6.4.2; owner's hand-drawn markup",
+    "sources": [
+     {
+      "title": "Pier 70 D4D, Figures 3.4.1 and 6.4.2; owner's hand-drawn markup"
+     }
+    ],
+    "category": "open_space",
+    "category_label": "Open space",
+    "record": {
+     "id": "pier70_irish_hill_playground",
+     "slug": "irish-hill-playground-and-irish-hill-corner-plaza",
+     "name": "Irish Hill Playground and Irish Hill Corner Plaza",
+     "permalink": "https://pierandpoint.org/parcels/irish-hill-playground-and-irish-hill-corner-plaza/",
+     "api": "https://pierandpoint.org/api/v1/records/irish-hill-playground-and-irish-hill-corner-plaza.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
+  "images": [
+   {
+    "path": "data/manual/images/pier70/wikimedia_irish_hill_remains_2018.jpg",
+    "kind": "before",
+    "taken": "2018-09-14",
+    "credit": "Pi.1415926535, \"Remains of Irish Hill on Potrero Point, September 2018\", via Wikimedia Commons; CC BY-SA 3.0; downscaled to 1600 px",
+    "license": "cc-by-sa",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Remains_of_Irish_Hill_on_Potrero_Point,_September_2018.JPG",
+    "license_evidence": "https://commons.wikimedia.org/wiki/File:Remains_of_Irish_Hill_on_Potrero_Point,_September_2018.JPG",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC BY-SA 3.0, credited 'Own work' by Pi.1415926535. Read 2026-09-19.",
+    "caption": "The surviving serpentine rock outcrop of Irish Hill, before the planned playground; no construction start is dated yet for this record.",
+    "url": "https://pierandpoint.org/assets/img/wikimedia_irish_hill_remains_2018.jpg"
+   },
+   {
+    "path": "data/manual/images/pier70_d4d_fig_3_4_1_open_space_zones.jpg",
+    "kind": "document",
+    "taken": "2022-04-26",
+    "credit": "Pier 70 Design for Development (Port of San Francisco), Figure 3.4.1 'Overview of Public Spaces', p.52",
+    "license": "public-record",
+    "source_url": "https://www.sfport.com/media/8123/download?inline=",
+    "license_evidence": "https://www.sfport.com/media/8123/download?inline=",
+    "license_note": "Figure or photograph from an adopted Port/Planning regulatory document (a Design for Development, SUD Land Use Plan or Design Controls) or a Port Commission agenda exhibit, published by the agency itself at its own domain as the public record of the adopted plan or noticed meeting item. Read 2026-09-18.",
+    "figure": "positioning",
+    "appeal": 2,
+    "appeal_note": "An overview key plan of the whole open-space network with small numbered call-outs and a column of body text -- the diagram itself is too small and busy to carry a card.",
+    "url": "https://pierandpoint.org/assets/img/pier70_d4d_fig_3_4_1_open_space_zones.jpg"
+   },
+   {
+    "path": "data/manual/images/pier70_d4d_fig_3_12_1_irish_hill_playground.jpg",
+    "kind": "document",
+    "taken": "2022-04-26",
+    "credit": "Pier 70 Design for Development (Port of San Francisco), Figure 3.12.1 'Illustrative Irish Hill Playground Plan', p.76 (illustrative plan by James Corner Field Operations / SITELAB urban studio, Forest City project team)",
+    "license": "public-record",
+    "source_url": "https://www.sfport.com/media/8123/download?inline=",
+    "license_evidence": "https://www.sfport.com/media/8123/download?inline=",
+    "license_note": "Figure or photograph from an adopted Port/Planning regulatory document (a Design for Development, SUD Land Use Plan or Design Controls) or a Port Commission agenda exhibit, published by the agency itself at its own domain as the public record of the adopted plan or noticed meeting item. Read 2026-09-18.",
+    "figure": "illustrative",
+    "appeal": 3,
+    "appeal_note": "A colorful illustrative playground plan with labelled zones (playground, picnic grove, seating), though the crop again carries the full page's body text.",
+    "url": "https://pierandpoint.org/assets/img/pier70_d4d_fig_3_12_1_irish_hill_playground.jpg"
+   }
+  ],
+  "open_questions": [
+   "No design approval, construction contract or completion for the playground or corner plaza was found; the site depends on the City's unexercised option on the PG&E Hoedown Yard and on Parcel K South, neither of which has moved.",
+   "How much of Irish Hill was quarried, when, and by whom is not stated in the retrieved primary sources beyond the NRHP nomination's site descriptions; the geometry file's 'quarried away in the early 20th century' summary is unsourced here.",
+   "This record combines two D4D zones (3.11 and 3.12) into one geometry, per the geometry file's caveat."
+  ],
+  "sources": [
+   {
+    "id": "src-d4d",
+    "title": "Pier 70 Special Use District Design for Development (D4D), updated April 26, 2022",
+    "publisher": "Port of San Francisco / SF Planning (adopted planning document; project team SITELAB urban studio)",
+    "url": "https://www.sfport.com/media/8123/download?inline=",
+    "accessed": "2026-09-17",
+    "date": "2022-04-26",
+    "note": "292-page PDF. Figure 6.4.2 (p.155) gives per-parcel height maxima; Sections 3.4-3.13 the open-space zones; S6.6.1 the historic buildings to be rehabilitated."
+   },
+   {
+    "id": "src-hpc-2013",
+    "title": "Informational presentation to the Historic Preservation Commission on the proposed rehabilitation of the Pier 70 20th Street Historic Buildings (case 2013.1168E), with the Port's July 2013 'Pier 70: From Plan to Projects' fact sheet",
+    "publisher": "Port of San Francisco / SF Planning",
+    "url": "https://default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf",
+    "accessed": "2026-09-17",
+    "date": "2013-11-26"
+   },
+   {
+    "id": "src-nrhp-2014",
+    "title": "Union Iron Works Historic District, National Register of Historic Places registration form (NRIS 14000150, listed April 17, 2014)",
+    "publisher": "National Park Service / California Office of Historic Preservation (nomination prepared for the Port of San Francisco by Carey & Co.)",
+    "url": "https://npgallery.nps.gov/GetAsset/99f11ae6-3834-4f99-840a-0e8a097398e6",
+    "accessed": "2026-09-17",
+    "date": "2014-04-17"
+   },
+   {
+    "id": "src-port-9b-2017",
+    "title": "Port Commission staff report, Item 9B: Pier 70 Mixed-Use Project approvals (Resolutions 17-43 through 17-52), meeting of September 26, 2017",
+    "publisher": "Port of San Francisco",
+    "url": "https://www.sfport.com/sites/default/files/Item%209B%20Pier%2070%20Approval%20092217.pdf",
+    "accessed": "2026-09-17",
+    "date": "2017-09-22",
+    "note": "184-page memo dated Sept 22, 2017 with the DDA major-terms table (Table 3), the Parcel K North sale process, the affordable housing plan and the financing plan."
+   }
+  ],
+  "notes": "Newly added 2026-09-17 as part of closing a gap the user pointed out: not all of Figure 3.4.1's 8 named open-space zones had been traced onto the map. Geometry redone multiple times the same day -- see digitization_method for the full history, including a full replacement after a user flagged this shape as looking misplaced.",
+  "has_record_file": true,
+  "last_verified": "2026-09-17",
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.385668351663,
+      37.75898724313272
+     ],
+     [
+      -122.3856296209309,
+      37.75826993313085
+     ],
+     [
+      -122.38574850144536,
+      37.758262792967635
+     ],
+     [
+      -122.38576984358319,
+      37.75888068368881
+     ],
+     [
+      -122.38650020961933,
+      37.758845659047154
+     ],
+     [
+      -122.3870927091811,
+      37.758181973612544
+     ],
+     [
+      -122.38721684202655,
+      37.75830740136974
+     ],
+     [
+      -122.38664254280157,
+      37.7589506997877
+     ],
+     [
+      -122.38656279383227,
+      37.75905489503835
+     ],
+     [
+      -122.38656819159526,
+      37.75905604693485
+     ],
+     [
+      -122.38656904466762,
+      37.75906570327805
+     ],
+     [
+      -122.386554,
+      37.75906638453553
+     ],
+     [
+      -122.386576,
+      37.75929800422032
+     ],
+     [
+      -122.38658951291238,
+      37.75929739334752
+     ],
+     [
+      -122.38659160730182,
+      37.75932110076565
+     ],
+     [
+      -122.38636979172678,
+      37.75930983941325
+     ],
+     [
+      -122.38636156404584,
+      37.759223197841045
+     ],
+     [
+      -122.38636014874906,
+      37.759018903726115
+     ],
+     [
+      -122.38634173552909,
+      37.75901439369802
+     ],
+     [
+      -122.38495070360933,
+      37.75908110051639
+     ],
+     [
+      -122.38494354153194,
+      37.75901018314145
+     ],
+     [
+      -122.385668351663,
+      37.75898724313272
+     ]
+    ]
+   ]
+  }
+ }
+}

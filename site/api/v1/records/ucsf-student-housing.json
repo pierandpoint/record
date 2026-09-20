@@ -1,0 +1,243 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-20",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "ucsf_student_housing",
+  "slug": "ucsf-student-housing",
+  "name": "UCSF Student Housing",
+  "permalink": "https://pierandpoint.org/parcels/ucsf-student-housing/",
+  "api": "https://pierandpoint.org/api/v1/records/ucsf-student-housing.json",
+  "names": [
+   "UCSF Student Housing"
+  ],
+  "site": {
+   "slug": "mission-bay",
+   "name": "Mission Bay",
+   "short": "Mission Bay",
+   "url": "https://pierandpoint.org/sites/mission-bay/"
+  },
+  "status": "complete",
+  "status_label": "Complete",
+  "use": "residential",
+  "address": null,
+  "summary": "A student/faculty housing building, very likely the South Building of UCSF's four-building Mission Bay housing complex (with Hearst Tower and the North and West buildings), built together and opened together around 2005.",
+  "summary_sources": [
+   "src-langan-housing",
+   "src-ucsf-housing"
+  ],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against data/raw/parcels.geojson and DataSF's Assessor tax roll -- e.g. blklot 8711507 at 675 Nelson Rising Lane alone is ~13 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
+    "digitized_from": "OpenStreetMap (way 255649621)"
+   }
+  },
+  "centroid": {
+   "lon": -122.390406,
+   "lat": 37.769124
+  },
+  "facts": [
+   {
+    "key": "address",
+    "value": "Very likely 550 Gene Friend Way (the South Building) per UCSF's housing description, though OpenStreetMap's own generic 'UCSF Student Housing' name tag for this feature doesn't confirm that specifically -- not asserted as certain",
+    "sources": [
+     "src-ucsf-housing",
+     "src-osm-student-housing"
+    ]
+   },
+   {
+    "key": "architect",
+    "value": "Skidmore, Owings & Merrill (SOM) with Fisher Friedman Associates",
+    "sources": [
+     "src-arcca-dna"
+    ]
+   },
+   {
+    "key": "use",
+    "value": "UCSF student and faculty housing",
+    "sources": [
+     "src-ucsf-housing"
+    ]
+   },
+   {
+    "key": "complex",
+    "value": "One of four connected buildings (Hearst Tower, North Building, West Building, South Building) totaling 298,800 sq ft for 750+ residents around a shared at-grade courtyard",
+    "sources": [
+     "src-ucsf-housing"
+    ]
+   }
+  ],
+  "costs": [],
+  "milestones": [
+   {
+    "date": "2005",
+    "date_label": "~2005",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "UCSF student housing (likely the South Building) opens as part of the Mission Bay housing complex",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-langan-housing",
+      "title": "UCSF Mission Bay - Student Housing",
+      "publisher": "Langan (engineering firm, own material)",
+      "url": "https://www.langan.com/portfolio/ucsf-mission-bay-student-housing",
+      "accessed": "2026-09-18"
+     }
+    ],
+    "source": "Langan (engineering firm, own material)",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "ucsf_student_housing",
+     "slug": "ucsf-student-housing",
+     "name": "UCSF Student Housing",
+     "permalink": "https://pierandpoint.org/parcels/ucsf-student-housing/",
+     "api": "https://pierandpoint.org/api/v1/records/ucsf-student-housing.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   },
+   {
+    "date": "2005-06",
+    "date_label": "~2005",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "UCSF student housing (likely the South Building) opens as part of the Mission Bay housing complex",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "title": "langan.com; campuslifeserviceshome.ucsf.edu"
+     }
+    ],
+    "source": "langan.com; campuslifeserviceshome.ucsf.edu",
+    "origin": "csv",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "ucsf_student_housing",
+     "slug": "ucsf-student-housing",
+     "name": "UCSF Student Housing",
+     "permalink": "https://pierandpoint.org/parcels/ucsf-student-housing/",
+     "api": "https://pierandpoint.org/api/v1/records/ucsf-student-housing.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
+  "changes": [],
+  "images": [],
+  "open_questions": [
+   "Which specific one of the complex's four buildings this record's geometry represents is not fully confirmed -- OSM tags it only generically as 'UCSF Student Housing', and 'South Building at 550 Gene Friend Way' is an inference from UCSF's own housing description, not a direct address match.",
+   "Could not confirm whether all four housing buildings opened in exactly the same month, or whether some phased in slightly later than others.",
+   "No openly licensed image was found; none is hosted here.",
+   "Images: no plan drawing, elevation or openly-licensed photograph was found for this building specifically. Searched: UCSF Real Estate's Mission Bay campus-site and LRDP pages (realestate.ucsf.edu, blocked to automated fetches with a 403); the UCSF 2014 LRDP EIR's CEQAnet filing (SCH 2013092047, whose pre-2016 attachments aren't hosted on CEQAnet itself); a May 2000 Regents Committee on Grounds and Buildings design-approval item for an early Mission Bay building (text-only, no figures); the 2008 \"UCSF Mission Bay Planning Principles\" appendix (a citywide-scale community map, no individual buildings labeled); and a UCSF wayfinding campus map (not an adopted plan, EIR or permit filing, so not eligible as public-record even though found). Not pursued further in this pass; the record's own project sources above remain the citation for the building's history. The same September 2008 Regents presentation (used for Byers Hall, Genentech Hall, Rock Hall and Rutter Center) includes one more photo on its \"Architectural Context\" slide labeled only \"Housing,\" showing what looks like more than one building together; it wasn't used here because it can't be confidently attributed to this specific one."
+  ],
+  "sources": [
+   {
+    "id": "src-langan-housing",
+    "title": "UCSF Mission Bay - Student Housing",
+    "publisher": "Langan (engineering firm, own material)",
+    "url": "https://www.langan.com/portfolio/ucsf-mission-bay-student-housing",
+    "accessed": "2026-09-18"
+   },
+   {
+    "id": "src-ucsf-housing",
+    "title": "Mission Bay Housing",
+    "publisher": "UCSF Campus Life Services (own material)",
+    "url": "https://campuslifeserviceshome.ucsf.edu/housing/mission-bay-housing",
+    "accessed": "2026-09-18"
+   },
+   {
+    "id": "src-arcca-dna",
+    "title": "UC San Francisco: The DNA of a Campus",
+    "publisher": "arcCA Digest (architecture press), naming SOM with Fisher Friedman as the student apartment complex architect",
+    "url": "https://arccadigest.org/uc-san-francisco-dna-campus/",
+    "accessed": "2026-09-18"
+   },
+   {
+    "id": "src-osm-student-housing",
+    "title": "UCSF Student Housing (OpenStreetMap way 255649621)",
+    "publisher": "OpenStreetMap",
+    "url": "https://www.openstreetmap.org/way/255649621",
+    "accessed": "2026-09-18"
+   }
+  ],
+  "notes": "Part of a single UCSF Mission Bay student/faculty housing complex (Hearst Tower plus North, West and South/Student Housing buildings) built together in Mission Bay's first development phase and opened together around 2005 -- four connected buildings totaling 298,800 sq ft for 750+ residents, surrounding a shared at-grade courtyard, per UCSF's own housing-office description. Architect Skidmore, Owings & Merrill (SOM) with Fisher Friedman Associates. This building is very likely the South Building (550 Gene Friend Way per UCSF's housing description), though OSM's own generic 'UCSF Student Housing' name tag doesn't confirm that specifically -- not asserted as certain.",
+  "has_record_file": true,
+  "last_verified": "2026-09-18",
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.3909229,
+      37.7690898
+     ],
+     [
+      -122.3906018,
+      37.7691081
+     ],
+     [
+      -122.3906068,
+      37.7691626
+     ],
+     [
+      -122.3900435,
+      37.7691947
+     ],
+     [
+      -122.3900532,
+      37.7693015
+     ],
+     [
+      -122.3898599,
+      37.7693125
+     ],
+     [
+      -122.389843,
+      37.76913
+     ],
+     [
+      -122.3898371,
+      37.7690623
+     ],
+     [
+      -122.3903751,
+      37.7690317
+     ],
+     [
+      -122.3908947,
+      37.7690021
+     ],
+     [
+      -122.3909148,
+      37.7690009
+     ],
+     [
+      -122.3909229,
+      37.7690898
+     ]
+    ]
+   ]
+  }
+ }
+}

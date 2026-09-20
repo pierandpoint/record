@@ -1,0 +1,125 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-20",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "mission_bay_p23_chase_landscaped_area",
+  "slug": "p23",
+  "name": "P23",
+  "permalink": "https://pierandpoint.org/parcels/p23/",
+  "api": "https://pierandpoint.org/api/v1/records/p23.json",
+  "names": [
+   "P23"
+  ],
+  "site": {
+   "slug": "mission-bay",
+   "name": "Mission Bay",
+   "short": "Mission Bay",
+   "url": "https://pierandpoint.org/sites/mission-bay/"
+  },
+  "status": "complete",
+  "status_label": "Complete",
+  "use": "park",
+  "address": null,
+  "summary": null,
+  "summary_sources": [],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "APPROXIMATE -- real landscaped/paved open land per Esri satellite imagery and the street/already-tracked-polygon-bounded gap computation, divided at owner-specified cross-sectional seams rather than a surveyed parcel boundary. Name and operator not confirmed by any source found in this pass. The remaining ~5,785 sqm of the original fragment (the building-hugging plaza strip, the panhandle, and P24's own dropped horns) is deliberately left untracked as its own P-number pending further review.",
+    "digitized_from": "Real-gap-fragment technique: bbox.difference(street buffer).difference(already-tracked polygons) around the UCSF Wayne and Gladys Valley Center for Vision / 499 Illinois St / Chase Center area (fragment 2, 19,181.78 sqm raw). The owner reviewed a 3-way width-scan split of that fragment (at its two real cross-sectional waists, lat 37.7658 and 37.76665) and then gave a precise construction: P23 is the north piece (piece2, the lawn wedge by the Chase Center roundabout) with its thin building-hugging 'panhandle' dropped, plus the part of the middle piece (piece1, the plaza) that lies east of the seam where piece2's lawn narrows into that panhandle, extended south."
+   }
+  },
+  "centroid": {
+   "lon": -122.386652,
+   "lat": 37.766389
+  },
+  "facts": [],
+  "costs": [],
+  "milestones": [],
+  "changes": [],
+  "images": [],
+  "open_questions": [],
+  "sources": [],
+  "notes": "OCII plan open-space parcel P23. Landscaped lawn and plaza between the Chase Center roundabout and the pavilion, east of the UCSF Wayne and Gladys Valley Center for Vision.",
+  "has_record_file": false,
+  "last_verified": null,
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.386302897,
+      37.766424172
+     ],
+     [
+      -122.38661712191846,
+      37.7658
+     ],
+     [
+      -122.386948,
+      37.7658
+     ],
+     [
+      -122.386948,
+      37.765812268941175
+     ],
+     [
+      -122.3868934,
+      37.7659183
+     ],
+     [
+      -122.3868934,
+      37.7659184
+     ],
+     [
+      -122.386948,
+      37.76592830130776
+     ],
+     [
+      -122.386948,
+      37.766634336435324
+     ],
+     [
+      -122.38688650959752,
+      37.76665
+     ],
+     [
+      -122.3868606,
+      37.7666566
+     ],
+     [
+      -122.3869482,
+      37.7669116
+     ],
+     [
+      -122.38638971859933,
+      37.767
+     ],
+     [
+      -122.38619057387052,
+      37.767
+     ],
+     [
+      -122.386165445,
+      37.766699042
+     ],
+     [
+      -122.38618996903313,
+      37.76665
+     ],
+     [
+      -122.386302897,
+      37.766424172
+     ]
+    ]
+   ]
+  }
+ }
+}

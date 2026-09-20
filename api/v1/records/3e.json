@@ -1,0 +1,81 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-20",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "mission_bay_3e_venue_east",
+  "slug": "3e",
+  "name": "3E",
+  "permalink": "https://pierandpoint.org/parcels/3e/",
+  "api": "https://pierandpoint.org/api/v1/records/3e.json",
+  "names": [
+   "3E"
+  ],
+  "site": {
+   "slug": "mission-bay",
+   "name": "Mission Bay",
+   "short": "Mission Bay",
+   "url": "https://pierandpoint.org/sites/mission-bay/"
+  },
+  "status": "planned",
+  "status_label": "Planned",
+  "use": "residential",
+  "address": null,
+  "summary": null,
+  "summary_sources": [],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "APPROXIMATE -- an idealized rectangle (owner-directed construction: shares Venue's real east edge and orientation, widened to the real 3rd St curb line) not a hand trace or surveyed footprint. Esri satellite imagery shows what appears to be a real structure across much of this area (a roof pattern resembling built construction, not open land or a parking lot), but its name, address, and completion status are NOT confirmed by any source checked in this pass -- flagged here rather than guessed. status/use are carried over from the OCII plan designation (a residential block on the 3W/3E line, matching Venue), not independently confirmed for this specific structure.",
+    "digitized_from": "Owner-directed construction, not a hand trace: Venue's own minimum-rotated-rectangle east edge (72.07m, the edge facing 3rd St) extended east as a rectangle of the same length and orientation, widened until it reaches the real 3rd St curb line (src/street_geometry.py buffer, half-width 6.8m)."
+   }
+  },
+  "centroid": {
+   "lon": -122.390311,
+   "lat": 37.773356
+  },
+  "facts": [],
+  "costs": [],
+  "milestones": [],
+  "changes": [],
+  "images": [],
+  "open_questions": [],
+  "sources": [],
+  "notes": "OCII plan block 3E. East of Venue (1155 4th St / 3W), toward 3rd St. Previously assumed absorbed into Venue's own footprint; the owner's review found it real and separate.",
+  "has_record_file": false,
+  "last_verified": null,
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.39062182492839,
+      37.773603161395194
+     ],
+     [
+      -122.39058280000002,
+      37.7729565
+     ],
+     [
+      -122.38984493436479,
+      37.77298432153685
+     ],
+     [
+      -122.38988395929316,
+      37.77363098293205
+     ],
+     [
+      -122.39062182492839,
+      37.773603161395194
+     ]
+    ]
+   ]
+  }
+ }
+}

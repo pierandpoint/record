@@ -1,0 +1,970 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-20",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "potrero_power_station_park",
+  "slug": "power-station-park",
+  "name": "Power Station Park",
+  "permalink": "https://pierandpoint.org/parcels/power-station-park/",
+  "api": "https://pierandpoint.org/api/v1/records/power-station-park.json",
+  "names": [
+   "Power Station Park",
+   "Power Station Park East",
+   "Power Station Park West"
+  ],
+  "site": {
+   "slug": "potrero",
+   "name": "Potrero Power Station",
+   "short": "Potrero Station",
+   "url": "https://pierandpoint.org/sites/potrero/"
+  },
+  "status": "planned",
+  "status_label": "Planned",
+  "use": "park",
+  "address": null,
+  "summary": "Planned ~1.2-acre central park in two blocks either side of Maryland Street: East between Blocks 8 and 12 (multi-purpose lawn and plaza opening to Unit 3 and the Stack) and West between Blocks 7 and 11 (play plaza). Schematic design by Plural Studio was approved by the Planning Director on June 23, 2022 (Case 2017-011878PHA-03). A Phase 1 open space delivered with Blocks 8 (East) and 11 (West); as of the March 2025 annual report neither block nor the park was under construction.",
+  "summary_sources": [
+   "src-d4d",
+   "src-dr-psp-2022",
+   "src-ar-2024",
+   "src-ar-2022"
+  ],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "APPROXIMATE -- Figure 6.2.3 labels this open space directly but shows it as an irregular, non-rectangular shape woven between Blocks 7, 8, 9, 11, and 12; this is a simplified two-part rectangular approximation (split 2026-09-16 by the real Maryland Street corridor that separates the Block 7/11 side from the Block 8/12 side -- see digitization_method), not a precise trace of the diagram's own organic outline. Each part shares an exact edge with its own two blocks by construction, so accuracy tracks whatever those block files carry.",
+    "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
+    "why_no_real_parcel": "Open space with no subdivided Assessor parcel of its own within the largely unaddressed former power-station site.",
+    "regulatory_context": "The site's central public open space, per the D4D's own Figure 6.2.3 label -- sits between the Humboldt St row of blocks (7/8/9) and the 23rd St row (11/12). Not yet built (the blocks around it are still 'planned')."
+   }
+  },
+  "centroid": {
+   "lon": -122.383486,
+   "lat": 37.756223
+  },
+  "facts": [
+   {
+    "key": "developer",
+    "value": "California Barrel Company LLC (project sponsor, Enrique Landa); now Fifth Space (formerly Associate Capital)",
+    "sources": [
+     "src-dr-psp-2022",
+     "src-sfyimby-2025-10-24"
+    ]
+   },
+   {
+    "key": "landscape_architect",
+    "value": "Plural Studio (design review plan sheets dated 7.29.21 carry the 'plural' logo, 2724 17th Street, San Francisco); CMG Landscape Architecture prepared the D4D open-space concepts and names Plural Studio as 'Affiliated Landscape Architect'",
+    "sources": [
+     "src-dr-psp-2022",
+     "src-d4d",
+     "src-cmg"
+    ]
+   },
+   {
+    "key": "use",
+    "value": "Public park: East block multi-purpose lawn (one U-6 youth soccer field) and paved plaza opening to Unit 3 and the Stack; West block play plaza with sculptural play elements, seating, planting, stormwater gardens (D4D 4.28-4.29); design review plans: lawn, meadow, play area, urban plazas, dining terrace, interpretive hub at the historic Boiler Hall stack location",
+    "sources": [
+     "src-d4d",
+     "src-dr-psp-2022"
+    ]
+   },
+   {
+    "key": "lot_area",
+    "value": "about 1.2 acres, two blocks (D4D 4.1); ~1.2-acre (SF Planning); 1.22 acres (DEIR); approximately 1.26 acres (Phase 1 application); IMP: 1.92 acres including Louisiana Paseo; pre-application slides: '2 acres' for park plus paseo",
+    "sources": [
+     "src-d4d",
+     "src-sfplanning-pps",
+     "src-deir",
+     "src-phase1-2020",
+     "src-imp",
+     "src-pres-020721"
+    ]
+   },
+   {
+    "key": "case_number",
+    "value": "2017-011878PHA-03 (Design Review Application, Power Station Park and Louisiana Paseo)",
+    "sources": [
+     "src-dr-psp-2022"
+    ]
+   },
+   {
+    "key": "block_lot",
+    "value": "4175/017, 4232/006 (per the design review staff memo)",
+    "sources": [
+     "src-dr-psp-2022"
+    ]
+   },
+   {
+    "key": "phase",
+    "value": "Phase 1 (both blocks); East delivered with Block 8 (originally Block 12 in the 2021 report), West delivered with Block 11",
+    "sources": [
+     "src-ar-2021",
+     "src-ar-2022",
+     "src-ar-2024",
+     "src-phase1-2020"
+    ]
+   },
+   {
+    "key": "design_details_2021",
+    "value": "Design review plans of 7.29.21: 51 six-foot benches (up from 25); West playground 5,766 sq ft (up from 2,851); East lawn 6,577 sq ft (up from 4,443); paving based on the Station A brick module; repurposed Boiler Hall doors as large tables",
+    "sources": [
+     "src-dr-psp-2022"
+    ]
+   },
+   {
+    "key": "ownership_maintenance",
+    "value": "Owned and maintained by the Project Master Association (IMP 9.2); design review required before any construction permit (DA Section 3.5)",
+    "sources": [
+     "src-imp",
+     "src-da-2020"
+    ]
+   },
+   {
+    "key": "d4d_precedent",
+    "value": "'intended to be a neighborhood gathering-place similar to South Park in SoMa'",
+    "sources": [
+     "src-d4d"
+    ]
+   }
+  ],
+  "costs": [],
+  "milestones": [
+   {
+    "date": "2018-10",
+    "date_label": "Oct 2018",
+    "status": null,
+    "status_label": null,
+    "text": "Draft EIR: 'proposed 1.22-acre central green space' extending east-west from Louisiana Paseo to the waterfront; eastern lawn to fit two U-6 soccer fields",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-deir",
+      "title": "Potrero Power Station Mixed-Use Development Project Draft EIR, Volume 1 (Case No. 2017-011878ENV)",
+      "publisher": "SF Planning",
+      "date": "2018-10",
+      "url": "https://sfmea.sfplanning.org/2017-011878ENV_DEIR_Volume_1.pdf",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "SF Planning, 2018-10",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_power_station_park",
+     "slug": "power-station-park",
+     "name": "Power Station Park",
+     "permalink": "https://pierandpoint.org/parcels/power-station-park/",
+     "api": "https://pierandpoint.org/api/v1/records/power-station-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2020-01-30",
+    "date_label": "Jan 30, 2020",
+    "status": null,
+    "status_label": null,
+    "text": "Planning Commission votes 5-0 to certify the EIR and recommend approval of the project (D4D dated February 26, 2020)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfplanning-pps",
+      "title": "Potrero Power Station project page (program elements, approval timeline, implementation milestones)",
+      "publisher": "SF Planning",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     },
+     {
+      "id": "src-d4d",
+      "title": "Potrero Power Station Design for Development (final, dated February 26, 2020)",
+      "publisher": "SF Planning / California Barrel Company",
+      "date": "2020-02-26",
+      "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "SF Planning; SF Planning / California Barrel Company, 2020-02-26",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_power_station_park",
+     "slug": "power-station-park",
+     "name": "Power Station Park",
+     "permalink": "https://pierandpoint.org/parcels/power-station-park/",
+     "api": "https://pierandpoint.org/api/v1/records/power-station-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2020-04-21",
+    "date_label": "Apr 21, 2020",
+    "status": null,
+    "status_label": null,
+    "text": "Board of Supervisors approves the project and DA (Ordinance 62-20); DA effective May 25, 2020",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfplanning-pps",
+      "title": "Potrero Power Station project page (program elements, approval timeline, implementation milestones)",
+      "publisher": "SF Planning",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     },
+     {
+      "id": "src-port-memo-10a",
+      "title": "Port Commission memo, Calendar Item 10A (Nov 14, 2025): amendment to Lease L-16662 to allow interim open space improvements (Prequel Park); with Resolution No. 25-70 adopted Nov 18, 2025; Exhibits 1-3",
+      "publisher": "Port of San Francisco",
+      "date": "2025-11-14",
+      "url": "https://www.sfport.com/sites/default/files/2025-11/111825_10a_potrero_power_station_lease_amendment_0.pdf",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "SF Planning; Port of San Francisco, 2025-11-14",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_power_station_park",
+     "slug": "power-station-park",
+     "name": "Power Station Park",
+     "permalink": "https://pierandpoint.org/parcels/power-station-park/",
+     "api": "https://pierandpoint.org/api/v1/records/power-station-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2020-10-07",
+    "date_label": "Oct 7, 2020",
+    "status": null,
+    "status_label": null,
+    "text": "Phase 1 application and Phasing Plan amendment approved: Phase 1 includes 'both blocks of the Power Station Park, totaling approximately 1.26 acres'; Power Station Park West moved from DA Phase 2 to Phase 1",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-phase1-2020",
+      "title": "Potrero Power Station Phase 1 and Phasing Plan Amendment Applications (October 2020), approval document",
+      "publisher": "California Barrel Company / SF Planning (M-Files: 'Potrero Power Station Phase 1 and Phasing Plan Amendment Applications')",
+      "date": "2020-10",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     },
+     {
+      "id": "src-ar-2021",
+      "title": "2021 Annual Report (March 2022), DA annual compliance review",
+      "publisher": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files)",
+      "date": "2022-03",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "California Barrel Company / SF Planning (M-Files: 'Potrero Power Station Phase 1 and Phasing Plan Amendment Applications'), 2020-10; California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files), 2022-03",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_power_station_park",
+     "slug": "power-station-park",
+     "name": "Power Station Park",
+     "permalink": "https://pierandpoint.org/parcels/power-station-park/",
+     "api": "https://pierandpoint.org/api/v1/records/power-station-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2021-02-07",
+    "date_label": "Feb 7, 2021",
+    "status": null,
+    "status_label": null,
+    "text": "Required first public (pre-application) meeting for Power Station Park and Louisiana Paseo (online, Sunday Feb 7, 10am)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dr-psp-2022",
+      "title": "Approval of the Design Review Application of Power Station Park and Louisiana Paseo (June 23, 2022), Case No. 2017-011878PHA-03, with staff memo of June 21, 2022 and Design Review Plans dated July 29, 2021",
+      "publisher": "SF Planning (M-Files: 'Power Station Park and Louisiana Paseo (June 23, 2022)')",
+      "date": "2022-06-23",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     },
+     {
+      "id": "src-sfplanning-pps",
+      "title": "Potrero Power Station project page (program elements, approval timeline, implementation milestones)",
+      "publisher": "SF Planning",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     },
+     {
+      "id": "src-pres-020721",
+      "title": "Power Station Park & Louisiana Paseo pre-application community meeting slides, February 7, 2021",
+      "publisher": "California Barrel Company (developer's own material, posted by SF Planning)",
+      "date": "2021-02-07",
+      "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropowerstn_presentation-020721.pdf",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "SF Planning (M-Files: 'Power Station Park and Louisiana Paseo (June 23, 2022)'), 2022-06-23; SF Planning; California Barrel Company (developer's own material, posted by SF Planning), 2021-02-07",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_power_station_park",
+     "slug": "power-station-park",
+     "name": "Power Station Park",
+     "permalink": "https://pierandpoint.org/parcels/power-station-park/",
+     "api": "https://pierandpoint.org/api/v1/records/power-station-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2021-03-23",
+    "date_label": "Mar 23, 2021",
+    "status": null,
+    "status_label": null,
+    "text": "Design Review Application for Power Station Park and Louisiana Paseo first submitted to Planning (annual reports print the submittal date as '3.23.20')",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dr-psp-2022",
+      "title": "Approval of the Design Review Application of Power Station Park and Louisiana Paseo (June 23, 2022), Case No. 2017-011878PHA-03, with staff memo of June 21, 2022 and Design Review Plans dated July 29, 2021",
+      "publisher": "SF Planning (M-Files: 'Power Station Park and Louisiana Paseo (June 23, 2022)')",
+      "date": "2022-06-23",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     },
+     {
+      "id": "src-ar-2021",
+      "title": "2021 Annual Report (March 2022), DA annual compliance review",
+      "publisher": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files)",
+      "date": "2022-03",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "SF Planning (M-Files: 'Power Station Park and Louisiana Paseo (June 23, 2022)'), 2022-06-23; California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files), 2022-03",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_power_station_park",
+     "slug": "power-station-park",
+     "name": "Power Station Park",
+     "permalink": "https://pierandpoint.org/parcels/power-station-park/",
+     "api": "https://pierandpoint.org/api/v1/records/power-station-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2021-07-29",
+    "date_label": "Jul 29, 2021",
+    "status": null,
+    "status_label": null,
+    "text": "Updated design review plans submitted in response to initial review comments (plan set dated 7.29.21)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dr-psp-2022",
+      "title": "Approval of the Design Review Application of Power Station Park and Louisiana Paseo (June 23, 2022), Case No. 2017-011878PHA-03, with staff memo of June 21, 2022 and Design Review Plans dated July 29, 2021",
+      "publisher": "SF Planning (M-Files: 'Power Station Park and Louisiana Paseo (June 23, 2022)')",
+      "date": "2022-06-23",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "SF Planning (M-Files: 'Power Station Park and Louisiana Paseo (June 23, 2022)'), 2022-06-23",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_power_station_park",
+     "slug": "power-station-park",
+     "name": "Power Station Park",
+     "permalink": "https://pierandpoint.org/parcels/power-station-park/",
+     "api": "https://pierandpoint.org/api/v1/records/power-station-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2021-08-03",
+    "date_label": "Aug 3, 2021",
+    "status": null,
+    "status_label": null,
+    "text": "Design review approved by Planning Department staff ('Design review approved, 8.3.21. Memo forthcoming')",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ar-2021",
+      "title": "2021 Annual Report (March 2022), DA annual compliance review",
+      "publisher": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files)",
+      "date": "2022-03",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     },
+     {
+      "id": "src-ar-2022",
+      "title": "2022 Annual Report (April 2023), DA annual compliance review",
+      "publisher": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files)",
+      "date": "2023-04",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files), 2022-03; California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files), 2023-04",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_power_station_park",
+     "slug": "power-station-park",
+     "name": "Power Station Park",
+     "permalink": "https://pierandpoint.org/parcels/power-station-park/",
+     "api": "https://pierandpoint.org/api/v1/records/power-station-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2021-09-15",
+    "date_label": "Sep 15, 2021",
+    "status": null,
+    "status_label": null,
+    "text": "Required second public meeting on the modified design; no further modifications required",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dr-psp-2022",
+      "title": "Approval of the Design Review Application of Power Station Park and Louisiana Paseo (June 23, 2022), Case No. 2017-011878PHA-03, with staff memo of June 21, 2022 and Design Review Plans dated July 29, 2021",
+      "publisher": "SF Planning (M-Files: 'Power Station Park and Louisiana Paseo (June 23, 2022)')",
+      "date": "2022-06-23",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "SF Planning (M-Files: 'Power Station Park and Louisiana Paseo (June 23, 2022)'), 2022-06-23",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_power_station_park",
+     "slug": "power-station-park",
+     "name": "Power Station Park",
+     "permalink": "https://pierandpoint.org/parcels/power-station-park/",
+     "api": "https://pierandpoint.org/api/v1/records/power-station-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2022-05-19",
+    "date_label": "May 19, 2022",
+    "status": null,
+    "status_label": null,
+    "text": "Site Permit Application for Block 8, including Power Station Park East, submitted",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ar-2022",
+      "title": "2022 Annual Report (April 2023), DA annual compliance review",
+      "publisher": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files)",
+      "date": "2023-04",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     },
+     {
+      "id": "src-ar-2024",
+      "title": "2024 Annual Report (March 2025), DA annual compliance review",
+      "publisher": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files)",
+      "date": "2025-03",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files), 2023-04; California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files), 2025-03",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_power_station_park",
+     "slug": "power-station-park",
+     "name": "Power Station Park",
+     "permalink": "https://pierandpoint.org/parcels/power-station-park/",
+     "api": "https://pierandpoint.org/api/v1/records/power-station-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2022-06-23",
+    "date_label": "Jun 23, 2022",
+    "status": null,
+    "status_label": null,
+    "text": "Planning Director Richard Hillis approves the Design Review Application (Case No. 2017-011878PHA-03; staff memo June 21, 2022); no D4D modifications requested",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dr-psp-2022",
+      "title": "Approval of the Design Review Application of Power Station Park and Louisiana Paseo (June 23, 2022), Case No. 2017-011878PHA-03, with staff memo of June 21, 2022 and Design Review Plans dated July 29, 2021",
+      "publisher": "SF Planning (M-Files: 'Power Station Park and Louisiana Paseo (June 23, 2022)')",
+      "date": "2022-06-23",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "SF Planning (M-Files: 'Power Station Park and Louisiana Paseo (June 23, 2022)'), 2022-06-23",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_power_station_park",
+     "slug": "power-station-park",
+     "name": "Power Station Park",
+     "permalink": "https://pierandpoint.org/parcels/power-station-park/",
+     "api": "https://pierandpoint.org/api/v1/records/power-station-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2022-07-28",
+    "date_label": "Jul 28, 2022",
+    "status": null,
+    "status_label": null,
+    "text": "Planning Commission Resolution 21156 notes the Department 'has approved horizontal development applications for Power Station Park and Louisiana Paseo'",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-cpc-21156",
+      "title": "Planning Commission Resolution No. 21156 (July 28, 2022): material change to the Phasing Plan removing the life-science requirement",
+      "publisher": "SF Planning Commission (M-Files)",
+      "date": "2022-07-28",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "SF Planning Commission (M-Files), 2022-07-28",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_power_station_park",
+     "slug": "power-station-park",
+     "name": "Power Station Park",
+     "permalink": "https://pierandpoint.org/parcels/power-station-park/",
+     "api": "https://pierandpoint.org/api/v1/records/power-station-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2023-06",
+    "date_label": "Jun 2023",
+    "status": null,
+    "status_label": null,
+    "text": "Phase 1 Street Improvement Project (DeSilva Gates, $39M contract) begins around the park blocks; expected complete Q4 2025",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ar-2024",
+      "title": "2024 Annual Report (March 2025), DA annual compliance review",
+      "publisher": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files)",
+      "date": "2025-03",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files), 2025-03",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_power_station_park",
+     "slug": "power-station-park",
+     "name": "Power Station Park",
+     "permalink": "https://pierandpoint.org/parcels/power-station-park/",
+     "api": "https://pierandpoint.org/api/v1/records/power-station-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2025-03",
+    "date_label": "Mar 2025",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "2024 annual report: no Privately-Owned Community Improvement yet required; Power Station Park East status 'Site Permit Application for Block 8 ... submitted, 5/19/22', West 'Design review approved, 8/3/21. Memo issued 6/23/22'; no park construction reported",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ar-2024",
+      "title": "2024 Annual Report (March 2025), DA annual compliance review",
+      "publisher": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files)",
+      "date": "2025-03",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files), 2025-03",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_power_station_park",
+     "slug": "power-station-park",
+     "name": "Power Station Park",
+     "permalink": "https://pierandpoint.org/parcels/power-station-park/",
+     "api": "https://pierandpoint.org/api/v1/records/power-station-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2026-08-03",
+    "date_label": "Aug 3, 2026",
+    "status": null,
+    "status_label": null,
+    "text": "JPMorgan $200 million financing reported for the Block 8 residential building (151 Humboldt St), which delivers Power Station Park East; the building 'would rise' (not yet started)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-chron-2026-08-03",
+      "title": "JPMorgan makes $200 million bet that San Francisco's housing freeze is thawing (Laura Waxmann)",
+      "publisher": "San Francisco Chronicle",
+      "date": "2026-08-03",
+      "url": "https://www.sfchronicle.com/realestate/article/jpmorgan-housing-san-francisco-22367970.php",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "San Francisco Chronicle, 2026-08-03",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_power_station_park",
+     "slug": "power-station-park",
+     "name": "Power Station Park",
+     "permalink": "https://pierandpoint.org/parcels/power-station-park/",
+     "api": "https://pierandpoint.org/api/v1/records/power-station-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   }
+  ],
+  "changes": [],
+  "images": [
+   {
+    "path": "data/manual/images/potrero/deir_p156_power_station_park.jpg",
+    "kind": "rendering",
+    "taken": "2018-10",
+    "credit": "Steelblue LLC, Figure 2-29 'Rendering Looking East Along Proposed Power Station Park Towards Unit 3 Power Block, the Boiler Stack, and the Bay', Potrero Power Station Mixed-Use Development Project Draft EIR (Case No. 2017-011878ENV, October 2018), p.2-64",
+    "license": "public-record",
+    "source_url": "https://sfmea.sfplanning.org/2017-011878ENV_DEIR_Volume_1.pdf#page=156",
+    "license_evidence": "https://sfmea.sfplanning.org/2017-011878ENV_DEIR_Volume_1.pdf",
+    "license_note": "CEQA (Cal. Pub. Res. Code Sec. 21000 et seq.) requires a Draft EIR to be made publicly available by the lead agency as part of the statutory environmental review process; this figure is a page of that public document, hosted at SF Planning's own environmental-review site, same as this record's existing DEIR precedent. Read 2026-09-19.",
+    "caption": "Figure 2-29: Rendering Looking East Along Proposed Power Station Park Towards Unit 3 Power Block, the Boiler Stack, and the Bay",
+    "source_crop": "python3 src/extract_pdf_figure.py https://sfmea.sfplanning.org/2017-011878ENV_DEIR_Volume_1.pdf 156 data/manual/images/potrero/deir_p156_power_station_park.jpg --rect auto",
+    "url": "https://pierandpoint.org/assets/img/deir_p156_power_station_park.jpg"
+   },
+   {
+    "path": "data/manual/images/potrero_power_station_park_d4d_fig4251.jpg",
+    "kind": "document",
+    "taken": "2020-02-26",
+    "credit": "Figure 4.25.1 'Power Station Park and Louisiana Paseo: Concept Plan Overview', Potrero Power Station Design for Development, Feb 26 2020, printed p.119 (PDF p.121) (public record)",
+    "license": "public-record",
+    "source_url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+    "license_evidence": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+    "license_note": "Figure or photograph from an adopted Port/Planning regulatory document (a Design for Development, SUD Land Use Plan or Design Controls) or a Port Commission agenda exhibit, published by the agency itself at its own domain as the public record of the adopted plan or noticed meeting item. Read 2026-09-18.",
+    "figure": "illustrative",
+    "appeal": 3,
+    "appeal_note": "Overview plan showing both halves of Power Station Park with numbered callouts for the lawn and plaza, though the surrounding buildings are left as blank outlines.",
+    "url": "https://pierandpoint.org/assets/img/potrero_power_station_park_d4d_fig4251.jpg"
+   }
+  ],
+  "open_questions": [
+   "No construction start, groundbreaking or completion date for either park block was found in any source through 2026-09-17; the park is tied to Blocks 8 and 11, and Block 8 was still seeking financing in Aug 2026. The geometry file's 'not yet built' is consistent with the March 2025 annual report but nothing later confirms it.",
+   "No cost figure for Power Station Park was found (annual reports give contract values only for streets, Unit 3, Sophie Maxwell, Station A).",
+   "Landscape architect identification rests on the 'plural' logo and 2724 17th Street address on the 7.29.21 plan sheets plus CMG's 'Affiliated Landscape Architect: Plural Studio'; no document names the firm in text.",
+   "Annual reports 2021-2023 print the design review submittal date as '3.23.20'; the Planning staff memo says March 23, 2021. The memo date is used.",
+   "The 2021 annual report lists Power Station Park East as 'Design review approved, 8.3.21' delivered with Block 12; from 2022 it is listed as delivered with Block 8 with a site permit application. The reason for the change is not stated.",
+   "Phase 1 application table (Table 5) lists Power Station Park West as moved from DA Phase 2 to Phase 1; the East block does not appear in that change table (presumably already Phase 1) - not confirmed against DA Exhibit M.",
+   "BOS File 260724 (Amended and Restated DA, 2026) amends the Phasing Plan; effects on park delivery triggers not checked (draft DA not read)."
+  ],
+  "sources": [
+   {
+    "id": "src-ar-2021",
+    "title": "2021 Annual Report (March 2022), DA annual compliance review",
+    "publisher": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files)",
+    "date": "2022-03",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-ar-2022",
+    "title": "2022 Annual Report (April 2023), DA annual compliance review",
+    "publisher": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files)",
+    "date": "2023-04",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-ar-2024",
+    "title": "2024 Annual Report (March 2025), DA annual compliance review",
+    "publisher": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files)",
+    "date": "2025-03",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-chron-2026-08-03",
+    "title": "JPMorgan makes $200 million bet that San Francisco's housing freeze is thawing (Laura Waxmann)",
+    "publisher": "San Francisco Chronicle",
+    "date": "2026-08-03",
+    "url": "https://www.sfchronicle.com/realestate/article/jpmorgan-housing-san-francisco-22367970.php",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-cmg",
+    "title": "Potrero Power Station project page",
+    "publisher": "CMG Landscape Architecture (landscape architect's own material)",
+    "url": "https://www.cmgsite.com/places/potrero-power-station/",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-cpc-21156",
+    "title": "Planning Commission Resolution No. 21156 (July 28, 2022): material change to the Phasing Plan removing the life-science requirement",
+    "publisher": "SF Planning Commission (M-Files)",
+    "date": "2022-07-28",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-d4d",
+    "title": "Potrero Power Station Design for Development (final, dated February 26, 2020)",
+    "publisher": "SF Planning / California Barrel Company",
+    "date": "2020-02-26",
+    "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-da-2020",
+    "title": "Development Agreement (September 2020), recorded, with exhibits",
+    "publisher": "City and County of San Francisco; posted by SF Planning (M-Files: 'Development Agreement (September 2020)')",
+    "date": "2020-09-22",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-deir",
+    "title": "Potrero Power Station Mixed-Use Development Project Draft EIR, Volume 1 (Case No. 2017-011878ENV)",
+    "publisher": "SF Planning",
+    "date": "2018-10",
+    "url": "https://sfmea.sfplanning.org/2017-011878ENV_DEIR_Volume_1.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-dr-psp-2022",
+    "title": "Approval of the Design Review Application of Power Station Park and Louisiana Paseo (June 23, 2022), Case No. 2017-011878PHA-03, with staff memo of June 21, 2022 and Design Review Plans dated July 29, 2021",
+    "publisher": "SF Planning (M-Files: 'Power Station Park and Louisiana Paseo (June 23, 2022)')",
+    "date": "2022-06-23",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-imp",
+    "title": "Potrero Power Station Infrastructure Master Plan (final)",
+    "publisher": "California Barrel Company / CBG Civil Engineers (project sponsor's plan document approved with the DA)",
+    "date": "2020",
+    "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_Infrastructure_Master_Plan_final.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-phase1-2020",
+    "title": "Potrero Power Station Phase 1 and Phasing Plan Amendment Applications (October 2020), approval document",
+    "publisher": "California Barrel Company / SF Planning (M-Files: 'Potrero Power Station Phase 1 and Phasing Plan Amendment Applications')",
+    "date": "2020-10",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-port-memo-10a",
+    "title": "Port Commission memo, Calendar Item 10A (Nov 14, 2025): amendment to Lease L-16662 to allow interim open space improvements (Prequel Park); with Resolution No. 25-70 adopted Nov 18, 2025; Exhibits 1-3",
+    "publisher": "Port of San Francisco",
+    "date": "2025-11-14",
+    "url": "https://www.sfport.com/sites/default/files/2025-11/111825_10a_potrero_power_station_lease_amendment_0.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-pres-020721",
+    "title": "Power Station Park & Louisiana Paseo pre-application community meeting slides, February 7, 2021",
+    "publisher": "California Barrel Company (developer's own material, posted by SF Planning)",
+    "date": "2021-02-07",
+    "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropowerstn_presentation-020721.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-sfplanning-pps",
+    "title": "Potrero Power Station project page (program elements, approval timeline, implementation milestones)",
+    "publisher": "SF Planning",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-sfyimby-2025-10-24",
+    "title": "Sophie Maxwell Affordable Housing Opens in Potrero Power Station, San Francisco (Andrew Nelson)",
+    "publisher": "SF YIMBY",
+    "date": "2025-10-24",
+    "url": "https://sfyimby.com/2025/10/sophie-maxwell-affordable-housing-opens-in-potrero-power-station-san-francisco.html",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": null,
+    "title": "default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf",
+    "url": "https://default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf"
+   }
+  ],
+  "notes": "Simplified rectangular approximation of a labeled but irregularly-shaped open space -- see accuracy_caveat.",
+  "has_record_file": true,
+  "last_verified": "2026-09-17",
+  "geometry": {
+   "type": "MultiPolygon",
+   "coordinates": [
+    [
+     [
+      [
+       -122.384389,
+       37.756303
+      ],
+      [
+       -122.383535,
+       37.756348
+      ],
+      [
+       -122.383501,
+       37.75602
+      ],
+      [
+       -122.384356,
+       37.755971
+      ],
+      [
+       -122.384389,
+       37.756303
+      ]
+     ]
+    ],
+    [
+     [
+      [
+       -122.383291,
+       37.756365
+      ],
+      [
+       -122.382443,
+       37.756421
+      ],
+      [
+       -122.382408,
+       37.756096
+      ],
+      [
+       -122.383257,
+       37.756038
+      ],
+      [
+       -122.383291,
+       37.756365
+      ]
+     ]
+    ]
+   ]
+  }
+ }
+}

@@ -1,0 +1,148 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-20",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "mission_bay_arterra",
+  "slug": "arterra",
+  "name": "Arterra",
+  "permalink": "https://pierandpoint.org/parcels/arterra/",
+  "api": "https://pierandpoint.org/api/v1/records/arterra.json",
+  "names": [
+   "Arterra"
+  ],
+  "site": {
+   "slug": "mission-bay",
+   "name": "Mission Bay",
+   "short": "Mission Bay",
+   "url": "https://pierandpoint.org/sites/mission-bay/"
+  },
+  "status": "complete",
+  "status_label": "Complete",
+  "use": "residential",
+  "address": null,
+  "summary": null,
+  "summary_sources": [],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I/II/III, Madrone, Arden, One Mission Bay, Radiance).",
+    "digitized_from": "OpenStreetMap (way 48569995, 300 Berry St)"
+   }
+  },
+  "centroid": {
+   "lon": -122.396265,
+   "lat": 37.773873
+  },
+  "facts": [],
+  "costs": [],
+  "milestones": [
+   {
+    "date": "2009",
+    "date_label": "~2009",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Arterra opens",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "title": "socketsite.com"
+     }
+    ],
+    "source": "socketsite.com",
+    "origin": "csv",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_arterra",
+     "slug": "arterra",
+     "name": "Arterra",
+     "permalink": "https://pierandpoint.org/parcels/arterra/",
+     "api": "https://pierandpoint.org/api/v1/records/arterra.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
+  "changes": [],
+  "images": [],
+  "open_questions": [],
+  "sources": [
+   {
+    "id": null,
+    "title": "openstreetmap.org/way/48569995",
+    "url": "https://www.openstreetmap.org/way/48569995"
+   },
+   {
+    "id": null,
+    "title": "socketsite.com/archives/2006/04/the_arterra_cle.html",
+    "url": "https://socketsite.com/archives/2006/04/the_arterra_cle.html"
+   }
+  ],
+  "notes": null,
+  "has_record_file": false,
+  "last_verified": null,
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.3967606,
+      37.7738524
+     ],
+     [
+      -122.3965807,
+      37.7737095
+     ],
+     [
+      -122.3964826,
+      37.7736316
+     ],
+     [
+      -122.396348,
+      37.7735246
+     ],
+     [
+      -122.3960104,
+      37.77379
+     ],
+     [
+      -122.3959813,
+      37.7738129
+     ],
+     [
+      -122.3959629,
+      37.7738274
+     ],
+     [
+      -122.3957489,
+      37.7739956
+     ],
+     [
+      -122.3961161,
+      37.7742873
+     ],
+     [
+      -122.3961615,
+      37.7743234
+     ],
+     [
+      -122.3967606,
+      37.7738524
+     ]
+    ]
+   ]
+  }
+ }
+}

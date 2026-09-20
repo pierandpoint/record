@@ -1,0 +1,32 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "3E -- plan block east of Venue, toward 3rd St",
+        "site": "Mission Bay South",
+        "status": "planned",
+        "use": "residential",
+        "geometry_type": "approximate",
+        "digitized_from": "Owner-directed construction, not a hand trace: Venue's own minimum-rotated-rectangle east edge (72.07m, the edge facing 3rd St) extended east as a rectangle of the same length and orientation, widened until it reaches the real 3rd St curb line (src/street_geometry.py buffer, half-width 6.8m).",
+        "digitization_method": "ADDED 2026-09-20: the owner corrected the prior resolution (which had 3E absorbed into Venue -- 'the real building spans the plan's 3W/3E line as one development, not two'). The owner identified 3E as a separate real plan block east of Venue, initially pointing at real-gap-fragments 6+7 (a jagged sliver hugging a structure visible in satellite imagery between Venue and 3rd St). Construction went through two corrections from the owner: (1) an axis-aligned bounding box of fragments 6+7 wrongly cut across Venue's own diagonal orientation and overlapped neighboring land -- corrected by using Venue's own minimum-rotated-rectangle east edge as the shared border instead, matching its exact length (72.07m) and rotation, with depth set so the area matched fragments 6+7 (3,030 sqm); (2) the owner then directed widening the rectangle further east to the real 3rd St curb line rather than stopping at the fragment-matched depth, giving the final 4,682 sqm shown here.",
+        "accuracy_caveat": "APPROXIMATE -- an idealized rectangle (owner-directed construction: shares Venue's real east edge and orientation, widened to the real 3rd St curb line) not a hand trace or surveyed footprint. Esri satellite imagery shows what appears to be a real structure across much of this area (a roof pattern resembling built construction, not open land or a parking lot), but its name, address, and completion status are NOT confirmed by any source checked in this pass -- flagged here rather than guessed. status/use are carried over from the OCII plan designation (a residential block on the 3W/3E line, matching Venue), not independently confirmed for this specific structure.",
+        "notes": "OCII plan block 3E. East of Venue (1155 4th St / 3W), toward 3rd St. Previously assumed absorbed into Venue's own footprint; the owner's review found it real and separate.",
+        "source_doc_urls": []
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-122.39062182492839, 37.773603161395194],
+            [-122.39058280000002, 37.7729565],
+            [-122.38984493436479, 37.77298432153685],
+            [-122.38988395929316, 37.77363098293205],
+            [-122.39062182492839, 37.773603161395194]
+          ]
+        ]
+      }
+    }
+  ]
+}

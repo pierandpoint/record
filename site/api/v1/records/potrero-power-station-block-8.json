@@ -1,0 +1,674 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-20",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "potrero_block_8",
+  "slug": "potrero-power-station-block-8",
+  "name": "Potrero Power Station Block 8",
+  "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-8/",
+  "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-8.json",
+  "names": [
+   "Potrero Power Station Block 8",
+   "151 Humboldt St"
+  ],
+  "site": {
+   "slug": "potrero",
+   "name": "Potrero Power Station",
+   "short": "Potrero Station",
+   "url": "https://pierandpoint.org/sites/potrero/"
+  },
+  "status": "planned",
+  "status_label": "Planned",
+  "use": "residential",
+  "address": null,
+  "summary": "Mid-rise market-rate residential block between Maryland and Delaware streets, south of Humboldt St and north of Power Station Park East, approved March 2, 2022 for a Foster + Partners-designed 14-story, approximately 125-ft, 339-unit building with about 18,000 sq ft of retail; in August 2026 JPMorgan Chase agreed to finance roughly $200 million for a 342-unit building at 151 Humboldt St, with construction expected to begin in fall 2026.",
+  "summary_sources": [
+   "src-dr-8-2022",
+   "src-chron-2026-08"
+  ],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "APPROXIMATE -- this block is not yet built and does not correspond to any subdivided Assessor parcel: it currently sits on vacant/graded land within the former power station site (unaddressed in DataSF's Assessor roll). Traced from an adopted regulatory diagram via multi-point real-street georeferencing (see digitization_method), but this diagram is dated Feb 2020 and may not reflect later design changes (as already found for the adjacent UCSF/Sophie Maxwell area). Treat vertex positions as accurate to roughly 10-25m, not survey-grade. Rebuilt 2026-09-16 via GDAL GCP/TPS georeferencing -- see digitization_method. Re-measured 2026-09-16 (third pass) in a single consistent pixel-detection pass across the whole block layout -- see digitization_method. Re-corrected 2026-09-16 (fourth pass) after fixing a mis-measured GCP -- see digitization_method.",
+    "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
+    "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead.",
+    "regulatory_context": "Figure 6.2.3 shows Block 8 with a split height: 90 ft (base, small corner) / 125 ft / 85 ft across its width -- the D4D's Permitted Uses table confirms residential is permitted here. Foster + Partners-designed residential building per press coverage, warm metallic patina and rhythmic facade modulation facing Power Station Park per some sources; unit count reported inconsistently across sources (249 vs. 339 vs. a separately-cited 355 units in one SF OEWD pipeline-forecast document, est. start Mar 2027-end May 2029, ~$275M) and height reported inconsistently too (140 ft vs. 156 ft in different press articles) -- confirmed as of a Feb 2026 source that construction had not started."
+   }
+  },
+  "centroid": {
+   "lon": -122.382987,
+   "lat": 37.75674
+  },
+  "facts": [
+   {
+    "key": "address",
+    "value": "151 Humboldt St (per the Chronicle, Aug 2026)",
+    "sources": [
+     "src-chron-2026-08"
+    ]
+   },
+   {
+    "key": "developer",
+    "value": "California Barrel Company LLC (Associate Capital; renamed Fifth Space in 2025), project sponsor Enrique Landa",
+    "sources": [
+     "src-dr-8-2022",
+     "src-chron-2026-08"
+    ]
+   },
+   {
+    "key": "architect",
+    "value": "Foster + Partners (design architect); Adamson Associates (executive architect), partnering with LBE firm YA Studio",
+    "sources": [
+     "src-dr-8-2022",
+     "src-ar-2021",
+     "src-chron-2026-08"
+    ]
+   },
+   {
+    "key": "units",
+    "value": "342 (Chronicle, Aug 2026). Other stated values: 339 (design review approval 2022: 22 studios, 208 one-bed, 74 two-bed, 35 three-bed); 249 (press, March-June 2021); approximately 315 (Phase 1 application 2020); 344 (2021 compliance report LBE section); approximately 348 (2022-2024 compliance reports)",
+    "sources": [
+     "src-chron-2026-08",
+     "src-dr-8-2022",
+     "src-yimby-2021-03",
+     "src-phase1-2020",
+     "src-ar-2021",
+     "src-ar-2024"
+    ]
+   },
+   {
+    "key": "affordable_units",
+    "value": "none on site planned; compliance reports assign 105 in-lieu fee unit-equivalents to Block 8",
+    "sources": [
+     "src-ar-2024"
+    ]
+   },
+   {
+    "key": "floors",
+    "value": "14 (12 habitable)",
+    "sources": [
+     "src-dr-8-2022"
+    ]
+   },
+   {
+    "key": "height_ft",
+    "value": "approximately 125 to the last occupied floor plus up to 20 ft of screened mechanical (145 ft) per the approved plans; press gave 140 ft (March 2021) and 156 ft (March 2022)",
+    "sources": [
+     "src-dr-8-2022",
+     "src-yimby-2021-03",
+     "src-yimby-2022-03"
+    ]
+   },
+   {
+    "key": "d4d_max_height_ft",
+    "value": "125 (midrise building, 101-145 ft class; D4D 6.2.2 and A.8 Block 8 controls)",
+    "sources": [
+     "src-d4d-final",
+     "src-dr-8-2022"
+    ]
+   },
+   {
+    "key": "gross_sqft",
+    "value": "400,500 total per SF YIMBY (382,500 residential, 18,000 retail); compliance reports give 360,475 GSF residential (2024) and 382,516 (2021)",
+    "sources": [
+     "src-yimby-2022-03",
+     "src-ar-2024",
+     "src-ar-2021"
+    ]
+   },
+   {
+    "key": "retail_sqft",
+    "value": "approximately 18,000 ground-floor retail around a central courtyard",
+    "sources": [
+     "src-dr-8-2022"
+    ]
+   },
+   {
+    "key": "use",
+    "value": "residential (market-rate rental) with ground-floor retail; D4D 6.10.2 places transit support facilities (bus shelter, operator restroom) on Block 8's Maryland St frontage",
+    "sources": [
+     "src-dr-8-2022",
+     "src-d4d-final"
+    ]
+   },
+   {
+    "key": "parking",
+    "value": "166 vehicle spaces; 163 Class I and 34 Class II bicycle spaces",
+    "sources": [
+     "src-dr-8-2022"
+    ]
+   },
+   {
+    "key": "planning_case",
+    "value": "2017-011878PHA-06; parent lots 4175/017, 4175/002, 4232/001, 4232/006; plan sheets label it 'Block 8, Lot 8'",
+    "sources": [
+     "src-dr-8-2022"
+    ]
+   },
+   {
+    "key": "location",
+    "value": "bounded by Humboldt St (north), Delaware St (east), Power Station Park East (south) and Maryland St (west), per the plan set key plan; Power Station Park East is to be delivered with Block 8",
+    "sources": [
+     "src-dr-8-2022",
+     "src-ar-2024"
+    ]
+   },
+   {
+    "key": "lender",
+    "value": "JPMorgan Chase (about $200 million, Aug 2026)",
+    "sources": [
+     "src-chron-2026-08"
+    ]
+   },
+   {
+    "key": "construction_status",
+    "value": "not started as of the 2024 compliance report (March 2025); construction expected fall 2026 per the Chronicle (Aug 3, 2026)",
+    "sources": [
+     "src-ar-2024",
+     "src-chron-2026-08"
+    ]
+   }
+  ],
+  "costs": [
+   {
+    "amount_usd": 200000000,
+    "what": "Construction financing from JPMorgan Chase for the 342-unit Block 8 building ('roughly $200 million')",
+    "date": "2026-08-03",
+    "approximate": true,
+    "sources": [
+     "src-chron-2026-08"
+    ]
+   },
+   {
+    "amount_usd": 1710000,
+    "what": "Design/consultant contracts awarded for Block 8 through Q3-2021 ($97k, 5.7%, to LBEs)",
+    "date": "2021",
+    "approximate": false,
+    "sources": [
+     "src-ar-2021"
+    ]
+   }
+  ],
+  "milestones": [
+   {
+    "date": "2020-10-07",
+    "date_label": "Oct 7, 2020",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Phase 1 Development Phase Application approved: Block 8 to include approximately 315 market-rate units (approximately 359,000 sq ft primarily residential, 5,000 sq ft retail, 49,000 sq ft accessory parking)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-phase1-2020",
+      "title": "Potrero Power Station Phase 1 and Phasing Plan Amendment Applications: Development Phase Approval (October 7, 2020) with the Phase 1 application",
+      "publisher": "SF Planning",
+      "date": "2020-10-07",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "SF Planning, 2020-10-07",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_block_8",
+     "slug": "potrero-power-station-block-8",
+     "name": "Potrero Power Station Block 8",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-8/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-8.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2020-10-11",
+    "date_label": "Oct 11, 2020",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Design review pre-application community meeting for Blocks 7 and 8",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfplanning-pps",
+      "title": "Potrero Power Station project page (implementation milestones)",
+      "publisher": "SF Planning",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "SF Planning",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_block_8",
+     "slug": "potrero-power-station-block-8",
+     "name": "Potrero Power Station Block 8",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-8/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-8.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2020-12-18",
+    "date_label": "Dec 18, 2020",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Design Review Application for Block 8 submitted (Case 2017-011878PHA-06)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ar-2021",
+      "title": "2021 Annual Report (March 2022): Potrero Power Station Development Agreement annual compliance review",
+      "publisher": "California Barrel Company LLC, filed with SF Planning",
+      "date": "2022-03",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "California Barrel Company LLC, filed with SF Planning, 2022-03",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_block_8",
+     "slug": "potrero-power-station-block-8",
+     "name": "Potrero Power Station Block 8",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-8/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-8.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2021-03-01",
+    "date_label": "Mar 1, 2021",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Planning filings published by SF YIMBY describe Block 8 as 140 ft with 249 units, six retail spaces, wellness center, pool and an eighth-floor urban farm; filings anticipated Block 8 construction starting 2026 and completing 2028",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-yimby-2021-03",
+      "title": "Foster + Partners Design Revealed For Potrero Power Station, Dogpatch, San Francisco",
+      "publisher": "SF YIMBY",
+      "date": "2021-03-01",
+      "url": "https://sfyimby.com/2021/03/foster-partners-design-revealed-for-potrero-power-station-hunters-point-san-francisco.html",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "SF YIMBY, 2021-03-01",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_block_8",
+     "slug": "potrero-power-station-block-8",
+     "name": "Potrero Power Station Block 8",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-8/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-8.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2022-03-02",
+    "date_label": "Mar 2, 2022",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Planning Director approves the Block 8 design review: 14 stories (12 habitable), approximately 125 ft plus rooftop features, 339 units, approximately 18,000 sq ft retail, 166 vehicle spaces; one minor modification to D4D A.8.1 (upper volume 96 ft 8 in deep from Maryland St at levels 9-10 vs 90 ft)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dr-8-2022",
+      "title": "Design Review Approval, Block 8 (March 2, 2022): Planning Director approval letter, staff memo of Feb 24, 2022 (Case 2017-011878PHA-06) and Foster + Partners / Adamson plan set dated June 23, 2021",
+      "publisher": "SF Planning",
+      "date": "2022-03-02",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "SF Planning, 2022-03-02",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_block_8",
+     "slug": "potrero-power-station-block-8",
+     "name": "Potrero Power Station Block 8",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-8/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-8.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2022-05-19",
+    "date_label": "May 19, 2022",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Site permit application for Block 8, including Power Station Park East, submitted",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ar-2022",
+      "title": "2022 Annual Report (April 2023): Potrero Power Station Development Agreement annual compliance review",
+      "publisher": "California Barrel Company LLC, filed with SF Planning",
+      "date": "2023-04",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     },
+     {
+      "id": "src-ar-2024",
+      "title": "2024 Annual Report (March 2025): 2024 Annual Compliance Report under the Development Agreement",
+      "publisher": "California Barrel Company LLC and Found Middle LP, filed with SF Planning",
+      "date": "2025-03-28",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "California Barrel Company LLC, filed with SF Planning, 2023-04; California Barrel Company LLC and Found Middle LP, filed with SF Planning, 2025-03-28",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_block_8",
+     "slug": "potrero-power-station-block-8",
+     "name": "Potrero Power Station Block 8",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-8/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-8.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2025-03-28",
+    "date_label": "Mar 28, 2025",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "2024 DA compliance report: Block 8 approximately 348 market-rate units; 'Developer has submitted no building permits for any market-rate housing projects'",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ar-2024",
+      "title": "2024 Annual Report (March 2025): 2024 Annual Compliance Report under the Development Agreement",
+      "publisher": "California Barrel Company LLC and Found Middle LP, filed with SF Planning",
+      "date": "2025-03-28",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "California Barrel Company LLC and Found Middle LP, filed with SF Planning, 2025-03-28",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_block_8",
+     "slug": "potrero-power-station-block-8",
+     "name": "Potrero Power Station Block 8",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-8/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-8.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2026",
+    "date_label": "2026",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Construction expected to begin in fall 2026",
+    "expected": true,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-chron-2026-08",
+      "title": "JPMorgan makes $200 million bet that San Francisco's housing freeze is thawing",
+      "publisher": "San Francisco Chronicle",
+      "date": "2026-08-03",
+      "url": "https://www.sfchronicle.com/realestate/article/jpmorgan-housing-san-francisco-22367970.php",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "San Francisco Chronicle, 2026-08-03",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_block_8",
+     "slug": "potrero-power-station-block-8",
+     "name": "Potrero Power Station Block 8",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-8/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-8.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
+    "date": "2026-08-03",
+    "date_label": "Aug 3, 2026",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "JPMorgan Chase agrees to finance roughly $200 million for a 342-unit Foster + Partners-designed building at 151 Humboldt St",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-chron-2026-08",
+      "title": "JPMorgan makes $200 million bet that San Francisco's housing freeze is thawing",
+      "publisher": "San Francisco Chronicle",
+      "date": "2026-08-03",
+      "url": "https://www.sfchronicle.com/realestate/article/jpmorgan-housing-san-francisco-22367970.php",
+      "accessed": "2026-09-17"
+     }
+    ],
+    "source": "San Francisco Chronicle, 2026-08-03",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_block_8",
+     "slug": "potrero-power-station-block-8",
+     "name": "Potrero Power Station Block 8",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-8/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-8.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   }
+  ],
+  "changes": [],
+  "images": [
+   {
+    "path": "data/manual/images/potrero_block8_rendering_2021.jpg",
+    "kind": "rendering",
+    "taken": "2021-06",
+    "credit": "Foster + Partners / Adamson Associates, sheet G-8-108-PL 'Block 8 - Indicative view from Power Station Park', Block 8 Design Review Approval (SF Planning, March 2, 2022), PDF page 37",
+    "license": "public-record",
+    "source_url": "https://sfplanning.org/potrero-power-station",
+    "license_evidence": "https://sfplanning.org/resource/senate-bill-1214-authorization",
+    "license_note": "Under SB 1214, SF Planning only posts an applicant's full architectural drawings online if the applicant didn't instead submit a reduced massing-diagram-only set for public distribution; when the full drawings are posted, as here in the published Design Review Approval packet, the applicant's permission for public posting is deemed granted and the Department 'shall not be subject to any restrictions on the copying or distribution' of them. Read 2026-09-18.",
+    "appeal": 5,
+    "appeal_note": "Full-bleed, sunlit ground-level view from Power Station Park showing greenery, retail canopies and active street life -- one of the strongest renderings in the set.",
+    "url": "https://pierandpoint.org/assets/img/potrero_block8_rendering_2021.jpg"
+   }
+  ],
+  "open_questions": [
+   "Address / parcel: the Chronicle gives Block 8 as 151 Humboldt St. status.csv's Block 2 row records that blklot 4232022 (151 Humboldt St) sits roughly where the D4D places Block 8. Block 8 may therefore already have a subdivided Assessor parcel (4232022) that could replace this approximate polygon. Not verified against DataSF here; flagged for the geometry owner.",
+   "Unit count for the 2026 building (342) differs from the 2022 approval (339) and the compliance reports (348). Whether a revised design review or new site permit has been filed since May 2022 is not documented in the corpus.",
+   "Architect: Stanley Saitowitz | Natoma Architects publishes a 'Potrero Power Block 8' concept ('initial thoughts to begin the process of developing a design for Block 8', architect's own material, undated). The Chronicle (Aug 2026) still credits Foster + Partners and uses its renderings. Not recorded as a fact; noted here only.",
+   "Height: the approved plan set shows 125 ft to the last occupied floor with mechanical screening to 145 ft; SF YIMBY reported 140 ft (2021) and 156 ft (2022). The geometry file's note ('140 ft vs. 156 ft') reflects the press figures, not the approval.",
+   "No construction start found. Searched the 2021-2024 compliance reports, SF YIMBY (Block 8 category, last item March 2022), the Chronicle and SF Standard. The Aug 2026 Chronicle says construction 'is expected to begin in the fall' of 2026; no groundbreaking report yet as of Sept 17, 2026.",
+   "The geometry file's regulatory_context cites an OEWD pipeline document with 355 units, an estimated start of March 2027 and about $275M; that document is not in the corpus and could not be verified.",
+   "No general contractor, total development cost, or ground-lease information for Block 8 in any source found (developer-owned land; no Port lease)."
+  ],
+  "sources": [
+   {
+    "id": "src-dr-8-2022",
+    "title": "Design Review Approval, Block 8 (March 2, 2022): Planning Director approval letter, staff memo of Feb 24, 2022 (Case 2017-011878PHA-06) and Foster + Partners / Adamson plan set dated June 23, 2021",
+    "publisher": "SF Planning",
+    "date": "2022-03-02",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-ar-2021",
+    "title": "2021 Annual Report (March 2022): Potrero Power Station Development Agreement annual compliance review",
+    "publisher": "California Barrel Company LLC, filed with SF Planning",
+    "date": "2022-03",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-ar-2022",
+    "title": "2022 Annual Report (April 2023): Potrero Power Station Development Agreement annual compliance review",
+    "publisher": "California Barrel Company LLC, filed with SF Planning",
+    "date": "2023-04",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-ar-2024",
+    "title": "2024 Annual Report (March 2025): 2024 Annual Compliance Report under the Development Agreement",
+    "publisher": "California Barrel Company LLC and Found Middle LP, filed with SF Planning",
+    "date": "2025-03-28",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-phase1-2020",
+    "title": "Potrero Power Station Phase 1 and Phasing Plan Amendment Applications: Development Phase Approval (October 7, 2020) with the Phase 1 application",
+    "publisher": "SF Planning",
+    "date": "2020-10-07",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-d4d-final",
+    "title": "Potrero Power Station Design for Development, final (February 26, 2020), Sections 6.2.2, 6.10.2 and Appendix A.8",
+    "publisher": "SF Planning",
+    "date": "2020-02-26",
+    "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-sfplanning-pps",
+    "title": "Potrero Power Station project page (implementation milestones)",
+    "publisher": "SF Planning",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-yimby-2021-03",
+    "title": "Foster + Partners Design Revealed For Potrero Power Station, Dogpatch, San Francisco",
+    "publisher": "SF YIMBY",
+    "date": "2021-03-01",
+    "url": "https://sfyimby.com/2021/03/foster-partners-design-revealed-for-potrero-power-station-hunters-point-san-francisco.html",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-yimby-2022-03",
+    "title": "Excavation Underway for Potrero Power Station along San Francisco's Dogpatch Waterfront",
+    "publisher": "SF YIMBY",
+    "date": "2022-03-08",
+    "url": "https://sfyimby.com/2022/03/excavation-underway-for-potrero-power-station-along-san-franciscos-dogpatch-waterfront.html",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-chron-2026-08",
+    "title": "JPMorgan makes $200 million bet that San Francisco's housing freeze is thawing",
+    "publisher": "San Francisco Chronicle",
+    "date": "2026-08-03",
+    "url": "https://www.sfchronicle.com/realestate/article/jpmorgan-housing-san-francisco-22367970.php",
+    "accessed": "2026-09-17"
+   },
+   {
+    "id": null,
+    "title": "default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf",
+    "url": "https://default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf"
+   }
+  ],
+  "notes": "Approximate polygon for a real, D4D-adopted block -- see accuracy_caveat.",
+  "has_record_file": true,
+  "last_verified": "2026-09-17",
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.383351,
+      37.756954
+     ],
+     [
+      -122.3825,
+      37.757005
+     ],
+     [
+      -122.382443,
+      37.756421
+     ],
+     [
+      -122.383291,
+      37.756365
+     ],
+     [
+      -122.383351,
+      37.756954
+     ]
+    ]
+   ]
+  }
+ }
+}

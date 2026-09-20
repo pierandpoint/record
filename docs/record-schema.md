@@ -183,6 +183,16 @@ doesn't exist in `status.csv` or `approximate_projects.csv` fails validation.
   to read record files and fold the CSV in. Until then, put new dated events
   in the record file only.
 
+## Drafts
+
+A record file may set a top-level `"draft": true`. A draft record, and every
+record belonging to a site whose `data/sites.csv` row sets `draft: yes`, is
+left out of the build entirely -- no page, no card, not in any API file --
+unless the environment variable `PP_DRAFTS=1` is set, for a local preview.
+Default is not a draft (the key can be omitted). See `sitegen/README.md` and
+`docs/briefs/publish.md`, "Rendered site in the public repo". No record is a
+draft today; this is the mechanism, not a change to any record's content.
+
 ## Relationship to the geometry files
 
 Geometry files keep their own `digitized_from`, `accuracy_caveat`,
