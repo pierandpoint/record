@@ -143,12 +143,32 @@ the site's URL structure.) No output from `diff` means the two are
 identical: the live page is exactly what that commit's tree contains, and
 if that commit is attested, exactly what was signed.
 
-The one thing you need is the right commit to compare against. Pages carry
-their build date and commit in the footer, and the same information is in
-`site/api/v1/snapshot.json` (also served live at
-`https://pierandpoint.org/api/v1/snapshot.json`), which is a byte-identical
-copy of `api/v1/snapshot.json` — the file the attestation hashes are
-computed from. Once you have the commit, verify it as described above.
+The one thing you need is the right commit to compare against — and it has
+to be a commit in *this* repository. The commit shown in a page's footer,
+and the `commit` field in `site/api/v1/snapshot.json` (also served live at
+`https://pierandpoint.org/api/v1/snapshot.json`), identify the build in the
+private pipeline that produced the record; that pipeline's history isn't
+published, so `git show` on that commit won't work here. `snapshot.json`
+declares the hashes for that build (`records_sha256`, `llms_sha256`) — the
+actual hashes are computed from `api/v1/records.json` and `api/v1/llms.txt`
+themselves and checked against what `snapshot.json` claims, as described
+above.
+
+There are two ways to get a commit in this repository to diff against:
+
+1. **The current live state.** The latest publish on `main` is what's
+   live, so the newest "Publish YYYY-MM-DD" commit works — or run:
+
+   ```sh
+   git log --first-parent -1 --author='pierandpoint-publish' main
+   ```
+
+2. **A specific attested state.** Read `records_sha256` from the live
+   `snapshot.json`, find the row in `snapshots.csv` with that
+   `records_sha256`, and use that row's `commit` column. That's the
+   publish commit whose `bundle` column holds the matching attestation.
+
+Once you have the commit, verify it as described above.
 
 ## Putting it together
 
