@@ -67,6 +67,13 @@ img { max-width: 100%; display: block; }
 .pp-map .rec { cursor: pointer; }
 .pp-map a:hover .rec, .pp-map a:focus .rec { filter: brightness(1.35); }
 .map-frame { position: relative; border-radius: 12px; overflow: hidden; border: 1px solid #24343c; background: var(--ink-3); }
+.pp-map.pp-zoomable { cursor: grab; touch-action: none; }
+.pp-map.pp-zoomable:active { cursor: grabbing; }
+.parcel-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.04em; opacity: 0; transition: opacity .15s ease; }
+.zoom-controls { position: absolute; top: 12px; right: 12px; z-index: 2; display: flex; flex-direction: column; gap: 6px; }
+.zoom-controls[hidden] { display: none; }
+.zoom-btn { width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid var(--line-3); background: rgba(29,37,40,.92); color: var(--text); font: 600 17px var(--mono); line-height: 1; cursor: pointer; }
+.zoom-btn:hover { border-color: var(--brass); color: var(--brass-hi); }
 .overview .ov-narrow { display: none; }
 @media (max-width: 719px) { .overview .ov-wide { display: none; } .overview .ov-narrow { display: block; } }
 .map-caption { font-size: 13px; color: var(--faint); margin-top: 10px; }
@@ -100,6 +107,22 @@ img { max-width: 100%; display: block; }
 .legend { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 13px; color: var(--soft); padding: 16px 0 0; }
 .legend > span { display: inline-flex; align-items: center; gap: 8px; }
 .legend b { font: 500 13px var(--mono); color: var(--text); }
+
+/* progress tracker (home page, above the site list) */
+.tracker { padding: 8px 0 8px; display: flex; flex-direction: column; gap: 8px; }
+.tracker .bar { height: 10px; }
+.tracker-sites { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin-top: 8px; }
+@media (min-width: 720px) { .tracker-sites { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px; } }
+.tracker-site { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 4px 12px; padding: 10px 0; border-bottom: 1px solid var(--line); color: var(--text-2); }
+.tracker-site:hover { text-decoration: none; color: var(--text); }
+.tracker-site-name { display: flex; align-items: center; gap: 10px; font-weight: 500; }
+.tracker-site-name .pin { width: 22px; height: 22px; font-size: 11px; }
+.tracker-site .bar { grid-column: 1 / -1; }
+.tracker-site-detail { font: 12px var(--mono); color: var(--faint); text-align: right; }
+.tracker-curve { margin-top: 8px; }
+.tracker-curve h3 { font: 500 13px var(--mono); letter-spacing: .04em; color: var(--soft); text-transform: uppercase; margin-bottom: 8px; }
+.tracker-curve .curve { display: block; width: 100%; height: auto; }
+.tracker-curve .empty-note { color: var(--faint); margin-top: 6px; }
 
 /* site cards */
 .sites { display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px 36px; padding: 32px 0 56px; }
@@ -227,6 +250,7 @@ details.notes h3 { font: 600 13px var(--mono); color: var(--paper-soft); margin:
 
 /* record dossiers (data/records/*.json on the record page) */
 .page-head .summary { max-width: 72ch; margin-top: 14px; font-size: 17px; line-height: 1.55; color: var(--paper-ink); }
+.page-head .intro-sources { max-width: 72ch; margin-top: 8px; font-size: 13px; }
 .page-head .aliases { font: 13px var(--mono); color: var(--paper-faint); margin-top: 6px; }
 sup.cites { font: 11px var(--mono); line-height: 0; margin-left: 2px; }
 sup.cites a { text-decoration: none; }
