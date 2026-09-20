@@ -29,6 +29,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
+          token: ${{ secrets.VINURADMIN_TOKEN }}
 
       - name: Verify published hashes and prepare attestation
         id: prepare
