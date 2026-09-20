@@ -19,6 +19,7 @@ pulled into other tools via the API.
 | `data/manual/images/**` | hosted images referenced by records |
 | `data/manual/*.geojson`, `data/processed/*.geojson` | geometry |
 | `api/v1/` | the machine-readable API: `records.json`, `llms.txt`, a SQLite export, `snapshot.json`, and related files |
+| `site/` | the rendered website, served as is at pierandpoint.org |
 | `docs/record-schema.md` | the schema for the data above |
 | `docs/verify.md` | how to verify a publish's signature |
 | `attestations/` | one signed attestation per publish |
@@ -41,6 +42,15 @@ signing and public transparency logging, and records it in
 
 That means every version of the record that's ever been published is
 independently, verifiably timestamped and cannot be quietly rewritten.
+
+pierandpoint.org itself is deployed straight from this repository's `main`
+branch by Cloudflare Pages, with output directory `site/` and no build
+step. So what a visitor sees is exactly the content of `site/` in a signed
+publish commit — there is no separate build or deploy process in between.
+`site/api/v1/` is a byte-identical copy of `api/v1/`, and `api/v1/` is the
+copy whose hashes the attestation records — see
+[`docs/verify.md`](docs/verify.md) for how to check a live page against
+one.
 
 ## How to verify it
 

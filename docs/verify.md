@@ -122,6 +122,34 @@ content was part of a signed, timestamped publish; it does not by itself
 tell you whether it's the *current* record — check the `date` column for
 that.
 
+## Checking the live site against the record
+
+pierandpoint.org is deployed straight from this repository's `main`
+branch, from the `site/` directory, with no build step in between. That
+means any page on the live site is byte-for-byte whatever is committed at
+`site/<path>` in this repository — so you can check that a page hasn't
+been altered in flight the same way you'd check any other file.
+
+Fetch the live page and the same path from the repository at a given
+commit, and diff them:
+
+```sh
+git show <commit>:site/index.html | diff - <(curl -sL https://pierandpoint.org/)
+```
+
+(Replace `<commit>` with the commit you're checking, and `site/index.html`
+/ the URL with whichever page you want — the paths under `site/` mirror
+the site's URL structure.) No output from `diff` means the two are
+identical: the live page is exactly what that commit's tree contains, and
+if that commit is attested, exactly what was signed.
+
+The one thing you need is the right commit to compare against. Pages carry
+their build date and commit in the footer, and the same information is in
+`site/api/v1/snapshot.json` (also served live at
+`https://pierandpoint.org/api/v1/snapshot.json`), which is a byte-identical
+copy of `api/v1/snapshot.json` — the file the attestation hashes are
+computed from. Once you have the commit, verify it as described above.
+
 ## Putting it together
 
 To fully verify a claim from the record:
