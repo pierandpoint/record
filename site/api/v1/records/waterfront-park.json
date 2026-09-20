@@ -624,6 +624,50 @@
     }
    },
    {
+    "date": "2031",
+    "date_label": "2031",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Completion expected: Waterfront Park South, North and West are Phase 2 under the revised Development Agreement phasing (The Point, the smaller Phase 1 piece, has no design review approval and no dated schedule of its own beyond its Dec 2021 submittal)",
+    "expected": true,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-phase1-2020",
+      "title": "Potrero Power Station Phase 1 and Phasing Plan Amendment Applications (October 2020), approval document",
+      "publisher": "California Barrel Company / SF Planning (M-Files: 'Potrero Power Station Phase 1 and Phasing Plan Amendment Applications')",
+      "date": "2020-10",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-17"
+     },
+     {
+      "id": "src-socketsite-2020-10",
+      "title": "Revised Timing for Massive Power Plant Redevelopment",
+      "publisher": "SocketSite",
+      "date": "2020-10-09",
+      "url": "https://socketsite.com/archives/2020/10/revised-phasing-for-massive-potrero-power-plant-redevelopment.html",
+      "accessed": "2026-09-20"
+     }
+    ],
+    "source": "California Barrel Company / SF Planning (M-Files: 'Potrero Power Station Phase 1 and Phasing Plan Amendment Applications'), 2020-10; SocketSite, 2020-10-09",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_waterfront_park",
+     "slug": "waterfront-park",
+     "name": "Waterfront Park",
+     "permalink": "https://pierandpoint.org/parcels/waterfront-park/",
+     "api": "https://pierandpoint.org/api/v1/records/waterfront-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   },
+   {
     "date": "2087-03",
     "date_label": "Mar 2087",
     "status": null,
@@ -721,7 +765,7 @@
   ],
   "open_questions": [
    "The brief's note that the BCDC permit application 2019.006.00 was 'filed complete June 2, 2020 per ceqanet' could not be verified: the CEQAnet entries (2017112005/2 and /3) show only the DEIR receipt (10/3/2018) and Final EIR receipt (12/11/2019) with BCDC as a reviewing agency. The original BCDC permit document (issued July 2021 per the Port memo) was not found on bcdc.ca.gov; the 2018-2019 DRB and Commission pages now return 404. Only the tracker row for amendment .02 was found.",
-   "No design review approval for The Point was found after the Dec 3, 2021 submittal; every annual report through March 2025 says 'Under Review'.",
+   "No design review approval for The Point was found after the Dec 3, 2021 submittal; every annual report through March 2025 says 'Under Review'. The added expected-completion milestone therefore uses Phase 2's overall window (2026-2031, SocketSite Oct 2020) for the park's larger South/North/West pieces, not a park-specific or Point-specific date.",
    "Seawall/shoreline construction: the only statement is Landa's 'building the seawall a few years ago' (Potrero View, Oct 2025); the Phase 1 horizontal work (pile driving, deep soil mixing) was substantially complete May 2023 but the annual report does not itemize shoreline protection.",
    "Area: 3.6 acres (D4D, DA, DEIR) vs ~3 acres and '1,000 linear feet' (SF Planning page only) vs 4.0 acres (IMP); the geometry file traces only the visible strip. Not reconciled.",
    "The geometry file's 'Waterfront Park' overlaps the newly added Prequel Park (Power Station sub-area); the sources agree the interim park sits within the future waterfront open space, but no drawing on file shows the interim footprint at scale.",
@@ -863,6 +907,14 @@
     "accessed": "2026-09-17"
    },
    {
+    "id": "src-socketsite-2020-10",
+    "title": "Revised Timing for Massive Power Plant Redevelopment",
+    "publisher": "SocketSite",
+    "date": "2020-10-09",
+    "url": "https://socketsite.com/archives/2020/10/revised-phasing-for-massive-potrero-power-plant-redevelopment.html",
+    "accessed": "2026-09-20"
+   },
+   {
     "id": null,
     "title": "default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf",
     "url": "https://default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf"
@@ -870,7 +922,7 @@
   ],
   "notes": "Simplified partial trace of a long shoreline open space -- see accuracy_caveat; does not capture the strip's full north-south extent.",
   "has_record_file": true,
-  "last_verified": "2026-09-17",
+  "last_verified": "2026-09-20",
   "geometry": {
    "type": "MultiPolygon",
    "coordinates": [

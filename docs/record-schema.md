@@ -22,7 +22,10 @@ doesn't exist in `status.csv` or `approximate_projects.csv` fails validation.
   "summary_sources": ["src-hpc-2013"],
   "milestones": [
     {"date": "2020-12", "status": "complete", "text": "Rehabilitation completed",
-     "sources": ["src-hpc-2013"], "expected": false, "approximate": true}
+     "sources": ["src-hpc-2013"], "expected": false, "approximate": true},
+    {"date": "2029", "status": "complete", "text": "Completion expected",
+     "sources": ["src-da-2018"], "expected": true, "approximate": true,
+     "basis": "phase", "basis_note": "Phase 3 in the 2018 Development Agreement's phasing schedule, Exhibit N; not a parcel-specific date"}
   ],
   "costs": [
     {"amount_usd": 100000000, "what": "Historic core rehabilitation, all buildings",
@@ -58,6 +61,28 @@ doesn't exist in `status.csv` or `approximate_projects.csv` fails validation.
   sourced.
 - `status` on a milestone, if set, is one of `complete`,
   `under_construction`, `planned`, `existing`, `being_removed`.
+- `basis` is required on a milestone with `expected: true` and `status:
+  complete` (a future completion): one of `record` (a date for this parcel
+  from a source -- a permit, a developer or agency announcement, a
+  commission report), `phase` (the parcel's phase in the Development
+  Agreement, D4D or infrastructure plan phasing, and that phase's scheduled
+  window -- not a parcel-specific date), or `project` (only the
+  whole-project buildout target is known, softer still). Prefer `record`
+  over `phase` over `project`: use the weakest basis the documents actually
+  support, never a stronger label than the source justifies. A future
+  completion with no `basis` fails validation.
+- `basis_note` is required alongside `basis: phase` or `basis: project`: one
+  sentence naming the phase or the buildout target and its document, e.g.
+  "Phase 3 in the 2018 Development Agreement's phasing schedule, Exhibit N;
+  not a parcel-specific date". Optional (usually omitted) for `basis:
+  record`, since the milestone's own `sources` already name the document.
+- A paused project doesn't get its expected completion deleted or
+  silently re-dated: add a separate, sourced milestone (`status:
+  under_construction` or `planned`) whose text says construction is paused
+  and by whose statement, and keep the existing expected-completion
+  milestone's `basis: project` with a `basis_note` explaining why the date
+  is soft (e.g. "buildout target predates the 2026 pause announcement; no
+  revised date sourced yet").
 - Every image has `path`, `kind`, `credit`, `license` and `source_url`, and
   the file exists. `kind` is one of:
   - `historic`: long before the redevelopment -- an old photograph of the
@@ -182,6 +207,12 @@ doesn't exist in `status.csv` or `approximate_projects.csv` fails validation.
   site still reads that CSV; the data-layer thread will switch `sitegen/`
   to read record files and fold the CSV in. Until then, put new dated events
   in the record file only.
+- The `basis`/`basis_note`/`approximate` rules above apply the same way to
+  a row in `data/milestones.csv` for a record with no dossier file yet: the
+  CSV gained `basis` and `basis_note` columns for exactly this (blank for
+  every milestone that isn't a future completion). `src/validate_records.py`
+  only checks the JSON files -- a CSV row's `basis` is not machine-checked,
+  so get it right by hand.
 
 ## Drafts
 

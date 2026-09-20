@@ -77,7 +77,52 @@
    }
   ],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2035",
+    "date_label": "2035",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Completion expected: Block 1 is not named in any Phase 1-3 block list found (the 2024 annual compliance report's Phase 1 list is Blocks 2, 7, 8, 11, 12, 15); only the whole-project buildout target applies",
+    "expected": true,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-phase1-2020",
+      "title": "Potrero Power Station Phase 1 and Phasing Plan Amendment Applications: Development Phase Approval (October 7, 2020)",
+      "publisher": "SF Planning",
+      "date": "2020-10-07",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-20"
+     },
+     {
+      "id": "src-socketsite-2020-10",
+      "title": "Revised Timing for Massive Power Plant Redevelopment",
+      "publisher": "SocketSite",
+      "date": "2020-10-09",
+      "url": "https://socketsite.com/archives/2020/10/revised-phasing-for-massive-potrero-power-plant-redevelopment.html",
+      "accessed": "2026-09-20"
+     }
+    ],
+    "source": "SF Planning, 2020-10-07; SocketSite, 2020-10-09",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_block_1",
+     "slug": "potrero-power-station-block-1",
+     "name": "Potrero Power Station Block 1",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-1/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-1.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    }
+   }
+  ],
   "changes": [],
   "images": [
    {
@@ -97,7 +142,8 @@
   ],
   "open_questions": [
    "No design review approval or construction-start date found for Block 1; it is not one of the six buildings named in the 2024 annual compliance report's Phase 1 list (Blocks 2, 7, 8, 11, 12, 15), and no later-phase design review approval was found either.",
-   "No source found claiming a specific planned use (e.g., grocery store) beyond the D4D's own generic 'Potential District Parking Garage Location, Potential Grocery Store Location' asterisk notation, which applies to Blocks 1, 5 and 13 collectively, not to Block 1 alone."
+   "No source found claiming a specific planned use (e.g., grocery store) beyond the D4D's own generic 'Potential District Parking Garage Location, Potential Grocery Store Location' asterisk notation, which applies to Blocks 1, 5 and 13 collectively, not to Block 1 alone.",
+   "No phase-specific schedule found for Block 1 (it appears in none of the 2024 compliance report's phase lists located); the added expected-completion milestone therefore uses only the whole-project buildout target (2035, SocketSite Oct 2020), not a block-specific date."
   ],
   "sources": [
    {
@@ -141,6 +187,22 @@
     "accessed": "2026-09-18"
    },
    {
+    "id": "src-phase1-2020",
+    "title": "Potrero Power Station Phase 1 and Phasing Plan Amendment Applications: Development Phase Approval (October 7, 2020)",
+    "publisher": "SF Planning",
+    "date": "2020-10-07",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-20"
+   },
+   {
+    "id": "src-socketsite-2020-10",
+    "title": "Revised Timing for Massive Power Plant Redevelopment",
+    "publisher": "SocketSite",
+    "date": "2020-10-09",
+    "url": "https://socketsite.com/archives/2020/10/revised-phasing-for-massive-potrero-power-plant-redevelopment.html",
+    "accessed": "2026-09-20"
+   },
+   {
     "id": null,
     "title": "default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf",
     "url": "https://default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf"
@@ -148,7 +210,7 @@
   ],
   "notes": "Approximate polygon for a real, D4D-adopted block -- see accuracy_caveat.",
   "has_record_file": true,
-  "last_verified": "2026-09-18",
+  "last_verified": "2026-09-20",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

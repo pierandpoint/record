@@ -8,7 +8,21 @@
     "src-d4d-final-fig623",
     "src-d4d-final-6.2.2"
   ],
-  "milestones": [],
+  "milestones": [
+    {
+      "date": "2035",
+      "status": "complete",
+      "text": "Completion expected: Block 13 is not named in any Phase 1-3 block list found (the 2024 annual compliance report's Phase 1 list is Blocks 2, 7, 8, 11, 12, 15); only the whole-project buildout target applies",
+      "sources": [
+        "src-phase1-2020",
+        "src-socketsite-2020-10"
+      ],
+      "expected": true,
+      "approximate": true,
+      "basis": "project",
+      "basis_note": "Whole-project buildout target: the October 2020 Phase 1 and Phasing Plan Amendment revised construction from six phases to three over the same 16 years, with the final Phase 3 'wrapping up construction in late 2035' per SocketSite (Oct 9, 2020); Block 13 has no dated or phase-specific schedule of its own in any source found."
+    }
+  ],
   "costs": [],
   "facts": [
     {
@@ -102,11 +116,28 @@
       "date": "2025-03-28",
       "url": "https://sfplanning.org/potrero-power-station",
       "accessed": "2026-09-18"
+    },
+    {
+      "id": "src-phase1-2020",
+      "title": "Potrero Power Station Phase 1 and Phasing Plan Amendment Applications: Development Phase Approval (October 7, 2020)",
+      "publisher": "SF Planning",
+      "date": "2020-10-07",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-20"
+    },
+    {
+      "id": "src-socketsite-2020-10",
+      "title": "Revised Timing for Massive Power Plant Redevelopment",
+      "publisher": "SocketSite",
+      "date": "2020-10-09",
+      "url": "https://socketsite.com/archives/2020/10/revised-phasing-for-massive-potrero-power-plant-redevelopment.html",
+      "accessed": "2026-09-20"
     }
   ],
   "open_questions": [
     "No design review approval or construction-start date found for Block 13; it is not one of the six buildings named in the 2024 annual compliance report's Phase 1 list (Blocks 2, 7, 8, 11, 12, 15), and no later-phase design review approval was found either.",
-    "This dossier's height figures for Block 13 come from this repository's own visual reading of the D4D's Figure 6.2.3 diagram, cross-checked against this repository's existing geometry file (potrero_block_13.geojson), which independently flagged the same 300 ft/280 ft figures as surprising for a block otherwise described in casual references as infrastructure/utility/PDR. The D4D's own Standard 6.2.2 places 'Block 13' in its 'Midrise buildings (101-145 feet)' list, which conflicts with the figure. This is a genuine internal inconsistency in the adopted Design for Development, not a transcription error by this project; flagged for the repository owner rather than resolved here."
+    "This dossier's height figures for Block 13 come from this repository's own visual reading of the D4D's Figure 6.2.3 diagram, cross-checked against this repository's existing geometry file (potrero_block_13.geojson), which independently flagged the same 300 ft/280 ft figures as surprising for a block otherwise described in casual references as infrastructure/utility/PDR. The D4D's own Standard 6.2.2 places 'Block 13' in its 'Midrise buildings (101-145 feet)' list, which conflicts with the figure. This is a genuine internal inconsistency in the adopted Design for Development, not a transcription error by this project; flagged for the repository owner rather than resolved here.",
+    "No phase-specific schedule found for Block 13; the added expected-completion milestone therefore uses only the whole-project buildout target (2035, SocketSite Oct 2020), not a block-specific date."
   ],
-  "last_verified": "2026-09-18"
+  "last_verified": "2026-09-20"
 }

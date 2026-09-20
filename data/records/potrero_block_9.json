@@ -27,6 +27,20 @@
       ],
       "expected": false,
       "approximate": false
+    },
+    {
+      "date": "2035",
+      "status": "complete",
+      "text": "Completion expected: Block 9's hotel is not named in any Phase 1-3 block list found and the developer said in May 2025 the hotel is 'a decade away'; only the whole-project buildout target applies",
+      "sources": [
+        "src-phase1-2020",
+        "src-socketsite-2020-10",
+        "src-chronicle-2025-05"
+      ],
+      "expected": true,
+      "approximate": true,
+      "basis": "project",
+      "basis_note": "Whole-project buildout target: the October 2020 Phase 1 and Phasing Plan Amendment's final Phase 3 'wrapping up construction in late 2035' per SocketSite (Oct 9, 2020); Block 9 has no assigned phase in any source found, and the developer's own May 2025 'a decade away' estimate (i.e., roughly mid-2030s) is consistent with, but not more specific than, this whole-project target."
     }
   ],
   "costs": [],
@@ -155,12 +169,29 @@
       "date": "2020-02-26",
       "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
       "accessed": "2026-09-17"
+    },
+    {
+      "id": "src-phase1-2020",
+      "title": "Potrero Power Station Phase 1 and Phasing Plan Amendment Applications: Development Phase Approval (October 7, 2020)",
+      "publisher": "SF Planning",
+      "date": "2020-10-07",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-20"
+    },
+    {
+      "id": "src-socketsite-2020-10",
+      "title": "Revised Timing for Massive Power Plant Redevelopment",
+      "publisher": "SocketSite",
+      "date": "2020-10-09",
+      "url": "https://socketsite.com/archives/2020/10/revised-phasing-for-massive-potrero-power-plant-redevelopment.html",
+      "accessed": "2026-09-20"
     }
   ],
   "open_questions": [
     "No source found stating a developer, architect, hotel brand/operator, or construction cost for the Block 9 hotel.",
     "No design review approval or construction-start date found for Block 9; the 2024 annual compliance report's only mention of Block 9 is site photos of 'Block 9 / Unit 3' as of December 2024, with no described construction activity.",
-    "Whether Unit 3 will ultimately be retained or demolished as part of the hotel project is not settled in any source found; the D4D provides for both configurations."
+    "Whether Unit 3 will ultimately be retained or demolished as part of the hotel project is not settled in any source found; the D4D provides for both configurations.",
+    "No phase-specific schedule found for the Block 9 hotel; the added expected-completion milestone therefore uses only the whole-project buildout target (2035, SocketSite Oct 2020), not a hotel-specific date."
   ],
-  "last_verified": "2026-09-18"
+  "last_verified": "2026-09-20"
 }
