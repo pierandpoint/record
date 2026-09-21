@@ -224,6 +224,77 @@ Default is not a draft (the key can be omitted). See `sitegen/README.md` and
 `docs/briefs/publish.md`, "Rendered site in the public repo". No record is a
 draft today; this is the mechanism, not a change to any record's content.
 
+## Adjacent records: proposals outside a site
+
+Most records sit inside the boundary of one of the four tracked sites. A record can
+instead be `adjacent`: real, contested or proposed development next to a tracked site
+but outside every tracked boundary -- the model is a proposal one block from Pier 70 or
+Potrero Power Station that Pier & Point records without taking a side on
+(`docs/briefs/adjacent-proposals.md`, "The stance, which is the whole point").
+
+```json
+{
+  "record_id": "potrero_23rd_st_data_center",
+  "relation": "adjacent",
+  "adjacent_to": "potrero",
+  "distance_note": "One block south of the Potrero Power Station boundary, across 23rd St.",
+  "how_to_comment": [
+    {"channel": "SF Planning project page", "detail": "Case No. 2026-XXXXXX",
+     "url": "https://sfplanning.org/..."},
+    {"channel": "Hearing notice", "detail": "Planning Commission calendar",
+     "url": "https://sfplanning.org/calendar"}
+  ],
+  "positions": [
+    {"who": "Supervisor X", "statement": "Quoted or paraphrased position, one sentence.",
+     "sources": ["src-example"], "date": "2026-09-10"}
+  ]
+}
+```
+
+- `relation` is optional: `tracked` (the default, and the only value every existing
+  record has) or `adjacent`. Omit it for a normal tracked record; don't write
+  `"relation": "tracked"` explicitly.
+- `adjacent_to` is required when `relation` is `adjacent`: the `slug` of a real row in
+  `data/sites.csv` -- the site this record sits next to, not inside. The validator
+  checks the slug exists. The record's own `site` grouping in `status.csv` or
+  `approximate_projects.csv` (the column that decides which site page it renders on)
+  must map to this same slug, so an adjacent record's "Nearby" section and its
+  `adjacent_to` always agree.
+- `distance_note` is required when `relation` is `adjacent`: one sourced phrase
+  locating it relative to the site's boundary, e.g. "One block south of the Potrero
+  Power Station boundary, across 23rd St." Not a citation object -- a short, plain
+  sentence a reader sees directly under the record's name.
+- `how_to_comment` is optional, meaningful on an `adjacent` record: a list of
+  `{"channel": ..., "detail": ..., "url": ...}` objects, official channels only (the
+  Planning Department's own project page, a hearing notice, the Board of Supervisors'
+  Clerk). `channel` is required; at least one of `detail` or `url` is required. Never a
+  petition, campaign or fundraising link, for or against (`docs/briefs/
+  adjacent-proposals.md`, "Don't") -- the validator rejects a URL on a known
+  petition/crowdfunding domain as a defensive check, but the rule itself is enforced by
+  not writing one in the first place.
+- `positions` is optional, meaningful on an `adjacent` record: a list of
+  `{"who": ..., "statement": ..., "sources": [...], "date": ...}` objects, one entry
+  per person or named group who has taken a public position, each cited like any other
+  claim (`sources` must be known source ids). `who` and `statement` are required; a
+  `statement` is quoted or closely paraphrased, never characterised ("says the project
+  would...", never "worries that..."). Language throughout an adjacent record's
+  `summary`, `notes` and `positions` is descriptive, not editorial: Pier & Point
+  records who said what and does not itself take a position.
+- Geometry for an `adjacent` record follows the same two paths as any other record: a
+  real Assessor parcel joined through `status.csv` where one exists, or an approximate
+  feature in `data/manual/*.geojson` per the usual rules, with its own
+  `accuracy_caveat` and `digitized_from`.
+- Rendering (`docs/briefs/adjacent-proposals.md`, "Rendering"): an adjacent record
+  appears on its site's page in a "Nearby" section under the tracked records, and on
+  the home map and the site map as a dashed outline with a legend entry of its own. It
+  is left out of the progress tracker, "N of M complete" counts and the sharing-card
+  counts; it is included in the API, the changelog and the digest, each stating its
+  relation. Its own record page shows "Nearby proposal, outside `<site>`" under its
+  name, its milestones as its entitlement path, a "How to comment" block from
+  `how_to_comment`, and a "Positions on record" list from `positions`.
+- Changelog rows that add an adjacent record use `category: coverage`
+  (`data/changelog.csv`), the same category used for any new piece of coverage.
+
 ## Relationship to the geometry files
 
 Geometry files keep their own `digitized_from`, `accuracy_caveat`,
