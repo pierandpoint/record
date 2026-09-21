@@ -46,6 +46,41 @@
   "costs": [],
   "milestones": [
    {
+    "date": "2007-04-27",
+    "date_label": "Apr 27, 2007",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "SF Dept. of Building Inspection permit #200704279921 filed to erect a 5-story office/lab building at 455 Mission Bay Blvd South, this parcel's address before it was renamed 1401 Third Street",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-datasf-permit-1401-3rd",
+      "title": "Building Permits: permit #200704279921 (455 Mission Bay Blvd South, block 8721 lot 012 at filing -- later renumbered lot 032), filed 2007-04-27, \"erect 5 stories office/lab\", completed 2008-04-24",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200704279921",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "DataSF / SF Department of Building Inspection",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_1401_3rd",
+     "slug": "1401-third-street",
+     "name": "1401 Third Street",
+     "permalink": "https://pierandpoint.org/parcels/1401-third-street/",
+     "api": "https://pierandpoint.org/api/v1/records/1401-third-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   },
+   {
     "date": "2009",
     "date_label": "~2009",
     "status": "complete",
@@ -85,7 +120,8 @@
   "images": [],
   "open_questions": [
    "Developer, architect and current/original tenant not confirmed by any source found in this pass -- consistent with this record's own geometry-file note.",
-   "Precise completion month not available; DataSF's Assessor tax roll gives only a year."
+   "Precise completion month not available; DataSF's Assessor tax roll gives only a year.",
+   "The permit's own block/lot (block 8721, lot 012) at filing time differs from the lot the Assessor now uses for this address (lot 032); Mission Bay parcels were renumbered after the original 2000s-era permits were filed, and the address, description (5-story office/lab), scale and 2008-04-24 permit-completion date all line up with this parcel, so this is treated as a lot renumbering, not a different building."
   ],
   "sources": [
    {
@@ -93,6 +129,13 @@
     "title": "Assessor Historical Secured Property Tax Rolls (block 8721, lot 032 -- 1401 3rd St)",
     "publisher": "DataSF / SF Office of the Assessor-Recorder",
     "url": "https://data.sf.gov/resource/wv5m-vpq2.json",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-datasf-permit-1401-3rd",
+    "title": "Building Permits: permit #200704279921 (455 Mission Bay Blvd South, block 8721 lot 012 at filing -- later renumbered lot 032), filed 2007-04-27, \"erect 5 stories office/lab\", completed 2008-04-24",
+    "publisher": "DataSF / SF Department of Building Inspection",
+    "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200704279921",
     "accessed": "2026-09-21"
    },
    {

@@ -5,6 +5,14 @@
   "summary_sources": ["src-datasf-assessor-8721032"],
   "milestones": [
     {
+      "date": "2007-04-27",
+      "status": "planned",
+      "text": "SF Dept. of Building Inspection permit #200704279921 filed to erect a 5-story office/lab building at 455 Mission Bay Blvd South, this parcel's address before it was renamed 1401 Third Street",
+      "sources": ["src-datasf-permit-1401-3rd"],
+      "expected": false,
+      "approximate": false
+    },
+    {
       "date": "2009",
       "status": "complete",
       "text": "Building completed, per DataSF Assessor tax roll",
@@ -23,11 +31,19 @@
       "publisher": "DataSF / SF Office of the Assessor-Recorder",
       "url": "https://data.sf.gov/resource/wv5m-vpq2.json",
       "accessed": "2026-09-21"
+    },
+    {
+      "id": "src-datasf-permit-1401-3rd",
+      "title": "Building Permits: permit #200704279921 (455 Mission Bay Blvd South, block 8721 lot 012 at filing -- later renumbered lot 032), filed 2007-04-27, \"erect 5 stories office/lab\", completed 2008-04-24",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200704279921",
+      "accessed": "2026-09-21"
     }
   ],
   "open_questions": [
     "Developer, architect and current/original tenant not confirmed by any source found in this pass -- consistent with this record's own geometry-file note.",
-    "Precise completion month not available; DataSF's Assessor tax roll gives only a year."
+    "Precise completion month not available; DataSF's Assessor tax roll gives only a year.",
+    "The permit's own block/lot (block 8721, lot 012) at filing time differs from the lot the Assessor now uses for this address (lot 032); Mission Bay parcels were renumbered after the original 2000s-era permits were filed, and the address, description (5-story office/lab), scale and 2008-04-24 permit-completion date all line up with this parcel, so this is treated as a lot renumbering, not a different building."
   ],
   "last_verified": "2026-09-21"
 }

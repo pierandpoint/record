@@ -10,6 +10,14 @@
   ],
   "milestones": [
     {
+      "date": "2007-05-09",
+      "status": "planned",
+      "text": "SF Dept. of Building Inspection permit #200705090778 filed to erect the 7-story parking garage at this address",
+      "sources": ["src-datasf-permit-chase-garage"],
+      "expected": false,
+      "approximate": false
+    },
+    {
       "date": "2009",
       "status": "complete",
       "text": "Parking structure completed.",
@@ -28,10 +36,18 @@
       "publisher": "DataSF",
       "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8721030",
       "accessed": "2026-09-21"
+    },
+    {
+      "id": "src-datasf-permit-chase-garage",
+      "title": "Building Permits: permit #200705090778 (450 South St, block 8721 lot 012 at filing -- now 150 Warriors Way / lot 030), filed 2007-05-09, \"to erect parking garage with 7 stories new building\", completed 2009-10-23, estimated cost $34,000,000",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200705090778",
+      "accessed": "2026-09-21"
     }
   ],
   "open_questions": [
     "Exact month/day of the 2009 completion is not sourced, only the year.",
+    "The 2007 permit's own block/lot (block 8721, lot 012) differs from the lot the Assessor now uses for this address (lot 030) and its address is given as 450 South St rather than 150 Warriors Way; the 7-story parking-garage description and 2009-10-23 permit-completion date (matching the Assessor's 2009 year) line up with this parcel, so this is treated as a lot/address renumbering (this session's own permit search elsewhere on this block confirms 450 South St and 150 Warriors Way are used interchangeably for this garage), not a different building.",
     "This garage's own construction (2009) predates Chase Center itself, which this pass did not independently source an opening date for -- the two are not on the same construction timeline, contrary to the possibility raised in this thread's brief."
   ],
   "last_verified": "2026-09-21"

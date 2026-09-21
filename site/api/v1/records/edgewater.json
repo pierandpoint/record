@@ -46,6 +46,41 @@
   "costs": [],
   "milestones": [
    {
+    "date": "2005-02-08",
+    "date_label": "Feb 8, 2005",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "SF Dept. of Building Inspection permit #200502085025 filed to erect a 5-story, 194-dwelling-unit building at 355 Berry St",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-datasf-permit-edgewater",
+      "title": "Building Permits: permit #200502085025 (355 Berry St, block 8707 lot 003), filed 2005-02-08, \"erect 5 stories 194 dwelling units bldg\", completed 2008-02-14",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200502085025",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "DataSF / SF Department of Building Inspection",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_edgewater",
+     "slug": "edgewater",
+     "name": "Edgewater",
+     "permalink": "https://pierandpoint.org/parcels/edgewater/",
+     "api": "https://pierandpoint.org/api/v1/records/edgewater.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   },
+   {
     "date": "2007",
     "date_label": "~2007",
     "status": "complete",
@@ -86,7 +121,8 @@
   "open_questions": [
    "Developer and architect not confirmed by any source found in this pass, consistent with this record's own geometry-file note.",
    "Precise opening month not available; DataSF's Assessor tax roll gives only a year.",
-   "A listing site's '6 units' figure (noted in this record's geometry file) reads as a floorplan-type count, not the building's 193-unit total per the Assessor tax roll -- flagged there rather than reconciled here."
+   "A listing site's '6 units' figure (noted in this record's geometry file) reads as a floorplan-type count, not the building's 193-unit total per the Assessor tax roll -- flagged there rather than reconciled here.",
+   "The 2005 construction permit's own unit count (194) is one more than the Assessor's 193 -- likely a manager's unit counted differently between filing and final tax-roll record, not a different building; not further reconciled here."
   ],
   "sources": [
    {
@@ -94,6 +130,13 @@
     "title": "Assessor Historical Secured Property Tax Rolls (block 8707, lot 003 -- 355 Berry St)",
     "publisher": "DataSF / SF Office of the Assessor-Recorder",
     "url": "https://data.sf.gov/resource/wv5m-vpq2.json",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-datasf-permit-edgewater",
+    "title": "Building Permits: permit #200502085025 (355 Berry St, block 8707 lot 003), filed 2005-02-08, \"erect 5 stories 194 dwelling units bldg\", completed 2008-02-14",
+    "publisher": "DataSF / SF Department of Building Inspection",
+    "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200502085025",
     "accessed": "2026-09-21"
    },
    {

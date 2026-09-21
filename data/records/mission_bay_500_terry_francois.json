@@ -11,6 +11,14 @@
   ],
   "milestones": [
     {
+      "date": "2007-05-03",
+      "status": "under_construction",
+      "text": "SF Dept. of Building Inspection permit #200705030366 filed for a temporary tower crane \"for construction of 6 story building\" at this address",
+      "sources": ["src-datasf-permit-500terry"],
+      "expected": false,
+      "approximate": false
+    },
+    {
       "date": "2008",
       "status": "complete",
       "text": "Building completed.",
@@ -36,10 +44,18 @@
       "publisher": "Clark Pacific (precast contractor)",
       "url": "https://www.clarkpacific.com/project/500-terry-francois-mission-bay-block-26a/",
       "accessed": "2026-09-21"
+    },
+    {
+      "id": "src-datasf-permit-500terry",
+      "title": "Building Permits: permit #200705030366 (500 Terry A. Francois, block 8721 lot 001 at filing), filed 2007-05-03, \"temporary tower crane for construction of 6 story building\", completed 2008-04-24",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200705030366",
+      "accessed": "2026-09-21"
     }
   ],
   "open_questions": [
     "Exact month/day of the 2008 completion is not sourced, only the year.",
+    "The 2007 crane permit's own block/lot (block 8721, lot 001) differs from the lot the Assessor now uses for this address (lot 010); the address and 2008-04-24 permit-completion date (matching the Assessor's 2008 year) line up with this parcel, so this is treated as a lot renumbering, not a different building.",
     "The building's architect and its later Cisco/Meraki tenant history are documented elsewhere (this project's own geometry file cites the SF Chronicle for the Meraki lease) but were not independently re-verified in this minimal-dossier pass, so are left out here rather than repeated unsourced."
   ],
   "last_verified": "2026-09-21"

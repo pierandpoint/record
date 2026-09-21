@@ -5,6 +5,14 @@
   "summary_sources": ["src-ucsf-ortho-2009-10", "src-datasf-assessor-8709018"],
   "milestones": [
     {
+      "date": "2006-11-29",
+      "status": "planned",
+      "text": "SF Dept. of Building Inspection permit #200611298694 filed to erect a new 6-story office/lab/retail building at this address",
+      "sources": ["src-datasf-permit-1500-owens"],
+      "expected": false,
+      "approximate": false
+    },
+    {
       "date": "2009-10-01",
       "status": "complete",
       "text": "UCSF Orthopaedic Institute opens at 1500 Owens St, the first UCSF clinical service to open at Mission Bay",
@@ -31,11 +39,19 @@
       "publisher": "DataSF / SF Office of the Assessor-Recorder",
       "url": "https://data.sf.gov/resource/wv5m-vpq2.json",
       "accessed": "2026-09-21"
+    },
+    {
+      "id": "src-datasf-permit-1500-owens",
+      "title": "Building Permits: permit #200611298694 (1500 Owens St, block 8709 lot 006 at filing), filed 2006-11-29, \"to erect a new 6 stories, office / lab / retail building\", completed 2009-07-31",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200611298694",
+      "accessed": "2026-09-21"
     }
   ],
   "open_questions": [
     "Architect and general contractor not confirmed by any source found in this pass.",
-    "Whether the other clinics now at this address (Sports Medicine, Physical Therapy & Rehabilitation, Gynecology & Urogynecology) opened at the same time as the Orthopaedic Institute or moved in later is not established."
+    "Whether the other clinics now at this address (Sports Medicine, Physical Therapy & Rehabilitation, Gynecology & Urogynecology) opened at the same time as the Orthopaedic Institute or moved in later is not established.",
+    "The 2006 construction permit's own block/lot (block 8709, lot 006) differs from the lot the Assessor now uses for this address (lot 018); Mission Bay parcels were renumbered after this permit was filed, and the address, 6-story office/lab/retail description, and 2009 permit-completion date all line up with this parcel, so this is treated as a lot renumbering, not a different building."
   ],
   "last_verified": "2026-09-21"
 }

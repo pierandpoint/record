@@ -9,6 +9,14 @@
   ],
   "milestones": [
     {
+      "date": "2000-04-18",
+      "status": "planned",
+      "text": "SF Dept. of Building Inspection permit #200004187592 filed to erect a 5-story, 100-unit residential building at 150 Berry St",
+      "sources": ["src-datasf-permit-richsorro"],
+      "expected": false,
+      "approximate": false
+    },
+    {
       "date": "2002-07",
       "status": "complete",
       "text": "Rich Sorro Commons opened -- the first affordable family housing development in Mission Bay.",
@@ -34,10 +42,18 @@
       "publisher": "DataSF",
       "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8706264",
       "accessed": "2026-09-21"
+    },
+    {
+      "id": "src-datasf-permit-richsorro",
+      "title": "Building Permits: permit #200004187592 (150 Berry St, block 3795B lot 001 at filing), filed 2000-04-18, \"erect a 5 story 100 unit residential bldg\", completed 2002-10-21, estimated cost $16,766,000",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200004187592",
+      "accessed": "2026-09-21"
     }
   ],
   "open_questions": [
-    "DataSF Assessor's own year_property_built field records 2003, one year after Mission Housing's stated July 2002 opening -- likely reflects the tax roll's assessment lag rather than a different construction date; not further reconciled here."
+    "DataSF Assessor's own year_property_built field records 2003, one year after Mission Housing's stated July 2002 opening -- likely reflects the tax roll's assessment lag rather than a different construction date; not further reconciled here.",
+    "The 2000 construction permit's own block/lot (block 3795B, lot 001, an older pre-redevelopment block grid) differs from the Assessor's current blklot 8706264; the address, 100-unit/5-story description, and October 2002 permit-completion date (matching Mission Housing's July 2002 opening and the Assessor's 2003 year, both within months) line up with this parcel, so this is treated as Mission Bay's redevelopment-era block renumbering, not a different building."
   ],
   "last_verified": "2026-09-21"
 }

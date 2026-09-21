@@ -46,6 +46,41 @@
   "costs": [],
   "milestones": [
    {
+    "date": "2000-04-18",
+    "date_label": "Apr 18, 2000",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "SF Dept. of Building Inspection permit #200004187592 filed to erect a 5-story, 100-unit residential building at 150 Berry St",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-datasf-permit-richsorro",
+      "title": "Building Permits: permit #200004187592 (150 Berry St, block 3795B lot 001 at filing), filed 2000-04-18, \"erect a 5 story 100 unit residential bldg\", completed 2002-10-21, estimated cost $16,766,000",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200004187592",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "DataSF / SF Department of Building Inspection",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_rich_sorro_commons",
+     "slug": "rich-sorro-commons",
+     "name": "Rich Sorro Commons",
+     "permalink": "https://pierandpoint.org/parcels/rich-sorro-commons/",
+     "api": "https://pierandpoint.org/api/v1/records/rich-sorro-commons.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   },
+   {
     "date": "2002-07",
     "date_label": "Jul 2002",
     "status": "complete",
@@ -84,7 +119,8 @@
   "changes": [],
   "images": [],
   "open_questions": [
-   "DataSF Assessor's own year_property_built field records 2003, one year after Mission Housing's stated July 2002 opening -- likely reflects the tax roll's assessment lag rather than a different construction date; not further reconciled here."
+   "DataSF Assessor's own year_property_built field records 2003, one year after Mission Housing's stated July 2002 opening -- likely reflects the tax roll's assessment lag rather than a different construction date; not further reconciled here.",
+   "The 2000 construction permit's own block/lot (block 3795B, lot 001, an older pre-redevelopment block grid) differs from the Assessor's current blklot 8706264; the address, 100-unit/5-story description, and October 2002 permit-completion date (matching Mission Housing's July 2002 opening and the Assessor's 2003 year, both within months) line up with this parcel, so this is treated as Mission Bay's redevelopment-era block renumbering, not a different building."
   ],
   "sources": [
    {
@@ -99,6 +135,13 @@
     "title": "Assessor Historical Secured Property Tax Rolls (blklot 8706264, 150 Berry St): year_property_built 2003",
     "publisher": "DataSF",
     "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8706264",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-datasf-permit-richsorro",
+    "title": "Building Permits: permit #200004187592 (150 Berry St, block 3795B lot 001 at filing), filed 2000-04-18, \"erect a 5 story 100 unit residential bldg\", completed 2002-10-21, estimated cost $16,766,000",
+    "publisher": "DataSF / SF Department of Building Inspection",
+    "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200004187592",
     "accessed": "2026-09-21"
    },
    {

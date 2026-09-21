@@ -9,6 +9,14 @@
   ],
   "milestones": [
     {
+      "date": "2000-10-30",
+      "status": "planned",
+      "text": "SF Dept. of Building Inspection permit #200010304349 filed to erect a six-story office building at 550 Terry A. Francois Blvd",
+      "sources": ["src-datasf-permit-550terry"],
+      "expected": false,
+      "approximate": false
+    },
+    {
       "date": "2002",
       "status": "complete",
       "text": "Building completed.",
@@ -27,10 +35,18 @@
       "publisher": "DataSF",
       "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8721011",
       "accessed": "2026-09-21"
+    },
+    {
+      "id": "src-datasf-permit-550terry",
+      "title": "Building Permits: permit #200010304349 (550 Terry A. Francois Blvd), filed 2000-10-30, \"erect a six story office bldg\", completed 2002-09-13",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200010304349",
+      "accessed": "2026-09-21"
     }
   ],
   "open_questions": [
     "Exact month/day of the 2002 completion is not sourced, only the year.",
+    "The 2000 permit's own block/lot references (spanning several small blocks in the 3839-3851 range, an older pre-redevelopment block grid) differ from the Assessor's current blklot 8721011; the address (550 Terry A. Francois Blvd), six-story office description, and 2002-09-13 permit-completion date (matching the Assessor's 2002 year exactly) line up with this parcel, so this is treated as Mission Bay's redevelopment-era block renumbering, not a different building.",
     "The building's developer/architect (reported elsewhere as Studios Architecture) was not independently confirmed by a source read in this pass -- left out of this minimal dossier rather than repeated unsourced."
   ],
   "last_verified": "2026-09-21"
