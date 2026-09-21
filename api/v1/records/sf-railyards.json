@@ -1,0 +1,328 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-21",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "mission_bay_sf_railyards",
+  "slug": "sf-railyards",
+  "name": "SF Railyards",
+  "permalink": "https://pierandpoint.org/parcels/sf-railyards/",
+  "api": "https://pierandpoint.org/api/v1/records/sf-railyards.json",
+  "names": [
+   "SF Railyards"
+  ],
+  "site": {
+   "slug": "mission-bay",
+   "name": "Mission Bay",
+   "short": "Mission Bay",
+   "url": "https://pierandpoint.org/sites/mission-bay/"
+  },
+  "status": "planned",
+  "status_label": "Planned",
+  "use": "mixed",
+  "relation": "adjacent",
+  "adjacent_to": "mission-bay",
+  "distance_note": "Borders Mission Bay North directly along Townsend St and 4th St. OCII's own December 2019 Mission Bay Land Use Map leaves this area (labeled N5A, N6 and N7) without an assigned land use or a drawn boundary, unlike every neighboring Mission Bay North block -- consistent with it still being outside Mission Bay North's own planned build-out.",
+  "how_to_comment": [
+   {
+    "channel": "SF Planning project page",
+    "detail": "SF Railyards Planning Program, Case No. 2023-000384CWP",
+    "url": "https://sfplanning.org/project/sf-railyards-planning-program"
+   },
+   {
+    "channel": "SF Planning Commission hearing calendar",
+    "detail": "Check for a scheduled hearing on this case number",
+    "url": "https://sfplanning.org/hearings-cpc-list"
+   },
+   {
+    "channel": "Clerk of the Board of Supervisors",
+    "detail": "District 6 (Supervisor Matt Dorsey)",
+    "url": "https://sfbos.org/clerk-board"
+   }
+  ],
+  "positions": [],
+  "address": null,
+  "summary": "A 20-acre active Caltrain rail yard and maintenance facility at the nexus of SoMa, Mission Bay and Showplace Square, including the existing 4th & King Street Station itself. Owned by Prologis, with Caltrain holding a perpetual easement to operate rail. SF Planning is processing it as the \"SF Railyards Planning Program\" (Case No. 2023-000384CWP); Prologis has floated development concepts including roughly 2,500 homes, up to 4 million square feet of commercial space and a tower as tall as 850 feet, via a Development Agreement, the same approval path used for Pier 70, Mission Rock and Potrero Power Station.",
+  "summary_sources": [
+   "src-sfplanning-staffreport-2025",
+   "src-sfplanning-faq-2023",
+   "src-sfchronicle-railyards-2026"
+  ],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "APPROXIMATE -- not a surveyed parcel or a GIS file from Caltrain/Prologis/SF Planning. The active rail right-of-way here carries no Assessor block/lot in DataSF's Parcels - Active and Retired dataset (checked directly; consistent with railroad right-of-way being outside the normal local assessment roll), so this could not be joined via status.csv like a real parcel. Three of the four sides (Townsend, 4th, 7th) are real, continuous DataSF street centerlines; the fourth (King St plus a straight closing line where King's real data ends short of 7th, at the I-280 interchange) is the weakest edge and the one most likely to need revision if a real project boundary or EIR figure becomes available. Includes the existing Caltrain 4th & King Street Station itself, which the project's own description treats as part of the site being redeveloped, not something outside it.",
+    "digitized_from": "Bounded by DataSF's official street centerlines (data/raw/official_street_centerlines.geojson): Townsend St (4th-7th) on the north, 4th St (Townsend-King) on the east, 7th St (Townsend-King) on the west, and King St (4th-~6th, where its real centerline data ends) on the south, each buffered by the project's standard measured half-width (src/street_geometry.py, 6.8m) and inset from the outer street-to-street ring by that same half-width to approximate the curb/yard edge rather than the street centerline itself -- same method as P9 (data/manual/mission_bay_p9_open_space.geojson). King St's real DataSF centerline stops short of 7th St (its last segment ends at -122.397986, 37.773324): that stretch of the site's real southern edge is not a city street at all but the I-280 northbound/southbound ramp interchange (confirmed both by the DataSF centerlines' own 'I-280 N/S ON/OFF RAMP' segments in the same file and by satellite imagery, which shows the ramp curving directly along the yard's southwest taper), so the closing edge there is a straight line from King St's last real point to 7th St's King-St corner, not a surveyed street. The resulting inset polygon is 20.08 acres, matching the SF Planning/Caltrain FAQ's own '20-acre site' description almost exactly, and its outline was checked directly against Esri World Imagery (via contextily) overlaid in QGIS-equivalent fashion -- it tracks the real fan of tracks and the 4th & King station platform canopy tightly, confirmed by the site owner 2026-09-21 after a side-by-side review of the overlay."
+   }
+  },
+  "centroid": {
+   "lon": -122.397199,
+   "lat": 37.774694
+  },
+  "facts": [],
+  "costs": [],
+  "milestones": [
+   {
+    "date": "2022-10",
+    "date_label": "Oct 2022",
+    "status": null,
+    "status_label": null,
+    "text": "Prologis, Caltrain and the City of San Francisco begin public outreach and engagement on the SF Railyards Planning Program.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfplanning-faq-2023",
+      "title": "SF Railyards -- Frequently Asked Questions",
+      "publisher": "SF Planning",
+      "date": "2023-03",
+      "url": "https://sfplanning.org/sites/default/files/documents/citywide/railyardsprojects/railyardsproject_FAQ.pdf",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "SF Planning, 2023-03",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "mission_bay_sf_railyards",
+     "slug": "sf-railyards",
+     "name": "SF Railyards",
+     "permalink": "https://pierandpoint.org/parcels/sf-railyards/",
+     "api": "https://pierandpoint.org/api/v1/records/sf-railyards.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "adjacent"
+   },
+   {
+    "date": "2025-01-09",
+    "date_label": "Jan 9, 2025",
+    "status": null,
+    "status_label": null,
+    "text": "SF Planning Commission informational presentation on the SF Railyards Planning Program (Case No. 2023-000384CWP); no action taken, informational only.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfplanning-staffreport-2025",
+      "title": "SF Railyards Planning Program, Informational Presentation (Case No. 2023-000384CWP)",
+      "publisher": "SF Planning Commission",
+      "date": "2025-01-09",
+      "url": "https://citypln-m-extnl.sfgov.org/Commissions/CPC/1_9_2025/Commission%20Packet/2023-000384CWP.pdf",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "SF Planning Commission, 2025-01-09",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "mission_bay_sf_railyards",
+     "slug": "sf-railyards",
+     "name": "SF Railyards",
+     "permalink": "https://pierandpoint.org/parcels/sf-railyards/",
+     "api": "https://pierandpoint.org/api/v1/records/sf-railyards.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "adjacent"
+   },
+   {
+    "date": "2026-03",
+    "date_label": "Mar 2026",
+    "status": null,
+    "status_label": null,
+    "text": "Prologis submits/firms up a development concept for the site: roughly 2,500 homes and up to 4 million square feet of commercial space, including a tower as tall as 850 feet at 4th and King.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfchronicle-railyards-2026",
+      "title": "Mega-development could transform S.F. railyards into cluster of towers -- one 850 feet tall",
+      "publisher": "San Francisco Chronicle",
+      "date": "2026-03",
+      "url": "https://www.sfchronicle.com/sf/article/railyards-850-foot-tower-20018214.php",
+      "accessed": "2026-09-21"
+     },
+     {
+      "id": "src-sfstandard-2026-03",
+      "title": "Prologis submits plans for Caltrain Railyard project in SF",
+      "publisher": "The San Francisco Standard",
+      "date": "2026-03-10",
+      "url": "https://sfstandard.com/2026/03/10/prologis-san-francisco-railyards-caltrain-development/",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "San Francisco Chronicle, 2026-03; The San Francisco Standard, 2026-03-10",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "mission_bay_sf_railyards",
+     "slug": "sf-railyards",
+     "name": "SF Railyards",
+     "permalink": "https://pierandpoint.org/parcels/sf-railyards/",
+     "api": "https://pierandpoint.org/api/v1/records/sf-railyards.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "adjacent"
+   }
+  ],
+  "changes": [
+   {
+    "date": "2026-09-21",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "New adjacent record (docs/briefs/adjacent-proposals.md): the SF Railyards, a 20-acre active Caltrain rail yard and the 4th & King Street Station, owned by Prologis with Caltrain holding a perpetual operating easement, directly bordering Mission Bay North. SF Planning is processing it as the \"SF Railyards Planning Program\" (Case No. 2023-000384CWP); Prologis has floated concepts including roughly 2,500 homes, up to 4 million square feet of commercial space and a tower as tall as 850 feet, via a Development Agreement. Geometry bounded by real street centerlines (Townsend, 4th, 7th, King), not a surveyed parcel -- see the geometry file's own accuracy_caveat. Pier & Point records the process and does not take a position.",
+    "source": "https://sfplanning.org/project/sf-railyards-planning-program",
+    "sources": [
+     {
+      "title": "https://sfplanning.org/project/sf-railyards-planning-program"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "mission_bay_sf_railyards",
+     "slug": "sf-railyards",
+     "name": "SF Railyards",
+     "permalink": "https://pierandpoint.org/parcels/sf-railyards/",
+     "api": "https://pierandpoint.org/api/v1/records/sf-railyards.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "adjacent",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
+  "images": [],
+  "open_questions": [
+   "Whether Prologis's March 2026 submission constitutes a formal Preliminary Project Assessment/application distinct from the January 2025 informational Case No. 2023-000384CWP, or is still pre-application, is not confirmed here -- SF Planning's project page and hearing calendar are the places to check.",
+   "No named individual or group's public position on this specific project (for or against) has been found and sourced yet, distinct from the SF Railyards Working Group's general, collectively-summarized 'conceptual support' described in the January 2025 staff report.",
+   "The site's geometry is bounded by real street centerlines on three sides; the fourth (where King St's real centerline data ends short of 7th St, at the I-280 interchange) is a straight closing line, not a surveyed street -- see the geometry file's own accuracy_caveat."
+  ],
+  "sources": [
+   {
+    "id": "src-sfplanning-project-page",
+    "title": "SF Railyards Planning Program",
+    "publisher": "SF Planning",
+    "url": "https://sfplanning.org/project/sf-railyards-planning-program",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-sfplanning-staffreport-2025",
+    "title": "SF Railyards Planning Program, Informational Presentation (Case No. 2023-000384CWP)",
+    "publisher": "SF Planning Commission",
+    "date": "2025-01-09",
+    "url": "https://citypln-m-extnl.sfgov.org/Commissions/CPC/1_9_2025/Commission%20Packet/2023-000384CWP.pdf",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-sfplanning-faq-2023",
+    "title": "SF Railyards -- Frequently Asked Questions",
+    "publisher": "SF Planning",
+    "date": "2023-03",
+    "url": "https://sfplanning.org/sites/default/files/documents/citywide/railyardsprojects/railyardsproject_FAQ.pdf",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-sfchronicle-railyards-2026",
+    "title": "Mega-development could transform S.F. railyards into cluster of towers -- one 850 feet tall",
+    "publisher": "San Francisco Chronicle",
+    "date": "2026-03",
+    "url": "https://www.sfchronicle.com/sf/article/railyards-850-foot-tower-20018214.php",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-sfstandard-2026-03",
+    "title": "Prologis submits plans for Caltrain Railyard project in SF",
+    "publisher": "The San Francisco Standard",
+    "date": "2026-03-10",
+    "url": "https://sfstandard.com/2026/03/10/prologis-san-francisco-railyards-caltrain-development/",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-ocii-landusemap-2019",
+    "title": "Mission Bay Land Use Map",
+    "publisher": "Office of Community Investment and Infrastructure (OCII)",
+    "date": "2019-12",
+    "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
+    "accessed": "2026-09-21"
+   }
+  ],
+  "notes": "SF Planning Case No. 2023-000384CWP, 'SF Railyards Planning Program'. The 20-acre site at the nexus of SoMa, Mission Bay and Showplace Square: Caltrain's northern terminus and an active service/maintenance yard, owned by Prologis with Caltrain holding a perpetual easement to operate rail. A Development Agreement is the expected approval path (precedent: Pier 70, Mission Rock, Potrero Power Station, all DAs). Directly borders Mission Bay North: OCII's own December 2019 Mission Bay Land Use Map shows the blocks informally labeled N5A, N6 and N7 in this area with no assigned land use and no drawn boundary (unlike every neighboring numbered Mission Bay North block, which has both), consistent with this still being active rail infrastructure outside Mission Bay North's own planned build-out as of that map.",
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.39498169817284,
+      37.77701132338247
+     ],
+     [
+      -122.39457905478378,
+      37.77668967386961
+     ],
+     [
+      -122.39419503196405,
+      37.776382825358944
+     ],
+     [
+      -122.39629891918926,
+      37.774626274348904
+     ],
+     [
+      -122.39802317982594,
+      37.77337324829203
+     ],
+     [
+      -122.40080377375291,
+      37.771215498460336
+     ],
+     [
+      -122.40155840164056,
+      37.771816911223894
+     ],
+     [
+      -122.39939526864252,
+      37.773525520223714
+     ],
+     [
+      -122.3971684485337,
+      37.77528430673002
+     ],
+     [
+      -122.39498169817284,
+      37.77701132338247
+     ]
+    ]
+   ]
+  }
+ }
+}

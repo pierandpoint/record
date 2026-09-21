@@ -1,0 +1,217 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-21",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "potrero_1215_michigan_data_center",
+  "slug": "1215-michigan-st",
+  "name": "1215 Michigan St",
+  "permalink": "https://pierandpoint.org/parcels/1215-michigan-st/",
+  "api": "https://pierandpoint.org/api/v1/records/1215-michigan-st.json",
+  "names": [
+   "1215 Michigan St"
+  ],
+  "site": {
+   "slug": "potrero",
+   "name": "Potrero Power Station",
+   "short": "Potrero Station",
+   "url": "https://pierandpoint.org/sites/potrero/"
+  },
+  "status": "planned",
+  "status_label": "Planned",
+  "use": "data_center",
+  "relation": "adjacent",
+  "adjacent_to": "potrero",
+  "distance_note": "The San Francisco Chronicle describes the site as one block from the Potrero Power Station redevelopment. By street address, it is closer to two blocks: the parcel fronts Michigan St between 24th and 25th, while the nearest currently-tracked Potrero Power Station parcel (the Sophie Maxwell Building, 1212 Maryland St) fronts Maryland St between Humboldt St and 23rd -- a block and a half to the north across 24th St.",
+  "how_to_comment": [
+   {
+    "channel": "SF Planning Property Information Map",
+    "detail": "Search block/lot 4241004 for any case filed on this parcel (none was on file as of Sept 2026).",
+    "url": "https://sfplanninggis.org/pim/"
+   },
+   {
+    "channel": "SF Planning Commission hearing calendar",
+    "detail": "No hearing is scheduled yet; check once a case number is assigned.",
+    "url": "https://sfplanning.org/hearings-cpc-list"
+   },
+   {
+    "channel": "Clerk of the Board of Supervisors",
+    "detail": "District 10 (Supervisor Shamann Walton)",
+    "url": "https://sfbos.org/clerk-board"
+   }
+  ],
+  "positions": [
+   {
+    "who": "Supervisor Shamann Walton (District 10, which includes this parcel)",
+    "statement": "Said he was unaware of the plans for 1215 Michigan St when contacted by the Chronicle. On data centers near residential neighborhoods generally: \"We are seeing data centers pop up near residential communities all across the United States, and we have seen the impacts, from polluting the water supply to the noise these facilities bring to the neighborhoods closest to them.\"",
+    "sources": [
+     "src-sfchronicle-2026-09"
+    ],
+    "date": "2026-09"
+   }
+  ],
+  "address": null,
+  "summary": "A 4-acre industrial parcel at 1215 Michigan St, currently home to crane-rental and heavy-hauling firm Sheedy Drayage, that the San Francisco Chronicle reported (Sept 2026) may become a roughly 160,000-square-foot data center. No application had been filed with SF Planning as of that report.",
+  "summary_sources": [
+   "src-sfchronicle-2026-09"
+  ],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "REAL Assessor parcel geometry (not approximate), but the local basemap (data/raw/parcels.geojson, buildings.geojson) was fetched to an older, slightly smaller bounding box that stops just north of this parcel, so the grey basemap land/building texture is blank immediately around this shape on the map -- cosmetic only; the parcel's own outline and position are exact. Fix: widen src/config.py's BBOX_SOUTH and re-fetch the raw layers.",
+    "digitized_from": "The real DataSF Assessor parcel for blklot 4241004 (1215 Michigan St, 4.07 acres, zoned PDR-1-G), fetched directly from the DataSF Socrata API (data.sfgov.org/resource/acdm-wktn.json, dataset 'Parcels - Active and Retired') on 2026-09-21. Routed through this table, not status.csv, only because the parcel sits just south of data/raw/parcels.geojson's cached bounding box (src/config.py's BBOX_SOUTH=37.7545; this parcel's northern edge is ~37.7542) and so isn't in that local extract -- the polygon itself is the real, unmodified Assessor shape, not hand-traced or approximated. A small blklot 4241003 (~0.25 acres) immediately west, also addressed 1215 Michigan St, is not included: the Chronicle's reporting and the Assessor's own lot_area (177,223 sq ft = 4.07 acres) both point to 4241004 as 'the' 4-acre parcel in question."
+   }
+  },
+  "centroid": {
+   "lon": -122.384341,
+   "lat": 37.753677
+  },
+  "facts": [],
+  "costs": [],
+  "milestones": [
+   {
+    "date": "2026-09",
+    "date_label": "Sep 2026",
+    "status": null,
+    "status_label": null,
+    "text": "San Francisco Chronicle reports Nestory Park Capital met with city officials to discuss permits for a data center at the site; no application filed with SF Planning as of this report, and the property has not changed hands.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfchronicle-2026-09",
+      "title": "Exclusive: Major S.F. waterfront site may become 160,000-square-foot data center",
+      "publisher": "San Francisco Chronicle",
+      "date": "2026-09",
+      "url": "https://www.sfchronicle.com/sf/article/data-center-waterfront-ai-dogpatch-22438639.php",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "San Francisco Chronicle, 2026-09",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_1215_michigan_data_center",
+     "slug": "1215-michigan-st",
+     "name": "1215 Michigan St",
+     "permalink": "https://pierandpoint.org/parcels/1215-michigan-st/",
+     "api": "https://pierandpoint.org/api/v1/records/1215-michigan-st.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "adjacent"
+   }
+  ],
+  "changes": [
+   {
+    "date": "2026-09-21",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "New adjacent record (docs/briefs/adjacent-proposals.md): 1215 Michigan St, a real DataSF Assessor parcel (blklot 4241004, 4.07 acres) one to two blocks from the Potrero Power Station redevelopment, currently occupied by Sheedy Drayage. The San Francisco Chronicle reported Nestory Park Capital had discussed a roughly 160,000-square-foot data center for the site with city officials; no application had been filed with SF Planning as of that report. Pier & Point records the process and does not take a position.",
+    "source": "https://www.sfchronicle.com/sf/article/data-center-waterfront-ai-dogpatch-22438639.php",
+    "sources": [
+     {
+      "title": "https://www.sfchronicle.com/sf/article/data-center-waterfront-ai-dogpatch-22438639.php"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "potrero_1215_michigan_data_center",
+     "slug": "1215-michigan-st",
+     "name": "1215 Michigan St",
+     "permalink": "https://pierandpoint.org/parcels/1215-michigan-st/",
+     "api": "https://pierandpoint.org/api/v1/records/1215-michigan-st.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "adjacent",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
+  "images": [],
+  "open_questions": [
+   "No SF Planning case number exists yet (none had been filed as of the Chronicle's Sept 2026 report) -- open_questions rather than a guessed PRJ number.",
+   "The Chronicle attributes current ownership to R.P. Stagg & Co. LLC and the proposal to Nestory Park Capital (David Flaherty, Flair Diversified Properties); neither has been independently confirmed here against a Recorder deed or business filing.",
+   "Whether the 0.25-acre parcel immediately west (blklot 4241003, also addressed 1215 Michigan St) is part of the same proposal is not stated in the source; left out of this record's geometry pending confirmation.",
+   "No named neighborhood group or Dogpatch-specific opposition statement on this project specifically has been found yet, distinct from the citywide data-center moratorium debate."
+  ],
+  "sources": [
+   {
+    "id": "src-sfchronicle-2026-09",
+    "title": "Exclusive: Major S.F. waterfront site may become 160,000-square-foot data center",
+    "publisher": "San Francisco Chronicle",
+    "date": "2026-09",
+    "url": "https://www.sfchronicle.com/sf/article/data-center-waterfront-ai-dogpatch-22438639.php",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-datasf-parcels",
+    "title": "Parcels - Active and Retired (blklot 4241004)",
+    "publisher": "DataSF / SF Office of the Assessor-Recorder",
+    "url": "https://data.sfgov.org/Geographic-Locations-and-Boundaries/Parcels-Active-and-Retired/acdm-wktn",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-datasf-secured-roll",
+    "title": "Assessor Historical Secured Property Tax Rolls (block 4241, lot 004)",
+    "publisher": "DataSF / SF Office of the Assessor-Recorder",
+    "url": "https://data.sf.gov/Housing-and-Buildings/Assessor-Historical-Secured-Property-Tax-Rolls/wv5m-vpq2",
+    "accessed": "2026-09-21"
+   }
+  ],
+  "notes": "Sheedy Drayage, a crane rental and heavy-hauling company, currently operates on the site under owner R.P. Stagg & Co. LLC (as reported by the San Francisco Chronicle; not independently confirmed against a Recorder deed). No formal application has been filed with SF Planning as of the Chronicle's reporting (Sept 2026) -- see the record file for what's sourced about the proposal itself.",
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.383141819,
+      37.753634398
+     ],
+     [
+      -122.384569699,
+      37.753552032
+     ],
+     [
+      -122.384775977,
+      37.753358395
+     ],
+     [
+      -122.385742343,
+      37.753302638
+     ],
+     [
+      -122.385816633,
+      37.754049704
+     ],
+     [
+      -122.383198506,
+      37.754204649
+     ],
+     [
+      -122.383141819,
+      37.753634398
+     ]
+    ]
+   ]
+  }
+ }
+}

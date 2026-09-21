@@ -1,0 +1,23 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "1215 Michigan St -- proposed data center (adjacent to Potrero Power Station)",
+        "site": "Potrero Power Station",
+        "status": "planned",
+        "use": "data_center",
+        "geometry_type": "real",
+        "digitized_from": "The real DataSF Assessor parcel for blklot 4241004 (1215 Michigan St, 4.07 acres, zoned PDR-1-G), fetched directly from the DataSF Socrata API (data.sfgov.org/resource/acdm-wktn.json, dataset 'Parcels - Active and Retired') on 2026-09-21. Routed through this table, not status.csv, only because the parcel sits just south of data/raw/parcels.geojson's cached bounding box (src/config.py's BBOX_SOUTH=37.7545; this parcel's northern edge is ~37.7542) and so isn't in that local extract -- the polygon itself is the real, unmodified Assessor shape, not hand-traced or approximated. A small blklot 4241003 (~0.25 acres) immediately west, also addressed 1215 Michigan St, is not included: the Chronicle's reporting and the Assessor's own lot_area (177,223 sq ft = 4.07 acres) both point to 4241004 as 'the' 4-acre parcel in question.",
+        "accuracy_caveat": "REAL Assessor parcel geometry (not approximate), but the local basemap (data/raw/parcels.geojson, buildings.geojson) was fetched to an older, slightly smaller bounding box that stops just north of this parcel, so the grey basemap land/building texture is blank immediately around this shape on the map -- cosmetic only; the parcel's own outline and position are exact. Fix: widen src/config.py's BBOX_SOUTH and re-fetch the raw layers.",
+        "notes": "Sheedy Drayage, a crane rental and heavy-hauling company, currently operates on the site under owner R.P. Stagg & Co. LLC (as reported by the San Francisco Chronicle; not independently confirmed against a Recorder deed). No formal application has been filed with SF Planning as of the Chronicle's reporting (Sept 2026) -- see the record file for what's sourced about the proposal itself.",
+        "source_doc_urls": ["https://www.sfchronicle.com/sf/article/data-center-waterfront-ai-dogpatch-22438639.php"]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-122.383141819, 37.753634398], [-122.384569699, 37.753552032], [-122.384775977, 37.753358395], [-122.385742343, 37.753302638], [-122.385816633, 37.754049704], [-122.383198506, 37.754204649], [-122.383141819, 37.753634398]]]
+      }
+    }
+  ]
+}

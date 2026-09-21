@@ -108,6 +108,11 @@ Power Station Park,Potrero Power Station,data/manual/potrero_power_station_park.
 Waterfront Park,Potrero Power Station,data/manual/potrero_waterfront_park.geojson
 Louisiana Paseo,Potrero Power Station,data/manual/potrero_louisiana_paseo.geojson
 Humboldt Street Plaza,Potrero Power Station,data/manual/potrero_humboldt_street_plaza.geojson
+# Added 2026-09-21 (docs/briefs/adjacent-proposals.md): the first `relation: adjacent` record
+# (docs/record-schema.md). A real Assessor parcel outside every tracked site's boundary, routed
+# through this table only because it falls just south of data/raw/parcels.geojson's cached bbox --
+# see the geometry file's own digitized_from/accuracy_caveat.
+1215 Michigan St -- proposed data center (adjacent to Potrero Power Station),Potrero Power Station,data/manual/potrero_1215_michigan_data_center.geojson
 Mission Creek Park,Mission Bay South,data/manual/mission_bay_creek_park.geojson
 Mission Bay Commons,Mission Bay South,data/manual/mission_bay_commons.geojson
 Bayfront Park (Mission Bay),Mission Bay South,data/manual/mission_bay_bayfront_park.geojson
@@ -188,3 +193,7 @@ P11 -- landscaped median strip connecting Mission Bay Circle to P11A,Mission Bay
 UCSF Neurosurgery at San Francisco Mission Bay,Mission Bay South,data/manual/ucsf_neurosurgery.geojson
 Mission Bay South Block 33 (unnamed UCSF building),Mission Bay South,data/manual/mission_bay_block_33.geojson
 Mission Bay South Block 34 (unnamed UCSF building),Mission Bay South,data/manual/mission_bay_block_34.geojson
+# Added 2026-09-21 (docs/briefs/adjacent-proposals.md): the second `relation: adjacent` record
+# (docs/record-schema.md). Bounded by real street centerlines, not a surveyed parcel -- see the
+# geometry file's own digitized_from/accuracy_caveat.
+SF Railyards -- Caltrain rail yard and 4th & King Station (Prologis/Caltrain redevelopment),Mission Bay North,data/manual/mission_bay_sf_railyards.geojson

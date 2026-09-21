@@ -5,7 +5,7 @@
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
  "terms": "https://pierandpoint.org/terms/",
- "count": 119,
+ "count": 121,
  "changes": [
   {
    "date": "2026-09-21",
@@ -185,6 +185,64 @@
    "record": null,
    "site": null,
    "relation": null,
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-09-21",
+   "kind": "added",
+   "kind_label": "Added",
+   "text": "New adjacent record (docs/briefs/adjacent-proposals.md): 1215 Michigan St, a real DataSF Assessor parcel (blklot 4241004, 4.07 acres) one to two blocks from the Potrero Power Station redevelopment, currently occupied by Sheedy Drayage. The San Francisco Chronicle reported Nestory Park Capital had discussed a roughly 160,000-square-foot data center for the site with city officials; no application had been filed with SF Planning as of that report. Pier & Point records the process and does not take a position.",
+   "source": "https://www.sfchronicle.com/sf/article/data-center-waterfront-ai-dogpatch-22438639.php",
+   "sources": [
+    {
+     "title": "https://www.sfchronicle.com/sf/article/data-center-waterfront-ai-dogpatch-22438639.php"
+    }
+   ],
+   "category": "coverage",
+   "category_label": "Coverage",
+   "record": {
+    "id": "potrero_1215_michigan_data_center",
+    "slug": "1215-michigan-st",
+    "name": "1215 Michigan St",
+    "permalink": "https://pierandpoint.org/parcels/1215-michigan-st/",
+    "api": "https://pierandpoint.org/api/v1/records/1215-michigan-st.json"
+   },
+   "site": {
+    "slug": "potrero",
+    "name": "Potrero Power Station",
+    "short": "Potrero Station",
+    "url": "https://pierandpoint.org/sites/potrero/"
+   },
+   "relation": "adjacent",
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-09-21",
+   "kind": "added",
+   "kind_label": "Added",
+   "text": "New adjacent record (docs/briefs/adjacent-proposals.md): the SF Railyards, a 20-acre active Caltrain rail yard and the 4th & King Street Station, owned by Prologis with Caltrain holding a perpetual operating easement, directly bordering Mission Bay North. SF Planning is processing it as the \"SF Railyards Planning Program\" (Case No. 2023-000384CWP); Prologis has floated concepts including roughly 2,500 homes, up to 4 million square feet of commercial space and a tower as tall as 850 feet, via a Development Agreement. Geometry bounded by real street centerlines (Townsend, 4th, 7th, King), not a surveyed parcel -- see the geometry file's own accuracy_caveat. Pier & Point records the process and does not take a position.",
+   "source": "https://sfplanning.org/project/sf-railyards-planning-program",
+   "sources": [
+    {
+     "title": "https://sfplanning.org/project/sf-railyards-planning-program"
+    }
+   ],
+   "category": "coverage",
+   "category_label": "Coverage",
+   "record": {
+    "id": "mission_bay_sf_railyards",
+    "slug": "sf-railyards",
+    "name": "SF Railyards",
+    "permalink": "https://pierandpoint.org/parcels/sf-railyards/",
+    "api": "https://pierandpoint.org/api/v1/records/sf-railyards.json"
+   },
+   "site": {
+    "slug": "mission-bay",
+    "name": "Mission Bay",
+    "short": "Mission Bay",
+    "url": "https://pierandpoint.org/sites/mission-bay/"
+   },
+   "relation": "adjacent",
    "permalink": "https://pierandpoint.org/changes/#record"
   },
   {

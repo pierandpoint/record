@@ -1,0 +1,27 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "SF Railyards -- Caltrain rail yard and 4th & King Station (Prologis/Caltrain redevelopment)",
+        "site": "Mission Bay North",
+        "status": "planned",
+        "use": "mixed",
+        "geometry_type": "approximate",
+        "digitized_from": "Bounded by DataSF's official street centerlines (data/raw/official_street_centerlines.geojson): Townsend St (4th-7th) on the north, 4th St (Townsend-King) on the east, 7th St (Townsend-King) on the west, and King St (4th-~6th, where its real centerline data ends) on the south, each buffered by the project's standard measured half-width (src/street_geometry.py, 6.8m) and inset from the outer street-to-street ring by that same half-width to approximate the curb/yard edge rather than the street centerline itself -- same method as P9 (data/manual/mission_bay_p9_open_space.geojson). King St's real DataSF centerline stops short of 7th St (its last segment ends at -122.397986, 37.773324): that stretch of the site's real southern edge is not a city street at all but the I-280 northbound/southbound ramp interchange (confirmed both by the DataSF centerlines' own 'I-280 N/S ON/OFF RAMP' segments in the same file and by satellite imagery, which shows the ramp curving directly along the yard's southwest taper), so the closing edge there is a straight line from King St's last real point to 7th St's King-St corner, not a surveyed street. The resulting inset polygon is 20.08 acres, matching the SF Planning/Caltrain FAQ's own '20-acre site' description almost exactly, and its outline was checked directly against Esri World Imagery (via contextily) overlaid in QGIS-equivalent fashion -- it tracks the real fan of tracks and the 4th & King station platform canopy tightly, confirmed by the site owner 2026-09-21 after a side-by-side review of the overlay.",
+        "accuracy_caveat": "APPROXIMATE -- not a surveyed parcel or a GIS file from Caltrain/Prologis/SF Planning. The active rail right-of-way here carries no Assessor block/lot in DataSF's Parcels - Active and Retired dataset (checked directly; consistent with railroad right-of-way being outside the normal local assessment roll), so this could not be joined via status.csv like a real parcel. Three of the four sides (Townsend, 4th, 7th) are real, continuous DataSF street centerlines; the fourth (King St plus a straight closing line where King's real data ends short of 7th, at the I-280 interchange) is the weakest edge and the one most likely to need revision if a real project boundary or EIR figure becomes available. Includes the existing Caltrain 4th & King Street Station itself, which the project's own description treats as part of the site being redeveloped, not something outside it.",
+        "notes": "SF Planning Case No. 2023-000384CWP, 'SF Railyards Planning Program'. The 20-acre site at the nexus of SoMa, Mission Bay and Showplace Square: Caltrain's northern terminus and an active service/maintenance yard, owned by Prologis with Caltrain holding a perpetual easement to operate rail. A Development Agreement is the expected approval path (precedent: Pier 70, Mission Rock, Potrero Power Station, all DAs). Directly borders Mission Bay North: OCII's own December 2019 Mission Bay Land Use Map shows the blocks informally labeled N5A, N6 and N7 in this area with no assigned land use and no drawn boundary (unlike every neighboring numbered Mission Bay North block, which has both), consistent with this still being active rail infrastructure outside Mission Bay North's own planned build-out as of that map.",
+        "source_doc_urls": [
+          "https://sfplanning.org/project/sf-railyards-planning-program",
+          "https://citypln-m-extnl.sfgov.org/Commissions/CPC/1_9_2025/Commission%20Packet/2023-000384CWP.pdf",
+          "https://sfplanning.org/sites/default/files/documents/citywide/railyardsprojects/railyardsproject_FAQ.pdf"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-122.39498169817284, 37.77701132338247], [-122.39457905478378, 37.77668967386961], [-122.39419503196405, 37.776382825358944], [-122.39629891918926, 37.774626274348904], [-122.39802317982594, 37.77337324829203], [-122.40080377375291, 37.771215498460336], [-122.40155840164056, 37.771816911223894], [-122.39939526864252, 37.773525520223714], [-122.3971684485337, 37.77528430673002], [-122.39498169817284, 37.77701132338247]]]
+      }
+    }
+  ]
+}
