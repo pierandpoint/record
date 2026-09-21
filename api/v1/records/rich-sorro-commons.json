@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -24,8 +24,10 @@
   "status_label": "Complete",
   "use": "residential",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "Rich Sorro Commons is a 100-unit affordable housing building at 150 Berry St in Mission Bay, developed by Mission Housing Development Corporation for families and people living with HIV/AIDS. Mission Housing's own project page states it opened in July 2002, the first affordable family housing development in Mission Bay.",
+  "summary_sources": [
+   "src-missionhousing-richsorro"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -42,15 +44,62 @@
   },
   "facts": [],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2002-07",
+    "date_label": "Jul 2002",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Rich Sorro Commons opened -- the first affordable family housing development in Mission Bay.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-missionhousing-richsorro",
+      "title": "Rich Sorro Commons",
+      "publisher": "Mission Housing Development Corporation",
+      "url": "https://www.missionhousing.org/richsorro",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "Mission Housing Development Corporation",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_rich_sorro_commons",
+     "slug": "rich-sorro-commons",
+     "name": "Rich Sorro Commons",
+     "permalink": "https://pierandpoint.org/parcels/rich-sorro-commons/",
+     "api": "https://pierandpoint.org/api/v1/records/rich-sorro-commons.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "DataSF Assessor's own year_property_built field records 2003, one year after Mission Housing's stated July 2002 opening -- likely reflects the tax roll's assessment lag rather than a different construction date; not further reconciled here."
+  ],
   "sources": [
    {
-    "id": null,
-    "title": "missionhousing.org/richsorro",
-    "url": "https://www.missionhousing.org/richsorro"
+    "id": "src-missionhousing-richsorro",
+    "title": "Rich Sorro Commons",
+    "publisher": "Mission Housing Development Corporation",
+    "url": "https://www.missionhousing.org/richsorro",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-datasf-8706264",
+    "title": "Assessor Historical Secured Property Tax Rolls (blklot 8706264, 150 Berry St): year_property_built 2003",
+    "publisher": "DataSF",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8706264",
+    "accessed": "2026-09-21"
    },
    {
     "id": null,
@@ -64,8 +113,8 @@
    }
   ],
   "notes": null,
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

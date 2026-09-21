@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -24,8 +24,11 @@
   "status_label": "Complete",
   "use": "institutional",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "A five-story commercial/research building at 1700 Owens Street in Mission Bay South, home to the UCSF-Bay Area Center for AIDS Research (CFAR) and the Taube-Koret Center for Huntington's Disease Research. DataSF's Assessor tax roll (block 8709, lot 007) records the building's construction year as 2007.",
+  "summary_sources": [
+   "src-datasf-assessor-8709007",
+   "src-cfar-location"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -42,15 +45,63 @@
   },
   "facts": [],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2007",
+    "date_label": "~2007",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Building completed, per DataSF Assessor tax roll",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-datasf-assessor-8709007",
+      "title": "Assessor Historical Secured Property Tax Rolls (block 8709, lot 007 -- 1700 Owens St)",
+      "publisher": "DataSF / SF Office of the Assessor-Recorder",
+      "url": "https://data.sf.gov/resource/wv5m-vpq2.json",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "DataSF / SF Office of the Assessor-Recorder",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_1700_owens",
+     "slug": "1700-owens-street",
+     "name": "1700 Owens Street",
+     "permalink": "https://pierandpoint.org/parcels/1700-owens-street/",
+     "api": "https://pierandpoint.org/api/v1/records/1700-owens-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "Developer and architect not confirmed by any source found in this pass.",
+   "The date any specific tenant (CFAR, the Taube-Koret Center) first moved in is not confirmed by any source found -- only the Assessor's bare 2007 construction year is sourced."
+  ],
   "sources": [
    {
-    "id": null,
-    "title": "cfar.ucsf.edu/event-location/1700-owens-street",
-    "url": "https://cfar.ucsf.edu/event-location/1700-owens-street"
+    "id": "src-datasf-assessor-8709007",
+    "title": "Assessor Historical Secured Property Tax Rolls (block 8709, lot 007 -- 1700 Owens St)",
+    "publisher": "DataSF / SF Office of the Assessor-Recorder",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-cfar-location",
+    "title": "1700 Owens Street (event location page)",
+    "publisher": "UCSF-Bay Area Center for AIDS Research (CFAR)",
+    "url": "https://cfar.ucsf.edu/event-location/1700-owens-street",
+    "accessed": "2026-09-21"
    },
    {
     "id": null,
@@ -59,8 +110,8 @@
    }
   ],
   "notes": "Construction date and architect not confirmed by any source found in this pass.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

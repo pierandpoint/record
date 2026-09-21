@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -12,7 +12,8 @@
   "permalink": "https://pierandpoint.org/parcels/mission-bay-by-windsor/",
   "api": "https://pierandpoint.org/api/v1/records/mission-bay-by-windsor.json",
   "names": [
-   "Mission Bay by Windsor"
+   "Mission Bay by Windsor",
+   "EVIVA Mission Bay"
   ],
   "site": {
    "slug": "mission-bay",
@@ -24,8 +25,11 @@
   "status_label": "Complete",
   "use": "residential",
   "address": "360 Berry St",
-  "summary": null,
-  "summary_sources": [],
+  "summary": "Mission Bay by Windsor is a 129-unit, 5-story apartment building at 360 Berry St, first leased under The Integral Group's \"EVIVA\" brand and completed in 2017 per DataSF Assessor records; GID Real Estate acquired the newly built property in August 2017, and it is now managed as Mission Bay by Windsor.",
+  "summary_sources": [
+   "src-datasf-assessor-360berry",
+   "src-gid-2017"
+  ],
   "shape": {
    "kind": "parcel",
    "parcel": "8704004",
@@ -39,7 +43,50 @@
   },
   "facts": [],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2017",
+    "date_label": "~2017",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "360 Berry St apartment building (129 units) completed",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-datasf-assessor-360berry",
+      "title": "Assessor Historical Secured Property Tax Rolls -- 360 Berry St (block 8704, lot 004)",
+      "publisher": "DataSF / San Francisco Office of the Assessor-Recorder",
+      "url": "https://data.sf.gov/resource/wv5m-vpq2.json?block=8704&lot=004",
+      "accessed": "2026-09-21"
+     },
+     {
+      "id": "src-rentcafe-windsor",
+      "title": "Mission Bay By Windsor Apartments, 360 Berry Street, San Francisco, CA",
+      "publisher": "RentCafe",
+      "url": "https://www.rentcafe.com/apartments/ca/san-francisco/mission-bay-by-windsor/default.aspx",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "DataSF / San Francisco Office of the Assessor-Recorder; RentCafe",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "8704004",
+     "slug": "mission-bay-by-windsor",
+     "name": "Mission Bay by Windsor",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-by-windsor/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-by-windsor.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [
    {
     "date": "2026-09-20",
@@ -71,8 +118,34 @@
    }
   ],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "Precise month of completion/first occupancy in 2017 is not sourced beyond the bare Assessor year and RentCafe's 'Building constructed in 2017' listing text; a claim of an April 9, 2017 opening date was found only on an unrelated commercial blog (not a real-estate or news outlet) and was not used.",
+   "Trade press names The Integral Group as developer under its 'EVIVA' platform, and The Registry (news.theregistrysf.com) has an article announcing a groundbreaking ceremony for the project, but that article's date and details are behind a paywall and were not verified, so are not cited here.",
+   "Architect not confirmed from any source checked in this pass."
+  ],
   "sources": [
+   {
+    "id": "src-datasf-assessor-360berry",
+    "title": "Assessor Historical Secured Property Tax Rolls -- 360 Berry St (block 8704, lot 004)",
+    "publisher": "DataSF / San Francisco Office of the Assessor-Recorder",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json?block=8704&lot=004",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-rentcafe-windsor",
+    "title": "Mission Bay By Windsor Apartments, 360 Berry Street, San Francisco, CA",
+    "publisher": "RentCafe",
+    "url": "https://www.rentcafe.com/apartments/ca/san-francisco/mission-bay-by-windsor/default.aspx",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-gid-2017",
+    "title": "GID Acquires 129 Unit Luxury Community in San Francisco, CA",
+    "publisher": "GID",
+    "date": "2017-08",
+    "url": "https://gid.com/gid-acquires-129-unit-luxury-community-san-francisco-ca/",
+    "accessed": "2026-09-21"
+   },
    {
     "id": null,
     "title": "apartments.com/mission-bay-by-windsor-apartments-san-francisco-ca/923ywp4",
@@ -85,8 +158,8 @@
    }
   ],
   "notes": "Mission Bay by Windsor, 360 Berry St -- apartment community (1-2 bed/1-2 bath units per current listings). Real, distinct parcel from the already-tracked Edgewater (355 Berry St, blklot 8707003) -- a 2026-09-19 pass had concluded these were the same building (a 99.6% footprint-overlap check against the wrong candidate geometry) and folded Windsor's real extent into Edgewater's own record as an unexplained 'open-land strip' near I-280; the owner corrected this directly (they are two separate condo complexes) and the real DataSF Assessor parcel boundary confirms it: blklot 8704004 at 360 Berry St, 96.7% overlapping the very shape wrongly parked under Edgewater. Uses the real Assessor parcel boundary rather than an OSM footprint since no distinct OSM way was found for it in this pass.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

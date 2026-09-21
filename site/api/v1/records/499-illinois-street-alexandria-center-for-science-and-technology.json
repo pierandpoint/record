@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -12,7 +12,8 @@
   "permalink": "https://pierandpoint.org/parcels/499-illinois-street-alexandria-center-for-science-and-technology/",
   "api": "https://pierandpoint.org/api/v1/records/499-illinois-street-alexandria-center-for-science-and-technology.json",
   "names": [
-   "499 Illinois Street (Alexandria Center for Science and Technology)"
+   "499 Illinois Street",
+   "Alexandria Center for Science and Technology – 499 Illinois"
   ],
   "site": {
    "slug": "mission-bay",
@@ -24,8 +25,11 @@
   "status_label": "Complete",
   "use": "institutional",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "499 Illinois Street is a 6-story, ~450,000 sq ft biotechnology building (lab, office, retail, parking) at Mission Bay, developed by Alexandria Real Estate Equities. Both DataSF Assessor records and the project's structural engineer's own page date its completion to 2008.",
+  "summary_sources": [
+   "src-datasf-499illinois",
+   "src-sgh-499illinois"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -42,20 +46,74 @@
   },
   "facts": [],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2008",
+    "date_label": "~2008",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Building completed.",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-datasf-499illinois",
+      "title": "Assessor Historical Secured Property Tax Rolls (blklot 3940004, 499 Illinois St): year_property_built 2008",
+      "publisher": "DataSF",
+      "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=3940004",
+      "accessed": "2026-09-21"
+     },
+     {
+      "id": "src-sgh-499illinois",
+      "title": "499 Illinois Street",
+      "publisher": "Simpson Gumpertz & Heger (project engineer)",
+      "url": "https://www.sgh.com/project/499-illinois-street/",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "DataSF; Simpson Gumpertz & Heger (project engineer)",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_499_illinois",
+     "slug": "499-illinois-street-alexandria-center-for-science-and-technology",
+     "name": "499 Illinois Street (Alexandria Center for Science and Technology)",
+     "permalink": "https://pierandpoint.org/parcels/499-illinois-street-alexandria-center-for-science-and-technology/",
+     "api": "https://pierandpoint.org/api/v1/records/499-illinois-street-alexandria-center-for-science-and-technology.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "Exact month/day of the 2008 completion is not sourced, only the year."
+  ],
   "sources": [
+   {
+    "id": "src-datasf-499illinois",
+    "title": "Assessor Historical Secured Property Tax Rolls (blklot 3940004, 499 Illinois St): year_property_built 2008",
+    "publisher": "DataSF",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=3940004",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-sgh-499illinois",
+    "title": "499 Illinois Street",
+    "publisher": "Simpson Gumpertz & Heger (project engineer)",
+    "url": "https://www.sgh.com/project/499-illinois-street/",
+    "accessed": "2026-09-21"
+   },
    {
     "id": null,
     "title": "fiercebiotech.com/biotech/alexandria-s-499-illinois-street-mission-bay-san-francisco-signs-anchor-97-700-rentable",
     "url": "https://www.fiercebiotech.com/biotech/alexandria-s-499-illinois-street-mission-bay-san-francisco-signs-anchor-97-700-rentable"
-   },
-   {
-    "id": null,
-    "title": "sgh.com/project/499-illinois-street",
-    "url": "https://www.sgh.com/project/499-illinois-street/"
    },
    {
     "id": null,
@@ -64,8 +122,8 @@
    }
   ],
   "notes": "Shares its DataSF mblr (SF3940003) with the adjacent 490 Illinois St building -- see that file's notes.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

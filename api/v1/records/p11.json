@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -12,7 +12,7 @@
   "permalink": "https://pierandpoint.org/parcels/p11/",
   "api": "https://pierandpoint.org/api/v1/records/p11.json",
   "names": [
-   "P11"
+   "P11 -- landscaped median strip connecting Mission Bay Circle to P11A"
   ],
   "site": {
    "slug": "mission-bay",
@@ -24,8 +24,11 @@
   "status_label": "Complete",
   "use": "park",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "A tree-lined median strip running within the road right-of-way, connecting the 'Mission Bay Circle' roundabout east to the P11A half-circle island; a real, already-landscaped median per satellite imagery, hand-traced with the property owner's guidance and fit to a rotated rectangle. OCII's own September 2023 Mission Bay Parks Open Space transition presentation lists 'P11/11A' together among the parcels already managed by SF Recreation and Parks (not among the still-pending 'when built' parcels), consistent with it being complete by that date.",
+  "summary_sources": [
+   "src-geom-p11",
+   "src-ocii-transition-2023"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -42,14 +45,78 @@
   },
   "facts": [],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2023-09",
+    "date_label": "~2023",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Already part of RPD's managed open-space inventory as 'P11/11A' (not listed among the still-pending 'when built' parcels), per OCII's Mission Bay Parks Open Space transition presentation to the Mission Bay CAC -- an upper bound on when this median was built, not its actual construction date",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-ocii-transition-2023",
+      "title": "Mission Bay Parks Open Space (CAC Item 2, September 2023)",
+      "publisher": "Office of Community Investment and Infrastructure (sfocii.org)",
+      "url": "https://sfocii.org/sites/default/files/inline-files/Item%202%20Mission%20Bay%20Open%20Space%20Transition.pdf",
+      "date": "2023-09",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "Office of Community Investment and Infrastructure (sfocii.org), 2023-09",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_p11_connector",
+     "slug": "p11",
+     "name": "P11",
+     "permalink": "https://pierandpoint.org/parcels/p11/",
+     "api": "https://pierandpoint.org/api/v1/records/p11.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [],
   "images": [],
-  "open_questions": [],
-  "sources": [],
+  "open_questions": [
+   "No public source names this specific median strip or gives its own construction date; the Sept 2023 OCII document only establishes it existed and was already RPD-managed by that date (grouped with P11A), which is an upper bound, not a build date.",
+   "A separate, later OCII source (the Nov 2024 CAC deck, src-ocii-openspace-2024) instead groups the label 'P11' together with P12, P13, P15, P16 and P17 under the still-interim 'Mission Bay Commons' area near 3rd Street and Mission Bay Boulevard -- a different location from this record's median strip near Mission Bay Circle. This repo's own digitization_method log already describes correcting an earlier session's own wrong location guess for P11 (made from that same source note) after the property owner pointed to this median strip instead; the underlying conflict between the two OCII documents' own use of 'P11' is not resolved here, only flagged.",
+   "Owner/operator beyond 'part of RPD's Mission Bay open-space inventory' not confirmed by any source found."
+  ],
+  "sources": [
+   {
+    "id": "src-geom-p11",
+    "title": "digitization_method log for mission_bay_p11_connector.geojson",
+    "publisher": "Pier & Point geometry records (this repository, data/manual/mission_bay_p11_connector.geojson)",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-ocii-transition-2023",
+    "title": "Mission Bay Parks Open Space (CAC Item 2, September 2023)",
+    "publisher": "Office of Community Investment and Infrastructure (sfocii.org)",
+    "url": "https://sfocii.org/sites/default/files/inline-files/Item%202%20Mission%20Bay%20Open%20Space%20Transition.pdf",
+    "date": "2023-09",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-ocii-openspace-2024",
+    "title": "Mission Bay Commons Parks (P12, P13, P15); Active Recreation Parks (P7, P9) -- Mission Bay Future Parks (CAC Update, November 14, 2024)",
+    "publisher": "Office of Community Investment and Infrastructure (sfocii.org)",
+    "url": "https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf",
+    "date": "2024-11-14",
+    "accessed": "2026-09-21"
+   }
+  ],
   "notes": "Thin landscaped median strip with a row of trees, connecting the Mission Bay Circle roundabout to the P11A median island.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

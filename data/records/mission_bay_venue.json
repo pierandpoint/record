@@ -1,0 +1,48 @@
+{
+  "record_id": "mission_bay_venue",
+  "names": [
+    "Venue"
+  ],
+  "summary": "Venue is a 147-149 unit apartment building at 1155 4th St, managed by Sares Regis Management; DataSF Assessor records and a RentCafe listing both give 2014 as the building's construction-completion year.",
+  "summary_sources": [
+    "src-datasf-assessor-venue",
+    "src-rentcafe-venue"
+  ],
+  "milestones": [
+    {
+      "date": "2014",
+      "status": "complete",
+      "text": "1155 4th St apartment building (Venue) completed, 149 units per DataSF Assessor records",
+      "sources": [
+        "src-datasf-assessor-venue",
+        "src-rentcafe-venue"
+      ],
+      "expected": false,
+      "approximate": true
+    }
+  ],
+  "costs": [],
+  "facts": [],
+  "images": [],
+  "sources": [
+    {
+      "id": "src-datasf-assessor-venue",
+      "title": "Assessor Historical Secured Property Tax Rolls -- 1155 4th St (block 8711, lot 025)",
+      "publisher": "DataSF / San Francisco Office of the Assessor-Recorder",
+      "url": "https://data.sf.gov/resource/wv5m-vpq2.json?block=8711&lot=025",
+      "accessed": "2026-09-21"
+    },
+    {
+      "id": "src-rentcafe-venue",
+      "title": "Venue Apartments, 1155 4th Street, San Francisco, CA",
+      "publisher": "RentCafe",
+      "url": "https://www.rentcafe.com/apartments/ca/san-francisco/venue-0/default.aspx",
+      "accessed": "2026-09-21"
+    }
+  ],
+  "open_questions": [
+    "Some apartment-listing aggregator summaries give 2015 rather than 2014 for this building's construction year; DataSF Assessor records and RentCafe's own 'Building constructed in 2014' listing text were preferred and used here. Precise month of completion is not sourced.",
+    "Developer/architect not confirmed from any source checked in this pass."
+  ],
+  "last_verified": "2026-09-21"
+}

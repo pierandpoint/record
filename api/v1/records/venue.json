@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -24,8 +24,11 @@
   "status_label": "Complete",
   "use": "residential",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "Venue is a 147-149 unit apartment building at 1155 4th St, managed by Sares Regis Management; DataSF Assessor records and a RentCafe listing both give 2014 as the building's construction-completion year.",
+  "summary_sources": [
+   "src-datasf-assessor-venue",
+   "src-rentcafe-venue"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -42,15 +45,70 @@
   },
   "facts": [],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2014",
+    "date_label": "~2014",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "1155 4th St apartment building (Venue) completed, 149 units per DataSF Assessor records",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-datasf-assessor-venue",
+      "title": "Assessor Historical Secured Property Tax Rolls -- 1155 4th St (block 8711, lot 025)",
+      "publisher": "DataSF / San Francisco Office of the Assessor-Recorder",
+      "url": "https://data.sf.gov/resource/wv5m-vpq2.json?block=8711&lot=025",
+      "accessed": "2026-09-21"
+     },
+     {
+      "id": "src-rentcafe-venue",
+      "title": "Venue Apartments, 1155 4th Street, San Francisco, CA",
+      "publisher": "RentCafe",
+      "url": "https://www.rentcafe.com/apartments/ca/san-francisco/venue-0/default.aspx",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "DataSF / San Francisco Office of the Assessor-Recorder; RentCafe",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_venue",
+     "slug": "venue",
+     "name": "Venue",
+     "permalink": "https://pierandpoint.org/parcels/venue/",
+     "api": "https://pierandpoint.org/api/v1/records/venue.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "Some apartment-listing aggregator summaries give 2015 rather than 2014 for this building's construction year; DataSF Assessor records and RentCafe's own 'Building constructed in 2014' listing text were preferred and used here. Precise month of completion is not sourced.",
+   "Developer/architect not confirmed from any source checked in this pass."
+  ],
   "sources": [
    {
-    "id": null,
-    "title": "rentcafe.com/apartments/ca/san-francisco/venue-0/default.aspx",
-    "url": "https://www.rentcafe.com/apartments/ca/san-francisco/venue-0/default.aspx"
+    "id": "src-datasf-assessor-venue",
+    "title": "Assessor Historical Secured Property Tax Rolls -- 1155 4th St (block 8711, lot 025)",
+    "publisher": "DataSF / San Francisco Office of the Assessor-Recorder",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json?block=8711&lot=025",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-rentcafe-venue",
+    "title": "Venue Apartments, 1155 4th Street, San Francisco, CA",
+    "publisher": "RentCafe",
+    "url": "https://www.rentcafe.com/apartments/ca/san-francisco/venue-0/default.aspx",
+    "accessed": "2026-09-21"
    },
    {
     "id": null,
@@ -59,8 +117,8 @@
    }
   ],
   "notes": "The real, notable Edwin M. Lee Apartments (124,000 sq ft supportive-housing building for veterans and low-income families, 1150 3rd St, one block away) was investigated for this pass but its address point sits ~37m from this footprint's edge -- close enough to be the nearest available DataSF footprint, but not confidently its own separate outline in the building-footprint data checked. Left out rather than guessed; a future pass should re-check with a dedicated satellite/plan comparison.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

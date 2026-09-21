@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -24,8 +24,11 @@
   "status_label": "Complete",
   "use": "park",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "A waterfront park along Mission Creek's south bank in Mission Bay, one of the Mission Bay Redevelopment Plan's earliest open-space parcels (labeled P2 and P3 -- and, for its amphitheater feature, P1 -- on OCII's current Mission Bay South open-space page); the San Francisco Recreation and Park Department took over its management from OCII/the Port on July 1, 2023. No source checked gives the surrounding park landscaping's own original construction or opening date, as distinct from the separately dated Mission Creek Park Pavilion within it (see that record).",
+  "summary_sources": [
+   "src-sfrecpark-creekpark",
+   "src-ocii-openspace-page"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -45,17 +48,38 @@
   "milestones": [],
   "changes": [],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "No source checked gives Mission Creek Park's own original construction/opening date; the Mission Creek Park Pavilion within it has a separately sourced 2003 completion (data/records/mission_bay_creek_park_pavilion.json), but that doesn't establish when the surrounding park landscaping itself opened -- background reading (a Southeast Waterfront community history page, and a landscape-architecture magazine mention of a 2004-dated EDAW site-plan rendering found only in search-summary form, not confirmed against the actual article text) suggested an early-2000s completion but nothing specific enough to cite as a fact.",
+   "OCII's September 2023 Mission Bay Parks Open Space transition presentation (src-ocii-transition-2023) lists plan parcels P1, P3, P5, P6, P10, P11/11A, P16, P17 and P26 as already RPD-managed by that date, but lists 'P2/P8' among parcels RPD 'will manage ... when built' (i.e., not yet complete as of Sept 2023) -- this record's own geometry file separately documents a 2026-09-20 union with P2 and P8 as 'barely touch[ing] this record's original shape,' consistent with those specific pieces being a later, smaller addition rather than part of the original park; not used to date the union since the two documents describe different things (a funding/management list vs. a geometry merge).",
+   "OCII's plan-label usage for this park is inconsistent across documents over time: the Nov 2024 CAC deck labels the whole feature 'P3'; the current sfocii.org open-space page splits it into P1 (amphitheater), P2 and P3; and a 2015 Successor Agency LRPMP (cited on this repo's neighboring P7/P8/P9 records) uses P2, P7, P8 and P9 for nearby, separately tracked open-space parcels along the same creek. Not reconciled here."
+  ],
   "sources": [
+   {
+    "id": "src-sfrecpark-creekpark",
+    "title": "Parks and Facilities • Mission Creek Park (North and South)",
+    "publisher": "San Francisco Recreation and Park Department (sfrecpark.org)",
+    "url": "https://sfrecpark.org/Facilities/Facility/Details/Mission-Creek-Park-North-and-South-449",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-ocii-openspace-page",
+    "title": "Mission Bay South: Open Space",
+    "publisher": "Office of Community Investment and Infrastructure (sfocii.org)",
+    "url": "https://sfocii.org/projects/mission-bay-south/open-space",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-ocii-transition-2023",
+    "title": "Mission Bay Parks Open Space (CAC Item 2, September 2023)",
+    "publisher": "Office of Community Investment and Infrastructure (sfocii.org)",
+    "url": "https://sfocii.org/sites/default/files/inline-files/Item%202%20Mission%20Bay%20Open%20Space%20Transition.pdf",
+    "date": "2023-09",
+    "accessed": "2026-09-21"
+   },
    {
     "id": null,
     "title": "openstreetmap.org/way/56656116",
     "url": "https://www.openstreetmap.org/way/56656116"
-   },
-   {
-    "id": null,
-    "title": "sfrecpark.org/Facilities/Facility/Details/Mission-Creek-Park-North-and-South-449",
-    "url": "https://sfrecpark.org/Facilities/Facility/Details/Mission-Creek-Park-North-and-South-449"
    },
    {
     "id": null,
@@ -64,8 +88,8 @@
    }
   ],
   "notes": "One of the parks completed as part of Mission Bay's original 1998 plan; open by fall 2010 per Wikipedia's Mission Bay article (citing the neighborhood's own park-completion history) and SF Rec & Park's facility page.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "MultiPolygon",
    "coordinates": [

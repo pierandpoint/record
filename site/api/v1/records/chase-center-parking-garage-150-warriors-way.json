@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -12,7 +12,8 @@
   "permalink": "https://pierandpoint.org/parcels/chase-center-parking-garage-150-warriors-way/",
   "api": "https://pierandpoint.org/api/v1/records/chase-center-parking-garage-150-warriors-way.json",
   "names": [
-   "Chase Center Parking Garage (150 Warriors Way)"
+   "Chase Center Parking Garage",
+   "150 Warriors Way Garage"
   ],
   "site": {
    "slug": "mission-bay",
@@ -24,8 +25,10 @@
   "status_label": "Complete",
   "use": "parking",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "This 469,726 sq ft, 9-story parking structure at 150 Warriors Way in Mission Bay South was built in 2009, per DataSF Assessor records -- roughly a decade before Chase Center opened next door -- and serves Chase Center and other Mission Bay South uses.",
+  "summary_sources": [
+   "src-datasf-8721030"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -42,11 +45,57 @@
   },
   "facts": [],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2009",
+    "date_label": "~2009",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Parking structure completed.",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-datasf-8721030",
+      "title": "Assessor Historical Secured Property Tax Rolls (blklot 8721030, 150 Warriors Way / 450 South St): year_property_built 2009",
+      "publisher": "DataSF",
+      "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8721030",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "DataSF",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_chase_parking_garage",
+     "slug": "chase-center-parking-garage-150-warriors-way",
+     "name": "Chase Center Parking Garage (150 Warriors Way)",
+     "permalink": "https://pierandpoint.org/parcels/chase-center-parking-garage-150-warriors-way/",
+     "api": "https://pierandpoint.org/api/v1/records/chase-center-parking-garage-150-warriors-way.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "Exact month/day of the 2009 completion is not sourced, only the year.",
+   "This garage's own construction (2009) predates Chase Center itself, which this pass did not independently source an opening date for -- the two are not on the same construction timeline, contrary to the possibility raised in this thread's brief."
+  ],
   "sources": [
+   {
+    "id": "src-datasf-8721030",
+    "title": "Assessor Historical Secured Property Tax Rolls (blklot 8721030, 150 Warriors Way / 450 South St): year_property_built 2009",
+    "publisher": "DataSF",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8721030",
+    "accessed": "2026-09-21"
+   },
    {
     "id": null,
     "title": "redfin.com/CA/San-Francisco/150-Warriors-Way-94158/home/146920252",
@@ -54,8 +103,8 @@
    }
   ],
   "notes": "This footprint originally overlapped the adjacent Uber Mission Bay 2 parcel (blklot 8721029) by 92 sq m; trimmed to the non-overlapping remainder.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

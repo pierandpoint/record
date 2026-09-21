@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -12,7 +12,8 @@
   "permalink": "https://pierandpoint.org/parcels/five88-mission-bay-south-block-7-west/",
   "api": "https://pierandpoint.org/api/v1/records/five88-mission-bay-south-block-7-west.json",
   "names": [
-   "Five88 (Mission Bay South Block 7 West)"
+   "Five88",
+   "Mission Bay South Block 7 West"
   ],
   "site": {
    "slug": "mission-bay",
@@ -24,8 +25,11 @@
   "status_label": "Complete",
   "use": "residential",
   "address": "588 Mission Bay Blvd North",
-  "summary": null,
-  "summary_sources": [],
+  "summary": "A four-story, ~230,000 sq ft affordable apartment building at 588 Mission Bay Blvd North (Mission Bay South Block 7 West) with 200 units (198 affordable plus a manager's unit) and over 10,000 sq ft of ground-floor retail, developed by Related California in partnership with Chinatown Community Development Center and designed by David Baker Architects. Groundbreaking was reported in April 2015 (SocketSite), and the architect's own project page lists the building as completed in 2017.",
+  "summary_sources": [
+   "src-socketsite-2015-01",
+   "src-dbarchitect-five88"
+  ],
   "shape": {
    "kind": "parcel",
    "parcel": "8711226",
@@ -39,15 +43,101 @@
   },
   "facts": [],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2015-04",
+    "date_label": "~2015",
+    "status": "under_construction",
+    "status_label": "Under construction",
+    "text": "Groundbreaking held for Five88 (588 Mission Bay Blvd North)",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-socketsite-2015-01",
+      "title": "Affordable 200-Unit Mission Bay Building Slated To Break Ground",
+      "publisher": "SocketSite",
+      "date": "2015-01",
+      "url": "https://socketsite.com/archives/2015/01/affordable-200-unit-mission-bay-building-slated-break-ground.html",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "SocketSite, 2015-01",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "8711226",
+     "slug": "five88-mission-bay-south-block-7-west",
+     "name": "Five88 (Mission Bay South Block 7 West)",
+     "permalink": "https://pierandpoint.org/parcels/five88-mission-bay-south-block-7-west/",
+     "api": "https://pierandpoint.org/api/v1/records/five88-mission-bay-south-block-7-west.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   },
+   {
+    "date": "2017",
+    "date_label": "~2017",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Five88 construction completed",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-dbarchitect-five88",
+      "title": "Five88 project page",
+      "publisher": "David Baker Architects",
+      "url": "https://www.dbarchitect.com/projects/five88",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "David Baker Architects",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "8711226",
+     "slug": "five88-mission-bay-south-block-7-west",
+     "name": "Five88 (Mission Bay South Block 7 West)",
+     "permalink": "https://pierandpoint.org/parcels/five88-mission-bay-south-block-7-west/",
+     "api": "https://pierandpoint.org/api/v1/records/five88-mission-bay-south-block-7-west.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "Precise completion month not found -- David Baker Architects' own project page gives only 'Completed 2017'.",
+   "DataSF's Assessor tax roll records no year_property_built for this parcel (blklot 8711226), consistent with status.csv's existing note; the 2017 completion year rests on the architect's project page rather than a public assessor or permit record.",
+   "A November 2016 UCSF news item describes the building as still welcoming applications ahead of opening, consistent with a 2017 (rather than the originally targeted September 2016) completion, but doesn't itself give a specific opening date."
+  ],
   "sources": [
    {
-    "id": null,
-    "title": "socketsite.com/archives/2015/01/affordable-200-unit-mission-bay-building-slated-break-ground.html",
-    "url": "https://socketsite.com/archives/2015/01/affordable-200-unit-mission-bay-building-slated-break-ground.html"
+    "id": "src-socketsite-2015-01",
+    "title": "Affordable 200-Unit Mission Bay Building Slated To Break Ground",
+    "publisher": "SocketSite",
+    "date": "2015-01",
+    "url": "https://socketsite.com/archives/2015/01/affordable-200-unit-mission-bay-building-slated-break-ground.html",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-dbarchitect-five88",
+    "title": "Five88 project page",
+    "publisher": "David Baker Architects",
+    "url": "https://www.dbarchitect.com/projects/five88",
+    "accessed": "2026-09-21"
    },
    {
     "id": null,
@@ -61,8 +151,8 @@
    }
   ],
   "notes": "Five88 (Mission Bay South Block 7 West), 588 Mission Bay Blvd North -- 200 affordable apartments (198 affordable plus a manager's unit), a four-story, ~230,000 sq ft mixed-use development with over 10,000 sq ft of ground-floor retail, 52 parking spaces and 306 bike spaces. Developed by Related California in partnership with Chinatown Community Development Center; architect David Baker + Partners. Targets households averaging up to 60% of Area Median Income, with 50 of the 200 units reserved with a preference for university/healthcare employees. Groundbreaking reported April 2015 with occupancy targeted for September 2016 (SocketSite); DataSF's Assessor tax roll lists blklot 8711226 as 'Multi-Family Residential' with no year_property_built recorded. Explicitly identified as 'Block 7 West' in SocketSite's own January 2015 coverage, which is how this record was matched to the plan's '7W' label after the plan-to-real-world transform's own error put that label's raw position on the wrong side of 4th St (see changelog). DataSF's Building Footprints layer records no footprint of its own for this parcel (the one fragment intersecting it, mblr SF8711227, actually belongs to the neighboring Family House parcel at their shared boundary) -- confirmed visually against satellite imagery -- so this record uses the real Assessor parcel boundary directly, the same treatment as Mission Bay Block 6 East on this same block face.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

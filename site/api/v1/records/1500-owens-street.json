@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -12,7 +12,8 @@
   "permalink": "https://pierandpoint.org/parcels/1500-owens-street/",
   "api": "https://pierandpoint.org/api/v1/records/1500-owens-street.json",
   "names": [
-   "1500 Owens Street"
+   "1500 Owens Street",
+   "UCSF Orthopaedic Institute at Mission Bay"
   ],
   "site": {
    "slug": "mission-bay",
@@ -24,8 +25,11 @@
   "status_label": "Complete",
   "use": "institutional",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "A UCSF Health outpatient medical building at 1500 Owens Street in Mission Bay South, housing the UCSF Orthopaedic Institute along with Radiology, Sports Medicine, and Physical Therapy & Rehabilitation clinics. The Orthopaedic Institute opened here October 1, 2009 -- the first UCSF clinical service to open at Mission Bay -- and DataSF's Assessor tax roll records the parcel's construction year as 2009.",
+  "summary_sources": [
+   "src-ucsf-ortho-2009-10",
+   "src-datasf-assessor-8709018"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -42,11 +46,66 @@
   },
   "facts": [],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2009-10-01",
+    "date_label": "Oct 1, 2009",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "UCSF Orthopaedic Institute opens at 1500 Owens St, the first UCSF clinical service to open at Mission Bay",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ucsf-ortho-2009-10",
+      "title": "UCSF Orthopaedic Institute at Mission Bay Opens for Patients, Research and Education",
+      "publisher": "UC San Francisco",
+      "date": "2009-10",
+      "url": "https://www.ucsf.edu/news/2009/10/96806/ucsf-orthopaedic-institute-mission-bay-opens-patients-research-and-education",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "UC San Francisco, 2009-10",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_1500_owens",
+     "slug": "1500-owens-street",
+     "name": "1500 Owens Street",
+     "permalink": "https://pierandpoint.org/parcels/1500-owens-street/",
+     "api": "https://pierandpoint.org/api/v1/records/1500-owens-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "Architect and general contractor not confirmed by any source found in this pass.",
+   "Whether the other clinics now at this address (Sports Medicine, Physical Therapy & Rehabilitation, Gynecology & Urogynecology) opened at the same time as the Orthopaedic Institute or moved in later is not established."
+  ],
   "sources": [
+   {
+    "id": "src-ucsf-ortho-2009-10",
+    "title": "UCSF Orthopaedic Institute at Mission Bay Opens for Patients, Research and Education",
+    "publisher": "UC San Francisco",
+    "date": "2009-10",
+    "url": "https://www.ucsf.edu/news/2009/10/96806/ucsf-orthopaedic-institute-mission-bay-opens-patients-research-and-education",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-datasf-assessor-8709018",
+    "title": "Assessor Historical Secured Property Tax Rolls (block 8709, lot 018 -- 1500 Owens St)",
+    "publisher": "DataSF / SF Office of the Assessor-Recorder",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json",
+    "accessed": "2026-09-21"
+   },
    {
     "id": null,
     "title": "ucsfhealth.org/locations/radiology-mission-bay-owens-st",
@@ -59,8 +118,8 @@
    }
   ],
   "notes": "Construction date and architect not confirmed by any source found in this pass.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

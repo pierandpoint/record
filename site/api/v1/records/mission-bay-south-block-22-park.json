@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -24,8 +24,10 @@
   "status_label": "Complete",
   "use": "park",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "A landscaped lawn with trees on Mission Bay South's plan Block 22; not a formally named park in any source checked. This project's own satellite review found no building footprint on the site, and a September 2026 owner on-site visit confirmed it is already a completed small park rather than still-planned open space, correcting an earlier satellite-only assessment. No independently published source (a city agency, news outlet or landscape-architecture record) naming or dating it was found.",
+  "summary_sources": [
+   "src-geom-block22"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -74,8 +76,18 @@
    }
   ],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "No independently published source (SF Recreation & Park Department, OCII, news coverage) names or dates this park; the only evidence found is this repo's own satellite-imagery review and the owner's September 2026 on-site confirmation that it is already built, both recorded in the geometry file's own digitization_method log -- not a substitute for a dated public-record source, so no completion milestone is asserted here.",
+   "This project's earlier DataSF Assessor Parcels/Building Footprints check (recorded in the same digitization_method log) traced the dominant underlying parcel to a retired 1998 'COMMON_AREAS' placeholder (blklot 8799TBA3, dropped 2005) plus scattered UCSF campus parcel fragments -- consistent with open, non-built land, but that doesn't establish when the current landscaping was actually built.",
+   "Not clear whether this block corresponds to any of OCII's lettered/numbered open-space plan parcels (P1-P27) tracked elsewhere in this project; no such label was found for it in any source checked."
+  ],
   "sources": [
+   {
+    "id": "src-geom-block22",
+    "title": "digitization_method log for mission_bay_block_22.geojson",
+    "publisher": "Pier & Point geometry records (this repository, data/manual/mission_bay_block_22.geojson)",
+    "accessed": "2026-09-21"
+   },
    {
     "id": null,
     "title": "data/manual/_reference/mission_bay_land_use_map_2019.png",
@@ -83,8 +95,8 @@
    }
   ],
   "notes": "Owner confirmed on site (2026-09-19) that this park is complete. No building footprint here (satellite- and building-footprint-confirmed); the OCII plan's own Dec 2019 Land Use Map designates this block's future land use as park (shown in park-green). No specific project name, developer, or completion date was found in this pass -- if the owner has one, it would be a useful addition.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

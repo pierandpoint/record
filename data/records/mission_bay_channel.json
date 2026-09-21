@@ -1,0 +1,39 @@
+{
+  "record_id": "mission_bay_channel",
+  "names": [
+    "Channel Mission Bay"
+  ],
+  "summary": "Channel Mission Bay is a 315-unit apartment building at 185 Channel St in Mission Bay, developed by DOB Mission Bay LP with LaHue and Associates and now managed by UDR. No source found in this pass states a completion date directly; DataSF Assessor tax-roll data shows the parcel's assessed improvement value rising from $0 in the 2012 roll to $30M in 2013 and $94M in 2014, with 316 units first recorded in the 2015 roll, consistent with construction substantially finishing around 2014.",
+  "summary_sources": [
+    "src-datasf-8711023"
+  ],
+  "milestones": [
+    {
+      "date": "2014",
+      "status": "complete",
+      "text": "Substantially complete, inferred from DataSF Assessor tax-roll data: assessed improvement value rose from near zero (2012 roll) to $30M (2013 roll) to $94M (2014 roll), and 316 units are first recorded in the 2015 roll. This is inferred from the trend in Assessor data, not a stated completion date from any source found.",
+      "sources": ["src-datasf-8711023"],
+      "expected": false,
+      "approximate": true
+    }
+  ],
+  "costs": [],
+  "facts": [],
+  "images": [],
+  "sources": [
+    {
+      "id": "src-datasf-8711023",
+      "title": "Assessor Historical Secured Property Tax Rolls (blklot 8711023, 185/1850 Channel St): assessed improvement value and unit-count history by roll year",
+      "publisher": "DataSF",
+      "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8711023",
+      "accessed": "2026-09-21"
+    }
+  ],
+  "open_questions": [
+    "No source found in this pass states a specific completion/opening date for this building; the 2014 date here is inferred from Assessor tax-roll value trends, not a stated event, and is flagged accordingly.",
+    "This parcel's own DataSF Assessor 'year_property_built' field is blank in every roll year checked -- unlike most other Mission Bay buildings in this pass, the Assessor does not give a direct construction year for this parcel.",
+    "Several real-estate listing aggregators (Zillow, Trulia, Apartments.com) state the building was 'built in 2013,' which is consistent with the Assessor's value trend, but these pages returned 403/blocked responses when fetched directly in this session and their exact wording could not be independently confirmed, so that claim is not used as a citation here.",
+    "The building's developer (DOB Mission Bay LP) and the LaHue and Associates/UDR project pages already cited in this project's geometry file (data/manual/mission_bay_channel.geojson) do not themselves give an opening date -- confirmed by this pass's own re-check of the geometry file's accuracy_caveat, which already notes 'Opening year not confirmed by any source found.'"
+  ],
+  "last_verified": "2026-09-21"
+}

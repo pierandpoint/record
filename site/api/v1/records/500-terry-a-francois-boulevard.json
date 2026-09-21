@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -12,7 +12,8 @@
   "permalink": "https://pierandpoint.org/parcels/500-terry-a-francois-boulevard/",
   "api": "https://pierandpoint.org/api/v1/records/500-terry-a-francois-boulevard.json",
   "names": [
-   "500 Terry A. Francois Boulevard"
+   "500 Terry A. Francois Boulevard",
+   "Mission Bay Block 26A"
   ],
   "site": {
    "slug": "mission-bay",
@@ -24,8 +25,11 @@
   "status_label": "Complete",
   "use": "commercial",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "500 Terry A. Francois Boulevard (Mission Bay Block 26A) is a 6-story office building in Mission Bay, developed as ML Mission Bay LLC with Swinerton Builders as general contractor per the project's precast contractor's own page, which -- together with DataSF Assessor records -- dates its completion to 2008.",
+  "summary_sources": [
+   "src-datasf-500terry",
+   "src-clarkpacific-500terry"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -42,15 +46,70 @@
   },
   "facts": [],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2008",
+    "date_label": "~2008",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Building completed.",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-datasf-500terry",
+      "title": "Assessor Historical Secured Property Tax Rolls (blklot 8721010, 500 Terry A. Francois Blvd): year_property_built 2008",
+      "publisher": "DataSF",
+      "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8721010",
+      "accessed": "2026-09-21"
+     },
+     {
+      "id": "src-clarkpacific-500terry",
+      "title": "500 Terry Francois – Mission Bay Block 26A",
+      "publisher": "Clark Pacific (precast contractor)",
+      "url": "https://www.clarkpacific.com/project/500-terry-francois-mission-bay-block-26a/",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "DataSF; Clark Pacific (precast contractor)",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_500_terry_francois",
+     "slug": "500-terry-a-francois-boulevard",
+     "name": "500 Terry A. Francois Boulevard",
+     "permalink": "https://pierandpoint.org/parcels/500-terry-a-francois-boulevard/",
+     "api": "https://pierandpoint.org/api/v1/records/500-terry-a-francois-boulevard.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "Exact month/day of the 2008 completion is not sourced, only the year.",
+   "The building's architect and its later Cisco/Meraki tenant history are documented elsewhere (this project's own geometry file cites the SF Chronicle for the Meraki lease) but were not independently re-verified in this minimal-dossier pass, so are left out here rather than repeated unsourced."
+  ],
   "sources": [
    {
-    "id": null,
-    "title": "clarkpacific.com/project/500-terry-francois-mission-bay-block-26a",
-    "url": "https://www.clarkpacific.com/project/500-terry-francois-mission-bay-block-26a/"
+    "id": "src-datasf-500terry",
+    "title": "Assessor Historical Secured Property Tax Rolls (blklot 8721010, 500 Terry A. Francois Blvd): year_property_built 2008",
+    "publisher": "DataSF",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8721010",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-clarkpacific-500terry",
+    "title": "500 Terry Francois – Mission Bay Block 26A",
+    "publisher": "Clark Pacific (precast contractor)",
+    "url": "https://www.clarkpacific.com/project/500-terry-francois-mission-bay-block-26a/",
+    "accessed": "2026-09-21"
    },
    {
     "id": null,
@@ -64,8 +123,8 @@
    }
   ],
   "notes": " GEOMETRY CORRECTED 2026-09-19: previously only captured 1 of 3 real footprint pieces; now unioned.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "MultiPolygon",
    "coordinates": [

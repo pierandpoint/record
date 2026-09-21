@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -24,8 +24,11 @@
   "status_label": "Complete",
   "use": "residential",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "A 236-unit affordable apartment complex (up to 60% AMI) at 420 Berry Street in Mission Bay North, next to Mission Creek Park, developed by Related Companies and Chinatown Community Development Center and designed by David Baker & Associates to follow the curve of the adjacent Caltrain tracks. DataSF's Assessor tax roll (block 8703, lot 006) records the building's construction year as 2007.",
+  "summary_sources": [
+   "src-datasf-assessor-8703006",
+   "src-dbarchitect-crescentcove"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -42,20 +45,71 @@
   },
   "facts": [],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2007",
+    "date_label": "~2007",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Building completed, per DataSF Assessor tax roll",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-datasf-assessor-8703006",
+      "title": "Assessor Historical Secured Property Tax Rolls (block 8703, lot 006 -- 420 Berry St)",
+      "publisher": "DataSF / SF Office of the Assessor-Recorder",
+      "url": "https://data.sf.gov/resource/wv5m-vpq2.json",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "DataSF / SF Office of the Assessor-Recorder",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_crescent_cove",
+     "slug": "crescent-cove",
+     "name": "Crescent Cove",
+     "permalink": "https://pierandpoint.org/parcels/crescent-cove/",
+     "api": "https://pierandpoint.org/api/v1/records/crescent-cove.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "Precise opening month and total development cost not found in this pass -- only a bare construction year is sourced from the Assessor's tax roll.",
+   "This record's own geometry file previously flagged the completion year as an unconfirmed 'mid-to-late 2000s' estimate; the Assessor's 2007 figure (cross-checked against a commercial property-records aggregator during this pass) resolves that to a specific, sourced year."
+  ],
   "sources": [
    {
-    "id": null,
-    "title": "therealdeal.com/sanfrancisco/2022/05/31/socal-investor-buys-236-unit-affordable-complex-in-sfs-mission-bay",
-    "url": "https://therealdeal.com/sanfrancisco/2022/05/31/socal-investor-buys-236-unit-affordable-complex-in-sfs-mission-bay/"
+    "id": "src-datasf-assessor-8703006",
+    "title": "Assessor Historical Secured Property Tax Rolls (block 8703, lot 006 -- 420 Berry St)",
+    "publisher": "DataSF / SF Office of the Assessor-Recorder",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json",
+    "accessed": "2026-09-21"
    },
    {
-    "id": null,
-    "title": "dbarchitect.com/projects/crescent-cove",
-    "url": "https://www.dbarchitect.com/projects/crescent-cove"
+    "id": "src-dbarchitect-crescentcove",
+    "title": "Crescent Cove project page",
+    "publisher": "David Baker Architects",
+    "url": "https://www.dbarchitect.com/projects/crescent-cove",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-therealdeal-2022",
+    "title": "SoCal investor buys 236-unit affordable complex in SF's Mission Bay",
+    "publisher": "The Real Deal",
+    "date": "2022-05",
+    "url": "https://therealdeal.com/sanfrancisco/2022/05/31/socal-investor-buys-236-unit-affordable-complex-in-sfs-mission-bay/",
+    "accessed": "2026-09-21"
    },
    {
     "id": null,
@@ -64,8 +118,8 @@
    }
   ],
   "notes": "Exact completion year not confirmed by a primary source in this pass; secondary sources place it in the mid-to-late 2000s.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

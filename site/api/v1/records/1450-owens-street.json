@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -12,7 +12,8 @@
   "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
   "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json",
   "names": [
-   "1450 Owens Street"
+   "1450 Owens Street",
+   "Alexandria Center for Science and Technology – 1450 Owens"
   ],
   "site": {
    "slug": "mission-bay",
@@ -24,8 +25,11 @@
   "status_label": "Complete",
   "use": "institutional",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "1450 Owens Street is a 7-story, ~215,000 sq ft laboratory/office building (133,000 sq ft lab, ~50,000 sq ft office, 2,600 sq ft ground-floor retail) at the Alexandria Center for Science and Technology's Mission Bay Megacampus, developed by Alexandria Real Estate Equities. The building came online in 2024, with Gladstone Institutes signing a 105,000+ sq ft anchor lease that year.",
+  "summary_sources": [
+   "src-cpe-2026",
+   "src-gladstone-2026"
+  ],
   "shape": {
    "kind": "parcel",
    "parcel": "8709017",
@@ -39,7 +43,130 @@
   },
   "facts": [],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2021-08",
+    "date_label": "Aug 2021",
+    "status": "under_construction",
+    "status_label": "Under construction",
+    "text": "Building permit issued for the 7-story lab/office building; construction estimated at ~$70 million.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfyimby-2023",
+      "title": "Construction Tops Out for 1450 Owens Street in Mission Bay, San Francisco",
+      "publisher": "San Francisco YIMBY",
+      "url": "https://sfyimby.com/2023/02/construction-tops-out-for-1450-owens-street-in-mission-bay-san-francisco.html",
+      "date": "2023-02",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "San Francisco YIMBY, 2023-02",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "8709017",
+     "slug": "1450-owens-street",
+     "name": "1450 Owens Street",
+     "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
+     "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   },
+   {
+    "date": "2023",
+    "date_label": "~2023",
+    "status": "under_construction",
+    "status_label": "Under construction",
+    "text": "Construction topped out on the seven-story structure (reported by San Francisco YIMBY in February 2023; exact topping-out date not stated).",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-sfyimby-2023",
+      "title": "Construction Tops Out for 1450 Owens Street in Mission Bay, San Francisco",
+      "publisher": "San Francisco YIMBY",
+      "url": "https://sfyimby.com/2023/02/construction-tops-out-for-1450-owens-street-in-mission-bay-san-francisco.html",
+      "date": "2023-02",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "San Francisco YIMBY, 2023-02",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "8709017",
+     "slug": "1450-owens-street",
+     "name": "1450 Owens Street",
+     "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
+     "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   },
+   {
+    "date": "2024",
+    "date_label": "~2024",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Building came online; anchor tenant Gladstone Institutes signed a 105,000+ sq ft lease for its data science and genomic immunology institutes.",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-cpe-2026",
+      "title": "Alexandria Lands Life Science Tenant in San Francisco",
+      "publisher": "Commercial Property Executive / Commercial Search",
+      "url": "https://www.commercialsearch.com/news/alexandria-lands-life-science-tenant-in-san-francisco/",
+      "date": "2026-03",
+      "accessed": "2026-09-21"
+     },
+     {
+      "id": "src-gladstone-2026",
+      "title": "Gladstone Institutes expands research footprint with 105,000 square feet of new laboratory space",
+      "publisher": "Gladstone Institutes",
+      "url": "https://gladstone.org/news/gladstone-expands-research-footprint-105000-square-feet-new-laboratory-space",
+      "accessed": "2026-09-21"
+     },
+     {
+      "id": "src-bisnow-2024",
+      "title": "Gladstone Institutes Leases 105K SF In Mission Bay",
+      "publisher": "Bisnow",
+      "url": "https://www.bisnow.com/san-francisco/news/life-sciences/gladstone-institutes-leases-105k-sf-mission-bay-133827",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "Commercial Property Executive / Commercial Search, 2026-03; Gladstone Institutes; Bisnow",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "8709017",
+     "slug": "1450-owens-street",
+     "name": "1450 Owens Street",
+     "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
+     "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [
    {
     "date": "2026-09-20",
@@ -71,17 +198,41 @@
    }
   ],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "Exact day of the August 2021 permit issuance is not sourced, only the month.",
+   "Exact topping-out date is not sourced; only that it had occurred by the San Francisco YIMBY article's February 2023 publication.",
+   "Exact month within 2024 that the building 'came online' is not sourced -- only the year, from Commercial Property Executive's March 2026 coverage."
+  ],
   "sources": [
    {
-    "id": null,
-    "title": "gladstone.org/news/gladstone-expands-research-footprint-105000-square-feet-new-laboratory-space",
-    "url": "https://gladstone.org/news/gladstone-expands-research-footprint-105000-square-feet-new-laboratory-space"
+    "id": "src-cpe-2026",
+    "title": "Alexandria Lands Life Science Tenant in San Francisco",
+    "publisher": "Commercial Property Executive / Commercial Search",
+    "url": "https://www.commercialsearch.com/news/alexandria-lands-life-science-tenant-in-san-francisco/",
+    "date": "2026-03",
+    "accessed": "2026-09-21"
    },
    {
-    "id": null,
-    "title": "bisnow.com/san-francisco/news/life-sciences/gladstone-institutes-leases-105k-sf-mission-bay-133827",
-    "url": "https://www.bisnow.com/san-francisco/news/life-sciences/gladstone-institutes-leases-105k-sf-mission-bay-133827"
+    "id": "src-gladstone-2026",
+    "title": "Gladstone Institutes expands research footprint with 105,000 square feet of new laboratory space",
+    "publisher": "Gladstone Institutes",
+    "url": "https://gladstone.org/news/gladstone-expands-research-footprint-105000-square-feet-new-laboratory-space",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-bisnow-2024",
+    "title": "Gladstone Institutes Leases 105K SF In Mission Bay",
+    "publisher": "Bisnow",
+    "url": "https://www.bisnow.com/san-francisco/news/life-sciences/gladstone-institutes-leases-105k-sf-mission-bay-133827",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-sfyimby-2023",
+    "title": "Construction Tops Out for 1450 Owens Street in Mission Bay, San Francisco",
+    "publisher": "San Francisco YIMBY",
+    "url": "https://sfyimby.com/2023/02/construction-tops-out-for-1450-owens-street-in-mission-bay-san-francisco.html",
+    "date": "2023-02",
+    "accessed": "2026-09-21"
    },
    {
     "id": null,
@@ -90,8 +241,8 @@
    }
   ],
   "notes": "1450 Owens Street -- a 7-story, ~1-acre laboratory/office building at the Alexandria Center for Science and Technology's Mission Bay Megacampus, completed/came online 2024 (133,000 sq ft lab space, ~50,000 sq ft office, 2,600 sq ft ground-level retail per Commercial Property Executive/EurekAlert coverage of the building). Owner-identified while reviewing the numbered real-gap-fragment map for this session's positioning check. Gladstone Institutes (whose own separate headquarters at 1650 Owens St, blklot 8709008, is already tracked) signed a 105,000+ sq ft lease here in 2024 for its data science and genomic immunology institutes, per Gladstone's own press release and multiple real-estate trade press reports -- this record tracks the real Alexandria-owned building/parcel, not a separate Gladstone-owned site. DataSF Assessor confirms blklot 8709017 at 1450 Owens St; the DataSF Building Footprints layer only captures small roof fragments (~688 sq m total) of this real ~4,607 sq m parcel, so this record uses the real Assessor parcel boundary directly, consistent with how this project handles other footprint-layer gaps (e.g. 1300 Fourth Street, Block 6E).",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

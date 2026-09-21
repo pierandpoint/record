@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -12,7 +12,8 @@
   "permalink": "https://pierandpoint.org/parcels/1300-fourth-street-mission-bay-south-block-6-east/",
   "api": "https://pierandpoint.org/api/v1/records/1300-fourth-street-mission-bay-south-block-6-east.json",
   "names": [
-   "1300 Fourth Street (Mission Bay South Block 6 East)"
+   "1300 Fourth Street",
+   "Mission Bay South Block 6 East"
   ],
   "site": {
    "slug": "mission-bay",
@@ -24,8 +25,11 @@
   "status_label": "Complete",
   "use": "residential",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "142 affordable apartments plus a manager's unit at 1300 Fourth Street (Mission Bay South Block 6 East), developed by Tenderloin Neighborhood Development Corporation (TNDC) and designed by Mithun Solomon and Studio VARA. Groundbreaking was reported in September 2016 (SocketSite), and the project's own property manager, Ventura Partners, lists it as completed in 2019.",
+  "summary_sources": [
+   "src-socketsite-2016-08",
+   "src-ventura-1300-4th"
+  ],
   "shape": {
    "kind": "parcel",
    "parcel": "8711505",
@@ -39,15 +43,100 @@
   },
   "facts": [],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2016-09",
+    "date_label": "~2016",
+    "status": "under_construction",
+    "status_label": "Under construction",
+    "text": "Groundbreaking held for 1300 Fourth Street (Mission Bay South Block 6 East)",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-socketsite-2016-08",
+      "title": "Affordable Mission Bay Development about to Break Ground",
+      "publisher": "SocketSite",
+      "date": "2016-08",
+      "url": "https://socketsite.com/archives/2016/08/affordable-mission-bay-development-about-to-break-ground.html",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "SocketSite, 2016-08",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "8711505",
+     "slug": "1300-fourth-street-mission-bay-south-block-6-east",
+     "name": "1300 Fourth Street (Mission Bay South Block 6 East)",
+     "permalink": "https://pierandpoint.org/parcels/1300-fourth-street-mission-bay-south-block-6-east/",
+     "api": "https://pierandpoint.org/api/v1/records/1300-fourth-street-mission-bay-south-block-6-east.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   },
+   {
+    "date": "2019",
+    "date_label": "~2019",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "1300 Fourth Street construction completed",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-ventura-1300-4th",
+      "title": "1300 -- 1360 Fourth Street project page",
+      "publisher": "Ventura Partners (TNDC's commercial property manager)",
+      "url": "https://venturapartners.com/our-projects/1300-1360-fourth-street/",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "Ventura Partners (TNDC's commercial property manager)",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "8711505",
+     "slug": "1300-fourth-street-mission-bay-south-block-6-east",
+     "name": "1300 Fourth Street (Mission Bay South Block 6 East)",
+     "permalink": "https://pierandpoint.org/parcels/1300-fourth-street-mission-bay-south-block-6-east/",
+     "api": "https://pierandpoint.org/api/v1/records/1300-fourth-street-mission-bay-south-block-6-east.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "Precise month of 2019 completion / certificate of occupancy not found; DataSF's Assessor tax roll records no year_property_built for this parcel (blklot 8711505), per status.csv's own note.",
+   "Total development cost (status.csv's notes cite ~$76M from unspecified reporting) not independently re-sourced in this pass."
+  ],
   "sources": [
    {
-    "id": null,
-    "title": "socketsite.com/archives/2016/08/affordable-mission-bay-development-about-to-break-ground.html",
-    "url": "https://socketsite.com/archives/2016/08/affordable-mission-bay-development-about-to-break-ground.html"
+    "id": "src-socketsite-2016-08",
+    "title": "Affordable Mission Bay Development about to Break Ground",
+    "publisher": "SocketSite",
+    "date": "2016-08",
+    "url": "https://socketsite.com/archives/2016/08/affordable-mission-bay-development-about-to-break-ground.html",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-ventura-1300-4th",
+    "title": "1300 -- 1360 Fourth Street project page",
+    "publisher": "Ventura Partners (TNDC's commercial property manager)",
+    "url": "https://venturapartners.com/our-projects/1300-1360-fourth-street/",
+    "accessed": "2026-09-21"
    },
    {
     "id": null,
@@ -56,8 +145,8 @@
    }
   ],
   "notes": "1300 Fourth Street (Mission Bay South Block 6 East) -- 142 affordable apartments plus a manager's unit, developed by Tenderloin Neighborhood Development Corporation (TNDC), designed by Mithun Solomon and Studio VARA, ~$76M cost. Serves households up to 50% of Area Median Income, with 20% of units reserved for formerly homeless families; includes a mid-block mews with 12 townhomes and 10 flats over up to seven ground-floor commercial spaces fronting 4th St. Groundbreaking was reported late September 2016 with an expected ~2-year construction timeline (SocketSite); DataSF's Assessor tax roll lists blklot 8711505 as 'Multi-Family Residential' with no year_property_built recorded. Also referenced administratively as 626 Mission Bay Blvd for its separate ground-floor retail portion (blklot 8711506, not part of this parcel). DataSF's own Building Footprints layer only captures small fragments of this building's roof (a handful of sub-100 sq m slivers totaling well under the real footprint) rather than its full mass, confirmed visually against satellite imagery -- so this record uses the real Assessor parcel boundary (a single-building, single-parcel site) rather than the incomplete building-footprint layer, consistent with how every other real-parcel record here is drawn.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -24,8 +24,10 @@
   "status_label": "Complete",
   "use": "institutional",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "The J. David Gladstone Institutes' Mission Bay headquarters at 1650 Owens Street: a six-story, roughly 200,000-sq-ft biomedical research building for this UCSF-affiliated independent nonprofit, dedicated in December 2004. A roughly 105,000-sq-ft, $160M expansion at the same address was announced in 2023 but is not confirmed complete.",
+  "summary_sources": [
+   "src-ucsf-gladstone-2004"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -40,22 +42,120 @@
    "lon": -122.394343,
    "lat": 37.767732
   },
-  "facts": [],
-  "costs": [],
-  "milestones": [],
-  "changes": [],
-  "images": [],
-  "open_questions": [],
-  "sources": [
+  "facts": [
    {
-    "id": null,
-    "title": "ucsf.edu/news/2004/12/101217/gladstone-institutes-dedicate-mission-bay-research-building",
-    "url": "https://www.ucsf.edu/news/2004/12/101217/gladstone-institutes-dedicate-mission-bay-research-building"
+    "key": "gross_sqft",
+    "value": "approximately 200,000 (original 2004 building)",
+    "sources": [
+     "src-ucsf-gladstone-2004"
+    ]
    },
    {
-    "id": null,
-    "title": "sfyimby.com/2023/02/gladstone-expansion-announced-for-1650-owens-street-in-mission-bay-san-francisco.html",
-    "url": "https://sfyimby.com/2023/02/gladstone-expansion-announced-for-1650-owens-street-in-mission-bay-san-francisco.html"
+    "key": "use",
+    "value": "UCSF-affiliated independent nonprofit biomedical research institute, named for founder J. David Gladstone",
+    "sources": [
+     "src-ucsf-gladstone-2004"
+    ]
+   }
+  ],
+  "costs": [],
+  "milestones": [
+   {
+    "date": "2004-12",
+    "date_label": "Dec 2004",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Gladstone Institutes dedicate their new Mission Bay research building",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ucsf-gladstone-2004",
+      "title": "Gladstone Institutes Dedicate Mission Bay Research Building",
+      "publisher": "UC San Francisco",
+      "date": "2004-12",
+      "url": "https://www.ucsf.edu/news/2004/12/101217/gladstone-institutes-dedicate-mission-bay-research-building",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "UC San Francisco, 2004-12",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_gladstone_institutes",
+     "slug": "j-david-gladstone-institutes",
+     "name": "J. David Gladstone Institutes",
+     "permalink": "https://pierandpoint.org/parcels/j-david-gladstone-institutes/",
+     "api": "https://pierandpoint.org/api/v1/records/j-david-gladstone-institutes.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   },
+   {
+    "date": "2023-02",
+    "date_label": "Feb 2023",
+    "status": null,
+    "status_label": null,
+    "text": "A roughly 105,000-sq-ft, ~$160M expansion at 1650 Owens Street is announced; reported as planned, not confirmed complete",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfyimby-gladstone-2023",
+      "title": "Gladstone Expansion Announced for 1650 Owens Street in Mission Bay, San Francisco",
+      "publisher": "San Francisco YIMBY",
+      "date": "2023-02",
+      "url": "https://sfyimby.com/2023/02/gladstone-expansion-announced-for-1650-owens-street-in-mission-bay-san-francisco.html",
+      "accessed": "2026-09-18"
+     }
+    ],
+    "source": "San Francisco YIMBY, 2023-02",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "mission_bay_gladstone_institutes",
+     "slug": "j-david-gladstone-institutes",
+     "name": "J. David Gladstone Institutes",
+     "permalink": "https://pierandpoint.org/parcels/j-david-gladstone-institutes/",
+     "api": "https://pierandpoint.org/api/v1/records/j-david-gladstone-institutes.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
+  "changes": [],
+  "images": [],
+  "open_questions": [
+   "Exact dedication day within December 2004 not sourced; only the month is confirmed.",
+   "Status of the 2023-announced expansion (permitted, under construction, completed) was not re-checked in this pass; per this record's own geometry file, it was not confirmed complete as of the last check and is not reflected in this footprint or status.",
+   "Architect and construction cost of the original 2004 building not found in this pass."
+  ],
+  "sources": [
+   {
+    "id": "src-ucsf-gladstone-2004",
+    "title": "Gladstone Institutes Dedicate Mission Bay Research Building",
+    "publisher": "UC San Francisco",
+    "date": "2004-12",
+    "url": "https://www.ucsf.edu/news/2004/12/101217/gladstone-institutes-dedicate-mission-bay-research-building",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-sfyimby-gladstone-2023",
+    "title": "Gladstone Expansion Announced for 1650 Owens Street in Mission Bay, San Francisco",
+    "publisher": "San Francisco YIMBY",
+    "date": "2023-02",
+    "url": "https://sfyimby.com/2023/02/gladstone-expansion-announced-for-1650-owens-street-in-mission-bay-san-francisco.html",
+    "accessed": "2026-09-18"
    },
    {
     "id": null,
@@ -64,8 +164,8 @@
    }
   ],
   "notes": "A 2023-announced ~105,000 sq ft / $160M expansion at this address was reported as planned; not confirmed complete, so not reflected in this footprint or status.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

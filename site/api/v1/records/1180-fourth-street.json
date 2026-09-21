@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -24,8 +24,11 @@
   "status_label": "Complete",
   "use": "residential",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "A 150-unit affordable apartment building at 1180 Fourth Street in Mission Bay South, for very-low- and low-income families and 50 formerly homeless households, developed by Mercy Housing California and designed by Kennerly Architecture & Planning with Mithun|Solomon. DataSF's Assessor tax roll records the parcel's construction year as 2015, and Mercy Housing held its official opening celebration on May 6, 2015.",
+  "summary_sources": [
+   "src-datasf-assessor-8711501",
+   "src-mercyhousing-2015-05"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -42,11 +45,109 @@
   },
   "facts": [],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2015",
+    "date_label": "~2015",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "DataSF's Assessor tax roll records the building's construction year",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-datasf-assessor-8711501",
+      "title": "Assessor Historical Secured Property Tax Rolls (block 8711, lot 501 -- 1180 4th St)",
+      "publisher": "DataSF / SF Office of the Assessor-Recorder",
+      "url": "https://data.sf.gov/resource/wv5m-vpq2.json",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "DataSF / SF Office of the Assessor-Recorder",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_1180_4th",
+     "slug": "1180-fourth-street",
+     "name": "1180 Fourth Street",
+     "permalink": "https://pierandpoint.org/parcels/1180-fourth-street/",
+     "api": "https://pierandpoint.org/api/v1/records/1180-fourth-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   },
+   {
+    "date": "2015-05-06",
+    "date_label": "May 6, 2015",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Mercy Housing California holds the official opening celebration / dedication for 1180 Fourth Street, attended by the Mayor and District 6 Supervisor",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-mercyhousing-2015-05",
+      "title": "Mercy Housing California Hosts Official Opening Celebration at 1180 Fourth Street, a new 150-unit Apartment Building for Low-income and Formerly Homeless Families in San Francisco's Mission Bay Neighborhood",
+      "publisher": "Mercy Housing",
+      "date": "2015-05",
+      "url": "https://www.mercyhousing.org/2015/05/mercy-housing-california-hosts-official-opening-celebration-at-1180-fourth-street-a-new-150-unit-apartment-building-for-low-income-and-formerly-homeless-families-in-san-franciscos-mission-ba/",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "Mercy Housing, 2015-05",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_1180_4th",
+     "slug": "1180-fourth-street",
+     "name": "1180 Fourth Street",
+     "permalink": "https://pierandpoint.org/parcels/1180-fourth-street/",
+     "api": "https://pierandpoint.org/api/v1/records/1180-fourth-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "The Registry's own December 2014 headline says construction was already complete by then, ahead of the May 2015 public opening/dedication; no source found pins down an exact construction-completion (certificate of occupancy) date distinct from the dedication event.",
+   "Total development cost not found in this pass."
+  ],
   "sources": [
+   {
+    "id": "src-datasf-assessor-8711501",
+    "title": "Assessor Historical Secured Property Tax Rolls (block 8711, lot 501 -- 1180 4th St)",
+    "publisher": "DataSF / SF Office of the Assessor-Recorder",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-mercyhousing-2015-05",
+    "title": "Mercy Housing California Hosts Official Opening Celebration at 1180 Fourth Street, a new 150-unit Apartment Building for Low-income and Formerly Homeless Families in San Francisco's Mission Bay Neighborhood",
+    "publisher": "Mercy Housing",
+    "date": "2015-05",
+    "url": "https://www.mercyhousing.org/2015/05/mercy-housing-california-hosts-official-opening-celebration-at-1180-fourth-street-a-new-150-unit-apartment-building-for-low-income-and-formerly-homeless-families-in-san-franciscos-mission-ba/",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-registry-2014-12",
+    "title": "Mercy Housing Completes 1180 Fourth Street Affordable Housing Designed by Mithun|Solomon and Kennerly Architecture in San Francisco",
+    "publisher": "The Registry",
+    "date": "2014-12",
+    "url": "https://news.theregistrysf.com/mercy-housing-completes-1180-fourth-street-affordable-housing-designed-mithunsolomon-kennerly-architecture-san-francisco/",
+    "accessed": "2026-09-21"
+   },
    {
     "id": null,
     "title": "casestudies.uli.org/1180-fourth-street",
@@ -64,8 +165,8 @@
    }
   ],
   "notes": "No OSM building/name tag found on this footprint; address and history confirmed via architect project pages and press coverage instead.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

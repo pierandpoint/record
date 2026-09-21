@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -24,8 +24,10 @@
   "status_label": "Complete",
   "use": "park",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "A San Francisco Recreation and Parks Department building at 290 Channel St within Mission Creek Park, with floor-to-ceiling windows and two patios overlooking Mission Creek, built for future café/recreational use adjacent to the Channel Street Dog Park. The structure was officially formalized in 2001 and received its certificate of completion in 2003, but the intended restaurant space stood unused for over two decades until a coffee tenant, Zocalo Coffee, finally opened there on August 1, 2026.",
+  "summary_sources": [
+   "src-missionlocal-pavilion"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -42,11 +44,60 @@
   },
   "facts": [],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2003",
+    "date_label": "~2003",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Pavilion building receives its certificate of completion",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-missionlocal-pavilion",
+      "title": "22 years after it was built, a cafe on the shore of Mission Creek finally opens",
+      "publisher": "Mission Local",
+      "url": "https://missionlocal.org/2026/09/san-francisco-zocalo-coffee-opening-mission-bay/",
+      "date": "2026-09",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "Mission Local, 2026-09",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_creek_park_pavilion",
+     "slug": "mission-creek-park-pavilion",
+     "name": "Mission Creek Park Pavilion",
+     "permalink": "https://pierandpoint.org/parcels/mission-creek-park-pavilion/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-creek-park-pavilion.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "The source gives three close but distinct dates for the building's early history -- 'officially formalized' in 2001, a food-and-beverage handling license obtained in 2002, and a certificate of completion issued in 2003; 2003 (the certificate of completion) is used here as the completion milestone since it is the most construction-specific of the three.",
+   "Architect or landscape-architect credit for the pavilion building itself was not identified in the source checked (a 2004 Landscape Architect magazine piece is referenced by the article but was not independently located).",
+   "Why the space sat unused as a restaurant/café for over two decades before Zocalo Coffee's 2026 opening is discussed in the source but not summarized here, since it postdates this record's construction-status milestone and is not itself a status change for the building."
+  ],
   "sources": [
+   {
+    "id": "src-missionlocal-pavilion",
+    "title": "22 years after it was built, a cafe on the shore of Mission Creek finally opens",
+    "publisher": "Mission Local",
+    "url": "https://missionlocal.org/2026/09/san-francisco-zocalo-coffee-opening-mission-bay/",
+    "date": "2026-09",
+    "accessed": "2026-09-21"
+   },
    {
     "id": null,
     "title": "sfrecpark.org/1704/Mission-Creek-Park-Pavilion",
@@ -64,8 +115,8 @@
    }
   ],
   "notes": null,
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

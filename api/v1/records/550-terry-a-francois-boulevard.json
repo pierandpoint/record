@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -24,8 +24,10 @@
   "status_label": "Complete",
   "use": "commercial",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "550 Terry A. Francois Boulevard is a 6-story Class A office building in Mission Bay, built in 2002 per DataSF Assessor records; it was long the Gap Inc./Old Navy corporate headquarters, purchased by DivcoWest from Gap in 2022 and later subleased to OpenAI.",
+  "summary_sources": [
+   "src-datasf-550terry"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -42,11 +44,57 @@
   },
   "facts": [],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2002",
+    "date_label": "~2002",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Building completed.",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-datasf-550terry",
+      "title": "Assessor Historical Secured Property Tax Rolls (blklot 8721011, 550 Terry A. Francois Blvd): year_property_built 2002",
+      "publisher": "DataSF",
+      "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8721011",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "DataSF",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_550_terry_francois",
+     "slug": "550-terry-a-francois-boulevard",
+     "name": "550 Terry A. Francois Boulevard",
+     "permalink": "https://pierandpoint.org/parcels/550-terry-a-francois-boulevard/",
+     "api": "https://pierandpoint.org/api/v1/records/550-terry-a-francois-boulevard.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "Exact month/day of the 2002 completion is not sourced, only the year.",
+   "The building's developer/architect (reported elsewhere as Studios Architecture) was not independently confirmed by a source read in this pass -- left out of this minimal dossier rather than repeated unsourced."
+  ],
   "sources": [
+   {
+    "id": "src-datasf-550terry",
+    "title": "Assessor Historical Secured Property Tax Rolls (blklot 8721011, 550 Terry A. Francois Blvd): year_property_built 2002",
+    "publisher": "DataSF",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8721011",
+    "accessed": "2026-09-21"
+   },
    {
     "id": null,
     "title": "divcowest.com/property/550-terry-francois",
@@ -64,8 +112,8 @@
    }
   ],
   "notes": "No OSM building/name tag found on this footprint; address and history confirmed via DataSF Assessor parcel data and news coverage instead.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

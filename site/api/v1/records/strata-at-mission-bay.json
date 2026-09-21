@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -24,8 +24,11 @@
   "status_label": "Complete",
   "use": "residential",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "Strata at Mission Bay is a roughly 192-193 unit apartment building at 555 Mission Rock St; SocketSite reported in January 2009 that its units were scheduled to come online that March, and DataSF Assessor records give 2009 as the building's construction-completion year.",
+  "summary_sources": [
+   "src-socketsite-strata-2009",
+   "src-datasf-assessor-strata"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -42,11 +45,74 @@
   },
   "facts": [],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2009-03",
+    "date_label": "~2009",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Strata at Mission Bay's rental units come online, per contemporaneous real estate press; DataSF Assessor records also give 2009 as this building's construction-completion year",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-socketsite-strata-2009",
+      "title": "Coming Soon: \"Strata At Mission Bay\" (A.K.A. 555 Mission Rock)",
+      "publisher": "SocketSite",
+      "date": "2009-01-29",
+      "url": "https://socketsite.com/archives/2009/01/coming_soon_strata_at_mission_bay_aka_555_mission_rock.html",
+      "accessed": "2026-09-21"
+     },
+     {
+      "id": "src-datasf-assessor-strata",
+      "title": "Assessor Historical Secured Property Tax Rolls -- 555 Mission Rock St (block 8711, lot 028)",
+      "publisher": "DataSF / San Francisco Office of the Assessor-Recorder",
+      "url": "https://data.sf.gov/resource/wv5m-vpq2.json?block=8711&lot=028",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "SocketSite, 2009-01-29; DataSF / San Francisco Office of the Assessor-Recorder",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_strata",
+     "slug": "strata-at-mission-bay",
+     "name": "Strata at Mission Bay",
+     "permalink": "https://pierandpoint.org/parcels/strata-at-mission-bay/",
+     "api": "https://pierandpoint.org/api/v1/records/strata-at-mission-bay.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "DataSF Assessor lists 193 units for this parcel versus the 192 reported by SocketSite and repeated across apartment-listing sites; the one-unit gap (possibly a manager's unit or a later modification) is not resolved.",
+   "Exact first move-in date (SocketSite's comments mention 'March 1st' from a commenter, not the article itself) is not confirmed from a primary source.",
+   "Developer/architect not confirmed from any source checked in this pass."
+  ],
   "sources": [
+   {
+    "id": "src-socketsite-strata-2009",
+    "title": "Coming Soon: \"Strata At Mission Bay\" (A.K.A. 555 Mission Rock)",
+    "publisher": "SocketSite",
+    "date": "2009-01-29",
+    "url": "https://socketsite.com/archives/2009/01/coming_soon_strata_at_mission_bay_aka_555_mission_rock.html",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-datasf-assessor-strata",
+    "title": "Assessor Historical Secured Property Tax Rolls -- 555 Mission Rock St (block 8711, lot 028)",
+    "publisher": "DataSF / San Francisco Office of the Assessor-Recorder",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json?block=8711&lot=028",
+    "accessed": "2026-09-21"
+   },
    {
     "id": null,
     "title": "stratasf.com",
@@ -64,8 +130,8 @@
    }
   ],
   "notes": null,
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

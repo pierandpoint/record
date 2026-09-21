@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -24,8 +24,11 @@
   "status_label": "Complete",
   "use": "residential",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "Mission Walk is a below-market-rate condominium development at 330 and 335 Berry St, built under the San Francisco Redevelopment Agency's Affordable Homeownership Program; this building (335 Berry St) was completed in 2009 per DataSF Assessor records, with its BMR units among the 131 across both addresses allocated by a lottery in January 2009.",
+  "summary_sources": [
+   "src-datasf-assessor-335berry",
+   "src-socketsite-missionwalk-2008"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -42,11 +45,117 @@
   },
   "facts": [],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2008-10",
+    "date_label": "Oct 2008",
+    "status": "under_construction",
+    "status_label": "Under construction",
+    "text": "Below-market-rate purchase applications open for the 131 condo units at 330/335 Berry St ahead of a January 2009 lottery, while the buildings are still under construction",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-socketsite-missionwalk-2008",
+      "title": "Mission Walk (330/335 Berry): BMR Applications Now Available",
+      "publisher": "SocketSite",
+      "date": "2008-10-27",
+      "url": "https://socketsite.com/archives/2008/10/mission_walk_330335_berry_applications_now_available_du.html",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "SocketSite, 2008-10-27",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_mission_walk_335",
+     "slug": "mission-walk-335-berry-st",
+     "name": "Mission Walk (335 Berry St)",
+     "permalink": "https://pierandpoint.org/parcels/mission-walk-335-berry-st/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-walk-335-berry-st.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   },
+   {
+    "date": "2009",
+    "date_label": "~2009",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "335 Berry St building completed",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-datasf-assessor-335berry",
+      "title": "Assessor Historical Secured Property Tax Rolls -- 335 Berry St (block 8707, lot 120)",
+      "publisher": "DataSF / San Francisco Office of the Assessor-Recorder",
+      "url": "https://data.sf.gov/resource/wv5m-vpq2.json?block=8707&lot=120",
+      "accessed": "2026-09-21"
+     },
+     {
+      "id": "src-sfcondomarket-335",
+      "title": "335 Berry St",
+      "publisher": "San Francisco Condo Market",
+      "url": "https://www.sanfranciscocondomarket.com/building/335-berry-st",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "DataSF / San Francisco Office of the Assessor-Recorder; San Francisco Condo Market",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_mission_walk_335",
+     "slug": "mission-walk-335-berry-st",
+     "name": "Mission Walk (335 Berry St)",
+     "permalink": "https://pierandpoint.org/parcels/mission-walk-335-berry-st/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-walk-335-berry-st.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "Precise completion month in 2009 is not sourced beyond the bare Assessor year.",
+   "DataSF Assessor's own use_code/unit-count fields for this specific parcel (Single Family Residential, 0 units, 2 stories) look like a condo common-element or garage lot rather than the full building, while listing sites describe a larger residential building at this address; not reconciled here.",
+   "Unit count for this address alone (as distinct from the combined 131-unit BMR program across both 330 and 335 Berry St) is not confirmed from a single source.",
+   "Developer/architect not confirmed from any source checked in this pass."
+  ],
   "sources": [
+   {
+    "id": "src-datasf-assessor-335berry",
+    "title": "Assessor Historical Secured Property Tax Rolls -- 335 Berry St (block 8707, lot 120)",
+    "publisher": "DataSF / San Francisco Office of the Assessor-Recorder",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json?block=8707&lot=120",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-socketsite-missionwalk-2008",
+    "title": "Mission Walk (330/335 Berry): BMR Applications Now Available",
+    "publisher": "SocketSite",
+    "date": "2008-10-27",
+    "url": "https://socketsite.com/archives/2008/10/mission_walk_330335_berry_applications_now_available_du.html",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-sfcondomarket-335",
+    "title": "335 Berry St",
+    "publisher": "San Francisco Condo Market",
+    "url": "https://www.sanfranciscocondomarket.com/building/335-berry-st",
+    "accessed": "2026-09-21"
+   },
    {
     "id": null,
     "title": "openstreetmap.org/way/56656114",
@@ -54,8 +163,8 @@
    }
   ],
   "notes": "Opening year and unit count not confirmed by any source found in this pass.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

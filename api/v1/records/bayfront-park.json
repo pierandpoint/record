@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -24,8 +24,11 @@
   "status_label": "Complete",
   "use": "park",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "A roughly 5.5-acre waterfront park at 16th Street and Terry A. Francois Boulevard, directly across from Chase Center, built by the Mission Bay Development Group for the Port of San Francisco with open lawns, a stretch of the Bay Trail, multiple plazas, and benches and sculptures made from reclaimed Bay Bridge steel; it had its public grand-opening celebration on October 22, 2024.",
+  "summary_sources": [
+   "src-sfgov-bayfront-open",
+   "src-sfport-bayfront"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -42,11 +45,67 @@
   },
   "facts": [],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2024-10-22",
+    "date_label": "Oct 22, 2024",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Grand opening celebration held at 16th Street Plaza in Bayfront Park, with Mayor London Breed",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfgov-bayfront-open",
+      "title": "Mayor London Breed Celebrates Grand Opening of Bayfront Park in Mission Bay",
+      "publisher": "SF.gov",
+      "url": "https://www.sf.gov/news--mayor-london-breed-celebrates-grand-opening-bayfront-park-mission-bay",
+      "date": "2024-10-22",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "SF.gov, 2024-10-22",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_bayfront_park",
+     "slug": "bayfront-park",
+     "name": "Bayfront Park",
+     "permalink": "https://pierandpoint.org/parcels/bayfront-park/",
+     "api": "https://pierandpoint.org/api/v1/records/bayfront-park.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "Reported size varies across sources (roughly 5.4 to 6 acres depending on the outlet); not resolved to one figure here.",
+   "October 22, 2024 is the public grand-opening celebration date; a separate physical-construction-completion date (permit final, certificate of occupancy) was not found in any source checked.",
+   "This record's own geometry file (data/manual/mission_bay_bayfront_park.geojson) notes the park occupies the Mission Bay South Design Controls Plan's former P21/P22 open-space parcels; OCII's own September 2023 open-space transition presentation (sfocii.org, Item 2) lists P21 as already Port-managed by that date but P22 as still 'when built' -- consistent with part of the site predating this park's 2024 completion, but not independently broken out here."
+  ],
   "sources": [
+   {
+    "id": "src-sfgov-bayfront-open",
+    "title": "Mayor London Breed Celebrates Grand Opening of Bayfront Park in Mission Bay",
+    "publisher": "SF.gov",
+    "url": "https://www.sf.gov/news--mayor-london-breed-celebrates-grand-opening-bayfront-park-mission-bay",
+    "date": "2024-10-22",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-sfport-bayfront",
+    "title": "Bayfront Park",
+    "publisher": "Port of San Francisco (sfport.com)",
+    "url": "https://www.sfport.com/bayfrontpark",
+    "accessed": "2026-09-21"
+   },
    {
     "id": null,
     "title": "openstreetmap.org/way/1329130170",
@@ -54,23 +113,13 @@
    },
    {
     "id": null,
-    "title": "sfport.com/bayfrontpark",
-    "url": "https://www.sfport.com/bayfrontpark"
-   },
-   {
-    "id": null,
     "title": "sfstandard.com/2024/10/22/san-francisco-opens-two-new-waterfront-parks",
     "url": "https://sfstandard.com/2024/10/22/san-francisco-opens-two-new-waterfront-parks/"
-   },
-   {
-    "id": null,
-    "title": "sf.gov/news--mayor-london-breed-celebrates-grand-opening-bayfront-park-mission-bay",
-    "url": "https://www.sf.gov/news--mayor-london-breed-celebrates-grand-opening-bayfront-park-mission-bay"
    }
   ],
   "notes": "Opened Oct 22, 2024, per SF Port and multiple press accounts; a Port-managed public park, not an OCII Community Facilities District park like the earlier-completed ones above.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

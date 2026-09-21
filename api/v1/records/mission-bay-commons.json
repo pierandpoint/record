@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -24,8 +24,10 @@
   "status_label": "Complete",
   "use": "park",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "A roughly two-acre lawn and green space at 3rd Street and Mission Bay Boulevard in Mission Bay, part of the city's Mission Bay Parks system; the San Francisco Recreation and Park Department took over its management and maintenance from OCII/the Port on July 1, 2023. No source checked gives this lawn's own original construction or opening date.",
+  "summary_sources": [
+   "src-sfrecpark-commons"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -45,8 +47,18 @@
   "milestones": [],
   "changes": [],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "No independently dated source found for when this lawn (the single mapped OSM lot between the Radiance and Nektar/Bayer buildings, per this record's own geometry file) was built or opened. The only dated event found is SF Rec & Park's July 1, 2023 assumption of management from OCII, which is a management transfer, not a construction-completion date -- not used as a completion milestone, per this repo's rule against attributing an area-wide/administrative event to an individual record's build status.",
+   "This record's geometry file explicitly distinguishes this single mapped lawn from the much larger, still-interim 'Mission Bay Commons' area further west (Spark Social SF, Stagecoach Greens, the soccer field, tracked separately as mission_bay_commons_interim_west); OCII's own Nov 2024 CAC materials use the plan labels P11, P12, P13, P15, P16 and P17 for that wider interim-use area collectively, without singling out which label (if any) corresponds to this specific mapped lot -- not resolved here."
+  ],
   "sources": [
+   {
+    "id": "src-sfrecpark-commons",
+    "title": "Parks and Facilities • Mission Bay Commons",
+    "publisher": "San Francisco Recreation and Park Department (sfrecpark.org)",
+    "url": "https://sfrecpark.org/Facilities/Facility/Details/Mission-Bay-Commons-455",
+    "accessed": "2026-09-21"
+   },
    {
     "id": null,
     "title": "openstreetmap.org/way/48569996",
@@ -64,8 +76,8 @@
    }
   ],
   "notes": "Completed as part of Mission Bay's original 1998 plan, open by fall 2010 per Wikipedia's Mission Bay article.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

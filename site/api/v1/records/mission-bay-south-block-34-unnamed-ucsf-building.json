@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -12,7 +12,8 @@
   "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-34-unnamed-ucsf-building/",
   "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-34-unnamed-ucsf-building.json",
   "names": [
-   "Mission Bay South Block 34 (unnamed UCSF building)"
+   "Mission Bay South Block 34 (unnamed UCSF building)",
+   "UCSF Bayfront Medical Building (probable)"
   ],
   "site": {
    "slug": "mission-bay",
@@ -24,8 +25,11 @@
   "status_label": "Complete",
   "use": "institutional",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "This record's geometry is the south of two real, previously untracked UCSF buildings between 3rd and Illinois Streets down to Mariposa Street; that location -- the corner of 3rd, Mariposa and Illinois -- matches UCSF's own Bayfront Medical Building (520 Illinois St), a five-story, ~182,800-sq-ft clinical building (Stantec architect, Clark Construction general contractor) built alongside a new Illinois Street parking garage under UCSF's 'Block 34 Clinical Building and Parking Garage' project, with construction starting October 2021 and the clinic opening in August 2024.",
+  "summary_sources": [
+   "src-ucsf-real-estate-bayfront",
+   "src-sfyimby-block34-2021"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -40,16 +44,139 @@
    "lon": -122.388366,
    "lat": 37.764453
   },
-  "facts": [],
+  "facts": [
+   {
+    "key": "architect",
+    "value": "Stantec (project architect), Clark Construction (general contractor)",
+    "sources": [
+     "src-stantec-bayfront-2024"
+    ]
+   },
+   {
+    "key": "gross_sqft",
+    "value": "approximately 182,800, five stories",
+    "sources": [
+     "src-sfyimby-block34-2021"
+    ]
+   }
+  ],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2021-10-02",
+    "date_label": "Oct 2, 2021",
+    "status": null,
+    "status_label": null,
+    "text": "Construction begins on the Block 34 clinical building",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfyimby-block34-2021",
+      "title": "Construction Starts for UCSF Clinical Building at Block 34, Mission Bay, San Francisco",
+      "publisher": "San Francisco YIMBY",
+      "date": "2021-10",
+      "url": "https://sfyimby.com/2021/10/construction-starts-for-ucsf-clinical-building-at-block-34-mission-bay-san-francisco.html",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "San Francisco YIMBY, 2021-10",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "mission_bay_block_34",
+     "slug": "mission-bay-south-block-34-unnamed-ucsf-building",
+     "name": "Mission Bay South Block 34 (unnamed UCSF building)",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-34-unnamed-ucsf-building/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-34-unnamed-ucsf-building.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   },
+   {
+    "date": "2024-08",
+    "date_label": "Aug 2024",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "UCSF Health Bayfront Medical Building (520 Illinois St) opens/welcomes patients -- probable identity of this record's building, inferred from its position at the 3rd/Mariposa/Illinois corner this project's clinical building occupies (see open_questions)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ucsf-real-estate-bayfront",
+      "title": "Bayfront Medical Building and Illinois Street Garage (project page: Bayfront Medical Building, 520 Illinois St, five stories, opened as part of UCSF's Block 34 project)",
+      "publisher": "UCSF Real Estate",
+      "url": "https://realestate.ucsf.edu/projects/bayfront-medical-building-and-illinois-street-garage",
+      "accessed": "2026-09-21"
+     },
+     {
+      "id": "src-stantec-bayfront-2024",
+      "title": "Stantec-designed UCSF Bayfront Medical Building opens on growing Mission Bay campus",
+      "publisher": "Stantec",
+      "date": "2024-08",
+      "url": "https://www.stantec.com/en/news/2024/stantec-designed-ucsf-bayfront-medical-building-opens-mission-bay-campus",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "UCSF Real Estate; Stantec, 2024-08",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_block_34",
+     "slug": "mission-bay-south-block-34-unnamed-ucsf-building",
+     "name": "Mission Bay South Block 34 (unnamed UCSF building)",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-34-unnamed-ucsf-building/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-34-unnamed-ucsf-building.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [],
   "images": [],
-  "open_questions": [],
-  "sources": [],
+  "open_questions": [
+   "This record's own geometry file states the building's name/address/operator are not confirmed by any source checked in the geometry-correction pass. This research pass found a strong but not fully confirmed candidate: UCSF's Bayfront Medical Building (520 Illinois St), the clinical half of the 'Block 34 Clinical Building and Parking Garage' project, whose own CEQA filing places it south of the Wayne and Gladys Valley Center for Vision (this project's mission_bay_490_illinois record) and at the corner of 3rd and Mariposa -- matching this record's own notes exactly (south building, extending to Mariposa St). No source directly ties an address to this record's own OCII plan-block-34 parcel number, so the identification is geographic inference from UCSF's own project descriptions, not confirmed by an address-to-parcel source.",
+   "Exact opening day within August 2024 is inconsistent across sources found (a UCSF news article dated 2024-08 vs. secondary reports of an August 23 opening event and an August 27 first-patients date); not resolved here, only the month is used.",
+   "Total project cost is reported elsewhere as approximately $335.8 million for the combined clinical building and garage; not broken out per building and not independently verified against a primary UCSF or Regents document in this pass, so left out of costs."
+  ],
+  "sources": [
+   {
+    "id": "src-ucsf-real-estate-bayfront",
+    "title": "Bayfront Medical Building and Illinois Street Garage (project page: Bayfront Medical Building, 520 Illinois St, five stories, opened as part of UCSF's Block 34 project)",
+    "publisher": "UCSF Real Estate",
+    "url": "https://realestate.ucsf.edu/projects/bayfront-medical-building-and-illinois-street-garage",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-sfyimby-block34-2021",
+    "title": "Construction Starts for UCSF Clinical Building at Block 34, Mission Bay, San Francisco",
+    "publisher": "San Francisco YIMBY",
+    "date": "2021-10",
+    "url": "https://sfyimby.com/2021/10/construction-starts-for-ucsf-clinical-building-at-block-34-mission-bay-san-francisco.html",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-stantec-bayfront-2024",
+    "title": "Stantec-designed UCSF Bayfront Medical Building opens on growing Mission Bay campus",
+    "publisher": "Stantec",
+    "date": "2024-08",
+    "url": "https://www.stantec.com/en/news/2024/stantec-designed-ucsf-bayfront-medical-building-opens-mission-bay-campus",
+    "accessed": "2026-09-21"
+   }
+  ],
   "notes": "OCII plan block 34. Between 3rd St and Illinois St, south of block 33, down to Mariposa St. Name/operator not yet confirmed.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

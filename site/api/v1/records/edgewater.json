@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -24,8 +24,10 @@
   "status_label": "Complete",
   "use": "residential",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "A six-story, 193-unit rental apartment building at 355 Berry Street on Mission Creek in Mission Bay North. DataSF's Assessor tax roll (block 8707, lot 003) records the building's construction year as 2007.",
+  "summary_sources": [
+   "src-datasf-assessor-8707003"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -42,11 +44,58 @@
   },
   "facts": [],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2007",
+    "date_label": "~2007",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Building completed, per DataSF Assessor tax roll",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-datasf-assessor-8707003",
+      "title": "Assessor Historical Secured Property Tax Rolls (block 8707, lot 003 -- 355 Berry St)",
+      "publisher": "DataSF / SF Office of the Assessor-Recorder",
+      "url": "https://data.sf.gov/resource/wv5m-vpq2.json",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "DataSF / SF Office of the Assessor-Recorder",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_edgewater",
+     "slug": "edgewater",
+     "name": "Edgewater",
+     "permalink": "https://pierandpoint.org/parcels/edgewater/",
+     "api": "https://pierandpoint.org/api/v1/records/edgewater.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "Developer and architect not confirmed by any source found in this pass, consistent with this record's own geometry-file note.",
+   "Precise opening month not available; DataSF's Assessor tax roll gives only a year.",
+   "A listing site's '6 units' figure (noted in this record's geometry file) reads as a floorplan-type count, not the building's 193-unit total per the Assessor tax roll -- flagged there rather than reconciled here."
+  ],
   "sources": [
+   {
+    "id": "src-datasf-assessor-8707003",
+    "title": "Assessor Historical Secured Property Tax Rolls (block 8707, lot 003 -- 355 Berry St)",
+    "publisher": "DataSF / SF Office of the Assessor-Recorder",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json",
+    "accessed": "2026-09-21"
+   },
    {
     "id": null,
     "title": "openstreetmap.org/way/46264111",
@@ -54,8 +103,8 @@
    }
   ],
   "notes": "Developer, year built and total unit count not confirmed: sources found were inconsistent (one listing site's '6 units' reads as a floorplan-type count, not the building total) or unsourced. Left out of facts rather than picking one arbitrarily; flagged as an open question for a future record-dossier pass.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

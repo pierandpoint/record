@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -12,7 +12,7 @@
   "permalink": "https://pierandpoint.org/parcels/p10/",
   "api": "https://pierandpoint.org/api/v1/records/p10.json",
   "names": [
-   "P10"
+   "P10 -- landscaped center island, Mission Bay Circle roundabout"
   ],
   "site": {
    "slug": "mission-bay",
@@ -24,8 +24,11 @@
   "status_label": "Complete",
   "use": "park",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "The landscaped center island (grass, trees) of the 'Mission Bay Circle' roundabout in Mission Bay, where Mission Bay Drive, Owens, Channel and Mission Bay Boulevard meet; a real, already-built park feature distinct from the surrounding road pavement, per satellite imagery and this project's owner-guided tracing. OCII's own September 2023 Mission Bay Parks Open Space transition presentation lists 'P10' among the parcels already managed by SF Recreation and Parks (not among the still-pending 'when built' parcels), consistent with it being complete by that date.",
+  "summary_sources": [
+   "src-geom-p10",
+   "src-ocii-transition-2023"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -42,14 +45,69 @@
   },
   "facts": [],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2023-09",
+    "date_label": "~2023",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Already part of RPD's managed open-space inventory (not listed among the still-pending 'when built' parcels), per OCII's Mission Bay Parks Open Space transition presentation to the Mission Bay CAC -- an upper bound on when this island was built, not its actual construction date",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-ocii-transition-2023",
+      "title": "Mission Bay Parks Open Space (CAC Item 2, September 2023)",
+      "publisher": "Office of Community Investment and Infrastructure (sfocii.org)",
+      "url": "https://sfocii.org/sites/default/files/inline-files/Item%202%20Mission%20Bay%20Open%20Space%20Transition.pdf",
+      "date": "2023-09",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "Office of Community Investment and Infrastructure (sfocii.org), 2023-09",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_p10_roundabout_island",
+     "slug": "p10",
+     "name": "P10",
+     "permalink": "https://pierandpoint.org/parcels/p10/",
+     "api": "https://pierandpoint.org/api/v1/records/p10.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [],
   "images": [],
-  "open_questions": [],
-  "sources": [],
+  "open_questions": [
+   "No public source (SF Rec & Park, OCII, SFMTA, news) names this island or gives its own landscaping/construction date; the Sept 2023 OCII document only establishes that it existed and was already managed by that date, which is an upper bound, not a build date. It is presumed built alongside the Mission Bay Circle roundabout itself, whose own original construction date was not independently confirmed either (a 2021 Streetsblog SF article describes a later proposal for an added bike ring around the roundabout, not its original construction).",
+   "Owner/operator beyond 'part of RPD's Mission Bay open-space inventory' not confirmed by any source found."
+  ],
+  "sources": [
+   {
+    "id": "src-geom-p10",
+    "title": "digitization_method log for mission_bay_p10_roundabout_island.geojson",
+    "publisher": "Pier & Point geometry records (this repository, data/manual/mission_bay_p10_roundabout_island.geojson)",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-ocii-transition-2023",
+    "title": "Mission Bay Parks Open Space (CAC Item 2, September 2023)",
+    "publisher": "Office of Community Investment and Infrastructure (sfocii.org)",
+    "url": "https://sfocii.org/sites/default/files/inline-files/Item%202%20Mission%20Bay%20Open%20Space%20Transition.pdf",
+    "date": "2023-09",
+    "accessed": "2026-09-21"
+   }
+  ],
   "notes": "Center island of the real 'Mission Bay Circle' roundabout at the south end of the Mission Bay Circle/Owens St area, matching plan label P10. Landscaped with grass and trees; the roundabout's own median (P11A) and connector strip (P11) are tracked separately.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

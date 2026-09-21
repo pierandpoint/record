@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -12,7 +12,8 @@
   "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-33-unnamed-ucsf-building/",
   "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-33-unnamed-ucsf-building.json",
   "names": [
-   "Mission Bay South Block 33 (unnamed UCSF building)"
+   "Mission Bay South Block 33 (unnamed UCSF building)",
+   "UCSF Illinois Street Garage (probable)"
   ],
   "site": {
    "slug": "mission-bay",
@@ -24,8 +25,10 @@
   "status_label": "Complete",
   "use": "institutional",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "This record's geometry is the north of two real, previously untracked UCSF buildings between 3rd and Illinois Streets, split from a single satellite-imagery fragment at a visible roofline gap; the same UCSF project that built the clinical building immediately south of it (this project's own mission_bay_block_34 record) also built a new Illinois Street Garage at 590 Illinois Street, described as sharing a block with the Valley Center for Vision to its north -- geographically the best match for this north building, though no address-linked primary source confirms the pairing.",
+  "summary_sources": [
+   "src-ucsf-real-estate-bayfront"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -42,14 +45,62 @@
   },
   "facts": [],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2023-05",
+    "date_label": "~2023",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Illinois Street Garage (590 Illinois St), 9 stories / 500 spaces, opens as part of UCSF's Block 34 Clinical Building and Parking Garage project -- probable identity of this record's building, inferred from its position immediately north of the clinical building this project also built (see open_questions)",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-ucsf-real-estate-bayfront",
+      "title": "Bayfront Medical Building and Illinois Street Garage (project page: Illinois Street Garage, 590 Illinois St, 9 stories / 500 spaces, opened May 15, 2023; on the same block as the Wayne and Gladys Valley Center for Vision at 490 Illinois St)",
+      "publisher": "UCSF Real Estate",
+      "url": "https://realestate.ucsf.edu/projects/bayfront-medical-building-and-illinois-street-garage",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "UCSF Real Estate",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_block_33",
+     "slug": "mission-bay-south-block-33-unnamed-ucsf-building",
+     "name": "Mission Bay South Block 33 (unnamed UCSF building)",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-33-unnamed-ucsf-building/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-33-unnamed-ucsf-building.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [],
   "images": [],
-  "open_questions": [],
-  "sources": [],
+  "open_questions": [
+   "This record's own geometry file states the building's name/address/operator are not confirmed by any source checked in the geometry-correction pass. This research pass found a strong but not fully confirmed candidate: UCSF's Illinois Street Garage (590 Illinois St), the parking-garage half of the same 'Block 34 Clinical Building and Parking Garage' project whose clinical building this project identifies as the neighboring mission_bay_block_34 record. The garage is described in UCSF's own project page as on the same block as 490 Illinois St (north of the clinic, which sits at the 3rd/Mariposa corner to the south) -- matching this record's position as the NORTH of the two split buildings. No source directly ties an address to this record's own OCII plan-block-33 parcel number, so the identification is geographic inference, not confirmed by an address-to-parcel source.",
+   "If this identification is correct, exact spaces/levels may not match this record's own traced footprint precisely (the garage is described as attached to/adjoining the clinical building rather than as a fully freestanding structure); this record's geometry was derived independently via the real-gap-fragment technique and was not re-traced against this new information.",
+   "Cost of the garage alone (vs. the combined ~$335.8M clinical-building-plus-garage project figure reported elsewhere) was not found."
+  ],
+  "sources": [
+   {
+    "id": "src-ucsf-real-estate-bayfront",
+    "title": "Bayfront Medical Building and Illinois Street Garage (project page: Illinois Street Garage, 590 Illinois St, 9 stories / 500 spaces, opened May 15, 2023; on the same block as the Wayne and Gladys Valley Center for Vision at 490 Illinois St)",
+    "publisher": "UCSF Real Estate",
+    "url": "https://realestate.ucsf.edu/projects/bayfront-medical-building-and-illinois-street-garage",
+    "accessed": "2026-09-21"
+   }
+  ],
   "notes": "OCII plan block 33. Between 3rd St and Illinois St, south of 16th St, immediately east of UCSF Medical Center at Mission Bay (across 3rd St). Name/operator not yet confirmed.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

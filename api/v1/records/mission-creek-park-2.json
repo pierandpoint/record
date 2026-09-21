@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -12,7 +12,7 @@
   "permalink": "https://pierandpoint.org/parcels/mission-creek-park-2/",
   "api": "https://pierandpoint.org/api/v1/records/mission-creek-park-2.json",
   "names": [
-   "Mission Creek Park"
+   "Mission Creek Park -- east reach (Pavilion to 4th St bridge)"
   ],
   "site": {
    "slug": "mission-bay",
@@ -24,8 +24,10 @@
   "status_label": "Complete",
   "use": "park",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "The stretch of landscaped park -- lawn, paths and trees -- between the already-tracked Mission Creek Park Pavilion and the 4th Street bridge, on Mission Creek's north/west bank; already built, per satellite imagery, and traced with the property owner's direct, iterative guidance after this project's own PDF-pixel transform repeatedly mis-located the stretch. No independently published source names, dates or definitively labels this specific segment.",
+  "summary_sources": [
+   "src-geom-p1p3"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -45,17 +47,30 @@
   "milestones": [],
   "changes": [],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "No independently published source dates when this specific stretch was built; it was hand-traced from satellite imagery because it was visibly already landscaped, not because any source dated its construction.",
+   "This record's own digitization_method log says OCII's plan labels P1 and P3 both fall somewhere in this general stretch, per that log's reading of the Nov 2024 CAC 'Remaining Mission Bay Open Space Parcels Update' -- but that deck's own extractable text only labels the whole wider park 'Mission Creek Park (P3)' and does not break out a separate P1 sub-area within this specific reach; which label (if either) applies to this exact segment, versus to the separately tracked Mission Creek Park record's own P1 (an amphitheater, per OCII's current open-space page), is not resolved.",
+   "Name/operator: presumed to be part of the same SF Recreation and Park Department-managed Mission Creek Park system as its neighbors, but not independently confirmed for this specific segment."
+  ],
   "sources": [
    {
-    "id": null,
-    "title": "sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf",
-    "url": "https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf"
+    "id": "src-geom-p1p3",
+    "title": "digitization_method log for mission_bay_creek_park_p1_p3.geojson",
+    "publisher": "Pier & Point geometry records (this repository, data/manual/mission_bay_creek_park_p1_p3.geojson)",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-ocii-openspace-2024",
+    "title": "Mission Bay Future Parks (CAC Update, November 14, 2024)",
+    "publisher": "Office of Community Investment and Infrastructure (sfocii.org)",
+    "url": "https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf",
+    "date": "2024-11-14",
+    "accessed": "2026-09-21"
    }
   ],
   "notes": "Covers OCII plan labels P1 and P3 as one combined record -- see digitization_method for why they aren't split.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

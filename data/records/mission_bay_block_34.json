@@ -1,0 +1,83 @@
+{
+  "record_id": "mission_bay_block_34",
+  "names": [
+    "Mission Bay South Block 34 (unnamed UCSF building)",
+    "UCSF Bayfront Medical Building (probable)"
+  ],
+  "summary": "This record's geometry is the south of two real, previously untracked UCSF buildings between 3rd and Illinois Streets down to Mariposa Street; that location -- the corner of 3rd, Mariposa and Illinois -- matches UCSF's own Bayfront Medical Building (520 Illinois St), a five-story, ~182,800-sq-ft clinical building (Stantec architect, Clark Construction general contractor) built alongside a new Illinois Street parking garage under UCSF's 'Block 34 Clinical Building and Parking Garage' project, with construction starting October 2021 and the clinic opening in August 2024.",
+  "summary_sources": [
+    "src-ucsf-real-estate-bayfront",
+    "src-sfyimby-block34-2021"
+  ],
+  "milestones": [
+    {
+      "date": "2021-10-02",
+      "text": "Construction begins on the Block 34 clinical building",
+      "sources": [
+        "src-sfyimby-block34-2021"
+      ],
+      "expected": false,
+      "approximate": false
+    },
+    {
+      "date": "2024-08",
+      "status": "complete",
+      "text": "UCSF Health Bayfront Medical Building (520 Illinois St) opens/welcomes patients -- probable identity of this record's building, inferred from its position at the 3rd/Mariposa/Illinois corner this project's clinical building occupies (see open_questions)",
+      "sources": [
+        "src-ucsf-real-estate-bayfront",
+        "src-stantec-bayfront-2024"
+      ],
+      "expected": false,
+      "approximate": false
+    }
+  ],
+  "costs": [],
+  "facts": [
+    {
+      "key": "architect",
+      "value": "Stantec (project architect), Clark Construction (general contractor)",
+      "sources": [
+        "src-stantec-bayfront-2024"
+      ]
+    },
+    {
+      "key": "gross_sqft",
+      "value": "approximately 182,800, five stories",
+      "sources": [
+        "src-sfyimby-block34-2021"
+      ]
+    }
+  ],
+  "images": [],
+  "sources": [
+    {
+      "id": "src-ucsf-real-estate-bayfront",
+      "title": "Bayfront Medical Building and Illinois Street Garage (project page: Bayfront Medical Building, 520 Illinois St, five stories, opened as part of UCSF's Block 34 project)",
+      "publisher": "UCSF Real Estate",
+      "url": "https://realestate.ucsf.edu/projects/bayfront-medical-building-and-illinois-street-garage",
+      "accessed": "2026-09-21"
+    },
+    {
+      "id": "src-sfyimby-block34-2021",
+      "title": "Construction Starts for UCSF Clinical Building at Block 34, Mission Bay, San Francisco",
+      "publisher": "San Francisco YIMBY",
+      "date": "2021-10",
+      "url": "https://sfyimby.com/2021/10/construction-starts-for-ucsf-clinical-building-at-block-34-mission-bay-san-francisco.html",
+      "accessed": "2026-09-21"
+    },
+    {
+      "id": "src-stantec-bayfront-2024",
+      "title": "Stantec-designed UCSF Bayfront Medical Building opens on growing Mission Bay campus",
+      "publisher": "Stantec",
+      "date": "2024-08",
+      "url": "https://www.stantec.com/en/news/2024/stantec-designed-ucsf-bayfront-medical-building-opens-mission-bay-campus",
+      "accessed": "2026-09-21"
+    }
+  ],
+  "open_questions": [
+    "This record's own geometry file states the building's name/address/operator are not confirmed by any source checked in the geometry-correction pass. This research pass found a strong but not fully confirmed candidate: UCSF's Bayfront Medical Building (520 Illinois St), the clinical half of the 'Block 34 Clinical Building and Parking Garage' project, whose own CEQA filing places it south of the Wayne and Gladys Valley Center for Vision (this project's mission_bay_490_illinois record) and at the corner of 3rd and Mariposa -- matching this record's own notes exactly (south building, extending to Mariposa St). No source directly ties an address to this record's own OCII plan-block-34 parcel number, so the identification is geographic inference from UCSF's own project descriptions, not confirmed by an address-to-parcel source.",
+    "Exact opening day within August 2024 is inconsistent across sources found (a UCSF news article dated 2024-08 vs. secondary reports of an August 23 opening event and an August 27 first-patients date); not resolved here, only the month is used.",
+    "Total project cost is reported elsewhere as approximately $335.8 million for the combined clinical building and garage; not broken out per building and not independently verified against a primary UCSF or Regents document in this pass, so left out of costs."
+  ],
+  "last_verified": "2026-09-21"
+}

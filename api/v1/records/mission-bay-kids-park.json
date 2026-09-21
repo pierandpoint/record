@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -24,8 +24,11 @@
   "status_label": "Complete",
   "use": "park",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "A playground at Long Bridge and China Basin streets in Mission Bay, part of the Mission Bay Parks system (labeled P6 on OCII's current Mission Bay South open-space page), that opened to the public in 2016 after months of delay; the exact day is inconsistently reported across the two sources found.",
+  "summary_sources": [
+   "src-mbp-kidspark-open",
+   "src-uls-kidspark"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -40,13 +43,92 @@
    "lon": -122.392654,
    "lat": 37.772168
   },
-  "facts": [],
+  "facts": [
+   {
+    "key": "ocii_plan_label",
+    "value": "P6 (\"Kids Park\"), per OCII's current Mission Bay South open-space page",
+    "sources": [
+     "src-ocii-openspace-page"
+    ]
+   }
+  ],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2016",
+    "date_label": "~2016",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Mission Bay Kids' Park playground opens to the public",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-mbp-kidspark-open",
+      "title": "Kids' Park opens in Mission Bay",
+      "publisher": "Mission Bay Parks (missionbayparks.com)",
+      "url": "https://missionbayparks.com/kids-park-opens-mission-bay/",
+      "date": "2016-09",
+      "accessed": "2026-09-21"
+     },
+     {
+      "id": "src-uls-kidspark",
+      "title": "New Mission Bay Kids' Park Opens Friday!",
+      "publisher": "Urban Life Signs (community blog)",
+      "url": "https://urbanlifesigns.blogspot.com/2016/06/new-mission-bay-kids-playground-opens.html",
+      "date": "2016-06",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "Mission Bay Parks (missionbayparks.com), 2016-09; Urban Life Signs (community blog), 2016-06",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_kids_park",
+     "slug": "mission-bay-kids-park",
+     "name": "Mission Bay Kids' Park",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-kids-park/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-kids-park.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "changes": [],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "Exact opening date is unresolved: the Urban Life Signs blog post says the playground opened Friday, July 1, 2016; Mission Bay Parks' own post announcing the opening is dated September 15, 2016 and doesn't state a specific day, raising the possibility of a later or phased opening than the blog's July date -- flagged rather than picked.",
+   "Neither source names a designer, landscape architect or general contractor."
+  ],
   "sources": [
+   {
+    "id": "src-mbp-kidspark-open",
+    "title": "Kids' Park opens in Mission Bay",
+    "publisher": "Mission Bay Parks (missionbayparks.com)",
+    "url": "https://missionbayparks.com/kids-park-opens-mission-bay/",
+    "date": "2016-09",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-uls-kidspark",
+    "title": "New Mission Bay Kids' Park Opens Friday!",
+    "publisher": "Urban Life Signs (community blog)",
+    "url": "https://urbanlifesigns.blogspot.com/2016/06/new-mission-bay-kids-playground-opens.html",
+    "date": "2016-06",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-ocii-openspace-page",
+    "title": "Mission Bay South: Open Space",
+    "publisher": "Office of Community Investment and Infrastructure (sfocii.org)",
+    "url": "https://sfocii.org/projects/mission-bay-south/open-space",
+    "accessed": "2026-09-21"
+   },
    {
     "id": null,
     "title": "openstreetmap.org/way/375747149",
@@ -64,8 +146,8 @@
    }
   ],
   "notes": "A completed, standing neighborhood playground (natural-play themed); part of the Mission Bay Parks system now managed by SF Recreation and Parks since July 2023.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

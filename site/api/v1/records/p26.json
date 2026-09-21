@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -12,7 +12,7 @@
   "permalink": "https://pierandpoint.org/parcels/p26/",
   "api": "https://pierandpoint.org/api/v1/records/p26.json",
   "names": [
-   "P26"
+   "P26 -- landscaped wedge (16th/3rd/Owens St interchange)"
   ],
   "site": {
    "slug": "mission-bay",
@@ -24,8 +24,10 @@
   "status_label": "Complete",
   "use": "park",
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "A triangular landscaped wedge in the freeway-ramp interchange near 16th Street, 3rd Street and Owens Street, next to the UCSF Medical Center campus; real landscaped/grassed land per satellite imagery, delineated by this project's owner-directed real-gap-fragment method rather than a surveyed parcel boundary or a named park record. Name, operator and construction date not confirmed by any source found -- and this project's own 'P26' label for it does not match OCII's official current numbering (see open_questions).",
+  "summary_sources": [
+   "src-geom-p26"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -45,11 +47,44 @@
   "milestones": [],
   "changes": [],
   "images": [],
-  "open_questions": [],
-  "sources": [],
+  "open_questions": [
+   "OCII's own current public Mission Bay South open-space page (src-ocii-openspace-page) labels 'P26' as Mariposa Park -- a real, much larger (2.5-acre) named park with a playground at Mariposa and Owens streets, developed alongside UCSF Benioff Children's Hospital and reported to have opened in spring 2016 (src-potreroview-mariposa) -- not this record's small (~2,037 sqm) freeway-interchange landscaping wedge. This project's own 'P26' label for this wedge, per its digitization_method log, was instead assigned during this project's own numbered real-gap-fragment review, not sourced to any city document naming this specific wedge P26. This is a likely label mismatch, not resolved or corrected here since it would require a geometry-file change, which is out of scope for this dossier pass.",
+   "No construction date found for this wedge itself; it sits near UCSF Medical Center at Mission Bay, which opened February 1, 2015 (per this repo's own record ucsf_mission_bay_hospital), but no source ties this landscaping's own completion to that date.",
+   "Name and operator (this project's own digitization_method log guesses SFMTA/Caltrans ramp landscaping or an OCII-era open-space installation) not confirmed by any source found."
+  ],
+  "sources": [
+   {
+    "id": "src-geom-p26",
+    "title": "digitization_method log for mission_bay_p26_interchange_wedge.geojson",
+    "publisher": "Pier & Point geometry records (this repository, data/manual/mission_bay_p26_interchange_wedge.geojson)",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-ocii-openspace-page",
+    "title": "Mission Bay South: Open Space",
+    "publisher": "Office of Community Investment and Infrastructure (sfocii.org)",
+    "url": "https://sfocii.org/projects/mission-bay-south/open-space",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-sfrecpark-mariposa",
+    "title": "Parks and Facilities • Mariposa Park",
+    "publisher": "San Francisco Recreation and Park Department (sfrecpark.org)",
+    "url": "https://sfrecpark.org/Facilities/Facility/Details/Mariposa-Park-451",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-potreroview-mariposa",
+    "title": "Mariposa Park Set to Open",
+    "publisher": "Potrero View",
+    "url": "https://www.potreroview.net/mariposa-park-set-to-open/",
+    "date": "2016-03",
+    "accessed": "2026-09-21"
+   }
+  ],
   "notes": "OCII plan open-space parcel P26. A small landscaped wedge in the freeway on/off-ramp interchange near 16th St/3rd St/Owens St, just west of the UCSF Medical Center campus.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
   "geometry": {
    "type": "Polygon",
    "coordinates": [
