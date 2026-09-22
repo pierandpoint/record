@@ -50,7 +50,19 @@
   var readDate = document.getElementById('pp-date');
   var readPhase = document.getElementById('pp-phase');
   var play = document.getElementById('pp-play');
+  var speedBtn = document.getElementById('pp-speed');
+  var yearJump = document.getElementById('pp-year-jump');
   var timer = null;
+  var SPEEDS = [1, 2, 4, 8];
+  var speedIdx = 0;
+
+  // The value of the "jump to a year" <option> that covers index m: one option per calendar
+  // year (its January index), so any month within a year snaps to that year's own option.
+  function yearOptionFor(m) {
+    if (m <= 0) return 0;
+    if (m >= MAX) return MAX;
+    return 1 + Math.floor((m - 1) / 12) * 12;
+  }
 
   function paint(m) {
     shapes.forEach(function (n) {
@@ -85,21 +97,33 @@
     readDate.textContent = label;
     readPhase.textContent = m < TODAY ? 'Recorded history' : m === TODAY ? 'Today' : 'Expected';
     slider.setAttribute('aria-valuetext', label + ', ' + readPhase.textContent);
+    if (yearJump) yearJump.value = String(yearOptionFor(m));
   }
 
   function stop() { if (timer) { clearInterval(timer); timer = null; } play.setAttribute('aria-pressed', 'false'); play.querySelector('span').textContent = 'Play'; }
+  function startTimer() {
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var step = (reduce ? 12 : 1) * SPEEDS[speedIdx];
+    timer = setInterval(function () {
+      var n = +slider.value + step;
+      if (n > MAX) { slider.value = MAX; paint(MAX); stop(); return; }
+      slider.value = n; paint(n);
+    }, reduce ? 700 : 140);
+  }
   slider.addEventListener('input', function () { stop(); paint(+slider.value); });
   play.addEventListener('click', function () {
     if (timer) { stop(); return; }
     if (+slider.value >= MAX) slider.value = 0;
     play.setAttribute('aria-pressed', 'true'); play.querySelector('span').textContent = 'Pause';
-    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    timer = setInterval(function () {
-      var n = +slider.value + (reduce ? 12 : 1);
-      if (n > MAX) { slider.value = MAX; paint(MAX); stop(); return; }
-      slider.value = n; paint(n);
-    }, reduce ? 700 : 140);
+    startTimer();
   });
+  if (speedBtn) speedBtn.addEventListener('click', function () {
+    speedIdx = (speedIdx + 1) % SPEEDS.length;
+    speedBtn.textContent = SPEEDS[speedIdx] + '×';
+    speedBtn.setAttribute('aria-label', 'Playback speed: ' + SPEEDS[speedIdx] + ' times normal, press to change');
+    if (timer) { clearInterval(timer); startTimer(); } // re-pace an already-running play without touching its pressed state
+  });
+  if (yearJump) yearJump.addEventListener('change', function () { stop(); slider.value = yearJump.value; paint(+yearJump.value); });
   document.querySelectorAll('.timeline').forEach(function (t) { t.hidden = false; });
   paint(+slider.value);
 
