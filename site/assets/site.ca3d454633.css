@@ -199,14 +199,28 @@ img { max-width: 100%; display: block; }
 .feed-details p { margin-top: 6px; color: var(--paper-soft); font-size: 14px; }
 .changes-filters { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 16px; padding: 20px; margin: 20px 0; background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 12px; }
 .filter-field { display: flex; flex-direction: column; gap: 4px; font-size: 13px; }
-.filter-field label { color: var(--paper-faint); font-weight: 600; }
+.filter-field label, .filter-field-label { color: var(--paper-faint); font-weight: 600; }
 .filter-field select, .filter-field input { min-height: 40px; padding: 0 10px; border-radius: 8px; border: 1px solid var(--paper-line); background: var(--paper-2); color: var(--paper-ink); font: 14px var(--sans); }
+.filter-dropdown { position: relative; }
+.filter-dropdown summary { list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 40px; min-width: 160px; padding: 0 10px; border-radius: 8px; border: 1px solid var(--paper-line); background: var(--paper-2); color: var(--paper-ink); font: 14px var(--sans); cursor: pointer; }
+.filter-dropdown summary::-webkit-details-marker, .filter-dropdown summary::marker { display: none; content: ''; }
+.filter-dropdown summary::after { content: '▾'; color: var(--paper-faint); font-size: 11px; }
+.filter-dropdown[open] summary { border-color: var(--paper-brass); }
+.filter-dropdown-panel { position: absolute; top: calc(100% + 6px); left: 0; z-index: 5; display: flex; flex-direction: column; gap: 8px; min-width: 220px; padding: 14px 16px; background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, .16); }
+.filter-check { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 400; color: var(--paper-ink); cursor: pointer; white-space: nowrap; }
+.filter-check input { min-height: auto; width: auto; }
 .changes-filters .btn { align-self: flex-end; }
 /* .btn itself sets display: inline-flex, which -- like .zoom-controls above -- overrides the
    browser's native [hidden] behaviour (an author display value always beats the UA stylesheet's
    [hidden] { display: none }, whatever the selector's specificity), so it needs the same explicit
    override before app.js un-hides it. */
 .changes-filters .btn[hidden] { display: none; }
+.category-legend { margin: -4px 0 20px; }
+.category-legend summary { cursor: pointer; font: 13px var(--mono); color: var(--paper-brass); }
+.legend-grid { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 12px; padding: 16px; background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 10px; }
+@media (min-width: 640px) { .legend-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.legend-row { display: flex; align-items: baseline; gap: 10px; font-size: 13px; color: var(--paper-soft); }
+.legend-row .kind { flex-shrink: 0; }
 
 /* record + site pages */
 .page-head { padding-top: 36px; padding-bottom: 28px; border-bottom: 1px solid var(--paper-line); }

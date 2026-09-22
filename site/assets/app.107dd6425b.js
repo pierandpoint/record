@@ -302,26 +302,48 @@
   var items = Array.prototype.slice.call(list.querySelectorAll('li'));
   var emptyNote = document.querySelector('[data-filter-empty]');
   var resetBtn = form.querySelector('[data-filter-reset]');
+  var categoryDropdown = form.querySelector('.filter-dropdown');
+  var categorySummary = form.querySelector('[data-filter-summary]');
   var fields = {
-    site: form.querySelector('#cf-site'), category: form.querySelector('#cf-category'),
+    site: form.querySelector('#cf-site'), category: Array.prototype.slice.call(form.querySelectorAll('input[name="category"]')),
     from: form.querySelector('#cf-from'), to: form.querySelector('#cf-to')
   };
 
+  // The category dropdown is a native <details>, so it already opens and closes on its own
+  // summary click with no JS at all; this only adds the extra behavior a real dropdown widget
+  // is expected to have -- closing on an outside click or Escape, and a running "N categories"
+  // label -- as enhancements on top of that working baseline.
+  function categoryLabel(count) {
+    if (!count) return 'All categories';
+    if (count === 1) return '1 category';
+    return count + ' categories';
+  }
+  if (categoryDropdown) {
+    document.addEventListener('click', function (e) {
+      if (categoryDropdown.open && !categoryDropdown.contains(e.target)) categoryDropdown.removeAttribute('open');
+    });
+    categoryDropdown.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && categoryDropdown.open) { categoryDropdown.removeAttribute('open'); categoryDropdown.querySelector('summary').focus(); }
+    });
+  }
+
   function readParams() {
     var params = new URLSearchParams(window.location.search);
-    return { site: params.get('site') || '', category: params.get('category') || '',
+    return { site: params.get('site') || '', category: params.getAll('category'),
              from: params.get('from') || '', to: params.get('to') || '' };
   }
   function applyToFields(v) {
-    fields.site.value = v.site; fields.category.value = v.category;
+    fields.site.value = v.site;
+    fields.category.forEach(function (cb) { cb.checked = v.category.indexOf(cb.value) !== -1; });
     fields.from.value = v.from; fields.to.value = v.to;
   }
   function currentValues() {
-    return { site: fields.site.value, category: fields.category.value, from: fields.from.value, to: fields.to.value };
+    return { site: fields.site.value, category: fields.category.filter(function (cb) { return cb.checked; }).map(function (cb) { return cb.value; }),
+             from: fields.from.value, to: fields.to.value };
   }
   function matches(li, v) {
     if (v.site && li.getAttribute('data-site') !== v.site) return false;
-    if (v.category && li.getAttribute('data-category') !== v.category) return false;
+    if (v.category.length && v.category.indexOf(li.getAttribute('data-category')) === -1) return false;
     var d = li.getAttribute('data-date');
     if (v.from && d < v.from) return false;
     if (v.to && d > v.to) return false;
@@ -335,10 +357,11 @@
       if (ok) shown++;
     });
     if (emptyNote) emptyNote.hidden = shown !== 0;
-    if (resetBtn) resetBtn.hidden = !(v.site || v.category || v.from || v.to);
+    if (resetBtn) resetBtn.hidden = !(v.site || v.category.length || v.from || v.to);
+    if (categorySummary) categorySummary.textContent = categoryLabel(v.category.length);
     var params = new URLSearchParams();
     if (v.site) params.set('site', v.site);
-    if (v.category) params.set('category', v.category);
+    v.category.forEach(function (c) { params.append('category', c); });
     if (v.from) params.set('from', v.from);
     if (v.to) params.set('to', v.to);
     var qs = params.toString();
@@ -348,12 +371,12 @@
   applyToFields(readParams());
   filter();
   form.addEventListener('submit', function (e) { e.preventDefault(); filter(); });
-  [fields.site, fields.category, fields.from, fields.to].forEach(function (el) {
+  [fields.site].concat(fields.category, [fields.from, fields.to]).forEach(function (el) {
     el.addEventListener('change', filter);
   });
   if (resetBtn) {
     resetBtn.addEventListener('click', function () {
-      applyToFields({ site: '', category: '', from: '', to: '' });
+      applyToFields({ site: '', category: [], from: '', to: '' });
       filter();
     });
   }
