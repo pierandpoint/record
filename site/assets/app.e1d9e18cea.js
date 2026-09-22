@@ -415,3 +415,68 @@
     });
   }
 })();
+
+// Per-box filters (docs/briefs/page-sections.md): a category + optional date-from filter scoped
+// to one collapsible box's own list, via data-filter-for="<list id>". Unlike the single-instance
+// /changes/all/ filter above, a page can carry several of these independently (a site page has
+// one for Changes and one for Retail; a record page can carry Sources' too), so this iterates
+// every [data-filter-for] form rather than assuming just one. Operates on any element carrying
+// data-category inside the target list, flat (Changes' <li>) or grouped (Retail's .tenant
+// inside a .tenant-group) alike -- a group with nothing left visible after filtering hides itself.
+(function () {
+  document.querySelectorAll('[data-filter-for]').forEach(function (form) {
+    var list = document.getElementById(form.getAttribute('data-filter-for'));
+    if (!list) return;
+    var items = Array.prototype.slice.call(list.querySelectorAll('[data-category]'));
+    if (!items.length) return;
+    var total = items.length;
+    var catField = form.querySelector('[data-filter-category]');
+    var fromField = form.querySelector('[data-filter-from]');
+    var resetBtn = form.querySelector('[data-filter-reset]');
+    var shownEl = form.querySelector('[data-filter-shown]');
+
+    function filter() {
+      var cat = catField ? catField.value : '';
+      var from = fromField ? fromField.value : '';
+      var shown = 0;
+      items.forEach(function (el) {
+        var ok = (!cat || el.getAttribute('data-category') === cat) &&
+                 (!from || !el.hasAttribute('data-date') || el.getAttribute('data-date') >= from);
+        el.hidden = !ok;
+        if (ok) shown++;
+      });
+      list.querySelectorAll('.tenant-group, .tenant-closed').forEach(function (g) {
+        g.hidden = g.querySelectorAll('[data-category]:not([hidden])').length === 0;
+      });
+      if (shownEl) shownEl.textContent = shown + ' of ' + total + ' shown';
+      if (resetBtn) resetBtn.hidden = !(cat || from);
+    }
+    [catField, fromField].forEach(function (el) { if (el) el.addEventListener('change', filter); });
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function () {
+        if (catField) catField.value = '';
+        if (fromField) fromField.value = '';
+        filter();
+      });
+    }
+    filter();
+  });
+})();
+
+// Reveal a collapsed <details> when navigating to an id inside it -- a citation superscript
+// jumping into Sources, or a jump-nav link to a section itself (docs/briefs/page-sections.md).
+// Doesn't depend on native browser support for auto-expanding <details> on fragment navigation,
+// which is inconsistent enough across engines not to bet the citation-jump UX on.
+(function () {
+  function reveal() {
+    var id = window.location.hash.slice(1);
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (!el) return;
+    var box = el.closest('details');
+    if (box && !box.open) box.open = true;
+    requestAnimationFrame(function () { el.scrollIntoView({ block: 'center' }); });
+  }
+  window.addEventListener('hashchange', reveal);
+  if (window.location.hash) reveal();
+})();

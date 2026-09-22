@@ -370,3 +370,30 @@ footer's first nav row, never the main navigation -- retail is a facet of a
 record, not a separate product). A row that is an opening, announcement or
 closure with a date gets a matching `data/changelog.csv` row, `category:
 retail`.
+
+## `data/site_documents.csv`
+
+A site's "Key documents": the handful of primary planning documents that
+explain the site as a whole -- a Design for Development, an EIR, the
+developer or agency's own project page -- shown on that site's own page,
+above the map (`docs/briefs/page-sections.md`). Short and hand-curated, not
+a data feed: unlike Changes or Retail below, this table is never expected to
+grow past a handful of rows per site, so it renders without a peek or a
+collapse threshold.
+
+Columns:
+
+- `site_slug`: a known `data/sites.csv` slug.
+- `title`: the document's own name, not a description of it.
+- `url`: required. A real, checkable link -- this table is not the place to
+  restate a citation that already exists elsewhere as plain text
+  (`data/sites.csv`'s own `now_source`/`boundary_source` columns) without a
+  link behind it; a site with nothing linkable yet gets no row rather than
+  one repeating a citation string as if it were a document.
+- `date`: optional, `YYYY`, `YYYY-MM` or `YYYY-MM-DD`.
+
+`src/validate_records.py` checks: every `site_slug` is known, `title` and
+`url` are both non-blank, `date` parses under the same date rule as
+everywhere else. Rendering: `sitegen/pages.py`'s `key_documents_section()`,
+which returns nothing for a site with no rows -- a blank is better than a
+guess, the same rule the rest of this repo follows for missing data.

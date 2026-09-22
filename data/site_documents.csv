@@ -1,0 +1,17 @@
+# Key documents (docs/briefs/page-sections.md): the handful of primary planning documents that
+# explain a site as a whole -- a Design for Development, an EIR, the developer or agency's own
+# project page -- shown on that site's own page, above the map. Curated by hand, one row per
+# document; a site with none yet renders no section at all (a blank is better than a guess,
+# same rule the rest of this repo follows for missing data).
+#   site_slug: a data/sites.csv slug.
+#   title: the document's own name, not a description of it.
+#   url: required -- a real, checkable link. No URL, no row: this table is not the place to
+#     restate a citation that already exists elsewhere as plain text (data/sites.csv's own
+#     now_source/boundary_source columns) without a link behind it.
+#   date: optional, YYYY or YYYY-MM or YYYY-MM-DD.
+#
+# Empty for now: sites.csv's own now_source/boundary_source columns are citation strings, not
+# stored URLs, so populating this table means a real research pass per site (finding the actual
+# D4D PDF, EIR notice of determination, OCII/agency project page, etc.) rather than reformatting
+# data already in the repo. Deferred rather than guessed at -- see docs/briefs/page-sections.md.
+site_slug,title,url,date

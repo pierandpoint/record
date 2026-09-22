@@ -286,7 +286,8 @@ details.locator[open] .source { margin-top: 4px; }
 .prose { font-size: 15px; line-height: 1.65; color: var(--paper-soft); overflow-wrap: anywhere; }
 .prose p + p { margin-top: 12px; }
 details.notes { border: 1px solid var(--paper-line); border-radius: 12px; padding: 0 20px; background: var(--paper-2); }
-details.notes summary { cursor: pointer; padding: 16px 0; font-weight: 600; list-style-position: inside; }
+details.notes summary { cursor: pointer; padding: 16px 0; font-weight: 600; list-style: none; }
+details.notes summary::-webkit-details-marker { display: none; }
 details.notes[open] summary { border-bottom: 1px solid var(--paper-line); margin-bottom: 16px; }
 details.notes .prose { padding-bottom: 20px; }
 details.notes h3 { font: 600 13px var(--mono); color: var(--paper-soft); margin: 12px 0 4px; }
@@ -301,6 +302,54 @@ details.notes h3 { font: 600 13px var(--mono); color: var(--paper-soft); margin:
 .status-group + .status-group { margin-top: 32px; }
 .status-group h3 { display: flex; align-items: center; gap: 10px; font: 600 15px var(--sans); margin-bottom: 10px; }
 .status-group h3 .count { font: 13px var(--mono); color: var(--paper-faint); font-weight: 400; }
+
+/* jump nav (docs/briefs/page-sections.md): every collapsible section on the page, reachable
+   whether it's currently open or not -- see app.js's revealHashTarget(). */
+.jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.jump a { display: inline-flex; align-items: baseline; gap: 6px; font: 500 13px var(--sans); color: var(--paper-ink); background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 999px; padding: 6px 12px; }
+.jump a:hover { border-color: var(--paper-brass); color: var(--paper-brass); text-decoration: none; }
+.jump a .n { font: 11px var(--mono); color: var(--paper-faint); }
+.jump a:hover .n { color: inherit; }
+
+/* the collapsible box pattern shared by Sources, Changes and Retail (docs/briefs/page-sections.md):
+   a <details> whose summary always shows a breakdown peek, open or closed, so collapsing hides
+   only the row-by-row detail, never the composition. Server-rendered `open` past a fixed item
+   threshold (sitegen/build.py's BOX_THRESHOLD) -- a short list never costs the reader a click. */
+.box > summary { list-style: none; cursor: pointer; padding-bottom: 14px; border-bottom: 1px solid var(--paper-ink); }
+.box > summary::-webkit-details-marker { display: none; }
+.box > summary .summary-top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.box > summary h2 { font: 500 22px var(--serif); display: flex; align-items: baseline; gap: 10px; }
+.box > summary h2 .count { font: 13px var(--mono); color: var(--paper-faint); }
+.box .chevron { font: 14px var(--mono); color: var(--paper-brass); flex-shrink: 0; transition: transform .15s ease; }
+.box[open] > summary .chevron { transform: rotate(90deg); }
+.box-body { padding-top: 16px; }
+.peek { display: flex; flex-wrap: wrap; gap: 6px 10px; margin-top: 8px; }
+.peek span { font: 12px var(--mono); color: var(--paper-soft); background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 999px; padding: 2px 9px; }
+.box-pair { display: grid; grid-template-columns: 1fr; gap: 40px; margin-top: 44px; }
+@media (min-width: 900px) { .box-pair { grid-template-columns: 1fr 1fr; gap: 56px; } }
+/* a per-box filter, scaled down from .changes-filters for a box's own scope (no site field --
+   the box is already scoped to one site or record). */
+.box-filters { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px 14px; padding: 14px 16px; margin-bottom: 16px; background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 10px; }
+.box-filters .filter-field select, .box-filters .filter-field input { min-height: 36px; font-size: 13px; }
+.box-filters .filter-shown { margin-left: auto; align-self: center; font: 12px var(--mono); color: var(--paper-faint); }
+.box-filters [data-filter-reset][hidden] { display: none; }
+.tenant[hidden], .feed li[hidden], .tenant-group[hidden] { display: none; }
+
+/* Key documents (data/site_documents.csv, docs/briefs/page-sections.md): a short, curated,
+   per-site list of the primary planning documents -- not a data-driven feed, so it gets no
+   peek and rarely if ever crosses the .box threshold. Renders nothing when a site has none. */
+.docs-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.docs-list li { display: flex; gap: 10px; align-items: baseline; padding: 10px 14px; background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 9px; font-size: 14px; }
+.docs-list li a { font-weight: 600; color: var(--paper-ink); }
+.docs-list li a:hover { color: var(--paper-brass); }
+.docs-list li span { font: 12px var(--mono); color: var(--paper-faint); white-space: nowrap; }
+
+/* existing "About this shape" / "Research notes" pattern: prose, not a counted list, so it
+   keeps its own bordered-card skin and gets no peek -- but its disclosure marker matches the
+   .box chevron above so every collapsible thing on the page reads as the same interaction. */
+details.notes summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+details.notes summary .chevron { font: 14px var(--mono); color: var(--paper-brass); transition: transform .15s ease; }
+details.notes[open] summary .chevron { transform: rotate(90deg); }
 
 /* retail tenants (data/retail_confirmed.csv, docs/briefs/retail-layer.md): site page section,
    record page section and the /retail/ directory all share this list markup. */
