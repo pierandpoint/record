@@ -1,0 +1,108 @@
+{
+  "record_id": "ucsf_bayfront_medical_building",
+  "names": [
+    "UCSF Bayfront Medical Building"
+  ],
+  "summary": "520 Illinois Street, a five-story, ~182,800-sq-ft clinical building (Stantec architect, Clark Construction general contractor) at the corner of 3rd, Mariposa and Illinois Streets -- the owner identified this as the north portion of what this project had tracked as one combined \"block 34\" fragment, split 2026-09-22 along a visible roofline seam from the Illinois Street Garage immediately south of it (data/records/ucsf_illinois_street_garage.json), both built under UCSF's own \"Block 34 Clinical Building and Parking Garage\" project.",
+  "summary_sources": [
+    "src-ucsf-real-estate-bayfront",
+    "src-sfyimby-block34-2021"
+  ],
+  "milestones": [
+    {
+      "date": "2020-05",
+      "text": "UC Regents' Committee on Finance and Capital Strategies (May 19-21, 2020 meeting) approves preliminary-plans/working-drawings funding and scope for the Block 34 parking garage, and preliminary-plans funding for the Block 34 clinical building",
+      "sources": [
+        "src-regents-2020-05-block34"
+      ],
+      "expected": false,
+      "approximate": true
+    },
+    {
+      "date": "2021-10-02",
+      "text": "Construction begins on the Block 34 clinical building",
+      "sources": [
+        "src-sfyimby-block34-2021"
+      ],
+      "expected": false,
+      "approximate": false
+    },
+    {
+      "date": "2024-08-27",
+      "status": "complete",
+      "text": "UCSF Health Bayfront Medical Building (520 Illinois St) opens",
+      "sources": [
+        "src-ucsf-real-estate-bayfront",
+        "src-stantec-bayfront-2024",
+        "src-cpe-bayfront-2024"
+      ],
+      "expected": false,
+      "approximate": false
+    }
+  ],
+  "costs": [],
+  "facts": [
+    {
+      "key": "architect",
+      "value": "Stantec (project architect), Clark Construction (general contractor)",
+      "sources": [
+        "src-stantec-bayfront-2024"
+      ]
+    },
+    {
+      "key": "gross_sqft",
+      "value": "approximately 182,800, five stories",
+      "sources": [
+        "src-sfyimby-block34-2021"
+      ]
+    }
+  ],
+  "images": [],
+  "sources": [
+    {
+      "id": "src-ucsf-real-estate-bayfront",
+      "title": "Bayfront Medical Building and Illinois Street Garage (project page: Bayfront Medical Building, 520 Illinois St, five stories, opened as part of UCSF's Block 34 project)",
+      "publisher": "UCSF Real Estate",
+      "url": "https://realestate.ucsf.edu/projects/bayfront-medical-building-and-illinois-street-garage",
+      "accessed": "2026-09-21"
+    },
+    {
+      "id": "src-sfyimby-block34-2021",
+      "title": "Construction Starts for UCSF Clinical Building at Block 34, Mission Bay, San Francisco",
+      "publisher": "San Francisco YIMBY",
+      "date": "2021-10",
+      "url": "https://sfyimby.com/2021/10/construction-starts-for-ucsf-clinical-building-at-block-34-mission-bay-san-francisco.html",
+      "accessed": "2026-09-21"
+    },
+    {
+      "id": "src-stantec-bayfront-2024",
+      "title": "Stantec-designed UCSF Bayfront Medical Building opens on growing Mission Bay campus",
+      "publisher": "Stantec",
+      "date": "2024-08",
+      "url": "https://www.stantec.com/en/news/2024/stantec-designed-ucsf-bayfront-medical-building-opens-mission-bay-campus",
+      "accessed": "2026-09-21"
+    },
+    {
+      "id": "src-regents-2020-05-block34",
+      "title": "Notice of Regents Meeting, May 19-21, 2020 -- Committee on Finance and Capital Strategies agenda items: \"Preliminary Plans and Working Drawings Funding and Scope, Mission Bay East Campus Phase 2 (Block 34) Parking Garage\" and \"Preliminary Plans Funding, Mission Bay East Campus Phase 2 (Block 34) Clinical Building\"",
+      "publisher": "Regents of the University of California",
+      "date": "2020-05",
+      "url": "https://regents.universityofcalifornia.edu/meetings/agendas/may20.html",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": "src-cpe-bayfront-2024",
+      "title": "UCSF Opens $228M Health-Care Facility (Bayfront Medical Building opened Aug 27, 2024; the adjoining 500-space, nine-level parking garage \"came online\" in 2023; clinical building broke ground Sept 2021, the parking structure \"a few months later\" -- superseded by Clark Construction's own more specific account, in the neighboring ucsf_illinois_street_garage record)",
+      "publisher": "Commercial Property Executive (commercialsearch.com)",
+      "date": "2024",
+      "url": "https://www.commercialsearch.com/news/ucsf-opens-228m-health-care-facility/",
+      "accessed": "2026-09-22"
+    }
+  ],
+  "open_questions": [
+    "2026-09-22, corroborating data point: this project's own DataSF business-registration spatial join (src/join_retail.py, out/retail_needs_review_approximate.csv), re-run after this record's geometry was added, shows registrations whose point-location falls inside this record's polygon listing '520 Illinois St # D2317' and '520 Illinois St # D1200' as their address -- matching the 520 Illinois St address already sourced from UCSF Real Estate's own project page, not contradicting it. The join is spatial-only and never auto-confirmed per that script's own docstring, so this is logged as corroboration, not an independent primary source.",
+    "SPLIT 2026-09-22: this record was previously mission_bay_block_34 (a probable, geographically-inferred identity for the WHOLE of a fragment that also included the Illinois Street Garage to its south). The owner directly corrected this: UCSF built three real structures where the OCII plan showed two, and Bayfront Medical Building is only the north piece of that fragment (see data/records/ucsf_illinois_street_garage.json for the south piece). The split follows a visible satellite roofline seam, not a surveyed or permitted lot line, and its exact boundary should be treated as indicative rather than authoritative.",
+    "Total project cost is reported elsewhere as approximately $335.8 million for the combined clinical building and garage; not broken out per building and not independently verified against a primary UCSF or Regents document in this pass, so left out of costs."
+  ],
+  "last_verified": "2026-09-22"
+}

@@ -1,54 +1,52 @@
 {
- "type": "FeatureCollection",
- "features": [
-  {
-   "type": "Feature",
-   "properties": {
-    "project_name": "William J. Rutter Community Center",
-    "site": "Mission Bay South",
-    "status": "complete",
-    "use": "institutional",
-    "geometry_type": "real",
-    "digitized_from": "OpenStreetMap (way 84812339, name=William J. Rutter Center, 1675 Owens St), extended 2026-09-20 with the real-gap-fragment technique to add the surface parking lot at 1625 Owens St immediately west/northwest of the building.",
-    "digitization_method": "ADDED 2026-09-18 for Mission Bay's UCSF campus pass: real OSM building footprint. EXTENDED 2026-09-20: the owner directed adding fragments 19, 20, 22 and 25 from the numbered real-gap-fragment map of this area (bbox.difference(street buffer).difference(already-tracked polygons)) to the building footprint, to encompass the parking lot at 1625 Owens St -- fragment 19 (6,786 sqm) is the main lot itself (confirmed against satellite imagery: painted parking stalls, west of the pool/courtyard), fragments 20, 22 and 25 (168 + 216 + 33 sqm) are thin slivers along the building's own west edge where the OSM trace doesn't quite meet the real curb line. All four fall directly against the existing building polygon and unioned into one clean Polygon (12,932.65 sqm total, up from 6,147 sqm).",
-    "accuracy_caveat": "REAL BUILDING FOOTPRINT (OpenStreetMap) PLUS APPROXIMATE PARKING LOT EXTENT (real-gap-fragment technique against satellite imagery, not a surveyed lot boundary) -- this is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against data/raw/parcels.geojson and DataSF's Assessor tax roll -- e.g. blklot 8711507 at 675 Nelson Rising Lane alone is ~13 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint plus the owner-directed parking-lot extent is the best available non-overlapping, honest shape for this record.",
-    "notes": "~150,000-156,600 sq ft (sources vary), four to five stories; houses the Bakar Fitness & Recreation Center, Mission Bay Conference Center, administrative offices and a restaurant/food court. Architect Legorreta Arquitectos (Ricardo and Victor Legorreta) with MBT Architecture as associate/executive architect, in Legorreta's contemporary Mexican-modernist style. Opened 2005 as part of Mission Bay's first development phase (year only; exact month not confirmed by a primary source).",
-    "source_doc_urls": [
-     "https://www.openstreetmap.org/way/84812339",
-     "https://www.legorreta.mx/en/proyecto-centro-comunitario-campus-mission-bay-ucsf",
-     "https://forell.com/projects/ucsf-mission-bay-william-j-rutter-center"
-    ]
-   },
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [-122.394744096, 37.768429472],
-      [-122.39473428, 37.768431776],
-      [-122.394046133, 37.768473253],
-      [-122.39323925147414, 37.76852187819656],
-      [-122.39321998981605, 37.76850652366903],
-      [-122.3931933495576, 37.7685082632575],
-      [-122.3932124547448, 37.76852349305102],
-      [-122.39300095752736, 37.76853623853278],
-      [-122.39298308730474, 37.76852199322157],
-      [-122.3929564477276, 37.76852373276555],
-      [-122.39297416148051, 37.76853785334611],
-      [-122.392695788, 37.768554629],
-      [-122.39267108120609, 37.76829625183719],
-      [-122.39276697415535, 37.768372693239655],
-      [-122.39276436098034, 37.768347634757866],
-      [-122.39266870294594, 37.76827138061716],
-      [-122.39264993161667, 37.76807507498494],
-      [-122.39274373550865, 37.76814985121675],
-      [-122.39274112225566, 37.76812479198727],
-      [-122.39264755328452, 37.7680502030118],
-      [-122.392617409, 37.767734962],
-      [-122.393784623, 37.767664622],
-      [-122.394744096, 37.768429472]
-     ]
-    ]
-   }
-  }
- ]
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "William J. Rutter Community Center",
+        "site": "Mission Bay South",
+        "status": "complete",
+        "use": "institutional",
+        "geometry_type": "real",
+        "digitized_from": "OpenStreetMap (way 84812339, name=William J. Rutter Center, 1675 Owens St). Its own small mid-edge digitizing jog on the west wall was straightened into a clean 4-corner quadrilateral 2026-09-22 (see digitization_method).",
+        "digitization_method": "ADDED 2026-09-18 for Mission Bay's UCSF campus pass: real OSM building footprint. EXTENDED 2026-09-20: the owner directed adding fragments 19, 20, 22 and 25 from the numbered real-gap-fragment map of this area to the building footprint, to encompass the 1625 Owens St parking lot and an adjoining garage structure immediately west (12,932.65 sqm total, up from 6,147 sqm). SPLIT BACK OUT 2026-09-22: cross-checking UCSF's own June 2025 CAC presentation (map updated December 2024) showed this whole west addition is UCSF's own separate 'Block 21A -- Community Center Garage', not part of the Rutter Center block (21B) -- the two are functionally distinct even though physically connected (satellite imagery shows a real, separate rooftop parking deck west of the Rutter Center's pool/courtyard, joined by a walkway). Reverted this record to the original OSM building footprint (21B), with its west edge straightened from a 3-point bend to a clean 2-point straight line (north corner to south corner, dropping the small mid-point jog -- the same real wall, just without the digitizing-noise kink) so it shares one clean boundary with the new 21A record (data/manual/ucsf_community_center_garage.geojson), which takes the rest of the west addition, cut along that same straight line.",
+        "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate; the west edge is idealized to a straight line (2 points instead of the OSM trace's 3, dropping a sub-meter digitizing jog), not a surveyed change. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against data/raw/parcels.geojson and DataSF's Assessor tax roll -- e.g. blklot 8711507 at 675 Nelson Rising Lane alone is ~13 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for this record.",
+        "notes": "~150,000-156,600 sq ft (sources vary), four to five stories; houses the Bakar Fitness & Recreation Center, Mission Bay Conference Center, administrative offices and a restaurant/food court. Architect Legorreta Arquitectos (Ricardo and Victor Legorreta) with MBT Architecture as associate/executive architect, in Legorreta's contemporary Mexican-modernist style. Opened 2005 as part of Mission Bay's first development phase (year only; exact month not confirmed by a primary source). Per UCSF's own Dec 2024-updated campus map, this is Block 21B; the adjoining Community Center Garage to its west is the separate Block 21A (data/manual/ucsf_community_center_garage.geojson).",
+        "source_doc_urls": [
+          "https://www.openstreetmap.org/way/84812339",
+          "https://www.legorreta.mx/en/proyecto-centro-comunitario-campus-mission-bay-ucsf",
+          "https://forell.com/projects/ucsf-mission-bay-william-j-rutter-center",
+          "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.3935542,
+              37.7684847
+            ],
+            [
+              -122.3927839,
+              37.768535
+            ],
+            [
+              -122.3927055,
+              37.7677832
+            ],
+            [
+              -122.3934758,
+              37.767733
+            ],
+            [
+              -122.3935542,
+              37.7684847
+            ]
+          ]
+        ]
+      }
+    }
+  ]
 }

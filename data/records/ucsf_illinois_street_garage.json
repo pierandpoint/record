@@ -1,0 +1,59 @@
+{
+  "record_id": "ucsf_illinois_street_garage",
+  "names": [
+    "UCSF Illinois Street Garage"
+  ],
+  "summary": "590 Illinois Street, a nine-story, 500-space parking garage the owner identified as the southernmost portion of what this project had tracked as one combined \"block 34\" fragment -- split off 2026-09-22 along a visible roofline seam from the Bayfront Medical Building immediately north of it (data/records/ucsf_bayfront_medical_building.json), both built under UCSF's own \"Block 34 Clinical Building and Parking Garage\" project.",
+  "summary_sources": [
+    "src-ucsf-real-estate-bayfront"
+  ],
+  "milestones": [
+    {
+      "date": "2021-04",
+      "status": "under_construction",
+      "text": "Construction begins on the Illinois Street Garage portion of the Block 34 project specifically (500 spaces, nine levels), per Clark Construction's own press release: \"Clark started construction on the garage portion of the development in April 2021\" -- distinct from the clinical building's own Sept/Oct 2021 groundbreaking",
+      "sources": [
+        "src-clark-groundbreaking-2021"
+      ],
+      "expected": false,
+      "approximate": false
+    },
+    {
+      "date": "2023-05",
+      "status": "complete",
+      "text": "Illinois Street Garage (590 Illinois St), 9 stories / 500 spaces, opens as part of UCSF's Block 34 Clinical Building and Parking Garage project, per UCSF Real Estate's own project page; the exact opening day (commonly reported as May 15, 2023) was not found as a directly quotable primary source in this pass -- UCSF's own project page has repeatedly blocked automated access (403) -- so only the year is used here",
+      "sources": [
+        "src-ucsf-real-estate-bayfront"
+      ],
+      "expected": false,
+      "approximate": true
+    }
+  ],
+  "costs": [],
+  "facts": [],
+  "images": [],
+  "sources": [
+    {
+      "id": "src-ucsf-real-estate-bayfront",
+      "title": "Bayfront Medical Building and Illinois Street Garage (project page: Illinois Street Garage, 590 Illinois St, 9 stories / 500 spaces, opened May 15, 2023; on the same block as the Wayne and Gladys Valley Center for Vision at 490 Illinois St)",
+      "publisher": "UCSF Real Estate",
+      "url": "https://realestate.ucsf.edu/projects/bayfront-medical-building-and-illinois-street-garage",
+      "accessed": "2026-09-21"
+    },
+    {
+      "id": "src-clark-groundbreaking-2021",
+      "title": "Clark Breaks Ground on UCSF's New Clinical Building in Mission Bay (\"Clark started construction on the garage portion of the development in April 2021\")",
+      "publisher": "Clark Construction Group (general contractor's own press release)",
+      "date": "2021-09-23",
+      "url": "https://www.clarkconstruction.com/news/clark-breaks-ground-ucsfs-new-clinical-building-mission-bay",
+      "accessed": "2026-09-22"
+    }
+  ],
+  "open_questions": [
+    "2026-09-22, corroborating data point: this project's own DataSF business-registration spatial join (src/join_retail.py, out/retail_needs_review_approximate.csv), re-run after this record's geometry was added, shows a registration (Sentry Security Services, Inc.) whose point-location falls inside this record's polygon listing '590 Illinois St' as its address -- matching the 590 Illinois St address already sourced from UCSF Real Estate's own project page, not contradicting it. The join is spatial-only and never auto-confirmed per that script's own docstring, so this is logged as corroboration, not an independent primary source.",
+    "SPLIT 2026-09-22: this record was previously mission_bay_block_33 (a probable, geographically-inferred identity for the WHOLE of what is now UCSF Valley Center for Vision -- west building, data/records/ucsf_valley_center_for_vision_west.json -- a mistaken pairing). The owner directly corrected this: the garage is the southernmost piece of the former mission_bay_block_34 fragment, not block 33. This record's geometry is now the south piece of that split (see ucsf_bayfront_medical_building.geojson for the north piece); the split follows a visible satellite roofline seam, not a surveyed or permitted lot line, and its exact boundary should be treated as indicative rather than authoritative.",
+    "Cost of the garage alone (vs. the combined ~$335.8M clinical-building-plus-garage project figure reported elsewhere) was not found.",
+    "2026-09-21 pass: added an April 2021 construction-start milestone from UCSF Real Estate's own combined project page for 'Bayfront Medical Building and Illinois Street Garage.' This is a combined-project date covering both buildings, not a garage-specific one, though Clark Construction's own press release (see milestone above) does independently corroborate April 2021 as garage-specific."
+  ],
+  "last_verified": "2026-09-22"
+}

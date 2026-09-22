@@ -5,7 +5,7 @@
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
  "terms": "https://pierandpoint.org/terms/",
- "count": 160,
+ "count": 169,
  "changes": [
   {
    "date": "2026-09-22",
@@ -505,6 +505,168 @@
     "url": "https://pierandpoint.org/sites/pier-70/"
    },
    "relation": "tracked",
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-09-22",
+   "kind": "correction",
+   "kind_label": "Correction",
+   "text": "Blocks 18B/18C corrected: independently verified a secondhand report that UCSF's own June 2025 CAC presentation (campus map updated December 2024) renumbers this block row. Cross-checking against it showed the building already tracked as '18B' (a real UCSF building complex west of Sandler Neurosciences Center, corrected 2026-09-20) is UCSF's own 'Block 18C', labeled 'Open Space (Near term: Childcare Center)'. The owner identified it directly as the existing UCSF at Mission Bay Child Development Center (727 Nelson Rising Lane, operating since 2006) -- renamed 18B to 18C, geometry unchanged, status changed to existing/interim ahead of a long-term open-space redesignation. With 18C's identity established, the 18A parking lot was extended east (~1,197 sqm) to close the access-lane gap that used to separate it from 18C, then re-split into new 18A/18B by an equal-area bisection so the row now runs 18A/18B (parking) back-to-back with 18C (existing childcare building). The childcare-center identification is the owner's own on-the-ground read, not independently confirmed by any source checked in this pass -- flagged as such in the record.",
+   "source": "docs/briefs/mission-bay-geometry.md",
+   "sources": [
+    {
+     "title": "docs/briefs/mission-bay-geometry.md"
+    }
+   ],
+   "category": "coverage",
+   "category_label": "Coverage",
+   "record": null,
+   "site": null,
+   "relation": null,
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-09-22",
+   "kind": "correction",
+   "kind_label": "Correction",
+   "text": "Block 21 split into 21A/21B: cross-checking UCSF's own June 2025 CAC presentation (campus map updated December 2024) showed the 1625 Owens St parking lot and adjoining garage structure, added to the William J. Rutter Community Center record on 2026-09-20, is UCSF's own separate 'Block 21A -- Community Center Garage', distinct from the Rutter Center itself (21B), even though the two are physically connected (a real rooftop parking deck joined to the community center building by a walkway). Split into two records along a clean straight line following the Rutter Center's own real west wall (idealized from a 3-point digitizing jog to a straight 2-point edge) rather than the raw polygon difference, which left thin sliver artifacts at the seam. The Rutter Center record (21B) reverts to its original OpenStreetMap building footprint; the garage (21A, new record) is approximate -- DataSF's own Building Footprints dataset does not separate the two structures, so there is no official boundary between them.",
+   "source": "docs/briefs/mission-bay-geometry.md",
+   "sources": [
+    {
+     "title": "docs/briefs/mission-bay-geometry.md"
+    }
+   ],
+   "category": "coverage",
+   "category_label": "Coverage",
+   "record": null,
+   "site": null,
+   "relation": null,
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-09-22",
+   "kind": "correction",
+   "kind_label": "Correction",
+   "text": "23A renamed to Weill Neurosciences Building: cross-checking UCSF's own June 2025 CAC presentation (campus map updated December 2024) showed this block's official name is 'Weill Neurosciences Building (23A)', not 'UCSF Neurosurgery at San Francisco Mission Bay' as previously recorded -- the owner clarified UCSF Neurosurgery is a clinical department practicing in the building, not the building's own name. Geometry/position unchanged (already correct, west of and adjacent to Third Street Garage). Also confirmed Third Street Garage as UCSF's Block 23B (matching its own existing architect-source URL, which already carried '23b' in its own slug) -- no change to that record's name or geometry.",
+   "source": "docs/briefs/mission-bay-geometry.md",
+   "sources": [
+    {
+     "title": "docs/briefs/mission-bay-geometry.md"
+    }
+   ],
+   "category": "coverage",
+   "category_label": "Coverage",
+   "record": null,
+   "site": null,
+   "relation": null,
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-09-22",
+   "kind": "correction",
+   "kind_label": "Correction",
+   "text": "Blocks 24A/B and 24C corrected to Genentech Hall and Byers Hall: both OCII's own Dec 2019 Land Use Map and UCSF's June 2025 CAC presentation (map updated December 2024) show 24A/B and 24C in the blue UCSF row directly south of Koret Quad (22)/Campus Way -- exactly where Genentech Hall and Byers Hall physically sit. The project's data had instead assigned 24A/B and 24C to Exchange on 16th (blklot 8727008, 1800 Owens St) and 1700 Owens St -- a completely different, separate cluster near Owens St/7th St on OCII's own map, unrelated to tonight's UCSF cross-check (this was a plain earlier assignment error). 1700 Owens St was already correctly tracked separately as 41/43-1; that stays unchanged. Byers Hall moves off the wrong '23B' label (now correctly Third Street Garage). Exchange on 16th ends up with no confirmed OCII block-plan number on either source map -- its real building record in status.csv is untouched, just not part of this numbered-block brief.",
+   "source": "docs/briefs/mission-bay-geometry.md",
+   "sources": [
+    {
+     "title": "docs/briefs/mission-bay-geometry.md"
+    }
+   ],
+   "category": "coverage",
+   "category_label": "Coverage",
+   "record": null,
+   "site": null,
+   "relation": null,
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-09-22",
+   "kind": "correction",
+   "kind_label": "Correction",
+   "text": "Block 40 corrected to Exchange on 16th (blklot 8727008), not part of the UCSF Medical Center hospital superblock: OCII's own Dec 2019 Land Use Map places block 40 as a purple parcel immediately south of 41/43-1, bounded by Owens St and the I-280 curve, exactly matching blklot 8727008's real shape and position -- confirmed by direct polygon comparison against the already-tracked 41/43-1 through -7 buildings (Kaiser, Gladstone Institutes, 1670 Owens Garage, 1700 Owens St, 1470/1450 Owens St), none of which overlap it. The hospital remains fully covered by blocks 36-39 alone, so this costs no coverage. Exchange on 16th, previously flagged as having no confirmed OCII block number, now has one.",
+   "source": "docs/briefs/mission-bay-geometry.md",
+   "sources": [
+    {
+     "title": "docs/briefs/mission-bay-geometry.md"
+    }
+   ],
+   "category": "coverage",
+   "category_label": "Coverage",
+   "record": null,
+   "site": null,
+   "relation": null,
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-09-22",
+   "kind": "correction",
+   "kind_label": "Correction",
+   "text": "490 Illinois St (Valley Center for Vision) and 499 Illinois St (Alexandria Center for Science and Technology) merged into one record under OCII block X4: both share the same DataSF Building Footprints mblr (SF3940003) -- one Assessor block-lot pairing -- and are described together as a connected 490-499 Illinois campus in commercial listings, so tracking them as two separate records double-counted one real estate holding. Combined into one MultiPolygon (the two building footprints remain geometrically distinct, ~12m apart, not touching). Also confirmed: OCII's Dec 2019 Land Use Map and UCSF's own numbering agree that blocks 33/34 (the real, unnamed buildings between 3rd St and Illinois St, corrected 2026-09-20) are a different, separate location from 490/499 Illinois St (X4, east of Illinois St) -- no renumbering needed there, resolving the apparent 33/34 conflict raised earlier against UCSF's June 2025 CAC presentation.",
+   "source": "docs/briefs/mission-bay-geometry.md",
+   "sources": [
+    {
+     "title": "docs/briefs/mission-bay-geometry.md"
+    }
+   ],
+   "category": "coverage",
+   "category_label": "Coverage",
+   "record": null,
+   "site": null,
+   "relation": null,
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-09-22",
+   "kind": "correction",
+   "kind_label": "Correction",
+   "text": "25B confirmed against UCSF's own June 2025 CAC presentation (campus map updated December 2024): it independently shows this exact position -- directly south of Third Street Garage (23B), east of Mission Hall (25A) -- as 'Future Research (25B)', matching this project's already-tracked position and planned/unbuilt status exactly. No geometry or status change; added as corroborating source. This was the last item on the owner's positioning-review list for the UCSF map cross-check.",
+   "source": "docs/briefs/mission-bay-geometry.md",
+   "sources": [
+    {
+     "title": "docs/briefs/mission-bay-geometry.md"
+    }
+   ],
+   "category": "coverage",
+   "category_label": "Coverage",
+   "record": null,
+   "site": null,
+   "relation": null,
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-09-22",
+   "kind": "correction",
+   "kind_label": "Correction",
+   "text": "25B re-oriented: the tracked rectangle was axis-aligned (pure lon/lat), which cut diagonally across the real parking lot's own curb lines in satellite imagery -- the real street grid in this part of Mission Bay runs at a slight angle, not true north/south. Rotated the same rectangle (unchanged size, 5,250 sqm) by 3.19 degrees around Mission Hall's real NE corner, matching Mission Hall's own east-wall orientation (the wall 25B's west edge shares) -- now tracks the lot's real edges and the 3rd St/16th St crosswalks closely on all four sides.",
+   "source": "docs/briefs/mission-bay-geometry.md",
+   "sources": [
+    {
+     "title": "docs/briefs/mission-bay-geometry.md"
+    }
+   ],
+   "category": "coverage",
+   "category_label": "Coverage",
+   "record": null,
+   "site": null,
+   "relation": null,
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-09-22",
+   "kind": "correction",
+   "kind_label": "Correction",
+   "text": "The owner corrected this project's own 2026-09-22 assumption (above) that blocks 33/34 were \"unrelated\" to 490/499 Illinois St: UCSF built three real structures here where the OCII plan showed two. OCII plan block 33 (data/manual/mission_bay_block_33.geojson, renamed ucsf_valley_center_for_vision_west.geojson) is UCSF's Valley Center for Vision -- a second, physically distinct building from the already-tracked 490 Illinois St tower of the same name, about 60-100m east across Illinois St; the relationship between the two is flagged as an open question, not asserted as either the same facility or unrelated. OCII plan block 34 (data/manual/mission_bay_block_34.geojson) was itself two buildings, not one: split along a visible satellite roofline seam into UCSF Bayfront Medical Building (north, ucsf_bayfront_medical_building.geojson, 520 Illinois St) and UCSF Illinois Street Garage (south, ucsf_illinois_street_garage.geojson, 590 Illinois St, 9 stories/500 spaces) -- both already documented in this project's own research dossiers, which had guessed the split the opposite way (garage=33, clinic=34) before the owner's on-the-ground correction. The 33/34 shared boundary and the new Bayfront/Garage boundary were both re-derived from block 34's own real, straight east and west edges (Illinois St and 3rd St sides, bearing about -85.6 degrees) via line intersection, rather than the original flat-latitude cut -- see each geojson's own digitization_method. The real Mariposa St edge was left as originally traced (already within about 1 degree of the same angle).",
+   "source": "docs/briefs/mission-bay-geometry.md",
+   "sources": [
+    {
+     "title": "docs/briefs/mission-bay-geometry.md"
+    }
+   ],
+   "category": "coverage",
+   "category_label": "Coverage",
+   "record": null,
+   "site": null,
+   "relation": null,
    "permalink": "https://pierandpoint.org/changes/#record"
   },
   {

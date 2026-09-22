@@ -1,0 +1,129 @@
+{
+  "record_id": "mission_bay_490_499_illinois",
+  "names": [
+    "UCSF Wayne and Gladys Valley Center for Vision",
+    "499 Illinois Street",
+    "Alexandria Center for Science and Technology – 499 Illinois"
+  ],
+  "summary": "Two adjacent buildings on OCII plan block X4, tracked as one combined record since their geometries were merged 2026-09-22 (they share one DataSF Assessor block-lot pairing, mblr SF3940003, ~12m apart, not touching): UCSF's Wayne and Gladys Valley Center for Vision, a 347,500-sq-ft, 12-story eye-care tower at 490 Illinois Street that opened November 2020 at a reported cost of about $237 million (SmithGroup architect); and 499 Illinois Street, a 6-story, ~450,000 sq ft biotechnology building completed 2008 and developed by Alexandria Real Estate Equities.",
+  "summary_sources": [
+    "src-sfyimby-490illinois",
+    "src-datasf-499illinois",
+    "src-sgh-499illinois"
+  ],
+  "milestones": [
+    {
+      "date": "2006-07-18",
+      "status": "planned",
+      "text": "SF Dept. of Building Inspection permit #200607186938 filed to erect the 6-story medical research and biotechnical research facility at 499 Illinois St",
+      "sources": ["src-datasf-permit-499-illinois"],
+      "expected": false,
+      "approximate": false
+    },
+    {
+      "date": "2008",
+      "status": "complete",
+      "text": "499 Illinois Street completed.",
+      "sources": ["src-datasf-499illinois", "src-sgh-499illinois"],
+      "expected": false,
+      "approximate": true
+    },
+    {
+      "date": "2017-01-26",
+      "status": "planned",
+      "text": "UC Regents approve a $237,000,000 project budget and design for UCSF's new Center for Vision Neurosciences building at Mission Bay -- referred to in UCSF's own campus numbering as 'Block 33' (a different numbering system from the OCII plan-block numbers used elsewhere in this repo; see open_questions), combining the Department of Ophthalmology and the Francis I. Proctor Foundation in a 12-story tower with a 5-story south wing and 3-story north wing; construction was expected to begin June 2017 with completion targeted for July 2019",
+      "sources": ["src-ucsf-2017-block33"],
+      "expected": false,
+      "approximate": false
+    },
+    {
+      "date": "2020-11",
+      "status": "complete",
+      "text": "UCSF opens the Wayne and Gladys Valley Center for Vision at 490 Illinois Street",
+      "sources": ["src-sfyimby-490illinois"],
+      "expected": false,
+      "approximate": true
+    }
+  ],
+  "costs": [
+    {
+      "amount_usd": 237000000,
+      "what": "Construction cost, Wayne and Gladys Valley Center for Vision (490 Illinois St)",
+      "date": "2020",
+      "approximate": true,
+      "sources": ["src-sfyimby-490illinois"]
+    },
+    {
+      "amount_usd": 90000000,
+      "what": "Estimated construction cost, 499 Illinois St (per its own 2006 building permit)",
+      "date": "2006",
+      "approximate": true,
+      "sources": ["src-datasf-permit-499-illinois"]
+    }
+  ],
+  "facts": [
+    {
+      "key": "architect",
+      "value": "SmithGroup (490 Illinois St, Valley Center for Vision)",
+      "sources": ["src-sfyimby-490illinois"]
+    },
+    {
+      "key": "gross_sqft",
+      "value": "490 Illinois St: 347,500 across three connected buildings (12-story tower, 5-story south wing, 3-story north wing) plus ~75,000 sq ft of parking for 200+ vehicles. 499 Illinois St: ~450,000, six stories.",
+      "sources": ["src-sfyimby-490illinois", "src-sgh-499illinois"]
+    },
+    {
+      "key": "developer",
+      "value": "490 Illinois St: University of California, San Francisco; fundraising led by the nonprofit That Man May See. 499 Illinois St: Alexandria Real Estate Equities.",
+      "sources": ["src-sfyimby-490illinois", "src-sgh-499illinois"]
+    }
+  ],
+  "images": [],
+  "sources": [
+    {
+      "id": "src-sfyimby-490illinois",
+      "title": "UCSF Opens Medical Facility at 490 Illinois Street, Mission Bay, San Francisco",
+      "publisher": "San Francisco YIMBY",
+      "date": "2020-11-27",
+      "url": "https://sfyimby.com/2020/11/ucsf-opens-medical-facility-at-490-illinois-street-mission-bay-san-francisco.html",
+      "accessed": "2026-09-21"
+    },
+    {
+      "id": "src-ucsf-2017-block33",
+      "title": "UC Regents Approve Budget, Design for Block 33 Building at Mission Bay",
+      "publisher": "UC San Francisco",
+      "date": "2017-02",
+      "url": "https://www.ucsf.edu/news/2017/02/405756/uc-regents-approve-budget-design-block-33-building-mission-bay",
+      "accessed": "2026-09-21"
+    },
+    {
+      "id": "src-datasf-499illinois",
+      "title": "Assessor Historical Secured Property Tax Rolls (blklot 3940004, 499 Illinois St): year_property_built 2008",
+      "publisher": "DataSF",
+      "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=3940004",
+      "accessed": "2026-09-21"
+    },
+    {
+      "id": "src-sgh-499illinois",
+      "title": "499 Illinois Street",
+      "publisher": "Simpson Gumpertz & Heger (project engineer)",
+      "url": "https://www.sgh.com/project/499-illinois-street/",
+      "accessed": "2026-09-21"
+    },
+    {
+      "id": "src-datasf-permit-499-illinois",
+      "title": "Building Permits: permit #200607186938 (499 Illinois St, block 3940 lot 001 at filing), filed 2006-07-18, \"to erect medical research and biotechnical research facility (6 stories)\", completed 2009-04-06, estimated cost $90,000,000",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200607186938",
+      "accessed": "2026-09-21"
+    }
+  ],
+  "open_questions": [
+    "MERGED 2026-09-22: this record combines the former mission_bay_490_illinois and mission_bay_499_illinois records, matching the geometry files' own 2026-09-22 merge (data/manual/mission_bay_490_499_illinois.geojson) -- both buildings share one DataSF Building Footprints mblr (SF3940003) and are described together as a connected 490-499 Illinois campus in commercial listings. UCSF's own occupancy at 499 Illinois St (leased, then purchased) versus outright ownership at 490 Illinois St is not distinguished by a source found in this pass.",
+    "Exact opening day within November 2020 (490 Illinois) is not given by the source found; only the month is confirmed. Exact month/day of the 2008 completion (499 Illinois) is likewise not sourced, only the year.",
+    "The 2006 construction permit's own block/lot for 499 Illinois St (block 3940, lot 001) differs from the lot the Assessor now uses for this address (lot 004); the address, biotechnical/medical-research-facility description, 6 stories, and $90M cost all line up with this parcel, so this is treated as a lot renumbering, not a different building. The permit's own completion sign-off (2009-04-06) also runs slightly later than the Assessor's 2008 year, which may reflect a lag between substantial completion and permit closeout.",
+    "2026-09-21 pass: found the January 26, 2017 Regents budget/design approval item for 490 Illinois St (UCSF calls it 'Block 33' in its own campus numbering -- assumed at the time to be a coincidental name collision with this project's unrelated OCII-plan block 33). The direct ucsf.edu article returned HTTP 403 to automated fetches in this pass; its content (matching $237,000,000 cost and 12-story/5-story/3-story massing figures already in this record) was confirmed via a search-engine summary rather than a direct read. A primary Regents PDF for the January 26, 2017 item itself was not located.",
+    "2026-09-22: the 'coincidental name collision' assumption above was reopened -- the owner directly identified OCII plan block 33 (data/records/ucsf_valley_center_for_vision_west.json, west of Illinois St, about 60-100m from this record's 490 Illinois St tower) as ALSO being Valley Center for Vision, not unrelated. Whether that west building is a second wing of this same facility, a distinct building sharing the name, or a misidentification, is unresolved -- see that record's own open_questions; not re-investigated here."
+  ],
+  "last_verified": "2026-09-22"
+}

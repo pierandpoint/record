@@ -5,7 +5,7 @@
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
  "terms": "https://pierandpoint.org/terms/",
- "count": 175,
+ "count": 177,
  "records": [
   {
    "id": "8719C001",
@@ -17092,7 +17092,7 @@
      "url": "https://therealdeal.com/san-francisco/2026/03/16/openai-inks-another-mission-bay-lease/"
     }
    ],
-   "notes": "The Exchange on 16th, 1800 Owens St -- formerly Dropbox's headquarters, now partly rebranded 'Icona: Labs at Mission Bay' -- a 750,370 sq ft, 12-story office/life-science campus on a ~3.5-acre lot, built by Kilroy Realty Corporation in 2018 as Dropbox's single-tenant headquarters (15-year lease). Sold in 2021 for $1.08B to KKR and Longfellow Real Estate Partners, who have since converted much of it to life-science labs; OpenAI signed a roughly 280,000 sq ft sublease reported closed Feb 2026. Blklot confirmed against the DataSF Assessor Historical Secured Property Tax Rolls dataset (wv5m-vpq2), whose property_location and square-footage/year-built fields match the published building exactly, since the base parcel map's own address field is a stale street-frontage number (701-707 16th St) rather than the building's current mailing address.",
+   "notes": "The Exchange on 16th, 1800 Owens St -- formerly Dropbox's headquarters, now partly rebranded 'Icona: Labs at Mission Bay' -- a 750,370 sq ft, 12-story office/life-science campus on a ~3.5-acre lot, built by Kilroy Realty Corporation in 2018 as Dropbox's single-tenant headquarters (15-year lease). Sold in 2021 for $1.08B to KKR and Longfellow Real Estate Partners, who have since converted much of it to life-science labs; OpenAI signed a roughly 280,000 sq ft sublease reported closed Feb 2026. Blklot confirmed against the DataSF Assessor Historical Secured Property Tax Rolls dataset (wv5m-vpq2), whose property_location and square-footage/year-built fields match the published building exactly, since the base parcel map's own address field is a stale street-frontage number (701-707 16th St) rather than the building's current mailing address. OCII plan block 40 (per OCII's own Dec 2019 Land Use Map, cross-checked 2026-09-22 -- this parcel had been left out of the block_inventory brief entirely, with block 40 wrongly lumped into the UCSF Medical Center hospital superblock instead, which stays fully covered by blocks 36-39 alone).",
    "has_record_file": false,
    "last_verified": null,
    "tenants": [],
@@ -73715,7 +73715,7 @@
      "accessed": "2026-09-21"
     }
    ],
-   "notes": "UCSF's first Mission Bay building and the first structure completed on the 303-acre campus. ~400,000-435,000 sq ft (sources vary), five stories. Architect SmithGroup (SF office). Opened January 2003 (a Jan 8, 2003 first-researcher-moved-in anecdote and a Feb 2003 trade-press \"now open\" piece support the month; not an official UCSF dedication-date citation).",
+   "notes": "OCII plan block 24A/B. UCSF's first Mission Bay building and the first structure completed on the 303-acre campus. ~400,000-435,000 sq ft (sources vary), five stories. Architect SmithGroup (SF office). Opened January 2003 (a Jan 8, 2003 first-researcher-moved-in anecdote and a Feb 2003 trade-press \"now open\" piece support the month; not an official UCSF dedication-date citation).",
    "has_record_file": true,
    "last_verified": "2026-09-21",
    "tenants": [],
@@ -74403,7 +74403,7 @@
      "accessed": "2026-09-21"
     }
    ],
-   "notes": "Home to QB3 (California Institute for Quantitative Biosciences) director's office and central administration, built as a hub for academia-biotech collaboration. Architect Bohlin Cywinski Jackson (corroborated by a former project manager's own portfolio and an architecture-press article, not confirmed directly on a UCSF-owned page). Opened 2005 (year only; exact month and square footage not found in any source checked).",
+   "notes": "OCII plan block 24C. Home to QB3 (California Institute for Quantitative Biosciences) director's office and central administration, built as a hub for academia-biotech collaboration. Architect Bohlin Cywinski Jackson (corroborated by a former project manager's own portfolio and an architecture-press article, not confirmed directly on a UCSF-owned page). Opened 2005 (year only; exact month and square footage not found in any source checked).",
    "has_record_file": true,
    "last_verified": "2026-09-21",
    "tenants": [],
@@ -75671,13 +75671,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL BUILDING FOOTPRINT (OpenStreetMap) PLUS APPROXIMATE PARKING LOT EXTENT (real-gap-fragment technique against satellite imagery, not a surveyed lot boundary) -- this is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against data/raw/parcels.geojson and DataSF's Assessor tax roll -- e.g. blklot 8711507 at 675 Nelson Rising Lane alone is ~13 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint plus the owner-directed parking-lot extent is the best available non-overlapping, honest shape for this record.",
-     "digitized_from": "OpenStreetMap (way 84812339, name=William J. Rutter Center, 1675 Owens St), extended 2026-09-20 with the real-gap-fragment technique to add the surface parking lot at 1625 Owens St immediately west/northwest of the building."
+     "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate; the west edge is idealized to a straight line (2 points instead of the OSM trace's 3, dropping a sub-meter digitizing jog), not a surveyed change. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against data/raw/parcels.geojson and DataSF's Assessor tax roll -- e.g. blklot 8711507 at 675 Nelson Rising Lane alone is ~13 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for this record.",
+     "digitized_from": "OpenStreetMap (way 84812339, name=William J. Rutter Center, 1675 Owens St). Its own small mid-edge digitizing jog on the west wall was straightened into a clean 4-corner quadrilateral 2026-09-22 (see digitization_method)."
     }
    },
    "centroid": {
-    "lon": -122.393209,
-    "lat": 37.76833
+    "lon": -122.393215,
+    "lat": 37.768204
    },
    "facts": [
     {
@@ -75891,11 +75891,106 @@
      "date": "2000-05",
      "url": "https://regents.universityofcalifornia.edu/regmeet/may00/101d.pdf",
      "accessed": "2026-09-21"
+    },
+    {
+     "id": null,
+     "title": "sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
+     "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf"
     }
    ],
-   "notes": "~150,000-156,600 sq ft (sources vary), four to five stories; houses the Bakar Fitness & Recreation Center, Mission Bay Conference Center, administrative offices and a restaurant/food court. Architect Legorreta Arquitectos (Ricardo and Victor Legorreta) with MBT Architecture as associate/executive architect, in Legorreta's contemporary Mexican-modernist style. Opened 2005 as part of Mission Bay's first development phase (year only; exact month not confirmed by a primary source).",
+   "notes": "~150,000-156,600 sq ft (sources vary), four to five stories; houses the Bakar Fitness & Recreation Center, Mission Bay Conference Center, administrative offices and a restaurant/food court. Architect Legorreta Arquitectos (Ricardo and Victor Legorreta) with MBT Architecture as associate/executive architect, in Legorreta's contemporary Mexican-modernist style. Opened 2005 as part of Mission Bay's first development phase (year only; exact month not confirmed by a primary source). Per UCSF's own Dec 2024-updated campus map, this is Block 21B; the adjoining Community Center Garage to its west is the separate Block 21A (data/manual/ucsf_community_center_garage.geojson).",
    "has_record_file": true,
    "last_verified": "2026-09-21",
+   "tenants": [],
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -122.3935542,
+       37.7684847
+      ],
+      [
+       -122.3927839,
+       37.768535
+      ],
+      [
+       -122.3927055,
+       37.7677832
+      ],
+      [
+       -122.3934758,
+       37.767733
+      ],
+      [
+       -122.3935542,
+       37.7684847
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ucsf_community_center_garage",
+   "slug": "community-center-garage-ucsf-mission-bay",
+   "name": "Community Center Garage (UCSF Mission Bay)",
+   "permalink": "https://pierandpoint.org/parcels/community-center-garage-ucsf-mission-bay/",
+   "api": "https://pierandpoint.org/api/v1/records/community-center-garage-ucsf-mission-bay.json",
+   "names": [
+    "Community Center Garage (UCSF Mission Bay)"
+   ],
+   "site": {
+    "slug": "mission-bay",
+    "name": "Mission Bay",
+    "short": "Mission Bay",
+    "url": "https://pierandpoint.org/sites/mission-bay/"
+   },
+   "status": "complete",
+   "status_label": "Complete",
+   "use": "parking",
+   "relation": "tracked",
+   "adjacent_to": null,
+   "distance_note": null,
+   "how_to_comment": [],
+   "positions": [],
+   "address": null,
+   "summary": null,
+   "summary_sources": [],
+   "shape": {
+    "kind": "approximate",
+    "parcel": null,
+    "display": "fill",
+    "display_reason": null,
+    "notes": {
+     "accuracy_caveat": "PARTIALLY REAL -- a real, standing garage structure is visible in satellite imagery (rooftop deck with painted parking-space striping), but this record's own boundary is derived from the real-gap-fragment technique against satellite imagery, not a surveyed building footprint or parcel line; DataSF's own Building Footprints dataset does not separate this garage from the Rutter Center building (both fall under one continuous footprint, mblr SF8709011), so there is no official boundary between 21A and 21B -- the dividing line used here is the Rutter Center's own real west wall, extended, which is a reasonable but not authoritative choice.",
+     "digitized_from": "Real-gap-fragment technique (bbox.difference(street buffer).difference(already-tracked polygons)), fragments 19, 20, 22 and 25 from the numbered map of the Owens St / Rutter Center area, added 2026-09-20 to the neighboring Rutter Community Center record and split back out into this separate record 2026-09-22."
+    }
+   },
+   "centroid": {
+    "lon": -122.394154,
+    "lat": 37.768231
+   },
+   "facts": [],
+   "costs": [],
+   "milestones": [],
+   "changes": [],
+   "images": [],
+   "open_questions": [],
+   "sources": [
+    {
+     "id": null,
+     "title": "data/manual/_reference/mission_bay_land_use_map_2019.png",
+     "url": "data/manual/_reference/mission_bay_land_use_map_2019.png"
+    },
+    {
+     "id": null,
+     "title": "sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
+     "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf"
+    }
+   ],
+   "notes": "A real parking garage structure (rooftop deck) immediately west of the William J. Rutter Community Center (21B), connected to it by a walkway. Per UCSF's own Dec 2024-updated campus map (June 2025 CAC presentation), this is Block 21A. Name/operator not independently confirmed by a primary source in this pass -- labeled per the UCSF map's own text.",
+   "has_record_file": false,
+   "last_verified": null,
    "tenants": [],
    "geometry": {
     "type": "Polygon",
@@ -75914,76 +76009,12 @@
        37.768473253
       ],
       [
-       -122.39323925147414,
-       37.76852187819656
+       -122.39355608618375,
+       37.76850278474909
       ],
       [
-       -122.39321998981605,
-       37.76850652366903
-      ],
-      [
-       -122.3931933495576,
-       37.7685082632575
-      ],
-      [
-       -122.3932124547448,
-       37.76852349305102
-      ],
-      [
-       -122.39300095752736,
-       37.76853623853278
-      ],
-      [
-       -122.39298308730474,
-       37.76852199322157
-      ],
-      [
-       -122.3929564477276,
-       37.76852373276555
-      ],
-      [
-       -122.39297416148051,
-       37.76853785334611
-      ],
-      [
-       -122.392695788,
-       37.768554629
-      ],
-      [
-       -122.39267108120609,
-       37.76829625183719
-      ],
-      [
-       -122.39276697415535,
-       37.768372693239655
-      ],
-      [
-       -122.39276436098034,
-       37.768347634757866
-      ],
-      [
-       -122.39266870294594,
-       37.76827138061716
-      ],
-      [
-       -122.39264993161667,
-       37.76807507498494
-      ],
-      [
-       -122.39274373550865,
-       37.76814985121675
-      ],
-      [
-       -122.39274112225566,
-       37.76812479198727
-      ],
-      [
-       -122.39264755328452,
-       37.7680502030118
-      ],
-      [
-       -122.392617409,
-       37.767734962
+       -122.3934706418386,
+       37.76768354349588
       ],
       [
        -122.393784623,
@@ -77518,9 +77549,14 @@
      "id": null,
      "title": "openstreetmap.org/way/27369503",
      "url": "https://www.openstreetmap.org/way/27369503"
+    },
+    {
+     "id": null,
+     "title": "sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
+     "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf"
     }
    ],
-   "notes": "Exact capacity and completion year not confirmed by any source found; left out rather than guessed.",
+   "notes": "OCII plan block 23B on UCSF's own campus map. Exact capacity and completion year not confirmed by any source found; left out rather than guessed.",
    "has_record_file": true,
    "last_verified": "2026-09-22",
    "tenants": [],
@@ -84550,390 +84586,13 @@
    }
   },
   {
-   "id": "mission_bay_490_illinois",
-   "slug": "ucsf-wayne-and-gladys-valley-center-for-vision",
-   "name": "UCSF Wayne and Gladys Valley Center for Vision",
-   "permalink": "https://pierandpoint.org/parcels/ucsf-wayne-and-gladys-valley-center-for-vision/",
-   "api": "https://pierandpoint.org/api/v1/records/ucsf-wayne-and-gladys-valley-center-for-vision.json",
+   "id": "mission_bay_490_499_illinois",
+   "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology",
+   "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision & Alexandria Center for Science and Technology)",
+   "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology/",
+   "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology.json",
    "names": [
-    "UCSF Wayne and Gladys Valley Center for Vision"
-   ],
-   "site": {
-    "slug": "mission-bay",
-    "name": "Mission Bay",
-    "short": "Mission Bay",
-    "url": "https://pierandpoint.org/sites/mission-bay/"
-   },
-   "status": "complete",
-   "status_label": "Complete",
-   "use": "institutional",
-   "relation": "tracked",
-   "adjacent_to": null,
-   "distance_note": null,
-   "how_to_comment": [],
-   "positions": [],
-   "address": null,
-   "summary": "UCSF's Wayne and Gladys Valley Center for Vision, a 347,500-sq-ft, 12-story eye-care tower (with a 5-story south wing and a garden-topped 3-story north wing) at 490 Illinois Street in Mission Bay, opened November 2020 at a reported construction cost of about $237 million; designed by SmithGroup, with fundraising led by the nonprofit That Man May See.",
-   "summary_sources": [
-    "src-sfyimby-490illinois"
-   ],
-   "shape": {
-    "kind": "approximate",
-    "parcel": null,
-    "display": "fill",
-    "display_reason": null,
-    "notes": {
-     "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF3940003), name/address from OpenStreetMap way 84821715 (490 Illinois St); not a hand trace or plan estimate. This building's DataSF footprint shares its mblr (SF3940003) with the adjacent 499 Illinois St building (below) -- both address points fall on the same Assessor block-lot pairing in the source data, consistent with the two being described as a connected campus (409-499 Illinois) in commercial listings, but the two footprints themselves are geometrically distinct pieces, used here as separate records since they carry separate names, addresses, and OSM tags.",
-     "digitized_from": "DataSF Building Footprints (mblr SF3940003); name/address from OpenStreetMap way 84821715 (490 Illinois St)"
-    }
-   },
-   "centroid": {
-    "lon": -122.387441,
-    "lat": 37.766577
-   },
-   "facts": [
-    {
-     "key": "architect",
-     "value": "SmithGroup",
-     "sources": [
-      "src-sfyimby-490illinois"
-     ]
-    },
-    {
-     "key": "gross_sqft",
-     "value": "347,500 across three connected buildings (12-story tower, 5-story south wing, 3-story north wing) plus ~75,000 sq ft of parking for 200+ vehicles",
-     "sources": [
-      "src-sfyimby-490illinois"
-     ]
-    },
-    {
-     "key": "developer",
-     "value": "University of California, San Francisco; fundraising led by the nonprofit That Man May See",
-     "sources": [
-      "src-sfyimby-490illinois"
-     ]
-    }
-   ],
-   "costs": [
-    {
-     "amount_usd": 237000000,
-     "what": "Construction cost, Wayne and Gladys Valley Center for Vision",
-     "date": "2020",
-     "approximate": true,
-     "sources": [
-      "src-sfyimby-490illinois"
-     ]
-    }
-   ],
-   "milestones": [
-    {
-     "date": "2017-01-26",
-     "date_label": "Jan 26, 2017",
-     "status": "planned",
-     "status_label": "Planned",
-     "text": "UC Regents approve a $237,000,000 project budget and design for UCSF's new Center for Vision Neurosciences building at Mission Bay -- referred to in UCSF's own campus numbering as 'Block 33' (a different numbering system from the OCII plan-block numbers used elsewhere in this repo), combining the Department of Ophthalmology and the Francis I. Proctor Foundation in a 12-story tower with a 5-story south wing and 3-story north wing; construction was expected to begin June 2017 with completion targeted for July 2019",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-ucsf-2017-block33",
-       "title": "UC Regents Approve Budget, Design for Block 33 Building at Mission Bay",
-       "publisher": "UC San Francisco",
-       "date": "2017-02",
-       "url": "https://www.ucsf.edu/news/2017/02/405756/uc-regents-approve-budget-design-block-33-building-mission-bay",
-       "accessed": "2026-09-21"
-      }
-     ],
-     "source": "UC San Francisco, 2017-02",
-     "origin": "record",
-     "category": "status",
-     "category_label": "Status",
-     "record": {
-      "id": "mission_bay_490_illinois",
-      "slug": "ucsf-wayne-and-gladys-valley-center-for-vision",
-      "name": "UCSF Wayne and Gladys Valley Center for Vision",
-      "permalink": "https://pierandpoint.org/parcels/ucsf-wayne-and-gladys-valley-center-for-vision/",
-      "api": "https://pierandpoint.org/api/v1/records/ucsf-wayne-and-gladys-valley-center-for-vision.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2020-11",
-     "date_label": "Nov 2020",
-     "status": "complete",
-     "status_label": "Complete",
-     "text": "UCSF opens the Wayne and Gladys Valley Center for Vision at 490 Illinois Street",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-sfyimby-490illinois",
-       "title": "UCSF Opens Medical Facility at 490 Illinois Street, Mission Bay, San Francisco",
-       "publisher": "San Francisco YIMBY",
-       "date": "2020-11-27",
-       "url": "https://sfyimby.com/2020/11/ucsf-opens-medical-facility-at-490-illinois-street-mission-bay-san-francisco.html",
-       "accessed": "2026-09-21"
-      }
-     ],
-     "source": "San Francisco YIMBY, 2020-11-27",
-     "origin": "record",
-     "category": "status",
-     "category_label": "Status",
-     "record": {
-      "id": "mission_bay_490_illinois",
-      "slug": "ucsf-wayne-and-gladys-valley-center-for-vision",
-      "name": "UCSF Wayne and Gladys Valley Center for Vision",
-      "permalink": "https://pierandpoint.org/parcels/ucsf-wayne-and-gladys-valley-center-for-vision/",
-      "api": "https://pierandpoint.org/api/v1/records/ucsf-wayne-and-gladys-valley-center-for-vision.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    }
-   ],
-   "changes": [],
-   "images": [],
-   "open_questions": [
-    "Exact opening day within November 2020 is not given by the source found (a November 27, 2020 article announcing the opening); only the month is confirmed.",
-    "2026-09-21 pass: found the January 26, 2017 Regents budget/design approval item for this building (UCSF calls it 'Block 33' in its own campus numbering, a coincidental name collision with this project's unrelated OCII-plan mission_bay_block_33 record). The direct ucsf.edu article returned HTTP 403 to automated fetches in this pass, as several other ucsf.edu pages have in this project; its content (matching $237,000,000 cost and 12-story/5-story/3-story massing figures already in this record) was confirmed via a search-engine summary of the same page rather than a direct read. A primary Regents PDF for the January 26, 2017 item itself was not located in this pass.",
-    "This record's own geometry file notes its DataSF footprint shares an mblr with the adjacent 499 Illinois St building; not re-investigated here."
-   ],
-   "sources": [
-    {
-     "id": "src-sfyimby-490illinois",
-     "title": "UCSF Opens Medical Facility at 490 Illinois Street, Mission Bay, San Francisco",
-     "publisher": "San Francisco YIMBY",
-     "date": "2020-11-27",
-     "url": "https://sfyimby.com/2020/11/ucsf-opens-medical-facility-at-490-illinois-street-mission-bay-san-francisco.html",
-     "accessed": "2026-09-21"
-    },
-    {
-     "id": "src-ucsf-2017-block33",
-     "title": "UC Regents Approve Budget, Design for Block 33 Building at Mission Bay",
-     "publisher": "UC San Francisco",
-     "date": "2017-02",
-     "url": "https://www.ucsf.edu/news/2017/02/405756/uc-regents-approve-budget-design-block-33-building-mission-bay",
-     "accessed": "2026-09-21"
-    },
-    {
-     "id": null,
-     "title": "openstreetmap.org/way/84821715",
-     "url": "https://www.openstreetmap.org/way/84821715"
-    }
-   ],
-   "notes": "This building's DataSF footprint shares its mblr (SF3940003) with the adjacent 499 Illinois St building (below) -- both address points fall on the same Assessor block-lot pairing in the source data, consistent with the two being described as a connected campus (409-499 Illinois) in commercial listings, but the two footprints themselves are geometrically distinct pieces, used here as separate records since they carry separate names, addresses, and OSM tags.",
-   "has_record_file": true,
-   "last_verified": "2026-09-21",
-   "tenants": [],
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       -122.3874961,
-       37.7663523
-      ],
-      [
-       -122.3874939,
-       37.7663161
-      ],
-      [
-       -122.3874939,
-       37.766316
-      ],
-      [
-       -122.3879455,
-       37.7662924
-      ],
-      [
-       -122.3879483,
-       37.7663261
-      ],
-      [
-       -122.3879486,
-       37.766326
-      ],
-      [
-       -122.3879487,
-       37.7663262
-      ],
-      [
-       -122.3879492,
-       37.7663323
-      ],
-      [
-       -122.3879488,
-       37.7663324
-      ],
-      [
-       -122.3879491,
-       37.7663353
-      ],
-      [
-       -122.3879477,
-       37.7663353
-      ],
-      [
-       -122.3879479,
-       37.7663378
-      ],
-      [
-       -122.3879784,
-       37.7663352
-      ],
-      [
-       -122.3879784,
-       37.7663353
-      ],
-      [
-       -122.3880283,
-       37.766849
-      ],
-      [
-       -122.3875511,
-       37.7668782
-      ],
-      [
-       -122.387551,
-       37.7668781
-      ],
-      [
-       -122.3875499,
-       37.7668575
-      ],
-      [
-       -122.3873621,
-       37.7668687
-      ],
-      [
-       -122.3873618,
-       37.7668896
-      ],
-      [
-       -122.3871637,
-       37.7669
-      ],
-      [
-       -122.3871655,
-       37.7669049
-      ],
-      [
-       -122.3870968,
-       37.766909
-      ],
-      [
-       -122.3870967,
-       37.7669089
-      ],
-      [
-       -122.3870902,
-       37.76689
-      ],
-      [
-       -122.3870815,
-       37.76689
-      ],
-      [
-       -122.3870866,
-       37.7669045
-      ],
-      [
-       -122.3869483,
-       37.7669117
-      ],
-      [
-       -122.3869482,
-       37.7669116
-      ],
-      [
-       -122.3868606,
-       37.7666566
-      ],
-      [
-       -122.3869874,
-       37.7666243
-      ],
-      [
-       -122.386992,
-       37.7666372
-      ],
-      [
-       -122.3870026,
-       37.7666351
-      ],
-      [
-       -122.3869951,
-       37.7666133
-      ],
-      [
-       -122.3870521,
-       37.766601
-      ],
-      [
-       -122.3870521,
-       37.7666011
-      ],
-      [
-       -122.3870541,
-       37.7666064
-      ],
-      [
-       -122.3872169,
-       37.7665632
-      ],
-      [
-       -122.3875237,
-       37.7665511
-      ],
-      [
-       -122.3875087,
-       37.7663583
-      ],
-      [
-       -122.3874975,
-       37.7663589
-      ],
-      [
-       -122.3874974,
-       37.7663585
-      ],
-      [
-       -122.3874962,
-       37.7663586
-      ],
-      [
-       -122.3874961,
-       37.7663585
-      ],
-      [
-       -122.3874956,
-       37.7663523
-      ],
-      [
-       -122.3874961,
-       37.7663523
-      ]
-     ]
-    ]
-   }
-  },
-  {
-   "id": "mission_bay_499_illinois",
-   "slug": "499-illinois-street-alexandria-center-for-science-and-technology",
-   "name": "499 Illinois Street (Alexandria Center for Science and Technology)",
-   "permalink": "https://pierandpoint.org/parcels/499-illinois-street-alexandria-center-for-science-and-technology/",
-   "api": "https://pierandpoint.org/api/v1/records/499-illinois-street-alexandria-center-for-science-and-technology.json",
-   "names": [
+    "UCSF Wayne and Gladys Valley Center for Vision",
     "499 Illinois Street",
     "Alexandria Center for Science and Technology – 499 Illinois"
    ],
@@ -84952,8 +84611,9 @@
    "how_to_comment": [],
    "positions": [],
    "address": null,
-   "summary": "499 Illinois Street is a 6-story, ~450,000 sq ft biotechnology building (lab, office, retail, parking) at Mission Bay, developed by Alexandria Real Estate Equities. Both DataSF Assessor records and the project's structural engineer's own page date its completion to 2008.",
+   "summary": "Two adjacent buildings on OCII plan block X4, tracked as one combined record since their geometries were merged 2026-09-22 (they share one DataSF Assessor block-lot pairing, mblr SF3940003, ~12m apart, not touching): UCSF's Wayne and Gladys Valley Center for Vision, a 347,500-sq-ft, 12-story eye-care tower at 490 Illinois Street that opened November 2020 at a reported cost of about $237 million (SmithGroup architect); and 499 Illinois Street, a 6-story, ~450,000 sq ft biotechnology building completed 2008 and developed by Alexandria Real Estate Equities.",
    "summary_sources": [
+    "src-sfyimby-490illinois",
     "src-datasf-499illinois",
     "src-sgh-499illinois"
    ],
@@ -84963,23 +84623,66 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF3940003), name/address from OpenStreetMap way 84821722 (499 Illinois St); not a hand trace or plan estimate. Shares its DataSF mblr (SF3940003) with the adjacent 490 Illinois St building -- see that file's notes.",
-     "digitized_from": "DataSF Building Footprints (mblr SF3940003); name/address from OpenStreetMap way 84821722 (499 Illinois St)"
+     "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF3940003), names/addresses from OpenStreetMap; not a hand trace or plan estimate. UCSF's own occupancy at 499 Illinois St (leased, then purchased) versus outright ownership at 490 Illinois St is not distinguished in this single combined record -- see the digitization_method above for each wing's own history.",
+     "digitized_from": "DataSF Building Footprints (mblr SF3940003); names/addresses from OpenStreetMap ways 84821715 (490 Illinois St) and 84821722 (499 Illinois St)."
     }
    },
    "centroid": {
-    "lon": -122.387496,
-    "lat": 37.765974
+    "lon": -122.387461,
+    "lat": 37.766304
    },
-   "facts": [],
-   "costs": [],
+   "facts": [
+    {
+     "key": "architect",
+     "value": "SmithGroup (490 Illinois St, Valley Center for Vision)",
+     "sources": [
+      "src-sfyimby-490illinois"
+     ]
+    },
+    {
+     "key": "gross_sqft",
+     "value": "490 Illinois St: 347,500 across three connected buildings (12-story tower, 5-story south wing, 3-story north wing) plus ~75,000 sq ft of parking for 200+ vehicles. 499 Illinois St: ~450,000, six stories.",
+     "sources": [
+      "src-sfyimby-490illinois",
+      "src-sgh-499illinois"
+     ]
+    },
+    {
+     "key": "developer",
+     "value": "490 Illinois St: University of California, San Francisco; fundraising led by the nonprofit That Man May See. 499 Illinois St: Alexandria Real Estate Equities.",
+     "sources": [
+      "src-sfyimby-490illinois",
+      "src-sgh-499illinois"
+     ]
+    }
+   ],
+   "costs": [
+    {
+     "amount_usd": 237000000,
+     "what": "Construction cost, Wayne and Gladys Valley Center for Vision (490 Illinois St)",
+     "date": "2020",
+     "approximate": true,
+     "sources": [
+      "src-sfyimby-490illinois"
+     ]
+    },
+    {
+     "amount_usd": 90000000,
+     "what": "Estimated construction cost, 499 Illinois St (per its own 2006 building permit)",
+     "date": "2006",
+     "approximate": true,
+     "sources": [
+      "src-datasf-permit-499-illinois"
+     ]
+    }
+   ],
    "milestones": [
     {
      "date": "2006-07-18",
      "date_label": "Jul 18, 2006",
      "status": "planned",
      "status_label": "Planned",
-     "text": "SF Dept. of Building Inspection permit #200607186938 filed to erect the 6-story medical research and biotechnical research facility at this address",
+     "text": "SF Dept. of Building Inspection permit #200607186938 filed to erect the 6-story medical research and biotechnical research facility at 499 Illinois St",
      "expected": false,
      "approximate": false,
      "sources": [
@@ -84996,11 +84699,11 @@
      "category": "status",
      "category_label": "Status",
      "record": {
-      "id": "mission_bay_499_illinois",
-      "slug": "499-illinois-street-alexandria-center-for-science-and-technology",
-      "name": "499 Illinois Street (Alexandria Center for Science and Technology)",
-      "permalink": "https://pierandpoint.org/parcels/499-illinois-street-alexandria-center-for-science-and-technology/",
-      "api": "https://pierandpoint.org/api/v1/records/499-illinois-street-alexandria-center-for-science-and-technology.json"
+      "id": "mission_bay_490_499_illinois",
+      "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology",
+      "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision & Alexandria Center for Science and Technology)",
+      "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology/",
+      "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -85015,7 +84718,7 @@
      "date_label": "~2008",
      "status": "complete",
      "status_label": "Complete",
-     "text": "Building completed.",
+     "text": "499 Illinois Street completed.",
      "expected": false,
      "approximate": true,
      "sources": [
@@ -85039,11 +84742,85 @@
      "category": "status",
      "category_label": "Status",
      "record": {
-      "id": "mission_bay_499_illinois",
-      "slug": "499-illinois-street-alexandria-center-for-science-and-technology",
-      "name": "499 Illinois Street (Alexandria Center for Science and Technology)",
-      "permalink": "https://pierandpoint.org/parcels/499-illinois-street-alexandria-center-for-science-and-technology/",
-      "api": "https://pierandpoint.org/api/v1/records/499-illinois-street-alexandria-center-for-science-and-technology.json"
+      "id": "mission_bay_490_499_illinois",
+      "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology",
+      "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision & Alexandria Center for Science and Technology)",
+      "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology/",
+      "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2017-01-26",
+     "date_label": "Jan 26, 2017",
+     "status": "planned",
+     "status_label": "Planned",
+     "text": "UC Regents approve a $237,000,000 project budget and design for UCSF's new Center for Vision Neurosciences building at Mission Bay -- referred to in UCSF's own campus numbering as 'Block 33' (a different numbering system from the OCII plan-block numbers used elsewhere in this repo; see open_questions), combining the Department of Ophthalmology and the Francis I. Proctor Foundation in a 12-story tower with a 5-story south wing and 3-story north wing; construction was expected to begin June 2017 with completion targeted for July 2019",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-ucsf-2017-block33",
+       "title": "UC Regents Approve Budget, Design for Block 33 Building at Mission Bay",
+       "publisher": "UC San Francisco",
+       "date": "2017-02",
+       "url": "https://www.ucsf.edu/news/2017/02/405756/uc-regents-approve-budget-design-block-33-building-mission-bay",
+       "accessed": "2026-09-21"
+      }
+     ],
+     "source": "UC San Francisco, 2017-02",
+     "origin": "record",
+     "category": "status",
+     "category_label": "Status",
+     "record": {
+      "id": "mission_bay_490_499_illinois",
+      "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology",
+      "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision & Alexandria Center for Science and Technology)",
+      "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology/",
+      "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2020-11",
+     "date_label": "~2020",
+     "status": "complete",
+     "status_label": "Complete",
+     "text": "UCSF opens the Wayne and Gladys Valley Center for Vision at 490 Illinois Street",
+     "expected": false,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-sfyimby-490illinois",
+       "title": "UCSF Opens Medical Facility at 490 Illinois Street, Mission Bay, San Francisco",
+       "publisher": "San Francisco YIMBY",
+       "date": "2020-11-27",
+       "url": "https://sfyimby.com/2020/11/ucsf-opens-medical-facility-at-490-illinois-street-mission-bay-san-francisco.html",
+       "accessed": "2026-09-21"
+      }
+     ],
+     "source": "San Francisco YIMBY, 2020-11-27",
+     "origin": "record",
+     "category": "status",
+     "category_label": "Status",
+     "record": {
+      "id": "mission_bay_490_499_illinois",
+      "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology",
+      "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision & Alexandria Center for Science and Technology)",
+      "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology/",
+      "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -85057,10 +84834,29 @@
    "changes": [],
    "images": [],
    "open_questions": [
-    "Exact month/day of the 2008 completion is not sourced, only the year.",
-    "The 2006 construction permit's own block/lot (block 3940, lot 001) differs from the lot the Assessor now uses for this address (lot 004); the address, biotechnical/medical-research-facility description, 6 stories, and $90M cost (matching the scale reported elsewhere for this building) all line up with this parcel, so this is treated as a lot renumbering, not a different building. The permit's own completion sign-off (2009-04-06) also runs slightly later than the Assessor's 2008 year, which may reflect a lag between substantial completion and permit closeout."
+    "MERGED 2026-09-22: this record combines the former mission_bay_490_illinois and mission_bay_499_illinois records, matching the geometry files' own 2026-09-22 merge (data/manual/mission_bay_490_499_illinois.geojson) -- both buildings share one DataSF Building Footprints mblr (SF3940003) and are described together as a connected 490-499 Illinois campus in commercial listings. UCSF's own occupancy at 499 Illinois St (leased, then purchased) versus outright ownership at 490 Illinois St is not distinguished by a source found in this pass.",
+    "Exact opening day within November 2020 (490 Illinois) is not given by the source found; only the month is confirmed. Exact month/day of the 2008 completion (499 Illinois) is likewise not sourced, only the year.",
+    "The 2006 construction permit's own block/lot for 499 Illinois St (block 3940, lot 001) differs from the lot the Assessor now uses for this address (lot 004); the address, biotechnical/medical-research-facility description, 6 stories, and $90M cost all line up with this parcel, so this is treated as a lot renumbering, not a different building. The permit's own completion sign-off (2009-04-06) also runs slightly later than the Assessor's 2008 year, which may reflect a lag between substantial completion and permit closeout.",
+    "2026-09-21 pass: found the January 26, 2017 Regents budget/design approval item for 490 Illinois St (UCSF calls it 'Block 33' in its own campus numbering -- assumed at the time to be a coincidental name collision with this project's unrelated OCII-plan block 33). The direct ucsf.edu article returned HTTP 403 to automated fetches in this pass; its content (matching $237,000,000 cost and 12-story/5-story/3-story massing figures already in this record) was confirmed via a search-engine summary rather than a direct read. A primary Regents PDF for the January 26, 2017 item itself was not located.",
+    "2026-09-22: the 'coincidental name collision' assumption above was reopened -- the owner directly identified OCII plan block 33 (data/records/ucsf_valley_center_for_vision_west.json, west of Illinois St, about 60-100m from this record's 490 Illinois St tower) as ALSO being Valley Center for Vision, not unrelated. Whether that west building is a second wing of this same facility, a distinct building sharing the name, or a misidentification, is unresolved -- see that record's own open_questions; not re-investigated here."
    ],
    "sources": [
+    {
+     "id": "src-sfyimby-490illinois",
+     "title": "UCSF Opens Medical Facility at 490 Illinois Street, Mission Bay, San Francisco",
+     "publisher": "San Francisco YIMBY",
+     "date": "2020-11-27",
+     "url": "https://sfyimby.com/2020/11/ucsf-opens-medical-facility-at-490-illinois-street-mission-bay-san-francisco.html",
+     "accessed": "2026-09-21"
+    },
+    {
+     "id": "src-ucsf-2017-block33",
+     "title": "UC Regents Approve Budget, Design for Block 33 Building at Mission Bay",
+     "publisher": "UC San Francisco",
+     "date": "2017-02",
+     "url": "https://www.ucsf.edu/news/2017/02/405756/uc-regents-approve-budget-design-block-33-building-mission-bay",
+     "accessed": "2026-09-21"
+    },
     {
      "id": "src-datasf-499illinois",
      "title": "Assessor Historical Secured Property Tax Rolls (blklot 3940004, 499 Illinois St): year_property_built 2008",
@@ -85084,6 +84880,11 @@
     },
     {
      "id": null,
+     "title": "openstreetmap.org/way/84821715",
+     "url": "https://www.openstreetmap.org/way/84821715"
+    },
+    {
+     "id": null,
      "title": "fiercebiotech.com/biotech/alexandria-s-499-illinois-street-mission-bay-san-francisco-signs-anchor-97-700-rentable",
      "url": "https://www.fiercebiotech.com/biotech/alexandria-s-499-illinois-street-mission-bay-san-francisco-signs-anchor-97-700-rentable"
     },
@@ -85093,169 +84894,355 @@
      "url": "https://www.openstreetmap.org/way/84821722"
     }
    ],
-   "notes": "Shares its DataSF mblr (SF3940003) with the adjacent 490 Illinois St building -- see that file's notes.",
+   "notes": "OCII plan block X4 (a plan-era open-space number absorbed into this final building complex, per docs/briefs/mission_bay_block_inventory.csv). UCSF Health also operates a Reproductive Health clinic on 499 Illinois St's 6th floor.",
    "has_record_file": true,
-   "last_verified": "2026-09-21",
+   "last_verified": "2026-09-22",
    "tenants": [],
    "geometry": {
-    "type": "Polygon",
+    "type": "MultiPolygon",
     "coordinates": [
      [
       [
-       -122.3874973,
-       37.7662062
-      ],
+       [
+        -122.3874912,
+        37.7661702
+       ],
+       [
+        -122.3874911,
+        37.7661693
+       ],
+       [
+        -122.3874854,
+        37.7661363
+       ],
+       [
+        -122.3874802,
+        37.7660783
+       ],
+       [
+        -122.3874691,
+        37.7659757
+       ],
+       [
+        -122.387265,
+        37.7659894
+       ],
+       [
+        -122.3870566,
+        37.7659486
+       ],
+       [
+        -122.3870546,
+        37.7659526
+       ],
+       [
+        -122.3870131,
+        37.7659464
+       ],
+       [
+        -122.387013,
+        37.7659463
+       ],
+       [
+        -122.387023,
+        37.7659272
+       ],
+       [
+        -122.3870151,
+        37.7659259
+       ],
+       [
+        -122.3870081,
+        37.7659392
+       ],
+       [
+        -122.3868934,
+        37.7659184
+       ],
+       [
+        -122.3868934,
+        37.7659183
+       ],
+       [
+        -122.3870209,
+        37.7656707
+       ],
+       [
+        -122.387151,
+        37.7656642
+       ],
+       [
+        -122.3871511,
+        37.7656643
+       ],
+       [
+        -122.3871421,
+        37.7656815
+       ],
+       [
+        -122.3871686,
+        37.7656786
+       ],
+       [
+        -122.387177,
+        37.7656622
+       ],
+       [
+        -122.3879104,
+        37.7656161
+       ],
+       [
+        -122.3879105,
+        37.7656163
+       ],
+       [
+        -122.3879417,
+        37.7659446
+       ],
+       [
+        -122.3879423,
+        37.7659508
+       ],
+       [
+        -122.3879594,
+        37.7661306
+       ],
+       [
+        -122.3879257,
+        37.766132
+       ],
+       [
+        -122.3879267,
+        37.7661365
+       ],
+       [
+        -122.3879256,
+        37.7661366
+       ],
+       [
+        -122.3879258,
+        37.7661381
+       ],
+       [
+        -122.3879305,
+        37.7661378
+       ],
+       [
+        -122.3879306,
+        37.766138
+       ],
+       [
+        -122.3879311,
+        37.7661426
+       ],
+       [
+        -122.3879313,
+        37.7661426
+       ],
+       [
+        -122.3879314,
+        37.7661428
+       ],
+       [
+        -122.3879329,
+        37.766178
+       ],
+       [
+        -122.3874973,
+        37.7662062
+       ],
+       [
+        -122.3874912,
+        37.7661702
+       ]
+      ]
+     ],
+     [
       [
-       -122.3874912,
-       37.7661702
-      ],
-      [
-       -122.3874911,
-       37.7661693
-      ],
-      [
-       -122.3874854,
-       37.7661363
-      ],
-      [
-       -122.3874802,
-       37.7660783
-      ],
-      [
-       -122.3874691,
-       37.7659757
-      ],
-      [
-       -122.387265,
-       37.7659894
-      ],
-      [
-       -122.3870566,
-       37.7659486
-      ],
-      [
-       -122.3870546,
-       37.7659526
-      ],
-      [
-       -122.3870131,
-       37.7659464
-      ],
-      [
-       -122.387013,
-       37.7659463
-      ],
-      [
-       -122.387023,
-       37.7659272
-      ],
-      [
-       -122.3870151,
-       37.7659259
-      ],
-      [
-       -122.3870081,
-       37.7659392
-      ],
-      [
-       -122.3868934,
-       37.7659184
-      ],
-      [
-       -122.3868934,
-       37.7659183
-      ],
-      [
-       -122.3870209,
-       37.7656707
-      ],
-      [
-       -122.387151,
-       37.7656642
-      ],
-      [
-       -122.3871511,
-       37.7656643
-      ],
-      [
-       -122.3871421,
-       37.7656815
-      ],
-      [
-       -122.3871686,
-       37.7656786
-      ],
-      [
-       -122.387177,
-       37.7656622
-      ],
-      [
-       -122.3879104,
-       37.7656161
-      ],
-      [
-       -122.3879105,
-       37.7656163
-      ],
-      [
-       -122.3879417,
-       37.7659446
-      ],
-      [
-       -122.3879417,
-       37.7659446
-      ],
-      [
-       -122.3879423,
-       37.7659508
-      ],
-      [
-       -122.3879594,
-       37.7661306
-      ],
-      [
-       -122.3879257,
-       37.766132
-      ],
-      [
-       -122.3879267,
-       37.7661365
-      ],
-      [
-       -122.3879256,
-       37.7661366
-      ],
-      [
-       -122.3879258,
-       37.7661381
-      ],
-      [
-       -122.3879305,
-       37.7661378
-      ],
-      [
-       -122.3879306,
-       37.766138
-      ],
-      [
-       -122.3879311,
-       37.7661426
-      ],
-      [
-       -122.3879313,
-       37.7661426
-      ],
-      [
-       -122.3879314,
-       37.7661428
-      ],
-      [
-       -122.3879329,
-       37.766178
-      ],
-      [
-       -122.3874973,
-       37.7662062
+       [
+        -122.3874939,
+        37.7663161
+       ],
+       [
+        -122.3874939,
+        37.766316
+       ],
+       [
+        -122.3879455,
+        37.7662924
+       ],
+       [
+        -122.3879483,
+        37.7663261
+       ],
+       [
+        -122.3879486,
+        37.766326
+       ],
+       [
+        -122.3879487,
+        37.7663262
+       ],
+       [
+        -122.3879492,
+        37.7663323
+       ],
+       [
+        -122.3879488,
+        37.7663324
+       ],
+       [
+        -122.3879491,
+        37.7663353
+       ],
+       [
+        -122.3879477,
+        37.7663353
+       ],
+       [
+        -122.3879479,
+        37.7663378
+       ],
+       [
+        -122.3879784,
+        37.7663352
+       ],
+       [
+        -122.3879784,
+        37.7663353
+       ],
+       [
+        -122.3880283,
+        37.766849
+       ],
+       [
+        -122.3875511,
+        37.7668782
+       ],
+       [
+        -122.387551,
+        37.7668781
+       ],
+       [
+        -122.3875499,
+        37.7668575
+       ],
+       [
+        -122.3873621,
+        37.7668687
+       ],
+       [
+        -122.3873618,
+        37.7668896
+       ],
+       [
+        -122.3871637,
+        37.7669
+       ],
+       [
+        -122.3871655,
+        37.7669049
+       ],
+       [
+        -122.3870968,
+        37.766909
+       ],
+       [
+        -122.3870967,
+        37.7669089
+       ],
+       [
+        -122.3870902,
+        37.76689
+       ],
+       [
+        -122.3870815,
+        37.76689
+       ],
+       [
+        -122.3870866,
+        37.7669045
+       ],
+       [
+        -122.3869483,
+        37.7669117
+       ],
+       [
+        -122.3869482,
+        37.7669116
+       ],
+       [
+        -122.3868606,
+        37.7666566
+       ],
+       [
+        -122.3869874,
+        37.7666243
+       ],
+       [
+        -122.386992,
+        37.7666372
+       ],
+       [
+        -122.3870026,
+        37.7666351
+       ],
+       [
+        -122.3869951,
+        37.7666133
+       ],
+       [
+        -122.3870521,
+        37.766601
+       ],
+       [
+        -122.3870521,
+        37.7666011
+       ],
+       [
+        -122.3870541,
+        37.7666064
+       ],
+       [
+        -122.3872169,
+        37.7665632
+       ],
+       [
+        -122.3875237,
+        37.7665511
+       ],
+       [
+        -122.3875087,
+        37.7663583
+       ],
+       [
+        -122.3874975,
+        37.7663589
+       ],
+       [
+        -122.3874974,
+        37.7663585
+       ],
+       [
+        -122.3874962,
+        37.7663586
+       ],
+       [
+        -122.3874961,
+        37.7663585
+       ],
+       [
+        -122.3874956,
+        37.7663523
+       ],
+       [
+        -122.3874961,
+        37.7663523
+       ],
+       [
+        -122.3874939,
+        37.7663161
+       ]
       ]
      ]
     ]
@@ -90385,13 +90372,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "PARTIALLY REAL -- the outer boundary is a real polygonized city block from real street geometry, not hand-traced; only the internal A/B split line is approximate (a bisection, since no real street divides this block into A and B).",
+     "accuracy_caveat": "PARTIALLY REAL -- the outer boundary is a real polygonized city block from real street geometry, not hand-traced; only the internal A/B split line is approximate (an equal-area bisection, since no real street divides this block into A and B). The east extension into the former access-lane gap is an inferred fill (convex hull minus 18C minus streets), not independently confirmed as driveway/parking pavement rather than a walkway.",
      "digitized_from": "Real block boundary from real street geometry (src/block_fit.py load_blocks(), trimmed against src/street_geometry.py's fuller street buffer); the plan's own A/B internal split has no mapped street, so it's a straight bisection along the block's long axis, not a real line."
     }
    },
    "centroid": {
-    "lon": -122.394942,
-    "lat": 37.769056
+    "lon": -122.395155,
+    "lat": 37.769049
    },
    "facts": [],
    "costs": [],
@@ -90437,9 +90424,14 @@
      "id": null,
      "title": "data/manual/_reference/mission_bay_land_use_map_2019.png",
      "url": "data/manual/_reference/mission_bay_land_use_map_2019.png"
+    },
+    {
+     "id": null,
+     "title": "sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
+     "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf"
     }
    ],
-   "notes": "No building on this site as of 2026-09-19 (satellite- and building-footprint-confirmed); currently an operating surface parking lot west of the Owens St curve. The OCII plan's own Dec 2019 Land Use Map designates this block for future UCSF institutional use, consistent with the rest of this campus row, but no specific project, developer, or timeline was found in this pass.",
+   "notes": "No building on this site as of 2026-09-19 (satellite- and building-footprint-confirmed); currently an operating surface parking lot west of the Owens St curve, now understood to run back-to-back with the existing Child Development Center building (18C) to its east. The OCII plan's own Dec 2019 Land Use Map designates this block for future UCSF institutional use, consistent with the rest of this campus row, but no specific project, developer, or timeline was found in this pass.",
    "has_record_file": false,
    "last_verified": null,
    "tenants": [],
@@ -90447,6 +90439,14 @@
     "type": "Polygon",
     "coordinates": [
      [
+      [
+       -122.39487560138858,
+       37.768593563463206
+      ],
+      [
+       -122.39499837851989,
+       37.768699169586505
+      ],
       [
        -122.39512097807071,
        37.768808268219416
@@ -90457,27 +90457,27 @@
       ],
       [
        -122.39536429461931,
-       37.7690474908538
+       37.76904749085381
       ],
       [
        -122.39551635840785,
-       37.769228775019734
+       37.76922877501972
       ],
       [
        -122.39554245869677,
-       37.769264196821744
+       37.76926419682175
       ],
       [
        -122.39554903535637,
-       37.769274880743886
+       37.76927488074388
       ],
       [
        -122.39553544918688,
-       37.769279872635586
+       37.76927987263557
       ],
       [
        -122.39542937942848,
-       37.76931703997258
+       37.76931703997257
       ],
       [
        -122.39534151262379,
@@ -90485,79 +90485,31 @@
       ],
       [
        -122.39525121056249,
-       37.769347010889256
+       37.76934701088925
       ],
       [
-       -122.39519245983676,
-       37.76935094129641
+       -122.39519245983678,
+       37.7693509412964
       ],
       [
        -122.39491420811505,
        37.76936771348862
       ],
       [
-       -122.39483283767818,
-       37.769372072026954
+       -122.39466992942323,
+       37.76938243784149
       ],
       [
-       -122.3945677665546,
-       37.76938627033655
+       -122.394584249579,
+       37.768554022086896
       ],
       [
-       -122.3945251665546,
-       37.76938857033896
-      ],
-      [
-       -122.3945239314868,
-       37.76938864317065
-      ],
-      [
-       -122.39442099514314,
-       37.76939522631584
-      ],
-      [
-       -122.39434083556341,
-       37.769400011488095
-      ],
-      [
-       -122.39418185899416,
-       37.769273282517155
-      ],
-      [
-       -122.39411664,
-       37.768591396
-      ],
-      [
-       -122.394746838,
-       37.768553412
-      ],
-      [
-       -122.394752013,
-       37.768552878
-      ],
-      [
-       -122.394757124,
-       37.768551905
-      ],
-      [
-       -122.39481107426236,
+       -122.39481107426238,
        37.76853923893674
-      ],
-      [
-       -122.39483283767818,
-       37.76855756126609
       ],
       [
        -122.39487560138858,
        37.768593563463206
-      ],
-      [
-       -122.39499837851989,
-       37.7686991695865
-      ],
-      [
-       -122.39512097807071,
-       37.768808268219416
       ]
      ]
     ]
@@ -90595,13 +90547,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- derived from the numbered real-gap-fragment technique (bbox minus real streets minus already-tracked polygons) rather than a specific real parcel or building-footprint source; the owner picked this union directly off a rendered numbered map. The small morphological closing used to bridge two internal walkway gaps may slightly overstate area at those two seams.",
-     "digitized_from": "Real block boundary from real street geometry (src/block_fit.py load_blocks(), trimmed against src/street_geometry.py's fuller street buffer); the plan's own A/B internal split has no mapped street, so it's a straight bisection along the block's long axis, not a real line."
+     "accuracy_caveat": "PARTIALLY REAL -- the outer boundary is a real polygonized city block from real street geometry, not hand-traced, except for its east edge (which now runs along 18C's real, already-tracked west edge) and its west edge (the equal-area bisection line shared with 18A, approximate since no real street divides this block into A and B). The extension into the former access-lane gap on this block's east side is an inferred fill (convex hull minus 18C minus streets), not independently confirmed as driveway/parking pavement rather than a walkway.",
+     "digitized_from": "Real block boundary from real street geometry (src/block_fit.py load_blocks(), trimmed against src/street_geometry.py's fuller street buffer); the plan's own A/B internal split has no mapped street, so it's an equal-area bisection along the block's long axis, not a real line."
     }
    },
    "centroid": {
-    "lon": -122.393609,
-    "lat": 37.768991
+    "lon": -122.393729,
+    "lat": 37.768974
    },
    "facts": [],
    "costs": [],
@@ -90649,7 +90601,309 @@
      "url": "data/manual/_reference/mission_bay_land_use_map_2019.png"
     }
    ],
-   "notes": "No building on this site as of 2026-09-19 (satellite- and building-footprint-confirmed); currently an operating surface parking lot west of the Owens St curve. The OCII plan's own Dec 2019 Land Use Map designates this block for future UCSF institutional use, consistent with the rest of this campus row, but no specific project, developer, or timeline was found in this pass.",
+   "notes": "No building on this site as of 2026-09-19 (satellite- and building-footprint-confirmed); currently an operating surface parking lot west of the Owens St curve, running back-to-back with the existing Child Development Center building (18C) to its east. The OCII plan's own Dec 2019 Land Use Map designates this block for future UCSF institutional use, consistent with the rest of this campus row, but no specific project, developer, or timeline was found in this pass.",
+   "has_record_file": false,
+   "last_verified": null,
+   "tenants": [],
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -122.39466992942323,
+       37.76938243784149
+      ],
+      [
+       -122.39407200988215,
+       37.769418476391536
+      ],
+      [
+       -122.39407295955834,
+       37.769418371141
+      ],
+      [
+       -122.39407291641461,
+       37.769417416624826
+      ],
+      [
+       -122.39407263019488,
+       37.769414424108895
+      ],
+      [
+       -122.39407248564474,
+       37.76941343770917
+      ],
+      [
+       -122.394072054093,
+       37.7694122410632
+      ],
+      [
+       -122.39407152789107,
+       37.76941098592224
+      ],
+      [
+       -122.39407036666793,
+       37.76940720651277
+      ],
+      [
+       -122.39406958423484,
+       37.76940333092589
+      ],
+      [
+       -122.39406918823633,
+       37.76939939702703
+      ],
+      [
+       -122.39406918254134,
+       37.769395443251284
+      ],
+      [
+       -122.39406956720562,
+       37.769391508227955
+      ],
+      [
+       -122.39406996583645,
+       37.76938950396211
+      ],
+      [
+       -122.39407010816625,
+       37.769388551310314
+      ],
+      [
+       -122.39407006300331,
+       37.76938758332291
+      ],
+      [
+       -122.3940514754907,
+       37.769193245101704
+      ],
+      [
+       -122.3940513309407,
+       37.76919225870287
+      ],
+      [
+       -122.3940508994944,
+       37.76919106234825
+      ],
+      [
+       -122.39405037304978,
+       37.769189806627146
+      ],
+      [
+       -122.3940492118283,
+       37.76918602721863
+      ],
+      [
+       -122.39404842939658,
+       37.769182151632926
+      ],
+      [
+       -122.3940480333992,
+       37.76917821773539
+      ],
+      [
+       -122.39404802770513,
+       37.76917426396105
+      ],
+      [
+       -122.39404841236995,
+       37.769170328939204
+      ],
+      [
+       -122.39404881112404,
+       37.7691683240553
+      ],
+      [
+       -122.39404895340637,
+       37.769167371721565
+      ],
+      [
+       -122.39404890824343,
+       37.769166403733934
+      ],
+      [
+       -122.39399470639788,
+       37.76859970659305
+      ],
+      [
+       -122.39399457519079,
+       37.768598797538246
+      ],
+      [
+       -122.39399365678447,
+       37.76859880874498
+      ],
+      [
+       -122.3933829596425,
+       37.76863561121961
+      ],
+      [
+       -122.39338200957063,
+       37.76863571457255
+      ],
+      [
+       -122.39338181890274,
+       37.768635794594324
+      ],
+      [
+       -122.39337803876485,
+       37.76863716202776
+      ],
+      [
+       -122.39337414046699,
+       37.76863814314472
+      ],
+      [
+       -122.39337016338033,
+       37.768638728036336
+      ],
+      [
+       -122.39336614767167,
+       37.76863891079546
+      ],
+      [
+       -122.39336213389808,
+       37.768638689576306
+      ],
+      [
+       -122.39335816259681,
+       37.7686380666131
+      ],
+      [
+       -122.3933560536296,
+       37.768637514296415
+      ],
+      [
+       -122.39335519579528,
+       37.76863733891755
+      ],
+      [
+       -122.39335415536934,
+       37.768637347053065
+      ],
+      [
+       -122.39314466592543,
+       37.76864997152666
+      ],
+      [
+       -122.3931437158532,
+       37.76865007487966
+      ],
+      [
+       -122.39314352552928,
+       37.768650154757076
+      ],
+      [
+       -122.39313974539319,
+       37.768651522190495
+      ],
+      [
+       -122.39313584709713,
+       37.76865250330779
+      ],
+      [
+       -122.39313187001224,
+       37.7686530882001
+      ],
+      [
+       -122.39312785430535,
+       37.76865327096025
+      ],
+      [
+       -122.39312384053333,
+       37.768653049742454
+      ],
+      [
+       -122.39311986923352,
+       37.76865242678092
+      ],
+      [
+       -122.39311776086988,
+       37.7686518746232
+      ],
+      [
+       -122.39311690274154,
+       37.76865169918449
+      ],
+      [
+       -122.39311586231689,
+       37.76865170732007
+      ],
+      [
+       -122.39270842710704,
+       37.768676260609965
+      ],
+      [
+       -122.394584249579,
+       37.768554022086896
+      ],
+      [
+       -122.39466992942323,
+       37.76938243784149
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "mission_bay_block_18c",
+   "slug": "mission-bay-south-block-18c-ucsf-at-mission-bay-child-development-center-owner-identified",
+   "name": "Mission Bay South Block 18C (UCSF at Mission Bay Child Development Center, owner-identified)",
+   "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-18c-ucsf-at-mission-bay-child-development-center-owner-identified/",
+   "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-18c-ucsf-at-mission-bay-child-development-center-owner-identified.json",
+   "names": [
+    "Mission Bay South Block 18C (UCSF at Mission Bay Child Development Center, owner-identified)"
+   ],
+   "site": {
+    "slug": "mission-bay",
+    "name": "Mission Bay",
+    "short": "Mission Bay",
+    "url": "https://pierandpoint.org/sites/mission-bay/"
+   },
+   "status": "existing",
+   "status_label": "Existing, not yet redeveloped",
+   "use": "institutional",
+   "relation": "tracked",
+   "adjacent_to": null,
+   "distance_note": null,
+   "how_to_comment": [],
+   "positions": [],
+   "address": null,
+   "summary": null,
+   "summary_sources": [],
+   "shape": {
+    "kind": "approximate",
+    "parcel": null,
+    "display": "fill",
+    "display_reason": null,
+    "notes": {
+     "accuracy_caveat": "APPROXIMATE BOUNDARY -- derived from the numbered real-gap-fragment technique (bbox minus real streets minus already-tracked polygons) rather than a specific real parcel or building-footprint source; the owner picked this union directly off a rendered numbered map. The small morphological closing used to bridge two internal walkway gaps may slightly overstate area at those two seams. IDENTITY: the 'UCSF at Mission Bay Child Development Center' name and this building's identification as that facility are the owner's own on-the-ground read, not independently confirmed against a parcel record, building footprint, or the UCSF document itself -- the UCSF map's 'Block 18C' label carries no address or cross-reference. Marked 'existing' rather than 'complete' because the UCSF map treats this as an interim use ahead of a long-term 'Open Space' redesignation, not a finished build-out.",
+     "digitized_from": "Real block boundary from real street geometry (src/block_fit.py load_blocks(), trimmed against src/street_geometry.py's fuller street buffer)."
+    }
+   },
+   "centroid": {
+    "lon": -122.393609,
+    "lat": 37.768991
+   },
+   "facts": [],
+   "costs": [],
+   "milestones": [],
+   "changes": [],
+   "images": [],
+   "open_questions": [],
+   "sources": [
+    {
+     "id": null,
+     "title": "data/manual/_reference/mission_bay_land_use_map_2019.png",
+     "url": "data/manual/_reference/mission_bay_land_use_map_2019.png"
+    },
+    {
+     "id": null,
+     "title": "sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
+     "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf"
+    }
+   ],
+   "notes": "Sited immediately west of Sandler Neurosciences Center. Per UCSF's own Dec 2024-updated campus map (June 2025 CAC presentation), this is Block 18C, long-term planned as Open Space, with childcare flagged as its near-term/current use -- read here as this already-operating Child Development Center. Address/operator (727 Nelson Rising Lane, Bright Horizons, since 2006) from web sources, not from a source document in this repo's own chain.",
    "has_record_file": false,
    "last_verified": null,
    "tenants": [],
@@ -96883,8 +97137,8 @@
     }
    },
    "centroid": {
-    "lon": -122.389505,
-    "lat": 37.767273
+    "lon": -122.389479,
+    "lat": 37.767295
    },
    "facts": [],
    "costs": [],
@@ -96925,8 +97179,14 @@
    "changes": [],
    "images": [],
    "open_questions": [],
-   "sources": [],
-   "notes": "OCII plan block 25B. Surface parking lot immediately east of Mission Hall (Global Health & Clinical Sciences Building), between it and 3rd St, north of 16th St. Currently undeveloped/planned per the OCII plan designation.",
+   "sources": [
+    {
+     "id": null,
+     "title": "sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
+     "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf"
+    }
+   ],
+   "notes": "OCII plan block 25B, confirmed by UCSF's own Dec 2024-updated campus map as 'Future Research'. Surface parking lot immediately east of Mission Hall (Global Health & Clinical Sciences Building), between it and 3rd St, north of 16th St. Currently undeveloped/planned per the OCII plan designation.",
    "has_record_file": false,
    "last_verified": null,
    "tenants": [],
@@ -96935,24 +97195,24 @@
     "coordinates": [
      [
       [
-       -122.38926497103954,
-       37.76691502453967
+       -122.38921912699313,
+       37.766951218459354
       ],
       [
-       -122.38926497103954,
-       37.767809899
+       -122.38926892591745,
+       37.76784470621355
       ],
       [
-       -122.3898653,
-       37.767809899
+       -122.38986832460233,
+       37.76781129847001
       ],
       [
-       -122.3898653,
-       37.76691502453967
+       -122.38981852567801,
+       37.766917810715825
       ],
       [
-       -122.38926497103954,
-       37.76691502453967
+       -122.38921912699313,
+       37.766951218459354
       ]
      ]
     ]
@@ -97071,11 +97331,11 @@
    }
   },
   {
-   "id": "ucsf_neurosurgery",
-   "slug": "ucsf-neurosurgery-at-san-francisco-mission-bay",
-   "name": "UCSF Neurosurgery at San Francisco Mission Bay",
-   "permalink": "https://pierandpoint.org/parcels/ucsf-neurosurgery-at-san-francisco-mission-bay/",
-   "api": "https://pierandpoint.org/api/v1/records/ucsf-neurosurgery-at-san-francisco-mission-bay.json",
+   "id": "ucsf_weill_neurosciences",
+   "slug": "weill-neurosciences-building",
+   "name": "Weill Neurosciences Building",
+   "permalink": "https://pierandpoint.org/parcels/weill-neurosciences-building/",
+   "api": "https://pierandpoint.org/api/v1/records/weill-neurosciences-building.json",
    "names": [
     "UCSF Neurosurgery at San Francisco Mission Bay",
     "Joan and Sanford I. Weill Neurosciences Building"
@@ -97108,7 +97368,7 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- an idealized rectangle (owner-directed construction: real-gap-fragment shape cut and aligned to Third Street Garage's own real orientation), not a hand-traced or surveyed footprint. The building's identity (UCSF Neurosurgery at San Francisco Mission Bay) and adjacency to Third Street Garage are from the owner's direct knowledge; not independently corroborated by a primary source in this pass.",
+     "accuracy_caveat": "APPROXIMATE -- an idealized rectangle (owner-directed construction: real-gap-fragment shape cut and aligned to Third Street Garage's own real orientation), not a hand-traced or surveyed footprint. The building name (Weill Neurosciences Building) is confirmed by UCSF's own campus map; UCSF Neurosurgery's presence in it is the owner's direct knowledge, not independently corroborated by a primary source in this pass.",
      "digitized_from": "Owner-directed construction, not a hand trace: real-gap-fragment 2 (11,626 sqm raw, from the numbered real-gap-fragment map for this area), idealized to a proper rectangle sharing Third Street Garage's own minimum-rotated-rectangle west edge and orientation, with the north walkway strip (a real gap fragment pinch point, width dropping to ~2m) cut off."
     }
    },
@@ -97165,11 +97425,11 @@
      "category": "status",
      "category_label": "Status",
      "record": {
-      "id": "ucsf_neurosurgery",
-      "slug": "ucsf-neurosurgery-at-san-francisco-mission-bay",
-      "name": "UCSF Neurosurgery at San Francisco Mission Bay",
-      "permalink": "https://pierandpoint.org/parcels/ucsf-neurosurgery-at-san-francisco-mission-bay/",
-      "api": "https://pierandpoint.org/api/v1/records/ucsf-neurosurgery-at-san-francisco-mission-bay.json"
+      "id": "ucsf_weill_neurosciences",
+      "slug": "weill-neurosciences-building",
+      "name": "Weill Neurosciences Building",
+      "permalink": "https://pierandpoint.org/parcels/weill-neurosciences-building/",
+      "api": "https://pierandpoint.org/api/v1/records/weill-neurosciences-building.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -97202,11 +97462,11 @@
      "category": "milestone",
      "category_label": "Milestone",
      "record": {
-      "id": "ucsf_neurosurgery",
-      "slug": "ucsf-neurosurgery-at-san-francisco-mission-bay",
-      "name": "UCSF Neurosurgery at San Francisco Mission Bay",
-      "permalink": "https://pierandpoint.org/parcels/ucsf-neurosurgery-at-san-francisco-mission-bay/",
-      "api": "https://pierandpoint.org/api/v1/records/ucsf-neurosurgery-at-san-francisco-mission-bay.json"
+      "id": "ucsf_weill_neurosciences",
+      "slug": "weill-neurosciences-building",
+      "name": "Weill Neurosciences Building",
+      "permalink": "https://pierandpoint.org/parcels/weill-neurosciences-building/",
+      "api": "https://pierandpoint.org/api/v1/records/weill-neurosciences-building.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -97239,11 +97499,11 @@
      "category": "status",
      "category_label": "Status",
      "record": {
-      "id": "ucsf_neurosurgery",
-      "slug": "ucsf-neurosurgery-at-san-francisco-mission-bay",
-      "name": "UCSF Neurosurgery at San Francisco Mission Bay",
-      "permalink": "https://pierandpoint.org/parcels/ucsf-neurosurgery-at-san-francisco-mission-bay/",
-      "api": "https://pierandpoint.org/api/v1/records/ucsf-neurosurgery-at-san-francisco-mission-bay.json"
+      "id": "ucsf_weill_neurosciences",
+      "slug": "weill-neurosciences-building",
+      "name": "Weill Neurosciences Building",
+      "permalink": "https://pierandpoint.org/parcels/weill-neurosciences-building/",
+      "api": "https://pierandpoint.org/api/v1/records/weill-neurosciences-building.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -97307,9 +97567,14 @@
      "date": "2016-03-24",
      "url": "https://regents.universityofcalifornia.edu/regmeet/mar16/gb1.pdf",
      "accessed": "2026-09-21"
+    },
+    {
+     "id": null,
+     "title": "sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
+     "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf"
     }
    ],
-   "notes": "OCII plan block 23A. Previously mismapped to Genentech Hall (a different, separate building further west); Genentech Hall's own real plan-block correlation is now an open question pending future review.",
+   "notes": "OCII plan block 23A on UCSF's own campus map. Previously mismapped to Genentech Hall (a different, separate building further west); Genentech Hall's own real plan-block correlation is now an open question pending future review. UCSF Neurosurgery at San Francisco Mission Bay is a clinical department practicing in this building; the building may house other departments as well.",
    "has_record_file": true,
    "last_verified": "2026-09-21",
    "tenants": [],
@@ -97342,14 +97607,13 @@
    }
   },
   {
-   "id": "mission_bay_block_33",
-   "slug": "mission-bay-south-block-33-unnamed-ucsf-building",
-   "name": "Mission Bay South Block 33 (unnamed UCSF building)",
-   "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-33-unnamed-ucsf-building/",
-   "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-33-unnamed-ucsf-building.json",
+   "id": "ucsf_valley_center_for_vision_west",
+   "slug": "ucsf-valley-center-for-vision",
+   "name": "UCSF Valley Center for Vision",
+   "permalink": "https://pierandpoint.org/parcels/ucsf-valley-center-for-vision/",
+   "api": "https://pierandpoint.org/api/v1/records/ucsf-valley-center-for-vision.json",
    "names": [
-    "Mission Bay South Block 33 (unnamed UCSF building)",
-    "UCSF Illinois Street Garage (probable)"
+    "UCSF Valley Center for Vision -- west building (OCII plan block 33)"
    ],
    "site": {
     "slug": "mission-bay",
@@ -97366,9 +97630,9 @@
    "how_to_comment": [],
    "positions": [],
    "address": null,
-   "summary": "This record's geometry is the north of two real, previously untracked UCSF buildings between 3rd and Illinois Streets, split from a single satellite-imagery fragment at a visible roofline gap; the same UCSF project that built the clinical building immediately south of it (this project's own mission_bay_block_34 record) also built a new Illinois Street Garage at 590 Illinois Street, described as sharing a block with the Valley Center for Vision to its north -- geographically the best match for this north building, though no address-linked primary source confirms the pairing.",
+   "summary": "A real, standing UCSF building on OCII plan block 33, between 3rd St and Illinois St, west of Illinois St -- about 60-100m from the already-tracked Wayne and Gladys Valley Center for Vision tower at 490 Illinois St, across the street. The owner directly identified this building as also being Valley Center for Vision. No independently published source (a UCSF page, news outlet or Regents document) naming this specific west-of-Illinois-St structure was found in this pass; the identification rests on the owner's own knowledge, recorded in the geometry file's own digitization_method log.",
    "summary_sources": [
-    "src-ucsf-real-estate-bayfront"
+    "src-geom-valley-west"
    ],
    "shape": {
     "kind": "approximate",
@@ -97376,7 +97640,7 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL BUILDING, APPROXIMATE BOUNDARY -- a real, standing structure clearly visible in Esri satellite imagery (not open land), but its own name/address/operator are NOT confirmed by any source checked in this pass -- flagged here rather than guessed. Boundary is the real-gap-fragment's own traced edge (following the street buffer's curb radius), not a hand-traced or surveyed building footprint.",
+     "accuracy_caveat": "REAL BUILDING, APPROXIMATE BOUNDARY -- a real, standing structure clearly visible in Esri satellite imagery (not open land), identified by the owner as UCSF's Valley Center for Vision. Boundary is the real-gap-fragment's own traced edge (following the street buffer's curb radius) with one corner re-derived to the real street angle (see digitization_method), not a hand-traced or surveyed building footprint. OPEN QUESTION, not resolved in this pass: this project already tracks a separate, already-committed record also named 'Valley Center for Vision' at 490 Illinois St (data/manual/mission_bay_490_499_illinois.geojson), about 60-100m east of this polygon, across Illinois St. The owner has directly and repeatedly confirmed this west-of-Illinois-St building is also Valley Center for Vision; whether it is a second wing/annex of the same named facility, a distinct building that happens to share the name, or a misidentification of one of the two, has not been independently verified against a primary source in this pass -- flagged here rather than silently merged or silently treated as unrelated.",
      "digitized_from": "Real-gap-fragment technique: bbox.difference(street buffer).difference(already-tracked polygons) between 3rd St and Illinois St, south of 16th St. The owner directly identified this whole real-gap fragment (fragment 6, 12,421 sqm raw) as capturing two separate real buildings, not one, and directed cutting it at the visible gap between the two rooflines in Esri satellite imagery (lat 37.76578)."
     }
    },
@@ -97386,100 +97650,26 @@
    },
    "facts": [],
    "costs": [],
-   "milestones": [
-    {
-     "date": "2021-04",
-     "date_label": "~2021",
-     "status": "under_construction",
-     "status_label": "Under construction",
-     "text": "Construction begins on the combined Bayfront Medical Building and Illinois Street Garage project, per UCSF Real Estate's own project page -- probable identity of this record's building (see open_questions); the clinical building's own construction start is separately dated October 2, 2021 by SF YIMBY (see the neighboring mission_bay_block_34 record), so this April 2021 date most likely reflects earlier garage or site work rather than the clinic",
-     "expected": false,
-     "approximate": true,
-     "sources": [
-      {
-       "id": "src-ucsf-real-estate-bayfront",
-       "title": "Bayfront Medical Building and Illinois Street Garage (project page: Illinois Street Garage, 590 Illinois St, 9 stories / 500 spaces, opened May 15, 2023; on the same block as the Wayne and Gladys Valley Center for Vision at 490 Illinois St)",
-       "publisher": "UCSF Real Estate",
-       "url": "https://realestate.ucsf.edu/projects/bayfront-medical-building-and-illinois-street-garage",
-       "accessed": "2026-09-21"
-      }
-     ],
-     "source": "UCSF Real Estate",
-     "origin": "record",
-     "category": "status",
-     "category_label": "Status",
-     "record": {
-      "id": "mission_bay_block_33",
-      "slug": "mission-bay-south-block-33-unnamed-ucsf-building",
-      "name": "Mission Bay South Block 33 (unnamed UCSF building)",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-33-unnamed-ucsf-building/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-33-unnamed-ucsf-building.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2023-05",
-     "date_label": "~2023",
-     "status": "complete",
-     "status_label": "Complete",
-     "text": "Illinois Street Garage (590 Illinois St), 9 stories / 500 spaces, opens as part of UCSF's Block 34 Clinical Building and Parking Garage project -- probable identity of this record's building, inferred from its position immediately north of the clinical building this project also built (see open_questions)",
-     "expected": false,
-     "approximate": true,
-     "sources": [
-      {
-       "id": "src-ucsf-real-estate-bayfront",
-       "title": "Bayfront Medical Building and Illinois Street Garage (project page: Illinois Street Garage, 590 Illinois St, 9 stories / 500 spaces, opened May 15, 2023; on the same block as the Wayne and Gladys Valley Center for Vision at 490 Illinois St)",
-       "publisher": "UCSF Real Estate",
-       "url": "https://realestate.ucsf.edu/projects/bayfront-medical-building-and-illinois-street-garage",
-       "accessed": "2026-09-21"
-      }
-     ],
-     "source": "UCSF Real Estate",
-     "origin": "record",
-     "category": "status",
-     "category_label": "Status",
-     "record": {
-      "id": "mission_bay_block_33",
-      "slug": "mission-bay-south-block-33-unnamed-ucsf-building",
-      "name": "Mission Bay South Block 33 (unnamed UCSF building)",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-33-unnamed-ucsf-building/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-33-unnamed-ucsf-building.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    }
-   ],
+   "milestones": [],
    "changes": [],
    "images": [],
    "open_questions": [
-    "This record's own geometry file states the building's name/address/operator are not confirmed by any source checked in the geometry-correction pass. This research pass found a strong but not fully confirmed candidate: UCSF's Illinois Street Garage (590 Illinois St), the parking-garage half of the same 'Block 34 Clinical Building and Parking Garage' project whose clinical building this project identifies as the neighboring mission_bay_block_34 record. The garage is described in UCSF's own project page as on the same block as 490 Illinois St (north of the clinic, which sits at the 3rd/Mariposa corner to the south) -- matching this record's position as the NORTH of the two split buildings. No source directly ties an address to this record's own OCII plan-block-33 parcel number, so the identification is geographic inference, not confirmed by an address-to-parcel source.",
-    "If this identification is correct, exact spaces/levels may not match this record's own traced footprint precisely (the garage is described as attached to/adjoining the clinical building rather than as a fully freestanding structure); this record's geometry was derived independently via the real-gap-fragment technique and was not re-traced against this new information.",
-    "Cost of the garage alone (vs. the combined ~$335.8M clinical-building-plus-garage project figure reported elsewhere) was not found.",
-    "2026-09-21 pass: added an April 2021 construction-start milestone from UCSF Real Estate's own combined project page for 'Bayfront Medical Building and Illinois Street Garage.' This is a combined-project date covering both buildings, not a garage-specific one; direct confirmation that the garage itself (rather than the clinical building) broke ground in April 2021 specifically was not found in this pass."
+    "This project already tracks a separate, independently sourced record also named Valley Center for Vision at 490 Illinois St (data/records/mission_bay_490_499_illinois.json), about 60-100m east of this building, across Illinois St. That record's own 2017 UC Regents source describes a single 12-story tower with a 5-story south wing and a 3-story north wing at 490 Illinois St -- it does not mention a separate west-of-Illinois-St building. Whether this west building is a second wing/annex of the same named facility built later, a distinct building that happens to share the name, or a misidentification of one of the two records, has not been resolved against any primary source in this pass -- flagged here rather than silently merged with, or silently treated as unrelated to, the 490 Illinois St record.",
+    "2026-09-22, new data point (not a resolution): re-running this project's own DataSF business-registration spatial join (src/join_retail.py, out/retail_needs_review_approximate.csv) after this record's geometry was added shows several registrations -- Buenafe #2, All May See, All May See Foundation, Simon Fung -- whose registered point-location falls inside THIS west building's polygon, but whose own listed street address is '490 Illinois St' (the other, east-of-Illinois-St tower's address), not a west-of-Illinois-St address. This could mean the two buildings genuinely share one administrative/mailing address, or it could simply be a DataSF geocoding artifact (a coarse or shared geocode for a multi-building campus) -- the join is spatial-only and 'never auto-confirmed' per that script's own docstring, so this is logged as a data point for a future pass, not treated as confirming the relationship either way. Notably, the same join's matches for the neighboring ucsf_bayfront_medical_building and ucsf_illinois_street_garage records DO show addresses consistent with their own already-sourced identities (520 Illinois St and 590 Illinois St respectively), which is corroborating, not contradictory, evidence for those two.",
+    "No address, opening date, architect, cost or square footage for this specific west building was found in this pass; every fact this project has for 'Valley Center for Vision' construction, cost and massing lives in the 490 Illinois St record instead, and may or may not apply here.",
+    "Geometry: this building's east edge (its own real, digitized boundary) sits close to, but not necessarily exactly on, Illinois St's west curb line -- not independently verified against DataSF Building Footprints or an Assessor parcel in this pass; see the geometry file's own accuracy_caveat."
    ],
    "sources": [
     {
-     "id": "src-ucsf-real-estate-bayfront",
-     "title": "Bayfront Medical Building and Illinois Street Garage (project page: Illinois Street Garage, 590 Illinois St, 9 stories / 500 spaces, opened May 15, 2023; on the same block as the Wayne and Gladys Valley Center for Vision at 490 Illinois St)",
-     "publisher": "UCSF Real Estate",
-     "url": "https://realestate.ucsf.edu/projects/bayfront-medical-building-and-illinois-street-garage",
-     "accessed": "2026-09-21"
+     "id": "src-geom-valley-west",
+     "title": "digitization_method log for ucsf_valley_center_for_vision_west.geojson",
+     "publisher": "Pier & Point geometry records (this repository, data/manual/ucsf_valley_center_for_vision_west.geojson)",
+     "accessed": "2026-09-22"
     }
    ],
-   "notes": "OCII plan block 33. Between 3rd St and Illinois St, south of 16th St, immediately east of UCSF Medical Center at Mission Bay (across 3rd St). Name/operator not yet confirmed.",
+   "notes": "OCII plan block 33. Between 3rd St and Illinois St, south of 16th St, immediately east of UCSF Medical Center at Mission Bay (across 3rd St), west of Illinois St. See accuracy_caveat for the unresolved naming question against the 490 Illinois St record.",
    "has_record_file": true,
-   "last_verified": "2026-09-21",
+   "last_verified": "2026-09-22",
    "tenants": [],
    "geometry": {
     "type": "Polygon",
@@ -98218,8 +98408,8 @@
        37.76578
       ],
       [
-       -122.38884303435361,
-       37.76578
+       -122.3888389922191,
+       37.76573786284002
       ],
       [
        -122.38893936,
@@ -98230,14 +98420,13 @@
    }
   },
   {
-   "id": "mission_bay_block_34",
-   "slug": "mission-bay-south-block-34-unnamed-ucsf-building",
-   "name": "Mission Bay South Block 34 (unnamed UCSF building)",
-   "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-34-unnamed-ucsf-building/",
-   "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-34-unnamed-ucsf-building.json",
+   "id": "ucsf_bayfront_medical_building",
+   "slug": "ucsf-bayfront-medical-building",
+   "name": "UCSF Bayfront Medical Building",
+   "permalink": "https://pierandpoint.org/parcels/ucsf-bayfront-medical-building/",
+   "api": "https://pierandpoint.org/api/v1/records/ucsf-bayfront-medical-building.json",
    "names": [
-    "Mission Bay South Block 34 (unnamed UCSF building)",
-    "UCSF Bayfront Medical Building (probable)"
+    "UCSF Bayfront Medical Building"
    ],
    "site": {
     "slug": "mission-bay",
@@ -98254,7 +98443,7 @@
    "how_to_comment": [],
    "positions": [],
    "address": null,
-   "summary": "This record's geometry is the south of two real, previously untracked UCSF buildings between 3rd and Illinois Streets down to Mariposa Street; that location -- the corner of 3rd, Mariposa and Illinois -- matches UCSF's own Bayfront Medical Building (520 Illinois St), a five-story, ~182,800-sq-ft clinical building (Stantec architect, Clark Construction general contractor) built alongside a new Illinois Street parking garage under UCSF's 'Block 34 Clinical Building and Parking Garage' project, with construction starting October 2021 and the clinic opening in August 2024.",
+   "summary": "520 Illinois Street, a five-story, ~182,800-sq-ft clinical building (Stantec architect, Clark Construction general contractor) at the corner of 3rd, Mariposa and Illinois Streets -- the owner identified this as the north portion of what this project had tracked as one combined \"block 34\" fragment, split 2026-09-22 along a visible roofline seam from the Illinois Street Garage immediately south of it (data/records/ucsf_illinois_street_garage.json), both built under UCSF's own \"Block 34 Clinical Building and Parking Garage\" project.",
    "summary_sources": [
     "src-ucsf-real-estate-bayfront",
     "src-sfyimby-block34-2021"
@@ -98265,13 +98454,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL BUILDING, APPROXIMATE BOUNDARY -- a real, standing structure clearly visible in Esri satellite imagery (not open land), but its own name/address/operator are NOT confirmed by any source checked in this pass -- flagged here rather than guessed. Boundary is the real-gap-fragment's own traced edge (following the street buffer's curb radius), not a hand-traced or surveyed building footprint.",
-     "digitized_from": "Real-gap-fragment technique: bbox.difference(street buffer).difference(already-tracked polygons) between 3rd St and Illinois St, south of 16th St, extended down to Mariposa St. The owner directly identified this whole real-gap fragment as capturing two separate real buildings, not one, and directed cutting it at the visible gap between the two rooflines in Esri satellite imagery (lat 37.76578)."
+     "accuracy_caveat": "REAL BUILDING, APPROXIMATE BOUNDARY -- a real, standing structure clearly visible in Esri satellite imagery (not open land). Boundary is the real-gap-fragment's own traced edge (following the street buffer's curb radius) with the north cap (and, for the garage, the cut from the building to its north) re-derived to the real street angle -- see digitization_method -- not a hand-traced or surveyed building footprint. The split between this building and its neighbor follows a visible satellite roofline seam, not a surveyed or permitted lot line -- treat the exact boundary as indicative, not authoritative.",
+     "digitized_from": "Real-gap-fragment technique: bbox.difference(street buffer).difference(already-tracked polygons) between 3rd St and Illinois St, south of 16th St, extended down to Mariposa St. The owner directly identified this whole real-gap fragment as capturing two separate real buildings, not one, and directed cutting it at the visible gap between the two rooflines in Esri satellite imagery (lat 37.76578) -- see mission_bay_block_33.geojson (now UCSF Valley Center for Vision -- west building) for the piece north of that cut."
     }
    },
    "centroid": {
-    "lon": -122.388366,
-    "lat": 37.764453
+    "lon": -122.388393,
+    "lat": 37.765427
    },
    "facts": [
     {
@@ -98314,48 +98503,11 @@
      "category": "milestone",
      "category_label": "Milestone",
      "record": {
-      "id": "mission_bay_block_34",
-      "slug": "mission-bay-south-block-34-unnamed-ucsf-building",
-      "name": "Mission Bay South Block 34 (unnamed UCSF building)",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-34-unnamed-ucsf-building/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-34-unnamed-ucsf-building.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2021-04",
-     "date_label": "Apr 2021",
-     "status": "under_construction",
-     "status_label": "Under construction",
-     "text": "Construction begins on the Illinois Street Garage portion of the Block 34 project specifically (500 spaces, nine levels), per Clark Construction's own press release: \"Clark started construction on the garage portion of the development in April 2021\" -- distinct from the clinical building's own Sept/Oct 2021 groundbreaking",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-clark-groundbreaking-2021",
-       "title": "Clark Breaks Ground on UCSF's New Clinical Building in Mission Bay (\"Clark started construction on the garage portion of the development in April 2021\")",
-       "publisher": "Clark Construction Group (general contractor's own press release)",
-       "date": "2021-09-23",
-       "url": "https://www.clarkconstruction.com/news/clark-breaks-ground-ucsfs-new-clinical-building-mission-bay",
-       "accessed": "2026-09-22"
-      }
-     ],
-     "source": "Clark Construction Group (general contractor's own press release), 2021-09-23",
-     "origin": "record",
-     "category": "status",
-     "category_label": "Status",
-     "record": {
-      "id": "mission_bay_block_34",
-      "slug": "mission-bay-south-block-34-unnamed-ucsf-building",
-      "name": "Mission Bay South Block 34 (unnamed UCSF building)",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-34-unnamed-ucsf-building/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-34-unnamed-ucsf-building.json"
+      "id": "ucsf_bayfront_medical_building",
+      "slug": "ucsf-bayfront-medical-building",
+      "name": "UCSF Bayfront Medical Building",
+      "permalink": "https://pierandpoint.org/parcels/ucsf-bayfront-medical-building/",
+      "api": "https://pierandpoint.org/api/v1/records/ucsf-bayfront-medical-building.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -98388,11 +98540,11 @@
      "category": "milestone",
      "category_label": "Milestone",
      "record": {
-      "id": "mission_bay_block_34",
-      "slug": "mission-bay-south-block-34-unnamed-ucsf-building",
-      "name": "Mission Bay South Block 34 (unnamed UCSF building)",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-34-unnamed-ucsf-building/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-34-unnamed-ucsf-building.json"
+      "id": "ucsf_bayfront_medical_building",
+      "slug": "ucsf-bayfront-medical-building",
+      "name": "UCSF Bayfront Medical Building",
+      "permalink": "https://pierandpoint.org/parcels/ucsf-bayfront-medical-building/",
+      "api": "https://pierandpoint.org/api/v1/records/ucsf-bayfront-medical-building.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -98407,7 +98559,7 @@
      "date_label": "Aug 27, 2024",
      "status": "complete",
      "status_label": "Complete",
-     "text": "UCSF Health Bayfront Medical Building (520 Illinois St) opens -- probable identity of this record's building, inferred from its position at the 3rd/Mariposa/Illinois corner this project's clinical building occupies (see open_questions). The adjoining nine-level, 500-space Illinois Street Garage came online separately in 2023.",
+     "text": "UCSF Health Bayfront Medical Building (520 Illinois St) opens",
      "expected": false,
      "approximate": false,
      "sources": [
@@ -98428,7 +98580,7 @@
       },
       {
        "id": "src-cpe-bayfront-2024",
-       "title": "UCSF Opens $228M Health-Care Facility (Bayfront Medical Building opened Aug 27, 2024; the adjoining 500-space, nine-level parking garage \"came online\" in 2023; clinical building broke ground Sept 2021, the parking structure \"a few months later\" -- superseded by Clark Construction's own more specific account, below)",
+       "title": "UCSF Opens $228M Health-Care Facility (Bayfront Medical Building opened Aug 27, 2024; the adjoining 500-space, nine-level parking garage \"came online\" in 2023; clinical building broke ground Sept 2021, the parking structure \"a few months later\" -- superseded by Clark Construction's own more specific account, in the neighboring ucsf_illinois_street_garage record)",
        "publisher": "Commercial Property Executive (commercialsearch.com)",
        "date": "2024",
        "url": "https://www.commercialsearch.com/news/ucsf-opens-228m-health-care-facility/",
@@ -98440,11 +98592,11 @@
      "category": "status",
      "category_label": "Status",
      "record": {
-      "id": "mission_bay_block_34",
-      "slug": "mission-bay-south-block-34-unnamed-ucsf-building",
-      "name": "Mission Bay South Block 34 (unnamed UCSF building)",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-34-unnamed-ucsf-building/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-34-unnamed-ucsf-building.json"
+      "id": "ucsf_bayfront_medical_building",
+      "slug": "ucsf-bayfront-medical-building",
+      "name": "UCSF Bayfront Medical Building",
+      "permalink": "https://pierandpoint.org/parcels/ucsf-bayfront-medical-building/",
+      "api": "https://pierandpoint.org/api/v1/records/ucsf-bayfront-medical-building.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -98458,9 +98610,8 @@
    "changes": [],
    "images": [],
    "open_questions": [
-    "This record's own geometry file states the building's name/address/operator are not confirmed by any source checked in the geometry-correction pass. This research pass found a strong but not fully confirmed candidate: UCSF's Bayfront Medical Building (520 Illinois St), the clinical half of the 'Block 34 Clinical Building and Parking Garage' project, whose own CEQA filing places it south of the Wayne and Gladys Valley Center for Vision (this project's mission_bay_490_illinois record) and at the corner of 3rd and Mariposa -- matching this record's own notes exactly (south building, extending to Mariposa St). No source directly ties an address to this record's own OCII plan-block-34 parcel number, so the identification is geographic inference from UCSF's own project descriptions, not confirmed by an address-to-parcel source.",
-    "2026-09-22 pass: Commercial Property Executive's Aug 2024 article states the building opened Aug 27, 2024 and the garage \"came online\" in 2023 (no specific day found for the garage); this resolves the prior Aug 23 vs 27 ambiguity in favor of Aug 27, though the exact day for the garage's own opening is still not pinned down.",
-    "A second 2026-09-22 pass reversed the CPE-based read above: Clark Construction's own press release (the general contractor, a more authoritative account than a trade article's paraphrase) explicitly states \"Clark started construction on the garage portion of the development in April 2021\" -- i.e. before, not after, the clinical building's own Sept/Oct 2021 groundbreaking. Added as a real milestone. The garage's own exact opening day (commonly reported as May 15, 2023) was not found as a directly quotable primary source in this pass -- UCSF's own project page states it but has repeatedly blocked automated access (403) by every method tried -- so only the year (2023) is used above, not the specific day.",
+    "2026-09-22, corroborating data point: this project's own DataSF business-registration spatial join (src/join_retail.py, out/retail_needs_review_approximate.csv), re-run after this record's geometry was added, shows registrations whose point-location falls inside this record's polygon listing '520 Illinois St # D2317' and '520 Illinois St # D1200' as their address -- matching the 520 Illinois St address already sourced from UCSF Real Estate's own project page, not contradicting it. The join is spatial-only and never auto-confirmed per that script's own docstring, so this is logged as corroboration, not an independent primary source.",
+    "SPLIT 2026-09-22: this record was previously mission_bay_block_34 (a probable, geographically-inferred identity for the WHOLE of a fragment that also included the Illinois Street Garage to its south). The owner directly corrected this: UCSF built three real structures where the OCII plan showed two, and Bayfront Medical Building is only the north piece of that fragment (see data/records/ucsf_illinois_street_garage.json for the south piece). The split follows a visible satellite roofline seam, not a surveyed or permitted lot line, and its exact boundary should be treated as indicative rather than authoritative.",
     "Total project cost is reported elsewhere as approximately $335.8 million for the combined clinical building and garage; not broken out per building and not independently verified against a primary UCSF or Regents document in this pass, so left out of costs."
    ],
    "sources": [
@@ -98497,22 +98648,14 @@
     },
     {
      "id": "src-cpe-bayfront-2024",
-     "title": "UCSF Opens $228M Health-Care Facility (Bayfront Medical Building opened Aug 27, 2024; the adjoining 500-space, nine-level parking garage \"came online\" in 2023; clinical building broke ground Sept 2021, the parking structure \"a few months later\" -- superseded by Clark Construction's own more specific account, below)",
+     "title": "UCSF Opens $228M Health-Care Facility (Bayfront Medical Building opened Aug 27, 2024; the adjoining 500-space, nine-level parking garage \"came online\" in 2023; clinical building broke ground Sept 2021, the parking structure \"a few months later\" -- superseded by Clark Construction's own more specific account, in the neighboring ucsf_illinois_street_garage record)",
      "publisher": "Commercial Property Executive (commercialsearch.com)",
      "date": "2024",
      "url": "https://www.commercialsearch.com/news/ucsf-opens-228m-health-care-facility/",
      "accessed": "2026-09-22"
-    },
-    {
-     "id": "src-clark-groundbreaking-2021",
-     "title": "Clark Breaks Ground on UCSF's New Clinical Building in Mission Bay (\"Clark started construction on the garage portion of the development in April 2021\")",
-     "publisher": "Clark Construction Group (general contractor's own press release)",
-     "date": "2021-09-23",
-     "url": "https://www.clarkconstruction.com/news/clark-breaks-ground-ucsfs-new-clinical-building-mission-bay",
-     "accessed": "2026-09-22"
     }
    ],
-   "notes": "OCII plan block 34. Between 3rd St and Illinois St, south of block 33, down to Mariposa St. Name/operator not yet confirmed.",
+   "notes": "OCII plan block 34 (north portion). Between 3rd St and Illinois St, south of block 33 (Valley Center for Vision), north of the Illinois Street Garage. 520 Illinois St, 5 stories, ~182,800 sq ft, architect Stantec, GC Clark Construction, opened Aug 27 2024, per UCSF's own project page.",
    "has_record_file": true,
    "last_verified": "2026-09-22",
    "tenants": [],
@@ -98523,6 +98666,182 @@
       [
        -122.38814882846074,
        37.76578
+      ],
+      [
+       -122.38806756835271,
+       37.76494000000001
+      ],
+      [
+       -122.3887584087156,
+       37.7648978215307
+      ],
+      [
+       -122.3888389922191,
+       37.76573786284002
+      ],
+      [
+       -122.38814882846074,
+       37.76578
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ucsf_illinois_street_garage",
+   "slug": "ucsf-illinois-street-garage",
+   "name": "UCSF Illinois Street Garage",
+   "permalink": "https://pierandpoint.org/parcels/ucsf-illinois-street-garage/",
+   "api": "https://pierandpoint.org/api/v1/records/ucsf-illinois-street-garage.json",
+   "names": [
+    "UCSF Illinois Street Garage"
+   ],
+   "site": {
+    "slug": "mission-bay",
+    "name": "Mission Bay",
+    "short": "Mission Bay",
+    "url": "https://pierandpoint.org/sites/mission-bay/"
+   },
+   "status": "complete",
+   "status_label": "Complete",
+   "use": "parking",
+   "relation": "tracked",
+   "adjacent_to": null,
+   "distance_note": null,
+   "how_to_comment": [],
+   "positions": [],
+   "address": null,
+   "summary": "590 Illinois Street, a nine-story, 500-space parking garage the owner identified as the southernmost portion of what this project had tracked as one combined \"block 34\" fragment -- split off 2026-09-22 along a visible roofline seam from the Bayfront Medical Building immediately north of it (data/records/ucsf_bayfront_medical_building.json), both built under UCSF's own \"Block 34 Clinical Building and Parking Garage\" project.",
+   "summary_sources": [
+    "src-ucsf-real-estate-bayfront"
+   ],
+   "shape": {
+    "kind": "approximate",
+    "parcel": null,
+    "display": "fill",
+    "display_reason": null,
+    "notes": {
+     "accuracy_caveat": "REAL BUILDING, APPROXIMATE BOUNDARY -- a real, standing structure clearly visible in Esri satellite imagery (not open land). Boundary is the real-gap-fragment's own traced edge (following the street buffer's curb radius) with the north cap (and, for the garage, the cut from the building to its north) re-derived to the real street angle -- see digitization_method -- not a hand-traced or surveyed building footprint. The split between this building and its neighbor follows a visible satellite roofline seam, not a surveyed or permitted lot line -- treat the exact boundary as indicative, not authoritative.",
+     "digitized_from": "Real-gap-fragment technique: bbox.difference(street buffer).difference(already-tracked polygons) between 3rd St and Illinois St, south of 16th St, extended down to Mariposa St. The owner directly identified this whole real-gap fragment as capturing two separate real buildings, not one, and directed cutting it at the visible gap between the two rooflines in Esri satellite imagery (lat 37.76578) -- see mission_bay_block_33.geojson (now UCSF Valley Center for Vision -- west building) for the piece north of that cut."
+    }
+   },
+   "centroid": {
+    "lon": -122.388365,
+    "lat": 37.764439
+   },
+   "facts": [],
+   "costs": [],
+   "milestones": [
+    {
+     "date": "2021-04",
+     "date_label": "Apr 2021",
+     "status": "under_construction",
+     "status_label": "Under construction",
+     "text": "Construction begins on the Illinois Street Garage portion of the Block 34 project specifically (500 spaces, nine levels), per Clark Construction's own press release: \"Clark started construction on the garage portion of the development in April 2021\" -- distinct from the clinical building's own Sept/Oct 2021 groundbreaking",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-clark-groundbreaking-2021",
+       "title": "Clark Breaks Ground on UCSF's New Clinical Building in Mission Bay (\"Clark started construction on the garage portion of the development in April 2021\")",
+       "publisher": "Clark Construction Group (general contractor's own press release)",
+       "date": "2021-09-23",
+       "url": "https://www.clarkconstruction.com/news/clark-breaks-ground-ucsfs-new-clinical-building-mission-bay",
+       "accessed": "2026-09-22"
+      }
+     ],
+     "source": "Clark Construction Group (general contractor's own press release), 2021-09-23",
+     "origin": "record",
+     "category": "status",
+     "category_label": "Status",
+     "record": {
+      "id": "ucsf_illinois_street_garage",
+      "slug": "ucsf-illinois-street-garage",
+      "name": "UCSF Illinois Street Garage",
+      "permalink": "https://pierandpoint.org/parcels/ucsf-illinois-street-garage/",
+      "api": "https://pierandpoint.org/api/v1/records/ucsf-illinois-street-garage.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2023-05",
+     "date_label": "~2023",
+     "status": "complete",
+     "status_label": "Complete",
+     "text": "Illinois Street Garage (590 Illinois St), 9 stories / 500 spaces, opens as part of UCSF's Block 34 Clinical Building and Parking Garage project, per UCSF Real Estate's own project page; the exact opening day (commonly reported as May 15, 2023) was not found as a directly quotable primary source in this pass -- UCSF's own project page has repeatedly blocked automated access (403) -- so only the year is used here",
+     "expected": false,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-ucsf-real-estate-bayfront",
+       "title": "Bayfront Medical Building and Illinois Street Garage (project page: Illinois Street Garage, 590 Illinois St, 9 stories / 500 spaces, opened May 15, 2023; on the same block as the Wayne and Gladys Valley Center for Vision at 490 Illinois St)",
+       "publisher": "UCSF Real Estate",
+       "url": "https://realestate.ucsf.edu/projects/bayfront-medical-building-and-illinois-street-garage",
+       "accessed": "2026-09-21"
+      }
+     ],
+     "source": "UCSF Real Estate",
+     "origin": "record",
+     "category": "status",
+     "category_label": "Status",
+     "record": {
+      "id": "ucsf_illinois_street_garage",
+      "slug": "ucsf-illinois-street-garage",
+      "name": "UCSF Illinois Street Garage",
+      "permalink": "https://pierandpoint.org/parcels/ucsf-illinois-street-garage/",
+      "api": "https://pierandpoint.org/api/v1/records/ucsf-illinois-street-garage.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    }
+   ],
+   "changes": [],
+   "images": [],
+   "open_questions": [
+    "2026-09-22, corroborating data point: this project's own DataSF business-registration spatial join (src/join_retail.py, out/retail_needs_review_approximate.csv), re-run after this record's geometry was added, shows a registration (Sentry Security Services, Inc.) whose point-location falls inside this record's polygon listing '590 Illinois St' as its address -- matching the 590 Illinois St address already sourced from UCSF Real Estate's own project page, not contradicting it. The join is spatial-only and never auto-confirmed per that script's own docstring, so this is logged as corroboration, not an independent primary source.",
+    "SPLIT 2026-09-22: this record was previously mission_bay_block_33 (a probable, geographically-inferred identity for the WHOLE of what is now UCSF Valley Center for Vision -- west building, data/records/ucsf_valley_center_for_vision_west.json -- a mistaken pairing). The owner directly corrected this: the garage is the southernmost piece of the former mission_bay_block_34 fragment, not block 33. This record's geometry is now the south piece of that split (see ucsf_bayfront_medical_building.geojson for the north piece); the split follows a visible satellite roofline seam, not a surveyed or permitted lot line, and its exact boundary should be treated as indicative rather than authoritative.",
+    "Cost of the garage alone (vs. the combined ~$335.8M clinical-building-plus-garage project figure reported elsewhere) was not found.",
+    "2026-09-21 pass: added an April 2021 construction-start milestone from UCSF Real Estate's own combined project page for 'Bayfront Medical Building and Illinois Street Garage.' This is a combined-project date covering both buildings, not a garage-specific one, though Clark Construction's own press release (see milestone above) does independently corroborate April 2021 as garage-specific."
+   ],
+   "sources": [
+    {
+     "id": "src-ucsf-real-estate-bayfront",
+     "title": "Bayfront Medical Building and Illinois Street Garage (project page: Illinois Street Garage, 590 Illinois St, 9 stories / 500 spaces, opened May 15, 2023; on the same block as the Wayne and Gladys Valley Center for Vision at 490 Illinois St)",
+     "publisher": "UCSF Real Estate",
+     "url": "https://realestate.ucsf.edu/projects/bayfront-medical-building-and-illinois-street-garage",
+     "accessed": "2026-09-21"
+    },
+    {
+     "id": "src-clark-groundbreaking-2021",
+     "title": "Clark Breaks Ground on UCSF's New Clinical Building in Mission Bay (\"Clark started construction on the garage portion of the development in April 2021\")",
+     "publisher": "Clark Construction Group (general contractor's own press release)",
+     "date": "2021-09-23",
+     "url": "https://www.clarkconstruction.com/news/clark-breaks-ground-ucsfs-new-clinical-building-mission-bay",
+     "accessed": "2026-09-22"
+    }
+   ],
+   "notes": "OCII plan block 34 (south portion, extending to Mariposa St). 590 Illinois St, 9 stories, 500 parking spaces, opened May 15 2023, part of the same UCSF project as the Bayfront Medical Building to its north, per UCSF's own project page.",
+   "has_record_file": true,
+   "last_verified": "2026-09-22",
+   "tenants": [],
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -122.38806756835271,
+       37.76494000000001
       ],
       [
        -122.388022276,
@@ -99257,12 +99576,12 @@
        37.764426002
       ],
       [
-       -122.38884303435361,
-       37.76578
+       -122.3887584087156,
+       37.7648978215307
       ],
       [
-       -122.38814882846074,
-       37.76578
+       -122.38806756835271,
+       37.76494000000001
       ]
      ]
     ]

@@ -10,20 +10,37 @@
         "use": "parking",
         "geometry_type": "approximate",
         "digitized_from": "Real-gap-fragment technique: bbox.difference(street buffer).difference(already-tracked polygons) around the Mission Hall/Byers Hall area, anchored on the real 4th St x 16th St and 3rd St x 16th St street-corner intersections per the owner's direct instruction (earlier attempts using building bounding boxes had repeatedly mis-centered on the wrong block). Fragment 14 (7,505 sqm raw) spans the whole plan block from Mission Hall's own footprint east toward 3rd St; the owner identified it as 25A+25B combined, with Mission Hall itself being 25A and this record -- the part east of Mission Hall, idealized as a clean rectangle -- being 25B.",
-        "digitization_method": "ADDED 2026-09-20: the owner corrected the prior resolution (which had 25A and 25B both lumped in as 'same hospital complex, absorbed into UCSF Medical Center'), and a same-day first-pass correction that mistakenly anchored on the 4th St x 16th St corner and pointed 25A/25B at Genentech Hall/Mission Hall (wrong block entirely, one row too far north/west; corrected without the owner's review, then reverted per their direct instruction not to commit un-reviewed conclusions). Re-anchored correctly at the owner's direction on both the 4th St x 16th St AND 3rd St x 16th St street corners: the real block spanning between them (fragment 14, 7,505 sqm) contains Mission Hall (already tracked, real building, = 25A) on its west portion and a real, still-undeveloped surface parking lot on its east portion. Per the owner's construction: cropped fragment 14 to a clean idealized rectangle bounded west by Mission Hall's own east edge, east/north/south by fragment 14's own extent -- 5,259 sqm, currently a painted-stall surface parking lot per satellite imagery, still planned/unbuilt per the OCII plan designation.",
+        "digitization_method": "ADDED 2026-09-20: the owner corrected the prior resolution (which had 25A and 25B both lumped in as 'same hospital complex, absorbed into UCSF Medical Center'), and a same-day first-pass correction that mistakenly anchored on the 4th St x 16th St corner and pointed 25A/25B at Genentech Hall/Mission Hall (wrong block entirely, one row too far north/west; corrected without the owner's review, then reverted per their direct instruction not to commit un-reviewed conclusions). Re-anchored correctly at the owner's direction on both the 4th St x 16th St AND 3rd St x 16th St street corners: the real block spanning between them (fragment 14, 7,505 sqm) contains Mission Hall (already tracked, real building, = 25A) on its west portion and a real, still-undeveloped surface parking lot on its east portion. Per the owner's construction: cropped fragment 14 to a clean idealized rectangle bounded west by Mission Hall's own east edge, east/north/south by fragment 14's own extent -- 5,259 sqm, currently a painted-stall surface parking lot per satellite imagery, still planned/unbuilt per the OCII plan designation. CONFIRMED 2026-09-22: UCSF's own June 2025 CAC presentation (campus map updated December 2024) independently shows this same position -- directly south of Third Street Garage (23B), east of Mission Hall (25A) -- as 'Future Research (25B)', matching this record's position and planned/unbuilt status exactly. RE-ORIENTED 2026-09-22 per the owner's direction: the previous rectangle was axis-aligned (pure lon/lat), which cut diagonally across the real lot's own edges in satellite imagery (clipping real paved area at one corner, overshooting the sidewalk at another) -- the real street grid here runs at a slight angle, not true north/south. Rotated the same rectangle (unchanged size/extent) by 3.19 degrees around Mission Hall's own real NE corner, matching the exact angle of Mission Hall's own minimum-rotated-rectangle east edge (the wall this lot's west edge shares) -- now tracks the lot's real curb lines and the crosswalks at 3rd St/16th St closely on all four sides. 5,250 sqm (was 5,259 sqm; same size, just rotated).",
         "accuracy_caveat": "APPROXIMATE -- idealized rectangle (owner-directed, not a hand trace of the lot's own painted edges) anchored on real street-corner intersections and the real, already-tracked Mission Hall footprint. The lot itself is real (visible painted parking stalls in Esri satellite imagery); the exact boundary is idealized to a clean rectangle rather than traced to the pavement's own edges.",
-        "notes": "OCII plan block 25B. Surface parking lot immediately east of Mission Hall (Global Health & Clinical Sciences Building), between it and 3rd St, north of 16th St. Currently undeveloped/planned per the OCII plan designation.",
-        "source_doc_urls": []
+        "notes": "OCII plan block 25B, confirmed by UCSF's own Dec 2024-updated campus map as 'Future Research'. Surface parking lot immediately east of Mission Hall (Global Health & Clinical Sciences Building), between it and 3rd St, north of 16th St. Currently undeveloped/planned per the OCII plan designation.",
+        "source_doc_urls": [
+          "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf"
+        ]
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
-            [-122.38926497103954, 37.76691502453967],
-            [-122.38926497103954, 37.767809899],
-            [-122.3898653, 37.767809899],
-            [-122.3898653, 37.76691502453967],
-            [-122.38926497103954, 37.76691502453967]
+            [
+              -122.38921912699313,
+              37.766951218459354
+            ],
+            [
+              -122.38926892591745,
+              37.76784470621355
+            ],
+            [
+              -122.38986832460233,
+              37.76781129847001
+            ],
+            [
+              -122.38981852567801,
+              37.766917810715825
+            ],
+            [
+              -122.38921912699313,
+              37.766951218459354
+            ]
           ]
         ]
       }

@@ -1,0 +1,49 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "UCSF Bayfront Medical Building",
+        "site": "Mission Bay South",
+        "status": "complete",
+        "use": "institutional",
+        "geometry_type": "approximate",
+        "digitized_from": "Real-gap-fragment technique: bbox.difference(street buffer).difference(already-tracked polygons) between 3rd St and Illinois St, south of 16th St, extended down to Mariposa St. The owner directly identified this whole real-gap fragment as capturing two separate real buildings, not one, and directed cutting it at the visible gap between the two rooflines in Esri satellite imagery (lat 37.76578) -- see mission_bay_block_33.geojson (now UCSF Valley Center for Vision -- west building) for the piece north of that cut.",
+        "digitization_method": "ADDED 2026-09-20: the owner corrected the block_inventory rows for 33 and 34, which had pointed at 490/499 Illinois Street -- real buildings, but 82-84m from 3rd St, too far to be the blocks the OCII plan drawing shows bordering 3rd St directly (they actually front Illinois St, matching their own address). The real 33/34 strip (between 3rd St and Illinois St) had no tracked record at all. This was originally digitized as one record (mission_bay_block_34.geojson, the south building from the real-gap-fragment split, extended down to the real Mariposa St curb line, 9,240 sqm). SPLIT 2026-09-22 per the owner's direct instruction: UCSF actually built three real structures here where the OCII plan showed two, and the owner identified this southern fragment itself as two further buildings -- a clinical building (Bayfront Medical Building) and, cut from its southernmost end, an independent parking garage (Illinois Street Garage, 590 Illinois St). The cut follows a visible roofline seam confirmed against a 5m-gridline overlay on Esri satellite imagery, at the real east edge's latitude 37.76494 (interpolated along block 34's own real, straight east edge, 3rd-St-facing, bearing -85.6 deg), extended across to the real west edge (Illinois-St-facing, same bearing) via line intersection -- i.e. street-grid-angle-aligned, not a flat latitude cut. The shared boundary with block 33 to the north was re-derived the same way (see mission_bay_block_33.geojson's own digitization_method); this piece's own south (Mariposa St) edge was left as originally traced -- it is a real, street-buffer-derived edge already within about 1 degree of the same street-grid angle, not an artificial cut.",
+        "accuracy_caveat": "REAL BUILDING, APPROXIMATE BOUNDARY -- a real, standing structure clearly visible in Esri satellite imagery (not open land). Boundary is the real-gap-fragment's own traced edge (following the street buffer's curb radius) with the north cap (and, for the garage, the cut from the building to its north) re-derived to the real street angle -- see digitization_method -- not a hand-traced or surveyed building footprint. The split between this building and its neighbor follows a visible satellite roofline seam, not a surveyed or permitted lot line -- treat the exact boundary as indicative, not authoritative.",
+        "notes": "OCII plan block 34 (north portion). Between 3rd St and Illinois St, south of block 33 (Valley Center for Vision), north of the Illinois Street Garage. 520 Illinois St, 5 stories, ~182,800 sq ft, architect Stantec, GC Clark Construction, opened Aug 27 2024, per UCSF's own project page.",
+        "source_doc_urls": [
+          "https://realestate.ucsf.edu/projects/bayfront-medical-building-and-illinois-street-garage"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.38814882846074,
+              37.76578
+            ],
+            [
+              -122.38806756835271,
+              37.76494000000001
+            ],
+            [
+              -122.3887584087156,
+              37.7648978215307
+            ],
+            [
+              -122.3888389922191,
+              37.76573786284002
+            ],
+            [
+              -122.38814882846074,
+              37.76578
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

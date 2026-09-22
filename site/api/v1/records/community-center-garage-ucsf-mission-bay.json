@@ -1,0 +1,106 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-22",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "ucsf_community_center_garage",
+  "slug": "community-center-garage-ucsf-mission-bay",
+  "name": "Community Center Garage (UCSF Mission Bay)",
+  "permalink": "https://pierandpoint.org/parcels/community-center-garage-ucsf-mission-bay/",
+  "api": "https://pierandpoint.org/api/v1/records/community-center-garage-ucsf-mission-bay.json",
+  "names": [
+   "Community Center Garage (UCSF Mission Bay)"
+  ],
+  "site": {
+   "slug": "mission-bay",
+   "name": "Mission Bay",
+   "short": "Mission Bay",
+   "url": "https://pierandpoint.org/sites/mission-bay/"
+  },
+  "status": "complete",
+  "status_label": "Complete",
+  "use": "parking",
+  "relation": "tracked",
+  "adjacent_to": null,
+  "distance_note": null,
+  "how_to_comment": [],
+  "positions": [],
+  "address": null,
+  "summary": null,
+  "summary_sources": [],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "PARTIALLY REAL -- a real, standing garage structure is visible in satellite imagery (rooftop deck with painted parking-space striping), but this record's own boundary is derived from the real-gap-fragment technique against satellite imagery, not a surveyed building footprint or parcel line; DataSF's own Building Footprints dataset does not separate this garage from the Rutter Center building (both fall under one continuous footprint, mblr SF8709011), so there is no official boundary between 21A and 21B -- the dividing line used here is the Rutter Center's own real west wall, extended, which is a reasonable but not authoritative choice.",
+    "digitized_from": "Real-gap-fragment technique (bbox.difference(street buffer).difference(already-tracked polygons)), fragments 19, 20, 22 and 25 from the numbered map of the Owens St / Rutter Center area, added 2026-09-20 to the neighboring Rutter Community Center record and split back out into this separate record 2026-09-22."
+   }
+  },
+  "centroid": {
+   "lon": -122.394154,
+   "lat": 37.768231
+  },
+  "facts": [],
+  "costs": [],
+  "milestones": [],
+  "changes": [],
+  "images": [],
+  "open_questions": [],
+  "sources": [
+   {
+    "id": null,
+    "title": "data/manual/_reference/mission_bay_land_use_map_2019.png",
+    "url": "data/manual/_reference/mission_bay_land_use_map_2019.png"
+   },
+   {
+    "id": null,
+    "title": "sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
+    "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf"
+   }
+  ],
+  "notes": "A real parking garage structure (rooftop deck) immediately west of the William J. Rutter Community Center (21B), connected to it by a walkway. Per UCSF's own Dec 2024-updated campus map (June 2025 CAC presentation), this is Block 21A. Name/operator not independently confirmed by a primary source in this pass -- labeled per the UCSF map's own text.",
+  "has_record_file": false,
+  "last_verified": null,
+  "tenants": [],
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.394744096,
+      37.768429472
+     ],
+     [
+      -122.39473428,
+      37.768431776
+     ],
+     [
+      -122.394046133,
+      37.768473253
+     ],
+     [
+      -122.39355608618375,
+      37.76850278474909
+     ],
+     [
+      -122.3934706418386,
+      37.76768354349588
+     ],
+     [
+      -122.393784623,
+      37.767664622
+     ],
+     [
+      -122.394744096,
+      37.768429472
+     ]
+    ]
+   ]
+  }
+ }
+}

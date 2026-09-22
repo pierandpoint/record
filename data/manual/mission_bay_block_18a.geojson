@@ -10,17 +10,26 @@
         "use": "institutional",
         "geometry_type": "approximate",
         "digitized_from": "Real block boundary from real street geometry (src/block_fit.py load_blocks(), trimmed against src/street_geometry.py's fuller street buffer); the plan's own A/B internal split has no mapped street, so it's a straight bisection along the block's long axis, not a real line.",
-        "digitization_method": "ADDED 2026-09-19 for the block-by-block plan walk-through (docs/briefs/mission_bay_block_inventory.csv), per the Mission Rock transform-and-register precedent for unbuilt blocks. West half of the parking lot west of the Owens St curve, north of Nelson Rising Lane. CORRECTED 2026-09-20: the owner reviewed a numbered real-gap-fragment map of this area and determined the parking lot previously split between this record and 18B (divided by an arbitrary bisection line, per the original 2026-09-19 note) is actually all one real block -- 18A. Merged in the former 18B polygon; the real 18B is a separate building complex further east (fragments 7+11+12 from the numbered map, morphologically closed to bridge two internal walkway strips -- see that record). The merged shape already stops ~14m short of the new 18B building on its own (a real access lane/driveway gap), so no additional east truncation was needed beyond that natural boundary.",
-        "accuracy_caveat": "PARTIALLY REAL -- the outer boundary is a real polygonized city block from real street geometry, not hand-traced; only the internal A/B split line is approximate (a bisection, since no real street divides this block into A and B).",
-        "notes": "No building on this site as of 2026-09-19 (satellite- and building-footprint-confirmed); currently an operating surface parking lot west of the Owens St curve. The OCII plan's own Dec 2019 Land Use Map designates this block for future UCSF institutional use, consistent with the rest of this campus row, but no specific project, developer, or timeline was found in this pass.",
+        "digitization_method": "ADDED 2026-09-19 for the block-by-block plan walk-through (docs/briefs/mission_bay_block_inventory.csv), per the Mission Rock transform-and-register precedent for unbuilt blocks. West half of the parking lot west of the Owens St curve, north of Nelson Rising Lane. CORRECTED 2026-09-20: the owner reviewed a numbered real-gap-fragment map of this area and determined the parking lot previously split between this record and 18B (divided by an arbitrary bisection line, per the original 2026-09-19 note) is actually all one real block -- 18A. Merged in the former 18B polygon; the real 18B is a separate building complex further east (fragments 7+11+12 from the numbered map, morphologically closed to bridge two internal walkway strips -- see that record). The merged shape already stops ~14m short of the new 18B building on its own (a real access lane/driveway gap), so no additional east truncation was needed beyond that natural boundary. RE-SPLIT 2026-09-22: cross-checking against UCSF's own June 2025 CAC presentation (map updated December 2024) established that the building formerly tracked here as 18B is actually UCSF's own 'Block 18C' (see mission_bay_block_18c.geojson) -- an existing Child Development Center, not future institutional space, so this parking lot's own A/B split needed redoing to match UCSF's numbering. Took the 2026-09-20 merged parking-lot shape and extended it east by the ~1,197 sqm access-lane/driveway gap that previously separated it from 18C, so the combined lot now runs back-to-back with 18C's west edge (convex hull of [merged lot, 18C] minus 18C, minus real streets). Re-split that combined ~9,738 sqm shape into new 18A (west) / 18B (east) via an equal-area bisection perpendicular to its long axis (binary search on the cut line, same 'no real dividing street' precedent as the original A/B split) -- this record is the west half, 4,869 sqm.",
+        "accuracy_caveat": "PARTIALLY REAL -- the outer boundary is a real polygonized city block from real street geometry, not hand-traced; only the internal A/B split line is approximate (an equal-area bisection, since no real street divides this block into A and B). The east extension into the former access-lane gap is an inferred fill (convex hull minus 18C minus streets), not independently confirmed as driveway/parking pavement rather than a walkway.",
+        "notes": "No building on this site as of 2026-09-19 (satellite- and building-footprint-confirmed); currently an operating surface parking lot west of the Owens St curve, now understood to run back-to-back with the existing Child Development Center building (18C) to its east. The OCII plan's own Dec 2019 Land Use Map designates this block for future UCSF institutional use, consistent with the rest of this campus row, but no specific project, developer, or timeline was found in this pass.",
         "source_doc_urls": [
-          "data/manual/_reference/mission_bay_land_use_map_2019.png"
+          "data/manual/_reference/mission_bay_land_use_map_2019.png",
+          "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf"
         ]
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
+            [
+              -122.39487560138858,
+              37.768593563463206
+            ],
+            [
+              -122.39499837851989,
+              37.768699169586505
+            ],
             [
               -122.39512097807071,
               37.768808268219416
@@ -31,27 +40,27 @@
             ],
             [
               -122.39536429461931,
-              37.7690474908538
+              37.76904749085381
             ],
             [
               -122.39551635840785,
-              37.769228775019734
+              37.76922877501972
             ],
             [
               -122.39554245869677,
-              37.769264196821744
+              37.76926419682175
             ],
             [
               -122.39554903535637,
-              37.769274880743886
+              37.76927488074388
             ],
             [
               -122.39553544918688,
-              37.769279872635586
+              37.76927987263557
             ],
             [
               -122.39542937942848,
-              37.76931703997258
+              37.76931703997257
             ],
             [
               -122.39534151262379,
@@ -59,79 +68,31 @@
             ],
             [
               -122.39525121056249,
-              37.769347010889256
+              37.76934701088925
             ],
             [
-              -122.39519245983676,
-              37.76935094129641
+              -122.39519245983678,
+              37.7693509412964
             ],
             [
               -122.39491420811505,
               37.76936771348862
             ],
             [
-              -122.39483283767818,
-              37.769372072026954
+              -122.39466992942323,
+              37.76938243784149
             ],
             [
-              -122.3945677665546,
-              37.76938627033655
+              -122.394584249579,
+              37.768554022086896
             ],
             [
-              -122.3945251665546,
-              37.76938857033896
-            ],
-            [
-              -122.3945239314868,
-              37.76938864317065
-            ],
-            [
-              -122.39442099514314,
-              37.76939522631584
-            ],
-            [
-              -122.39434083556341,
-              37.769400011488095
-            ],
-            [
-              -122.39418185899416,
-              37.769273282517155
-            ],
-            [
-              -122.39411664,
-              37.768591396
-            ],
-            [
-              -122.394746838,
-              37.768553412
-            ],
-            [
-              -122.394752013,
-              37.768552878
-            ],
-            [
-              -122.394757124,
-              37.768551905
-            ],
-            [
-              -122.39481107426236,
+              -122.39481107426238,
               37.76853923893674
-            ],
-            [
-              -122.39483283767818,
-              37.76855756126609
             ],
             [
               -122.39487560138858,
               37.768593563463206
-            ],
-            [
-              -122.39499837851989,
-              37.7686991695865
-            ],
-            [
-              -122.39512097807071,
-              37.768808268219416
             ]
           ]
         ]

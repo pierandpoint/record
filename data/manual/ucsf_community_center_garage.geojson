@@ -1,0 +1,37 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Community Center Garage (UCSF Mission Bay)",
+        "site": "Mission Bay South",
+        "status": "complete",
+        "use": "parking",
+        "geometry_type": "approximate",
+        "digitized_from": "Real-gap-fragment technique (bbox.difference(street buffer).difference(already-tracked polygons)), fragments 19, 20, 22 and 25 from the numbered map of the Owens St / Rutter Center area, added 2026-09-20 to the neighboring Rutter Community Center record and split back out into this separate record 2026-09-22.",
+        "digitization_method": "ADDED 2026-09-20 as part of ucsf_rutter_community_center.geojson: the owner directed adding fragments 19, 20, 22 and 25 from the numbered real-gap-fragment map of this area to that building's footprint, to encompass the 1625 Owens St parking lot and an adjoining garage structure immediately west of the Rutter Center's pool/courtyard -- fragment 19 (6,786 sqm) is the main lot itself (confirmed against satellite imagery: painted parking stalls), fragments 20, 22 and 25 (168 + 216 + 33 sqm) are thin slivers along the shared edge. SPLIT OUT AS ITS OWN RECORD 2026-09-22: cross-checking UCSF's own June 2025 CAC presentation (map updated December 2024) showed this whole area is UCSF's own separate 'Block 21A -- Community Center Garage', distinct from the Rutter Center block (21B) even though the two are physically connected (a real rooftop parking deck, visible in satellite imagery with painted parking-space striping, joined to the Rutter Center building by a walkway). Cut from the combined shape along a straight line following the Rutter Center's own real west wall (its two real corners, north and south, per that record's own digitization_method) -- a clean split rather than the raw polygon difference, which left thin sliver artifacts ('horns') at the seam.",
+        "accuracy_caveat": "PARTIALLY REAL -- a real, standing garage structure is visible in satellite imagery (rooftop deck with painted parking-space striping), but this record's own boundary is derived from the real-gap-fragment technique against satellite imagery, not a surveyed building footprint or parcel line; DataSF's own Building Footprints dataset does not separate this garage from the Rutter Center building (both fall under one continuous footprint, mblr SF8709011), so there is no official boundary between 21A and 21B -- the dividing line used here is the Rutter Center's own real west wall, extended, which is a reasonable but not authoritative choice.",
+        "notes": "A real parking garage structure (rooftop deck) immediately west of the William J. Rutter Community Center (21B), connected to it by a walkway. Per UCSF's own Dec 2024-updated campus map (June 2025 CAC presentation), this is Block 21A. Name/operator not independently confirmed by a primary source in this pass -- labeled per the UCSF map's own text.",
+        "source_doc_urls": [
+          "data/manual/_reference/mission_bay_land_use_map_2019.png",
+          "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-122.394744096, 37.768429472],
+            [-122.39473428, 37.768431776],
+            [-122.394046133, 37.768473253],
+            [-122.39355608618375, 37.76850278474909],
+            [-122.3934706418386, 37.76768354349588],
+            [-122.393784623, 37.767664622],
+            [-122.394744096, 37.768429472]
+          ]
+        ]
+      }
+    }
+  ]
+}

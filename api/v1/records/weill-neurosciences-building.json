@@ -1,0 +1,284 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-22",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "ucsf_weill_neurosciences",
+  "slug": "weill-neurosciences-building",
+  "name": "Weill Neurosciences Building",
+  "permalink": "https://pierandpoint.org/parcels/weill-neurosciences-building/",
+  "api": "https://pierandpoint.org/api/v1/records/weill-neurosciences-building.json",
+  "names": [
+   "UCSF Neurosurgery at San Francisco Mission Bay",
+   "Joan and Sanford I. Weill Neurosciences Building"
+  ],
+  "site": {
+   "slug": "mission-bay",
+   "name": "Mission Bay",
+   "short": "Mission Bay",
+   "url": "https://pierandpoint.org/sites/mission-bay/"
+  },
+  "status": "complete",
+  "status_label": "Complete",
+  "use": "institutional",
+  "relation": "tracked",
+  "adjacent_to": null,
+  "distance_note": null,
+  "how_to_comment": [],
+  "positions": [],
+  "address": null,
+  "summary": "This record's geometry is the owner-identified footprint west of and adjacent to Third Street Garage on OCII plan Block 23A; that address and adjacency match the Joan and Sanford I. Weill Neurosciences Building at 1651 4th Street, a six-story, roughly 282,500-sq-ft neuroscience research and clinical building (design architect Mark Cavagnero Associates with SmithGroup as executive architect) that opened in October 2021. UCSF Health's own 'Neurosurgery Mission Bay - Fourth St.' clinic listing gives the same 1651 4th Street address.",
+  "summary_sources": [
+   "src-ucsfhealth-weill",
+   "src-ucsfhealth-neurosurgery-4th",
+   "src-dpr-23a",
+   "src-archrecord-weill"
+  ],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "APPROXIMATE -- an idealized rectangle (owner-directed construction: real-gap-fragment shape cut and aligned to Third Street Garage's own real orientation), not a hand-traced or surveyed footprint. The building name (Weill Neurosciences Building) is confirmed by UCSF's own campus map; UCSF Neurosurgery's presence in it is the owner's direct knowledge, not independently corroborated by a primary source in this pass.",
+    "digitized_from": "Owner-directed construction, not a hand trace: real-gap-fragment 2 (11,626 sqm raw, from the numbered real-gap-fragment map for this area), idealized to a proper rectangle sharing Third Street Garage's own minimum-rotated-rectangle west edge and orientation, with the north walkway strip (a real gap fragment pinch point, width dropping to ~2m) cut off."
+   }
+  },
+  "centroid": {
+   "lon": -122.390274,
+   "lat": 37.768205
+  },
+  "facts": [
+   {
+    "key": "architect",
+    "value": "Mark Cavagnero Associates (design architect) with SmithGroup (executive architect)",
+    "sources": [
+     "src-archrecord-weill"
+    ]
+   },
+   {
+    "key": "gross_sqft",
+    "value": "approximately 282,500-283,000",
+    "sources": [
+     "src-archrecord-weill",
+     "src-dpr-23a"
+    ]
+   },
+   {
+    "key": "address",
+    "value": "1651 4th Street, San Francisco",
+    "sources": [
+     "src-ucsfhealth-neurosurgery-4th"
+    ]
+   }
+  ],
+  "costs": [],
+  "milestones": [
+   {
+    "date": "2016-03-24",
+    "date_label": "Mar 24, 2016",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "UC Regents Committee on Grounds and Buildings approves $21,000,000 in preliminary-plans funding for the Mission Bay Neurosciences Research Building (Block 23A) -- a 270,000 gsf, six-story building on the Block 23A surface parking lot that became this building -- with full budget, financing and design/CEQA approval expected in March 2017 and construction targeted for fall 2017",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ucregents-2016-03-23a",
+      "title": "Approval of Preliminary Plans Funding, Mission Bay Neurosciences Research Building (Block 23A), San Francisco Campus (Committee on Grounds and Buildings, Item GB1, March 24, 2016)",
+      "publisher": "The Regents of the University of California",
+      "date": "2016-03-24",
+      "url": "https://regents.universityofcalifornia.edu/regmeet/mar16/gb1.pdf",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "The Regents of the University of California, 2016-03-24",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "ucsf_weill_neurosciences",
+     "slug": "weill-neurosciences-building",
+     "name": "Weill Neurosciences Building",
+     "permalink": "https://pierandpoint.org/parcels/weill-neurosciences-building/",
+     "api": "https://pierandpoint.org/api/v1/records/weill-neurosciences-building.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2021-06",
+    "date_label": "~2021",
+    "status": null,
+    "status_label": null,
+    "text": "Construction completed, per architecture trade press (Architectural Record)",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-archrecord-weill",
+      "title": "UCSF Joan & Sanford I. Weill Neurosciences Building by SmithGroup with Mark Cavagnero Associates",
+      "publisher": "Architectural Record",
+      "date": "2021-10-27",
+      "url": "https://www.architecturalrecord.com/articles/15366-ucsf-joan-sanford-i-weill-neurosciences-building-by-smithgroup-with-mark-cavagnero-associates",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "Architectural Record, 2021-10-27",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "ucsf_weill_neurosciences",
+     "slug": "weill-neurosciences-building",
+     "name": "Weill Neurosciences Building",
+     "permalink": "https://pierandpoint.org/parcels/weill-neurosciences-building/",
+     "api": "https://pierandpoint.org/api/v1/records/weill-neurosciences-building.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2021-10",
+    "date_label": "Oct 2021",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Joan and Sanford I. Weill Neurosciences Building opens, welcoming patients for neurology, neurosurgery and psychiatric care alongside the Weill Institute for Neurosciences' research programs",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ucsf-weill-news",
+      "title": "UCSF Weill Neurosciences Building Heralds New Era for Patients",
+      "publisher": "UC San Francisco",
+      "date": "2021-10",
+      "url": "https://www.ucsf.edu/news/2021/10/421691/ucsf-weill-neurosciences-building-heralds-new-era-patients",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "UC San Francisco, 2021-10",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "ucsf_weill_neurosciences",
+     "slug": "weill-neurosciences-building",
+     "name": "Weill Neurosciences Building",
+     "permalink": "https://pierandpoint.org/parcels/weill-neurosciences-building/",
+     "api": "https://pierandpoint.org/api/v1/records/weill-neurosciences-building.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   }
+  ],
+  "changes": [],
+  "images": [],
+  "open_questions": [
+   "This record's own geometry file notes the owner directly identified the building here as UCSF Neurosurgery at Mission Bay (correcting an earlier mis-resolution to Genentech Hall) but flags that identification as not independently corroborated by a primary source in that pass. This research pass found strong, independent corroboration: a contractor project page names this same OCII Block 23A as the site of the Joan and Sanford I. Weill Neurosciences Building, and UCSF Health's own clinic-location page places its 'Neurosurgery Mission Bay - Fourth St.' service at 1651 4th Street, the Weill building's address, directly adjacent to Third Street Garage as this record's geometry describes. Not treated as fully closed: no single source explicitly ties the parcel-level footprint to the 1651 4th Street address by lot number.",
+   "Exact opening day is not confirmed: this record uses October 2021 (from UCSF's own news article, dated by its URL and by architecture-press coverage of the same announcement); one secondary aggregation suggested October 28, 2021 specifically, but that day was not independently verified against a primary page in this pass.",
+   "Construction cost is reported elsewhere (via a $185 million naming gift from the Weill Family Foundation, and a total project value cited by some outlets around $535 million) but was not independently verified against a primary UCSF or Regents document in this pass, so left out of costs.",
+   "2026-09-21 pass: the March 2016 Regents preliminary-plans item (270,000 gsf, six stories) predates the Weill naming gift and 'Weill Neurosciences Building' name; identification with this record rests on the Block 23A site match (confirmed elsewhere in this record's own sources), not a name match in the 2016 item itself."
+  ],
+  "sources": [
+   {
+    "id": "src-ucsf-weill-news",
+    "title": "UCSF Weill Neurosciences Building Heralds New Era for Patients",
+    "publisher": "UC San Francisco",
+    "date": "2021-10",
+    "url": "https://www.ucsf.edu/news/2021/10/421691/ucsf-weill-neurosciences-building-heralds-new-era-patients",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-ucsfhealth-weill",
+    "title": "Weill Neurosciences Building (location page; notes UCSF's 1650 Third St. parking garage is directly adjacent)",
+    "publisher": "UCSF Health",
+    "url": "https://www.ucsfhealth.org/lp/weill-neurosciences-building",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-ucsfhealth-neurosurgery-4th",
+    "title": "Neurosurgery Mission Bay - Fourth St. (clinic location, 1651 4th Street)",
+    "publisher": "UCSF Health",
+    "url": "https://www.ucsfhealth.org/locations/neurosurgery-mission-bay-fourth-st",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-dpr-23a",
+    "title": "UCSF Block 23A Neurosciences Research Building (contractor project page, confirming OCII/campus Block 23A as the Weill Neurosciences Building)",
+    "publisher": "DPR Construction",
+    "url": "https://www.dpr.com/projects/ucsf-block-23a-neurosciences-research-building",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-archrecord-weill",
+    "title": "UCSF Joan & Sanford I. Weill Neurosciences Building by SmithGroup with Mark Cavagnero Associates",
+    "publisher": "Architectural Record",
+    "date": "2021-10-27",
+    "url": "https://www.architecturalrecord.com/articles/15366-ucsf-joan-sanford-i-weill-neurosciences-building-by-smithgroup-with-mark-cavagnero-associates",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-ucregents-2016-03-23a",
+    "title": "Approval of Preliminary Plans Funding, Mission Bay Neurosciences Research Building (Block 23A), San Francisco Campus (Committee on Grounds and Buildings, Item GB1, March 24, 2016)",
+    "publisher": "The Regents of the University of California",
+    "date": "2016-03-24",
+    "url": "https://regents.universityofcalifornia.edu/regmeet/mar16/gb1.pdf",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": null,
+    "title": "sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
+    "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf"
+   }
+  ],
+  "notes": "OCII plan block 23A on UCSF's own campus map. Previously mismapped to Genentech Hall (a different, separate building further west); Genentech Hall's own real plan-block correlation is now an open question pending future review. UCSF Neurosurgery at San Francisco Mission Bay is a clinical department practicing in this building; the building may house other departments as well.",
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
+  "tenants": [],
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.38984676056575,
+      37.767899083526295
+     ],
+     [
+      -122.38992229783514,
+      37.76872174865433
+     ],
+     [
+      -122.39091380509325,
+      37.76866485924246
+     ],
+     [
+      -122.39083826782387,
+      37.76784219411443
+     ],
+     [
+      -122.38984676056575,
+      37.767899083526295
+     ]
+    ]
+   ]
+  }
+ }
+}
