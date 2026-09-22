@@ -63,6 +63,7 @@ img { max-width: 100%; display: block; }
 .hero { padding-top: 36px; padding-bottom: 24px; }
 .hero h1 { font: 500 clamp(32px, 5.2vw, 56px)/1.04 var(--serif); letter-spacing: -.015em; margin-top: 12px; max-width: 22ch; }
 .hero .sub { font-size: clamp(16px, 1.6vw, 19px); color: var(--soft); margin-top: 12px; max-width: 60ch; }
+.hero .sub-2 { font-size: 14px; color: var(--faint); margin-top: 10px; max-width: 62ch; }
 
 /* maps */
 .pp-map { display: block; width: 100%; height: auto; background: var(--ink-3); }
@@ -85,6 +86,8 @@ img { max-width: 100%; display: block; }
 .jump a.placeholder { border-style: dashed; }
 .jump a span { font-family: var(--mono); color: var(--brass); }
 .jump a.placeholder span { color: var(--soft); }
+.update-line { display: block; margin-top: 16px; font: 14px var(--mono); color: var(--soft); }
+.update-line:hover { color: var(--brass-hi); }
 
 /* timeline */
 .timeline { position: sticky; top: 0; z-index: 10; background: rgba(22,29,31,.94); backdrop-filter: blur(6px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-top: 24px; }
@@ -142,6 +145,9 @@ img { max-width: 100%; display: block; }
 .pin { width: 30px; height: 30px; border-radius: 50%; background: var(--brass); color: var(--ink); display: inline-flex; align-items: center; justify-content: center; font: 500 13px var(--mono); flex-shrink: 0; }
 .pin.placeholder { background: none; border: 1.5px dashed var(--soft); color: var(--text-2); }
 .site-card h2 { font: 500 24px/1.2 var(--serif); flex-grow: 1; }
+.site-lead-card { margin: 0; }
+.site-lead-card img { width: 100%; height: 110px; object-fit: cover; border-radius: 10px; background: var(--ink-3); }
+.site-lead-card figcaption { margin-top: 4px; }
 .site-card h2 a { color: var(--text); }
 .site-card .meta { display: flex; justify-content: space-between; gap: 12px; font: 12px var(--mono); color: var(--faint); }
 .site-card .meta .done { color: var(--brass); }
@@ -175,8 +181,41 @@ img { max-width: 100%; display: block; }
 .feed.compact li { grid-template-columns: auto 1fr; }
 .feed.compact .body { grid-column: 1 / -1; }
 
+/* changes tabs, filters and the combined changelog+milestone feed (/changes/, docs/briefs/changes-ux.md) */
+.tabs { display: flex; gap: 4px; margin-top: 20px; border-bottom: 1px solid var(--paper-line); }
+.tabs a { padding: 10px 4px; margin-bottom: -1px; color: var(--paper-soft); font-weight: 500; font-size: 14px; border-bottom: 2px solid transparent; }
+.tabs a:hover { text-decoration: none; color: var(--paper-ink); }
+.tabs a[aria-current="page"] { color: var(--paper-ink); border-bottom-color: var(--paper-brass); }
+.tabs a + a { margin-left: 16px; }
+.feed.changes li { grid-template-columns: 110px 96px 100px minmax(0, 1fr); }
+/* .feed li sets display: grid, which overrides the browser's native [hidden] behaviour the same
+   way .btn and .zoom-controls do above -- app.js sets a filtered-out <li>'s hidden property, and
+   without this it would keep rendering in the grid regardless. */
+.feed.changes li[hidden] { display: none; }
+@media (max-width: 719px) { .feed.changes li { grid-template-columns: auto 1fr; } .feed.changes .site-chip { grid-column: 2; } }
+.site-chip { align-self: start; justify-self: start; background: none; border: 1px solid var(--paper-line); color: var(--paper-faint); font-size: 12px; font-weight: 500; padding: 3px 8px; }
+.feed-details { margin-top: 4px; }
+.feed-details summary { cursor: pointer; font: 12px var(--mono); color: var(--paper-brass); }
+.feed-details p { margin-top: 6px; color: var(--paper-soft); font-size: 14px; }
+.changes-filters { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 16px; padding: 20px; margin: 20px 0; background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 12px; }
+.filter-field { display: flex; flex-direction: column; gap: 4px; font-size: 13px; }
+.filter-field label { color: var(--paper-faint); font-weight: 600; }
+.filter-field select, .filter-field input { min-height: 40px; padding: 0 10px; border-radius: 8px; border: 1px solid var(--paper-line); background: var(--paper-2); color: var(--paper-ink); font: 14px var(--sans); }
+.changes-filters .btn { align-self: flex-end; }
+/* .btn itself sets display: inline-flex, which -- like .zoom-controls above -- overrides the
+   browser's native [hidden] behaviour (an author display value always beats the UA stylesheet's
+   [hidden] { display: none }, whatever the selector's specificity), so it needs the same explicit
+   override before app.js un-hides it. */
+.changes-filters .btn[hidden] { display: none; }
+
 /* record + site pages */
 .page-head { padding-top: 36px; padding-bottom: 28px; border-bottom: 1px solid var(--paper-line); }
+.page-head-lead { display: flex; gap: 32px; flex-wrap: wrap-reverse; align-items: flex-start; }
+.page-head-lead .page-head-text { flex: 1 1 360px; min-width: 0; }
+.site-lead-page { flex: 1 1 260px; max-width: 320px; margin: 0; }
+.site-lead-page img { width: 100%; height: 190px; object-fit: cover; border-radius: 12px; background: var(--paper-line); }
+.site-lead-page figcaption { margin-top: 6px; }
+@media (max-width: 719px) { .site-lead-page { max-width: none; } }
 .crumbs { font: 12px var(--mono); color: var(--paper-faint); display: flex; flex-wrap: wrap; gap: 8px; }
 .page-head h1 { font: 500 clamp(32px, 5vw, 56px)/1.04 var(--serif); letter-spacing: -.015em; margin: 12px 0 8px; }
 .page-head .sub { color: var(--paper-soft); font-size: 17px; }
@@ -248,6 +287,7 @@ details.notes h3 { font: 600 13px var(--mono); color: var(--paper-soft); margin:
 .site-footer { border-top: 1px solid var(--line); padding: 40px 0 48px; font-size: 14px; color: var(--soft); }
 .site-footer .wrap { display: grid; gap: 24px; }
 @media (min-width: 900px) { .site-footer .wrap { grid-template-columns: 1.4fr 1fr 1fr; } }
+.footer-tagline { grid-column: 1 / -1; color: var(--text-2); font-size: 14px; margin: 0; }
 .site-footer nav { display: flex; flex-direction: column; gap: 8px; }
 .site-footer nav a { color: var(--text-2); }
 .site-footer .small { font: 12px var(--mono); color: var(--faint); grid-column: 1 / -1; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; border-top: 1px solid var(--line); padding-top: 20px; }

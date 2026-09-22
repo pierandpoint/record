@@ -289,3 +289,72 @@
   }
   initZoom();
 })();
+
+// /changes/all/'s filters (docs/briefs/changes-ux.md): a plain GET form so the page still
+// works, unfiltered, with JavaScript off. With it on, this filters the already-inlined list
+// client-side (no server round trip, no third-party request) and keeps the filter state in
+// the URL query so a filtered view can be copied and shared. Runs on its own, independent of
+// the timeline/zoom IIFE above, since a changes page carries no pp-record data.
+(function () {
+  var list = document.querySelector('[data-changes-list]');
+  var form = document.querySelector('.changes-filters');
+  if (!list || !form) return;
+  var items = Array.prototype.slice.call(list.querySelectorAll('li'));
+  var emptyNote = document.querySelector('[data-filter-empty]');
+  var resetBtn = form.querySelector('[data-filter-reset]');
+  var fields = {
+    site: form.querySelector('#cf-site'), category: form.querySelector('#cf-category'),
+    from: form.querySelector('#cf-from'), to: form.querySelector('#cf-to')
+  };
+
+  function readParams() {
+    var params = new URLSearchParams(window.location.search);
+    return { site: params.get('site') || '', category: params.get('category') || '',
+             from: params.get('from') || '', to: params.get('to') || '' };
+  }
+  function applyToFields(v) {
+    fields.site.value = v.site; fields.category.value = v.category;
+    fields.from.value = v.from; fields.to.value = v.to;
+  }
+  function currentValues() {
+    return { site: fields.site.value, category: fields.category.value, from: fields.from.value, to: fields.to.value };
+  }
+  function matches(li, v) {
+    if (v.site && li.getAttribute('data-site') !== v.site) return false;
+    if (v.category && li.getAttribute('data-category') !== v.category) return false;
+    var d = li.getAttribute('data-date');
+    if (v.from && d < v.from) return false;
+    if (v.to && d > v.to) return false;
+    return true;
+  }
+  function filter() {
+    var v = currentValues(), shown = 0;
+    items.forEach(function (li) {
+      var ok = matches(li, v);
+      li.hidden = !ok;
+      if (ok) shown++;
+    });
+    if (emptyNote) emptyNote.hidden = shown !== 0;
+    if (resetBtn) resetBtn.hidden = !(v.site || v.category || v.from || v.to);
+    var params = new URLSearchParams();
+    if (v.site) params.set('site', v.site);
+    if (v.category) params.set('category', v.category);
+    if (v.from) params.set('from', v.from);
+    if (v.to) params.set('to', v.to);
+    var qs = params.toString();
+    window.history.replaceState(null, '', window.location.pathname + (qs ? '?' + qs : ''));
+  }
+
+  applyToFields(readParams());
+  filter();
+  form.addEventListener('submit', function (e) { e.preventDefault(); filter(); });
+  [fields.site, fields.category, fields.from, fields.to].forEach(function (el) {
+    el.addEventListener('change', filter);
+  });
+  if (resetBtn) {
+    resetBtn.addEventListener('click', function () {
+      applyToFields({ site: '', category: '', from: '', to: '' });
+      filter();
+    });
+  }
+})();

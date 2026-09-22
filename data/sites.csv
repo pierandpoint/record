@@ -8,8 +8,12 @@
 #   draft: added 2026-09-20 (docs/briefs/publish.md, "Rendered site in the public repo"). yes = this site and
 #   its records are left out of the build entirely -- no page, no card, not in any API file -- unless the
 #   environment variable PP_DRAFTS=1 is set, for a local preview. Default no. See sitegen/README.md.
-slug,name,short,data_sites,placeholder,owner,now,now_source,boundary_source,draft
-mission-rock,Mission Rock,Mission Rock,Pier 50 / Mission Rock,no,Pier 50 · Giants and Tishman Speyer,The Canyon and Verde opened in 2024.,mvrdv.com; sfyimby.com,,no
-mission-bay,Mission Bay,Mission Bay,Mission Bay North|Mission Bay South,no,OCII redevelopment area,Mission Bay School (the neighborhood’s first public school) opened Aug 17 2026; Block 12 West -- the project area’s last undeveloped parcel -- is now going through an OCII subdivision MOU.,sfusd.edu; sfocii.org,"DataSF 'Former San Francisco Redevelopment Agency Project Areas' (m288-24sn), features 'Mission Bay - North' and 'Mission Bay - South'; cross-checked against the Mission Bay South Design for Development’s own Plan Boundary, Development Block and Street Grid Map (Nov 17, 2025) and the OCII/Wikipedia Townsend/7th/Mariposa/3rd-and-Bay description",no
-pier-70,Pier 70,Pier 70,Pier 70,no,28-acre site · Brookfield Properties,Elevation Sky Park’s public opening event is scheduled for Sep 19.,businesswire.com,,no
-potrero,Potrero Power Station,Potrero Station,Potrero Power Station,no,Former PG&E plant · Associate Capital,Block 2 · UCSF is under construction; completion expected late 2028.,sfyimby.com,,no
+#   lead_image: added 2026-09-22 (docs/briefs/changes-ux.md). Optional: the `path` of an already-hosted
+#   image (a data/records/*.json entry with scope: site, or any hosted record image) to use as this
+#   site's lead photo on the home page and the site page. Blank = the automatic pick: the
+#   highest-scoring tier-1 or tier-2 image (sitegen/imagepick.py) among the site's own tracked records.
+slug,name,short,data_sites,placeholder,owner,now,now_source,boundary_source,draft,lead_image
+mission-rock,Mission Rock,Mission Rock,Pier 50 / Mission Rock,no,Pier 50 · Giants and Tishman Speyer,The Canyon and Verde opened in 2024.,mvrdv.com; sfyimby.com,,no,
+mission-bay,Mission Bay,Mission Bay,Mission Bay North|Mission Bay South,no,OCII redevelopment area,Mission Bay School (the neighborhood’s first public school) opened Aug 17 2026; Block 12 West -- the project area’s last undeveloped parcel -- is now going through an OCII subdivision MOU.,sfusd.edu; sfocii.org,"DataSF 'Former San Francisco Redevelopment Agency Project Areas' (m288-24sn), features 'Mission Bay - North' and 'Mission Bay - South'; cross-checked against the Mission Bay South Design for Development’s own Plan Boundary, Development Block and Street Grid Map (Nov 17, 2025) and the OCII/Wikipedia Townsend/7th/Mariposa/3rd-and-Bay description",no,
+pier-70,Pier 70,Pier 70,Pier 70,no,28-acre site · Brookfield Properties,Elevation Sky Park’s public opening event is scheduled for Sep 19.,businesswire.com,,no,
+potrero,Potrero Power Station,Potrero Station,Potrero Power Station,no,Former PG&E plant · Associate Capital,Block 2 · UCSF is under construction; completion expected late 2028.,sfyimby.com,,no,

@@ -301,3 +301,20 @@ Geometry files keep their own `digitized_from`, `accuracy_caveat`,
 `regulatory_context`, `images` and `source_doc_urls`. Those stay where they
 are (the caveat must travel with the shape). A record file is the place for
 everything else about the parcel.
+
+## `data/changelog.csv`
+
+One row per addition or correction made to the record (a real-world event
+belongs in a milestone instead). Columns: `date`, `kind` (`added`,
+`correction` or `status`), `category` (`status`, `milestone`,
+`construction`, `retail`, `open_space`, `correction`, `coverage` or
+`coming_up`), `record_id` (optional, links the row to a record page),
+`summary`, `text` and `source`.
+
+`summary` is one sentence, at most 140 characters, derived strictly from the
+row's own `text` -- no new facts, no new claims, and no more certainty than
+`text` itself supports. `src/validate_records.py` requires one on every row
+and fails a row over 140 characters. The changes pages (`/changes/`) show
+the date, a category chip, a site chip (derived from `record_id`, or "all
+sites" when blank), the record link and the summary; the full `text` sits
+behind a details disclosure.
