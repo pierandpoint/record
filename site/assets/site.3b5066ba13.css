@@ -304,28 +304,35 @@ details.notes h3 { font: 600 13px var(--mono); color: var(--paper-soft); margin:
 .status-group h3 .count { font: 13px var(--mono); color: var(--paper-faint); font-weight: 400; }
 
 /* jump nav (docs/briefs/page-sections.md): every collapsible section on the page, reachable
-   whether it's currently open or not -- see app.js's revealHashTarget(). */
-.jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-.jump a { display: inline-flex; align-items: baseline; gap: 6px; font: 500 13px var(--sans); color: var(--paper-ink); background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 999px; padding: 6px 12px; }
-.jump a:hover { border-color: var(--paper-brass); color: var(--paper-brass); text-decoration: none; }
-.jump a .n { font: 11px var(--mono); color: var(--paper-faint); }
-.jump a:hover .n { color: inherit; }
+   whether it's currently open or not -- see app.js's revealHashTarget(). Named .section-jump,
+   not .jump: that name is already the home page's own "jump to a site" nav (above), a different
+   component (dark theme, grid layout, numbered pins) that a shared class name would collide with. */
+.section-jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.section-jump a { display: inline-flex; align-items: baseline; gap: 6px; font: 500 13px var(--sans); color: var(--paper-ink); background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 999px; padding: 6px 12px; }
+.section-jump a:hover { border-color: var(--paper-brass); color: var(--paper-brass); text-decoration: none; }
+.section-jump a .n { font: 11px var(--mono); color: var(--paper-faint); }
+.section-jump a:hover .n { color: inherit; }
 
 /* the collapsible box pattern shared by Sources, Changes and Retail (docs/briefs/page-sections.md):
    a <details> whose summary always shows a breakdown peek, open or closed, so collapsing hides
    only the row-by-row detail, never the composition. Server-rendered `open` past a fixed item
    threshold (sitegen/build.py's BOX_THRESHOLD) -- a short list never costs the reader a click. */
-.box > summary { list-style: none; cursor: pointer; padding-bottom: 14px; border-bottom: 1px solid var(--paper-ink); }
+.box > summary { list-style: none; cursor: pointer; padding-bottom: 14px; padding-top: 4px; border-bottom: 1px solid var(--paper-ink); border-radius: 6px; }
 .box > summary::-webkit-details-marker { display: none; }
+.box > summary:hover { background: var(--paper-2); }
+.box > summary:hover .chevron { color: #9c6f34; text-decoration: underline; text-underline-offset: 2px; }
 .box > summary .summary-top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
 .box > summary h2 { font: 500 22px var(--serif); display: flex; align-items: baseline; gap: 10px; }
 .box > summary h2 .count { font: 13px var(--mono); color: var(--paper-faint); }
-.box .chevron { font: 14px var(--mono); color: var(--paper-brass); flex-shrink: 0; transition: transform .15s ease; }
-.box[open] > summary .chevron { transform: rotate(90deg); }
 .box-body { padding-top: 16px; }
 .peek { display: flex; flex-wrap: wrap; gap: 6px 10px; margin-top: 8px; }
 .peek span { font: 12px var(--mono); color: var(--paper-soft); background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 999px; padding: 2px 9px; }
-.box-pair { display: grid; grid-template-columns: 1fr; gap: 40px; margin-top: 44px; }
+/* No margin-top here on purpose: a block margin on a section's first child collapses straight
+   through an unpadded wrapping <section>, escaping onto the dark body background between it and
+   the previous (also .light) section instead of staying inside either one's own painted
+   background -- the section that wraps this in sitegen/build.py carries the top spacing as
+   padding instead, which doesn't collapse. */
+.box-pair { display: grid; grid-template-columns: 1fr; gap: 40px; }
 @media (min-width: 900px) { .box-pair { grid-template-columns: 1fr 1fr; gap: 56px; } }
 /* a per-box filter, scaled down from .changes-filters for a box's own scope (no site field --
    the box is already scoped to one site or record). */
@@ -346,10 +353,18 @@ details.notes h3 { font: 600 13px var(--mono); color: var(--paper-soft); margin:
 
 /* existing "About this shape" / "Research notes" pattern: prose, not a counted list, so it
    keeps its own bordered-card skin and gets no peek -- but its disclosure marker matches the
-   .box chevron above so every collapsible thing on the page reads as the same interaction. */
+   .box chevron below so every collapsible thing on the page reads as the same interaction. */
 details.notes summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-details.notes summary .chevron { font: 14px var(--mono); color: var(--paper-brass); transition: transform .15s ease; }
-details.notes[open] summary .chevron { transform: rotate(90deg); }
+details.notes summary:hover .chevron { color: #9c6f34; }
+
+/* Every collapsible summary's own disclosure label: an explicit "Show all"/"Hide", not a bare
+   arrow glyph -- a lone chevron reads as decoration more than a control, easy to miss as the
+   only clickable cue on an otherwise plain heading row (flagged directly against the shipped
+   page). CSS-only content swap on [open], so it needs no JavaScript and updates the instant a
+   native <details> toggles. */
+.box .chevron, details.notes summary .chevron { font: 500 13px var(--mono); color: var(--paper-brass); flex-shrink: 0; }
+.box .chevron::before, details.notes summary .chevron::before { content: "Show all ›"; }
+.box[open] > summary .chevron::before, details.notes[open] summary .chevron::before { content: "Hide ‹"; }
 
 /* retail tenants (data/retail_confirmed.csv, docs/briefs/retail-layer.md): site page section,
    record page section and the /retail/ directory all share this list markup. */
