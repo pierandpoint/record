@@ -11,6 +11,15 @@
   ],
   "milestones": [
     {
+      "date": "2020-05",
+      "text": "UC Regents' Committee on Finance and Capital Strategies (May 19-21, 2020 meeting) approves preliminary-plans/working-drawings funding and scope for the Block 34 parking garage, and preliminary-plans funding for the Block 34 clinical building",
+      "sources": [
+        "src-regents-2020-05-block34"
+      ],
+      "expected": false,
+      "approximate": true
+    },
+    {
       "date": "2021-10-02",
       "text": "Construction begins on the Block 34 clinical building",
       "sources": [
@@ -20,12 +29,13 @@
       "approximate": false
     },
     {
-      "date": "2024-08",
+      "date": "2024-08-27",
       "status": "complete",
-      "text": "UCSF Health Bayfront Medical Building (520 Illinois St) opens/welcomes patients -- probable identity of this record's building, inferred from its position at the 3rd/Mariposa/Illinois corner this project's clinical building occupies (see open_questions)",
+      "text": "UCSF Health Bayfront Medical Building (520 Illinois St) opens -- probable identity of this record's building, inferred from its position at the 3rd/Mariposa/Illinois corner this project's clinical building occupies (see open_questions). The adjoining nine-level, 500-space Illinois Street Garage came online separately in 2023.",
       "sources": [
         "src-ucsf-real-estate-bayfront",
-        "src-stantec-bayfront-2024"
+        "src-stantec-bayfront-2024",
+        "src-cpe-bayfront-2024"
       ],
       "expected": false,
       "approximate": false
@@ -72,12 +82,28 @@
       "date": "2024-08",
       "url": "https://www.stantec.com/en/news/2024/stantec-designed-ucsf-bayfront-medical-building-opens-mission-bay-campus",
       "accessed": "2026-09-21"
+    },
+    {
+      "id": "src-regents-2020-05-block34",
+      "title": "Notice of Regents Meeting, May 19-21, 2020 -- Committee on Finance and Capital Strategies agenda items: \"Preliminary Plans and Working Drawings Funding and Scope, Mission Bay East Campus Phase 2 (Block 34) Parking Garage\" and \"Preliminary Plans Funding, Mission Bay East Campus Phase 2 (Block 34) Clinical Building\"",
+      "publisher": "Regents of the University of California",
+      "date": "2020-05",
+      "url": "https://regents.universityofcalifornia.edu/meetings/agendas/may20.html",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": "src-cpe-bayfront-2024",
+      "title": "UCSF Opens $228M Health-Care Facility (Bayfront Medical Building opened Aug 27, 2024; the adjoining 500-space, nine-level parking garage \"came online\" in 2023; clinical building broke ground Sept 2021, the parking structure \"a few months later\")",
+      "publisher": "Commercial Property Executive (commercialsearch.com)",
+      "date": "2024",
+      "url": "https://www.commercialsearch.com/news/ucsf-opens-228m-health-care-facility/",
+      "accessed": "2026-09-22"
     }
   ],
   "open_questions": [
     "This record's own geometry file states the building's name/address/operator are not confirmed by any source checked in the geometry-correction pass. This research pass found a strong but not fully confirmed candidate: UCSF's Bayfront Medical Building (520 Illinois St), the clinical half of the 'Block 34 Clinical Building and Parking Garage' project, whose own CEQA filing places it south of the Wayne and Gladys Valley Center for Vision (this project's mission_bay_490_illinois record) and at the corner of 3rd and Mariposa -- matching this record's own notes exactly (south building, extending to Mariposa St). No source directly ties an address to this record's own OCII plan-block-34 parcel number, so the identification is geographic inference from UCSF's own project descriptions, not confirmed by an address-to-parcel source.",
-    "Exact opening day within August 2024 is inconsistent across sources found (a UCSF news article dated 2024-08 vs. secondary reports of an August 23 opening event and an August 27 first-patients date); not resolved here, only the month is used.",
+    "2026-09-22 pass: Commercial Property Executive's Aug 2024 article states the building opened Aug 27, 2024 and the garage \"came online\" in 2023 (no specific day found for the garage); this resolves the prior Aug 23 vs 27 ambiguity in favor of Aug 27, though the exact day for the garage's own opening is still not pinned down. The same article states the clinical building broke ground in September 2021 (not Oct 2, per src-sfyimby-block34-2021, kept here as the more specific figure) and the parking structure's construction began \"a few months later\" -- i.e. after, not before, the clinical building -- so no separate garage-construction-start milestone is added here.",
     "Total project cost is reported elsewhere as approximately $335.8 million for the combined clinical building and garage; not broken out per building and not independently verified against a primary UCSF or Regents document in this pass, so left out of costs."
   ],
-  "last_verified": "2026-09-21"
+  "last_verified": "2026-09-22"
 }

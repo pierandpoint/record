@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-21",
+ "generated": "2026-09-22",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -63817,12 +63817,48 @@
       "url": "https://pierandpoint.org/sites/mission-bay/"
      },
      "relation": "tracked"
+    },
+    {
+     "date": "2022-10",
+     "date_label": "Oct 2022",
+     "status": "complete",
+     "status_label": "Complete",
+     "text": "Mission Creek Stormwater Park (the P3 extension, 1.2 acres at 1000 Channel St, bounded by China Basin Channel, west of Fourth Street) completed, per a Landscape Performance Series case study -- resolves this project's own prior open question of whether the fall-2021 target opening (after a COVID-19 construction pause) actually happened on schedule; it slipped about a year further",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-laf-p3-2022",
+       "title": "Mission Creek Stormwater Park case study brief (\"Completion Date: October 2022\")",
+       "publisher": "Landscape Architecture Foundation, Landscape Performance Series",
+       "url": "https://www.landscapeperformance.org/case-study-briefs/mission-creek",
+       "accessed": "2026-09-22"
+      }
+     ],
+     "source": "Landscape Architecture Foundation, Landscape Performance Series",
+     "origin": "record",
+     "category": "status",
+     "category_label": "Status",
+     "record": {
+      "id": "mission_bay_creek_park",
+      "slug": "mission-creek-park",
+      "name": "Mission Creek Park",
+      "permalink": "https://pierandpoint.org/parcels/mission-creek-park/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-creek-park.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
     }
    ],
    "changes": [],
    "images": [],
    "open_questions": [
-    "The 2019-09 construction-start milestone is for the P3 extension specifically (a 1.65-acre addition west of Fourth Street, per src-potreroview-p3-2021), not the original park; that source also says the P3 extension's opening slipped from an end-of-2020 target to fall 2021 after a COVID-19 construction pause, but no source independently confirms whether that revised fall 2021 opening actually happened on schedule, so no separate completion milestone is added for P3 here.",
+    "The 2019-09 and 2022-10 milestones are both for the P3 extension specifically (a 1.2-1.65-acre addition west of Fourth Street), not the original park. The Potrero View source's fall-2021 target (after a COVID-19 pause) did not hold -- the Landscape Performance Series case study gives an actual completion date of October 2022, about a year later.",
     "No source checked gives Mission Creek Park's own original construction/opening date; the Mission Creek Park Pavilion within it has a separately sourced 2003 completion (data/records/mission_bay_creek_park_pavilion.json), but that doesn't establish when the surrounding park landscaping itself opened -- background reading (a Southeast Waterfront community history page, and a landscape-architecture magazine mention of a 2004-dated EDAW site-plan rendering found only in search-summary form, not confirmed against the actual article text) suggested an early-2000s completion but nothing specific enough to cite as a fact.",
     "OCII's September 2023 Mission Bay Parks Open Space transition presentation (src-ocii-transition-2023) lists plan parcels P1, P3, P5, P6, P10, P11/11A, P16, P17 and P26 as already RPD-managed by that date, but lists 'P2/P8' among parcels RPD 'will manage ... when built' (i.e., not yet complete as of Sept 2023) -- this record's own geometry file separately documents a 2026-09-20 union with P2 and P8 as 'barely touch[ing] this record's original shape,' consistent with those specific pieces being a later, smaller addition rather than part of the original park; not used to date the union since the two documents describe different things (a funding/management list vs. a geometry merge).",
     "OCII's plan-label usage for this park is inconsistent across documents over time: the Nov 2024 CAC deck labels the whole feature 'P3'; the current sfocii.org open-space page splits it into P1 (amphitheater), P2 and P3; and a 2015 Successor Agency LRPMP (cited on this repo's neighboring P7/P8/P9 records) uses P2, P7, P8 and P9 for nearby, separately tracked open-space parcels along the same creek. Not reconciled here."
@@ -63859,6 +63895,13 @@
      "accessed": "2026-09-21"
     },
     {
+     "id": "src-laf-p3-2022",
+     "title": "Mission Creek Stormwater Park case study brief (\"Completion Date: October 2022\")",
+     "publisher": "Landscape Architecture Foundation, Landscape Performance Series",
+     "url": "https://www.landscapeperformance.org/case-study-briefs/mission-creek",
+     "accessed": "2026-09-22"
+    },
+    {
      "id": null,
      "title": "openstreetmap.org/way/56656116",
      "url": "https://www.openstreetmap.org/way/56656116"
@@ -63871,7 +63914,7 @@
    ],
    "notes": "One of the parks completed as part of Mission Bay's original 1998 plan; open by fall 2010 per Wikipedia's Mission Bay article (citing the neighborhood's own park-completion history) and SF Rec & Park's facility page.",
    "has_record_file": true,
-   "last_verified": "2026-09-21",
+   "last_verified": "2026-09-22",
    "geometry": {
     "type": "MultiPolygon",
     "coordinates": [
@@ -69335,6 +69378,38 @@
    "facts": [],
    "costs": [],
    "milestones": [
+    {
+     "date": "2005-01",
+     "date_label": "~2005",
+     "status": "under_construction",
+     "status_label": "Under construction",
+     "text": "Construction of Avalon at Mission Bay North II (313 units, $118.0M projected total capital cost, AvalonBay 25% JV equity) already under way, per AvalonBay's own Q1 2005 earnings-release development schedule (Attachment 7)",
+     "expected": false,
+     "approximate": true,
+     "sources": [
+      {
+       "title": "AvalonBay Communities Q1 2005 earnings release, Attachment 7 (investors.avalonbay.com)"
+      }
+     ],
+     "source": "AvalonBay Communities Q1 2005 earnings release, Attachment 7 (investors.avalonbay.com)",
+     "origin": "csv",
+     "category": "status",
+     "category_label": "Status",
+     "record": {
+      "id": "mission_bay_avalon_phase_ii",
+      "slug": "avalon-at-mission-bay-ii",
+      "name": "Avalon at Mission Bay II",
+      "permalink": "https://pierandpoint.org/parcels/avalon-at-mission-bay-ii/",
+      "api": "https://pierandpoint.org/api/v1/records/avalon-at-mission-bay-ii.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
     {
      "date": "2006-06",
      "date_label": "~2006",
@@ -76402,15 +76477,15 @@
      "date_label": "~2004",
      "status": "complete",
      "status_label": "Complete",
-     "text": "255 Berry (Signature Development Group) opens",
+     "text": "255 Berry (Channel Park Condominiums) completed -- developer's own project page gives a 2001-2004 development date range; $60,000,000 project cost, 99 units, architect McLarand Vasquez Emsiek & Partners",
      "expected": false,
      "approximate": true,
      "sources": [
       {
-       "title": "web search of real-estate listing sources"
+       "title": "Signature Development Group's own project page (signaturedevelopment.com/development/255-berry/)"
       }
      ],
-     "source": "web search of real-estate listing sources",
+     "source": "Signature Development Group's own project page (signaturedevelopment.com/development/255-berry/)",
      "origin": "csv",
      "category": "status",
      "category_label": "Status",
@@ -93170,6 +93245,79 @@
    "costs": [],
    "milestones": [
     {
+     "date": "2010",
+     "date_label": "~2010",
+     "status": "under_construction",
+     "status_label": "Under construction",
+     "text": "EPA Region 9 / California DTSC $760,000 Revolving Loan Fund hazardous-substances subgrant funds construction of \"Mission Bay Park P10\" together with Mission Bay Circle -- soil removal/relocation, clean fill import, a landscape/hardscape cap and a methane mitigation system; construction projected to employ approximately 395 workers over 15 months",
+     "expected": false,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-epa-rlf-subgrants",
+       "title": "Brownfields Program Revolving Loan Fund (RLF) Success Stories -- California DTSC Subgrants fact sheet (Subgrant 4: \"Mission Bay Park P10\")",
+       "publisher": "US Environmental Protection Agency, Region 9 (archived)",
+       "url": "https://archive.epa.gov/region9/brownfields/archive/web/pdf/r9-rlf-fs-subgrants.pdf",
+       "accessed": "2026-09-22"
+      }
+     ],
+     "source": "US Environmental Protection Agency, Region 9 (archived)",
+     "origin": "record",
+     "category": "status",
+     "category_label": "Status",
+     "record": {
+      "id": "mission_bay_p10_roundabout_island",
+      "slug": "p10",
+      "name": "P10",
+      "permalink": "https://pierandpoint.org/parcels/p10/",
+      "api": "https://pierandpoint.org/api/v1/records/p10.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2011-11",
+     "date_label": "~2011",
+     "status": "under_construction",
+     "status_label": "Under construction",
+     "text": "Mission Bay Circle (the roundabout containing this island) shown to a DTSC/EPA/City press tour as a \"landscaped turnaround that will eventually serve as a gateway to the park corridor\" -- described in future tense, i.e. not yet functional at this date",
+     "expected": false,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-baycrossings-2011",
+       "title": "Earth-Friendly Redevelopment in Mission Bay",
+       "publisher": "Bay Crossings",
+       "url": "https://www.baycrossings.com/earth-friendly-redevelopment-in-mission-bay/",
+       "date": "2011-11",
+       "accessed": "2026-09-22"
+      }
+     ],
+     "source": "Bay Crossings, 2011-11",
+     "origin": "record",
+     "category": "status",
+     "category_label": "Status",
+     "record": {
+      "id": "mission_bay_p10_roundabout_island",
+      "slug": "p10",
+      "name": "P10",
+      "permalink": "https://pierandpoint.org/parcels/p10/",
+      "api": "https://pierandpoint.org/api/v1/records/p10.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
      "date": "2023-09",
      "date_label": "~2023",
      "status": "complete",
@@ -93210,7 +93358,7 @@
    "changes": [],
    "images": [],
    "open_questions": [
-    "No public source (SF Rec & Park, OCII, SFMTA, news) names this island or gives its own landscaping/construction date; the Sept 2023 OCII document only establishes that it existed and was already managed by that date, which is an upper bound, not a build date. It is presumed built alongside the Mission Bay Circle roundabout itself, whose own original construction date was not independently confirmed either (a 2021 Streetsblog SF article describes a later proposal for an added bike ring around the roundabout, not its original construction).",
+    "2026-09-22 pass: a 2011-2012-era EPA/DTSC brownfields fact sheet directly names \"Mission Bay Park P10\" (Subgrant 4, $760,000) funding its construction together with Mission Bay Circle, and a Nov 2011 press-tour article shows the Circle still not yet functional at that date -- but neither source gives an exact construction-start date, only that funded work was under way by 2010-2011. The original park/roundabout's exact start and completion dates remain unconfirmed.",
     "Owner/operator beyond 'part of RPD's Mission Bay open-space inventory' not confirmed by any source found."
    ],
    "sources": [
@@ -93227,11 +93375,26 @@
      "url": "https://sfocii.org/sites/default/files/inline-files/Item%202%20Mission%20Bay%20Open%20Space%20Transition.pdf",
      "date": "2023-09",
      "accessed": "2026-09-21"
+    },
+    {
+     "id": "src-epa-rlf-subgrants",
+     "title": "Brownfields Program Revolving Loan Fund (RLF) Success Stories -- California DTSC Subgrants fact sheet (Subgrant 4: \"Mission Bay Park P10\")",
+     "publisher": "US Environmental Protection Agency, Region 9 (archived)",
+     "url": "https://archive.epa.gov/region9/brownfields/archive/web/pdf/r9-rlf-fs-subgrants.pdf",
+     "accessed": "2026-09-22"
+    },
+    {
+     "id": "src-baycrossings-2011",
+     "title": "Earth-Friendly Redevelopment in Mission Bay",
+     "publisher": "Bay Crossings",
+     "url": "https://www.baycrossings.com/earth-friendly-redevelopment-in-mission-bay/",
+     "date": "2011-11",
+     "accessed": "2026-09-22"
     }
    ],
    "notes": "Center island of the real 'Mission Bay Circle' roundabout at the south end of the Mission Bay Circle/Owens St area, matching plan label P10. Landscaped with grass and trees; the roundabout's own median (P11A) and connector strip (P11) are tracked separately.",
    "has_record_file": true,
-   "last_verified": "2026-09-21",
+   "last_verified": "2026-09-22",
    "geometry": {
     "type": "Polygon",
     "coordinates": [
@@ -95735,6 +95898,43 @@
    "costs": [],
    "milestones": [
     {
+     "date": "2020-05",
+     "date_label": "~2020",
+     "status": null,
+     "status_label": null,
+     "text": "UC Regents' Committee on Finance and Capital Strategies (May 19-21, 2020 meeting) approves preliminary-plans/working-drawings funding and scope for the Block 34 parking garage, and preliminary-plans funding for the Block 34 clinical building",
+     "expected": false,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-regents-2020-05-block34",
+       "title": "Notice of Regents Meeting, May 19-21, 2020 -- Committee on Finance and Capital Strategies agenda items: \"Preliminary Plans and Working Drawings Funding and Scope, Mission Bay East Campus Phase 2 (Block 34) Parking Garage\" and \"Preliminary Plans Funding, Mission Bay East Campus Phase 2 (Block 34) Clinical Building\"",
+       "publisher": "Regents of the University of California",
+       "date": "2020-05",
+       "url": "https://regents.universityofcalifornia.edu/meetings/agendas/may20.html",
+       "accessed": "2026-09-22"
+      }
+     ],
+     "source": "Regents of the University of California, 2020-05",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "mission_bay_block_34",
+      "slug": "mission-bay-south-block-34-unnamed-ucsf-building",
+      "name": "Mission Bay South Block 34 (unnamed UCSF building)",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-34-unnamed-ucsf-building/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-34-unnamed-ucsf-building.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
      "date": "2021-10-02",
      "date_label": "Oct 2, 2021",
      "status": null,
@@ -95772,11 +95972,11 @@
      "relation": "tracked"
     },
     {
-     "date": "2024-08",
-     "date_label": "Aug 2024",
+     "date": "2024-08-27",
+     "date_label": "Aug 27, 2024",
      "status": "complete",
      "status_label": "Complete",
-     "text": "UCSF Health Bayfront Medical Building (520 Illinois St) opens/welcomes patients -- probable identity of this record's building, inferred from its position at the 3rd/Mariposa/Illinois corner this project's clinical building occupies (see open_questions)",
+     "text": "UCSF Health Bayfront Medical Building (520 Illinois St) opens -- probable identity of this record's building, inferred from its position at the 3rd/Mariposa/Illinois corner this project's clinical building occupies (see open_questions). The adjoining nine-level, 500-space Illinois Street Garage came online separately in 2023.",
      "expected": false,
      "approximate": false,
      "sources": [
@@ -95794,9 +95994,17 @@
        "date": "2024-08",
        "url": "https://www.stantec.com/en/news/2024/stantec-designed-ucsf-bayfront-medical-building-opens-mission-bay-campus",
        "accessed": "2026-09-21"
+      },
+      {
+       "id": "src-cpe-bayfront-2024",
+       "title": "UCSF Opens $228M Health-Care Facility (Bayfront Medical Building opened Aug 27, 2024; the adjoining 500-space, nine-level parking garage \"came online\" in 2023; clinical building broke ground Sept 2021, the parking structure \"a few months later\")",
+       "publisher": "Commercial Property Executive (commercialsearch.com)",
+       "date": "2024",
+       "url": "https://www.commercialsearch.com/news/ucsf-opens-228m-health-care-facility/",
+       "accessed": "2026-09-22"
       }
      ],
-     "source": "UCSF Real Estate; Stantec, 2024-08",
+     "source": "UCSF Real Estate; Stantec, 2024-08; Commercial Property Executive (commercialsearch.com), 2024",
      "origin": "record",
      "category": "status",
      "category_label": "Status",
@@ -95820,7 +96028,7 @@
    "images": [],
    "open_questions": [
     "This record's own geometry file states the building's name/address/operator are not confirmed by any source checked in the geometry-correction pass. This research pass found a strong but not fully confirmed candidate: UCSF's Bayfront Medical Building (520 Illinois St), the clinical half of the 'Block 34 Clinical Building and Parking Garage' project, whose own CEQA filing places it south of the Wayne and Gladys Valley Center for Vision (this project's mission_bay_490_illinois record) and at the corner of 3rd and Mariposa -- matching this record's own notes exactly (south building, extending to Mariposa St). No source directly ties an address to this record's own OCII plan-block-34 parcel number, so the identification is geographic inference from UCSF's own project descriptions, not confirmed by an address-to-parcel source.",
-    "Exact opening day within August 2024 is inconsistent across sources found (a UCSF news article dated 2024-08 vs. secondary reports of an August 23 opening event and an August 27 first-patients date); not resolved here, only the month is used.",
+    "2026-09-22 pass: Commercial Property Executive's Aug 2024 article states the building opened Aug 27, 2024 and the garage \"came online\" in 2023 (no specific day found for the garage); this resolves the prior Aug 23 vs 27 ambiguity in favor of Aug 27, though the exact day for the garage's own opening is still not pinned down. The same article states the clinical building broke ground in September 2021 (not Oct 2, per src-sfyimby-block34-2021, kept here as the more specific figure) and the parking structure's construction began \"a few months later\" -- i.e. after, not before, the clinical building -- so no separate garage-construction-start milestone is added here.",
     "Total project cost is reported elsewhere as approximately $335.8 million for the combined clinical building and garage; not broken out per building and not independently verified against a primary UCSF or Regents document in this pass, so left out of costs."
    ],
    "sources": [
@@ -95846,11 +96054,27 @@
      "date": "2024-08",
      "url": "https://www.stantec.com/en/news/2024/stantec-designed-ucsf-bayfront-medical-building-opens-mission-bay-campus",
      "accessed": "2026-09-21"
+    },
+    {
+     "id": "src-regents-2020-05-block34",
+     "title": "Notice of Regents Meeting, May 19-21, 2020 -- Committee on Finance and Capital Strategies agenda items: \"Preliminary Plans and Working Drawings Funding and Scope, Mission Bay East Campus Phase 2 (Block 34) Parking Garage\" and \"Preliminary Plans Funding, Mission Bay East Campus Phase 2 (Block 34) Clinical Building\"",
+     "publisher": "Regents of the University of California",
+     "date": "2020-05",
+     "url": "https://regents.universityofcalifornia.edu/meetings/agendas/may20.html",
+     "accessed": "2026-09-22"
+    },
+    {
+     "id": "src-cpe-bayfront-2024",
+     "title": "UCSF Opens $228M Health-Care Facility (Bayfront Medical Building opened Aug 27, 2024; the adjoining 500-space, nine-level parking garage \"came online\" in 2023; clinical building broke ground Sept 2021, the parking structure \"a few months later\")",
+     "publisher": "Commercial Property Executive (commercialsearch.com)",
+     "date": "2024",
+     "url": "https://www.commercialsearch.com/news/ucsf-opens-228m-health-care-facility/",
+     "accessed": "2026-09-22"
     }
    ],
    "notes": "OCII plan block 34. Between 3rd St and Illinois St, south of block 33, down to Mariposa St. Name/operator not yet confirmed.",
    "has_record_file": true,
-   "last_verified": "2026-09-21",
+   "last_verified": "2026-09-22",
    "geometry": {
     "type": "Polygon",
     "coordinates": [
