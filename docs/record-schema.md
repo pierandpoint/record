@@ -318,3 +318,55 @@ and fails a row over 140 characters. The changes pages (`/changes/`) show
 the date, a category chip, a site chip (derived from `record_id`, or "all
 sites" when blank), the record link and the summary; the full `text` sits
 behind a details disclosure.
+
+## `data/retail_confirmed.csv`
+
+Confirmed ground-floor tenants: one row per tenant per record. Human-confirmed
+only -- `src/join_retail.py`'s DataSF business-registration join
+(`data/processed/retail_points.geojson`, `out/retail_needs_review.csv`) is a
+candidate feed a person triages against leasing pages, developer tenant
+lists, press coverage and the tenant's own site before it becomes a row here;
+the raw registrations are never rendered on the public site (they include
+home-based sole-proprietor registrations and stale entries). `src/
+retail_candidates.py` lists registrations at tracked parcels that aren't in
+this table yet, for the monthly review (`docs/operations.md`).
+
+Columns:
+
+- `record_id`: a known id from `status.csv` or `approximate_projects.csv` --
+  the parcel the tenant's storefront actually sits on, not just the site.
+- `slug`: the tenant's name, lowercased and hyphenated, unique across the
+  whole table (not just per record). `sitegen/imagepick.py`'s `subject:
+  retail:<slug>` picks a tenant's own storefront photo from a record's
+  `images` by this same slug (`docs/record-schema.md`'s `subject` field,
+  above) -- keep a tenant's slug here and any photo tagged for it in sync by
+  hand if either ever changes.
+- `name`: the tenant's own name, as the source gives it.
+- `category`: one of `food and drink`, `grocery`, `fitness`, `health`,
+  `retail goods`, `services`, `arts and culture`, `office lobby or other`.
+  Fixed list; no other value.
+- `status`: `open`, `announced` (a source names it coming, with no confirmed
+  opening yet) or `closed`.
+- `opened` / `closed`: `YYYY`, `YYYY-MM` or `YYYY-MM-DD`, or blank when no
+  source gives a firm date -- a blank is better than a guessed date, and an
+  `announced` tenant with no opening date yet is exactly the case this
+  covers.
+- `source`: a URL. Required on every row -- no source, no tenant, the same
+  rule as everywhere else in this repo.
+- `unit_or_address`: free text, as specific as the source gives it (a suite
+  number, a building name).
+
+`src/validate_records.py` checks: every `record_id` is known, every `slug` is
+unique, `opened`/`closed` parse under the same date rule as everywhere else,
+`source` is non-blank, `status` and `category` are each in their fixed list.
+
+Rendering: the site page's "What's open, what's coming" section
+(`sitegen/build.py`), the site map's "show tenants" toggle (an outline and a
+count per parcel with tenants, never a pin -- `sitegen/pages.py`'s
+`site_map()`), the record page's own tenant list, each site card's "N open ·
+M coming" count line on the home page, and the `/retail/` directory
+(`sitegen/build.py`, linked from each site page's tenant section and the
+footer's first nav row, never the main navigation -- retail is a facet of a
+record, not a separate product). A row that is an opening, announcement or
+closure with a date gets a matching `data/changelog.csv` row, `category:
+retail`.

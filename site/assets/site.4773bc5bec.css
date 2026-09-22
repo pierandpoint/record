@@ -77,6 +77,15 @@ img { max-width: 100%; display: block; }
 .zoom-controls[hidden] { display: none; }
 .zoom-btn { width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid var(--line-3); background: rgba(29,37,40,.92); color: var(--text); font: 600 17px var(--mono); line-height: 1; cursor: pointer; }
 .zoom-btn:hover { border-color: var(--brass); color: var(--brass-hi); }
+/* "show tenants" map toggle (docs/briefs/retail-layer.md) */
+.tenant-toggle { position: absolute; top: 12px; left: 12px; z-index: 2; background: rgba(29,37,40,.92); font-size: 13px; min-height: 38px; padding: 0 14px; }
+.tenant-toggle[hidden] { display: none; }
+.tenant-toggle[aria-pressed="true"] { border-color: var(--brass); color: var(--brass-hi); }
+.tenant-badge { opacity: 0; transition: opacity .15s ease; }
+.pp-map.tenants-on .tenant-badge { opacity: 1; }
+.pp-map.tenants-on a[data-tenants] .rec { stroke: var(--brass); stroke-width: 2.4; }
+.tenant-focus-panel { margin-top: 10px; padding: 10px 14px; border-radius: 8px; background: var(--ink-2); border: 1px solid var(--line-2); font: 13px var(--mono); color: var(--text-2); }
+.tenant-focus-panel[hidden] { display: none; }
 .overview .ov-narrow { display: none; }
 @media (max-width: 719px) { .overview .ov-wide { display: none; } .overview .ov-narrow { display: block; } }
 .map-caption { font-size: 13px; color: var(--faint); margin-top: 10px; }
@@ -152,6 +161,7 @@ img { max-width: 100%; display: block; }
 .site-card .meta { display: flex; justify-content: space-between; gap: 12px; font: 12px var(--mono); color: var(--faint); }
 .site-card .meta .done { color: var(--brass); }
 .site-card .map-frame .pp-map { aspect-ratio: 654 / 380; }
+.tenant-count-line { font: 13px var(--mono); color: var(--brass); margin: -4px 0 0; }
 .site-card footer { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; font-size: 14px; color: var(--text-2); }
 .site-card footer a { flex-shrink: 0; font-weight: 500; }
 .placeholder-panel { aspect-ratio: 654 / 380; border-radius: 12px; border: 1.5px dashed var(--line-3); background: repeating-linear-gradient(45deg, rgba(169,179,174,.07) 0 2px, transparent 2px 12px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 24px; text-align: center; color: var(--faint); }
@@ -291,6 +301,30 @@ details.notes h3 { font: 600 13px var(--mono); color: var(--paper-soft); margin:
 .status-group + .status-group { margin-top: 32px; }
 .status-group h3 { display: flex; align-items: center; gap: 10px; font: 600 15px var(--sans); margin-bottom: 10px; }
 .status-group h3 .count { font: 13px var(--mono); color: var(--paper-faint); font-weight: 400; }
+
+/* retail tenants (data/retail_confirmed.csv, docs/briefs/retail-layer.md): site page section,
+   record page section and the /retail/ directory all share this list markup. */
+.tenant-group { margin-top: 24px; }
+.tenant-group:first-child { margin-top: 0; }
+.tenant-group h3 { display: flex; align-items: center; gap: 10px; font: 600 15px var(--sans); margin-bottom: 10px; color: var(--paper-ink); }
+.tenant-group h3 .count { font: 13px var(--mono); color: var(--paper-faint); font-weight: 400; }
+.tenant-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.tenant { display: flex; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--paper-line); }
+.tenant-media { flex-shrink: 0; width: 56px; height: 56px; border-radius: 10px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: var(--paper-2); border: 1px solid var(--paper-line); }
+.tenant-photo { width: 100%; height: 100%; object-fit: cover; }
+.tenant-icon { font: 600 11px var(--mono); letter-spacing: .02em; color: var(--paper-brass); }
+.tenant-body { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.tenant-name { font-size: 15px; font-weight: 600; color: var(--paper-ink); display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.tenant-record { font-size: 12px; font-weight: 500; color: var(--paper-brass); }
+.tenant-meta { overflow-wrap: anywhere; }
+.chip.tenant-status-open { background: #e3ecdf; color: #2b6a45; border-color: transparent; }
+.chip.tenant-status-announced { background: #f6e3cc; color: #8a4f0d; border-color: transparent; }
+.chip.tenant-status-closed { background: #e8e1d0; color: var(--paper-soft); border-color: transparent; }
+.tenant-closed { margin-top: 16px; }
+.tenant-closed summary { cursor: pointer; font: 600 13px var(--mono); color: var(--paper-faint); }
+.tenant-closed .tenant-list { margin-top: 12px; }
+.tenant-directory-link { margin-top: 20px; font-weight: 500; }
+.retail-site + .retail-site { margin-top: 48px; padding-top: 48px; border-top: 1px solid var(--paper-line); }
 .prose-page { max-width: 72ch; padding-top: 48px; padding-bottom: 80px; font-size: 17px; line-height: 1.7; color: var(--paper-soft); }
 .prose-page h1 { font: 500 clamp(32px, 5vw, 52px)/1.06 var(--serif); color: var(--paper-ink); margin: 10px 0 20px; }
 .prose-page h2 { font: 500 26px/1.2 var(--serif); color: var(--paper-ink); margin: 40px 0 12px; }

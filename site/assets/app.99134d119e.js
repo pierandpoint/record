@@ -285,6 +285,40 @@
         if (outBtn) outBtn.addEventListener('click', function () { var c = center(); zoomAt(1 / 1.4, c.x, c.y); });
         if (resetBtn) resetBtn.addEventListener('click', reset);
       }
+
+      // The "show tenants" toggle (docs/briefs/retail-layer.md): an outline and a count per
+      // parcel with a confirmed tenant, never a per-tenant pin. Rendered always by
+      // sitegen/pages.py's site_map() but visually inert until this flips .tenants-on on the
+      // svg -- so with JavaScript off the toggle button itself stays hidden (like the zoom
+      // controls above) and the page's own "What's open, what's coming" section, already in
+      // the markup, is the only way to see the tenant list.
+      var toggle = frame ? frame.querySelector('[data-tenant-toggle]') : null;
+      var panel = frame ? frame.parentElement.querySelector('[data-tenant-panel]') : null;
+      if (toggle) {
+        toggle.hidden = false;
+        toggle.addEventListener('click', function () {
+          var on = svg.classList.toggle('tenants-on');
+          toggle.setAttribute('aria-pressed', on ? 'true' : 'false');
+          toggle.textContent = on ? 'Hide tenants' : 'Show tenants';
+          if (!on && panel) panel.hidden = true;
+        });
+        if (panel) {
+          var showPanel = function (a) {
+            if (!svg.classList.contains('tenants-on')) return;
+            var summary = a.getAttribute('data-tenant-summary');
+            if (!summary) return;
+            panel.textContent = summary.split('; ').join(' · ');
+            panel.hidden = false;
+          };
+          var hidePanel = function () { panel.hidden = true; };
+          svg.querySelectorAll('a[data-tenants]').forEach(function (a) {
+            a.addEventListener('pointerenter', function () { showPanel(a); });
+            a.addEventListener('focus', function () { showPanel(a); });
+            a.addEventListener('pointerleave', hidePanel);
+            a.addEventListener('blur', hidePanel);
+          });
+        }
+      }
     });
   }
   initZoom();

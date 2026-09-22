@@ -1,0 +1,39 @@
+# Human-confirmed retail and amenity tenants, one row per tenant per record (docs/record-schema.md,
+# "data/retail_confirmed.csv"). Seeded by triaging out/retail_needs_review.csv and
+# data/processed/retail_points.geojson (src/join_retail.py's candidate feed) against leasing pages,
+# developer tenant lists, press coverage and the businesses' own sites -- the registration join
+# itself is never rendered on the public site; this table is the human-confirmed subset of it.
+#   record_id: a status.csv/approximate_projects.csv id the tenant's storefront sits on.
+#   slug: name lowercased and hyphenated, unique across this whole table (sitegen/imagepick.py's
+#     `subject: retail:<slug>` picks a tenant's own storefront photo by this same slug).
+#   category: one of food and drink | grocery | fitness | health | retail goods | services |
+#     arts and culture | office lobby or other.
+#   status: open | announced | closed.
+#   opened / closed: YYYY, YYYY-MM or YYYY-MM-DD, or blank when no source gives a firm date.
+#   source: a URL. Required on every row -- no source, no tenant.
+#   unit_or_address: free text, as specific as the source gives (suite, building name).
+# Two parcels in DataSF's own registration join (4052001 and 4114010) both matched every "1070
+# Maryland St" registration near Pier 70's Building 12/14 -- an artifact of overlapping Assessor
+# parcel polygons the join can't resolve (not this table's to fix; Pier 70's geometry is signed
+# off, CLAUDE.md). Building 12's own real street address is 1070 Maryland St (status.csv), so
+# every "1070 Maryland St" tenant below is assigned to 4114010, never 4052001.
+record_id,slug,name,category,status,opened,closed,source,unit_or_address
+8719A008,via-aurelia,Via Aurelia,food and drink,open,2025-10,,https://www.hautelivingsf.com/2025/10/16/via-aurelia-restaurant-opens-at-mission-rock-with-tuscan-themed-celebration/,300 Toni Stone Xing (Visa Building G ground floor)
+8719A008,blue-bottle-coffee,Blue Bottle Coffee,food and drink,open,2025-11-10,,https://hoodline.com/2025/11/blue-bottle-brews-up-new-mission-rock-cafe-13th-san-francisco-location/,300 Toni Stone Crossing Ste E
+8719A008,proper-food,Proper Food,food and drink,open,2024-06,,https://whatnowsf.com/proper-food-rings-in-10-year-anniversary-with-18th-store-opening-in-mission-rock-development/,300 Toni Stone Xing Ste E
+8719A008,fieldwork-brewing,Fieldwork Brewing Co.,food and drink,open,2026-07-26,,https://www.brewbound.com/pr/2026/07/28/fieldwork-opens-mission-rock-taproom-expanding-its-footprint-in-san-francisco,300 Toni Stone Crossing
+8719B002,sweetgreen,Sweetgreen,food and drink,open,2025-09-08,,https://sf.funcheap.com/sweetgreen-softopening-sfs-mission-rock-free-meal-days-sept-45/,1023 3rd St (The Canyon)
+8719B002,quik-dog,Quik Dog,food and drink,open,2025-11,,https://hoodline.com/2025/11/trick-dog-boss-unleashes-quik-dog-near-oracle-park/,1023 3rd St Ste E
+8719C003,flour-water-pizza-shop,Flour + Water Pizza Shop,food and drink,open,2025-04-14,,https://sfist.com/2025/04/07/flour-water-pizza-shop-opens-next-week-in-mission-rock/,1090 Dr Maya Angelou Ln Ste A
+8719C003,ikes-love-and-sandwiches,Ike's Love & Sandwiches,food and drink,open,2024-07-19,,https://www.globenewswire.com/news-release/2024/06/17/2900025/0/en/IKE-S-LOVE-SANDWICHES-RETURNS-TO-SF-ROOTS-FOR-ITS-100TH-LOCATION.html,1090 Dr Maya Angelou Ln Ste G
+8719C003,luxfit-mission-rock,LuxFit,fitness,open,2024-07,,https://www.yelp.com/biz/luxfit-mission-rock-san-francisco,1090 Dr Maya Angelou Ln Ste E
+8719C003,greys-florals,Grey's Florals,retail goods,open,2026-08,,https://whatnow.com/san-francisco/retail/greys-florals-to-open-in-mission-rock/,1090 Dr Maya Angelou Ln Ste B
+8719C003,mnt-studio-mission-rock,MNT Studio,fitness,announced,,,https://mntstudio.co/mission-rock,1090 Dr Maya Angelou Ln
+8719C001,arsicault-bakery-mission-rock,Arsicault Bakery,food and drink,open,2025-03-10,,https://www.citybiz.co/article/670677/celebrated-san-francisco-bakery-arsicault-opens-new-location-in-mission-rock-neighborhood/,1070 Bridgeview Way Unit B
+8719C001,chipotle-mission-rock,Chipotle Mexican Grill,food and drink,announced,,,https://x.com/SFBusinessTimes/status/2005866556429881431,365 Toni Stone Xing Ste C
+pier70_building_101,rh-san-francisco,RH San Francisco,retail goods,open,2022-05-12,,https://ir.rh.com/news-events/detail/18/rh-announces-the-opening-of-rh-san-francisco-the-gallery-at-the-historic-bethlehem-steel-building,Building 101 (The Gallery at the Historic Bethlehem Steel Building)
+pier70_building_101,rh-palm-court,Palm Court Restaurant (RH San Francisco),food and drink,open,2022-05-12,,https://ir.rh.com/news-events/detail/18/rh-announces-the-opening-of-rh-san-francisco-the-gallery-at-the-historic-bethlehem-steel-building,Building 101
+4114010,breadbelly-b12,Breadbelly B12,food and drink,open,2025-02,,https://www.sfchronicle.com/food/restaurants/article/breadbelly-bakery-pier-70-20389703.php,1070 Maryland St Ste 122 (Building 12)
+4114010,sven-ceramics,Sven Ceramics,arts and culture,open,,,https://pier70sf.com/directory/sven-ceramics/,1070 Maryland St Ste 275 (Building 12)
+4114010,bay-padel-pier-70,Bay Padel,fitness,open,2024-06,,https://baypadel.us/dogpatch-san-francisco/,1070 Maryland St Ste 140 (Building 12)
+pier70_e3,elevation-sky-park,Elevation Sky Park San Francisco,arts and culture,open,2026-09-19,,https://www.businesswire.com/news/home/20260723971049/en/BLONDISH-to-Headline-Pier-Play-San-Francisco-as-Elevation-Sky-Park-San-Francisco-Opens-at-Pier-70-on-September-19,Pier 70 Parcel E3 (interim use)
