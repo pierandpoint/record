@@ -49,12 +49,50 @@
   },
   "facts": [],
   "costs": [],
-  "milestones": [],
+  "milestones": [
+   {
+    "date": "2011-11-04",
+    "date_label": "~2011",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Park P16 -- per OCII's own Nov 2024 CAC map, at this record's own location (the east end of the Mission Bay Commons strip, between 3rd St and Terry Francois Blvd) -- described as \"the newest segment of the Mission Bay Commons Park system\" and \"recently completed\" as of this date, funded partly by a DTSC brownfields grant",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-epa-2011-p16",
+      "title": "San Francisco Creates New \"Green\" Project at Mission Bay Community with Stimulus, Private Funding (Nov 4, 2011) -- names only Park P16, not P17, and says \"recently completed,\" not \"dedicated\"",
+      "publisher": "US Environmental Protection Agency (archived press release)",
+      "url": "https://www.epa.gov/archive/epapages/newsroom_archive/newsreleases/f331b33bcc8cb8cf8525793e00531a9a.html",
+      "date": "2011-11-04",
+      "accessed": "2026-09-22"
+     }
+    ],
+    "source": "US Environmental Protection Agency (archived press release), 2011-11-04",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_commons",
+     "slug": "mission-bay-commons",
+     "name": "Mission Bay Commons",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-commons/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   }
+  ],
   "changes": [],
   "images": [],
   "open_questions": [
-   "No independently dated source found for when this lawn (the single mapped OSM lot between the Radiance and Nektar/Bayer buildings, per this record's own geometry file) was built or opened. The only dated event found is SF Rec & Park's July 1, 2023 assumption of management from OCII, which is a management transfer, not a construction-completion date -- not used as a completion milestone, per this repo's rule against attributing an area-wide/administrative event to an individual record's build status.",
-   "This record's geometry file explicitly distinguishes this single mapped lawn from the much larger, still-interim 'Mission Bay Commons' area further west (Spark Social SF, Stagecoach Greens, the soccer field, tracked separately as mission_bay_commons_interim_west); OCII's own Nov 2024 CAC materials use the plan labels P11, P12, P13, P15, P16 and P17 for that wider interim-use area collectively, without singling out which label (if any) corresponds to this specific mapped lot -- not resolved here."
+   "The only dated event found is SF Rec & Park's July 1, 2023 assumption of management from OCII, which is a management transfer, not a construction-completion date -- not used as a completion milestone, per this repo's rule against attributing an area-wide/administrative event to an individual record's build status.",
+   "2026-09-22 pass: OCII's own Nov 2024 CAC map places labels P16 and P17 specifically at the east end of the Mission Bay Commons strip (between 3rd St and Terry Francois Blvd), matching this record's own mapped lawn -- resolving which OCII labels apply here, versus the P11/P12/P13/P15 labels used for the separate, still-interim area further west (mission_bay_commons_interim_west). The only dated source found (a Nov 2011 EPA press release) names just P16, not P17, and says the park was \"recently completed\" rather than giving a construction date or a dedication date -- so the milestone above is deliberately narrower than that OCII grouping might suggest."
   ],
   "sources": [
    {
@@ -63,6 +101,14 @@
     "publisher": "San Francisco Recreation and Park Department (sfrecpark.org)",
     "url": "https://sfrecpark.org/Facilities/Facility/Details/Mission-Bay-Commons-455",
     "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-epa-2011-p16",
+    "title": "San Francisco Creates New \"Green\" Project at Mission Bay Community with Stimulus, Private Funding (Nov 4, 2011) -- names only Park P16, not P17, and says \"recently completed,\" not \"dedicated\"",
+    "publisher": "US Environmental Protection Agency (archived press release)",
+    "url": "https://www.epa.gov/archive/epapages/newsroom_archive/newsreleases/f331b33bcc8cb8cf8525793e00531a9a.html",
+    "date": "2011-11-04",
+    "accessed": "2026-09-22"
    },
    {
     "id": null,
@@ -82,7 +128,7 @@
   ],
   "notes": "Completed as part of Mission Bay's original 1998 plan, open by fall 2010 per Wikipedia's Mission Bay article.",
   "has_record_file": true,
-  "last_verified": "2026-09-21",
+  "last_verified": "2026-09-22",
   "geometry": {
    "type": "Polygon",
    "coordinates": [

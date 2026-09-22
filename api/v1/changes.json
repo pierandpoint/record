@@ -5,7 +5,7 @@
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
  "terms": "https://pierandpoint.org/terms/",
- "count": 124,
+ "count": 125,
  "changes": [
   {
    "date": "2026-09-22",
@@ -52,6 +52,24 @@
     "url": "https://pierandpoint.org/sites/mission-bay/"
    },
    "relation": "tracked",
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-09-22",
+   "kind": "added",
+   "kind_label": "Added",
+   "text": "Verified a third Gemini research batch (docs/briefs/gemini-verification-3.md), following ground rules the project gave it after two earlier rounds. Citations were real and quotable far more often this time, but two of the 13 claims were still rejected before verification even started -- both cited real documents describing a different physical parcel than this project tracks (Block 22 vs. Bayfront Park/P22, confirmed ~500m apart and matching UCSF's own \"Koret Quad\" label; the P26 interchange wedge vs. the real, separately-named Mariposa Park, confirmed via San Francisco's own Legistar API that the cited ordinance's own title places it on a different street). Of the remaining 11: confirmed and added -- Uber Mission Bay 3 & 4 gained two 2018 structural-steel milestones (Mortenson's own steel-fabrication page, distinct from the arena's steel package) and a JV-formation note (Alexandria Real Estate's own SEC filing); Mission Bay Commons gained a narrower, accurately-worded Nov 2011 completion milestone for Park P16 specifically (the source names only P16, not P17, and says \"recently completed,\" not \"dedicated,\" as Gemini's fuller claim implied); Mission Bay Block 34 gained a real April 2021 garage-construction-start date from Clark Construction's own press release, reversing this project's own prior rejection of the same date (which had relied on a vaguer secondary paraphrase). Caught and rejected: P11/P11A's claimed Board of Supervisors File #190755 was re-checked directly against Legistar's API and confirmed, again, not to exist; UCSF's 1670 Owens Garage citation turned out to be about a different, separately-addressed UCSF garage (1625 Owens St, serving the Rutter Center) three streets away. Flagged, not resolved: a real identity question about whether mission_bay_creek_park_p1_p3 actually belongs to Mission Bay North's own NP1/NP2 open-space system rather than the Mission Bay South labels it currently carries. Left as-is: the UCSF Preliminary Utilities Plant and part of the Third Street Garage's own completion date, both blocked by realestate.ucsf.edu's persistent 403 (tried direct fetch, a reader-proxy, spoofed-user-agent curl, and the Wayback Machine -- the Wayback Machine itself is blocked at this environment's network level). The Third Street Garage did gain a general-contractor fact (Overaa Construction) confirming its identity and surfacing an 822-vs-882-space discrepancy between a 2003 pre-construction budget and the contractor's own as-built figure.",
+   "source": "docs/briefs/gemini-verification-3.md",
+   "sources": [
+    {
+     "title": "docs/briefs/gemini-verification-3.md"
+    }
+   ],
+   "category": "milestone",
+   "category_label": "Milestone",
+   "record": null,
+   "site": null,
+   "relation": null,
    "permalink": "https://pierandpoint.org/changes/#record"
   },
   {
