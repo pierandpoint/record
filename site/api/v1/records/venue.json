@@ -131,7 +131,37 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-22",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "Joe & The Juice operates a juice and coffee bar at 1155 4th St, the ground floor of the Venue apartment building. No opening date found; confirmed via Joe & The Juice's own location page.",
+    "source": "https://content.joejuice.com/locations/1155-4th-street",
+    "sources": [
+     {
+      "title": "https://content.joejuice.com/locations/1155-4th-street"
+     }
+    ],
+    "category": "retail",
+    "category_label": "Retail",
+    "record": {
+     "id": "mission_bay_venue",
+     "slug": "venue",
+     "name": "Venue",
+     "permalink": "https://pierandpoint.org/parcels/venue/",
+     "api": "https://pierandpoint.org/api/v1/records/venue.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [],
   "open_questions": [
    "Some apartment-listing aggregator summaries give 2015 rather than 2014 for this building's construction year; DataSF Assessor records and RentCafe's own 'Building constructed in 2014' listing text were preferred and used here. Precise month of completion is not sourced.",
@@ -168,7 +198,31 @@
   "notes": "The real, notable Edwin M. Lee Apartments (124,000 sq ft supportive-housing building for veterans and low-income families, 1150 3rd St, one block away) was investigated for this pass but its address point sits ~37m from this footprint's edge -- close enough to be the nearest available DataSF footprint, but not confidently its own separate outline in the building-footprint data checked. Left out rather than guessed; a future pass should re-check with a dedicated satellite/plan comparison.",
   "has_record_file": true,
   "last_verified": "2026-09-21",
-  "tenants": [],
+  "tenants": [
+   {
+    "slug": "joe-and-the-juice-venue",
+    "name": "Joe & The Juice",
+    "category": "food and drink",
+    "status": "open",
+    "opened": null,
+    "closed": null,
+    "source": "https://content.joejuice.com/locations/1155-4th-street",
+    "unit_or_address": "1155 4th St (Venue)",
+    "record": {
+     "id": "mission_bay_venue",
+     "slug": "venue",
+     "name": "Venue",
+     "permalink": "https://pierandpoint.org/parcels/venue/",
+     "api": "https://pierandpoint.org/api/v1/records/venue.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    }
+   }
+  ],
   "geometry": {
    "type": "Polygon",
    "coordinates": [
