@@ -16,7 +16,9 @@
       "date": "2006-07-18",
       "status": "planned",
       "text": "SF Dept. of Building Inspection permit #200607186938 filed to erect the 6-story medical research and biotechnical research facility at 499 Illinois St",
-      "sources": ["src-datasf-permit-499-illinois"],
+      "sources": [
+        "src-datasf-permit-499-illinois"
+      ],
       "expected": false,
       "approximate": false
     },
@@ -24,7 +26,10 @@
       "date": "2008",
       "status": "complete",
       "text": "499 Illinois Street completed.",
-      "sources": ["src-datasf-499illinois", "src-sgh-499illinois"],
+      "sources": [
+        "src-datasf-499illinois",
+        "src-sgh-499illinois"
+      ],
       "expected": false,
       "approximate": true
     },
@@ -32,7 +37,9 @@
       "date": "2017-01-26",
       "status": "planned",
       "text": "UC Regents approve a $237,000,000 project budget and design for UCSF's new Center for Vision Neurosciences building at Mission Bay -- referred to in UCSF's own campus numbering as 'Block 33' (a different numbering system from the OCII plan-block numbers used elsewhere in this repo; see open_questions), combining the Department of Ophthalmology and the Francis I. Proctor Foundation in a 12-story tower with a 5-story south wing and 3-story north wing; construction was expected to begin June 2017 with completion targeted for July 2019",
-      "sources": ["src-ucsf-2017-block33"],
+      "sources": [
+        "src-ucsf-2017-block33"
+      ],
       "expected": false,
       "approximate": false
     },
@@ -40,7 +47,9 @@
       "date": "2020-11",
       "status": "complete",
       "text": "UCSF opens the Wayne and Gladys Valley Center for Vision at 490 Illinois Street",
-      "sources": ["src-sfyimby-490illinois"],
+      "sources": [
+        "src-sfyimby-490illinois"
+      ],
       "expected": false,
       "approximate": true
     }
@@ -51,34 +60,89 @@
       "what": "Construction cost, Wayne and Gladys Valley Center for Vision (490 Illinois St)",
       "date": "2020",
       "approximate": true,
-      "sources": ["src-sfyimby-490illinois"]
+      "sources": [
+        "src-sfyimby-490illinois"
+      ]
     },
     {
       "amount_usd": 90000000,
       "what": "Estimated construction cost, 499 Illinois St (per its own 2006 building permit)",
       "date": "2006",
       "approximate": true,
-      "sources": ["src-datasf-permit-499-illinois"]
+      "sources": [
+        "src-datasf-permit-499-illinois"
+      ]
     }
   ],
   "facts": [
     {
       "key": "architect",
       "value": "SmithGroup (490 Illinois St, Valley Center for Vision)",
-      "sources": ["src-sfyimby-490illinois"]
+      "sources": [
+        "src-sfyimby-490illinois"
+      ]
     },
     {
       "key": "gross_sqft",
       "value": "490 Illinois St: 347,500 across three connected buildings (12-story tower, 5-story south wing, 3-story north wing) plus ~75,000 sq ft of parking for 200+ vehicles. 499 Illinois St: ~450,000, six stories.",
-      "sources": ["src-sfyimby-490illinois", "src-sgh-499illinois"]
+      "sources": [
+        "src-sfyimby-490illinois",
+        "src-sgh-499illinois"
+      ]
     },
     {
       "key": "developer",
       "value": "490 Illinois St: University of California, San Francisco; fundraising led by the nonprofit That Man May See. 499 Illinois St: Alexandria Real Estate Equities.",
-      "sources": ["src-sfyimby-490illinois", "src-sgh-499illinois"]
+      "sources": [
+        "src-sfyimby-490illinois",
+        "src-sgh-499illinois"
+      ]
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
+      "kind": "now",
+      "scope": "site",
+      "taken": "2024-05-20",
+      "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+      "license": "public-domain",
+      "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
+      "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
+      "license_note": "USDA's data.gov catalog record for NAIP imagery sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0); the USDA FSA policies page says public-domain information may be freely distributed with credit requested ('U.S. Department of Agriculture, Farm Service Agency'). Read 2026-09-22.",
+      "caption": "USDA NAIP aerial orthophoto (2024 flight), cropped to the Mission Bay project area and its immediate surroundings",
+      "aerial": true,
+      "focus": [
+        0.4,
+        0.05,
+        0.45,
+        0.75
+      ],
+      "appeal": 3,
+      "appeal_note": "A straight-down orthophoto rather than an oblique aerial, but Oracle Park and Chase Center are both clearly recognizable landmarks in the frame, giving anyone who knows the city an immediate fix on the neighborhood."
+    },
+    {
+      "path": "data/manual/images/mission_bay/wikimedia_mission_bay_aerial_2024.jpg",
+      "kind": "now",
+      "scope": "site",
+      "taken": "2024-02-10",
+      "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+      "license": "cc0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
+      "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
+      "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
+      "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+      "aerial": true,
+      "focus": [
+        0.35,
+        0.45,
+        0.3,
+        0.25
+      ],
+      "appeal": 5,
+      "appeal_note": "Oracle Park's diamond and Chase Center's dome (with its own logo) are both clearly identifiable landmarks in one colorful frame -- reads far better at card size than the flatter government orthophoto."
+    }
+  ],
   "sources": [
     {
       "id": "src-sfyimby-490illinois",
