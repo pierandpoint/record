@@ -481,6 +481,11 @@ sup.cites a { text-decoration: none; }
 /* /near/ (docs/briefs/near-me.md): the locate button, the local map's "you are here" dot and
    250 m highlight, the nearby list, the far-away arrow and line, and the crawlable finder. */
 .near-locate { padding: 24px 0 4px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+/* .near-locate's own display: flex above otherwise beats the browser's default [hidden] {
+   display: none } regardless of specificity (the same reasoning as .zoom-controls[hidden] and
+   the other overrides in this file) -- without this, app.js hiding the button once a position
+   comes back (a manual click, or the already-granted auto-resume) had no visible effect at all. */
+.near-locate[hidden] { display: none; }
 .near-privacy { font-size: 13px; color: var(--paper-faint); max-width: 58ch; }
 .near-status { font-size: 14px; font-weight: 600; color: var(--paper-brass); }
 .near-map-frame { margin-top: 20px; }
