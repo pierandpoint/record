@@ -58,6 +58,8 @@ img { max-width: 100%; display: block; }
 .source { font-family: var(--mono); font-size: 12px; color: var(--faint); overflow-wrap: anywhere; }
 .basis-note { display: block; font-family: var(--mono); font-size: 12px; color: var(--faint); margin-top: 2px; }
 .source::before { content: "↳ "; }
+/* glossary: first-use terms (sitegen/glossary.py), on both the dark and paper backgrounds */
+abbr[title] { text-decoration: underline dotted; text-decoration-color: currentColor; text-decoration-thickness: 1px; text-underline-offset: 3px; cursor: help; }
 
 /* hero */
 .hero { padding-top: 36px; padding-bottom: 24px; }
@@ -349,6 +351,13 @@ details.notes h3 { font: 600 13px var(--mono); color: var(--paper-soft); margin:
 .docs-list li a { font-weight: 600; color: var(--paper-ink); }
 .docs-list li a:hover { color: var(--paper-brass); }
 .docs-list li span { font: 12px var(--mono); color: var(--paper-faint); white-space: nowrap; }
+
+/* Glossary (data/glossary.csv, docs/briefs/glossary.md): the /glossary/ reference page. */
+.glossary-list { max-width: 72ch; padding-top: 24px; padding-bottom: 60px; display: flex; flex-direction: column; }
+.glossary-entry { padding: 18px 0; border-bottom: 1px solid var(--paper-line); scroll-margin-top: 24px; }
+.glossary-entry h2 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; font: 500 19px var(--serif); color: var(--paper-ink); }
+.glossary-entry .glossary-expansion { font: 500 13px var(--mono); color: var(--paper-brass); }
+.glossary-entry p { font-size: 15px; color: var(--paper-soft); margin-top: 8px; }
 
 /* existing "About this shape" / "Research notes" pattern: prose, not a counted list, so it
    keeps its own bordered-card skin and gets no peek -- but its disclosure marker matches the

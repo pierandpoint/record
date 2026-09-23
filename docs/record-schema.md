@@ -397,3 +397,43 @@ Columns:
 everywhere else. Rendering: `sitegen/pages.py`'s `key_documents_section()`,
 which returns nothing for a site with no rows -- a blank is better than a
 guess, the same rule the rest of this repo follows for missing data.
+
+## `data/glossary.csv`
+
+Every acronym and term of art the site's text uses, expanded the first time
+each one appears on a page (`docs/briefs/glossary.md`).
+
+Columns:
+
+- `term`: the acronym exactly as it appears in the rendered text -- case-
+  sensitive, so it only matches that same casing (`sitegen/glossary.py`
+  matches on a word boundary, so `SUD` never matches inside `sudden`).
+- `expansion`: what the term stands for. Required for a real entry; cited
+  to the defining agency or document when its meaning wasn't obvious from
+  the text that uses it, never invented.
+- `plain`: one sentence in plain words for a neighbor, e.g. "The design
+  rulebook a developer and the City agree on for a site: heights, uses,
+  streets, parks." Required for a real entry.
+- `source`: a URL to the defining agency's or program's own page, where a
+  reliably correct one exists. Blank rather than a guessed link when it
+  doesn't (the same "a blank is better than a guess" rule as everywhere
+  else in this repo).
+- `allowlist`: `yes` for a token that looks like an acronym but isn't a
+  term worth explaining -- a parcel or block code (`P11`, `HDY3`), a
+  firm or developer's own initials (`TMG`, `WRNS`), a quarter or fiscal
+  year (`Q3`, `FY2025`), or a short form common enough that spelling it
+  out would be noise (`PDF`). An allow-listed row leaves `expansion`,
+  `plain` and `source` blank and is never wrapped on the page; it exists
+  only so `src/check_glossary.py` doesn't flag the token as unexplained.
+
+Rendering: `sitegen/glossary.py`'s `apply_first_use()`, called once from
+`sitegen/build.py`'s `page()`, wraps the first occurrence of each real
+(non-allow-listed) term in a page's rendered body in
+`<abbr title="expansion">`, linked to that term's entry on `/glossary/`
+(`sitegen/pages.py`'s `glossary_page()`). Never inside a link, `<code>`,
+`<script>`, `<style>`, `<title>` or an inline `<svg>` (map chrome, not
+prose), and never in a page's `<title>`, meta tags, alt text, the sharing-
+card text or the API output, since none of those go through a page's
+rendered body. `src/check_glossary.py` (run in CI after the site builds)
+fails if any built page still carries an uppercase token of three to six
+letters that's neither a real term here nor allow-listed.
