@@ -5,7 +5,7 @@
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
  "terms": "https://pierandpoint.org/terms/",
- "count": 176,
+ "count": 177,
  "changes": [
   {
    "date": "2026-09-23",
@@ -195,6 +195,35 @@
     "name": "Pier 70",
     "short": "Pier 70",
     "url": "https://pierandpoint.org/sites/pier-70/"
+   },
+   "relation": "tracked",
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-09-23",
+   "kind": "added",
+   "kind_label": "Added",
+   "text": "The owner flagged Caffe Central (490 Illinois St, inside UCSF's Wayne and Gladys Valley Center for Vision tower) as another possibly-missing tenant. Confirmed via the cafe's own site, which publishes this exact address as a location. No opening date found (the building itself opened Nov 2020, so it can't predate that). Assigned to mission_bay_490_499_illinois, the record whose own sourced address is 490 Illinois St -- not the neighboring ucsf_valley_center_for_vision_west record the automated join's spatial match lands tenants at that address on, which is a separate building ~60-100m away across the street with an already-flagged, unresolved naming question (see that record's own accuracy_caveat). The registration join found no DataSF listing for Caffe Central at this address either (only one at 460 16th St, presumably a different location of the same small chain), so this is the same class of gap as Standard Deviant Brewing: a real, findable tenant invisible to the automated scan.",
+   "source": "https://www.caffecentral.com/490-illinois-street-mission-bay",
+   "sources": [
+    {
+     "title": "https://www.caffecentral.com/490-illinois-street-mission-bay"
+    }
+   ],
+   "category": "retail",
+   "category_label": "Retail",
+   "record": {
+    "id": "mission_bay_490_499_illinois",
+    "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology",
+    "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision & Alexandria Center for Science and Technology)",
+    "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology/",
+    "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology.json"
+   },
+   "site": {
+    "slug": "mission-bay",
+    "name": "Mission Bay",
+    "short": "Mission Bay",
+    "url": "https://pierandpoint.org/sites/mission-bay/"
    },
    "relation": "tracked",
    "permalink": "https://pierandpoint.org/changes/#record"
