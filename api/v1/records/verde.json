@@ -209,7 +209,9 @@
     "approximate": false,
     "sources": [
      "src-port-2019-09"
-    ]
+    ],
+    "kind": "land_or_lease",
+    "scope": "record"
    },
    {
     "amount_usd": 75600000,
@@ -218,7 +220,9 @@
     "approximate": false,
     "sources": [
      "src-port-2019-09"
-    ]
+    ],
+    "kind": "fee_or_subsidy",
+    "scope": "record"
    },
    {
     "amount_usd": 116200000,
@@ -227,7 +231,9 @@
     "approximate": true,
     "sources": [
      "src-cpe-2026-07"
-    ]
+    ],
+    "kind": "financing",
+    "scope": "record"
    },
    {
     "amount_usd": 117800000,
@@ -236,54 +242,9 @@
     "approximate": false,
     "sources": [
      "src-cpe-2026-07"
-    ]
-   },
-   {
-    "amount_usd": 145427289,
-    "what": "Mission Rock Phase 1 horizontal budget (streets, utilities, inland China Basin Park, soft costs) as first approved by the Port Commission, Resolution 19-39; site-level, shared by Parcels A, B, F and G",
-    "date": "2019-09-24",
-    "approximate": false,
-    "sources": [
-     "src-port-2019-09",
-     "src-port-2023-10"
-    ]
-   },
-   {
-    "amount_usd": 218470335,
-    "what": "Mission Rock Phase 1 horizontal budget as revised and approved by the Port Commission, Resolution 23-46 (up from $184.2M approved August 2021); site-level, shared by Parcels A, B, F and G",
-    "date": "2023-10-10",
-    "approximate": false,
-    "sources": [
-     "src-port-2023-10"
-    ]
-   },
-   {
-    "amount_usd": 16525375,
-    "what": "Port Capital Advance approved to cover Phase 1 City-agency costs, earning 10% and repaid ahead of Phase 2 developer capital; site-level",
-    "date": "2023-10-10",
-    "approximate": false,
-    "sources": [
-     "src-port-2023-10"
-    ]
-   },
-   {
-    "amount_usd": 107580000,
-    "what": "Mission Rock CFD Development Special Tax Bonds issued in 2021 to fund Phase 1 infrastructure: $43.3M Series 2021A (May 27, 2021), $54.28M Series 2021B taxable and $10.0M Series 2021C (November 10, 2021), per the Port's September 2023 bond memo; the Port's FY2025 disclosure report gives the 2021 total as $99.03M; site-level",
-    "date": "2021-11-10",
-    "approximate": false,
-    "sources": [
-     "src-port-2023-09-bonds",
-     "src-port-discl-fy2025"
-    ]
-   },
-   {
-    "amount_usd": 45895000,
-    "what": "Mission Rock CFD bonds issued in calendar 2023 (tax-exempt), per the Port's FY2025 continuing-disclosure report; site-level",
-    "date": "2023",
-    "approximate": true,
-    "sources": [
-     "src-port-discl-fy2025"
-    ]
+    ],
+    "kind": "financing",
+    "scope": "record"
    }
   ],
   "milestones": [
@@ -979,6 +940,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-09-23",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Same move as Parcel G (see 8719A008's changelog row). Parcel F's own appraised-lease-value, jobs-housing-fee-received, construction-loan and refinancing figures stay on the record with kind (land_or_lease, fee_or_subsidy, financing x2) and scope (record) added; the two loan figures are flagged kind: financing so they're never summed with a development total.",
+    "source": "docs/record-schema.md",
+    "sources": [
+     {
+      "title": "docs/record-schema.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8719C001",
+     "slug": "verde",
+     "name": "Verde",
+     "permalink": "https://pierandpoint.org/parcels/verde/",
+     "api": "https://pierandpoint.org/api/v1/records/verde.json"
+    },
+    "site": {
+     "slug": "mission-rock",
+     "name": "Mission Rock",
+     "short": "Mission Rock",
+     "url": "https://pierandpoint.org/sites/mission-rock/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-22",
     "kind": "added",

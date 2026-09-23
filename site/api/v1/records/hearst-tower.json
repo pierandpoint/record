@@ -200,7 +200,37 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-23",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "The November 2002 UC Regents item's $112,816,000 capital-improvement budget covers the whole Block 20 project (Hearst Tower plus the Housing North, Housing West and Student Housing mid-rise buildings) with no per-building breakdown, so it was never a record-scope figure for any one of them. Added to data/site_costs.csv (kind: development, scope: site, phase 'Block 20'), with a site_cost_refs pointer left on all four records, each of which already discussed the figure in its own open_questions without asserting it as a record-scope total.",
+    "source": "docs/record-schema.md",
+    "sources": [
+     {
+      "title": "docs/record-schema.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "ucsf_hearst_tower",
+     "slug": "hearst-tower",
+     "name": "Hearst Tower",
+     "permalink": "https://pierandpoint.org/parcels/hearst-tower/",
+     "api": "https://pierandpoint.org/api/v1/records/hearst-tower.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
@@ -251,7 +281,8 @@
    "Could not confirm whether all four housing buildings opened in exactly the same month, or whether some phased in slightly later than others.",
    "No openly licensed image was found; none is hosted here.",
    "Images: no plan drawing, elevation or openly-licensed photograph was found for this building specifically. Searched: UCSF Real Estate's Mission Bay campus-site and LRDP pages (realestate.ucsf.edu, blocked to automated fetches with a 403); the UCSF 2014 LRDP EIR's CEQAnet filing (SCH 2013092047, whose pre-2016 attachments aren't hosted on CEQAnet itself); a May 2000 Regents Committee on Grounds and Buildings design-approval item for an early Mission Bay building (text-only, no figures); the 2008 \"UCSF Mission Bay Planning Principles\" appendix (a citywide-scale community map, no individual buildings labeled); and a UCSF wayfinding campus map (not an adopted plan, EIR or permit filing, so not eligible as public-record even though found). Not pursued further in this pass; the record's own project sources above remain the citation for the building's history. The same September 2008 Regents presentation (used for Byers Hall, Genentech Hall, Rock Hall and Rutter Center) includes one more photo on its \"Architectural Context\" slide labeled only \"Housing,\" showing what looks like more than one building together; it wasn't used here because it can't be confidently attributed to this specific one.",
-   "2026-09-21 pass: the November 2002 Regents item's 430-unit, 298,800-asf, one-tower-plus-three-mid-rise description matches this record's own facts (431 apartments, 298,800 sq ft complex total) closely enough to identify Hearst Tower as the 15-story tower it describes, though the item covers the whole Block 20 project rather than naming Hearst Tower individually."
+   "2026-09-21 pass: the November 2002 Regents item's 430-unit, 298,800-asf, one-tower-plus-three-mid-rise description matches this record's own facts (431 apartments, 298,800 sq ft complex total) closely enough to identify Hearst Tower as the 15-story tower it describes, though the item covers the whole Block 20 project rather than naming Hearst Tower individually.",
+   "2026-09-23 pass: searched for a cost figure specific to this tower alone (versus the whole four-building Block 20 project). The only figure found anywhere is the November 2002 Regents item's own $112,816,000 project budget, which the Regents item itself states as a whole-project total covering the tower and all three mid-rise buildings together -- no source breaks it down per building, so no record-scope figure is added here; a per-project figure belongs in a site- or phase-scope table, not this record's own costs array."
   ],
   "sources": [
    {

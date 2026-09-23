@@ -191,22 +191,15 @@
   ],
   "costs": [
    {
-    "amount_usd": 127000000,
-    "what": "Estimated total cost of the eight-building Historic Core rehabilitation at completion in 2020 (up from $81.9M at 2014 approvals); hard costs $102.2M, soft costs $24.8M",
-    "date": "2019-01",
-    "approximate": true,
-    "sources": [
-     "src-port-hc-2019"
-    ]
-   },
-   {
     "amount_usd": 15900000,
     "what": "Hard cost of the Building 101 rehabilitation (2018 actual/estimate; $13.1M at 2014 approvals)",
     "date": "2019-01",
     "approximate": true,
     "sources": [
      "src-port-hc-2019"
-    ]
+    ],
+    "kind": "construction",
+    "scope": "record"
    },
    {
     "amount_usd": 250000,
@@ -215,7 +208,9 @@
     "approximate": true,
     "sources": [
      "src-nrhp-2014"
-    ]
+    ],
+    "kind": "construction",
+    "scope": "record"
    }
   ],
   "milestones": [
@@ -876,6 +871,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-09-23",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The eight-building Historic Core's $127M estimated total rehabilitation cost was copied identically onto Buildings 101, 102, 104, 113/116 and 14's own cost entries. Moved it to one row in data/site_costs.csv (kind: development, scope: site, phase \"Pier 70 Historic Core\"), with a site_cost_refs pointer left on all five records. Each building keeps its own hard-cost figure, now with kind: construction and scope: record.",
+    "source": "docs/record-schema.md",
+    "sources": [
+     {
+      "title": "docs/record-schema.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_building_101",
+     "slug": "pier-70-building-101-bethlehem-steel-hq",
+     "name": "Pier 70 Building 101 (Bethlehem Steel HQ)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-101-bethlehem-steel-hq/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-101-bethlehem-steel-hq.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-22",
     "kind": "added",

@@ -211,7 +211,9 @@
      "approximate": false,
      "sources": [
       "src-port-2019-09"
-     ]
+     ],
+     "kind": "land_or_lease",
+     "scope": "record"
     },
     {
      "amount_usd": 75600000,
@@ -220,7 +222,9 @@
      "approximate": false,
      "sources": [
       "src-port-2019-09"
-     ]
+     ],
+     "kind": "fee_or_subsidy",
+     "scope": "record"
     },
     {
      "amount_usd": 116200000,
@@ -229,7 +233,9 @@
      "approximate": true,
      "sources": [
       "src-cpe-2026-07"
-     ]
+     ],
+     "kind": "financing",
+     "scope": "record"
     },
     {
      "amount_usd": 117800000,
@@ -238,54 +244,9 @@
      "approximate": false,
      "sources": [
       "src-cpe-2026-07"
-     ]
-    },
-    {
-     "amount_usd": 145427289,
-     "what": "Mission Rock Phase 1 horizontal budget (streets, utilities, inland China Basin Park, soft costs) as first approved by the Port Commission, Resolution 19-39; site-level, shared by Parcels A, B, F and G",
-     "date": "2019-09-24",
-     "approximate": false,
-     "sources": [
-      "src-port-2019-09",
-      "src-port-2023-10"
-     ]
-    },
-    {
-     "amount_usd": 218470335,
-     "what": "Mission Rock Phase 1 horizontal budget as revised and approved by the Port Commission, Resolution 23-46 (up from $184.2M approved August 2021); site-level, shared by Parcels A, B, F and G",
-     "date": "2023-10-10",
-     "approximate": false,
-     "sources": [
-      "src-port-2023-10"
-     ]
-    },
-    {
-     "amount_usd": 16525375,
-     "what": "Port Capital Advance approved to cover Phase 1 City-agency costs, earning 10% and repaid ahead of Phase 2 developer capital; site-level",
-     "date": "2023-10-10",
-     "approximate": false,
-     "sources": [
-      "src-port-2023-10"
-     ]
-    },
-    {
-     "amount_usd": 107580000,
-     "what": "Mission Rock CFD Development Special Tax Bonds issued in 2021 to fund Phase 1 infrastructure: $43.3M Series 2021A (May 27, 2021), $54.28M Series 2021B taxable and $10.0M Series 2021C (November 10, 2021), per the Port's September 2023 bond memo; the Port's FY2025 disclosure report gives the 2021 total as $99.03M; site-level",
-     "date": "2021-11-10",
-     "approximate": false,
-     "sources": [
-      "src-port-2023-09-bonds",
-      "src-port-discl-fy2025"
-     ]
-    },
-    {
-     "amount_usd": 45895000,
-     "what": "Mission Rock CFD bonds issued in calendar 2023 (tax-exempt), per the Port's FY2025 continuing-disclosure report; site-level",
-     "date": "2023",
-     "approximate": true,
-     "sources": [
-      "src-port-discl-fy2025"
-     ]
+     ],
+     "kind": "financing",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -982,6 +943,35 @@
    ],
    "changes": [
     {
+     "date": "2026-09-23",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Same move as Parcel G (see 8719A008's changelog row). Parcel F's own appraised-lease-value, jobs-housing-fee-received, construction-loan and refinancing figures stay on the record with kind (land_or_lease, fee_or_subsidy, financing x2) and scope (record) added; the two loan figures are flagged kind: financing so they're never summed with a development total.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "8719C001",
+      "slug": "verde",
+      "name": "Verde",
+      "permalink": "https://pierandpoint.org/parcels/verde/",
+      "api": "https://pierandpoint.org/api/v1/records/verde.json"
+     },
+     "site": {
+      "slug": "mission-rock",
+      "name": "Mission Rock",
+      "short": "Mission Rock",
+      "url": "https://pierandpoint.org/sites/mission-rock/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-09-22",
      "kind": "added",
      "kind_label": "Added",
@@ -1595,7 +1585,9 @@
      "approximate": false,
      "sources": [
       "src-port-2019-09"
-     ]
+     ],
+     "kind": "land_or_lease",
+     "scope": "record"
     },
     {
      "amount_usd": 59700000,
@@ -1604,54 +1596,9 @@
      "approximate": false,
      "sources": [
       "src-port-2019-09"
-     ]
-    },
-    {
-     "amount_usd": 145427289,
-     "what": "Mission Rock Phase 1 horizontal budget (streets, utilities, inland China Basin Park, soft costs) as first approved by the Port Commission, Resolution 19-39; site-level, shared by Parcels A, B, F and G",
-     "date": "2019-09-24",
-     "approximate": false,
-     "sources": [
-      "src-port-2019-09",
-      "src-port-2023-10"
-     ]
-    },
-    {
-     "amount_usd": 218470335,
-     "what": "Mission Rock Phase 1 horizontal budget as revised and approved by the Port Commission, Resolution 23-46 (up from $184.2M approved August 2021); site-level, shared by Parcels A, B, F and G",
-     "date": "2023-10-10",
-     "approximate": false,
-     "sources": [
-      "src-port-2023-10"
-     ]
-    },
-    {
-     "amount_usd": 16525375,
-     "what": "Port Capital Advance approved to cover Phase 1 City-agency costs, earning 10% and repaid ahead of Phase 2 developer capital; site-level",
-     "date": "2023-10-10",
-     "approximate": false,
-     "sources": [
-      "src-port-2023-10"
-     ]
-    },
-    {
-     "amount_usd": 107580000,
-     "what": "Mission Rock CFD Development Special Tax Bonds issued in 2021 to fund Phase 1 infrastructure: $43.3M Series 2021A (May 27, 2021), $54.28M Series 2021B taxable and $10.0M Series 2021C (November 10, 2021), per the Port's September 2023 bond memo; the Port's FY2025 disclosure report gives the 2021 total as $99.03M; site-level",
-     "date": "2021-11-10",
-     "approximate": false,
-     "sources": [
-      "src-port-2023-09-bonds",
-      "src-port-discl-fy2025"
-     ]
-    },
-    {
-     "amount_usd": 45895000,
-     "what": "Mission Rock CFD bonds issued in calendar 2023 (tax-exempt), per the Port's FY2025 continuing-disclosure report; site-level",
-     "date": "2023",
-     "approximate": true,
-     "sources": [
-      "src-port-discl-fy2025"
-     ]
+     ],
+     "kind": "fee_or_subsidy",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -2331,6 +2278,35 @@
    ],
    "changes": [
     {
+     "date": "2026-09-23",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Same move as Parcel G (see 8719A008's changelog row): the four shared Phase 1 figures now live once in data/site_costs.csv with a site_cost_refs pointer, and Parcel A's own appraised-lease-value and jobs-housing-fee-received figures stay on the record with kind and scope added.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "8719B002",
+      "slug": "the-canyon",
+      "name": "The Canyon",
+      "permalink": "https://pierandpoint.org/parcels/the-canyon/",
+      "api": "https://pierandpoint.org/api/v1/records/the-canyon.json"
+     },
+     "site": {
+      "slug": "mission-rock",
+      "name": "Mission Rock",
+      "short": "Mission Rock",
+      "url": "https://pierandpoint.org/sites/mission-rock/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-09-22",
      "kind": "added",
      "kind_label": "Added",
@@ -2851,7 +2827,9 @@
      "approximate": false,
      "sources": [
       "src-hre-2016"
-     ]
+     ],
+     "kind": "construction",
+     "scope": "record"
     },
     {
      "amount_usd": 181080,
@@ -2860,7 +2838,9 @@
      "approximate": true,
      "sources": [
       "src-hre-2016"
-     ]
+     ],
+     "kind": "construction",
+     "scope": "record"
     },
     {
      "amount_usd": 55416.47,
@@ -2869,7 +2849,9 @@
      "approximate": false,
      "sources": [
       "src-bos-r43-18"
-     ]
+     ],
+     "kind": "land_or_lease",
+     "scope": "record"
     },
     {
      "amount_usd": 2916.67,
@@ -2878,7 +2860,9 @@
      "approximate": false,
      "sources": [
       "src-bos-r43-18"
-     ]
+     ],
+     "kind": "land_or_lease",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -4167,7 +4151,9 @@
      "approximate": false,
      "sources": [
       "src-port-2019-09"
-     ]
+     ],
+     "kind": "land_or_lease",
+     "scope": "record"
     },
     {
      "amount_usd": 60400000,
@@ -4176,54 +4162,9 @@
      "approximate": false,
      "sources": [
       "src-port-2019-09"
-     ]
-    },
-    {
-     "amount_usd": 145427289,
-     "what": "Mission Rock Phase 1 horizontal budget (streets, utilities, inland China Basin Park, soft costs) as first approved by the Port Commission, Resolution 19-39; site-level, shared by Parcels A, B, F and G",
-     "date": "2019-09-24",
-     "approximate": false,
-     "sources": [
-      "src-port-2019-09",
-      "src-port-2023-10"
-     ]
-    },
-    {
-     "amount_usd": 218470335,
-     "what": "Mission Rock Phase 1 horizontal budget as revised and approved by the Port Commission, Resolution 23-46 (up from $184.2M approved August 2021); site-level, shared by Parcels A, B, F and G",
-     "date": "2023-10-10",
-     "approximate": false,
-     "sources": [
-      "src-port-2023-10"
-     ]
-    },
-    {
-     "amount_usd": 16525375,
-     "what": "Port Capital Advance approved to cover Phase 1 City-agency costs, earning 10% and repaid ahead of Phase 2 developer capital; site-level",
-     "date": "2023-10-10",
-     "approximate": false,
-     "sources": [
-      "src-port-2023-10"
-     ]
-    },
-    {
-     "amount_usd": 107580000,
-     "what": "Mission Rock CFD Development Special Tax Bonds issued in 2021 to fund Phase 1 infrastructure: $43.3M Series 2021A (May 27, 2021), $54.28M Series 2021B taxable and $10.0M Series 2021C (November 10, 2021), per the Port's September 2023 bond memo; the Port's FY2025 disclosure report gives the 2021 total as $99.03M; site-level",
-     "date": "2021-11-10",
-     "approximate": false,
-     "sources": [
-      "src-port-2023-09-bonds",
-      "src-port-discl-fy2025"
-     ]
-    },
-    {
-     "amount_usd": 45895000,
-     "what": "Mission Rock CFD bonds issued in calendar 2023 (tax-exempt), per the Port's FY2025 continuing-disclosure report; site-level",
-     "date": "2023",
-     "approximate": true,
-     "sources": [
-      "src-port-discl-fy2025"
-     ]
+     ],
+     "kind": "fee_or_subsidy",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -4803,6 +4744,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The Mission Rock Phase 1 horizontal budget, Port Capital Advance and CFD bond figures were duplicated identically across Parcels A, B, F and G's own cost entries. Moved each to one row in the new data/site_costs.csv (kind and scope added: infrastructure/public_investment, scope site, phase \"Mission Rock Phase 1\"), with a site_cost_refs pointer left on each of the four records since the Port's own memos name all four as sharing the budget. Parcel G's own appraised-lease-value and jobs-housing-fee figures stay on the record, now with kind (land_or_lease, fee_or_subsidy) and scope (record) added.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "8719A008",
+      "slug": "building-g",
+      "name": "Building G",
+      "permalink": "https://pierandpoint.org/parcels/building-g/",
+      "api": "https://pierandpoint.org/api/v1/records/building-g.json"
+     },
+     "site": {
+      "slug": "mission-rock",
+      "name": "Mission Rock",
+      "short": "Mission Rock",
+      "url": "https://pierandpoint.org/sites/mission-rock/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-22",
      "kind": "added",
@@ -5518,7 +5488,9 @@
      "approximate": false,
      "sources": [
       "src-port-2019-09"
-     ]
+     ],
+     "kind": "land_or_lease",
+     "scope": "record"
     },
     {
      "amount_usd": 74900000,
@@ -5527,54 +5499,9 @@
      "approximate": false,
      "sources": [
       "src-port-2019-09"
-     ]
-    },
-    {
-     "amount_usd": 145427289,
-     "what": "Mission Rock Phase 1 horizontal budget (streets, utilities, inland China Basin Park, soft costs) as first approved by the Port Commission, Resolution 19-39; site-level, shared by Parcels A, B, F and G",
-     "date": "2019-09-24",
-     "approximate": false,
-     "sources": [
-      "src-port-2019-09",
-      "src-port-2023-10"
-     ]
-    },
-    {
-     "amount_usd": 218470335,
-     "what": "Mission Rock Phase 1 horizontal budget as revised and approved by the Port Commission, Resolution 23-46 (up from $184.2M approved August 2021); site-level, shared by Parcels A, B, F and G",
-     "date": "2023-10-10",
-     "approximate": false,
-     "sources": [
-      "src-port-2023-10"
-     ]
-    },
-    {
-     "amount_usd": 16525375,
-     "what": "Port Capital Advance approved to cover Phase 1 City-agency costs, earning 10% and repaid ahead of Phase 2 developer capital; site-level",
-     "date": "2023-10-10",
-     "approximate": false,
-     "sources": [
-      "src-port-2023-10"
-     ]
-    },
-    {
-     "amount_usd": 107580000,
-     "what": "Mission Rock CFD Development Special Tax Bonds issued in 2021 to fund Phase 1 infrastructure: $43.3M Series 2021A (May 27, 2021), $54.28M Series 2021B taxable and $10.0M Series 2021C (November 10, 2021), per the Port's September 2023 bond memo; the Port's FY2025 disclosure report gives the 2021 total as $99.03M; site-level",
-     "date": "2021-11-10",
-     "approximate": false,
-     "sources": [
-      "src-port-2023-09-bonds",
-      "src-port-discl-fy2025"
-     ]
-    },
-    {
-     "amount_usd": 45895000,
-     "what": "Mission Rock CFD bonds issued in calendar 2023 (tax-exempt), per the Port's FY2025 continuing-disclosure report; site-level",
-     "date": "2023",
-     "approximate": true,
-     "sources": [
-      "src-port-discl-fy2025"
-     ]
+     ],
+     "kind": "fee_or_subsidy",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -6298,6 +6225,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Same move as Parcel G (see 8719A008's changelog row): the four shared Phase 1 figures now live once in data/site_costs.csv with a site_cost_refs pointer, and Parcel B's own appraised-lease-value and jobs-housing-fee-paid figures stay on the record with kind and scope added.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "8719C003",
+      "slug": "building-b",
+      "name": "Building B",
+      "permalink": "https://pierandpoint.org/parcels/building-b/",
+      "api": "https://pierandpoint.org/api/v1/records/building-b.json"
+     },
+     "site": {
+      "slug": "mission-rock",
+      "name": "Mission Rock",
+      "short": "Mission Rock",
+      "url": "https://pierandpoint.org/sites/mission-rock/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-22",
      "kind": "added",
@@ -7558,17 +7514,7 @@
      ]
     }
    ],
-   "costs": [
-    {
-     "amount_usd": 237400000,
-     "what": "Brookfield's reported spending on Phase 1 to October 2022, covering infrastructure, road work and the Building 12 restoration (no Building 12 breakdown published)",
-     "date": "2022-10",
-     "approximate": true,
-     "sources": [
-      "src-trd-2022-10"
-     ]
-    }
-   ],
+   "costs": [],
    "milestones": [
     {
      "date": "1941",
@@ -8282,6 +8228,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The Real Deal's $237.4M figure for Brookfield's reported Phase 1 spending explicitly covers infrastructure and road work alongside the Building 12 restoration with no Building 12-specific breakdown published, so it was never a record-scope figure for this one building. Moved it to data/site_costs.csv (kind: development, scope: site, phase \"Pier 70 28-Acre Project Phase 1\"), with a site_cost_refs pointer left on this record since the source does discuss Building 12's restoration as part of what the figure covers.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "4114010",
+      "slug": "historic-building-12",
+      "name": "Historic Building 12",
+      "permalink": "https://pierandpoint.org/parcels/historic-building-12/",
+      "api": "https://pierandpoint.org/api/v1/records/historic-building-12.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-23",
      "kind": "added",
@@ -9101,7 +9076,9 @@
      "approximate": true,
      "sources": [
       "src-hoodline-2025-12"
-     ]
+     ],
+     "kind": "development",
+     "scope": "record"
     },
     {
      "amount_usd": 670000,
@@ -9110,7 +9087,9 @@
      "approximate": true,
      "sources": [
       "src-standard-2025-10"
-     ]
+     ],
+     "kind": "development",
+     "scope": "record"
     },
     {
      "amount_usd": 2860000,
@@ -9119,7 +9098,10 @@
      "approximate": false,
      "sources": [
       "src-ar-2021"
-     ]
+     ],
+     "kind": "other",
+     "scope": "record",
+     "kind_note": "Design/consultant contracts awarded (tracked for LBE-participation reporting), not a total development or hard-construction figure."
     }
    ],
    "milestones": [
@@ -10541,7 +10523,9 @@
      "approximate": false,
      "sources": [
       "src-bisnow-2025-05"
-     ]
+     ],
+     "kind": "financing",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -13714,7 +13698,9 @@
      "approximate": false,
      "sources": [
       "src-sfpw-project"
-     ]
+     ],
+     "kind": "development",
+     "scope": "record"
     },
     {
      "amount_usd": 239000000,
@@ -13723,7 +13709,9 @@
      "approximate": false,
      "sources": [
       "src-sfpw-project"
-     ]
+     ],
+     "kind": "public_investment",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -14271,7 +14259,9 @@
      "approximate": true,
      "sources": [
       "src-sfyimby-2021"
-     ]
+     ],
+     "kind": "construction",
+     "scope": "record"
     },
     {
      "amount_usd": 86000000,
@@ -14280,7 +14270,9 @@
      "approximate": true,
      "sources": [
       "src-sfyimby-2021"
-     ]
+     ],
+     "kind": "development",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -14852,7 +14844,9 @@
      "approximate": true,
      "sources": [
       "src-ocii-2021"
-     ]
+     ],
+     "kind": "development",
+     "scope": "record"
     },
     {
      "amount_usd": 83184522,
@@ -14861,7 +14855,9 @@
      "approximate": false,
      "sources": [
       "src-ocii-2023"
-     ]
+     ],
+     "kind": "public_investment",
+     "scope": "record"
     },
     {
      "amount_usd": 4243993,
@@ -14870,7 +14866,9 @@
      "approximate": false,
      "sources": [
       "src-ocii-2023"
-     ]
+     ],
+     "kind": "public_investment",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -15543,7 +15541,9 @@
      "approximate": false,
      "sources": [
       "src-sfyimby-hire"
-     ]
+     ],
+     "kind": "construction",
+     "scope": "record"
     },
     {
      "amount_usd": 129000000,
@@ -15552,7 +15552,9 @@
      "approximate": true,
      "sources": [
       "src-registry-ribbon"
-     ]
+     ],
+     "kind": "development",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -21954,27 +21956,7 @@
      ]
     }
    ],
-   "costs": [
-    {
-     "amount_usd": 1,
-     "what": "Annual rent under Port Lease L-16662 ($1/year, 66 years through March 2087), in consideration for the developer improving, maintaining and operating the premises at its cost",
-     "date": "2025-11-14",
-     "approximate": false,
-     "sources": [
-      "src-port-memo-10a"
-     ]
-    },
-    {
-     "amount_usd": 15000000,
-     "what": "Developer's estimate for developing the whole Prequel Park (range $15-20 million; not broken out for the Port portion)",
-     "date": "2025-05-22",
-     "approximate": true,
-     "sources": [
-      "src-chron-2025-05-22",
-      "src-pv-2025-10"
-     ]
-    }
-   ],
+   "costs": [],
    "milestones": [
     {
      "date": "2018-10",
@@ -22718,7 +22700,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The $1/year Port Lease L-16662 rent is shared with potrero_waterfront_park (same lease, same source and date); the developer's $15-20 million Prequel Park estimate is 'not broken out for the Port portion' and is identically copied onto prequel_park_power_station_subarea. Moved both to data/site_costs.csv (kind: land_or_lease/development, scope: site, the second with phase \"Prequel Park\"), each with a site_cost_refs pointer left on this record.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "prequel_park_port_subarea",
+      "slug": "prequel-park-port-sub-area",
+      "name": "Prequel Park (Port sub-area)",
+      "permalink": "https://pierandpoint.org/parcels/prequel-park-port-sub-area/",
+      "api": "https://pierandpoint.org/api/v1/records/prequel-park-port-sub-area.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/prequel_park_exhibit2.jpg",
@@ -23096,18 +23108,7 @@
      ]
     }
    ],
-   "costs": [
-    {
-     "amount_usd": 15000000,
-     "what": "Developer's estimate for developing Prequel Park (range $15-20 million)",
-     "date": "2025-05-22",
-     "approximate": true,
-     "sources": [
-      "src-chron-2025-05-22",
-      "src-pv-2025-10"
-     ]
-    }
-   ],
+   "costs": [],
    "milestones": [
     {
      "date": "2020-04-21",
@@ -23710,6 +23711,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "See prequel_park_port_subarea's changelog row for the move.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "prequel_park_power_station_subarea",
+      "slug": "prequel-park-power-station-sub-area",
+      "name": "Prequel Park (Power Station sub-area)",
+      "permalink": "https://pierandpoint.org/parcels/prequel-park-power-station-sub-area/",
+      "api": "https://pierandpoint.org/api/v1/records/prequel-park-power-station-sub-area.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-16",
      "kind": "added",
@@ -30950,7 +30980,9 @@
      "approximate": false,
      "sources": [
       "src-port-12b-2020"
-     ]
+     ],
+     "kind": "land_or_lease",
+     "scope": "record"
     },
     {
      "amount_usd": 12867392,
@@ -30959,7 +30991,9 @@
      "approximate": false,
      "sources": [
       "src-port-12b-2020"
-     ]
+     ],
+     "kind": "land_or_lease",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -33187,16 +33221,9 @@
      "approximate": false,
      "sources": [
       "src-port-11a-2026"
-     ]
-    },
-    {
-     "amount_usd": 736000,
-     "what": "Estimated annual Community Facilities District special taxes from Parcel K North and the Hoedown Yard, to fund maintenance of Irish Hill Park, Michigan Street, Crane Cove Park and other areas north of 20th Street (2017 projection)",
-     "date": "2017-09",
-     "approximate": true,
-     "sources": [
-      "src-port-9b-2017"
-     ]
+     ],
+     "kind": "land_or_lease",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -33547,7 +33574,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "See HDY1/2's changelog row for the move. Parcel K North's own $24.2M land-sale-proceeds figure stays on the record with kind: land_or_lease and scope: record.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_pkn",
+      "slug": "pier-70-parcel-k-north-pkn",
+      "name": "Pier 70 Parcel K North (PKN)",
+      "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-k-north-pkn/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-k-north-pkn.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/pier70_d4d_fig_6_4_2_building_height.jpg",
@@ -34984,7 +35041,9 @@
      "approximate": false,
      "sources": [
       "src-port-capital-plan-2024"
-     ]
+     ],
+     "kind": "infrastructure",
+     "scope": "record"
     },
     {
      "amount_usd": 17845000,
@@ -34993,7 +35052,9 @@
      "approximate": false,
      "sources": [
       "src-ccp-2018-11"
-     ]
+     ],
+     "kind": "construction",
+     "scope": "record"
     },
     {
      "amount_usd": 36668550,
@@ -35002,7 +35063,9 @@
      "approximate": false,
      "sources": [
       "src-ccp-2018-11"
-     ]
+     ],
+     "kind": "infrastructure",
+     "scope": "record"
     },
     {
      "amount_usd": 8695000,
@@ -35011,7 +35074,9 @@
      "approximate": false,
      "sources": [
       "src-ccp-2015-10"
-     ]
+     ],
+     "kind": "public_investment",
+     "scope": "record"
     },
     {
      "amount_usd": 31475904,
@@ -35020,7 +35085,9 @@
      "approximate": true,
      "sources": [
       "src-ccp-2015-10"
-     ]
+     ],
+     "kind": "infrastructure",
+     "scope": "record"
     },
     {
      "amount_usd": 3100000,
@@ -35029,7 +35096,9 @@
      "approximate": true,
      "sources": [
       "src-ccp-2018-11"
-     ]
+     ],
+     "kind": "infrastructure",
+     "scope": "record"
     },
     {
      "amount_usd": 3000000,
@@ -35038,7 +35107,9 @@
      "approximate": true,
      "sources": [
       "src-cbs-2025-12"
-     ]
+     ],
+     "kind": "public_investment",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -36761,17 +36832,7 @@
      ]
     }
    ],
-   "costs": [
-    {
-     "amount_usd": 736000,
-     "what": "Estimated annual CFD special taxes from Parcel K North and the Hoedown Yard for maintenance of Irish Hill Park, Michigan Street, Crane Cove Park and other areas north of 20th Street (2017 projection)",
-     "date": "2017-09",
-     "approximate": true,
-     "sources": [
-      "src-port-9b-2017"
-     ]
-    }
-   ],
+   "costs": [],
    "milestones": [
     {
      "date": "2013-07",
@@ -36888,6 +36949,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "See HDY1/2's changelog row for the move.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_irish_hill_playground",
+      "slug": "irish-hill-playground-and-irish-hill-corner-plaza",
+      "name": "Irish Hill Playground and Irish Hill Corner Plaza",
+      "permalink": "https://pierandpoint.org/parcels/irish-hill-playground-and-irish-hill-corner-plaza/",
+      "api": "https://pierandpoint.org/api/v1/records/irish-hill-playground-and-irish-hill-corner-plaza.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-17",
      "kind": "added",
@@ -37665,17 +37755,7 @@
      ]
     }
    ],
-   "costs": [
-    {
-     "amount_usd": 736000,
-     "what": "Estimated annual CFD special taxes from Parcel K North and the Hoedown Yard for maintenance of Irish Hill Park, Michigan Street, Crane Cove Park and other areas north of 20th Street (2017 projection)",
-     "date": "2017-09",
-     "approximate": true,
-     "sources": [
-      "src-port-9b-2017"
-     ]
-    }
-   ],
+   "costs": [],
    "milestones": [
     {
      "date": "2017-07-25",
@@ -37905,7 +37985,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "See HDY1/2's changelog row for the move.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_hdy3",
+      "slug": "pier-70-hoedown-yard-3-hdy3",
+      "name": "Pier 70 Hoedown Yard 3 (HDY3)",
+      "permalink": "https://pierandpoint.org/parcels/pier-70-hoedown-yard-3-hdy3/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-70-hoedown-yard-3-hdy3.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/pier70_d4d_fig_6_4_2_building_height.jpg",
@@ -38141,17 +38251,7 @@
      ]
     }
    ],
-   "costs": [
-    {
-     "amount_usd": 736000,
-     "what": "Estimated annual CFD special taxes from Parcel K North and the Hoedown Yard for maintenance of Irish Hill Park, Michigan Street, Crane Cove Park and other areas north of 20th Street (2017 projection)",
-     "date": "2017-09",
-     "approximate": true,
-     "sources": [
-      "src-port-9b-2017"
-     ]
-    }
-   ],
+   "costs": [],
    "milestones": [
     {
      "date": "2017-07-25",
@@ -38381,7 +38481,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The 2017 projection of $736,000 in annual CFD special taxes from Parcel K North and the Hoedown Yard was copied identically onto HDY1/2, HDY3, Irish Hill Playground and Parcel K North's own cost entries. Moved it to one row in data/site_costs.csv (kind: public_investment, scope: site), with a site_cost_refs pointer left on all four records.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_hdy1_2",
+      "slug": "pier-70-hoedown-yard-1-2-hdy1-2",
+      "name": "Pier 70 Hoedown Yard 1/2 (HDY1/2)",
+      "permalink": "https://pierandpoint.org/parcels/pier-70-hoedown-yard-1-2-hdy1-2/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-70-hoedown-yard-1-2-hdy1-2.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/pier70_d4d_fig_6_4_2_building_height.jpg",
@@ -42513,7 +42643,9 @@
      "approximate": false,
      "sources": [
       "src-port-12b-2020"
-     ]
+     ],
+     "kind": "land_or_lease",
+     "scope": "record"
     },
     {
      "amount_usd": 11280135,
@@ -42522,7 +42654,9 @@
      "approximate": false,
      "sources": [
       "src-port-12b-2020"
-     ]
+     ],
+     "kind": "land_or_lease",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -45045,7 +45179,10 @@
      "approximate": false,
      "sources": [
       "src-port-9b-2017"
-     ]
+     ],
+     "kind": "other",
+     "scope": "record",
+     "kind_note": "A fundraising threshold the developer must meet before the Arts Building lease begins, not a spend or loan figure."
     },
     {
      "amount_usd": 20000000,
@@ -45054,7 +45191,9 @@
      "approximate": false,
      "sources": [
       "src-port-9b-2017"
-     ]
+     ],
+     "kind": "public_investment",
+     "scope": "record"
     },
     {
      "amount_usd": 13500000,
@@ -45063,7 +45202,10 @@
      "approximate": false,
      "sources": [
       "src-port-9b-2017"
-     ]
+     ],
+     "kind": "other",
+     "scope": "record",
+     "kind_note": "A security instrument (financial guarantee) the developer provides for its Noonan-replacement and Arts Building lease obligations, not a spend figure."
     }
    ],
    "milestones": [
@@ -49239,22 +49381,15 @@
    ],
    "costs": [
     {
-     "amount_usd": 127000000,
-     "what": "Estimated total cost of the eight-building Historic Core rehabilitation at completion in 2020 (up from $81.9M at 2014 approvals); hard costs $102.2M, soft costs $24.8M",
-     "date": "2019-01",
-     "approximate": true,
-     "sources": [
-      "src-port-hc-2019"
-     ]
-    },
-    {
      "amount_usd": 15900000,
      "what": "Hard cost of the Building 101 rehabilitation (2018 actual/estimate; $13.1M at 2014 approvals)",
      "date": "2019-01",
      "approximate": true,
      "sources": [
       "src-port-hc-2019"
-     ]
+     ],
+     "kind": "construction",
+     "scope": "record"
     },
     {
      "amount_usd": 250000,
@@ -49263,7 +49398,9 @@
      "approximate": true,
      "sources": [
       "src-nrhp-2014"
-     ]
+     ],
+     "kind": "construction",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -49924,6 +50061,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The eight-building Historic Core's $127M estimated total rehabilitation cost was copied identically onto Buildings 101, 102, 104, 113/116 and 14's own cost entries. Moved it to one row in data/site_costs.csv (kind: development, scope: site, phase \"Pier 70 Historic Core\"), with a site_cost_refs pointer left on all five records. Each building keeps its own hard-cost figure, now with kind: construction and scope: record.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_building_101",
+      "slug": "pier-70-building-101-bethlehem-steel-hq",
+      "name": "Pier 70 Building 101 (Bethlehem Steel HQ)",
+      "permalink": "https://pierandpoint.org/parcels/pier-70-building-101-bethlehem-steel-hq/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-70-building-101-bethlehem-steel-hq.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-22",
      "kind": "added",
@@ -50613,22 +50779,15 @@
    ],
    "costs": [
     {
-     "amount_usd": 127000000,
-     "what": "Estimated total cost of the eight-building Historic Core rehabilitation at completion in 2020 (up from $81.9M at 2014 approvals); hard costs $102.2M, soft costs $24.8M",
-     "date": "2019-01",
-     "approximate": true,
-     "sources": [
-      "src-port-hc-2019"
-     ]
-    },
-    {
      "amount_usd": 6700000,
      "what": "Estimated hard cost of the Building 102 rehabilitation (future expenditure estimate in 2018; $3.1M at 2014 approvals)",
      "date": "2019-01",
      "approximate": true,
      "sources": [
       "src-port-hc-2019"
-     ]
+     ],
+     "kind": "construction",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -51255,7 +51414,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "See Building 101's changelog row for the move.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_building_102",
+      "slug": "pier-70-building-102-former-power-house",
+      "name": "Pier 70 Building 102 (former Power House)",
+      "permalink": "https://pierandpoint.org/parcels/pier-70-building-102-former-power-house/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-70-building-102-former-power-house.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/pier70/20th_st_historic_buildings_siteplan_2013.jpg",
@@ -51652,22 +51841,15 @@
    ],
    "costs": [
     {
-     "amount_usd": 127000000,
-     "what": "Estimated total cost of the eight-building Historic Core rehabilitation at completion in 2020 (up from $81.9M at 2014 approvals); hard costs $102.2M, soft costs $24.8M",
-     "date": "2019-01",
-     "approximate": true,
-     "sources": [
-      "src-port-hc-2019"
-     ]
-    },
-    {
      "amount_usd": 10600000,
      "what": "Hard cost of the Building 104 rehabilitation (2018 actual; $8.6M at 2014 approvals)",
      "date": "2019-01",
      "approximate": true,
      "sources": [
       "src-port-hc-2019"
-     ]
+     ],
+     "kind": "construction",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -52257,7 +52439,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "See Building 101's changelog row for the move.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_building_104",
+      "slug": "pier-70-building-104-uiw-headquarters",
+      "name": "Pier 70 Building 104 (UIW Headquarters)",
+      "permalink": "https://pierandpoint.org/parcels/pier-70-building-104-uiw-headquarters/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-70-building-104-uiw-headquarters.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/pier70/wikimedia_building104_2018.jpg",
@@ -52717,22 +52929,15 @@
    ],
    "costs": [
     {
-     "amount_usd": 127000000,
-     "what": "Estimated total cost of the eight-building Historic Core rehabilitation at completion in 2020 (up from $81.9M at 2014 approvals); hard costs $102.2M, soft costs $24.8M",
-     "date": "2019-01",
-     "approximate": true,
-     "sources": [
-      "src-port-hc-2019"
-     ]
-    },
-    {
      "amount_usd": 45200000,
      "what": "Hard cost of the Building 113/114 rehabilitation (2018 actual; $24.2M for 113 and 114 combined at 2014 approvals)",
      "date": "2019-01",
      "approximate": true,
      "sources": [
       "src-port-hc-2019"
-     ]
+     ],
+     "kind": "construction",
+     "scope": "record"
     },
     {
      "amount_usd": 14500000,
@@ -52741,7 +52946,9 @@
      "approximate": true,
      "sources": [
       "src-port-hc-2019"
-     ]
+     ],
+     "kind": "construction",
+     "scope": "record"
     },
     {
      "amount_usd": 100000,
@@ -52750,7 +52957,9 @@
      "approximate": true,
      "sources": [
       "src-nrhp-2014"
-     ]
+     ],
+     "kind": "construction",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -53536,7 +53745,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "See Building 101's changelog row for the move.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_building_113_116",
+      "slug": "pier-70-building-113-114-115-116-union-iron-works-machine-shop",
+      "name": "Pier 70 Building 113/114/115/116 (Union Iron Works Machine Shop)",
+      "permalink": "https://pierandpoint.org/parcels/pier-70-building-113-114-115-116-union-iron-works-machine-shop/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-70-building-113-114-115-116-union-iron-works-machine-shop.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/pier70/wikimedia_union_iron_works_2018.jpg",
@@ -54185,22 +54424,15 @@
    ],
    "costs": [
     {
-     "amount_usd": 127000000,
-     "what": "Estimated total cost of the eight-building Historic Core rehabilitation at completion in 2020 (up from $81.9M at 2014 approvals); hard costs $102.2M, soft costs $24.8M",
-     "date": "2019-01",
-     "approximate": true,
-     "sources": [
-      "src-port-hc-2019"
-     ]
-    },
-    {
      "amount_usd": 7500000,
      "what": "Hard cost of the Building 14 rehabilitation (2018 actual; $2.6M at 2014 approvals)",
      "date": "2019-01",
      "approximate": true,
      "sources": [
       "src-port-hc-2019"
-     ]
+     ],
+     "kind": "construction",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -54767,7 +54999,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "See Building 101's changelog row for the move.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_building_14",
+      "slug": "pier-70-building-14",
+      "name": "Pier 70 Building 14",
+      "permalink": "https://pierandpoint.org/parcels/pier-70-building-14/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-70-building-14.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/pier70/20th_st_historic_buildings_siteplan_2013.jpg",
@@ -56477,7 +56739,10 @@
      "approximate": false,
      "sources": [
       "src-ar-2021"
-     ]
+     ],
+     "kind": "other",
+     "scope": "record",
+     "kind_note": "Design/consultant contracts awarded (tracked for LBE-participation reporting), not a total development or hard-construction figure."
     }
    ],
    "milestones": [
@@ -60355,7 +60620,9 @@
      "approximate": true,
      "sources": [
       "src-chron-2026-08"
-     ]
+     ],
+     "kind": "financing",
+     "scope": "record"
     },
     {
      "amount_usd": 1710000,
@@ -60364,7 +60631,10 @@
      "approximate": false,
      "sources": [
       "src-ar-2021"
-     ]
+     ],
+     "kind": "other",
+     "scope": "record",
+     "kind_note": "Design/consultant contracts awarded (tracked for LBE-participation reporting), not a total development or hard-construction figure."
     }
    ],
    "milestones": [
@@ -62838,26 +63108,7 @@
      ]
     }
    ],
-   "costs": [
-    {
-     "amount_usd": 1,
-     "what": "Annual rent under Port Lease L-16662 for the Port shoreline premises ($1/year, 66 years); developer improves, maintains and operates at its cost",
-     "date": "2025-11-14",
-     "approximate": false,
-     "sources": [
-      "src-port-memo-10a"
-     ]
-    },
-    {
-     "amount_usd": 39000000,
-     "what": "DeSilva Gates contract for the Phase 1 Street Improvement Project (site-wide streets and utilities, June 2023-Q4 2025; not park-specific)",
-     "date": "2023",
-     "approximate": true,
-     "sources": [
-      "src-ar-2024"
-     ]
-    }
-   ],
+   "costs": [],
    "milestones": [
     {
      "date": "2018-10",
@@ -63404,6 +63655,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Both of this record's cost entries turned out not to be park-specific: the $1/year Port Lease L-16662 rent covers the Port-owned shoreline premises shared with Prequel Park's Port sub-area (same lease, same source, same date as that record's own $1 entry), and the DeSilva Gates $39M Phase 1 Street Improvement contract is explicitly 'site-wide streets and utilities, not park-specific'. Moved both to data/site_costs.csv (kind: land_or_lease/infrastructure, scope: site), each with a site_cost_refs pointer left on this record.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_waterfront_park",
+      "slug": "waterfront-park",
+      "name": "Waterfront Park",
+      "permalink": "https://pierandpoint.org/parcels/waterfront-park/",
+      "api": "https://pierandpoint.org/api/v1/records/waterfront-park.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-15",
      "kind": "correction",
@@ -73604,7 +73884,9 @@
      "approximate": false,
      "sources": [
       "src-ucsf-2014-11"
-     ]
+     ],
+     "kind": "development",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -74077,7 +74359,19 @@
      ]
     }
    ],
-   "costs": [],
+   "costs": [
+    {
+     "amount_usd": 222400000,
+     "what": "Total capital-improvement budget the UC Regents amended and approved in March 1999 for 'UC Hall Seismic Replacement, Mission Bay' (Building 24) -- believed to be this building based on matching gross square footage (433,828 gsf) and programs, per the January 2000 Regents item that recounts the March 1999 action; the March 1999 item itself does not use the 'Genentech Hall' name",
+     "date": "1999-03",
+     "kind": "development",
+     "scope": "record",
+     "approximate": true,
+     "sources": [
+      "src-ucregents-2000-01-mb-update"
+     ]
+    }
+   ],
    "milestones": [
     {
      "date": "1999-03",
@@ -74186,7 +74480,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "The March 1999 UC Regents item approves a capital-improvement budget for 'UC Hall Seismic Replacement, Mission Bay' (Building 24); identified as Genentech Hall by matching gross square footage (433,828 gsf) and program to the January 2000 Regents update that recounts the March 1999 action -- the 1999 item itself never uses the name 'Genentech Hall'.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "ucsf_genentech_hall",
+      "slug": "genentech-hall",
+      "name": "Genentech Hall",
+      "permalink": "https://pierandpoint.org/parcels/genentech-hall/",
+      "api": "https://pierandpoint.org/api/v1/records/genentech-hall.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/mission_bay/ucsf_regents_2008_byers_genentech.jpg",
@@ -74500,7 +74824,19 @@
      ]
     }
    ],
-   "costs": [],
+   "costs": [
+    {
+     "amount_usd": 88000000,
+     "what": "Total project budget the UC Regents approved in March 2000 for the Mission Bay Developmental Biology and Genetics Building (Building 19B) -- believed to be this building based on matching architect, size and programs, per the May 2000 Regents design-approval item that recounts the budget action; neither item uses the 'Rock Hall' name",
+     "date": "2000-03",
+     "kind": "development",
+     "scope": "record",
+     "approximate": true,
+     "sources": [
+      "src-ucregents-2000-05-19b"
+     ]
+    }
+   ],
    "milestones": [
     {
      "date": "2000-05",
@@ -74616,7 +74952,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "The March 2000 UC Regents item approves a project budget for the Mission Bay Developmental Biology and Genetics Building (Building 19B); identified as Rock Hall by matching architect, size and program to the May 2000 Regents design-approval item that recounts the budget action -- neither item uses the name 'Rock Hall'.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "ucsf_rock_hall",
+      "slug": "arthur-and-toni-rembe-rock-hall",
+      "name": "Arthur and Toni Rembe Rock Hall",
+      "permalink": "https://pierandpoint.org/parcels/arthur-and-toni-rembe-rock-hall/",
+      "api": "https://pierandpoint.org/api/v1/records/arthur-and-toni-rembe-rock-hall.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/mission_bay/ucsf_regents_2008_rock_hall.jpg",
@@ -75029,7 +75395,8 @@
     "Exact opening month and square footage not found in any source checked.",
     "No openly licensed image was found; none is hosted here.",
     "Images: the only photograph found of Byers Hall is undated beyond appearing in a September 2008 UC Regents presentation slide (shared with its neighbor); its exact capture date isn't confirmed. No site plan or architectural rendering specific to this building was found in a public-record source.",
-    "2026-09-21 pass: the March 2002 Regents design-approval item names the project 'the QB3 Building at Mission Bay,' not 'Byers Hall' -- the identification rests on QB3's own description of Byers Hall as its home building, not a direct name match in the Regents record."
+    "2026-09-21 pass: the March 2002 Regents design-approval item names the project 'the QB3 Building at Mission Bay,' not 'Byers Hall' -- the identification rests on QB3's own description of Byers Hall as its home building, not a direct name match in the Regents record.",
+    "2026-09-23 pass: searched for a construction or development cost figure (the March 2002 Regents design-approval item itself, which covers only the EIR addendum and design, not budget; UC Regents financing/capital-improvement agenda archives for a separate QB3 budget item; general web search for a press-reported figure). No cost was found; unlike its neighbors (Genentech Hall, Rock Hall, Rutter Center), no earlier Regents budget item naming this project was located in this pass."
    ],
    "sources": [
     {
@@ -75236,7 +75603,9 @@
      "approximate": true,
      "sources": [
       "src-tradeline-2012"
-     ]
+     ],
+     "kind": "development",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -75522,7 +75891,9 @@
      "approximate": true,
      "sources": [
       "src-architizer-smith"
-     ]
+     ],
+     "kind": "development",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -75884,7 +76255,19 @@
      ]
     }
    ],
-   "costs": [],
+   "costs": [
+    {
+     "amount_usd": 135000000,
+     "what": "\"$135 million UCSF cancer research site to open,\" per SFGate's coverage ahead of the building's grand opening -- described as the facility's overall cost, of which the Helen Diller Family's own $35,000,000 gift was the largest individual-donor contribution",
+     "date": "2009-05",
+     "kind": "development",
+     "scope": "record",
+     "approximate": true,
+     "sources": [
+      "src-sfgate-diller-2009"
+     ]
+    }
+   ],
    "milestones": [
     {
      "date": "2006",
@@ -76024,7 +76407,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "SFGate, May 2009, ahead of the building's grand opening: '$135 million UCSF cancer research site to open,' described as the facility's overall cost, of which the Helen Diller Family's own $35M gift was the largest individual-donor contribution.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "ucsf_helen_diller_cancer_research",
+      "slug": "helen-diller-family-cancer-research-building",
+      "name": "Helen Diller Family Cancer Research Building",
+      "permalink": "https://pierandpoint.org/parcels/helen-diller-family-cancer-research-building/",
+      "api": "https://pierandpoint.org/api/v1/records/helen-diller-family-cancer-research-building.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
@@ -76097,6 +76510,14 @@
      "publisher": "A History of UCSF (UCSF-affiliated historical archive)",
      "url": "https://history.library.ucsf.edu/1990.html",
      "accessed": "2026-09-18"
+    },
+    {
+     "id": "src-sfgate-diller-2009",
+     "title": "$135 million UCSF cancer research site to open",
+     "publisher": "SFGate",
+     "date": "2009-05-31",
+     "url": "https://www.sfgate.com/health/article/135-million-UCSF-cancer-research-site-to-open-3229463.php",
+     "accessed": "2026-09-23"
     },
     {
      "id": "src-osm-diller",
@@ -76221,7 +76642,19 @@
      ]
     }
    ],
-   "costs": [],
+   "costs": [
+    {
+     "amount_usd": 102000000,
+     "what": "Design-build contract amount for Mission Hall, as stated on design-builder Rudolph and Sletten's own project page (the developer/contractor's own marketing material, not an independent source) -- likely covers combined design and construction, not broken out separately",
+     "date": "2014",
+     "kind": "construction",
+     "scope": "record",
+     "approximate": true,
+     "sources": [
+      "src-rs-mission-hall"
+     ]
+    }
+   ],
    "milestones": [
     {
      "date": "2013",
@@ -76366,7 +76799,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "Design-builder Rudolph and Sletten's own project page states the design-build contract amount; flagged as the contractor's own marketing material, not an independent source, and likely covers combined design and construction.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "ucsf_mission_hall",
+      "slug": "mission-hall-global-health-and-clinical-sciences-building",
+      "name": "Mission Hall (Global Health & Clinical Sciences Building)",
+      "permalink": "https://pierandpoint.org/parcels/mission-hall-global-health-and-clinical-sciences-building/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-hall-global-health-and-clinical-sciences-building.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
@@ -76440,6 +76903,13 @@
      "publisher": "A History of UCSF (UCSF-affiliated historical archive)",
      "url": "https://history.library.ucsf.edu/2010.html",
      "accessed": "2026-09-18"
+    },
+    {
+     "id": "src-rs-mission-hall",
+     "title": "UCSF Mission Hall: Global Health & Clinical Sciences Building",
+     "publisher": "Rudolph and Sletten (design-build contractor, own material)",
+     "url": "https://www.rsconstruction.com/projects/education/ucsf-mission-hall-global-health-clinical-sciences-building/",
+     "accessed": "2026-09-23"
     },
     {
      "id": "src-osm-mission-hall",
@@ -76585,7 +77055,19 @@
      ]
     }
    ],
-   "costs": [],
+   "costs": [
+    {
+     "amount_usd": 58000000,
+     "what": "Total project budget the UC Regents approved in March 2000 for the Mission Bay Campus Community Center Building (21B), confirmed as this building by matching architects and program, per the May 2000 Regents design-approval item that recounts the budget action",
+     "date": "2000-03",
+     "kind": "development",
+     "scope": "record",
+     "approximate": true,
+     "sources": [
+      "src-ucregents-2000-05-21b"
+     ]
+    }
+   ],
    "milestones": [
     {
      "date": "2000-05",
@@ -76693,7 +77175,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "The March 2000 UC Regents item approves a project budget for Mission Bay Building 21B; identified as the Rutter Community Center by matching size and program.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "ucsf_rutter_community_center",
+      "slug": "william-j-rutter-community-center",
+      "name": "William J. Rutter Community Center",
+      "permalink": "https://pierandpoint.org/parcels/william-j-rutter-community-center/",
+      "api": "https://pierandpoint.org/api/v1/records/william-j-rutter-community-center.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/mission_bay/ucsf_regents_2008_rutter.jpg",
@@ -77300,7 +77812,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "The November 2002 UC Regents item's $112,816,000 capital-improvement budget covers the whole Block 20 project (Hearst Tower plus the Housing North, Housing West and Student Housing mid-rise buildings) with no per-building breakdown, so it was never a record-scope figure for any one of them. Added to data/site_costs.csv (kind: development, scope: site, phase 'Block 20'), with a site_cost_refs pointer left on all four records, each of which already discussed the figure in its own open_questions without asserting it as a record-scope total.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "ucsf_hearst_tower",
+      "slug": "hearst-tower",
+      "name": "Hearst Tower",
+      "permalink": "https://pierandpoint.org/parcels/hearst-tower/",
+      "api": "https://pierandpoint.org/api/v1/records/hearst-tower.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
@@ -77351,7 +77893,8 @@
     "Could not confirm whether all four housing buildings opened in exactly the same month, or whether some phased in slightly later than others.",
     "No openly licensed image was found; none is hosted here.",
     "Images: no plan drawing, elevation or openly-licensed photograph was found for this building specifically. Searched: UCSF Real Estate's Mission Bay campus-site and LRDP pages (realestate.ucsf.edu, blocked to automated fetches with a 403); the UCSF 2014 LRDP EIR's CEQAnet filing (SCH 2013092047, whose pre-2016 attachments aren't hosted on CEQAnet itself); a May 2000 Regents Committee on Grounds and Buildings design-approval item for an early Mission Bay building (text-only, no figures); the 2008 \"UCSF Mission Bay Planning Principles\" appendix (a citywide-scale community map, no individual buildings labeled); and a UCSF wayfinding campus map (not an adopted plan, EIR or permit filing, so not eligible as public-record even though found). Not pursued further in this pass; the record's own project sources above remain the citation for the building's history. The same September 2008 Regents presentation (used for Byers Hall, Genentech Hall, Rock Hall and Rutter Center) includes one more photo on its \"Architectural Context\" slide labeled only \"Housing,\" showing what looks like more than one building together; it wasn't used here because it can't be confidently attributed to this specific one.",
-    "2026-09-21 pass: the November 2002 Regents item's 430-unit, 298,800-asf, one-tower-plus-three-mid-rise description matches this record's own facts (431 apartments, 298,800 sq ft complex total) closely enough to identify Hearst Tower as the 15-story tower it describes, though the item covers the whole Block 20 project rather than naming Hearst Tower individually."
+    "2026-09-21 pass: the November 2002 Regents item's 430-unit, 298,800-asf, one-tower-plus-three-mid-rise description matches this record's own facts (431 apartments, 298,800 sq ft complex total) closely enough to identify Hearst Tower as the 15-story tower it describes, though the item covers the whole Block 20 project rather than naming Hearst Tower individually.",
+    "2026-09-23 pass: searched for a cost figure specific to this tower alone (versus the whole four-building Block 20 project). The only figure found anywhere is the November 2002 Regents item's own $112,816,000 project budget, which the Regents item itself states as a whole-project total covering the tower and all three mid-rise buildings together -- no source breaks it down per building, so no record-scope figure is added here; a per-project figure belongs in a site- or phase-scope table, not this record's own costs array."
    ],
    "sources": [
     {
@@ -77624,7 +78167,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "See Hearst Tower's changelog row for the move.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "ucsf_housing_north",
+      "slug": "ucsf-mission-bay-housing-north-building",
+      "name": "UCSF Mission Bay Housing North Building",
+      "permalink": "https://pierandpoint.org/parcels/ucsf-mission-bay-housing-north-building/",
+      "api": "https://pierandpoint.org/api/v1/records/ucsf-mission-bay-housing-north-building.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
@@ -77676,7 +78249,8 @@
     "No exact unit count found for this specific building (only the four-building complex total).",
     "No openly licensed image was found; none is hosted here.",
     "Images: no plan drawing, elevation or openly-licensed photograph was found for this building specifically. Searched: UCSF Real Estate's Mission Bay campus-site and LRDP pages (realestate.ucsf.edu, blocked to automated fetches with a 403); the UCSF 2014 LRDP EIR's CEQAnet filing (SCH 2013092047, whose pre-2016 attachments aren't hosted on CEQAnet itself); a May 2000 Regents Committee on Grounds and Buildings design-approval item for an early Mission Bay building (text-only, no figures); the 2008 \"UCSF Mission Bay Planning Principles\" appendix (a citywide-scale community map, no individual buildings labeled); and a UCSF wayfinding campus map (not an adopted plan, EIR or permit filing, so not eligible as public-record even though found). Not pursued further in this pass; the record's own project sources above remain the citation for the building's history. The same September 2008 Regents presentation (used for Byers Hall, Genentech Hall, Rock Hall and Rutter Center) includes one more photo on its \"Architectural Context\" slide labeled only \"Housing,\" showing what looks like more than one building together; it wasn't used here because it can't be confidently attributed to this specific one.",
-    "2026-09-21 pass: the November 2002 Regents item covers the whole Block 20 project (one tower plus three mid-rise buildings) rather than naming this building individually; identification of this record as one of the three mid-rise buildings follows from its own facts entry, not a direct name match in the Regents record."
+    "2026-09-21 pass: the November 2002 Regents item covers the whole Block 20 project (one tower plus three mid-rise buildings) rather than naming this building individually; identification of this record as one of the three mid-rise buildings follows from its own facts entry, not a direct name match in the Regents record.",
+    "2026-09-23 pass: searched for a cost figure specific to this building alone (versus the whole four-building Block 20 project). The only figure found anywhere is the November 2002 Regents item's own $112,816,000 project budget, which the Regents item itself states as a whole-project total covering Hearst Tower and all three mid-rise buildings together -- no source breaks it down per building, so no record-scope figure is added here; a per-project figure belongs in a site- or phase-scope table, not this record's own costs array."
    ],
    "sources": [
     {
@@ -77945,7 +78519,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "See Hearst Tower's changelog row for the move.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "ucsf_housing_west",
+      "slug": "ucsf-mission-bay-housing-west-building",
+      "name": "UCSF Mission Bay Housing West Building",
+      "permalink": "https://pierandpoint.org/parcels/ucsf-mission-bay-housing-west-building/",
+      "api": "https://pierandpoint.org/api/v1/records/ucsf-mission-bay-housing-west-building.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
@@ -77997,7 +78601,8 @@
     "No exact unit count found for this specific building (only the four-building complex total).",
     "No openly licensed image was found; none is hosted here.",
     "Images: no plan drawing, elevation or openly-licensed photograph was found for this building specifically. Searched: UCSF Real Estate's Mission Bay campus-site and LRDP pages (realestate.ucsf.edu, blocked to automated fetches with a 403); the UCSF 2014 LRDP EIR's CEQAnet filing (SCH 2013092047, whose pre-2016 attachments aren't hosted on CEQAnet itself); a May 2000 Regents Committee on Grounds and Buildings design-approval item for an early Mission Bay building (text-only, no figures); the 2008 \"UCSF Mission Bay Planning Principles\" appendix (a citywide-scale community map, no individual buildings labeled); and a UCSF wayfinding campus map (not an adopted plan, EIR or permit filing, so not eligible as public-record even though found). Not pursued further in this pass; the record's own project sources above remain the citation for the building's history. The same September 2008 Regents presentation (used for Byers Hall, Genentech Hall, Rock Hall and Rutter Center) includes one more photo on its \"Architectural Context\" slide labeled only \"Housing,\" showing what looks like more than one building together; it wasn't used here because it can't be confidently attributed to this specific one.",
-    "2026-09-21 pass: the November 2002 Regents item covers the whole Block 20 project (one tower plus three mid-rise buildings) rather than naming this building individually; identification of this record as one of the three mid-rise buildings follows from its own facts entry, not a direct name match in the Regents record."
+    "2026-09-21 pass: the November 2002 Regents item covers the whole Block 20 project (one tower plus three mid-rise buildings) rather than naming this building individually; identification of this record as one of the three mid-rise buildings follows from its own facts entry, not a direct name match in the Regents record.",
+    "2026-09-23 pass: searched for a cost figure specific to this building alone (versus the whole four-building Block 20 project). The only figure found anywhere is the November 2002 Regents item's own $112,816,000 project budget, which the Regents item itself states as a whole-project total covering Hearst Tower and all three mid-rise buildings together -- no source breaks it down per building, so no record-scope figure is added here; a per-project figure belongs in a site- or phase-scope table, not this record's own costs array."
    ],
    "sources": [
     {
@@ -78259,7 +78864,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "See Hearst Tower's changelog row for the move.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "ucsf_student_housing",
+      "slug": "ucsf-student-housing",
+      "name": "UCSF Student Housing",
+      "permalink": "https://pierandpoint.org/parcels/ucsf-student-housing/",
+      "api": "https://pierandpoint.org/api/v1/records/ucsf-student-housing.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
@@ -78311,7 +78946,8 @@
     "Could not confirm whether all four housing buildings opened in exactly the same month, or whether some phased in slightly later than others.",
     "No openly licensed image was found; none is hosted here.",
     "Images: no plan drawing, elevation or openly-licensed photograph was found for this building specifically. Searched: UCSF Real Estate's Mission Bay campus-site and LRDP pages (realestate.ucsf.edu, blocked to automated fetches with a 403); the UCSF 2014 LRDP EIR's CEQAnet filing (SCH 2013092047, whose pre-2016 attachments aren't hosted on CEQAnet itself); a May 2000 Regents Committee on Grounds and Buildings design-approval item for an early Mission Bay building (text-only, no figures); the 2008 \"UCSF Mission Bay Planning Principles\" appendix (a citywide-scale community map, no individual buildings labeled); and a UCSF wayfinding campus map (not an adopted plan, EIR or permit filing, so not eligible as public-record even though found). Not pursued further in this pass; the record's own project sources above remain the citation for the building's history. The same September 2008 Regents presentation (used for Byers Hall, Genentech Hall, Rock Hall and Rutter Center) includes one more photo on its \"Architectural Context\" slide labeled only \"Housing,\" showing what looks like more than one building together; it wasn't used here because it can't be confidently attributed to this specific one.",
-    "2026-09-21 pass: the November 2002 Regents item covers the whole Block 20 project (one tower plus three mid-rise buildings) rather than naming this building individually; identification of this record as one of the three mid-rise buildings follows from its own facts entry, not a direct name match in the Regents record."
+    "2026-09-21 pass: the November 2002 Regents item covers the whole Block 20 project (one tower plus three mid-rise buildings) rather than naming this building individually; identification of this record as one of the three mid-rise buildings follows from its own facts entry, not a direct name match in the Regents record.",
+    "2026-09-23 pass: searched for a cost figure specific to this building alone (versus the whole four-building Block 20 project). The only figure found anywhere is the November 2002 Regents item's own $112,816,000 project budget, which the Regents item itself states as a whole-project total covering Hearst Tower and all three mid-rise buildings together -- no source breaks it down per building, so no record-scope figure is added here; a per-project figure belongs in a site- or phase-scope table, not this record's own costs array."
    ],
    "sources": [
     {
@@ -78486,7 +79122,19 @@
      ]
     }
    ],
-   "costs": [],
+   "costs": [
+    {
+     "amount_usd": 23298000,
+     "what": "Total project budget the UC Regents approved and fully externally financed in November 2003 for the Mission Bay Building 23B Parking Structure Project (822 spaces on nine levels plus 52 surface spaces)",
+     "date": "2003-11",
+     "kind": "development",
+     "scope": "record",
+     "approximate": false,
+     "sources": [
+      "src-regents-2003-11"
+     ]
+    }
+   ],
    "milestones": [
     {
      "date": "2003-11-19",
@@ -78637,7 +79285,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "The figure was already recorded as a `total_cost` fact on this record, citing the same November 2003 UC Regents item; added as a structured costs entry (kind: development) so it's captured consistently with every other record.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "ucsf_third_street_garage",
+      "slug": "third-street-garage",
+      "name": "Third Street Garage",
+      "permalink": "https://pierandpoint.org/parcels/third-street-garage/",
+      "api": "https://pierandpoint.org/api/v1/records/third-street-garage.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
@@ -78811,7 +79489,19 @@
     "lat": 37.767435
    },
    "facts": [],
-   "costs": [],
+   "costs": [
+    {
+     "amount_usd": 52800000,
+     "what": "SF Department of Building Inspection permit #200801243180's revised construction-cost valuation for the 6-story, 823-space parking garage (the permit's initial filed estimate was $17,900,000); no UCSF or Regents primary source names a cost for this garage",
+     "date": "2010-01",
+     "kind": "construction",
+     "scope": "record",
+     "approximate": true,
+     "sources": [
+      "src-datasf-permit-1670owens"
+     ]
+    }
+   ],
    "milestones": [
     {
      "date": "2010",
@@ -78850,7 +79540,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "SF Department of Building Inspection permit revised-cost valuation (DataSF); the permit's initial filed estimate was lower, noted for context. No UCSF- or Regents-stated project budget was found.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "ucsf_1670_owens_garage",
+      "slug": "1670-owens-garage",
+      "name": "1670 Owens Garage",
+      "permalink": "https://pierandpoint.org/parcels/1670-owens-garage/",
+      "api": "https://pierandpoint.org/api/v1/records/1670-owens-garage.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
@@ -78911,6 +79631,13 @@
      "publisher": "PropertyShark",
      "url": "https://www.propertyshark.com/mason/Property/75338434/1670-Owens-St-San-Francisco-CA-94158/",
      "accessed": "2026-09-21"
+    },
+    {
+     "id": "src-datasf-permit-1670owens",
+     "title": "Building Permits: permit #200801243180 (1670 Owens St, block 8709 lot 009), filed 2008-01-24, \"erect 6 stories parking garage (823 spaces)\", completed 2010-01-29",
+     "publisher": "DataSF / SF Department of Building Inspection",
+     "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200801243180",
+     "accessed": "2026-09-23"
     },
     {
      "id": null,
@@ -79343,7 +80070,19 @@
     "lat": 37.772497
    },
    "facts": [],
-   "costs": [],
+   "costs": [
+    {
+     "amount_usd": 32625000,
+     "what": "SF Department of Building Inspection permit #200502085025's revised construction-cost valuation for the 5-story, 194-unit building at 355 Berry St (the permit's initial filed estimate was $5,000,000)",
+     "date": "2008-02",
+     "kind": "construction",
+     "scope": "record",
+     "approximate": true,
+     "sources": [
+      "src-datasf-permit-edgewater"
+     ]
+    }
+   ],
    "milestones": [
     {
      "date": "2005-02-08",
@@ -79418,7 +80157,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "SF Department of Building Inspection permit revised-cost valuation (DataSF).",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_edgewater",
+      "slug": "edgewater",
+      "name": "Edgewater",
+      "permalink": "https://pierandpoint.org/parcels/edgewater/",
+      "api": "https://pierandpoint.org/api/v1/records/edgewater.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
@@ -80049,7 +80818,8 @@
     "Apartment-listing aggregators (Apartments.com, Redfin, ApartmentHomeLiving, among others) give 2014 as this block's construction year, but DataSF Assessor records and the project architect's own project page both give 2016; not resolved which reflects actual first occupancy versus an earlier leasing target that slipped.",
     "Contemporaneous press (SFGate, CBS News San Francisco) reported a 5-alarm fire on March 11, 2014 that destroyed one of the two under-construction MB360 buildings, requiring a rebuild; no source found specifies which of the two street addresses (701 China Basin St, this record, vs. 1200 4th St) was the one destroyed, so it is not asserted here which block the fire affected.",
     "Precise month of this block's actual completion/first occupancy is not sourced beyond the bare Assessor year.",
-    "Developer of record beyond BRE Properties/Essex Property Trust, and any subsequent sale history, not researched in this pass."
+    "Developer of record beyond BRE Properties/Essex Property Trust, and any subsequent sale history, not researched in this pass.",
+    "2026-09-23 pass: The Registry's own article (already cited above) reports BRE Properties 'expected a total development cost of $227 million, or $630,000 a unit' -- but that figure covers the whole 360-unit, two-block MB360 development (this record's 701 China Basin St block plus the separate mission_bay_mb360_1200_4th block) as one project, not this 188-unit block alone. No block-specific figure was found, so no record-scope figure is added here."
    ],
    "sources": [
     {
@@ -81067,7 +81837,19 @@
     "lat": 37.772378
    },
    "facts": [],
-   "costs": [],
+   "costs": [
+    {
+     "amount_usd": 12000000,
+     "what": "SF Department of Building Inspection permit #200607247440's construction-cost valuation (estimated and revised cost both $12,000,000) for the 8-story, 192-unit building at 555 Mission Rock St",
+     "date": "2009-07",
+     "kind": "construction",
+     "scope": "record",
+     "approximate": true,
+     "sources": [
+      "src-datasf-permit-strata"
+     ]
+    }
+   ],
    "milestones": [
     {
      "date": "2006-07-24",
@@ -81151,6 +81933,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "SF Department of Building Inspection permit revised-cost valuation (DataSF).",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_strata",
+      "slug": "strata-at-mission-bay",
+      "name": "Strata at Mission Bay",
+      "permalink": "https://pierandpoint.org/parcels/strata-at-mission-bay/",
+      "api": "https://pierandpoint.org/api/v1/records/strata-at-mission-bay.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-22",
      "kind": "added",
@@ -82065,7 +82876,19 @@
      ]
     }
    ],
-   "costs": [],
+   "costs": [
+    {
+     "amount_usd": 26400000,
+     "what": "SF Department of Building Inspection permit #200208194343's revised construction-cost valuation for the original 6-story office/laboratory building at 1650 Owens St (the permit's initial filed estimate was $14,000,000); no Gladstone- or UCSF-stated project budget was found. The permit's own completed_date (2005-10-28) postdates Gladstone's December 2004 dedication -- likely reflects administrative permit closeout rather than the building's actual completion.",
+     "date": "2005-10",
+     "kind": "construction",
+     "scope": "record",
+     "approximate": true,
+     "sources": [
+      "src-datasf-permit-gladstone-2004"
+     ]
+    }
+   ],
    "milestones": [
     {
      "date": "2003-11",
@@ -82179,7 +83002,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "SF Department of Building Inspection permit #200208194343's revised construction-cost valuation for the original 6-story building at 1650 Owens St (initial filed estimate $14M); no Gladstone- or UCSF-stated project budget was found.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_gladstone_institutes",
+      "slug": "j-david-gladstone-institutes",
+      "name": "J. David Gladstone Institutes",
+      "permalink": "https://pierandpoint.org/parcels/j-david-gladstone-institutes/",
+      "api": "https://pierandpoint.org/api/v1/records/j-david-gladstone-institutes.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
@@ -82248,6 +83101,13 @@
      "date": "2023-02",
      "url": "https://sfyimby.com/2023/02/gladstone-expansion-announced-for-1650-owens-street-in-mission-bay-san-francisco.html",
      "accessed": "2026-09-18"
+    },
+    {
+     "id": "src-datasf-permit-gladstone-2004",
+     "title": "Building Permits: permit #200208194343 (1650 Owens St), \"erect a 6 story office/laboratory\", status complete",
+     "publisher": "DataSF / SF Department of Building Inspection",
+     "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200208194343",
+     "accessed": "2026-09-23"
     },
     {
      "id": "src-regents-2003-11-23b",
@@ -82763,7 +83623,19 @@
     "lat": 37.771644
    },
    "facts": [],
-   "costs": [],
+   "costs": [
+    {
+     "amount_usd": 26700000,
+     "what": "SF Department of Building Inspection permit #200505112108's revised construction-cost valuation for the 4-story, 236-unit affordable building at 420 Berry St (the permit's initial filed estimate was $5,000,000)",
+     "date": "2007-10",
+     "kind": "construction",
+     "scope": "record",
+     "approximate": true,
+     "sources": [
+      "src-datasf-permit-crescent-cove"
+     ]
+    }
+   ],
    "milestones": [
     {
      "date": "2005-05-11",
@@ -82838,7 +83710,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "SF Department of Building Inspection permit revised-cost valuation (DataSF).",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_crescent_cove",
+      "slug": "crescent-cove",
+      "name": "Crescent Cove",
+      "permalink": "https://pierandpoint.org/parcels/crescent-cove/",
+      "api": "https://pierandpoint.org/api/v1/records/crescent-cove.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
@@ -86470,7 +87372,9 @@
      "approximate": true,
      "sources": [
       "src-sfyimby-490illinois"
-     ]
+     ],
+     "kind": "construction",
+     "scope": "record"
     },
     {
      "amount_usd": 90000000,
@@ -86479,7 +87383,9 @@
      "approximate": true,
      "sources": [
       "src-datasf-permit-499-illinois"
-     ]
+     ],
+     "kind": "construction",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -91300,7 +92206,19 @@
     "lat": 37.769455
    },
    "facts": [],
-   "costs": [],
+   "costs": [
+    {
+     "amount_usd": 42950000,
+     "what": "SF Department of Building Inspection permit #200705090778's revised construction-cost valuation for the 7-story, 469,726 sq ft parking garage (the permit's initial filed estimate was $34,000,000)",
+     "date": "2009-10",
+     "kind": "construction",
+     "scope": "record",
+     "approximate": true,
+     "sources": [
+      "src-datasf-permit-chase-garage"
+     ]
+    }
+   ],
    "milestones": [
     {
      "date": "2007-05-09",
@@ -91375,7 +92293,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "SF Department of Building Inspection permit revised-cost valuation (DataSF).",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_chase_parking_garage",
+      "slug": "chase-center-parking-garage-150-warriors-way",
+      "name": "Chase Center Parking Garage (150 Warriors Way)",
+      "permalink": "https://pierandpoint.org/parcels/chase-center-parking-garage-150-warriors-way/",
+      "api": "https://pierandpoint.org/api/v1/records/chase-center-parking-garage-150-warriors-way.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
@@ -100070,7 +101018,19 @@
      ]
     }
    ],
-   "costs": [],
+   "costs": [
+    {
+     "amount_usd": 357600000,
+     "what": "Total project budget the UC Regents approved in May 2017 for the Weill Neurosciences Building, alongside project scope and design -- funded from $141,600,000 in external financing, $175,000,000 in gifts and $41,000,000 in campus funding",
+     "date": "2017-05",
+     "kind": "development",
+     "scope": "record",
+     "approximate": false,
+     "sources": [
+      "src-ucsf-2017-05-regents-3projects"
+     ]
+    }
+   ],
    "milestones": [
     {
      "date": "2016-03-24",
@@ -100184,7 +101144,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "UC Regents item, May 2017: total project budget of $357.6M funded from $141.6M external financing, $175M in gifts and $41M campus funding.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "ucsf_weill_neurosciences",
+      "slug": "weill-neurosciences-building",
+      "name": "Weill Neurosciences Building",
+      "permalink": "https://pierandpoint.org/parcels/weill-neurosciences-building/",
+      "api": "https://pierandpoint.org/api/v1/records/weill-neurosciences-building.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
@@ -100274,6 +101264,14 @@
      "date": "2021-10-27",
      "url": "https://www.architecturalrecord.com/articles/15366-ucsf-joan-sanford-i-weill-neurosciences-building-by-smithgroup-with-mark-cavagnero-associates",
      "accessed": "2026-09-21"
+    },
+    {
+     "id": "src-ucsf-2017-05-regents-3projects",
+     "title": "UC Regents Approve Building Plans for 3 Projects in Mission Bay, Dogpatch",
+     "publisher": "UC San Francisco",
+     "date": "2017-05",
+     "url": "https://www.ucsf.edu/news/2017/05/407096/uc-regents-approve-building-plans-3-projects-mission-bay-dogpatch",
+     "accessed": "2026-09-23"
     },
     {
      "id": "src-ucregents-2016-03-23a",
@@ -101238,7 +102236,19 @@
      ]
     }
    ],
-   "costs": [],
+   "costs": [
+    {
+     "amount_usd": 228000000,
+     "what": "\"The project's development costs amounted to $228 million,\" per Commercial Property Executive's coverage of the Bayfront Medical Building's opening -- covers this building alone, not the adjoining Illinois Street Garage (reported separately, no cost given)",
+     "date": "2024-08",
+     "kind": "development",
+     "scope": "record",
+     "approximate": true,
+     "sources": [
+      "src-cpe-bayfront-2024"
+     ]
+    }
+   ],
    "milestones": [
     {
      "date": "2020-05",
@@ -101367,7 +102377,37 @@
      "relation": "tracked"
     }
    ],
-   "changes": [],
+   "changes": [
+    {
+     "date": "2026-09-23",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "Commercial Property Executive's coverage of the building's opening: 'the project's development costs amounted to $228 million' -- covers this building alone, not the adjoining Illinois Street Garage.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "ucsf_bayfront_medical_building",
+      "slug": "ucsf-bayfront-medical-building",
+      "name": "UCSF Bayfront Medical Building",
+      "permalink": "https://pierandpoint.org/parcels/ucsf-bayfront-medical-building/",
+      "api": "https://pierandpoint.org/api/v1/records/ucsf-bayfront-medical-building.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
    "images": [
     {
      "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
@@ -102896,7 +103936,9 @@
      "approximate": true,
      "sources": [
       "src-constrdive-2019"
-     ]
+     ],
+     "kind": "development",
+     "scope": "record"
     },
     {
      "amount_usd": 1300000000,
@@ -102905,7 +103947,9 @@
      "approximate": true,
      "sources": [
       "src-wikipedia-chase"
-     ]
+     ],
+     "kind": "development",
+     "scope": "record"
     }
    ],
    "milestones": [
@@ -104626,7 +105670,8 @@
     "2026-09-23: this record's geometry was migrated off status.csv (record_id changed from the blklot '8722063' to 'mission_bay_uber_3_4') because DataSF's own Assessor Parcel dataset gives this parcel and the neighboring Chase Center arena byte-identical geometry (one shared master-condo superblock parcel). The new geometry is the union of both towers' own real OpenStreetMap building footprints (OSM ways 1410182008 and 1410183655) instead -- see the geojson's own digitization_method.",
     "As of 2025 SEC filings, Uber still lists 1725 3rd St as its corporate HQ address, though a 2023 report said that specific building had never been fully staffed and was being marketed for sublease -- current occupancy is genuinely unclear and not resolved here.",
     "This project's own DataSF business-registration data shows several Uber-internal registrations here (Bon Appetit @ Uber cafeteria service across multiple floors, Uber Freight Holding Corporation, a Mercedes-Benz-branded garage/showroom) not otherwise researched or added as facts in this pass.",
-    "No dedicated primary source (an Alexandria or Uber press release specifically) was found for the exact completion date of each tower individually; 2021 is used as a combined year."
+    "No dedicated primary source (an Alexandria or Uber press release specifically) was found for the exact completion date of each tower individually; 2021 is used as a combined year.",
+    "2026-09-23 pass: searched for a total development or construction cost for the two towers. Press coverage only turns up financing and lease figures -- Uber's $136,000,000 payment for a 45% joint-venture stake, its $1,000,000,000 in lease payments over 20 years, and the $600,000,000 CMBS refinancing already cited above -- none of which is a stated construction or development cost, so none is recorded here."
    ],
    "sources": [
     {

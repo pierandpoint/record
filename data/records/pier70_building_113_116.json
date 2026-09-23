@@ -203,22 +203,15 @@
   ],
   "costs": [
     {
-      "amount_usd": 127000000,
-      "what": "Estimated total cost of the eight-building Historic Core rehabilitation at completion in 2020 (up from $81.9M at 2014 approvals); hard costs $102.2M, soft costs $24.8M",
-      "date": "2019-01",
-      "approximate": true,
-      "sources": [
-        "src-port-hc-2019"
-      ]
-    },
-    {
       "amount_usd": 45200000,
       "what": "Hard cost of the Building 113/114 rehabilitation (2018 actual; $24.2M for 113 and 114 combined at 2014 approvals)",
       "date": "2019-01",
       "approximate": true,
       "sources": [
         "src-port-hc-2019"
-      ]
+      ],
+      "kind": "construction",
+      "scope": "record"
     },
     {
       "amount_usd": 14500000,
@@ -227,7 +220,9 @@
       "approximate": true,
       "sources": [
         "src-port-hc-2019"
-      ]
+      ],
+      "kind": "construction",
+      "scope": "record"
     },
     {
       "amount_usd": 100000,
@@ -236,7 +231,9 @@
       "approximate": true,
       "sources": [
         "src-nrhp-2014"
-      ]
+      ],
+      "kind": "construction",
+      "scope": "record"
     }
   ],
   "facts": [
@@ -385,7 +382,12 @@
       "license_evidence": "https://commons.wikimedia.org/wiki/File:Union_Iron_Works_building_on_Pier_70,_September_2018.JPG",
       "license_note": "Wikimedia Commons' license box on the file page confirms CC BY-SA 3.0, credited 'Own work' by Pi.1415926535. Read 2026-09-19.",
       "caption": "The Union Iron Works Machine Shop/Foundry facade, a few months after certificate of occupancy (113/114: April 2018; 115/116: November 2017)",
-      "focus": [0.05, 0.22, 0.9, 0.36]
+      "focus": [
+        0.05,
+        0.22,
+        0.9,
+        0.36
+      ]
     },
     {
       "path": "data/manual/images/pier70/20th_st_historic_buildings_siteplan_2013.jpg",
@@ -511,5 +513,8 @@
     "The STRUCTURE magazine article is undated on the page; it describes the project as 'currently complete', so it post-dates April 2018.",
     "This record covers both Assessor-lot groupings (the status.csv row for blklot 4111004 is commented out); the geometry is the D4D's single 113-116 box."
   ],
-  "last_verified": "2026-09-18"
+  "last_verified": "2026-09-18",
+  "site_cost_refs": [
+    "pier70-historic-core-rehab-2019"
+  ]
 }

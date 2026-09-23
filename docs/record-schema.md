@@ -28,9 +28,11 @@ doesn't exist in `status.csv` or `approximate_projects.csv` fails validation.
      "basis": "phase", "basis_note": "Phase 3 in the 2018 Development Agreement's phasing schedule, Exhibit N; not a parcel-specific date"}
   ],
   "costs": [
-    {"amount_usd": 100000000, "what": "Historic core rehabilitation, all buildings",
-     "date": "2017", "approximate": true, "sources": ["src-sfbt-2017"]}
+    {"amount_usd": 15900000, "what": "Hard cost of the Building 101 rehabilitation",
+     "date": "2019-01", "kind": "construction", "scope": "record", "approximate": true,
+     "sources": ["src-port-hc-2019"]}
   ],
+  "site_cost_refs": ["pier70-historic-core-rehab-2019"],
   "facts": [
     {"key": "developer", "value": "Orton Development", "sources": ["src-sfport-core"]},
     {"key": "architect", "value": "Marcy Wong Donn Logan Architects", "sources": ["src-sfport-core"]},
@@ -83,6 +85,36 @@ doesn't exist in `status.csv` or `approximate_projects.csv` fails validation.
   milestone's `basis: project` with a `basis_note` explaining why the date
   is soft (e.g. "buildout target predates the 2026 pause announcement; no
   revised date sourced yet").
+- Every cost entry requires `kind` and `scope`, in addition to the existing
+  `amount_usd`, `what`, `date`/`approximate` and `sources`:
+  - `kind` is one of `development` (a building's or parcel's stated total
+    development cost), `construction` (hard cost only, when the source
+    distinguishes it), `infrastructure` (streets, utilities, parks,
+    shoreline -- horizontal work), `public_investment` (CFD bonds, IFD or
+    tax-increment allocations, Port capital advances, grants),
+    `financing` (construction loans, refinancing -- recorded, but every
+    aggregation skips a `financing` entry, so it is never summed with
+    anything else), `land_or_lease` (appraisals, prepaid lease values, land
+    payments), `fee_or_subsidy` (impact fees, jobs-housing fees,
+    affordable-housing subsidies), or `other` (requires a one-sentence
+    `kind_note` saying what it is -- an unlabelled "other" is a guess).
+  - `scope` on a record file's own `costs` array is always `record` (the
+    parcel or building this record is): a `phase`- or `site`-scope figure
+    is never written into a record file's `costs` array -- it belongs in
+    `data/site_costs.csv` instead (see below), and the validator rejects
+    one that shows up here.
+  - `stated_on` is optional: only needed when the existing `date` field is
+    already carrying a different meaning for this entry (for example, a
+    spend total stated "as of" a period end) and the entry also needs to
+    record the date the source itself was published or stated. Most
+    entries don't need it; `date` alone is the date the source states.
+  - `site_cost_refs` is an optional top-level array of `data/site_costs.csv`
+    row ids: a pointer from this record to a phase- or site-scope figure,
+    written only when the source itself ties that figure to this specific
+    record (e.g. a Port memo naming this parcel among the several sharing a
+    phase budget). It never carries its own `amount_usd` -- the amount lives
+    once in `data/site_costs.csv` -- so the same figure is never
+    double-counted by being copied onto every record it's a pointer from.
 - Every image has `path`, `kind`, `credit`, `license` and `source_url`, and
   the file exists. `kind` is one of:
   - `historic`: long before the redevelopment -- an old photograph of the
@@ -370,6 +402,45 @@ footer's first nav row, never the main navigation -- retail is a facet of a
 record, not a separate product). A row that is an opening, announcement or
 closure with a date gets a matching `data/changelog.csv` row, `category:
 retail`.
+
+## `data/site_costs.csv`
+
+A `phase`- or `site`-scope cost figure, stored once instead of copied onto
+every record it touches. A figure that genuinely belongs to a single parcel
+or building stays in that record's own `costs` array (`scope: record`);
+this table is only for a figure the source itself states at the level of a
+named phase (Mission Rock Phase 1, Pier 70's Historic Core) or a whole site.
+
+Columns:
+
+- `id`: a stable, unique, lowercase-hyphenated id (e.g.
+  `mission-rock-phase1-horizontal-2023`). A record's `site_cost_refs`
+  points at this id, so changing it breaks that pointer -- treat it as a
+  key, not a label.
+- `site`: a known `data/sites.csv` slug.
+- `phase`: free text naming the phase (e.g. "Mission Rock Phase 1", "Pier
+  70 Historic Core"), or blank for a whole-site figure.
+- `kind`: the same fixed list as a record cost entry's `kind`, above
+  (`development`, `construction`, `infrastructure`, `public_investment`,
+  `financing`, `land_or_lease`, `fee_or_subsidy`, `other` with `kind_note`).
+- `amount_usd`: a number, nominal as stated -- no inflation adjustment.
+- `date`: `YYYY`, `YYYY-MM` or `YYYY-MM-DD`, the date the source states.
+- `what`: one sentence describing the figure, as specific as the source is
+  (which resolution or memo, what it covers).
+- `approximate`: `yes` or `no`.
+- `source_url`: required. No source, no figure, same rule as everywhere
+  else in this repo.
+- `source_note`: optional, free text -- a page number, a caveat about how
+  the source itself qualifies the figure.
+
+`src/validate_records.py` checks: `id` is unique and lowercase-hyphenated,
+`site` is a known slug, `kind` is in the fixed list (`kind_note` required
+for `other`), `amount_usd` is a number, `date` parses, `what` and
+`source_url` are non-blank, `approximate` is `yes`/`no`, and every
+`site_cost_refs` entry on a record file resolves to a row here. Rendering:
+none yet -- this table isn't read by `sitegen/` today (`docs/briefs/
+costs.md`); it exists so a phase- or site-scope figure has exactly one
+home instead of an unreliable number of copies.
 
 ## `data/site_documents.csv`
 

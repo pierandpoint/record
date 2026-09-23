@@ -182,22 +182,15 @@
   ],
   "costs": [
    {
-    "amount_usd": 127000000,
-    "what": "Estimated total cost of the eight-building Historic Core rehabilitation at completion in 2020 (up from $81.9M at 2014 approvals); hard costs $102.2M, soft costs $24.8M",
-    "date": "2019-01",
-    "approximate": true,
-    "sources": [
-     "src-port-hc-2019"
-    ]
-   },
-   {
     "amount_usd": 10600000,
     "what": "Hard cost of the Building 104 rehabilitation (2018 actual; $8.6M at 2014 approvals)",
     "date": "2019-01",
     "approximate": true,
     "sources": [
      "src-port-hc-2019"
-    ]
+    ],
+    "kind": "construction",
+    "scope": "record"
    }
   ],
   "milestones": [
@@ -787,7 +780,37 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-23",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "See Building 101's changelog row for the move.",
+    "source": "docs/record-schema.md",
+    "sources": [
+     {
+      "title": "docs/record-schema.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_building_104",
+     "slug": "pier-70-building-104-uiw-headquarters",
+     "name": "Pier 70 Building 104 (UIW Headquarters)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-104-uiw-headquarters/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-104-uiw-headquarters.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/pier70/wikimedia_building104_2018.jpg",

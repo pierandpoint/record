@@ -63,7 +63,19 @@
     ]
    }
   ],
-  "costs": [],
+  "costs": [
+   {
+    "amount_usd": 26400000,
+    "what": "SF Department of Building Inspection permit #200208194343's revised construction-cost valuation for the original 6-story office/laboratory building at 1650 Owens St (the permit's initial filed estimate was $14,000,000); no Gladstone- or UCSF-stated project budget was found. The permit's own completed_date (2005-10-28) postdates Gladstone's December 2004 dedication -- likely reflects administrative permit closeout rather than the building's actual completion.",
+    "date": "2005-10",
+    "kind": "construction",
+    "scope": "record",
+    "approximate": true,
+    "sources": [
+     "src-datasf-permit-gladstone-2004"
+    ]
+   }
+  ],
   "milestones": [
    {
     "date": "2003-11",
@@ -177,7 +189,37 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-23",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "SF Department of Building Inspection permit #200208194343's revised construction-cost valuation for the original 6-story building at 1650 Owens St (initial filed estimate $14M); no Gladstone- or UCSF-stated project budget was found.",
+    "source": "docs/record-schema.md",
+    "sources": [
+     {
+      "title": "docs/record-schema.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_gladstone_institutes",
+     "slug": "j-david-gladstone-institutes",
+     "name": "J. David Gladstone Institutes",
+     "permalink": "https://pierandpoint.org/parcels/j-david-gladstone-institutes/",
+     "api": "https://pierandpoint.org/api/v1/records/j-david-gladstone-institutes.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
@@ -246,6 +288,13 @@
     "date": "2023-02",
     "url": "https://sfyimby.com/2023/02/gladstone-expansion-announced-for-1650-owens-street-in-mission-bay-san-francisco.html",
     "accessed": "2026-09-18"
+   },
+   {
+    "id": "src-datasf-permit-gladstone-2004",
+    "title": "Building Permits: permit #200208194343 (1650 Owens St), \"erect a 6 story office/laboratory\", status complete",
+    "publisher": "DataSF / SF Department of Building Inspection",
+    "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200208194343",
+    "accessed": "2026-09-23"
    },
    {
     "id": "src-regents-2003-11-23b",

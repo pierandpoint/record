@@ -157,26 +157,7 @@
     ]
    }
   ],
-  "costs": [
-   {
-    "amount_usd": 1,
-    "what": "Annual rent under Port Lease L-16662 for the Port shoreline premises ($1/year, 66 years); developer improves, maintains and operates at its cost",
-    "date": "2025-11-14",
-    "approximate": false,
-    "sources": [
-     "src-port-memo-10a"
-    ]
-   },
-   {
-    "amount_usd": 39000000,
-    "what": "DeSilva Gates contract for the Phase 1 Street Improvement Project (site-wide streets and utilities, June 2023-Q4 2025; not park-specific)",
-    "date": "2023",
-    "approximate": true,
-    "sources": [
-     "src-ar-2024"
-    ]
-   }
-  ],
+  "costs": [],
   "milestones": [
    {
     "date": "2018-10",
@@ -723,6 +704,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-09-23",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Both of this record's cost entries turned out not to be park-specific: the $1/year Port Lease L-16662 rent covers the Port-owned shoreline premises shared with Prequel Park's Port sub-area (same lease, same source, same date as that record's own $1 entry), and the DeSilva Gates $39M Phase 1 Street Improvement contract is explicitly 'site-wide streets and utilities, not park-specific'. Moved both to data/site_costs.csv (kind: land_or_lease/infrastructure, scope: site), each with a site_cost_refs pointer left on this record.",
+    "source": "docs/record-schema.md",
+    "sources": [
+     {
+      "title": "docs/record-schema.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_waterfront_park",
+     "slug": "waterfront-park",
+     "name": "Waterfront Park",
+     "permalink": "https://pierandpoint.org/parcels/waterfront-park/",
+     "api": "https://pierandpoint.org/api/v1/records/waterfront-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-15",
     "kind": "correction",
