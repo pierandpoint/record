@@ -141,7 +141,14 @@ img { max-width: 100%; display: block; }
 .tracker-site-name .pin { width: 22px; height: 22px; font-size: 11px; }
 .tracker-site .bar { grid-column: 1 / -1; grid-row: 2; }
 .tracker-site-detail { grid-column: 2; grid-row: 1; font: 12px var(--mono); color: var(--faint); text-align: right; }
-.tracker-curve { margin-top: 8px; }
+/* Capped at 760px -- status_composition_curve()'s own native viewBox width (sitegen/pages.py) --
+   so it never upscales past the resolution it was actually drawn at. Without this, width:100%
+   on a wide desktop .wrap (up to 1344px) stretched the chart well past its own detail, and since
+   height:auto follows the SVG's fixed 4:1 viewBox aspect ratio, the chart grew proportionally
+   taller too -- 360px tall at 1728px, nearly half a laptop's fold, flagged directly as "huge on
+   desktop." Below 760px (including every mobile width, where this wasn't flagged) nothing
+   changes: width:100% still scales it down same as before. */
+.tracker-curve { margin-top: 8px; max-width: 760px; }
 .tracker-curve h3 { font: 500 13px var(--mono); letter-spacing: .04em; color: var(--soft); text-transform: uppercase; margin-bottom: 8px; }
 .tracker-curve .curve { display: block; width: 100%; height: auto; }
 .tracker-curve .empty-note { color: var(--faint); margin-top: 6px; }
