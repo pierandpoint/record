@@ -300,9 +300,18 @@ details.notes h3 { font: 600 13px var(--mono); color: var(--paper-soft); margin:
    a <details> whose summary always shows a breakdown peek, open or closed, so collapsing hides
    only the row-by-row detail, never the composition. Server-rendered `open` past a fixed item
    threshold (sitegen/build.py's BOX_THRESHOLD) -- a short list never costs the reader a click. */
-.box > summary { list-style: none; cursor: pointer; padding-bottom: 14px; padding-top: 4px; border-bottom: 1px solid var(--paper-ink); border-radius: 6px; }
+/* margin/padding balance: the hover fill needs real breathing room on all sides (a background
+   flush against the text on every edge read as "rough" -- flagged directly against the shipped
+   page), but the row still has to line up with the plain heading above it (Records) and with
+   the peek pills below, which don't get the same inset. Negative side-margins pull the hover
+   area out past the summary's own content box; matching side-padding pushes the text back to
+   where it started, so nothing visibly shifts -- only the hover fill gets the extra width. The
+   bottom border-bottom rule stays full-width regardless, since it's the same divider style the
+   rest of the page uses (.feed, .record-list); only the hover *fill* gets rounded corners, and
+   only on top, since the bottom rule is already a flat line. */
+.box > summary { list-style: none; cursor: pointer; margin: 0 -14px; padding: 8px 14px 14px; border-bottom: 1px solid var(--paper-ink); }
 .box > summary::-webkit-details-marker { display: none; }
-.box > summary:hover { background: var(--paper-2); }
+.box > summary:hover { background: var(--paper-2); border-radius: 8px 8px 0 0; }
 .box > summary:hover .chevron { color: #9c6f34; text-decoration: underline; text-underline-offset: 2px; }
 .box > summary .summary-top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
 .box > summary h2 { font: 500 22px var(--serif); display: flex; align-items: baseline; gap: 10px; }
