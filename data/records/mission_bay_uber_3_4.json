@@ -1,0 +1,104 @@
+{
+  "record_id": "mission_bay_uber_3_4",
+  "names": [
+    "Uber Mission Bay 3 & 4",
+    "Uber Headquarters Building 3",
+    "Uber Headquarters Building 4"
+  ],
+  "summary": "Two 11-story, LEED Gold office towers at 1655 & 1725 3rd St (combined ~584,000-586,208 sq ft, sources disagree on the exact figure), developed by a joint venture of Alexandria Real Estate Equities, Uber Technologies and the Golden State Warriors, designed by SHoP Architects, completed 2021, and leased in full by Uber as its San Francisco/global headquarters since January 2022 on a 20-year lease for ~4,000 employees.",
+  "summary_sources": [
+    "src-commercialsearch-2020",
+    "src-officesnapshots-2022"
+  ],
+  "milestones": [
+    {
+      "date": "2021",
+      "status": "complete",
+      "text": "Both towers complete construction",
+      "sources": [
+        "src-commercialsearch-2020"
+      ],
+      "expected": false,
+      "approximate": true
+    },
+    {
+      "date": "2022-01",
+      "text": "Uber occupies both towers as its San Francisco/global headquarters, on a 20-year lease covering ~584,000-586,000 sq ft for ~4,000 employees",
+      "sources": [
+        "src-officesnapshots-2022"
+      ],
+      "expected": false,
+      "approximate": true
+    }
+  ],
+  "costs": [],
+  "facts": [
+    {
+      "key": "address",
+      "value": "1655 3rd St (Building 3) and 1725 3rd St (Building 4)",
+      "sources": [
+        "src-commercialsearch-2020"
+      ]
+    },
+    {
+      "key": "developer",
+      "value": "Joint venture of Alexandria Real Estate Equities, Uber Technologies and the Golden State Warriors",
+      "sources": [
+        "src-commercialsearch-2020"
+      ]
+    },
+    {
+      "key": "architect",
+      "value": "SHoP Architects",
+      "sources": [
+        "src-commercialsearch-2020"
+      ]
+    },
+    {
+      "key": "gross_sqft",
+      "value": "~584,000-586,208 combined (sources disagree on the exact figure)",
+      "sources": [
+        "src-commercialsearch-2020"
+      ]
+    },
+    {
+      "key": "leed",
+      "value": "LEED Gold",
+      "sources": [
+        "src-commercialsearch-2020"
+      ]
+    },
+    {
+      "key": "tenant",
+      "value": "Uber Technologies, Inc. leases the entire office component as its San Francisco/global headquarters: 20-year lease, ~4,000 employees, 145 dedicated parking spaces",
+      "sources": [
+        "src-officesnapshots-2022"
+      ]
+    }
+  ],
+  "images": [],
+  "sources": [
+    {
+      "id": "src-commercialsearch-2020",
+      "title": "Uber & Golden State Warriors Secure $600M CMBS Refi from J.P. Morgan for Mission Bay Towers",
+      "publisher": "CommercialCafe / CommercialSearch",
+      "url": "https://www.commercialcafe.com/blog/uber-golden-state-warriors-secure-600m-cmbs-refi-j-p-morgan-mission-bay-towers/",
+      "accessed": "2026-09-23"
+    },
+    {
+      "id": "src-officesnapshots-2022",
+      "title": "Uber Mission Bay Headquarters - San Francisco",
+      "publisher": "Office Snapshots (secondary design press)",
+      "date": "2022-01-24",
+      "url": "https://officesnapshots.com/2022/01/24/uber-mission-bay-headquarters-san-francisco/",
+      "accessed": "2026-09-23"
+    }
+  ],
+  "open_questions": [
+    "2026-09-23: this record's geometry was migrated off status.csv (record_id changed from the blklot '8722063' to 'mission_bay_uber_3_4') because DataSF's own Assessor Parcel dataset gives this parcel and the neighboring Chase Center arena byte-identical geometry (one shared master-condo superblock parcel). The new geometry is the union of both towers' own real OpenStreetMap building footprints (OSM ways 1410182008 and 1410183655) instead -- see the geojson's own digitization_method.",
+    "As of 2025 SEC filings, Uber still lists 1725 3rd St as its corporate HQ address, though a 2023 report said that specific building had never been fully staffed and was being marketed for sublease -- current occupancy is genuinely unclear and not resolved here.",
+    "This project's own DataSF business-registration data shows several Uber-internal registrations here (Bon Appetit @ Uber cafeteria service across multiple floors, Uber Freight Holding Corporation, a Mercedes-Benz-branded garage/showroom) not otherwise researched or added as facts in this pass.",
+    "No dedicated primary source (an Alexandria or Uber press release specifically) was found for the exact completion date of each tower individually; 2021 is used as a combined year."
+  ],
+  "last_verified": "2026-09-23"
+}
