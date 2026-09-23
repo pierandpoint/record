@@ -135,6 +135,7 @@
 // not gated on the timeline's #pp-record/#pp-slider above: a record page and /near/ carry
 // neither.
 (function () {
+  function svgEl(tag) { return document.createElementNS('http://www.w3.org/2000/svg', tag); }
   function initZoom() {
     document.querySelectorAll('.pp-zoomable').forEach(function (svg) {
       var frame = svg.closest('.map-frame');
@@ -142,6 +143,9 @@
       var parts = (svg.getAttribute('viewBox') || '0 0 100 100').split(' ').map(Number);
       var base = { x: parts[0], y: parts[1], w: parts[2], h: parts[3] };
       var view = { x: base.x, y: base.y, w: base.w, h: base.h };
+      // Reassigned below, once, if this map carries tenant markers (docs/briefs/
+      // tenant-markers.md) -- a no-op otherwise, so apply() can call it unconditionally.
+      var updateTenantMarkers = function () {};
       // A record page's map (sitegen/pages.py's site_map(outer_box=...)) can zoom out past its
       // own fitted view, all the way to the four-site overview -- data-outer is that wider
       // limit, at the same aspect as the viewBox so the h = w * (base.h/base.w) math below
@@ -218,6 +222,7 @@
       function apply() {
         svg.setAttribute('viewBox', view.x + ' ' + view.y + ' ' + view.w + ' ' + view.h);
         updateLabels();
+        updateTenantMarkers();
       }
       function clamp() {
         view.w = Math.max(MIN_W, Math.min(MAX_W, view.w));
@@ -343,38 +348,267 @@
         if (resetBtn) resetBtn.addEventListener('click', reset);
       }
 
-      // The "show tenants" toggle (docs/briefs/retail-layer.md): an outline and a count per
-      // parcel with a confirmed tenant, never a per-tenant pin. Rendered always by
-      // sitegen/pages.py's site_map() but visually inert until this flips .tenants-on on the
-      // svg -- so with JavaScript off the toggle button itself stays hidden (like the zoom
-      // controls above) and the page's own "What's open, what's coming" section, already in
-      // the markup, is the only way to see the tenant list.
-      var toggle = frame ? frame.querySelector('[data-tenant-toggle]') : null;
-      var panel = frame ? frame.parentElement.querySelector('[data-tenant-panel]') : null;
-      if (toggle) {
-        toggle.hidden = false;
-        toggle.addEventListener('click', function () {
-          var on = svg.classList.toggle('tenants-on');
-          toggle.setAttribute('aria-pressed', on ? 'true' : 'false');
-          toggle.textContent = on ? 'Hide tenants' : 'Show tenants';
-          if (!on && panel) panel.hidden = true;
+      // The "show tenants" toggle and its markers (docs/briefs/tenant-markers.md): a segmented
+      // control next to the zoom buttons, rendered hidden by sitegen/build.py; the pills and
+      // per-tenant markers themselves are built entirely here from the sibling JSON island
+      // (sitegen/pages.py's tenant_marker_json()) into the empty <g class="tenant-markers">
+      // site_map() left in the svg -- so with JavaScript off the toggle stays hidden and the
+      // page's own tenant list, already in the markup, is the only way to see it.
+      var toggleGroup = frame ? frame.querySelector('.tenant-toggle-group') : null;
+      var dataEl = frame ? frame.querySelector('.pp-tenant-data') : null;
+      var card = frame ? frame.querySelector('[data-tenant-card]') : null;
+      var markersLayer = svg.querySelector('.tenant-markers');
+      var DATA = null;
+      if (dataEl) { try { DATA = JSON.parse(dataEl.textContent); } catch (err) { DATA = null; } }
+      var parcelIds = DATA ? Object.keys(DATA.parcels) : [];
+
+      if (toggleGroup && markersLayer && DATA && parcelIds.length) {
+        toggleGroup.hidden = false;
+        var offBtn = toggleGroup.querySelector('[data-tenant-toggle="off"]');
+        var onBtn = toggleGroup.querySelector('[data-tenant-toggle="on"]');
+        var SPLIT_PX = 120; // a parcel must read at least this wide on screen to split into markers
+        var GRID_GAP = DATA.markerR * 3.4; // fixed data-space spacing between a parcel's own markers
+        var MIN_GRID_GAP = DATA.markerR * 2.6; // the gap a full-size marker needs not to touch its neighbour
+        var MIN_MARKER_SCALE = 0.7; // never shrink a marker past this fraction of the reference size -- below this the glyph stops reading
+        var STATUS_WORD = { open: 'Open', announced: 'Announced', closed: 'Closed' };
+        var openMarker = null, allMarkers = [];
+
+        var parcels = parcelIds.map(function (id) {
+          var d = DATA.parcels[id];
+          var n = d.tenants.length;
+          var cols = Math.max(1, Math.ceil(Math.sqrt(n)));
+          var rows = Math.ceil(n / cols);
+          // The grid's own spacing is clamped to this parcel's own bbox (data-space, fixed
+          // regardless of zoom) so a small parcel's markers stay near its own outline instead of
+          // always spreading by the site's own reference gap -- a big parcel gets the full
+          // GRID_GAP. A parcel too small to fit MIN_GRID_GAP's worth of full-size markers shrinks
+          // the markers themselves (down to MIN_MARKER_SCALE) along with the gap, together, so a
+          // packed small parcel (several tenants on one small footprint) stays close to its own
+          // outline instead of spilling into its neighbours at full marker size.
+          var shape = svg.querySelector('.rec[data-id="' + id + '"]');
+          var bb = shape && shape.getBBox ? shape.getBBox() : null;
+          var gap = GRID_GAP, markerScale = 1;
+          if (bb && bb.width && bb.height) {
+            var fitDim = Math.max(cols, rows) + 0.6;
+            var bboxFit = Math.min(bb.width, bb.height) / fitDim;
+            markerScale = Math.max(MIN_MARKER_SCALE, Math.min(1, bboxFit / MIN_GRID_GAP));
+            gap = Math.max(MIN_GRID_GAP * markerScale, Math.min(GRID_GAP, bboxFit));
+          }
+          var markers = d.tenants.map(function (t, i) {
+            var col = i % cols, row = Math.floor(i / cols);
+            var mx = d.cx + (col - (cols - 1) / 2) * gap, my = d.cy + (row - (rows - 1) / 2) * gap;
+            var g = svgEl('g');
+            g.setAttribute('class', 'tenant-marker');
+            g.setAttribute('data-status', t.status);
+            g.setAttribute('tabindex', '0');
+            g.setAttribute('role', 'button');
+            g.setAttribute('aria-label', t.name + ', ' + (STATUS_WORD[t.status] || t.status));
+            g.setAttribute('transform', 'translate(' + mx.toFixed(1) + ' ' + my.toFixed(1) + ')');
+            var circle = svgEl('circle');
+            circle.setAttribute('class', 'tenant-marker-circle');
+            g.appendChild(circle);
+            var use = svgEl('use');
+            use.setAttribute('class', 'tenant-glyph');
+            use.setAttribute('href', '#tg-' + t.catKey);
+            g.appendChild(use);
+            markersLayer.appendChild(g);
+            var entry = { parcelId: id, cx: mx, cy: my, t: t, el: g, circle: circle, use: use, record: d.record };
+            g.addEventListener('click', function () { entry.el.focus(); openCard(entry); });
+            g.addEventListener('keydown', function (e) {
+              if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openCard(entry); }
+              else if (e.key === 'ArrowRight' || e.key === 'ArrowLeft' || e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+                e.preventDefault(); e.stopPropagation();
+                var dir = (e.key === 'ArrowRight' || e.key === 'ArrowDown') ? 1 : -1;
+                var i2 = allMarkers.indexOf(entry);
+                var next = allMarkers[(i2 + dir + allMarkers.length) % allMarkers.length];
+                if (next) { next.el.focus(); openCard(next); }
+              }
+            });
+            return entry;
+          });
+          allMarkers = allMarkers.concat(markers);
+
+          var pillG = svgEl('g');
+          pillG.setAttribute('class', 'tenant-pill');
+          pillG.setAttribute('tabindex', '0');
+          pillG.setAttribute('role', 'button');
+          pillG.setAttribute('aria-label', n + (n === 1 ? ' tenant' : ' tenants') + ' at ' + d.recordName + ', press to zoom in');
+          var rect = svgEl('rect');
+          rect.setAttribute('class', 'tenant-pill-bg');
+          pillG.appendChild(rect);
+          var text = svgEl('text');
+          text.setAttribute('class', 'tenant-pill-count');
+          text.setAttribute('text-anchor', 'middle');
+          pillG.appendChild(text);
+          markersLayer.appendChild(pillG);
+          var pill = { el: pillG, rect: rect, text: text, ox: 0, oy: 0, hide: false, mergedCount: n };
+          var p = { id: id, cx: d.cx, cy: d.cy, count: n, record: d.record, split: false,
+                   bboxWidth: bb ? bb.width : 0, markerScale: markerScale, markers: markers, pill: pill };
+          pillG.addEventListener('click', function () { zoomToParcel(p); });
+          pillG.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); zoomToParcel(p); }
+          });
+          return p;
         });
-        if (panel) {
-          var showPanel = function (a) {
-            if (!svg.classList.contains('tenants-on')) return;
-            var summary = a.getAttribute('data-tenant-summary');
-            if (!summary) return;
-            panel.textContent = summary.split('; ').join(' · ');
-            panel.hidden = false;
-          };
-          var hidePanel = function () { panel.hidden = true; };
-          svg.querySelectorAll('a[data-tenants]').forEach(function (a) {
-            a.addEventListener('pointerenter', function () { showPanel(a); });
-            a.addEventListener('focus', function () { showPanel(a); });
-            a.addEventListener('pointerleave', hidePanel);
-            a.addEventListener('blur', hidePanel);
+
+        function zoomToParcel(p) {
+          var w = Math.max(MIN_W, base.w * 0.16);
+          if (svg.ppSetView) svg.ppSetView(p.cx, p.cy, w);
+          else { view.x = p.cx - view.w / 2; view.y = p.cy - view.h / 2; clamp(); apply(); }
+        }
+
+        function pillMetrics(count, factor) {
+          var fs = DATA.pillFs * factor;
+          var w = fs * (1.7 + String(count).length * 0.95), h = fs * 1.9;
+          return { fs: fs, w: w, h: h };
+        }
+
+        function resolvePillOverlap(factor, pxPerUnit) {
+          var visible = parcels.filter(function (p) { return !p.split; });
+          visible.forEach(function (p) {
+            p.metrics = pillMetrics(p.count, factor);
+            p.pill.ox = 0; p.pill.oy = 0; p.pill.hide = false; p.pill.mergedCount = p.count;
+          });
+          if (pxPerUnit) {
+            var order = visible.slice().sort(function (a, b) { return b.count - a.count; });
+            var placed = [];
+            order.forEach(function (p) {
+              var m = p.metrics, placedOk = false;
+              var candidates = [[0, 0]];
+              var ring = (m.w + m.h) / 2 + 8;
+              for (var s = 0; s < 8; s++) {
+                var ang = (s / 8) * Math.PI * 2;
+                candidates.push([Math.cos(ang) * ring / pxPerUnit, Math.sin(ang) * ring / pxPerUnit]);
+              }
+              for (var c = 0; c < candidates.length && !placedOk; c++) {
+                var ox = candidates[c][0], oy = candidates[c][1];
+                var sx = (p.cx + ox) * pxPerUnit, sy = (p.cy + oy) * pxPerUnit;
+                var collide = placed.some(function (q) {
+                  var qx = (q.cx + q.pill.ox) * pxPerUnit, qy = (q.cy + q.pill.oy) * pxPerUnit;
+                  return Math.abs(sx - qx) < (m.w + q.metrics.w) / 2 + 6 && Math.abs(sy - qy) < (m.h + q.metrics.h) / 2 + 6;
+                });
+                if (!collide) { p.pill.ox = ox; p.pill.oy = oy; placedOk = true; }
+              }
+              if (placedOk) { placed.push(p); return; }
+              var nearest = null, nearestDist = Infinity;
+              placed.forEach(function (q) {
+                var d2 = Math.hypot(p.cx - q.cx, p.cy - q.cy);
+                if (d2 < nearestDist) { nearestDist = d2; nearest = q; }
+              });
+              if (nearest) { nearest.pill.mergedCount += p.count; p.pill.hide = true; }
+              else { placed.push(p); }
+            });
+          }
+          visible.forEach(function (p) {
+            var pill = p.pill;
+            pill.el.style.display = pill.hide ? 'none' : '';
+            if (pill.hide) return;
+            var m = p.metrics, cx = p.cx + pill.ox, cy = p.cy + pill.oy;
+            pill.rect.setAttribute('x', (cx - m.w / 2).toFixed(1));
+            pill.rect.setAttribute('y', (cy - m.h / 2).toFixed(1));
+            pill.rect.setAttribute('width', m.w.toFixed(1));
+            pill.rect.setAttribute('height', m.h.toFixed(1));
+            pill.rect.setAttribute('rx', (m.h / 2).toFixed(1));
+            pill.text.setAttribute('x', cx.toFixed(1));
+            pill.text.setAttribute('y', (cy + m.fs * 0.34).toFixed(1));
+            pill.text.setAttribute('font-size', m.fs.toFixed(2));
+            pill.text.textContent = pill.mergedCount;
           });
         }
+
+        function positionCard(entry) {
+          if (!card || !svg.getScreenCTM) return;
+          var ctm = svg.getScreenCTM();
+          if (!ctm) return;
+          var pt = svg.createSVGPoint();
+          pt.x = entry.cx; pt.y = entry.cy;
+          var screenPt = pt.matrixTransform(ctm);
+          var frameRect = frame.getBoundingClientRect();
+          var x = screenPt.x - frameRect.left, y = screenPt.y - frameRect.top;
+          var dock = frameRect.width > 0 && frameRect.width < 480;
+          card.classList.toggle('tenant-card-dock', dock);
+          if (dock) { card.style.left = ''; card.style.top = ''; return; }
+          var cw = card.offsetWidth || 240, ch = card.offsetHeight || 150;
+          var flipX = x + cw + 16 > frameRect.width;
+          var flipY = y - ch - 14 < 0;
+          card.style.left = Math.max(8, flipX ? x - cw - 12 : x + 12) + 'px';
+          card.style.top = Math.max(8, flipY ? y + 14 : y - ch - 14) + 'px';
+        }
+
+        function closeCard() {
+          if (!card || card.hidden) return;
+          card.classList.remove('tenant-card-open');
+          card.hidden = true;
+          if (openMarker) { openMarker.el.classList.remove('tenant-marker-open'); openMarker = null; }
+        }
+
+        function openCard(entry) {
+          if (!card) return;
+          if (openMarker) openMarker.el.classList.remove('tenant-marker-open');
+          openMarker = entry;
+          entry.el.classList.add('tenant-marker-open');
+          var t = entry.t;
+          var media = card.querySelector('[data-tenant-card-media]');
+          if (t.photo) { media.hidden = false; media.innerHTML = '<img src="' + t.photo.src + '" alt="" style="object-position:' + t.photo.pos + '">'; }
+          else { media.hidden = true; media.innerHTML = ''; }
+          card.querySelector('[data-tenant-card-name]').textContent = t.name;
+          card.querySelector('[data-tenant-card-meta]').textContent = [t.categoryLabel, STATUS_WORD[t.status] || t.status, t.dateLabel].filter(Boolean).join(' · ');
+          var loc = card.querySelector('[data-tenant-card-loc]');
+          if (t.unit) { loc.hidden = false; loc.textContent = t.unit; } else { loc.hidden = true; }
+          var src = card.querySelector('[data-tenant-card-source]');
+          if (t.source) { src.hidden = false; src.href = t.source; } else { src.hidden = true; }
+          card.querySelector('[data-tenant-card-open]').setAttribute('href', '/parcels/' + entry.record + '/');
+          card.hidden = false;
+          positionCard(entry);
+          requestAnimationFrame(function () { card.classList.add('tenant-card-open'); positionCard(entry); });
+        }
+
+        var closeBtn = card ? card.querySelector('[data-tenant-card-close]') : null;
+        if (closeBtn) closeBtn.addEventListener('click', function () { var m = openMarker; closeCard(); if (m) m.el.focus(); });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && card && !card.hidden) { var m = openMarker; closeCard(); if (m) m.el.focus(); }
+        });
+        document.addEventListener('pointerdown', function (e) {
+          if (card && !card.hidden && !card.contains(e.target) && !markersLayer.contains(e.target)) closeCard();
+        }, true);
+
+        function setTenantsOn(on) {
+          svg.classList.toggle('tenants-on', on);
+          if (offBtn) offBtn.setAttribute('aria-pressed', on ? 'false' : 'true');
+          if (onBtn) onBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+          if (!on) closeCard();
+        }
+        if (offBtn) offBtn.addEventListener('click', function () { setTenantsOn(false); });
+        if (onBtn) onBtn.addEventListener('click', function () { setTenantsOn(true); });
+
+        updateTenantMarkers = function () {
+          var factor = view.w / base.w;
+          var pxPerUnit = svg.clientWidth ? svg.clientWidth / view.w : 0;
+          var r = DATA.markerR * factor;
+          parcels.forEach(function (p) {
+            var split = pxPerUnit > 0 && p.bboxWidth * pxPerUnit >= SPLIT_PX;
+            if (p.split && !split && openMarker && openMarker.parcelId === p.id) closeCard();
+            p.split = split;
+            p.pill.el.style.display = split ? 'none' : '';
+            p.markers.forEach(function (m) {
+              m.el.style.display = split ? '' : 'none';
+              // Each glyph is authored on a 24x24 grid centred at (12,12) (sitegen/pages.py's
+              // TENANT_CATEGORY_GLYPHS) -- translate that centre onto the marker's own local
+              // origin (0,0) before scaling it down to fit inside the circle. p.markerScale
+              // shrinks the marker itself (never below MIN_MARKER_SCALE) on a parcel too small
+              // to fit full-size markers without spilling past its own outline.
+              if (split) {
+                var pr = r * p.markerScale;
+                m.circle.setAttribute('r', pr.toFixed(2));
+                var gscale = (pr * 0.09).toFixed(3);
+                m.use.setAttribute('transform', 'scale(' + gscale + ') translate(-12 -12)');
+              }
+            });
+          });
+          resolvePillOverlap(factor, pxPerUnit);
+          if (openMarker && card && !card.hidden) positionCard(openMarker);
+        };
+        updateTenantMarkers();
       }
     });
   }

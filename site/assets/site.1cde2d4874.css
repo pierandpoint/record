@@ -79,15 +79,65 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .zoom-controls[hidden] { display: none; }
 .zoom-btn { width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid var(--line-3); background: rgba(29,37,40,.92); color: var(--text); font: 600 17px var(--mono); line-height: 1; cursor: pointer; }
 .zoom-btn:hover { border-color: var(--brass); color: var(--brass-hi); }
-/* "show tenants" map toggle (docs/briefs/retail-layer.md) */
-.tenant-toggle { position: absolute; top: 12px; left: 12px; z-index: 2; background: rgba(29,37,40,.92); font-size: 13px; min-height: 38px; padding: 0 14px; }
-.tenant-toggle[hidden] { display: none; }
-.tenant-toggle[aria-pressed="true"] { border-color: var(--brass); color: var(--brass-hi); }
-.tenant-badge { opacity: 0; transition: opacity .15s ease; }
-.pp-map.tenants-on .tenant-badge { opacity: 1; }
+/* "show tenants" map toggle: a small segmented control next to the zoom buttons
+   (docs/briefs/tenant-markers.md) */
+.tenant-toggle-group { position: absolute; top: 12px; left: 12px; z-index: 2; display: flex; align-items: center; gap: 6px; background: rgba(29,37,40,.92); border: 1px solid var(--line-3); border-radius: 999px; padding: 4px; }
+.tenant-toggle-group[hidden] { display: none; }
+.tenant-toggle-label { font-family: var(--mono); font-size: 11px; letter-spacing: .04em; color: var(--soft); padding-left: 8px; }
+.tenant-seg { min-height: 28px; padding: 0 12px; border-radius: 999px; border: none; background: none; color: var(--soft); font: 500 12px var(--sans); cursor: pointer; }
+.tenant-seg[aria-pressed="true"] { background: var(--brass); color: var(--ink); font-weight: 600; }
+.tenant-seg:not([aria-pressed="true"]):hover { color: var(--text); }
 .pp-map.tenants-on a[data-tenants] .rec { stroke: var(--brass); stroke-width: 2.4; }
-.tenant-focus-panel { margin-top: 10px; padding: 10px 14px; border-radius: 8px; background: var(--ink-2); border: 1px solid var(--line-2); font: 13px var(--mono); color: var(--text-2); }
-.tenant-focus-panel[hidden] { display: none; }
+
+/* Tenant map markers (docs/briefs/tenant-markers.md): a zoom-aware pill per parcel, splitting
+   into individual glyph markers past a zoom threshold, both built by app.js from the sibling
+   JSON island. The whole layer stays invisible until the toggle adds .tenants-on to the map, the
+   same rendered-but-inert pattern the old text badge used, so a JS-off page never shows a bare
+   empty group. */
+.tenant-markers { opacity: 0; pointer-events: none; transition: opacity .12s ease; }
+.pp-map.tenants-on .tenant-markers { opacity: 1; pointer-events: auto; }
+.tenant-pill-bg { fill: var(--ink-2); stroke: var(--line-3); stroke-width: 1; filter: drop-shadow(0 2px 4px rgba(0,0,0,.4)); }
+.tenant-pill:hover .tenant-pill-bg, .tenant-pill:focus-visible .tenant-pill-bg { stroke: var(--brass); }
+.tenant-pill { cursor: pointer; }
+.tenant-pill-count { fill: var(--brass-hi); font-family: var(--mono); font-weight: 600; }
+.tenant-marker-circle { stroke-width: 1.4; filter: drop-shadow(0 1px 3px rgba(0,0,0,.45)); }
+.tenant-marker[data-status="open"] .tenant-marker-circle { fill: var(--brass); stroke: var(--ink); }
+.tenant-marker[data-status="announced"] .tenant-marker-circle { fill: var(--ink-2); stroke: var(--brass); stroke-dasharray: 2.4 1.8; }
+.tenant-glyph { fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.tenant-marker[data-status="open"] .tenant-glyph { stroke: var(--ink); }
+.tenant-marker[data-status="announced"] .tenant-glyph { stroke: var(--brass-hi); }
+.tenant-marker { cursor: pointer; }
+.tenant-marker:hover .tenant-marker-circle, .tenant-marker:focus-visible .tenant-marker-circle,
+.tenant-marker.tenant-marker-open .tenant-marker-circle { stroke: var(--brass-hi); stroke-width: 2; }
+.tenant-pill:focus-visible, .tenant-marker:focus-visible { outline: none; }
+
+/* The tenant card: a small anchored panel, never a browser-default tooltip, opened on tap/Enter
+   with a 120ms ease (docs/briefs/tenant-markers.md). Positioned in JS (left/top, in px, relative
+   to .map-frame); .flip-x/.flip-y mirror the pointer arrow when the card would run past an edge.
+   Docks to the bottom of the frame on a narrow phone instead of following the marker. */
+.tenant-card { position: absolute; z-index: 3; width: 240px; max-width: calc(100% - 24px); background: var(--ink-2); border: 1px solid var(--line-3); border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,.5); padding: 10px; opacity: 0; transform: translateY(4px) scale(.98); transform-origin: top left; transition: opacity .12s ease, transform .12s ease; pointer-events: none; }
+.tenant-card.tenant-card-open { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+.tenant-card[hidden] { display: none; }
+.tenant-card-close { position: absolute; top: 6px; right: 6px; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; border: none; background: none; color: var(--soft); font-size: 16px; line-height: 1; cursor: pointer; border-radius: 6px; }
+.tenant-card-close:hover { color: var(--text); background: var(--ink); }
+.tenant-card-media { width: 100%; height: 100px; border-radius: 6px; overflow: hidden; margin-bottom: 8px; background: var(--ink-3); }
+.tenant-card-media img { width: 100%; height: 100%; object-fit: cover; }
+.tenant-card-media[hidden] { display: none; }
+.tenant-card-body { padding-right: 20px; }
+.tenant-card-name { font: 600 14px var(--sans); color: var(--text); }
+.tenant-card-meta { font-size: 12px; color: var(--soft); margin-top: 3px; }
+.tenant-card-loc { font-size: 12px; color: var(--faint); margin-top: 3px; }
+.tenant-card-loc[hidden] { display: none; }
+.tenant-card-links { display: flex; justify-content: space-between; gap: 10px; margin-top: 8px; font-size: 12px; }
+.tenant-card-source[hidden] { display: none; }
+.tenant-card-open { font-weight: 600; }
+@media (max-width: 480px) {
+  .tenant-card.tenant-card-dock { left: 12px !important; right: 12px; bottom: 12px; top: auto !important; width: auto; max-width: none; transform: translateY(8px); transform-origin: bottom center; }
+  .tenant-card.tenant-card-dock.tenant-card-open { transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tenant-card, .tenant-markers { transition: none; }
+}
 .overview .ov-narrow { display: none; }
 @media (max-width: 719px) { .overview .ov-wide { display: none; } .overview .ov-narrow { display: block; } }
 .map-caption { font-size: 13px; color: var(--faint); margin-top: 10px; }
