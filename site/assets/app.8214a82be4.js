@@ -264,15 +264,23 @@
       }, { passive: false });
       svg.addEventListener('dblclick', function (e) { e.preventDefault(); reset(); });
 
-      var pointers = {}, dragStart = null, pinchStart = null;
+      var pointers = {}, dragStart = null, pinchStart = null, dragging = false;
+      // Below this many px of movement, a single pointer is still a click/tap, not a drag --
+      // matters because setPointerCapture retargets the click that follows to the captured
+      // element (the svg itself), so a parcel's own <a> never sees it and its page never
+      // opens. Deferring capture (and any view change) until real movement is seen keeps a
+      // plain click on a parcel link working, while an actual drag still pans as before.
+      var DRAG_THRESHOLD = 4;
       svg.addEventListener('pointerdown', function (e) {
-        svg.setPointerCapture(e.pointerId);
         pointers[e.pointerId] = { x: e.clientX, y: e.clientY };
         var ids = Object.keys(pointers);
         if (ids.length === 1) {
           dragStart = { clientX: e.clientX, clientY: e.clientY, view: { x: view.x, y: view.y } };
+          dragging = false;
         } else if (ids.length === 2) {
           dragStart = null;
+          // Two pointers down is unambiguously a pinch, never a click -- capture both right away.
+          ids.forEach(function (id) { svg.setPointerCapture(+id); });
           var pts = ids.map(function (id) { return pointers[id]; });
           var dx = pts[0].x - pts[1].x, dy = pts[0].y - pts[1].y;
           pinchStart = { dist: Math.hypot(dx, dy) || 1, view: { x: view.x, y: view.y, w: view.w },
@@ -284,6 +292,11 @@
         pointers[e.pointerId] = { x: e.clientX, y: e.clientY };
         var ids = Object.keys(pointers);
         if (ids.length === 1 && dragStart) {
+          if (!dragging) {
+            if (Math.hypot(e.clientX - dragStart.clientX, e.clientY - dragStart.clientY) < DRAG_THRESHOLD) return;
+            dragging = true;
+            svg.setPointerCapture(e.pointerId);
+          }
           var scale = view.w / svg.clientWidth;
           view.x = dragStart.view.x - (e.clientX - dragStart.clientX) * scale;
           view.y = dragStart.view.y - (e.clientY - dragStart.clientY) * scale;
@@ -303,7 +316,7 @@
       function endPointer(e) {
         delete pointers[e.pointerId];
         var ids = Object.keys(pointers);
-        dragStart = null; pinchStart = null;
+        dragStart = null; pinchStart = null; dragging = false;
         if (ids.length === 1) dragStart = { clientX: pointers[ids[0]].x, clientY: pointers[ids[0]].y, view: { x: view.x, y: view.y } };
       }
       svg.addEventListener('pointerup', endPointer);
