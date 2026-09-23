@@ -128,11 +128,12 @@
   paint(+slider.value);
 })();
 
-// Pan and zoom (the .pp-zoomable svg; sitegen/pages.py's site_map(zoomable=True) on a site
-// page's own map, and overview_map(zoomable=True) on /near/'s local map, docs/briefs/
+// Pan and zoom (the .pp-zoomable svg; sitegen/pages.py's site_map(zoomable=True) on a site or
+// record page's own map, and overview_map(zoomable=True) on /near/'s local map, docs/briefs/
 // near-me.md). Manipulates the SVG viewBox directly: no map library, no tiles, no external
 // requests (docs/briefs/site-ux.md). Degrades to the fitted view with JS off. Its own IIFE,
-// not gated on the timeline's #pp-record/#pp-slider above: /near/ carries neither.
+// not gated on the timeline's #pp-record/#pp-slider above: a record page and /near/ carry
+// neither.
 (function () {
   function initZoom() {
     document.querySelectorAll('.pp-zoomable').forEach(function (svg) {
@@ -141,18 +142,34 @@
       var parts = (svg.getAttribute('viewBox') || '0 0 100 100').split(' ').map(Number);
       var base = { x: parts[0], y: parts[1], w: parts[2], h: parts[3] };
       var view = { x: base.x, y: base.y, w: base.w, h: base.h };
+      // A record page's map (sitegen/pages.py's site_map(outer_box=...)) can zoom out past its
+      // own fitted view, all the way to the four-site overview -- data-outer is that wider
+      // limit, at the same aspect as the viewBox so the h = w * (base.h/base.w) math below
+      // still holds. Absent (every other zoomable map), zoom-out stays bounded to the fitted
+      // view itself, unchanged from before.
+      var outerParts = (svg.getAttribute('data-outer') || '').split(' ').map(Number);
+      var outer = outerParts.length === 4 && outerParts.every(function (n) { return !isNaN(n); })
+        ? { x: outerParts[0], y: outerParts[1], w: outerParts[2], h: outerParts[3] } : base;
       // data-max-zoom/data-free-pan (sitegen/pages.py's overview_map(zoomable=True), docs/briefs/
       // near-me.md): the /near/ page's own map spans kilometres and must recentre on a real
       // device position that can sit outside its fitted box entirely, so it opts into a much
-      // deeper zoom and no clamp back inside that box. A site page's own map sets neither, so
-      // its zoom range and edge-clamping behavior are unchanged.
-      var MIN_W = base.w / (parseFloat(svg.getAttribute('data-max-zoom')) || 8), MAX_W = base.w, LABEL_AT = base.w * 0.45;
+      // deeper zoom and no clamp back inside that box. A site or record page's own map sets
+      // neither, so its zoom range and edge-clamping behavior are unchanged.
+      var MIN_W = base.w / (parseFloat(svg.getAttribute('data-max-zoom')) || 8), MAX_W = outer.w, LABEL_AT = base.w * 0.45;
       var freePan = svg.hasAttribute('data-free-pan');
       // A label's font-size and halo are set in the same user-unit space as the map itself
       // (sitegen/pages.py), so left alone they'd grow with the shapes as the view zooms in.
       // Counter-scale both by view.w / base.w on every zoom step to hold their on-screen size
       // roughly constant instead.
       var labels = Array.prototype.map.call(svg.querySelectorAll('.parcel-label'), function (label) {
+        return { el: label, fontSize: parseFloat(label.getAttribute('font-size')) || 9,
+                 strokeWidth: parseFloat(label.getAttribute('stroke-width')) || 3 };
+      });
+      // Site-name pins (sitegen/pages.py's site_labels): unlike parcel labels above, always
+      // visible, no size-on-screen threshold -- just counter-scaled the same way, so "which
+      // cluster is this" stays legible at any zoom instead of shrinking to nothing on the way
+      // out to the four-site overview or ballooning at the default fitted-in view.
+      var sitePins = Array.prototype.map.call(svg.querySelectorAll('.site-pin-label'), function (label) {
         return { el: label, fontSize: parseFloat(label.getAttribute('font-size')) || 9,
                  strokeWidth: parseFloat(label.getAttribute('stroke-width')) || 3 };
       });
@@ -192,6 +209,10 @@
           label.style.fontSize = (entry.fontSize * scale).toFixed(2) + 'px';
           label.style.strokeWidth = (entry.strokeWidth * scale).toFixed(2) + 'px';
         });
+        sitePins.forEach(function (entry) {
+          entry.el.style.fontSize = (entry.fontSize * scale).toFixed(2) + 'px';
+          entry.el.style.strokeWidth = (entry.strokeWidth * scale).toFixed(2) + 'px';
+        });
       }
 
       function apply() {
@@ -202,8 +223,8 @@
         view.w = Math.max(MIN_W, Math.min(MAX_W, view.w));
         view.h = view.w * (base.h / base.w);
         if (!freePan) {
-          view.x = Math.max(base.x, Math.min(base.x + base.w - view.w, view.x));
-          view.y = Math.max(base.y, Math.min(base.y + base.h - view.h, view.y));
+          view.x = Math.max(outer.x, Math.min(outer.x + outer.w - view.w, view.x));
+          view.y = Math.max(outer.y, Math.min(outer.y + outer.h - view.h, view.y));
         }
       }
       function toSvgPoint(clientX, clientY) {

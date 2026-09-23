@@ -250,23 +250,6 @@ img { max-width: 100%; display: block; }
 .stack { display: flex; flex-direction: column; gap: 48px; min-width: 0; }
 .card { background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 14px; }
 .card h2 { font: 500 12px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: #9c6f34; }
-.locator-card { padding-bottom: 20px; }
-details.locator summary { cursor: pointer; list-style-position: inside; display: flex; flex-direction: column; align-items: center; gap: 8px; }
-.locator-map { display: block; width: 100%; max-width: 190px; height: auto; border-radius: 10px; margin: 0 auto; }
-details.locator[open] .locator-map { max-width: 100%; }
-.locator-hint { font: 500 11px var(--mono); letter-spacing: .04em; color: var(--paper-faint); }
-details.locator[open] .locator-hint { display: none; }
-.locator-dot { fill: #7ea0b3; stroke: #16232b; stroke-width: 1; }
-.locator-dot.current { fill: #d3a35e; }
-.locator-label { display: none; }
-.locator-label.current { display: block; }
-details.locator[open] .locator-label { display: block; }
-.locator-street { stroke: #33474e; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
-.locator-landmark { stroke: #4a6169; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
-.locator-landmark-point { fill: #4a6169; stroke: #16232b; stroke-width: 0.6; }
-.locator-landmark-label { display: none; }
-details.locator[open] .locator-landmark-label { display: block; }
-details.locator[open] .source { margin-top: 4px; }
 .facts { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 10px 12px; margin: 0; font-size: 14px; }
 .facts dt { color: var(--paper-faint); }
 .facts dd { margin: 0; overflow-wrap: anywhere; }
