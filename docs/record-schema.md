@@ -428,12 +428,23 @@ Columns:
 
 Rendering: `sitegen/glossary.py`'s `apply_first_use()`, called once from
 `sitegen/build.py`'s `page()`, wraps the first occurrence of each real
-(non-allow-listed) term in a page's rendered body in
+(non-allow-listed) term *within each region* of a page's rendered body in
 `<abbr title="expansion">`, linked to that term's entry on `/glossary/`
-(`sitegen/pages.py`'s `glossary_page()`). Never inside a link, `<code>`,
-`<script>`, `<style>`, `<title>` or an inline `<svg>` (map chrome, not
-prose), and never in a page's `<title>`, meta tags, alt text, the sharing-
-card text or the API output, since none of those go through a page's
-rendered body. `src/check_glossary.py` (run in CI after the site builds)
-fails if any built page still carries an uppercase token of three to six
-letters that's neither a real term here nor allow-listed.
+(`sitegen/pages.py`'s `glossary_page()`) -- a region is each `<section>`,
+`<aside>` or `<details>` (Where it is, Money, Open questions, At a glance,
+a Changes/Sources/Retail box, "About this shape", "Research notes", ...),
+the same elements the page is already laid out with, plus one implicit
+top-level region for everything outside all three (the page-head). Not
+once per whole page: a reader can jump straight into any one region via
+the page's own jump-nav or a deep link, or open a collapsed box without
+ever passing an earlier mention elsewhere, so each region gets its own
+first-use link rather than risking one a reader never sees. A term
+repeated many times within one region (a Changes box citing the same
+agreement across a dozen milestones, say) still gets wrapped only once
+there. Never inside a link, `<code>`, `<script>`, `<style>`, `<title>` or
+an inline `<svg>` (map chrome, not prose), and never in a page's `<title>`,
+meta tags, alt text, the sharing-card text or the API output, since none
+of those go through a page's rendered body. `src/check_glossary.py` (run
+in CI after the site builds) fails if any built page still carries an
+uppercase token of three to six letters that's neither a real term here
+nor allow-listed.
