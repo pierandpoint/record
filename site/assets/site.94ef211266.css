@@ -100,15 +100,31 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .tenant-pill:hover .tenant-pill-bg, .tenant-pill:focus-visible .tenant-pill-bg { stroke: var(--brass); }
 .tenant-pill { cursor: pointer; }
 .tenant-pill-count { fill: var(--brass-hi); font-family: var(--mono); font-weight: 600; }
-.tenant-marker-circle { stroke-width: 1.4; filter: drop-shadow(0 1px 3px rgba(0,0,0,.45)); }
+/* --mk (set per marker in app.js, proportional to its own radius -- a fixed stroke-width would
+   overwhelm a small marker's fill and barely show on a large one) drives both this and the
+   hover/open emphasis below, so the two stay in the same proportion at any marker size. */
+.tenant-marker-circle { stroke-width: var(--mk, 1.4); filter: drop-shadow(0 1px 3px rgba(0,0,0,.45)); }
+/* One hue (brass), filled vs hollow-dashed for open vs announced -- not a second status colour:
+   every record-status colour (complete/under_construction/planned/existing/being_removed) is
+   already a parcel's own fill, so a tenant-status colour drawn from that same set collides with
+   whatever status the tenant's own parcel happens to be in (an announced tenant in an
+   under_construction building would be orange-on-orange). Brass never collides with any of them,
+   and fill-vs-hollow-dashed is already this site's own convention for confirmed-vs-anticipated
+   (the map legend's own "Expected, not yet confirmed" swatch). */
 .tenant-marker[data-status="open"] .tenant-marker-circle { fill: var(--brass); stroke: var(--ink); }
 .tenant-marker[data-status="announced"] .tenant-marker-circle { fill: var(--ink-2); stroke: var(--brass); stroke-dasharray: 2.4 1.8; }
 .tenant-glyph { fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .tenant-marker[data-status="open"] .tenant-glyph { stroke: var(--ink); }
 .tenant-marker[data-status="announced"] .tenant-glyph { stroke: var(--brass-hi); }
+.tenant-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; font-size: 13px; color: var(--soft); margin-top: 10px; }
+.tenant-legend[hidden] { display: none; }
+.tenant-legend > span { display: inline-flex; align-items: center; gap: 8px; }
+.swatch.tenant-open { background: var(--brass); border: none; }
+.swatch.tenant-announced { background: none; border: 1.5px dashed var(--brass); }
+.tenant-legend-note { color: var(--faint); }
 .tenant-marker { cursor: pointer; }
 .tenant-marker:hover .tenant-marker-circle, .tenant-marker:focus-visible .tenant-marker-circle,
-.tenant-marker.tenant-marker-open .tenant-marker-circle { stroke: var(--brass-hi); stroke-width: 2; }
+.tenant-marker.tenant-marker-open .tenant-marker-circle { stroke: var(--brass-hi); stroke-width: calc(var(--mk, 1.4) * 1.5); }
 .tenant-pill:focus-visible, .tenant-marker:focus-visible { outline: none; }
 
 /* The tenant card: a small anchored panel, never a browser-default tooltip, opened on tap/Enter

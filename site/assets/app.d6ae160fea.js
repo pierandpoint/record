@@ -357,6 +357,7 @@
       var toggleGroup = frame ? frame.querySelector('.tenant-toggle-group') : null;
       var dataEl = frame ? frame.querySelector('.pp-tenant-data') : null;
       var card = frame ? frame.querySelector('[data-tenant-card]') : null;
+      var legendCaption = frame && frame.parentElement ? frame.parentElement.querySelector('[data-tenant-legend]') : null;
       var markersLayer = svg.querySelector('.tenant-markers');
       var DATA = null;
       if (dataEl) { try { DATA = JSON.parse(dataEl.textContent); } catch (err) { DATA = null; } }
@@ -576,6 +577,7 @@
           svg.classList.toggle('tenants-on', on);
           if (offBtn) offBtn.setAttribute('aria-pressed', on ? 'false' : 'true');
           if (onBtn) onBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+          if (legendCaption) legendCaption.hidden = !on;
           if (!on) closeCard();
         }
         if (offBtn) offBtn.addEventListener('click', function () { setTenantsOn(false); });
@@ -600,6 +602,10 @@
               if (split) {
                 var pr = r * p.markerScale;
                 m.circle.setAttribute('r', pr.toFixed(2));
+                // The ring's own stroke-width (site.css's --mk) has to scale with the circle's
+                // radius too, not stay a fixed size -- a fixed width would swallow a small
+                // marker's fill whole and barely register on a large one.
+                m.circle.style.setProperty('--mk', (pr * 0.12).toFixed(3));
                 var gscale = (pr * 0.09).toFixed(3);
                 m.use.setAttribute('transform', 'scale(' + gscale + ') translate(-12 -12)');
               }
