@@ -538,8 +538,10 @@
   if (window.location.hash) reveal();
 })();
 
-// /near/ (docs/briefs/near-me.md): the location prompt fires only from this button, never on
-// load; the position is read once, used to place a dot and sort a list, and never stored or
+// /near/ (docs/briefs/near-me.md): the browser's own permission dialog only ever appears from a
+// click on this button, never on load; once granted, a later load skips straight to the map (see
+// the permissions.query() check at the end of this IIFE) rather than asking again every time.
+// Either way the position is read once, used to place a dot and sort a list, and never stored or
 // sent anywhere -- everything below runs on the device, against #pp-near's inlined bbox and
 // record lat/lons (sitegen/build.py). Degrades to the plain, crawlable finder list with
 // JavaScript off, or if the visitor never presses the button or declines the prompt.
@@ -547,6 +549,7 @@
   var btn = document.getElementById('near-locate-btn');
   var dataEl = document.getElementById('pp-near');
   if (!btn || !dataEl) return;
+  var locateWrap = btn.closest('.near-locate');
   var D = JSON.parse(dataEl.textContent);
   var KX = Math.cos((D.s + D.n) / 2 * Math.PI / 180);
   var METRES_PER_UNIT = (D.n - D.s) * 111320 / D.height;
@@ -725,6 +728,11 @@
   function success(pos) {
     showStatus('');
     resetPanels();
+    // Found it -- the button (and the privacy line under it) has done its job for this visit,
+    // so it steps aside for the map/list it just produced. Reappears on a fresh page load
+    // wherever locate() isn't re-run automatically below (permission not yet granted, or
+    // withdrawn since).
+    if (locateWrap) locateWrap.hidden = true;
     var lat = pos.coords.latitude, lon = pos.coords.longitude, acc = pos.coords.accuracy;
     var ranked = withDistances(lat, lon);
     if (ranked.length && ranked[0].dist <= NEAR_M) showNear(lat, lon, acc);
@@ -737,7 +745,7 @@
     finderSection.hidden = false;
   }
 
-  btn.addEventListener('click', function () {
+  function locate() {
     if (!('geolocation' in navigator)) { showStatus('Geolocation is not available in this browser.'); return; }
     showStatus('Locating…');
     // A Permissions-Policy block (sitegen/static/_headers) or a browser that simply refuses the
@@ -748,7 +756,24 @@
     } catch (e) {
       failure({ message: (e && e.message) || 'blocked by the browser' });
     }
-  });
+  }
+
+  btn.addEventListener('click', locate);
+
+  // If this browser already granted pierandpoint.org geolocation access -- from an earlier visit,
+  // or an earlier click this same session -- skip straight to the map on the next load instead of
+  // asking the visitor to press the button again every time. navigator.permissions.query() only
+  // reads the existing grant; it never shows a prompt of its own, so this still never surfaces the
+  // browser's permission dialog without a click (docs/briefs/near-me.md's "the prompt fires only
+  // from the button" is about that dialog, not about noticing a grant that's already there) --
+  // and the position it then reads is used and discarded exactly as a manual click's would be,
+  // never stored. Silently falls back to the plain button wherever the Permissions API is missing,
+  // or reports the state as 'prompt' (not decided yet) or 'denied'.
+  if (navigator.permissions && navigator.permissions.query) {
+    navigator.permissions.query({ name: 'geolocation' }).then(function (status) {
+      if (status.state === 'granted') locate();
+    }).catch(function () { /* unsupported for this query in this browser -- button stays the only path */ });
+  }
 })();
 
 // /near/'s finder (docs/briefs/near-me.md): search + site/status filters + sort, over the
