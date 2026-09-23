@@ -126,10 +126,14 @@
   if (yearJump) yearJump.addEventListener('change', function () { stop(); slider.value = yearJump.value; paint(+yearJump.value); });
   document.querySelectorAll('.timeline').forEach(function (t) { t.hidden = false; });
   paint(+slider.value);
+})();
 
-  // Pan and zoom on a site page's own map only (the .pp-zoomable svg; sitegen/pages.py's
-  // site_map(zoomable=True)). Manipulates the SVG viewBox directly: no map library, no tiles,
-  // no external requests (docs/briefs/site-ux.md). Degrades to the fitted view with JS off.
+// Pan and zoom (the .pp-zoomable svg; sitegen/pages.py's site_map(zoomable=True) on a site
+// page's own map, and overview_map(zoomable=True) on /near/'s local map, docs/briefs/
+// near-me.md). Manipulates the SVG viewBox directly: no map library, no tiles, no external
+// requests (docs/briefs/site-ux.md). Degrades to the fitted view with JS off. Its own IIFE,
+// not gated on the timeline's #pp-record/#pp-slider above: /near/ carries neither.
+(function () {
   function initZoom() {
     document.querySelectorAll('.pp-zoomable').forEach(function (svg) {
       var frame = svg.closest('.map-frame');
@@ -137,7 +141,13 @@
       var parts = (svg.getAttribute('viewBox') || '0 0 100 100').split(' ').map(Number);
       var base = { x: parts[0], y: parts[1], w: parts[2], h: parts[3] };
       var view = { x: base.x, y: base.y, w: base.w, h: base.h };
-      var MIN_W = base.w / 8, MAX_W = base.w, LABEL_AT = base.w * 0.45;
+      // data-max-zoom/data-free-pan (sitegen/pages.py's overview_map(zoomable=True), docs/briefs/
+      // near-me.md): the /near/ page's own map spans kilometres and must recentre on a real
+      // device position that can sit outside its fitted box entirely, so it opts into a much
+      // deeper zoom and no clamp back inside that box. A site page's own map sets neither, so
+      // its zoom range and edge-clamping behavior are unchanged.
+      var MIN_W = base.w / (parseFloat(svg.getAttribute('data-max-zoom')) || 8), MAX_W = base.w, LABEL_AT = base.w * 0.45;
+      var freePan = svg.hasAttribute('data-free-pan');
       // A label's font-size and halo are set in the same user-unit space as the map itself
       // (sitegen/pages.py), so left alone they'd grow with the shapes as the view zooms in.
       // Counter-scale both by view.w / base.w on every zoom step to hold their on-screen size
@@ -191,8 +201,10 @@
       function clamp() {
         view.w = Math.max(MIN_W, Math.min(MAX_W, view.w));
         view.h = view.w * (base.h / base.w);
-        view.x = Math.max(base.x, Math.min(base.x + base.w - view.w, view.x));
-        view.y = Math.max(base.y, Math.min(base.y + base.h - view.h, view.y));
+        if (!freePan) {
+          view.x = Math.max(base.x, Math.min(base.x + base.w - view.w, view.x));
+          view.y = Math.max(base.y, Math.min(base.y + base.h - view.h, view.y));
+        }
       }
       function toSvgPoint(clientX, clientY) {
         var ctm = svg.getScreenCTM();
@@ -212,6 +224,17 @@
       }
       function reset() { view = { x: base.x, y: base.y, w: base.w, h: base.h }; apply(); }
       function center() { return { x: view.x + view.w / 2, y: view.y + view.h / 2 }; }
+
+      // A small public hook (sitegen/static/app.js's own near-me code below, docs/briefs/
+      // near-me.md) so another script can recentre this same pan/zoom state -- e.g. on a real
+      // device position -- rather than fighting it by writing the viewBox attribute directly,
+      // which the drag/pinch/keyboard handlers above know nothing about.
+      svg.ppGetBase = function () { return { x: base.x, y: base.y, w: base.w, h: base.h }; };
+      svg.ppSetView = function (cx, cy, w) {
+        view = { x: cx - w / 2, y: cy - (w * (base.h / base.w)) / 2, w: w, h: w * (base.h / base.w) };
+        clamp(); apply();
+      };
+      svg.ppReset = reset;
 
       svg.addEventListener('wheel', function (e) {
         e.preventDefault();
@@ -479,4 +502,262 @@
   }
   window.addEventListener('hashchange', reveal);
   if (window.location.hash) reveal();
+})();
+
+// /near/ (docs/briefs/near-me.md): the location prompt fires only from this button, never on
+// load; the position is read once, used to place a dot and sort a list, and never stored or
+// sent anywhere -- everything below runs on the device, against #pp-near's inlined bbox and
+// record lat/lons (sitegen/build.py). Degrades to the plain, crawlable finder list with
+// JavaScript off, or if the visitor never presses the button or declines the prompt.
+(function () {
+  var btn = document.getElementById('near-locate-btn');
+  var dataEl = document.getElementById('pp-near');
+  if (!btn || !dataEl) return;
+  var D = JSON.parse(dataEl.textContent);
+  var KX = Math.cos((D.s + D.n) / 2 * Math.PI / 180);
+  var METRES_PER_UNIT = (D.n - D.s) * 111320 / D.height;
+  // sitegen/geo.py's Projection, then sitegen/pages.py's overview_map() own sideways flip
+  // (R(p) = (p[1], -p[0]), since the map is drawn with north pointing left): mirrored here
+  // rather than sent pre-rotated, so this is the whole exported transform -- the bbox plus
+  // the map's fixed height (geo.Projection's own height=1000).
+  function project(lon, lat) {
+    var x = (lon - D.w) * KX / (D.n - D.s) * D.height;
+    var y = (D.n - lat) / (D.n - D.s) * D.height;
+    return [y, -x];
+  }
+  function toRad(deg) { return deg * Math.PI / 180; }
+  function haversine(lat1, lon1, lat2, lon2) {
+    var R = 6371000;
+    var dLat = toRad(lat2 - lat1), dLon = toRad(lon2 - lon1);
+    var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  }
+  function bearing(lat1, lon1, lat2, lon2) {
+    var y = Math.sin(toRad(lon2 - lon1)) * Math.cos(toRad(lat2));
+    var x = Math.cos(toRad(lat1)) * Math.sin(toRad(lat2)) -
+      Math.sin(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.cos(toRad(lon2 - lon1));
+    return (Math.atan2(y, x) * 180 / Math.PI + 360) % 360;
+  }
+  var COMPASS = ['north', 'north-east', 'east', 'south-east', 'south', 'south-west', 'west', 'north-west'];
+  function compassOf(deg) { return COMPASS[Math.round(deg / 45) % 8]; }
+  function fmtDistance(m) { return m < 1000 ? Math.round(m) + ' m' : (m / 1000).toFixed(m < 10000 ? 1 : 0) + ' km'; }
+
+  var NEAR_M = 1500, CLOSE_M = 250, MAP_WIDTH_M = 400;
+  var mapFrame = document.getElementById('near-map-frame');
+  var svgs = mapFrame ? Array.prototype.slice.call(mapFrame.querySelectorAll('.pp-map')) : [];
+  var statusEl = document.getElementById('near-status');
+  var closeWrap = document.getElementById('near-close');
+  var closeList = document.getElementById('near-close-list');
+  var furtherWrap = document.getElementById('near-further-wrap');
+  var furtherCount = document.getElementById('near-further-count');
+  var farList = document.getElementById('near-far-list');
+  var farLine = document.getElementById('near-far-line');
+  var finderSection = document.getElementById('near-finder');
+
+  function svgEl(tag) { return document.createElementNS('http://www.w3.org/2000/svg', tag); }
+
+  function clearOverlay(svg) {
+    var g = svg.querySelector('.near-overlay');
+    if (g) g.remove();
+    Array.prototype.forEach.call(svg.querySelectorAll('.rec.near-highlight'), function (el) { el.classList.remove('near-highlight'); });
+  }
+
+  // The numbered site pins (sitegen/pages.py's overview_map()) are sized to read at the whole
+  // map's own fitted scale -- the far-away view above and the home page's own overview -- and
+  // turn into a giant, meaningless circle once the local map zooms into a 400 m crop around the
+  // visitor, so showNear() hides them and showFar() (after resetting the view) brings them back.
+  function setPinsVisible(svg, visible) {
+    Array.prototype.forEach.call(svg.querySelectorAll('.site-pin, .site-pin-label'), function (el) {
+      el.style.display = visible ? '' : 'none';
+    });
+  }
+
+  function drawYouAreHere(svg, cx, cy, accuracyM, viewW) {
+    var g = svgEl('g');
+    g.setAttribute('class', 'near-overlay');
+    if (accuracyM) {
+      var ring = svgEl('circle');
+      ring.setAttribute('class', 'near-accuracy-ring');
+      ring.setAttribute('cx', cx); ring.setAttribute('cy', cy);
+      ring.setAttribute('r', accuracyM / METRES_PER_UNIT);
+      g.appendChild(ring);
+    }
+    var dot = svgEl('circle');
+    dot.setAttribute('class', 'near-you-dot');
+    dot.setAttribute('cx', cx); dot.setAttribute('cy', cy);
+    dot.setAttribute('r', Math.max(viewW * 0.014, 1.5));
+    var title = svgEl('title'); title.textContent = 'You are here';
+    dot.appendChild(title);
+    g.appendChild(dot);
+    svg.appendChild(g);
+  }
+
+  function drawArrow(svg, deg) {
+    var base = svg.ppGetBase ? svg.ppGetBase() : null;
+    if (!base) return;
+    var screenDeg = deg - 90, rad = toRad(screenDeg);
+    var dx = Math.sin(rad), dy = -Math.cos(rad);
+    var halfW = base.w / 2, halfH = base.h / 2;
+    var t = Math.min(dx ? Math.abs(halfW / dx) : Infinity, dy ? Math.abs(halfH / dy) : Infinity) * 0.94;
+    var cx = base.x + halfW + dx * t, cy = base.y + halfH + dy * t;
+    var size = Math.min(base.w, base.h) * 0.035;
+    var g = svgEl('g');
+    g.setAttribute('class', 'near-overlay near-arrow');
+    g.setAttribute('transform', 'translate(' + cx + ' ' + cy + ') rotate(' + screenDeg + ')');
+    var tri = svgEl('path');
+    tri.setAttribute('d', 'M0 ' + (-size) + ' L' + (size * 0.7) + ' ' + (size * 0.6) + ' L' + (-size * 0.7) + ' ' + (size * 0.6) + ' Z');
+    g.appendChild(tri);
+    svg.appendChild(g);
+  }
+
+  function recordItemHtml(r, distanceM) {
+    // .near-item, not .record-list's plain "what"/"detail" grid (sitegen/static/site.css):
+    // a thumbnail alongside the name breaks that grid at phone width.
+    var thumb = r.image ? '<img class="thumb" src="' + r.image + '" alt="" loading="lazy">' : '<span class="thumb thumb-empty" aria-hidden="true"></span>';
+    var bits = [fmtDistance(distanceM), r.statusLabel, r.use];
+    if (r.expectedLabel) bits.push('Expected ' + r.expectedLabel);
+    return '<li class="near-item">' + thumb + '<div class="near-item-body"><a href="/parcels/' + r.slug + '/">' + r.name + '</a>' +
+      '<span class="detail">' + bits.join(' · ') + '</span></div></li>';
+  }
+
+  function showStatus(text) {
+    if (!statusEl) return;
+    statusEl.hidden = !text;
+    statusEl.textContent = text || '';
+  }
+
+  function resetPanels() {
+    closeWrap.hidden = true;
+    farLine.hidden = true;
+    furtherWrap.hidden = true;
+    svgs.forEach(clearOverlay);
+  }
+
+  function withDistances(lat, lon) {
+    return D.records.map(function (r) {
+      return { r: r, dist: haversine(lat, lon, r.lat, r.lon) };
+    }).sort(function (a, b) { return a.dist - b.dist; });
+  }
+
+  function showNear(lat, lon, accuracyM) {
+    var ranked = withDistances(lat, lon);
+    var close = ranked.filter(function (x) { return x.dist <= CLOSE_M; });
+    var further = ranked.filter(function (x) { return x.dist > CLOSE_M; });
+    closeList.innerHTML = close.length ? close.map(function (x) { return recordItemHtml(x.r, x.dist); }).join('')
+      : '<li><div class="what">Nothing tracked within ' + CLOSE_M + ' m.</div></li>';
+    farList.innerHTML = further.map(function (x) { return recordItemHtml(x.r, x.dist); }).join('');
+    furtherCount.textContent = further.length;
+    furtherWrap.hidden = further.length === 0;
+    closeWrap.hidden = false;
+    farLine.hidden = true;
+    finderSection.hidden = true;
+
+    var p = project(lon, lat);
+    var w = MAP_WIDTH_M / METRES_PER_UNIT;
+    mapFrame.hidden = false;
+    svgs.forEach(function (svg) {
+      clearOverlay(svg);
+      setPinsVisible(svg, false);
+      if (svg.ppSetView) svg.ppSetView(p[0], p[1], w);
+      drawYouAreHere(svg, p[0], p[1], accuracyM, w);
+      close.forEach(function (x) {
+        Array.prototype.forEach.call(svg.querySelectorAll('.rec[data-id="' + x.r.id + '"]'), function (el) { el.classList.add('near-highlight'); });
+      });
+    });
+  }
+
+  function showFar(lat, lon) {
+    var ranked = withDistances(lat, lon);
+    var nearest = ranked[0];
+    closeWrap.hidden = true;
+    finderSection.hidden = false;
+    mapFrame.hidden = false;
+    var deg = nearest ? bearing(nearest.r.lat, nearest.r.lon, lat, lon) : 0;
+    svgs.forEach(function (svg) {
+      clearOverlay(svg);
+      setPinsVisible(svg, true);
+      if (svg.ppReset) svg.ppReset();
+      if (nearest) drawArrow(svg, deg);
+    });
+    if (nearest) {
+      farLine.textContent = 'You are ' + fmtDistance(nearest.dist) + ' ' + compassOf(deg) + ' of ' + nearest.r.siteName + '.';
+      farLine.hidden = false;
+    } else {
+      farLine.hidden = true;
+    }
+  }
+
+  function success(pos) {
+    showStatus('');
+    resetPanels();
+    var lat = pos.coords.latitude, lon = pos.coords.longitude, acc = pos.coords.accuracy;
+    var ranked = withDistances(lat, lon);
+    if (ranked.length && ranked[0].dist <= NEAR_M) showNear(lat, lon, acc);
+    else showFar(lat, lon);
+  }
+  function failure(err) {
+    showStatus('Location unavailable' + (err && err.message ? ' (' + err.message + ')' : '') + ' — showing every tracked record instead.');
+    resetPanels();
+    mapFrame.hidden = true;
+    finderSection.hidden = false;
+  }
+
+  btn.addEventListener('click', function () {
+    if (!('geolocation' in navigator)) { showStatus('Geolocation is not available in this browser.'); return; }
+    showStatus('Locating…');
+    navigator.geolocation.getCurrentPosition(success, failure, { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 });
+  });
+})();
+
+// /near/'s finder (docs/briefs/near-me.md): search + site/status filters + sort, over the
+// server-rendered, fully crawlable #finder-list above -- degrades to that plain list with
+// JavaScript off. Its own IIFE, independent of the geolocation one above.
+(function () {
+  var list = document.getElementById('finder-list');
+  if (!list) return;
+  var items = Array.prototype.slice.call(list.querySelectorAll('.finder-item'));
+  var search = document.getElementById('finder-search');
+  var siteSel = document.getElementById('finder-site');
+  var statusSel = document.getElementById('finder-status');
+  var sortSel = document.getElementById('finder-sort');
+  var resetBtn = document.getElementById('finder-reset');
+  var emptyNote = document.getElementById('finder-empty');
+  var STATUS_ORDER = ['complete', 'under_construction', 'planned', 'existing', 'being_removed'];
+
+  function apply() {
+    var q = (search.value || '').trim().toLowerCase();
+    var site = siteSel.value, status = statusSel.value;
+    var shown = 0;
+    items.forEach(function (li) {
+      var ok = (!site || li.getAttribute('data-site') === site) &&
+        (!status || li.getAttribute('data-status') === status) &&
+        (!q || li.getAttribute('data-name').indexOf(q) !== -1 || li.getAttribute('data-address').indexOf(q) !== -1);
+      li.hidden = !ok;
+      if (ok) shown++;
+    });
+    if (emptyNote) emptyNote.hidden = shown !== 0;
+    if (resetBtn) resetBtn.hidden = !(q || site || status || sortSel.value);
+
+    var by = sortSel.value;
+    if (by) {
+      var sorted = items.slice().sort(function (a, b) {
+        if (by === 'status') return STATUS_ORDER.indexOf(a.getAttribute('data-status')) - STATUS_ORDER.indexOf(b.getAttribute('data-status'));
+        var ea = a.getAttribute('data-expected') || '9999', eb = b.getAttribute('data-expected') || '9999';
+        return ea < eb ? -1 : ea > eb ? 1 : 0;
+      });
+      sorted.forEach(function (li) { list.appendChild(li); });
+    } else {
+      items.forEach(function (li) { list.appendChild(li); });
+    }
+  }
+  [search, siteSel, statusSel, sortSel].forEach(function (el) {
+    el.addEventListener('input', apply);
+    el.addEventListener('change', apply);
+  });
+  if (resetBtn) resetBtn.addEventListener('click', function () {
+    search.value = ''; siteSel.value = ''; statusSel.value = ''; sortSel.value = '';
+    apply();
+  });
+  apply();
 })();

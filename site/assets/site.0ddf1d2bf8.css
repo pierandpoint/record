@@ -443,6 +443,40 @@ sup.cites a { text-decoration: none; }
 .gallery-kind { font: 600 13px var(--mono); color: var(--paper-soft); margin: 4px 0 -4px; }
 .sources li:target { background: #f6e3cc; border-radius: 4px; }
 
+/* /near/ (docs/briefs/near-me.md): the locate button, the local map's "you are here" dot and
+   250 m highlight, the nearby list, the far-away arrow and line, and the crawlable finder. */
+.near-locate { padding: 24px 0 4px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.near-privacy { font-size: 13px; color: var(--paper-faint); max-width: 58ch; }
+.near-status { font-size: 14px; font-weight: 600; color: var(--paper-brass); }
+.near-map-frame { margin-top: 20px; }
+.near-map-frame[hidden] { display: none; }
+.near-you-dot { fill: var(--brass); stroke: #161d1f; stroke-width: 1.5px; vector-effect: non-scaling-stroke; }
+.near-accuracy-ring { fill: rgba(211, 163, 94, .18); stroke: var(--brass); stroke-width: 1px; vector-effect: non-scaling-stroke; }
+.pp-map .rec.near-highlight { stroke: var(--brass-hi) !important; stroke-width: 2.6px !important; }
+.near-arrow path { fill: var(--brass); }
+.near-close { padding: 24px 0 8px; }
+.near-close[hidden] { display: none; }
+.near-close .record-list { margin-top: 12px; }
+.near-further { margin-top: 16px; }
+.near-further summary { cursor: pointer; font: 600 13px var(--mono); color: var(--paper-brass); }
+.near-further[hidden] { display: none; }
+.near-far-line { font-size: 17px; font-weight: 600; margin: 20px 0; }
+.near-far-line[hidden] { display: none; }
+#near-finder[hidden] { display: none; }
+/* .near-item overrides .record-list li's own grid (name/detail side by side, sized against a
+   fixed-width thumbnail) with a simple flex row -- a thumbnail's fixed width otherwise starves
+   the name column at phone width, which with .record-list .what a's overflow-wrap: anywhere
+   wraps every letter of the name onto its own line. */
+.record-list li.near-item { display: flex; gap: 12px; align-items: flex-start; }
+.near-item .thumb { width: 40px; height: 40px; border-radius: 8px; object-fit: cover; flex-shrink: 0; background: var(--paper-line); }
+.near-item .thumb-empty { display: inline-block; border: 1px dashed var(--paper-line); }
+.near-item-body { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.near-item-body a { font-weight: 500; overflow-wrap: anywhere; }
+.near-item-body .detail { text-align: left; }
+.finder-item[hidden] { display: none; }
+#finder-controls .btn[hidden] { display: none; }
+.near-accuracy-note { color: var(--paper-faint); font-size: 13px; max-width: 62ch; margin-top: 32px; padding-bottom: 8px; }
+
 /* founder portrait on the independence page */
 .prose-page img.portrait { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; float: left; margin: 4px 24px 12px 0; border: 1px solid var(--paper-line); }
 @media (max-width: 600px) { .prose-page img.portrait { float: none; display: block; margin: 0 0 16px; width: 120px; height: 120px; } }
