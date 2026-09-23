@@ -827,3 +827,88 @@
   });
   apply();
 })();
+
+// Image lightbox for a record page's gallery (sitegen/build.py, docs/briefs/site-ux.md): the
+// lead image and every thumbnail below it are each a real <a href> straight to the full-size
+// file, so with JS off a click just opens that file directly. With JS, this intercepts the click
+// and opens an in-page overlay instead, paging across every image on the page (in the same
+// lead-then-thumbnails order they're laid out in, not just the ones in whichever kind group was
+// clicked) via the prev/next buttons, the keyboard, or a swipe -- a carousel from the moment it
+// opens, not a single fixed view. Its own IIFE, guarded on there being any gallery at all, since
+// most pages (everything but a record page) carry none.
+(function () {
+  var frames = Array.prototype.slice.call(document.querySelectorAll('a.gallery-frame'));
+  if (!frames.length) return;
+
+  var overlay = document.createElement('div');
+  overlay.className = 'lightbox';
+  overlay.hidden = true;
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.setAttribute('aria-label', 'Image viewer');
+  overlay.innerHTML =
+    '<button type="button" class="lightbox-close" aria-label="Close">×</button>' +
+    (frames.length > 1 ? '<button type="button" class="lightbox-prev" aria-label="Previous image">‹</button>' +
+      '<button type="button" class="lightbox-next" aria-label="Next image">›</button>' : '') +
+    '<figure><img alt="" draggable="false"><figcaption></figcaption>' +
+    (frames.length > 1 ? '<p class="lightbox-count" aria-hidden="true"></p>' : '') + '</figure>';
+  document.body.appendChild(overlay);
+
+  var imgEl = overlay.querySelector('img');
+  var capEl = overlay.querySelector('figcaption');
+  var countEl = overlay.querySelector('.lightbox-count');
+  var closeBtn = overlay.querySelector('.lightbox-close');
+  var prevBtn = overlay.querySelector('.lightbox-prev');
+  var nextBtn = overlay.querySelector('.lightbox-next');
+  var current = 0, lastFocused = null;
+
+  function show(i) {
+    current = (i + frames.length) % frames.length;
+    var a = frames[current];
+    var thumb = a.querySelector('img');
+    var caption = a.closest('figure').querySelector('figcaption');
+    imgEl.src = a.getAttribute('href');
+    imgEl.alt = thumb ? thumb.getAttribute('alt') || '' : '';
+    capEl.innerHTML = caption ? caption.innerHTML : '';
+    if (countEl) countEl.textContent = (current + 1) + ' of ' + frames.length;
+  }
+  function open(i) {
+    lastFocused = document.activeElement;
+    show(i);
+    overlay.hidden = false;
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+    document.addEventListener('keydown', onKey);
+  }
+  function close() {
+    overlay.hidden = true;
+    document.body.style.overflow = '';
+    document.removeEventListener('keydown', onKey);
+    if (lastFocused && lastFocused.focus) lastFocused.focus();
+  }
+  function onKey(e) {
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft') show(current - 1);
+    else if (e.key === 'ArrowRight') show(current + 1);
+  }
+  frames.forEach(function (a, i) {
+    a.addEventListener('click', function (e) { e.preventDefault(); open(i); });
+  });
+  closeBtn.addEventListener('click', close);
+  if (prevBtn) prevBtn.addEventListener('click', function () { show(current - 1); });
+  if (nextBtn) nextBtn.addEventListener('click', function () { show(current + 1); });
+  overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
+
+  // Swipe left/right to page -- a threshold before it counts as a swipe (the same drag-vs-tap
+  // distinction the map's own pan/zoom uses, sitegen/static/app.js's initZoom() above), so a
+  // plain tap on the image or the backdrop doesn't accidentally turn the page.
+  var swipeStartX = null;
+  overlay.addEventListener('pointerdown', function (e) { swipeStartX = e.clientX; });
+  overlay.addEventListener('pointerup', function (e) {
+    if (swipeStartX === null || frames.length < 2) return;
+    var dx = e.clientX - swipeStartX;
+    swipeStartX = null;
+    if (dx > 40) show(current - 1);
+    else if (dx < -40) show(current + 1);
+  });
+})();

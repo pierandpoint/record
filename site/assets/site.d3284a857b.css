@@ -267,14 +267,41 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .cite h2 { font: 500 12px var(--mono); letter-spacing: .12em; color: var(--brass); }
 .cite code { font: 12px var(--mono); background: var(--ink); color: var(--soft); padding: 10px 12px; border-radius: 6px; overflow-wrap: anywhere; }
 .cite p { font-size: 14px; color: var(--text-2); }
-.gallery, .gallery-lead { display: grid; gap: 16px; }
-.gallery figure, .gallery-lead figure { margin: 0; display: flex; flex-direction: column; gap: 8px; }
-.gallery img, .gallery-lead img { border-radius: 12px; width: 100%; max-height: 520px; object-fit: cover; background: var(--paper-line); }
-.gallery figcaption, .gallery-lead figcaption { font: 12px/1.5 var(--mono); color: var(--paper-faint); }
+.gallery-lead, .gallery-thumbs { display: grid; gap: 16px; }
+.gallery-lead figure, .gallery-thumbs figure { margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.gallery-frame { display: block; border-radius: 12px; }
+.gallery-lead img, .gallery-thumbs img { display: block; border-radius: 12px; width: 100%; object-fit: cover; background: var(--paper-line); }
 .gallery-lead img { max-height: 640px; }
+.gallery-frame:hover img, .gallery-frame:focus-visible img { filter: brightness(1.08); }
+.gallery-lead figcaption { font: 12px/1.5 var(--mono); color: var(--paper-faint); }
 .figure-scope { font: 600 11px var(--mono); letter-spacing: .04em; color: var(--brass); margin: 0; text-transform: uppercase; }
 .figure-caption { font: 13px/1.5 var(--sans); color: var(--paper-soft); margin: 0; }
-@media (min-width: 720px) { .gallery.multi { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+/* A thumbnail's own caption/scope-note/figcaption stay in the DOM (app.js's lightbox reads them
+   when that thumbnail is opened) but are never shown at thumbnail size -- a credit line doesn't
+   fit under a 96px-tall crop, and showing it there is exactly the "too much real estate" this
+   thumbnail row replaced (docs/briefs/site-ux.md). */
+.gallery-thumbs { grid-template-columns: repeat(auto-fill, minmax(88px, 1fr)); gap: 8px; }
+.gallery-thumbs img { height: 88px; }
+.gallery-thumbs figcaption, .gallery-thumbs .figure-caption, .gallery-thumbs .figure-scope { display: none; }
+@media (min-width: 480px) { .gallery-thumbs { grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); } .gallery-thumbs img { height: 104px; } }
+
+/* Lightbox carousel (app.js): one image at a time, arrows/keyboard/swipe to page across every
+   image on the record page in the same order the lead + thumbnails above are laid out in.
+   Always the dark theme regardless of the page's own light/dark section, the same choice
+   .cite already makes, since an image viewer reads better against a near-black backdrop. */
+.lightbox { position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; background: rgba(9, 14, 15, .97); padding: 56px 16px; }
+.lightbox[hidden] { display: none; }
+.lightbox figure { margin: 0; max-width: min(1100px, 100%); max-height: 100%; display: flex; flex-direction: column; gap: 10px; }
+.lightbox img { max-width: 100%; max-height: 74vh; object-fit: contain; border-radius: 8px; margin: 0 auto; -webkit-user-drag: none; user-select: none; touch-action: none; }
+.lightbox figcaption { font: 12px/1.5 var(--mono); color: var(--soft); text-align: center; }
+.lightbox-count { font: 12px var(--mono); color: var(--faint); text-align: center; margin: 0; }
+.lightbox-close, .lightbox-prev, .lightbox-next { position: absolute; border: 1px solid var(--line-3); background: rgba(29,37,40,.92); color: var(--text); border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center; font: 600 20px var(--mono); line-height: 1; }
+.lightbox-close { top: 16px; right: 16px; width: 40px; height: 40px; }
+.lightbox-prev, .lightbox-next { top: 50%; transform: translateY(-50%); width: 48px; height: 48px; font-size: 26px; }
+.lightbox-prev { left: 16px; }
+.lightbox-next { right: 16px; }
+.lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover, .lightbox-close:focus-visible, .lightbox-prev:focus-visible, .lightbox-next:focus-visible { border-color: var(--brass); color: var(--brass-hi); }
+@media (max-width: 479px) { .lightbox-prev, .lightbox-next { width: 38px; height: 38px; font-size: 22px; } .lightbox { padding: 56px 8px; } }
 .prose { font-size: 15px; line-height: 1.65; color: var(--paper-soft); overflow-wrap: anywhere; }
 .prose p + p { margin-top: 12px; }
 details.notes { border: 1px solid var(--paper-line); border-radius: 12px; padding: 0 20px; background: var(--paper-2); }
