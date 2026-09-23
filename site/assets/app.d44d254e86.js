@@ -740,7 +740,14 @@
   btn.addEventListener('click', function () {
     if (!('geolocation' in navigator)) { showStatus('Geolocation is not available in this browser.'); return; }
     showStatus('Locating…');
-    navigator.geolocation.getCurrentPosition(success, failure, { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 });
+    // A Permissions-Policy block (sitegen/static/_headers) or a browser that simply refuses the
+    // call can throw synchronously here rather than reaching the error callback below -- caught
+    // so the button never leaves the visitor stuck on "Locating…" with no explanation.
+    try {
+      navigator.geolocation.getCurrentPosition(success, failure, { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 });
+    } catch (e) {
+      failure({ message: (e && e.message) || 'blocked by the browser' });
+    }
   });
 })();
 

@@ -5,6 +5,11 @@
   X-Frame-Options: DENY
   Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
 
+/near/
+  Permissions-Policy: camera=(), microphone=(), geolocation=(self), interest-cohort=()
+/near/*
+  Permissions-Policy: camera=(), microphone=(), geolocation=(self), interest-cohort=()
+
 /assets/*
   Cache-Control: public, max-age=86400
 
