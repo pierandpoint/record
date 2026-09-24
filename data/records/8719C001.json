@@ -158,6 +158,22 @@
       ],
       "expected": false,
       "approximate": true
+    },
+    {
+      "date": "2020-10-26",
+      "text": "DBI site permit 201910073784 for new construction of Building F (23 stories, 258 residential units with retail, office, restaurant and assembly) approved; filed October 7, 2019",
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2024-04-10",
+      "text": "DBI permit 202312293282, a revision/architectural+MEP addendum for Mission Rock Building F (revision to PA #201910073784 S3 and Port application B-2022-0127), is approved",
+      "sources": [
+        "src-watch-dbi-building-permits-2"
+      ],
+      "expected": false
     }
   ],
   "costs": [
@@ -204,6 +220,24 @@
       ],
       "kind": "financing",
       "scope": "record"
+    },
+    {
+      "amount_usd": 99907840,
+      "what": "Revised/estimated construction cost on DBI site permit 201910073784 for Building F",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ],
+      "date": "2020-10-26"
+    },
+    {
+      "amount_usd": 896904,
+      "what": "Revised cost on DBI permit 202312293282, an architectural and MEP addendum revision for Mission Rock Building F",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-2"
+      ],
+      "date": "2024-04-10"
     }
   ],
   "facts": [
@@ -355,6 +389,13 @@
       "sources": [
         "src-mrp-2019-07",
         "src-port-2019-09"
+      ]
+    },
+    {
+      "key": "permitted_units",
+      "value": "258 residential units proposed on DBI site permit 201910073784 (as built described elsewhere as 254)",
+      "sources": [
+        "src-watch-dbi-building-permits"
       ]
     }
   ],
@@ -545,6 +586,20 @@
       "date": "2018-04-24",
       "url": "https://www.sfport.com/sites/default/files/2025-07/Mission%20Rock%20Design%20Controls%204.24.18_FINAL_Reduced%20File.pdf",
       "accessed": "2026-09-19"
+    },
+    {
+      "id": "src-watch-dbi-building-permits",
+      "title": "Permit 201910073784 (approved) -- 365 Toni Stone Cg",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201910073784",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-2",
+      "title": "Permit 202312293282 (approved) -- 365 Toni Stone Cg",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202312293282",
+      "accessed": "2026-09-24"
     }
   ],
   "open_questions": [
@@ -555,7 +610,7 @@
     "Images: no 'before' photo is hosted (until 2020 the parcel was the Seawall Lot 337 surface parking lot) and no rendering is hosted because the architects' renderings are not openly licensed; they are reachable through the architect sources listed here.",
     "A Mapillary storefront photo of Ike's Love & Sandwiches (a sourced retail tenant, see the retail fact above) was hosted briefly and then removed: on review it read as too cluttered (a trash bin, a parked car and several pedestrians in front of the sign) to keep. Still on the shot list for a cleaner frame."
   ],
-  "last_verified": "2026-09-17",
+  "last_verified": "2026-09-24",
   "site_cost_refs": [
     "mission-rock-phase1-horizontal-2019",
     "mission-rock-phase1-horizontal-2023",

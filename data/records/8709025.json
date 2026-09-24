@@ -77,6 +77,23 @@
       ],
       "expected": true,
       "approximate": false
+    },
+    {
+      "date": "2024-08-02",
+      "text": "OTC alterations permit 202408027795 issued for installation of a new fire water line from Owens Street to the new building",
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2026-08",
+      "text": "OCII Commission Chair Scott reports having attended a ribbon-cutting event at the Mission Bay grade school near Chase Center, at which children took part",
+      "sources": [
+        "src-watch-ocii-commission"
+      ],
+      "status": "complete",
+      "expected": false
     }
   ],
   "costs": [
@@ -101,6 +118,24 @@
       ],
       "kind": "development",
       "scope": "record"
+    },
+    {
+      "amount_usd": 102600,
+      "what": "Revised cost on OTC alterations permit 202408027795 for installation of a new fire water line from Owens Street to the new building at 1415 Owens St",
+      "kind": "infrastructure",
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ],
+      "date": "2024-08-02"
+    },
+    {
+      "amount_usd": 102600,
+      "what": "OTC alterations permit 202412056214 to revise the fire department connection from a 2-way to a 4-way detail at 1415 Owens St (estimated and revised cost)",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-2"
+      ],
+      "date": "2024-12-05"
     }
   ],
   "facts": [
@@ -292,6 +327,27 @@
       "date": "2026-08",
       "url": "https://news.theregistrysf.com/sfusd-cuts-ribbon-on-129mm-82000-sqft-mission-bay-school-san-franciscos-first-new-elementary-in-two-decades/",
       "accessed": "2026-09-18"
+    },
+    {
+      "id": "src-watch-dbi-building-permits",
+      "title": "Permit 202408027795 (issued) -- 1415 Owens St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202408027795",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-ocii-commission",
+      "title": "20260818_Minutes.pdf",
+      "publisher": "OCII Commission",
+      "url": "https://sfocii.org/files/minutes/2026-08/20260818_Minutes.pdf",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-2",
+      "title": "Permit 202412056214 (complete) -- 1415 Owens St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202412056214",
+      "accessed": "2026-09-24"
     }
   ],
   "open_questions": [
@@ -300,5 +356,5 @@
     "No SFUSD document names a square-footage figure officially; the 81,800/82,000 sq ft figures come from trade press, not the district itself.",
     "No openly licensed image was found; none is hosted here."
   ],
-  "last_verified": "2026-09-18"
+  "last_verified": "2026-09-24"
 }

@@ -94,10 +94,81 @@
     "sources": [
      "src-ocii-cac-2026"
     ]
+   },
+   {
+    "key": "address_assignment",
+    "value": "Address 385 Channel created for Mission Bay block 8710, lot 006 via over-the-counter alterations permit M401947, issued June 17, 2013",
+    "sources": [
+     "src-watch-dbi-building-permits-4"
+    ]
    }
   ],
-  "costs": [],
+  "costs": [
+   {
+    "amount_usd": 37000,
+    "what": "Revised cost of DBI permit 201811307166 for AT&T antenna replacement and equipment installation at the site",
+    "kind": "construction",
+    "sources": [
+     "src-watch-dbi-building-permits"
+    ],
+    "date": "2019-12-20"
+   },
+   {
+    "amount_usd": 120000,
+    "what": "Reported cost on DBI permit 201306179714 for demolition of a portion of a warehouse building at 385 Channel (permit later expired)",
+    "kind": "construction",
+    "sources": [
+     "src-watch-dbi-building-permits-2"
+    ],
+    "date": "2013"
+   },
+   {
+    "amount_usd": 179000,
+    "what": "Demolition of a one-story storage building at 385 Channel under DBI permit 201712055462 (estimated and revised cost both $179,000)",
+    "kind": "construction",
+    "sources": [
+     "src-watch-dbi-building-permits-3"
+    ],
+    "date": "2017-12-05"
+   }
+  ],
   "milestones": [
+   {
+    "date": "2013-07-12",
+    "date_label": "Jul 12, 2013",
+    "status": null,
+    "status_label": null,
+    "text": "DBI issued over-the-counter alterations permit 201306179714 at 385 Channel for \"demolition of portion of building (warehouse)\" with a reported cost of $120,000; the permit was filed June 17, 2013, approved and issued July 12, 2013, and its status was later recorded as expired as of October 20, 2017",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-watch-dbi-building-permits-2",
+      "title": "Permit 201306179714 (expired) -- 385 Channel",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201306179714",
+      "accessed": "2026-09-24"
+     }
+    ],
+    "source": "DBI (Building Permits)",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8710006",
+     "slug": "mission-bay-south-block-12-west",
+     "name": "Mission Bay South Block 12 West",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-12-west/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-12-west.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
    {
     "date": "2015-12",
     "date_label": "Dec 2015",
@@ -117,6 +188,114 @@
      }
     ],
     "source": "Successor Agency to the SF Redevelopment Agency (predecessor to OCII); primary city agency document, 2015-12",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "8710006",
+     "slug": "mission-bay-south-block-12-west",
+     "name": "Mission Bay South Block 12 West",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-12-west/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-12-west.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2018-02-22",
+    "date_label": "Feb 22, 2018",
+    "status": "under_construction",
+    "status_label": "Under construction",
+    "text": "Demolition permit 201712055462 issued for the one-story warehouse structure on the parcel",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-watch-dbi-building-permits-3",
+      "title": "Permit 201712055462 (complete) -- 385 Channel",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201712055462",
+      "accessed": "2026-09-24"
+     }
+    ],
+    "source": "DBI (Building Permits)",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "8710006",
+     "slug": "mission-bay-south-block-12-west",
+     "name": "Mission Bay South Block 12 West",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-12-west/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-12-west.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2019-05-17",
+    "date_label": "May 17, 2019",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "DBI demolition permit 201712055462, to 'demolish 1 story storage bldg' at 385 Channel, is recorded as complete (filed Dec 5, 2017; approved Feb 16, 2018; issued Feb 22, 2018), clearing the one-story warehouse structure from the parcel",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-watch-dbi-building-permits-3",
+      "title": "Permit 201712055462 (complete) -- 385 Channel",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201712055462",
+      "accessed": "2026-09-24"
+     }
+    ],
+    "source": "DBI (Building Permits)",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "8710006",
+     "slug": "mission-bay-south-block-12-west",
+     "name": "Mission Bay South Block 12 West",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-12-west/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-12-west.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2020-01-10",
+    "date_label": "Jan 10, 2020",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "DBI over-the-counter alterations permit 201811307166 -- an AT&T modification to a temporary site (remove and replace 6 existing antennas with 6 new antennas, install 6 new RRUs and other small equipment) -- filed Nov 30, 2018, issued Dec 20, 2019, and recorded complete",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-watch-dbi-building-permits",
+      "title": "Permit 201811307166 (complete) -- 385 Channel",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201811307166",
+      "accessed": "2026-09-24"
+     }
+    ],
+    "source": "DBI (Building Permits)",
     "origin": "record",
     "category": "status",
     "category_label": "Status",
@@ -287,7 +466,240 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-24",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "status: complete\nstatus_date: 2020-01-10T08:01:33.000\nfiled_date: 2018-11-30T13:33:25.000\nissued_date: 2019-12-20T10:04:42.000",
+    "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201811307166",
+    "sources": [
+     {
+      "title": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201811307166"
+     }
+    ],
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8710006",
+     "slug": "mission-bay-south-block-12-west",
+     "name": "Mission Bay South Block 12 West",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-12-west/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-12-west.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-09-24",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "estimated_cost: 21000.0\nrevised_cost: 37000.0",
+    "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201811307166",
+    "sources": [
+     {
+      "title": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201811307166"
+     }
+    ],
+    "category": "construction",
+    "category_label": "Construction",
+    "record": {
+     "id": "8710006",
+     "slug": "mission-bay-south-block-12-west",
+     "name": "Mission Bay South Block 12 West",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-12-west/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-12-west.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-09-24",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "status: expired\nstatus_date: 2017-10-20T09:02:06.000\nfiled_date: 2013-06-17T12:26:27.000\nissued_date: 2013-07-12T12:55:38.000\napproved_date: 2013-07-12T12:48:54.000\ndescription: demolition of portion of building (warehouse",
+    "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201306179714",
+    "sources": [
+     {
+      "title": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201306179714"
+     }
+    ],
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8710006",
+     "slug": "mission-bay-south-block-12-west",
+     "name": "Mission Bay South Block 12 West",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-12-west/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-12-west.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-09-24",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "description: demolition of portion of building (warehouse\nestimated_cost: 120000.0\nrevised_cost: 120000.0",
+    "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201306179714",
+    "sources": [
+     {
+      "title": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201306179714"
+     }
+    ],
+    "category": "construction",
+    "category_label": "Construction",
+    "record": {
+     "id": "8710006",
+     "slug": "mission-bay-south-block-12-west",
+     "name": "Mission Bay South Block 12 West",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-12-west/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-12-west.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-09-24",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "status: complete\nstatus_date: 2019-05-17T15:31:54.000",
+    "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201712055462",
+    "sources": [
+     {
+      "title": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201712055462"
+     }
+    ],
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "8710006",
+     "slug": "mission-bay-south-block-12-west",
+     "name": "Mission Bay South Block 12 West",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-12-west/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-12-west.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-09-24",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "estimated_cost: 179000.0\nrevised_cost: 179000.0",
+    "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201712055462",
+    "sources": [
+     {
+      "title": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201712055462"
+     }
+    ],
+    "category": "construction",
+    "category_label": "Construction",
+    "record": {
+     "id": "8710006",
+     "slug": "mission-bay-south-block-12-west",
+     "name": "Mission Bay South Block 12 West",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-12-west/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-12-west.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-09-24",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "issued_date: 2018-02-22T12:06:16.000",
+    "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201712055462",
+    "sources": [
+     {
+      "title": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201712055462"
+     }
+    ],
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8710006",
+     "slug": "mission-bay-south-block-12-west",
+     "name": "Mission Bay South Block 12 West",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-12-west/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-12-west.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-09-24",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "to create address at mission bay, block 8710, lot 006 as; 385 channel",
+    "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=M401947",
+    "sources": [
+     {
+      "title": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=M401947"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "8710006",
+     "slug": "mission-bay-south-block-12-west",
+     "name": "Mission Bay South Block 12 West",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-12-west/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-12-west.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
@@ -383,6 +795,34 @@
     "accessed": "2026-09-18"
    },
    {
+    "id": "src-watch-dbi-building-permits",
+    "title": "Permit 201811307166 (complete) -- 385 Channel",
+    "publisher": "DBI (Building Permits)",
+    "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201811307166",
+    "accessed": "2026-09-24"
+   },
+   {
+    "id": "src-watch-dbi-building-permits-2",
+    "title": "Permit 201306179714 (expired) -- 385 Channel",
+    "publisher": "DBI (Building Permits)",
+    "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201306179714",
+    "accessed": "2026-09-24"
+   },
+   {
+    "id": "src-watch-dbi-building-permits-3",
+    "title": "Permit 201712055462 (complete) -- 385 Channel",
+    "publisher": "DBI (Building Permits)",
+    "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201712055462",
+    "accessed": "2026-09-24"
+   },
+   {
+    "id": "src-watch-dbi-building-permits-4",
+    "title": "Permit M401947 (issued) -- 385 Channel",
+    "publisher": "DBI (Building Permits)",
+    "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=M401947",
+    "accessed": "2026-09-24"
+   },
+   {
     "id": null,
     "title": "sfocii.org/files/2026-08/MB%20CAC%20Agenda%208-13-26.pdf",
     "url": "https://sfocii.org/files/2026-08/MB%20CAC%20Agenda%208-13-26.pdf"
@@ -395,7 +835,7 @@
   ],
   "notes": "Mission Bay South Block 12 West, 385 Channel St (1.6 acres) -- the Mission Bay South project area's last remaining undeveloped development parcel (OCII's own Aug 13 2026 Mission Bay CAC presentation: 'Block 12 West last remaining development parcel; no entitlements remain under Mission Bay Plan Documents'). Currently a surface parking lot fronting the China Basin St roundabout; OCII and land owner FOCIL-MB LLC have proposed a Memorandum of Understanding (going to the OCII Commission Sep 2026) to subdivide it into a 1.16-acre, ~265-unit affordable project (up to 90 ft) and a 0.43-acre, ~270-unit market-rate project with an inclusionary requirement (up to 250 ft) -- both preliminary and subject to change, with entitlements (Redevelopment Plan/Design for Development amendments, OPA housing-program amendment, tentative/final subdivision map) still ahead as of this row's sourcing. Classified 'mixed' here (rather than 'residential') because the two halves are two distinct, differently-affordability-restricted projects, not one building.",
   "has_record_file": true,
-  "last_verified": "2026-09-20",
+  "last_verified": "2026-09-24",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

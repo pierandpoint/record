@@ -140,6 +140,86 @@
       ],
       "expected": false,
       "approximate": true
+    },
+    {
+      "date": "2024-02-22",
+      "text": "Alteration permit approved for deferred free-standing demountable partitions (DIRTT) on levels 2-4",
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2023-11-03",
+      "text": "DBI permit 202309136499 approved for Visa tenant improvement phase 1 (deferred stair elements: railings, guard rails and hangars)",
+      "sources": [
+        "src-watch-dbi-building-permits-3"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2023-04-13",
+      "text": "Building permit approved for tenant improvement of one partial and four full floors, including selective demolition of structural slab for a new interconnecting stair (permit 202210275305, filed 2022-10-27)",
+      "sources": [
+        "src-watch-dbi-building-permits-4"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2020-10-26",
+      "text": "DBI new-construction site permit 201910073785 approved for Building G (13 stories, type I-A commercial)",
+      "sources": [
+        "src-watch-dbi-building-permits-5"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2019-10-07",
+      "text": "New-construction site permit application filed with DBI (permit 201910073785)",
+      "sources": [
+        "src-watch-dbi-building-permits-5"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2023-09-21",
+      "text": "DBI permit 202212128138 approved (filed December 12, 2022) for tenant improvement of floors 12 and 13 and a rooftop elevator lobby",
+      "sources": [
+        "src-watch-dbi-building-permits-6"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2023-04-13",
+      "text": "DBI permit 202211216982 approved for tenant improvement of floors 6-11 (filed November 21, 2022)",
+      "sources": [
+        "src-watch-dbi-building-permits-7"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2023-12-05",
+      "text": "DBI approves permit 202310128495 for demountable interior partitions on levels 6 through 11 (filed October 12, 2023)",
+      "sources": [
+        "src-watch-dbi-building-permits-8"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2024-02-09",
+      "text": "DBI permit 202311201106 approved: revision adding exterior terrace lighting to the phase 1 and phase 3 Visa tenant-improvement permits",
+      "sources": [
+        "src-watch-dbi-building-permits-9"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2023-10-25",
+      "text": "DBI permit 202306160296 approved: tenant improvement revision adding a horizontal exit on level 5 and revising the demolition scope of the existing building",
+      "sources": [
+        "src-watch-dbi-building-permits-10"
+      ],
+      "expected": false
     }
   ],
   "costs": [
@@ -164,6 +244,69 @@
       ],
       "kind": "fee_or_subsidy",
       "scope": "record"
+    },
+    {
+      "amount_usd": 210000,
+      "what": "Permit 202308295553: deferred free-standing demountable partitions (DIRTT) on levels 2, 3 and 4 of the office building",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ],
+      "date": "2024-02-22"
+    },
+    {
+      "amount_usd": 168000,
+      "what": "Filed building permit 202401194265 for Visa phase 3 tenant improvements: deferred free-standing demountable partitions (DIRTT) on level 12",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-2"
+      ],
+      "date": "2024-01-19"
+    },
+    {
+      "amount_usd": 22000000,
+      "what": "Tenant improvement of one partial and four full floors (permit 202210275305)",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-4"
+      ],
+      "date": "2023-04-13"
+    },
+    {
+      "amount_usd": 79835080,
+      "what": "Estimated/revised cost on DBI new-construction permit 201910073785 for Building G",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-5"
+      ],
+      "date": "2020-10-26"
+    },
+    {
+      "amount_usd": 25000000,
+      "what": "Tenant improvement of two full floors (12 and 13) plus rooftop elevator lobby, permit 202212128138 (estimated and revised cost)",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-6"
+      ],
+      "date": "2023-09-21"
+    },
+    {
+      "amount_usd": 31000000,
+      "what": "Tenant improvement of six full floors (6-11) in the existing 13-story building (DBI permit 202211216982, revised cost)",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-7"
+      ],
+      "date": "2023-04-13"
+    },
+    {
+      "amount_usd": 1100000,
+      "what": "Permit 202310128495: deferred free-standing demountable partitions (DIRTT) on levels 6 through 11",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-8"
+      ],
+      "date": "2023-12-05"
     }
   ],
   "facts": [
@@ -297,6 +440,20 @@
       "sources": [
         "src-port-2023-10",
         "src-port-2018-01"
+      ]
+    },
+    {
+      "key": "construction_type",
+      "value": "Type I-A, 13 stories, no basement",
+      "sources": [
+        "src-watch-dbi-building-permits-5"
+      ]
+    },
+    {
+      "key": "dbi_permit",
+      "value": "201910073785 (site permit, new construction; approved 2020-10-26)",
+      "sources": [
+        "src-watch-dbi-building-permits-5"
       ]
     }
   ],
@@ -510,6 +667,76 @@
       "date": "2018-04-24",
       "url": "https://www.sfport.com/sites/default/files/2025-07/Mission%20Rock%20Design%20Controls%204.24.18_FINAL_Reduced%20File.pdf",
       "accessed": "2026-09-19"
+    },
+    {
+      "id": "src-watch-dbi-building-permits",
+      "title": "Permit 202308295553 (approved) -- 300 Toni Stone Cg",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202308295553",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-2",
+      "title": "Permit 202401194265 (filed) -- 300 Toni Stone Cg",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202401194265",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-3",
+      "title": "Permit 202309136499 (approved) -- 300 Toni Stone Cg",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202309136499",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-4",
+      "title": "Permit 202210275305 (approved) -- 300 Toni Stone Cg",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202210275305",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-5",
+      "title": "Permit 201910073785 (approved) -- 300 Toni Stone Cg",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201910073785",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-6",
+      "title": "Permit 202212128138 (approved) -- 300 Toni Stone Cg",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202212128138",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-7",
+      "title": "Permit 202211216982 (approved) -- 300 Toni Stone Cg",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202211216982",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-8",
+      "title": "Permit 202310128495 (approved) -- 300 Toni Stone Cg",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202310128495",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-9",
+      "title": "Permit 202311201106 (approved) -- 300 Toni Stone Cg",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202311201106",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-10",
+      "title": "Permit 202306160296 (approved) -- 300 Toni Stone Cg",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202306160296",
+      "accessed": "2026-09-24"
     }
   ],
   "open_questions": [
@@ -520,7 +747,7 @@
     "The Fieldwork opening date rests on a search excerpt of a July 28, 2026 press release that returned 403 here.",
     "Images: no 'before' photo is hosted (until 2020 the parcel was the Seawall Lot 337 surface parking lot) and no rendering is hosted because the architects' renderings are not openly licensed; they are reachable through the architect sources listed here."
   ],
-  "last_verified": "2026-09-17",
+  "last_verified": "2026-09-24",
   "site_cost_refs": [
     "mission-rock-phase1-horizontal-2019",
     "mission-rock-phase1-horizontal-2023",

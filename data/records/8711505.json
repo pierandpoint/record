@@ -29,10 +29,102 @@
       ],
       "expected": false,
       "approximate": true
+    },
+    {
+      "date": "2016-05-17",
+      "text": "OCII Commission adopts Resolution No. 21-2016, authorizing an Option to Ground Lease Agreement with 1300 4th Street Associates, L.P. for construction of a 143-unit (including one manager's unit) low-income affordable family rental development at Mission Bay South, Block 6 East (626 Mission Bay Boulevard North)",
+      "sources": [
+        "src-watch-ocii-commission"
+      ],
+      "status": "planned",
+      "expected": false
+    },
+    {
+      "date": "2016-08-16",
+      "text": "OCII Commission adopts Resolution No. 41-2016, authorizing a Ground Lease Agreement and an Amended and Restated Loan Agreement (aggregate loan amount $35,750,000) with 1300 4th Street Associates, L.P. for the 143-unit (including one manager's unit) low-income affordable family rental housing development at Mission Bay South Block 6 East",
+      "sources": [
+        "src-watch-ocii-commission-2"
+      ],
+      "status": "planned",
+      "expected": false
     }
   ],
-  "costs": [],
-  "facts": [],
+  "costs": [
+    {
+      "amount_usd": 35750000,
+      "what": "Aggregate OCII loan amount authorized under a Ground Lease Agreement and an Amended and Restated Loan Agreement with 1300 4th Street Associates, L.P. for the Block 6 East affordable housing development",
+      "kind": "financing",
+      "sources": [
+        "src-watch-ocii-commission-2"
+      ],
+      "date": "2016-08-16"
+    }
+  ],
+  "facts": [
+    {
+      "key": "anticipated_schedule_2016",
+      "value": "At OCII's May 2016 approval, staff reported construction was due to start in late August/early September 2016 with completion anticipated in April 2018 (the project was in fact reported complete in 2019)",
+      "sources": [
+        "src-watch-ocii-commission"
+      ]
+    },
+    {
+      "key": "units",
+      "value": "143 total, including one manager's unit (low-income affordable family rental housing)",
+      "sources": [
+        "src-watch-ocii-commission"
+      ]
+    },
+    {
+      "key": "alternate_address",
+      "value": "626 Mission Bay Boulevard North (address used in OCII's 2016 ground lease authorization for Mission Bay South Block 6 East)",
+      "sources": [
+        "src-watch-ocii-commission"
+      ]
+    },
+    {
+      "key": "parking",
+      "value": "39 onsite spaces: 34 for residents (assigned by lottery, no extra parking fees) and 5 for commercial tenants, two of which would be car-share",
+      "sources": [
+        "src-watch-ocii-commission"
+      ]
+    },
+    {
+      "key": "general_contractor",
+      "value": "Nibbi Bros., reported in May 2016 as set to work on Mission Bay 6 East starting within 9-12 months",
+      "sources": [
+        "src-watch-ocii-commission"
+      ]
+    },
+    {
+      "key": "address",
+      "value": "OCII's 2016 authorizing resolution gives the address as 626 Mission Bay Boulevard North (Mission Bay South, Block 6 East)",
+      "sources": [
+        "src-watch-ocii-commission-2"
+      ]
+    },
+    {
+      "key": "units",
+      "value": "143, including one manager's unit (per OCII Resolution No. 41-2016)",
+      "sources": [
+        "src-watch-ocii-commission-2"
+      ]
+    },
+    {
+      "key": "ownership_entity",
+      "value": "1300 4th Street Associates, L.P., a California limited partnership (OCII ground lessee and borrower)",
+      "sources": [
+        "src-watch-ocii-commission-2"
+      ]
+    },
+    {
+      "key": "ocii_loan_terms",
+      "value": "OCII loan at 1.5%-3% interest; after 55 years the loan will either be paid off or refinanced (per OCII staff at the August 16, 2016 Commission meeting)",
+      "sources": [
+        "src-watch-ocii-commission-2"
+      ]
+    }
+  ],
   "images": [
     {
       "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
@@ -92,11 +184,25 @@
       "publisher": "Ventura Partners (TNDC's commercial property manager)",
       "url": "https://venturapartners.com/our-projects/1300-1360-fourth-street/",
       "accessed": "2026-09-21"
+    },
+    {
+      "id": "src-watch-ocii-commission",
+      "title": "20160517.pdf",
+      "publisher": "OCII Commission",
+      "url": "https://sfocii.org/files/minutes/2026-08/20160517.pdf",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-ocii-commission-2",
+      "title": "20160816.pdf",
+      "publisher": "OCII Commission",
+      "url": "https://sfocii.org/files/minutes/2026-09/20160816.pdf",
+      "accessed": "2026-09-24"
     }
   ],
   "open_questions": [
     "Precise month of 2019 completion / certificate of occupancy not found; DataSF's Assessor tax roll records no year_property_built for this parcel (blklot 8711505), per status.csv's own note.",
     "Total development cost (status.csv's notes cite ~$76M from unspecified reporting) not independently re-sourced in this pass."
   ],
-  "last_verified": "2026-09-21"
+  "last_verified": "2026-09-24"
 }

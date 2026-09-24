@@ -59,6 +59,47 @@
       ],
       "expected": false,
       "approximate": false
+    },
+    {
+      "date": "2011-10-06",
+      "text": "Building permit 201110066246 filed for new construction: \"erect 6 stories building of police headquarters, fire station\"",
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2012-03-28",
+      "text": "Site permit 201110066246 issued (approved 2012-03-27); first construction document dated the same day",
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ],
+      "status": "under_construction",
+      "expected": false
+    },
+    {
+      "date": "2017-01-11",
+      "text": "Building permit 201110066246 status recorded as complete",
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2013-05-15",
+      "text": "DBI issues permit 201207054084 for rehabilitation and renovation of the vacated fire station at 1275 3rd St as a community room and SFFD office (part of the Public Safety Building project)",
+      "sources": [
+        "src-watch-dbi-building-permits-2"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2015-10-29",
+      "text": "Permit 201207054084 (fire station rehabilitation into community room/SFFD office) reaches 'complete' status with DBI",
+      "sources": [
+        "src-watch-dbi-building-permits-2"
+      ],
+      "expected": false
     }
   ],
   "costs": [
@@ -83,6 +124,24 @@
       ],
       "kind": "public_investment",
       "scope": "record"
+    },
+    {
+      "amount_usd": 164000000,
+      "what": "Revised cost on building permit 201110066246 to erect 6-story police headquarters and fire station at 1251 3rd St",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ],
+      "date": "2012"
+    },
+    {
+      "amount_usd": 3700000,
+      "what": "Permit 201207054084 revised cost for rehabilitation and renovation of the vacated fire station at 1275 3rd St into a community room and SFFD office",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-2"
+      ],
+      "date": "2013"
     }
   ],
   "facts": [
@@ -296,6 +355,20 @@
       "publisher": "Citizen Portal (news aggregator, secondary)",
       "url": "https://citizenportal.ai/articles/7089011/California/San-Francisco-County/San-Francisco-City/City-officials-outline-Mission-Bay-public-safety-building-300000sqft-complex-LEED-Gold-groundbreaking-scheduled",
       "accessed": "2026-09-18"
+    },
+    {
+      "id": "src-watch-dbi-building-permits",
+      "title": "Permit 201110066246 (complete) -- 1251 03rd St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201110066246",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-2",
+      "title": "Permit 201207054084 (complete) -- 1275 03rd St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201207054084",
+      "accessed": "2026-09-24"
     }
   ],
   "open_questions": [
@@ -305,5 +378,5 @@
     "No sourced record of renovations, expansions, or notable incidents at the building since its 2015 opening was found.",
     "No openly licensed image was found; all located images are on agency/firm project pages under their own copyright, so none is hosted here -- see the source links above."
   ],
-  "last_verified": "2026-09-18"
+  "last_verified": "2026-09-24"
 }

@@ -160,6 +160,39 @@
       ],
       "expected": false,
       "approximate": false
+    },
+    {
+      "date": "2020-10-26",
+      "text": "Site permit 201910073782 for new construction of a 24-story, 283-unit residential building approved",
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2019-10-07",
+      "text": "New construction site permit application 201910073782 filed",
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2024-11-05",
+      "text": "DBI permit 202409090347 approved: add control dampers on levels 2 and 3, revise smoke control matrix and firefighter smoke control panel",
+      "sources": [
+        "src-watch-dbi-building-permits-2"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2025-05-07",
+      "text": "Over-the-counter alteration permit filed for tenant improvements in ground-floor suite C, proposed use food/beverage handling",
+      "sources": [
+        "src-watch-dbi-building-permits-3"
+      ],
+      "status": "planned",
+      "expected": false
     }
   ],
   "costs": [
@@ -184,6 +217,15 @@
       ],
       "kind": "fee_or_subsidy",
       "scope": "record"
+    },
+    {
+      "amount_usd": 121921920,
+      "what": "Revised construction cost on building permit 201910073782 for the 283-unit residential building",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ],
+      "date": "2020-10-26"
     }
   ],
   "facts": [
@@ -350,6 +392,13 @@
       "sources": [
         "src-port-2023-10",
         "src-legistar-231116"
+      ]
+    },
+    {
+      "key": "building_permit",
+      "value": "201910073782 (site permit, new construction; filed October 7, 2019, approved October 26, 2020)",
+      "sources": [
+        "src-watch-dbi-building-permits"
       ]
     }
   ],
@@ -566,6 +615,27 @@
       "publisher": "Swinerton (general contractor's own material)",
       "url": "https://swinerton.com/mission-rock-parcel-a-successfully-kicks-off/",
       "accessed": "2026-09-17"
+    },
+    {
+      "id": "src-watch-dbi-building-permits",
+      "title": "Permit 201910073782 (approved) -- 1023 03rd St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201910073782",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-2",
+      "title": "Permit 202409090347 (approved) -- 1023 03rd St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202409090347",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-3",
+      "title": "Permit 202505075927 (filed) -- 1023 03rd St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202505075927",
+      "accessed": "2026-09-24"
     }
   ],
   "open_questions": [
@@ -577,7 +647,7 @@
     "The repo's status.csv and milestones.csv date the opening ceremony June 24, 2024; the sources say June 21, 2023 (SF YIMBY, MVRDV). Flagged in the PR for the owner.",
     "Images: no 'before' photo is hosted (until 2020 the parcel was the Seawall Lot 337 surface parking lot) and no rendering is hosted because the architects' renderings are not openly licensed; they are reachable through the architect sources listed here."
   ],
-  "last_verified": "2026-09-17",
+  "last_verified": "2026-09-24",
   "site_cost_refs": [
     "mission-rock-phase1-horizontal-2019",
     "mission-rock-phase1-horizontal-2023",

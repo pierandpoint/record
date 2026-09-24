@@ -48,9 +48,72 @@
       ],
       "expected": true,
       "approximate": true
+    },
+    {
+      "date": "2020-01-10",
+      "text": "DBI over-the-counter alterations permit 201811307166 -- an AT&T modification to a temporary site (remove and replace 6 existing antennas with 6 new antennas, install 6 new RRUs and other small equipment) -- filed Nov 30, 2018, issued Dec 20, 2019, and recorded complete",
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ],
+      "status": "complete",
+      "expected": false
+    },
+    {
+      "date": "2013-07-12",
+      "text": "DBI issued over-the-counter alterations permit 201306179714 at 385 Channel for \"demolition of portion of building (warehouse)\" with a reported cost of $120,000; the permit was filed June 17, 2013, approved and issued July 12, 2013, and its status was later recorded as expired as of October 20, 2017",
+      "sources": [
+        "src-watch-dbi-building-permits-2"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2019-05-17",
+      "text": "DBI demolition permit 201712055462, to 'demolish 1 story storage bldg' at 385 Channel, is recorded as complete (filed Dec 5, 2017; approved Feb 16, 2018; issued Feb 22, 2018), clearing the one-story warehouse structure from the parcel",
+      "sources": [
+        "src-watch-dbi-building-permits-3"
+      ],
+      "status": "complete",
+      "expected": false
+    },
+    {
+      "date": "2018-02-22",
+      "text": "Demolition permit 201712055462 issued for the one-story warehouse structure on the parcel",
+      "sources": [
+        "src-watch-dbi-building-permits-3"
+      ],
+      "status": "under_construction",
+      "expected": false
     }
   ],
-  "costs": [],
+  "costs": [
+    {
+      "amount_usd": 37000,
+      "what": "Revised cost of DBI permit 201811307166 for AT&T antenna replacement and equipment installation at the site",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ],
+      "date": "2019-12-20"
+    },
+    {
+      "amount_usd": 120000,
+      "what": "Reported cost on DBI permit 201306179714 for demolition of a portion of a warehouse building at 385 Channel (permit later expired)",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-2"
+      ],
+      "date": "2013"
+    },
+    {
+      "amount_usd": 179000,
+      "what": "Demolition of a one-story storage building at 385 Channel under DBI permit 201712055462 (estimated and revised cost both $179,000)",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-3"
+      ],
+      "date": "2017-12-05"
+    }
+  ],
   "facts": [
     {
       "key": "address",
@@ -99,6 +162,13 @@
       "value": "Not yet selected -- no developer named for either half of the split parcel as of this record's last verification; OCII's CAC presentation references a forthcoming RFP for the affordable-housing half",
       "sources": [
         "src-ocii-cac-2026"
+      ]
+    },
+    {
+      "key": "address_assignment",
+      "value": "Address 385 Channel created for Mission Bay block 8710, lot 006 via over-the-counter alterations permit M401947, issued June 17, 2013",
+      "sources": [
+        "src-watch-dbi-building-permits-4"
       ]
     }
   ],
@@ -185,6 +255,34 @@
       "date": "2023-06-08",
       "url": "https://sfocii.org/sites/default/files/inline-files/Item%202%20MBS%20Environmental%20Consultant%20Affordable%20Housing%20Sites%206.8.23.pdf",
       "accessed": "2026-09-18"
+    },
+    {
+      "id": "src-watch-dbi-building-permits",
+      "title": "Permit 201811307166 (complete) -- 385 Channel",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201811307166",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-2",
+      "title": "Permit 201306179714 (expired) -- 385 Channel",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201306179714",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-3",
+      "title": "Permit 201712055462 (complete) -- 385 Channel",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201712055462",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-4",
+      "title": "Permit M401947 (issued) -- 385 Channel",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=M401947",
+      "accessed": "2026-09-24"
     }
   ],
   "open_questions": [
@@ -195,5 +293,5 @@
     "No cost, budget or subsidy figures for Block 12 West were found in any source reviewed.",
     "No construction-start or completion date has been found for either half of the subdivided parcel, and no expected-completion milestone has been added (2026-09-20 pass): the only whole-plan-area date in OCII's own documents is the Mission Bay South Redevelopment Plan's own 30-year administrative term (Ordinance No. 335-98, effective from Nov 2, 1998), which sets when OCII's authority under the Plan ends, not when a project actually gets built -- using it as a stand-in for a construction-buildout target would misrepresent an undeveloped, still-unentitled parcel as complete in about two years. Left on the 2038+ cap until a real entitlement/construction schedule exists."
   ],
-  "last_verified": "2026-09-20"
+  "last_verified": "2026-09-24"
 }

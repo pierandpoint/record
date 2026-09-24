@@ -30,9 +30,109 @@
       ],
       "expected": false,
       "approximate": true
+    },
+    {
+      "date": "2021-09-29",
+      "text": "OTC alteration permit #202105271222 (reprogram existing BDA to comply with SF ERRCS frequencies and replace the roof \"donor\" antenna) completed",
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ],
+      "status": "complete",
+      "expected": false
+    },
+    {
+      "date": "2022-10-07",
+      "text": "DBI over-the-counter alterations permit #202106152477 for lobby architectural and interior finish upgrades (new conference room, reconfigured mail room) completed",
+      "sources": [
+        "src-watch-dbi-building-permits-2"
+      ],
+      "status": "complete",
+      "expected": false
+    },
+    {
+      "date": "2016-08-16",
+      "text": "DBI permit #201608124922 issued for installation of a new 6-inch fire service off the 12-inch main on Berry St (filed 2016-08-12), for the 129-unit apartment project at 360 Berry St",
+      "sources": [
+        "src-watch-dbi-building-permits-3"
+      ],
+      "status": "under_construction",
+      "expected": false
+    },
+    {
+      "date": "2015-02-19",
+      "text": "DBI permit #201312265046 issued for the 5-story, 129-unit residential building at 360 Berry St (approved 2015-01-29)",
+      "sources": [
+        "src-watch-dbi-building-permits-4"
+      ],
+      "status": "planned",
+      "expected": false
+    },
+    {
+      "date": "2015-05-20",
+      "text": "First construction document issued under DBI permit #201312265046 at 360 Berry St",
+      "sources": [
+        "src-watch-dbi-building-permits-4"
+      ],
+      "status": "under_construction",
+      "expected": false
+    },
+    {
+      "date": "2017-06-15",
+      "text": "DBI permit #201312265046 for the 129-unit building at 360 Berry St reached 'complete' status",
+      "sources": [
+        "src-watch-dbi-building-permits-4"
+      ],
+      "status": "complete",
+      "expected": false
+    },
+    {
+      "date": "2016-11-14",
+      "text": "DBI permit #201507151572 (revision to addendum #1 of #201312265046 for steel and foundation details for the entry trellis at 360 Berry St) completed",
+      "sources": [
+        "src-watch-dbi-building-permits-5"
+      ],
+      "status": "complete",
+      "expected": false
     }
   ],
-  "costs": [],
+  "costs": [
+    {
+      "amount_usd": 60000,
+      "what": "Revised cost of DBI permit #202106152477 for lobby interior finish upgrades, new conference room and mail room reconfiguration",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-2"
+      ],
+      "date": "2021-06-15"
+    },
+    {
+      "amount_usd": 45750,
+      "what": "Revised cost on DBI permit #201608124922 to install a new 6-inch fire service off the 12-inch main on Berry St for the 360 Berry St apartment building",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-3"
+      ],
+      "date": "2016-08-16"
+    },
+    {
+      "amount_usd": 34925500,
+      "what": "Revised construction cost on DBI permit #201312265046 to erect the 5-story, 129-unit residential building at 360 Berry St",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-4"
+      ],
+      "date": "2013-12-26"
+    },
+    {
+      "amount_usd": 150000,
+      "what": "Revision permit #201507151572 for steel and foundation details for the entry trellis at 360 Berry St (revised cost)",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-5"
+      ],
+      "date": "2015-10-28"
+    }
+  ],
   "facts": [],
   "images": [
     {
@@ -107,6 +207,41 @@
       "publisher": "DataSF / SF Department of Building Inspection",
       "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=201312265046",
       "accessed": "2026-09-21"
+    },
+    {
+      "id": "src-watch-dbi-building-permits",
+      "title": "Permit 202105271222 (complete) -- 360 Berry St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202105271222",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-2",
+      "title": "Permit 202106152477 (complete) -- 360 Berry St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202106152477",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-3",
+      "title": "Permit 201608124922 (complete) -- 360 Berry St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201608124922",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-4",
+      "title": "Permit 201312265046 (complete) -- 360 Berry St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201312265046",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-5",
+      "title": "Permit 201507151572 (complete) -- 360 Berry St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201507151572",
+      "accessed": "2026-09-24"
     }
   ],
   "open_questions": [
@@ -114,5 +249,5 @@
     "Trade press names The Integral Group as developer under its 'EVIVA' platform, and The Registry (news.theregistrysf.com) has an article announcing a groundbreaking ceremony for the project, but that article's date and details are behind a paywall and were not verified, so are not cited here.",
     "Architect not confirmed from any source checked in this pass."
   ],
-  "last_verified": "2026-09-21"
+  "last_verified": "2026-09-24"
 }

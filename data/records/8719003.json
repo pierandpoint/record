@@ -59,6 +59,33 @@
       ],
       "expected": false,
       "approximate": true
+    },
+    {
+      "date": "2023-04-19",
+      "text": "Building permit issued for additional rooftop photovoltaics (42 Boviet 450W panels, 18.9 kW); filed December 19, 2022",
+      "sources": [
+        "src-watch-dbi-building-permits-2"
+      ],
+      "status": "existing",
+      "expected": false
+    },
+    {
+      "date": "2023-04-24",
+      "text": "Building permit 201901281440 (new construction, 141 units) recorded complete",
+      "sources": [
+        "src-watch-dbi-building-permits-3"
+      ],
+      "status": "complete",
+      "expected": false
+    },
+    {
+      "date": "2022-03-22",
+      "text": "Over-the-counter alterations permit issued to remove and replace water-damaged finishes in modular residential units, corridors and stairwells on levels 1-4, to comply with a notice of violation",
+      "sources": [
+        "src-watch-dbi-building-permits-4"
+      ],
+      "status": "existing",
+      "expected": false
     }
   ],
   "costs": [
@@ -83,6 +110,42 @@
       ],
       "kind": "development",
       "scope": "record"
+    },
+    {
+      "amount_usd": 37800,
+      "what": "Permitted cost of additional rooftop PV installation (42 Boviet 450W panels, 18.9 kW) at 410 China Basin St",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-2"
+      ],
+      "date": "2023-04-19"
+    },
+    {
+      "amount_usd": 42000000,
+      "what": "Permit 201901281440 estimated and revised construction cost for the 141-unit, 4-story building",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-3"
+      ],
+      "date": "2019"
+    },
+    {
+      "amount_usd": 3500000,
+      "what": "Alterations permit (202203180314) to remove and replace water-damaged finishes in modular units, corridors and stairwells on levels 1-4 -- revised cost",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-4"
+      ],
+      "date": "2022-03-22"
+    },
+    {
+      "amount_usd": 286000,
+      "what": "Revised cost on OTC alterations permit 202008312996 for a solar hot water heating system at the apartment building",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-5"
+      ],
+      "date": "2020-11-02"
     }
   ],
   "facts": [
@@ -203,6 +266,27 @@
       "sources": [
         "src-bridge-page"
       ]
+    },
+    {
+      "key": "affordability",
+      "value": "100% affordable housing project (per DBI permit 202012020114)",
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ]
+    },
+    {
+      "key": "permit",
+      "value": "DBI permit 201901281440 (site permit, new construction wood frame): filed 2019-01-28, approved and issued 2019-05-14, first construction document 2020-07-07",
+      "sources": [
+        "src-watch-dbi-building-permits-3"
+      ]
+    },
+    {
+      "key": "solar_hot_water",
+      "value": "Solar hot water heating system added via deferred plan check submittal (permit 202008312996), referencing building permit #2019-0128-1440",
+      "sources": [
+        "src-watch-dbi-building-permits-5"
+      ]
     }
   ],
   "images": [
@@ -301,6 +385,41 @@
       "publisher": "TS Studio (landscape architect, own material)",
       "url": "https://www.tsstudio.org/410-china-basin",
       "accessed": "2026-09-18"
+    },
+    {
+      "id": "src-watch-dbi-building-permits",
+      "title": "Permit 202012020114 (complete) -- 410 China Basin St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202012020114",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-2",
+      "title": "Permit 202212198635 (issued) -- 410 China Basin St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202212198635",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-3",
+      "title": "Permit 201901281440 (complete) -- 410 China Basin St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201901281440",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-4",
+      "title": "Permit 202203180314 (issued) -- 410 China Basin St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202203180314",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-5",
+      "title": "Permit 202008312996 (complete) -- 410 China Basin St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202008312996",
+      "accessed": "2026-09-24"
     }
   ],
   "open_questions": [
@@ -313,5 +432,5 @@
     "Construction cost figures conflict across sources ($42M construction/$86M total per SF YIMBY, vs. a per-unit figure in Potrero View that implies roughly $54M); not reconciled.",
     "No openly licensed image was found; none is hosted here."
   ],
-  "last_verified": "2026-09-18"
+  "last_verified": "2026-09-24"
 }

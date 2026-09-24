@@ -168,6 +168,70 @@
       ],
       "expected": false,
       "approximate": true
+    },
+    {
+      "date": "2021-05-19",
+      "text": "Site permit 201910285744 approved to erect 8 stories, type I-A office/retail/assembly/restaurant commercial Building B",
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2019-10-28",
+      "text": "New construction site permit application filed for Building B",
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2025-12-16",
+      "text": "Permit filed for tenant improvements on the 5th, 6th, 7th and 8th floors of the existing 8-story office building, including a full prep kitchen and change of occupancy from B to A-2 on level 5 and B to A-3 on level 7",
+      "sources": [
+        "src-watch-dbi-building-permits-2"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2025-12-03",
+      "text": "OTC alterations permit issued to demolish existing piping and sprinkler components for a new slab opening (permit 202512030797, referencing PA #202509266165); existing and proposed use office",
+      "sources": [
+        "src-watch-dbi-building-permits-3"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2025-05-19",
+      "text": "Building permit approved for office tenant improvement (non-structural partitions, ceilings, lighting, MEP, AV/IT) on levels 3 and 4, including new stepped aisle and stepped seating in a slab opening",
+      "sources": [
+        "src-watch-dbi-building-permits-4"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2026-01-13",
+      "text": "Building permit 202509266165 approved (filed October 10, 2025) for alteration of existing floor plates on levels 6, 7 and 8 — demolishing slab to create floor openings for future tenant improvements",
+      "sources": [
+        "src-watch-dbi-building-permits-5"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2025-08-06",
+      "text": "DBI over-the-counter alteration permit 202506209141 approved for a revision to the Golden State Warriors tenant improvement (base building bathrooms), referencing permit application 202412247382 and Port permit B-2024-0274",
+      "sources": [
+        "src-watch-dbi-building-permits-6"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2025-03-07",
+      "text": "Alteration permit approved to demolish a portion of the existing 4th floor slab for a future stair connection between levels 3 and 4, including a 2-hour rated smoke barrier around the new floor opening (DBI permit 202410253714, filed 2024-11-20)",
+      "sources": [
+        "src-watch-dbi-building-permits-7"
+      ],
+      "expected": false
     }
   ],
   "costs": [
@@ -192,6 +256,51 @@
       ],
       "kind": "fee_or_subsidy",
       "scope": "record"
+    },
+    {
+      "amount_usd": 78083460,
+      "what": "Estimated/revised construction cost stated on new-construction site permit 201910285744 for Building B",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ],
+      "date": "2021-05-19"
+    },
+    {
+      "amount_usd": 32500000,
+      "what": "Tenant improvement build-out of floors 5, 6, 7 and 8, including architectural, MEP and structural work, a full prep kitchen and satellite food service stations (permit 202511079166)",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-2"
+      ],
+      "date": "2025-12-16"
+    },
+    {
+      "amount_usd": 11245700,
+      "what": "Revised cost on approved permit 202412247382 for office tenant improvement on levels 3 and 4 (estimated cost at filing was $6,583,515)",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-4"
+      ],
+      "date": "2025-05-19"
+    },
+    {
+      "amount_usd": 1750000,
+      "what": "Permit 202509266165: alteration of existing floor plates on levels 6, 7 and 8, creating floor openings for future tenant improvements (revised cost)",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-5"
+      ],
+      "date": "2026-01-13"
+    },
+    {
+      "amount_usd": 221000,
+      "what": "Estimated/revised cost of alteration permit 202410253714 for partial 4th floor slab demolition and smoke barrier construction",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-7"
+      ],
+      "date": "2025-03-07"
     }
   ],
   "facts": [
@@ -324,6 +433,13 @@
       "sources": [
         "src-port-2023-10",
         "src-port-2018-01"
+      ]
+    },
+    {
+      "key": "building_permit",
+      "value": "201910285744 (site permit, new construction; filed 2019-10-28, approved 2021-05-19)",
+      "sources": [
+        "src-watch-dbi-building-permits"
       ]
     }
   ],
@@ -544,6 +660,55 @@
       "date": "2018-04-24",
       "url": "https://www.sfport.com/sites/default/files/2025-07/Mission%20Rock%20Design%20Controls%204.24.18_FINAL_Reduced%20File.pdf",
       "accessed": "2026-09-19"
+    },
+    {
+      "id": "src-watch-dbi-building-permits",
+      "title": "Permit 201910285744 (approved) -- 1090 Dr Maya Angelou Ln",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201910285744",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-2",
+      "title": "Permit 202511079166 (approved) -- 1089 03rd St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202511079166",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-3",
+      "title": "Permit 202512030797 (issued) -- 1090 Dr Maya Angelou Ln",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202512030797",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-4",
+      "title": "Permit 202412247382 (approved) -- 1090 Dr Maya Angelou Ln",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202412247382",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-5",
+      "title": "Permit 202509266165 (approved) -- 1089 03rd St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202509266165",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-6",
+      "title": "Permit 202506209141 (approved) -- 1090 Dr Maya Angelou Ln",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202506209141",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-7",
+      "title": "Permit 202410253714 (approved) -- 1090 Dr Maya Angelou Ln",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202410253714",
+      "accessed": "2026-09-24"
     }
   ],
   "open_questions": [
@@ -555,7 +720,7 @@
     "Whether the Nvidia lease commenced in March 2026 as scheduled: no later source found.",
     "Images: no 'before' photo is hosted (until 2020 the parcel was the Seawall Lot 337 surface parking lot) and no rendering is hosted because the architects' renderings are not openly licensed; they are reachable through the architect sources listed here."
   ],
-  "last_verified": "2026-09-21",
+  "last_verified": "2026-09-24",
   "site_cost_refs": [
     "mission-rock-phase1-horizontal-2019",
     "mission-rock-phase1-horizontal-2023",

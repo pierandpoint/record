@@ -29,10 +29,172 @@
       ],
       "expected": false,
       "approximate": true
+    },
+    {
+      "date": "2025-10-31",
+      "text": "Building permit issued for excavation and shoring of tunnels under the podium slab to replace plumbing main trunk lines",
+      "sources": [
+        "src-watch-dbi-building-permits-5"
+      ],
+      "status": "under_construction",
+      "expected": false
+    },
+    {
+      "date": "2022-04-11",
+      "text": "Alterations permit 202201286910 (laundry room structural repairs, roofing replacement, mechanical revisions) recorded as complete",
+      "sources": [
+        "src-watch-dbi-building-permits-6"
+      ],
+      "expected": false
+    },
+    {
+      "date": "2020-07-14",
+      "text": "Building permit for ground-floor fitness studio tenant improvement recorded as complete",
+      "sources": [
+        "src-watch-dbi-building-permits-7"
+      ],
+      "status": "complete",
+      "expected": false
+    },
+    {
+      "date": "2017-02-13",
+      "text": "Permit 201611183132 for a solar hot water heating system recorded complete",
+      "sources": [
+        "src-watch-dbi-building-permits-8"
+      ],
+      "status": "complete",
+      "expected": false
+    },
+    {
+      "date": "2021-02-17",
+      "text": "Ground-floor tenant improvement for a new cafe completed (DBI permit 201912200102, issued 2020-10-26)",
+      "sources": [
+        "src-watch-dbi-building-permits-11"
+      ],
+      "status": "complete",
+      "expected": false
     }
   ],
-  "costs": [],
-  "facts": [],
+  "costs": [
+    {
+      "amount_usd": 75000,
+      "what": "Interior tenant improvement permit (new cabinetry, non-bearing walls, partitions, break room, floors, ceiling, mechanical and electrical work) for medical/dental clinic space at 1365 04th St",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ],
+      "date": "2019-06-10"
+    },
+    {
+      "amount_usd": 175000,
+      "what": "Ground-floor tenant improvement converting retail space to a food service establishment (permit 202203099583)",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-2"
+      ],
+      "date": "2022-04-26"
+    },
+    {
+      "amount_usd": 600000,
+      "what": "Interior tenant improvement permit (restrooms, breakroom, teller line, doors, millwork, flooring and MEP) for ground-floor space",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-4"
+      ],
+      "date": "2019-04-18"
+    },
+    {
+      "amount_usd": 8000000,
+      "what": "Permit 202506037829: excavate and shore tunnels beneath the pile-supported podium slab to replace plumbing main trunk lines at 588 Mission Bay Blvd North (revised cost)",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-5"
+      ],
+      "date": "2025-10-31"
+    },
+    {
+      "amount_usd": 350000,
+      "what": "Over-the-counter alterations permit 202201286910: repairs to existing laundry room including structural repairs, replacement of damaged roofing and revisions to mechanical system at 588 Mission Bay Blvd North",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-6"
+      ],
+      "date": "2022-01-28"
+    },
+    {
+      "amount_usd": 300000,
+      "what": "Tenant improvement for ground-floor fitness studio with retail (install HVAC, two ADA bathrooms, workout studio, lighting and AV systems)",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-7"
+      ],
+      "date": "2019-06-26"
+    },
+    {
+      "amount_usd": 310000,
+      "what": "Installation of a solar hot water heating system at 588 Mission Bay Blvd North (permit 201611183132)",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-8"
+      ],
+      "date": "2017-01-30"
+    },
+    {
+      "amount_usd": 185000,
+      "what": "Revised cost of an over-the-counter alterations permit (202006158766) to install a demising partition dividing an existing vacant ground-floor retail space into two retail spaces",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-10"
+      ],
+      "date": "2020-08-20"
+    },
+    {
+      "amount_usd": 400000,
+      "what": "Interior ground-level tenant improvement for a new cafe (ground floor of the building), per DBI permit 201912200102",
+      "kind": "construction",
+      "sources": [
+        "src-watch-dbi-building-permits-11"
+      ],
+      "date": "2020-10-26"
+    }
+  ],
+  "facts": [
+    {
+      "key": "alternate_address",
+      "value": "1375 Fourth Street (address corrected from 1345 Fourth Street by administrative permit 201909121489)",
+      "sources": [
+        "src-watch-dbi-building-permits-3"
+      ]
+    },
+    {
+      "key": "ground_floor_use_change_2019",
+      "value": "A 2019 alterations permit (201902284052, issued 2019-04-18) covered interior tenant improvements changing a ground-floor space from retail sales to a lending institution, including a teller line.",
+      "sources": [
+        "src-watch-dbi-building-permits-4"
+      ]
+    },
+    {
+      "key": "units_on_permit_202506037829",
+      "value": "200 existing apartment units, 200 proposed (no change in unit count)",
+      "sources": [
+        "src-watch-dbi-building-permits-5"
+      ]
+    },
+    {
+      "key": "units",
+      "value": "200 apartment units (per DBI permit 201611183132)",
+      "sources": [
+        "src-watch-dbi-building-permits-8"
+      ]
+    },
+    {
+      "key": "ground_floor_use_change",
+      "value": "A 2019 over-the-counter alterations permit converted ground-floor space from retail sales to a lending institution, including installation of a teller line.",
+      "sources": [
+        "src-watch-dbi-building-permits-9"
+      ]
+    }
+  ],
   "images": [
     {
       "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
@@ -92,6 +254,83 @@
       "publisher": "David Baker Architects",
       "url": "https://www.dbarchitect.com/projects/five88",
       "accessed": "2026-09-21"
+    },
+    {
+      "id": "src-watch-dbi-building-permits",
+      "title": "Permit 201906102971 (complete) -- 1365 04th St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201906102971",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-2",
+      "title": "Permit 202203099583 (issued) -- 588 Mission Bay Blvd North Bl",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202203099583",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-3",
+      "title": "Permit 201909121489 (complete) -- 1375 04th St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201909121489",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-4",
+      "title": "Permit 201902284052 (issued) -- 1335 04th St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201902284052",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-5",
+      "title": "Permit 202506037829 (issued) -- 588 Mission Bay Blvd North Bl",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202506037829",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-6",
+      "title": "Permit 202201286910 (complete) -- 588 Mission Bay Blvd North Bl",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202201286910",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-7",
+      "title": "Permit 201905302080 (complete) -- 1345 04th St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201905302080",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-8",
+      "title": "Permit 201611183132 (complete) -- 588 Mission Bay Blvd North Bl",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201611183132",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-9",
+      "title": "Permit 201908088230 (issued) -- 1335 04th St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201908088230",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-10",
+      "title": "Permit 202006158766 (complete) -- 1385 04th St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202006158766",
+      "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-11",
+      "title": "Permit 201912200102 (complete) -- 1385 04th St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201912200102",
+      "accessed": "2026-09-24"
     }
   ],
   "open_questions": [
@@ -99,5 +338,5 @@
     "DataSF's Assessor tax roll records no year_property_built for this parcel (blklot 8711226), consistent with status.csv's existing note; the 2017 completion year rests on the architect's project page rather than a public assessor or permit record.",
     "A November 2016 UCSF news item describes the building as still welcoming applications ahead of opening, consistent with a 2017 (rather than the originally targeted September 2016) completion, but doesn't itself give a specific opening date."
   ],
-  "last_verified": "2026-09-21"
+  "last_verified": "2026-09-24"
 }
