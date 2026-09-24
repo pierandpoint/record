@@ -70,7 +70,6 @@
     },
     {
       "date": "2032-08",
-      "status": "planned",
       "text": "School is planned to grow one grade per year into a full TK-5 (with Preschool) campus",
       "sources": [
         "src-sfusd-school"
@@ -354,7 +353,8 @@
     "Full-build-out (2032) enrollment capacity is not consistently reported across sources ('more than 400', 'up to 550', '600'); no SFUSD primary-source capacity figure was found.",
     "Total project cost is ambiguous: SFUSD's construction contract with McCarthy was $95.39M, but a trade-press piece at the 2026 opening cites $129M as the project total, with no breakdown of the difference found.",
     "No SFUSD document names a square-footage figure officially; the 81,800/82,000 sq ft figures come from trade press, not the district itself.",
-    "No openly licensed image was found; none is hosted here."
+    "No openly licensed image was found; none is hosted here.",
+    "CORRECTED 2026-09-24: the 2032-08 grade-growth milestone (school growing one grade per year to full TK-5) carried `status: \"planned\"`, which the site's timeline reads as the whole record reverting to pre-construction 'planned' status for any date past August 2032 -- even though the school is already built and open (same bug mechanism reported by a site visitor on 'Prequel Park (Power Station sub-area)', found here by auditing every record for the same pattern). That milestone describes enrollment growth, not a change in construction status, so it should never have carried a status field at all; removed it. The milestone's date, text and sources are unchanged."
   ],
   "last_verified": "2026-09-24"
 }

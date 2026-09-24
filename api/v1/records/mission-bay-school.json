@@ -500,8 +500,8 @@
    {
     "date": "2032-08",
     "date_label": "Aug 2032",
-    "status": "planned",
-    "status_label": "Planned",
+    "status": null,
+    "status_label": null,
     "text": "School is planned to grow one grade per year into a full TK-5 (with Preschool) campus",
     "expected": true,
     "approximate": false,
@@ -516,8 +516,8 @@
     ],
     "source": "SFUSD (primary/official)",
     "origin": "record",
-    "category": "status",
-    "category_label": "Status",
+    "category": "coming_up",
+    "category_label": "Coming up",
     "record": {
      "id": "8709025",
      "slug": "mission-bay-school",
@@ -650,6 +650,35 @@
     },
     "relation": "tracked",
     "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-09-24",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "An audit for other records with the same bug reported on 'Prequel Park (Power Station sub-area)' found this record's 2032-08 milestone (\"School is planned to grow one grade per year into a full TK-5 (with Preschool) campus\") carried status: 'planned', even though the school is already built and open (live status: complete). The site's timeline renderer treats any dated status-setting milestone as the record's status as of that date, so scrubbing the timeline past August 2032 would have shown this already-open school reverting to 'planned' (pre-construction). The milestone describes enrollment growth, not a change in construction status, so it should never have carried a status field at all -- removed it. The milestone's date, text and sources are unchanged.",
+    "source": "audit of every record for the same status/milestone mismatch pattern as prequel_park_power_station_subarea (data/records/8709025.json)",
+    "sources": [
+     {
+      "title": "audit of every record for the same status/milestone mismatch pattern as prequel_park_power_station_subarea (data/records/8709025.json)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8709025",
+     "slug": "mission-bay-school",
+     "name": "Mission Bay School",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-school/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-school.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
    }
   ],
   "images": [
@@ -702,7 +731,8 @@
    "Full-build-out (2032) enrollment capacity is not consistently reported across sources ('more than 400', 'up to 550', '600'); no SFUSD primary-source capacity figure was found.",
    "Total project cost is ambiguous: SFUSD's construction contract with McCarthy was $95.39M, but a trade-press piece at the 2026 opening cites $129M as the project total, with no breakdown of the difference found.",
    "No SFUSD document names a square-footage figure officially; the 81,800/82,000 sq ft figures come from trade press, not the district itself.",
-   "No openly licensed image was found; none is hosted here."
+   "No openly licensed image was found; none is hosted here.",
+   "CORRECTED 2026-09-24: the 2032-08 grade-growth milestone (school growing one grade per year to full TK-5) carried `status: \"planned\"`, which the site's timeline reads as the whole record reverting to pre-construction 'planned' status for any date past August 2032 -- even though the school is already built and open (same bug mechanism reported by a site visitor on 'Prequel Park (Power Station sub-area)', found here by auditing every record for the same pattern). That milestone describes enrollment growth, not a change in construction status, so it should never have carried a status field at all; removed it. The milestone's date, text and sources are unchanged."
   ],
   "sources": [
    {

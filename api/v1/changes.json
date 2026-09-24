@@ -5,7 +5,7 @@
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
  "terms": "https://pierandpoint.org/terms/",
- "count": 440,
+ "count": 441,
  "changes": [
   {
    "date": "2026-09-24",
@@ -6528,6 +6528,35 @@
     "name": "Potrero Power Station",
     "short": "Potrero Station",
     "url": "https://pierandpoint.org/sites/potrero/"
+   },
+   "relation": "tracked",
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-09-24",
+   "kind": "correction",
+   "kind_label": "Correction",
+   "text": "An audit for other records with the same bug reported on 'Prequel Park (Power Station sub-area)' found this record's 2032-08 milestone (\"School is planned to grow one grade per year into a full TK-5 (with Preschool) campus\") carried status: 'planned', even though the school is already built and open (live status: complete). The site's timeline renderer treats any dated status-setting milestone as the record's status as of that date, so scrubbing the timeline past August 2032 would have shown this already-open school reverting to 'planned' (pre-construction). The milestone describes enrollment growth, not a change in construction status, so it should never have carried a status field at all -- removed it. The milestone's date, text and sources are unchanged.",
+   "source": "audit of every record for the same status/milestone mismatch pattern as prequel_park_power_station_subarea (data/records/8709025.json)",
+   "sources": [
+    {
+     "title": "audit of every record for the same status/milestone mismatch pattern as prequel_park_power_station_subarea (data/records/8709025.json)"
+    }
+   ],
+   "category": "correction",
+   "category_label": "Correction",
+   "record": {
+    "id": "8709025",
+    "slug": "mission-bay-school",
+    "name": "Mission Bay School",
+    "permalink": "https://pierandpoint.org/parcels/mission-bay-school/",
+    "api": "https://pierandpoint.org/api/v1/records/mission-bay-school.json"
+   },
+   "site": {
+    "slug": "mission-bay",
+    "name": "Mission Bay",
+    "short": "Mission Bay",
+    "url": "https://pierandpoint.org/sites/mission-bay/"
    },
    "relation": "tracked",
    "permalink": "https://pierandpoint.org/changes/#record"
