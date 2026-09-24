@@ -46,7 +46,9 @@ doesn't exist in `status.csv` or `approximate_projects.csv` fails validation.
   ],
   "sources": [
     {"id": "src-hpc-2013", "title": "Historic Preservation Commission packet 2013.1168E",
-     "publisher": "SF Planning", "date": "2013-11", "url": "https://...", "accessed": "2026-09-18"}
+     "publisher": "SF Planning", "date": "2013-11", "url": "https://...", "accessed": "2026-09-18"},
+    {"id": "src-d4d-2020", "title": "Design for Development, Feb 2020", "publisher": "SF Planning",
+     "date": "2020-02", "url": "https://...", "accessed": "2026-09-18", "overview": true}
   ],
   "open_questions": ["Construction start for the seismic work is not dated in any source found."],
   "last_verified": "2026-09-18"
@@ -58,6 +60,20 @@ doesn't exist in `status.csv` or `approximate_projects.csv` fails validation.
 - `record_id` matches the filename and exists in the manifest tables.
 - Every `milestone`, `cost`, `fact` and the `summary` cites at least one
   source id, and every cited id exists in `sources`. No source, no claim.
+- A source may set `overview: true` when it's a document worth calling out
+  above the rest -- a master plan, an EIR or D4D's own site-plan/land-use
+  figure, an agency deck showing the planned transformation of an area (the
+  P12-P16 park decks, say) -- not a permit filing, a news article, or
+  anything whose value here is a single cited fact rather than the whole
+  document. It still stays in the numbered Sources list; `overview: true`
+  only means it also renders in a short "Key documents" callout right after
+  the summary, since a reader deciding whether to dig into a record often
+  wants exactly this rather than a citation for one specific claim. Never
+  mandatory -- most sources aren't one of these, and the callout doesn't
+  render at all when none are flagged. Requires `url` (there has to be
+  something to open); at most 3 per record, so it stays a highlight, not
+  a second Sources list -- flag the ones that matter most, not everything
+  that qualifies.
 - Dates are `YYYY`, `YYYY-MM` or `YYYY-MM-DD`. `expected: true` for dates
   that haven't happened; `approximate: true` when only a year or range is
   sourced.
