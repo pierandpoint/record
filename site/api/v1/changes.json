@@ -5,7 +5,7 @@
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
  "terms": "https://pierandpoint.org/terms/",
- "count": 440,
+ "count": 439,
  "changes": [
   {
    "date": "2026-09-24",
@@ -4912,35 +4912,6 @@
    "date": "2026-09-24",
    "kind": "added",
    "kind_label": "Added",
-   "text": "install 2 illuminated single faced wall signs \"bank of america\"",
-   "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201911016171",
-   "sources": [
-    {
-     "title": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201911016171"
-    }
-   ],
-   "category": "retail",
-   "category_label": "Retail",
-   "record": {
-    "id": "8711226",
-    "slug": "five88-mission-bay-south-block-7-west",
-    "name": "Five88 (Mission Bay South Block 7 West)",
-    "permalink": "https://pierandpoint.org/parcels/five88-mission-bay-south-block-7-west/",
-    "api": "https://pierandpoint.org/api/v1/records/five88-mission-bay-south-block-7-west.json"
-   },
-   "site": {
-    "slug": "mission-bay",
-    "name": "Mission Bay",
-    "short": "Mission Bay",
-    "url": "https://pierandpoint.org/sites/mission-bay/"
-   },
-   "relation": "tracked",
-   "permalink": "https://pierandpoint.org/changes/#record"
-  },
-  {
-   "date": "2026-09-24",
-   "kind": "added",
-   "kind_label": "Added",
    "text": "issued_date: 2022-01-26T09:30:59.000\napproved_date: 2022-01-26T09:30:59.000\ndescription: pile load test program for augered cast in place piles in support of a planned 7 story shell and core office/lab high-rise.",
    "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202112214798",
    "sources": [
@@ -5072,35 +5043,6 @@
     "name": "Mission Bay South Block 9",
     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-9/",
     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-9.json"
-   },
-   "site": {
-    "slug": "mission-bay",
-    "name": "Mission Bay",
-    "short": "Mission Bay",
-    "url": "https://pierandpoint.org/sites/mission-bay/"
-   },
-   "relation": "tracked",
-   "permalink": "https://pierandpoint.org/changes/#record"
-  },
-  {
-   "date": "2026-09-24",
-   "kind": "added",
-   "kind_label": "Added",
-   "text": "install sign a: signle facaed, non-electric wall sign. 7'11\" x 1'3\" (proper food)",
-   "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202205194649",
-   "sources": [
-    {
-     "title": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202205194649"
-    }
-   ],
-   "category": "retail",
-   "category_label": "Retail",
-   "record": {
-    "id": "8711226",
-    "slug": "five88-mission-bay-south-block-7-west",
-    "name": "Five88 (Mission Bay South Block 7 West)",
-    "permalink": "https://pierandpoint.org/parcels/five88-mission-bay-south-block-7-west/",
-    "api": "https://pierandpoint.org/api/v1/records/five88-mission-bay-south-block-7-west.json"
    },
    "site": {
     "slug": "mission-bay",
@@ -6522,6 +6464,35 @@
     "name": "1470 Owens Street",
     "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
     "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
+   },
+   "site": {
+    "slug": "mission-bay",
+    "name": "Mission Bay",
+    "short": "Mission Bay",
+    "url": "https://pierandpoint.org/sites/mission-bay/"
+   },
+   "relation": "tracked",
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-09-24",
+   "kind": "correction",
+   "kind_label": "Correction",
+   "text": "Manual review of the 2026-W39 watch run's 225 proposals (before merge) found two retail_confirmed.csv rows that were redundant, not wrong: \"bank-of-america-2\" (permit 201911016171, one illuminated wall sign) and \"bank-of-america\" (permit 201911016173, two illuminated wall signs) were the same signage buildout for the same Bank of America branch at 588 Mission Bay Blvd North, filed minutes apart on 2019-11-12 -- kept the more specific one, dropped the \"-2\" row. Likewise \"proper-food-2\" (permit 202205194649, sign A) and \"proper-foods\" (permit 202205194650, sign B) were the same Proper Food(s) signage buildout at the same address, filed 12 minutes apart on 2022-09-01 -- kept \"proper-foods\" (status open, dated), dropped \"proper-food-2\" (status announced, undated) rather than show the same tenant twice under two spellings and two different statuses. The extraction pipeline evaluates each permit independently and has no cross-permit dedup step; this is a known gap, not a one-off mistake.",
+   "source": "Manual review of PR #99 before merge",
+   "sources": [
+    {
+     "title": "Manual review of PR #99 before merge"
+    }
+   ],
+   "category": "correction",
+   "category_label": "Correction",
+   "record": {
+    "id": "8711226",
+    "slug": "five88-mission-bay-south-block-7-west",
+    "name": "Five88 (Mission Bay South Block 7 West)",
+    "permalink": "https://pierandpoint.org/parcels/five88-mission-bay-south-block-7-west/",
+    "api": "https://pierandpoint.org/api/v1/records/five88-mission-bay-south-block-7-west.json"
    },
    "site": {
     "slug": "mission-bay",
