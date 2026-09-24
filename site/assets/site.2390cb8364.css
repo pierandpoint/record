@@ -480,7 +480,11 @@ details.notes summary:hover .chevron { color: #9c6f34; }
 .tenant-group h3 { display: flex; align-items: center; gap: 10px; font: 600 15px var(--sans); margin-bottom: 10px; color: var(--paper-ink); }
 .tenant-group h3 .count { font: 13px var(--mono); color: var(--paper-faint); font-weight: 400; }
 .tenant-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
-.tenant { display: flex; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--paper-line); }
+.tenant { display: flex; gap: 14px; padding: 12px 10px; margin: 0 -10px; border-radius: 8px; border-bottom: 1px solid var(--paper-line); scroll-margin-top: 16px; }
+/* Landed on via a tenant marker's "Open record" link (#tenant-<slug>, docs/briefs/
+   tenant-markers.md) -- marks which row it is, since arriving here can otherwise look like it
+   scrolled to nothing in particular. */
+.tenant:target { background: var(--paper-2); border-bottom-color: transparent; box-shadow: inset 3px 0 0 var(--brass); }
 .tenant-media { flex-shrink: 0; width: 56px; height: 56px; border-radius: 10px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: var(--paper-2); border: 1px solid var(--paper-line); }
 .tenant-photo { width: 100%; height: 100%; object-fit: cover; }
 .tenant-icon { font: 600 11px var(--mono); letter-spacing: .02em; color: var(--paper-brass); }

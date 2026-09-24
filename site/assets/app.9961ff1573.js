@@ -554,7 +554,11 @@
           if (t.unit) { loc.hidden = false; loc.textContent = t.unit; } else { loc.hidden = true; }
           var src = card.querySelector('[data-tenant-card-source]');
           if (t.source) { src.hidden = false; src.href = t.source; } else { src.hidden = true; }
-          card.querySelector('[data-tenant-card-open]').setAttribute('href', '/parcels/' + entry.record + '/');
+          // #tenant-<slug> (sitegen/pages.py's tenant_item(), the same row id the Retail list's
+          // own tenants carry) lands on this tenant's own row, not just the top of its record
+          // page -- and turns tapping a tenant on the record you're already viewing into a
+          // same-page scroll instead of a same-URL reload that looks like nothing happened.
+          card.querySelector('[data-tenant-card-open]').setAttribute('href', '/parcels/' + entry.record + '/#tenant-' + t.slug);
           card.hidden = false;
           positionCard(entry);
           requestAnimationFrame(function () { card.classList.add('tenant-card-open'); positionCard(entry); });
