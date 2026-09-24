@@ -329,6 +329,21 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .grid-main { display: grid; grid-template-columns: minmax(0, 1fr); gap: 48px; padding-top: 40px; padding-bottom: 72px; }
 @media (min-width: 1000px) { .grid-main { grid-template-columns: minmax(0, 1fr) 380px; } }
 .stack { display: flex; flex-direction: column; gap: 48px; min-width: 0; }
+/* A record page's own two-column grid (sitegen/build.py's per-record loop) collapses to one
+   column below 1000px, and document order would then put the whole main column -- gallery,
+   map, milestones, retail, costs, notes -- before "At a glance" ever shows up, since that card
+   lives in the second (sidebar) column on desktop. display:contents on the two column wrappers
+   here promotes their own children (.rec-top/.rec-rest, .rec-glance/.rec-aside-rest) to be
+   direct grid-main items instead, so `order` can put "At a glance" right after the map without
+   touching the desktop layout at all -- those wrappers stay real flex columns (with their own
+   gap) above 1000px, where source order already matches the two visual columns. */
+@media (max-width: 999px) {
+  .grid-main > .stack, .grid-main > aside { display: contents; }
+  .rec-top { order: 1; }
+  .rec-glance { order: 2; }
+  .rec-rest { order: 3; }
+  .rec-aside-rest { order: 4; }
+}
 .card { background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 14px; }
 .card h2 { font: 500 12px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: #9c6f34; }
 .facts { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 10px 12px; margin: 0; font-size: 14px; }
