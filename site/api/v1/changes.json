@@ -5,7 +5,7 @@
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
  "terms": "https://pierandpoint.org/terms/",
- "count": 439,
+ "count": 440,
  "changes": [
   {
    "date": "2026-09-24",
@@ -6499,6 +6499,35 @@
     "name": "Mission Bay",
     "short": "Mission Bay",
     "url": "https://pierandpoint.org/sites/mission-bay/"
+   },
+   "relation": "tracked",
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-09-24",
+   "kind": "correction",
+   "kind_label": "Correction",
+   "text": "Corrected this record's geometry file status from 'under_construction' to 'planned'. A site visitor caught the resulting bug directly: the timeline showed 'under construction' today but reverted to 'planned' a couple of years into the future when scrubbing forward. Root cause was already diagnosed in this record's own open_questions (unresolved since the file was added) -- no dated source has ever confirmed construction has started; the geometry file's status was simply never corrected to match. The sibling 'Prequel Park (Port sub-area)' record already correctly said 'planned'.",
+   "source": "this record's own dossier and open_questions (data/records/prequel_park_power_station_subarea.json)",
+   "sources": [
+    {
+     "title": "this record's own dossier and open_questions (data/records/prequel_park_power_station_subarea.json)"
+    }
+   ],
+   "category": "correction",
+   "category_label": "Correction",
+   "record": {
+    "id": "prequel_park_power_station_subarea",
+    "slug": "prequel-park-power-station-sub-area",
+    "name": "Prequel Park (Power Station sub-area)",
+    "permalink": "https://pierandpoint.org/parcels/prequel-park-power-station-sub-area/",
+    "api": "https://pierandpoint.org/api/v1/records/prequel-park-power-station-sub-area.json"
+   },
+   "site": {
+    "slug": "potrero",
+    "name": "Potrero Power Station",
+    "short": "Potrero Station",
+    "url": "https://pierandpoint.org/sites/potrero/"
    },
    "relation": "tracked",
    "permalink": "https://pierandpoint.org/changes/#record"

@@ -34793,8 +34793,8 @@
     "short": "Potrero Station",
     "url": "https://pierandpoint.org/sites/potrero/"
    },
-   "status": "under_construction",
-   "status_label": "Under construction",
+   "status": "planned",
+   "status_label": "Planned",
    "use": "park",
    "relation": "tracked",
    "adjacent_to": null,
@@ -35554,6 +35554,35 @@
    ],
    "changes": [
     {
+     "date": "2026-09-24",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Corrected this record's geometry file status from 'under_construction' to 'planned'. A site visitor caught the resulting bug directly: the timeline showed 'under construction' today but reverted to 'planned' a couple of years into the future when scrubbing forward. Root cause was already diagnosed in this record's own open_questions (unresolved since the file was added) -- no dated source has ever confirmed construction has started; the geometry file's status was simply never corrected to match. The sibling 'Prequel Park (Port sub-area)' record already correctly said 'planned'.",
+     "source": "this record's own dossier and open_questions (data/records/prequel_park_power_station_subarea.json)",
+     "sources": [
+      {
+       "title": "this record's own dossier and open_questions (data/records/prequel_park_power_station_subarea.json)"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "prequel_park_power_station_subarea",
+      "slug": "prequel-park-power-station-sub-area",
+      "name": "Prequel Park (Power Station sub-area)",
+      "permalink": "https://pierandpoint.org/parcels/prequel-park-power-station-sub-area/",
+      "api": "https://pierandpoint.org/api/v1/records/prequel-park-power-station-sub-area.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-09-23",
      "kind": "correction",
      "kind_label": "Correction",
@@ -35641,7 +35670,7 @@
     }
    ],
    "open_questions": [
-    "Status: the geometry file says 'under_construction'. No dated source found confirms a construction start as of 2026-09-17; the latest primary statement is the Port memo (Nov 2025, start Q1 or Q3 2026) and ICA SF ('Construction begins in 2026', Oct 2025). Recommend 'planned' until a dated source appears.",
+    "2026-09-24: fixed. A site visitor caught a real rendering bug this open_question had already predicted -- the timeline showed 'under construction' today but 'planned' a couple of years in the future, because the geometry file's live status field ('under_construction') was never corrected to match this record's own sourced finding that no dated source confirms a construction start. Corrected the geometry file's status to 'planned', matching the sibling 'Prequel Park (Port sub-area)' record. Still true as of this fix: no dated source confirms construction has started; the latest primary statement is the Port memo (Nov 2025, start Q1 or Q3 2026) and ICA SF ('Construction begins in 2026', Oct 2025).",
     "Area: ~2 acres (Port memo), 2.5 acres (developer site), 2.75 acres (Chronicle, ICA SF), 'almost three' (Potrero View); the BCDC amendment scope is 57,000-62,000 sq ft within the shoreline band only. The developer-land share is not stated anywhere (the ~1.6 acres in the geometry file is a subtraction, not a sourced figure).",
     "The 'Spring 2026 SF development pipeline' listing cited in the geometry file (developer FIFTH SPACE; scope demolition, grading, utilities, stormwater, landscaping) could not be found online; no URL on file.",
     "BCDC 2019.006.02: received June 19, 2025, issued June 26, 2026 per the BCDC tracker; the repo currently records June 19, 2025 as the issue date. The amendment text itself was not found.",
@@ -35754,7 +35783,7 @@
    ],
    "notes": "Newly added 2026-09-16 to complement 'Prequel Park (Port sub-area)' -- see accuracy_caveat.",
    "has_record_file": true,
-   "last_verified": "2026-09-20",
+   "last_verified": "2026-09-24",
    "tenants": [],
    "geometry": {
     "type": "Polygon",
