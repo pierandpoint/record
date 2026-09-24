@@ -368,9 +368,14 @@
         var offBtn = toggleGroup.querySelector('[data-tenant-toggle="off"]');
         var onBtn = toggleGroup.querySelector('[data-tenant-toggle="on"]');
         var SPLIT_PX = 120; // a parcel must read at least this wide on screen to split into markers
-        var GRID_GAP = DATA.markerR * 3.4; // fixed data-space spacing between a parcel's own markers
-        var MIN_GRID_GAP = DATA.markerR * 2.6; // the gap a full-size marker needs not to touch its neighbour
-        var MIN_MARKER_SCALE = 0.7; // never shrink a marker past this fraction of the reference size -- below this the glyph stops reading
+        // A marker's diameter grows from MIN_MARKER_PX (right at the split threshold) up to
+        // MAX_MARKER_PX as the parcel keeps getting bigger on screen, then holds -- there's more
+        // room to tap a bigger target once you've zoomed in further, so it shouldn't stay pinned
+        // to its smallest comfortable size forever. MAX_MARKER_PX matches the usual ~44px
+        // minimum touch-target guideline.
+        var MIN_MARKER_PX = 26, MAX_MARKER_PX = 44, GROW_OVER_PX = 200;
+        var GRID_SPACING = 2.6; // grid cell spacing, in multiples of the marker's own live radius
+        var MIN_RADIUS_SCALE = 0.6; // never shrink a marker below this fraction of its target size
         var STATUS_WORD = { open: 'Open', announced: 'Announced', closed: 'Closed' };
         var openMarker = null, allMarkers = [];
 
@@ -379,32 +384,19 @@
           var n = d.tenants.length;
           var cols = Math.max(1, Math.ceil(Math.sqrt(n)));
           var rows = Math.ceil(n / cols);
-          // The grid's own spacing is clamped to this parcel's own bbox (data-space, fixed
-          // regardless of zoom) so a small parcel's markers stay near its own outline instead of
-          // always spreading by the site's own reference gap -- a big parcel gets the full
-          // GRID_GAP. A parcel too small to fit MIN_GRID_GAP's worth of full-size markers shrinks
-          // the markers themselves (down to MIN_MARKER_SCALE) along with the gap, together, so a
-          // packed small parcel (several tenants on one small footprint) stays close to its own
-          // outline instead of spilling into its neighbours at full marker size.
+          // bboxFit: the largest grid-cell spacing this parcel's own footprint can offer
+          // (data-space, fixed regardless of zoom) -- caps how big updateTenantMarkers() can grow
+          // this parcel's markers before they'd spill past its own outline into a neighbour.
           var shape = svg.querySelector('.rec[data-id="' + id + '"]');
           var bb = shape && shape.getBBox ? shape.getBBox() : null;
-          var gap = GRID_GAP, markerScale = 1;
-          if (bb && bb.width && bb.height) {
-            var fitDim = Math.max(cols, rows) + 0.6;
-            var bboxFit = Math.min(bb.width, bb.height) / fitDim;
-            markerScale = Math.max(MIN_MARKER_SCALE, Math.min(1, bboxFit / MIN_GRID_GAP));
-            gap = Math.max(MIN_GRID_GAP * markerScale, Math.min(GRID_GAP, bboxFit));
-          }
+          var bboxFit = (bb && bb.width && bb.height) ? Math.min(bb.width, bb.height) / (Math.max(cols, rows) + 0.6) : Infinity;
           var markers = d.tenants.map(function (t, i) {
-            var col = i % cols, row = Math.floor(i / cols);
-            var mx = d.cx + (col - (cols - 1) / 2) * gap, my = d.cy + (row - (rows - 1) / 2) * gap;
             var g = svgEl('g');
             g.setAttribute('class', 'tenant-marker');
             g.setAttribute('data-status', t.status);
             g.setAttribute('tabindex', '0');
             g.setAttribute('role', 'button');
             g.setAttribute('aria-label', t.name + ', ' + (STATUS_WORD[t.status] || t.status));
-            g.setAttribute('transform', 'translate(' + mx.toFixed(1) + ' ' + my.toFixed(1) + ')');
             var circle = svgEl('circle');
             circle.setAttribute('class', 'tenant-marker-circle');
             g.appendChild(circle);
@@ -413,7 +405,11 @@
             use.setAttribute('href', '#tg-' + t.catKey);
             g.appendChild(use);
             markersLayer.appendChild(g);
-            var entry = { parcelId: id, cx: mx, cy: my, t: t, el: g, circle: circle, use: use, record: d.record };
+            // col/row: this marker's fixed grid cell; cx/cy (its live screen anchor, kept current
+            // by updateTenantMarkers() below) start at the parcel's own centroid and are only
+            // ever read once positioned.
+            var entry = { parcelId: id, col: i % cols, row: Math.floor(i / cols), cx: d.cx, cy: d.cy,
+                         t: t, el: g, circle: circle, use: use, record: d.record };
             g.addEventListener('click', function () { entry.el.focus(); openCard(entry); });
             g.addEventListener('keydown', function (e) {
               if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openCard(entry); }
@@ -443,8 +439,8 @@
           pillG.appendChild(text);
           markersLayer.appendChild(pillG);
           var pill = { el: pillG, rect: rect, text: text, ox: 0, oy: 0, hide: false, mergedCount: n };
-          var p = { id: id, cx: d.cx, cy: d.cy, count: n, record: d.record, split: false,
-                   bboxWidth: bb ? bb.width : 0, markerScale: markerScale, markers: markers, pill: pill };
+          var p = { id: id, cx: d.cx, cy: d.cy, count: n, cols: cols, rows: rows, record: d.record, split: false,
+                   bboxWidth: bb ? bb.width : 0, bboxFit: bboxFit, markers: markers, pill: pill };
           pillG.addEventListener('click', function () { zoomToParcel(p); });
           pillG.addEventListener('keydown', function (e) {
             if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); zoomToParcel(p); }
@@ -586,29 +582,42 @@
         updateTenantMarkers = function () {
           var factor = view.w / base.w;
           var pxPerUnit = svg.clientWidth ? svg.clientWidth / view.w : 0;
-          var r = DATA.markerR * factor;
           parcels.forEach(function (p) {
-            var split = pxPerUnit > 0 && p.bboxWidth * pxPerUnit >= SPLIT_PX;
+            var parcelPx = pxPerUnit * p.bboxWidth;
+            var split = pxPerUnit > 0 && parcelPx >= SPLIT_PX;
             if (p.split && !split && openMarker && openMarker.parcelId === p.id) closeCard();
             p.split = split;
             p.pill.el.style.display = split ? 'none' : '';
+            if (!split) {
+              p.markers.forEach(function (m) { m.el.style.display = 'none'; });
+              return;
+            }
+            // Grow the target diameter from MIN_MARKER_PX (right at the split threshold) toward
+            // MAX_MARKER_PX as the parcel keeps getting bigger on screen, then hold -- easier to
+            // tap once there's room, instead of staying pinned to its smallest size forever.
+            var growT = pxPerUnit > 0 ? Math.max(0, Math.min(1, (parcelPx - SPLIT_PX) / GROW_OVER_PX)) : 0;
+            var targetPxR = (MIN_MARKER_PX + growT * (MAX_MARKER_PX - MIN_MARKER_PX)) / 2;
+            var targetDataR = pxPerUnit > 0 ? targetPxR / pxPerUnit : 0;
+            // Clamp down to what this parcel's own footprint can fit its tenant count without
+            // spilling into a neighbour (p.bboxFit, set once from the shape's own bbox), never
+            // below MIN_RADIUS_SCALE of the target so the glyph stays legible on a packed parcel.
+            var maxByBbox = p.bboxFit / GRID_SPACING;
+            var pr = Math.max(targetDataR * MIN_RADIUS_SCALE, Math.min(targetDataR, maxByBbox));
+            var gap = pr * GRID_SPACING;
             p.markers.forEach(function (m) {
-              m.el.style.display = split ? '' : 'none';
+              m.el.style.display = '';
+              var mx = p.cx + (m.col - (p.cols - 1) / 2) * gap, my = p.cy + (m.row - (p.rows - 1) / 2) * gap;
+              m.cx = mx; m.cy = my;
+              m.el.setAttribute('transform', 'translate(' + mx.toFixed(2) + ' ' + my.toFixed(2) + ')');
+              m.circle.setAttribute('r', pr.toFixed(2));
+              // The ring's own stroke-width (site.css's --mk) has to scale with the circle's
+              // radius too, not stay a fixed size -- a fixed width would swallow a small
+              // marker's fill whole and barely register on a large one.
+              m.circle.style.setProperty('--mk', (pr * 0.12).toFixed(3));
               // Each glyph is authored on a 24x24 grid centred at (12,12) (sitegen/pages.py's
               // TENANT_CATEGORY_GLYPHS) -- translate that centre onto the marker's own local
-              // origin (0,0) before scaling it down to fit inside the circle. p.markerScale
-              // shrinks the marker itself (never below MIN_MARKER_SCALE) on a parcel too small
-              // to fit full-size markers without spilling past its own outline.
-              if (split) {
-                var pr = r * p.markerScale;
-                m.circle.setAttribute('r', pr.toFixed(2));
-                // The ring's own stroke-width (site.css's --mk) has to scale with the circle's
-                // radius too, not stay a fixed size -- a fixed width would swallow a small
-                // marker's fill whole and barely register on a large one.
-                m.circle.style.setProperty('--mk', (pr * 0.12).toFixed(3));
-                var gscale = (pr * 0.09).toFixed(3);
-                m.use.setAttribute('transform', 'scale(' + gscale + ') translate(-12 -12)');
-              }
+              // origin (0,0) before scaling it down to fit inside the circle.
+              m.use.setAttribute('transform', 'scale(' + (pr * 0.09).toFixed(3) + ') translate(-12 -12)');
             });
           });
           resolvePillOverlap(factor, pxPerUnit);
