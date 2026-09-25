@@ -734,10 +734,11 @@
 // while the box is collapsed, and a full-width bar that toggles between collapsed and expanded.
 // Server-rendered markup always shows the complete list with the chip row as plain text and the
 // bar hidden, so this only ever upgrades in place -- a visitor with JavaScript off keeps the
-// full, unfiltered list. BOX_THRESHOLD mirrors sitegen/pages.py's own constant; keep them in sync.
+// full, unfiltered list. Whether a box gets a bar at all is a server-side call (pages.py's
+// box_bar(), against its own threshold -- Costs uses 1, not the shared BOX_THRESHOLD, so it
+// still collapses past a single entry): this only ever checks whether that markup exists, never
+// re-derives the threshold itself, so the two can't drift out of sync with each other.
 (function () {
-  var BOX_THRESHOLD = 8;
-
   document.querySelectorAll('.box[data-total]').forEach(function (box) {
     var count = parseInt(box.getAttribute('data-total'), 10) || 0;
     var lead = box.hasAttribute('data-lead');
@@ -754,7 +755,7 @@
     var status = box.querySelector('[data-box-status]');
     var chips = box.querySelector('.bx-chips');
     var chipButtons = chips ? Array.prototype.slice.call(chips.querySelectorAll('button.bx-chip')) : [];
-    var hasBar = count > BOX_THRESHOLD && !!bar;
+    var hasBar = !!bar;
 
     // Upgrade the chip row in place: reveal the tappable buttons, hide the plain-text counts
     // they stand in for with JavaScript off.
