@@ -1093,16 +1093,38 @@
   var frames = Array.prototype.slice.call(document.querySelectorAll('a.gallery-frame'));
   if (!frames.length) return;
 
+  // Kind filter (site-ux follow-up): when a record's images span more than one kind, prev/next/
+  // swipe can be narrowed to just the kinds still checked, rather than always paging through
+  // everything -- e.g. only "Now" and "Rendering", skipping "Document" and "Before". Clicking a
+  // thumbnail directly always shows that image regardless of the filter; the filter only changes
+  // what stepping with the buttons/keyboard/swipe lands on next. `activeKinds` stays null (no
+  // filter UI, nothing to narrow) when every image shares one kind or has none at all.
+  var kindLabels = frames.map(function (a) { return a.dataset.kindLabel || ''; });
+  var distinctKinds = kindLabels.filter(function (k, i) { return k && kindLabels.indexOf(k) === i; });
+  var activeKinds = null;
+  if (distinctKinds.length > 1) {
+    activeKinds = {};
+    distinctKinds.forEach(function (k) { activeKinds[k] = true; });
+  }
+  function isActive(i) {
+    return !activeKinds || !kindLabels[i] || activeKinds[kindLabels[i]];
+  }
+
   var overlay = document.createElement('div');
   overlay.className = 'lightbox';
   overlay.hidden = true;
   overlay.setAttribute('role', 'dialog');
   overlay.setAttribute('aria-modal', 'true');
   overlay.setAttribute('aria-label', 'Image viewer');
+  var kindsHtml = activeKinds ? '<div class="lightbox-kinds" role="group" aria-label="Filter by kind">' +
+    distinctKinds.map(function (k) {
+      return '<button type="button" class="lightbox-kind" aria-pressed="true">' + k + '</button>';
+    }).join('') + '</div>' : '';
   overlay.innerHTML =
     '<button type="button" class="lightbox-close" aria-label="Close">×</button>' +
     (frames.length > 1 ? '<button type="button" class="lightbox-prev" aria-label="Previous image">‹</button>' +
       '<button type="button" class="lightbox-next" aria-label="Next image">›</button>' : '') +
+    kindsHtml +
     '<figure><img alt="" draggable="false"><figcaption></figcaption>' +
     (frames.length > 1 ? '<p class="lightbox-count" aria-hidden="true"></p>' : '') + '</figure>';
   document.body.appendChild(overlay);
@@ -1125,6 +1147,15 @@
     capEl.innerHTML = caption ? caption.innerHTML : '';
     if (countEl) countEl.textContent = (current + 1) + ' of ' + frames.length;
   }
+  // Prev/next/swipe/keyboard all step through the filter, not straight to current+/-1: skips any
+  // frame whose kind is unchecked, wrapping around: the `tries` bound is only a guard against
+  // activeKinds somehow having nothing checked (the chip handler below never allows that).
+  function step(delta) {
+    if (!activeKinds) { show(current + delta); return; }
+    var i = current, tries = 0;
+    do { i = (i + delta + frames.length) % frames.length; tries++; } while (!isActive(i) && tries <= frames.length);
+    show(i);
+  }
   function open(i) {
     lastFocused = document.activeElement;
     show(i);
@@ -1141,16 +1172,30 @@
   }
   function onKey(e) {
     if (e.key === 'Escape') close();
-    else if (e.key === 'ArrowLeft') show(current - 1);
-    else if (e.key === 'ArrowRight') show(current + 1);
+    else if (e.key === 'ArrowLeft') step(-1);
+    else if (e.key === 'ArrowRight') step(1);
   }
   frames.forEach(function (a, i) {
     a.addEventListener('click', function (e) { e.preventDefault(); open(i); });
   });
   closeBtn.addEventListener('click', close);
-  if (prevBtn) prevBtn.addEventListener('click', function () { show(current - 1); });
-  if (nextBtn) nextBtn.addEventListener('click', function () { show(current + 1); });
+  if (prevBtn) prevBtn.addEventListener('click', function () { step(-1); });
+  if (nextBtn) nextBtn.addEventListener('click', function () { step(1); });
   overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
+
+  if (activeKinds) {
+    Array.prototype.slice.call(overlay.querySelectorAll('.lightbox-kind')).forEach(function (btn, n) {
+      var k = distinctKinds[n];
+      btn.addEventListener('click', function () {
+        var isOn = activeKinds[k];
+        // Never let the last checked kind be unchecked -- stepping needs at least one to land on.
+        if (isOn && distinctKinds.filter(function (kk) { return activeKinds[kk]; }).length <= 1) return;
+        activeKinds[k] = !isOn;
+        btn.setAttribute('aria-pressed', String(!isOn));
+        if (!isActive(current)) step(1);
+      });
+    });
+  }
 
   // Swipe left/right to page -- a threshold before it counts as a swipe (the same drag-vs-tap
   // distinction the map's own pan/zoom uses, sitegen/static/app.js's initZoom() above), so a
@@ -1161,7 +1206,7 @@
     if (swipeStartX === null || frames.length < 2) return;
     var dx = e.clientX - swipeStartX;
     swipeStartX = null;
-    if (dx > 40) show(current - 1);
-    else if (dx < -40) show(current + 1);
+    if (dx > 40) step(-1);
+    else if (dx < -40) step(1);
   });
 })();

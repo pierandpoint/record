@@ -315,7 +315,7 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 
 /* record + site pages */
 .page-head { padding-top: 36px; padding-bottom: 28px; border-bottom: 1px solid var(--paper-line); }
-.page-head-lead { display: flex; gap: 32px; flex-wrap: wrap-reverse; align-items: flex-start; }
+.page-head-lead { display: flex; gap: 32px; flex-wrap: wrap-reverse; align-items: center; }
 .page-head-lead .page-head-text { flex: 1 1 360px; min-width: 0; }
 .site-lead-page { flex: 1 1 260px; max-width: 320px; margin: 0; }
 .site-lead-page img { width: 100%; height: 190px; object-fit: cover; border-radius: 12px; background: var(--paper-line); }
@@ -357,7 +357,12 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .cite p { font-size: 14px; color: var(--text-2); }
 .gallery-lead, .gallery-thumbs { display: grid; gap: 16px; }
 .gallery-lead figure, .gallery-thumbs figure { margin: 0; display: flex; flex-direction: column; gap: 8px; }
-.gallery-frame { display: block; border-radius: 12px; }
+.gallery-frame { display: block; border-radius: 12px; position: relative; }
+/* A thumbnail's kind (site-ux follow-up): most records have only one or two images per kind, so
+   a heading over each group stacked the page far more than the photos warranted -- a small badge
+   on the thumbnail itself carries the same information without a heading of its own. */
+.thumb-kind { position: absolute; left: 6px; bottom: 6px; font: 600 10px var(--mono); letter-spacing: .04em;
+              text-transform: uppercase; color: #fff; background: rgba(0, 0, 0, .65); padding: 2px 7px; border-radius: 999px; }
 .gallery-lead img, .gallery-thumbs img { display: block; border-radius: 12px; width: 100%; object-fit: cover; background: var(--paper-line); }
 .gallery-lead img { max-height: 640px; }
 .gallery-frame:hover img, .gallery-frame:focus-visible img { filter: brightness(1.08); }
@@ -389,7 +394,16 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .lightbox-prev { left: 16px; }
 .lightbox-next { right: 16px; }
 .lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover, .lightbox-close:focus-visible, .lightbox-prev:focus-visible, .lightbox-next:focus-visible { border-color: var(--brass); color: var(--brass-hi); }
-@media (max-width: 479px) { .lightbox-prev, .lightbox-next { width: 38px; height: 38px; font-size: 22px; } .lightbox { padding: 56px 8px; } }
+/* Kind filter chips (site-ux follow-up): fixed to the top of the overlay, not the figure, so they
+   don't shift position as the caption below changes length between images. */
+.lightbox-kinds { position: absolute; top: 16px; left: 50%; transform: translateX(-50%); z-index: 1;
+                  display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; max-width: calc(100% - 120px); }
+.lightbox-kind { font: 600 11px var(--mono); letter-spacing: .03em; text-transform: uppercase; padding: 6px 12px;
+                 border-radius: 999px; border: 1px solid var(--line-3); background: rgba(29,37,40,.92); color: var(--faint); cursor: pointer; }
+.lightbox-kind[aria-pressed="true"] { color: var(--brass-hi); border-color: var(--brass); background: rgba(184,140,74,.18); }
+.lightbox-kind:hover, .lightbox-kind:focus-visible { border-color: var(--brass); }
+@media (max-width: 479px) { .lightbox-prev, .lightbox-next { width: 38px; height: 38px; font-size: 22px; } .lightbox { padding: 56px 8px; }
+  .lightbox-kinds { max-width: calc(100% - 90px); top: 12px; } .lightbox-kind { font-size: 10px; padding: 5px 9px; } }
 .prose { font-size: 15px; line-height: 1.65; color: var(--paper-soft); overflow-wrap: anywhere; }
 .prose p + p { margin-top: 12px; }
 details.notes { border: 1px solid var(--paper-line); border-radius: 12px; padding: 0 20px; background: var(--paper-2); }
