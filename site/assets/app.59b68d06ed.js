@@ -650,7 +650,7 @@
   var categorySummary = form.querySelector('[data-filter-summary]');
   var fields = {
     site: form.querySelector('#cf-site'), category: Array.prototype.slice.call(form.querySelectorAll('input[name="category"]')),
-    from: form.querySelector('#cf-from'), to: form.querySelector('#cf-to')
+    from: form.querySelector('#cf-from'), to: form.querySelector('#cf-to'), record: form.querySelector('#cf-record')
   };
 
   // The category dropdown is a native <details>, so it already opens and closes on its own
@@ -674,19 +674,21 @@
   function readParams() {
     var params = new URLSearchParams(window.location.search);
     return { site: params.get('site') || '', category: params.getAll('category'),
-             from: params.get('from') || '', to: params.get('to') || '' };
+             from: params.get('from') || '', to: params.get('to') || '', record: params.get('record') || '' };
   }
   function applyToFields(v) {
     fields.site.value = v.site;
     fields.category.forEach(function (cb) { cb.checked = v.category.indexOf(cb.value) !== -1; });
     fields.from.value = v.from; fields.to.value = v.to;
+    if (fields.record) fields.record.value = v.record;
   }
   function currentValues() {
     return { site: fields.site.value, category: fields.category.filter(function (cb) { return cb.checked; }).map(function (cb) { return cb.value; }),
-             from: fields.from.value, to: fields.to.value };
+             from: fields.from.value, to: fields.to.value, record: fields.record ? fields.record.value : '' };
   }
   function matches(li, v) {
     if (v.site && li.getAttribute('data-site') !== v.site) return false;
+    if (v.record && li.getAttribute('data-record') !== v.record) return false;
     if (v.category.length && v.category.indexOf(li.getAttribute('data-category')) === -1) return false;
     var d = li.getAttribute('data-date');
     if (v.from && d < v.from) return false;
@@ -701,13 +703,14 @@
       if (ok) shown++;
     });
     if (emptyNote) emptyNote.hidden = shown !== 0;
-    if (resetBtn) resetBtn.hidden = !(v.site || v.category.length || v.from || v.to);
+    if (resetBtn) resetBtn.hidden = !(v.site || v.category.length || v.from || v.to || v.record);
     if (categorySummary) categorySummary.textContent = categoryLabel(v.category.length);
     var params = new URLSearchParams();
     if (v.site) params.set('site', v.site);
     v.category.forEach(function (c) { params.append('category', c); });
     if (v.from) params.set('from', v.from);
     if (v.to) params.set('to', v.to);
+    if (v.record) params.set('record', v.record);
     var qs = params.toString();
     window.history.replaceState(null, '', window.location.pathname + (qs ? '?' + qs : ''));
   }
@@ -720,71 +723,135 @@
   });
   if (resetBtn) {
     resetBtn.addEventListener('click', function () {
-      applyToFields({ site: '', category: [], from: '', to: '' });
+      applyToFields({ site: '', category: [], from: '', to: '', record: '' });
       filter();
     });
   }
 })();
 
-// Per-box filters (docs/briefs/page-sections.md): a category + optional date-from filter scoped
-// to one collapsible box's own list, via data-filter-for="<list id>". Unlike the single-instance
-// /changes/all/ filter above, a page can carry several of these independently (a site page has
-// one for Changes and one for Retail; a record page can carry Sources' too), so this iterates
-// every [data-filter-for] form rather than assuming just one. Operates on any element carrying
-// data-category inside the target list, flat (Changes' <li>) or grouped (Retail's .tenant
-// inside a .tenant-group) alike -- a group with nothing left visible after filtering hides itself.
+// The .box pattern (docs/briefs/box-pattern.md): a single-select category chip row, a lead row
+// (Changes and Costs only -- the list's own first item, both already sorted newest-first) shown
+// while the box is collapsed, and a full-width bar that toggles between collapsed and expanded.
+// Server-rendered markup always shows the complete list with the chip row as plain text and the
+// bar hidden, so this only ever upgrades in place -- a visitor with JavaScript off keeps the
+// full, unfiltered list. BOX_THRESHOLD mirrors sitegen/pages.py's own constant; keep them in sync.
 (function () {
-  document.querySelectorAll('[data-filter-for]').forEach(function (form) {
-    var list = document.getElementById(form.getAttribute('data-filter-for'));
-    if (!list) return;
-    var items = Array.prototype.slice.call(list.querySelectorAll('[data-category]'));
-    if (!items.length) return;
-    var total = items.length;
-    var catField = form.querySelector('[data-filter-category]');
-    var fromField = form.querySelector('[data-filter-from]');
-    var resetBtn = form.querySelector('[data-filter-reset]');
-    var shownEl = form.querySelector('[data-filter-shown]');
+  var BOX_THRESHOLD = 8;
 
-    function filter() {
-      var cat = catField ? catField.value : '';
-      var from = fromField ? fromField.value : '';
+  document.querySelectorAll('.box[data-total]').forEach(function (box) {
+    var count = parseInt(box.getAttribute('data-total'), 10) || 0;
+    var lead = box.hasAttribute('data-lead');
+    var list = box.querySelector('.box-list');
+    if (!list) return;
+    var items = Array.prototype.slice.call(list.querySelectorAll('[data-box-item]'));
+    // The lead row (docs/briefs/box-pattern.md): Changes marks its own pick explicitly
+    // (pages.py's lead_entry() skips correction/coverage rows, which can otherwise sort more
+    // recent than the row actually worth leading with) -- Costs has no such row to skip, so its
+    // already-sorted-newest-first list's own first item stands in.
+    var leadEl = list.querySelector('[data-box-lead]') || items[0];
+    var tail = list.querySelector('[data-box-tail]');
+    var bar = box.querySelector('.bx-bar');
+    var status = box.querySelector('[data-box-status]');
+    var chips = box.querySelector('.bx-chips');
+    var chipButtons = chips ? Array.prototype.slice.call(chips.querySelectorAll('button.bx-chip')) : [];
+    var hasBar = count > BOX_THRESHOLD && !!bar;
+
+    // Upgrade the chip row in place: reveal the tappable buttons, hide the plain-text counts
+    // they stand in for with JavaScript off.
+    if (chips) {
+      Array.prototype.slice.call(chips.querySelectorAll('span.bx-chip')).forEach(function (el) { el.hidden = true; });
+      chipButtons.forEach(function (el) { el.hidden = false; });
+    }
+
+    var activeCat = '';
+    // An under-threshold box has no bar and so no collapsed state at all -- chips still narrow
+    // it, but there's nothing to "expand" back out of.
+    var expanded = !hasBar;
+
+    function itemCount(cat) {
+      return items.filter(function (el) { return el.getAttribute('data-category') === cat; }).length;
+    }
+    function chipLabel(cat) {
+      var btn = chipButtons.filter(function (b) { return b.getAttribute('data-cat') === cat; })[0];
+      return btn ? btn.getAttribute('data-label') : '';
+    }
+    function render() {
       var shown = 0;
       items.forEach(function (el) {
-        var ok = (!cat || el.getAttribute('data-category') === cat) &&
-                 (!from || !el.hasAttribute('data-date') || el.getAttribute('data-date') >= from);
+        var ok = activeCat ? el.getAttribute('data-category') === activeCat
+                            : (expanded || (lead && el === leadEl));
         el.hidden = !ok;
         if (ok) shown++;
       });
+      if (tail) tail.hidden = !(expanded || activeCat);
       list.querySelectorAll('.tenant-group, .tenant-closed').forEach(function (g) {
-        g.hidden = g.querySelectorAll('[data-category]:not([hidden])').length === 0;
+        g.hidden = g.querySelectorAll('[data-box-item]:not([hidden])').length === 0;
       });
-      if (shownEl) shownEl.textContent = shown + ' of ' + total + ' shown';
-      if (resetBtn) resetBtn.hidden = !(cat || from);
+      chipButtons.forEach(function (btn) {
+        btn.setAttribute('aria-pressed', btn.getAttribute('data-cat') === activeCat ? 'true' : 'false');
+      });
+      if (hasBar) {
+        var left, right;
+        if (activeCat) {
+          left = itemCount(activeCat) + ' ' + chipLabel(activeCat) + ' of ' + count;
+          right = 'Show all ' + count;
+        } else if (expanded) {
+          left = 'All ' + count;
+          right = 'Show less ▴';
+        } else if (lead) {
+          left = '+' + (count - 1) + ' earlier';
+          right = 'Show all ▾';
+        } else {
+          left = 'All ' + count;
+          right = 'Show all ▾';
+        }
+        bar.querySelector('.bx-bar-l').textContent = left;
+        bar.querySelector('.bx-bar-r').textContent = right;
+        bar.setAttribute('aria-expanded', (expanded || !!activeCat) ? 'true' : 'false');
+      }
+      if (status) status.textContent = 'Showing ' + shown + ' of ' + count + '.';
     }
-    [catField, fromField].forEach(function (el) { if (el) el.addEventListener('change', filter); });
-    if (resetBtn) {
-      resetBtn.addEventListener('click', function () {
-        if (catField) catField.value = '';
-        if (fromField) fromField.value = '';
-        filter();
+
+    chipButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var cat = btn.getAttribute('data-cat');
+        if (activeCat === cat) { activeCat = ''; expanded = !hasBar; } // tapping the selected chip again collapses
+        else activeCat = cat;
+        render();
+      });
+    });
+    if (hasBar) {
+      bar.hidden = false;
+      bar.addEventListener('click', function () {
+        if (activeCat) { activeCat = ''; expanded = true; } // "Show all N" clears the filter and expands
+        else expanded = !expanded;
+        render();
       });
     }
-    filter();
+    // The citation-jump and jump-nav reveal (below) calls this to force a collapsed box open
+    // without needing to know its internal state.
+    box._ppExpand = function () { activeCat = ''; expanded = true; render(); };
+    render();
   });
 })();
 
-// Reveal a collapsed <details> when navigating to an id inside it -- a citation superscript
+// Reveal a collapsed section when navigating to an id inside it -- a citation superscript
 // jumping into Sources, or a jump-nav link to a section itself (docs/briefs/page-sections.md).
-// Doesn't depend on native browser support for auto-expanding <details> on fragment navigation,
-// which is inconsistent enough across engines not to bet the citation-jump UX on.
+// Handles both the remaining <details> sections ("About this shape"/"Research notes") and the
+// .box pattern (docs/briefs/box-pattern.md), whose own collapse state isn't a <details open>
+// attribute the browser can restore on its own -- either way this doesn't depend on native
+// browser support for auto-expanding on fragment navigation, inconsistent enough across engines
+// not to bet the citation-jump UX on.
 (function () {
   function reveal() {
     var id = window.location.hash.slice(1);
     if (!id) return;
     var el = document.getElementById(id);
     if (!el) return;
-    var box = el.closest('details');
-    if (box && !box.open) box.open = true;
+    var details = el.closest('details');
+    if (details && !details.open) details.open = true;
+    var box = el.closest('.box');
+    if (box && typeof box._ppExpand === 'function') box._ppExpand();
     requestAnimationFrame(function () { el.scrollIntoView({ block: 'center' }); });
   }
   window.addEventListener('hashchange', reveal);

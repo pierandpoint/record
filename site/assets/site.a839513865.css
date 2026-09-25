@@ -434,29 +434,14 @@ details.notes h3 { font: 600 13px var(--mono); color: var(--paper-soft); margin:
 .section-jump a .n { font: 11px var(--mono); color: var(--paper-faint); }
 .section-jump a:hover .n { color: inherit; }
 
-/* the collapsible box pattern shared by Sources, Changes and Retail (docs/briefs/page-sections.md):
-   a <details> whose summary always shows a breakdown peek, open or closed, so collapsing hides
-   only the row-by-row detail, never the composition. Server-rendered `open` past a fixed item
-   threshold (sitegen/build.py's BOX_THRESHOLD) -- a short list never costs the reader a click. */
-/* margin/padding balance: the hover fill needs real breathing room on all sides (a background
-   flush against the text on every edge read as "rough" -- flagged directly against the shipped
-   page), but the row still has to line up with the plain heading above it (Records) and with
-   the peek pills below, which don't get the same inset. Negative side-margins pull the hover
-   area out past the summary's own content box; matching side-padding pushes the text back to
-   where it started, so nothing visibly shifts -- only the hover fill gets the extra width. The
-   bottom border-bottom rule stays full-width regardless, since it's the same divider style the
-   rest of the page uses (.feed, .record-list); only the hover *fill* gets rounded corners, and
-   only on top, since the bottom rule is already a flat line. */
-.box > summary { list-style: none; cursor: pointer; margin: 0 -14px; padding: 8px 14px 14px; border-bottom: 1px solid var(--paper-ink); }
-.box > summary::-webkit-details-marker { display: none; }
-.box > summary:hover { background: var(--paper-2); border-radius: 8px 8px 0 0; }
-.box > summary:hover .chevron { color: #9c6f34; text-decoration: underline; text-underline-offset: 2px; }
-.box > summary .summary-top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
-.box > summary h2 { font: 500 22px var(--serif); display: flex; align-items: baseline; gap: 10px; }
-.box > summary h2 .count { font: 13px var(--mono); color: var(--paper-faint); }
-.box-body { padding-top: 16px; }
-.peek { display: flex; flex-wrap: wrap; gap: 6px 10px; margin-top: 8px; }
-.peek span { font: 12px var(--mono); color: var(--paper-soft); background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 999px; padding: 2px 9px; }
+/* the collapsible box pattern shared by Sources, Changes, Retail and Costs (docs/briefs/
+   box-pattern.md): a plain <section>, not a <details> -- the chip row below is interactive,
+   and interactive content inside a <summary> toggles the details on every tap, which is what
+   made the pattern's own old peek pills look tappable but do nothing. Collapse/expand and
+   category filtering are both app.js state (the box IIFE), not a native open attribute. */
+.box > .box-head h2 { font: 500 22px var(--serif); display: flex; align-items: baseline; gap: 10px; margin: 0; padding-bottom: 8px; border-bottom: 1px solid var(--paper-ink); }
+.box > .box-head h2 .count { font: 13px var(--mono); color: var(--paper-faint); }
+.box-list { padding-top: 16px; }
 /* No margin-top here on purpose: a block margin on a section's first child collapses straight
    through an unpadded wrapping <section>, escaping onto the dark body background between it and
    the previous (also .light) section instead of staying inside either one's own painted
@@ -464,17 +449,32 @@ details.notes h3 { font: 600 13px var(--mono); color: var(--paper-soft); margin:
    padding instead, which doesn't collapse. */
 .box-pair { display: grid; grid-template-columns: 1fr; gap: 40px; }
 @media (min-width: 900px) { .box-pair { grid-template-columns: 1fr 1fr; gap: 56px; } }
-/* a per-box filter, scaled down from .changes-filters for a box's own scope (no site field --
-   the box is already scoped to one site or record). */
-.box-filters { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px 14px; padding: 14px 16px; margin-bottom: 16px; background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 10px; }
-.box-filters .filter-field select, .box-filters .filter-field input { min-height: 36px; font-size: 13px; }
-.box-filters .filter-shown { margin-left: auto; align-self: center; font: 12px var(--mono); color: var(--paper-faint); }
-.box-filters [data-filter-reset][hidden] { display: none; }
-.tenant[hidden], .feed li[hidden], .tenant-group[hidden] { display: none; }
+.tenant[hidden], .feed li[hidden], .tenant-group[hidden], .sources li[hidden], .costs tr[hidden] { display: none; }
+
+/* The chip row (docs/briefs/box-pattern.md): single-select category filter, one pill per
+   category that actually has entries. Server-rendered as plain text (.bx-chip span); app.js
+   reveals the matching <button> in its place and hides the span, so a visitor with JavaScript
+   off sees an honest, non-interactive breakdown instead of a dead-looking button. */
+.bx-chips { display: flex; flex-wrap: wrap; gap: 6px 8px; margin: 12px 0 2px; }
+.bx-chip { font: 12px var(--mono); color: var(--paper-soft); background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 999px; padding: 4px 11px; }
+button.bx-chip { cursor: pointer; }
+button.bx-chip[aria-pressed="true"] { background: var(--paper-ink); border-color: var(--paper-ink); color: var(--paper); }
+
+/* The bar (docs/briefs/box-pattern.md): one full-width, left-text/right-action button that both
+   discloses the box's current state and toggles it. Hidden by default -- a box with JavaScript
+   off, or at or under BOX_THRESHOLD items, always shows its complete list, so there's nothing
+   for a bar to control. */
+.bx-bar { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 12px; margin-top: 8px; padding: 11px 14px; background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 8px; font: 13px var(--mono); color: var(--paper-soft); text-align: left; cursor: pointer; }
+.bx-bar-r { color: var(--paper-brass); font-weight: 500; white-space: nowrap; }
+
+/* Changes' own "All filters →" link (docs/briefs/box-pattern.md): the last row of the expanded
+   list, pointing at /changes/all/ pre-filtered to this record or site -- hidden along with every
+   other row while the box is collapsed (app.js), never counted as an item or filtered by category. */
+.box-tail { margin-top: 16px; font: 500 13px var(--mono); }
 
 /* Key documents (data/site_documents.csv, docs/briefs/page-sections.md): a short, curated,
-   per-site list of the primary planning documents -- not a data-driven feed, so it gets no
-   peek and rarely if ever crosses the .box threshold. Renders nothing when a site has none. */
+   per-site list of the primary planning documents -- not a data-driven feed, so it never gets
+   the .box treatment. Renders nothing when a site has none. */
 .docs-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
 .docs-list li { display: flex; gap: 10px; align-items: baseline; padding: 10px 14px; background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 9px; font-size: 14px; }
 .docs-list li a { font-weight: 600; color: var(--paper-ink); }
@@ -489,8 +489,8 @@ details.notes h3 { font: 600 13px var(--mono); color: var(--paper-soft); margin:
 .glossary-entry p { font-size: 15px; color: var(--paper-soft); margin-top: 8px; }
 
 /* existing "About this shape" / "Research notes" pattern: prose, not a counted list, so it
-   keeps its own bordered-card skin and gets no peek -- but its disclosure marker matches the
-   .box chevron below so every collapsible thing on the page reads as the same interaction. */
+   keeps its own bordered-card skin and never adopts .box -- there's nothing for a chip row to
+   break down and no item count to threshold against; they stay collapsed unconditionally. */
 details.notes summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 details.notes summary:hover .chevron { color: #9c6f34; }
 
@@ -499,22 +499,9 @@ details.notes summary:hover .chevron { color: #9c6f34; }
    only clickable cue on an otherwise plain heading row (flagged directly against the shipped
    page). CSS-only content swap on [open], so it needs no JavaScript and updates the instant a
    native <details> toggles. */
-.box .chevron, details.notes summary .chevron, details.costs-more summary .chevron { font: 500 13px var(--mono); color: var(--paper-brass); flex-shrink: 0; }
-.box .chevron::before, details.notes summary .chevron::before, details.costs-more summary .chevron::before { content: "Show all ›"; }
-.box[open] > summary .chevron::before, details.notes[open] summary .chevron::before, details.costs-more[open] summary .chevron::before { content: "Hide ‹"; }
-
-/* The costs table's own "+N more" toggle (site-ux follow-up): deliberately NOT the notes/box
-   bordered-card skin above -- reported directly that a rounded card right under the table read as
-   a separate, unrelated section. This instead reads as the table's own next row: no box, pulled up
-   to meet the table's bottom edge, and the "more" table below shares .costs's own row styling, so
-   opening it looks like the same table simply grew rather than a second thing appearing. */
-details.costs-more { margin: -12px 0 12px; }
-details.costs-more summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; cursor: pointer;
-                              list-style: none; padding: 10px 0; border-bottom: 1px solid var(--paper-line); font: 13px var(--mono); color: var(--paper-soft); }
-details.costs-more summary::-webkit-details-marker { display: none; }
-details.costs-more summary:hover { color: var(--paper-ink); }
-details.costs-more summary:hover .chevron { color: #9c6f34; }
-details.costs-more .costs { margin-top: 0; margin-bottom: 0; }
+details.notes summary .chevron { font: 500 13px var(--mono); color: var(--paper-brass); flex-shrink: 0; }
+details.notes summary .chevron::before { content: "Show all ›"; }
+details.notes[open] summary .chevron::before { content: "Hide ‹"; }
 
 /* retail tenants (data/retail_confirmed.csv, docs/briefs/retail-layer.md): site page section,
    record page section and the /retail/ directory all share this list markup. */
