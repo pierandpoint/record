@@ -374,19 +374,40 @@ changes pages (`/changes/`) show the date, a category chip, a site chip
 (derived from `record_id`, or "all sites" when blank), the record link and
 the summary; the full `text` sits behind a details disclosure.
 
-`event_date` (`YYYY`, `YYYY-MM` or `YYYY-MM-DD`, optional) is the date of
-the real-world event `text` describes, as distinct from `date` (the day the
-row was added to this file, per this file's own convention -- unchanged).
-The two differ whenever a change is recorded well after the event it
-reports (a permit filed years ago, a court ruling from 2016 added to the
-file this week): the changes feed sorts and displays by `event_date` when
-it's set, falling back to `date` otherwise, and the source line reads
-"added `<date>`" whenever the two differ, so a bulk-added event never reads
-as having just happened. Older, hand-written rows may leave it blank; every
-row the weekly-watch pipeline writes sets it (`src/watch/extract.py`
-requires it in the proposal schema). A milestone the pipeline writes (in a
-record file or `data/milestones.csv`) always uses the event date as its own
-date, never the date it was added.
+`event_date` (`YYYY`, `YYYY-MM` or `YYYY-MM-DD`) is the date of the
+real-world event `text` describes, as distinct from `date` (the day the row
+was added to this file, per this file's own convention -- unchanged). The
+two differ whenever a change is recorded well after the event it reports (a
+permit filed years ago, a court ruling from 2016 added to the file this
+week): the changes feed sorts and displays by `event_date` when it's set,
+falling back to `date` otherwise, and the source line reads "added
+`<date>`" whenever the two differ by more than 7 days -- or always, on a
+real-world row with no `event_date` at all, since there the displayed date
+is *only* the added date and the note is the one honest signal of that --
+so a bulk-added event never reads as having just happened. `src/watch/extract.py` requires
+it in every weekly-watch proposal's schema, and a milestone the pipeline
+writes (in a record file or `data/milestones.csv`) always uses the event
+date as its own date, never the date it was added.
+
+The owner's category rule (docs/briefs/dates-and-closed.md): a real-world
+category (`status`, `milestone`, `construction`, `retail`, `open_space`,
+`coming_up`) should always carry a real `event_date` -- `src/
+validate_records.py` warns, without failing CI, on one that doesn't, since
+CLAUDE.md's "a blank is better than a guess" outranks a hard block here:
+some rows genuinely have no discoverable event date anywhere (the row's own
+text, a linked milestone, its cited source, or -- for a retail row --
+`data/retail_confirmed.csv`), and a blank one should carry a matching entry
+in its record's own `open_questions` explaining what was checked. A
+record-maintenance category (`correction`, `coverage` -- the event is our
+own edit, not something that happened out there) sets `event_date` equal to
+`date`, or leaves it blank; anything else on one of those two categories is
+a hard validator problem, since there's no legitimate reason for it to
+differ. A blank real-world `event_date` still needs *some* date to sort and
+display by, so it falls back to `date` like every other blank one above --
+but `sitegen/pages.py`'s `lead_entry()` treats that fallback as "not
+actually a dated event" and skips it, so an unknown-timing row can never
+wrongly outrank a genuinely dated one for the one row (Changes and Costs on
+a record or site page) that stays visible while its box is collapsed.
 
 ## `data/retail_confirmed.csv`
 
@@ -439,6 +460,21 @@ footer's first nav row, never the main navigation -- retail is a facet of a
 record, not a separate product). A row that is an opening, announcement or
 closure with a date gets a matching `data/changelog.csv` row, `category:
 retail`.
+
+A `closed` tenant never counts toward a Retail box's header count, a
+category chip's count or the bar's "of N" (`sitegen/build.py`'s
+`current_tenant_count()`/`retail_chips()`, `docs/briefs/dates-and-closed.md`)
+-- those are always open-plus-announced ("current") figures, on a record or
+site page and on `/retail/` alike. A category whose only tenants are closed
+gets no chip at all. Closed tenants stay visible only in the list's own
+collapsed "Closed (n)" group at the end, whose own count follows whichever
+chip is active (the full closed count when none is) and hides entirely once
+the active filter leaves no closures -- both handled client-side by the
+same generic `.box` chip logic every other box uses (`sitegen/static/
+app.js`), keyed off a tenant `<li>`'s own `data-status` attribute, which no
+other box's items carry. The home page's site-card "N open · M coming" line
+(`sitegen/build.py`'s `tenant_status_counts()`) already excluded `closed`
+before this rule existed.
 
 ## `data/site_costs.csv`
 

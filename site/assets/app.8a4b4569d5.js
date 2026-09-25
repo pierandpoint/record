@@ -650,7 +650,8 @@
   var categorySummary = form.querySelector('[data-filter-summary]');
   var fields = {
     site: form.querySelector('#cf-site'), category: Array.prototype.slice.call(form.querySelectorAll('input[name="category"]')),
-    from: form.querySelector('#cf-from'), to: form.querySelector('#cf-to'), record: form.querySelector('#cf-record')
+    from: form.querySelector('#cf-from'), to: form.querySelector('#cf-to'), record: form.querySelector('#cf-record'),
+    datetype: Array.prototype.slice.call(form.querySelectorAll('input[name="datetype"]'))
   };
 
   // The category dropdown is a native <details>, so it already opens and closes on its own
@@ -674,23 +675,30 @@
   function readParams() {
     var params = new URLSearchParams(window.location.search);
     return { site: params.get('site') || '', category: params.getAll('category'),
-             from: params.get('from') || '', to: params.get('to') || '', record: params.get('record') || '' };
+             from: params.get('from') || '', to: params.get('to') || '', record: params.get('record') || '',
+             datetype: params.get('datetype') === 'added' ? 'added' : 'event' };
   }
   function applyToFields(v) {
     fields.site.value = v.site;
     fields.category.forEach(function (cb) { cb.checked = v.category.indexOf(cb.value) !== -1; });
     fields.from.value = v.from; fields.to.value = v.to;
     if (fields.record) fields.record.value = v.record;
+    fields.datetype.forEach(function (r) { r.checked = r.value === v.datetype; });
   }
   function currentValues() {
+    var checkedType = fields.datetype.filter(function (r) { return r.checked; })[0];
     return { site: fields.site.value, category: fields.category.filter(function (cb) { return cb.checked; }).map(function (cb) { return cb.value; }),
-             from: fields.from.value, to: fields.to.value, record: fields.record ? fields.record.value : '' };
+             from: fields.from.value, to: fields.to.value, record: fields.record ? fields.record.value : '',
+             datetype: checkedType ? checkedType.value : 'event' };
   }
   function matches(li, v) {
     if (v.site && li.getAttribute('data-site') !== v.site) return false;
     if (v.record && li.getAttribute('data-record') !== v.record) return false;
     if (v.category.length && v.category.indexOf(li.getAttribute('data-category')) === -1) return false;
-    var d = li.getAttribute('data-date');
+    // "When it happened" (default) reads data-date (the event date, falling back to the added
+    // date when none was recorded); "When we recorded it" reads data-added-date instead
+    // (docs/briefs/dates-and-closed.md).
+    var d = li.getAttribute(v.datetype === 'added' ? 'data-added-date' : 'data-date');
     if (v.from && d < v.from) return false;
     if (v.to && d > v.to) return false;
     return true;
@@ -703,7 +711,7 @@
       if (ok) shown++;
     });
     if (emptyNote) emptyNote.hidden = shown !== 0;
-    if (resetBtn) resetBtn.hidden = !(v.site || v.category.length || v.from || v.to || v.record);
+    if (resetBtn) resetBtn.hidden = !(v.site || v.category.length || v.from || v.to || v.record || v.datetype !== 'event');
     if (categorySummary) categorySummary.textContent = categoryLabel(v.category.length);
     var params = new URLSearchParams();
     if (v.site) params.set('site', v.site);
@@ -711,6 +719,7 @@
     if (v.from) params.set('from', v.from);
     if (v.to) params.set('to', v.to);
     if (v.record) params.set('record', v.record);
+    if (v.datetype !== 'event') params.set('datetype', v.datetype);
     var qs = params.toString();
     window.history.replaceState(null, '', window.location.pathname + (qs ? '?' + qs : ''));
   }
@@ -718,12 +727,12 @@
   applyToFields(readParams());
   filter();
   form.addEventListener('submit', function (e) { e.preventDefault(); filter(); });
-  [fields.site].concat(fields.category, [fields.from, fields.to]).forEach(function (el) {
+  [fields.site].concat(fields.category, [fields.from, fields.to], fields.datetype).forEach(function (el) {
     el.addEventListener('change', filter);
   });
   if (resetBtn) {
     resetBtn.addEventListener('click', function () {
-      applyToFields({ site: '', category: [], from: '', to: '', record: '' });
+      applyToFields({ site: '', category: [], from: '', to: '', record: '', datetype: 'event' });
       filter();
     });
   }
@@ -769,8 +778,13 @@
     // it, but there's nothing to "expand" back out of.
     var expanded = !hasBar;
 
+    // A closed tenant (data-status="closed", Retail only -- docs/briefs/dates-and-closed.md)
+    // never counts toward a chip's count, the header count or the bar's "of N": those are all
+    // current-tenant (open/announced) figures. No other box's items carry data-status at all,
+    // so isClosed() is always false there and every count below is unaffected.
+    function isClosed(el) { return el.getAttribute('data-status') === 'closed'; }
     function itemCount(cat) {
-      return items.filter(function (el) { return el.getAttribute('data-category') === cat; }).length;
+      return items.filter(function (el) { return el.getAttribute('data-category') === cat && !isClosed(el); }).length;
     }
     function chipLabel(cat) {
       var btn = chipButtons.filter(function (b) { return b.getAttribute('data-cat') === cat; })[0];
@@ -782,11 +796,20 @@
         var ok = activeCat ? el.getAttribute('data-category') === activeCat
                             : (expanded || (lead && el === leadEl));
         el.hidden = !ok;
-        if (ok) shown++;
+        if (ok && !isClosed(el)) shown++;
       });
       if (tail) tail.hidden = !(expanded || activeCat);
+      // The Closed group's own count follows the same filter as everything else (previously it
+      // stayed a static server-rendered number regardless of which chip was active): shown with
+      // its full count when no chip is selected, narrowed to just the active category's closed
+      // tenants when one is, and hidden entirely once that leaves nothing to show.
       list.querySelectorAll('.tenant-group, .tenant-closed').forEach(function (g) {
-        g.hidden = g.querySelectorAll('[data-box-item]:not([hidden])').length === 0;
+        var visible = g.querySelectorAll('[data-box-item]:not([hidden])').length;
+        g.hidden = visible === 0;
+        if (g.classList.contains('tenant-closed')) {
+          var summary = g.querySelector('summary');
+          if (summary) summary.textContent = 'Closed (' + visible + ')';
+        }
       });
       chipButtons.forEach(function (btn) {
         btn.setAttribute('aria-pressed', btn.getAttribute('data-cat') === activeCat ? 'true' : 'false');

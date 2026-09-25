@@ -300,6 +300,7 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .filter-dropdown-panel { position: absolute; top: calc(100% + 6px); left: 0; z-index: 5; display: flex; flex-direction: column; gap: 8px; min-width: 220px; padding: 14px 16px; background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, .16); }
 .filter-check { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 400; color: var(--paper-ink); cursor: pointer; white-space: nowrap; }
 .filter-check input { min-height: auto; width: auto; }
+.filter-radio-group { display: flex; gap: 14px; flex-wrap: wrap; min-height: 40px; align-items: center; }
 .changes-filters .btn { align-self: flex-end; }
 /* .btn itself sets display: inline-flex, which -- like .zoom-controls above -- overrides the
    browser's native [hidden] behaviour (an author display value always beats the UA stylesheet's
