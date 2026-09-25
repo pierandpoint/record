@@ -499,9 +499,22 @@ details.notes summary:hover .chevron { color: #9c6f34; }
    only clickable cue on an otherwise plain heading row (flagged directly against the shipped
    page). CSS-only content swap on [open], so it needs no JavaScript and updates the instant a
    native <details> toggles. */
-.box .chevron, details.notes summary .chevron { font: 500 13px var(--mono); color: var(--paper-brass); flex-shrink: 0; }
-.box .chevron::before, details.notes summary .chevron::before { content: "Show all ›"; }
-.box[open] > summary .chevron::before, details.notes[open] summary .chevron::before { content: "Hide ‹"; }
+.box .chevron, details.notes summary .chevron, details.costs-more summary .chevron { font: 500 13px var(--mono); color: var(--paper-brass); flex-shrink: 0; }
+.box .chevron::before, details.notes summary .chevron::before, details.costs-more summary .chevron::before { content: "Show all ›"; }
+.box[open] > summary .chevron::before, details.notes[open] summary .chevron::before, details.costs-more[open] summary .chevron::before { content: "Hide ‹"; }
+
+/* The costs table's own "+N more" toggle (site-ux follow-up): deliberately NOT the notes/box
+   bordered-card skin above -- reported directly that a rounded card right under the table read as
+   a separate, unrelated section. This instead reads as the table's own next row: no box, pulled up
+   to meet the table's bottom edge, and the "more" table below shares .costs's own row styling, so
+   opening it looks like the same table simply grew rather than a second thing appearing. */
+details.costs-more { margin: -12px 0 12px; }
+details.costs-more summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; cursor: pointer;
+                              list-style: none; padding: 10px 0; border-bottom: 1px solid var(--paper-line); font: 13px var(--mono); color: var(--paper-soft); }
+details.costs-more summary::-webkit-details-marker { display: none; }
+details.costs-more summary:hover { color: var(--paper-ink); }
+details.costs-more summary:hover .chevron { color: #9c6f34; }
+details.costs-more .costs { margin-top: 0; margin-bottom: 0; }
 
 /* retail tenants (data/retail_confirmed.csv, docs/briefs/retail-layer.md): site page section,
    record page section and the /retail/ directory all share this list markup. */
