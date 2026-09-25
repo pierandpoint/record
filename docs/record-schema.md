@@ -357,15 +357,36 @@ belongs in a milestone instead). Columns: `date`, `kind` (`added`,
 `correction` or `status`), `category` (`status`, `milestone`,
 `construction`, `retail`, `open_space`, `correction`, `coverage` or
 `coming_up`), `record_id` (optional, links the row to a record page),
-`summary`, `text` and `source`.
+`summary`, `text`, `source` and `event_date`.
 
-`summary` is one sentence, at most 140 characters, derived strictly from the
-row's own `text` -- no new facts, no new claims, and no more certainty than
-`text` itself supports. `src/validate_records.py` requires one on every row
-and fails a row over 140 characters. The changes pages (`/changes/`) show
-the date, a category chip, a site chip (derived from `record_id`, or "all
-sites" when blank), the record link and the summary; the full `text` sits
-behind a details disclosure.
+`summary` is one complete, plain-language sentence, at most 140 characters,
+derived strictly from the row's own `text` -- no new facts, no new claims,
+and no more certainty than `text` itself supports. It must not start with a
+record id or field name followed by a colon, must not join clauses with
+" -- ", and must end with terminal punctuation (`.`, `!`, `?`, or a closing
+quote/parenthesis after one) -- the tell of a mechanically-built summary
+(the record id, the field, `" -- "`, then the source text sliced at a fixed
+length, cutting mid-word) rather than a written sentence.
+`src/validate_records.py`'s `changelog_summary_problem()` enforces all of
+this on every row, and `src/watch/apply.py` runs the same check before a
+weekly-watch proposal is ever written, dropping one that fails it. The
+changes pages (`/changes/`) show the date, a category chip, a site chip
+(derived from `record_id`, or "all sites" when blank), the record link and
+the summary; the full `text` sits behind a details disclosure.
+
+`event_date` (`YYYY`, `YYYY-MM` or `YYYY-MM-DD`, optional) is the date of
+the real-world event `text` describes, as distinct from `date` (the day the
+row was added to this file, per this file's own convention -- unchanged).
+The two differ whenever a change is recorded well after the event it
+reports (a permit filed years ago, a court ruling from 2016 added to the
+file this week): the changes feed sorts and displays by `event_date` when
+it's set, falling back to `date` otherwise, and the source line reads
+"added `<date>`" whenever the two differ, so a bulk-added event never reads
+as having just happened. Older, hand-written rows may leave it blank; every
+row the weekly-watch pipeline writes sets it (`src/watch/extract.py`
+requires it in the proposal schema). A milestone the pipeline writes (in a
+record file or `data/milestones.csv`) always uses the event date as its own
+date, never the date it was added.
 
 ## `data/retail_confirmed.csv`
 
