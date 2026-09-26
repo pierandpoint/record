@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-25",
+ "generated": "2026-09-26",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -256,7 +256,7 @@
    {
     "amount_usd": 99907840,
     "what": "Revised/estimated construction cost on DBI site permit 201910073784 for Building F",
-    "kind": "construction",
+    "kind": "permit_valuation",
     "sources": [
      "src-watch-dbi-building-permits"
     ],
@@ -265,7 +265,7 @@
    {
     "amount_usd": 896904,
     "what": "Revised cost on DBI permit 202312293282, an architectural and MEP addendum revision for Mission Rock Building F",
-    "kind": "construction",
+    "kind": "permit_valuation",
     "sources": [
      "src-watch-dbi-building-permits-2"
     ],
@@ -1041,6 +1041,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-09-25",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "A DBI-sourced permit inside the record's own construction window keeps its place as a milestone; its cost entry's kind changes to permit_valuation, excluded from cost totals like a financing entry.",
+    "source": "docs/briefs/watch-rules.md",
+    "sources": [
+     {
+      "title": "docs/briefs/watch-rules.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8719C001",
+     "slug": "verde",
+     "name": "Verde",
+     "permalink": "https://pierandpoint.org/parcels/verde/",
+     "api": "https://pierandpoint.org/api/v1/records/verde.json"
+    },
+    "site": {
+     "slug": "mission-rock",
+     "name": "Mission Rock",
+     "short": "Mission Rock",
+     "url": "https://pierandpoint.org/sites/mission-rock/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-24",
     "kind": "added",

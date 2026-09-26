@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-25",
+ "generated": "2026-09-26",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -302,15 +302,6 @@
     "kind": "other",
     "scope": "record",
     "kind_note": "Design/consultant contracts awarded (tracked for LBE-participation reporting), not a total development or hard-construction figure."
-   },
-   {
-    "amount_usd": 225000,
-    "what": "Permitted cost of ground-floor tenant improvement at the Sophie Maxwell Building (retail display area, showroom, sales center, bathroom, support spaces), per OTC alterations permit 202601304958",
-    "kind": "construction",
-    "sources": [
-     "src-watch-dbi-building-permits-2"
-    ],
-    "date": "2026-03-27"
    }
   ],
   "milestones": [
@@ -1264,42 +1255,6 @@
     "relation": "tracked"
    },
    {
-    "date": "2026-03-27",
-    "date_label": "Mar 27, 2026",
-    "status": null,
-    "status_label": null,
-    "text": "OTC alterations permit 202601304958 issued (filed 2026-01-30) for a ground-floor tenant improvement at the Sophie Maxwell Building: buildout of retail display area, showroom, sales center, bathroom and support spaces",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-watch-dbi-building-permits-2",
-      "title": "Permit 202601304958 (issued) -- 1212 Maryland St",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202601304958",
-      "accessed": "2026-09-24"
-     }
-    ],
-    "source": "DBI (Building Permits)",
-    "origin": "record",
-    "category": "retail",
-    "category_label": "Retail",
-    "record": {
-     "id": "4232020",
-     "slug": "sophie-maxwell-building",
-     "name": "Sophie Maxwell Building",
-     "permalink": "https://pierandpoint.org/parcels/sophie-maxwell-building/",
-     "api": "https://pierandpoint.org/api/v1/records/sophie-maxwell-building.json"
-    },
-    "site": {
-     "slug": "potrero",
-     "name": "Potrero Power Station",
-     "short": "Potrero Station",
-     "url": "https://pierandpoint.org/sites/potrero/"
-    },
-    "relation": "tracked"
-   },
-   {
     "date": "2026-07-29",
     "date_label": "Jul 29, 2026",
     "status": "complete",
@@ -1384,6 +1339,35 @@
   ],
   "changes": [
    {
+    "date": "2026-09-25",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "One DBI-sourced permit event, outside the record's own construction window, moves from milestones to the new permits array; a second, inside the window, keeps its place as a construction-progress milestone. Neither carried a status field and this doesn't change the record's computed status.",
+    "source": "docs/briefs/watch-rules.md",
+    "sources": [
+     {
+      "title": "docs/briefs/watch-rules.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "4232020",
+     "slug": "sophie-maxwell-building",
+     "name": "Sophie Maxwell Building",
+     "permalink": "https://pierandpoint.org/parcels/sophie-maxwell-building/",
+     "api": "https://pierandpoint.org/api/v1/records/sophie-maxwell-building.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
@@ -1416,7 +1400,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "status: issued\nstatus_date: 2026-03-27T13:14:24.000",
+    "text": "status: issued status_date: 2026-03-27T13:14:24.000",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202601304958",
     "sources": [
      {

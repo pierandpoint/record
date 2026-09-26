@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-25",
+ "generated": "2026-09-26",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -217,7 +217,7 @@
    {
     "amount_usd": 78083460,
     "what": "Estimated/revised construction cost stated on new-construction site permit 201910285744 for Building B",
-    "kind": "construction",
+    "kind": "permit_valuation",
     "sources": [
      "src-watch-dbi-building-permits"
     ],
@@ -226,7 +226,7 @@
    {
     "amount_usd": 32500000,
     "what": "Tenant improvement build-out of floors 5, 6, 7 and 8, including architectural, MEP and structural work, a full prep kitchen and satellite food service stations (permit 202511079166)",
-    "kind": "construction",
+    "kind": "permit_valuation",
     "sources": [
      "src-watch-dbi-building-permits-2"
     ],
@@ -235,29 +235,11 @@
    {
     "amount_usd": 11245700,
     "what": "Revised cost on approved permit 202412247382 for office tenant improvement on levels 3 and 4 (estimated cost at filing was $6,583,515)",
-    "kind": "construction",
+    "kind": "permit_valuation",
     "sources": [
      "src-watch-dbi-building-permits-4"
     ],
     "date": "2025-05-19"
-   },
-   {
-    "amount_usd": 1750000,
-    "what": "Permit 202509266165: alteration of existing floor plates on levels 6, 7 and 8, creating floor openings for future tenant improvements (revised cost)",
-    "kind": "construction",
-    "sources": [
-     "src-watch-dbi-building-permits-5"
-    ],
-    "date": "2026-01-13"
-   },
-   {
-    "amount_usd": 221000,
-    "what": "Estimated/revised cost of alteration permit 202410253714 for partial 4th floor slab demolition and smoke barrier construction",
-    "kind": "construction",
-    "sources": [
-     "src-watch-dbi-building-permits-7"
-    ],
-    "date": "2025-03-07"
    }
   ],
   "milestones": [
@@ -911,42 +893,6 @@
     "relation": "tracked"
    },
    {
-    "date": "2025-03-07",
-    "date_label": "Mar 7, 2025",
-    "status": null,
-    "status_label": null,
-    "text": "Alteration permit approved to demolish a portion of the existing 4th floor slab for a future stair connection between levels 3 and 4, including a 2-hour rated smoke barrier around the new floor opening (DBI permit 202410253714, filed 2024-11-20)",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-watch-dbi-building-permits-7",
-      "title": "Permit 202410253714 (approved) -- 1090 Dr Maya Angelou Ln",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202410253714",
-      "accessed": "2026-09-24"
-     }
-    ],
-    "source": "DBI (Building Permits)",
-    "origin": "record",
-    "category": "retail",
-    "category_label": "Retail",
-    "record": {
-     "id": "8719C003",
-     "slug": "building-b",
-     "name": "Building B",
-     "permalink": "https://pierandpoint.org/parcels/building-b/",
-     "api": "https://pierandpoint.org/api/v1/records/building-b.json"
-    },
-    "site": {
-     "slug": "mission-rock",
-     "name": "Mission Rock",
-     "short": "Mission Rock",
-     "url": "https://pierandpoint.org/sites/mission-rock/"
-    },
-    "relation": "tracked"
-   },
-   {
     "date": "2025-05-16",
     "date_label": "May 16, 2025",
     "status": null,
@@ -984,78 +930,6 @@
     "relation": "tracked"
    },
    {
-    "date": "2025-05-19",
-    "date_label": "May 19, 2025",
-    "status": null,
-    "status_label": null,
-    "text": "Building permit approved for office tenant improvement (non-structural partitions, ceilings, lighting, MEP, AV/IT) on levels 3 and 4, including new stepped aisle and stepped seating in a slab opening",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-watch-dbi-building-permits-4",
-      "title": "Permit 202412247382 (approved) -- 1090 Dr Maya Angelou Ln",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202412247382",
-      "accessed": "2026-09-24"
-     }
-    ],
-    "source": "DBI (Building Permits)",
-    "origin": "record",
-    "category": "retail",
-    "category_label": "Retail",
-    "record": {
-     "id": "8719C003",
-     "slug": "building-b",
-     "name": "Building B",
-     "permalink": "https://pierandpoint.org/parcels/building-b/",
-     "api": "https://pierandpoint.org/api/v1/records/building-b.json"
-    },
-    "site": {
-     "slug": "mission-rock",
-     "name": "Mission Rock",
-     "short": "Mission Rock",
-     "url": "https://pierandpoint.org/sites/mission-rock/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2025-08-06",
-    "date_label": "Aug 6, 2025",
-    "status": null,
-    "status_label": null,
-    "text": "DBI over-the-counter alteration permit 202506209141 approved for a revision to the Golden State Warriors tenant improvement (base building bathrooms), referencing permit application 202412247382 and Port permit B-2024-0274",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-watch-dbi-building-permits-6",
-      "title": "Permit 202506209141 (approved) -- 1090 Dr Maya Angelou Ln",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202506209141",
-      "accessed": "2026-09-24"
-     }
-    ],
-    "source": "DBI (Building Permits)",
-    "origin": "record",
-    "category": "retail",
-    "category_label": "Retail",
-    "record": {
-     "id": "8719C003",
-     "slug": "building-b",
-     "name": "Building B",
-     "permalink": "https://pierandpoint.org/parcels/building-b/",
-     "api": "https://pierandpoint.org/api/v1/records/building-b.json"
-    },
-    "site": {
-     "slug": "mission-rock",
-     "name": "Mission Rock",
-     "short": "Mission Rock",
-     "url": "https://pierandpoint.org/sites/mission-rock/"
-    },
-    "relation": "tracked"
-   },
-   {
     "date": "2025-11-20",
     "date_label": "Nov 20, 2025",
     "status": null,
@@ -1077,114 +951,6 @@
     "origin": "record",
     "category": "milestone",
     "category_label": "Milestone",
-    "record": {
-     "id": "8719C003",
-     "slug": "building-b",
-     "name": "Building B",
-     "permalink": "https://pierandpoint.org/parcels/building-b/",
-     "api": "https://pierandpoint.org/api/v1/records/building-b.json"
-    },
-    "site": {
-     "slug": "mission-rock",
-     "name": "Mission Rock",
-     "short": "Mission Rock",
-     "url": "https://pierandpoint.org/sites/mission-rock/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2025-12-03",
-    "date_label": "Dec 3, 2025",
-    "status": null,
-    "status_label": null,
-    "text": "OTC alterations permit issued to demolish existing piping and sprinkler components for a new slab opening (permit 202512030797, referencing PA #202509266165); existing and proposed use office",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-watch-dbi-building-permits-3",
-      "title": "Permit 202512030797 (issued) -- 1090 Dr Maya Angelou Ln",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202512030797",
-      "accessed": "2026-09-24"
-     }
-    ],
-    "source": "DBI (Building Permits)",
-    "origin": "record",
-    "category": "retail",
-    "category_label": "Retail",
-    "record": {
-     "id": "8719C003",
-     "slug": "building-b",
-     "name": "Building B",
-     "permalink": "https://pierandpoint.org/parcels/building-b/",
-     "api": "https://pierandpoint.org/api/v1/records/building-b.json"
-    },
-    "site": {
-     "slug": "mission-rock",
-     "name": "Mission Rock",
-     "short": "Mission Rock",
-     "url": "https://pierandpoint.org/sites/mission-rock/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2025-12-16",
-    "date_label": "Dec 16, 2025",
-    "status": null,
-    "status_label": null,
-    "text": "Permit filed for tenant improvements on the 5th, 6th, 7th and 8th floors of the existing 8-story office building, including a full prep kitchen and change of occupancy from B to A-2 on level 5 and B to A-3 on level 7",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-watch-dbi-building-permits-2",
-      "title": "Permit 202511079166 (approved) -- 1089 03rd St",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202511079166",
-      "accessed": "2026-09-24"
-     }
-    ],
-    "source": "DBI (Building Permits)",
-    "origin": "record",
-    "category": "retail",
-    "category_label": "Retail",
-    "record": {
-     "id": "8719C003",
-     "slug": "building-b",
-     "name": "Building B",
-     "permalink": "https://pierandpoint.org/parcels/building-b/",
-     "api": "https://pierandpoint.org/api/v1/records/building-b.json"
-    },
-    "site": {
-     "slug": "mission-rock",
-     "name": "Mission Rock",
-     "short": "Mission Rock",
-     "url": "https://pierandpoint.org/sites/mission-rock/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2026-01-13",
-    "date_label": "Jan 13, 2026",
-    "status": null,
-    "status_label": null,
-    "text": "Building permit 202509266165 approved (filed October 10, 2025) for alteration of existing floor plates on levels 6, 7 and 8 — demolishing slab to create floor openings for future tenant improvements",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-watch-dbi-building-permits-5",
-      "title": "Permit 202509266165 (approved) -- 1089 03rd St",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202509266165",
-      "accessed": "2026-09-24"
-     }
-    ],
-    "source": "DBI (Building Permits)",
-    "origin": "record",
-    "category": "retail",
-    "category_label": "Retail",
     "record": {
      "id": "8719C003",
      "slug": "building-b",
@@ -1271,6 +1037,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-09-25",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Six DBI-sourced permit events, outside the record's own construction window, move from milestones to the new permits array; none carried a status field and this doesn't change the record's computed status.",
+    "source": "docs/briefs/watch-rules.md",
+    "sources": [
+     {
+      "title": "docs/briefs/watch-rules.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8719C003",
+     "slug": "building-b",
+     "name": "Building B",
+     "permalink": "https://pierandpoint.org/parcels/building-b/",
+     "api": "https://pierandpoint.org/api/v1/records/building-b.json"
+    },
+    "site": {
+     "slug": "mission-rock",
+     "name": "Mission Rock",
+     "short": "Mission Rock",
+     "url": "https://pierandpoint.org/sites/mission-rock/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-24",
     "kind": "added",
@@ -1536,7 +1331,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "status: approved\nstatus_date: 2026-01-13T10:39:33.000\nfiled_date: 2025-10-10T14:25:13.000\napproved_date: 2026-01-13T10:39:33.000\ndescription: proj#25-0621-mou port: alteration to existing floor plates on level 6,7,& 8.",
+    "text": "status: approved status_date: 2026-01-13T10:39:33.000 filed_date: 2025-10-10T14:25:13.000 approved_date: 2026-01-13T10:39:33.000 description: proj#25-0621-mou port: alteration to existing floor plates on level 6,7,& 8.",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202509266165",
     "sources": [
      {
@@ -1565,7 +1360,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "estimated_cost: 1750000.0\nrevised_cost: 1750000.0",
+    "text": "estimated_cost: 1750000.0 revised_cost: 1750000.0",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202509266165",
     "sources": [
      {

@@ -31,47 +31,19 @@
       "approximate": true
     },
     {
-      "date": "2025-10-31",
-      "text": "Building permit issued for excavation and shoring of tunnels under the podium slab to replace plumbing main trunk lines",
-      "sources": [
-        "src-watch-dbi-building-permits-5"
-      ],
-      "status": "under_construction",
-      "expected": false
-    },
-    {
-      "date": "2022-04-11",
-      "text": "Alterations permit 202201286910 (laundry room structural repairs, roofing replacement, mechanical revisions) recorded as complete",
-      "sources": [
-        "src-watch-dbi-building-permits-6"
-      ],
-      "expected": false
-    },
-    {
-      "date": "2020-07-14",
-      "text": "Building permit for ground-floor fitness studio tenant improvement recorded as complete",
-      "sources": [
-        "src-watch-dbi-building-permits-7"
-      ],
-      "status": "complete",
-      "expected": false
-    },
-    {
       "date": "2017-02-13",
       "text": "Permit 201611183132 for a solar hot water heating system recorded complete",
       "sources": [
         "src-watch-dbi-building-permits-8"
       ],
-      "status": "complete",
       "expected": false
     },
     {
-      "date": "2021-02-17",
-      "text": "Ground-floor tenant improvement for a new cafe completed (DBI permit 201912200102, issued 2020-10-26)",
+      "date": "2017-02-13",
+      "text": "Permit 201612205457 to clarify the support structure of the solar hot water storage tank recorded complete",
       "sources": [
-        "src-watch-dbi-building-permits-11"
+        "src-watch-dbi-building-permits-12"
       ],
-      "status": "complete",
       "expected": false
     }
   ],
@@ -79,7 +51,7 @@
     {
       "amount_usd": 75000,
       "what": "Interior tenant improvement permit (new cabinetry, non-bearing walls, partitions, break room, floors, ceiling, mechanical and electrical work) for medical/dental clinic space at 1365 04th St",
-      "kind": "construction",
+      "kind": "permit_valuation",
       "sources": [
         "src-watch-dbi-building-permits"
       ],
@@ -88,7 +60,7 @@
     {
       "amount_usd": 175000,
       "what": "Ground-floor tenant improvement converting retail space to a food service establishment (permit 202203099583)",
-      "kind": "construction",
+      "kind": "permit_valuation",
       "sources": [
         "src-watch-dbi-building-permits-2"
       ],
@@ -97,7 +69,7 @@
     {
       "amount_usd": 600000,
       "what": "Interior tenant improvement permit (restrooms, breakroom, teller line, doors, millwork, flooring and MEP) for ground-floor space",
-      "kind": "construction",
+      "kind": "permit_valuation",
       "sources": [
         "src-watch-dbi-building-permits-4"
       ],
@@ -106,25 +78,16 @@
     {
       "amount_usd": 8000000,
       "what": "Permit 202506037829: excavate and shore tunnels beneath the pile-supported podium slab to replace plumbing main trunk lines at 588 Mission Bay Blvd North (revised cost)",
-      "kind": "construction",
+      "kind": "permit_valuation",
       "sources": [
         "src-watch-dbi-building-permits-5"
       ],
       "date": "2025-10-31"
     },
     {
-      "amount_usd": 350000,
-      "what": "Over-the-counter alterations permit 202201286910: repairs to existing laundry room including structural repairs, replacement of damaged roofing and revisions to mechanical system at 588 Mission Bay Blvd North",
-      "kind": "construction",
-      "sources": [
-        "src-watch-dbi-building-permits-6"
-      ],
-      "date": "2022-01-28"
-    },
-    {
       "amount_usd": 300000,
       "what": "Tenant improvement for ground-floor fitness studio with retail (install HVAC, two ADA bathrooms, workout studio, lighting and AV systems)",
-      "kind": "construction",
+      "kind": "permit_valuation",
       "sources": [
         "src-watch-dbi-building-permits-7"
       ],
@@ -133,7 +96,7 @@
     {
       "amount_usd": 310000,
       "what": "Installation of a solar hot water heating system at 588 Mission Bay Blvd North (permit 201611183132)",
-      "kind": "construction",
+      "kind": "permit_valuation",
       "sources": [
         "src-watch-dbi-building-permits-8"
       ],
@@ -142,20 +105,11 @@
     {
       "amount_usd": 185000,
       "what": "Revised cost of an over-the-counter alterations permit (202006158766) to install a demising partition dividing an existing vacant ground-floor retail space into two retail spaces",
-      "kind": "construction",
+      "kind": "permit_valuation",
       "sources": [
         "src-watch-dbi-building-permits-10"
       ],
       "date": "2020-08-20"
-    },
-    {
-      "amount_usd": 400000,
-      "what": "Interior ground-level tenant improvement for a new cafe (ground floor of the building), per DBI permit 201912200102",
-      "kind": "construction",
-      "sources": [
-        "src-watch-dbi-building-permits-11"
-      ],
-      "date": "2020-10-26"
     }
   ],
   "facts": [
@@ -341,6 +295,83 @@
       "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
       "accessed": "2026-09-24",
       "overview": true
+    },
+    {
+      "id": "src-watch-dbi-building-permits-12",
+      "title": "Permit 201612205457 (complete) -- 588 Mission Bay Blvd North Bl",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201612205457",
+      "accessed": "2026-09-26"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-13",
+      "title": "Permit 202103116427 (issued) -- 1385 04th St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202103116427",
+      "accessed": "2026-09-26"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-14",
+      "title": "Permit 202112224867 (complete) -- 540 Mission Bay Blvd North Bl",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202112224867",
+      "accessed": "2026-09-26"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-15",
+      "title": "Permit 201905079905 (complete) -- 1335 04th St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201905079905",
+      "accessed": "2026-09-26"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-16",
+      "title": "Permit 201912098992 (complete) -- 540 Mission Bay Blvd North Bl",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201912098992",
+      "accessed": "2026-09-26"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-17",
+      "title": "Permit 202012080543 (complete) -- 1385 04th St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202012080543",
+      "accessed": "2026-09-26"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-18",
+      "title": "Permit 202002134406 (complete) -- 1375 04th St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202002134406",
+      "accessed": "2026-09-26"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-19",
+      "title": "Permit 202206146325 (issued) -- 588 Mission Bay Blvd North Bl",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202206146325",
+      "accessed": "2026-09-26"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-20",
+      "title": "Permit 201811085368 (complete) -- 588 Mission Bay Blvd North Bl",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201811085368",
+      "accessed": "2026-09-26"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-21",
+      "title": "Permit 202012281782 (issued) -- 1385 04th St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202012281782",
+      "accessed": "2026-09-26"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-22",
+      "title": "Permit 202206247088 (complete) -- 588 Mission Bay Blvd North Bl",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202206247088",
+      "accessed": "2026-09-26"
     }
   ],
   "open_questions": [
@@ -350,5 +381,162 @@
     "Blue Bottle Coffee's confirmed opening date is not given by any source found (status: announced).",
     "No date found for Blue Bottle Coffee's announced opening (588 Mission Bay Blvd North): the only source is a DBI sign permit, whose own text (a one-line sign description) carries no date; retail_confirmed.csv's own opened field is blank, as expected for an announced tenant with no confirmed opening yet."
   ],
-  "last_verified": "2026-09-24"
+  "last_verified": "2026-09-26",
+  "permits": [
+    {
+      "permit_number": "202506037829",
+      "permit_type": "grading or excavation permit",
+      "description": "Building permit issued for excavation and shoring of tunnels under the podium slab to replace plumbing main trunk lines",
+      "issued_date": "2025-10-31",
+      "sources": [
+        "src-watch-dbi-building-permits-5"
+      ]
+    },
+    {
+      "permit_number": "202201286910",
+      "permit_type": "additions alterations or repairs",
+      "description": "Alterations permit 202201286910 (laundry room structural repairs, roofing replacement, mechanical revisions) recorded as complete",
+      "completed_date": "2022-04-11",
+      "valuation": 350000,
+      "sources": [
+        "src-watch-dbi-building-permits-6"
+      ]
+    },
+    {
+      "permit_number": "201905302080",
+      "permit_type": "additions alterations or repairs",
+      "description": "Building permit for ground-floor fitness studio tenant improvement recorded as complete",
+      "completed_date": "2020-07-14",
+      "sources": [
+        "src-watch-dbi-building-permits-7"
+      ]
+    },
+    {
+      "permit_number": "201912200102",
+      "permit_type": "additions alterations or repairs",
+      "description": "Ground-floor tenant improvement for a new cafe completed (DBI permit 201912200102, issued 2020-10-26)",
+      "completed_date": "2021-02-17",
+      "valuation": 400000,
+      "sources": [
+        "src-watch-dbi-building-permits-11"
+      ]
+    },
+    {
+      "permit_number": "202103116427",
+      "permit_type": "otc alterations permit",
+      "description": "Over-the-counter alterations permit 202103116427 issued for as-built relocation of 3 LED wall horn/strobes",
+      "filed_date": "2021-03-11",
+      "issued_date": "2021-03-26",
+      "valuation": 528.0,
+      "sources": [
+        "src-watch-dbi-building-permits-13"
+      ]
+    },
+    {
+      "permit_number": "202112224867",
+      "permit_type": "otc alterations permit",
+      "description": "Permit 202112224867, an OTC alterations permit, recorded complete",
+      "filed_date": "2021-12-22",
+      "issued_date": "2021-12-29",
+      "completed_date": "2022-01-07",
+      "valuation": 1.0,
+      "sources": [
+        "src-watch-dbi-building-permits-14"
+      ]
+    },
+    {
+      "permit_number": "201905079905",
+      "permit_type": "otc alterations permit",
+      "description": "ground fl - existing srpinkler system ti. relocated 36 sprinklers, added 20 sprinklers",
+      "filed_date": "2019-05-07",
+      "issued_date": "2019-05-07",
+      "completed_date": "2019-10-16",
+      "valuation": 28000.0,
+      "sources": [
+        "src-watch-dbi-building-permits-15"
+      ]
+    },
+    {
+      "permit_number": "201912098992",
+      "permit_type": "otc alterations permit",
+      "description": "addition of auto sliding door and floor finish upgrades at 1st fl. main entry of (e) building constructed in 2015",
+      "filed_date": "2019-12-09",
+      "issued_date": "2020-01-03",
+      "completed_date": "2022-01-07",
+      "valuation": 10000.0,
+      "sources": [
+        "src-watch-dbi-building-permits-16"
+      ]
+    },
+    {
+      "permit_number": "202012080543",
+      "permit_type": "otc alterations permit",
+      "description": "1st floor: add (1) one and relocae eighteen (18) sprinklers to conform with the wall/ceiling layout of the tenant improvement. ref # 2019-12-20-0102",
+      "filed_date": "2020-12-08",
+      "issued_date": "2021-01-12",
+      "completed_date": "2021-02-12",
+      "valuation": 4575.0,
+      "sources": [
+        "src-watch-dbi-building-permits-17"
+      ]
+    },
+    {
+      "permit_number": "202002134406",
+      "permit_type": "otc alterations permit",
+      "description": "fire sprinklers: relocate pendent sprinkler heads to meet new ceiling hights and walls n/a maher",
+      "filed_date": "2020-02-13",
+      "issued_date": "2020-02-19",
+      "completed_date": "2020-04-29",
+      "valuation": 15000.0,
+      "sources": [
+        "src-watch-dbi-building-permits-18"
+      ]
+    },
+    {
+      "permit_number": "202206146325",
+      "permit_type": "otc alterations permit",
+      "description": "provide and install one 4-ton heat pump, run refridgerant lines, ductwork, grd and thermostat. ref pa 202203199583",
+      "filed_date": "2022-06-14",
+      "issued_date": "2022-06-23",
+      "valuation": 15000.0,
+      "sources": [
+        "src-watch-dbi-building-permits-19"
+      ]
+    },
+    {
+      "permit_number": "201811085368",
+      "permit_type": "otc alterations permit",
+      "description": "to comply with nov #201898971. replace previously removed insulation and fire rated drywall in units #135, 134, 136, and common hallway. 2' flood cut.",
+      "filed_date": "2018-11-08",
+      "issued_date": "2018-11-08",
+      "completed_date": "2018-12-04",
+      "valuation": 12000.0,
+      "sources": [
+        "src-watch-dbi-building-permits-20"
+      ]
+    },
+    {
+      "permit_number": "202012281782",
+      "permit_type": "otc alterations permit",
+      "description": "ti# 2019-1220-0102 modify existing fire alarm system. add (10 booster power supply, (1) sychronization output module, (1) smoke detector, (3) duct detectors, (3) control relays, (4) wall horn/strobes, (1) wall strobe",
+      "filed_date": "2020-12-28",
+      "issued_date": "2021-01-06",
+      "valuation": 16140.0,
+      "sources": [
+        "src-watch-dbi-building-permits-21"
+      ]
+    },
+    {
+      "permit_number": "202206247088",
+      "permit_type": "otc alterations permit",
+      "description": "g/f: t.i.: add 4 horn/strove fire alarms - ceiling mounted to (e) system. ref pa202203099583.",
+      "filed_date": "2022-06-24",
+      "issued_date": "2022-06-24",
+      "completed_date": "2022-08-12",
+      "valuation": 15476.0,
+      "sources": [
+        "src-watch-dbi-building-permits-22"
+      ]
+    }
+  ]
 }

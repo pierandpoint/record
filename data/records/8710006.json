@@ -50,23 +50,6 @@
       "approximate": true
     },
     {
-      "date": "2020-01-10",
-      "text": "DBI over-the-counter alterations permit 201811307166 -- an AT&T modification to a temporary site (remove and replace 6 existing antennas with 6 new antennas, install 6 new RRUs and other small equipment) -- filed Nov 30, 2018, issued Dec 20, 2019, and recorded complete",
-      "sources": [
-        "src-watch-dbi-building-permits"
-      ],
-      "status": "complete",
-      "expected": false
-    },
-    {
-      "date": "2013-07-12",
-      "text": "DBI issued over-the-counter alterations permit 201306179714 at 385 Channel for \"demolition of portion of building (warehouse)\" with a reported cost of $120,000; the permit was filed June 17, 2013, approved and issued July 12, 2013, and its status was later recorded as expired as of October 20, 2017",
-      "sources": [
-        "src-watch-dbi-building-permits-2"
-      ],
-      "expected": false
-    },
-    {
       "date": "2019-05-17",
       "text": "DBI demolition permit 201712055462, to 'demolish 1 story storage bldg' at 385 Channel, is recorded as complete (filed Dec 5, 2017; approved Feb 16, 2018; issued Feb 22, 2018), clearing the one-story warehouse structure from the parcel",
       "sources": [
@@ -87,27 +70,9 @@
   ],
   "costs": [
     {
-      "amount_usd": 37000,
-      "what": "Revised cost of DBI permit 201811307166 for AT&T antenna replacement and equipment installation at the site",
-      "kind": "construction",
-      "sources": [
-        "src-watch-dbi-building-permits"
-      ],
-      "date": "2019-12-20"
-    },
-    {
-      "amount_usd": 120000,
-      "what": "Reported cost on DBI permit 201306179714 for demolition of a portion of a warehouse building at 385 Channel (permit later expired)",
-      "kind": "construction",
-      "sources": [
-        "src-watch-dbi-building-permits-2"
-      ],
-      "date": "2013"
-    },
-    {
       "amount_usd": 179000,
       "what": "Demolition of a one-story storage building at 385 Channel under DBI permit 201712055462 (estimated and revised cost both $179,000)",
-      "kind": "construction",
+      "kind": "permit_valuation",
       "sources": [
         "src-watch-dbi-building-permits-3"
       ],
@@ -295,5 +260,27 @@
     "No cost, budget or subsidy figures for Block 12 West were found in any source reviewed.",
     "No construction-start or completion date has been found for either half of the subdivided parcel, and no expected-completion milestone has been added (2026-09-20 pass): the only whole-plan-area date in OCII's own documents is the Mission Bay South Redevelopment Plan's own 30-year administrative term (Ordinance No. 335-98, effective from Nov 2, 1998), which sets when OCII's authority under the Plan ends, not when a project actually gets built -- using it as a stand-in for a construction-buildout target would misrepresent an undeveloped, still-unentitled parcel as complete in about two years. Left on the 2038+ cap until a real entitlement/construction schedule exists."
   ],
-  "last_verified": "2026-09-24"
+  "last_verified": "2026-09-24",
+  "permits": [
+    {
+      "permit_number": "201811307166",
+      "permit_type": "otc alterations permit",
+      "description": "DBI over-the-counter alterations permit 201811307166 -- an AT&T modification to a temporary site (remove and replace 6 existing antennas with 6 new antennas, install 6 new RRUs and other small equipment) -- filed Nov 30, 2018, issued Dec 20, 2019, and recorded complete",
+      "completed_date": "2020-01-10",
+      "valuation": 37000,
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ]
+    },
+    {
+      "permit_number": "201306179714",
+      "permit_type": "otc alterations permit",
+      "description": "DBI issued over-the-counter alterations permit 201306179714 at 385 Channel for \"demolition of portion of building (warehouse)\" with a reported cost of $120,000; the permit was filed June 17, 2013, approved and issued July 12, 2013, and its status was later recorded as expired as of October 20, 2017",
+      "issued_date": "2013-07-12",
+      "valuation": 120000,
+      "sources": [
+        "src-watch-dbi-building-permits-2"
+      ]
+    }
+  ]
 }

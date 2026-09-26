@@ -184,54 +184,6 @@
         "src-watch-dbi-building-permits"
       ],
       "expected": false
-    },
-    {
-      "date": "2025-12-16",
-      "text": "Permit filed for tenant improvements on the 5th, 6th, 7th and 8th floors of the existing 8-story office building, including a full prep kitchen and change of occupancy from B to A-2 on level 5 and B to A-3 on level 7",
-      "sources": [
-        "src-watch-dbi-building-permits-2"
-      ],
-      "expected": false
-    },
-    {
-      "date": "2025-12-03",
-      "text": "OTC alterations permit issued to demolish existing piping and sprinkler components for a new slab opening (permit 202512030797, referencing PA #202509266165); existing and proposed use office",
-      "sources": [
-        "src-watch-dbi-building-permits-3"
-      ],
-      "expected": false
-    },
-    {
-      "date": "2025-05-19",
-      "text": "Building permit approved for office tenant improvement (non-structural partitions, ceilings, lighting, MEP, AV/IT) on levels 3 and 4, including new stepped aisle and stepped seating in a slab opening",
-      "sources": [
-        "src-watch-dbi-building-permits-4"
-      ],
-      "expected": false
-    },
-    {
-      "date": "2026-01-13",
-      "text": "Building permit 202509266165 approved (filed October 10, 2025) for alteration of existing floor plates on levels 6, 7 and 8 — demolishing slab to create floor openings for future tenant improvements",
-      "sources": [
-        "src-watch-dbi-building-permits-5"
-      ],
-      "expected": false
-    },
-    {
-      "date": "2025-08-06",
-      "text": "DBI over-the-counter alteration permit 202506209141 approved for a revision to the Golden State Warriors tenant improvement (base building bathrooms), referencing permit application 202412247382 and Port permit B-2024-0274",
-      "sources": [
-        "src-watch-dbi-building-permits-6"
-      ],
-      "expected": false
-    },
-    {
-      "date": "2025-03-07",
-      "text": "Alteration permit approved to demolish a portion of the existing 4th floor slab for a future stair connection between levels 3 and 4, including a 2-hour rated smoke barrier around the new floor opening (DBI permit 202410253714, filed 2024-11-20)",
-      "sources": [
-        "src-watch-dbi-building-permits-7"
-      ],
-      "expected": false
     }
   ],
   "costs": [
@@ -260,7 +212,7 @@
     {
       "amount_usd": 78083460,
       "what": "Estimated/revised construction cost stated on new-construction site permit 201910285744 for Building B",
-      "kind": "construction",
+      "kind": "permit_valuation",
       "sources": [
         "src-watch-dbi-building-permits"
       ],
@@ -269,7 +221,7 @@
     {
       "amount_usd": 32500000,
       "what": "Tenant improvement build-out of floors 5, 6, 7 and 8, including architectural, MEP and structural work, a full prep kitchen and satellite food service stations (permit 202511079166)",
-      "kind": "construction",
+      "kind": "permit_valuation",
       "sources": [
         "src-watch-dbi-building-permits-2"
       ],
@@ -278,29 +230,11 @@
     {
       "amount_usd": 11245700,
       "what": "Revised cost on approved permit 202412247382 for office tenant improvement on levels 3 and 4 (estimated cost at filing was $6,583,515)",
-      "kind": "construction",
+      "kind": "permit_valuation",
       "sources": [
         "src-watch-dbi-building-permits-4"
       ],
       "date": "2025-05-19"
-    },
-    {
-      "amount_usd": 1750000,
-      "what": "Permit 202509266165: alteration of existing floor plates on levels 6, 7 and 8, creating floor openings for future tenant improvements (revised cost)",
-      "kind": "construction",
-      "sources": [
-        "src-watch-dbi-building-permits-5"
-      ],
-      "date": "2026-01-13"
-    },
-    {
-      "amount_usd": 221000,
-      "what": "Estimated/revised cost of alteration permit 202410253714 for partial 4th floor slab demolition and smoke barrier construction",
-      "kind": "construction",
-      "sources": [
-        "src-watch-dbi-building-permits-7"
-      ],
-      "date": "2025-03-07"
     }
   ],
   "facts": [
@@ -730,5 +664,63 @@
     "mission-rock-phase1-port-capital-advance-2023",
     "mission-rock-cfd-bonds-2021",
     "mission-rock-cfd-bonds-2023"
+  ],
+  "permits": [
+    {
+      "permit_number": "202511079166",
+      "permit_type": "additions alterations or repairs",
+      "description": "Permit filed for tenant improvements on the 5th, 6th, 7th and 8th floors of the existing 8-story office building, including a full prep kitchen and change of occupancy from B to A-2 on level 5 and B to A-3 on level 7",
+      "filed_date": "2025-12-16",
+      "sources": [
+        "src-watch-dbi-building-permits-2"
+      ]
+    },
+    {
+      "permit_number": "202512030797",
+      "permit_type": "otc alterations permit",
+      "description": "OTC alterations permit issued to demolish existing piping and sprinkler components for a new slab opening (permit 202512030797, referencing PA #202509266165); existing and proposed use office",
+      "issued_date": "2025-12-03",
+      "sources": [
+        "src-watch-dbi-building-permits-3"
+      ]
+    },
+    {
+      "permit_number": "202412247382",
+      "permit_type": "additions alterations or repairs",
+      "description": "Building permit approved for office tenant improvement (non-structural partitions, ceilings, lighting, MEP, AV/IT) on levels 3 and 4, including new stepped aisle and stepped seating in a slab opening",
+      "issued_date": "2025-05-19",
+      "sources": [
+        "src-watch-dbi-building-permits-4"
+      ]
+    },
+    {
+      "permit_number": "202509266165",
+      "permit_type": "additions alterations or repairs",
+      "description": "Building permit 202509266165 approved (filed October 10, 2025) for alteration of existing floor plates on levels 6, 7 and 8 — demolishing slab to create floor openings for future tenant improvements",
+      "filed_date": "2026-01-13",
+      "valuation": 1750000,
+      "sources": [
+        "src-watch-dbi-building-permits-5"
+      ]
+    },
+    {
+      "permit_number": "202506209141",
+      "permit_type": "otc alterations permit",
+      "description": "DBI over-the-counter alteration permit 202506209141 approved for a revision to the Golden State Warriors tenant improvement (base building bathrooms), referencing permit application 202412247382 and Port permit B-2024-0274",
+      "issued_date": "2025-08-06",
+      "sources": [
+        "src-watch-dbi-building-permits-6"
+      ]
+    },
+    {
+      "permit_number": "202410253714",
+      "permit_type": "additions alterations or repairs",
+      "description": "Alteration permit approved to demolish a portion of the existing 4th floor slab for a future stair connection between levels 3 and 4, including a 2-hour rated smoke barrier around the new floor opening (DBI permit 202410253714, filed 2024-11-20)",
+      "filed_date": "2025-03-07",
+      "valuation": 221000,
+      "sources": [
+        "src-watch-dbi-building-permits-7"
+      ]
+    }
   ]
 }

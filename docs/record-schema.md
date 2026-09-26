@@ -112,7 +112,12 @@ doesn't exist in `status.csv` or `approximate_projects.csv` fails validation.
     aggregation skips a `financing` entry, so it is never summed with
     anything else), `land_or_lease` (appraisals, prepaid lease values, land
     payments), `fee_or_subsidy` (impact fees, jobs-housing fees,
-    affordable-housing subsidies), or `other` (requires a one-sentence
+    affordable-housing subsidies), `permit_valuation` (docs/briefs/
+    watch-rules.md: a DBI building permit's own self-reported valuation,
+    kept as a cost only when the permit itself is kept as a milestone --
+    excluded from every aggregation exactly like `financing`, since a
+    permit's valuation is stated for the permit fee, not vetted as a real
+    development-cost figure), or `other` (requires a one-sentence
     `kind_note` saying what it is -- an unlabelled "other" is a guess).
   - `scope` on a record file's own `costs` array is always `record` (the
     parcel or building this record is): a `phase`- or `site`-scope figure
@@ -242,6 +247,41 @@ doesn't exist in `status.csv` or `approximate_projects.csv` fails validation.
 - Keys in `facts` are free text but stay lowercase snake_case so they can be
   compared across records (`developer`, `architect`, `units`, `gross_sqft`,
   `height_ft`, `affordable_units`, `ground_lease_term`, ...).
+- `permits` is an optional top-level array (docs/briefs/watch-rules.md):
+  a minor building permit that documents real activity on the record but
+  isn't itself a milestone -- an OTC alteration, a tenant-improvement
+  revision, a deferred submittal, a grading/shoring permit, an MEP or
+  fire-system permit, signage, or any other permit outside the record's own
+  construction window (the span from its first under_construction/
+  site-permit/new-construction-permit date to its first complete date; see
+  the brief for the exact rule). A permit that's either status-eligible
+  (new construction, a primary-structure demolition, a site permit, a
+  first TCO/CFC, or an agency stage change -- these can carry a milestone
+  `status` at any time) or that falls inside the window (real construction
+  progress, even from a minor permit -- stays a milestone, just never with
+  a `status` tag) belongs in `milestones` instead, not here.
+
+  ```json
+  {"permit_number": "201908078130", "permit_type": "otc alterations permit",
+   "description": "Deferred submittal to PA 2018-0601-0826 for aluminum composite panels",
+   "filed_date": "2019-08-14", "issued_date": "2019-08-14", "completed_date": "2019-08-14",
+   "valuation": 16000, "sources": ["src-watch-dbi-building-permits-25"]}
+  ```
+
+  `permit_number`, `permit_type` and `description` are required.
+  `filed_date`/`issued_date`/`completed_date` are each optional and follow
+  the usual date rule; `valuation` is an optional number (the permit's own
+  stated cost -- writes no entry in `costs`, unlike a status- or
+  progress-milestone permit's valuation, which becomes a `permit_valuation`
+  cost). `sources` is required, same "no source, no claim" rule as
+  everywhere else.
+
+  Rendered as a "Building permits" subsection inside a record page's
+  Research notes (`sitegen/build.py`, box-pattern's `collapsible_box()`),
+  newest first, at most 10 shown by default with the rest behind the same
+  bar Costs uses (docs/briefs/watch-rules.md, "Destination"). Never
+  rendered in the Changes feed or as its lead row -- a `permits` entry is
+  not a milestone.
 
 ## Rules the validator can't enforce (you must)
 

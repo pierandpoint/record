@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-25",
+ "generated": "2026-09-26",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -188,18 +188,9 @@
     "scope": "record"
    },
    {
-    "amount_usd": 164000000,
-    "what": "Revised cost on building permit 201110066246 to erect 6-story police headquarters and fire station at 1251 3rd St",
-    "kind": "construction",
-    "sources": [
-     "src-watch-dbi-building-permits"
-    ],
-    "date": "2012"
-   },
-   {
     "amount_usd": 3700000,
     "what": "Permit 201207054084 revised cost for rehabilitation and renovation of the vacated fire station at 1275 3rd St into a community room and SFFD office",
-    "kind": "construction",
+    "kind": "permit_valuation",
     "sources": [
      "src-watch-dbi-building-permits-2"
     ],
@@ -528,81 +519,96 @@
      "url": "https://pierandpoint.org/sites/mission-bay/"
     },
     "relation": "tracked"
-   },
-   {
-    "date": "2015-10-29",
-    "date_label": "Oct 29, 2015",
-    "status": null,
-    "status_label": null,
-    "text": "Permit 201207054084 (fire station rehabilitation into community room/SFFD office) reaches 'complete' status with DBI",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-watch-dbi-building-permits-2",
-      "title": "Permit 201207054084 (complete) -- 1275 03rd St",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201207054084",
-      "accessed": "2026-09-24"
-     }
-    ],
-    "source": "DBI (Building Permits)",
-    "origin": "record",
-    "category": "milestone",
-    "category_label": "Milestone",
-    "record": {
-     "id": "8719007",
-     "slug": "san-francisco-public-safety-building",
-     "name": "San Francisco Public Safety Building",
-     "permalink": "https://pierandpoint.org/parcels/san-francisco-public-safety-building/",
-     "api": "https://pierandpoint.org/api/v1/records/san-francisco-public-safety-building.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2017-01-11",
-    "date_label": "Jan 11, 2017",
-    "status": null,
-    "status_label": null,
-    "text": "Building permit 201110066246 status recorded as complete",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-watch-dbi-building-permits",
-      "title": "Permit 201110066246 (complete) -- 1251 03rd St",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201110066246",
-      "accessed": "2026-09-24"
-     }
-    ],
-    "source": "DBI (Building Permits)",
-    "origin": "record",
-    "category": "milestone",
-    "category_label": "Milestone",
-    "record": {
-     "id": "8719007",
-     "slug": "san-francisco-public-safety-building",
-     "name": "San Francisco Public Safety Building",
-     "permalink": "https://pierandpoint.org/parcels/san-francisco-public-safety-building/",
-     "api": "https://pierandpoint.org/api/v1/records/san-francisco-public-safety-building.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    },
-    "relation": "tracked"
    }
   ],
   "changes": [
+   {
+    "date": "2026-09-26",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "permit_number: 201611021689 permit_type_definition: otc alterations permit status: complete status_date: 2016-11-09T07:53:22.000 filed_date: 2016-11-02T08:15:04.000 issued_date: 2016-11-02T08:41:20.000 approved_date: 2016-11-02T08:41:20.000 description: roof top - generator vent builts per sffd request",
+    "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201611021689",
+    "sources": [
+     {
+      "title": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201611021689"
+     }
+    ],
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8719007",
+     "slug": "san-francisco-public-safety-building",
+     "name": "San Francisco Public Safety Building",
+     "permalink": "https://pierandpoint.org/parcels/san-francisco-public-safety-building/",
+     "api": "https://pierandpoint.org/api/v1/records/san-francisco-public-safety-building.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-09-26",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "permit_number: 201509106609 permit_type_definition: otc alterations permit status: complete status_date: 2015-10-29T15:33:01.000 filed_date: 2015-09-10T12:36:17.000 issued_date: 2015-09-10T12:46:19.000 approved_date: 2015-09-10T12:46:19.000 description: change address from 1051 3rd street to 1275 3rd street.",
+    "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201509106609",
+    "sources": [
+     {
+      "title": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201509106609"
+     }
+    ],
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8719007",
+     "slug": "san-francisco-public-safety-building",
+     "name": "San Francisco Public Safety Building",
+     "permalink": "https://pierandpoint.org/parcels/san-francisco-public-safety-building/",
+     "api": "https://pierandpoint.org/api/v1/records/san-francisco-public-safety-building.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-09-25",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Two DBI-sourced permit events move from milestones to the new permits array; a third, inside the record's own construction window, keeps its place as a milestone without a status tag. None carried a status field and this doesn't change the record's computed status.",
+    "source": "docs/briefs/watch-rules.md",
+    "sources": [
+     {
+      "title": "docs/briefs/watch-rules.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8719007",
+     "slug": "san-francisco-public-safety-building",
+     "name": "San Francisco Public Safety Building",
+     "permalink": "https://pierandpoint.org/parcels/san-francisco-public-safety-building/",
+     "api": "https://pierandpoint.org/api/v1/records/san-francisco-public-safety-building.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-24",
     "kind": "added",
@@ -665,7 +671,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "status: complete\nstatus_date: 2017-01-11T13:18:47.000",
+    "text": "status: complete status_date: 2017-01-11T13:18:47.000",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201110066246",
     "sources": [
      {
@@ -694,7 +700,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "estimated_cost: 164000000.0\nrevised_cost: 164000000.0",
+    "text": "estimated_cost: 164000000.0 revised_cost: 164000000.0",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201110066246",
     "sources": [
      {
@@ -935,11 +941,25 @@
     "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
     "accessed": "2026-09-24",
     "overview": true
+   },
+   {
+    "id": "src-watch-dbi-building-permits-3",
+    "title": "Permit 201611021689 (complete) -- 1245 03rd St",
+    "publisher": "DBI (Building Permits)",
+    "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201611021689",
+    "accessed": "2026-09-26"
+   },
+   {
+    "id": "src-watch-dbi-building-permits-4",
+    "title": "Permit 201509106609 (complete) -- 1275 03rd St",
+    "publisher": "DBI (Building Permits)",
+    "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201509106609",
+    "accessed": "2026-09-26"
    }
   ],
   "notes": "San Francisco Public Safety Building, 1245 3rd St (Mission Bay South Block 8) -- a 300,000 sq ft, $243M joint facility combining the SFPD's Police Command Center/headquarters (110,000 sq ft), the Southern District police station (20,000 sq ft), the Mission Bay Fire Station (17,000 sq ft), community space and a 128,000 sq ft parking structure, funded by the 2010 Earthquake Safety and Emergency Response (ESER) bond. Construction began 2011; grand opening April 16, 2015 (sfpublicworks.org).",
   "has_record_file": true,
-  "last_verified": "2026-09-24",
+  "last_verified": "2026-09-26",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

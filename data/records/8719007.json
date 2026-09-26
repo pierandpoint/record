@@ -78,24 +78,8 @@
       "expected": false
     },
     {
-      "date": "2017-01-11",
-      "text": "Building permit 201110066246 status recorded as complete",
-      "sources": [
-        "src-watch-dbi-building-permits"
-      ],
-      "expected": false
-    },
-    {
       "date": "2013-05-15",
       "text": "DBI issues permit 201207054084 for rehabilitation and renovation of the vacated fire station at 1275 3rd St as a community room and SFFD office (part of the Public Safety Building project)",
-      "sources": [
-        "src-watch-dbi-building-permits-2"
-      ],
-      "expected": false
-    },
-    {
-      "date": "2015-10-29",
-      "text": "Permit 201207054084 (fire station rehabilitation into community room/SFFD office) reaches 'complete' status with DBI",
       "sources": [
         "src-watch-dbi-building-permits-2"
       ],
@@ -126,18 +110,9 @@
       "scope": "record"
     },
     {
-      "amount_usd": 164000000,
-      "what": "Revised cost on building permit 201110066246 to erect 6-story police headquarters and fire station at 1251 3rd St",
-      "kind": "construction",
-      "sources": [
-        "src-watch-dbi-building-permits"
-      ],
-      "date": "2012"
-    },
-    {
       "amount_usd": 3700000,
       "what": "Permit 201207054084 revised cost for rehabilitation and renovation of the vacated fire station at 1275 3rd St into a community room and SFFD office",
-      "kind": "construction",
+      "kind": "permit_valuation",
       "sources": [
         "src-watch-dbi-building-permits-2"
       ],
@@ -379,6 +354,20 @@
       "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
       "accessed": "2026-09-24",
       "overview": true
+    },
+    {
+      "id": "src-watch-dbi-building-permits-3",
+      "title": "Permit 201611021689 (complete) -- 1245 03rd St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201611021689",
+      "accessed": "2026-09-26"
+    },
+    {
+      "id": "src-watch-dbi-building-permits-4",
+      "title": "Permit 201509106609 (complete) -- 1275 03rd St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201509106609",
+      "accessed": "2026-09-26"
     }
   ],
   "open_questions": [
@@ -388,5 +377,50 @@
     "No sourced record of renovations, expansions, or notable incidents at the building since its 2015 opening was found.",
     "No openly licensed image was found; all located images are on agency/firm project pages under their own copyright, so none is hosted here -- see the source links above."
   ],
-  "last_verified": "2026-09-24"
+  "last_verified": "2026-09-26",
+  "permits": [
+    {
+      "permit_number": "201110066246",
+      "permit_type": "additions alterations or repairs",
+      "description": "Building permit 201110066246 status recorded as complete",
+      "completed_date": "2017-01-11",
+      "valuation": 164000000,
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ]
+    },
+    {
+      "permit_number": "201207054084",
+      "permit_type": "additions alterations or repairs",
+      "description": "Permit 201207054084 (fire station rehabilitation into community room/SFFD office) reaches 'complete' status with DBI",
+      "completed_date": "2015-10-29",
+      "sources": [
+        "src-watch-dbi-building-permits-2"
+      ]
+    },
+    {
+      "permit_number": "201611021689",
+      "permit_type": "otc alterations permit",
+      "description": "OTC alterations permit 201611021689 issued for roof top generator vent builts per SFFD request",
+      "filed_date": "2016-11-02",
+      "issued_date": "2016-11-02",
+      "completed_date": "2016-11-09",
+      "valuation": 1.0,
+      "sources": [
+        "src-watch-dbi-building-permits-3"
+      ]
+    },
+    {
+      "permit_number": "201509106609",
+      "permit_type": "otc alterations permit",
+      "description": "OTC alterations permit 201509106609 filed and issued to change address from 1051 3rd street to 1275 3rd street",
+      "filed_date": "2015-09-10",
+      "issued_date": "2015-09-10",
+      "completed_date": "2015-10-29",
+      "valuation": 1.0,
+      "sources": [
+        "src-watch-dbi-building-permits-4"
+      ]
+    }
+  ]
 }

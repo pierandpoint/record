@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-25",
+ "generated": "2026-09-26",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -147,7 +147,7 @@
    {
     "amount_usd": 102600,
     "what": "Revised cost on OTC alterations permit 202408027795 for installation of a new fire water line from Owens Street to the new building at 1415 Owens St",
-    "kind": "infrastructure",
+    "kind": "permit_valuation",
     "sources": [
      "src-watch-dbi-building-permits"
     ],
@@ -156,7 +156,7 @@
    {
     "amount_usd": 102600,
     "what": "OTC alterations permit 202412056214 to revise the fire department connection from a 2-way to a 4-way detail at 1415 Owens St (estimated and revised cost)",
-    "kind": "construction",
+    "kind": "permit_valuation",
     "sources": [
      "src-watch-dbi-building-permits-2"
     ],
@@ -536,6 +536,35 @@
   ],
   "changes": [
    {
+    "date": "2026-09-25",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "A DBI-sourced permit inside the record's own construction window keeps its place as a milestone; its cost entry's kind changes to permit_valuation (docs/record-schema.md), excluded from cost totals like a financing entry, since a permit's self-reported valuation isn't a vetted development-cost figure.",
+    "source": "docs/briefs/watch-rules.md",
+    "sources": [
+     {
+      "title": "docs/briefs/watch-rules.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8709025",
+     "slug": "mission-bay-school",
+     "name": "Mission Bay School",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-school/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-school.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
@@ -626,7 +655,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "description: revise fdc from a 2 way to a 4 way detail and site plan ref pa# 2024-0802-7795\nestimated_cost: 102600.0",
+    "text": "description: revise fdc from a 2 way to a 4 way detail and site plan ref pa# 2024-0802-7795 estimated_cost: 102600.0",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202412056214",
     "sources": [
      {

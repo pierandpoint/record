@@ -581,6 +581,11 @@ sup.cites a { text-decoration: none; }
 .costs tr:first-child td { border-top: 1px solid var(--paper-ink); }
 .costs .amount { font: 500 15px var(--mono); white-space: nowrap; }
 .costs .when { font: 13px var(--mono); color: var(--paper-faint); white-space: nowrap; text-align: right; padding-right: 0; }
+/* Building permits (docs/briefs/watch-rules.md): reuses the .costs table wholesale (same row
+   shape -- a date column, a description column); this is the one addition, a muted inline label
+   so a permit's own declared valuation doesn't read as a vetted cost figure like the Costs box
+   above it. */
+.permit-valuation { font-size: 13px; color: var(--paper-faint); }
 .questions { margin: 0 0 12px; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.55; color: var(--paper-soft); }
 .gallery-kind { font: 600 13px var(--mono); color: var(--paper-soft); margin: 4px 0 -4px; }
 .sources li:target { background: #f6e3cc; border-radius: 4px; }

@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-25",
+ "generated": "2026-09-26",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -49,18 +49,9 @@
   "facts": [],
   "costs": [
    {
-    "amount_usd": 60000,
-    "what": "Revised cost of DBI permit #202106152477 for lobby interior finish upgrades, new conference room and mail room reconfiguration",
-    "kind": "construction",
-    "sources": [
-     "src-watch-dbi-building-permits-2"
-    ],
-    "date": "2021-06-15"
-   },
-   {
     "amount_usd": 45750,
     "what": "Revised cost on DBI permit #201608124922 to install a new 6-inch fire service off the 12-inch main on Berry St for the 360 Berry St apartment building",
-    "kind": "construction",
+    "kind": "permit_valuation",
     "sources": [
      "src-watch-dbi-building-permits-3"
     ],
@@ -69,7 +60,7 @@
    {
     "amount_usd": 34925500,
     "what": "Revised construction cost on DBI permit #201312265046 to erect the 5-story, 129-unit residential building at 360 Berry St",
-    "kind": "construction",
+    "kind": "permit_valuation",
     "sources": [
      "src-watch-dbi-building-permits-4"
     ],
@@ -78,7 +69,7 @@
    {
     "amount_usd": 150000,
     "what": "Revision permit #201507151572 for steel and foundation details for the entry trellis at 360 Berry St (revised cost)",
-    "kind": "construction",
+    "kind": "permit_valuation",
     "sources": [
      "src-watch-dbi-building-permits-5"
     ],
@@ -161,8 +152,8 @@
    {
     "date": "2015-05-20",
     "date_label": "May 20, 2015",
-    "status": "under_construction",
-    "status_label": "Under construction",
+    "status": null,
+    "status_label": null,
     "text": "First construction document issued under DBI permit #201312265046 at 360 Berry St",
     "expected": false,
     "approximate": false,
@@ -177,8 +168,8 @@
     ],
     "source": "DBI (Building Permits)",
     "origin": "record",
-    "category": "status",
-    "category_label": "Status",
+    "category": "milestone",
+    "category_label": "Milestone",
     "record": {
      "id": "8704004",
      "slug": "mission-bay-by-windsor",
@@ -197,8 +188,8 @@
    {
     "date": "2016-08-16",
     "date_label": "Aug 16, 2016",
-    "status": "under_construction",
-    "status_label": "Under construction",
+    "status": null,
+    "status_label": null,
     "text": "DBI permit #201608124922 issued for installation of a new 6-inch fire service off the 12-inch main on Berry St (filed 2016-08-12), for the 129-unit apartment project at 360 Berry St",
     "expected": false,
     "approximate": false,
@@ -213,8 +204,8 @@
     ],
     "source": "DBI (Building Permits)",
     "origin": "record",
-    "category": "status",
-    "category_label": "Status",
+    "category": "milestone",
+    "category_label": "Milestone",
     "record": {
      "id": "8704004",
      "slug": "mission-bay-by-windsor",
@@ -233,8 +224,8 @@
    {
     "date": "2016-11-14",
     "date_label": "Nov 14, 2016",
-    "status": "complete",
-    "status_label": "Complete",
+    "status": null,
+    "status_label": null,
     "text": "DBI permit #201507151572 (revision to addendum #1 of #201312265046 for steel and foundation details for the entry trellis at 360 Berry St) completed",
     "expected": false,
     "approximate": false,
@@ -249,8 +240,8 @@
     ],
     "source": "DBI (Building Permits)",
     "origin": "record",
-    "category": "status",
-    "category_label": "Status",
+    "category": "milestone",
+    "category_label": "Milestone",
     "record": {
      "id": "8704004",
      "slug": "mission-bay-by-windsor",
@@ -344,86 +335,130 @@
      "url": "https://pierandpoint.org/sites/mission-bay/"
     },
     "relation": "tracked"
-   },
-   {
-    "date": "2021-09-29",
-    "date_label": "Sep 29, 2021",
-    "status": "complete",
-    "status_label": "Complete",
-    "text": "OTC alteration permit #202105271222 (reprogram existing BDA to comply with SF ERRCS frequencies and replace the roof \"donor\" antenna) completed",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-watch-dbi-building-permits",
-      "title": "Permit 202105271222 (complete) -- 360 Berry St",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202105271222",
-      "accessed": "2026-09-24"
-     }
-    ],
-    "source": "DBI (Building Permits)",
-    "origin": "record",
-    "category": "status",
-    "category_label": "Status",
-    "record": {
-     "id": "8704004",
-     "slug": "mission-bay-by-windsor",
-     "name": "Mission Bay by Windsor",
-     "permalink": "https://pierandpoint.org/parcels/mission-bay-by-windsor/",
-     "api": "https://pierandpoint.org/api/v1/records/mission-bay-by-windsor.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2022-10-07",
-    "date_label": "Oct 7, 2022",
-    "status": "complete",
-    "status_label": "Complete",
-    "text": "DBI over-the-counter alterations permit #202106152477 for lobby architectural and interior finish upgrades (new conference room, reconfigured mail room) completed",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-watch-dbi-building-permits-2",
-      "title": "Permit 202106152477 (complete) -- 360 Berry St",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202106152477",
-      "accessed": "2026-09-24"
-     }
-    ],
-    "source": "DBI (Building Permits)",
-    "origin": "record",
-    "category": "status",
-    "category_label": "Status",
-    "record": {
-     "id": "8704004",
-     "slug": "mission-bay-by-windsor",
-     "name": "Mission Bay by Windsor",
-     "permalink": "https://pierandpoint.org/parcels/mission-bay-by-windsor/",
-     "api": "https://pierandpoint.org/api/v1/records/mission-bay-by-windsor.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    },
-    "relation": "tracked"
    }
   ],
   "changes": [
    {
+    "date": "2026-09-26",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "permit_number: M686247 permit_type_definition: otc alterations permit status: issued status_date: 2016-04-29T14:38:29.000 filed_date: 2016-04-29T14:35:15.000 issued_date: 2016-04-29T14:38:29.000 approved_date: 2016-04-29T14:38:29.000 description: street space",
+    "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=M686247",
+    "sources": [
+     {
+      "title": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=M686247"
+     }
+    ],
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8704004",
+     "slug": "mission-bay-by-windsor",
+     "name": "Mission Bay by Windsor",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-by-windsor/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-by-windsor.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-09-26",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "permit_number: 202203180298 permit_type_definition: otc alterations permit status: complete status_date: 2022-08-04T11:18:49.000 filed_date: 2022-03-18T08:24:01.000 issued_date: 2022-03-18T09:25:45.000 approved_date: 2022-03-18T09:25:45.000 description: 1st fl - fire sprinkler work for the lobby area; 2 heads are added and 2 head is relocated.",
+    "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202203180298",
+    "sources": [
+     {
+      "title": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202203180298"
+     }
+    ],
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8704004",
+     "slug": "mission-bay-by-windsor",
+     "name": "Mission Bay by Windsor",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-by-windsor/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-by-windsor.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-09-26",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "permit_number: 202205234742 permit_type_definition: otc alterations permit status: complete status_date: 2022-08-08T09:13:44.000 filed_date: 2022-05-23T07:36:49.000 issued_date: 2022-05-23T07:56:25.000 approved_date: 2022-05-23T07:56:25.000 description: 1st fl: fire work only to add a strobe in the mail room. ref pa# 202106152477.",
+    "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202205234742",
+    "sources": [
+     {
+      "title": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202205234742"
+     }
+    ],
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8704004",
+     "slug": "mission-bay-by-windsor",
+     "name": "Mission Bay by Windsor",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-by-windsor/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-by-windsor.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-09-25",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "A minor fire-service installation permit had set status: under_construction for 2016, which is now reserved for the building's own 201312265046 construction permit -- whose own recorded status is planned at issuance, so the computed status for 2015-2016 is now planned rather than under_construction or complete.",
+    "source": "docs/briefs/watch-rules.md",
+    "sources": [
+     {
+      "title": "docs/briefs/watch-rules.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8704004",
+     "slug": "mission-bay-by-windsor",
+     "name": "Mission Bay by Windsor",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-by-windsor/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-by-windsor.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "status: complete\nstatus_date: 2021-09-29T16:43:49.000",
+    "text": "status: complete status_date: 2021-09-29T16:43:49.000",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202105271222",
     "sources": [
      {
@@ -452,7 +487,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "status: complete\nstatus_date: 2022-10-07T14:59:08.000",
+    "text": "status: complete status_date: 2022-10-07T14:59:08.000",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202106152477",
     "sources": [
      {
@@ -510,7 +545,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "description: install new 6\" fire service off at 12\" main on berry st per nfpa 13 and 24; maher n/a. ref sprinkler appl# 2013/12/26/5046s-4; n/a maher ord. 155-16\nestimated_cost: 25000.0\nrevised_cost: 45750.0",
+    "text": "description: install new 6\" fire service off at 12\" main on berry st per nfpa 13 and 24; maher n/a. ref sprinkler appl# 2013/12/26/5046s-4; n/a maher ord. 155-16 estimated_cost: 25000.0 revised_cost: 45750.0",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201608124922",
     "sources": [
      {
@@ -539,7 +574,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "filed_date: 2016-08-12T13:11:58.000\nissued_date: 2016-08-16T12:46:37.000",
+    "text": "filed_date: 2016-08-12T13:11:58.000 issued_date: 2016-08-16T12:46:37.000",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201608124922",
     "sources": [
      {
@@ -626,7 +661,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "status: complete\nstatus_date: 2017-06-15T15:45:59.000",
+    "text": "status: complete status_date: 2017-06-15T15:45:59.000",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201312265046",
     "sources": [
      {
@@ -684,7 +719,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "status: complete\nstatus_date: 2016-11-14T13:37:08.000",
+    "text": "status: complete status_date: 2016-11-14T13:37:08.000",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201507151572",
     "sources": [
      {
@@ -894,6 +929,27 @@
     "overview": true
    },
    {
+    "id": "src-watch-dbi-building-permits-6",
+    "title": "Permit M686247 (issued) -- 360 Berry St",
+    "publisher": "DBI (Building Permits)",
+    "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=M686247",
+    "accessed": "2026-09-26"
+   },
+   {
+    "id": "src-watch-dbi-building-permits-7",
+    "title": "Permit 202203180298 (complete) -- 360 Berry St",
+    "publisher": "DBI (Building Permits)",
+    "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202203180298",
+    "accessed": "2026-09-26"
+   },
+   {
+    "id": "src-watch-dbi-building-permits-8",
+    "title": "Permit 202205234742 (complete) -- 360 Berry St",
+    "publisher": "DBI (Building Permits)",
+    "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202205234742",
+    "accessed": "2026-09-26"
+   },
+   {
     "id": null,
     "title": "apartments.com/mission-bay-by-windsor-apartments-san-francisco-ca/923ywp4",
     "url": "https://www.apartments.com/mission-bay-by-windsor-apartments-san-francisco-ca/923ywp4/"
@@ -906,7 +962,7 @@
   ],
   "notes": "Mission Bay by Windsor, 360 Berry St -- apartment community (1-2 bed/1-2 bath units per current listings). Real, distinct parcel from the already-tracked Edgewater (355 Berry St, blklot 8707003) -- a 2026-09-19 pass had concluded these were the same building (a 99.6% footprint-overlap check against the wrong candidate geometry) and folded Windsor's real extent into Edgewater's own record as an unexplained 'open-land strip' near I-280; the owner corrected this directly (they are two separate condo complexes) and the real DataSF Assessor parcel boundary confirms it: blklot 8704004 at 360 Berry St, 96.7% overlapping the very shape wrongly parked under Edgewater. Uses the real Assessor parcel boundary rather than an OSM footprint since no distinct OSM way was found for it in this pass.",
   "has_record_file": true,
-  "last_verified": "2026-09-24",
+  "last_verified": "2026-09-26",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

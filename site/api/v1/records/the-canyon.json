@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-25",
+ "generated": "2026-09-26",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -249,7 +249,7 @@
    {
     "amount_usd": 121921920,
     "what": "Revised construction cost on building permit 201910073782 for the 283-unit residential building",
-    "kind": "construction",
+    "kind": "permit_valuation",
     "sources": [
      "src-watch-dbi-building-permits"
     ],
@@ -968,42 +968,6 @@
     "relation": "tracked"
    },
    {
-    "date": "2024-11-05",
-    "date_label": "Nov 5, 2024",
-    "status": null,
-    "status_label": null,
-    "text": "DBI permit 202409090347 approved: add control dampers on levels 2 and 3, revise smoke control matrix and firefighter smoke control panel",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-watch-dbi-building-permits-2",
-      "title": "Permit 202409090347 (approved) -- 1023 03rd St",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202409090347",
-      "accessed": "2026-09-24"
-     }
-    ],
-    "source": "DBI (Building Permits)",
-    "origin": "record",
-    "category": "milestone",
-    "category_label": "Milestone",
-    "record": {
-     "id": "8719B002",
-     "slug": "the-canyon",
-     "name": "The Canyon",
-     "permalink": "https://pierandpoint.org/parcels/the-canyon/",
-     "api": "https://pierandpoint.org/api/v1/records/the-canyon.json"
-    },
-    "site": {
-     "slug": "mission-rock",
-     "name": "Mission Rock",
-     "short": "Mission Rock",
-     "url": "https://pierandpoint.org/sites/mission-rock/"
-    },
-    "relation": "tracked"
-   },
-   {
     "date": "2025-03-11",
     "date_label": "Mar 11, 2025",
     "status": null,
@@ -1039,28 +1003,22 @@
      "url": "https://pierandpoint.org/sites/mission-rock/"
     },
     "relation": "tracked"
-   },
+   }
+  ],
+  "changes": [
    {
-    "date": "2025-05-07",
-    "date_label": "May 7, 2025",
-    "status": "planned",
-    "status_label": "Planned",
-    "text": "Over-the-counter alteration permit filed for tenant improvements in ground-floor suite C, proposed use food/beverage handling",
-    "expected": false,
-    "approximate": false,
+    "date": "2026-09-25",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "A 2025-05-07 OTC alteration permit for ground-floor tenant improvements had carried a status field, reverting the record's computed status to planned years after its 2023 certificate of occupancy. The permit is now recorded without a status tag; the site permit and TCO milestones already on file are the record's real status history.",
+    "source": "docs/briefs/watch-rules.md",
     "sources": [
      {
-      "id": "src-watch-dbi-building-permits-3",
-      "title": "Permit 202505075927 (filed) -- 1023 03rd St",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202505075927",
-      "accessed": "2026-09-24"
+      "title": "docs/briefs/watch-rules.md"
      }
     ],
-    "source": "DBI (Building Permits)",
-    "origin": "record",
-    "category": "status",
-    "category_label": "Status",
+    "category": "correction",
+    "category_label": "Correction",
     "record": {
      "id": "8719B002",
      "slug": "the-canyon",
@@ -1074,15 +1032,14 @@
      "short": "Mission Rock",
      "url": "https://pierandpoint.org/sites/mission-rock/"
     },
-    "relation": "tracked"
-   }
-  ],
-  "changes": [
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "status: approved\nstatus_date: 2020-10-26T00:00:00.000",
+    "text": "status: approved status_date: 2020-10-26T00:00:00.000",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201910073782",
     "sources": [
      {
@@ -1198,7 +1155,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "approved_date: 2024-11-05T10:04:23.000\ndescription: proj-24-0596: mayor ed 17-02 priority. add control dampers on levels 2 and 3. revise smoke control matrix and fire fighter smoke control panel.",
+    "text": "approved_date: 2024-11-05T10:04:23.000 description: proj-24-0596: mayor ed 17-02 priority. add control dampers on levels 2 and 3. revise smoke control matrix and fire fighter smoke control panel.",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202409090347",
     "sources": [
      {

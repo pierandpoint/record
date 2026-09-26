@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-25",
+ "generated": "2026-09-26",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -105,27 +105,9 @@
   ],
   "costs": [
    {
-    "amount_usd": 37000,
-    "what": "Revised cost of DBI permit 201811307166 for AT&T antenna replacement and equipment installation at the site",
-    "kind": "construction",
-    "sources": [
-     "src-watch-dbi-building-permits"
-    ],
-    "date": "2019-12-20"
-   },
-   {
-    "amount_usd": 120000,
-    "what": "Reported cost on DBI permit 201306179714 for demolition of a portion of a warehouse building at 385 Channel (permit later expired)",
-    "kind": "construction",
-    "sources": [
-     "src-watch-dbi-building-permits-2"
-    ],
-    "date": "2013"
-   },
-   {
     "amount_usd": 179000,
     "what": "Demolition of a one-story storage building at 385 Channel under DBI permit 201712055462 (estimated and revised cost both $179,000)",
-    "kind": "construction",
+    "kind": "permit_valuation",
     "sources": [
      "src-watch-dbi-building-permits-3"
     ],
@@ -133,42 +115,6 @@
    }
   ],
   "milestones": [
-   {
-    "date": "2013-07-12",
-    "date_label": "Jul 12, 2013",
-    "status": null,
-    "status_label": null,
-    "text": "DBI issued over-the-counter alterations permit 201306179714 at 385 Channel for \"demolition of portion of building (warehouse)\" with a reported cost of $120,000; the permit was filed June 17, 2013, approved and issued July 12, 2013, and its status was later recorded as expired as of October 20, 2017",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-watch-dbi-building-permits-2",
-      "title": "Permit 201306179714 (expired) -- 385 Channel",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201306179714",
-      "accessed": "2026-09-24"
-     }
-    ],
-    "source": "DBI (Building Permits)",
-    "origin": "record",
-    "category": "milestone",
-    "category_label": "Milestone",
-    "record": {
-     "id": "8710006",
-     "slug": "mission-bay-south-block-12-west",
-     "name": "Mission Bay South Block 12 West",
-     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-12-west/",
-     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-12-west.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    },
-    "relation": "tracked"
-   },
    {
     "date": "2015-12",
     "date_label": "Dec 2015",
@@ -257,42 +203,6 @@
       "title": "Permit 201712055462 (complete) -- 385 Channel",
       "publisher": "DBI (Building Permits)",
       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201712055462",
-      "accessed": "2026-09-24"
-     }
-    ],
-    "source": "DBI (Building Permits)",
-    "origin": "record",
-    "category": "status",
-    "category_label": "Status",
-    "record": {
-     "id": "8710006",
-     "slug": "mission-bay-south-block-12-west",
-     "name": "Mission Bay South Block 12 West",
-     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-12-west/",
-     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-12-west.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2020-01-10",
-    "date_label": "Jan 10, 2020",
-    "status": "complete",
-    "status_label": "Complete",
-    "text": "DBI over-the-counter alterations permit 201811307166 -- an AT&T modification to a temporary site (remove and replace 6 existing antennas with 6 new antennas, install 6 new RRUs and other small equipment) -- filed Nov 30, 2018, issued Dec 20, 2019, and recorded complete",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-watch-dbi-building-permits",
-      "title": "Permit 201811307166 (complete) -- 385 Channel",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201811307166",
       "accessed": "2026-09-24"
      }
     ],
@@ -471,10 +381,39 @@
   ],
   "changes": [
    {
+    "date": "2026-09-25",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Two DBI-sourced permit events (an AT&T antenna modification and a warehouse demolition), outside the record's own construction window, move from milestones to the new permits array; neither carried a status field and this doesn't change the record's computed status.",
+    "source": "docs/briefs/watch-rules.md",
+    "sources": [
+     {
+      "title": "docs/briefs/watch-rules.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8710006",
+     "slug": "mission-bay-south-block-12-west",
+     "name": "Mission Bay South Block 12 West",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-12-west/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-12-west.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "status: complete\nstatus_date: 2020-01-10T08:01:33.000\nfiled_date: 2018-11-30T13:33:25.000\nissued_date: 2019-12-20T10:04:42.000",
+    "text": "status: complete status_date: 2020-01-10T08:01:33.000 filed_date: 2018-11-30T13:33:25.000 issued_date: 2019-12-20T10:04:42.000",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201811307166",
     "sources": [
      {
@@ -503,7 +442,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "estimated_cost: 21000.0\nrevised_cost: 37000.0",
+    "text": "estimated_cost: 21000.0 revised_cost: 37000.0",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201811307166",
     "sources": [
      {
@@ -532,7 +471,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "status: expired\nstatus_date: 2017-10-20T09:02:06.000\nfiled_date: 2013-06-17T12:26:27.000\nissued_date: 2013-07-12T12:55:38.000\napproved_date: 2013-07-12T12:48:54.000\ndescription: demolition of portion of building (warehouse",
+    "text": "status: expired status_date: 2017-10-20T09:02:06.000 filed_date: 2013-06-17T12:26:27.000 issued_date: 2013-07-12T12:55:38.000 approved_date: 2013-07-12T12:48:54.000 description: demolition of portion of building (warehouse",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201306179714",
     "sources": [
      {
@@ -561,7 +500,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "description: demolition of portion of building (warehouse\nestimated_cost: 120000.0\nrevised_cost: 120000.0",
+    "text": "description: demolition of portion of building (warehouse estimated_cost: 120000.0 revised_cost: 120000.0",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201306179714",
     "sources": [
      {
@@ -590,7 +529,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "status: complete\nstatus_date: 2019-05-17T15:31:54.000",
+    "text": "status: complete status_date: 2019-05-17T15:31:54.000",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201712055462",
     "sources": [
      {
@@ -619,7 +558,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "estimated_cost: 179000.0\nrevised_cost: 179000.0",
+    "text": "estimated_cost: 179000.0 revised_cost: 179000.0",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201712055462",
     "sources": [
      {

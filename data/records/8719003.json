@@ -61,15 +61,6 @@
       "approximate": true
     },
     {
-      "date": "2023-04-19",
-      "text": "Building permit issued for additional rooftop photovoltaics (42 Boviet 450W panels, 18.9 kW); filed December 19, 2022",
-      "sources": [
-        "src-watch-dbi-building-permits-2"
-      ],
-      "status": "existing",
-      "expected": false
-    },
-    {
       "date": "2023-04-24",
       "text": "Building permit 201901281440 (new construction, 141 units) recorded complete",
       "sources": [
@@ -84,7 +75,6 @@
       "sources": [
         "src-watch-dbi-building-permits-4"
       ],
-      "status": "existing",
       "expected": false
     }
   ],
@@ -114,7 +104,7 @@
     {
       "amount_usd": 37800,
       "what": "Permitted cost of additional rooftop PV installation (42 Boviet 450W panels, 18.9 kW) at 410 China Basin St",
-      "kind": "construction",
+      "kind": "permit_valuation",
       "sources": [
         "src-watch-dbi-building-permits-2"
       ],
@@ -123,7 +113,7 @@
     {
       "amount_usd": 42000000,
       "what": "Permit 201901281440 estimated and revised construction cost for the 141-unit, 4-story building",
-      "kind": "construction",
+      "kind": "permit_valuation",
       "sources": [
         "src-watch-dbi-building-permits-3"
       ],
@@ -132,7 +122,7 @@
     {
       "amount_usd": 3500000,
       "what": "Alterations permit (202203180314) to remove and replace water-damaged finishes in modular units, corridors and stairwells on levels 1-4 -- revised cost",
-      "kind": "construction",
+      "kind": "permit_valuation",
       "sources": [
         "src-watch-dbi-building-permits-4"
       ],
@@ -141,7 +131,7 @@
     {
       "amount_usd": 286000,
       "what": "Revised cost on OTC alterations permit 202008312996 for a solar hot water heating system at the apartment building",
-      "kind": "construction",
+      "kind": "permit_valuation",
       "sources": [
         "src-watch-dbi-building-permits-5"
       ],
@@ -430,6 +420,13 @@
       "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
       "accessed": "2026-09-24",
       "overview": true
+    },
+    {
+      "id": "src-watch-dbi-building-permits-6",
+      "title": "Permit 202008192108 (complete) -- 410 China Basin St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202008192108",
+      "accessed": "2026-09-26"
     }
   ],
   "open_questions": [
@@ -443,5 +440,28 @@
     "No openly licensed image was found; none is hosted here.",
     "The date the 410 China Basin St building was confirmed 100% affordable is not stated in the permit data found."
   ],
-  "last_verified": "2026-09-24"
+  "last_verified": "2026-09-26",
+  "permits": [
+    {
+      "permit_number": "202212198635",
+      "permit_type": "additions alterations or repairs",
+      "description": "Building permit issued for additional rooftop photovoltaics (42 Boviet 450W panels, 18.9 kW); filed December 19, 2022",
+      "issued_date": "2023-04-19",
+      "sources": [
+        "src-watch-dbi-building-permits-2"
+      ]
+    },
+    {
+      "permit_number": "202008192108",
+      "permit_type": "otc alterations permit",
+      "description": "underground piping plan to p.o.c at street curb and provide underground piping to wharf hydrant for future construction under site permit#201901281440 (s)",
+      "filed_date": "2020-08-19",
+      "issued_date": "2020-10-26",
+      "completed_date": "2023-01-13",
+      "valuation": 66600.0,
+      "sources": [
+        "src-watch-dbi-building-permits-6"
+      ]
+    }
+  ]
 }

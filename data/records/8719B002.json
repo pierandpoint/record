@@ -176,23 +176,6 @@
         "src-watch-dbi-building-permits"
       ],
       "expected": false
-    },
-    {
-      "date": "2024-11-05",
-      "text": "DBI permit 202409090347 approved: add control dampers on levels 2 and 3, revise smoke control matrix and firefighter smoke control panel",
-      "sources": [
-        "src-watch-dbi-building-permits-2"
-      ],
-      "expected": false
-    },
-    {
-      "date": "2025-05-07",
-      "text": "Over-the-counter alteration permit filed for tenant improvements in ground-floor suite C, proposed use food/beverage handling",
-      "sources": [
-        "src-watch-dbi-building-permits-3"
-      ],
-      "status": "planned",
-      "expected": false
     }
   ],
   "costs": [
@@ -221,7 +204,7 @@
     {
       "amount_usd": 121921920,
       "what": "Revised construction cost on building permit 201910073782 for the 283-unit residential building",
-      "kind": "construction",
+      "kind": "permit_valuation",
       "sources": [
         "src-watch-dbi-building-permits"
       ],
@@ -657,5 +640,25 @@
     "mission-rock-phase1-port-capital-advance-2023",
     "mission-rock-cfd-bonds-2021",
     "mission-rock-cfd-bonds-2023"
+  ],
+  "permits": [
+    {
+      "permit_number": "202409090347",
+      "permit_type": "additions alterations or repairs",
+      "description": "DBI permit 202409090347 approved: add control dampers on levels 2 and 3, revise smoke control matrix and firefighter smoke control panel",
+      "issued_date": "2024-11-05",
+      "sources": [
+        "src-watch-dbi-building-permits-2"
+      ]
+    },
+    {
+      "permit_number": "202505075927",
+      "permit_type": "otc alterations permit",
+      "description": "Over-the-counter alteration permit filed for tenant improvements in ground-floor suite C, proposed use food/beverage handling",
+      "filed_date": "2025-05-07",
+      "sources": [
+        "src-watch-dbi-building-permits-3"
+      ]
+    }
   ]
 }

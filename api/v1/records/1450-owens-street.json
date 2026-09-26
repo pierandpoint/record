@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-25",
+ "generated": "2026-09-26",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -51,7 +51,7 @@
    {
     "amount_usd": 30000,
     "what": "OTC alterations permit 202209061935 for a new 8-inch fire sprinkler water service connecting to an existing 8-inch main in the street (estimated and revised cost)",
-    "kind": "construction",
+    "kind": "permit_valuation",
     "sources": [
      "src-watch-dbi-building-permits-2"
     ],
@@ -60,43 +60,25 @@
    {
     "amount_usd": 68000000,
     "what": "Permit-stated construction cost for the 7-story warm shell and core (permit 202012281760)",
-    "kind": "construction",
+    "kind": "permit_valuation",
     "sources": [
      "src-watch-dbi-building-permits-4"
     ],
     "date": "2021-08"
    },
    {
-    "amount_usd": 200000,
-    "what": "Permitted cost of the 40.2 kW rooftop solar photovoltaic system (permit 202407166568)",
-    "kind": "construction",
-    "sources": [
-     "src-watch-dbi-building-permits-5"
-    ],
-    "date": "2024-09-26"
-   },
-   {
     "amount_usd": 110000,
     "what": "Revised cost on OTC alterations permit 202112063791 for a test section of planned stone column ground improvements",
-    "kind": "construction",
+    "kind": "permit_valuation",
     "sources": [
      "src-watch-dbi-building-permits-6"
     ],
     "date": "2022-01-26"
    },
    {
-    "amount_usd": 800000,
-    "what": "Main lobby improvements at the main entrance of the 7-story lab/office building (OTC alterations permit 202304196000; estimated and revised cost)",
-    "kind": "construction",
-    "sources": [
-     "src-watch-dbi-building-permits-7"
-    ],
-    "date": "2023-06-22"
-   },
-   {
     "amount_usd": 120000,
     "what": "Revised cost on permit 202112214798 for the pile load test program for augered cast-in-place piles at 1450 Owens St (initially estimated at $10,000)",
-    "kind": "construction",
+    "kind": "permit_valuation",
     "sources": [
      "src-watch-dbi-building-permits-8"
     ],
@@ -105,7 +87,7 @@
    {
     "amount_usd": 26400000,
     "what": "Estimated/revised cost of interior tenant improvement permit for offices, R&D laboratories and support spaces at levels 1 and 5-7",
-    "kind": "construction",
+    "kind": "permit_valuation",
     "sources": [
      "src-watch-dbi-building-permits-9"
     ],
@@ -153,8 +135,8 @@
    {
     "date": "2021-10-21",
     "date_label": "Oct 21, 2021",
-    "status": "under_construction",
-    "status_label": "Under construction",
+    "status": null,
+    "status_label": null,
     "text": "Grading permit (202107194655) issued for site grading in support of the planned 7-story shell & core lab/office high rise; filed July 19, 2021.",
     "expected": false,
     "approximate": false,
@@ -169,8 +151,8 @@
     ],
     "source": "DBI (Building Permits)",
     "origin": "record",
-    "category": "status",
-    "category_label": "Status",
+    "category": "milestone",
+    "category_label": "Milestone",
     "record": {
      "id": "8709017",
      "slug": "1450-owens-street",
@@ -189,8 +171,8 @@
    {
     "date": "2022-01-26",
     "date_label": "Jan 26, 2022",
-    "status": "under_construction",
-    "status_label": "Under construction",
+    "status": null,
+    "status_label": null,
     "text": "OTC alterations permit (202112063791) issued for a test section of planned stone column ground improvements at the site.",
     "expected": false,
     "approximate": false,
@@ -205,8 +187,8 @@
     ],
     "source": "DBI (Building Permits)",
     "origin": "record",
-    "category": "status",
-    "category_label": "Status",
+    "category": "milestone",
+    "category_label": "Milestone",
     "record": {
      "id": "8709017",
      "slug": "1450-owens-street",
@@ -225,8 +207,8 @@
    {
     "date": "2022-01-26",
     "date_label": "Jan 26, 2022",
-    "status": "under_construction",
-    "status_label": "Under construction",
+    "status": null,
+    "status_label": null,
     "text": "Over-the-counter alterations permit issued for a pile load test program for augered cast-in-place piles supporting the planned 7-story shell-and-core office/lab building (filed 2021-12-21).",
     "expected": false,
     "approximate": false,
@@ -241,8 +223,8 @@
     ],
     "source": "DBI (Building Permits)",
     "origin": "record",
-    "category": "status",
-    "category_label": "Status",
+    "category": "milestone",
+    "category_label": "Milestone",
     "record": {
      "id": "8709017",
      "slug": "1450-owens-street",
@@ -261,8 +243,8 @@
    {
     "date": "2022-07-28",
     "date_label": "Jul 28, 2022",
-    "status": "under_construction",
-    "status_label": "Under construction",
+    "status": null,
+    "status_label": null,
     "text": "First construction document issued under permit 202012281760.",
     "expected": false,
     "approximate": false,
@@ -277,8 +259,8 @@
     ],
     "source": "DBI (Building Permits)",
     "origin": "record",
-    "category": "status",
-    "category_label": "Status",
+    "category": "milestone",
+    "category_label": "Milestone",
     "record": {
      "id": "8709017",
      "slug": "1450-owens-street",
@@ -316,6 +298,42 @@
     "origin": "record",
     "category": "status",
     "category_label": "Status",
+    "record": {
+     "id": "8709017",
+     "slug": "1450-owens-street",
+     "name": "1450 Owens Street",
+     "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
+     "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2023-06-01",
+    "date_label": "Jun 1, 2023",
+    "status": null,
+    "status_label": null,
+    "text": "Alterations permit 202306018964 filed and issued on 2023-06-01 for 31 evacuation plan maps covering floors 1-7 and the penthouse, for fire review only.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-watch-dbi-building-permits-11",
+      "title": "Permit 202306018964 (complete) -- 1450 Owens St",
+      "publisher": "DBI (Building Permits)",
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202306018964",
+      "accessed": "2026-09-26"
+     }
+    ],
+    "source": "DBI (Building Permits)",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
     "record": {
      "id": "8709017",
      "slug": "1450-owens-street",
@@ -385,8 +403,8 @@
    {
     "date": "2024-01-30",
     "date_label": "Jan 30, 2024",
-    "status": "complete",
-    "status_label": "Complete",
+    "status": null,
+    "status_label": null,
     "text": "Fire sprinkler water service permit (202209061935, filed September 2022 and issued September 13, 2022) reached complete status.",
     "expected": false,
     "approximate": false,
@@ -401,8 +419,8 @@
     ],
     "source": "DBI (Building Permits)",
     "origin": "record",
-    "category": "status",
-    "category_label": "Status",
+    "category": "milestone",
+    "category_label": "Milestone",
     "record": {
      "id": "8709017",
      "slug": "1450-owens-street",
@@ -421,8 +439,8 @@
    {
     "date": "2024-03-14",
     "date_label": "Mar 14, 2024",
-    "status": "complete",
-    "status_label": "Complete",
+    "status": null,
+    "status_label": null,
     "text": "Grading/excavation permit 202107194655 recorded as complete.",
     "expected": false,
     "approximate": false,
@@ -437,8 +455,8 @@
     ],
     "source": "DBI (Building Permits)",
     "origin": "record",
-    "category": "status",
-    "category_label": "Status",
+    "category": "milestone",
+    "category_label": "Milestone",
     "record": {
      "id": "8709017",
      "slug": "1450-owens-street",
@@ -455,26 +473,26 @@
     "relation": "tracked"
    },
    {
-    "date": "2025-01-10",
-    "date_label": "Jan 10, 2025",
-    "status": "complete",
-    "status_label": "Complete",
-    "text": "Over-the-counter alterations permit (202405303298) for new irrigation and a foundation for a public artwork installation, filed May 2024 and issued August 6, 2024, reached 'complete' status.",
+    "date": "2024-04-10",
+    "date_label": "Apr 10, 2024",
+    "status": null,
+    "status_label": null,
+    "text": "Alterations permit 202403087397 issued for revisions to incorporate final scp changes required by landscape & public art coordination.",
     "expected": false,
     "approximate": false,
     "sources": [
      {
-      "id": "src-watch-dbi-building-permits",
-      "title": "Permit 202405303298 (complete) -- 1450 Owens St",
+      "id": "src-watch-dbi-building-permits-12",
+      "title": "Permit 202403087397 (complete) -- 1450 Owens St",
       "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202405303298",
-      "accessed": "2026-09-24"
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202403087397",
+      "accessed": "2026-09-26"
      }
     ],
     "source": "DBI (Building Permits)",
     "origin": "record",
-    "category": "status",
-    "category_label": "Status",
+    "category": "milestone",
+    "category_label": "Milestone",
     "record": {
      "id": "8709017",
      "slug": "1450-owens-street",
@@ -491,62 +509,26 @@
     "relation": "tracked"
    },
    {
-    "date": "2025-02-27",
-    "date_label": "Feb 27, 2025",
-    "status": "complete",
-    "status_label": "Complete",
-    "text": "Permit for installation of a Notifier NFS2-3030 addressable voice fire alarm system in the building's core areas (as-built drawings for the high-rise lab and office construction) reached completed status; filed November 14, 2024 and issued November 20, 2024.",
+    "date": "2024-06-26",
+    "date_label": "Jun 26, 2024",
+    "status": null,
+    "status_label": null,
+    "text": "Over-the-counter alterations permit 202306018964 (evacuation plan maps) recorded as complete.",
     "expected": false,
     "approximate": false,
     "sources": [
      {
-      "id": "src-watch-dbi-building-permits-3",
-      "title": "Permit 202411014254 (complete) -- 1450 Owens St",
+      "id": "src-watch-dbi-building-permits-11",
+      "title": "Permit 202306018964 (complete) -- 1450 Owens St",
       "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202411014254",
-      "accessed": "2026-09-24"
+      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202306018964",
+      "accessed": "2026-09-26"
      }
     ],
     "source": "DBI (Building Permits)",
     "origin": "record",
-    "category": "status",
-    "category_label": "Status",
-    "record": {
-     "id": "8709017",
-     "slug": "1450-owens-street",
-     "name": "1450 Owens Street",
-     "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
-     "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2025-02-28",
-    "date_label": "Feb 28, 2025",
-    "status": "complete",
-    "status_label": "Complete",
-    "text": "Permit 202407166568 for a 40.2 kW rooftop photovoltaic system completed (filed July 2024, issued September 2024).",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-watch-dbi-building-permits-5",
-      "title": "Permit 202407166568 (complete) -- 1450 Owens St",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202407166568",
-      "accessed": "2026-09-24"
-     }
-    ],
-    "source": "DBI (Building Permits)",
-    "origin": "record",
-    "category": "status",
-    "category_label": "Status",
+    "category": "milestone",
+    "category_label": "Milestone",
     "record": {
      "id": "8709017",
      "slug": "1450-owens-street",
@@ -597,81 +579,183 @@
      "url": "https://pierandpoint.org/sites/mission-bay/"
     },
     "relation": "tracked"
-   },
-   {
-    "date": "2025-05-19",
-    "date_label": "May 19, 2025",
-    "status": "complete",
-    "status_label": "Complete",
-    "text": "OTC alterations permit 202304196000 for main lobby improvements at the main entrance marked complete (issued June 22, 2023).",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-watch-dbi-building-permits-7",
-      "title": "Permit 202304196000 (complete) -- 1450 Owens St",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202304196000",
-      "accessed": "2026-09-24"
-     }
-    ],
-    "source": "DBI (Building Permits)",
-    "origin": "record",
-    "category": "status",
-    "category_label": "Status",
-    "record": {
-     "id": "8709017",
-     "slug": "1450-owens-street",
-     "name": "1450 Owens Street",
-     "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
-     "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2026-07-14",
-    "date_label": "Jul 14, 2026",
-    "status": "under_construction",
-    "status_label": "Under construction",
-    "text": "Building permit issued for interior tenant improvement to build out offices, R&D laboratories and support spaces on levels 1 and 5-7 of the existing 7-story core and shell building (filed January 2026, approved July 10, 2026).",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-watch-dbi-building-permits-9",
-      "title": "Permit 202512232555 (issued) -- 1450 Owens St",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202512232555",
-      "accessed": "2026-09-24"
-     }
-    ],
-    "source": "DBI (Building Permits)",
-    "origin": "record",
-    "category": "status",
-    "category_label": "Status",
-    "record": {
-     "id": "8709017",
-     "slug": "1450-owens-street",
-     "name": "1450 Owens Street",
-     "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
-     "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    },
-    "relation": "tracked"
    }
   ],
   "changes": [
+   {
+    "date": "2026-09-26",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "permit_number: 202306018964 permit_type_definition: otc alterations permit status: complete status_date: 2024-06-26T16:31:26.000 filed_date: 2023-06-01T07:40:53.000 issued_date: 2023-06-01T08:27:48.000 approved_date: 2023-06-01T08:27:48.000 description: 31 evacuation plan maps floors 1-7 & penthouse for fire review only.",
+    "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202306018964",
+    "sources": [
+     {
+      "title": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202306018964"
+     }
+    ],
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8709017",
+     "slug": "1450-owens-street",
+     "name": "1450 Owens Street",
+     "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
+     "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-09-26",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "permit_number: 202306018964 permit_type_definition: otc alterations permit status: complete status_date: 2024-06-26T16:31:26.000",
+    "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202306018964",
+    "sources": [
+     {
+      "title": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202306018964"
+     }
+    ],
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8709017",
+     "slug": "1450-owens-street",
+     "name": "1450 Owens Street",
+     "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
+     "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-09-26",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "permit_number: 202403087397 permit_type_definition: additions alterations or repairs status: complete status_date: 2024-05-30T14:31:39.000 filed_date: 2024-03-15T10:47:31.000 issued_date: 2024-04-10T08:39:17.000 approved_date: 2024-04-09T13:09:16.000 description: revision to pid pa# 202307263056, pa# 202204202594, & pa# 202210043668. to incorporate final scp revisions required by landscape & public art coordination.",
+    "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202403087397",
+    "sources": [
+     {
+      "title": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202403087397"
+     }
+    ],
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8709017",
+     "slug": "1450-owens-street",
+     "name": "1450 Owens Street",
+     "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
+     "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-09-26",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "permit_number: 202608317416 permit_type_definition: additions alterations or repairs status: filed status_date: 2026-09-17T10:05:58.000 filed_date: 2026-09-17T10:05:58.000 description: deferred mech and bulletin 1 wall location and ceiling updates for office ara nd support space at lvl 1,5-7.",
+    "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202608317416",
+    "sources": [
+     {
+      "title": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202608317416"
+     }
+    ],
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8709017",
+     "slug": "1450-owens-street",
+     "name": "1450 Owens Street",
+     "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
+     "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-09-26",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "issued_date: 2018-06-18T09:37:15.000 approved_date: 2018-06-18T09:37:15.000 description: restripe (e) parking lot to add ada accessibile parking spot estimated_cost: 2000.0 revised_cost: 25000.0",
+    "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201805290412",
+    "sources": [
+     {
+      "title": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201805290412"
+     }
+    ],
+    "category": "construction",
+    "category_label": "Construction",
+    "record": {
+     "id": "8709017",
+     "slug": "1450-owens-street",
+     "name": "1450 Owens Street",
+     "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
+     "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-09-25",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "A 2026-07-14 interior tenant-improvement permit had carried a status field, reverting the record's computed status to under_construction after its 2025 new-construction permit already reached complete. Six DBI permits on this record lose their status tag as construction-progress entries; five move to a new permits list.",
+    "source": "docs/briefs/watch-rules.md",
+    "sources": [
+     {
+      "title": "docs/briefs/watch-rules.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8709017",
+     "slug": "1450-owens-street",
+     "name": "1450 Owens Street",
+     "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
+     "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-24",
     "kind": "added",
@@ -705,7 +789,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "description: new 8in fire sprinkler water service connecting to an (e) 8in main on street. ref pa 202012281760.\nestimated_cost: 30000.0",
+    "text": "description: new 8in fire sprinkler water service connecting to an (e) 8in main on street. ref pa 202012281760. estimated_cost: 30000.0",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202209061935",
     "sources": [
      {
@@ -734,7 +818,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "status: complete\nstatus_date: 2024-01-30T10:44:08.000",
+    "text": "status: complete status_date: 2024-01-30T10:44:08.000",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202209061935",
     "sources": [
      {
@@ -792,7 +876,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "status: complete\nstatus_date: 2025-05-19T15:54:59.000",
+    "text": "status: complete status_date: 2025-05-19T15:54:59.000",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202012281760",
     "sources": [
      {
@@ -821,7 +905,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "estimated_cost: 68000000.0\nrevised_cost: 68000000.0",
+    "text": "estimated_cost: 68000000.0 revised_cost: 68000000.0",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202012281760",
     "sources": [
      {
@@ -879,7 +963,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "status: complete\nstatus_date: 2025-02-28T10:27:49.000",
+    "text": "status: complete status_date: 2025-02-28T10:27:49.000",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202407166568",
     "sources": [
      {
@@ -1024,7 +1108,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "status: complete\nstatus_date: 2025-05-19T15:53:17.000",
+    "text": "status: complete status_date: 2025-05-19T15:53:17.000",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202304196000",
     "sources": [
      {
@@ -1053,7 +1137,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "issued_date: 2022-01-26T09:30:59.000\napproved_date: 2022-01-26T09:30:59.000\ndescription: pile load test program for augered cast in place piles in support of a planned 7 story shell and core office/lab high-rise.",
+    "text": "issued_date: 2022-01-26T09:30:59.000 approved_date: 2022-01-26T09:30:59.000 description: pile load test program for augered cast in place piles in support of a planned 7 story shell and core office/lab high-rise.",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202112214798",
     "sources": [
      {
@@ -1082,7 +1166,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "estimated_cost: 10000.0\nrevised_cost: 120000.0",
+    "text": "estimated_cost: 10000.0 revised_cost: 120000.0",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202112214798",
     "sources": [
      {
@@ -1169,7 +1253,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "issued_date: 2021-10-21T07:39:20.000\napproved_date: 2021-10-21T07:39:20.000\ndescription: site grading in support of a planned 7 story shell & core lab/office high rise.",
+    "text": "issued_date: 2021-10-21T07:39:20.000 approved_date: 2021-10-21T07:39:20.000 description: site grading in support of a planned 7 story shell & core lab/office high rise.",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202107194655",
     "sources": [
      {
@@ -1198,7 +1282,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "status: complete\nstatus_date: 2024-03-14T12:23:22.000",
+    "text": "status: complete status_date: 2024-03-14T12:23:22.000",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202107194655",
     "sources": [
      {
@@ -1415,6 +1499,34 @@
     "overview": true
    },
    {
+    "id": "src-watch-dbi-building-permits-11",
+    "title": "Permit 202306018964 (complete) -- 1450 Owens St",
+    "publisher": "DBI (Building Permits)",
+    "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202306018964",
+    "accessed": "2026-09-26"
+   },
+   {
+    "id": "src-watch-dbi-building-permits-12",
+    "title": "Permit 202403087397 (complete) -- 1450 Owens St",
+    "publisher": "DBI (Building Permits)",
+    "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202403087397",
+    "accessed": "2026-09-26"
+   },
+   {
+    "id": "src-watch-dbi-building-permits-13",
+    "title": "Permit 202608317416 (filed) -- 1450 Owens St",
+    "publisher": "DBI (Building Permits)",
+    "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202608317416",
+    "accessed": "2026-09-26"
+   },
+   {
+    "id": "src-watch-dbi-building-permits-14",
+    "title": "Permit 201805290412 (complete) -- 1450 Owens St",
+    "publisher": "DBI (Building Permits)",
+    "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201805290412",
+    "accessed": "2026-09-26"
+   },
+   {
     "id": null,
     "title": "data.sf.gov/resource/wv5m-vpq2.json",
     "url": "https://data.sf.gov/resource/wv5m-vpq2.json"
@@ -1422,7 +1534,7 @@
   ],
   "notes": "1450 Owens Street -- a 7-story, ~1-acre laboratory/office building at the Alexandria Center for Science and Technology's Mission Bay Megacampus, completed/came online 2024 (133,000 sq ft lab space, ~50,000 sq ft office, 2,600 sq ft ground-level retail per Commercial Property Executive/EurekAlert coverage of the building). Owner-identified while reviewing the numbered real-gap-fragment map for this session's positioning check. Gladstone Institutes (whose own separate headquarters at 1650 Owens St, blklot 8709008, is already tracked) signed a 105,000+ sq ft lease here in 2024 for its data science and genomic immunology institutes, per Gladstone's own press release and multiple real-estate trade press reports -- this record tracks the real Alexandria-owned building/parcel, not a separate Gladstone-owned site. DataSF Assessor confirms blklot 8709017 at 1450 Owens St; the DataSF Building Footprints layer only captures small roof fragments (~688 sq m total) of this real ~4,607 sq m parcel, so this record uses the real Assessor parcel boundary directly, consistent with how this project handles other footprint-layer gaps (e.g. 1300 Fourth Street, Block 6E).",
   "has_record_file": true,
-  "last_verified": "2026-09-24",
+  "last_verified": "2026-09-26",
   "tenants": [],
   "geometry": {
    "type": "Polygon",
