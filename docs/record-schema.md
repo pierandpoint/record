@@ -164,6 +164,22 @@ doesn't exist in `status.csv` or `approximate_projects.csv` fails validation.
   Allowed licenses: `public-domain`, `public-record`, `cc-by`, `cc-by-sa`,
   `cc0`, `owner` (our own photo). Anything else is not hosted here: link it
   in `sources` instead.
+
+  <a id="our-own-photographs"></a>**Our own photographs.** Photos taken by
+  Pier & Point's founder, Pierre Rohel, are published under the Creative
+  Commons Attribution 4.0 International license (CC BY 4.0,
+  https://creativecommons.org/licenses/by/4.0/), the same license as the
+  record data. Reuse them freely, commercially or not, with the credit
+  "Pierre Rohel / Pier & Point" and a link to the license. Their entries
+  carry `license: cc-by`, that exact `credit`, `source_url` pointing at the
+  hosted file in the public record repository, `license_evidence` pointing at
+  this paragraph, and a `license_note` giving the date the photo was taken.
+  (`owner` stays in the validator's list only so older data still reads; no
+  entry uses it, and a new one shouldn't: it names no license.) The hosted
+  copy is a smaller, upright derivative with every licence plate and
+  recognisable face blurred and all camera metadata removed except the
+  credit and the license. The full-resolution original is kept, unpublished,
+  for provenance.
 - An image may set `scope`: `record` (default, not usually written
   explicitly), `area` or `site`.
   - `record`: depicts this record specifically.

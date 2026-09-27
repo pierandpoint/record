@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-26",
+ "generated": "2026-09-27",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -29,8 +29,10 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "A seven-story building at 255 Berry St.",
+  "summary_sources": [
+   "src-osm-255-berry"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -82,18 +84,63 @@
    }
   ],
   "changes": [],
-  "images": [],
-  "open_questions": [],
+  "images": [
+   {
+    "path": "data/manual/images/mission_bay/owner_20260923_102159.jpg",
+    "kind": "now",
+    "taken": "2026-09-23",
+    "credit": "Pierre Rohel / Pier & Point",
+    "license": "cc-by",
+    "source_url": "https://github.com/pierandpoint/record/blob/main/data/manual/images/mission_bay/owner_20260923_102159.jpg",
+    "license_evidence": "https://github.com/pierandpoint/record/blob/main/docs/record-schema.md#our-own-photographs",
+    "license_note": "Taken by Pierre Rohel on 2026-09-23; published under CC BY 4.0 per docs/record-schema.md, 'Our own photographs'.",
+    "appeal": 3,
+    "appeal_note": "The whole building seen across a lawn under a clear sky, with a parked lift at the left edge.",
+    "url": "https://pierandpoint.org/assets/img/owner_20260923_102159.jpg"
+   },
+   {
+    "path": "data/manual/images/mission_bay/owner_20260923_103301.jpg",
+    "kind": "now",
+    "taken": "2026-09-23",
+    "credit": "Pierre Rohel / Pier & Point",
+    "license": "cc-by",
+    "source_url": "https://github.com/pierandpoint/record/blob/main/data/manual/images/mission_bay/owner_20260923_103301.jpg",
+    "license_evidence": "https://github.com/pierandpoint/record/blob/main/docs/record-schema.md#our-own-photographs",
+    "license_note": "Taken by Pierre Rohel on 2026-09-23; published under CC BY 4.0 per docs/record-schema.md, 'Our own photographs'.",
+    "caption": "Seen from across Mission Creek",
+    "appeal": 3,
+    "appeal_note": "The full facade above the creek-side planting, reflected in the water.",
+    "url": "https://pierandpoint.org/assets/img/owner_20260923_103301.jpg"
+   },
+   {
+    "path": "data/manual/images/mission_bay/owner_20260924_094603.jpg",
+    "kind": "now",
+    "taken": "2026-09-24",
+    "credit": "Pierre Rohel / Pier & Point",
+    "license": "cc-by",
+    "source_url": "https://github.com/pierandpoint/record/blob/main/data/manual/images/mission_bay/owner_20260924_094603.jpg",
+    "license_evidence": "https://github.com/pierandpoint/record/blob/main/docs/record-schema.md#our-own-photographs",
+    "license_note": "Taken by Pierre Rohel on 2026-09-24; published under CC BY 4.0 per docs/record-schema.md, 'Our own photographs'.",
+    "appeal": 2,
+    "appeal_note": "A close, upward view of one corner; only part of the building is in frame.",
+    "url": "https://pierandpoint.org/assets/img/owner_20260924_094603.jpg"
+   }
+  ],
+  "open_questions": [
+   "This record file was created on 2026-09-27 to host the owner's own field photos. Its summary is limited to what its cited source was re-read to confirm that day; fuller details already in this repo's status.csv notes or geometry file (developer, architect, unit count, year built) were left out where that source didn't state them. No research pass yet: no milestones, costs or facts."
+  ],
   "sources": [
    {
-    "id": null,
-    "title": "openstreetmap.org/relation/3831604",
-    "url": "https://www.openstreetmap.org/relation/3831604"
+    "id": "src-osm-255-berry",
+    "title": "OpenStreetMap relation 3831604 (255 Berry Street, building:levels 7)",
+    "publisher": "OpenStreetMap contributors",
+    "url": "https://www.openstreetmap.org/relation/3831604",
+    "accessed": "2026-09-27"
    }
   ],
   "notes": "Unit count and architect not confirmed by any source found in this pass; left out rather than guessed.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-27",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

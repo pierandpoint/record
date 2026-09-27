@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-09-26",
+ "generated": "2026-09-27",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -29,8 +29,10 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "One Mission Bay, a completed 350-unit condominium development with ground-floor retail at the corner of 3rd and Channel streets.",
+  "summary_sources": [
+   "src-strada-omb"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -114,18 +116,64 @@
    }
   ],
   "changes": [],
-  "images": [],
-  "open_questions": [],
+  "images": [
+   {
+    "path": "data/manual/images/mission_bay/owner_20260923_103438.jpg",
+    "kind": "now",
+    "taken": "2026-09-23",
+    "credit": "Pierre Rohel / Pier & Point",
+    "license": "cc-by",
+    "source_url": "https://github.com/pierandpoint/record/blob/main/data/manual/images/mission_bay/owner_20260923_103438.jpg",
+    "license_evidence": "https://github.com/pierandpoint/record/blob/main/docs/record-schema.md#our-own-photographs",
+    "license_note": "Taken by Pierre Rohel on 2026-09-23; published under CC BY 4.0 per docs/record-schema.md, 'Our own photographs'.",
+    "appeal": 4,
+    "appeal_note": "The whole glass tower with its red-brown accent band against a clear sky, from the street.",
+    "url": "https://pierandpoint.org/assets/img/owner_20260923_103438.jpg"
+   },
+   {
+    "path": "data/manual/images/mission_bay/owner_20260924_094613.jpg",
+    "kind": "now",
+    "taken": "2026-09-24",
+    "credit": "Pierre Rohel / Pier & Point",
+    "license": "cc-by",
+    "source_url": "https://github.com/pierandpoint/record/blob/main/data/manual/images/mission_bay/owner_20260924_094613.jpg",
+    "license_evidence": "https://github.com/pierandpoint/record/blob/main/docs/record-schema.md#our-own-photographs",
+    "license_note": "Taken by Pierre Rohel on 2026-09-24; published under CC BY 4.0 per docs/record-schema.md, 'Our own photographs'.",
+    "caption": "Seen from across the water",
+    "appeal": 4,
+    "appeal_note": "The development and its reflection seen across calm water, a clear waterfront view.",
+    "url": "https://pierandpoint.org/assets/img/owner_20260924_094613.jpg"
+   },
+   {
+    "path": "data/manual/images/mission_bay/owner_20260924_095037.jpg",
+    "kind": "now",
+    "taken": "2026-09-24",
+    "credit": "Pierre Rohel / Pier & Point",
+    "license": "cc-by",
+    "source_url": "https://github.com/pierandpoint/record/blob/main/data/manual/images/mission_bay/owner_20260924_095037.jpg",
+    "license_evidence": "https://github.com/pierandpoint/record/blob/main/docs/record-schema.md#our-own-photographs",
+    "license_note": "Taken by Pierre Rohel on 2026-09-24; published under CC BY 4.0 per docs/record-schema.md, 'Our own photographs'.",
+    "caption": "Seen from across the water",
+    "appeal": 3,
+    "appeal_note": "The building row seen across the water, shot toward the sun; clear but hazy, with lens flare.",
+    "url": "https://pierandpoint.org/assets/img/owner_20260924_095037.jpg"
+   }
+  ],
+  "open_questions": [
+   "This record file was created on 2026-09-27 to host the owner's own field photos. Its summary is limited to what its cited source was re-read to confirm that day; fuller details already in this repo's status.csv notes or geometry file (developer, architect, unit count, year built) were left out where that source didn't state them. No research pass yet: no milestones, costs or facts."
+  ],
   "sources": [
+   {
+    "id": "src-strada-omb",
+    "title": "One Mission Bay",
+    "publisher": "Strada Investment Group",
+    "url": "https://stradasf.com/what-we-do/development/one-mission-bay/",
+    "accessed": "2026-09-27"
+   },
    {
     "id": null,
     "title": "openstreetmap.org/way/563104192",
     "url": "https://www.openstreetmap.org/way/563104192"
-   },
-   {
-    "id": null,
-    "title": "stradasf.com/what-we-do/development/one-mission-bay",
-    "url": "https://stradasf.com/what-we-do/development/one-mission-bay/"
    },
    {
     "id": null,
@@ -139,8 +187,8 @@
    }
   ],
   "notes": "350 condominium units across two connected structures (a high-rise tower plus a lower perimeter building) at 1000 3rd St and 110 Channel St, unit sizes 495-1,528 sq ft per real-estate listings; amenities include a 24-hour doorperson, heated outdoor pool, fitness center, and resident lounge/dining space. A claimed ~50,000 sq ft of ground-floor retail could not be confirmed as specific to this building (see digitization_method) -- not asserted here.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-09-27",
   "tenants": [],
   "geometry": {
    "type": "Polygon",
