@@ -79,15 +79,35 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .zoom-controls[hidden] { display: none; }
 .zoom-btn { width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid var(--line-3); background: rgba(29,37,40,.92); color: var(--text); font: 600 17px var(--mono); line-height: 1; cursor: pointer; }
 .zoom-btn:hover { border-color: var(--brass); color: var(--brass-hi); }
-/* "show tenants" map toggle: a small segmented control next to the zoom buttons
-   (docs/briefs/tenant-markers.md) */
-.tenant-toggle-group { position: absolute; top: 12px; left: 12px; z-index: 2; display: flex; align-items: center; gap: 6px; background: rgba(29,37,40,.92); border: 1px solid var(--line-3); border-radius: 999px; padding: 4px; }
-.tenant-toggle-group[hidden] { display: none; }
-.tenant-toggle-label { font-family: var(--mono); font-size: 11px; letter-spacing: .04em; color: var(--soft); padding-left: 8px; }
-.tenant-seg { min-height: 28px; padding: 0 12px; border-radius: 999px; border: none; background: none; color: var(--soft); font: 500 12px var(--sans); cursor: pointer; }
-.tenant-seg[aria-pressed="true"] { background: var(--brass); color: var(--ink); font-weight: 600; }
-.tenant-seg:not([aria-pressed="true"]):hover { color: var(--text); }
-.pp-map.tenants-on a[data-tenants] .rec { stroke: var(--brass); stroke-width: 2.4; }
+/* Every per-map toggle (Status | Use, Tenants) lives in this slim row above the map, not on the
+   map canvas itself (owner decision 2026-09-27, 2nd round: the canvas carries no overlay but the
+   zoom buttons, which stay put at .zoom-controls above). Left-aligned, wrapping onto a second
+   line rather than overflowing at narrow widths; each toggle keeps its own [hidden] so the row
+   collapses cleanly when one has nothing to show (JavaScript off, or a map with no tenants). */
+.map-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 10px; }
+.toggle-group { display: flex; align-items: center; gap: 6px; background: rgba(29,37,40,.92); border: 1px solid var(--line-3); border-radius: 999px; padding: 4px; }
+.toggle-group[hidden] { display: none; }
+.toggle-seg { min-height: 28px; padding: 0 12px; border-radius: 999px; border: none; background: none; color: var(--soft); font: 500 12px var(--sans); cursor: pointer; }
+.toggle-seg[aria-pressed="true"] { background: var(--brass); color: var(--ink); font-weight: 600; }
+.toggle-seg:not([aria-pressed="true"]):hover { color: var(--text); }
+/* .toggle-chip: a standalone pill (the Tenants toggle -- a single button, not a segmented pair),
+   sharing the pressed/brass look .toggle-seg uses inside a group. */
+.toggle-chip { display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--line-3); background: rgba(29,37,40,.92); color: var(--soft); font: 500 12px var(--sans); cursor: pointer; }
+.toggle-chip[hidden] { display: none; }
+.toggle-chip[aria-pressed="true"] { background: var(--brass); border-color: var(--brass); color: var(--ink); font-weight: 600; }
+.toggle-chip:not([aria-pressed="true"]):hover { border-color: var(--brass); color: var(--text); }
+/* :not(.mode-use) -- brass stays reserved for interaction/tenants (owner decision 2026-09-27,
+   4th round): in Use mode a parcel's own colour is its category, so a tenant highlight must not
+   repaint its stroke brass, which would read as a sixth category that doesn't exist. The tenant
+   markers themselves are untouched; only this parcel-outline highlight is scoped off. */
+.pp-map.tenants-on:not(.mode-use) a[data-tenants] .rec { stroke: var(--brass); stroke-width: 2.4; }
+/* A nearby proposal (docs/record-schema.md's "adjacent" records) is never a use category -- it's
+   outside the tracked-status system, same reasoning pages.py's own NEARBY_COLOR comment already
+   gives for Status mode. Its fixed purple sat too close to the Use palette's own mixed-use plum
+   (owner decision 2026-09-28), so in Use mode this overrides its inline stroke to the same
+   neutral grey a timeline tick reads there (app.js's TICK_NEUTRAL) -- the dash pattern itself is
+   untouched, still the inline stroke-dasharray record_shape() renders. */
+.pp-map.mode-use .rec.nearby { stroke: #a9b3ae; }
 
 /* Tenant map markers (docs/briefs/tenant-markers.md): a zoom-aware pill per parcel, splitting
    into individual glyph markers past a zoom threshold, both built by app.js from the sibling
@@ -176,6 +196,11 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .timeline { position: sticky; top: 0; z-index: 10; background: rgba(22,29,31,.94); backdrop-filter: blur(6px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-top: 24px; }
 .timeline .wrap { display: flex; flex-direction: column; gap: 10px; padding-top: 10px; padding-bottom: 10px; }
 .timeline-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+/* Without this, [hidden]'s own `display: none` (a user-agent style) loses to the `display: flex`
+   above (an author style always wins over user-agent, regardless of selector or source order) --
+   the exact bug the legend's own [hidden] rule was added to fix earlier in this PR, recurring here
+   for the Use-mode timeline note (found while verifying this round's screenshots). */
+.timeline-top[hidden] { display: none; }
 .timeline-controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .timeline .btn-icon { padding: 0 12px; min-width: 44px; font-family: var(--mono); font-weight: 600; }
 .year-jump { min-height: 44px; max-width: 112px; padding: 0 10px; border-radius: 8px; border: 1px solid var(--line-3); background: var(--ink-2); color: var(--text); font: 500 14px var(--sans); cursor: pointer; }
@@ -194,13 +219,26 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .timeline .readout strong { font: 500 18px/1.2 var(--mono); }
 .timeline .readout span { font: 12px/1.3 var(--mono); color: var(--brass); }
 .timeline noscript { font-size: 13px; color: var(--faint); }
+/* Stands in for the slider/Play/readout in Use mode (owner decision 2026-09-28, 9th round): Use
+   no longer encodes status or time, so there's nothing left for those controls to drive. */
+.timeline-use-note { margin: 0; padding: 6px 0; font-size: 14px; color: var(--faint); }
 
 .legend { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 13px; color: var(--soft); padding: 16px 0 0; }
+.legend[hidden] { display: none; }
 .legend > span { display: inline-flex; align-items: center; gap: 8px; }
 .legend b { font: 500 13px var(--mono); color: var(--text); }
+/* Names which mode a legend belongs to (owner decision 2026-09-28, 8th round), so a visitor
+   scrolled down to it doesn't have to scroll back up to the toggle to tell Status from Use. */
+.legend-heading { flex-basis: 100%; margin: 0 0 6px; }
+.legend-note { flex-basis: 100%; margin: 0 0 4px; font-size: 12.5px; color: var(--faint); max-width: 640px; }
 
 /* progress tracker (home page, above the site list) */
-.tracker { padding: 8px 0 8px; display: flex; flex-direction: column; gap: 8px; }
+/* padding-top/-bottom, not the `padding` shorthand: this section is also `.wrap` (padding: 0
+   var(--gutter)), and the shorthand here was zeroing that gutter's left/right back out on the
+   same element, pushing every line in this section flush to the viewport edge -- including the
+   "As of <year>: ..." caption -- while the legend and everything else on the page, in a plain
+   .wrap with no such override, kept its indent (found while in this area, owner, 2026-09-28). */
+.tracker { padding-top: 8px; padding-bottom: 8px; display: flex; flex-direction: column; gap: 8px; }
 .tracker .bar { height: 10px; }
 .tracker-sites { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin-top: 8px; }
 @media (min-width: 720px) { .tracker-sites { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px; } }

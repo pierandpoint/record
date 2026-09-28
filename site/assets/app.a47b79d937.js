@@ -56,6 +56,73 @@
   var SPEEDS = [1, 2, 4, 8];
   var speedIdx = 0;
 
+  // Status | Use (docs/briefs/site-ux.md follow-up, sitegen/pages.py's view_toggle()): the
+  // control only exists on the home and site pages (never a record page's own locator map), so
+  // its absence is exactly the scope switch -- no toggle on the page means mode can never be
+  // anything but 'status', whatever the URL says. Lives in the map's own top-left .map-controls
+  // overlay, stacked with the tenant toggle (build.py's map_controls()) -- one lookup here still
+  // works since a page only ever carries one of these regardless of which map-frame it sits in.
+  var toggle = document.querySelector('.color-toggle');
+  var viewParams = new URLSearchParams(window.location.search);
+  var mode = (toggle && viewParams.get('view') === 'use') ? 'use' : 'status';
+
+  function setLegendMode(m) {
+    document.querySelectorAll('[data-legend-mode]').forEach(function (el) {
+      el.hidden = el.getAttribute('data-legend-mode') !== m;
+    });
+  }
+  // A parcel's tenant highlight (site.css's .tenants-on a[data-tenants] .rec) recolours its
+  // stroke brass -- fine in Status mode, where brass never means anything else on the map, but in
+  // Use mode that same brass would read as a sixth category that doesn't exist (owner decision
+  // 2026-09-27, 4th round: brass stays reserved for interaction/tenants, never a parcel's own
+  // colour). This class is what site.css's selector excludes; the tenant markers themselves are
+  // unaffected, only a highlighted parcel's own outline.
+  function setMapModeClass(m) {
+    document.querySelectorAll('.pp-map').forEach(function (svg) {
+      svg.classList.toggle('mode-use', m === 'use');
+    });
+  }
+  // Use is a clean single-variable map now (owner decision 2026-09-28, 9th round): it no longer
+  // encodes status at all, so the slider, Play and the progress chart -- all of them status/time
+  // controls -- have nothing left to drive in Use mode. sitegen/pages.py marks each one
+  // data-view-mode="status" (the timeline's own controls/track, and home's .tracker-curve); the
+  // timeline's one-line Use-mode note is the only data-view-mode="use" element. slider.value is
+  // never touched here, so switching back to Status resumes at the same month it was on.
+  function setViewVisibility(m) {
+    document.querySelectorAll('[data-view-mode]').forEach(function (el) {
+      el.hidden = el.getAttribute('data-view-mode') !== m;
+    });
+  }
+  function setMode(m, pushUrl) {
+    mode = m;
+    setLegendMode(m);
+    setToggleButtons(m);
+    setMapModeClass(m);
+    setViewVisibility(m);
+    if (pushUrl) {
+      var params = new URLSearchParams(window.location.search);
+      if (m === 'use') params.set('view', 'use'); else params.delete('view');
+      var qs = params.toString();
+      window.history.replaceState(null, '', window.location.pathname + (qs ? '?' + qs : ''));
+    }
+    paint(+slider.value);
+  }
+  function setToggleButtons(m) {
+    if (!toggle) return;
+    toggle.querySelectorAll('[data-view-toggle]').forEach(function (btn) {
+      btn.setAttribute('aria-pressed', btn.getAttribute('data-view-toggle') === m ? 'true' : 'false');
+    });
+  }
+  if (toggle) {
+    setLegendMode(mode);
+    setToggleButtons(mode);
+    setMapModeClass(mode);
+    setViewVisibility(mode);
+    toggle.querySelectorAll('[data-view-toggle]').forEach(function (btn) {
+      btn.addEventListener('click', function () { setMode(btn.getAttribute('data-view-toggle'), true); });
+    });
+  }
+
   // The value of the "jump to a year" <option> that covers index m: one option per calendar
   // year (its January index), so any month within a year snaps to that year's own option.
   function yearOptionFor(m) {
@@ -69,12 +136,28 @@
       var r = byId[n.getAttribute('data-id')];
       if (!r) return;
       var a = statusAt(r, m);
+      var outline = n.getAttribute('data-mode') === 'outline';
       n.removeAttribute('stroke-dasharray');
-      if (!a.s) {
+      n.setAttribute('fill-opacity', '1');
+      n.setAttribute('stroke-opacity', '1');
+      n.setAttribute('stroke-width', outline ? '1.8' : '0.8');
+      if (mode === 'use' && r.useCategory) {
+        // A clean single-variable map (owner decision 2026-09-28, 9th round): every parcel shows
+        // its use at full strength, regardless of status -- the validated palette (dataviz skill's
+        // checker) only clears its CVD/normal-vision checks at full strength; the faint "planned"
+        // strength this used to render at failed both, which made a mostly-planned site like Pier
+        // 70 or Potrero unreadable. Thin stroke for the same sleekness as before; the honesty
+        // markers (hatch, outline, dashed) are geometry/data-quality, not status, so they're
+        // unaffected and still apply here exactly as in Status mode.
+        var uc = R.useColors[r.useCategory];
+        n.setAttribute('fill', outline ? 'none' : (r.confidence === 'approximate' ? 'url(#h-use-' + r.useCategory + ')' : uc));
+        n.setAttribute('stroke', (outline || r.confidence === 'approximate') ? uc : '#0f1618');
+        if (!outline) n.setAttribute('stroke-width', '0.6');
+        n.setAttribute('opacity', n.getAttribute('data-dim') || '1');
+      } else if (!a.s) {
         n.setAttribute('fill', 'rgba(169,179,174,0.06)'); n.setAttribute('stroke', '#7d8a8e'); n.setAttribute('stroke-dasharray', '2 2'); n.setAttribute('opacity', '1');
       } else {
         var c = R.colors[a.s];
-        var outline = n.getAttribute('data-mode') === 'outline';
         n.setAttribute('fill', outline ? 'none' : (r.confidence === 'approximate' ? 'url(#h-' + a.s + ')' : c));
         n.setAttribute('stroke', (outline || r.confidence === 'approximate') ? c : '#0f1618');
         n.setAttribute('opacity', a.expected ? '0.62' : (n.getAttribute('data-dim') || '1'));
@@ -86,6 +169,10 @@
       var a = statusAt(r, m), k = a.s || 'nodate';
       counts['all:' + k] = (counts['all:' + k] || 0) + 1;
       counts[r.site + ':' + k] = (counts[r.site + ':' + k] || 0) + 1;
+      if (r.useCategory) {
+        counts['all:use:' + r.useCategory] = (counts['all:use:' + r.useCategory] || 0) + 1;
+        counts[r.site + ':use:' + r.useCategory] = (counts[r.site + ':use:' + r.useCategory] || 0) + 1;
+      }
     });
     document.querySelectorAll('[data-count]').forEach(function (el) {
       el.textContent = counts[el.getAttribute('data-count')] || 0;
@@ -125,6 +212,7 @@
   });
   if (yearJump) yearJump.addEventListener('change', function () { stop(); slider.value = yearJump.value; paint(+yearJump.value); });
   document.querySelectorAll('.timeline').forEach(function (t) { t.hidden = false; });
+  if (toggle) toggle.hidden = false;
   paint(+slider.value);
 })();
 
@@ -348,13 +436,16 @@
         if (resetBtn) resetBtn.addEventListener('click', reset);
       }
 
-      // The "show tenants" toggle and its markers (docs/briefs/tenant-markers.md): a segmented
-      // control next to the zoom buttons, rendered hidden by sitegen/build.py; the pills and
-      // per-tenant markers themselves are built entirely here from the sibling JSON island
-      // (sitegen/pages.py's tenant_marker_json()) into the empty <g class="tenant-markers">
-      // site_map() left in the svg -- so with JavaScript off the toggle stays hidden and the
-      // page's own tenant list, already in the markup, is the only way to see it.
-      var toggleGroup = frame ? frame.querySelector('.tenant-toggle-group') : null;
+      // The "show tenants" toggle and its markers (docs/briefs/tenant-markers.md): a single chip
+      // in the toolbar row above the map (sitegen/build.py's map_toolbar()), rendered hidden by
+      // sitegen/build.py; the pills and per-tenant markers themselves are built entirely here
+      // from the sibling JSON island (sitegen/pages.py's tenant_marker_json()) into the empty
+      // <g class="tenant-markers"> site_map() left in the svg -- so with JavaScript off the
+      // toggle stays hidden and the page's own tenant list, already in the markup, is the only
+      // way to see it. The toolbar is a sibling of .map-frame, not a descendant (owner decision
+      // 2026-09-27: the map canvas itself carries no overlay but the zoom buttons), so this reads
+      // from frame.parentElement exactly like legendCaption below.
+      var tenantChip = frame && frame.parentElement ? frame.parentElement.querySelector('.tenant-toggle') : null;
       var dataEl = frame ? frame.querySelector('.pp-tenant-data') : null;
       var card = frame ? frame.querySelector('[data-tenant-card]') : null;
       var legendCaption = frame && frame.parentElement ? frame.parentElement.querySelector('[data-tenant-legend]') : null;
@@ -363,10 +454,8 @@
       if (dataEl) { try { DATA = JSON.parse(dataEl.textContent); } catch (err) { DATA = null; } }
       var parcelIds = DATA ? Object.keys(DATA.parcels) : [];
 
-      if (toggleGroup && markersLayer && DATA && parcelIds.length) {
-        toggleGroup.hidden = false;
-        var offBtn = toggleGroup.querySelector('[data-tenant-toggle="off"]');
-        var onBtn = toggleGroup.querySelector('[data-tenant-toggle="on"]');
+      if (tenantChip && markersLayer && DATA && parcelIds.length) {
+        tenantChip.hidden = false;
         var SPLIT_PX = 120; // a parcel must read at least this wide on screen to split into markers
         // A marker's diameter grows from MIN_MARKER_PX (right at the split threshold) up to
         // MAX_MARKER_PX as the parcel keeps getting bigger on screen, then holds -- there's more
@@ -575,13 +664,11 @@
 
         function setTenantsOn(on) {
           svg.classList.toggle('tenants-on', on);
-          if (offBtn) offBtn.setAttribute('aria-pressed', on ? 'false' : 'true');
-          if (onBtn) onBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+          tenantChip.setAttribute('aria-pressed', on ? 'true' : 'false');
           if (legendCaption) legendCaption.hidden = !on;
           if (!on) closeCard();
         }
-        if (offBtn) offBtn.addEventListener('click', function () { setTenantsOn(false); });
-        if (onBtn) onBtn.addEventListener('click', function () { setTenantsOn(true); });
+        tenantChip.addEventListener('click', function () { setTenantsOn(tenantChip.getAttribute('aria-pressed') !== 'true'); });
 
         updateTenantMarkers = function () {
           var factor = view.w / base.w;
