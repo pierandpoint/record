@@ -109,6 +109,50 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
    untouched, still the inline stroke-dasharray record_shape() renders. */
 .pp-map.mode-use .rec.nearby { stroke: #a9b3ae; }
 
+/* Satellite layer (docs/briefs/satellite-layer.md). .mode-sat is independent of .mode-use/
+   .mode-none (colour axis) -- it's the imagery-on axis, set whenever the Satellite chip is
+   pressed, whatever colour mode is active underneath it.
+   - .pp-basemap-detail (pages.py's basemap_uses()) is the flat land/building/street fill; hidden
+     once a real photo is standing in for it. The plain water rect it sits inside stays visible as
+     a fallback background for whatever a zoomed-out pan reveals past the photo's own extent.
+   - Every parcel's fill is already set to 'none' by app.js's paint() while satellite is on (an
+     "at most a very light fill" that settled on none, over a photo -- see paint()'s own note);
+     what CSS adds is a dark-edge-then-light-glow halo around its stroke. Checked with the
+     dataviz skill's validate_palette.js, `--surface` set to a sampled dark imagery tone
+     (#1e4743, shadowed water/vegetation) and a sampled light one (#e3e2d1, sunlit concrete/
+     roofing) from a decoded NAIP frame: every status and use colour here reads a plain WCAG
+     contrast in the 1.7-2.9:1 range against at least one of the two -- a flat outline alone is
+     not reliably legible on a photo, which is exactly why the brief calls for a halo rather than
+     a bare outline. A single-colour halo only helps on the tone it contrasts with; stacking a
+     close dark edge with a wider, softer light glow (two zero-offset drop-shadows, applied in
+     that order so the second's shadow traces the first's already-widened silhouette) gives every
+     outline an edge that reads against a dark patch of the photo *and* a light one, the map
+     equivalent of the "visible labels" relief the skill calls for on a plain contrast WARN.
+   - .mode-none is the None colour option: reachable only while .mode-sat is also set (view_
+     toggle()'s own None segment stays hidden otherwise), a thin neutral outline with no colour
+     signal at all -- paint() sets its stroke colour directly (SAT_NONE_COLOR), so this rule only
+     needs the shared halo above, already covered by .mode-sat .rec. */
+.pp-map.mode-sat .pp-basemap-detail { display: none; }
+.pp-map.mode-sat .rec { filter: drop-shadow(0 0 1.2px rgba(0,0,0,.92)) drop-shadow(0 0 1.6px rgba(255,255,255,.65)); }
+/* Press-and-hold peek (docs/briefs/satellite-layer.md): holding the Satellite chip, or a
+   stationary long-press on the map itself, hides every overlay -- parcels, labels, tenant
+   markers -- so the photo shows clean, restored the instant the hold ends. .pp-peeking is toggled
+   by app.js on the .map-frame that owns whichever map is being held; both of a map's own
+   .pp-overlays groups (site_map()'s one group, overview_map()'s two) go with one rule. */
+.map-frame.pp-peeking .pp-overlays { opacity: 0; }
+/* The imagery credit + flight date, always visible in a map corner while satellite is on
+   (build.py's SAT_CREDIT) -- same corner-pill treatment as .zoom-controls' own buttons, opposite
+   corner so the two never overlap. */
+.sat-credit { position: absolute; left: 12px; bottom: 12px; z-index: 2; margin: 0; padding: 5px 10px; border-radius: 8px; background: rgba(22,29,31,.82); border: 1px solid var(--line-3); color: var(--text-2); font: 500 11.5px var(--mono); }
+.sat-credit[hidden] { display: none; }
+/* The None-mode legend (pages.py's none_legend()): the map has nothing left to explain but the
+   photo's own credit and which shapes are approximate, so the legend shrinks to just those two
+   lines instead of repeating the general .legend layout's swatch grid. */
+.legend-none { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; font-size: 13px; color: var(--soft); padding: 16px 0 0; }
+.legend-none[hidden] { display: none; }
+.legend-none > span { display: inline-flex; align-items: center; gap: 8px; }
+.sat-credit-legend { font-family: var(--mono); color: var(--text-2); }
+
 /* Tenant map markers (docs/briefs/tenant-markers.md): a zoom-aware pill per parcel, splitting
    into individual glyph markers past a zoom threshold, both built by app.js from the sibling
    JSON island. The whole layer stays invisible until the toggle adds .tenants-on to the map, the

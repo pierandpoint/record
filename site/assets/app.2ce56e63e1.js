@@ -64,7 +64,22 @@
   // works since a page only ever carries one of these regardless of which map-frame it sits in.
   var toggle = document.querySelector('.color-toggle');
   var viewParams = new URLSearchParams(window.location.search);
-  var mode = (toggle && viewParams.get('view') === 'use') ? 'use' : 'status';
+  // Satellite layer (docs/briefs/satellite-layer.md): satData is this page's one satellite-capable
+  // map (the home overview or a site's own map -- never a record locator map, which carries no
+  // .pp-imagery-data island at all), parsed once. satOn round-trips through ?sat=1, but only when
+  // this page actually has imagery to show for it -- a URL copied from a page that does, pasted
+  // onto one that doesn't, must not leave the site claiming a satellite view with nothing behind
+  // it. 'none' (the third color-toggle segment) only ever applies with satellite on; a URL with
+  // view=none but no sat=1 falls back to Status, same as turning satellite off while None is
+  // selected does at runtime (requirement in the brief).
+  var satEl = document.querySelector('.pp-imagery-data');
+  var satData = satEl && JSON.parse(satEl.textContent);
+  var satToggle = document.querySelector('.satellite-toggle');
+  var satOn = !!(satData && viewParams.get('sat') === '1');
+  var requestedView = viewParams.get('view');
+  var mode = requestedView === 'use' ? 'use' : (requestedView === 'none' && satOn ? 'none' : 'status');
+  if (!toggle) mode = 'status';
+  var SAT_NONE_COLOR = '#e7e2d2';
 
   function setLegendMode(m) {
     document.querySelectorAll('[data-legend-mode]').forEach(function (el) {
@@ -80,6 +95,7 @@
   function setMapModeClass(m) {
     document.querySelectorAll('.pp-map').forEach(function (svg) {
       svg.classList.toggle('mode-use', m === 'use');
+      svg.classList.toggle('mode-none', m === 'none');
     });
   }
   // Use is a clean single-variable map now (owner decision 2026-09-28, 9th round): it no longer
@@ -87,21 +103,39 @@
   // controls -- have nothing left to drive in Use mode. sitegen/pages.py marks each one
   // data-view-mode="status" (the timeline's own controls/track, and home's .tracker-curve); the
   // timeline's one-line Use-mode note is the only data-view-mode="use" element. slider.value is
-  // never touched here, so switching back to Status resumes at the same month it was on.
+  // never touched here, so switching back to Status resumes at the same month it was on. None
+  // reads as "status" here -- satellite's None colour is a separate axis from the timeline (it
+  // still follows the slider, same as Status; only Use has nothing left for the timeline to show).
   function setViewVisibility(m) {
+    var useOnly = m === 'use';
     document.querySelectorAll('[data-view-mode]').forEach(function (el) {
-      el.hidden = el.getAttribute('data-view-mode') !== m;
+      el.hidden = (el.getAttribute('data-view-mode') === 'use') !== useOnly;
+    });
+  }
+  // A timeline tick is a status event (sitegen/pages.py's timeline()), so its own colour clashes
+  // with satellite's None palette (owner decision 2026-09-28) -- repainted neutral grey there, and
+  // back to its own status colour otherwise, from data-color/data-expected rather than the server-
+  // rendered inline style, which is only ever the Status-mode version. Use mode needs no case here
+  // any more: its ticks are simply hidden along with the rest of the timeline (setViewVisibility).
+  var TICK_NEUTRAL = '#a9b3ae';
+  function paintTicks(m) {
+    document.querySelectorAll('.timeline .tick').forEach(function (el) {
+      var color = m === 'none' ? TICK_NEUTRAL : el.getAttribute('data-color');
+      el.style.borderColor = color;
+      el.style.background = el.getAttribute('data-expected') === '1' ? 'transparent' : color;
     });
   }
   function setMode(m, pushUrl) {
+    if (m === 'none' && !satOn) m = 'status'; // None only ever reachable with satellite on
     mode = m;
     setLegendMode(m);
     setToggleButtons(m);
     setMapModeClass(m);
     setViewVisibility(m);
+    paintTicks(m);
     if (pushUrl) {
       var params = new URLSearchParams(window.location.search);
-      if (m === 'use') params.set('view', 'use'); else params.delete('view');
+      if (m === 'use' || m === 'none') params.set('view', m); else params.delete('view');
       var qs = params.toString();
       window.history.replaceState(null, '', window.location.pathname + (qs ? '?' + qs : ''));
     }
@@ -118,10 +152,174 @@
     setToggleButtons(mode);
     setMapModeClass(mode);
     setViewVisibility(mode);
+    paintTicks(mode);
     toggle.querySelectorAll('[data-view-toggle]').forEach(function (btn) {
       btn.addEventListener('click', function () { setMode(btn.getAttribute('data-view-toggle'), true); });
     });
   }
+
+  // ---------- satellite layer (docs/briefs/satellite-layer.md) ----------
+  // The map-unit box a NAIP frame is drawn at is fixed per map (satData.box); which frame is
+  // current follows the timeline slider, "the NAIP frame nearest to and not after the slider's
+  // month" -- before the first NAIP year, the earliest frame stands in, labelled as such rather
+  // than silently implied to be dated to whatever month the slider is on.
+  function satYearForIndex(m) {
+    if (m <= 0) return START - 1; // before the window's own start: before every NAIP year too
+    if (m >= MAX) return END + 1; // the "<end>+" cap: at or after every NAIP year
+    return START + Math.floor((m - 1) / 12);
+  }
+  function pickSatFrame(m) {
+    if (!satData || !satData.frames.length) return null;
+    // Use is now a single-variable map with no timeline of its own (owner change, 2026-09-28:
+    // every parcel draws at full use colour, and the timeline hides while Use is active) --
+    // satellite there always shows the latest committed frame, never the slider's position,
+    // which the mode no longer has a UI for anyway. Status keeps following the slider exactly as
+    // before; None is unchanged too (still slider-driven, same as Status).
+    if (mode === 'use') return { frame: satData.frames[satData.frames.length - 1], before: false };
+    var year = satYearForIndex(m), chosen = satData.frames[0], before = true;
+    satData.frames.forEach(function (f) { if (f.year <= year) { chosen = f; before = false; } });
+    return { frame: chosen, before: before };
+  }
+  function satCreditText(picked) {
+    var d = picked.frame.date.split('-');
+    var text = 'Imagery: USDA NAIP, flown ' + MON[+d[1] - 1] + ' ' + d[0];
+    return picked.before ? text + ' (earliest available)' : text;
+  }
+  // One <image> per .pp-sat-slot (the home overview carries two, its wide and narrow variants;
+  // a site page carries one) -- both ever placed at the same satData.box, since both variants
+  // share one underlying map-unit coordinate system (sitegen/geo.py's image_box_from_view).
+  // Created once, on the first time satellite is turned on ("no imagery bytes until Satellite is
+  // first turned on"); its href is only ever set to the one frame actually needed next.
+  function ensureSatImages() {
+    if (!satData || satData.imgEls) return;
+    satData.imgEls = [];
+    // Scoped to satFrame, not the whole document: basemap_uses() gives every .pp-map its own
+    // .pp-sat-slot (a record's own mini-map on a site card included), but only the one map next
+    // to this page's Satellite chip actually has imagery to show -- "Record mini-maps ... stay
+    // unchanged" (the brief's own scope line).
+    (satFrame || document).querySelectorAll('.pp-sat-slot').forEach(function (slot) {
+      var img = document.createElementNS('http://www.w3.org/2000/svg', 'image');
+      img.setAttribute('x', satData.box[0]);
+      img.setAttribute('y', satData.box[1]);
+      img.setAttribute('width', satData.box[2]);
+      img.setAttribute('height', satData.box[3]);
+      img.setAttribute('preserveAspectRatio', 'none');
+      slot.appendChild(img);
+      satData.imgEls.push(img);
+    });
+  }
+  // Sets each satellite <image>'s href to the frame the current slider position calls for --
+  // "then only the year needed": switching to a year not seen yet this visit is the only thing
+  // that fetches new imagery bytes; revisiting one already shown re-uses the browser's own cache.
+  function updateSatFrame(m) {
+    if (!satOn || !satData) return;
+    var picked = pickSatFrame(m);
+    if (!picked) return;
+    satData.imgEls.forEach(function (img) {
+      if (img.getAttribute('href') !== picked.frame.href) img.setAttribute('href', picked.frame.href);
+    });
+    var text = satCreditText(picked);
+    document.querySelectorAll('.sat-credit').forEach(function (el) { el.textContent = text; });
+    document.querySelectorAll('[data-sat-credit-legend]').forEach(function (el) { el.textContent = text; });
+  }
+  function setSatOn(on, pushUrl) {
+    if (on && !satData) return; // a ?sat=1 pasted onto a page with no imagery is not honoured
+    satOn = on;
+    // Scoped to satFrame, not the whole document: a mini site-card map on the home page (or any
+    // other .pp-map sharing the page) has no imagery of its own and must never be left with its
+    // basemap hidden (site.css's .mode-sat .pp-basemap-detail) and nothing to show in its place --
+    // that half-applied state is exactly the "mix" the None/Status/Use toggle must never produce.
+    (satFrame ? satFrame.querySelectorAll('.pp-map') : []).forEach(function (svg) { svg.classList.toggle('mode-sat', on); });
+    if (satToggle) satToggle.setAttribute('aria-pressed', on ? 'true' : 'false');
+    // The None colour segment only ever exists with satellite on (view_toggle()'s own note).
+    var noneBtn = toggle && toggle.querySelector('[data-view-toggle="none"]');
+    if (noneBtn) noneBtn.hidden = !on;
+    document.querySelectorAll('.sat-credit').forEach(function (el) { el.hidden = !on; });
+    if (pushUrl) {
+      var params = new URLSearchParams(window.location.search);
+      if (on) { params.set('sat', '1'); } else { params.delete('sat'); if (params.get('view') === 'none') params.delete('view'); }
+      var qs = params.toString();
+      window.history.replaceState(null, '', window.location.pathname + (qs ? '?' + qs : ''));
+    }
+    if (on) { ensureSatImages(); updateSatFrame(+slider.value); }
+    if (!on && mode === 'none') setMode('status', false); else paint(+slider.value);
+  }
+  // Press-and-hold peek: holding the Satellite chip, or a *stationary* long-press on the map
+  // itself, hides every overlay (site.css's .pp-peeking .pp-overlays) until release, so the photo
+  // shows clean. HOLD_MS/MOVE_TOLERANCE_PX shared by the chip, the map and the keyboard
+  // equivalent below, so all three feel like the same gesture at the same threshold.
+  var HOLD_MS = 450, MOVE_TOLERANCE_PX = 8;
+  function peekStart(frame) { if (frame) frame.classList.add('pp-peeking'); }
+  function peekEnd(frame) { if (frame) frame.classList.remove('pp-peeking'); }
+  // Wires a stationary-hold gesture onto `el` via pointer events (covers mouse, touch and pen
+  // alike) without ever calling preventDefault/stopPropagation -- panning and pinch-zoom (wired
+  // separately, further down this file) see every event exactly as before; a hold is only ever
+  // detected, never intercepted. Movement past MOVE_TOLERANCE_PX before the hold threshold fires
+  // cancels the pending peek outright (a pan never triggers it); movement after peeking has
+  // already started ends the peek immediately, so dragging always reads as dragging.
+  function wireHold(el, onStart, onEnd) {
+    var timer = null, startX = 0, startY = 0, active = false;
+    // Move/up/cancel are wired on window, not `el`, once a press actually starts: a real hold
+    // often drifts a pixel or two off the source element (a small chip especially) without the
+    // pointer being released, and el-scoped listeners would see that as pointerleave and end the
+    // peek early. Movement is still measured against the press's own start point, so panning the
+    // map or dragging off the chip still cancels/ends the hold exactly as before -- only where
+    // that movement is observed from has changed, not the thresholds themselves.
+    function onMove(ev) {
+      if (Math.abs(ev.clientX - startX) <= MOVE_TOLERANCE_PX && Math.abs(ev.clientY - startY) <= MOVE_TOLERANCE_PX) return;
+      release();
+    }
+    function release() {
+      clearTimeout(timer);
+      window.removeEventListener('pointermove', onMove);
+      window.removeEventListener('pointerup', release);
+      window.removeEventListener('pointercancel', release);
+      if (active) { active = false; onEnd(); }
+    }
+    el.addEventListener('pointerdown', function (ev) {
+      if (ev.isPrimary === false) return;
+      startX = ev.clientX; startY = ev.clientY; active = false;
+      clearTimeout(timer);
+      timer = setTimeout(function () { active = true; onStart(); }, HOLD_MS);
+      window.addEventListener('pointermove', onMove);
+      window.addEventListener('pointerup', release);
+      window.addEventListener('pointercancel', release);
+    });
+  }
+  if (satToggle) {
+    satToggle.hidden = false; // no-JS keeps this chip hidden entirely (requirement in the brief)
+    // Both the chip's own hold and the map's own long-press peek the *same* map -- the
+    // .map-frame that sits next to this chip's .map-toolbar (build.py's map_toolbar()/site_map(),
+    // always siblings under one shared container, on both the home overview and a site page).
+    var satToolbar = satToggle.closest('.map-toolbar');
+    var satFrame = satToolbar && satToolbar.parentElement && satToolbar.parentElement.querySelector('.map-frame');
+    var chipWasHold = false;
+    wireHold(satToggle, function () { chipWasHold = true; peekStart(satFrame); }, function () { peekEnd(satFrame); });
+    satToggle.addEventListener('click', function () {
+      if (chipWasHold) { chipWasHold = false; return; } // a hold-then-release never also toggles
+      setSatOn(!satOn, true);
+    });
+    if (satFrame) wireHold(satFrame, function () { peekStart(satFrame); }, function () { peekEnd(satFrame); });
+    // Keyboard equivalent (requirement: "holding a key while the chip has focus"): the button's
+    // own activation keys, Enter and Space, held past the same HOLD_MS threshold peek instead of
+    // toggling -- released quickly, they toggle as normal. Native activation is suppressed
+    // (preventDefault) so it never fires its own click on top of this.
+    var keyTimer = null, keyHeld = false;
+    satToggle.addEventListener('keydown', function (ev) {
+      if (ev.key !== ' ' && ev.key !== 'Enter') return;
+      ev.preventDefault();
+      if (ev.repeat) return;
+      keyHeld = false;
+      keyTimer = setTimeout(function () { keyHeld = true; peekStart(satFrame); }, HOLD_MS);
+    });
+    satToggle.addEventListener('keyup', function (ev) {
+      if (ev.key !== ' ' && ev.key !== 'Enter') return;
+      ev.preventDefault();
+      clearTimeout(keyTimer);
+      if (keyHeld) { keyHeld = false; peekEnd(satFrame); } else { setSatOn(!satOn, true); }
+    });
+  }
+  setSatOn(satOn, false);
 
   // The value of the "jump to a year" <option> that covers index m: one option per calendar
   // year (its January index), so any month within a year snaps to that year's own option.
@@ -141,6 +339,33 @@
       n.setAttribute('fill-opacity', '1');
       n.setAttribute('stroke-opacity', '1');
       n.setAttribute('stroke-width', outline ? '1.8' : '0.8');
+      // Satellite only ever touches shapes on the one map its own chip sits next to. A mini
+      // site-card map on the home page (or any other .pp-map sharing a page with a satellite-
+      // capable one) has no imagery of its own and no chip of its own -- it must render exactly
+      // as Status/Use already do, on its own, never a half-applied satellite outline with no
+      // photo behind it and never a "None" it has no way to opt into. That's the one thing the
+      // colour toggle must never produce: Status, Use or None, never a mix of them on the same
+      // page at once.
+      var sat = satOn && !!satFrame && n.closest('.map-frame') === satFrame;
+      // Satellite's None colour (docs/briefs/satellite-layer.md): a thin neutral outline, no
+      // status or use signal at all, dashed exactly where the shape is approximate -- the whole
+      // point is that the photo, not the parcel colour, carries the information here.
+      if (sat && mode === 'none') {
+        n.setAttribute('fill', 'none');
+        n.setAttribute('stroke', SAT_NONE_COLOR);
+        n.setAttribute('opacity', n.getAttribute('data-dim') || '1');
+        if (r.confidence === 'approximate') n.setAttribute('stroke-dasharray', '4 3');
+        return;
+      }
+      if (!a.s) {
+        n.setAttribute('fill', 'rgba(169,179,174,0.06)'); n.setAttribute('stroke', '#7d8a8e'); n.setAttribute('stroke-dasharray', '2 2'); n.setAttribute('opacity', '1');
+        return;
+      }
+      // With satellite on (Status or Use), a parcel is an outline over the photo instead of a
+      // fill: `sat` forces fill to 'none' -- the approximate-shape hatch would draw over the photo
+      // otherwise -- and its stroke to the mode's own colour, with a dashed stroke standing in for
+      // the hatch's own "this shape is approximate" honesty marker (applied once, below, after
+      // either branch -- both read it the same way).
       if (mode === 'use' && r.useCategory) {
         // A clean single-variable map (owner decision 2026-09-28, 9th round): every parcel shows
         // its use at full strength, regardless of status -- the validated palette (dataviz skill's
@@ -150,20 +375,20 @@
         // markers (hatch, outline, dashed) are geometry/data-quality, not status, so they're
         // unaffected and still apply here exactly as in Status mode.
         var uc = R.useColors[r.useCategory];
-        n.setAttribute('fill', outline ? 'none' : (r.confidence === 'approximate' ? 'url(#h-use-' + r.useCategory + ')' : uc));
-        n.setAttribute('stroke', (outline || r.confidence === 'approximate') ? uc : '#0f1618');
+        n.setAttribute('fill', (outline || sat) ? 'none' : (r.confidence === 'approximate' ? 'url(#h-use-' + r.useCategory + ')' : uc));
+        n.setAttribute('stroke', sat ? uc : ((outline || r.confidence === 'approximate') ? uc : '#0f1618'));
         if (!outline) n.setAttribute('stroke-width', '0.6');
         n.setAttribute('opacity', n.getAttribute('data-dim') || '1');
-      } else if (!a.s) {
-        n.setAttribute('fill', 'rgba(169,179,174,0.06)'); n.setAttribute('stroke', '#7d8a8e'); n.setAttribute('stroke-dasharray', '2 2'); n.setAttribute('opacity', '1');
       } else {
         var c = R.colors[a.s];
-        n.setAttribute('fill', outline ? 'none' : (r.confidence === 'approximate' ? 'url(#h-' + a.s + ')' : c));
-        n.setAttribute('stroke', (outline || r.confidence === 'approximate') ? c : '#0f1618');
+        n.setAttribute('fill', (outline || sat) ? 'none' : (r.confidence === 'approximate' ? 'url(#h-' + a.s + ')' : c));
+        n.setAttribute('stroke', sat ? c : ((outline || r.confidence === 'approximate') ? c : '#0f1618'));
         n.setAttribute('opacity', a.expected ? '0.62' : (n.getAttribute('data-dim') || '1'));
         if (a.expected) n.setAttribute('stroke-dasharray', '3 2');
       }
+      if (sat && r.confidence === 'approximate') n.setAttribute('stroke-dasharray', '4 3');
     });
+    updateSatFrame(m);
     var counts = {};
     R.records.forEach(function (r) {
       var a = statusAt(r, m), k = a.s || 'nodate';
