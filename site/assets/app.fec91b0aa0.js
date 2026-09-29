@@ -1197,10 +1197,12 @@
 // /near/ (docs/briefs/near-me.md): the browser's own permission dialog only ever appears from a
 // click on this button, never on load; once granted, a later load skips straight to the map (see
 // the permissions.query() check at the end of this IIFE) rather than asking again every time.
-// Either way the position is read once, used to place a dot and sort a list, and never stored or
-// sent anywhere -- everything below runs on the device, against #pp-near's inlined bbox and
-// record lat/lons (sitegen/build.py). Degrades to the plain, crawlable finder list with
-// JavaScript off, or if the visitor never presses the button or declines the prompt.
+// Either way the position is watched continuously (a visitor walking the neighbourhood wants the
+// dot and the nearby list to keep up, not a one-time snapshot) and never stored or sent anywhere
+// -- everything below runs on the device, against #pp-near's inlined bbox and record lat/lons
+// (sitegen/build.py), on every position the browser reports, for as long as the page stays open.
+// Degrades to the plain, crawlable finder list with JavaScript off, or if the visitor never
+// presses the button or declines the prompt.
 (function () {
   var btn = document.getElementById('near-locate-btn');
   var dataEl = document.getElementById('pp-near');
@@ -1237,6 +1239,7 @@
   function fmtDistance(m) { return m < 1000 ? Math.round(m) + ' m' : (m / 1000).toFixed(m < 10000 ? 1 : 0) + ' km'; }
 
   var NEAR_M = 1500, CLOSE_M = 250, MAP_WIDTH_M = 400;
+  var watchId = null;
   var mapFrame = document.getElementById('near-map-frame');
   var svgs = mapFrame ? Array.prototype.slice.call(mapFrame.querySelectorAll('.pp-map')) : [];
   var statusEl = document.getElementById('near-status');
@@ -1352,6 +1355,10 @@
     svgs.forEach(function (svg) {
       clearOverlay(svg);
       setPinsVisible(svg, false);
+      // Re-centres on every call, including a later one from the position watch below as a
+      // visitor walks -- a deliberate follow-me choice (confirmed directly) over leaving the
+      // view wherever a visitor last panned/zoomed it, so the map always frames what's actually
+      // around them right now rather than fighting to stay in view as they move.
       if (svg.ppSetView) svg.ppSetView(p[0], p[1], w);
       drawYouAreHere(svg, p[0], p[1], accuracyM, w);
       close.forEach(function (x) {
@@ -1381,7 +1388,23 @@
     }
   }
 
+  // success() runs on every position the watch below reports, not just the first -- re-ranking
+  // the list and redrawing the dot each time is exactly what a visitor walking around wants, and
+  // showNear()/showFar() already do a full redraw+recentre per call, so nothing here needs to
+  // know it might be the fifth update rather than the first. But a stationary phone's GPS still
+  // keeps firing updates a few metres apart from pure noise, and every one of those redraws would
+  // otherwise reset any pinch-zoom or pan a visitor just made to look at one block more closely
+  // (confirmed directly: don't touch the view if they haven't actually moved). MOVE_THRESHOLD_M
+  // is compared against the last position that actually triggered a redraw, not the previous
+  // callback, so a walk of several sub-threshold steps in the same direction still adds up and
+  // triggers once the cumulative distance clears it, rather than each step comparing fresh
+  // against wherever the phone happened to be a moment before.
+  var lastFixLat = null, lastFixLon = null;
+  var MOVE_THRESHOLD_M = 12;
   function success(pos) {
+    var lat = pos.coords.latitude, lon = pos.coords.longitude, acc = pos.coords.accuracy;
+    if (lastFixLat !== null && haversine(lastFixLat, lastFixLon, lat, lon) < MOVE_THRESHOLD_M) return;
+    lastFixLat = lat; lastFixLon = lon;
     showStatus('');
     resetPanels();
     // Found it -- the button (and the privacy line under it) has done its job for this visit,
@@ -1389,26 +1412,44 @@
     // wherever locate() isn't re-run automatically below (permission not yet granted, or
     // withdrawn since).
     if (locateWrap) locateWrap.hidden = true;
-    var lat = pos.coords.latitude, lon = pos.coords.longitude, acc = pos.coords.accuracy;
     var ranked = withDistances(lat, lon);
     if (ranked.length && ranked[0].dist <= NEAR_M) showNear(lat, lon, acc);
     else showFar(lat, lon);
   }
   function failure(err) {
-    showStatus('Location unavailable' + (err && err.message ? ' (' + err.message + ')' : '') + ' — showing every tracked record instead.');
-    resetPanels();
-    mapFrame.hidden = true;
-    finderSection.hidden = false;
+    // A continuous watch can hit a transient error mid-walk (signal loss under a bridge or
+    // between tall buildings, or the mocked-geolocation reset this exact case was caught with in
+    // testing) without anything really being wrong -- if there's already a good fix on screen,
+    // leave the map, dot and list exactly as they are rather than yanking the visitor back to the
+    // plain fallback list over a blip the next reading will likely resolve on its own. Only fall
+    // back when there's never been a fix to fall back *from*.
+    if (lastFixLat === null) {
+      showStatus('Location unavailable' + (err && err.message ? ' (' + err.message + ')' : '') + ' — showing every tracked record instead.');
+      resetPanels();
+      mapFrame.hidden = true;
+      finderSection.hidden = false;
+    }
+    // PERMISSION_DENIED (code 1) is terminal for this watch -- the browser won't grant itself
+    // permission on a later callback, so there's no point leaving it running (or, on some
+    // browsers, repeatedly firing this same error). Anything else (POSITION_UNAVAILABLE, TIMEOUT)
+    // can resolve on its own as the device's GPS gets a fix, so the watch stays open for those.
+    if (err && err.code === 1 && watchId !== null) {
+      navigator.geolocation.clearWatch(watchId);
+      watchId = null;
+    }
   }
 
   function locate() {
     if (!('geolocation' in navigator)) { showStatus('Geolocation is not available in this browser.'); return; }
     showStatus('Locating…');
-    // A Permissions-Policy block (sitegen/static/_headers) or a browser that simply refuses the
-    // call can throw synchronously here rather than reaching the error callback below -- caught
-    // so the button never leaves the visitor stuck on "Locating…" with no explanation.
+    if (watchId !== null) navigator.geolocation.clearWatch(watchId);
+    // watchPosition, not getCurrentPosition: a visitor walking the neighbourhood wants the dot
+    // and nearby list to keep tracking them, not a single snapshot from wherever they pressed
+    // the button. A Permissions-Policy block (sitegen/static/_headers) or a browser that simply
+    // refuses the call can throw synchronously here rather than reaching the error callback below
+    // -- caught so the button never leaves the visitor stuck on "Locating…" with no explanation.
     try {
-      navigator.geolocation.getCurrentPosition(success, failure, { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 });
+      watchId = navigator.geolocation.watchPosition(success, failure, { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 });
     } catch (e) {
       failure({ message: (e && e.message) || 'blocked by the browser' });
     }
