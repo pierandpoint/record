@@ -335,6 +335,16 @@
       if (!r) return;
       var a = statusAt(r, m);
       var outline = n.getAttribute('data-mode') === 'outline';
+      // The hover tooltip (record_shape()'s own <title>, server-rendered once from the record's
+      // fixed current status): kept in sync with the active colour mode, same as the shape's own
+      // fill/stroke just below -- a record with no use category falls back to its status label
+      // here too, matching the same fallback the colouring itself uses a few lines down.
+      var titleEl = n.querySelector('title');
+      if (titleEl) {
+        titleEl.textContent = (mode === 'use' && r.useCategory)
+          ? r.name + ' · ' + R.useLabels[r.useCategory]
+          : r.name + ' · ' + R.labels[r.status];
+      }
       n.removeAttribute('stroke-dasharray');
       n.setAttribute('fill-opacity', '1');
       n.setAttribute('stroke-opacity', '1');

@@ -131,7 +131,13 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
    - .mode-none is the None colour option: reachable only while .mode-sat is also set (view_
      toggle()'s own None segment stays hidden otherwise), a thin neutral outline with no colour
      signal at all -- paint() sets its stroke colour directly (SAT_NONE_COLOR), so this rule only
-     needs the shared halo above, already covered by .mode-sat .rec. */
+     needs the shared halo above, already covered by .mode-sat .rec.
+   - .pp-sat-slot itself must hide when satellite is off, not just .pp-basemap-detail: the photo's
+     <image> sits above the plain WATER rect but below the land/building/street fill (pages.py's
+     basemap_uses()), so that fill only ever covers it where there's built land -- water and any
+     other gap past its edges would otherwise keep showing the last-loaded frame after the chip is
+     turned off, since app.js never removes the <image> itself, only toggles this class. */
+.pp-map:not(.mode-sat) .pp-sat-slot { display: none; }
 .pp-map.mode-sat .pp-basemap-detail { display: none; }
 .pp-map.mode-sat .rec { filter: drop-shadow(0 0 1.2px rgba(0,0,0,.92)) drop-shadow(0 0 1.6px rgba(255,255,255,.65)); }
 /* Press-and-hold peek (docs/briefs/satellite-layer.md): holding the Satellite chip, or a
