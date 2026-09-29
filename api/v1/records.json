@@ -5,7 +5,7 @@
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
  "terms": "https://pierandpoint.org/terms/",
- "count": 177,
+ "count": 183,
  "records": [
   {
    "id": "8719C001",
@@ -14610,6 +14610,7 @@
    "permalink": "https://pierandpoint.org/parcels/mb4e/",
    "api": "https://pierandpoint.org/api/v1/records/mb4e.json",
    "names": [
+    "Mission Bay South Block 4-East",
     "MB4E"
    ],
    "site": {
@@ -14627,8 +14628,12 @@
    "how_to_comment": [],
    "positions": [],
    "address": null,
-   "summary": null,
-   "summary_sources": [],
+   "summary": "A 398-unit, two-phase affordable housing development at 1290 3rd St, on a currently-active surface parking lot between Mission Rock St and China Basin St -- built by Curtis Development and Bayview Senior Services (as Mission Bay 4 East Associates, L.P.) under an OCII Exclusive Negotiating Agreement. Phase I (165 units, ~160 ft) fronts China Basin St; Phase II (233 units, ~225 ft) fronts Mission Rock St. Administratively separate from the Giants/Tishman Speyer Mission Rock masterplan despite sitting immediately adjacent to it.",
+   "summary_sources": [
+    "src-ocii-memo-2024-09",
+    "src-ocii-reso-02-2026",
+    "src-noe-2026-0000027"
+   ],
    "shape": {
     "kind": "parcel",
     "parcel": "8711029B",
@@ -14640,8 +14645,91 @@
     "lon": -122.390047,
     "lat": 37.772513
    },
-   "facts": [],
-   "costs": [],
+   "facts": [
+    {
+     "key": "developer",
+     "value": "Curtis Development and Bayview Senior Services, as Mission Bay 4 East Associates, L.P.",
+     "sources": [
+      "src-ocii-memo-2024-09"
+     ]
+    },
+    {
+     "key": "architect",
+     "value": "Y.A. studio",
+     "sources": [
+      "src-ocii-memo-2024-09"
+     ]
+    },
+    {
+     "key": "property_manager",
+     "value": "The John Stewart Company",
+     "sources": [
+      "src-ocii-memo-2024-09"
+     ]
+    },
+    {
+     "key": "units",
+     "value": "398 total: Phase I 165 units (163 affordable + 2 manager units, ~160 ft, China Basin St frontage); Phase II 233 units (231 affordable + 2 manager units, ~225 ft, Mission Rock St frontage)",
+     "sources": [
+      "src-ocii-reso-02-2026",
+      "src-noe-2026-0000027"
+     ]
+    },
+    {
+     "key": "affordable_units",
+     "value": "All residential units (394 of 398, excluding 4 manager units) restricted to 70% AMI or below per the April 2026 CEQA Notice of Exemption -- this is the legally operative restriction. Earlier and secondary sources give different ranges (30-80% AMI per the 2024 ENA staff memo; ~35-95% AMI per the developer's own project site) -- see open_questions.",
+     "sources": [
+      "src-noe-2026-0000027"
+     ]
+    },
+    {
+     "key": "retail_sqft",
+     "value": "Approximately 1,253 sq ft ground-floor retail, Phase I",
+     "sources": [
+      "src-noe-2026-0000027"
+     ]
+    },
+    {
+     "key": "blklot",
+     "value": "8711029B (1290 3rd St), confirmed via DataSF's Parcels - Active and Retired dataset; subdivided by Tentative Parcel Map No. 12743 (2026-03-31) into separate Phase I and Phase II lots",
+     "sources": [
+      "src-datasf-parcels-2026-09-28",
+      "src-noe-2026-0000027"
+     ]
+    }
+   ],
+   "costs": [
+    {
+     "amount_usd": 5111731,
+     "what": "OCII predevelopment loan authorized alongside the Exclusive Negotiating Agreement (Resolution No. 30-2024)",
+     "date": "2024-09",
+     "kind": "public_investment",
+     "scope": "record",
+     "sources": [
+      "src-ocii-memo-2024-09"
+     ]
+    },
+    {
+     "amount_usd": 89600000,
+     "what": "OCII permanent gap loan funds committed for Phase I, 165 units (Resolution No. 02-2026)",
+     "date": "2026-02",
+     "kind": "public_investment",
+     "scope": "record",
+     "sources": [
+      "src-ocii-reso-02-2026"
+     ]
+    },
+    {
+     "amount_usd": 5000000,
+     "what": "OCII Phase I predevelopment loan agreement (Resolution No. 03-2026), separate from the 2024 predevelopment loan",
+     "date": "2026-02",
+     "kind": "public_investment",
+     "scope": "record",
+     "sources": [
+      "src-ocii-reso-03-2026"
+     ]
+    }
+   ],
    "milestones": [
     {
      "date": "2015-12",
@@ -14676,6 +14764,315 @@
      "relation": "tracked"
     },
     {
+     "date": "2023-11-09",
+     "date_label": "Nov 9, 2023",
+     "status": null,
+     "status_label": null,
+     "text": "OCII issues a Request for Qualifications for a developer team for Block 4-East.",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-ocii-memo-2024-09",
+       "title": "MEMO: 4E ENA and Loan Agreement (agenda item 5(b), OCII Commission meeting 2024-09-03)",
+       "publisher": "Office of Community Investment and Infrastructure (OCII)",
+       "date": "2024-09-03",
+       "url": "https://sfocii.org/sites/default/files/2024-08/MEMO_4E%20ENA%20and%20Loan%20Agreement%20with%20Att.pdf",
+       "accessed": "2026-09-28",
+       "overview": true
+      }
+     ],
+     "source": "Office of Community Investment and Infrastructure (OCII), 2024-09-03",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "8711029B",
+      "slug": "mb4e",
+      "name": "MB4E",
+      "permalink": "https://pierandpoint.org/parcels/mb4e/",
+      "api": "https://pierandpoint.org/api/v1/records/mb4e.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2024-01",
+     "date_label": "~2024",
+     "status": null,
+     "status_label": null,
+     "text": "Four development teams respond to OCII's RFQ; a selection panel picks Curtis Development / Bayview Senior Services, with Y.A. studio as lead architect and The John Stewart Company as property manager.",
+     "expected": false,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-ocii-memo-2024-09",
+       "title": "MEMO: 4E ENA and Loan Agreement (agenda item 5(b), OCII Commission meeting 2024-09-03)",
+       "publisher": "Office of Community Investment and Infrastructure (OCII)",
+       "date": "2024-09-03",
+       "url": "https://sfocii.org/sites/default/files/2024-08/MEMO_4E%20ENA%20and%20Loan%20Agreement%20with%20Att.pdf",
+       "accessed": "2026-09-28",
+       "overview": true
+      }
+     ],
+     "source": "Office of Community Investment and Infrastructure (OCII), 2024-09-03",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "8711029B",
+      "slug": "mb4e",
+      "name": "MB4E",
+      "permalink": "https://pierandpoint.org/parcels/mb4e/",
+      "api": "https://pierandpoint.org/api/v1/records/mb4e.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2024-09-03",
+     "date_label": "Sep 3, 2024",
+     "status": null,
+     "status_label": null,
+     "text": "OCII Commission Resolution No. 30-2024 authorizes an Exclusive Negotiating Agreement and a predevelopment loan not to exceed $5,111,731 to Mission Bay 4 East Associates, L.P.",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-ocii-memo-2024-09",
+       "title": "MEMO: 4E ENA and Loan Agreement (agenda item 5(b), OCII Commission meeting 2024-09-03)",
+       "publisher": "Office of Community Investment and Infrastructure (OCII)",
+       "date": "2024-09-03",
+       "url": "https://sfocii.org/sites/default/files/2024-08/MEMO_4E%20ENA%20and%20Loan%20Agreement%20with%20Att.pdf",
+       "accessed": "2026-09-28",
+       "overview": true
+      }
+     ],
+     "source": "Office of Community Investment and Infrastructure (OCII), 2024-09-03",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "8711029B",
+      "slug": "mb4e",
+      "name": "MB4E",
+      "permalink": "https://pierandpoint.org/parcels/mb4e/",
+      "api": "https://pierandpoint.org/api/v1/records/mb4e.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2026-02-03",
+     "date_label": "Feb 3, 2026",
+     "status": null,
+     "status_label": null,
+     "text": "OCII Commission Resolution No. 02-2026 authorizes commitment of approximately $89,600,000 in permanent gap loan funds for Phase I (165 units); the concurrent Resolution No. 03-2026 authorizes a separate $5,000,000 Phase I predevelopment loan agreement. A related Resolution No. 04-2026 covers a Phase II predevelopment loan (not independently detailed here).",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-ocii-reso-02-2026",
+       "title": "OCII Resolution No. 02-2026 (permanent gap loan commitment, Phase I)",
+       "publisher": "Office of Community Investment and Infrastructure (OCII)",
+       "date": "2026-02-03",
+       "url": "https://sfocii.org/files/inline-files/2026002.pdf",
+       "accessed": "2026-09-28"
+      },
+      {
+       "id": "src-ocii-reso-03-2026",
+       "title": "OCII Resolution No. 03-2026 (Phase I predevelopment loan agreement)",
+       "publisher": "Office of Community Investment and Infrastructure (OCII)",
+       "date": "2026-02-03",
+       "url": "https://sfocii.org/files/2026-01/RESO%2003-2026_Phase%20I_Predev%20Loan%20&%20Exhibit%20A.pdf",
+       "accessed": "2026-09-28"
+      }
+     ],
+     "source": "Office of Community Investment and Infrastructure (OCII), 2026-02-03; Office of Community Investment and Infrastructure (OCII), 2026-02-03",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "8711029B",
+      "slug": "mb4e",
+      "name": "MB4E",
+      "permalink": "https://pierandpoint.org/parcels/mb4e/",
+      "api": "https://pierandpoint.org/api/v1/records/mb4e.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2026-03-31",
+     "date_label": "Mar 31, 2026",
+     "status": null,
+     "status_label": null,
+     "text": "Tentative Parcel Map No. 12743 subdivides Assessor Block 8711, Lot 029B into two lots for Phase I and Phase II.",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-noe-2026-0000027",
+       "title": "Notice of Exemption: The Mission Bay South Block 4-East Project",
+       "publisher": "Office of Community Investment and Infrastructure (OCII)",
+       "date": "2026-04-14",
+       "url": "https://media.api.sf.gov/documents/2026-0000027_The_Mission_Bay_South_Block_4_East_Project.pdf",
+       "accessed": "2026-09-28",
+       "overview": true
+      }
+     ],
+     "source": "Office of Community Investment and Infrastructure (OCII), 2026-04-14",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "8711029B",
+      "slug": "mb4e",
+      "name": "MB4E",
+      "permalink": "https://pierandpoint.org/parcels/mb4e/",
+      "api": "https://pierandpoint.org/api/v1/records/mb4e.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2026-04-02",
+     "date_label": "Apr 2, 2026",
+     "status": null,
+     "status_label": null,
+     "text": "SF Public Works Order No. 212730 approves the Block 4-East parcel subdivision; the appeal period closes 2026-04-12 with no appeals filed.",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-noe-2026-0000027",
+       "title": "Notice of Exemption: The Mission Bay South Block 4-East Project",
+       "publisher": "Office of Community Investment and Infrastructure (OCII)",
+       "date": "2026-04-14",
+       "url": "https://media.api.sf.gov/documents/2026-0000027_The_Mission_Bay_South_Block_4_East_Project.pdf",
+       "accessed": "2026-09-28",
+       "overview": true
+      }
+     ],
+     "source": "Office of Community Investment and Infrastructure (OCII), 2026-04-14",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "8711029B",
+      "slug": "mb4e",
+      "name": "MB4E",
+      "permalink": "https://pierandpoint.org/parcels/mb4e/",
+      "api": "https://pierandpoint.org/api/v1/records/mb4e.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2026-04-14",
+     "date_label": "Apr 14, 2026",
+     "status": null,
+     "status_label": null,
+     "text": "A CEQA Notice of Exemption is filed for the Block 4-East project (statutory exemption under AB 1449 / Public Resources Code section 21080.40, the 100%-affordable-housing exemption). All residential units are restricted to 70% AMI or below (excluding 4 manager units).",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-noe-2026-0000027",
+       "title": "Notice of Exemption: The Mission Bay South Block 4-East Project",
+       "publisher": "Office of Community Investment and Infrastructure (OCII)",
+       "date": "2026-04-14",
+       "url": "https://media.api.sf.gov/documents/2026-0000027_The_Mission_Bay_South_Block_4_East_Project.pdf",
+       "accessed": "2026-09-28",
+       "overview": true
+      }
+     ],
+     "source": "Office of Community Investment and Infrastructure (OCII), 2026-04-14",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "8711029B",
+      "slug": "mb4e",
+      "name": "MB4E",
+      "permalink": "https://pierandpoint.org/parcels/mb4e/",
+      "api": "https://pierandpoint.org/api/v1/records/mb4e.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2027",
+     "date_label": "2027",
+     "status": null,
+     "status_label": null,
+     "text": "Phase I construction start targeted (per the developer's own project site; not yet confirmed by an OCII resolution or staff report).",
+     "expected": true,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-mb4e-site",
+       "title": "Mission Bay Block 4 East (developer project page)",
+       "publisher": "Mission Bay 4 East Associates, L.P.",
+       "url": "https://www.mb4e.com/",
+       "accessed": "2026-09-28"
+      }
+     ],
+     "source": "Mission Bay 4 East Associates, L.P.",
+     "origin": "record",
+     "category": "coming_up",
+     "category_label": "Coming up",
+     "record": {
+      "id": "8711029B",
+      "slug": "mb4e",
+      "name": "MB4E",
+      "permalink": "https://pierandpoint.org/parcels/mb4e/",
+      "api": "https://pierandpoint.org/api/v1/records/mb4e.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
      "date": "2027-02",
      "date_label": "2027",
      "status": "under_construction",
@@ -14692,6 +15089,42 @@
      "origin": "csv",
      "category": "status",
      "category_label": "Status",
+     "record": {
+      "id": "8711029B",
+      "slug": "mb4e",
+      "name": "MB4E",
+      "permalink": "https://pierandpoint.org/parcels/mb4e/",
+      "api": "https://pierandpoint.org/api/v1/records/mb4e.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2028",
+     "date_label": "2028",
+     "status": null,
+     "status_label": null,
+     "text": "Phase II construction start targeted (per the developer's own project site; not yet confirmed by an OCII resolution or staff report).",
+     "expected": true,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-mb4e-site",
+       "title": "Mission Bay Block 4 East (developer project page)",
+       "publisher": "Mission Bay 4 East Associates, L.P.",
+       "url": "https://www.mb4e.com/",
+       "accessed": "2026-09-28"
+      }
+     ],
+     "source": "Mission Bay 4 East Associates, L.P.",
+     "origin": "record",
+     "category": "coming_up",
+     "category_label": "Coming up",
      "record": {
       "id": "8711029B",
       "slug": "mb4e",
@@ -14774,6 +15207,35 @@
    ],
    "changes": [
     {
+     "date": "2026-09-28",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "New record file for blklot 8711029B (already tracked in status.csv since 2026-09-13): a 398-unit, two-phase affordable housing development by Curtis Development and Bayview Senior Services, sourced to OCII Commission resolutions (Sept 2024, Feb 2026) and an April 2026 CEQA Notice of Exemption.",
+     "source": "docs/record-schema.md",
+     "sources": [
+      {
+       "title": "docs/record-schema.md"
+      }
+     ],
+     "category": "coverage",
+     "category_label": "Coverage",
+     "record": {
+      "id": "8711029B",
+      "slug": "mb4e",
+      "name": "MB4E",
+      "permalink": "https://pierandpoint.org/parcels/mb4e/",
+      "api": "https://pierandpoint.org/api/v1/records/mb4e.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-09-18",
      "kind": "correction",
      "kind_label": "Correction",
@@ -14804,12 +15266,60 @@
     }
    ],
    "images": [],
-   "open_questions": [],
+   "open_questions": [
+    "Affordability figures differ across sources: the April 2026 CEQA Notice of Exemption (the most recent, legally binding source) restricts all 394 residential units to 70% AMI or below; the 2024 ENA staff memo cited 30-80% AMI; the developer's own project site (mb4e.com) still advertises 35% to ~95% AMI. The NOE is treated as authoritative here.",
+    "Construction start dates (Phase I early 2027, Phase II 2028) and completion targets (Phase I leasing 2029, Phase II completion ~2030) are sourced only to the developer's own project site, not yet confirmed by an OCII resolution or staff report -- flagged as expected/approximate.",
+    "OCII Resolution No. 04-2026 (Phase II predevelopment loan) is referenced in the Feb 2026 resolutions' recitals but was not independently read in this pass; its terms are not detailed here.",
+    "No public official's or community group's stated position on this project has been found and sourced."
+   ],
    "sources": [
     {
-     "id": null,
-     "title": "mb4e.com",
-     "url": "https://www.mb4e.com/"
+     "id": "src-ocii-memo-2024-09",
+     "title": "MEMO: 4E ENA and Loan Agreement (agenda item 5(b), OCII Commission meeting 2024-09-03)",
+     "publisher": "Office of Community Investment and Infrastructure (OCII)",
+     "date": "2024-09-03",
+     "url": "https://sfocii.org/sites/default/files/2024-08/MEMO_4E%20ENA%20and%20Loan%20Agreement%20with%20Att.pdf",
+     "accessed": "2026-09-28",
+     "overview": true
+    },
+    {
+     "id": "src-ocii-reso-02-2026",
+     "title": "OCII Resolution No. 02-2026 (permanent gap loan commitment, Phase I)",
+     "publisher": "Office of Community Investment and Infrastructure (OCII)",
+     "date": "2026-02-03",
+     "url": "https://sfocii.org/files/inline-files/2026002.pdf",
+     "accessed": "2026-09-28"
+    },
+    {
+     "id": "src-ocii-reso-03-2026",
+     "title": "OCII Resolution No. 03-2026 (Phase I predevelopment loan agreement)",
+     "publisher": "Office of Community Investment and Infrastructure (OCII)",
+     "date": "2026-02-03",
+     "url": "https://sfocii.org/files/2026-01/RESO%2003-2026_Phase%20I_Predev%20Loan%20&%20Exhibit%20A.pdf",
+     "accessed": "2026-09-28"
+    },
+    {
+     "id": "src-noe-2026-0000027",
+     "title": "Notice of Exemption: The Mission Bay South Block 4-East Project",
+     "publisher": "Office of Community Investment and Infrastructure (OCII)",
+     "date": "2026-04-14",
+     "url": "https://media.api.sf.gov/documents/2026-0000027_The_Mission_Bay_South_Block_4_East_Project.pdf",
+     "accessed": "2026-09-28",
+     "overview": true
+    },
+    {
+     "id": "src-mb4e-site",
+     "title": "Mission Bay Block 4 East (developer project page)",
+     "publisher": "Mission Bay 4 East Associates, L.P.",
+     "url": "https://www.mb4e.com/",
+     "accessed": "2026-09-28"
+    },
+    {
+     "id": "src-datasf-parcels-2026-09-28",
+     "title": "Parcels - Active and Retired (blklot 8711029B, 1290 3rd St)",
+     "publisher": "DataSF / SF Office of the Assessor-Recorder",
+     "url": "https://data.sf.gov/resource/acdm-wktn.json",
+     "accessed": "2026-09-28"
     },
     {
      "id": null,
@@ -14823,8 +15333,8 @@
     }
    ],
    "notes": "MB4E -- 398-unit, 100% affordable (30-95% AMI) two-phase development (Phase I: 165 units/16 stories fronting China Basin St; Phase II: 233 units/23 stories fronting Mission Rock St), plus ~1,250 sqft ground-floor retail, on a currently-active surface parking lot at 1290 3rd St between Mission Rock St and China Basin St. Developed by Curtis Development + Bayview Senior Services under SF's Office of Community Investment and Infrastructure (OCII) -- administratively separate from the Giants/Tishman Speyer Mission Rock masterplan (the Verde/Canyon rows above), despite sitting immediately adjacent to it and fronting a street literally named Mission Rock St. Per SF's own Spring 2026 development pipeline forecast, still in pre-construction bid-package phase as of that report; Phase I construction targeted to start early 2027, Phase II 2028 -- NOT yet under vertical construction as of this row's sourcing (2026-09-13), despite likely visible fencing/site-prep activity. NOTE: added after direct on-the-ground user observation of this parking lot; verified via SF OEWD's official pipeline forecast, OCII commission exhibits, and DataSF parcel records rather than assumed. (mb4e.com; sfyimby.com/2025/06/renderings-revealed-for-23-story-affordable-housing-in-mission-bay-san-francisco.html; media.api.sf.gov/documents/Spring_2026_DEV_Forecast.pdf)",
-   "has_record_file": false,
-   "last_verified": null,
+   "has_record_file": true,
+   "last_verified": "2026-09-28",
    "tenants": [],
    "geometry": {
     "type": "Polygon",
@@ -101798,7 +102308,9 @@
    "names": [
     "UCSF Wayne and Gladys Valley Center for Vision",
     "499 Illinois Street",
-    "Alexandria Center for Science and Technology – 499 Illinois"
+    "409 Illinois Street",
+    "Alexandria Center for Science and Technology – 499 Illinois",
+    "UCSF School of Dentistry and Interprofessional Education Center"
    ],
    "site": {
     "slug": "mission-bay",
@@ -101815,11 +102327,13 @@
    "how_to_comment": [],
    "positions": [],
    "address": null,
-   "summary": "Two adjacent buildings on OCII plan block X4, tracked as one combined record since their geometries were merged 2026-09-22 (they share one DataSF Assessor block-lot pairing, mblr SF3940003, ~12m apart, not touching): UCSF's Wayne and Gladys Valley Center for Vision, a 347,500-sq-ft, 12-story eye-care tower at 490 Illinois Street that opened November 2020 at a reported cost of about $237 million (SmithGroup architect); and 499 Illinois Street, a 6-story, ~450,000 sq ft biotechnology building completed 2008 and developed by Alexandria Real Estate Equities.",
+   "summary": "Three buildings on this shared parcel pairing, tracked as one combined record (they share the same DataSF Assessor block, share a garage, and are described together in every source found): UCSF's Wayne and Gladys Valley Center for Vision, a 347,500-sq-ft, 12-story eye-care tower at 490 Illinois Street that opened November 2020 at a reported cost of about $237 million (SmithGroup architect); 499 Illinois Street, a 6-story, ~450,000 sq ft biotechnology building completed 2008 and developed by Alexandria Real Estate Equities; and 409 Illinois Street, part of the same Alexandria-developed complex, which UCSF bought together with 499 Illinois St for $767,000,000 in December 2025 and is renovating into its new School of Dentistry and an Interprofessional Education Center, targeted to open in late 2029.",
    "summary_sources": [
     "src-sfyimby-490illinois",
     "src-datasf-499illinois",
-    "src-sgh-499illinois"
+    "src-sgh-499illinois",
+    "src-sfstandard-2025-12",
+    "src-ceqanet-2025120825"
    ],
    "shape": {
     "kind": "approximate",
@@ -101838,14 +102352,15 @@
    "facts": [
     {
      "key": "architect",
-     "value": "SmithGroup (490 Illinois St, Valley Center for Vision)",
+     "value": "490 Illinois St (Valley Center for Vision): SmithGroup. 409 Illinois St renovation (School of Dentistry / Interprofessional Education Center): CO Architects, with Suffolk as design-build contractor.",
      "sources": [
-      "src-sfyimby-490illinois"
+      "src-sfyimby-490illinois",
+      "src-asumag-2026"
      ]
     },
     {
      "key": "gross_sqft",
-     "value": "490 Illinois St: 347,500 across three connected buildings (12-story tower, 5-story south wing, 3-story north wing) plus ~75,000 sq ft of parking for 200+ vehicles. 499 Illinois St: ~450,000, six stories.",
+     "value": "490 Illinois St: 347,500 across three connected buildings (12-story tower, 5-story south wing, 3-story north wing) plus ~75,000 sq ft of parking for 200+ vehicles. 499 Illinois St: ~450,000, six stories. 409 and 499 Illinois St combined (per UC's own Dec 2025 acquisition filing): ~525,421 rentable sq ft on 3.6 acres with a 587-space shared garage. 409 Illinois St's renovation into the School of Dentistry / Interprofessional Education Center is 261,117 gross sq ft.",
      "sources": [
       "src-sfyimby-490illinois",
       "src-sgh-499illinois"
@@ -101853,10 +102368,17 @@
     },
     {
      "key": "developer",
-     "value": "490 Illinois St: University of California, San Francisco; fundraising led by the nonprofit That Man May See. 499 Illinois St: Alexandria Real Estate Equities.",
+     "value": "490 Illinois St: University of California, San Francisco; fundraising led by the nonprofit That Man May See. 499 Illinois St: Alexandria Real Estate Equities (original developer; sold to UCSF Dec 2025).",
      "sources": [
       "src-sfyimby-490illinois",
       "src-sgh-499illinois"
+     ]
+    },
+    {
+     "key": "blklot",
+     "value": "409 Illinois St: 3940003. 499 Illinois St: 3940005 per DataSF's current Assessor parcel data (queried 2026-09-28) -- differs from the block/lot 001 the 2006 building permit used and the lot 004 an earlier source in this file cites; the Assessor's own lot numbering for this address has clearly changed more than once and is not fully reconciled here (see open_questions). 490 Illinois St's own blklot was not re-confirmed in this pass.",
+     "sources": [
+      "src-datasf-parcels-2026-09-28"
      ]
     }
    ],
@@ -101879,6 +102401,28 @@
      "approximate": true,
      "sources": [
       "src-datasf-permit-499-illinois"
+     ],
+     "kind": "construction",
+     "scope": "record"
+    },
+    {
+     "amount_usd": 767000000,
+     "what": "UC Regents' purchase price for 409 Illinois St and 499 Illinois St together, from Alexandria Real Estate Equities",
+     "date": "2025-12",
+     "approximate": false,
+     "sources": [
+      "src-sfstandard-2025-12"
+     ],
+     "kind": "land_or_lease",
+     "scope": "record"
+    },
+    {
+     "amount_usd": 278000000,
+     "what": "Reported project cost for Suffolk/CO Architects' renovation of 409 Illinois St into UCSF's School of Dentistry and Interprofessional Education Center; not confirmed whether this covers the construction contract only or the total project",
+     "date": "2026-08",
+     "approximate": true,
+     "sources": [
+      "src-constructiondive-2026-08"
      ],
      "kind": "construction",
      "scope": "record"
@@ -102037,9 +102581,200 @@
       "url": "https://pierandpoint.org/sites/mission-bay/"
      },
      "relation": "tracked"
+    },
+    {
+     "date": "2025-12-17",
+     "date_label": "Dec 17, 2025",
+     "status": null,
+     "status_label": null,
+     "text": "The University of California (UC Regents) buys 409 Illinois St and 499 Illinois St together from Alexandria Real Estate Equities for $767,000,000: approximately 525,421 rentable sq ft on 3.6 acres with a 587-space shared garage. UC's own CEQA Notice of Exemption for the acquisition (Class 1, Existing Facilities) was posted the next day.",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-sfstandard-2025-12",
+       "title": "UCSF drops $767 million to expand its Mission Bay campus",
+       "publisher": "San Francisco Standard",
+       "date": "2025-12-17",
+       "url": "https://sfstandard.com/2025/12/17/ucsf-drops-767-million-expand-its-mission-bay-campus/",
+       "accessed": "2026-09-28"
+      },
+      {
+       "id": "src-ceqanet-2025120825",
+       "title": "Acquisition of 409 Illinois Street and 499 Illinois Street, San Francisco (SCH #2025120825)",
+       "publisher": "University of California, via California CEQAnet Web Portal",
+       "date": "2025-12-18",
+       "url": "https://ceqanet.lci.ca.gov/2025120825",
+       "accessed": "2026-09-28"
+      }
+     ],
+     "source": "San Francisco Standard, 2025-12-17; University of California, via California CEQAnet Web Portal, 2025-12-18",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "mission_bay_490_499_illinois",
+      "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology",
+      "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision & Alexandria Center for Science and Technology)",
+      "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology/",
+      "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2026",
+     "date_label": "~2026",
+     "status": "under_construction",
+     "status_label": "Under construction",
+     "text": "Renovation of 409 Illinois St begins: 261,117 gross sq ft converted into UCSF's new School of Dentistry and Interprofessional Education Center (dentistry, medicine, nursing, pharmacy and physical therapy). Suffolk (contractor) and CO Architects (architect) selected via progressive design-build; Construction Dive reports a project cost of about $278,000,000.",
+     "expected": false,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-asumag-2026",
+       "title": "UCSF selects Suffolk, CO Architects for 261,000-sq-ft Mission Bay education and dental center",
+       "publisher": "American School & University",
+       "url": "https://www.asumag.com/planning-design/renovation/press-release/55403432/ucsf-selects-suffolk-co-architects-for-261000-square-foot-mission-bay-education-and-dental-center",
+       "accessed": "2026-09-28"
+      },
+      {
+       "id": "src-constructiondive-2026-08",
+       "title": "Suffolk wins $278M California university dental school project",
+       "publisher": "Construction Dive",
+       "date": "2026-08-27",
+       "url": "https://www.constructiondive.com/news/suffolk-wins-california-university-dental-school-project/829259/",
+       "accessed": "2026-09-28"
+      }
+     ],
+     "source": "American School & University; Construction Dive, 2026-08-27",
+     "origin": "record",
+     "category": "status",
+     "category_label": "Status",
+     "record": {
+      "id": "mission_bay_490_499_illinois",
+      "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology",
+      "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision & Alexandria Center for Science and Technology)",
+      "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology/",
+      "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2026-05-07",
+     "date_label": "May 7, 2026",
+     "status": null,
+     "status_label": null,
+     "text": "UC files a separate CEQA Notice of Exemption for an \"Advanced Work Phase\" at 409/499 Illinois St -- site preparation and make-ready construction elements ahead of the main renovation, also a Class 1 exemption.",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-ceqanet-2026050271",
+       "title": "Advanced Work Phase, Mission Bay Education Center and Dental Clinics project (SCH #2026050271)",
+       "publisher": "University of California, via California CEQAnet Web Portal",
+       "date": "2026-05-07",
+       "url": "https://ceqanet.lci.ca.gov/2026050271",
+       "accessed": "2026-09-28"
+      }
+     ],
+     "source": "University of California, via California CEQAnet Web Portal, 2026-05-07",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "mission_bay_490_499_illinois",
+      "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology",
+      "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision & Alexandria Center for Science and Technology)",
+      "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology/",
+      "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2029",
+     "date_label": "2029",
+     "status": "complete",
+     "status_label": "Complete",
+     "text": "Completion targeted for late 2029 for UCSF's School of Dentistry and Interprofessional Education Center at 409 Illinois St.",
+     "expected": true,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-asumag-2026",
+       "title": "UCSF selects Suffolk, CO Architects for 261,000-sq-ft Mission Bay education and dental center",
+       "publisher": "American School & University",
+       "url": "https://www.asumag.com/planning-design/renovation/press-release/55403432/ucsf-selects-suffolk-co-architects-for-261000-square-foot-mission-bay-education-and-dental-center",
+       "accessed": "2026-09-28"
+      }
+     ],
+     "source": "American School & University",
+     "origin": "record",
+     "category": "status",
+     "category_label": "Status",
+     "record": {
+      "id": "mission_bay_490_499_illinois",
+      "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology",
+      "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision & Alexandria Center for Science and Technology)",
+      "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology/",
+      "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
     }
    ],
    "changes": [
+    {
+     "date": "2026-09-28",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "UC Regents bought 409 Illinois St and 499 Illinois St together from Alexandria Real Estate Equities for $767,000,000 (closed 2025-12-17), and is renovating 409 Illinois St (261,117 sq ft) into a new School of Dentistry and Interprofessional Education Center with Suffolk and CO Architects, targeted to open in late 2029.",
+     "source": "https://sfstandard.com/2025/12/17/ucsf-drops-767-million-expand-its-mission-bay-campus/",
+     "sources": [
+      {
+       "title": "https://sfstandard.com/2025/12/17/ucsf-drops-767-million-expand-its-mission-bay-campus/"
+      }
+     ],
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "mission_bay_490_499_illinois",
+      "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology",
+      "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision & Alexandria Center for Science and Technology)",
+      "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology/",
+      "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-23",
      "kind": "added",
@@ -102122,7 +102857,8 @@
     "The 2006 construction permit's own block/lot for 499 Illinois St (block 3940, lot 001) differs from the lot the Assessor now uses for this address (lot 004); the address, biotechnical/medical-research-facility description, 6 stories, and $90M cost all line up with this parcel, so this is treated as a lot renumbering, not a different building. The permit's own completion sign-off (2009-04-06) also runs slightly later than the Assessor's 2008 year, which may reflect a lag between substantial completion and permit closeout.",
     "2026-09-21 pass: found the January 26, 2017 Regents budget/design approval item for 490 Illinois St (UCSF calls it 'Block 33' in its own campus numbering -- assumed at the time to be a coincidental name collision with this project's unrelated OCII-plan block 33). The direct ucsf.edu article returned HTTP 403 to automated fetches in this pass; its content (matching $237,000,000 cost and 12-story/5-story/3-story massing figures already in this record) was confirmed via a search-engine summary rather than a direct read. A primary Regents PDF for the January 26, 2017 item itself was not located.",
     "2026-09-22: the 'coincidental name collision' assumption above was reopened -- the owner directly identified OCII plan block 33 (data/records/ucsf_valley_center_for_vision_west.json, west of Illinois St, about 60-100m from this record's 490 Illinois St tower) as ALSO being Valley Center for Vision, not unrelated. Whether that west building is a second wing of this same facility, a distinct building sharing the name, or a misidentification, is unresolved -- see that record's own open_questions; not re-investigated here.",
-    "No opening date found for Caffe Central (490 Illinois St): checked its own site for a firm date; retail_confirmed.csv's own opened field is also blank, and the building itself only opened Nov 2020."
+    "No opening date found for Caffe Central (490 Illinois St): checked its own site for a firm date; retail_confirmed.csv's own opened field is also blank, and the building itself only opened Nov 2020.",
+    "2026-09-28: exact month/day for 409 Illinois St's 2026 renovation start, and the exact date within 'late 2029' targeted for completion, are not given by any source found. Whether the Construction Dive-reported $278,000,000 figure is Suffolk's construction contract value alone or the total project cost (design, FF&E, etc.) is also not stated by that source. No SF Planning case number exists for this renovation because UC, as a state entity, is exempt from local planning review -- all environmental review runs through UC itself as CEQA lead agency; treat the absence of a Planning case number as confirmed, not unresearched. The Assessor's blklot for 499 Illinois St has been given as 3940001 (2006 permit), 3940004 (an earlier source in this file) and now 3940005 (a live 2026-09-28 query) -- not reconciled here; possibly repeated lot-line adjustments on a shared master parcel with 409 Illinois St, whose current blklot (3940003) is comparatively well-confirmed."
    ],
    "sources": [
     {
@@ -102172,6 +102908,52 @@
      "overview": true
     },
     {
+     "id": "src-sfstandard-2025-12",
+     "title": "UCSF drops $767 million to expand its Mission Bay campus",
+     "publisher": "San Francisco Standard",
+     "date": "2025-12-17",
+     "url": "https://sfstandard.com/2025/12/17/ucsf-drops-767-million-expand-its-mission-bay-campus/",
+     "accessed": "2026-09-28"
+    },
+    {
+     "id": "src-ceqanet-2025120825",
+     "title": "Acquisition of 409 Illinois Street and 499 Illinois Street, San Francisco (SCH #2025120825)",
+     "publisher": "University of California, via California CEQAnet Web Portal",
+     "date": "2025-12-18",
+     "url": "https://ceqanet.lci.ca.gov/2025120825",
+     "accessed": "2026-09-28"
+    },
+    {
+     "id": "src-ceqanet-2026050271",
+     "title": "Advanced Work Phase, Mission Bay Education Center and Dental Clinics project (SCH #2026050271)",
+     "publisher": "University of California, via California CEQAnet Web Portal",
+     "date": "2026-05-07",
+     "url": "https://ceqanet.lci.ca.gov/2026050271",
+     "accessed": "2026-09-28"
+    },
+    {
+     "id": "src-asumag-2026",
+     "title": "UCSF selects Suffolk, CO Architects for 261,000-sq-ft Mission Bay education and dental center",
+     "publisher": "American School & University",
+     "url": "https://www.asumag.com/planning-design/renovation/press-release/55403432/ucsf-selects-suffolk-co-architects-for-261000-square-foot-mission-bay-education-and-dental-center",
+     "accessed": "2026-09-28"
+    },
+    {
+     "id": "src-constructiondive-2026-08",
+     "title": "Suffolk wins $278M California university dental school project",
+     "publisher": "Construction Dive",
+     "date": "2026-08-27",
+     "url": "https://www.constructiondive.com/news/suffolk-wins-california-university-dental-school-project/829259/",
+     "accessed": "2026-09-28"
+    },
+    {
+     "id": "src-datasf-parcels-2026-09-28",
+     "title": "Parcels - Active and Retired (blklot 3940003, 409 Illinois St; blklot 3940005, 499 Illinois St)",
+     "publisher": "DataSF / SF Office of the Assessor-Recorder",
+     "url": "https://data.sf.gov/resource/acdm-wktn.json",
+     "accessed": "2026-09-28"
+    },
+    {
      "id": null,
      "title": "openstreetmap.org/way/84821715",
      "url": "https://www.openstreetmap.org/way/84821715"
@@ -102189,7 +102971,7 @@
    ],
    "notes": "OCII plan block X4 (a plan-era open-space number absorbed into this final building complex, per docs/briefs/mission_bay_block_inventory.csv). UCSF Health also operates a Reproductive Health clinic on 499 Illinois St's 6th floor.",
    "has_record_file": true,
-   "last_verified": "2026-09-22",
+   "last_verified": "2026-09-28",
    "tenants": [
     {
      "slug": "caffe-central-490-illinois",
@@ -120910,6 +121692,2174 @@
         -122.3887984,
         37.767131
        ]
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "pier70_dry_docks",
+   "slug": "piers-68-and-70-dry-docks",
+   "name": "Piers 68 & 70 Dry Docks",
+   "permalink": "https://pierandpoint.org/parcels/piers-68-and-70-dry-docks/",
+   "api": "https://pierandpoint.org/api/v1/records/piers-68-and-70-dry-docks.json",
+   "names": [
+    "Piers 68 & 70 Dry Docks",
+    "Dry Dock No. 2",
+    "Eureka Dry Dock"
+   ],
+   "site": {
+    "slug": "pier-70",
+    "name": "Pier 70",
+    "short": "Pier 70",
+    "url": "https://pierandpoint.org/sites/pier-70/"
+   },
+   "status": "being_removed",
+   "status_label": "Being removed",
+   "use": "maritime_industrial",
+   "relation": "adjacent",
+   "adjacent_to": "pier-70",
+   "distance_note": "Piers 68 & 70's dry-dock and ship-repair facility sits immediately north of Brookfield's tracked 28-acre Pier 70 redevelopment parcel and Crane Cove Park, outside both -- Port materials describe it as a separate 13-acre facility, closed in 2017, at the complex's northeast corner.",
+   "how_to_comment": [
+    {
+     "channel": "Port Commission meeting calendar",
+     "detail": "Agenda items on the Pier 68/70 dry docks",
+     "url": "https://sfport.com/meetings-events"
+    },
+    {
+     "channel": "Clerk of the Board of Supervisors",
+     "detail": "District 10 (the supplemental appropriation ordinance)",
+     "url": "https://sfbos.org/clerk-board"
+    }
+   ],
+   "positions": [],
+   "address": null,
+   "summary": "Two Port-owned floating dry docks at Piers 68 & 70 -- Dry Dock No. 2 and the Eureka Dry Dock -- that the Port Commission declared an emergency over on 2025-12-08 after hull tears and uncontrolled ballast-tank flooding caused Dry Dock No. 2 to list. The Port is stabilizing both structures and plans to demolish and dispose of them, at a total estimated cost of $61.2M, of which about $20.0M was secured as of February 2026.",
+   "summary_sources": [
+    "src-port-memo-2026-01",
+    "src-cpc-memo-2026-02"
+   ],
+   "shape": {
+    "kind": "approximate",
+    "parcel": null,
+    "display": "fill",
+    "display_reason": null,
+    "notes": {
+     "accuracy_caveat": "APPROXIMATE -- a coarse placeholder box, not a traced footprint. This is a Port tideland facility with no Assessor parcel and no source site plan or GIS shapefile was found to digitize the actual dry-dock basins, cranes and sheds from. The box is anchored to two real points (the 20th/Illinois St intersection, and the narrow real gap between Pier 70's and Mission Bay South's own tracked geometry) but does not represent the true shape or full extent of the 13-acre shipyard, which projects east into the Bay beyond what a land-based box can show. Needs replacement with a real digitized footprint if a Port GIS layer or the Dry Dock Memorandum's own site figure becomes available.",
+     "digitized_from": "No Assessor block/lot exists for this Port tideland/water-lot facility (confirmed: DataSF's 'Parcels - Active and Retired' Socrata dataset, acdm-wktn, has no PIER-numbered street_name entries at all near this site, consistent with pier and dry-dock structures sitting outside the Assessor's secured roll). No Port GIS shapefile or site-plan figure for the Piers 68/70 shipyard footprint was available to digitize from directly, so this is a coarse locational box only, centered near the shipyard's known entrance at 20th and Illinois St (real DataSF street-centerline intersection, data/raw/official_street_centerlines.geojson) and sized to sit between the tracked Pier 70 parcel's own northern edge (Crane Cove Park, data/manual/pier70_crane_cove_park.geojson, max latitude 37.76406) and Mission Bay South's nearest tracked features (the UCSF Illinois Street Garage and the P24 waterfront lawn, data/processed/approximate_projects.geojson, both of which reach south to roughly latitude 37.7644-37.7648) -- the real Piers 68/70 shipyard, described in Port materials as a 13-acre facility at the 'northeast corner' of the complex including Dry Dock No. 2 and the Eureka Dry Dock, occupies this narrow shoreline gap and extends east into the Bay itself, which this box does not attempt to trace.",
+     "why_no_real_parcel": "Port tideland/water-lot facility; not on the Assessor's secured roll (data.sf.gov acdm-wktn has no PIER-numbered parcels near this site).",
+     "regulatory_context": "Dry Dock No. 2 (a ~1940s-era floating dry dock) developed excessive listing after hull tears and uncontrolled ballast-tank flooding in November 2025; the Port Commission President and Executive Director declared an emergency on 2025-12-08 (Port Commission memo, Calendar Item 9A, 2026-01-09). Port staff anticipate advertising a demolition-services contract in summer 2026 for Dry Dock No. 2 and the neighboring Eureka Dry Dock (a second floating dry dock at Piers 68/70, formerly USS Steadfast/AFDM-14 -- not the 1890 ferryboat Eureka at Hyde Street Pier/SF Maritime NHP). Total estimated cost of stabilization and disposal is $61.2M (Capital Planning Committee memo, 2026-02-09); see the record file for the funding breakdown and what remains unfunded."
+    }
+   },
+   "centroid": {
+    "lon": -122.38542,
+    "lat": 37.76504
+   },
+   "facts": [
+    {
+     "key": "structures",
+     "value": "Two floating dry docks: Dry Dock No. 2 and the Eureka Dry Dock (the latter formerly USS Steadfast, AFDM-14 -- not the 1890 ferryboat Eureka preserved at Hyde Street Pier/SF Maritime NHP)",
+     "sources": [
+      "src-port-memo-2026-01"
+     ]
+    }
+   ],
+   "costs": [
+    {
+     "amount_usd": 10000000,
+     "what": "Cap on emergency stabilization work (continuous pumping, reinforcing steel, stabilizing deck cranes) authorized under the Port's December 2025 emergency declaration",
+     "date": "2025-12",
+     "kind": "public_investment",
+     "scope": "record",
+     "sources": [
+      "src-port-memo-2026-01"
+     ]
+    },
+    {
+     "amount_usd": 61200000,
+     "what": "Total estimated cost to stabilize and dispose of Dry Dock No. 2 and the Eureka Dry Dock (Phase 1A stabilization $8.6M + Dry Dock No. 2 disposal $27.4M + Eureka disposal $15.7M + $9.5M contingency, per the Capital Planning Committee's Feb 2026 cost table); about $20.0M was secured as of Feb 2026, with roughly $41.2M pending FY2026-27 budget approval",
+     "date": "2026-02",
+     "kind": "infrastructure",
+     "scope": "record",
+     "approximate": true,
+     "sources": [
+      "src-cpc-memo-2026-02"
+     ]
+    }
+   ],
+   "milestones": [
+    {
+     "date": "2024-10",
+     "date_label": "Oct 2024",
+     "status": null,
+     "status_label": null,
+     "text": "Port Commission authorizes Resolution 24-51 funding toward Pier 70 shipyard dry dock work; the formal supplemental appropriation ordinance was introduced later (see 2025-12 and 2026-02 entries).",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-cpc-memo-2026-02",
+       "title": "Capital Planning Committee memo: Port Dry Docks Supplemental (cost table and funding status)",
+       "publisher": "City and County of San Francisco Capital Planning Committee",
+       "date": "2026-02-09",
+       "url": "https://onesanfrancisco.org/sites/default/files/2026-02/Agenda%20Item%204%20-%20CPC%20Memo%20-%20Port%20-%20Dry%20Docks%20Supplemental_Signed.pdf",
+       "accessed": "2026-09-28",
+       "overview": true
+      }
+     ],
+     "source": "City and County of San Francisco Capital Planning Committee, 2026-02-09",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "pier70_dry_docks",
+      "slug": "piers-68-and-70-dry-docks",
+      "name": "Piers 68 & 70 Dry Docks",
+      "permalink": "https://pierandpoint.org/parcels/piers-68-and-70-dry-docks/",
+      "api": "https://pierandpoint.org/api/v1/records/piers-68-and-70-dry-docks.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "adjacent"
+    },
+    {
+     "date": "2025-11",
+     "date_label": "Nov 2025",
+     "status": null,
+     "status_label": null,
+     "text": "Existing tears in Dry Dock No. 2's hull enlarge and new tears appear, causing uncontrolled flooding of ballast tanks; the dry dock is then found to have excessive listing on its northeast side following a rainstorm.",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-port-memo-2026-01",
+       "title": "Informational memo: dry dock emergency declaration, stabilization and future demolition (Calendar Item 9A)",
+       "publisher": "Port of San Francisco / Port Commission",
+       "date": "2026-01-09",
+       "url": "https://www.sfport.com/sites/default/files/2026-01/011326_9a_info_on_dry_dock_and_emergency_declaration_for_stabilization_and_future_demolition.docx.pdf",
+       "accessed": "2026-09-28",
+       "overview": true
+      }
+     ],
+     "source": "Port of San Francisco / Port Commission, 2026-01-09",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "pier70_dry_docks",
+      "slug": "piers-68-and-70-dry-docks",
+      "name": "Piers 68 & 70 Dry Docks",
+      "permalink": "https://pierandpoint.org/parcels/piers-68-and-70-dry-docks/",
+      "api": "https://pierandpoint.org/api/v1/records/piers-68-and-70-dry-docks.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "adjacent"
+    },
+    {
+     "date": "2025-12-08",
+     "date_label": "Dec 8, 2025",
+     "status": null,
+     "status_label": null,
+     "text": "The Port Commission President and Executive Director declare the existence of an emergency over Dry Dock No. 2's condition.",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-port-memo-2026-01",
+       "title": "Informational memo: dry dock emergency declaration, stabilization and future demolition (Calendar Item 9A)",
+       "publisher": "Port of San Francisco / Port Commission",
+       "date": "2026-01-09",
+       "url": "https://www.sfport.com/sites/default/files/2026-01/011326_9a_info_on_dry_dock_and_emergency_declaration_for_stabilization_and_future_demolition.docx.pdf",
+       "accessed": "2026-09-28",
+       "overview": true
+      }
+     ],
+     "source": "Port of San Francisco / Port Commission, 2026-01-09",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "pier70_dry_docks",
+      "slug": "piers-68-and-70-dry-docks",
+      "name": "Piers 68 & 70 Dry Docks",
+      "permalink": "https://pierandpoint.org/parcels/piers-68-and-70-dry-docks/",
+      "api": "https://pierandpoint.org/api/v1/records/piers-68-and-70-dry-docks.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "adjacent"
+    },
+    {
+     "date": "2025-12-16",
+     "date_label": "Dec 16, 2025",
+     "status": null,
+     "status_label": null,
+     "text": "Mayor introduces a supplemental appropriation ordinance for dry dock emergency stabilization and future demolition funding.",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-cpc-memo-2026-02",
+       "title": "Capital Planning Committee memo: Port Dry Docks Supplemental (cost table and funding status)",
+       "publisher": "City and County of San Francisco Capital Planning Committee",
+       "date": "2026-02-09",
+       "url": "https://onesanfrancisco.org/sites/default/files/2026-02/Agenda%20Item%204%20-%20CPC%20Memo%20-%20Port%20-%20Dry%20Docks%20Supplemental_Signed.pdf",
+       "accessed": "2026-09-28",
+       "overview": true
+      }
+     ],
+     "source": "City and County of San Francisco Capital Planning Committee, 2026-02-09",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "pier70_dry_docks",
+      "slug": "piers-68-and-70-dry-docks",
+      "name": "Piers 68 & 70 Dry Docks",
+      "permalink": "https://pierandpoint.org/parcels/piers-68-and-70-dry-docks/",
+      "api": "https://pierandpoint.org/api/v1/records/piers-68-and-70-dry-docks.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "adjacent"
+    },
+    {
+     "date": "2026",
+     "date_label": "2026",
+     "status": null,
+     "status_label": null,
+     "text": "Port staff anticipate advertising a contract for demolition services in the summer of 2026 (staff's informal name for the underlying memo: the \"Dry Dock Memorandum\").",
+     "expected": true,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-port-memo-2026-01",
+       "title": "Informational memo: dry dock emergency declaration, stabilization and future demolition (Calendar Item 9A)",
+       "publisher": "Port of San Francisco / Port Commission",
+       "date": "2026-01-09",
+       "url": "https://www.sfport.com/sites/default/files/2026-01/011326_9a_info_on_dry_dock_and_emergency_declaration_for_stabilization_and_future_demolition.docx.pdf",
+       "accessed": "2026-09-28",
+       "overview": true
+      }
+     ],
+     "source": "Port of San Francisco / Port Commission, 2026-01-09",
+     "origin": "record",
+     "category": "coming_up",
+     "category_label": "Coming up",
+     "record": {
+      "id": "pier70_dry_docks",
+      "slug": "piers-68-and-70-dry-docks",
+      "name": "Piers 68 & 70 Dry Docks",
+      "permalink": "https://pierandpoint.org/parcels/piers-68-and-70-dry-docks/",
+      "api": "https://pierandpoint.org/api/v1/records/piers-68-and-70-dry-docks.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "adjacent"
+    },
+    {
+     "date": "2026-01-09",
+     "date_label": "Jan 9, 2026",
+     "status": null,
+     "status_label": null,
+     "text": "Port Commission receives an informational memo (Calendar Item 9A) on the dry dock emergency, the stabilization work under way (continuous pumping, reinforcing steel, stabilizing deck cranes, capped at $10,000,000), and staff's plan to advertise a demolition-services contract in summer 2026.",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-port-memo-2026-01",
+       "title": "Informational memo: dry dock emergency declaration, stabilization and future demolition (Calendar Item 9A)",
+       "publisher": "Port of San Francisco / Port Commission",
+       "date": "2026-01-09",
+       "url": "https://www.sfport.com/sites/default/files/2026-01/011326_9a_info_on_dry_dock_and_emergency_declaration_for_stabilization_and_future_demolition.docx.pdf",
+       "accessed": "2026-09-28",
+       "overview": true
+      }
+     ],
+     "source": "Port of San Francisco / Port Commission, 2026-01-09",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "pier70_dry_docks",
+      "slug": "piers-68-and-70-dry-docks",
+      "name": "Piers 68 & 70 Dry Docks",
+      "permalink": "https://pierandpoint.org/parcels/piers-68-and-70-dry-docks/",
+      "api": "https://pierandpoint.org/api/v1/records/piers-68-and-70-dry-docks.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "adjacent"
+    },
+    {
+     "date": "2026-02-09",
+     "date_label": "Feb 9, 2026",
+     "status": null,
+     "status_label": null,
+     "text": "Capital Planning Committee reviews a supplemental memo giving the full cost picture: $61.2M total estimated cost to stabilize and dispose of Dry Dock No. 2 and the Eureka Dry Dock, of which about $20.0M was secured and about $41.2M remained pending FY2026-27 budget approval.",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-cpc-memo-2026-02",
+       "title": "Capital Planning Committee memo: Port Dry Docks Supplemental (cost table and funding status)",
+       "publisher": "City and County of San Francisco Capital Planning Committee",
+       "date": "2026-02-09",
+       "url": "https://onesanfrancisco.org/sites/default/files/2026-02/Agenda%20Item%204%20-%20CPC%20Memo%20-%20Port%20-%20Dry%20Docks%20Supplemental_Signed.pdf",
+       "accessed": "2026-09-28",
+       "overview": true
+      }
+     ],
+     "source": "City and County of San Francisco Capital Planning Committee, 2026-02-09",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "pier70_dry_docks",
+      "slug": "piers-68-and-70-dry-docks",
+      "name": "Piers 68 & 70 Dry Docks",
+      "permalink": "https://pierandpoint.org/parcels/piers-68-and-70-dry-docks/",
+      "api": "https://pierandpoint.org/api/v1/records/piers-68-and-70-dry-docks.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "adjacent"
+    }
+   ],
+   "changes": [
+    {
+     "date": "2026-09-28",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "New adjacent record for the Piers 68 & 70 dry docks (Dry Dock No. 2 and the Eureka Dry Dock), following the Port's December 2025 emergency declaration over Dry Dock No. 2's hull tears and listing, the January and February 2026 Port/Capital Planning Committee memos on stabilization and planned demolition, and Mission Local's February 2026 reporting on the $61.2M disposal cost.",
+     "source": "docs/briefs/adjacent-proposals.md",
+     "sources": [
+      {
+       "title": "docs/briefs/adjacent-proposals.md"
+      }
+     ],
+     "category": "coverage",
+     "category_label": "Coverage",
+     "record": {
+      "id": "pier70_dry_docks",
+      "slug": "piers-68-and-70-dry-docks",
+      "name": "Piers 68 & 70 Dry Docks",
+      "permalink": "https://pierandpoint.org/parcels/piers-68-and-70-dry-docks/",
+      "api": "https://pierandpoint.org/api/v1/records/piers-68-and-70-dry-docks.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "adjacent",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
+   "images": [],
+   "open_questions": [
+    "Whether the $18.5M Port Commission Resolution 24-51 authorization (Oct 2024) is a subset of, or additional to, the $61.2M total cost figure presented in the Feb 2026 Capital Planning Committee memo is not established by the sources reviewed here.",
+    "Whether demolition will be completed \"before winter storms\" (a claim in an owner-supplied unsourced summary, not repeated in this record) is not supported by any primary source found; SFist (2026-03-05) reports it will likely be a year before the dry dock situation is resolved, and roughly $41.2M of the $61.2M total remained unfunded as of Feb 2026.",
+    "What becomes of BAE Systems' ship-repair operations at the adjacent Pier 70 shipyard once these dry docks are removed is not addressed in the sources reviewed here."
+   ],
+   "sources": [
+    {
+     "id": "src-port-memo-2026-01",
+     "title": "Informational memo: dry dock emergency declaration, stabilization and future demolition (Calendar Item 9A)",
+     "publisher": "Port of San Francisco / Port Commission",
+     "date": "2026-01-09",
+     "url": "https://www.sfport.com/sites/default/files/2026-01/011326_9a_info_on_dry_dock_and_emergency_declaration_for_stabilization_and_future_demolition.docx.pdf",
+     "accessed": "2026-09-28",
+     "overview": true
+    },
+    {
+     "id": "src-cpc-memo-2026-02",
+     "title": "Capital Planning Committee memo: Port Dry Docks Supplemental (cost table and funding status)",
+     "publisher": "City and County of San Francisco Capital Planning Committee",
+     "date": "2026-02-09",
+     "url": "https://onesanfrancisco.org/sites/default/files/2026-02/Agenda%20Item%204%20-%20CPC%20Memo%20-%20Port%20-%20Dry%20Docks%20Supplemental_Signed.pdf",
+     "accessed": "2026-09-28",
+     "overview": true
+    },
+    {
+     "id": "src-missionlocal-2026-02",
+     "title": "Port of S.F. is budgeting $61M to demolish its massive dry docks",
+     "publisher": "Mission Local",
+     "date": "2026-02",
+     "url": "https://missionlocal.org/2026/02/port-of-san-francisco-dry-dock-pier-68-70/",
+     "accessed": "2026-09-28"
+    },
+    {
+     "id": "src-sfist-2026-03",
+     "title": "It Will Likely Be a Year Before The Port Of SF's Sinking Dry Dock...",
+     "publisher": "SFist",
+     "date": "2026-03-05",
+     "url": "https://sfist.com/2026/03/05/it-will-likely-be-a-year-before-the-port-of-sfs-sinking-dry-dock/",
+     "accessed": "2026-09-28"
+    }
+   ],
+   "notes": "Distinct from and outside the boundary of Brookfield's tracked 28-acre Pier 70 D4D redevelopment parcel and the separately-delivered Crane Cove Park, per the Port's own description of the Pier 70 shipyard/dry docks as a separate 13-acre facility (closed 2017) at the complex's northeast corner.",
+   "has_record_file": true,
+   "last_verified": "2026-09-28",
+   "tenants": [],
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -122.3859,
+       37.7644
+      ],
+      [
+       -122.3859,
+       37.766
+      ],
+      [
+       -122.3847,
+       37.766
+      ],
+      [
+       -122.3847,
+       37.7644
+      ],
+      [
+       -122.3859,
+       37.7644
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "pier_54",
+   "slug": "pier-54",
+   "name": "Pier 54",
+   "permalink": "https://pierandpoint.org/parcels/pier-54/",
+   "api": "https://pierandpoint.org/api/v1/records/pier-54.json",
+   "names": [
+    "Pier 54"
+   ],
+   "site": {
+    "slug": "mission-bay",
+    "name": "Mission Bay",
+    "short": "Mission Bay",
+    "url": "https://pierandpoint.org/sites/mission-bay/"
+   },
+   "status": "being_removed",
+   "status_label": "Being removed",
+   "use": "maritime_industrial",
+   "relation": "adjacent",
+   "adjacent_to": "mission-bay",
+   "distance_note": "On Terry A. Francois Blvd, within the stretch DataSF's official 'Former San Francisco Redevelopment Agency Project Areas' boundary marks as Mission Bay South, and about 30m from Mission Bay South's own nearest tracked feature (the UCSF Illinois Street Garage/P24 waterfront lawn) -- versus roughly 470m from Mission Rock's own tracked footprint (Pier 48/50). Recorded as adjacent to Mission Bay, not Mission Rock, on that basis; see the PR's geometry test for the full distance comparison. Pier 54 itself predates and is not part of Mission Bay's OCII development program -- it is Port-jurisdiction maritime infrastructure.",
+   "how_to_comment": [
+    {
+     "channel": "Port Commission meeting calendar",
+     "detail": "Agenda items on Pier 54 and the Five-Year CIP",
+     "url": "https://sfport.com/meetings-events"
+    },
+    {
+     "channel": "Clerk of the Board of Supervisors",
+     "detail": "District 10",
+     "url": "https://sfbos.org/clerk-board"
+    }
+   ],
+   "positions": [],
+   "address": null,
+   "summary": "Pier 54, a Port-owned pier on Terry A. Francois Blvd, was condemned and closed in 2024 after years of structural deterioration, displacing the businesses that operated there. The Port's draft Five-Year Capital Improvement Program (FY2027-31) budgets $2.0M to demolish the pier's shed; no funded timeline exists yet for removing the rest of the structure.",
+   "summary_sources": [
+    "src-sfgate-2024-09",
+    "src-port-cip-2026-02"
+   ],
+   "shape": {
+    "kind": "approximate",
+    "parcel": null,
+    "display": "fill",
+    "display_reason": null,
+    "notes": {
+     "accuracy_caveat": "APPROXIMATE -- a coarse placeholder box, not a traced footprint, for the same reasons as data/manual/pier70_dry_docks.geojson (no parcel, no source figure). The box does not represent the real pier structure's true shape or its full extent into the Bay.",
+     "digitized_from": "No Assessor block/lot exists for this Port pier structure (confirmed: DataSF's 'Parcels - Active and Retired' Socrata dataset, acdm-wktn, has no PIER-numbered street_name entries). No Port GIS shapefile or site-plan figure was available, so this is a coarse locational box centered on the real DataSF street-centerline address range 500-599 Terry A. Francois Blvd (data/raw/official_street_centerlines.geojson), the address range covering the Pier 52/54 area (California State Parks Division of Boating and Waterways lists a combined 'Pier 54 & Pier 52 BLF' boat-launch facility on Terry A. Francois Blvd in this same stretch).",
+     "why_no_real_parcel": "Port pier structure; not on the Assessor's secured roll (data.sf.gov acdm-wktn has no PIER-numbered parcels near this site).",
+     "regulatory_context": "Condemned and red-tagged in 2024; the Port announced it would permanently close at the end of 2024, displacing the pier's tenant businesses (SFGate, Sept 2024). The Port's draft Five-Year Capital Improvement Program (FY2027-31, Feb 2026) budgets a 'Pier 54 Shed Demolition' line item totaling $2.0M ($500,000 in FY2026-27 and $1,500,000 in FY2027-28); no line item for full substructure removal appears in that document."
+    }
+   },
+   "centroid": {
+    "lon": -122.38478,
+    "lat": 37.76952
+   },
+   "facts": [],
+   "costs": [
+    {
+     "amount_usd": 2000000,
+     "what": "Port draft Five-Year CIP (FY2027-31) line item to demolish the Pier 54 shed: $500,000 budgeted in FY2026-27 and $1,500,000 in FY2027-28",
+     "date": "2026-02",
+     "kind": "public_investment",
+     "scope": "record",
+     "sources": [
+      "src-port-cip-2026-02"
+     ]
+    }
+   ],
+   "milestones": [
+    {
+     "date": "2024-07",
+     "date_label": "~2024",
+     "status": null,
+     "status_label": null,
+     "text": "Pier 54 is officially red-tagged as unsafe.",
+     "expected": false,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-sfgate-2024-09",
+       "title": "Crumbling SF pier closing down, forcing iconic businesses to move",
+       "publisher": "SFGate",
+       "date": "2024-09",
+       "url": "https://discoveryink.wordpress.com/2024/09/08/crumbling-sf-pier-closing-down-forcing-iconic-businesses-to-move/",
+       "accessed": "2026-09-28"
+      }
+     ],
+     "source": "SFGate, 2024-09",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "pier_54",
+      "slug": "pier-54",
+      "name": "Pier 54",
+      "permalink": "https://pierandpoint.org/parcels/pier-54/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-54.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "adjacent"
+    },
+    {
+     "date": "2024-12",
+     "date_label": "~2024",
+     "status": null,
+     "status_label": null,
+     "text": "Port announces Pier 54 will permanently close at the end of 2024, displacing its tenant businesses.",
+     "expected": false,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-sfgate-2024-09",
+       "title": "Crumbling SF pier closing down, forcing iconic businesses to move",
+       "publisher": "SFGate",
+       "date": "2024-09",
+       "url": "https://discoveryink.wordpress.com/2024/09/08/crumbling-sf-pier-closing-down-forcing-iconic-businesses-to-move/",
+       "accessed": "2026-09-28"
+      }
+     ],
+     "source": "SFGate, 2024-09",
+     "origin": "record",
+     "category": "retail",
+     "category_label": "Retail",
+     "record": {
+      "id": "pier_54",
+      "slug": "pier-54",
+      "name": "Pier 54",
+      "permalink": "https://pierandpoint.org/parcels/pier-54/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-54.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "adjacent"
+    },
+    {
+     "date": "2026-02",
+     "date_label": "Feb 2026",
+     "status": null,
+     "status_label": null,
+     "text": "Port's draft Five-Year Capital Improvement Program (FY2027-31) budgets a \"Pier 54 Shed Demolition\" line item totaling $2.0M: $500,000 in FY2026-27 and $1,500,000 in FY2027-28. No line item for full substructure removal appears in the same document.",
+     "expected": true,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-port-cip-2026-02",
+       "title": "Draft Five-Year Capital Improvement Program FY2027-31, Attachment V",
+       "publisher": "Port of San Francisco",
+       "date": "2026-02",
+       "url": "https://www.sfport.com/sites/default/files/2026-02/item_10a.5_attachment_v_fy_2027-31_five-year_cip_draft.pdf",
+       "accessed": "2026-09-28",
+       "overview": true
+      }
+     ],
+     "source": "Port of San Francisco, 2026-02",
+     "origin": "record",
+     "category": "coming_up",
+     "category_label": "Coming up",
+     "record": {
+      "id": "pier_54",
+      "slug": "pier-54",
+      "name": "Pier 54",
+      "permalink": "https://pierandpoint.org/parcels/pier-54/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-54.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "adjacent"
+    }
+   ],
+   "changes": [
+    {
+     "date": "2026-09-28",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "New adjacent record for Pier 54, closed and red-tagged in 2024 (SFGate), with the Port's draft Five-Year Capital Improvement Program (FY2027-31) budgeting $2.0M to demolish the pier shed across FY2026-27 and FY2027-28.",
+     "source": "docs/briefs/adjacent-proposals.md",
+     "sources": [
+      {
+       "title": "docs/briefs/adjacent-proposals.md"
+      }
+     ],
+     "category": "coverage",
+     "category_label": "Coverage",
+     "record": {
+      "id": "pier_54",
+      "slug": "pier-54",
+      "name": "Pier 54",
+      "permalink": "https://pierandpoint.org/parcels/pier-54/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-54.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "adjacent",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
+   "images": [],
+   "open_questions": [
+    "No funded plan yet for removing the pier's substructure beyond the shed demolition.",
+    "That the Port planned to fence the pier to prevent vandalism is reported only in a search-engine summary of the SFGate article, not independently re-verified here against the full original article text (which sits behind a paywall; the mirror used for this record's other facts may not repeat that detail).",
+    "This record's site grouping (\"Mission Bay South\") reflects DataSF's official redevelopment-project-area boundary, which reaches this stretch of Terry A. Francois Blvd -- not a claim that Pier 54 is a Mission Bay OCII development block, which it is not."
+   ],
+   "sources": [
+    {
+     "id": "src-sfgate-2024-09",
+     "title": "Crumbling SF pier closing down, forcing iconic businesses to move",
+     "publisher": "SFGate",
+     "date": "2024-09",
+     "url": "https://discoveryink.wordpress.com/2024/09/08/crumbling-sf-pier-closing-down-forcing-iconic-businesses-to-move/",
+     "accessed": "2026-09-28"
+    },
+    {
+     "id": "src-port-cip-2026-02",
+     "title": "Draft Five-Year Capital Improvement Program FY2027-31, Attachment V",
+     "publisher": "Port of San Francisco",
+     "date": "2026-02",
+     "url": "https://www.sfport.com/sites/default/files/2026-02/item_10a.5_attachment_v_fy_2027-31_five-year_cip_draft.pdf",
+     "accessed": "2026-09-28",
+     "overview": true
+    }
+   ],
+   "notes": "This is a Port maritime/pier facility, not an OCII Mission Bay South development block -- grouped under the Mission Bay South site here because that is the nearest tracked site and because DataSF's official 'Former San Francisco Redevelopment Agency Project Areas' boundary (data/raw/redevelopment_project_areas.geojson) for Mission Bay South extends north along the Terry A. Francois Blvd shoreline to include this stretch. It is materially farther from Mission Rock's own tracked footprint (Pier 48/50, ~470m away) than from Mission Bay South's nearest tracked features (the UCSF Illinois Street Garage/P24 lawn, ~30m away) -- see the PR body's geometry test for the full distance comparison. Recorded as adjacent rather than tracked because it is Port-jurisdiction maritime infrastructure being demolished, not a Mission Bay OCII development parcel like this site's other tracked records.",
+   "has_record_file": true,
+   "last_verified": "2026-09-28",
+   "tenants": [],
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -122.3851,
+       37.7692
+      ],
+      [
+       -122.3851,
+       37.77
+      ],
+      [
+       -122.3843,
+       37.77
+      ],
+      [
+       -122.3843,
+       37.7692
+      ],
+      [
+       -122.3851,
+       37.7692
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "mission_bay_ferry_landing",
+   "slug": "mission-bay-ferry-landing",
+   "name": "Mission Bay Ferry Landing",
+   "permalink": "https://pierandpoint.org/parcels/mission-bay-ferry-landing/",
+   "api": "https://pierandpoint.org/api/v1/records/mission-bay-ferry-landing.json",
+   "names": [
+    "Mission Bay Ferry Landing"
+   ],
+   "site": {
+    "slug": "mission-bay",
+    "name": "Mission Bay",
+    "short": "Mission Bay",
+    "url": "https://pierandpoint.org/sites/mission-bay/"
+   },
+   "status": "under_construction",
+   "status_label": "Under construction",
+   "use": "transit",
+   "relation": "adjacent",
+   "adjacent_to": "mission-bay",
+   "distance_note": "Sited near Agua Vista Park on Terry A. Francois Blvd, within the stretch DataSF's official 'Former San Francisco Redevelopment Agency Project Areas' boundary marks as Mission Bay South, and about 270m from Mission Bay South's own nearest tracked feature -- versus roughly 1,000m from Mission Rock's tracked footprint. No primary source found places this project at \"former Pier 64\"; that description, from an owner-supplied unsourced summary, is not repeated in this record. Recorded as adjacent to Mission Bay rather than tracked because it is a Port/WETA transit facility, not a Mission Bay OCII development block.",
+   "how_to_comment": [
+    {
+     "channel": "SFCTA Board and committee meeting calendar",
+     "detail": "Prop L funding actions for this project",
+     "url": "https://www.sfcta.org/civic-engagement/meetings"
+    },
+    {
+     "channel": "Port Commission meeting calendar",
+     "detail": "Agenda items on the Mission Bay Ferry Landing",
+     "url": "https://sfport.com/meetings-events"
+    }
+   ],
+   "positions": [],
+   "address": null,
+   "summary": "A WETA/Port of San Francisco ferry terminal under construction on Terry A. Francois Blvd near Agua Vista Park, in the Mission Bay/Central Waterfront area. Marine demolition of derelict piles was reported complete in 2025; ferry-landing and upland construction is under way, targeted for completion by the end of 2027.",
+   "summary_sources": [
+    "src-sfport-ferrylanding",
+    "src-sfcta-blog-2026"
+   ],
+   "shape": {
+    "kind": "approximate",
+    "parcel": null,
+    "display": "fill",
+    "display_reason": null,
+    "notes": {
+     "accuracy_caveat": "APPROXIMATE -- a coarse placeholder box, not a traced footprint, for the same reasons as data/manual/pier70_dry_docks.geojson (no parcel, no source figure). Primary sources describe the site only as 'adjacent to the intersection of Terry A. Francois Boulevard and 16th Street... adjacent to Agua Vista Park' -- no source found calls this site 'former Pier 64' (a distinct, still-separate 'Pier 64 Sediment Cleanup' line item appears in the Port's own draft Five-Year CIP), so this box is NOT placed at Pier 64 and that claim is not repeated in this record. The box does not represent the real ferry landing's true shape (a floating dock projecting into the Bay plus upland improvements) or its full extent.",
+     "digitized_from": "No Assessor block/lot exists for this Port/WETA ferry facility (confirmed: DataSF's 'Parcels - Active and Retired' Socrata dataset, acdm-wktn, has no PIER-numbered street_name entries near this site). No Port/WETA/SFCTA GIS shapefile or site-plan figure was available, so this is a coarse locational box centered near Agua Vista Park (801 Terry A. Francois Blvd, a real, addressed park immediately next to the project per the Port's own project page), using the real DataSF street-centerline address range for that stretch of Terry A. Francois Blvd (data/raw/official_street_centerlines.geojson).",
+     "why_no_real_parcel": "Port/WETA ferry facility; not on the Assessor's secured roll (data.sf.gov acdm-wktn has no PIER-numbered parcels near this site).",
+     "regulatory_context": "A WETA/Port of San Francisco ferry terminal project. Marine demolition of derelict piles (Phase 2a) was reported complete in 2025; ferry-landing and upland construction (Phase 2b) is under way, with completion targeted by the end of 2027. The San Francisco County Transportation Authority approved sales-tax (Prop L) funding toward the project, including a further allocation reported in April 2026."
+    }
+   },
+   "centroid": {
+    "lon": -122.38388,
+    "lat": 37.76604
+   },
+   "facts": [],
+   "costs": [
+    {
+     "amount_usd": 9800000,
+     "what": "SFCTA Board-approved Prop L sales tax funds to support the Mission Bay Ferry Landing project",
+     "date": "2026-04",
+     "kind": "public_investment",
+     "scope": "record",
+     "sources": [
+      "src-sfcta-blog-2026"
+     ]
+    }
+   ],
+   "milestones": [
+    {
+     "date": "2025",
+     "date_label": "~2025",
+     "status": "complete",
+     "status_label": "Complete",
+     "text": "Phase 2a marine demolition (removal of derelict piles at the site) reported complete.",
+     "expected": false,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-sfport-ferrylanding",
+       "title": "Mission Bay Ferry Landing",
+       "publisher": "Port of San Francisco",
+       "url": "https://www.sfport.com/projects-programs/mission-bay-ferry-landing",
+       "accessed": "2026-09-28",
+       "overview": true
+      }
+     ],
+     "source": "Port of San Francisco",
+     "origin": "record",
+     "category": "status",
+     "category_label": "Status",
+     "record": {
+      "id": "mission_bay_ferry_landing",
+      "slug": "mission-bay-ferry-landing",
+      "name": "Mission Bay Ferry Landing",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-ferry-landing/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-ferry-landing.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "adjacent"
+    },
+    {
+     "date": "2026-04",
+     "date_label": "Apr 2026",
+     "status": null,
+     "status_label": null,
+     "text": "SFCTA Board approves further Prop L sales-tax funding ($9.8M) to support the Mission Bay Ferry Landing project.",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-sfcta-blog-2026",
+       "title": "$9.8 Million in Sales Tax Funds Approved to Support Downtown Revitalization, Caltrain Station ADA...",
+       "publisher": "San Francisco County Transportation Authority",
+       "date": "2026-04",
+       "url": "https://www.sfcta.org/blogs/98-million-sales-tax-funds-approved-support-downtown-revitalization-caltrain-station-ada",
+       "accessed": "2026-09-28"
+      }
+     ],
+     "source": "San Francisco County Transportation Authority, 2026-04",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "mission_bay_ferry_landing",
+      "slug": "mission-bay-ferry-landing",
+      "name": "Mission Bay Ferry Landing",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-ferry-landing/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-ferry-landing.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "adjacent"
+    },
+    {
+     "date": "2027",
+     "date_label": "2027",
+     "status": "complete",
+     "status_label": "Complete",
+     "text": "Completion of the ferry landing is expected by the end of 2027.",
+     "expected": true,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-sfcta-blog-2026",
+       "title": "$9.8 Million in Sales Tax Funds Approved to Support Downtown Revitalization, Caltrain Station ADA...",
+       "publisher": "San Francisco County Transportation Authority",
+       "date": "2026-04",
+       "url": "https://www.sfcta.org/blogs/98-million-sales-tax-funds-approved-support-downtown-revitalization-caltrain-station-ada",
+       "accessed": "2026-09-28"
+      }
+     ],
+     "source": "San Francisco County Transportation Authority, 2026-04",
+     "origin": "record",
+     "category": "status",
+     "category_label": "Status",
+     "record": {
+      "id": "mission_bay_ferry_landing",
+      "slug": "mission-bay-ferry-landing",
+      "name": "Mission Bay Ferry Landing",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-ferry-landing/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-ferry-landing.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "adjacent"
+    }
+   ],
+   "changes": [
+    {
+     "date": "2026-09-28",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "New adjacent record for the WETA/Port Mission Bay Ferry Landing, near Agua Vista Park on Terry A. Francois Blvd, targeted for completion by the end of 2027, with SFCTA approving further Prop L sales-tax funding toward it in April 2026.",
+     "source": "docs/briefs/adjacent-proposals.md",
+     "sources": [
+      {
+       "title": "docs/briefs/adjacent-proposals.md"
+      }
+     ],
+     "category": "coverage",
+     "category_label": "Coverage",
+     "record": {
+      "id": "mission_bay_ferry_landing",
+      "slug": "mission-bay-ferry-landing",
+      "name": "Mission Bay Ferry Landing",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-ferry-landing/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-ferry-landing.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "adjacent",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
+   "images": [],
+   "open_questions": [
+    "No primary source found describing this project's site as \"former Pier 64\"; the Port's own draft Five-Year CIP separately lists a distinct \"Pier 64 Sediment Cleanup\" line item, suggesting \"Pier 64\" remains a separate Port designation from this ferry landing.",
+    "The project's total budget is reported inconsistently across secondary sources (some cite a much larger total project cost); only the SFCTA-confirmed $9.8M Prop L sales-tax allocation (April 2026) is recorded here as a directly sourced cost figure.",
+    "Exact construction start and phase-by-phase dates for Phase 2b (ferry landing plus upland improvements) beyond the year-end-2027 completion target are not established here."
+   ],
+   "sources": [
+    {
+     "id": "src-sfport-ferrylanding",
+     "title": "Mission Bay Ferry Landing",
+     "publisher": "Port of San Francisco",
+     "url": "https://www.sfport.com/projects-programs/mission-bay-ferry-landing",
+     "accessed": "2026-09-28",
+     "overview": true
+    },
+    {
+     "id": "src-sfcta-blog-2026",
+     "title": "$9.8 Million in Sales Tax Funds Approved to Support Downtown Revitalization, Caltrain Station ADA...",
+     "publisher": "San Francisco County Transportation Authority",
+     "date": "2026-04",
+     "url": "https://www.sfcta.org/blogs/98-million-sales-tax-funds-approved-support-downtown-revitalization-caltrain-station-ada",
+     "accessed": "2026-09-28"
+    },
+    {
+     "id": "src-sfcta-5ypp-2024",
+     "title": "Mission Bay Ferry Landing, Prop L 2023 Five-Year Prioritization Program (Approved)",
+     "publisher": "San Francisco County Transportation Authority",
+     "date": "2024-06-25",
+     "url": "https://www.sfcta.org/sites/default/files/2024-06/EP%2012%20Mission%20Bay%20Ferry%20Landing%20Prop%20L%202023%205YPP%20Approved%206.25.24.pdf",
+     "accessed": "2026-09-28"
+    }
+   ],
+   "notes": "This is a Port/WETA transit facility, not an OCII Mission Bay South development block -- grouped under the Mission Bay South site here because that is the nearest tracked site and because DataSF's official 'Former San Francisco Redevelopment Agency Project Areas' boundary (data/raw/redevelopment_project_areas.geojson) for Mission Bay South extends north along the Terry A. Francois Blvd shoreline to include this stretch (contains this location; see the PR body's geometry test). Recorded as adjacent rather than tracked because it is Port/WETA transit infrastructure, not a Mission Bay OCII development parcel like this site's other tracked records.",
+   "has_record_file": true,
+   "last_verified": "2026-09-28",
+   "tenants": [],
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -122.3842,
+       37.7658
+      ],
+      [
+       -122.3842,
+       37.7664
+      ],
+      [
+       -122.3834,
+       37.7664
+      ],
+      [
+       -122.3834,
+       37.7658
+      ],
+      [
+       -122.3842,
+       37.7658
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "700_indiana_st",
+   "slug": "700-indiana-st",
+   "name": "700 Indiana St",
+   "permalink": "https://pierandpoint.org/parcels/700-indiana-st/",
+   "api": "https://pierandpoint.org/api/v1/records/700-indiana-st.json",
+   "names": [
+    "700 Indiana Street",
+    "MBC BioLabs at 700 Indiana"
+   ],
+   "site": {
+    "slug": "pier-70",
+    "name": "Pier 70",
+    "short": "Pier 70",
+    "url": "https://pierandpoint.org/sites/pier-70/"
+   },
+   "status": "planned",
+   "status_label": "Planned",
+   "use": "commercial",
+   "relation": "adjacent",
+   "adjacent_to": "pier-70",
+   "distance_note": "About 470m from the tracked Pier 70 D4D parcel's own boundary (versus about 665m from Potrero Power Station's tracked boundary) -- Dogpatch, between 19th and 20th St near Indiana St/I-280.",
+   "how_to_comment": [
+    {
+     "channel": "SF Planning Property Information Map",
+     "detail": "Case No. 2023-001074ENX",
+     "url": "https://sfplanninggis.org/pim/"
+    },
+    {
+     "channel": "Clerk of the Board of Supervisors",
+     "detail": "District 10 (Supervisor Shamann Walton)",
+     "url": "https://sfbos.org/clerk-board"
+    }
+   ],
+   "positions": [],
+   "address": null,
+   "summary": "A proposed 3-story-plus-basement lab/office building at 700 Indiana St in Dogpatch, replacing an existing one-story building, for tenant MBC BioLabs. SF Planning Commission approved the project in June 2024; a neighborhood appeal of its CEQA exemption was rejected by the Board of Supervisors in September 2024, clearing it to proceed. No building permit had been issued as of September 2026.",
+   "summary_sources": [
+    "src-ceqanet-700indiana",
+    "src-citizenportal-boslupheld"
+   ],
+   "shape": {
+    "kind": "approximate",
+    "parcel": null,
+    "display": "fill",
+    "display_reason": null,
+    "notes": {
+     "accuracy_caveat": "REAL Assessor parcel geometry (not approximate).",
+     "digitized_from": "The real DataSF Assessor parcel for blklot 4062007 (700 Indiana St, Dogpatch), fetched directly from the local data/raw/parcels.geojson cache (already within this project's bounding box) on 2026-09-28. The polygon itself is the real, unmodified Assessor shape.",
+     "regulatory_context": "SF Planning Case No. 2023-001074ENX. Planning Commission approved the project 2024-06-13 (Motion No. 21576): a 3-story-plus-basement, ~70,650-72,350 gross sq ft lab/office building (sources give slightly different figures) replacing an existing ~15,068 sq ft one-story building, for MBC BioLabs. A neighborhood appeal of the CEQA general plan evaluation exemption was rejected by the Board of Supervisors 9-1 on 2024-09-24 (Supervisor Walton dissenting), clearing the project to proceed. No DataSF building permit found as of 2026-09-28, so construction has apparently not yet started."
+    }
+   },
+   "centroid": {
+    "lon": -122.391784,
+    "lat": 37.761048
+   },
+   "facts": [
+    {
+     "key": "developer",
+     "value": "Dewey Land Company (purchased the site in 2022 for $15,000,000)",
+     "sources": [
+      "src-sfyimby-700indiana"
+     ]
+    },
+    {
+     "key": "architect",
+     "value": "MBH Architects",
+     "sources": [
+      "src-sfyimby-700indiana"
+     ]
+    },
+    {
+     "key": "tenant",
+     "value": "MBC BioLabs (expanding from its flagship campus at 953 Indiana St)",
+     "sources": [
+      "src-sfyimby-700indiana"
+     ]
+    },
+    {
+     "key": "gross_sqft",
+     "value": "Reported as approximately 70,650 sq ft (Planning Commission motion language) or 72,349-72,350 sq ft (CEQA Notice of Exemption and a Feb 2025 news report) -- sources disagree by about 1,700 sq ft; both figures kept rather than picking one. Replaces an existing approximately 15,068 sq ft one-story building on a 0.71-acre (31,090 sq ft) lot.",
+     "sources": [
+      "src-ceqanet-700indiana",
+      "src-sfyimby-700indiana"
+     ]
+    },
+    {
+     "key": "height_ft",
+     "value": "Reported as either 48 ft (north) / 33 ft (south) per the CEQA filing, or a 54 ft height cap per a Feb 2025 news report -- discrepancy not resolved here.",
+     "sources": [
+      "src-ceqanet-700indiana",
+      "src-sfyimby-700indiana"
+     ]
+    },
+    {
+     "key": "blklot",
+     "value": "4062007",
+     "sources": [
+      "src-datasf-parcels-2026-09-28"
+     ]
+    }
+   ],
+   "costs": [
+    {
+     "amount_usd": 40000000,
+     "what": "Estimated construction cost, per secondary reporting -- not independently confirmed against a primary Planning or permit document",
+     "date": "2025",
+     "approximate": true,
+     "kind": "construction",
+     "scope": "record",
+     "sources": [
+      "src-sfyimby-700indiana"
+     ]
+    }
+   ],
+   "milestones": [
+    {
+     "date": "2024-06-13",
+     "date_label": "Jun 13, 2024",
+     "status": null,
+     "status_label": null,
+     "text": "SF Planning Commission approves the project (Case No. 2023-001074ENX, Motion No. 21576).",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-ceqanet-700indiana",
+       "title": "700 Indiana Street Project, Notice of Exemption",
+       "publisher": "City and County of San Francisco, via California CEQAnet Web Portal",
+       "url": "https://ceqanet.lci.ca.gov/2025010779",
+       "accessed": "2026-09-28",
+       "overview": true
+      }
+     ],
+     "source": "City and County of San Francisco, via California CEQAnet Web Portal",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "700_indiana_st",
+      "slug": "700-indiana-st",
+      "name": "700 Indiana St",
+      "permalink": "https://pierandpoint.org/parcels/700-indiana-st/",
+      "api": "https://pierandpoint.org/api/v1/records/700-indiana-st.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "adjacent"
+    },
+    {
+     "date": "2024-09-24",
+     "date_label": "Sep 24, 2024",
+     "status": null,
+     "status_label": null,
+     "text": "SF Board of Supervisors votes 9-1 to uphold the Planning Department's CEQA general plan evaluation exemption, rejecting a neighborhood appeal (Appeal No. 24-040); Supervisor Walton (District 10) cast the dissenting vote.",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-ceqanet-700indiana",
+       "title": "700 Indiana Street Project, Notice of Exemption",
+       "publisher": "City and County of San Francisco, via California CEQAnet Web Portal",
+       "url": "https://ceqanet.lci.ca.gov/2025010779",
+       "accessed": "2026-09-28",
+       "overview": true
+      },
+      {
+       "id": "src-citizenportal-boslupheld",
+       "title": "Board upholds Planning Department's General Plan Evaluation for proposed Dogpatch biotech lab after heated CEQA appeal",
+       "publisher": "Citizen Portal",
+       "date": "2024-09-24",
+       "url": "https://citizenportal.ai/articles/6596036/california/san-francisco-county/board-upholds-planning-departments-general-plan-evaluation-for-proposed-dogpatch-biotech-lab-after-heated-ceqa-appeal",
+       "accessed": "2026-09-28"
+      }
+     ],
+     "source": "City and County of San Francisco, via California CEQAnet Web Portal; Citizen Portal, 2024-09-24",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "700_indiana_st",
+      "slug": "700-indiana-st",
+      "name": "700 Indiana St",
+      "permalink": "https://pierandpoint.org/parcels/700-indiana-st/",
+      "api": "https://pierandpoint.org/api/v1/records/700-indiana-st.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "adjacent"
+    }
+   ],
+   "changes": [
+    {
+     "date": "2026-09-28",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "New adjacent record for 700 Indiana St, a proposed lab/office building for MBC BioLabs approved by the Planning Commission in June 2024, with a neighborhood CEQA appeal rejected by the Board of Supervisors in September 2024.",
+     "source": "docs/briefs/adjacent-proposals.md",
+     "sources": [
+      {
+       "title": "docs/briefs/adjacent-proposals.md"
+      }
+     ],
+     "category": "coverage",
+     "category_label": "Coverage",
+     "record": {
+      "id": "700_indiana_st",
+      "slug": "700-indiana-st",
+      "name": "700 Indiana St",
+      "permalink": "https://pierandpoint.org/parcels/700-indiana-st/",
+      "api": "https://pierandpoint.org/api/v1/records/700-indiana-st.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "adjacent",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
+   "images": [],
+   "open_questions": [
+    "Two different named appeal bodies appear in sources on this project: the Board of Supervisors (which heard and rejected the CEQA exemption appeal, resolved 2024-09-24, the event recorded above) and a separate Board of Appeals item (Appeal No. 24-040, continued to a Nov 13, 2024 hearing) whose subject and outcome could not be confirmed in this pass -- not established here whether it is the same matter under a different docket or a genuinely separate appeal.",
+    "No construction start date or building permit has been found as of 2026-09-28; status is recorded as planned rather than under_construction pending better evidence.",
+    "The gross square footage and height figures differ between the CEQA filing and a Feb 2025 news report; both are kept in facts rather than resolved to one number.",
+    "The $40,000,000 estimated construction cost is from secondary reporting only, not independently confirmed against a primary Planning or permit document."
+   ],
+   "sources": [
+    {
+     "id": "src-ceqanet-700indiana",
+     "title": "700 Indiana Street Project, Notice of Exemption",
+     "publisher": "City and County of San Francisco, via California CEQAnet Web Portal",
+     "url": "https://ceqanet.lci.ca.gov/2025010779",
+     "accessed": "2026-09-28",
+     "overview": true
+    },
+    {
+     "id": "src-citizenportal-boslupheld",
+     "title": "Board upholds Planning Department's General Plan Evaluation for proposed Dogpatch biotech lab after heated CEQA appeal",
+     "publisher": "Citizen Portal",
+     "date": "2024-09-24",
+     "url": "https://citizenportal.ai/articles/6596036/california/san-francisco-county/board-upholds-planning-departments-general-plan-evaluation-for-proposed-dogpatch-biotech-lab-after-heated-ceqa-appeal",
+     "accessed": "2026-09-28"
+    },
+    {
+     "id": "src-sfyimby-700indiana",
+     "title": "Environmental Streamlining for 700 Indiana Street in Dogpatch, San Francisco",
+     "publisher": "San Francisco YIMBY",
+     "date": "2025-02-02",
+     "url": "https://sfyimby.com/2025/02/environmental-streamlining-for-700-indiana-street-in-dogpatch-san-francisco.html",
+     "accessed": "2026-09-28"
+    },
+    {
+     "id": "src-datasf-parcels-2026-09-28",
+     "title": "Parcels - Active and Retired (blklot 4062007, 700 Indiana St)",
+     "publisher": "DataSF / SF Office of the Assessor-Recorder",
+     "url": "https://data.sf.gov/resource/acdm-wktn.json",
+     "accessed": "2026-09-28"
+    }
+   ],
+   "notes": "Developer: Dewey Land Company (purchased the site 2022 for $15M). End tenant: MBC BioLabs. Architect: MBH Architects.",
+   "has_record_file": true,
+   "last_verified": "2026-09-28",
+   "tenants": [],
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -122.391931376,
+       37.761479797
+      ],
+      [
+       -122.391666861,
+       37.761495753
+      ],
+      [
+       -122.391560716,
+       37.760401671
+      ],
+      [
+       -122.391830196,
+       37.760385415
+      ],
+      [
+       -122.391931376,
+       37.761479797
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "piers_38_40",
+   "slug": "piers-38-and-40",
+   "name": "Piers 38 & 40",
+   "permalink": "https://pierandpoint.org/parcels/piers-38-and-40/",
+   "api": "https://pierandpoint.org/api/v1/records/piers-38-and-40.json",
+   "names": [
+    "Piers 38 & 40",
+    "South Beach Piers 38-40"
+   ],
+   "site": {
+    "slug": "mission-rock",
+    "name": "Mission Rock",
+    "short": "Mission Rock",
+    "url": "https://pierandpoint.org/sites/mission-rock/"
+   },
+   "status": "planned",
+   "status_label": "Planned",
+   "use": "commercial",
+   "relation": "adjacent",
+   "adjacent_to": "mission-rock",
+   "distance_note": "Piers 38 and 40, at the foot of King St/Townsend St (89 King St), sit about 420-460m north of Mission Rock's own tracked boundary (Pier 48/50), just north of and adjacent to South Beach Harbor.",
+   "how_to_comment": [
+    {
+     "channel": "Port Commission meeting calendar",
+     "detail": "Agenda items on Piers 38 & 40",
+     "url": "https://sfport.com/meetings-events"
+    },
+    {
+     "channel": "Port of San Francisco project page",
+     "detail": "South Beach / Piers 38-40",
+     "url": "https://www.sfport.com/projects-programs/south-beach-piers-38-40"
+    }
+   ],
+   "positions": [],
+   "address": null,
+   "summary": "A long-stalled Port of San Francisco redevelopment of Piers 38 and 40, led by San Francisco Waterfront Partners (an affiliate of Pacific Waterfront Partners). The original 2021 Exclusive Negotiating Agreement expired in 2023 after missed performance dates; in April 2026 the Port Commission settled a related back-rent dispute and adopted an Amended and Restated ENA giving the developer a 12-month \"Evaluation Period\" to rework the project's scope and financing. No lease, term sheet or CEQA review is in place as of this record's last_verified date.",
+   "summary_sources": [
+    "src-sfport-item9b-2026-04"
+   ],
+   "shape": {
+    "kind": "approximate",
+    "parcel": null,
+    "display": "fill",
+    "display_reason": null,
+    "notes": {
+     "accuracy_caveat": "APPROXIMATE -- a coarse placeholder box, not a traced footprint, for the same reasons as data/manual/pier70_dry_docks.geojson (no parcel, no source figure). Piers 38 and 40 themselves sit just north of this project's cached raw-data bounding box edge (src/config.py's BBOX_NORTH=37.7795); the box's south edge sits right at that boundary and it extends only a short distance north/east, so it does not claim to trace the two piers' real combined footprint.",
+     "digitized_from": "No Assessor block/lot exists for this Port pier facility (confirmed: DataSF's 'Parcels - Active and Retired' Socrata dataset, acdm-wktn, has no PIER-numbered street_name entries). No Port GIS shapefile or site-plan figure was available, so this is a coarse locational box anchored to Pier 40's own real, addressed location (89 King St), placed just east of the real DataSF street-centerline cutoff for King St's own address range at this project's cached bounding box edge (data/raw/official_street_centerlines.geojson).",
+     "why_no_real_parcel": "Port pier facility; not on the Assessor's secured roll (data.sf.gov acdm-wktn has no PIER-numbered parcels near this site).",
+     "regulatory_context": "Developer: San Francisco Waterfront Partners III, LLC (SFWP), an affiliate of Pacific Waterfront Partners (PWP). Original Exclusive Negotiating Agreement: Port Commission Resolution 21-10 (2021-02-23), expired 2023-03-15 for missed performance dates. PWP separately owed the Port over $980,000 in back rent on three unrelated leases (Pier 28, two Agriculture Building suites), unpaid since it vacated them 2024-01-31. On 2026-04-28 the Port Commission adopted a Settlement Agreement (Resolution 26-21: PWP to pay $720,000 over 3 years, with the remainder of the debt forgiven on compliance) and an Amended and Restated ENA (Resolution 26-22: a 12-month 'Evaluation Period' to explore value engineering, project phasing and a new financial partner, with a new Schedule of Performance due before the period ends around April 2027). No lease, term sheet or CEQA review is in place as of this record's own last_verified date."
+    }
+   },
+   "centroid": {
+    "lon": -122.38944,
+    "lat": 37.77968
+   },
+   "facts": [
+    {
+     "key": "developer",
+     "value": "San Francisco Waterfront Partners III, LLC (SFWP), an affiliate of Pacific Waterfront Partners (PWP)",
+     "sources": [
+      "src-sfport-item9b-2026-04"
+     ]
+    },
+    {
+     "key": "prior_scope_estimate",
+     "value": "As last formally endorsed (2022, never executed): approximately 215,000 sq ft office, up to 20,000 sq ft retail, approximately 130,000 sq ft public access/open space; cost estimate approximately $528-536 million, up from an original approximately $383 million 2020 proposal. Explicitly under review (\"value engineering\", \"scope reduction\") under the 2026 Amended ENA and not current.",
+     "sources": [
+      "src-realdeal-2022-07",
+      "src-sfchronicle-2020-07"
+     ]
+    }
+   ],
+   "costs": [],
+   "milestones": [
+    {
+     "date": "2021-02-23",
+     "date_label": "Feb 23, 2021",
+     "status": null,
+     "status_label": null,
+     "text": "Port Commission Resolution 21-10 authorizes an Exclusive Negotiating Agreement (dated 2021-03-12) with San Francisco Waterfront Partners III, LLC.",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-sfport-item9b-2026-04",
+       "title": "Amended and Restated ENA and Related Settlement Agreements, Piers 38 and 40 (Calendar Item 9B)",
+       "publisher": "Port of San Francisco / Port Commission",
+       "date": "2026-04-28",
+       "url": "https://www.sfport.com/sites/default/files/2026-04/item_9b_piers_38_and_40_amended_ena_and_related_settlement_agreements.docx.pdf",
+       "accessed": "2026-09-28",
+       "overview": true
+      }
+     ],
+     "source": "Port of San Francisco / Port Commission, 2026-04-28",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "piers_38_40",
+      "slug": "piers-38-and-40",
+      "name": "Piers 38 & 40",
+      "permalink": "https://pierandpoint.org/parcels/piers-38-and-40/",
+      "api": "https://pierandpoint.org/api/v1/records/piers-38-and-40.json"
+     },
+     "site": {
+      "slug": "mission-rock",
+      "name": "Mission Rock",
+      "short": "Mission Rock",
+      "url": "https://pierandpoint.org/sites/mission-rock/"
+     },
+     "relation": "adjacent"
+    },
+    {
+     "date": "2022-07-12",
+     "date_label": "Jul 12, 2022",
+     "status": null,
+     "status_label": null,
+     "text": "Port Commission Resolution 22-36 endorses a Term Sheet (never executed) describing the project's then-scope: visitor-serving restaurant/retail, maritime uses including South Beach Harbor expansion and youth sailing, retained Pier 40 marina tenants, public access/open space, and revenue-generating office space.",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-sfport-item9b-2026-04",
+       "title": "Amended and Restated ENA and Related Settlement Agreements, Piers 38 and 40 (Calendar Item 9B)",
+       "publisher": "Port of San Francisco / Port Commission",
+       "date": "2026-04-28",
+       "url": "https://www.sfport.com/sites/default/files/2026-04/item_9b_piers_38_and_40_amended_ena_and_related_settlement_agreements.docx.pdf",
+       "accessed": "2026-09-28",
+       "overview": true
+      },
+      {
+       "id": "src-realdeal-2022-07",
+       "title": "Estimate On Revamp SF Piers 38 And 40 Swells To $528M",
+       "publisher": "The Real Deal",
+       "date": "2022-07-14",
+       "url": "https://therealdeal.com/san-francisco/2022/07/14/cost-to-revamp-sf-piers-38-and-40-swells-to-528m/",
+       "accessed": "2026-09-28"
+      }
+     ],
+     "source": "Port of San Francisco / Port Commission, 2026-04-28; The Real Deal, 2022-07-14",
+     "origin": "record",
+     "category": "retail",
+     "category_label": "Retail",
+     "record": {
+      "id": "piers_38_40",
+      "slug": "piers-38-and-40",
+      "name": "Piers 38 & 40",
+      "permalink": "https://pierandpoint.org/parcels/piers-38-and-40/",
+      "api": "https://pierandpoint.org/api/v1/records/piers-38-and-40.json"
+     },
+     "site": {
+      "slug": "mission-rock",
+      "name": "Mission Rock",
+      "short": "Mission Rock",
+      "url": "https://pierandpoint.org/sites/mission-rock/"
+     },
+     "relation": "adjacent"
+    },
+    {
+     "date": "2023-03-15",
+     "date_label": "Mar 15, 2023",
+     "status": null,
+     "status_label": null,
+     "text": "The original Exclusive Negotiating Agreement expires; the developer is out of compliance with its own performance dates.",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-sfport-item9b-2026-04",
+       "title": "Amended and Restated ENA and Related Settlement Agreements, Piers 38 and 40 (Calendar Item 9B)",
+       "publisher": "Port of San Francisco / Port Commission",
+       "date": "2026-04-28",
+       "url": "https://www.sfport.com/sites/default/files/2026-04/item_9b_piers_38_and_40_amended_ena_and_related_settlement_agreements.docx.pdf",
+       "accessed": "2026-09-28",
+       "overview": true
+      }
+     ],
+     "source": "Port of San Francisco / Port Commission, 2026-04-28",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "piers_38_40",
+      "slug": "piers-38-and-40",
+      "name": "Piers 38 & 40",
+      "permalink": "https://pierandpoint.org/parcels/piers-38-and-40/",
+      "api": "https://pierandpoint.org/api/v1/records/piers-38-and-40.json"
+     },
+     "site": {
+      "slug": "mission-rock",
+      "name": "Mission Rock",
+      "short": "Mission Rock",
+      "url": "https://pierandpoint.org/sites/mission-rock/"
+     },
+     "relation": "adjacent"
+    },
+    {
+     "date": "2024-01-31",
+     "date_label": "Jan 31, 2024",
+     "status": null,
+     "status_label": null,
+     "text": "Pacific Waterfront Partners (SFWP's affiliate) vacates three unrelated Port leases (Pier 28 and two Agriculture Building suites), leaving over $980,000 in back rent unpaid.",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-sfport-item9b-2026-04",
+       "title": "Amended and Restated ENA and Related Settlement Agreements, Piers 38 and 40 (Calendar Item 9B)",
+       "publisher": "Port of San Francisco / Port Commission",
+       "date": "2026-04-28",
+       "url": "https://www.sfport.com/sites/default/files/2026-04/item_9b_piers_38_and_40_amended_ena_and_related_settlement_agreements.docx.pdf",
+       "accessed": "2026-09-28",
+       "overview": true
+      }
+     ],
+     "source": "Port of San Francisco / Port Commission, 2026-04-28",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "piers_38_40",
+      "slug": "piers-38-and-40",
+      "name": "Piers 38 & 40",
+      "permalink": "https://pierandpoint.org/parcels/piers-38-and-40/",
+      "api": "https://pierandpoint.org/api/v1/records/piers-38-and-40.json"
+     },
+     "site": {
+      "slug": "mission-rock",
+      "name": "Mission Rock",
+      "short": "Mission Rock",
+      "url": "https://pierandpoint.org/sites/mission-rock/"
+     },
+     "relation": "adjacent"
+    },
+    {
+     "date": "2026-04-28",
+     "date_label": "Apr 28, 2026",
+     "status": null,
+     "status_label": null,
+     "text": "Port Commission adopts a Settlement Agreement (Resolution 26-21: Pacific Waterfront Partners to pay $720,000 over 3 years, with the remaining debt forgiven on compliance) and an Amended and Restated ENA (Resolution 26-22: a 12-month \"Evaluation Period\" for the developer to pursue value engineering, project phasing and a new financial partner, with a new Schedule of Performance due before the period ends around April 2027).",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-sfport-item9b-2026-04",
+       "title": "Amended and Restated ENA and Related Settlement Agreements, Piers 38 and 40 (Calendar Item 9B)",
+       "publisher": "Port of San Francisco / Port Commission",
+       "date": "2026-04-28",
+       "url": "https://www.sfport.com/sites/default/files/2026-04/item_9b_piers_38_and_40_amended_ena_and_related_settlement_agreements.docx.pdf",
+       "accessed": "2026-09-28",
+       "overview": true
+      }
+     ],
+     "source": "Port of San Francisco / Port Commission, 2026-04-28",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "piers_38_40",
+      "slug": "piers-38-and-40",
+      "name": "Piers 38 & 40",
+      "permalink": "https://pierandpoint.org/parcels/piers-38-and-40/",
+      "api": "https://pierandpoint.org/api/v1/records/piers-38-and-40.json"
+     },
+     "site": {
+      "slug": "mission-rock",
+      "name": "Mission Rock",
+      "short": "Mission Rock",
+      "url": "https://pierandpoint.org/sites/mission-rock/"
+     },
+     "relation": "adjacent"
+    },
+    {
+     "date": "2026-08-12",
+     "date_label": "Aug 12, 2026",
+     "status": null,
+     "status_label": null,
+     "text": "A marketing listing (\"Pacific Cornerstone\") offers up to approximately 279,876 sq ft of Piers 38 & 40 for long-term lease to credit tenants, positioning occupancy for late 2029 -- parallel tenant-marketing activity alongside the Port's own Evaluation Period, not a confirmed lease or Port-approved deal.",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-registrysf-2026-08",
+       "title": "Pacific Cornerstone Brings 280,000 SQFT Piers 38 & 40 Waterfront Redevelopment to Market for Long-Term Lease in San Francisco",
+       "publisher": "The Registry SF",
+       "date": "2026-08-12",
+       "url": "https://news.theregistrysf.com/pacific-cornerstone-brings-280000-sqft-piers-38-40-waterfront-redevelopment-to-market-for-long-term-lease-in-san-francisco/",
+       "accessed": "2026-09-28"
+      }
+     ],
+     "source": "The Registry SF, 2026-08-12",
+     "origin": "record",
+     "category": "retail",
+     "category_label": "Retail",
+     "record": {
+      "id": "piers_38_40",
+      "slug": "piers-38-and-40",
+      "name": "Piers 38 & 40",
+      "permalink": "https://pierandpoint.org/parcels/piers-38-and-40/",
+      "api": "https://pierandpoint.org/api/v1/records/piers-38-and-40.json"
+     },
+     "site": {
+      "slug": "mission-rock",
+      "name": "Mission Rock",
+      "short": "Mission Rock",
+      "url": "https://pierandpoint.org/sites/mission-rock/"
+     },
+     "relation": "adjacent"
+    }
+   ],
+   "changes": [
+    {
+     "date": "2026-09-28",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "New adjacent record for Piers 38 & 40, whose original 2021 Exclusive Negotiating Agreement lapsed in 2023; the Port Commission settled a related back-rent dispute and adopted an Amended and Restated ENA with a 12-month evaluation period in April 2026.",
+     "source": "docs/briefs/adjacent-proposals.md",
+     "sources": [
+      {
+       "title": "docs/briefs/adjacent-proposals.md"
+      }
+     ],
+     "category": "coverage",
+     "category_label": "Coverage",
+     "record": {
+      "id": "piers_38_40",
+      "slug": "piers-38-and-40",
+      "name": "Piers 38 & 40",
+      "permalink": "https://pierandpoint.org/parcels/piers-38-and-40/",
+      "api": "https://pierandpoint.org/api/v1/records/piers-38-and-40.json"
+     },
+     "site": {
+      "slug": "mission-rock",
+      "name": "Mission Rock",
+      "short": "Mission Rock",
+      "url": "https://pierandpoint.org/sites/mission-rock/"
+     },
+     "relation": "adjacent",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
+   "images": [],
+   "open_questions": [
+    "No Port Commission agenda item after 2026-04-28 was found; the 12-month Evaluation Period runs to approximately April 2027 with an interim Schedule of Performance due before then -- worth a periodic re-check rather than treating April 2026 as the final word.",
+    "No current, authoritative square footage or cost figure exists for the project as of this record's last_verified date: the 2022 estimates are explicitly being re-evaluated under the 2026 Amended ENA.",
+    "No public official's or community/maritime-advocacy group's position on the 2026 Amended ENA or settlement specifically has been found and sourced (all community-input coverage found dates to the 2020 RFP era).",
+    "Given the project's history of default and its ongoing, unresolved Evaluation Period, its ultimate outcome is genuinely uncertain -- this record treats it as an active but fragile project worth continued tracking, not a settled one."
+   ],
+   "sources": [
+    {
+     "id": "src-sfport-item9b-2026-04",
+     "title": "Amended and Restated ENA and Related Settlement Agreements, Piers 38 and 40 (Calendar Item 9B)",
+     "publisher": "Port of San Francisco / Port Commission",
+     "date": "2026-04-28",
+     "url": "https://www.sfport.com/sites/default/files/2026-04/item_9b_piers_38_and_40_amended_ena_and_related_settlement_agreements.docx.pdf",
+     "accessed": "2026-09-28",
+     "overview": true
+    },
+    {
+     "id": "src-realdeal-2022-07",
+     "title": "Estimate On Revamp SF Piers 38 And 40 Swells To $528M",
+     "publisher": "The Real Deal",
+     "date": "2022-07-14",
+     "url": "https://therealdeal.com/san-francisco/2022/07/14/cost-to-revamp-sf-piers-38-and-40-swells-to-528m/",
+     "accessed": "2026-09-28"
+    },
+    {
+     "id": "src-sfchronicle-2020-07",
+     "title": "SF pier development",
+     "publisher": "San Francisco Chronicle",
+     "date": "2020-07-16",
+     "url": "https://www.sfchronicle.com/realestate/article/sf-pier-development-17213785.php",
+     "accessed": "2026-09-28"
+    },
+    {
+     "id": "src-registrysf-2026-08",
+     "title": "Pacific Cornerstone Brings 280,000 SQFT Piers 38 & 40 Waterfront Redevelopment to Market for Long-Term Lease in San Francisco",
+     "publisher": "The Registry SF",
+     "date": "2026-08-12",
+     "url": "https://news.theregistrysf.com/pacific-cornerstone-brings-280000-sqft-piers-38-40-waterfront-redevelopment-to-market-for-long-term-lease-in-san-francisco/",
+     "accessed": "2026-09-28"
+    },
+    {
+     "id": null,
+     "title": "sfport.com/projects-programs/south-beach-piers-38-40",
+     "url": "https://www.sfport.com/projects-programs/south-beach-piers-38-40"
+    }
+   ],
+   "notes": "The 2022 scope estimate (~215,000 sq ft office, up to 20,000 sq ft retail, ~$528-536M cost) is explicitly under review ('value engineering', 'scope reduction') per the April 2026 Amended ENA and is not treated as current. Separately, an August 2026 marketing listing ('Pacific Cornerstone') offers up to ~279,876 sq ft of the piers for long-term lease to credit tenants, positioning occupancy for late 2029 -- parallel tenant-marketing activity alongside the Port's own Evaluation Period, not a confirmed deal.",
+   "has_record_file": true,
+   "last_verified": "2026-09-28",
+   "tenants": [],
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -122.39,
+       37.7792
+      ],
+      [
+       -122.39,
+       37.7804
+      ],
+      [
+       -122.3886,
+       37.7804
+      ],
+      [
+       -122.3886,
+       37.7792
+      ],
+      [
+       -122.39,
+       37.7792
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "22nd_st_caltrain_ada",
+   "slug": "22nd-st-caltrain-station-ada-access-improvement",
+   "name": "22nd St Caltrain Station ADA Access Improvement",
+   "permalink": "https://pierandpoint.org/parcels/22nd-st-caltrain-station-ada-access-improvement/",
+   "api": "https://pierandpoint.org/api/v1/records/22nd-st-caltrain-station-ada-access-improvement.json",
+   "names": [
+    "22nd Street Caltrain Station ADA Access Improvement"
+   ],
+   "site": {
+    "slug": "pier-70",
+    "name": "Pier 70",
+    "short": "Pier 70",
+    "url": "https://pierandpoint.org/sites/pier-70/"
+   },
+   "status": "planned",
+   "status_label": "Planned",
+   "use": "transit",
+   "relation": "adjacent",
+   "adjacent_to": "pier-70",
+   "distance_note": "The existing 22nd St Caltrain station (Pennsylvania Ave/Indiana St, Dogpatch) sits roughly 400-450m from both Pier 70's and Potrero Power Station's tracked boundaries -- grouped here under Pier 70 as the closer, better-established Dogpatch association.",
+   "how_to_comment": [
+    {
+     "channel": "SFCTA Board and committee meeting calendar",
+     "detail": "Prop L funding actions for this project",
+     "url": "https://www.sfcta.org/civic-engagement/meetings"
+    },
+    {
+     "channel": "Peninsula Corridor Joint Powers Board (Caltrain) meeting calendar",
+     "detail": "Project sponsor",
+     "url": "https://www.caltrain.com/about/board-of-directors"
+    }
+   ],
+   "positions": [],
+   "address": null,
+   "summary": "An accessibility retrofit of the existing, below-grade 22nd Street Caltrain station -- the only regular-service Caltrain station without wheelchair access. The project adds ramps to both platforms plus wayfinding and safety improvements. Design is under way (targeted complete summer 2027); construction is not slated to start until spring 2028, with completion targeted for mid-2029. Total project cost is $19,134,000, sponsored by the Peninsula Corridor Joint Powers Board (Caltrain) with SFCTA (Prop L) and FTA funding.",
+   "summary_sources": [
+    "src-sfcta-boardpacket-2026-04"
+   ],
+   "shape": {
+    "kind": "approximate",
+    "parcel": null,
+    "display": "fill",
+    "display_reason": null,
+    "notes": {
+     "accuracy_caveat": "APPROXIMATE -- a coarse placeholder box over the existing station's real location, not a traced footprint of the platforms or the planned ramps themselves (one ~305ft ramp on the northbound platform, one ~465ft ramp on the southbound platform, per the project's own design description).",
+     "digitized_from": "No Assessor block/lot exists for the existing 22nd St Caltrain station or its below-grade platforms (active rail right-of-way, the same reasoning already documented for the existing mission_bay_sf_railyards adjacent record's 4th & King Station -- confirmed here too: DataSF's 'Parcels - Active and Retired' Socrata dataset has no parcel at this location). No Caltrain/Peninsula Corridor Joint Powers Board GIS shapefile or site-plan figure was available, so this is a coarse locational box near the real DataSF street-centerline address range for 22nd St at Pennsylvania Ave/Indiana St (data/raw/official_street_centerlines.geojson), where the existing below-grade station sits.",
+     "why_no_real_parcel": "Active Caltrain rail right-of-way; not on the Assessor's secured roll, the same situation as the existing 4th & King Street Station (data/manual/mission_bay_sf_railyards.geojson).",
+     "regulatory_context": "The Caltrain 22nd Street Station is the railroad's only regular-service station that is not wheelchair accessible: its platforms sit about 25 ft below street level, reachable only by stairs. Sponsor: Peninsula Corridor Joint Powers Board (Caltrain); funded in part through SFCTA's Prop L. Total project cost per SFCTA's April 2026 Board Packet: $19,134,000 (Planning/Conceptual Engineering $734,000 already spent via Prop K; Design Engineering $1,300,000 via Prop L, allocated 2026-04-28; Construction $17,100,000, an engineer's estimate at 30% design). The FTA's 'All Stations Accessibility Program' separately awarded the Peninsula Corridor Joint Powers Board $14.1 million for this project's ADA improvements, announced 2026-09-10 -- matching almost exactly the funding gap SFCTA's own April 2026 plan had left as 'Planned TBD'."
+    }
+   },
+   "centroid": {
+    "lon": -122.39108,
+    "lat": 37.75814
+   },
+   "facts": [
+    {
+     "key": "sponsor",
+     "value": "Peninsula Corridor Joint Powers Board (Caltrain), with funding from SFCTA (Prop L) and the FTA",
+     "sources": [
+      "src-sfcta-boardpacket-2026-04"
+     ]
+    },
+    {
+     "key": "scope",
+     "value": "One ramp on the northbound platform (about 305 ft long, 6.5% slope) and one on the southbound platform (about 465 ft long, 6.1% slope), plus tactile strips, lighting and signage. Platforms sit about 25 ft below street grade, currently reachable only by stairs.",
+     "sources": [
+      "src-sfcta-boardpacket-2026-04"
+     ]
+    }
+   ],
+   "costs": [
+    {
+     "amount_usd": 19134000,
+     "what": "Total project cost per SFCTA's April 2026 funding plan (Planning/Conceptual Engineering $734,000 already spent via Prop K; Design Engineering $1,300,000 via Prop L; Construction $17,100,000, an engineer's estimate at 30% design)",
+     "date": "2026-04",
+     "kind": "infrastructure",
+     "scope": "record",
+     "approximate": true,
+     "sources": [
+      "src-sfcta-boardpacket-2026-04"
+     ]
+    },
+    {
+     "amount_usd": 1300000,
+     "what": "Prop L design-phase allocation, approved by the SFCTA Board",
+     "date": "2026-04-28",
+     "kind": "public_investment",
+     "scope": "record",
+     "sources": [
+      "src-sfcta-blog-2026-04"
+     ]
+    },
+    {
+     "amount_usd": 14100000,
+     "what": "Federal Transit Administration All Stations Accessibility Program grant to the Peninsula Corridor Joint Powers Board for this project's ADA improvements",
+     "date": "2026-09-10",
+     "kind": "public_investment",
+     "scope": "record",
+     "sources": [
+      "src-trains-2026-09"
+     ]
+    }
+   ],
+   "milestones": [
+    {
+     "date": "2024-02",
+     "date_label": "~2024",
+     "status": null,
+     "status_label": null,
+     "text": "Caltrain and SFCTA begin pursuing federal funding for the station's accessibility project.",
+     "expected": false,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-greencaltrain-2024-02",
+       "title": "Caltrain and SFCTA Pursue Funding for 22nd Street Station Accessibility",
+       "publisher": "Green Caltrain",
+       "date": "2024-02-04",
+       "url": "https://www.greencaltrain.com/2024/02/caltrain-and-sfcta-pursue-funding-for-22nd-street-station-accessibility/",
+       "accessed": "2026-09-28"
+      }
+     ],
+     "source": "Green Caltrain, 2024-02-04",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "22nd_st_caltrain_ada",
+      "slug": "22nd-st-caltrain-station-ada-access-improvement",
+      "name": "22nd St Caltrain Station ADA Access Improvement",
+      "permalink": "https://pierandpoint.org/parcels/22nd-st-caltrain-station-ada-access-improvement/",
+      "api": "https://pierandpoint.org/api/v1/records/22nd-st-caltrain-station-ada-access-improvement.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "adjacent"
+    },
+    {
+     "date": "2026-04-14",
+     "date_label": "Apr 14, 2026",
+     "status": null,
+     "status_label": null,
+     "text": "SFCTA's Transportation Authority Board packet recommends $1,300,000 in Prop L funds for the project's design phase, part of a total funding plan of $19,134,000 (Planning/Conceptual Engineering $734,000 already spent via Prop K; Design Engineering $1,300,000 via Prop L; Construction $17,100,000, an engineer's estimate at 30% design).",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-sfcta-boardpacket-2026-04",
+       "title": "SFCTA Transportation Authority Board Packet, April 14, 2026 (Attachments 2, 3 and 5: 22nd St Station ADA project description, staff recommendation and funding plan)",
+       "publisher": "San Francisco County Transportation Authority",
+       "date": "2026-04-14",
+       "url": "https://www.sfcta.org/sites/default/files/2026-04/SFCTA_Board_PACKET_2026-04-14.pdf",
+       "accessed": "2026-09-28",
+       "overview": true
+      }
+     ],
+     "source": "San Francisco County Transportation Authority, 2026-04-14",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "22nd_st_caltrain_ada",
+      "slug": "22nd-st-caltrain-station-ada-access-improvement",
+      "name": "22nd St Caltrain Station ADA Access Improvement",
+      "permalink": "https://pierandpoint.org/parcels/22nd-st-caltrain-station-ada-access-improvement/",
+      "api": "https://pierandpoint.org/api/v1/records/22nd-st-caltrain-station-ada-access-improvement.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "adjacent"
+    },
+    {
+     "date": "2026-04-28",
+     "date_label": "Apr 28, 2026",
+     "status": null,
+     "status_label": null,
+     "text": "SFCTA Board formally approves the $1,300,000 Prop L design-phase allocation (one of three projects sharing a combined $9.8M Prop L allocation that day, alongside the Powell St Improvement and the Mission Bay Ferry Landing).",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-sfcta-blog-2026-04",
+       "title": "$9.8 Million in Sales Tax Funds Approved to Support Downtown Revitalization, Caltrain Station ADA...",
+       "publisher": "San Francisco County Transportation Authority",
+       "date": "2026-04-28",
+       "url": "https://www.sfcta.org/blogs/98-million-sales-tax-funds-approved-support-downtown-revitalization-caltrain-station-ada",
+       "accessed": "2026-09-28"
+      }
+     ],
+     "source": "San Francisco County Transportation Authority, 2026-04-28",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "22nd_st_caltrain_ada",
+      "slug": "22nd-st-caltrain-station-ada-access-improvement",
+      "name": "22nd St Caltrain Station ADA Access Improvement",
+      "permalink": "https://pierandpoint.org/parcels/22nd-st-caltrain-station-ada-access-improvement/",
+      "api": "https://pierandpoint.org/api/v1/records/22nd-st-caltrain-station-ada-access-improvement.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "adjacent"
+    },
+    {
+     "date": "2026-09-10",
+     "date_label": "Sep 10, 2026",
+     "status": null,
+     "status_label": null,
+     "text": "The Federal Transit Administration's All Stations Accessibility Program awards the Peninsula Corridor Joint Powers Board $14.1 million for ADA improvements at the 22nd Street station -- matching almost exactly the funding gap SFCTA's own April 2026 plan had left as \"Planned TBD\".",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-trains-2026-09",
+       "title": "FTA Awards $233 Million for Station Accessibility Projects",
+       "publisher": "Trains.com",
+       "date": "2026-09-16",
+       "url": "https://www.trains.com/pro/passenger/fta-awards-233-million-for-station-accessibility-projects/",
+       "accessed": "2026-09-28"
+      }
+     ],
+     "source": "Trains.com, 2026-09-16",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "22nd_st_caltrain_ada",
+      "slug": "22nd-st-caltrain-station-ada-access-improvement",
+      "name": "22nd St Caltrain Station ADA Access Improvement",
+      "permalink": "https://pierandpoint.org/parcels/22nd-st-caltrain-station-ada-access-improvement/",
+      "api": "https://pierandpoint.org/api/v1/records/22nd-st-caltrain-station-ada-access-improvement.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "adjacent"
+    },
+    {
+     "date": "2027",
+     "date_label": "2027",
+     "status": null,
+     "status_label": null,
+     "text": "Design (PS&E, Plans/Specifications/Estimate) targeted complete.",
+     "expected": true,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-sfcta-boardpacket-2026-04",
+       "title": "SFCTA Transportation Authority Board Packet, April 14, 2026 (Attachments 2, 3 and 5: 22nd St Station ADA project description, staff recommendation and funding plan)",
+       "publisher": "San Francisco County Transportation Authority",
+       "date": "2026-04-14",
+       "url": "https://www.sfcta.org/sites/default/files/2026-04/SFCTA_Board_PACKET_2026-04-14.pdf",
+       "accessed": "2026-09-28",
+       "overview": true
+      }
+     ],
+     "source": "San Francisco County Transportation Authority, 2026-04-14",
+     "origin": "record",
+     "category": "coming_up",
+     "category_label": "Coming up",
+     "record": {
+      "id": "22nd_st_caltrain_ada",
+      "slug": "22nd-st-caltrain-station-ada-access-improvement",
+      "name": "22nd St Caltrain Station ADA Access Improvement",
+      "permalink": "https://pierandpoint.org/parcels/22nd-st-caltrain-station-ada-access-improvement/",
+      "api": "https://pierandpoint.org/api/v1/records/22nd-st-caltrain-station-ada-access-improvement.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "adjacent"
+    },
+    {
+     "date": "2029",
+     "date_label": "2029",
+     "status": "complete",
+     "status_label": "Complete",
+     "text": "Project completion targeted (station open for use expected spring 2029; full project completion targeted mid/late 2029).",
+     "expected": true,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-sfcta-boardpacket-2026-04",
+       "title": "SFCTA Transportation Authority Board Packet, April 14, 2026 (Attachments 2, 3 and 5: 22nd St Station ADA project description, staff recommendation and funding plan)",
+       "publisher": "San Francisco County Transportation Authority",
+       "date": "2026-04-14",
+       "url": "https://www.sfcta.org/sites/default/files/2026-04/SFCTA_Board_PACKET_2026-04-14.pdf",
+       "accessed": "2026-09-28",
+       "overview": true
+      }
+     ],
+     "source": "San Francisco County Transportation Authority, 2026-04-14",
+     "origin": "record",
+     "category": "status",
+     "category_label": "Status",
+     "record": {
+      "id": "22nd_st_caltrain_ada",
+      "slug": "22nd-st-caltrain-station-ada-access-improvement",
+      "name": "22nd St Caltrain Station ADA Access Improvement",
+      "permalink": "https://pierandpoint.org/parcels/22nd-st-caltrain-station-ada-access-improvement/",
+      "api": "https://pierandpoint.org/api/v1/records/22nd-st-caltrain-station-ada-access-improvement.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "adjacent"
+    }
+   ],
+   "changes": [
+    {
+     "date": "2026-09-28",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "New adjacent record for the 22nd Street Caltrain Station ADA Access Improvement, funded in part by SFCTA Prop L and a September 2026 FTA All Stations Accessibility Program grant.",
+     "source": "docs/briefs/adjacent-proposals.md",
+     "sources": [
+      {
+       "title": "docs/briefs/adjacent-proposals.md"
+      }
+     ],
+     "category": "coverage",
+     "category_label": "Coverage",
+     "record": {
+      "id": "22nd_st_caltrain_ada",
+      "slug": "22nd-st-caltrain-station-ada-access-improvement",
+      "name": "22nd St Caltrain Station ADA Access Improvement",
+      "permalink": "https://pierandpoint.org/parcels/22nd-st-caltrain-station-ada-access-improvement/",
+      "api": "https://pierandpoint.org/api/v1/records/22nd-st-caltrain-station-ada-access-improvement.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "adjacent",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    }
+   ],
+   "images": [],
+   "open_questions": [
+    "This record's placement under Pier 70 rather than Potrero Power Station reflects a roughly equal real-world distance (about 400-450m to each tracked boundary) plus the station's more established association with the Dogpatch/Pier 70 corridor in transit planning -- not a precise geometry test against a real station footprint (no Assessor parcel or site-plan figure exists to test against; see accuracy_caveat).",
+    "No construction start date is confirmed beyond the spring 2028 target implied by SFCTA's own milestone table; this could shift given design is only at an early stage as of this record's last_verified date."
+   ],
+   "sources": [
+    {
+     "id": "src-sfcta-boardpacket-2026-04",
+     "title": "SFCTA Transportation Authority Board Packet, April 14, 2026 (Attachments 2, 3 and 5: 22nd St Station ADA project description, staff recommendation and funding plan)",
+     "publisher": "San Francisco County Transportation Authority",
+     "date": "2026-04-14",
+     "url": "https://www.sfcta.org/sites/default/files/2026-04/SFCTA_Board_PACKET_2026-04-14.pdf",
+     "accessed": "2026-09-28",
+     "overview": true
+    },
+    {
+     "id": "src-sfcta-blog-2026-04",
+     "title": "$9.8 Million in Sales Tax Funds Approved to Support Downtown Revitalization, Caltrain Station ADA...",
+     "publisher": "San Francisco County Transportation Authority",
+     "date": "2026-04-28",
+     "url": "https://www.sfcta.org/blogs/98-million-sales-tax-funds-approved-support-downtown-revitalization-caltrain-station-ada",
+     "accessed": "2026-09-28"
+    },
+    {
+     "id": "src-greencaltrain-2024-02",
+     "title": "Caltrain and SFCTA Pursue Funding for 22nd Street Station Accessibility",
+     "publisher": "Green Caltrain",
+     "date": "2024-02-04",
+     "url": "https://www.greencaltrain.com/2024/02/caltrain-and-sfcta-pursue-funding-for-22nd-street-station-accessibility/",
+     "accessed": "2026-09-28"
+    },
+    {
+     "id": "src-trains-2026-09",
+     "title": "FTA Awards $233 Million for Station Accessibility Projects",
+     "publisher": "Trains.com",
+     "date": "2026-09-16",
+     "url": "https://www.trains.com/pro/passenger/fta-awards-233-million-for-station-accessibility-projects/",
+     "accessed": "2026-09-28"
+    }
+   ],
+   "notes": "Design (PS&E) is scheduled to run April/June 2026 through July/September 2027 (30% complete as of March 2026); construction is not slated to start until spring 2028, with project completion targeted July/September 2029.",
+   "has_record_file": true,
+   "last_verified": "2026-09-28",
+   "tenants": [],
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -122.3914,
+       37.7579
+      ],
+      [
+       -122.3914,
+       37.7585
+      ],
+      [
+       -122.3906,
+       37.7585
+      ],
+      [
+       -122.3906,
+       37.7579
+      ],
+      [
+       -122.3914,
+       37.7579
       ]
      ]
     ]

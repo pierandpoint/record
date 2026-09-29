@@ -14,7 +14,9 @@
   "names": [
    "UCSF Wayne and Gladys Valley Center for Vision",
    "499 Illinois Street",
-   "Alexandria Center for Science and Technology – 499 Illinois"
+   "409 Illinois Street",
+   "Alexandria Center for Science and Technology – 499 Illinois",
+   "UCSF School of Dentistry and Interprofessional Education Center"
   ],
   "site": {
    "slug": "mission-bay",
@@ -31,11 +33,13 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "Two adjacent buildings on OCII plan block X4, tracked as one combined record since their geometries were merged 2026-09-22 (they share one DataSF Assessor block-lot pairing, mblr SF3940003, ~12m apart, not touching): UCSF's Wayne and Gladys Valley Center for Vision, a 347,500-sq-ft, 12-story eye-care tower at 490 Illinois Street that opened November 2020 at a reported cost of about $237 million (SmithGroup architect); and 499 Illinois Street, a 6-story, ~450,000 sq ft biotechnology building completed 2008 and developed by Alexandria Real Estate Equities.",
+  "summary": "Three buildings on this shared parcel pairing, tracked as one combined record (they share the same DataSF Assessor block, share a garage, and are described together in every source found): UCSF's Wayne and Gladys Valley Center for Vision, a 347,500-sq-ft, 12-story eye-care tower at 490 Illinois Street that opened November 2020 at a reported cost of about $237 million (SmithGroup architect); 499 Illinois Street, a 6-story, ~450,000 sq ft biotechnology building completed 2008 and developed by Alexandria Real Estate Equities; and 409 Illinois Street, part of the same Alexandria-developed complex, which UCSF bought together with 499 Illinois St for $767,000,000 in December 2025 and is renovating into its new School of Dentistry and an Interprofessional Education Center, targeted to open in late 2029.",
   "summary_sources": [
    "src-sfyimby-490illinois",
    "src-datasf-499illinois",
-   "src-sgh-499illinois"
+   "src-sgh-499illinois",
+   "src-sfstandard-2025-12",
+   "src-ceqanet-2025120825"
   ],
   "shape": {
    "kind": "approximate",
@@ -54,14 +58,15 @@
   "facts": [
    {
     "key": "architect",
-    "value": "SmithGroup (490 Illinois St, Valley Center for Vision)",
+    "value": "490 Illinois St (Valley Center for Vision): SmithGroup. 409 Illinois St renovation (School of Dentistry / Interprofessional Education Center): CO Architects, with Suffolk as design-build contractor.",
     "sources": [
-     "src-sfyimby-490illinois"
+     "src-sfyimby-490illinois",
+     "src-asumag-2026"
     ]
    },
    {
     "key": "gross_sqft",
-    "value": "490 Illinois St: 347,500 across three connected buildings (12-story tower, 5-story south wing, 3-story north wing) plus ~75,000 sq ft of parking for 200+ vehicles. 499 Illinois St: ~450,000, six stories.",
+    "value": "490 Illinois St: 347,500 across three connected buildings (12-story tower, 5-story south wing, 3-story north wing) plus ~75,000 sq ft of parking for 200+ vehicles. 499 Illinois St: ~450,000, six stories. 409 and 499 Illinois St combined (per UC's own Dec 2025 acquisition filing): ~525,421 rentable sq ft on 3.6 acres with a 587-space shared garage. 409 Illinois St's renovation into the School of Dentistry / Interprofessional Education Center is 261,117 gross sq ft.",
     "sources": [
      "src-sfyimby-490illinois",
      "src-sgh-499illinois"
@@ -69,10 +74,17 @@
    },
    {
     "key": "developer",
-    "value": "490 Illinois St: University of California, San Francisco; fundraising led by the nonprofit That Man May See. 499 Illinois St: Alexandria Real Estate Equities.",
+    "value": "490 Illinois St: University of California, San Francisco; fundraising led by the nonprofit That Man May See. 499 Illinois St: Alexandria Real Estate Equities (original developer; sold to UCSF Dec 2025).",
     "sources": [
      "src-sfyimby-490illinois",
      "src-sgh-499illinois"
+    ]
+   },
+   {
+    "key": "blklot",
+    "value": "409 Illinois St: 3940003. 499 Illinois St: 3940005 per DataSF's current Assessor parcel data (queried 2026-09-28) -- differs from the block/lot 001 the 2006 building permit used and the lot 004 an earlier source in this file cites; the Assessor's own lot numbering for this address has clearly changed more than once and is not fully reconciled here (see open_questions). 490 Illinois St's own blklot was not re-confirmed in this pass.",
+    "sources": [
+     "src-datasf-parcels-2026-09-28"
     ]
    }
   ],
@@ -95,6 +107,28 @@
     "approximate": true,
     "sources": [
      "src-datasf-permit-499-illinois"
+    ],
+    "kind": "construction",
+    "scope": "record"
+   },
+   {
+    "amount_usd": 767000000,
+    "what": "UC Regents' purchase price for 409 Illinois St and 499 Illinois St together, from Alexandria Real Estate Equities",
+    "date": "2025-12",
+    "approximate": false,
+    "sources": [
+     "src-sfstandard-2025-12"
+    ],
+    "kind": "land_or_lease",
+    "scope": "record"
+   },
+   {
+    "amount_usd": 278000000,
+    "what": "Reported project cost for Suffolk/CO Architects' renovation of 409 Illinois St into UCSF's School of Dentistry and Interprofessional Education Center; not confirmed whether this covers the construction contract only or the total project",
+    "date": "2026-08",
+    "approximate": true,
+    "sources": [
+     "src-constructiondive-2026-08"
     ],
     "kind": "construction",
     "scope": "record"
@@ -253,9 +287,200 @@
      "url": "https://pierandpoint.org/sites/mission-bay/"
     },
     "relation": "tracked"
+   },
+   {
+    "date": "2025-12-17",
+    "date_label": "Dec 17, 2025",
+    "status": null,
+    "status_label": null,
+    "text": "The University of California (UC Regents) buys 409 Illinois St and 499 Illinois St together from Alexandria Real Estate Equities for $767,000,000: approximately 525,421 rentable sq ft on 3.6 acres with a 587-space shared garage. UC's own CEQA Notice of Exemption for the acquisition (Class 1, Existing Facilities) was posted the next day.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfstandard-2025-12",
+      "title": "UCSF drops $767 million to expand its Mission Bay campus",
+      "publisher": "San Francisco Standard",
+      "date": "2025-12-17",
+      "url": "https://sfstandard.com/2025/12/17/ucsf-drops-767-million-expand-its-mission-bay-campus/",
+      "accessed": "2026-09-28"
+     },
+     {
+      "id": "src-ceqanet-2025120825",
+      "title": "Acquisition of 409 Illinois Street and 499 Illinois Street, San Francisco (SCH #2025120825)",
+      "publisher": "University of California, via California CEQAnet Web Portal",
+      "date": "2025-12-18",
+      "url": "https://ceqanet.lci.ca.gov/2025120825",
+      "accessed": "2026-09-28"
+     }
+    ],
+    "source": "San Francisco Standard, 2025-12-17; University of California, via California CEQAnet Web Portal, 2025-12-18",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "mission_bay_490_499_illinois",
+     "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology",
+     "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision & Alexandria Center for Science and Technology)",
+     "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology/",
+     "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2026",
+    "date_label": "~2026",
+    "status": "under_construction",
+    "status_label": "Under construction",
+    "text": "Renovation of 409 Illinois St begins: 261,117 gross sq ft converted into UCSF's new School of Dentistry and Interprofessional Education Center (dentistry, medicine, nursing, pharmacy and physical therapy). Suffolk (contractor) and CO Architects (architect) selected via progressive design-build; Construction Dive reports a project cost of about $278,000,000.",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-asumag-2026",
+      "title": "UCSF selects Suffolk, CO Architects for 261,000-sq-ft Mission Bay education and dental center",
+      "publisher": "American School & University",
+      "url": "https://www.asumag.com/planning-design/renovation/press-release/55403432/ucsf-selects-suffolk-co-architects-for-261000-square-foot-mission-bay-education-and-dental-center",
+      "accessed": "2026-09-28"
+     },
+     {
+      "id": "src-constructiondive-2026-08",
+      "title": "Suffolk wins $278M California university dental school project",
+      "publisher": "Construction Dive",
+      "date": "2026-08-27",
+      "url": "https://www.constructiondive.com/news/suffolk-wins-california-university-dental-school-project/829259/",
+      "accessed": "2026-09-28"
+     }
+    ],
+    "source": "American School & University; Construction Dive, 2026-08-27",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_490_499_illinois",
+     "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology",
+     "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision & Alexandria Center for Science and Technology)",
+     "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology/",
+     "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2026-05-07",
+    "date_label": "May 7, 2026",
+    "status": null,
+    "status_label": null,
+    "text": "UC files a separate CEQA Notice of Exemption for an \"Advanced Work Phase\" at 409/499 Illinois St -- site preparation and make-ready construction elements ahead of the main renovation, also a Class 1 exemption.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ceqanet-2026050271",
+      "title": "Advanced Work Phase, Mission Bay Education Center and Dental Clinics project (SCH #2026050271)",
+      "publisher": "University of California, via California CEQAnet Web Portal",
+      "date": "2026-05-07",
+      "url": "https://ceqanet.lci.ca.gov/2026050271",
+      "accessed": "2026-09-28"
+     }
+    ],
+    "source": "University of California, via California CEQAnet Web Portal, 2026-05-07",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "mission_bay_490_499_illinois",
+     "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology",
+     "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision & Alexandria Center for Science and Technology)",
+     "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology/",
+     "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2029",
+    "date_label": "2029",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Completion targeted for late 2029 for UCSF's School of Dentistry and Interprofessional Education Center at 409 Illinois St.",
+    "expected": true,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-asumag-2026",
+      "title": "UCSF selects Suffolk, CO Architects for 261,000-sq-ft Mission Bay education and dental center",
+      "publisher": "American School & University",
+      "url": "https://www.asumag.com/planning-design/renovation/press-release/55403432/ucsf-selects-suffolk-co-architects-for-261000-square-foot-mission-bay-education-and-dental-center",
+      "accessed": "2026-09-28"
+     }
+    ],
+    "source": "American School & University",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_490_499_illinois",
+     "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology",
+     "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision & Alexandria Center for Science and Technology)",
+     "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology/",
+     "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
    }
   ],
   "changes": [
+   {
+    "date": "2026-09-28",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "UC Regents bought 409 Illinois St and 499 Illinois St together from Alexandria Real Estate Equities for $767,000,000 (closed 2025-12-17), and is renovating 409 Illinois St (261,117 sq ft) into a new School of Dentistry and Interprofessional Education Center with Suffolk and CO Architects, targeted to open in late 2029.",
+    "source": "https://sfstandard.com/2025/12/17/ucsf-drops-767-million-expand-its-mission-bay-campus/",
+    "sources": [
+     {
+      "title": "https://sfstandard.com/2025/12/17/ucsf-drops-767-million-expand-its-mission-bay-campus/"
+     }
+    ],
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "mission_bay_490_499_illinois",
+     "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology",
+     "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision & Alexandria Center for Science and Technology)",
+     "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology/",
+     "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-alexandria-center-for-science-and-technology.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-23",
     "kind": "added",
@@ -338,7 +563,8 @@
    "The 2006 construction permit's own block/lot for 499 Illinois St (block 3940, lot 001) differs from the lot the Assessor now uses for this address (lot 004); the address, biotechnical/medical-research-facility description, 6 stories, and $90M cost all line up with this parcel, so this is treated as a lot renumbering, not a different building. The permit's own completion sign-off (2009-04-06) also runs slightly later than the Assessor's 2008 year, which may reflect a lag between substantial completion and permit closeout.",
    "2026-09-21 pass: found the January 26, 2017 Regents budget/design approval item for 490 Illinois St (UCSF calls it 'Block 33' in its own campus numbering -- assumed at the time to be a coincidental name collision with this project's unrelated OCII-plan block 33). The direct ucsf.edu article returned HTTP 403 to automated fetches in this pass; its content (matching $237,000,000 cost and 12-story/5-story/3-story massing figures already in this record) was confirmed via a search-engine summary rather than a direct read. A primary Regents PDF for the January 26, 2017 item itself was not located.",
    "2026-09-22: the 'coincidental name collision' assumption above was reopened -- the owner directly identified OCII plan block 33 (data/records/ucsf_valley_center_for_vision_west.json, west of Illinois St, about 60-100m from this record's 490 Illinois St tower) as ALSO being Valley Center for Vision, not unrelated. Whether that west building is a second wing of this same facility, a distinct building sharing the name, or a misidentification, is unresolved -- see that record's own open_questions; not re-investigated here.",
-   "No opening date found for Caffe Central (490 Illinois St): checked its own site for a firm date; retail_confirmed.csv's own opened field is also blank, and the building itself only opened Nov 2020."
+   "No opening date found for Caffe Central (490 Illinois St): checked its own site for a firm date; retail_confirmed.csv's own opened field is also blank, and the building itself only opened Nov 2020.",
+   "2026-09-28: exact month/day for 409 Illinois St's 2026 renovation start, and the exact date within 'late 2029' targeted for completion, are not given by any source found. Whether the Construction Dive-reported $278,000,000 figure is Suffolk's construction contract value alone or the total project cost (design, FF&E, etc.) is also not stated by that source. No SF Planning case number exists for this renovation because UC, as a state entity, is exempt from local planning review -- all environmental review runs through UC itself as CEQA lead agency; treat the absence of a Planning case number as confirmed, not unresearched. The Assessor's blklot for 499 Illinois St has been given as 3940001 (2006 permit), 3940004 (an earlier source in this file) and now 3940005 (a live 2026-09-28 query) -- not reconciled here; possibly repeated lot-line adjustments on a shared master parcel with 409 Illinois St, whose current blklot (3940003) is comparatively well-confirmed."
   ],
   "sources": [
    {
@@ -388,6 +614,52 @@
     "overview": true
    },
    {
+    "id": "src-sfstandard-2025-12",
+    "title": "UCSF drops $767 million to expand its Mission Bay campus",
+    "publisher": "San Francisco Standard",
+    "date": "2025-12-17",
+    "url": "https://sfstandard.com/2025/12/17/ucsf-drops-767-million-expand-its-mission-bay-campus/",
+    "accessed": "2026-09-28"
+   },
+   {
+    "id": "src-ceqanet-2025120825",
+    "title": "Acquisition of 409 Illinois Street and 499 Illinois Street, San Francisco (SCH #2025120825)",
+    "publisher": "University of California, via California CEQAnet Web Portal",
+    "date": "2025-12-18",
+    "url": "https://ceqanet.lci.ca.gov/2025120825",
+    "accessed": "2026-09-28"
+   },
+   {
+    "id": "src-ceqanet-2026050271",
+    "title": "Advanced Work Phase, Mission Bay Education Center and Dental Clinics project (SCH #2026050271)",
+    "publisher": "University of California, via California CEQAnet Web Portal",
+    "date": "2026-05-07",
+    "url": "https://ceqanet.lci.ca.gov/2026050271",
+    "accessed": "2026-09-28"
+   },
+   {
+    "id": "src-asumag-2026",
+    "title": "UCSF selects Suffolk, CO Architects for 261,000-sq-ft Mission Bay education and dental center",
+    "publisher": "American School & University",
+    "url": "https://www.asumag.com/planning-design/renovation/press-release/55403432/ucsf-selects-suffolk-co-architects-for-261000-square-foot-mission-bay-education-and-dental-center",
+    "accessed": "2026-09-28"
+   },
+   {
+    "id": "src-constructiondive-2026-08",
+    "title": "Suffolk wins $278M California university dental school project",
+    "publisher": "Construction Dive",
+    "date": "2026-08-27",
+    "url": "https://www.constructiondive.com/news/suffolk-wins-california-university-dental-school-project/829259/",
+    "accessed": "2026-09-28"
+   },
+   {
+    "id": "src-datasf-parcels-2026-09-28",
+    "title": "Parcels - Active and Retired (blklot 3940003, 409 Illinois St; blklot 3940005, 499 Illinois St)",
+    "publisher": "DataSF / SF Office of the Assessor-Recorder",
+    "url": "https://data.sf.gov/resource/acdm-wktn.json",
+    "accessed": "2026-09-28"
+   },
+   {
     "id": null,
     "title": "openstreetmap.org/way/84821715",
     "url": "https://www.openstreetmap.org/way/84821715"
@@ -405,7 +677,7 @@
   ],
   "notes": "OCII plan block X4 (a plan-era open-space number absorbed into this final building complex, per docs/briefs/mission_bay_block_inventory.csv). UCSF Health also operates a Reproductive Health clinic on 499 Illinois St's 6th floor.",
   "has_record_file": true,
-  "last_verified": "2026-09-22",
+  "last_verified": "2026-09-28",
   "tenants": [
    {
     "slug": "caffe-central-490-illinois",

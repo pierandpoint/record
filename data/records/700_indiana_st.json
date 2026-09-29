@@ -1,0 +1,54 @@
+{
+  "record_id": "700_indiana_st",
+  "relation": "adjacent",
+  "adjacent_to": "pier-70",
+  "names": ["700 Indiana Street", "MBC BioLabs at 700 Indiana"],
+  "distance_note": "About 470m from the tracked Pier 70 D4D parcel's own boundary (versus about 665m from Potrero Power Station's tracked boundary) -- Dogpatch, between 19th and 20th St near Indiana St/I-280.",
+  "summary": "A proposed 3-story-plus-basement lab/office building at 700 Indiana St in Dogpatch, replacing an existing one-story building, for tenant MBC BioLabs. SF Planning Commission approved the project in June 2024; a neighborhood appeal of its CEQA exemption was rejected by the Board of Supervisors in September 2024, clearing it to proceed. No building permit had been issued as of September 2026.",
+  "summary_sources": ["src-ceqanet-700indiana", "src-citizenportal-boslupheld"],
+  "milestones": [
+    {"date": "2024-06-13", "text": "SF Planning Commission approves the project (Case No. 2023-001074ENX, Motion No. 21576).",
+     "sources": ["src-ceqanet-700indiana"]},
+    {"date": "2024-09-24", "text": "SF Board of Supervisors votes 9-1 to uphold the Planning Department's CEQA general plan evaluation exemption, rejecting a neighborhood appeal (Appeal No. 24-040); Supervisor Walton (District 10) cast the dissenting vote.",
+     "sources": ["src-ceqanet-700indiana", "src-citizenportal-boslupheld"]}
+  ],
+  "costs": [
+    {"amount_usd": 40000000, "what": "Estimated construction cost, per secondary reporting -- not independently confirmed against a primary Planning or permit document",
+     "date": "2025", "approximate": true, "kind": "construction", "scope": "record", "sources": ["src-sfyimby-700indiana"]}
+  ],
+  "facts": [
+    {"key": "developer", "value": "Dewey Land Company (purchased the site in 2022 for $15,000,000)", "sources": ["src-sfyimby-700indiana"]},
+    {"key": "architect", "value": "MBH Architects", "sources": ["src-sfyimby-700indiana"]},
+    {"key": "tenant", "value": "MBC BioLabs (expanding from its flagship campus at 953 Indiana St)", "sources": ["src-sfyimby-700indiana"]},
+    {"key": "gross_sqft", "value": "Reported as approximately 70,650 sq ft (Planning Commission motion language) or 72,349-72,350 sq ft (CEQA Notice of Exemption and a Feb 2025 news report) -- sources disagree by about 1,700 sq ft; both figures kept rather than picking one. Replaces an existing approximately 15,068 sq ft one-story building on a 0.71-acre (31,090 sq ft) lot.", "sources": ["src-ceqanet-700indiana", "src-sfyimby-700indiana"]},
+    {"key": "height_ft", "value": "Reported as either 48 ft (north) / 33 ft (south) per the CEQA filing, or a 54 ft height cap per a Feb 2025 news report -- discrepancy not resolved here.", "sources": ["src-ceqanet-700indiana", "src-sfyimby-700indiana"]},
+    {"key": "blklot", "value": "4062007", "sources": ["src-datasf-parcels-2026-09-28"]}
+  ],
+  "how_to_comment": [
+    {"channel": "SF Planning Property Information Map", "detail": "Case No. 2023-001074ENX", "url": "https://sfplanninggis.org/pim/"},
+    {"channel": "Clerk of the Board of Supervisors", "detail": "District 10 (Supervisor Shamann Walton)", "url": "https://sfbos.org/clerk-board"}
+  ],
+  "sources": [
+    {"id": "src-ceqanet-700indiana", "title": "700 Indiana Street Project, Notice of Exemption",
+     "publisher": "City and County of San Francisco, via California CEQAnet Web Portal",
+     "url": "https://ceqanet.lci.ca.gov/2025010779", "accessed": "2026-09-28", "overview": true},
+    {"id": "src-citizenportal-boslupheld", "title": "Board upholds Planning Department's General Plan Evaluation for proposed Dogpatch biotech lab after heated CEQA appeal",
+     "publisher": "Citizen Portal", "date": "2024-09-24",
+     "url": "https://citizenportal.ai/articles/6596036/california/san-francisco-county/board-upholds-planning-departments-general-plan-evaluation-for-proposed-dogpatch-biotech-lab-after-heated-ceqa-appeal",
+     "accessed": "2026-09-28"},
+    {"id": "src-sfyimby-700indiana", "title": "Environmental Streamlining for 700 Indiana Street in Dogpatch, San Francisco",
+     "publisher": "San Francisco YIMBY", "date": "2025-02-02",
+     "url": "https://sfyimby.com/2025/02/environmental-streamlining-for-700-indiana-street-in-dogpatch-san-francisco.html",
+     "accessed": "2026-09-28"},
+    {"id": "src-datasf-parcels-2026-09-28", "title": "Parcels - Active and Retired (blklot 4062007, 700 Indiana St)",
+     "publisher": "DataSF / SF Office of the Assessor-Recorder", "url": "https://data.sf.gov/resource/acdm-wktn.json",
+     "accessed": "2026-09-28"}
+  ],
+  "open_questions": [
+    "Two different named appeal bodies appear in sources on this project: the Board of Supervisors (which heard and rejected the CEQA exemption appeal, resolved 2024-09-24, the event recorded above) and a separate Board of Appeals item (Appeal No. 24-040, continued to a Nov 13, 2024 hearing) whose subject and outcome could not be confirmed in this pass -- not established here whether it is the same matter under a different docket or a genuinely separate appeal.",
+    "No construction start date or building permit has been found as of 2026-09-28; status is recorded as planned rather than under_construction pending better evidence.",
+    "The gross square footage and height figures differ between the CEQA filing and a Feb 2025 news report; both are kept in facts rather than resolved to one number.",
+    "The $40,000,000 estimated construction cost is from secondary reporting only, not independently confirmed against a primary Planning or permit document."
+  ],
+  "last_verified": "2026-09-28"
+}

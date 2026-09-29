@@ -393,7 +393,7 @@ Potrero Power Station that Pier & Point records without taking a side on
   the home map and the site map as a dashed outline with a legend entry of its own. It
   is left out of the progress tracker, "N of M complete" counts and the sharing-card
   counts; it is included in the API, the changelog and the digest, each stating its
-  relation. Its own record page shows "Nearby proposal, outside `<site>`" under its
+  relation. Its own record page shows "Nearby project, outside `<site>`" under its
   name, its milestones as its entitlement path, a "How to comment" block from
   `how_to_comment`, and a "Positions on record" list from `positions`.
 - Changelog rows that add an adjacent record use `category: coverage`

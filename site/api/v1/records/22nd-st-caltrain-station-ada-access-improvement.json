@@ -1,0 +1,442 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-29",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "22nd_st_caltrain_ada",
+  "slug": "22nd-st-caltrain-station-ada-access-improvement",
+  "name": "22nd St Caltrain Station ADA Access Improvement",
+  "permalink": "https://pierandpoint.org/parcels/22nd-st-caltrain-station-ada-access-improvement/",
+  "api": "https://pierandpoint.org/api/v1/records/22nd-st-caltrain-station-ada-access-improvement.json",
+  "names": [
+   "22nd Street Caltrain Station ADA Access Improvement"
+  ],
+  "site": {
+   "slug": "pier-70",
+   "name": "Pier 70",
+   "short": "Pier 70",
+   "url": "https://pierandpoint.org/sites/pier-70/"
+  },
+  "status": "planned",
+  "status_label": "Planned",
+  "use": "transit",
+  "relation": "adjacent",
+  "adjacent_to": "pier-70",
+  "distance_note": "The existing 22nd St Caltrain station (Pennsylvania Ave/Indiana St, Dogpatch) sits roughly 400-450m from both Pier 70's and Potrero Power Station's tracked boundaries -- grouped here under Pier 70 as the closer, better-established Dogpatch association.",
+  "how_to_comment": [
+   {
+    "channel": "SFCTA Board and committee meeting calendar",
+    "detail": "Prop L funding actions for this project",
+    "url": "https://www.sfcta.org/civic-engagement/meetings"
+   },
+   {
+    "channel": "Peninsula Corridor Joint Powers Board (Caltrain) meeting calendar",
+    "detail": "Project sponsor",
+    "url": "https://www.caltrain.com/about/board-of-directors"
+   }
+  ],
+  "positions": [],
+  "address": null,
+  "summary": "An accessibility retrofit of the existing, below-grade 22nd Street Caltrain station -- the only regular-service Caltrain station without wheelchair access. The project adds ramps to both platforms plus wayfinding and safety improvements. Design is under way (targeted complete summer 2027); construction is not slated to start until spring 2028, with completion targeted for mid-2029. Total project cost is $19,134,000, sponsored by the Peninsula Corridor Joint Powers Board (Caltrain) with SFCTA (Prop L) and FTA funding.",
+  "summary_sources": [
+   "src-sfcta-boardpacket-2026-04"
+  ],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "APPROXIMATE -- a coarse placeholder box over the existing station's real location, not a traced footprint of the platforms or the planned ramps themselves (one ~305ft ramp on the northbound platform, one ~465ft ramp on the southbound platform, per the project's own design description).",
+    "digitized_from": "No Assessor block/lot exists for the existing 22nd St Caltrain station or its below-grade platforms (active rail right-of-way, the same reasoning already documented for the existing mission_bay_sf_railyards adjacent record's 4th & King Station -- confirmed here too: DataSF's 'Parcels - Active and Retired' Socrata dataset has no parcel at this location). No Caltrain/Peninsula Corridor Joint Powers Board GIS shapefile or site-plan figure was available, so this is a coarse locational box near the real DataSF street-centerline address range for 22nd St at Pennsylvania Ave/Indiana St (data/raw/official_street_centerlines.geojson), where the existing below-grade station sits.",
+    "why_no_real_parcel": "Active Caltrain rail right-of-way; not on the Assessor's secured roll, the same situation as the existing 4th & King Street Station (data/manual/mission_bay_sf_railyards.geojson).",
+    "regulatory_context": "The Caltrain 22nd Street Station is the railroad's only regular-service station that is not wheelchair accessible: its platforms sit about 25 ft below street level, reachable only by stairs. Sponsor: Peninsula Corridor Joint Powers Board (Caltrain); funded in part through SFCTA's Prop L. Total project cost per SFCTA's April 2026 Board Packet: $19,134,000 (Planning/Conceptual Engineering $734,000 already spent via Prop K; Design Engineering $1,300,000 via Prop L, allocated 2026-04-28; Construction $17,100,000, an engineer's estimate at 30% design). The FTA's 'All Stations Accessibility Program' separately awarded the Peninsula Corridor Joint Powers Board $14.1 million for this project's ADA improvements, announced 2026-09-10 -- matching almost exactly the funding gap SFCTA's own April 2026 plan had left as 'Planned TBD'."
+   }
+  },
+  "centroid": {
+   "lon": -122.39108,
+   "lat": 37.75814
+  },
+  "facts": [
+   {
+    "key": "sponsor",
+    "value": "Peninsula Corridor Joint Powers Board (Caltrain), with funding from SFCTA (Prop L) and the FTA",
+    "sources": [
+     "src-sfcta-boardpacket-2026-04"
+    ]
+   },
+   {
+    "key": "scope",
+    "value": "One ramp on the northbound platform (about 305 ft long, 6.5% slope) and one on the southbound platform (about 465 ft long, 6.1% slope), plus tactile strips, lighting and signage. Platforms sit about 25 ft below street grade, currently reachable only by stairs.",
+    "sources": [
+     "src-sfcta-boardpacket-2026-04"
+    ]
+   }
+  ],
+  "costs": [
+   {
+    "amount_usd": 19134000,
+    "what": "Total project cost per SFCTA's April 2026 funding plan (Planning/Conceptual Engineering $734,000 already spent via Prop K; Design Engineering $1,300,000 via Prop L; Construction $17,100,000, an engineer's estimate at 30% design)",
+    "date": "2026-04",
+    "kind": "infrastructure",
+    "scope": "record",
+    "approximate": true,
+    "sources": [
+     "src-sfcta-boardpacket-2026-04"
+    ]
+   },
+   {
+    "amount_usd": 1300000,
+    "what": "Prop L design-phase allocation, approved by the SFCTA Board",
+    "date": "2026-04-28",
+    "kind": "public_investment",
+    "scope": "record",
+    "sources": [
+     "src-sfcta-blog-2026-04"
+    ]
+   },
+   {
+    "amount_usd": 14100000,
+    "what": "Federal Transit Administration All Stations Accessibility Program grant to the Peninsula Corridor Joint Powers Board for this project's ADA improvements",
+    "date": "2026-09-10",
+    "kind": "public_investment",
+    "scope": "record",
+    "sources": [
+     "src-trains-2026-09"
+    ]
+   }
+  ],
+  "milestones": [
+   {
+    "date": "2024-02",
+    "date_label": "~2024",
+    "status": null,
+    "status_label": null,
+    "text": "Caltrain and SFCTA begin pursuing federal funding for the station's accessibility project.",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-greencaltrain-2024-02",
+      "title": "Caltrain and SFCTA Pursue Funding for 22nd Street Station Accessibility",
+      "publisher": "Green Caltrain",
+      "date": "2024-02-04",
+      "url": "https://www.greencaltrain.com/2024/02/caltrain-and-sfcta-pursue-funding-for-22nd-street-station-accessibility/",
+      "accessed": "2026-09-28"
+     }
+    ],
+    "source": "Green Caltrain, 2024-02-04",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "22nd_st_caltrain_ada",
+     "slug": "22nd-st-caltrain-station-ada-access-improvement",
+     "name": "22nd St Caltrain Station ADA Access Improvement",
+     "permalink": "https://pierandpoint.org/parcels/22nd-st-caltrain-station-ada-access-improvement/",
+     "api": "https://pierandpoint.org/api/v1/records/22nd-st-caltrain-station-ada-access-improvement.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "adjacent"
+   },
+   {
+    "date": "2026-04-14",
+    "date_label": "Apr 14, 2026",
+    "status": null,
+    "status_label": null,
+    "text": "SFCTA's Transportation Authority Board packet recommends $1,300,000 in Prop L funds for the project's design phase, part of a total funding plan of $19,134,000 (Planning/Conceptual Engineering $734,000 already spent via Prop K; Design Engineering $1,300,000 via Prop L; Construction $17,100,000, an engineer's estimate at 30% design).",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfcta-boardpacket-2026-04",
+      "title": "SFCTA Transportation Authority Board Packet, April 14, 2026 (Attachments 2, 3 and 5: 22nd St Station ADA project description, staff recommendation and funding plan)",
+      "publisher": "San Francisco County Transportation Authority",
+      "date": "2026-04-14",
+      "url": "https://www.sfcta.org/sites/default/files/2026-04/SFCTA_Board_PACKET_2026-04-14.pdf",
+      "accessed": "2026-09-28",
+      "overview": true
+     }
+    ],
+    "source": "San Francisco County Transportation Authority, 2026-04-14",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "22nd_st_caltrain_ada",
+     "slug": "22nd-st-caltrain-station-ada-access-improvement",
+     "name": "22nd St Caltrain Station ADA Access Improvement",
+     "permalink": "https://pierandpoint.org/parcels/22nd-st-caltrain-station-ada-access-improvement/",
+     "api": "https://pierandpoint.org/api/v1/records/22nd-st-caltrain-station-ada-access-improvement.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "adjacent"
+   },
+   {
+    "date": "2026-04-28",
+    "date_label": "Apr 28, 2026",
+    "status": null,
+    "status_label": null,
+    "text": "SFCTA Board formally approves the $1,300,000 Prop L design-phase allocation (one of three projects sharing a combined $9.8M Prop L allocation that day, alongside the Powell St Improvement and the Mission Bay Ferry Landing).",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfcta-blog-2026-04",
+      "title": "$9.8 Million in Sales Tax Funds Approved to Support Downtown Revitalization, Caltrain Station ADA...",
+      "publisher": "San Francisco County Transportation Authority",
+      "date": "2026-04-28",
+      "url": "https://www.sfcta.org/blogs/98-million-sales-tax-funds-approved-support-downtown-revitalization-caltrain-station-ada",
+      "accessed": "2026-09-28"
+     }
+    ],
+    "source": "San Francisco County Transportation Authority, 2026-04-28",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "22nd_st_caltrain_ada",
+     "slug": "22nd-st-caltrain-station-ada-access-improvement",
+     "name": "22nd St Caltrain Station ADA Access Improvement",
+     "permalink": "https://pierandpoint.org/parcels/22nd-st-caltrain-station-ada-access-improvement/",
+     "api": "https://pierandpoint.org/api/v1/records/22nd-st-caltrain-station-ada-access-improvement.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "adjacent"
+   },
+   {
+    "date": "2026-09-10",
+    "date_label": "Sep 10, 2026",
+    "status": null,
+    "status_label": null,
+    "text": "The Federal Transit Administration's All Stations Accessibility Program awards the Peninsula Corridor Joint Powers Board $14.1 million for ADA improvements at the 22nd Street station -- matching almost exactly the funding gap SFCTA's own April 2026 plan had left as \"Planned TBD\".",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-trains-2026-09",
+      "title": "FTA Awards $233 Million for Station Accessibility Projects",
+      "publisher": "Trains.com",
+      "date": "2026-09-16",
+      "url": "https://www.trains.com/pro/passenger/fta-awards-233-million-for-station-accessibility-projects/",
+      "accessed": "2026-09-28"
+     }
+    ],
+    "source": "Trains.com, 2026-09-16",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "22nd_st_caltrain_ada",
+     "slug": "22nd-st-caltrain-station-ada-access-improvement",
+     "name": "22nd St Caltrain Station ADA Access Improvement",
+     "permalink": "https://pierandpoint.org/parcels/22nd-st-caltrain-station-ada-access-improvement/",
+     "api": "https://pierandpoint.org/api/v1/records/22nd-st-caltrain-station-ada-access-improvement.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "adjacent"
+   },
+   {
+    "date": "2027",
+    "date_label": "2027",
+    "status": null,
+    "status_label": null,
+    "text": "Design (PS&E, Plans/Specifications/Estimate) targeted complete.",
+    "expected": true,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-sfcta-boardpacket-2026-04",
+      "title": "SFCTA Transportation Authority Board Packet, April 14, 2026 (Attachments 2, 3 and 5: 22nd St Station ADA project description, staff recommendation and funding plan)",
+      "publisher": "San Francisco County Transportation Authority",
+      "date": "2026-04-14",
+      "url": "https://www.sfcta.org/sites/default/files/2026-04/SFCTA_Board_PACKET_2026-04-14.pdf",
+      "accessed": "2026-09-28",
+      "overview": true
+     }
+    ],
+    "source": "San Francisco County Transportation Authority, 2026-04-14",
+    "origin": "record",
+    "category": "coming_up",
+    "category_label": "Coming up",
+    "record": {
+     "id": "22nd_st_caltrain_ada",
+     "slug": "22nd-st-caltrain-station-ada-access-improvement",
+     "name": "22nd St Caltrain Station ADA Access Improvement",
+     "permalink": "https://pierandpoint.org/parcels/22nd-st-caltrain-station-ada-access-improvement/",
+     "api": "https://pierandpoint.org/api/v1/records/22nd-st-caltrain-station-ada-access-improvement.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "adjacent"
+   },
+   {
+    "date": "2029",
+    "date_label": "2029",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Project completion targeted (station open for use expected spring 2029; full project completion targeted mid/late 2029).",
+    "expected": true,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-sfcta-boardpacket-2026-04",
+      "title": "SFCTA Transportation Authority Board Packet, April 14, 2026 (Attachments 2, 3 and 5: 22nd St Station ADA project description, staff recommendation and funding plan)",
+      "publisher": "San Francisco County Transportation Authority",
+      "date": "2026-04-14",
+      "url": "https://www.sfcta.org/sites/default/files/2026-04/SFCTA_Board_PACKET_2026-04-14.pdf",
+      "accessed": "2026-09-28",
+      "overview": true
+     }
+    ],
+    "source": "San Francisco County Transportation Authority, 2026-04-14",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "22nd_st_caltrain_ada",
+     "slug": "22nd-st-caltrain-station-ada-access-improvement",
+     "name": "22nd St Caltrain Station ADA Access Improvement",
+     "permalink": "https://pierandpoint.org/parcels/22nd-st-caltrain-station-ada-access-improvement/",
+     "api": "https://pierandpoint.org/api/v1/records/22nd-st-caltrain-station-ada-access-improvement.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "adjacent"
+   }
+  ],
+  "changes": [
+   {
+    "date": "2026-09-28",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "New adjacent record for the 22nd Street Caltrain Station ADA Access Improvement, funded in part by SFCTA Prop L and a September 2026 FTA All Stations Accessibility Program grant.",
+    "source": "docs/briefs/adjacent-proposals.md",
+    "sources": [
+     {
+      "title": "docs/briefs/adjacent-proposals.md"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "22nd_st_caltrain_ada",
+     "slug": "22nd-st-caltrain-station-ada-access-improvement",
+     "name": "22nd St Caltrain Station ADA Access Improvement",
+     "permalink": "https://pierandpoint.org/parcels/22nd-st-caltrain-station-ada-access-improvement/",
+     "api": "https://pierandpoint.org/api/v1/records/22nd-st-caltrain-station-ada-access-improvement.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "adjacent",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
+  "images": [],
+  "open_questions": [
+   "This record's placement under Pier 70 rather than Potrero Power Station reflects a roughly equal real-world distance (about 400-450m to each tracked boundary) plus the station's more established association with the Dogpatch/Pier 70 corridor in transit planning -- not a precise geometry test against a real station footprint (no Assessor parcel or site-plan figure exists to test against; see accuracy_caveat).",
+   "No construction start date is confirmed beyond the spring 2028 target implied by SFCTA's own milestone table; this could shift given design is only at an early stage as of this record's last_verified date."
+  ],
+  "sources": [
+   {
+    "id": "src-sfcta-boardpacket-2026-04",
+    "title": "SFCTA Transportation Authority Board Packet, April 14, 2026 (Attachments 2, 3 and 5: 22nd St Station ADA project description, staff recommendation and funding plan)",
+    "publisher": "San Francisco County Transportation Authority",
+    "date": "2026-04-14",
+    "url": "https://www.sfcta.org/sites/default/files/2026-04/SFCTA_Board_PACKET_2026-04-14.pdf",
+    "accessed": "2026-09-28",
+    "overview": true
+   },
+   {
+    "id": "src-sfcta-blog-2026-04",
+    "title": "$9.8 Million in Sales Tax Funds Approved to Support Downtown Revitalization, Caltrain Station ADA...",
+    "publisher": "San Francisco County Transportation Authority",
+    "date": "2026-04-28",
+    "url": "https://www.sfcta.org/blogs/98-million-sales-tax-funds-approved-support-downtown-revitalization-caltrain-station-ada",
+    "accessed": "2026-09-28"
+   },
+   {
+    "id": "src-greencaltrain-2024-02",
+    "title": "Caltrain and SFCTA Pursue Funding for 22nd Street Station Accessibility",
+    "publisher": "Green Caltrain",
+    "date": "2024-02-04",
+    "url": "https://www.greencaltrain.com/2024/02/caltrain-and-sfcta-pursue-funding-for-22nd-street-station-accessibility/",
+    "accessed": "2026-09-28"
+   },
+   {
+    "id": "src-trains-2026-09",
+    "title": "FTA Awards $233 Million for Station Accessibility Projects",
+    "publisher": "Trains.com",
+    "date": "2026-09-16",
+    "url": "https://www.trains.com/pro/passenger/fta-awards-233-million-for-station-accessibility-projects/",
+    "accessed": "2026-09-28"
+   }
+  ],
+  "notes": "Design (PS&E) is scheduled to run April/June 2026 through July/September 2027 (30% complete as of March 2026); construction is not slated to start until spring 2028, with project completion targeted July/September 2029.",
+  "has_record_file": true,
+  "last_verified": "2026-09-28",
+  "tenants": [],
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.3914,
+      37.7579
+     ],
+     [
+      -122.3914,
+      37.7585
+     ],
+     [
+      -122.3906,
+      37.7585
+     ],
+     [
+      -122.3906,
+      37.7579
+     ],
+     [
+      -122.3914,
+      37.7579
+     ]
+    ]
+   ]
+  }
+ }
+}

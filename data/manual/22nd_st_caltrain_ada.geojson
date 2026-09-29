@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "22nd St Caltrain Station ADA Access Improvement -- adjacent to Pier 70",
+        "site": "Pier 70",
+        "status": "planned",
+        "use": "transit",
+        "geometry_type": "approximate",
+        "digitized_from": "No Assessor block/lot exists for the existing 22nd St Caltrain station or its below-grade platforms (active rail right-of-way, the same reasoning already documented for the existing mission_bay_sf_railyards adjacent record's 4th & King Station -- confirmed here too: DataSF's 'Parcels - Active and Retired' Socrata dataset has no parcel at this location). No Caltrain/Peninsula Corridor Joint Powers Board GIS shapefile or site-plan figure was available, so this is a coarse locational box near the real DataSF street-centerline address range for 22nd St at Pennsylvania Ave/Indiana St (data/raw/official_street_centerlines.geojson), where the existing below-grade station sits.",
+        "accuracy_caveat": "APPROXIMATE -- a coarse placeholder box over the existing station's real location, not a traced footprint of the platforms or the planned ramps themselves (one ~305ft ramp on the northbound platform, one ~465ft ramp on the southbound platform, per the project's own design description).",
+        "why_no_real_parcel": "Active Caltrain rail right-of-way; not on the Assessor's secured roll, the same situation as the existing 4th & King Street Station (data/manual/mission_bay_sf_railyards.geojson).",
+        "regulatory_context": "The Caltrain 22nd Street Station is the railroad's only regular-service station that is not wheelchair accessible: its platforms sit about 25 ft below street level, reachable only by stairs. Sponsor: Peninsula Corridor Joint Powers Board (Caltrain); funded in part through SFCTA's Prop L. Total project cost per SFCTA's April 2026 Board Packet: $19,134,000 (Planning/Conceptual Engineering $734,000 already spent via Prop K; Design Engineering $1,300,000 via Prop L, allocated 2026-04-28; Construction $17,100,000, an engineer's estimate at 30% design). The FTA's 'All Stations Accessibility Program' separately awarded the Peninsula Corridor Joint Powers Board $14.1 million for this project's ADA improvements, announced 2026-09-10 -- matching almost exactly the funding gap SFCTA's own April 2026 plan had left as 'Planned TBD'.",
+        "notes": "Design (PS&E) is scheduled to run April/June 2026 through July/September 2027 (30% complete as of March 2026); construction is not slated to start until spring 2028, with project completion targeted July/September 2029.",
+        "digitization_method": "2026-09-28 -- CREATED as a coarse locational box (see accuracy_caveat and digitized_from), anchored near the real 22nd St address range at Pennsylvania Ave/Indiana St where the existing station sits. No owner review yet.",
+        "source_doc_urls": [
+          "https://www.sfcta.org/sites/default/files/2026-04/SFCTA_Board_PACKET_2026-04-14.pdf",
+          "https://www.sfcta.org/blogs/98-million-sales-tax-funds-approved-support-downtown-revitalization-caltrain-station-ada"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-122.3914, 37.7579], [-122.3914, 37.7585], [-122.3906, 37.7585], [-122.3906, 37.7579], [-122.3914, 37.7579]]]
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "project_name": "Piers 38 & 40 -- proposed redevelopment (San Francisco Waterfront Partners) adjacent to Mission Rock",
+        "site": "Pier 50 / Mission Rock",
+        "status": "planned",
+        "use": "commercial",
+        "geometry_type": "approximate",
+        "digitized_from": "No Assessor block/lot exists for this Port pier facility (confirmed: DataSF's 'Parcels - Active and Retired' Socrata dataset, acdm-wktn, has no PIER-numbered street_name entries). No Port GIS shapefile or site-plan figure was available, so this is a coarse locational box anchored to Pier 40's own real, addressed location (89 King St), placed just east of the real DataSF street-centerline cutoff for King St's own address range at this project's cached bounding box edge (data/raw/official_street_centerlines.geojson).",
+        "accuracy_caveat": "APPROXIMATE -- a coarse placeholder box, not a traced footprint, for the same reasons as data/manual/pier70_dry_docks.geojson (no parcel, no source figure). Piers 38 and 40 themselves sit just north of this project's cached raw-data bounding box edge (src/config.py's BBOX_NORTH=37.7795); the box's south edge sits right at that boundary and it extends only a short distance north/east, so it does not claim to trace the two piers' real combined footprint.",
+        "why_no_real_parcel": "Port pier facility; not on the Assessor's secured roll (data.sf.gov acdm-wktn has no PIER-numbered parcels near this site).",
+        "regulatory_context": "Developer: San Francisco Waterfront Partners III, LLC (SFWP), an affiliate of Pacific Waterfront Partners (PWP). Original Exclusive Negotiating Agreement: Port Commission Resolution 21-10 (2021-02-23), expired 2023-03-15 for missed performance dates. PWP separately owed the Port over $980,000 in back rent on three unrelated leases (Pier 28, two Agriculture Building suites), unpaid since it vacated them 2024-01-31. On 2026-04-28 the Port Commission adopted a Settlement Agreement (Resolution 26-21: PWP to pay $720,000 over 3 years, with the remainder of the debt forgiven on compliance) and an Amended and Restated ENA (Resolution 26-22: a 12-month 'Evaluation Period' to explore value engineering, project phasing and a new financial partner, with a new Schedule of Performance due before the period ends around April 2027). No lease, term sheet or CEQA review is in place as of this record's own last_verified date.",
+        "notes": "The 2022 scope estimate (~215,000 sq ft office, up to 20,000 sq ft retail, ~$528-536M cost) is explicitly under review ('value engineering', 'scope reduction') per the April 2026 Amended ENA and is not treated as current. Separately, an August 2026 marketing listing ('Pacific Cornerstone') offers up to ~279,876 sq ft of the piers for long-term lease to credit tenants, positioning occupancy for late 2029 -- parallel tenant-marketing activity alongside the Port's own Evaluation Period, not a confirmed deal.",
+        "digitization_method": "2026-09-28 -- CREATED as a coarse locational box (see accuracy_caveat and digitized_from), anchored to Pier 40's real address (89 King St) at the edge of this project's cached bounding box. No owner review yet.",
+        "source_doc_urls": [
+          "https://www.sfport.com/sites/default/files/2026-04/item_9b_piers_38_and_40_amended_ena_and_related_settlement_agreements.docx.pdf",
+          "https://www.sfport.com/projects-programs/south-beach-piers-38-40"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-122.39, 37.7792], [-122.39, 37.7804], [-122.3886, 37.7804], [-122.3886, 37.7792], [-122.39, 37.7792]]]
+      }
+    }
+  ]
+}

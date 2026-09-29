@@ -1,0 +1,429 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-29",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "piers_38_40",
+  "slug": "piers-38-and-40",
+  "name": "Piers 38 & 40",
+  "permalink": "https://pierandpoint.org/parcels/piers-38-and-40/",
+  "api": "https://pierandpoint.org/api/v1/records/piers-38-and-40.json",
+  "names": [
+   "Piers 38 & 40",
+   "South Beach Piers 38-40"
+  ],
+  "site": {
+   "slug": "mission-rock",
+   "name": "Mission Rock",
+   "short": "Mission Rock",
+   "url": "https://pierandpoint.org/sites/mission-rock/"
+  },
+  "status": "planned",
+  "status_label": "Planned",
+  "use": "commercial",
+  "relation": "adjacent",
+  "adjacent_to": "mission-rock",
+  "distance_note": "Piers 38 and 40, at the foot of King St/Townsend St (89 King St), sit about 420-460m north of Mission Rock's own tracked boundary (Pier 48/50), just north of and adjacent to South Beach Harbor.",
+  "how_to_comment": [
+   {
+    "channel": "Port Commission meeting calendar",
+    "detail": "Agenda items on Piers 38 & 40",
+    "url": "https://sfport.com/meetings-events"
+   },
+   {
+    "channel": "Port of San Francisco project page",
+    "detail": "South Beach / Piers 38-40",
+    "url": "https://www.sfport.com/projects-programs/south-beach-piers-38-40"
+   }
+  ],
+  "positions": [],
+  "address": null,
+  "summary": "A long-stalled Port of San Francisco redevelopment of Piers 38 and 40, led by San Francisco Waterfront Partners (an affiliate of Pacific Waterfront Partners). The original 2021 Exclusive Negotiating Agreement expired in 2023 after missed performance dates; in April 2026 the Port Commission settled a related back-rent dispute and adopted an Amended and Restated ENA giving the developer a 12-month \"Evaluation Period\" to rework the project's scope and financing. No lease, term sheet or CEQA review is in place as of this record's last_verified date.",
+  "summary_sources": [
+   "src-sfport-item9b-2026-04"
+  ],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "APPROXIMATE -- a coarse placeholder box, not a traced footprint, for the same reasons as data/manual/pier70_dry_docks.geojson (no parcel, no source figure). Piers 38 and 40 themselves sit just north of this project's cached raw-data bounding box edge (src/config.py's BBOX_NORTH=37.7795); the box's south edge sits right at that boundary and it extends only a short distance north/east, so it does not claim to trace the two piers' real combined footprint.",
+    "digitized_from": "No Assessor block/lot exists for this Port pier facility (confirmed: DataSF's 'Parcels - Active and Retired' Socrata dataset, acdm-wktn, has no PIER-numbered street_name entries). No Port GIS shapefile or site-plan figure was available, so this is a coarse locational box anchored to Pier 40's own real, addressed location (89 King St), placed just east of the real DataSF street-centerline cutoff for King St's own address range at this project's cached bounding box edge (data/raw/official_street_centerlines.geojson).",
+    "why_no_real_parcel": "Port pier facility; not on the Assessor's secured roll (data.sf.gov acdm-wktn has no PIER-numbered parcels near this site).",
+    "regulatory_context": "Developer: San Francisco Waterfront Partners III, LLC (SFWP), an affiliate of Pacific Waterfront Partners (PWP). Original Exclusive Negotiating Agreement: Port Commission Resolution 21-10 (2021-02-23), expired 2023-03-15 for missed performance dates. PWP separately owed the Port over $980,000 in back rent on three unrelated leases (Pier 28, two Agriculture Building suites), unpaid since it vacated them 2024-01-31. On 2026-04-28 the Port Commission adopted a Settlement Agreement (Resolution 26-21: PWP to pay $720,000 over 3 years, with the remainder of the debt forgiven on compliance) and an Amended and Restated ENA (Resolution 26-22: a 12-month 'Evaluation Period' to explore value engineering, project phasing and a new financial partner, with a new Schedule of Performance due before the period ends around April 2027). No lease, term sheet or CEQA review is in place as of this record's own last_verified date."
+   }
+  },
+  "centroid": {
+   "lon": -122.38944,
+   "lat": 37.77968
+  },
+  "facts": [
+   {
+    "key": "developer",
+    "value": "San Francisco Waterfront Partners III, LLC (SFWP), an affiliate of Pacific Waterfront Partners (PWP)",
+    "sources": [
+     "src-sfport-item9b-2026-04"
+    ]
+   },
+   {
+    "key": "prior_scope_estimate",
+    "value": "As last formally endorsed (2022, never executed): approximately 215,000 sq ft office, up to 20,000 sq ft retail, approximately 130,000 sq ft public access/open space; cost estimate approximately $528-536 million, up from an original approximately $383 million 2020 proposal. Explicitly under review (\"value engineering\", \"scope reduction\") under the 2026 Amended ENA and not current.",
+    "sources": [
+     "src-realdeal-2022-07",
+     "src-sfchronicle-2020-07"
+    ]
+   }
+  ],
+  "costs": [],
+  "milestones": [
+   {
+    "date": "2021-02-23",
+    "date_label": "Feb 23, 2021",
+    "status": null,
+    "status_label": null,
+    "text": "Port Commission Resolution 21-10 authorizes an Exclusive Negotiating Agreement (dated 2021-03-12) with San Francisco Waterfront Partners III, LLC.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfport-item9b-2026-04",
+      "title": "Amended and Restated ENA and Related Settlement Agreements, Piers 38 and 40 (Calendar Item 9B)",
+      "publisher": "Port of San Francisco / Port Commission",
+      "date": "2026-04-28",
+      "url": "https://www.sfport.com/sites/default/files/2026-04/item_9b_piers_38_and_40_amended_ena_and_related_settlement_agreements.docx.pdf",
+      "accessed": "2026-09-28",
+      "overview": true
+     }
+    ],
+    "source": "Port of San Francisco / Port Commission, 2026-04-28",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "piers_38_40",
+     "slug": "piers-38-and-40",
+     "name": "Piers 38 & 40",
+     "permalink": "https://pierandpoint.org/parcels/piers-38-and-40/",
+     "api": "https://pierandpoint.org/api/v1/records/piers-38-and-40.json"
+    },
+    "site": {
+     "slug": "mission-rock",
+     "name": "Mission Rock",
+     "short": "Mission Rock",
+     "url": "https://pierandpoint.org/sites/mission-rock/"
+    },
+    "relation": "adjacent"
+   },
+   {
+    "date": "2022-07-12",
+    "date_label": "Jul 12, 2022",
+    "status": null,
+    "status_label": null,
+    "text": "Port Commission Resolution 22-36 endorses a Term Sheet (never executed) describing the project's then-scope: visitor-serving restaurant/retail, maritime uses including South Beach Harbor expansion and youth sailing, retained Pier 40 marina tenants, public access/open space, and revenue-generating office space.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfport-item9b-2026-04",
+      "title": "Amended and Restated ENA and Related Settlement Agreements, Piers 38 and 40 (Calendar Item 9B)",
+      "publisher": "Port of San Francisco / Port Commission",
+      "date": "2026-04-28",
+      "url": "https://www.sfport.com/sites/default/files/2026-04/item_9b_piers_38_and_40_amended_ena_and_related_settlement_agreements.docx.pdf",
+      "accessed": "2026-09-28",
+      "overview": true
+     },
+     {
+      "id": "src-realdeal-2022-07",
+      "title": "Estimate On Revamp SF Piers 38 And 40 Swells To $528M",
+      "publisher": "The Real Deal",
+      "date": "2022-07-14",
+      "url": "https://therealdeal.com/san-francisco/2022/07/14/cost-to-revamp-sf-piers-38-and-40-swells-to-528m/",
+      "accessed": "2026-09-28"
+     }
+    ],
+    "source": "Port of San Francisco / Port Commission, 2026-04-28; The Real Deal, 2022-07-14",
+    "origin": "record",
+    "category": "retail",
+    "category_label": "Retail",
+    "record": {
+     "id": "piers_38_40",
+     "slug": "piers-38-and-40",
+     "name": "Piers 38 & 40",
+     "permalink": "https://pierandpoint.org/parcels/piers-38-and-40/",
+     "api": "https://pierandpoint.org/api/v1/records/piers-38-and-40.json"
+    },
+    "site": {
+     "slug": "mission-rock",
+     "name": "Mission Rock",
+     "short": "Mission Rock",
+     "url": "https://pierandpoint.org/sites/mission-rock/"
+    },
+    "relation": "adjacent"
+   },
+   {
+    "date": "2023-03-15",
+    "date_label": "Mar 15, 2023",
+    "status": null,
+    "status_label": null,
+    "text": "The original Exclusive Negotiating Agreement expires; the developer is out of compliance with its own performance dates.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfport-item9b-2026-04",
+      "title": "Amended and Restated ENA and Related Settlement Agreements, Piers 38 and 40 (Calendar Item 9B)",
+      "publisher": "Port of San Francisco / Port Commission",
+      "date": "2026-04-28",
+      "url": "https://www.sfport.com/sites/default/files/2026-04/item_9b_piers_38_and_40_amended_ena_and_related_settlement_agreements.docx.pdf",
+      "accessed": "2026-09-28",
+      "overview": true
+     }
+    ],
+    "source": "Port of San Francisco / Port Commission, 2026-04-28",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "piers_38_40",
+     "slug": "piers-38-and-40",
+     "name": "Piers 38 & 40",
+     "permalink": "https://pierandpoint.org/parcels/piers-38-and-40/",
+     "api": "https://pierandpoint.org/api/v1/records/piers-38-and-40.json"
+    },
+    "site": {
+     "slug": "mission-rock",
+     "name": "Mission Rock",
+     "short": "Mission Rock",
+     "url": "https://pierandpoint.org/sites/mission-rock/"
+    },
+    "relation": "adjacent"
+   },
+   {
+    "date": "2024-01-31",
+    "date_label": "Jan 31, 2024",
+    "status": null,
+    "status_label": null,
+    "text": "Pacific Waterfront Partners (SFWP's affiliate) vacates three unrelated Port leases (Pier 28 and two Agriculture Building suites), leaving over $980,000 in back rent unpaid.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfport-item9b-2026-04",
+      "title": "Amended and Restated ENA and Related Settlement Agreements, Piers 38 and 40 (Calendar Item 9B)",
+      "publisher": "Port of San Francisco / Port Commission",
+      "date": "2026-04-28",
+      "url": "https://www.sfport.com/sites/default/files/2026-04/item_9b_piers_38_and_40_amended_ena_and_related_settlement_agreements.docx.pdf",
+      "accessed": "2026-09-28",
+      "overview": true
+     }
+    ],
+    "source": "Port of San Francisco / Port Commission, 2026-04-28",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "piers_38_40",
+     "slug": "piers-38-and-40",
+     "name": "Piers 38 & 40",
+     "permalink": "https://pierandpoint.org/parcels/piers-38-and-40/",
+     "api": "https://pierandpoint.org/api/v1/records/piers-38-and-40.json"
+    },
+    "site": {
+     "slug": "mission-rock",
+     "name": "Mission Rock",
+     "short": "Mission Rock",
+     "url": "https://pierandpoint.org/sites/mission-rock/"
+    },
+    "relation": "adjacent"
+   },
+   {
+    "date": "2026-04-28",
+    "date_label": "Apr 28, 2026",
+    "status": null,
+    "status_label": null,
+    "text": "Port Commission adopts a Settlement Agreement (Resolution 26-21: Pacific Waterfront Partners to pay $720,000 over 3 years, with the remaining debt forgiven on compliance) and an Amended and Restated ENA (Resolution 26-22: a 12-month \"Evaluation Period\" for the developer to pursue value engineering, project phasing and a new financial partner, with a new Schedule of Performance due before the period ends around April 2027).",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfport-item9b-2026-04",
+      "title": "Amended and Restated ENA and Related Settlement Agreements, Piers 38 and 40 (Calendar Item 9B)",
+      "publisher": "Port of San Francisco / Port Commission",
+      "date": "2026-04-28",
+      "url": "https://www.sfport.com/sites/default/files/2026-04/item_9b_piers_38_and_40_amended_ena_and_related_settlement_agreements.docx.pdf",
+      "accessed": "2026-09-28",
+      "overview": true
+     }
+    ],
+    "source": "Port of San Francisco / Port Commission, 2026-04-28",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "piers_38_40",
+     "slug": "piers-38-and-40",
+     "name": "Piers 38 & 40",
+     "permalink": "https://pierandpoint.org/parcels/piers-38-and-40/",
+     "api": "https://pierandpoint.org/api/v1/records/piers-38-and-40.json"
+    },
+    "site": {
+     "slug": "mission-rock",
+     "name": "Mission Rock",
+     "short": "Mission Rock",
+     "url": "https://pierandpoint.org/sites/mission-rock/"
+    },
+    "relation": "adjacent"
+   },
+   {
+    "date": "2026-08-12",
+    "date_label": "Aug 12, 2026",
+    "status": null,
+    "status_label": null,
+    "text": "A marketing listing (\"Pacific Cornerstone\") offers up to approximately 279,876 sq ft of Piers 38 & 40 for long-term lease to credit tenants, positioning occupancy for late 2029 -- parallel tenant-marketing activity alongside the Port's own Evaluation Period, not a confirmed lease or Port-approved deal.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-registrysf-2026-08",
+      "title": "Pacific Cornerstone Brings 280,000 SQFT Piers 38 & 40 Waterfront Redevelopment to Market for Long-Term Lease in San Francisco",
+      "publisher": "The Registry SF",
+      "date": "2026-08-12",
+      "url": "https://news.theregistrysf.com/pacific-cornerstone-brings-280000-sqft-piers-38-40-waterfront-redevelopment-to-market-for-long-term-lease-in-san-francisco/",
+      "accessed": "2026-09-28"
+     }
+    ],
+    "source": "The Registry SF, 2026-08-12",
+    "origin": "record",
+    "category": "retail",
+    "category_label": "Retail",
+    "record": {
+     "id": "piers_38_40",
+     "slug": "piers-38-and-40",
+     "name": "Piers 38 & 40",
+     "permalink": "https://pierandpoint.org/parcels/piers-38-and-40/",
+     "api": "https://pierandpoint.org/api/v1/records/piers-38-and-40.json"
+    },
+    "site": {
+     "slug": "mission-rock",
+     "name": "Mission Rock",
+     "short": "Mission Rock",
+     "url": "https://pierandpoint.org/sites/mission-rock/"
+    },
+    "relation": "adjacent"
+   }
+  ],
+  "changes": [
+   {
+    "date": "2026-09-28",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "New adjacent record for Piers 38 & 40, whose original 2021 Exclusive Negotiating Agreement lapsed in 2023; the Port Commission settled a related back-rent dispute and adopted an Amended and Restated ENA with a 12-month evaluation period in April 2026.",
+    "source": "docs/briefs/adjacent-proposals.md",
+    "sources": [
+     {
+      "title": "docs/briefs/adjacent-proposals.md"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "piers_38_40",
+     "slug": "piers-38-and-40",
+     "name": "Piers 38 & 40",
+     "permalink": "https://pierandpoint.org/parcels/piers-38-and-40/",
+     "api": "https://pierandpoint.org/api/v1/records/piers-38-and-40.json"
+    },
+    "site": {
+     "slug": "mission-rock",
+     "name": "Mission Rock",
+     "short": "Mission Rock",
+     "url": "https://pierandpoint.org/sites/mission-rock/"
+    },
+    "relation": "adjacent",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
+  "images": [],
+  "open_questions": [
+   "No Port Commission agenda item after 2026-04-28 was found; the 12-month Evaluation Period runs to approximately April 2027 with an interim Schedule of Performance due before then -- worth a periodic re-check rather than treating April 2026 as the final word.",
+   "No current, authoritative square footage or cost figure exists for the project as of this record's last_verified date: the 2022 estimates are explicitly being re-evaluated under the 2026 Amended ENA.",
+   "No public official's or community/maritime-advocacy group's position on the 2026 Amended ENA or settlement specifically has been found and sourced (all community-input coverage found dates to the 2020 RFP era).",
+   "Given the project's history of default and its ongoing, unresolved Evaluation Period, its ultimate outcome is genuinely uncertain -- this record treats it as an active but fragile project worth continued tracking, not a settled one."
+  ],
+  "sources": [
+   {
+    "id": "src-sfport-item9b-2026-04",
+    "title": "Amended and Restated ENA and Related Settlement Agreements, Piers 38 and 40 (Calendar Item 9B)",
+    "publisher": "Port of San Francisco / Port Commission",
+    "date": "2026-04-28",
+    "url": "https://www.sfport.com/sites/default/files/2026-04/item_9b_piers_38_and_40_amended_ena_and_related_settlement_agreements.docx.pdf",
+    "accessed": "2026-09-28",
+    "overview": true
+   },
+   {
+    "id": "src-realdeal-2022-07",
+    "title": "Estimate On Revamp SF Piers 38 And 40 Swells To $528M",
+    "publisher": "The Real Deal",
+    "date": "2022-07-14",
+    "url": "https://therealdeal.com/san-francisco/2022/07/14/cost-to-revamp-sf-piers-38-and-40-swells-to-528m/",
+    "accessed": "2026-09-28"
+   },
+   {
+    "id": "src-sfchronicle-2020-07",
+    "title": "SF pier development",
+    "publisher": "San Francisco Chronicle",
+    "date": "2020-07-16",
+    "url": "https://www.sfchronicle.com/realestate/article/sf-pier-development-17213785.php",
+    "accessed": "2026-09-28"
+   },
+   {
+    "id": "src-registrysf-2026-08",
+    "title": "Pacific Cornerstone Brings 280,000 SQFT Piers 38 & 40 Waterfront Redevelopment to Market for Long-Term Lease in San Francisco",
+    "publisher": "The Registry SF",
+    "date": "2026-08-12",
+    "url": "https://news.theregistrysf.com/pacific-cornerstone-brings-280000-sqft-piers-38-40-waterfront-redevelopment-to-market-for-long-term-lease-in-san-francisco/",
+    "accessed": "2026-09-28"
+   },
+   {
+    "id": null,
+    "title": "sfport.com/projects-programs/south-beach-piers-38-40",
+    "url": "https://www.sfport.com/projects-programs/south-beach-piers-38-40"
+   }
+  ],
+  "notes": "The 2022 scope estimate (~215,000 sq ft office, up to 20,000 sq ft retail, ~$528-536M cost) is explicitly under review ('value engineering', 'scope reduction') per the April 2026 Amended ENA and is not treated as current. Separately, an August 2026 marketing listing ('Pacific Cornerstone') offers up to ~279,876 sq ft of the piers for long-term lease to credit tenants, positioning occupancy for late 2029 -- parallel tenant-marketing activity alongside the Port's own Evaluation Period, not a confirmed deal.",
+  "has_record_file": true,
+  "last_verified": "2026-09-28",
+  "tenants": [],
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.39,
+      37.7792
+     ],
+     [
+      -122.39,
+      37.7804
+     ],
+     [
+      -122.3886,
+      37.7804
+     ],
+     [
+      -122.3886,
+      37.7792
+     ],
+     [
+      -122.39,
+      37.7792
+     ]
+    ]
+   ]
+  }
+ }
+}

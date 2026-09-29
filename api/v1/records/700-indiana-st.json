@@ -1,0 +1,310 @@
+{
+ "api_version": "0",
+ "generated": "2026-09-29",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "700_indiana_st",
+  "slug": "700-indiana-st",
+  "name": "700 Indiana St",
+  "permalink": "https://pierandpoint.org/parcels/700-indiana-st/",
+  "api": "https://pierandpoint.org/api/v1/records/700-indiana-st.json",
+  "names": [
+   "700 Indiana Street",
+   "MBC BioLabs at 700 Indiana"
+  ],
+  "site": {
+   "slug": "pier-70",
+   "name": "Pier 70",
+   "short": "Pier 70",
+   "url": "https://pierandpoint.org/sites/pier-70/"
+  },
+  "status": "planned",
+  "status_label": "Planned",
+  "use": "commercial",
+  "relation": "adjacent",
+  "adjacent_to": "pier-70",
+  "distance_note": "About 470m from the tracked Pier 70 D4D parcel's own boundary (versus about 665m from Potrero Power Station's tracked boundary) -- Dogpatch, between 19th and 20th St near Indiana St/I-280.",
+  "how_to_comment": [
+   {
+    "channel": "SF Planning Property Information Map",
+    "detail": "Case No. 2023-001074ENX",
+    "url": "https://sfplanninggis.org/pim/"
+   },
+   {
+    "channel": "Clerk of the Board of Supervisors",
+    "detail": "District 10 (Supervisor Shamann Walton)",
+    "url": "https://sfbos.org/clerk-board"
+   }
+  ],
+  "positions": [],
+  "address": null,
+  "summary": "A proposed 3-story-plus-basement lab/office building at 700 Indiana St in Dogpatch, replacing an existing one-story building, for tenant MBC BioLabs. SF Planning Commission approved the project in June 2024; a neighborhood appeal of its CEQA exemption was rejected by the Board of Supervisors in September 2024, clearing it to proceed. No building permit had been issued as of September 2026.",
+  "summary_sources": [
+   "src-ceqanet-700indiana",
+   "src-citizenportal-boslupheld"
+  ],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "REAL Assessor parcel geometry (not approximate).",
+    "digitized_from": "The real DataSF Assessor parcel for blklot 4062007 (700 Indiana St, Dogpatch), fetched directly from the local data/raw/parcels.geojson cache (already within this project's bounding box) on 2026-09-28. The polygon itself is the real, unmodified Assessor shape.",
+    "regulatory_context": "SF Planning Case No. 2023-001074ENX. Planning Commission approved the project 2024-06-13 (Motion No. 21576): a 3-story-plus-basement, ~70,650-72,350 gross sq ft lab/office building (sources give slightly different figures) replacing an existing ~15,068 sq ft one-story building, for MBC BioLabs. A neighborhood appeal of the CEQA general plan evaluation exemption was rejected by the Board of Supervisors 9-1 on 2024-09-24 (Supervisor Walton dissenting), clearing the project to proceed. No DataSF building permit found as of 2026-09-28, so construction has apparently not yet started."
+   }
+  },
+  "centroid": {
+   "lon": -122.391784,
+   "lat": 37.761048
+  },
+  "facts": [
+   {
+    "key": "developer",
+    "value": "Dewey Land Company (purchased the site in 2022 for $15,000,000)",
+    "sources": [
+     "src-sfyimby-700indiana"
+    ]
+   },
+   {
+    "key": "architect",
+    "value": "MBH Architects",
+    "sources": [
+     "src-sfyimby-700indiana"
+    ]
+   },
+   {
+    "key": "tenant",
+    "value": "MBC BioLabs (expanding from its flagship campus at 953 Indiana St)",
+    "sources": [
+     "src-sfyimby-700indiana"
+    ]
+   },
+   {
+    "key": "gross_sqft",
+    "value": "Reported as approximately 70,650 sq ft (Planning Commission motion language) or 72,349-72,350 sq ft (CEQA Notice of Exemption and a Feb 2025 news report) -- sources disagree by about 1,700 sq ft; both figures kept rather than picking one. Replaces an existing approximately 15,068 sq ft one-story building on a 0.71-acre (31,090 sq ft) lot.",
+    "sources": [
+     "src-ceqanet-700indiana",
+     "src-sfyimby-700indiana"
+    ]
+   },
+   {
+    "key": "height_ft",
+    "value": "Reported as either 48 ft (north) / 33 ft (south) per the CEQA filing, or a 54 ft height cap per a Feb 2025 news report -- discrepancy not resolved here.",
+    "sources": [
+     "src-ceqanet-700indiana",
+     "src-sfyimby-700indiana"
+    ]
+   },
+   {
+    "key": "blklot",
+    "value": "4062007",
+    "sources": [
+     "src-datasf-parcels-2026-09-28"
+    ]
+   }
+  ],
+  "costs": [
+   {
+    "amount_usd": 40000000,
+    "what": "Estimated construction cost, per secondary reporting -- not independently confirmed against a primary Planning or permit document",
+    "date": "2025",
+    "approximate": true,
+    "kind": "construction",
+    "scope": "record",
+    "sources": [
+     "src-sfyimby-700indiana"
+    ]
+   }
+  ],
+  "milestones": [
+   {
+    "date": "2024-06-13",
+    "date_label": "Jun 13, 2024",
+    "status": null,
+    "status_label": null,
+    "text": "SF Planning Commission approves the project (Case No. 2023-001074ENX, Motion No. 21576).",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ceqanet-700indiana",
+      "title": "700 Indiana Street Project, Notice of Exemption",
+      "publisher": "City and County of San Francisco, via California CEQAnet Web Portal",
+      "url": "https://ceqanet.lci.ca.gov/2025010779",
+      "accessed": "2026-09-28",
+      "overview": true
+     }
+    ],
+    "source": "City and County of San Francisco, via California CEQAnet Web Portal",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "700_indiana_st",
+     "slug": "700-indiana-st",
+     "name": "700 Indiana St",
+     "permalink": "https://pierandpoint.org/parcels/700-indiana-st/",
+     "api": "https://pierandpoint.org/api/v1/records/700-indiana-st.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "adjacent"
+   },
+   {
+    "date": "2024-09-24",
+    "date_label": "Sep 24, 2024",
+    "status": null,
+    "status_label": null,
+    "text": "SF Board of Supervisors votes 9-1 to uphold the Planning Department's CEQA general plan evaluation exemption, rejecting a neighborhood appeal (Appeal No. 24-040); Supervisor Walton (District 10) cast the dissenting vote.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ceqanet-700indiana",
+      "title": "700 Indiana Street Project, Notice of Exemption",
+      "publisher": "City and County of San Francisco, via California CEQAnet Web Portal",
+      "url": "https://ceqanet.lci.ca.gov/2025010779",
+      "accessed": "2026-09-28",
+      "overview": true
+     },
+     {
+      "id": "src-citizenportal-boslupheld",
+      "title": "Board upholds Planning Department's General Plan Evaluation for proposed Dogpatch biotech lab after heated CEQA appeal",
+      "publisher": "Citizen Portal",
+      "date": "2024-09-24",
+      "url": "https://citizenportal.ai/articles/6596036/california/san-francisco-county/board-upholds-planning-departments-general-plan-evaluation-for-proposed-dogpatch-biotech-lab-after-heated-ceqa-appeal",
+      "accessed": "2026-09-28"
+     }
+    ],
+    "source": "City and County of San Francisco, via California CEQAnet Web Portal; Citizen Portal, 2024-09-24",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "700_indiana_st",
+     "slug": "700-indiana-st",
+     "name": "700 Indiana St",
+     "permalink": "https://pierandpoint.org/parcels/700-indiana-st/",
+     "api": "https://pierandpoint.org/api/v1/records/700-indiana-st.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "adjacent"
+   }
+  ],
+  "changes": [
+   {
+    "date": "2026-09-28",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "New adjacent record for 700 Indiana St, a proposed lab/office building for MBC BioLabs approved by the Planning Commission in June 2024, with a neighborhood CEQA appeal rejected by the Board of Supervisors in September 2024.",
+    "source": "docs/briefs/adjacent-proposals.md",
+    "sources": [
+     {
+      "title": "docs/briefs/adjacent-proposals.md"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "700_indiana_st",
+     "slug": "700-indiana-st",
+     "name": "700 Indiana St",
+     "permalink": "https://pierandpoint.org/parcels/700-indiana-st/",
+     "api": "https://pierandpoint.org/api/v1/records/700-indiana-st.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "adjacent",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
+  "images": [],
+  "open_questions": [
+   "Two different named appeal bodies appear in sources on this project: the Board of Supervisors (which heard and rejected the CEQA exemption appeal, resolved 2024-09-24, the event recorded above) and a separate Board of Appeals item (Appeal No. 24-040, continued to a Nov 13, 2024 hearing) whose subject and outcome could not be confirmed in this pass -- not established here whether it is the same matter under a different docket or a genuinely separate appeal.",
+   "No construction start date or building permit has been found as of 2026-09-28; status is recorded as planned rather than under_construction pending better evidence.",
+   "The gross square footage and height figures differ between the CEQA filing and a Feb 2025 news report; both are kept in facts rather than resolved to one number.",
+   "The $40,000,000 estimated construction cost is from secondary reporting only, not independently confirmed against a primary Planning or permit document."
+  ],
+  "sources": [
+   {
+    "id": "src-ceqanet-700indiana",
+    "title": "700 Indiana Street Project, Notice of Exemption",
+    "publisher": "City and County of San Francisco, via California CEQAnet Web Portal",
+    "url": "https://ceqanet.lci.ca.gov/2025010779",
+    "accessed": "2026-09-28",
+    "overview": true
+   },
+   {
+    "id": "src-citizenportal-boslupheld",
+    "title": "Board upholds Planning Department's General Plan Evaluation for proposed Dogpatch biotech lab after heated CEQA appeal",
+    "publisher": "Citizen Portal",
+    "date": "2024-09-24",
+    "url": "https://citizenportal.ai/articles/6596036/california/san-francisco-county/board-upholds-planning-departments-general-plan-evaluation-for-proposed-dogpatch-biotech-lab-after-heated-ceqa-appeal",
+    "accessed": "2026-09-28"
+   },
+   {
+    "id": "src-sfyimby-700indiana",
+    "title": "Environmental Streamlining for 700 Indiana Street in Dogpatch, San Francisco",
+    "publisher": "San Francisco YIMBY",
+    "date": "2025-02-02",
+    "url": "https://sfyimby.com/2025/02/environmental-streamlining-for-700-indiana-street-in-dogpatch-san-francisco.html",
+    "accessed": "2026-09-28"
+   },
+   {
+    "id": "src-datasf-parcels-2026-09-28",
+    "title": "Parcels - Active and Retired (blklot 4062007, 700 Indiana St)",
+    "publisher": "DataSF / SF Office of the Assessor-Recorder",
+    "url": "https://data.sf.gov/resource/acdm-wktn.json",
+    "accessed": "2026-09-28"
+   }
+  ],
+  "notes": "Developer: Dewey Land Company (purchased the site 2022 for $15M). End tenant: MBC BioLabs. Architect: MBH Architects.",
+  "has_record_file": true,
+  "last_verified": "2026-09-28",
+  "tenants": [],
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.391931376,
+      37.761479797
+     ],
+     [
+      -122.391666861,
+      37.761495753
+     ],
+     [
+      -122.391560716,
+      37.760401671
+     ],
+     [
+      -122.391830196,
+      37.760385415
+     ],
+     [
+      -122.391931376,
+      37.761479797
+     ]
+    ]
+   ]
+  }
+ }
+}
