@@ -70,6 +70,12 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 /* maps */
 .pp-map { display: block; width: 100%; height: auto; background: var(--ink-3); }
 .pp-map .rec { cursor: pointer; }
+/* An outline-mode shape (pages.py's record_shape(): a nearby project's dashed purple boundary, or
+   a tracked record grouping several buildings under one Assessor lot) renders with fill="none",
+   which by SVG default only registers a click on the stroke itself -- a 1-2px line -- leaving the
+   whole visible interior, where cursor:pointer above tells a visitor to click, dead. pointer-events
+   widens the hit area back to the full shape regardless of what's actually painted. */
+.pp-map .rec[data-mode="outline"] { pointer-events: all; }
 .pp-map a:hover .rec, .pp-map a:focus .rec { filter: brightness(1.35); }
 .map-frame { position: relative; border-radius: 12px; overflow: hidden; border: 1px solid #24343c; background: var(--ink-3); }
 .pp-map.pp-zoomable { cursor: grab; touch-action: none; }
