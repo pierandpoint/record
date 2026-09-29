@@ -1,0 +1,38 @@
+/* @font-face rules for the site's four self-hosted typefaces (docs/launch.md, "Self-host
+   the fonts"). The .woff2 files this points at are generated once from sitegen/fonts/*.ttf
+   by src/convert_fonts_to_woff2.py and copied verbatim into /assets/fonts/ by sitegen/build.py;
+   see sitegen/fonts/README.md. Licensed under the SIL Open Font License 1.1, published next to
+   the font files themselves at /assets/fonts/OFL.txt. Family names here match the --serif/
+   --sans/--mono variables in site.css, which this file never touches. */
+
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/PublicSans-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/assets/fonts/PublicSans-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/assets/fonts/IBMPlexMono-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/assets/fonts/SourceSerif4-Medium.woff2') format('woff2');
+}
