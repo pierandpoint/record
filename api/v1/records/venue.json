@@ -32,7 +32,8 @@
   "summary": "Venue is a 147-149 unit apartment building at 1155 4th St, managed by Sares Regis Management; DataSF Assessor records and a RentCafe listing both give 2014 as the building's construction-completion year.",
   "summary_sources": [
    "src-datasf-assessor-venue",
-   "src-rentcafe-venue"
+   "src-rentcafe-venue",
+   "src-datasf-permit-venue"
   ],
   "shape": {
    "kind": "approximate",
@@ -40,7 +41,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8711025), cross-referenced by position against an OpenStreetMap building/address point (way 255652150) for the name and street address; not a hand trace or plan estimate. The real, notable Edwin M. Lee Apartments (124,000 sq ft supportive-housing building for veterans and low-income families, 1150 3rd St, one block away) was investigated for this pass but its address point sits ~37m from this footprint's edge -- close enough to be the nearest available DataSF footprint, but not confidently its own separate outline in the building-footprint data checked. Left out rather than guessed; a future pass should re-check with a dedicated satellite/plan comparison.",
+    "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8711025), cross-referenced by position against an OpenStreetMap building/address point (way 255652150) for the name and street address; not a hand trace or plan estimate. The real, notable Edwin M. Lee Apartments (per SF YIMBY, May 2021: 118 units, about 123,700 sq ft, 62 units for formerly unhoused veterans and 56 for families, at 1150 3rd St, one block away) was investigated for this pass but its address point sits ~37m (our own measurement) from this footprint's edge -- close enough to be the nearest available DataSF footprint, but not confidently its own separate outline in the building-footprint data checked. Left out rather than guessed; a future pass should re-check with a dedicated satellite/plan comparison.",
     "digitized_from": "DataSF Building Footprints (mblr SF8711025); name/address from OpenStreetMap way 255652150 (1155 4th St)"
    }
   },
@@ -133,10 +134,39 @@
   ],
   "changes": [
    {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The nearby Edwin M. Lee Apartments note now cites SF YIMBY (118 units, about 123,700 sq ft) in place of an unsourced 124,000 sq ft figure. The aerial photo credits were corrected: the NAIP credit names the Farm Production and Conservation Business Center, and the Commons photo no longer says it was taken from a departing flight. The Joe & The Juice row now says the tenant's page names only the address, not the Venue building. The RentCafe-based manager and unit-mix statements are marked as not re-confirmed because that page returns 403.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_venue",
+     "slug": "venue",
+     "name": "Venue",
+     "permalink": "https://pierandpoint.org/parcels/venue/",
+     "api": "https://pierandpoint.org/api/v1/records/venue.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-22",
     "kind": "added",
     "kind_label": "Added",
-    "text": "Joe & The Juice operates a juice and coffee bar at 1155 4th St, the ground floor of the Venue apartment building. No opening date found; confirmed via Joe & The Juice's own location page.",
+    "text": "Joe & The Juice's own location page lists a cafe at 1155 4th Street (juice, sandwiches and coffee). The page does not name the Venue building; we match the address to the ground floor of the Venue apartment building at 1155 4th St (OSM and DBI records). No opening date found.",
     "source": "https://content.joejuice.com/locations/1155-4th-street",
     "sources": [
      {
@@ -168,11 +198,11 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-05-20",
-    "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+    "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
     "license": "public-domain",
     "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
     "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
-    "license_note": "USDA's data.gov catalog record for NAIP imagery sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0); the USDA FSA policies page says public-domain information may be freely distributed with credit requested ('U.S. Department of Agriculture, Farm Service Agency'). Read 2026-09-22.",
+    "license_note": "USDA's data.gov catalog record for NAIP imagery (published by the Farm Production and Conservation Business Center) sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0). Read 2026-09-22; publisher name re-read 2026-09-29.",
     "caption": "USDA NAIP aerial orthophoto (2024 flight), cropped to the Mission Bay project area and its immediate surroundings",
     "aerial": true,
     "focus": [
@@ -190,12 +220,12 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-02-10",
-    "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+    "credit": "Firstcultural (Alfred Twu, per the photographer's Wikimedia Commons user page), via Wikimedia Commons; CC0; downscaled to 1600 px",
     "license": "cc0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by the author Firstcultural; the author's Commons user page (https://commons.wikimedia.org/wiki/User:Firstcultural) gives the name Alfred Twu. File page read 2026-09-23, user page read 2026-09-29.",
+    "caption": "Aerial photo of San Francisco's Mission Bay, ballpark, and Caltrain area",
     "aerial": true,
     "focus": [
      0.35,
@@ -211,7 +241,8 @@
   "open_questions": [
    "Some apartment-listing aggregator summaries give 2015 rather than 2014 for this building's construction year; DataSF Assessor records and RentCafe's own 'Building constructed in 2014' listing text were preferred and used here. Precise month of completion is not sourced.",
    "Developer/architect not confirmed from any source checked in this pass.",
-   "No opening date found for Joe & The Juice (1155 4th St): checked its own location page for a firm date; retail_confirmed.csv's own opened field is also blank."
+   "No opening date found for Joe & The Juice (1155 4th St): checked its own location page for a firm date; retail_confirmed.csv's own opened field is also blank.",
+   "RentCafe (venue-0 listing) returned 403 on 2026-09-29, so the Sares Regis Management attribution, the unit mix and RentCafe's 'Building constructed in 2014' text could not be re-read; the 2014 year is independently supported by the Assessor roll and the DBI permit completed 2014-10-01."
   ],
   "sources": [
    {
@@ -248,11 +279,16 @@
     "id": null,
     "title": "openstreetmap.org/way/255652150",
     "url": "https://www.openstreetmap.org/way/255652150"
+   },
+   {
+    "id": null,
+    "title": "sfyimby.com/2021/05/new-affordable-housing-reaches-completion-at-1150-3rd-street-mission-bay-san-francisco.html",
+    "url": "https://sfyimby.com/2021/05/new-affordable-housing-reaches-completion-at-1150-3rd-street-mission-bay-san-francisco.html"
    }
   ],
-  "notes": "The real, notable Edwin M. Lee Apartments (124,000 sq ft supportive-housing building for veterans and low-income families, 1150 3rd St, one block away) was investigated for this pass but its address point sits ~37m from this footprint's edge -- close enough to be the nearest available DataSF footprint, but not confidently its own separate outline in the building-footprint data checked. Left out rather than guessed; a future pass should re-check with a dedicated satellite/plan comparison.",
+  "notes": "The real, notable Edwin M. Lee Apartments (per SF YIMBY, May 2021: 118 units, about 123,700 sq ft, 62 units for formerly unhoused veterans and 56 for families, at 1150 3rd St, one block away) was investigated for this pass but its address point sits ~37m (our own measurement) from this footprint's edge -- close enough to be the nearest available DataSF footprint, but not confidently its own separate outline in the building-footprint data checked. Left out rather than guessed; a future pass should re-check with a dedicated satellite/plan comparison.",
   "has_record_file": true,
-  "last_verified": "2026-09-21",
+  "last_verified": "2026-09-29",
   "tenants": [
    {
     "slug": "joe-and-the-juice-venue",

@@ -9,12 +9,12 @@
         "status": "complete",
         "use": "commercial",
         "geometry_type": "real",
-        "digitized_from": "DataSF Building Footprints (mblr SF8721032); address confirmed via DataSF Assessor parcel data (blklot 8721032) and real-estate listing sources",
-        "digitization_method": "ADDED 2026-09-19 during a systematic real-city-block coverage audit (block_fit.py's polygonized street blocks, checked for building-footprint area not covered by any tracked record) prompted by the owner questioning apparent map gaps: A ~222,000 sq ft office building at 1401 3rd St, built 2009. Specific tenant not confirmed by any source found in this pass.",
-        "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8721032), address confirmed via DataSF Assessor parcel data (blklot 8721032) and real-estate listing sources; not a hand trace or plan estimate. Building name/tenant not confirmed -- addressed by its street number only, consistent with how this project handles other buildings where no clean primary name was found (e.g. 1500/1700 Owens St).",
+        "digitized_from": "DataSF Building Footprints (mblr SF8721032); address confirmed via DataSF Assessor parcel data (blklot 8721032) and the DataSF Assessor roll (parcel 8721032)",
+        "digitization_method": "ADDED 2026-09-19 during a systematic real-city-block coverage audit (block_fit.py's polygonized street blocks, checked for building-footprint area not covered by any tracked record) prompted by the owner questioning apparent map gaps: A ~222,000 sq ft office building at 1401 3rd St, built 2009. Specific tenant not confirmed by any source found in this pass. 2026-09-29 accuracy audit: the ~222,000 sq ft, 5-story and 2009 built-year figures and the 'commercial' use come from the DataSF Assessor roll (wv5m-vpq2, parcel 8721032: Commercial Office, year_property_built 2009, property_area 222000), not from any listing. The earlier reference to 'real-estate listing sources' was removed: the only listing cited was CBRE's page for 1455 3rd St (a different building, returns 403), which has been dropped from source_doc_urls.",
+        "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8721032), address confirmed via DataSF Assessor parcel data (blklot 8721032) and the DataSF Assessor roll (parcel 8721032); not a hand trace or plan estimate. Building name/tenant not confirmed -- addressed by its street number only, consistent with how this project handles other buildings where no clean primary name was found (e.g. 1500/1700 Owens St).",
         "notes": "Tenant/occupant not identified in this pass; left blank rather than guessed.",
         "source_doc_urls": [
-          "https://www.cbre.com/properties/properties-for-lease/retail/details/US-SMPL-53845/1455-3rd-street-san-francisco-ca-94158"
+          "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8721032"
         ]
       },
       "geometry": {

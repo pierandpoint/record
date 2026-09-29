@@ -4,7 +4,7 @@
     "Chase Center Parking Garage",
     "150 Warriors Way Garage"
   ],
-  "summary": "This 469,726 sq ft, 9-story parking structure at 150 Warriors Way in Mission Bay South was built in 2009, per DataSF Assessor records -- roughly a decade before Chase Center opened next door -- and serves Chase Center and other Mission Bay South uses.",
+  "summary": "This 9-story, 469,726 sq ft parking structure at 150 Warriors Way in Mission Bay South was built in 2009, per DataSF Assessor records.",
   "summary_sources": [
     "src-datasf-8721030"
   ],
@@ -33,13 +33,14 @@
   "costs": [
     {
       "amount_usd": 42950000,
-      "what": "SF Department of Building Inspection permit #200705090778's revised construction-cost valuation for the 7-story, 469,726 sq ft parking garage (the permit's initial filed estimate was $34,000,000)",
+      "what": "SF Department of Building Inspection permit #200705090778's revised construction-cost valuation for the 7-story parking garage (the permit's initial filed estimate was $34,000,000); the Assessor gives the parcel's building area as 469,726 sq ft",
       "date": "2009-10",
       "kind": "construction",
       "scope": "record",
       "approximate": true,
       "sources": [
-        "src-datasf-permit-chase-garage"
+        "src-datasf-permit-chase-garage",
+        "src-datasf-8721030"
       ]
     }
   ],
@@ -50,11 +51,11 @@
       "kind": "now",
       "scope": "site",
       "taken": "2024-05-20",
-      "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+      "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
       "license": "public-domain",
       "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
       "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
-      "license_note": "USDA's data.gov catalog record for NAIP imagery sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0); the USDA FSA policies page says public-domain information may be freely distributed with credit requested ('U.S. Department of Agriculture, Farm Service Agency'). Read 2026-09-22.",
+      "license_note": "USDA's data.gov catalog record for NAIP imagery (published by the Farm Production and Conservation Business Center) sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0). Read 2026-09-22; publisher name re-read 2026-09-29.",
       "caption": "USDA NAIP aerial orthophoto (2024 flight), cropped to the Mission Bay project area and its immediate surroundings",
       "aerial": true,
       "focus": [
@@ -71,12 +72,12 @@
       "kind": "now",
       "scope": "site",
       "taken": "2024-02-10",
-      "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+      "credit": "Firstcultural (Alfred Twu, per the photographer's Wikimedia Commons user page), via Wikimedia Commons; CC0; downscaled to 1600 px",
       "license": "cc0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
       "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-      "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-      "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+      "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by the author Firstcultural; the author's Commons user page (https://commons.wikimedia.org/wiki/User:Firstcultural) gives the name Alfred Twu. File page read 2026-09-23, user page read 2026-09-29.",
+      "caption": "Aerial photo of San Francisco's Mission Bay, ballpark, and Caltrain area",
       "aerial": true,
       "focus": [
         0.35,
@@ -116,7 +117,7 @@
   "open_questions": [
     "Exact month/day of the 2009 completion is not sourced, only the year.",
     "The 2007 permit's own block/lot (block 8721, lot 012) differs from the lot the Assessor now uses for this address (lot 030) and its address is given as 450 South St rather than 150 Warriors Way; the 7-story parking-garage description and 2009-10-23 permit-completion date (matching the Assessor's 2009 year) line up with this parcel, so this is treated as a lot/address renumbering (this session's own permit search elsewhere on this block confirms 450 South St and 150 Warriors Way are used interchangeably for this garage), not a different building.",
-    "This garage's own construction (2009) predates Chase Center itself, which this pass did not independently source an opening date for -- the two are not on the same construction timeline, contrary to the possibility raised in this thread's brief."
+    "Chase Center's own opening date was not independently sourced in this pass, and no cited source states who this garage serves."
   ],
-  "last_verified": "2026-09-21"
+  "last_verified": "2026-09-29"
 }

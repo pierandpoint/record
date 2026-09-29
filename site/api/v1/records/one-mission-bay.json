@@ -39,8 +39,8 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- union of a surveyed OpenStreetMap building footprint and a real DataSF Assessor parcel boundary (blklot 8715007, the site's common-area/master lot), not a hand trace or plan estimate. The underlying Assessor parcel is otherwise condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single per-unit blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can; blklot 8715007 (the master lot) is the exception used here. Real-geometry-without-a-single-owner-parcel pattern already used for several Pier 70 buildings (DataSF Building Footprints) and for Mission Bay's own real park polygons.",
-    "digitized_from": "OpenStreetMap (way 563104192, name=One Mission Bay)"
+    "accuracy_caveat": "REAL -- union of a surveyed OpenStreetMap building footprint and the boundary of blklot 8715007, a RETIRED DataSF parcel (active false; mapped 2014-02-11, dropped 2016-11-16; last Assessor roll 2017, property location 110 Channel St), not a hand trace or plan estimate -- the shape therefore includes a superseded boundary, and whether to keep it is the owner's call. The per-unit condo lots were not identified in the 2026-09 audit (no active lot in DataSF Parcels carries mapblklot 8715007), and no single per-unit blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can; blklot 8715007, a retired parcel, is the exception used here. Real-geometry-without-a-single-owner-parcel pattern already used for several Pier 70 buildings (DataSF Building Footprints) and for Mission Bay's own real park polygons.",
+    "digitized_from": "OpenStreetMap (way 563104192, name=One Mission Bay), unioned with the boundary of retired DataSF parcel blklot 8715007"
    }
   },
   "centroid": {
@@ -51,51 +51,19 @@
   "costs": [],
   "milestones": [
    {
-    "date": "2016-11-30",
-    "date_label": "Nov 30, 2016",
-    "status": "under_construction",
-    "status_label": "Under construction",
-    "text": "One Mission Bay (110 Channel St/1000 3rd St) tops out",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "title": "businesswire.com"
-     }
-    ],
-    "source": "businesswire.com",
-    "origin": "csv",
-    "category": "status",
-    "category_label": "Status",
-    "record": {
-     "id": "mission_bay_one_mission_bay",
-     "slug": "one-mission-bay",
-     "name": "One Mission Bay",
-     "permalink": "https://pierandpoint.org/parcels/one-mission-bay/",
-     "api": "https://pierandpoint.org/api/v1/records/one-mission-bay.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2018-06",
+    "date": "2018",
     "date_label": "~2018",
     "status": "complete",
     "status_label": "Complete",
-    "text": "One Mission Bay (110 Channel St/1000 3rd St) completed",
+    "text": "One Mission Bay (110 Channel St/1000 3rd St) completed (Strada's project page: 'completed in 2018'; no month given)",
     "expected": false,
     "approximate": true,
     "sources": [
      {
-      "title": "stradasf.com"
+      "title": "https://stradasf.com/what-we-do/development/one-mission-bay/"
      }
     ],
-    "source": "stradasf.com",
+    "source": "https://stradasf.com/what-we-do/development/one-mission-bay/",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -115,7 +83,37 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The shape's caveat and log called blklot 8715007 a current common-area/master lot with no address. DataSF Parcels shows it as a retired parcel (mapped 2014-02-11, dropped 2016-11-16) whose last Assessor roll is 2017 with the address 110 Channel St, and no active lot carries it as mapblklot, so the caveat and a dated log entry now say the shape includes a superseded boundary (the geometry was not changed; the owner decides). The log also now says that '13 stories', a '6-story perimeter building', CIM Group as developer and Arquitectonica as architect appear in no cited source (Compass says 16 stories, OSM 17, Strada 'partnered with the buyer'). The shape notes now cite Strada's 350 units and 20,000 sq ft of retail and the Compass pool and concierge, dropping unit sizes and other amenities. The June 2018 completion milestone now reads 2018, and the November 2016 topping-out milestone (bare businesswire.com citation, release unreadable) was removed. digitized_from now mentions the retired-parcel union.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_one_mission_bay",
+     "slug": "one-mission-bay",
+     "name": "One Mission Bay",
+     "permalink": "https://pierandpoint.org/parcels/one-mission-bay/",
+     "api": "https://pierandpoint.org/api/v1/records/one-mission-bay.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/mission_bay/owner_20260923_103438.jpg",
@@ -186,7 +184,7 @@
     "url": "https://www.compass.com/building/one-mission-bay-san-francisco-ca/776843632918628669/"
    }
   ],
-  "notes": "350 condominium units across two connected structures (a high-rise tower plus a lower perimeter building) at 1000 3rd St and 110 Channel St, unit sizes 495-1,528 sq ft per real-estate listings; amenities include a 24-hour doorperson, heated outdoor pool, fitness center, and resident lounge/dining space. A claimed ~50,000 sq ft of ground-floor retail could not be confirmed as specific to this building (see digitization_method) -- not asserted here.",
+  "notes": "350 condominium units across two connected structures (a high-rise tower plus a lower perimeter building) at 1000 3rd St and 110 Channel St; Strada's project page lists 350 units and 20,000 sq ft of ground-floor retail, and the Compass building page lists a pool and concierge (other amenities and the 495-1,528 sq ft unit sizes are not confirmed by any cited page). A claimed ~50,000 sq ft of ground-floor retail could not be confirmed as specific to this building (see digitization_method) -- not asserted here.",
   "has_record_file": true,
   "last_verified": "2026-09-27",
   "tenants": [],

@@ -46,51 +46,19 @@
   "costs": [],
   "milestones": [
    {
-    "date": "2013-12-02",
-    "date_label": "Dec 2, 2013",
-    "status": "planned",
-    "status_label": "Planned",
-    "text": "Kaiser's medical office building at 1600 Owens St scheduled, deal to close Dec 2013 with completion expected late 2015",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "title": "socketsite.com"
-     }
-    ],
-    "source": "socketsite.com",
-    "origin": "csv",
-    "category": "status",
-    "category_label": "Status",
-    "record": {
-     "id": "8709020",
-     "slug": "kaiser-permanente-san-francisco-mission-bay-medical-offices",
-     "name": "Kaiser Permanente San Francisco Mission Bay Medical Offices",
-     "permalink": "https://pierandpoint.org/parcels/kaiser-permanente-san-francisco-mission-bay-medical-offices/",
-     "api": "https://pierandpoint.org/api/v1/records/kaiser-permanente-san-francisco-mission-bay-medical-offices.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    },
-    "relation": "tracked"
-   },
-   {
     "date": "2016-03",
-    "date_label": "Mar 2016",
+    "date_label": "~2016",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Kaiser Permanente Mission Bay Medical Offices opens to patients",
+    "text": "Kaiser Permanente Mission Bay Medical Offices announced to open in March 2016 (Potrero View, Feb 2016); STUDIOS Architecture lists the building as completed 2016",
     "expected": false,
-    "approximate": false,
+    "approximate": true,
     "sources": [
      {
-      "title": "potrerview.net; studios.com"
+      "title": "https://www.potreroview.net/kaiser-permanente-mission-bay-medical-offices-to-open-in-march/; https://studios.com/1600-owens-kaiser-medical-office-building.html"
      }
     ],
-    "source": "potrerview.net; studios.com",
+    "source": "https://www.potreroview.net/kaiser-permanente-mission-bay-medical-offices-to-open-in-march/; https://studios.com/1600-owens-kaiser-medical-office-building.html",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -112,10 +80,39 @@
   ],
   "changes": [
    {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The record said Kaiser bought the building outright from Alexandria for a stated price in a sale that closed Dec 20, 2013, per Alexandria's SEC filing. That filing never mentions Kaiser, 1600 Owens or a sale, and the price had printed as broken text, so the sale date, price and seller are removed; STUDIOS Architecture says only that Kaiser purchased the project. The March 2016 opening now reads as announced (Potrero View, February 2016: opens next month) rather than confirmed, alongside STUDIOS' completed-2016. Potrero View says nine stories, like STUDIOS; only the Assessor says 10. The milestone citing socketsite.com for a Dec 2013 deal was removed and the bare-domain citations replaced with the pages read. The 'fee-manager' wording was dropped since no source states it.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8709020",
+     "slug": "kaiser-permanente-san-francisco-mission-bay-medical-offices",
+     "name": "Kaiser Permanente San Francisco Mission Bay Medical Offices",
+     "permalink": "https://pierandpoint.org/parcels/kaiser-permanente-san-francisco-mission-bay-medical-offices/",
+     "api": "https://pierandpoint.org/api/v1/records/kaiser-permanente-san-francisco-mission-bay-medical-offices.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-18",
     "kind": "added",
     "kind_label": "Added",
-    "text": "Kaiser Permanente Mission Bay Medical Offices added as a real, active Assessor-parcel record (blklot 8709020, 1600 Owens St) -- an outpatient medical office building Kaiser purchased outright from developer/fee-manager Alexandria Real Estate Equities in Dec 2013, opened March 2016. Stories (9 vs 10), square footage (200,000-250,884 sq ft) and LEED rating (Platinum vs Gold) are contested across sources and left unresolved rather than picked arbitrarily.",
+    "text": "Kaiser Permanente Mission Bay Medical Offices added as a real, active Assessor-parcel record (blklot 8709020, 1600 Owens St) -- an outpatient medical office building built speculatively by Alexandria Real Estate Equities that, per its architect STUDIOS, Kaiser purchased (sale date not sourced); completed 2016, announced in February 2016 to open that March. Stories (nine per STUDIOS and Potrero View, 10 per the Assessor), square footage (200,000-250,884 sq ft) and LEED rating (Platinum vs Gold) differ across sources and left unresolved rather than picked arbitrarily.",
     "source": "docs/briefs/mission-bay-geometry.md",
     "sources": [
      {
@@ -160,7 +157,7 @@
     "url": "https://www.sec.gov/Archives/edgar/data/1035443/000103544314000075/a3q14-ex991.htm"
    }
   ],
-  "notes": "Kaiser Permanente San Francisco Mission Bay Medical Offices, 1600 Owens St -- a 9-to-10-story outpatient medical office building (sources disagree: STUDIOS Architecture's own project page says nine stories with 220,000 sq ft; Potrero View and the DataSF Assessor tax roll both say 10 stories, tax roll property_area 250,884 sq ft, likely including garage/below-grade area; Kaiser's own reporting and Potrero View cite 200,000 sq ft) with primary care, OB/GYN, pediatrics, dermatology, orthopedics, optical and occupational health -- no emergency department. Built speculatively by developer/fee-manager Alexandria Real Estate Equities, architect STUDIOS Architecture, design-build general contractor Whiting-Turner; Kaiser Foundation Health Plan, Inc. purchased the building outright from Alexandria for approximately \u0005.2M in a sale that closed Dec 20, 2013 (Alexandria's own SEC earnings-supplemental filing), so Kaiser owns the real estate rather than leasing it. Completed 2016; opened to patients March 2016. LEED rating also disputed (STUDIOS claims Platinum; Potrero View says Gold) and left unresolved. Blklot 8709020 confirmed via DataSF's Assessor Parcels dataset and Historical Secured Property Tax Roll (property_location '1600 OWENS ST', use_code COMO/property_class OMD, year_property_built 2016); zoning_district 'MISSION BAY REDEVELOPMENT' (MB-RA) in data/raw/parcels.geojson confirms the Mission Bay South project area.",
+  "notes": "Kaiser Permanente San Francisco Mission Bay Medical Offices, 1600 Owens St -- a 9-to-10-story outpatient medical office building (sources disagree: STUDIOS Architecture's own project page says nine stories with 220,000 sq ft; Potrero View also says nine stories, while the DataSF Assessor tax roll says 10 stories and gives property_area 250,884 sq ft, likely including garage/below-grade area; Potrero View cites 200,000 sq ft) with primary care, OB/GYN, pediatrics, dermatology, orthopedics, optical and occupational health -- no emergency department. Built speculatively by developer Alexandria Real Estate Equities, architect STUDIOS Architecture, design-build general contractor Whiting-Turner; STUDIOS Architecture's project page says Kaiser Permanente \"purchased the project\" from that speculative development; the sale date, price and seller are not stated in any source read here. Completed 2016 (STUDIOS); Potrero View reported in February 2016 that the offices would open in March 2016 (a pre-opening announcement; no post-opening source read). LEED rating also disputed (STUDIOS claims Platinum; Potrero View says Gold) and left unresolved. Blklot 8709020 confirmed via DataSF's Assessor Parcels dataset and Historical Secured Property Tax Roll (property_location '1600 OWENS ST', use_code COMO/property_class OMD, year_property_built 2016); zoning_district 'MISSION BAY REDEVELOPMENT' (MB-RA) in data/raw/parcels.geojson confirms the Mission Bay South project area.",
   "has_record_file": false,
   "last_verified": null,
   "tenants": [],

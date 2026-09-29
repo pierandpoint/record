@@ -22,14 +22,14 @@
   },
   "status": "planned",
   "status_label": "Planned",
-  "use": "commercial",
+  "use": "mixed",
   "relation": "tracked",
   "adjacent_to": null,
   "distance_note": null,
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "Commercial-office parcel on the south side of 22nd Street east of Maryland Street (west half of the H1/H2 pair), 90 ft and six stories under the D4D, assigned to Phase 3A with Parcel E3 in the Port's proposed 2026 phasing plan. No design, appraisal or construction record exists for it.",
+  "summary": "Flexible commercial-office/residential parcel (baseline scenario residential) on the south side of 22nd Street east of Maryland Street (west half of the H1/H2 pair), 90 ft under the D4D (six stories for commercial buildings, nine for residential), assigned to Phase 3A with Parcel E3 in the Port's proposed 2026 phasing plan. No design, appraisal or construction record exists for it.",
   "summary_sources": [
    "src-d4d",
    "src-port-11a-2026"
@@ -40,10 +40,10 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- this block is not yet built and does not correspond to any subdivided Assessor parcel: it currently sits on vacant/graded land, surface parking, or an existing industrial building slated for demolition within Brookfield's 28-acre district (unaddressed in DataSF's Assessor roll). Redone 2026-09-14 with a corrected, shear-free transform (see digitization_method) -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects this transform's 1-8m residual error, not a deliberate encroachment. Street-facing edge re-clipped 2026-09-17 against official curb-referenced street data -- see digitization_method.",
+    "accuracy_caveat": "APPROXIMATE -- this block is not yet built (Port Item 11A, Aug 2026: the developer 'has not exercised an option of any Phase 1 option parcels'), and no source read ties it to a specific Assessor lot: DataSF's Assessor parcels include new lots created for the 28-acre district in 2019, without street addresses, but which lot (if any) is this block's was not established. It currently sits on vacant/graded land, surface parking, or an existing industrial building slated for demolition within Brookfield's 28-acre district. Redone 2026-09-14 with a corrected, shear-free transform (see digitization_method) -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects this transform's 1-8m residual error, not a deliberate encroachment. Street-facing edge re-clipped 2026-09-17 against official curb-referenced street data -- see digitization_method.",
     "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-    "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of Brookfield's larger, largely unaddressed 28-acre site), but it has not been subdivided per the masterplan's individual named parcels -- this uses hand-traced approximate geometry instead.",
-    "regulatory_context": "Office (pure office, not mixed-use, per Brookfield's own leasing brochure), 90 ft max per Figure 6.4.2 (6-story cap per D4D Section 6.4.2, not the sometimes-cited '6-8 stories'). Brookfield's brochure gives a combined H1-H2 total of '+/- 430,000 RSF'. No construction-start source found."
+    "why_no_real_parcel": "No source read ties this block to a specific Assessor lot. DataSF's Assessor parcels include lots created for Brookfield's 28-acre district in 2019 (for example, Port Item 12B, Feb 2020, gives Parcel E2 as Block 4116, Lot 008), but this block's own lot was not identified, so this uses hand-traced approximate geometry instead.",
+    "regulatory_context": "Flexible commercial-office/residential parcel: D4D Figure 2.1.1 stripes H1 as Commercial-Office and Residential; the baseline (Mid-Point) and Maximum Residential scenarios show it residential and only the Maximum Office scenario shows it commercial. 90 ft max per Figure 6.4.2; six stories for commercial buildings and nine for residential (D4D Section 6.4.2). An earlier note citing Brookfield's leasing brochure (pure office use; a combined ~430,000 RSF for H1-H2) was removed 2026-09-29 because the brochure is not cited or retrieved. No construction-start source found."
    }
   },
   "centroid": {
@@ -75,7 +75,7 @@
    },
    {
     "key": "use",
-    "value": "Commercial-office parcel (D4D land-use scenarios show H1/H2 as commercial; the Maximum Residential figure combines them as 'H1/H2')",
+    "value": "Flexible commercial-office/residential parcel: D4D Figure 2.1.1 stripes H1 as Commercial-Office and Residential; the Mid-Point (baseline) and Maximum Residential scenarios (Figures 1.5.5-1.5.7) show H1 and H2 residential, and only the Maximum Office scenario shows them commercial (and labels them 'H1/H2')",
     "sources": [
      "src-d4d"
     ]
@@ -89,7 +89,7 @@
    },
    {
     "key": "max_stories",
-    "value": "6 commercial stories (D4D S6.4.2)",
+    "value": "6 stories for commercial buildings, 9 for residential (D4D S6.4.2)",
     "sources": [
      "src-d4d"
     ]
@@ -110,7 +110,7 @@
    },
    {
     "key": "adjacent_open_space",
-    "value": "Waterfront Promenade outdoor dining terraces may be located adjacent to the east face of H2; the 22nd Street viewing pavilion and tree grove terminate 22nd Street at the shoreline (D4D Section 3.7)",
+    "value": "Waterfront Promenade outdoor dining terraces may be located adjacent to the east face of H2; the 22nd Street viewing pavilion extends 22nd Street to the Bay, and a tree grove runs parallel to the Bay Trail at the southern edge of the site (D4D Section 3.7)",
     "sources": [
      "src-d4d"
     ]
@@ -210,7 +210,7 @@
     "date_label": "Nov 15, 2017",
     "status": null,
     "status_label": null,
-    "text": "Mayor Lee signs the Development Agreement ordinance (Ordinance 224-17) and the rest of the project legislation after Board of Supervisors approval on October 31, 2017",
+    "text": "Mayor Lee signs the Development Agreement ordinance (Ordinance 224-17) and the rest of the project legislation; the Board of Supervisors passed it on first reading on October 31, 2017 and finally on November 14, 2017",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -423,11 +423,11 @@
     "relation": "tracked"
    },
    {
-    "date": "2022-04",
+    "date": "2022",
     "date_label": "~2022",
     "status": null,
     "status_label": null,
-    "text": "Brookfield halts construction at the end of Phase 1 horizontal work, citing market conditions",
+    "text": "Brookfield halts construction at the end of Phase 1 horizontal work, citing market conditions (The Real Deal, April 2023: 'last year'; Bisnow, Oct 2022: 'earlier this year')",
     "expected": false,
     "approximate": true,
     "sources": [
@@ -595,7 +595,7 @@
     "date_label": "Aug 11, 2026",
     "status": null,
     "status_label": null,
-    "text": "Port Commission hears an informational report on proposed DDA amendments: parcel-specific outside dates, a Project-wide affordable rate of no less than 20% (327 stand-alone affordable units kept), 65-to-90 ft height increases on certain residential parcels, developer return cut from 18% to 14%, and a new phasing plan",
+    "text": "Port Commission hears an informational report (staff report dated Aug 7; no action taken) on proposed DDA amendments: parcel-specific outside dates, a Project-wide affordable rate of no less than 20% (327 stand-alone affordable units kept), 65-to-90 ft height increases on certain residential parcels, developer return cut from 18% to 14%, and a new phasing plan",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -608,9 +608,25 @@
       "date": "2026-08-07",
       "note": "Informational only; amendments to the DDA to go to the Port Commission and Board of Supervisors 'by the end of this year or early next year'. Exhibit A is the proposed phasing plan.",
       "overview": true
+     },
+     {
+      "id": "src-port-minutes-2026-08-11",
+      "title": "Port Commission minutes, August 11, 2026 (Item 11A, Pier 70 28-Acre Site update: informational item, presented by Port staff; no action)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/media/11558/download?inline",
+      "accessed": "2026-09-29",
+      "date": "2026-08-11"
+     },
+     {
+      "id": "src-port-mtg-2026-08-11",
+      "title": "Port Commission meeting page, August 11, 2026 (agenda listing Item 11A, Pier 70 28-Acre Site update)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/meetings/port-commission-august-11-2026",
+      "accessed": "2026-09-29",
+      "date": "2026-08-11"
      }
     ],
-    "source": "Port of San Francisco, 2026-08-07",
+    "source": "Port of San Francisco, 2026-08-07; Port of San Francisco, 2026-08-11; Port of San Francisco, 2026-08-11",
     "origin": "record",
     "category": "milestone",
     "category_label": "Milestone",
@@ -673,7 +689,7 @@
     "date_label": "2042",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Completion expected by Phase 3's DDA outside date; this parcel is now grouped with E3 in subphase 3A of the Port's proposed 2026 phasing plan",
+    "text": "Any completion is soft: the DDA's original outside date for Phase 3 is about 2042; this parcel is now grouped with E3 in subphase 3A of the Port's proposed 2026 phasing plan",
     "expected": true,
     "approximate": true,
     "sources": [
@@ -718,7 +734,37 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Parcel H1 is now described as a flexible commercial-office/residential parcel (D4D Figure 2.1.1 stripes it both; the baseline scenario is residential) instead of commercial-office, and the map use is mixed; six stories is the commercial limit and nine the residential limit; the uncited Brookfield brochure claims (pure office, ~430,000 RSF for H1-H2) were removed; the 2042 completion date is the original 2017 outside date, now tolled by the down market delay (extended to December 26, 2026, Port Item 11A), with no parcel-specific date sourced; the claim that the block has no Assessor lot was replaced with what the sources show; the tree grove is described as running parallel to the Bay Trail; the Brookfield construction halt is dated 2022; the Aug 11, 2026 Port Commission minutes now back the informational hearing; also the Board of Supervisors vote on the Development Agreement shows first reading Oct 31 and final passage Nov 14, 2017.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_h1",
+     "slug": "pier-70-parcel-h1",
+     "name": "Pier 70 Parcel H1",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-h1/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-h1.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/pier70_d4d_fig_6_4_2_building_height.jpg",
@@ -767,11 +813,11 @@
     "kind": "rendering",
     "scope": "site",
     "taken": "2022-04-26",
-    "credit": "Port of San Francisco / SF Planning, Pier 70 Special Use District Design for Development (D4D, adopted 2017, updated April 26, 2022), Figure 1.1.2, p.5",
+    "credit": "Port of San Francisco / SF Planning, Pier 70 Special Use District Design for Development (D4D, updated April 26, 2022; approved in 2017 per Port Item 9B, Resolution 17-45), Figure 1.1.2, p.5",
     "license": "public-record",
     "source_url": "https://www.sfport.com/media/8123/download?inline=",
     "license_evidence": "https://www.sfport.com/media/8123/download?inline=",
-    "license_note": "An adopted Port of San Francisco / SF Planning planning document (the Pier 70 Special Use District Design for Development); an adopted D4D is a public-record planning document. Read 2026-09-22.",
+    "license_note": "A Port of San Francisco / SF Planning planning document approved in 2017 (Port Item 9B, Resolution 17-45) (the Pier 70 Special Use District Design for Development); an adopted D4D is a public-record planning document. Read 2026-09-22.",
     "caption": "Figure 1.1.2: Site Location and Context, Pier 70 Special Use District Design for Development (D4D), p.5",
     "source_crop": "python3 src/extract_pdf_figure.py https://www.sfport.com/media/8123/download?inline= 21 data/manual/images/pier70/d4d_p5_site_context.jpg --rect auto --dpi 300",
     "focus": [
@@ -788,7 +834,7 @@
   "open_questions": [
    "No construction start, building permit or vertical DDA for this parcel was found in any Port Commission document through the August 11, 2026 informational report, which says the developer 'has not exercised an option of any Phase 1 option parcels'.",
    "Per-parcel gross square footage and unit counts are not published in the D4D (which sets height, stories and land-use scenarios, not parcel programs); the SUD's per-parcel programs would be in the SUD ordinance (Planning Code Sec. 249.79) or the Phase Submittal, neither of which was retrieved.",
-   "Brookfield's leasing brochure reportedly gives a combined '+/- 430,000 RSF' for H1-H2 (recorded in the geometry file); not retrievable in this pass.",
+   "Brookfield's leasing brochure reportedly gives a combined '+/- 430,000 RSF' for H1-H2 and calls H1 pure office; the brochure was not retrieved, so those statements were removed from the geometry file on 2026-09-29.",
    "Whether the Elevation Sky Park interim venue extends onto H2 (the Port described it as 'where 22nd Street meets the Bay' on 'Phase 2/3 sites'): unresolved; see the Parcel E3 record."
   ],
   "sources": [
@@ -811,7 +857,7 @@
    {
     "id": "src-d4d",
     "title": "Pier 70 Special Use District Design for Development (D4D), updated April 26, 2022",
-    "publisher": "Port of San Francisco / SF Planning (adopted planning document; project team SITELAB urban studio)",
+    "publisher": "Port of San Francisco / SF Planning (planning document approved in 2017 per Port Item 9B, Resolution 17-45; project team SITELAB urban studio)",
     "url": "https://www.sfport.com/media/8123/download?inline=",
     "accessed": "2026-09-17",
     "date": "2022-04-26",
@@ -870,11 +916,27 @@
     "url": "https://therealdeal.com/san-francisco/2023/04/17/brookfield-leases-first-seven-tenants-at-pier-70/",
     "accessed": "2026-09-17",
     "date": "2023-04-17"
+   },
+   {
+    "id": "src-port-minutes-2026-08-11",
+    "title": "Port Commission minutes, August 11, 2026 (Item 11A, Pier 70 28-Acre Site update: informational item, presented by Port staff; no action)",
+    "publisher": "Port of San Francisco",
+    "url": "https://www.sfport.com/media/11558/download?inline",
+    "accessed": "2026-09-29",
+    "date": "2026-08-11"
+   },
+   {
+    "id": "src-port-mtg-2026-08-11",
+    "title": "Port Commission meeting page, August 11, 2026 (agenda listing Item 11A, Pier 70 28-Acre Site update)",
+    "publisher": "Port of San Francisco",
+    "url": "https://www.sfport.com/meetings/port-commission-august-11-2026",
+    "accessed": "2026-09-29",
+    "date": "2026-08-11"
    }
   ],
-  "notes": "Approximate polygon for a real, D4D-adopted parcel -- see accuracy_caveat.",
+  "notes": "Approximate polygon for a real, D4D-adopted parcel -- see accuracy_caveat. Status planned: Port Item 11A (Aug 2026) says construction of Phase 1 vertical projects and parks has not moved forward.",
   "has_record_file": true,
-  "last_verified": "2026-09-20",
+  "last_verified": "2026-09-29",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

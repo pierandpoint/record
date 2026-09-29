@@ -29,7 +29,7 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "A five-story, roughly 222,000 sq ft commercial office building at 1401 Third Street in Mission Bay South. DataSF's Assessor tax roll (block 8721, lot 032) records the building's construction year as 2009.",
+  "summary": "A five-story, roughly 222,000 sq ft commercial office building at 1401 Third Street in Mission Bay. DataSF's Assessor tax roll (block 8721, lot 032) records the building's construction year as 2009.",
   "summary_sources": [
    "src-datasf-assessor-8721032"
   ],
@@ -39,8 +39,8 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8721032), address confirmed via DataSF Assessor parcel data (blklot 8721032) and real-estate listing sources; not a hand trace or plan estimate. Building name/tenant not confirmed -- addressed by its street number only, consistent with how this project handles other buildings where no clean primary name was found (e.g. 1500/1700 Owens St).",
-    "digitized_from": "DataSF Building Footprints (mblr SF8721032); address confirmed via DataSF Assessor parcel data (blklot 8721032) and real-estate listing sources"
+    "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8721032), address confirmed via DataSF Assessor parcel data (blklot 8721032) and the DataSF Assessor roll (parcel 8721032); not a hand trace or plan estimate. Building name/tenant not confirmed -- addressed by its street number only, consistent with how this project handles other buildings where no clean primary name was found (e.g. 1500/1700 Owens St).",
+    "digitized_from": "DataSF Building Footprints (mblr SF8721032); address confirmed via DataSF Assessor parcel data (blklot 8721032) and the DataSF Assessor roll (parcel 8721032)"
    }
   },
   "centroid": {
@@ -55,13 +55,13 @@
     "date_label": "Apr 27, 2007",
     "status": "planned",
     "status_label": "Planned",
-    "text": "SF Dept. of Building Inspection permit #200704279921 filed to erect a 5-story office/lab building at 455 Mission Bay Blvd South, this parcel's address before it was renamed 1401 Third Street",
+    "text": "SF Dept. of Building Inspection permit #200704279921 filed to erect a 5-story office/lab building at 455 Mission Bay Blvd South (block 8721, lot 012); its mapped point is about 6 m from the Assessor point for this parcel (1401 Third Street, lot 032), which is our inference for linking the two, not stated by any source",
     "expected": false,
     "approximate": false,
     "sources": [
      {
       "id": "src-datasf-permit-1401-3rd",
-      "title": "Building Permits: permit #200704279921 (455 Mission Bay Blvd South, block 8721 lot 012 at filing -- later renumbered lot 032), filed 2007-04-27, \"erect 5 stories office/lab\", completed 2008-04-24",
+      "title": "Building Permits: permit #200704279921 (455 Mission Bay Blvd South, block 8721 lot 012 at filing), filed 2007-04-27, \"erect 5 stories office/lab\", completed 2009-11-17",
       "publisher": "DataSF / SF Department of Building Inspection",
       "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200704279921",
       "accessed": "2026-09-21"
@@ -99,7 +99,7 @@
       "id": "src-datasf-assessor-8721032",
       "title": "Assessor Historical Secured Property Tax Rolls (block 8721, lot 032 -- 1401 3rd St)",
       "publisher": "DataSF / SF Office of the Assessor-Recorder",
-      "url": "https://data.sf.gov/resource/wv5m-vpq2.json",
+      "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8721032",
       "accessed": "2026-09-21"
      }
     ],
@@ -123,14 +123,44 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The geometry notes cited a CBRE listing for a different building (1455 3rd St) as a source; it was removed and the Assessor roll for parcel 8721032 is cited for the size, year built and office use. The record's permit source said the permit completed on 2008-04-24; the permit row says 2009-11-17, so that was corrected everywhere it appeared. The claim that 455 Mission Bay Blvd South was this parcel's address before a renaming is now stated as our inference from the permit's location, and the summary says Mission Bay instead of Mission Bay South.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_1401_3rd",
+     "slug": "1401-third-street",
+     "name": "1401 Third Street",
+     "permalink": "https://pierandpoint.org/parcels/1401-third-street/",
+     "api": "https://pierandpoint.org/api/v1/records/1401-third-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
     "kind": "now",
     "scope": "site",
     "taken": "2024-05-20",
-    "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+    "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
     "license": "public-domain",
     "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
     "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
@@ -152,12 +182,12 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-02-10",
-    "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+    "credit": "Firstcultural (Alfred Twu, per the photographer's Wikimedia Commons user page), via Wikimedia Commons; CC0; downscaled to 1600 px",
     "license": "cc0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by the author Firstcultural; the author's Commons user page (https://commons.wikimedia.org/wiki/User:Firstcultural) gives the name Alfred Twu. File page read 2026-09-23, user page read 2026-09-29.",
+    "caption": "Aerial photo of San Francisco's Mission Bay, ballpark, and Caltrain area",
     "aerial": true,
     "focus": [
      0.35,
@@ -173,19 +203,19 @@
   "open_questions": [
    "Developer, architect and current/original tenant not confirmed by any source found in this pass -- consistent with this record's own geometry-file note.",
    "Precise completion month not available; DataSF's Assessor tax roll gives only a year.",
-   "The permit's own block/lot (block 8721, lot 012) at filing time differs from the lot the Assessor now uses for this address (lot 032); Mission Bay parcels were renumbered after the original 2000s-era permits were filed, and the address, description (5-story office/lab), scale and 2008-04-24 permit-completion date all line up with this parcel, so this is treated as a lot renumbering, not a different building."
+   "The permit's own block/lot (block 8721, lot 012) at filing time differs from the lot the Assessor uses for 1401 Third Street (lot 032). The permit's location point (about 6 m from the Assessor point), its description (5-story office/lab) and its 2009-11-17 completion date (the Assessor gives year built 2009) are consistent with this parcel, so it is treated as the same building, but no source states that 455 Mission Bay Blvd South was renamed 1401 Third Street or that the lot was renumbered."
   ],
   "sources": [
    {
     "id": "src-datasf-assessor-8721032",
     "title": "Assessor Historical Secured Property Tax Rolls (block 8721, lot 032 -- 1401 3rd St)",
     "publisher": "DataSF / SF Office of the Assessor-Recorder",
-    "url": "https://data.sf.gov/resource/wv5m-vpq2.json",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8721032",
     "accessed": "2026-09-21"
    },
    {
     "id": "src-datasf-permit-1401-3rd",
-    "title": "Building Permits: permit #200704279921 (455 Mission Bay Blvd South, block 8721 lot 012 at filing -- later renumbered lot 032), filed 2007-04-27, \"erect 5 stories office/lab\", completed 2008-04-24",
+    "title": "Building Permits: permit #200704279921 (455 Mission Bay Blvd South, block 8721 lot 012 at filing), filed 2007-04-27, \"erect 5 stories office/lab\", completed 2009-11-17",
     "publisher": "DataSF / SF Department of Building Inspection",
     "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200704279921",
     "accessed": "2026-09-21"
@@ -198,16 +228,11 @@
     "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
     "accessed": "2026-09-24",
     "overview": true
-   },
-   {
-    "id": null,
-    "title": "cbre.com/properties/properties-for-lease/retail/details/US-SMPL-53845/1455-3rd-street-san-francisco-ca-94158",
-    "url": "https://www.cbre.com/properties/properties-for-lease/retail/details/US-SMPL-53845/1455-3rd-street-san-francisco-ca-94158"
    }
   ],
   "notes": "Tenant/occupant not identified in this pass; left blank rather than guessed.",
   "has_record_file": true,
-  "last_verified": "2026-09-21",
+  "last_verified": "2026-09-29",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

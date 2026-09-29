@@ -22,7 +22,7 @@
   },
   "status": "planned",
   "status_label": "Planned",
-  "use": "institutional",
+  "use": "parking",
   "relation": "tracked",
   "adjacent_to": null,
   "distance_note": null,
@@ -53,15 +53,15 @@
     "date_label": "Dec 2019",
     "status": "planned",
     "status_label": "Planned",
-    "text": "Same finding as 15A; the current 18B record (the built UCSF building complex east of the parking lot, per this record's own 2026-09-20 geometry correction) sits within the same Dec 2019 UCSF-colored band",
+    "text": "OCII's Mission Bay Land Use Map (December 2019) shows Block 18B in the UCSF-designated color; UCSF's own June 2025 CAC presentation lists 'Block 18B - Parking' and labels it 'Future Parking Garage'. The current 18B record is the eastern half of the parking lot west of Block 18C, per this record's 2026-09-22 geometry correction",
     "expected": false,
     "approximate": false,
     "sources": [
      {
-      "title": "OCII Mission Bay Land Use Map, December 2019"
+      "title": "OCII Mission Bay Land Use Map, December 2019; UCSF Mission Bay Development Overview, Mission Bay CAC, June 12, 2025, p.3 (https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf)"
      }
     ],
-    "source": "OCII Mission Bay Land Use Map, December 2019",
+    "source": "OCII Mission Bay Land Use Map, December 2019; UCSF Mission Bay Development Overview, Mission Bay CAC, June 12, 2025, p.3 (https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf)",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -81,7 +81,37 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Block 18B record said the December 2019 Land Use Map designates it for future UCSF institutional use, and its timeline entry still described the record as the built UCSF building complex. The 2019 map says only 'UCSF'; UCSF's June 2025 CAC presentation labels the block 'Future Parking Garage (18B)', so the use is now parking. Since the 2026-09-22 correction the record is the eastern half of the parking lot, and the timeline entry now says so and cites both documents. The note about no building standing there is now described as this project's own imagery check, not something the plan map can show, and it no longer states that 18C is an existing childcare centre; that question is left for the owner. An unsupported claim about the 2015 map showing block 18 undivided was dropped.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_block_18b",
+     "slug": "mission-bay-south-block-18b-ucsf-planned",
+     "name": "Mission Bay South Block 18B (UCSF planned)",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-18b-ucsf-planned/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-18b-ucsf-planned.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [],
   "open_questions": [],
   "sources": [
@@ -89,9 +119,14 @@
     "id": null,
     "title": "data/manual/_reference/mission_bay_land_use_map_2019.png",
     "url": "data/manual/_reference/mission_bay_land_use_map_2019.png"
+   },
+   {
+    "id": null,
+    "title": "sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
+    "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf"
    }
   ],
-  "notes": "No building on this site as of 2026-09-19 (satellite- and building-footprint-confirmed); currently an operating surface parking lot west of the Owens St curve, running back-to-back with the existing Child Development Center building (18C) to its east. The OCII plan's own Dec 2019 Land Use Map designates this block for future UCSF institutional use, consistent with the rest of this campus row, but no specific project, developer, or timeline was found in this pass.",
+  "notes": "No building is recorded on this site as of this project's own 2026-09-19 satellite and building-footprint check (the imagery is not cited or saved here), and it appears to be a surface parking lot west of the Owens St curve, back-to-back with the block to its east that this project records as 18C (see mission_bay_block_18c.geojson). OCII's Dec 2019 Land Use Map shows Block 18B in the UCSF-designated color, but UCSF's own June 2025 CAC presentation (page 3; its map is dated December 2024) labels it 'FUTURE PARKING GARAGE (18B)' and lists 'Block 18B - Parking' among the undeveloped parcels remaining, so the planned use is parking, not a building for institutional use. No specific project, developer or timeline was found.",
   "has_record_file": false,
   "last_verified": null,
   "tenants": [],

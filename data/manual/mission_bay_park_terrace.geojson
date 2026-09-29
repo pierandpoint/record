@@ -10,11 +10,13 @@
     "use": "residential",
     "geometry_type": "real",
     "digitized_from": "OpenStreetMap (way 46264112, 325 Berry St)",
-    "digitization_method": "ADDED 2026-09-18 for Mission Bay's North-blocks pass: real OSM building footprint. Park Terrace, 325 Berry St -- 110-unit condo building, built 2007.",
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I/II/III, Madrone, Arden, One Mission Bay, Radiance).",
-    "notes": "Developer not confirmed by any source found in this pass; left out rather than guessed.",
+    "digitization_method": "ADDED 2026-09-18 for Mission Bay's North-blocks pass: real OSM building footprint. Park Terrace, 325 Berry St -- 110-unit condo building, built 2007. 2026-09-29 accuracy audit: citations for the '110-unit condo building, built 2007' line: 110 units and seven stories per SocketSite (May 5, 2006), which also names the developers as Opus West and Phoenix Property Company; year built 2007 per the DataSF Assessor roll for the condominium lots at 325 Berry St (parcel 8707009 and its siblings; data/raw/parcels.geojson shows about 111 per-unit lots there). Neither is in the cited OSM way.",
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I, Madrone and Radiance, re-checked against data/raw/parcels.geojson in the 2026-09 audit; Avalon II and III are not condo-mapped, and Arden and One Mission Bay were not re-checked).",
+    "notes": "Developers Opus West and Phoenix Property Company per SocketSite (May 5, 2006).",
     "source_doc_urls": [
-     "https://www.openstreetmap.org/way/46264112"
+     "https://www.openstreetmap.org/way/46264112",
+     "https://socketsite.com/archives/2006/05/new_development_8.html",
+     "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8707009"
     ]
    },
    "geometry": {

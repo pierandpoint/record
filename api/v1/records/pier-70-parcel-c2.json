@@ -42,10 +42,10 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- this block is not yet built and does not correspond to any subdivided Assessor parcel: it currently sits on vacant/graded land, surface parking, or an existing industrial building slated for demolition within Brookfield's 28-acre district (unaddressed in DataSF's Assessor roll). Redone 2026-09-14 with a corrected, shear-free transform (see digitization_method) -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects this transform's 1-8m residual error, not a deliberate encroachment. RESOLVED 2026-09-16: no longer overlaps 'Pier 70 Building 2 (Warehouse No. 2)' -- that file's placement was corrected to its real position elsewhere on the site (see that file's digitization_method). CORRECTED 2026-09-17: re-measured directly from Figure 6.4.2's own color fill, replacing a previously wrong position -- see digitization_method.",
+    "accuracy_caveat": "APPROXIMATE -- this block is not yet built (Port Item 11A, Aug 2026: the developer 'has not exercised an option of any Phase 1 option parcels'), and no source read ties it to a specific Assessor lot: DataSF's Assessor parcels include new lots created for the 28-acre district in 2019, without street addresses, but which lot (if any) is this block's was not established. It currently sits on vacant/graded land, surface parking, or an existing industrial building slated for demolition within Brookfield's 28-acre district. Redone 2026-09-14 with a corrected, shear-free transform (see digitization_method) -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects this transform's 1-8m residual error, not a deliberate encroachment. RESOLVED 2026-09-16: no longer overlaps 'Pier 70 Building 2 (Warehouse No. 2)' -- that file's placement was corrected to its real position elsewhere on the site (see that file's digitization_method). CORRECTED 2026-09-17: re-measured directly from Figure 6.4.2's own color fill, replacing a previously wrong position -- see digitization_method.",
     "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-    "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of Brookfield's larger, largely unaddressed 28-acre site), but it has not been subdivided per the masterplan's individual named parcels -- this uses hand-traced approximate geometry instead.",
-    "regulatory_context": "Residential, 90 ft max per Figure 6.4.2. C2A, a sub-portion of this parcel, is one of two 100%-affordable parcels in this cluster per a 2020 Port Commission resolution (the other is C1B, part of Parcel C1). No construction-start source found."
+    "why_no_real_parcel": "No source read ties this block to a specific Assessor lot. DataSF's Assessor parcels include lots created for Brookfield's 28-acre district in 2019 (for example, Port Item 12B, Feb 2020, gives Parcel E2 as Block 4116, Lot 008), but this block's own lot was not identified, so this uses hand-traced approximate geometry instead.",
+    "regulatory_context": "Residential per D4D Figure 2.1.1 (which stripes C2 as Residential and Parking Garage options), 90 ft max per Figure 6.4.2. C2A, a sub-portion of this parcel, is one of two 100%-affordable parcels in this cluster per Port Resolution 20-07 (Item 12B, Feb 2020: 'the 100% affordable housing parcels (Parcels C1B and C2A)'; the other is C1B, part of Parcel C1). No construction-start source found."
    }
   },
   "centroid": {
@@ -212,7 +212,7 @@
     "date_label": "Nov 15, 2017",
     "status": null,
     "status_label": null,
-    "text": "Mayor Lee signs the Development Agreement ordinance (Ordinance 224-17) and the rest of the project legislation after Board of Supervisors approval on October 31, 2017",
+    "text": "Mayor Lee signs the Development Agreement ordinance (Ordinance 224-17) and the rest of the project legislation; the Board of Supervisors passed it on first reading on October 31, 2017 and finally on November 14, 2017",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -464,11 +464,11 @@
     "relation": "tracked"
    },
    {
-    "date": "2022-04",
+    "date": "2022",
     "date_label": "~2022",
     "status": null,
     "status_label": null,
-    "text": "Brookfield halts construction at the end of Phase 1 horizontal work, citing market conditions",
+    "text": "Brookfield halts construction at the end of Phase 1 horizontal work, citing market conditions (The Real Deal, April 2023: 'last year'; Bisnow, Oct 2022: 'earlier this year')",
     "expected": false,
     "approximate": true,
     "sources": [
@@ -636,7 +636,7 @@
     "date_label": "Aug 7, 2026",
     "status": "planned",
     "status_label": "Planned",
-    "text": "Port reports that although Phase 1 horizontal infrastructure and Building 12's rehabilitation are complete, construction of Phase 1 vertical buildings and parks 'has not moved forward' since 2022 because of pandemic-driven office-vacancy increases, 20-30% construction-cost escalation and higher financing costs",
+    "text": "Port reports that although Phase 1 horizontal infrastructure and Building 12's rehabilitation are complete, construction of Phase 1 vertical buildings and parks 'has not moved forward' because of pandemic-driven office-vacancy increases, 20-30% construction-cost escalation and higher financing costs",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -675,7 +675,7 @@
     "date_label": "Aug 11, 2026",
     "status": null,
     "status_label": null,
-    "text": "Port Commission hears an informational report on proposed DDA amendments: parcel-specific outside dates, a Project-wide affordable rate of no less than 20% (327 stand-alone affordable units kept), 65-to-90 ft height increases on certain residential parcels, developer return cut from 18% to 14%, and a new phasing plan",
+    "text": "Port Commission hears an informational report (staff report dated Aug 7; no action taken) on proposed DDA amendments: parcel-specific outside dates, a Project-wide affordable rate of no less than 20% (327 stand-alone affordable units kept), 65-to-90 ft height increases on certain residential parcels, developer return cut from 18% to 14%, and a new phasing plan",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -688,9 +688,25 @@
       "date": "2026-08-07",
       "note": "Informational only; amendments to the DDA to go to the Port Commission and Board of Supervisors 'by the end of this year or early next year'. Exhibit A is the proposed phasing plan.",
       "overview": true
+     },
+     {
+      "id": "src-port-minutes-2026-08-11",
+      "title": "Port Commission minutes, August 11, 2026 (Item 11A, Pier 70 28-Acre Site update: informational item, presented by Port staff; no action)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/media/11558/download?inline",
+      "accessed": "2026-09-29",
+      "date": "2026-08-11"
+     },
+     {
+      "id": "src-port-mtg-2026-08-11",
+      "title": "Port Commission meeting page, August 11, 2026 (agenda listing Item 11A, Pier 70 28-Acre Site update)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/meetings/port-commission-august-11-2026",
+      "accessed": "2026-09-29",
+      "date": "2026-08-11"
      }
     ],
-    "source": "Port of San Francisco, 2026-08-07",
+    "source": "Port of San Francisco, 2026-08-07; Port of San Francisco, 2026-08-11; Port of San Francisco, 2026-08-11",
     "origin": "record",
     "category": "milestone",
     "category_label": "Milestone",
@@ -714,7 +730,7 @@
     "date_label": "Aug 11, 2026",
     "status": null,
     "status_label": null,
-    "text": "Port reports the C2A affordable project 'has not advanced' for lack of gap funding; proposed amendments would require the developer to close escrow on C2B (with A and D) by 2029-2030 or face a public offering",
+    "text": "Port staff report for the Commission's Aug 11, 2026 meeting (dated Aug 7) says the C2A affordable project 'has not advanced' for lack of gap funding; proposed amendments would require the developer to close escrow on C2B (with A and D) by 2029-2030 or face a public offering",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -727,9 +743,25 @@
       "date": "2026-08-07",
       "note": "Informational only; amendments to the DDA to go to the Port Commission and Board of Supervisors 'by the end of this year or early next year'. Exhibit A is the proposed phasing plan.",
       "overview": true
+     },
+     {
+      "id": "src-port-minutes-2026-08-11",
+      "title": "Port Commission minutes, August 11, 2026 (Item 11A, Pier 70 28-Acre Site update: informational item, presented by Port staff; no action)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/media/11558/download?inline",
+      "accessed": "2026-09-29",
+      "date": "2026-08-11"
+     },
+     {
+      "id": "src-port-mtg-2026-08-11",
+      "title": "Port Commission meeting page, August 11, 2026 (agenda listing Item 11A, Pier 70 28-Acre Site update)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/meetings/port-commission-august-11-2026",
+      "accessed": "2026-09-29",
+      "date": "2026-08-11"
      }
     ],
-    "source": "Port of San Francisco, 2026-08-07",
+    "source": "Port of San Francisco, 2026-08-07; Port of San Francisco, 2026-08-11; Port of San Francisco, 2026-08-11",
     "origin": "record",
     "category": "milestone",
     "category_label": "Milestone",
@@ -792,7 +824,7 @@
     "date_label": "2042",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Completion expected only by the Pier 70 28-Acre Project's whole-project buildout target, since Phase 1's own DDA schedule has lapsed and vertical construction on this parcel remains paused",
+    "text": "Completion expected only by the Pier 70 28-Acre Project's whole-project buildout target; Phase 1's own DDA deadlines have been tolled by the down market delay (extended to December 26, 2026) and vertical construction on this parcel remains paused",
     "expected": true,
     "approximate": true,
     "sources": [
@@ -836,7 +868,37 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Phase 1 schedule is described as tolled by the down market delay (extended to December 26, 2026, Port Item 11A) rather than lapsed, with the 2042 whole-project date kept as a soft date that is not a forecast for this parcel; the map notes no longer say the block has no Assessor lot or that the D4D height figure shows a Residential fill; Residential use is cited to D4D Figure 2.1.1 (which also allows a garage) and the 100% affordable C2A status to Port Resolution 20-07; the Chinatown CDC page is described as not naming a parcel; 'since 2022' was dropped from the Port's statement; the Brookfield construction halt is dated 2022 rather than April 2022; the Board of Supervisors vote on the Development Agreement shows first reading Oct 31 and final passage Nov 14, 2017; the Aug 11, 2026 Port Commission minutes now back the informational hearing.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_c2",
+     "slug": "pier-70-parcel-c2",
+     "name": "Pier 70 Parcel C2",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-c2/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-c2.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/pier70_d4d_fig_6_4_2_building_height.jpg",
@@ -870,7 +932,7 @@
     "path": "data/manual/images/pier70_sud_land_use_plan_2018.jpg",
     "kind": "document",
     "taken": "2018-03-13",
-    "credit": "Port of San Francisco, Pier 70 SUD Land Use Plan, Exhibit A4-1 (03/13/2018)",
+    "credit": "Port of San Francisco, Pier 70 SUD Land Use Plan, Exhibit A4-1 (03/13/2018); the sheet carries the SITELAB urban studio logo",
     "license": "public-record",
     "source_url": "https://sfport.com/files/2021-11/pier_70_sud_land_use_plan.pdf",
     "license_evidence": "https://sfport.com/files/2021-11/pier_70_sud_land_use_plan.pdf",
@@ -885,11 +947,11 @@
     "kind": "rendering",
     "scope": "site",
     "taken": "2022-04-26",
-    "credit": "Port of San Francisco / SF Planning, Pier 70 Special Use District Design for Development (D4D, adopted 2017, updated April 26, 2022), Figure 1.1.2, p.5",
+    "credit": "Port of San Francisco / SF Planning, Pier 70 Special Use District Design for Development (D4D, updated April 26, 2022; approved in 2017 per Port Item 9B, Resolution 17-45), Figure 1.1.2, p.5",
     "license": "public-record",
     "source_url": "https://www.sfport.com/media/8123/download?inline=",
     "license_evidence": "https://www.sfport.com/media/8123/download?inline=",
-    "license_note": "An adopted Port of San Francisco / SF Planning planning document (the Pier 70 Special Use District Design for Development); an adopted D4D is a public-record planning document. Read 2026-09-22.",
+    "license_note": "A Port of San Francisco / SF Planning planning document approved in 2017 (Port Item 9B, Resolution 17-45) (the Pier 70 Special Use District Design for Development); an adopted D4D is a public-record planning document. Read 2026-09-22.",
     "caption": "Figure 1.1.2: Site Location and Context, Pier 70 Special Use District Design for Development (D4D), p.5",
     "source_crop": "python3 src/extract_pdf_figure.py https://www.sfport.com/media/8123/download?inline= 21 data/manual/images/pier70/d4d_p5_site_context.jpg --rect auto --dpi 300",
     "focus": [
@@ -907,7 +969,8 @@
    "No construction start, building permit or vertical DDA for this parcel was found in any Port Commission document through the August 11, 2026 informational report, which says the developer 'has not exercised an option of any Phase 1 option parcels'.",
    "Per-parcel gross square footage and unit counts are not published in the D4D (which sets height, stories and land-use scenarios, not parcel programs); the SUD's per-parcel programs would be in the SUD ordinance (Planning Code Sec. 249.79) or the Phase Submittal, neither of which was retrieved.",
    "The C2A affordable project's unit count beyond 'at least 100', its cost and its financing are all listed as TBD by the developer; no MOHCD loan approval or Port ground lease for C2A was found.",
-   "The 2017 approvals counted 320+ stand-alone affordable units across three sites (C1B, C2A, Parcel K South); the 2026 report holds the minimum at 327 and says the parties are evaluating higher unit yields, but no per-site split was published."
+   "The 2017 approvals counted 320+ stand-alone affordable units across three sites (C1B, C2A, Parcel K South); the 2026 report holds the minimum at 327 and says the parties are evaluating higher unit yields, but no per-site split was published.",
+   "The developer page cited for C2A (Chinatown CDC's 'In Development' list) does not name Parcel C2A; that the 'Pier 70' entry is the C2A project is inferred from the Port's Aug 2026 report naming the same developers for Parcel C2A. A Port or MOHCD document naming C2A and the unit count would settle it."
   ],
   "sources": [
    {
@@ -928,15 +991,16 @@
    },
    {
     "id": "src-ccdc-c2a",
-    "title": "In Development: Pier 70 Parcel C2A (developer's page)",
+    "title": "In Development: Pier 70 (developer's page; the entry does not name a parcel)",
     "publisher": "Chinatown Community Development Center (developer's claim)",
     "url": "https://www.chinatowncdc.org/our-housing/in-development",
-    "accessed": "2026-09-17"
+    "accessed": "2026-09-17",
+    "note": "The page's 'Pier 70' entry names Chinatown CDC and Young Community Developers as co-developers of an inclusionary housing project but never names Parcel C2 or C2A; it is tied to C2A here through the Port's Aug 2026 report, which names Parcel C2A as the Phase 1 affordable parcel and the MOHCD-selected developer team."
    },
    {
     "id": "src-d4d",
     "title": "Pier 70 Special Use District Design for Development (D4D), updated April 26, 2022",
-    "publisher": "Port of San Francisco / SF Planning (adopted planning document; project team SITELAB urban studio)",
+    "publisher": "Port of San Francisco / SF Planning (planning document approved in 2017 per Port Item 9B, Resolution 17-45; project team SITELAB urban studio)",
     "url": "https://www.sfport.com/media/8123/download?inline=",
     "accessed": "2026-09-17",
     "date": "2022-04-26",
@@ -1003,11 +1067,27 @@
     "url": "https://therealdeal.com/san-francisco/2023/04/17/brookfield-leases-first-seven-tenants-at-pier-70/",
     "accessed": "2026-09-17",
     "date": "2023-04-17"
+   },
+   {
+    "id": "src-port-minutes-2026-08-11",
+    "title": "Port Commission minutes, August 11, 2026 (Item 11A, Pier 70 28-Acre Site update: informational item, presented by Port staff; no action)",
+    "publisher": "Port of San Francisco",
+    "url": "https://www.sfport.com/media/11558/download?inline",
+    "accessed": "2026-09-29",
+    "date": "2026-08-11"
+   },
+   {
+    "id": "src-port-mtg-2026-08-11",
+    "title": "Port Commission meeting page, August 11, 2026 (agenda listing Item 11A, Pier 70 28-Acre Site update)",
+    "publisher": "Port of San Francisco",
+    "url": "https://www.sfport.com/meetings/port-commission-august-11-2026",
+    "accessed": "2026-09-29",
+    "date": "2026-08-11"
    }
   ],
-  "notes": "Approximate polygon for a real, D4D-adopted parcel -- see accuracy_caveat.",
+  "notes": "Approximate polygon for a real, D4D-adopted parcel -- see accuracy_caveat. Status planned: Port Item 11A (Aug 2026) says construction of Phase 1 vertical projects and parks has not moved forward.",
   "has_record_file": true,
-  "last_verified": "2026-09-20",
+  "last_verified": "2026-09-29",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

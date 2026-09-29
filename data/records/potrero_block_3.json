@@ -10,17 +10,17 @@
   ],
   "milestones": [
     {
-      "date": "2035",
+      "date": "2031",
       "status": "complete",
-      "text": "Completion expected: Block 3 is not named in any Phase 1-3 block list found (the 2024 annual compliance report's Phase 1 list is Blocks 2, 7, 8, 11, 12, 15); only the whole-project buildout target applies",
+      "text": "Completion expected: SocketSite's October 2020 schedule table lists Block 3 in Phase 2 with vertical development 2029-2031 (Block 3 is not in the 2024 annual compliance report's Phase 1 list: Blocks 2, 7, 8, 11, 12, 15)",
       "sources": [
-        "src-phase1-2020",
-        "src-socketsite-2020-10"
+        "src-socketsite-2020-10",
+        "src-phase1-2020"
       ],
       "expected": true,
       "approximate": true,
-      "basis": "project",
-      "basis_note": "Whole-project buildout target: the October 2020 Phase 1 and Phasing Plan Amendment revised construction from six phases to three over the same 16 years, with the final Phase 3 'wrapping up construction in late 2035' per SocketSite (Oct 9, 2020); Block 3 has no dated or phase-specific schedule of its own in any source found."
+      "basis": "phase",
+      "basis_note": "Phase 2 in the October 2020 revised phasing, as reported by SocketSite (Oct 9, 2020), whose 'Re-Phase Program, Detailed Construction Schedule' table lists Block 3 vertical development 2029-2031; a 2020 forecast now six years old, not a Block 3-specific commitment; no design review or construction start found."
     },
     {
       "date": "2020-04-21",
@@ -28,7 +28,8 @@
       "text": "Board of Supervisors approves the Potrero Power Station project and Development Agreement (Ordinance No. 62-20, Board File 200040), the entitlement that first names Block 3 as a development block under the adopted Design for Development's Land Use Table; the Development Agreement's own effective date is May 25, 2020, distinct from the D4D's own February 26, 2020 final-document date",
       "sources": [
         "src-port-memo-10a",
-        "src-sfplanning-pps"
+        "src-sfplanning-pps",
+        "src-d4d-final-table311"
       ],
       "expected": false,
       "approximate": false
@@ -52,9 +53,10 @@
     },
     {
       "key": "life_science_deed_restriction",
-      "value": "One or more of Blocks 2, 3, 11, 12 or 15 must be deed-restricted for Life Science/Laboratory uses under the Development Agreement's Phasing Plan (as adopted; a July 2022 Planning Commission resolution separately removed an earlier, block-specific 130,000 sq ft life-science requirement tied to Block 15 -- see that record)",
+      "value": "As adopted in the D4D (Table 3.1.1, note 13), one or more of Blocks 2, 3, 11, 12 or 15 had to be deed-restricted for Life Science/Laboratory uses under the Development Agreement's Phasing Plan; on July 28, 2022 the Planning Commission (Resolution No. 21156) approved deleting the Phasing Plan section that required one building of not less than 130,000 sq ft to be dedicated to Life Science uses, so that requirement was removed. Laboratory and Life Science uses remain permitted here.",
       "sources": [
-        "src-d4d-final-table311-notes-13"
+        "src-d4d-final-table311-notes-13",
+        "src-pc-res-21156"
       ]
     },
     {
@@ -105,7 +107,7 @@
     {
       "id": "src-d4d-final-table311",
       "title": "Potrero Power Station Design for Development, final (February 26, 2020), Table 3.1.1 Permitted Uses",
-      "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+      "publisher": "SF Planning",
       "date": "2020-02-26",
       "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
       "accessed": "2026-09-17"
@@ -113,7 +115,7 @@
     {
       "id": "src-d4d-final-fig623",
       "title": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 Building Height Plan",
-      "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+      "publisher": "SF Planning",
       "date": "2020-02-26",
       "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
       "accessed": "2026-09-17"
@@ -121,7 +123,7 @@
     {
       "id": "src-d4d-final-table311-notes-13",
       "title": "Potrero Power Station Design for Development, final (February 26, 2020), Table 3.1.1 Permitted Uses, Note 13",
-      "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+      "publisher": "SF Planning",
       "date": "2020-02-26",
       "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
       "accessed": "2026-09-17"
@@ -175,11 +177,19 @@
       "accessed": "2026-09-22",
       "date": "2020-02-26",
       "overview": true
+    },
+    {
+      "id": "src-pc-res-21156",
+      "title": "Planning Commission Resolution No. 21156 (July 28, 2022), Case 2017-011878PHA-09: material change to the Potrero Power Station Development Agreement Phasing Plan removing the requirement to dedicate one building of not less than 130,000 sq ft to Life Science uses (deleting Section 3.6)",
+      "publisher": "SF Planning Commission",
+      "date": "2022-07-28",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-29"
     }
   ],
   "open_questions": [
     "No design review approval or construction-start date found for Block 3; it is not one of the six buildings named in the 2024 annual compliance report's Phase 1 list (Blocks 2, 7, 8, 11, 12, 15), and no later-phase design review approval was found either.",
-    "No phase-specific schedule found for Block 3; the added expected-completion milestone therefore uses only the whole-project buildout target (2035, SocketSite Oct 2020), not a block-specific date."
+    "Block 3's 2029-2031 window comes from a 2020 press table (SocketSite); no current Block 3 schedule was found."
   ],
   "last_verified": "2026-09-20"
 }

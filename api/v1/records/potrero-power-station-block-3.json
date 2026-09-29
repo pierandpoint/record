@@ -40,10 +40,10 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- this block is not yet built and does not correspond to any subdivided Assessor parcel: it currently sits on vacant/graded land within the former power station site (unaddressed in DataSF's Assessor roll). Traced from an adopted regulatory diagram via multi-point real-street georeferencing (see digitization_method), but this diagram is dated 2020 and may not reflect later design changes. Treat vertex positions as accurate to roughly 10-25m, not survey-grade. West edge corrected 2026-09-16 (fifth pass) against Maryland Street's real, directly-measured near curb, cross-validated against the source diagram's own printed scale (which independently implies a similar block width) -- treat that edge as accurate to roughly 5-10m. The north, south, and east edges still carry the original 10-25m diagram-transform tolerance and have not been independently re-verified against satellite imagery. Rebuilt 2026-09-16 via GDAL GCP/TPS georeferencing -- see digitization_method. Re-measured 2026-09-16 (third pass) in a single consistent pixel-detection pass across the whole block layout -- see digitization_method. Re-corrected 2026-09-16 (fourth pass) after fixing a mis-measured GCP -- see digitization_method.",
-    "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
-    "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead.",
-    "regulatory_context": "Flat 130 ft max height per Figure 6.2.3. The D4D's own Permitted Uses table marks residential NOT PERMITTED on this block, while Laboratory and Life Science uses ARE permitted -- i.e., this is planned as an office/lab block, not residential, contrary to a sometimes-cited secondhand description. It does not front the Louisiana Paseo (a separate, physically distant open space between Blocks 15 and 7). No construction-start source found."
+    "accuracy_caveat": "APPROXIMATE -- this block is not yet built (no design-review approval or construction start found; it is not in the 2024 annual compliance report's Phase 1 list) and no Assessor lot of its own was found: DataSF Parcels (checked 2026-09-29) shows its footprint lying within a much larger active lot, 4175028 (1241 Delaware St, about 21,900 sq m, recorded 2022-08-30), which also overlaps the Block 4 and Block 9 footprints. Traced from an adopted regulatory diagram via multi-point real-street georeferencing (see digitization_method), but this diagram is dated 2020 and may not reflect later design changes. Treat vertex positions as accurate to roughly 10-25m, not survey-grade. West edge corrected 2026-09-16 (fifth pass) against Maryland Street's real, directly-measured near curb, cross-validated against the source diagram's own printed scale (which independently implies a similar block width) -- treat that edge as accurate to roughly 5-10m. The north, south, and east edges still carry the original 10-25m diagram-transform tolerance and have not been independently re-verified against satellite imagery. Rebuilt 2026-09-16 via GDAL GCP/TPS georeferencing -- see digitization_method. Re-measured 2026-09-16 (third pass) in a single consistent pixel-detection pass across the whole block layout -- see digitization_method. Re-corrected 2026-09-16 (fourth pass) after fixing a mis-measured GCP -- see digitization_method.",
+    "digitized_from": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
+    "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead. DataSF Parcels (checked 2026-09-29) shows this footprint within the much larger active lot 4175028 (1241 Delaware St), not a lot of its own.",
+    "regulatory_context": "Flat 130 ft max height per Figure 6.2.3 of the final D4D (colour-coded height label). The D4D's Permitted Uses table (Table 3.1.1) marks Residential Not Permitted on this block, while Non-Retail Sales/Services (office), Laboratory and Life Science uses are permitted (subject to the table's note 13) -- i.e., planned as an office/lab block, not residential. In Figure 6.2.3 the block sits north of Humboldt Street between Maryland and Delaware Streets, so it does not front the Louisiana Paseo (which runs between Blocks 15 and 7). No construction-start source found."
    }
   },
   "centroid": {
@@ -67,9 +67,10 @@
    },
    {
     "key": "life_science_deed_restriction",
-    "value": "One or more of Blocks 2, 3, 11, 12 or 15 must be deed-restricted for Life Science/Laboratory uses under the Development Agreement's Phasing Plan (as adopted; a July 2022 Planning Commission resolution separately removed an earlier, block-specific 130,000 sq ft life-science requirement tied to Block 15 -- see that record)",
+    "value": "As adopted in the D4D (Table 3.1.1, note 13), one or more of Blocks 2, 3, 11, 12 or 15 had to be deed-restricted for Life Science/Laboratory uses under the Development Agreement's Phasing Plan; on July 28, 2022 the Planning Commission (Resolution No. 21156) approved deleting the Phasing Plan section that required one building of not less than 130,000 sq ft to be dedicated to Life Science uses, so that requirement was removed. Laboratory and Life Science uses remain permitted here.",
     "sources": [
-     "src-d4d-final-table311-notes-13"
+     "src-d4d-final-table311-notes-13",
+     "src-pc-res-21156"
     ]
    },
    {
@@ -106,9 +107,17 @@
       "publisher": "SF Planning",
       "url": "https://sfplanning.org/potrero-power-station",
       "accessed": "2026-09-20"
+     },
+     {
+      "id": "src-d4d-final-table311",
+      "title": "Potrero Power Station Design for Development, final (February 26, 2020), Table 3.1.1 Permitted Uses",
+      "publisher": "SF Planning",
+      "date": "2020-02-26",
+      "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+      "accessed": "2026-09-17"
      }
     ],
-    "source": "Port of San Francisco, 2025-11-14; SF Planning",
+    "source": "Port of San Francisco, 2025-11-14; SF Planning; SF Planning, 2020-02-26",
     "origin": "record",
     "category": "status",
     "category_label": "Status",
@@ -128,14 +137,22 @@
     "relation": "tracked"
    },
    {
-    "date": "2035",
-    "date_label": "2035",
+    "date": "2031",
+    "date_label": "2031",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Completion expected: Block 3 is not named in any Phase 1-3 block list found (the 2024 annual compliance report's Phase 1 list is Blocks 2, 7, 8, 11, 12, 15); only the whole-project buildout target applies",
+    "text": "Completion expected: SocketSite's October 2020 schedule table lists Block 3 in Phase 2 with vertical development 2029-2031 (Block 3 is not in the 2024 annual compliance report's Phase 1 list: Blocks 2, 7, 8, 11, 12, 15)",
     "expected": true,
     "approximate": true,
     "sources": [
+     {
+      "id": "src-socketsite-2020-10",
+      "title": "Revised Timing for Massive Power Plant Redevelopment",
+      "publisher": "SocketSite",
+      "date": "2020-10-09",
+      "url": "https://socketsite.com/archives/2020/10/revised-phasing-for-massive-potrero-power-plant-redevelopment.html",
+      "accessed": "2026-09-20"
+     },
      {
       "id": "src-phase1-2020",
       "title": "Potrero Power Station Phase 1 and Phasing Plan Amendment Applications: Development Phase Approval (October 7, 2020)",
@@ -144,17 +161,9 @@
       "url": "https://sfplanning.org/potrero-power-station",
       "accessed": "2026-09-20",
       "overview": true
-     },
-     {
-      "id": "src-socketsite-2020-10",
-      "title": "Revised Timing for Massive Power Plant Redevelopment",
-      "publisher": "SocketSite",
-      "date": "2020-10-09",
-      "url": "https://socketsite.com/archives/2020/10/revised-phasing-for-massive-potrero-power-plant-redevelopment.html",
-      "accessed": "2026-09-20"
      }
     ],
-    "source": "SF Planning, 2020-10-07; SocketSite, 2020-10-09",
+    "source": "SocketSite, 2020-10-09; SF Planning, 2020-10-07",
     "origin": "record",
     "category": "status",
     "category_label": "Status",
@@ -174,7 +183,37 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Block 3's expected completion is now 2031, from SocketSite's October 2020 schedule table (Phase 2, vertical development 2029-2031), instead of the 2035 whole-project target. The life-science deed-restriction fact now says the Planning Commission's Resolution 21156 (July 28, 2022) removed the requirement to dedicate a 130,000 sq ft building to life science. The mapping notes no longer call the site vacant land with no address: DataSF Parcels shows the footprint within the much larger active lot 4175028 (1241 Delaware St). The unsourced 'secondhand description' contrast was removed, mapping sources now cite the final D4D (Feb 26, 2020) instead of a dead 2019 draft link, and the D4D publisher is shown as SF Planning.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_block_3",
+     "slug": "potrero-power-station-block-3",
+     "name": "Potrero Power Station Block 3",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-3/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-3.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/potrero_d4d_final_height_plan_p245.jpg",
@@ -215,13 +254,13 @@
   ],
   "open_questions": [
    "No design review approval or construction-start date found for Block 3; it is not one of the six buildings named in the 2024 annual compliance report's Phase 1 list (Blocks 2, 7, 8, 11, 12, 15), and no later-phase design review approval was found either.",
-   "No phase-specific schedule found for Block 3; the added expected-completion milestone therefore uses only the whole-project buildout target (2035, SocketSite Oct 2020), not a block-specific date."
+   "Block 3's 2029-2031 window comes from a 2020 press table (SocketSite); no current Block 3 schedule was found."
   ],
   "sources": [
    {
     "id": "src-d4d-final-table311",
     "title": "Potrero Power Station Design for Development, final (February 26, 2020), Table 3.1.1 Permitted Uses",
-    "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+    "publisher": "SF Planning",
     "date": "2020-02-26",
     "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
     "accessed": "2026-09-17"
@@ -229,7 +268,7 @@
    {
     "id": "src-d4d-final-fig623",
     "title": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 Building Height Plan",
-    "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+    "publisher": "SF Planning",
     "date": "2020-02-26",
     "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
     "accessed": "2026-09-17"
@@ -237,7 +276,7 @@
    {
     "id": "src-d4d-final-table311-notes-13",
     "title": "Potrero Power Station Design for Development, final (February 26, 2020), Table 3.1.1 Permitted Uses, Note 13",
-    "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+    "publisher": "SF Planning",
     "date": "2020-02-26",
     "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
     "accessed": "2026-09-17"
@@ -293,12 +332,15 @@
     "overview": true
    },
    {
-    "id": null,
-    "title": "default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf",
-    "url": "https://default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf"
+    "id": "src-pc-res-21156",
+    "title": "Planning Commission Resolution No. 21156 (July 28, 2022), Case 2017-011878PHA-09: material change to the Potrero Power Station Development Agreement Phasing Plan removing the requirement to dedicate one building of not less than 130,000 sq ft to Life Science uses (deleting Section 3.6)",
+    "publisher": "SF Planning Commission",
+    "date": "2022-07-28",
+    "url": "https://sfplanning.org/potrero-power-station",
+    "accessed": "2026-09-29"
    }
   ],
-  "notes": "Approximate polygon for a real, D4D-adopted block -- see accuracy_caveat.",
+  "notes": "Approximate polygon for a real, D4D-adopted block (final D4D, Feb 26, 2020: Table 3.1.1 and Figure 6.2.3) -- see accuracy_caveat. Status 'planned': shown in the final D4D, and SocketSite's October 2020 schedule table lists Block 3 in Phase 2 (vertical development 2029-2031). Use 'commercial': office, laboratory and life science uses are permitted and residential is not (D4D Table 3.1.1).",
   "has_record_file": true,
   "last_verified": "2026-09-20",
   "tenants": [],

@@ -43,7 +43,7 @@
     {
       "date": "2021-03-01",
       "status": "planned",
-      "text": "Planning filings published by SF YIMBY describe Block 8 as 140 ft with 249 units, six retail spaces, wellness center, pool and an eighth-floor urban farm; filings anticipated Block 8 construction starting 2026 and completing 2028",
+      "text": "SF YIMBY reports new design-review applications: Block 8 described as 140 ft with 249 units, six retail spaces, wellness center, pool and an eighth-floor urban farm; the article itself states that Block 8 would begin rising in 2026 and complete in 2028",
       "sources": [
         "src-yimby-2021-03"
       ],
@@ -104,14 +104,16 @@
     {
       "date": "2028",
       "status": "complete",
-      "text": "Completion expected: SF YIMBY's March 2021 report of Planning filings anticipated Block 8 construction starting 2026 and completing 2028; the August 2026 report of JPMorgan construction financing and a fall 2026 start is consistent with that timeline, though no source has restated a 2028 completion since 2021",
+      "text": "Completion expected: SocketSite's October 2020 revised-phasing schedule lists Block 8 vertical development 2026-2028 (Phase 1) and SF YIMBY's March 2021 report anticipated completion in 2028; the August 2026 report of JPMorgan construction financing and a fall 2026 start gives no completion date, and no source since 2021 restates a 2028 completion",
       "sources": [
+        "src-socketsite-2020-10",
         "src-yimby-2021-03",
         "src-chron-2026-08"
       ],
       "expected": true,
       "approximate": true,
-      "basis": "record"
+      "basis": "phase",
+      "basis_note": "Phase 1 in the October 2020 revised phasing, as reported by SocketSite (Oct 9, 2020), whose 'Re-Phase Program, Detailed Construction Schedule' table lists Block 8 vertical development 2026-2028; a stale press-reported forecast (the same 2020-21 articles had Blocks 7 and 15 completing by 2026, which did not happen), not a Block 8 commitment; the Chronicle (Aug 3, 2026) gives only a fall 2026 start."
     }
   ],
   "costs": [
@@ -149,15 +151,16 @@
     },
     {
       "key": "developer",
-      "value": "California Barrel Company LLC (Associate Capital; renamed Fifth Space in 2025), project sponsor Enrique Landa",
+      "value": "California Barrel Company LLC (Associate Capital, now called Fifth Space), project sponsor Enrique Landa",
       "sources": [
         "src-dr-8-2022",
-        "src-chron-2026-08"
+        "src-chron-2026-08",
+        "src-sfyimby-2026-02"
       ]
     },
     {
       "key": "architect",
-      "value": "Foster + Partners (design architect); Adamson Associates (executive architect), partnering with LBE firm YA Studio",
+      "value": "Foster + Partners (design architect); Adamson Associates (executive architect), which in March 2022 said it intended to partner with the LBE firm YA Studio during the Construction Documents design phase",
       "sources": [
         "src-dr-8-2022",
         "src-ar-2021",
@@ -225,10 +228,12 @@
     },
     {
       "key": "use",
-      "value": "residential (market-rate rental) with ground-floor retail; D4D 6.10.2 places transit support facilities (bus shelter, operator restroom) on Block 8's Maryland St frontage",
+      "value": "residential (market-rate, and per the 2024 compliance report anticipated to be rental) with ground-floor retail; D4D 6.10.2 requires a shuttle stop along the east side of Block 8 and, on its ground floor facing Maryland Street, public seating serving as a shuttle shelter with a real-time arrival screen and overhead shelter (the Muni bus stop and operator restroom are on Block 12, D4D 6.10.1)",
       "sources": [
         "src-dr-8-2022",
-        "src-d4d-final"
+        "src-d4d-final",
+        "src-phase1-2020",
+        "src-ar-2024"
       ]
     },
     {
@@ -247,8 +252,9 @@
     },
     {
       "key": "location",
-      "value": "bounded by Humboldt St (north), Delaware St (east), Power Station Park East (south) and Maryland St (west), per the plan set key plan; Power Station Park East is to be delivered with Block 8",
+      "value": "fronts Humboldt St (north) and Maryland St (west); in the D4D's Figure 6.2.3 Delaware St runs along its east side and open space (Power Station Park) lies to its south; the 2024 compliance report says Power Station Park East is to be delivered with Block 8",
       "sources": [
+        "src-d4d-final-fig623",
         "src-dr-8-2022",
         "src-ar-2024"
       ]
@@ -271,23 +277,11 @@
   ],
   "images": [
     {
-      "path": "data/manual/images/potrero_block8_rendering_2021.jpg",
-      "kind": "rendering",
-      "taken": "2021-06",
-      "credit": "Foster + Partners / Adamson Associates, sheet G-8-108-PL 'Block 8 - Indicative view from Power Station Park', Block 8 Design Review Approval (SF Planning, March 2, 2022), PDF page 37",
-      "license": "public-record",
-      "source_url": "https://sfplanning.org/potrero-power-station",
-      "license_evidence": "https://sfplanning.org/resource/senate-bill-1214-authorization",
-      "license_note": "Under SB 1214, SF Planning only posts an applicant's full architectural drawings online if the applicant didn't instead submit a reduced massing-diagram-only set for public distribution; when the full drawings are posted, as here in the published Design Review Approval packet, the applicant's permission for public posting is deemed granted and the Department 'shall not be subject to any restrictions on the copying or distribution' of them. Read 2026-09-18.",
-      "appeal": 5,
-      "appeal_note": "Full-bleed, sunlit ground-level view from Power Station Park showing greenery, retail canopies and active street life -- one of the strongest renderings in the set."
-    },
-    {
       "path": "data/manual/images/potrero/d4d_p23_land_use_framework.jpg",
-      "kind": "rendering",
+      "kind": "document",
       "scope": "site",
       "taken": "2020-02-26",
-      "credit": "SF Planning / California Barrel Company, Potrero Power Station Design for Development, final (February 26, 2020), Figure 1.6.1: Land Use Framework, p.23",
+      "credit": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 1.6.1: Land Use Framework, p.23 (SF Planning; the D4D names no individual author)",
       "license": "public-record",
       "source_url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
       "license_evidence": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
@@ -301,7 +295,8 @@
         0.6
       ],
       "appeal": 5,
-      "appeal_note": "A labeled 3D aerial illustration of the whole 21-acre site's land-use framework -- blocks, streets and open space in one wide, colorful view -- reads well at card size and establishes the whole site rather than one building."
+      "appeal_note": "A labeled 3D aerial illustration of the whole 21-acre site's land-use framework -- blocks, streets and open space in one wide, colorful view -- reads well at card size and establishes the whole site rather than one building.",
+      "figure": "illustrative"
     }
   ],
   "sources": [
@@ -389,11 +384,35 @@
     {
       "id": "src-d4d-fig161",
       "title": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 1.6.1: Land Use Framework, p.23",
-      "publisher": "SF Planning / California Barrel Company",
+      "publisher": "SF Planning",
       "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
       "accessed": "2026-09-22",
       "date": "2020-02-26",
       "overview": true
+    },
+    {
+      "id": "src-d4d-final-fig623",
+      "title": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 Building Height Plan, printed p.245",
+      "publisher": "SF Planning",
+      "date": "2020-02-26",
+      "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "src-sfyimby-2026-02",
+      "title": "Excavation Work Underway for Potrero Power Station Block 2, San Francisco",
+      "publisher": "San Francisco YIMBY",
+      "date": "2026-02-09",
+      "url": "https://sfyimby.com/2026/02/excavation-work-underway-for-potrero-power-station-block-2-san-francisco.html",
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "src-socketsite-2020-10",
+      "title": "Revised Timing for Massive Power Plant Redevelopment",
+      "publisher": "SocketSite",
+      "date": "2020-10-09",
+      "url": "https://socketsite.com/archives/2020/10/revised-phasing-for-massive-potrero-power-plant-redevelopment.html",
+      "accessed": "2026-09-29"
     }
   ],
   "open_questions": [
@@ -402,9 +421,10 @@
     "Architect: Stanley Saitowitz | Natoma Architects publishes a 'Potrero Power Block 8' concept ('initial thoughts to begin the process of developing a design for Block 8', architect's own material, undated). The Chronicle (Aug 2026) still credits Foster + Partners and uses its renderings. Not recorded as a fact; noted here only.",
     "Height: the approved plan set shows 125 ft to the last occupied floor with mechanical screening to 145 ft; SF YIMBY reported 140 ft (2021) and 156 ft (2022). The geometry file's note ('140 ft vs. 156 ft') reflects the press figures, not the approval.",
     "No construction start found. Searched the 2021-2024 compliance reports, SF YIMBY (Block 8 category, last item March 2022), the Chronicle and SF Standard. The Aug 2026 Chronicle says construction 'is expected to begin in the fall' of 2026; no groundbreaking report yet as of Sept 17, 2026.",
-    "The geometry file's regulatory_context cites an OEWD pipeline document with 355 units, an estimated start of March 2027 and about $275M; that document is not in the corpus and could not be verified.",
+    "An earlier version of the geometry file's regulatory_context cited an unidentified SF OEWD pipeline document (355 units, March 2027 start, about $275M); it could not be located or verified and was removed from the geometry file on 2026-09-29.",
     "No general contractor, total development cost, or ground-lease information for Block 8 in any source found (developer-owned land; no Port lease).",
-    "The 2028 completion figure used for the new expected-completion milestone comes from SF YIMBY's March 2021 report of Planning filings; no source since has restated a completion year for the 342-unit building financed in August 2026, so this is treated as a record-specific but stale estimate rather than a current commitment."
+    "The 2028 completion figure comes from SocketSite's October 2020 schedule table (Block 8 vertical development 2026-2028) and SF YIMBY's March 2021 report; no source since has restated a completion year for the 342-unit building financed in August 2026, so it is treated as a stale phase forecast rather than a current commitment.",
+    "2026-09-29 audit: the hosted Foster + Partners rendering (sheet G-8-108-PL, PDF page 37 of the Design Review Approval) was removed from this record because the sheet is marked (c) Foster + Partners 2020 and the SB 1214 authorization page grants permission to the Planning Department, not to third parties; the Design Review Approval stays linked in sources."
   ],
   "last_verified": "2026-09-20"
 }

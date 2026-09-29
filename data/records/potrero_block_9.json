@@ -4,43 +4,32 @@
     "Block 9",
     "Unit 3 hotel site"
   ],
-  "summary": "Planned ~240,000-gsf, 250-room waterfront hotel site incorporating the retained Unit 3 Power Block; as of May 2025 the developer said the hotel 'could be a decade away' and proposed an interim park (Prequel Park) on the land instead.",
+  "summary": "Planned ~240,000-sq-ft, 250-room waterfront hotel site around the Stack and the Unit 3 Power Block (partly demolished in 2023-24; the D4D provides for the hotel with or without Unit 3); the Chronicle reported in May 2025 that the hotel's construction 'could be a decade away' and that the developer proposed an interim park (Prequel Park) on the land instead.",
   "summary_sources": [
-    "src-13b-2020",
-    "src-chronicle-2025-05"
+    "src-sfplanning-pps",
+    "src-chronicle-2025-05",
+    "src-ar-2024",
+    "src-d4d-final-fig623"
   ],
   "milestones": [
     {
       "date": "2020-02-20",
-      "text": "Port memo (Item 13B) describes the project's program including a 240,000 gsf hotel (250 rooms)",
+      "text": "Port memo (Item 13B) describes the project's program; SF Planning's project page lists a 240,000 sq ft hotel (250 rooms) in that program",
       "sources": [
-        "src-13b-2020"
+        "src-13b-2020",
+        "src-sfplanning-pps"
       ],
       "expected": false,
       "approximate": false
     },
     {
       "date": "2025-05-22",
-      "text": "Developer Enrique Landa says the hotel approved for this site is 'a decade away' given the slow recovery of San Francisco's hospitality sector, and proposes an interim waterfront park (Prequel Park) using the Unit 3/Stack area in the meantime",
+      "text": "Chronicle reports the hotel approved for this site is slowed by the sluggish recovery of San Francisco's hospitality sector ('the hotel's construction could be a decade away', the reporter's words), and that the developer, Enrique Landa, proposes an interim waterfront park (Prequel Park) around the stack in the meantime",
       "sources": [
         "src-chronicle-2025-05"
       ],
       "expected": false,
       "approximate": false
-    },
-    {
-      "date": "2035",
-      "status": "complete",
-      "text": "Completion expected: Block 9's hotel is not named in any Phase 1-3 block list found and the developer said in May 2025 the hotel is 'a decade away'; only the whole-project buildout target applies",
-      "sources": [
-        "src-phase1-2020",
-        "src-socketsite-2020-10",
-        "src-chronicle-2025-05"
-      ],
-      "expected": true,
-      "approximate": true,
-      "basis": "project",
-      "basis_note": "Whole-project buildout target: the October 2020 Phase 1 and Phasing Plan Amendment's final Phase 3 'wrapping up construction in late 2035' per SocketSite (Oct 9, 2020); Block 9 has no assigned phase in any source found, and the developer's own May 2025 'a decade away' estimate (i.e., roughly mid-2030s) is consistent with, but not more specific than, this whole-project target."
     },
     {
       "date": "2020-04-21",
@@ -48,7 +37,8 @@
       "text": "Board of Supervisors approves the Potrero Power Station project and Development Agreement (Ordinance No. 62-20, Board File 200040), the entitlement that first names Block 9 as a development block under the adopted Design for Development's Land Use Table; the Development Agreement's own effective date is May 25, 2020, distinct from the D4D's own February 26, 2020 final-document date",
       "sources": [
         "src-port-memo-10a",
-        "src-sfplanning-pps"
+        "src-sfplanning-pps",
+        "src-d4d-final-table311"
       ],
       "expected": false,
       "approximate": false
@@ -81,7 +71,7 @@
     },
     {
       "key": "height_ft",
-      "value": "The D4D final's Figure 6.2.3 shows a separate 'Block 9 Building Configurations' inset with two alternate massings, 'WITH UNIT 3' and 'WITHOUT UNIT 3', with callouts including 177 ft MAX, 110 ft MAX, 102 ft MAX, 85 ft, 65 ft and 35 ft (with-Unit-3 option) and 125 ft / 85 ft (without-Unit-3 option); Standard 6.2.1 separately states that if Unit 3 is demolished, the height limit for Block 9 would be 125/85 feet",
+      "value": "The D4D final's Figure 6.2.3 shows a separate 'Block 9 Building Configurations' inset with two alternate massings. By its colour-coded labels, 'with Unit 3' is 85 ft, 65 ft and 35 ft plus Unit 3 itself at about 130 ft ('~130''), and 'without Unit 3' is 125 ft and 85 ft. The '177'MAX', '110'MAX' and '102'MAX' labels are dimension lines (plan extents), not heights. Standard 6.2.1 separately states that if Unit 3 is demolished, the height limit for Block 9 would be 125/85 feet",
       "sources": [
         "src-d4d-final-fig623",
         "src-d4d-final-6.2.1"
@@ -89,16 +79,18 @@
     },
     {
       "key": "existing_structures_on_site",
-      "value": "Unit 3 Power Block (128-ft tall steel-frame boiler structure, highest point 143 ft at the elevator shaft, plus a 40-ft tall turbine-generator-condenser structure and a four-story concrete control room building) and the adjacent 300-ft Boiler Stack (mapped separately in this dataset as potrero_the_stack)",
+      "value": "As described in the 2018 Draft EIR (before Unit 3's abatement and partial demolition, June 2023 to July 2024, per the 2024 annual compliance report): Unit 3 Power Block (128-ft tall steel-frame boiler structure, highest point 143 ft at the elevator shaft, plus a 40-ft tall turbine-generator-condenser structure and a four-story concrete control room building) and the adjacent 300-ft Boiler Stack (mapped separately in this dataset as potrero_the_stack)",
       "sources": [
-        "src-deir-vol1-unit3"
+        "src-deir-vol1-unit3",
+        "src-ar-2024"
       ]
     },
     {
       "key": "rooftop_bar_limit",
-      "value": "'Only one rooftop bar shall be permitted on Block 9' under the adopted D4D -- the origin of the single-rooftop-bar cap for the whole 29-acre project that the developer sought to remove in its 2026 Development Agreement amendment request (see the Station A/Block 15 and other block records for that amendment)",
+      "value": "'Only one rooftop bar shall be permitted on Block 9' under the adopted D4D (Table 3.1.1, note 10); note 7 separately allows rooftop bars on Blocks 2, 3, 11, 12 and 15. The Chronicle (July 29, 2026) describes a rule 'limiting the entire 29-acre development to a single rooftop bar' that the developer asked to eliminate in its 2026 Development Agreement amendment request; the source of that project-wide cap is not identified in the sources found",
       "sources": [
-        "src-d4d-final-table311-notes"
+        "src-d4d-final-table311-notes",
+        "src-chronicle-2026-07"
       ]
     }
   ],
@@ -150,7 +142,6 @@
       "id": "src-sfplanning-pps",
       "title": "Potrero Power Station project page",
       "publisher": "SF Planning Department",
-      "date": "2026-09",
       "url": "https://sfplanning.org/potrero-power-station",
       "accessed": "2026-09-17",
       "overview": true
@@ -166,7 +157,7 @@
     {
       "id": "src-d4d-final-table311",
       "title": "Potrero Power Station Design for Development, final (February 26, 2020), Table 3.1.1 Permitted Uses",
-      "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+      "publisher": "SF Planning",
       "date": "2020-02-26",
       "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
       "accessed": "2026-09-17"
@@ -174,7 +165,7 @@
     {
       "id": "src-d4d-final-fig623",
       "title": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 Building Height Plan (Block 9 Building Configurations inset)",
-      "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+      "publisher": "SF Planning",
       "date": "2020-02-26",
       "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
       "accessed": "2026-09-17"
@@ -182,7 +173,7 @@
     {
       "id": "src-d4d-final-6.2.1",
       "title": "Potrero Power Station Design for Development, final (February 26, 2020), Standard 6.2.1: Height of Existing Structures",
-      "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+      "publisher": "SF Planning",
       "date": "2020-02-26",
       "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
       "accessed": "2026-09-17"
@@ -198,7 +189,7 @@
     {
       "id": "src-d4d-final-table311-notes",
       "title": "Potrero Power Station Design for Development, final (February 26, 2020), Table 3.1.1 Permitted Uses, Note 10",
-      "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+      "publisher": "SF Planning",
       "date": "2020-02-26",
       "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
       "accessed": "2026-09-17"
@@ -236,13 +227,29 @@
       "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
       "accessed": "2026-09-22",
       "date": "2020-02-26"
+    },
+    {
+      "id": "src-ar-2024",
+      "title": "2024 Annual Compliance Report under the Development Agreement for the Potrero Power Station Mixed-Use Development Project, p.34 (Unit 3 abatement and partial demolition)",
+      "publisher": "California Barrel Company LLC / Found Middle LP, submitted to SF Planning Department",
+      "date": "2025-03-28",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "src-chronicle-2026-07",
+      "title": "One of S.F.’s biggest developments is changing its plans — but not its biggest promise",
+      "publisher": "San Francisco Chronicle (Laura Waxmann)",
+      "date": "2026-07-29",
+      "url": "https://www.sfchronicle.com/realestate/article/one-s-f-s-biggest-developments-changing-plans-22365461.php",
+      "accessed": "2026-09-29"
     }
   ],
   "open_questions": [
     "No source found stating a developer, architect, hotel brand/operator, or construction cost for the Block 9 hotel.",
     "No design review approval or construction-start date found for Block 9; the 2024 annual compliance report's only mention of Block 9 is site photos of 'Block 9 / Unit 3' as of December 2024, with no described construction activity.",
     "Whether Unit 3 will ultimately be retained or demolished as part of the hotel project is not settled in any source found; the D4D provides for both configurations.",
-    "No phase-specific schedule found for the Block 9 hotel; the added expected-completion milestone therefore uses only the whole-project buildout target (2035, SocketSite Oct 2020), not a hotel-specific date."
+    "No current schedule found for the Block 9 hotel. SocketSite's October 2020 schedule table lists Block 9 in Phase 2 with vertical development 2029-2030, but the Chronicle (May 2025) reported the hotel's construction could be a decade away, so no completion year is shown; the earlier 2035 expected-completion milestone was removed on 2026-09-29 because the source refers to a possible construction start about a decade out, not a completion, and to the reporter's words, not the developer's."
   ],
   "last_verified": "2026-09-20"
 }

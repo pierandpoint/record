@@ -46,51 +46,19 @@
   "costs": [],
   "milestones": [
    {
-    "date": "2016-09-06",
-    "date_label": "Sep 6, 2016",
-    "status": "under_construction",
-    "status_label": "Under construction",
-    "text": "Pile drivers arrive to start construction of Uber's Mission Bay headquarters (1455 & 1515 3rd St)",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "title": "socketsite.com"
-     }
-    ],
-    "source": "socketsite.com",
-    "origin": "csv",
-    "category": "status",
-    "category_label": "Status",
-    "record": {
-     "id": "8721035",
-     "slug": "uber-mission-bay-1",
-     "name": "Uber Mission Bay 1",
-     "permalink": "https://pierandpoint.org/parcels/uber-mission-bay-1/",
-     "api": "https://pierandpoint.org/api/v1/records/uber-mission-bay-1.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2021-06",
-    "date_label": "~2021",
+    "date": "2022",
+    "date_label": "~2022",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Uber Mission Bay 1 (1455 3rd St) completed",
+    "text": "Uber Mission Bay 1 (1455 3rd St) completed (ArchDaily lists the project as 2022; no source read gives a month)",
     "expected": false,
     "approximate": true,
     "sources": [
      {
-      "title": "archdaily.com"
+      "title": "https://www.archdaily.com/1006339/uber-headquarters-shop-architects"
      }
     ],
-    "source": "archdaily.com",
+    "source": "https://www.archdaily.com/1006339/uber-headquarters-shop-architects",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -119,10 +87,10 @@
     "approximate": false,
     "sources": [
      {
-      "title": "sfstandard.com"
+      "title": "https://sfstandard.com/2023/10/27/openai-uber-headquarters-mission-bay/; https://therealdeal.com/san-francisco/2023/10/29/openai-subleases-two-san-francisco-buildings-from-uber/"
      }
     ],
-    "source": "sfstandard.com",
+    "source": "https://sfstandard.com/2023/10/27/openai-uber-headquarters-mission-bay/; https://therealdeal.com/san-francisco/2023/10/29/openai-subleases-two-san-francisco-buildings-from-uber/",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -144,10 +112,39 @@
   ],
   "changes": [
    {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The retail table showed OpenAI as open at 1455 3rd St on the strength of a 2023 SF Standard report of a signed lease; it now shows the tenant as announced with no opening date. Uber was shown as open since June 2020 based only on a DataSF business registration that predates the building's completion and on a building later subleased to OpenAI; that row was removed, and the changelog entry now describes it as a registration. The completion milestone said June 2021 with only a bare domain; ArchDaily gives 2022, so it now reads 2022 (the status notes say the same, and that the Assessor has no year built). A pile-driver milestone from a bare domain was removed. The joint venture (Alexandria 51%, Uber 49%, formed September 2014) now cites Alexandria's 3Q14 supplemental, which also calls the two buildings Class A. The OpenAI lease milestone cites the SF Standard and Real Deal articles.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8721035",
+     "slug": "uber-mission-bay-1",
+     "name": "Uber Mission Bay 1",
+     "permalink": "https://pierandpoint.org/parcels/uber-mission-bay-1/",
+     "api": "https://pierandpoint.org/api/v1/records/uber-mission-bay-1.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "OpenAI has signed the largest office lease in San Francisco since 2018, agreeing to take over two buildings at 1455 Third Street and 1515 Third Street owned by Uber",
+    "text": "SF Standard reported on 2023-10-27 that OpenAI is leasing two buildings at 1455 and 1515 Third St from Uber, described as the largest office lease in San Francisco since 2018. The article reports the lease, not an operating office.",
     "source": "https://sfstandard.com/2023/10/27/openai-uber-headquarters-mission-bay/",
     "sources": [
      {
@@ -176,7 +173,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "Uber Technologies Inc registered at 1455 3rd St, location start date 2020-06-25 (DataSF Registered Business Locations)",
+    "text": "DataSF Registered Business Locations lists Uber Technologies Inc at 1455 3rd St with a location start date of 2020-06-25. A registration is not an opening, and it predates the building's completion (ArchDaily lists the project as 2022), so it does not show an Uber office opening there.",
     "source": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
     "sources": [
      {
@@ -219,9 +216,14 @@
     "id": null,
     "title": "archdaily.com/1006339/uber-headquarters-shop-architects",
     "url": "https://www.archdaily.com/1006339/uber-headquarters-shop-architects"
+   },
+   {
+    "id": null,
+    "title": "sec.gov/Archives/edgar/data/1035443/000103544314000075/a3q14-ex991.htm",
+    "url": "https://www.sec.gov/Archives/edgar/data/1035443/000103544314000075/a3q14-ex991.htm"
    }
   ],
-  "notes": "Uber Mission Bay 1, 1455 3rd St -- an 11-story Class A office tower developed by a joint venture of Alexandria Real Estate Equities (51%) and Uber Technologies (49%, announced 2014), designed by SHoP Architects, part of Uber's four-building Mission Bay headquarters campus (completed 2021). Subleased to OpenAI along with 1515 3rd St in an October 2023 deal (~486,600 sq ft combined), reported as the largest SF office lease since 2018.",
+  "notes": "Uber Mission Bay 1, 1455 3rd St -- an 11-story Class A office tower developed by a joint venture of Alexandria Real Estate Equities (51%) and Uber Technologies (49%), formed in September 2014 per Alexandria's 3Q14 supplemental, designed by SHoP Architects, part of Uber's four-building Mission Bay headquarters campus (ArchDaily lists the project as 2022; the Assessor gives no year built for this parcel). Subleased to OpenAI along with 1515 3rd St in an October 2023 deal (~486,600 sq ft combined), reported as the largest SF office lease since 2018.",
   "has_record_file": false,
   "last_verified": null,
   "tenants": [
@@ -229,33 +231,10 @@
     "slug": "openai",
     "name": "OpenAI",
     "category": "office lobby or other",
-    "status": "open",
+    "status": "announced",
     "opened": null,
     "closed": null,
     "source": "https://sfstandard.com/2023/10/27/openai-uber-headquarters-mission-bay/",
-    "unit_or_address": "1455 3rd St",
-    "record": {
-     "id": "8721035",
-     "slug": "uber-mission-bay-1",
-     "name": "Uber Mission Bay 1",
-     "permalink": "https://pierandpoint.org/parcels/uber-mission-bay-1/",
-     "api": "https://pierandpoint.org/api/v1/records/uber-mission-bay-1.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    }
-   },
-   {
-    "slug": "uber-2",
-    "name": "Uber",
-    "category": "office lobby or other",
-    "status": "open",
-    "opened": "2020-06",
-    "closed": null,
-    "source": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
     "unit_or_address": "1455 3rd St",
     "record": {
      "id": "8721035",

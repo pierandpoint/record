@@ -38,7 +38,7 @@
    "display_reason": null,
    "notes": {
     "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same real-geometry-without-a-single-parcel pattern already used for several Pier 70 buildings (DataSF Building Footprints) and for Mission Bay's own real park polygons.",
-    "digitized_from": "OpenStreetMap (way 142845124, addr:housename=Madrone Mission Bay, 480 Mission Bay Blvd N)"
+    "digitized_from": "OpenStreetMap (way 142845124, name=Madrone Mission Bay, 480 Mission Bay Blvd N)"
    }
   },
   "centroid": {
@@ -53,15 +53,15 @@
     "date_label": "Jul 29, 2010",
     "status": "under_construction",
     "status_label": "Under construction",
-    "text": "Construction resumes on 'Radiance West' (325 China Basin Blvd Phase Two), the site later completed and rebranded as Madrone, after a 2008 suspension",
+    "text": "Construction under way on 'Radiance West' (325 China Basin Phase Two), the site later completed as Madrone, after a 2008 suspension; SocketSite reported move-in expected by mid-2012",
     "expected": false,
     "approximate": false,
     "sources": [
      {
-      "title": "socketsite.com"
+      "title": "https://socketsite.com/archives/2010/07/radiance_west_325_china_basin_phase_two_construction_un.html"
      }
     ],
-    "source": "socketsite.com",
+    "source": "https://socketsite.com/archives/2010/07/radiance_west_325_china_basin_phase_two_construction_un.html",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -81,19 +81,19 @@
     "relation": "tracked"
    },
    {
-    "date": "2011-06",
-    "date_label": "~2011",
+    "date": "2012",
+    "date_label": "~2012",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Madrone (420/435/480 Mission Bay Blvd N) completed",
+    "text": "Madrone (420 and 480 Mission Bay Blvd N, 435 China Basin St) completed: the DataSF Assessor roll gives year built 2012 for its condominium lots, and Bosa says its two towers were completed 'a few years' after Radiance (2008)",
     "expected": false,
     "approximate": true,
     "sources": [
      {
-      "title": "bosadevelopment.com"
+      "title": "https://data.sf.gov/resource/wv5m-vpq2.json?block=8720; https://bosadevelopment.com/project/radiance-madrone-mission-bay/"
      }
     ],
-    "source": "bosadevelopment.com",
+    "source": "https://data.sf.gov/resource/wv5m-vpq2.json?block=8720; https://bosadevelopment.com/project/radiance-madrone-mission-bay/",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -113,7 +113,37 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The geometry notes gave 329-330 units, an architect and an opening of 2011-2012 that Bosa's project page does not support (it gives 693 units for three buildings combined, no architect, and only 'a few years' after 2008). Those statements were withdrawn in a dated note, the completion milestone moved from June 2011 to 2012 per the DataSF Assessor roll, the 2010 milestone now cites its SocketSite post, and the OSM tag citation was corrected from addr:housename to name.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_madrone",
+     "slug": "madrone",
+     "name": "Madrone",
+     "permalink": "https://pierandpoint.org/parcels/madrone/",
+     "api": "https://pierandpoint.org/api/v1/records/madrone.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [],
   "open_questions": [],
   "sources": [
@@ -126,9 +156,14 @@
     "id": null,
     "title": "bosadevelopment.com/project/radiance-madrone-mission-bay",
     "url": "https://bosadevelopment.com/project/radiance-madrone-mission-bay/"
+   },
+   {
+    "id": null,
+    "title": "data.sf.gov/resource/wv5m-vpq2.json?block=8720",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json?block=8720"
    }
   ],
-  "notes": "Exact opening year (2011 vs. 2012) and unit count (329 vs. 330) are inconsistently reported across sources; not resolved here.",
+  "notes": "Unit count and opening year are not established by any cited source: Bosa's project page gives 693 units for Radiance, Madrone and Arden combined and says only that Madrone's towers were completed 'a few years' after Radiance (2008); the Assessor roll gives year built 2012 for the condominium lots at 420 and 480 Mission Bay Blvd N and 435 China Basin St.",
   "has_record_file": false,
   "last_verified": null,
   "tenants": [],

@@ -46,19 +46,19 @@
   "costs": [],
   "milestones": [
    {
-    "date": "2015-09-03",
-    "date_label": "Sep 3, 2015",
+    "date": "2015-09",
+    "date_label": "~2015",
     "status": "under_construction",
     "status_label": "Under construction",
     "text": "Kilroy Realty breaks ground on The Exchange on 16th (1800 Owens St) with Mayor Ed Lee",
     "expected": false,
-    "approximate": false,
+    "approximate": true,
     "sources": [
      {
-      "title": "businesswire.com"
+      "title": "https://news.theregistrysf.com/kilroy-realty-breaks-ground-on-the-exchange-on-16th-in-the-mission-bay-submarket-of-san-francisco/"
      }
     ],
-    "source": "businesswire.com",
+    "source": "https://news.theregistrysf.com/kilroy-realty-breaks-ground-on-the-exchange-on-16th-in-the-mission-bay-submarket-of-san-francisco/",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -78,19 +78,19 @@
     "relation": "tracked"
    },
    {
-    "date": "2018-01",
+    "date": "2018",
     "date_label": "~2018",
     "status": "complete",
     "status_label": "Complete",
-    "text": "The Exchange on 16th (1800 Owens St) completed by Kilroy Realty as Dropbox's headquarters",
+    "text": "The Exchange on 16th (1800 Owens St) completed by Kilroy Realty in 2018; Dropbox was to take possession in phases from Q4 2018 through Q4 2019",
     "expected": false,
     "approximate": true,
     "sources": [
      {
-      "title": "businesswire.com"
+      "title": "https://therealdeal.com/san-francisco/2022/05/18/former-dropbox-hq-in-mission-bay-turned-into-750k-sf-of-life-sciences-labs/ ; https://www.sec.gov/Archives/edgar/data/0001025996/000102599617000189/exhibit992q317.htm"
      }
     ],
-    "source": "businesswire.com",
+    "source": "https://therealdeal.com/san-francisco/2022/05/18/former-dropbox-hq-in-mission-bay-turned-into-750k-sf-of-life-sciences-labs/ ; https://www.sec.gov/Archives/edgar/data/0001025996/000102599617000189/exhibit992q317.htm",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -112,10 +112,39 @@
   ],
   "changes": [
    {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Dropbox, Vir and OpenAI rows previously said each opened an office on the date of a DataSF business registration; a registration is not an opening, so the retail rows no longer carry an opened date. Vir now cites its own contact page (1800 Owens Street, Suite 900) and Dropbox cites the March 2026 Real Deal report that it plans to vacate; OpenAI is now shown as announced, based on the reported ~280,000 sq ft sublease (March 2026). The Exchange on 16th's completion moved from January 2018 to 2018 (Kilroy's own release has Dropbox taking possession in phases from Q4 2018), the groundbreaking is dated September 2015 and cited to a readable report, the lot is about 3.25 acres, and the lab conversion and OpenAI sublease dates are stated as the sources give them.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8727008",
+     "slug": "the-exchange-on-16th",
+     "name": "The Exchange on 16th",
+     "permalink": "https://pierandpoint.org/parcels/the-exchange-on-16th/",
+     "api": "https://pierandpoint.org/api/v1/records/the-exchange-on-16th.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "Dropbox registered at 1800 Owens St, location start date 2019-05-30 (DataSF Registered Business Locations)",
+    "text": "Dropbox registered at 1800 Owens St, location start date 2019-05-30 (DataSF Registered Business Locations); a registration is not an opening. The Real Deal (2026-03-16) reports Dropbox is now planning to vacate the building entirely.",
     "source": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
     "sources": [
      {
@@ -144,7 +173,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "Vir Biotechnology, Inc. registered at 1800 Owens St, location start date 2022-04-25 (DataSF Registered Business Locations)",
+    "text": "Vir Biotechnology, Inc. registered at 1800 Owens St, location start date 2022-04-25 (DataSF Registered Business Locations); a registration is not an opening. The Real Deal (2022-05-18) reports Vir's 133,000 sq ft sublease was converted into a direct long-term lease, and Vir's own contact page lists 1800 Owens Street, Suite 900.",
     "source": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
     "sources": [
      {
@@ -173,11 +202,11 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "Openai Opco, LLC registered at 1800 Owens St Unit 1-4, location start date 2026-06-15, plus multiple Bon Appetit @ Openai catering registrations on floors 2, 3, 6, 7 and 8 of the same building (DataSF Registered Business Locations)",
-    "source": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
+    "text": "OpenAI signed a deal to sublease approximately 280,000 square feet of office space at 1800 Owens St, reported by The Real Deal on 2026-03-16 with confirmation from a March 2026 Newmark market report. DataSF Registered Business Locations also lists Openai Opco, LLC at 1800 Owens St Unit 1-4 (location start 2026-06-15) and several 'Bon Appetit @ Openai' catering registrations on floors 2, 3, 6, 7 and 8; registrations do not show an opening.",
+    "source": "https://therealdeal.com/san-francisco/2026/03/16/openai-inks-another-mission-bay-lease/",
     "sources": [
      {
-      "title": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis"
+      "title": "https://therealdeal.com/san-francisco/2026/03/16/openai-inks-another-mission-bay-lease/"
      }
     ],
     "category": "retail",
@@ -216,21 +245,26 @@
     "id": null,
     "title": "therealdeal.com/san-francisco/2026/03/16/openai-inks-another-mission-bay-lease",
     "url": "https://therealdeal.com/san-francisco/2026/03/16/openai-inks-another-mission-bay-lease/"
+   },
+   {
+    "id": null,
+    "title": "sec.gov/Archives/edgar/data/0001025996/000102599617000189/exhibit992q317.htm",
+    "url": "https://www.sec.gov/Archives/edgar/data/0001025996/000102599617000189/exhibit992q317.htm"
    }
   ],
-  "notes": "The Exchange on 16th, 1800 Owens St -- formerly Dropbox's headquarters, now partly rebranded 'Icona: Labs at Mission Bay' -- a 750,370 sq ft, 12-story office/life-science campus on a ~3.5-acre lot, built by Kilroy Realty Corporation in 2018 as Dropbox's single-tenant headquarters (15-year lease). Sold in 2021 for $1.08B to KKR and Longfellow Real Estate Partners, who have since converted much of it to life-science labs; OpenAI signed a roughly 280,000 sq ft sublease reported closed Feb 2026. Blklot confirmed against the DataSF Assessor Historical Secured Property Tax Rolls dataset (wv5m-vpq2), whose property_location and square-footage/year-built fields match the published building exactly, since the base parcel map's own address field is a stale street-frontage number (701-707 16th St) rather than the building's current mailing address. OCII plan block 40 (per OCII's own Dec 2019 Land Use Map, cross-checked 2026-09-22 -- this parcel had been left out of the block_inventory brief entirely, with block 40 wrongly lumped into the UCSF Medical Center hospital superblock instead, which stays fully covered by blocks 36-39 alone).",
+  "notes": "The Exchange on 16th, 1800 Owens St -- formerly Dropbox's headquarters, now partly rebranded 'Icona: Labs at Mission Bay' -- a 750,370 sq ft, 12-story office/life-science campus on a ~3.25-acre lot (141,415 sq ft per the Assessor roll), built by Kilroy Realty Corporation in 2018 as Dropbox's single-tenant headquarters (15-year lease, per Kilroy's October 2017 announcement as reproduced in its Q3 2017 SEC supplemental). Sold in 2021 for $1.08B to KKR and Longfellow Real Estate Partners, who by May 2022 were marketing more than 406,000 sq ft as 'lab-capable' space and building out turnkey labs (The Real Deal, May 18, 2022); OpenAI signed a roughly 280,000 sq ft sublease, reported in March 2026 with confirmation from a March 2026 Newmark market report (The Real Deal, Mar 16, 2026), which also reports Dropbox is planning to vacate the building entirely. Blklot confirmed against the DataSF Assessor Historical Secured Property Tax Rolls dataset (wv5m-vpq2), whose property_location and square-footage/year-built fields match the published building exactly, since the base parcel map's own address field is a stale street-frontage number (701-707 16th St) rather than the building's current mailing address. OCII plan block 40 (per OCII's own Dec 2019 Land Use Map, cross-checked 2026-09-22 -- this parcel had been left out of the block_inventory brief entirely, with block 40 wrongly lumped into the UCSF Medical Center hospital superblock instead, which stays fully covered by blocks 36-39 alone).",
   "has_record_file": false,
   "last_verified": null,
   "tenants": [
    {
-    "slug": "dropbox",
-    "name": "Dropbox",
+    "slug": "openai-3",
+    "name": "OpenAI",
     "category": "office lobby or other",
-    "status": "open",
-    "opened": "2019-05",
+    "status": "announced",
+    "opened": null,
     "closed": null,
-    "source": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
-    "unit_or_address": "1800 Owens St",
+    "source": "https://therealdeal.com/san-francisco/2026/03/16/openai-inks-another-mission-bay-lease/",
+    "unit_or_address": "1800 Owens St Unit 1-4",
     "record": {
      "id": "8727008",
      "slug": "the-exchange-on-16th",
@@ -246,14 +280,14 @@
     }
    },
    {
-    "slug": "openai-3",
-    "name": "OpenAI",
+    "slug": "dropbox",
+    "name": "Dropbox",
     "category": "office lobby or other",
     "status": "open",
-    "opened": "2026-06",
+    "opened": null,
     "closed": null,
-    "source": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
-    "unit_or_address": "1800 Owens St Unit 1-4",
+    "source": "https://therealdeal.com/san-francisco/2026/03/16/openai-inks-another-mission-bay-lease/",
+    "unit_or_address": "1800 Owens St",
     "record": {
      "id": "8727008",
      "slug": "the-exchange-on-16th",
@@ -273,9 +307,9 @@
     "name": "Vir Biotechnology",
     "category": "office lobby or other",
     "status": "open",
-    "opened": "2022-04",
+    "opened": null,
     "closed": null,
-    "source": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
+    "source": "https://www.vir.bio/contact/",
     "unit_or_address": "1800 Owens St",
     "record": {
      "id": "8727008",

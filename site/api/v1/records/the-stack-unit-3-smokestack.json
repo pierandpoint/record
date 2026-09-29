@@ -31,7 +31,7 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "A 300-foot concrete boiler exhaust stack built in 1965 alongside the Unit 3 Power Block; explicitly retained as an existing structure under the Design for Development, and slated to anchor a temporary art installation within the interim Prequel Park.",
+  "summary": "A 300-foot concrete boiler exhaust stack built in 1965 alongside the Unit 3 Power Block; explicitly retained as an existing structure under the Design for Development, and proposed by the developer (May 2025) as a temporary art gallery within the interim Prequel Park.",
   "summary_sources": [
    "src-deir-vol1-stack",
    "src-d4d-final-6.2.1",
@@ -43,10 +43,10 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- Figure 6.2.3 marks this with a single point symbol and the label 'STACK / EXISTING STRUCTURE (~300')', not a footprint outline, but this polygon has been rebuilt 2026-09-16 (second pass) to trace the structure's actual visible footprint in satellite imagery (a fallen/lowered stack lying on the ground) rather than a diagram-derived placeholder. Treat as accurate to roughly 5-10m -- limited mainly by how precisely the lon/lat grid overlay could be read against the image, not by diagram-transform error.",
-    "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
-    "why_no_real_parcel": "This is an existing structure without its own subdivided Assessor parcel -- it sits within the larger, largely unaddressed former power-station site.",
-    "regulatory_context": "The historic ~300 ft tall smokestack from the power station's Unit 3 generating block, explicitly called out on the D4D's own Figure 6.2.3 as an 'Existing Structure' the plan retains (unlike the rest of the demolished power block) -- a literal, physical landmark left standing amid the redevelopment, sitting within Block 9's mapped development envelope (see potrero_block_9.geojson) at the site's waterfront edge. The Block 9 Building Configurations inset on the same figure shows two alternate massing options labeled 'WITH UNIT 3' and 'WITHOUT UNIT 3' -- suggesting the adjacent Unit 3 power block building (distinct from the Stack itself) may or may not be retained; the diagram does not draw Unit 3's own footprint distinctly enough to trace separately, so it is not mapped here as its own feature."
+    "accuracy_caveat": "APPROXIMATE -- Figure 6.2.3 marks this with a single point symbol and the label 'STACK / EXISTING STRUCTURE (~300')', not a footprint outline, but this polygon has been rebuilt 2026-09-16 (second pass) to trace the structure's actual visible footprint in satellite imagery (an earlier pass read it as a fallen or lowered stack, which no source reports: the D4D, the 2018 Draft EIR and the Chronicle of May 22, 2025 all describe a standing ~300-ft Stack retained by the plan, so the polygon may instead trace the imaged lean of the standing Stack rather than its base; unconfirmed, see digitization_method) rather than a diagram-derived placeholder. Treat as accurate to roughly 5-10m -- limited mainly by how precisely the lon/lat grid overlay could be read against the image, not by diagram-transform error.",
+    "digitized_from": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
+    "why_no_real_parcel": "This is an existing structure without its own subdivided Assessor parcel -- it sits within the larger, largely unaddressed former power-station site. DataSF Parcels (checked 2026-09-29) shows this polygon straddling active lots 4175028 (1241 Delaware St), 4232016 and 4232015; the 2018 Draft EIR lists the Power Station sub-area as Assessor's Block 4175 Lots 002/017 and Block 4232 Lots 001/006.",
+    "regulatory_context": "The historic ~300 ft tall smokestack from the power station's Unit 3 generating block, called out on the D4D's own Figure 6.2.3 as 'EXISTING STRUCTURE (~300')' the plan retains (Standard 6.2.1 sets its height limit at its existing height) -- a literal, physical landmark left standing amid the redevelopment, sitting within Block 9's mapped development envelope (see potrero_block_9.geojson) at the site's waterfront edge. The Block 9 Building Configurations inset on the same figure shows two alternate massing options labeled 'WITH UNIT 3' and 'WITHOUT UNIT 3' -- meaning the adjacent Unit 3 power block building (distinct from the Stack itself) may or may not be retained; the diagram does not draw Unit 3's own footprint distinctly enough to trace separately, so it is not mapped here as its own feature."
    }
   },
   "centroid": {
@@ -56,10 +56,11 @@
   "facts": [
    {
     "key": "height_ft",
-    "value": "300 ft (described in the DEIR as a '300-foot tall concrete boiler exhaust stack'; the D4D final and SF Planning's project page both cite the existing structure at approximately 300 ft)",
+    "value": "300 ft (described in the DEIR as a '300-foot tall concrete boiler exhaust stack'; the D4D final labels it 'EXISTING STRUCTURE (~300')' in Figure 6.2.3, and Standard 6.2.1 refers to its 300-foot height limit)",
     "sources": [
      "src-deir-vol1-stack",
-     "src-d4d-final-fig623"
+     "src-d4d-final-fig623",
+     "src-d4d-final-6.2.1"
     ]
    },
    {
@@ -78,7 +79,7 @@
    },
    {
     "key": "historic_status",
-    "value": "Contributor to the Third Street Industrial District (added when the district's period of significance was extended to 1965); not individually evaluated as eligible under a separate criterion in the source reviewed",
+    "value": "Contributor to the Third Street Industrial District (added when the district's period of significance was extended to 1965); the 2018 DEIR states the Boiler Stack is not considered to be individually significant",
     "sources": [
      "src-deir-vol1-stack"
     ]
@@ -155,9 +156,17 @@
       "url": "https://sfmea.sfplanning.org/2017-011878ENV_DEIR_Volume_1.pdf",
       "accessed": "2026-09-17",
       "overview": true
+     },
+     {
+      "id": "src-d4d-final-6.2.1",
+      "title": "Potrero Power Station Design for Development, final (February 26, 2020), Standard 6.2.1: Height of Existing Structures",
+      "publisher": "SF Planning",
+      "date": "2020-02-26",
+      "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+      "accessed": "2026-09-17"
      }
     ],
-    "source": "SF Planning Department, 2018-10",
+    "source": "SF Planning Department, 2018-10; SF Planning, 2020-02-26",
     "origin": "record",
     "category": "status",
     "category_label": "Status",
@@ -188,13 +197,13 @@
      {
       "id": "src-d4d-final-6.2.1",
       "title": "Potrero Power Station Design for Development, final (February 26, 2020), Standard 6.2.1: Height of Existing Structures",
-      "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+      "publisher": "SF Planning",
       "date": "2020-02-26",
       "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
       "accessed": "2026-09-17"
      }
     ],
-    "source": "Port/City of San Francisco, adopted by SF Planning Commission, 2020-02-26",
+    "source": "SF Planning, 2020-02-26",
     "origin": "record",
     "category": "retail",
     "category_label": "Retail",
@@ -218,8 +227,8 @@
     "date_label": "May 22, 2025",
     "status": null,
     "status_label": null,
-    "text": "Developer announces plans, with Heatherwick Studio, to open the Stack as a temporary art gallery as part of Prequel Park",
-    "expected": true,
+    "text": "Developer announces plans, with Heatherwick Studio, to open the Stack as a temporary art gallery as part of Prequel Park; the Chronicle reports the park, if approved, could open by the first quarter of 2027",
+    "expected": false,
     "approximate": false,
     "sources": [
      {
@@ -233,8 +242,8 @@
     ],
     "source": "San Francisco Chronicle (Laura Waxmann), 2025-05-22",
     "origin": "record",
-    "category": "coming_up",
-    "category_label": "Coming up",
+    "category": "retail",
+    "category_label": "Retail",
     "record": {
      "id": "potrero_the_stack",
      "slug": "the-stack-unit-3-smokestack",
@@ -252,6 +261,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "No source says the 300-ft Stack fell or was lowered: the D4D, the 2018 Draft EIR and the Chronicle (May 22, 2025) describe it as standing and retained. The earlier changelog row, the map caveat and the mapping log said a 'fallen' stack was visible in satellite imagery; they now say that was an unconfirmed reading (a standing tower seen off-nadir can look elongated) and that the polygon may trace an imaged lean, pending a check against current imagery. The map notes were also updated to match the polygon, the Unit 3 'demolished' wording was removed (Unit 3 was partly demolished in 2023-24 and may or may not be retained), the DEIR's finding that the Stack is not individually significant is stated, the Prequel Park gallery is described as proposed, and sources cite the final D4D.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_the_stack",
+     "slug": "the-stack-unit-3-smokestack",
+     "name": "The Stack (Unit 3 smokestack)",
+     "permalink": "https://pierandpoint.org/parcels/the-stack-unit-3-smokestack/",
+     "api": "https://pierandpoint.org/api/v1/records/the-stack-unit-3-smokestack.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-19",
     "kind": "added",
@@ -285,11 +323,11 @@
     "date": "2026-09-16",
     "kind": "correction",
     "kind_label": "Correction",
-    "text": "The Stack’s marker moved about 120 m onto the real structure, which now lies on the ground.",
-    "source": "Satellite imagery review",
+    "text": "The Stack’s marker moved about 120 m onto an elongated feature seen in satellite imagery. An earlier version of this row said the real structure now lies on the ground; no source reports that (the D4D, the 2018 Draft EIR and the Chronicle of May 22, 2025 describe a standing, retained 300-ft Stack), and a standing tower seen off-nadir can also look elongated, so that reading is unconfirmed.",
+    "source": "Satellite imagery review (interpretation unconfirmed); D4D Standard 6.2.1",
     "sources": [
      {
-      "title": "Satellite imagery review"
+      "title": "Satellite imagery review (interpretation unconfirmed); D4D Standard 6.2.1"
      }
     ],
     "category": "correction",
@@ -340,10 +378,10 @@
    },
    {
     "path": "data/manual/images/potrero/d4d_p23_land_use_framework.jpg",
-    "kind": "rendering",
+    "kind": "document",
     "scope": "site",
     "taken": "2020-02-26",
-    "credit": "SF Planning / California Barrel Company, Potrero Power Station Design for Development, final (February 26, 2020), Figure 1.6.1: Land Use Framework, p.23",
+    "credit": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 1.6.1: Land Use Framework, p.23 (SF Planning; the D4D names no individual author)",
     "license": "public-record",
     "source_url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
     "license_evidence": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
@@ -358,6 +396,7 @@
     ],
     "appeal": 5,
     "appeal_note": "A labeled 3D aerial illustration of the whole 21-acre site's land-use framework -- blocks, streets and open space in one wide, colorful view -- reads well at card size and establishes the whole site rather than one building.",
+    "figure": "illustrative",
     "url": "https://pierandpoint.org/assets/img/d4d_p23_land_use_framework.jpg"
    }
   ],
@@ -379,7 +418,7 @@
    {
     "id": "src-d4d-final-6.2.1",
     "title": "Potrero Power Station Design for Development, final (February 26, 2020), Standard 6.2.1: Height of Existing Structures",
-    "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+    "publisher": "SF Planning",
     "date": "2020-02-26",
     "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
     "accessed": "2026-09-17"
@@ -387,7 +426,7 @@
    {
     "id": "src-d4d-final-fig623",
     "title": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 Building Height Plan",
-    "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+    "publisher": "SF Planning",
     "date": "2020-02-26",
     "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
     "accessed": "2026-09-17",
@@ -404,19 +443,14 @@
    {
     "id": "src-d4d-fig161",
     "title": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 1.6.1: Land Use Framework, p.23",
-    "publisher": "SF Planning / California Barrel Company",
+    "publisher": "SF Planning",
     "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
     "accessed": "2026-09-22",
     "date": "2020-02-26",
     "overview": true
-   },
-   {
-    "id": null,
-    "title": "default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf",
-    "url": "https://default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf"
    }
   ],
-  "notes": "Point/marker feature traced from Figure 6.2.3 -- see accuracy_caveat. Not a true footprint.",
+  "notes": "Traced from Figure 6.2.3 of the final D4D (Feb 26, 2020), which marks the Stack with a point symbol, not a footprint; the polygon was rebuilt 2026-09-16 to follow a feature seen in satellite imagery, so it is not a surveyed footprint -- see accuracy_caveat. Status 'existing': the D4D, the 2018 Draft EIR and the Chronicle (May 2025) describe a standing, retained Stack. Use 'entertainment': Table 3.1.1 permits only Retail Sales/Services and Entertainment, Arts and Recreation uses on The Stack.",
   "has_record_file": true,
   "last_verified": "2026-09-20",
   "tenants": [],

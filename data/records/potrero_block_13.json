@@ -3,24 +3,27 @@
   "names": [
     "Block 13"
   ],
-  "summary": "Planned mixed-use block on the Potrero Power Station masterplan; the D4D's own Figure 6.2.3 shows two towers up to 280 and 300 ft on this block, the tallest permitted heights on the site, though the D4D's separate height-category text places Block 13 among 'Midrise buildings' (101-145 ft) -- an internal inconsistency in the adopted document that this dossier does not resolve.",
+  "summary": "Planned mixed-use block on the Potrero Power Station masterplan, in the 4.8-acre area at 22nd and Illinois Streets that PG&E owns and operates as an electrical switchyard; the D4D's Figure 6.2.3 gives it 85 ft and 125 ft height limits, and its build-out depends on the switchyard's relocation.",
   "summary_sources": [
     "src-d4d-final-fig623",
-    "src-d4d-final-6.2.2"
+    "src-d4d-final-6.2.2",
+    "src-sfplanning-pps",
+    "src-d4d-final-fig121"
   ],
   "milestones": [
     {
       "date": "2035",
       "status": "complete",
-      "text": "Completion expected: Block 13 is not named in any Phase 1-3 block list found (the 2024 annual compliance report's Phase 1 list is Blocks 2, 7, 8, 11, 12, 15); only the whole-project buildout target applies",
+      "text": "Completion expected: Block 13 is in Phase 3 of the revised phasing, and SocketSite's October 2020 schedule table lists its vertical development 2031-2035 (it is not in the 2024 annual compliance report's Phase 1 list: Blocks 2, 7, 8, 11, 12, 15)",
       "sources": [
+        "src-socketsite-2020-10",
         "src-phase1-2020",
-        "src-socketsite-2020-10"
+        "src-sfplanning-pps"
       ],
       "expected": true,
       "approximate": true,
-      "basis": "project",
-      "basis_note": "Whole-project buildout target: the October 2020 Phase 1 and Phasing Plan Amendment revised construction from six phases to three over the same 16 years, with the final Phase 3 'wrapping up construction in late 2035' per SocketSite (Oct 9, 2020); Block 13 has no dated or phase-specific schedule of its own in any source found."
+      "basis": "phase",
+      "basis_note": "Phase 3 in the October 2020 revised phasing, as reported by SocketSite (Oct 9, 2020), whose 'Re-Phase Program, Detailed Construction Schedule' table lists Block 13 vertical development 2031-2035; a 2020 forecast, not a Block 13-specific commitment, and contingent on the switchyard's relocation ('Ultimate built-out of the PG&E lands ... will depend on the relocation of the switchyard', SF Planning project page)."
     },
     {
       "date": "2020-04-21",
@@ -28,7 +31,8 @@
       "text": "Board of Supervisors approves the Potrero Power Station project and Development Agreement (Ordinance No. 62-20, Board File 200040), the entitlement that first names Block 13 as a development block under the adopted Design for Development's Land Use Table; the Development Agreement's own effective date is May 25, 2020, distinct from the D4D's own February 26, 2020 final-document date",
       "sources": [
         "src-port-memo-10a",
-        "src-sfplanning-pps"
+        "src-sfplanning-pps",
+        "src-d4d-final-table311"
       ],
       "expected": false,
       "approximate": false
@@ -45,7 +49,7 @@
     },
     {
       "key": "height_ft",
-      "value": "an 85 ft/125 ft base split with two upper-tower callouts of 300 ft max and 280 ft max, per the D4D's Figure 6.2.3 -- see summary for the discrepancy with the D4D's own height-category text",
+      "value": "85 ft and 125 ft (Figure 6.2.3, colour-coded height labels); Standard 6.2.2 lists Block 13 among the midrise buildings (101-145 ft)",
       "sources": [
         "src-d4d-final-fig623"
       ]
@@ -70,6 +74,14 @@
       "sources": [
         "src-annual-2024"
       ]
+    },
+    {
+      "key": "site_context",
+      "value": "In the 4.8-acre PG&E-owned northern switchyard area at 22nd and Illinois Streets (the D4D's 'PG&E Sub-area'); the Master Plan's build-out of the PG&E lands depends on relocating the switchyard",
+      "sources": [
+        "src-sfplanning-pps",
+        "src-d4d-final-fig121"
+      ]
     }
   ],
   "images": [
@@ -88,10 +100,10 @@
     },
     {
       "path": "data/manual/images/potrero/d4d_p23_land_use_framework.jpg",
-      "kind": "rendering",
+      "kind": "document",
       "scope": "site",
       "taken": "2020-02-26",
-      "credit": "SF Planning / California Barrel Company, Potrero Power Station Design for Development, final (February 26, 2020), Figure 1.6.1: Land Use Framework, p.23",
+      "credit": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 1.6.1: Land Use Framework, p.23 (SF Planning; the D4D names no individual author)",
       "license": "public-record",
       "source_url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
       "license_evidence": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
@@ -105,14 +117,15 @@
         0.6
       ],
       "appeal": 5,
-      "appeal_note": "A labeled 3D aerial illustration of the whole 21-acre site's land-use framework -- blocks, streets and open space in one wide, colorful view -- reads well at card size and establishes the whole site rather than one building."
+      "appeal_note": "A labeled 3D aerial illustration of the whole 21-acre site's land-use framework -- blocks, streets and open space in one wide, colorful view -- reads well at card size and establishes the whole site rather than one building.",
+      "figure": "illustrative"
     }
   ],
   "sources": [
     {
       "id": "src-d4d-final-table311",
       "title": "Potrero Power Station Design for Development, final (February 26, 2020), Table 3.1.1 Permitted Uses",
-      "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+      "publisher": "SF Planning",
       "date": "2020-02-26",
       "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
       "accessed": "2026-09-17"
@@ -120,7 +133,7 @@
     {
       "id": "src-d4d-final-fig623",
       "title": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 Building Height Plan",
-      "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+      "publisher": "SF Planning",
       "date": "2020-02-26",
       "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
       "accessed": "2026-09-17"
@@ -128,7 +141,7 @@
     {
       "id": "src-d4d-final-6.2.2",
       "title": "Potrero Power Station Design for Development, final (February 26, 2020), Standard 6.2.2: Maximum Height",
-      "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+      "publisher": "SF Planning",
       "date": "2020-02-26",
       "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
       "accessed": "2026-09-17"
@@ -136,7 +149,7 @@
     {
       "id": "src-d4d-final-table311-notes-14",
       "title": "Potrero Power Station Design for Development, final (February 26, 2020), Table 3.1.1 Permitted Uses, Note 14",
-      "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+      "publisher": "SF Planning",
       "date": "2020-02-26",
       "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
       "accessed": "2026-09-17"
@@ -185,17 +198,26 @@
     {
       "id": "src-d4d-fig161",
       "title": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 1.6.1: Land Use Framework, p.23",
-      "publisher": "SF Planning / California Barrel Company",
+      "publisher": "SF Planning",
       "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
       "accessed": "2026-09-22",
       "date": "2020-02-26",
       "overview": true
+    },
+    {
+      "id": "src-d4d-final-fig121",
+      "title": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 1.2.1 Site Boundaries and Ownership, p.12",
+      "publisher": "SF Planning",
+      "date": "2020-02-26",
+      "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+      "accessed": "2026-09-29"
     }
   ],
   "open_questions": [
     "No design review approval or construction-start date found for Block 13; it is not one of the six buildings named in the 2024 annual compliance report's Phase 1 list (Blocks 2, 7, 8, 11, 12, 15), and no later-phase design review approval was found either.",
-    "This dossier's height figures for Block 13 come from this repository's own visual reading of the D4D's Figure 6.2.3 diagram, cross-checked against this repository's existing geometry file (potrero_block_13.geojson), which independently flagged the same 300 ft/280 ft figures as surprising for a block otherwise described in casual references as infrastructure/utility/PDR. The D4D's own Standard 6.2.2 places 'Block 13' in its 'Midrise buildings (101-145 feet)' list, which conflicts with the figure. This is a genuine internal inconsistency in the adopted Design for Development, not a transcription error by this project; flagged for the repository owner rather than resolved here.",
-    "No phase-specific schedule found for Block 13; the added expected-completion milestone therefore uses only the whole-project buildout target (2035, SocketSite Oct 2020), not a block-specific date."
+    "2026-09-29 audit: an earlier version of this dossier read the '300'MAX' and '280'MAX' labels on Figure 6.2.3 as heights and reported a conflict with Standard 6.2.2; they are dimension lines (plan extents), and the block's heights are 85 ft and 125 ft, within the midrise range. The D4D's Appendix A.12 is titled 'Block 13 Controls (Low-rise Building)' while Standard 6.2.2 lists Block 13 as midrise (101-145 ft); the difference in labels is unexplained.",
+    "Block 13's 2031-2035 window comes from a 2020 press table (SocketSite) and is contingent on the PG&E switchyard's relocation; no current Block 13 schedule was found.",
+    "DataSF Parcels lists an active addressed lot (4175499, 1101 Illinois St) over this block's approximate footprint; whether it is PG&E's switchyard parcel is not established (owner decision on the geometry)."
   ],
   "last_verified": "2026-09-20"
 }

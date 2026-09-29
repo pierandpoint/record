@@ -38,7 +38,7 @@
    "display_reason": null,
    "notes": {
     "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same real-geometry-without-a-single-parcel pattern already used for several Pier 70 buildings (DataSF Building Footprints) and for Mission Bay's own real park polygons.",
-    "digitized_from": "OpenStreetMap (way 1258086102, addr:housename=Radiance at Mission Bay, 325 China Basin St)"
+    "digitized_from": "OpenStreetMap (way 1258086102, name=Radiance at Mission Bay, 325 China Basin St)"
    }
   },
   "centroid": {
@@ -49,51 +49,19 @@
   "costs": [],
   "milestones": [
    {
-    "date": "2006-12-14",
-    "date_label": "Dec 14, 2006",
-    "status": "under_construction",
-    "status_label": "Under construction",
-    "text": "Ground broken for Radiance at Mission Bay (325 China Basin St/330 Mission Bay Blvd N); delivery expected mid-2008",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "title": "socketsite.com"
-     }
-    ],
-    "source": "socketsite.com",
-    "origin": "csv",
-    "category": "status",
-    "category_label": "Status",
-    "record": {
-     "id": "mission_bay_radiance",
-     "slug": "radiance",
-     "name": "Radiance",
-     "permalink": "https://pierandpoint.org/parcels/radiance/",
-     "api": "https://pierandpoint.org/api/v1/records/radiance.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2008-09",
-    "date_label": "~2008",
+    "date": "2009-03",
+    "date_label": "~2009",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Radiance (325 China Basin St) offers its first homes, among the first major US condo developments to open after the 2008 financial crisis",
+    "text": "Radiance (325 China Basin St) offering its first homes as of a March 22, 2009 SFGate/Chronicle article ('Radiance offers first homes in Mission Bay'); Bosa's project page calls it the first major condominium development in the United States after the 2008 market downturn",
     "expected": false,
     "approximate": true,
     "sources": [
      {
-      "title": "sfgate.com"
+      "title": "https://www.sfgate.com/realestate/article/Radiance-offers-first-homes-in-Mission-Bay-3247162.php; https://bosadevelopment.com/project/radiance-madrone-mission-bay/"
      }
     ],
-    "source": "sfgate.com",
+    "source": "https://www.sfgate.com/realestate/article/Radiance-offers-first-homes-in-Mission-Bay-3247162.php; https://bosadevelopment.com/project/radiance-madrone-mission-bay/",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -113,7 +81,37 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The geometry notes said Radiance is 9 stories per two realtor sources; the readable sources say SFGate describes a nine-story and a six-story building and OSM has 8 levels, so the notes were rewritten. The 'first homes' milestone moved from September 2008 to March 2009, the date of the SFGate article that reports it, and the December 2006 groundbreaking milestone was removed because no readable source dates it. The OSM tag citation was corrected to name=.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_radiance",
+     "slug": "radiance",
+     "name": "Radiance",
+     "permalink": "https://pierandpoint.org/parcels/radiance/",
+     "api": "https://pierandpoint.org/api/v1/records/radiance.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [],
   "open_questions": [],
   "sources": [
@@ -128,7 +126,7 @@
     "url": "https://bosadevelopment.com/project/radiance-madrone-mission-bay/"
    }
   ],
-  "notes": "Story count is reported as 9 by two independent realtor sources; one outlier source says 16, which appears to conflate Radiance with the taller sister building Madrone -- not used here.",
+  "notes": "Story count: SFGate (March 22, 2009) describes Radiance Phase One as a nine-story building and a six-story building; the OSM way has building:levels 8. Bosa's page attributes the two connected 16-storey towers to Madrone, not Radiance.",
   "has_record_file": false,
   "last_verified": null,
   "tenants": [],

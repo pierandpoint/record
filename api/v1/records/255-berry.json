@@ -39,7 +39,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I/II/III, Madrone, Arden, One Mission Bay, Radiance).",
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I, Madrone and Radiance, re-checked against data/raw/parcels.geojson in the 2026-09 audit; Avalon II and III are not condo-mapped, and Arden and One Mission Bay were not re-checked).",
     "digitized_from": "OpenStreetMap (relation 3831604, 255 Berry St)"
    }
   },
@@ -55,7 +55,7 @@
     "date_label": "~2004",
     "status": "complete",
     "status_label": "Complete",
-    "text": "255 Berry (Channel Park Condominiums) completed -- developer's own project page gives a 2001-2004 development date range; $60,000,000 project cost, 99 units, architect McLarand Vasquez Emsiek & Partners",
+    "text": "255 Berry completed -- developer's own project page gives a 2001-2004 development date range; $60,000,000 project cost, 99 units, architect McLarand Vasquez Emsiek & Partners",
     "expected": false,
     "approximate": true,
     "sources": [
@@ -83,7 +83,37 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The geometry notes called the developer Signature Properties and said the building was built in 2004; the developer's own page says Signature Development Group and gives a 2001-2004 development range, so a dated correction was appended. The 'Signature I' naming and the milestone's 'Channel Park Condominiums' name are not on any cited page and were removed. The notes now give the 99 units and the architect from the developer's project page, which is cited for the residential use.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_255_berry",
+     "slug": "255-berry",
+     "name": "255 Berry",
+     "permalink": "https://pierandpoint.org/parcels/255-berry/",
+     "api": "https://pierandpoint.org/api/v1/records/255-berry.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/mission_bay/owner_20260923_102159.jpg",
@@ -136,11 +166,16 @@
     "publisher": "OpenStreetMap contributors",
     "url": "https://www.openstreetmap.org/relation/3831604",
     "accessed": "2026-09-27"
+   },
+   {
+    "id": null,
+    "title": "signaturedevelopment.com/development/255-berry",
+    "url": "https://signaturedevelopment.com/development/255-berry/"
    }
   ],
-  "notes": "Unit count and architect not confirmed by any source found in this pass; left out rather than guessed.",
+  "notes": "99 lofts and condominium units and the architect (McLarand Vasquez Emsiek & Partners) per Signature Development Group's project page; the OSM relation itself gives only building=yes.",
   "has_record_file": true,
-  "last_verified": "2026-09-27",
+  "last_verified": "2026-09-29",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

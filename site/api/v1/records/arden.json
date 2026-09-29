@@ -49,39 +49,7 @@
   "costs": [],
   "milestones": [
    {
-    "date": "2014-12",
-    "date_label": "~2014",
-    "status": "under_construction",
-    "status_label": "Under construction",
-    "text": "Arden (708-718 Long Bridge St) under construction and sold out, framing underway on both towers, targeting fall 2015 completion",
-    "expected": false,
-    "approximate": true,
-    "sources": [
-     {
-      "title": "livabl.com"
-     }
-    ],
-    "source": "livabl.com",
-    "origin": "csv",
-    "category": "status",
-    "category_label": "Status",
-    "record": {
-     "id": "mission_bay_arden",
-     "slug": "arden",
-     "name": "Arden",
-     "permalink": "https://pierandpoint.org/parcels/arden/",
-     "api": "https://pierandpoint.org/api/v1/records/arden.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2016-06",
+    "date": "2016",
     "date_label": "~2016",
     "status": "complete",
     "status_label": "Complete",
@@ -90,10 +58,10 @@
     "approximate": true,
     "sources": [
      {
-      "title": "kinokorealestate.com"
+      "title": "Kinoko Real Estate, Arden development page (\"Completed in 2016 by Bosa Development\"), https://kinokorealestate.com/developments/arden"
      }
     ],
-    "source": "kinokorealestate.com",
+    "source": "Kinoko Real Estate, Arden development page (\"Completed in 2016 by Bosa Development\"), https://kinokorealestate.com/developments/arden",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -113,7 +81,37 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Arden completion milestone said June 2016; its cited source, Kinoko Real Estate's Arden page, says only 'Completed in 2016', so it now reads 2016 and cites that page instead of a bare domain. A 2014 milestone saying Arden was under construction, sold out and targeting fall 2015 was removed: it cited only the bare domain livabl.com, no page could be found or read, and nothing else read confirms it. The geometry notes also flag that the 267-unit figure is not stated by either cited source.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_arden",
+     "slug": "arden",
+     "name": "Arden",
+     "permalink": "https://pierandpoint.org/parcels/arden/",
+     "api": "https://pierandpoint.org/api/v1/records/arden.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [],
   "open_questions": [],
   "sources": [

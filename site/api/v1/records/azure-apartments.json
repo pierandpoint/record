@@ -58,10 +58,10 @@
     "approximate": true,
     "sources": [
      {
-      "title": "multifamilybiz.com; bisnow.com"
+      "title": "https://www.multifamilybiz.com/pressreleases/2525/equity_residential_and_nibbi_brothers_celebrate_the"
      }
     ],
-    "source": "multifamilybiz.com; bisnow.com",
+    "source": "https://www.multifamilybiz.com/pressreleases/2525/equity_residential_and_nibbi_brothers_celebrate_the",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -81,19 +81,19 @@
     "relation": "tracked"
    },
    {
-    "date": "2015-04",
+    "date": "2015",
     "date_label": "~2015",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Azure Apartments (690 Long Bridge St) opens (\"spring 2015\")",
+    "text": "Azure Apartments (690 Long Bridge St) completed: the DataSF Assessor roll gives year built 2015, and the developer's August 2014 topping-out release forecast opening in \"Spring of 2015\"",
     "expected": false,
     "approximate": true,
     "sources": [
      {
-      "title": "multifamilybiz.com"
+      "title": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8711013; https://www.multifamilybiz.com/pressreleases/2525/equity_residential_and_nibbi_brothers_celebrate_the"
      }
     ],
-    "source": "multifamilybiz.com",
+    "source": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8711013; https://www.multifamilybiz.com/pressreleases/2525/equity_residential_and_nibbi_brothers_celebrate_the",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -113,7 +113,37 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The site notes said Azure opened in spring 2015 and that its 234,825 sq ft Assessor figure matched press reporting exactly. The only readable press item is an August 2014 topping-out release that forecasts a spring 2015 opening and gives 396,200 sq ft, so the notes now cite the DataSF Assessor roll (year built 2015, 273 units, 16 stories, 234,825 sq ft) and say the opening was forecast, not confirmed. The completion milestone is now dated 2015 (approximate) and the topping-out milestone links the release instead of naming bare domains.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8711013",
+     "slug": "azure-apartments",
+     "name": "Azure Apartments",
+     "permalink": "https://pierandpoint.org/parcels/azure-apartments/",
+     "api": "https://pierandpoint.org/api/v1/records/azure-apartments.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/mission_bay/owner_20260923_103215.jpg",
@@ -143,7 +173,8 @@
    }
   ],
   "open_questions": [
-   "This record file was created on 2026-09-27 to host the owner's own field photos. Its summary is limited to what its cited source was re-read to confirm that day; fuller details already in this repo's status.csv notes or geometry file (developer, architect, unit count, year built) were left out where that source didn't state them. No research pass yet: no milestones, costs or facts."
+   "This record file was created on 2026-09-27 to host the owner's own field photos. Its summary is limited to what its cited source was re-read to confirm that day; fuller details already in this repo's status.csv notes or geometry file (developer, architect, unit count, year built) were left out where that source didn't state them. No research pass yet: no milestones, costs or facts.",
+   "Opening month for Azure Apartments is not sourced: the only readable press item (Aug 2014 topping-out release) forecasts 'Opening in Spring of 2015', the operator page (equityapartments.com) returns 403, and the DataSF Assessor roll gives only year built 2015."
   ],
   "sources": [
    {
@@ -157,11 +188,16 @@
     "id": null,
     "title": "equityapartments.com/san-francisco-bay/mission-bay/azure-apartments",
     "url": "https://www.equityapartments.com/san-francisco-bay/mission-bay/azure-apartments"
+   },
+   {
+    "id": null,
+    "title": "data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8711013",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8711013"
    }
   ],
-  "notes": "Azure Apartments, 690 Long Bridge St -- a 16-story, 273-unit rental apartment tower (234,825 sq ft per the DataSF Assessor tax roll, which matches press reporting exactly), developed by Equity Residential with Nibbi Brothers as general contractor, architect HKS with NC2 Studio (interiors) and Cliff Lowe Associates (landscape), opened spring 2015.",
+  "notes": "Azure Apartments, 690 Long Bridge St -- a 16-story, 273-unit rental apartment tower (234,825 sq ft and year built 2015 per the DataSF Assessor tax roll; the developer's August 2014 press release gives 396,200 sq ft for the development, a figure not reconciled with the Assessor's), developed by Equity Residential with Nibbi Brothers as general contractor, architect HKS with NC2 Studio (interiors) and Cliff Lowe Associates (landscape). The same release forecast an opening in spring 2015; no post-opening source was read.",
   "has_record_file": true,
-  "last_verified": "2026-09-27",
+  "last_verified": "2026-09-29",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

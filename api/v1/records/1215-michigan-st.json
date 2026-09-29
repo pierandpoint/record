@@ -20,21 +20,21 @@
    "short": "Potrero Station",
    "url": "https://pierandpoint.org/sites/potrero/"
   },
-  "status": "planned",
-  "status_label": "Planned",
-  "use": "data_center",
+  "status": "existing",
+  "status_label": "Existing, not yet redeveloped",
+  "use": "industrial",
   "relation": "adjacent",
   "adjacent_to": "potrero",
-  "distance_note": "The San Francisco Chronicle describes the site as one block from the Potrero Power Station redevelopment. By street address, it is closer to two blocks: the parcel fronts Michigan St between 24th and 25th, while the nearest currently-tracked Potrero Power Station parcel (the Sophie Maxwell Building, 1212 Maryland St) fronts Maryland St between Humboldt St and 23rd -- a block and a half to the north across 24th St.",
+  "distance_note": "The San Francisco Chronicle describes the site as \"a block from\" the Potrero Power Station redevelopment. Our own reckoning by street address (not a sourced figure) is closer to two blocks: the parcel is addressed on Michigan St, while the nearest currently-tracked Potrero Power Station parcel, the Sophie Maxwell Building, is addressed at 1212 Maryland St (both addresses per DataSF Parcels, acdm-wktn), roughly a block and a half to the north across 24th St by our reading of the street grid.",
   "how_to_comment": [
    {
     "channel": "SF Planning Property Information Map",
-    "detail": "Search block/lot 4241004 for any case filed on this parcel (none was on file as of Sept 2026).",
+    "detail": "Search block/lot 4241004 for any case filed on this parcel. (DataSF's Planning Department Records dataset, qvu5-m3a2, showed no record on block 4241 lot 004 when queried on 2026-09-29; the Property Information Map itself could not be read automatically.)",
     "url": "https://sfplanninggis.org/pim/"
    },
    {
     "channel": "SF Planning Commission hearing calendar",
-    "detail": "No hearing is scheduled yet; check once a case number is assigned.",
+    "detail": "Hearings are held weekly on Thursdays at 12:00pm; check the calendar once a case number is assigned.",
     "url": "https://sfplanning.org/hearings-cpc-list"
    },
    {
@@ -46,7 +46,7 @@
   "positions": [
    {
     "who": "Supervisor Shamann Walton (District 10, which includes this parcel)",
-    "statement": "Said he was unaware of the plans for 1215 Michigan St when contacted by the Chronicle. On data centers near residential neighborhoods generally: \"We are seeing data centers pop up near residential communities all across the United States, and we have seen the impacts, from polluting the water supply to the noise these facilities bring to the neighborhoods closest to them.\"",
+    "statement": "Said he was unaware of the plans for 1215 Michigan St when contacted by the Chronicle. On data centers near residential neighborhoods generally, the Chronicle reports he said the moratorium was a result of the rise in data centers popping up near residential communities across the country, and having seen the \"impacts, from polluting the water supply to the noise these facilities bring to the neighborhoods closest to them.\"",
     "sources": [
      "src-sfchronicle-2026-09"
     ],
@@ -54,7 +54,7 @@
    }
   ],
   "address": null,
-  "summary": "A 4-acre industrial parcel at 1215 Michigan St, currently home to crane-rental and heavy-hauling firm Sheedy Drayage, that the San Francisco Chronicle reported (Sept 2026) may become a roughly 160,000-square-foot data center. No application had been filed with SF Planning as of that report.",
+  "summary": "A 4-acre industrial parcel at 1215 Michigan St, currently home to crane-rental and heavy-hauling firm Sheedy Drayage, that the San Francisco Chronicle reported (Sept 2026) may become a roughly 160,000-square-foot data center. The Chronicle reported that no plans for a data center appeared to have been filed with the city as of that report.",
   "summary_sources": [
    "src-sfchronicle-2026-09"
   ],
@@ -64,7 +64,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL Assessor parcel geometry (not approximate), but the local basemap (data/raw/parcels.geojson, buildings.geojson) was fetched to an older, slightly smaller bounding box that stops just north of this parcel, so the grey basemap land/building texture is blank immediately around this shape on the map -- cosmetic only; the parcel's own outline and position are exact. Fix: widen src/config.py's BBOX_SOUTH and re-fetch the raw layers.",
+    "accuracy_caveat": "REAL Assessor parcel geometry (not approximate), but the local basemap (data/raw/parcels.geojson, buildings.geojson) was fetched to an older, slightly smaller bounding box that stops just north of this parcel, so the grey basemap land/building texture is blank immediately around this shape on the map -- cosmetic only; the parcel's own outline and position are exact. Fix: widen src/config.py's BBOX_SOUTH and re-fetch the raw layers. That this is a real Assessor parcel rests on DataSF Parcels (acdm-wktn), which lists blklot 4241004 as an active parcel addressed 1215 MICHIGAN; the Chronicle article names the address but does not discuss the parcel.",
     "digitized_from": "The real DataSF Assessor parcel for blklot 4241004 (1215 Michigan St, 4.07 acres, zoned PDR-1-G), fetched directly from the DataSF Socrata API (data.sfgov.org/resource/acdm-wktn.json, dataset 'Parcels - Active and Retired') on 2026-09-21. Routed through this table, not status.csv, only because the parcel sits just south of data/raw/parcels.geojson's cached bounding box (src/config.py's BBOX_SOUTH=37.7545; this parcel's northern edge is ~37.7542) and so isn't in that local extract -- the polygon itself is the real, unmodified Assessor shape, not hand-traced or approximated. A small blklot 4241003 (~0.25 acres) immediately west, also addressed 1215 Michigan St, is not included: the Chronicle's reporting and the Assessor's own lot_area (177,223 sq ft = 4.07 acres) both point to 4241004 as 'the' 4-acre parcel in question."
    }
   },
@@ -80,7 +80,7 @@
     "date_label": "Sep 2026",
     "status": null,
     "status_label": null,
-    "text": "San Francisco Chronicle reports Nestory Park Capital met with city officials to discuss permits for a data center at the site; no application filed with SF Planning as of this report, and the property has not changed hands.",
+    "text": "San Francisco Chronicle reports Nestory Park Capital met with city officials to discuss permits for a data center at the site; the paper said the exact status of any proposal was unclear, that no plans appeared to have been filed with the city, and that the property had not changed hands.",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -115,10 +115,39 @@
   ],
   "changes": [
    {
+    "date": "2026-09-29",
+    "kind": "status",
+    "kind_label": "Status",
+    "text": "The map status changed from planned to existing. The San Francisco Chronicle (Sept 2026) reported that the site may become a data center, called the exact status of any proposal unclear and said no plans appeared to have been filed with the city; the site itself is an operating industrial yard. Also corrected: the wording that no application had been filed with SF Planning now follows the Chronicle's hedged wording, the Chronicle quote from Supervisor Walton is limited to the words the paper actually quoted, the distance note marks the two-block figure as our own reckoning, and the Planning Commission hearing line no longer says none is scheduled. Its use is now 'industrial' rather than 'data_center', since the Chronicle describes the site as a crane-rental and heavy-hauling yard today (orchestrator addition).",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "potrero_1215_michigan_data_center",
+     "slug": "1215-michigan-st",
+     "name": "1215 Michigan St",
+     "permalink": "https://pierandpoint.org/parcels/1215-michigan-st/",
+     "api": "https://pierandpoint.org/api/v1/records/1215-michigan-st.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "adjacent",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-21",
     "kind": "added",
     "kind_label": "Added",
-    "text": "New adjacent record (docs/briefs/adjacent-proposals.md): 1215 Michigan St, a real DataSF Assessor parcel (blklot 4241004, 4.07 acres) one to two blocks from the Potrero Power Station redevelopment, currently occupied by Sheedy Drayage. The San Francisco Chronicle reported Nestory Park Capital had discussed a roughly 160,000-square-foot data center for the site with city officials; no application had been filed with SF Planning as of that report. Pier & Point records the process and does not take a position.",
+    "text": "New adjacent record (docs/briefs/adjacent-proposals.md): 1215 Michigan St, a real DataSF Assessor parcel (blklot 4241004, 4.07 acres) that the San Francisco Chronicle describes as a block from the Potrero Power Station redevelopment (our own reckoning by street address is closer to two blocks), currently occupied by Sheedy Drayage. The San Francisco Chronicle reported Nestory Park Capital had discussed a roughly 160,000-square-foot data center for the site with city officials; the paper said the exact status of any proposal was unclear and that no plans appeared to have been filed with the city as of that report. Pier & Point records the process and does not take a position.",
     "source": "https://www.sfchronicle.com/sf/article/data-center-waterfront-ai-dogpatch-22438639.php",
     "sources": [
      {
@@ -163,7 +192,7 @@
    {
     "id": "src-datasf-parcels",
     "title": "Parcels - Active and Retired (blklot 4241004)",
-    "publisher": "DataSF / SF Office of the Assessor-Recorder",
+    "publisher": "DataSF (data.sf.gov; dataset listed under Department Metrics: Technology; parcel records from the Assessor)",
     "url": "https://data.sfgov.org/Geographic-Locations-and-Boundaries/Parcels-Active-and-Retired/acdm-wktn",
     "accessed": "2026-09-21"
    },
@@ -173,9 +202,14 @@
     "publisher": "DataSF / SF Office of the Assessor-Recorder",
     "url": "https://data.sf.gov/Housing-and-Buildings/Assessor-Historical-Secured-Property-Tax-Rolls/wv5m-vpq2",
     "accessed": "2026-09-21"
+   },
+   {
+    "id": null,
+    "title": "data.sf.gov/resource/acdm-wktn.json?blklot=4241004",
+    "url": "https://data.sf.gov/resource/acdm-wktn.json?blklot=4241004"
    }
   ],
-  "notes": "Sheedy Drayage, a crane rental and heavy-hauling company, currently operates on the site under owner R.P. Stagg & Co. LLC (as reported by the San Francisco Chronicle; not independently confirmed against a Recorder deed). No formal application has been filed with SF Planning as of the Chronicle's reporting (Sept 2026) -- see the record file for what's sourced about the proposal itself.",
+  "notes": "Sheedy Drayage, a crane rental and heavy-hauling company, currently operates on the site under owner R.P. Stagg & Co. LLC (as reported by the San Francisco Chronicle; not independently confirmed against a Recorder deed). The Chronicle reported in Sept 2026 that the exact status of any proposal was unclear and that no plans for a data center appeared to have been filed with the city -- see the record file for what's sourced about the proposal itself. Status is 'existing': the site is an operating industrial yard today, and a data center is only a reported possibility, not a plan of record. Use is 'industrial' for the same reason (the Chronicle describes a crane-rental and heavy-hauling yard); on the map it shows under Other, not as a commercial data center.",
   "has_record_file": true,
   "last_verified": "2026-09-21",
   "tenants": [],

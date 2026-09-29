@@ -3,9 +3,10 @@
   "names": [
     "Sister Lillian Murphy Community"
   ],
-  "summary": "Sister Lillian Murphy Community is a 152-unit affordable housing development at 671-691 China Basin St in Mission Bay, developed by Mercy Housing California and named for the Sisters of Mercy nun who founded Mercy Housing. San Francisco YIMBY reported the City and Mayor London Breed marking the completed building's dedication in April 2022.",
+  "summary": "Sister Lillian Murphy Community is a 152-unit affordable housing development at 671-691 China Basin St (DataSF parcel address range; SF YIMBY's article gives 691) in Mission Bay, developed by Mercy Housing and named for Sister Lillian Murphy, who led Mercy Housing for 27 years before retiring in 2014 and died in 2019. San Francisco YIMBY reported the City and Mayor London Breed marking the completed building's dedication in April 2022.",
   "summary_sources": [
-    "src-sfyimby-sistermurphy"
+    "src-sfyimby-sistermurphy",
+    "src-datasf-parcel-8711020"
   ],
   "milestones": [
     {
@@ -37,7 +38,7 @@
       "kind": "now",
       "scope": "site",
       "taken": "2024-05-20",
-      "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+      "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
       "license": "public-domain",
       "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
       "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
@@ -58,12 +59,12 @@
       "kind": "now",
       "scope": "site",
       "taken": "2024-02-10",
-      "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+      "credit": "Firstcultural (Alfred Twu, per the photographer's Wikimedia Commons user page), via Wikimedia Commons; CC0; downscaled to 1600 px",
       "license": "cc0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
       "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-      "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-      "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+      "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by the author Firstcultural; the author's Commons user page (https://commons.wikimedia.org/wiki/User:Firstcultural) gives the name Alfred Twu. File page read 2026-09-23, user page read 2026-09-29.",
+      "caption": "Aerial photo of San Francisco's Mission Bay, ballpark, and Caltrain area",
       "aerial": true,
       "focus": [
         0.35,
@@ -117,7 +118,7 @@
     },
     {
       "id": "src-datasf-permit-china-basin",
-      "title": "Building Permits: permit #201804196818 (691 China Basin St, block 8711 lot 020), filed 2018-04-19, \"erect a new r-2,e,b 7 stories with 152 dwelling unit ... residential, child development center and art activity space\", completed 2021-10-20, estimated cost $90,000,000",
+      "title": "Building Permits: permit #201804196818 (691 China Basin St, block 8711 lot 020), filed 2018-04-19, \"erect a new r-2,e,b 7 stories with 152 dwelling unit ... residential,child developement [sic] center and art activity space\", completed 2021-10-20, estimated cost $90,000,000",
       "publisher": "DataSF / SF Department of Building Inspection",
       "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=201804196818",
       "accessed": "2026-09-21"
@@ -130,11 +131,18 @@
       "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
       "accessed": "2026-09-24",
       "overview": true
+    },
+    {
+      "id": "src-datasf-parcel-8711020",
+      "title": "Parcels - Active and Retired (blklot 8711020, 671-691 China Basin St)",
+      "publisher": "DataSF / SF Office of the Assessor-Recorder",
+      "url": "https://data.sf.gov/resource/acdm-wktn.json?blklot=8711020",
+      "accessed": "2026-09-29"
     }
   ],
   "open_questions": [
     "The April 2022 event reported by SF YIMBY is a dedication/naming celebration, not necessarily the construction-completion or first-occupancy date; the article's own publication date (2022-04-05) is used as the approximate month since the event date itself is not stated.",
     "Mercy Housing's own project page describes an application lottery conducted December 15, 2020, suggesting the building was substantially ready for leasing well before the April 2022 event -- but no source found in this pass gives an exact construction-completion or move-in date, so that earlier date is not used as the milestone."
   ],
-  "last_verified": "2026-09-21"
+  "last_verified": "2026-09-29"
 }

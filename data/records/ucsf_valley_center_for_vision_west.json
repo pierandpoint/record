@@ -3,8 +3,9 @@
   "names": [
     "UCSF Valley Center for Vision -- west building (OCII plan block 33)"
   ],
-  "summary": "A real, standing UCSF building on OCII plan block 33, between 3rd St and Illinois St, west of Illinois St -- about 60-100m from the already-tracked Wayne and Gladys Valley Center for Vision tower at 490 Illinois St, across the street. The owner directly identified this building as also being Valley Center for Vision. No independently published source (a UCSF page, news outlet or Regents document) naming this specific west-of-Illinois-St structure was found in this pass; the identification rests on the owner's own knowledge, recorded in the geometry file's own digitization_method log.",
+  "summary": "A real, standing UCSF building on OCII plan block 33, between 3rd St and Illinois St, west of Illinois St. UCSF's own June 2025 CAC presentation map labels block 33 'VALLEY CENTER FOR VISION (33)', which supports the name. The tracked tower at 490 Illinois St, east of Illinois St, is a separate record also named Valley Center for Vision; that record's identification should be reviewed against the same UCSF map (see open questions). Its footprint here is approximate (see the shape's accuracy caveat).",
   "summary_sources": [
+    "src-ucsf-cac-2025-06",
     "src-geom-valley-west"
   ],
   "milestones": [],
@@ -16,11 +17,11 @@
       "kind": "now",
       "scope": "site",
       "taken": "2024-05-20",
-      "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+      "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
       "license": "public-domain",
       "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
       "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
-      "license_note": "USDA's data.gov catalog record for NAIP imagery sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0); the USDA FSA policies page says public-domain information may be freely distributed with credit requested ('U.S. Department of Agriculture, Farm Service Agency'). Read 2026-09-22.",
+      "license_note": "USDA's data.gov catalog record for NAIP imagery (published by the Farm Production and Conservation Business Center, Geospatial Enterprise Operations Branch) sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0). Read 2026-09-22 and 2026-09-29.",
       "caption": "USDA NAIP aerial orthophoto (2024 flight), cropped to the Mission Bay project area and its immediate surroundings",
       "aerial": true,
       "focus": [
@@ -37,12 +38,12 @@
       "kind": "now",
       "scope": "site",
       "taken": "2024-02-10",
-      "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+      "credit": "Firstcultural, via Wikimedia Commons; CC0; downscaled to 1600 px",
       "license": "cc0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
       "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-      "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-      "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+      "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural. Read 2026-09-23.",
+      "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area",
       "aerial": true,
       "focus": [
         0.35,
@@ -57,7 +58,7 @@
   "sources": [
     {
       "id": "src-geom-valley-west",
-      "title": "digitization_method log for ucsf_valley_center_for_vision_west.geojson",
+      "title": "digitization_method log for ucsf_valley_center_for_vision_west.geojson (this repository's own mapping narrative, not an outside source)",
       "publisher": "Pier & Point geometry records (this repository, data/manual/ucsf_valley_center_for_vision_west.geojson)",
       "accessed": "2026-09-22"
     },
@@ -69,13 +70,22 @@
       "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
       "accessed": "2026-09-24",
       "overview": true
+    },
+    {
+      "id": "src-ucsf-cac-2025-06",
+      "title": "UCSF Mission Bay Development Overview (CAC presentation, June 12, 2025; p.3 map 'MAP UPDATED: DECEMBER 2024')",
+      "publisher": "UCSF, via OCII (sfocii.org)",
+      "date": "2025-06-12",
+      "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
+      "accessed": "2026-09-29"
     }
   ],
   "open_questions": [
     "This project already tracks a separate, independently sourced record also named Valley Center for Vision at 490 Illinois St (data/records/mission_bay_490_499_illinois.json), about 60-100m east of this building, across Illinois St. That record's own 2017 UC Regents source describes a single 12-story tower with a 5-story south wing and a 3-story north wing at 490 Illinois St -- it does not mention a separate west-of-Illinois-St building. Whether this west building is a second wing/annex of the same named facility built later, a distinct building that happens to share the name, or a misidentification of one of the two records, has not been resolved against any primary source in this pass -- flagged here rather than silently merged with, or silently treated as unrelated to, the 490 Illinois St record.",
     "2026-09-22, new data point (not a resolution): re-running this project's own DataSF business-registration spatial join (src/join_retail.py, out/retail_needs_review_approximate.csv) after this record's geometry was added shows several registrations -- Buenafe #2, All May See, All May See Foundation, Simon Fung -- whose registered point-location falls inside THIS west building's polygon, but whose own listed street address is '490 Illinois St' (the other, east-of-Illinois-St tower's address), not a west-of-Illinois-St address. This could mean the two buildings genuinely share one administrative/mailing address, or it could simply be a DataSF geocoding artifact (a coarse or shared geocode for a multi-building campus) -- the join is spatial-only and 'never auto-confirmed' per that script's own docstring, so this is logged as a data point for a future pass, not treated as confirming the relationship either way. Notably, the same join's matches for the neighboring ucsf_bayfront_medical_building and ucsf_illinois_street_garage records DO show addresses consistent with their own already-sourced identities (520 Illinois St and 590 Illinois St respectively), which is corroborating, not contradictory, evidence for those two.",
     "No address, opening date, architect, cost or square footage for this specific west building was found in this pass; every fact this project has for 'Valley Center for Vision' construction, cost and massing lives in the 490 Illinois St record instead, and may or may not apply here.",
-    "Geometry: this building's east edge (its own real, digitized boundary) sits close to, but not necessarily exactly on, Illinois St's west curb line -- not independently verified against DataSF Building Footprints or an Assessor parcel in this pass; see the geometry file's own accuracy_caveat."
+    "Geometry: this building's east edge (its own real, digitized boundary) sits close to, but not necessarily exactly on, Illinois St's west curb line -- not independently verified against DataSF Building Footprints or an Assessor parcel in this pass; see the geometry file's own accuracy_caveat.",
+    "Added 2026-09-29: UCSF's June 12, 2025 CAC presentation (p.3 map, updated December 2024) labels block 33, between Third St and Illinois St, 'VALLEY CENTER FOR VISION (33)', which supports this record's identification. That reverses the open question above: the separate 490/499 Illinois St record, whose polygon is east of the Illinois St centerline, may be the one that is mislabelled as Valley Center for Vision. The owner should reconcile the two records; nothing was changed here."
   ],
   "last_verified": "2026-09-22"
 }

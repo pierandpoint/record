@@ -3,24 +3,24 @@
   "names": [
     "Block 4"
   ],
-  "summary": "Planned residential block on the Potrero Power Station masterplan with a stepped height envelope up to 100 ft; no design review approval or construction start found.",
+  "summary": "Planned residential block on the Potrero Power Station masterplan with a stepped height envelope of 65 ft and 85 ft; no design review approval or construction start found.",
   "summary_sources": [
     "src-d4d-final-fig623",
     "src-d4d-final-table311"
   ],
   "milestones": [
     {
-      "date": "2035",
+      "date": "2029",
       "status": "complete",
-      "text": "Completion expected: Block 4 is not named in any Phase 1-3 block list found (the 2024 annual compliance report's Phase 1 list is Blocks 2, 7, 8, 11, 12, 15); only the whole-project buildout target applies",
+      "text": "Completion expected: SocketSite's October 2020 schedule table lists Block 4 in Phase 2 with vertical development 2028-2029 (Block 4 is not in the 2024 annual compliance report's Phase 1 list: Blocks 2, 7, 8, 11, 12, 15)",
       "sources": [
-        "src-phase1-2020",
-        "src-socketsite-2020-10"
+        "src-socketsite-2020-10",
+        "src-phase1-2020"
       ],
       "expected": true,
       "approximate": true,
-      "basis": "project",
-      "basis_note": "Whole-project buildout target: the October 2020 Phase 1 and Phasing Plan Amendment revised construction from six phases to three over the same 16 years, with the final Phase 3 'wrapping up construction in late 2035' per SocketSite (Oct 9, 2020); Block 4 has no dated or phase-specific schedule of its own in any source found. (Waterfront Park North/West are delivered 'with Block 4' per the Phase 1 application, but no calendar date attaches to that trigger either.)"
+      "basis": "phase",
+      "basis_note": "Phase 2 in the October 2020 revised phasing, as reported by SocketSite (Oct 9, 2020), whose 'Re-Phase Program, Detailed Construction Schedule' table lists Block 4 vertical development 2028-2029; a 2020 forecast now six years old, not a Block 4-specific commitment; no design review or construction start found. (Waterfront Park North/West are delivered 'with Block 4' per the Phase 1 application, but no calendar date attaches to that trigger either.)"
     },
     {
       "date": "2020-04-21",
@@ -28,7 +28,8 @@
       "text": "Board of Supervisors approves the Potrero Power Station project and Development Agreement (Ordinance No. 62-20, Board File 200040), the entitlement that first names Block 4 as a development block under the adopted Design for Development's Land Use Table; the Development Agreement's own effective date is May 25, 2020, distinct from the D4D's own February 26, 2020 final-document date",
       "sources": [
         "src-port-memo-10a",
-        "src-sfplanning-pps"
+        "src-sfplanning-pps",
+        "src-d4d-final-table311"
       ],
       "expected": false,
       "approximate": false
@@ -38,23 +39,30 @@
   "facts": [
     {
       "key": "use",
-      "value": "Residential, Institutional, Retail and Non-Retail Sales/Services uses permitted; Laboratory and Life Science uses Not Permitted (D4D final Table 3.1.1)",
+      "value": "Residential permitted; Institutional (hospital not permitted; basement to mezzanine only in majority-residential buildings), Retail (hotel not permitted; basement to 2nd floor only) and Non-Retail Sales/Services (basement, ground floor and mezzanine only) uses permitted with those floor limits; Laboratory and Life Science Not Permitted (D4D final Table 3.1.1 and its notes 1, 2, 7 and 8)",
       "sources": [
         "src-d4d-final-table311"
       ]
     },
     {
       "key": "height_ft",
-      "value": "stepped envelope of 65 ft, 85 ft and 100 ft (max) across different portions of the block, per the D4D's Figure 6.2.3; the D4D's height-category text separately places Block 4 in a 'Lowrise buildings' category of up to 100 ft",
+      "value": "stepped envelope of 65 ft and 85 ft across different portions of the block, per the colour-coded labels in the D4D's Figure 6.2.3 (the '100'MAX' label is a plan dimension line, not a height); Standard 6.2.2 places Block 4 among the 'Lowrise buildings' (up to 100 feet)",
       "sources": [
         "src-d4d-final-fig623"
       ]
     },
     {
       "key": "phasing",
-      "value": "Not listed among the six Phase 1 blocks (2, 7, 8, 11, 12, 15) named in the 2024 annual compliance report; the same report separately mentions unrelated Tank Farm Area and 'Block 4' PG&E remediation work, which this dossier does not conflate with this development block without a clearer source",
+      "value": "Not listed among the six Phase 1 blocks (2, 7, 8, 11, 12, 15) named in the 2024 annual compliance report; the same report (p.32) says the Project contracted Pacific States Environmental Contractors in Q3 2021 as general contractor for environmental remediation of the Project's 'Tank Farm Area and Block 4', which appears to refer to this masterplan block but is not defined in the report, so it is not used as a source for other facts here",
       "sources": [
         "src-annual-2024"
+      ]
+    },
+    {
+      "key": "design_role",
+      "value": "Named in the D4D's Figure 1.6.4 text among the 'differentiated buildings' that stand out from the general urban fabric (Block 4, on the waterfront)",
+      "sources": [
+        "src-d4d-fig164"
       ]
     }
   ],
@@ -98,7 +106,7 @@
     {
       "id": "src-d4d-final-table311",
       "title": "Potrero Power Station Design for Development, final (February 26, 2020), Table 3.1.1 Permitted Uses",
-      "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+      "publisher": "SF Planning",
       "date": "2020-02-26",
       "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
       "accessed": "2026-09-17"
@@ -106,7 +114,7 @@
     {
       "id": "src-d4d-final-fig623",
       "title": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 Building Height Plan",
-      "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+      "publisher": "SF Planning",
       "date": "2020-02-26",
       "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
       "accessed": "2026-09-17"
@@ -160,12 +168,20 @@
       "accessed": "2026-09-22",
       "date": "2020-02-26",
       "overview": true
+    },
+    {
+      "id": "src-d4d-fig164",
+      "title": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 1.6.4 Urban Form Framework and text, printed p.29",
+      "publisher": "SF Planning",
+      "date": "2020-02-26",
+      "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+      "accessed": "2026-09-29"
     }
   ],
   "open_questions": [
     "No design review approval or construction-start date found for Block 4; it is not one of the six buildings named in the 2024 annual compliance report's Phase 1 list (Blocks 2, 7, 8, 11, 12, 15), and no later-phase design review approval was found either.",
-    "The 2024 annual compliance report mentions 'Block 4' twice in the context of PG&E remediation of a 'Tank Farm Area and Block 4' -- it is not clear from that report whether this refers to the same Block 4 as this masterplan block or to a different PG&E-internal block numbering; not used as a source for this record's facts.",
-    "No phase-specific schedule found for Block 4; the added expected-completion milestone therefore uses only the whole-project buildout target (2035, SocketSite Oct 2020), not a block-specific date."
+    "The 2024 annual compliance report (p.32) refers to remediation of the Project's 'Tank Farm Area and Block 4' by its contractor Pacific States; it appears to mean this masterplan block, but the report does not define 'Block 4', so it is not used as a source for this record's other facts.",
+    "Block 4's 2028-2029 window comes from a 2020 press table (SocketSite); no current Block 4 schedule was found."
   ],
   "last_verified": "2026-09-20"
 }

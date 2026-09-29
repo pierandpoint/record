@@ -29,9 +29,11 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "Avalon at Mission Bay II, on the Assessor land parcel at 301 King St (blklot 8705011).",
+  "summary": "Avalon at Mission Bay II, on the Assessor land parcel at 301 King St (blklot 8705011). The Assessor roll for that parcel shows 313 units and a 2006 year built, matching AvalonBay's Q4 2006 report of Avalon at Mission Bay North II, a 313-home high-rise completed that quarter (the release gives no street address, so the tie rests on the unit count).",
   "summary_sources": [
-   "src-datasf-parcels"
+   "src-datasf-parcels",
+   "src-datasf-assessor-8705011",
+   "src-avalonbay-4q06"
   ],
   "shape": {
    "kind": "approximate",
@@ -39,7 +41,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- official DataSF Assessor parcel boundary (blklot 8705011), ~6093 sq m, not a hand trace or plan estimate. 301 King St, 313 units per secondary sources, opened 2006, architect Arquitectonica. This is the whole site/land parcel, not just the building's rooftop -- it includes any courtyard, landscaping or parking within the lot line. The parcel is condo-mapped for ownership purposes across many individually owned per-unit lots sharing this same footprint (confirmed against data/raw/parcels.geojson), so no single blklot represents one owner and it cannot be joined via status.csv the way a single-owner parcel can.",
+    "accuracy_caveat": "REAL -- official DataSF Assessor parcel boundary (blklot 8705011), ~6093 sq m, not a hand trace or plan estimate. 301 King St, 313 units and completed in Q4 2006 per AvalonBay's Q4 2006 earnings release (the Assessor roll for parcel 8705011 also shows 313 units and a 2006 year built); architect not confirmed by any source found. This is the whole site/land parcel, not just the building's rooftop -- it includes any courtyard, landscaping or parking within the lot line. The parcel is condo-mapped for ownership purposes across many individually owned per-unit lots sharing this same footprint (confirmed against data/raw/parcels.geojson), so no single blklot represents one owner and it cannot be joined via status.csv the way a single-owner parcel can.",
     "digitized_from": "DataSF Parcels -- Active and Retired (blklot 8705011, real cadastral land-parcel boundary)"
    }
   },
@@ -83,19 +85,19 @@
     "relation": "tracked"
    },
    {
-    "date": "2006-06",
+    "date": "2006-12",
     "date_label": "~2006",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Avalon at Mission Bay II (301 King St) completed",
+    "text": "Avalon at Mission Bay II (301 King St) completed (AvalonBay's Q4 2006 release: initial occupancy Q3 2006, completion Q4 2006; month approximate)",
     "expected": false,
     "approximate": true,
     "sources": [
      {
-      "title": "arquitectonica.com"
+      "title": "https://investors.avalonbay.com/_assets/_507c2c21b8248effea3ae857347c8cf4/avalonbay/db/2294/21588/earnings_release/4Q06-results.pdf"
      }
     ],
-    "source": "arquitectonica.com",
+    "source": "https://investors.avalonbay.com/_assets/_507c2c21b8248effea3ae857347c8cf4/avalonbay/db/2294/21588/earnings_release/4Q06-results.pdf",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -115,7 +117,37 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "AvalonBay's Q4 2006 earnings release lists Avalon at Mission Bay North II (313 homes) as completed in that quarter, with initial occupancy in Q3 2006, so the completion milestone moved from June to December 2006, marked approximate. The shape caveat now cites that release and the Assessor's 313 units for the unit count and opening; the Arquitectonica page it cited describes a 260-unit project matching the third phase, so the architect claim was dropped. The notes no longer state a three-phase count, and the record's summary now cites the Assessor roll and the AvalonBay release. The parcel source now cites a filtered DataSF query instead of the dataset landing page. The 'Avalon at Mission Bay II' name is kept as the repository's label and noted as such.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_avalon_phase_ii",
+     "slug": "avalon-at-mission-bay-ii",
+     "name": "Avalon at Mission Bay II",
+     "permalink": "https://pierandpoint.org/parcels/avalon-at-mission-bay-ii/",
+     "api": "https://pierandpoint.org/api/v1/records/avalon-at-mission-bay-ii.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/mission_bay/owner_20260923_102432.jpg",
@@ -158,23 +190,44 @@
    }
   ],
   "open_questions": [
-   "This record file was created on 2026-09-27 to host the owner's own field photos. Its summary is limited to what its cited source was re-read to confirm that day; fuller details already in this repo's status.csv notes or geometry file (developer, architect, unit count, year built) were left out where that source didn't state them. No research pass yet: no milestones, costs or facts."
+   "This record file was created on 2026-09-27 to host the owner's own field photos. Its summary is limited to what its cited source was re-read to confirm that day; fuller details already in this repo's status.csv notes or geometry file (developer, architect, unit count, year built) were left out where that source didn't state them. No research pass yet: no milestones, costs or facts.",
+   "The architect of this building is not confirmed: the Arquitectonica 'Avalon Mission Bay' page describes a 260-unit development that matches Avalon at Mission Bay North III, not this 313-unit building. The 'Avalon at Mission Bay II' name is this repository's label; AvalonBay's releases call it 'Avalon at Mission Bay North II'."
   ],
   "sources": [
    {
     "id": "src-datasf-parcels",
-    "title": "Parcels - Active and Retired (blklot 8705011, 301 King St)",
+    "title": "Parcels - Active and Retired (blklot 8705011, 301 King St), filtered API query",
     "publisher": "DataSF / SF Office of the Assessor-Recorder",
-    "url": "https://data.sfgov.org/Geographic-Locations-and-Boundaries/Parcels-Active-and-Retired/acdm-wktn",
+    "url": "https://data.sf.gov/resource/acdm-wktn.json?blklot=8705011",
     "accessed": "2026-09-27"
+   },
+   {
+    "id": "src-datasf-assessor-8705011",
+    "title": "Assessor Historical Secured Property Tax Rolls (parcel 8705011, 301 King St: 313 units, year built 2006)",
+    "publisher": "DataSF / SF Office of the Assessor-Recorder",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8705011",
+    "accessed": "2026-09-29"
+   },
+   {
+    "id": "src-avalonbay-4q06",
+    "title": "AvalonBay Communities, Inc. Announces Fourth Quarter and Full Year 2006 Operating Results",
+    "publisher": "AvalonBay Communities (company earnings release, own material)",
+    "date": "2007-01-31",
+    "url": "https://investors.avalonbay.com/_assets/_507c2c21b8248effea3ae857347c8cf4/avalonbay/db/2294/21588/earnings_release/4Q06-results.pdf",
+    "accessed": "2026-09-29"
    },
    {
     "id": null,
     "title": "arquitectonica.com/architecture/project/avalon-mission-bay",
     "url": "https://arquitectonica.com/architecture/project/avalon-mission-bay/"
+   },
+   {
+    "id": null,
+    "title": "data.sfgov.org/Geographic-Locations-and-Boundaries/Parcels-Active-and-Retired/acdm-wktn",
+    "url": "https://data.sfgov.org/Geographic-Locations-and-Boundaries/Parcels-Active-and-Retired/acdm-wktn"
    }
   ],
-  "notes": "One of three AvalonBay phases along King St.",
+  "notes": "AvalonBay's releases name this building 'Avalon at Mission Bay North II'. That it is one of three AvalonBay phases along King St is not stated by any source read, and 'Avalon at Mission Bay II' is this repository's label.",
   "has_record_file": true,
   "last_verified": "2026-09-27",
   "tenants": [],

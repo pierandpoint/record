@@ -30,10 +30,12 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "A UCSF Health outpatient medical building at 1500 Owens Street in Mission Bay South, housing the UCSF Orthopaedic Institute along with Radiology, Sports Medicine, and Physical Therapy & Rehabilitation clinics. The Orthopaedic Institute opened here October 1, 2009 -- the first UCSF clinical service to open at Mission Bay -- and DataSF's Assessor tax roll records the parcel's construction year as 2009.",
+  "summary": "A UCSF Health outpatient medical building at 1500 Owens Street in Mission Bay South, housing the UCSF Orthopaedic Institute and a UCSF Health Radiology (musculoskeletal imaging) clinic. The Orthopaedic Institute opened here October 1, 2009 -- the first UCSF clinical service to open at Mission Bay -- and DataSF's Assessor tax roll records the parcel's construction year as 2009.",
   "summary_sources": [
    "src-ucsf-ortho-2009-10",
-   "src-datasf-assessor-8709018"
+   "src-datasf-assessor-8709018",
+   "src-ucsfhealth-radiology-1500",
+   "src-ocii-landusemap-2019"
   ],
   "shape": {
    "kind": "approximate",
@@ -41,7 +43,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8709018), cross-referenced by position against an OpenStreetMap building/address point (way 84805709) for the name and street address; not a hand trace or plan estimate. Construction date and architect not confirmed by any source found in this pass.",
+    "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8709018), cross-referenced by position against an OpenStreetMap building/address point (way 84805709) for the name and street address; not a hand trace or plan estimate. Construction is dated by DBI permit 200611298694 (filed 2006-11-29, completed 2009-07-31) and the Assessor's year built (2009); the architect is not confirmed by any source found.",
     "digitized_from": "DataSF Building Footprints (mblr SF8709018); name/address from OpenStreetMap way 84805709 (1500 Owens St)"
    }
   },
@@ -126,14 +128,44 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The summary and shape notes listed Sports Medicine, Physical Therapy & Rehabilitation, and other clinics at 1500 Owens; the cited UCSF Health page confirms only Radiology (Musculoskeletal Imaging), so the summary now names the Orthopaedic Institute and Radiology and the shape log carries a dated correction. The shape's caveat and notes said the construction date was not confirmed; the record's own DBI permit (filed 2006, completed 2009-07-31) and the Assessor's 2009 year built confirm it, and only the architect remains unconfirmed. 'Mission Bay South' now cites the OCII land use map. The Wikimedia aerial's credit names only the Commons username Firstcultural. The October 1, 2009 opening rests on a UCSF news page that blocks automated fetches and is flagged in the record's open questions.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_1500_owens",
+     "slug": "1500-owens-street",
+     "name": "1500 Owens Street",
+     "permalink": "https://pierandpoint.org/parcels/1500-owens-street/",
+     "api": "https://pierandpoint.org/api/v1/records/1500-owens-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
     "kind": "now",
     "scope": "site",
     "taken": "2024-05-20",
-    "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+    "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
     "license": "public-domain",
     "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
     "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
@@ -155,12 +187,12 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-02-10",
-    "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+    "credit": "Firstcultural, via Wikimedia Commons; CC0; downscaled to 1600 px",
     "license": "cc0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural. Read 2026-09-23.",
+    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area",
     "aerial": true,
     "focus": [
      0.35,
@@ -176,7 +208,9 @@
   "open_questions": [
    "Architect and general contractor not confirmed by any source found in this pass.",
    "Whether the other clinics now at this address (Sports Medicine, Physical Therapy & Rehabilitation, Gynecology & Urogynecology) opened at the same time as the Orthopaedic Institute or moved in later is not established.",
-   "The 2006 construction permit's own block/lot (block 8709, lot 006) differs from the lot the Assessor now uses for this address (lot 018); Mission Bay parcels were renumbered after this permit was filed, and the address, 6-story office/lab/retail description, and 2009 permit-completion date all line up with this parcel, so this is treated as a lot renumbering, not a different building."
+   "The 2006 construction permit's own block/lot (block 8709, lot 006) differs from the lot the Assessor now uses for this address (lot 018); Mission Bay parcels were renumbered after this permit was filed, and the address, 6-story office/lab/retail description, and 2009 permit-completion date all line up with this parcel, so this is treated as a lot renumbering, not a different building.",
+   "Sports Medicine, Physical Therapy & Rehabilitation, Orthopedic Surgery Center and Gynecology & Urogynecology clinics were removed from the summary: the only page read for this address (UCSF Health's Radiology page) lists Radiology (Musculoskeletal Imaging) alone. Other UCSF Health location pages may list them.",
+   "The UCSF news release (2009-10) cited for the Orthopaedic Institute's October 1, 2009 opening returns 403 to automated fetches and could not be read in the 2026-09 audit; the exact day and 'first UCSF clinical service at Mission Bay' are unchecked. DBI's permit shows the building complete on 2009-07-31, consistent with a late-2009 opening."
   ],
   "sources": [
    {
@@ -211,9 +245,11 @@
     "overview": true
    },
    {
-    "id": null,
-    "title": "ucsfhealth.org/locations/radiology-mission-bay-owens-st",
-    "url": "https://www.ucsfhealth.org/locations/radiology-mission-bay-owens-st"
+    "id": "src-ucsfhealth-radiology-1500",
+    "title": "Radiology Mission Bay - Owens St. (Radiology (Musculoskeletal Imaging), 1500 Owens Street)",
+    "publisher": "UCSF Health",
+    "url": "https://www.ucsfhealth.org/locations/radiology-mission-bay-owens-st",
+    "accessed": "2026-09-29"
    },
    {
     "id": null,
@@ -221,7 +257,7 @@
     "url": "https://www.openstreetmap.org/way/84805709"
    }
   ],
-  "notes": "Construction date and architect not confirmed by any source found in this pass.",
+  "notes": "Construction dated by DBI permit 200611298694 (filed 2006-11-29, completed 2009-07-31) and the Assessor's 2009 year built; architect not confirmed by any source found.",
   "has_record_file": true,
   "last_verified": "2026-09-21",
   "tenants": [],

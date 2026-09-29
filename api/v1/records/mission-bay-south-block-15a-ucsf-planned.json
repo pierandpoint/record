@@ -22,7 +22,7 @@
   },
   "status": "planned",
   "status_label": "Planned",
-  "use": "institutional",
+  "use": "residential",
   "relation": "tracked",
   "adjacent_to": null,
   "distance_note": null,
@@ -53,15 +53,15 @@
     "date_label": "Dec 2019",
     "status": "planned",
     "status_label": "Planned",
-    "text": "OCII's Mission Bay Land Use Map (December 2019) is the earliest document found showing this specific lettered block (15A) designated for UCSF institutional use; the Successor Agency's own Dec 2015 property map shows block 15 undivided and without UCSF color-coding, and the 1998 Redevelopment Plan's own legal text uses an unrelated block-numbering scheme entirely (per this repo's own prior research, docs/briefs/mission_bay_review_items.md), so the 1998 date is not traceable to this specific designation",
+    "text": "OCII's Mission Bay Land Use Map (December 2019) shows this lettered block (15A) in the 'UCSF' color; the Successor Agency's Dec 2015 property map (Long-Range Property Management Plan, Attachment B, page 12, dated 11/04/15) shows block 15 as a single undivided grey block without UCSF color-coding",
     "expected": false,
     "approximate": false,
     "sources": [
      {
-      "title": "OCII Mission Bay Land Use Map, December 2019"
+      "title": "OCII Mission Bay Land Use Map, December 2019; https://sfocii.org/sites/default/files/inline-files/02%20Mission%20Bay.pdf"
      }
     ],
-    "source": "OCII Mission Bay Land Use Map, December 2019",
+    "source": "OCII Mission Bay Land Use Map, December 2019; https://sfocii.org/sites/default/files/inline-files/02%20Mission%20Bay.pdf",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -81,7 +81,37 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The notes said the block is surface parking (satellite-confirmed) and designated for UCSF institutional use, citing only the 2019 land use map, which shows neither. They now say the parking is our own observation in USDA NAIP imagery, cite UCSF's June 2025 CAC deck (undeveloped, Block 15 - Housing), and the use is corrected from institutional to residential. The 2019 milestone now cites the Dec 2015 property management plan map for the undivided block and drops two unverifiable clauses.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_block_15a",
+     "slug": "mission-bay-south-block-15a-ucsf-planned",
+     "name": "Mission Bay South Block 15A (UCSF planned)",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-15a-ucsf-planned/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-15a-ucsf-planned.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [],
   "open_questions": [],
   "sources": [
@@ -89,9 +119,19 @@
     "id": null,
     "title": "data/manual/_reference/mission_bay_land_use_map_2019.png",
     "url": "data/manual/_reference/mission_bay_land_use_map_2019.png"
+   },
+   {
+    "id": null,
+    "title": "sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
+    "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf"
+   },
+   {
+    "id": null,
+    "title": "sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
+    "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf"
    }
   ],
-  "notes": "No building on this site as of 2026-09-19 (satellite- and building-footprint-confirmed); currently used as surface parking. The OCII plan's own Dec 2019 Land Use Map designates this block for future UCSF institutional use, consistent with the rest of this campus row, but no specific project, developer, or timeline was found in this pass.",
+  "notes": "No building on this site as of UCSF's June 2025 CAC deck ('Undeveloped parcels remaining'); parked cars fill the block in USDA NAIP imagery (viewed 2026-09-29), an imagery observation that no cited document states. The OCII plan's Dec 2019 Land Use Map colors this block 'UCSF' (no use type); UCSF's own June 2025 deck, citing its Long Range Development Plan, lists Block 15 as Housing. No specific project, developer, or timeline was found in this pass.",
   "has_record_file": false,
   "last_verified": null,
   "tenants": [],

@@ -29,9 +29,12 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "Channel Mission Bay is a 315-unit apartment building at 185 Channel St in Mission Bay, developed by DOB Mission Bay LP with LaHue and Associates and now managed by UDR. No source found in this pass states a completion date directly; DataSF Assessor tax-roll data shows the parcel's assessed improvement value rising from $0 in the 2012 roll to $30M in 2013 and $94M in 2014, with 316 units first recorded in the 2015 roll, consistent with construction substantially finishing around 2014.",
+  "summary": "Channel Mission Bay is a 315-unit apartment building (per its DBI permit) at 185 Channel St in Mission Bay, developed by DOB Mission Bay LP with design/development by LaHue and Associates and listed by UDR as one of its communities. DBI records permit #201104224606 (8 stories, 315 units) as completed on July 22, 2014; DataSF Assessor tax-roll data are consistent with that: assessed improvement value rose from $0 in the 2012 roll to $30M in 2013 and $94M in 2014, with 316 units first recorded in the 2015 roll.",
   "summary_sources": [
-   "src-datasf-8711023"
+   "src-datasf-8711023",
+   "src-datasf-permit-channel",
+   "src-lahue-channel",
+   "src-udr-channel"
   ],
   "shape": {
    "kind": "approximate",
@@ -68,7 +71,7 @@
      },
      {
       "id": "src-socketsite-2011-04-block-watch",
-      "title": "Mission Bay Neighborhood Block Watch And Construction Chatter",
+      "title": "Mission Bay Neighborhood Block and Construction Watch",
       "publisher": "SocketSite",
       "date": "2011-04-15",
       "url": "https://socketsite.com/archives/2011/04/mission_bay_neighborhood_block_watch_and_construction_c.html",
@@ -95,14 +98,21 @@
     "relation": "tracked"
    },
    {
-    "date": "2014",
-    "date_label": "~2014",
+    "date": "2014-07-22",
+    "date_label": "Jul 22, 2014",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Substantially complete, inferred from DataSF Assessor tax-roll data: assessed improvement value rose from near zero (2012 roll) to $30M (2013 roll) to $94M (2014 roll), and 316 units are first recorded in the 2015 roll. This is inferred from the trend in Assessor data, not a stated completion date from any source found.",
+    "text": "DBI records permit #201104224606 (8 stories, 315 units) as completed; Assessor tax-roll data are consistent (assessed improvement value $0 in the 2012 roll, $30M in 2013, $94M in 2014; 316 units first recorded in the 2015 roll). A completion date for the permit is not an opening date.",
     "expected": false,
-    "approximate": true,
+    "approximate": false,
     "sources": [
+     {
+      "id": "src-datasf-permit-channel",
+      "title": "Building Permits: permit #201104224606 (185 Channel St, block 8711 lot 023), filed 2011-04-22, \"to erect 8 stories, 315 units residential, retail, parking building\", completed 2014-07-22, estimated cost $71,000,000",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=201104224606",
+      "accessed": "2026-09-21"
+     },
      {
       "id": "src-datasf-8711023",
       "title": "Assessor Historical Secured Property Tax Rolls (blklot 8711023, 185/1850 Channel St): assessed improvement value and unit-count history by roll year",
@@ -111,7 +121,7 @@
       "accessed": "2026-09-21"
      }
     ],
-    "source": "DataSF",
+    "source": "DataSF / SF Department of Building Inspection; DataSF",
     "origin": "record",
     "category": "status",
     "category_label": "Status",
@@ -133,10 +143,39 @@
   ],
   "changes": [
    {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The summary and timeline now say the city's building permit for the 315-unit building is recorded complete on July 22, 2014 (DataSF), rather than that no source states a completion date, and note a completed permit is not an opening date. Developer, design firm and UDR are cited to their own pages. The Gus's Community Market changelog row no longer claims a deli, butcher counter or cafe or a Channel Mission Bay ground-floor location, which the CBS article does not state; Gus's own site now backs the 1101 4th St address and current operation. The Market Hall's 2016 opening year could not be checked because its only source is an unreadable Yelp listing, and a 2014 SFist piece shows it was planned for Labor Day 2014, so a note was added to the record's open questions. The Wikimedia credit no longer names a flight the file page does not state.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_channel",
+     "slug": "channel-mission-bay",
+     "name": "Channel Mission Bay",
+     "permalink": "https://pierandpoint.org/parcels/channel-mission-bay/",
+     "api": "https://pierandpoint.org/api/v1/records/channel-mission-bay.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-22",
     "kind": "added",
     "kind_label": "Added",
-    "text": "Gus's Community Market opened its fourth family-owned San Francisco store on Dec 26, 2018, at 1101 4th St, the ground floor of the Channel Mission Bay apartment building at 4th and Channel, with a deli, butcher counter, cafe and grocery.",
+    "text": "CBS News SF reported that Wednesday, Dec 26, 2018 was opening day for the family's fourth grocery store, Gus's Community Market in Mission Bay. Gus's own website lists its Mission Bay Market at 1101 4th St, at 4th and Channel. The CBS article gives no address and does not describe a deli, butcher counter or cafe, so those details and the ground-floor location in the Channel Mission Bay building are not stated here.",
     "source": "https://www.cbsnews.com/sanfrancisco/news/sons-open-mission-bay-gus-grocery-store-to-honor-dad",
     "sources": [
      {
@@ -197,7 +236,7 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-05-20",
-    "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+    "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
     "license": "public-domain",
     "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
     "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
@@ -219,12 +258,12 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-02-10",
-    "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+    "credit": "Firstcultural, aerial view, via Wikimedia Commons; CC0; downscaled to 1600 px",
     "license": "cc0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by the uploader Firstcultural. Read 2026-09-23.",
+    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area",
     "aerial": true,
     "focus": [
      0.35,
@@ -266,10 +305,11 @@
    }
   ],
   "open_questions": [
-   "No source found in this pass states a specific completion/opening date for this building; the 2014 date here is inferred from Assessor tax-roll value trends, not a stated event, and is flagged accordingly.",
+   "DBI records permit #201104224606 as completed on 2014-07-22 (DataSF i98e-djp9), but a permit completion is not an opening date; no source found states when the building opened or first leased.",
    "This parcel's own DataSF Assessor 'year_property_built' field is blank in every roll year checked -- unlike most other Mission Bay buildings in this pass, the Assessor does not give a direct construction year for this parcel.",
    "Several real-estate listing aggregators (Zillow, Trulia, Apartments.com) state the building was 'built in 2013,' which is consistent with the Assessor's value trend, but these pages returned 403/blocked responses when fetched directly in this session and their exact wording could not be independently confirmed, so that claim is not used as a citation here.",
-   "The building's developer (DOB Mission Bay LP) and the LaHue and Associates/UDR project pages already cited in this project's geometry file (data/manual/mission_bay_channel.geojson) do not themselves give an opening date -- confirmed by this pass's own re-check of the geometry file's accuracy_caveat, which already notes 'Opening year not confirmed by any source found.'"
+   "The building's developer (DOB Mission Bay LP) and the LaHue and Associates/UDR project pages already cited in this project's geometry file (data/manual/mission_bay_channel.geojson) do not themselves give an opening date -- confirmed by this pass's own re-check of the geometry file's accuracy_caveat, which already notes 'Opening year not confirmed by any source found.'",
+   "2026-09-29 accuracy audit: The Market Hall's 2016 opening year (retail_confirmed.csv and a Sept 2026 changelog row) rests on an unreadable Yelp listing (HTTP 403); SFist (2014-06-09) reported it as planned for 185 Channel Street with a target of Labor Day 2014, so the opening year is unconfirmed. Gus's Community Market's own site lists a Mission Bay Market at 1101 4th St (at 4th and Channel), read 2026-09-29."
   ],
   "sources": [
    {
@@ -288,7 +328,7 @@
    },
    {
     "id": "src-socketsite-2011-04-block-watch",
-    "title": "Mission Bay Neighborhood Block Watch And Construction Chatter",
+    "title": "Mission Bay Neighborhood Block and Construction Watch",
     "publisher": "SocketSite",
     "date": "2011-04-15",
     "url": "https://socketsite.com/archives/2011/04/mission_bay_neighborhood_block_watch_and_construction_c.html",
@@ -304,14 +344,18 @@
     "overview": true
    },
    {
-    "id": null,
-    "title": "udr.com/san-francisco-bay-area-apartments/san-francisco/channel-mission-bay",
-    "url": "https://www.udr.com/san-francisco-bay-area-apartments/san-francisco/channel-mission-bay/"
+    "id": "src-lahue-channel",
+    "title": "185 Channel St (Developer: DOB Mission Bay LP; Design/Development: LaHue and Associates)",
+    "publisher": "LaHue and Associates (developer's design/development firm, own material)",
+    "url": "https://lahueandassociates.com/185-channel-st/",
+    "accessed": "2026-09-29"
    },
    {
-    "id": null,
-    "title": "lahueandassociates.com/185-channel-st",
-    "url": "https://lahueandassociates.com/185-channel-st/"
+    "id": "src-udr-channel",
+    "title": "Channel Mission Bay, 185 Channel St",
+    "publisher": "UDR (apartment operator, own material)",
+    "url": "https://www.udr.com/san-francisco-bay-area-apartments/san-francisco/channel-mission-bay/",
+    "accessed": "2026-09-29"
    },
    {
     "id": null,
@@ -321,7 +365,7 @@
   ],
   "notes": "Opening year not confirmed by any source found in this pass.",
   "has_record_file": true,
-  "last_verified": "2026-09-21",
+  "last_verified": "2026-09-29",
   "tenants": [
    {
     "slug": "guss-community-market",
@@ -330,8 +374,8 @@
     "status": "open",
     "opened": "2018-12-26",
     "closed": null,
-    "source": "https://www.cbsnews.com/sanfrancisco/news/sons-open-mission-bay-gus-grocery-store-to-honor-dad",
-    "unit_or_address": "1101 4th St (Channel Mission Bay ground floor",
+    "source": "https://www.cbsnews.com/sanfrancisco/news/sons-open-mission-bay-gus-grocery-store-to-honor-dad; https://gussmarket.com/locations/mission-bay-market/",
+    "unit_or_address": "1101 4th St (at 4th and Channel)",
     "record": {
      "id": "mission_bay_channel",
      "slug": "channel-mission-bay",

@@ -29,9 +29,11 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "A triangular landscaped wedge in the freeway-ramp interchange near 16th Street, 3rd Street and Owens Street, next to the UCSF Medical Center campus; real landscaped/grassed land per satellite imagery, delineated by this project's owner-directed real-gap-fragment method rather than a surveyed parcel boundary or a named park record. Name, operator and construction date not confirmed by any source found -- and this project's own 'P26' label for it does not match OCII's official current numbering (see open_questions).",
+  "summary": "A small (~2,037 sqm) wedge of open ground at about 37.7645 N, 122.393 W, between the I-280 ramp and Owens St near Mariposa St, traced by this project's owner-directed real-gap-fragment method rather than a surveyed parcel boundary; in USDA NAIP imagery it is a strip of dry grass and bare ground. Its name, operator and construction date are not confirmed by any source found, and this project's own 'P26' label and its earlier 16th/3rd/Owens description do not match OCII's Dec 2015 map, which places P26 at Mariposa St (see open_questions).",
   "summary_sources": [
-   "src-geom-p26"
+   "src-geom-p26",
+   "src-ocii-lrpmp-2015",
+   "src-naip-2026-09-29"
   ],
   "shape": {
    "kind": "approximate",
@@ -50,18 +52,48 @@
   "facts": [],
   "costs": [],
   "milestones": [],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The record's summary described the wedge as in a 16th/3rd/Owens interchange next to the UCSF Medical Center, citing only our own digitization log. It now states only what is supported: the polygon's location near Owens and Mariposa Streets, its appearance in USDA NAIP imagery, and that OCII's Dec 2015 map places P26 at Mariposa St. The geometry file gained a dated flag and a citation but no change to name, status or use, since the P26/P27 identity is the owner's decision.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_p26_interchange_wedge",
+     "slug": "p26",
+     "name": "P26",
+     "permalink": "https://pierandpoint.org/parcels/p26/",
+     "api": "https://pierandpoint.org/api/v1/records/p26.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
     "kind": "now",
     "scope": "site",
     "taken": "2024-05-20",
-    "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+    "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
     "license": "public-domain",
     "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
     "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
-    "license_note": "USDA's data.gov catalog record for NAIP imagery sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0); the USDA FSA policies page says public-domain information may be freely distributed with credit requested ('U.S. Department of Agriculture, Farm Service Agency'). Read 2026-09-22.",
+    "license_note": "USDA's data.gov catalog record for NAIP imagery (published by the Farm Production and Conservation Business Center) sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0). Read 2026-09-22; publisher name re-read 2026-09-29.",
     "caption": "USDA NAIP aerial orthophoto (2024 flight), cropped to the Mission Bay project area and its immediate surroundings",
     "aerial": true,
     "focus": [
@@ -79,12 +111,12 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-02-10",
-    "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+    "credit": "Firstcultural (Alfred Twu, per the photographer's Wikimedia Commons user page), via Wikimedia Commons; CC0; downscaled to 1600 px",
     "license": "cc0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by the author Firstcultural; the author's Commons user page (https://commons.wikimedia.org/wiki/User:Firstcultural) gives the name Alfred Twu. File page read 2026-09-23, user page read 2026-09-29.",
+    "caption": "Aerial photo of San Francisco's Mission Bay, ballpark, and Caltrain area",
     "aerial": true,
     "focus": [
      0.35,
@@ -100,7 +132,8 @@
   "open_questions": [
    "OCII's own current public Mission Bay South open-space page (src-ocii-openspace-page) labels 'P26' as Mariposa Park -- a real, much larger (2.5-acre) named park with a playground at Mariposa and Owens streets, developed alongside UCSF Benioff Children's Hospital and reported to have opened in spring 2016 (src-potreroview-mariposa) -- not this record's small (~2,037 sqm) freeway-interchange landscaping wedge. This project's own 'P26' label for this wedge, per its digitization_method log, was instead assigned during this project's own numbered real-gap-fragment review, not sourced to any city document naming this specific wedge P26. This is a likely label mismatch, not resolved or corrected here since it would require a geometry-file change, which is out of scope for this dossier pass.",
    "No construction date found for this wedge itself; it sits near UCSF Medical Center at Mission Bay, which opened February 1, 2015 (per this repo's own record ucsf_mission_bay_hospital), but no source ties this landscaping's own completion to that date.",
-   "Name and operator (this project's own digitization_method log guesses SFMTA/Caltrans ramp landscaping or an OCII-era open-space installation) not confirmed by any source found."
+   "Name and operator (this project's own digitization_method log guesses SFMTA/Caltrans ramp landscaping or an OCII-era open-space installation) not confirmed by any source found.",
+   "The mission_bay_p27_track_field polygon (east of Owens St) covers a green park in USDA NAIP imagery, where OCII's 2015 map puts P26 (Mariposa Park); the P26 and P27 labels look swapped or misplaced. Owner decision, not changed here."
   ],
   "sources": [
    {
@@ -131,11 +164,26 @@
     "url": "https://www.potreroview.net/mariposa-park-set-to-open/",
     "date": "2016-03",
     "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-ocii-lrpmp-2015",
+    "title": "Mission Bay North and South Approved Long-Range Property Management Plan, Attachment B - Map of Mission Bay Property (page 12, dated 11/04/15)",
+    "publisher": "Successor Agency to the San Francisco Redevelopment Agency (OCII)",
+    "date": "2015-12",
+    "url": "https://sfocii.org/sites/default/files/inline-files/02%20Mission%20Bay.pdf",
+    "accessed": "2026-09-29"
+   },
+   {
+    "id": "src-naip-2026-09-29",
+    "title": "USDA NAIP imagery, image service export viewed 2026-09-29 with this project's traced polygons overlaid",
+    "publisher": "USDA Farm Production and Conservation Business Center (NAIP)",
+    "url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer",
+    "accessed": "2026-09-29"
    }
   ],
   "notes": "OCII plan open-space parcel P26. A small landscaped wedge in the freeway on/off-ramp interchange near 16th St/3rd St/Owens St, just west of the UCSF Medical Center campus.",
   "has_record_file": true,
-  "last_verified": "2026-09-21",
+  "last_verified": "2026-09-29",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

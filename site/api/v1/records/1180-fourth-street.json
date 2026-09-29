@@ -29,10 +29,11 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "A 150-unit affordable apartment building at 1180 Fourth Street in Mission Bay South, for very-low- and low-income families and 50 formerly homeless households, developed by Mercy Housing California and designed by Kennerly Architecture & Planning with Mithun|Solomon. DataSF's Assessor tax roll records the parcel's construction year as 2015, and Mercy Housing held its official opening celebration on May 6, 2015.",
+  "summary": "A 150-unit affordable apartment building at 1180 Fourth Street in Mission Bay South for low-income families, 50 of them formerly homeless, developed by Mercy Housing California and designed by Mithun (formerly WRT/Solomon E.T.C.), with Kennerly Architecture and Planning as associate design architect. DataSF's Assessor tax roll records the parcel's construction year as 2015, and Mercy Housing held its official opening celebration on May 6, 2015.",
   "summary_sources": [
    "src-datasf-assessor-8711501",
-   "src-mercyhousing-2015-05"
+   "src-mercyhousing-2015-05",
+   "src-mithun-1180"
   ],
   "shape": {
    "kind": "approximate",
@@ -161,18 +162,48 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The summary and shape notes named Kennerly Architecture & Planning as lead designer; Mithun's project page shows Mithun (formerly WRT/Solomon E.T.C.) as architect, Kennerly as associate design architect and Full Circle Architects as associate architect. The notes said the building fills a full city block and is 216,000 sq ft; Mithun gives 217,620 sf on 1.4 acres at Fourth and Channel, so the block claim is withdrawn. The completion year is explained (Mithun 2014; DBI permit completed 2015-04-02; Assessor 2015). 'Very-low-income' was removed from the summary because only 'low-income' is sourced, and Mithun was added as a source. The Wikimedia aerial's credit now names only the Commons username Firstcultural, and the NAIP credit names the USDA Farm Production and Conservation Business Center, which the data.gov record names as NAIP's administrator. The May 6, 2015 opening celebration rests on a Mercy Housing page that now returns 404 and is flagged in the record's open questions.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_1180_4th",
+     "slug": "1180-fourth-street",
+     "name": "1180 Fourth Street",
+     "permalink": "https://pierandpoint.org/parcels/1180-fourth-street/",
+     "api": "https://pierandpoint.org/api/v1/records/1180-fourth-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
     "kind": "now",
     "scope": "site",
     "taken": "2024-05-20",
-    "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+    "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
     "license": "public-domain",
     "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
     "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
-    "license_note": "USDA's data.gov catalog record for NAIP imagery sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0); the USDA FSA policies page says public-domain information may be freely distributed with credit requested ('U.S. Department of Agriculture, Farm Service Agency'). Read 2026-09-22.",
+    "license_note": "USDA's data.gov catalog record for NAIP imagery (published by the Farm Production and Conservation Business Center, Geospatial Enterprise Operations Branch) sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0). Read 2026-09-22 and 2026-09-29.",
     "caption": "USDA NAIP aerial orthophoto (2024 flight), cropped to the Mission Bay project area and its immediate surroundings",
     "aerial": true,
     "focus": [
@@ -190,12 +221,12 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-02-10",
-    "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+    "credit": "Firstcultural, via Wikimedia Commons; CC0; downscaled to 1600 px",
     "license": "cc0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural. Read 2026-09-23.",
+    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area",
     "aerial": true,
     "focus": [
      0.35,
@@ -250,7 +281,9 @@
   ],
   "open_questions": [
    "The Registry's own December 2014 headline says construction was already complete by then, ahead of the May 2015 public opening/dedication; no source found pins down an exact construction-completion (certificate of occupancy) date distinct from the dedication event.",
-   "Total development cost not found in this pass."
+   "Total development cost not found in this pass.",
+   "Mercy Housing's May 2015 press page now returns 404 and could not be read in the 2026-09 audit; the May 6 date and the attendees (the Mayor and the District 6 Supervisor) are not re-verified (an Internet Archive snapshot of the page exists and should be checked). 'Very-low-income' was removed from the summary because no source read states it; Mithun says 'low-income'.",
+   "Mithun gives completion 2014 while DBI's permit 201012036075 shows completed 2015-04-02 and the Assessor year built is 2015; the record uses 2015 for the completion year."
   ],
   "sources": [
    {
@@ -293,14 +326,16 @@
     "overview": true
    },
    {
-    "id": null,
-    "title": "casestudies.uli.org/1180-fourth-street",
-    "url": "https://casestudies.uli.org/1180-fourth-street/"
+    "id": "src-mithun-1180",
+    "title": "1180 Fourth Street",
+    "publisher": "Mithun (architect, own material)",
+    "url": "https://mithun.com/project/1180-fourth-street/",
+    "accessed": "2026-09-29"
    },
    {
     "id": null,
-    "title": "mithun.com/project/1180-fourth-street",
-    "url": "https://mithun.com/project/1180-fourth-street/"
+    "title": "casestudies.uli.org/1180-fourth-street",
+    "url": "https://casestudies.uli.org/1180-fourth-street/"
    },
    {
     "id": null,

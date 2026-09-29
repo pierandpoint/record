@@ -49,19 +49,19 @@
   "costs": [],
   "milestones": [
    {
-    "date": "2004-06",
-    "date_label": "~2004",
+    "date": "2003",
+    "date_label": "~2003",
     "status": "complete",
     "status_label": "Complete",
-    "text": "The Beacon (250/260 King St) completed",
+    "text": "The Beacon (250/260 King St) completed (SFHighrises, a real-estate listing site, gives 'Year Built: 2003'; the year is not confirmed by a primary source)",
     "expected": false,
     "approximate": true,
     "sources": [
      {
-      "title": "wzarc.com"
+      "title": "https://sfhighrises.com/building/the-beacon/"
      }
     ],
-    "source": "wzarc.com",
+    "source": "https://sfhighrises.com/building/the-beacon/",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -83,10 +83,39 @@
   ],
   "changes": [
    {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Beacon's completion moved from June 2004 to 'built 2003' as listed by SFHighrises (a listing site, not a primary source; the month had no source). Lucky Strike's 2012 opening is now described as announced for March 9, 2012 (InPark Magazine and 7x7 are pre-opening pieces), its opened date is blank, and its status rests on Lucky Strike's own location page; InPark places it on the ground floor of the Beacon. The Safeway and AT&T addresses are marked as this project's own assignment to The Beacon, since their sources do not name it. The geometry notes now name what the listing sites do and do not say about units, developer and the architect conflict.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_the_beacon",
+     "slug": "the-beacon",
+     "name": "The Beacon",
+     "permalink": "https://pierandpoint.org/parcels/the-beacon/",
+     "api": "https://pierandpoint.org/api/v1/records/the-beacon.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-22",
     "kind": "added",
     "kind_label": "Added",
-    "text": "Safeway operates a full-service grocery, pharmacy, bakery and deli at 298 King St, the ground floor of The Beacon mixed-use building in Mission Bay North. No opening date found; confirmed via Safeway's own store locator.",
+    "text": "Safeway operates a full-service grocery, pharmacy, bakery and deli at 298 King St (Safeway's own store locator, which does not name The Beacon or Mission Bay North; the assignment to The Beacon is this project's own mapping). No opening date found.",
     "source": "https://local.safeway.com/safeway/ca/san-francisco/298-king-st.html",
     "sources": [
      {
@@ -115,11 +144,11 @@
     "date": "2026-09-22",
     "kind": "added",
     "kind_label": "Added",
-    "text": "Lucky Strike San Francisco, a bowling alley and entertainment venue with a bar and dining room, opened at 200 King St in The Beacon around March 2012.",
-    "source": "https://www.7x7.com/lucky-strike-debuts-in-san-francisco-1781519316.html",
+    "text": "Lucky Strike San Francisco, a bowling alley and entertainment venue with a bar and dining room, was announced to open at 200 King St, 'at the ground floor of the Beacon', on March 9, 2012 (InPark Magazine, Feb 27, 2012; 7x7, Mar 9, 2012: 'opens in SoMa this weekend'). No post-opening source was read. Lucky Strike's own location page lists 200 King Street as open (read 2026-09-29).",
+    "source": "https://www.inparkmagazine.com/lucky-strike-to-open-bowling-alley-with-bay-area-vibe-in-san-francisco/ ; https://www.7x7.com/lucky-strike-debuts-in-san-francisco-1781519316.html",
     "sources": [
      {
-      "title": "https://www.7x7.com/lucky-strike-debuts-in-san-francisco-1781519316.html"
+      "title": "https://www.inparkmagazine.com/lucky-strike-to-open-bowling-alley-with-bay-area-vibe-in-san-francisco/ ; https://www.7x7.com/lucky-strike-debuts-in-san-francisco-1781519316.html"
      }
     ],
     "category": "retail",
@@ -187,9 +216,19 @@
     "id": null,
     "title": "catellus.com/mission-bay",
     "url": "https://www.catellus.com/mission-bay"
+   },
+   {
+    "id": null,
+    "title": "sfhighrises.com/building/the-beacon",
+    "url": "https://sfhighrises.com/building/the-beacon/"
+   },
+   {
+    "id": null,
+    "title": "afirealestate.com/buildings/?building=beacon",
+    "url": "https://afirealestate.com/buildings/?building=beacon"
    }
   ],
-  "notes": "Full-block mixed-use condominium complex at 250/260 King St; ground-floor retail (grocery, bank, spa) below residential floors. Architect attribution conflicts between sources (Brand + Allen Architects per one architect-portfolio source vs. SOM/HKS per an aggregator) and is not resolved here -- not recorded as a fact pending a primary-source confirmation.",
+  "notes": "Mixed-use condominium complex at 250 and 260 King St (the two OSM apartment-tagged building footprints tracked here); the Assessor parcel is condo-mapped across per-unit lots (data/raw/parcels.geojson). A broker's portfolio page (Afi + Associates, read 2026-09-29) describes a 'gourmet grocery store, bank, spa' at the complex; that is a secondary source and does not name the tenants. Architect attribution conflicts between sources (Afi + Associates says Skidmore, Owings and Merrill; earlier research also recorded Brand + Allen Architects and SOM/HKS from sources not cited here) and is not resolved -- not recorded as a fact pending a primary-source confirmation.",
   "has_record_file": false,
   "last_verified": null,
   "tenants": [
@@ -198,10 +237,10 @@
     "name": "Lucky Strike San Francisco",
     "category": "arts and culture",
     "status": "open",
-    "opened": "2012-03",
+    "opened": null,
     "closed": null,
-    "source": "https://www.7x7.com/lucky-strike-debuts-in-san-francisco-1781519316.html",
-    "unit_or_address": "200 King St (The Beacon)",
+    "source": "https://luckystrikeent.com/location/lucky-strike-san-francisco",
+    "unit_or_address": "200 King St (ground floor of the Beacon, per InPark Magazine, Feb 27, 2012)",
     "record": {
      "id": "mission_bay_the_beacon",
      "slug": "the-beacon",
@@ -224,7 +263,7 @@
     "opened": null,
     "closed": null,
     "source": "https://local.safeway.com/safeway/ca/san-francisco/298-king-st.html",
-    "unit_or_address": "298 King St (The Beacon)",
+    "unit_or_address": "298 King St (assignment to The Beacon is Pier & Point's own mapping; the store page does not name it)",
     "record": {
      "id": "mission_bay_the_beacon",
      "slug": "the-beacon",
@@ -247,7 +286,7 @@
     "opened": null,
     "closed": null,
     "source": "https://www.yelp.com/biz/at-and-t-san-francisco-5",
-    "unit_or_address": "236 King St (The Beacon)",
+    "unit_or_address": "236 King St (assignment to The Beacon is Pier & Point's own mapping; not stated by the source)",
     "record": {
      "id": "mission_bay_the_beacon",
      "slug": "the-beacon",

@@ -40,7 +40,7 @@
     "accuracy_caveat": "APPROXIMATE (planned, unbuilt) on the undivided remainder lot 8719A006; edges are Blocks J's and I's traced edges (~1-3 m) and the TAFB property line / unbuilt Bridgeview Street line.",
     "digitized_from": "Mission Rock Design Controls, Figure 6.2 (p.151), Figure 3.1.1 - Location Map of Open Spaces (p.45) and Section 3.4 Channel Lane (p.66).",
     "why_no_real_parcel": "A real Assessor lot exists under this open space -- 8719A006, the undivided remainder of Seawall Lot 337 recorded 2020-06-12 -- but it has not been subdivided per block, so joining status.csv to it would paint the same ~9-acre parking-lot shape for every unbuilt block. Hand-derived geometry is used instead, with the lot's own lines wherever this open space touches them.",
-    "regulatory_context": "Dedicated open space, Design Controls Section 3.4: a 50 ft maximum plaza with a 12 ft pedestrian throughway, not accessible by vehicles, a protected view corridor from Mission Rock Square to the Bay, connecting across Terry A Francois Boulevard to Channel Wharf."
+    "regulatory_context": "Dedicated open space, Design Controls Section 3.4: a 50 ft maximum plaza with a 12 ft pedestrian throughway, not accessible by vehicles, a view corridor that Guideline 3.4.4 says should be maintained from Mission Rock Square to the water (a guideline, not a standard), connecting across Terry A Francois Boulevard to Channel Wharf."
    }
   },
   "centroid": {
@@ -55,15 +55,15 @@
     "date_label": "Jan 30, 2018",
     "status": "planned",
     "status_label": "Planned",
-    "text": "Port Commission approves the Mission Rock Design Controls (Resolution 18-04), which name this planned open space as Channel Lane (Design Controls Section 3.4)",
+    "text": "Port Commission approves the Mission Rock Design Controls, which name this planned open space as Channel Lane (Design Controls Section 3.4); the Port's Jan 26, 2018 staff report requested this approval under Resolution 18-04, and its Sept 2019 memo dates the Commission's approvals January 30, 2018 (it numbers the Design Controls resolution 18-05)",
     "expected": false,
     "approximate": false,
     "sources": [
      {
-      "title": "Port Commission Item 11A staff report, Jan 26 2018"
+      "title": "Port Commission Item 11A staff report, Jan 26 2018 (request); Port Commission Item 7A memo, Sept 20 2019 (approval date)"
      }
     ],
-    "source": "Port Commission Item 11A staff report, Jan 26 2018",
+    "source": "Port Commission Item 11A staff report, Jan 26 2018 (request); Port Commission Item 7A memo, Sept 20 2019 (approval date)",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -85,14 +85,43 @@
   ],
   "changes": [
    {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The geometry notes said Channel Lane has a protected view corridor and that it is not yet built with surface parking there today. The Design Controls call the view corridor a guideline ('should be maintained'), not a protected standard, and a 2018 plan cannot show today's condition. The notes now say that and cite the Port's June 2026 report; the lane's built state is not confirmed. The Jan 30, 2018 Design Controls approval milestone and changelog row now cite the Sept 2019 Port memo that states the date.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_rock_channel_lane",
+     "slug": "mission-rock-channel-lane",
+     "name": "Mission Rock Channel Lane",
+     "permalink": "https://pierandpoint.org/parcels/mission-rock-channel-lane/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-rock-channel-lane.json"
+    },
+    "site": {
+     "slug": "mission-rock",
+     "name": "Mission Rock",
+     "short": "Mission Rock",
+     "url": "https://pierandpoint.org/sites/mission-rock/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-17",
     "kind": "added",
     "kind_label": "Added",
     "text": "Channel Lane added: the planned pedestrian open space between Blocks J and I, from the Design Controls' open space plan.",
-    "source": "Mission Rock Design Controls, Figures 1.1 and 3.1.1, Section 3.4",
+    "source": "Mission Rock Design Controls, Figures 1.1 and 3.1.1, Section 3.4; Port Commission Item 7A memo, Sept 20 2019 (January 30, 2018 approval)",
     "sources": [
      {
-      "title": "Mission Rock Design Controls, Figures 1.1 and 3.1.1, Section 3.4"
+      "title": "Mission Rock Design Controls, Figures 1.1 and 3.1.1, Section 3.4; Port Commission Item 7A memo, Sept 20 2019 (January 30, 2018 approval)"
      }
     ],
     "category": "open_space",
@@ -121,9 +150,14 @@
     "id": null,
     "title": "sfport.com/sites/default/files/2025-07/Mission%20Rock%20Design%20Controls%204.24.18_FINAL_Reduced%20File.pdf",
     "url": "https://www.sfport.com/sites/default/files/2025-07/Mission%20Rock%20Design%20Controls%204.24.18_FINAL_Reduced%20File.pdf"
+   },
+   {
+    "id": null,
+    "title": "sfport.com/sites/default/files/2026-06/item_11a_mission_rock_phase_2_update_and_port_capital.pdf",
+    "url": "https://www.sfport.com/sites/default/files/2026-06/item_11a_mission_rock_phase_2_update_and_port_capital.pdf"
    }
   ],
-  "notes": "Planned pedestrian lane between Blocks J and I, not yet built (surface parking today).",
+  "notes": "Planned pedestrian lane between Blocks J and I (Design Controls Section 3.4, Figure 1.1). No source read shows it built: the Port's June 5, 2026 report describes the project site as a surface parking lot to be transformed and Phase 2, not yet begun, as possibly starting construction as early as 2027. Its own current condition is not separately confirmed.",
   "has_record_file": false,
   "last_verified": null,
   "tenants": [],

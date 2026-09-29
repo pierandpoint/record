@@ -29,7 +29,7 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "Planned office/laboratory building on the Potrero Power Station masterplan, paired with Block 12 as a combined ~430,000 sq ft life-science campus; design under review as of the March 2025 annual compliance report, with no construction start found.",
+  "summary": "Planned office building on the Potrero Power Station masterplan (office, laboratory and life science uses are permitted there), paired with Block 12 at a combined ~430,000 sq ft of office per the project's engineer; design under review as of the March 2025 annual compliance report, with no construction start found.",
   "summary_sources": [
    "src-meyersplus",
    "src-annual-2024"
@@ -40,10 +40,10 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- this block is not yet built and does not correspond to any subdivided Assessor parcel: it currently sits on vacant/graded land within the former power station site (unaddressed in DataSF's Assessor roll). Traced from an adopted regulatory diagram via multi-point real-street georeferencing (see digitization_method), but this diagram is dated 2020 and may not reflect later design changes. Treat vertex positions as accurate to roughly 10-25m, not survey-grade. South edge corrected 2026-09-16 (second pass) using the source diagram's own measured depth rather than a satellite curb search (see digitization_method) -- the diagram-derived depth should be reliable to within a few meters, but this edge has NOT been independently confirmed against a visible real-world curb. This block's WEST-EAST WIDTH is also known to disagree with the diagram (~55m actual vs ~92m implied) and has NOT been corrected -- flagged as an open follow-up, not resolved. Rebuilt 2026-09-16 via GDAL GCP/TPS georeferencing -- see digitization_method. Re-measured 2026-09-16 (third pass) in a single consistent pixel-detection pass across the whole block layout -- see digitization_method. Re-corrected 2026-09-16 (fourth pass) after fixing a mis-measured GCP -- see digitization_method.",
-    "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
-    "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead.",
-    "regulatory_context": "Flat 130 ft max height per Figure 6.2.3, within an 85-145 ft range sometimes cited secondhand. The D4D's Permitted Uses table confirms Lab/Life Science uses are permitted here (paired with Block 12 as a life-science campus in some secondary sources, combined at roughly 430,000 sq ft per a Keyser Marston Associates estimate -- notably less than a sometimes-cited '~500,000 GSF' figure). No source found specifically tying Herzog & de Meuron to this block (their confirmed Potrero work is Blocks 2 and 15/Station A). No construction-start source found."
+    "accuracy_caveat": "APPROXIMATE -- this block is not yet built (design under review as of the March 2025 annual compliance report) and this approximate footprint has not been matched to an Assessor parcel: DataSF Parcels lists an active, unaddressed lot, 4232021 (recorded 2022-08-30), that overlaps about three quarters of it, but that lot has not been confirmed as this block's parcel. Traced from an adopted regulatory diagram via multi-point real-street georeferencing (see digitization_method), but this diagram is dated 2020 and may not reflect later design changes. Treat vertex positions as accurate to roughly 10-25m, not survey-grade. South edge corrected 2026-09-16 (second pass) using the source diagram's own measured depth rather than a satellite curb search (see digitization_method) -- the diagram-derived depth should be reliable to within a few meters, but this edge has NOT been independently confirmed against a visible real-world curb. This block's WEST-EAST WIDTH is also known to disagree with the diagram (~55m actual vs ~70m implied by the 2026-09-29 re-measurement, originally recorded as ~92m) and has NOT been corrected -- flagged as an open follow-up, not resolved. Rebuilt 2026-09-16 via GDAL GCP/TPS georeferencing -- see digitization_method. Re-measured 2026-09-16 (third pass) in a single consistent pixel-detection pass across the whole block layout -- see digitization_method. Re-corrected 2026-09-16 (fourth pass) after fixing a mis-measured GCP -- see digitization_method.",
+    "digitized_from": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
+    "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead. DataSF Parcels (checked 2026-09-29) lists an active, unaddressed lot, 4232021 (recorded 2022-08-30, PPS-MU zoning), overlapping about three quarters of this approximate footprint; it has not been confirmed as this block's parcel.",
+    "regulatory_context": "Flat 130 ft max height per Figure 6.2.3 of the final D4D (the colour-coded height label). The D4D's Permitted Uses table (Table 3.1.1) shows Non-Retail Sales and Services (including office), Laboratory and Life Science uses permitted (subject to the table's note 13) and Residential not permitted here. Blocks 11 and 12 together are described as approximately 430,000 sq ft of office by the project's MEP engineer (Meyers+ Engineers project page, a consultant's own material, not a Planning document). The Meyers+ page and the June 7, 2020 pre-application community meeting slides list Herzog & de Meuron + Adamson Associates as architect for Blocks 11, 12 and 15. No construction-start source found."
    }
   },
   "centroid": {
@@ -141,9 +141,26 @@
       "publisher": "SF Planning",
       "url": "https://sfplanning.org/potrero-power-station",
       "accessed": "2026-09-20"
+     },
+     {
+      "id": "src-d4d-final-table311",
+      "title": "Potrero Power Station Design for Development, final (February 26, 2020), Table 3.1.1 Permitted Uses",
+      "publisher": "SF Planning",
+      "date": "2020-02-26",
+      "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+      "accessed": "2026-09-17"
+     },
+     {
+      "id": "src-phase1-2020",
+      "title": "Potrero Power Station Phase 1 and Phasing Plan Amendment Applications: Development Phase Approval (October 7, 2020)",
+      "publisher": "SF Planning",
+      "date": "2020-10-07",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-20",
+      "overview": true
      }
     ],
-    "source": "Port of San Francisco, 2025-11-14; SF Planning",
+    "source": "Port of San Francisco, 2025-11-14; SF Planning; SF Planning, 2020-02-26; SF Planning, 2020-10-07",
     "origin": "record",
     "category": "status",
     "category_label": "Status",
@@ -276,16 +293,16 @@
    },
    {
     "date": "2026-07",
-    "date_label": "2026",
+    "date_label": "~2026",
     "status": null,
     "status_label": null,
-    "text": "Developer proposes a Development Agreement amendment increasing Block 11's permitted height by 15 feet, to make its 'smaller floorplate' more attractive to commercial tenants",
-    "expected": true,
+    "text": "Developer requests a Development Agreement amendment increasing Block 11's permitted height by 15 feet, to make its 'smaller floorplate' more attractive to commercial tenants; the Planning Commission considered the request (Chronicle, July 29, 2026), and if it agrees the amendment goes to the Board of Supervisors",
+    "expected": false,
     "approximate": true,
     "sources": [
      {
       "id": "src-chronicle-2026-07",
-      "title": "One of San Francisco's biggest developments is changing its plans -- but not its biggest promise",
+      "title": "One of S.F.’s biggest developments is changing its plans — but not its biggest promise",
       "publisher": "San Francisco Chronicle (Laura Waxmann)",
       "date": "2026-07-29",
       "url": "https://www.sfchronicle.com/realestate/article/one-s-f-s-biggest-developments-changing-plans-22365461.php",
@@ -294,8 +311,8 @@
     ],
     "source": "San Francisco Chronicle (Laura Waxmann), 2026-07-29",
     "origin": "record",
-    "category": "coming_up",
-    "category_label": "Coming up",
+    "category": "milestone",
+    "category_label": "Milestone",
     "record": {
      "id": "potrero_block_11",
      "slug": "potrero-power-station-block-11",
@@ -316,7 +333,7 @@
     "date_label": "2028",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Completion expected: Block 11 is part of Phase 1 (per the 2024 annual compliance report's Phase 1 list, Blocks 2, 7, 8, 11, 12, 15), whose construction is scheduled to complete in 2028 under the revised Development Agreement phasing",
+    "text": "Phase 1 completion forecast: Block 11 is part of Phase 1 (per the 2024 annual compliance report's Phase 1 list, Blocks 2, 7, 8, 11, 12, 15), which SocketSite's October 2020 report of the revised phasing said would be completed in 2028; a 2020 forecast, not a current Block 11 date",
     "expected": true,
     "approximate": true,
     "sources": [
@@ -336,9 +353,17 @@
       "date": "2020-10-09",
       "url": "https://socketsite.com/archives/2020/10/revised-phasing-for-massive-potrero-power-plant-redevelopment.html",
       "accessed": "2026-09-20"
+     },
+     {
+      "id": "src-annual-2024",
+      "title": "2024 Annual Compliance Report under the Development Agreement for the Potrero Power Station Mixed-Use Development Project",
+      "publisher": "California Barrel Company LLC / Found Middle LP, submitted to SF Planning Department",
+      "date": "2025-03-28",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-18"
      }
     ],
-    "source": "SF Planning, 2020-10-07; SocketSite, 2020-10-09",
+    "source": "SF Planning, 2020-10-07; SocketSite, 2020-10-09; California Barrel Company LLC / Found Middle LP, submitted to SF Planning Department, 2025-03-28",
     "origin": "record",
     "category": "status",
     "category_label": "Status",
@@ -358,7 +383,37 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Block 11's mapping notes now cite the final Design for Development (Feb 26, 2020, Figure 6.2.3 and Table 3.1.1) instead of a dead 2019 draft link. Removed an unsourced '85-145 ft range' and a Keyser Marston / '~500,000 GSF' comparison, corrected the architect statement (the Meyers+ page and the June 2020 pre-application slides do list Herzog & de Meuron + Adamson for Blocks 11, 12 and 15), and corrected the Power Station Park statement (the strip next to Block 15 is Louisiana Paseo). The 430,000 sq ft figure is now described as office, per the project's engineer, not a life-science campus. The caveat no longer says no Assessor parcel exists: an active unaddressed lot (4232021) overlaps most of the footprint but is not confirmed as this block's parcel. The 2028 completion is kept as a soft 2020 Phase 1 forecast, the July 2026 height request is no longer marked as expected, and a Chronicle title, D4D publisher, Meyers+ date and one image kind were corrected.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_block_11",
+     "slug": "potrero-power-station-block-11",
+     "name": "Potrero Power Station Block 11",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-11/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-11.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/potrero_d4d_final_height_plan_p245.jpg",
@@ -376,10 +431,10 @@
    },
    {
     "path": "data/manual/images/potrero/d4d_p23_land_use_framework.jpg",
-    "kind": "rendering",
+    "kind": "document",
     "scope": "site",
     "taken": "2020-02-26",
-    "credit": "SF Planning / California Barrel Company, Potrero Power Station Design for Development, final (February 26, 2020), Figure 1.6.1: Land Use Framework, p.23",
+    "credit": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 1.6.1: Land Use Framework, p.23 (SF Planning; the D4D names no individual author)",
     "license": "public-record",
     "source_url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
     "license_evidence": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
@@ -394,19 +449,21 @@
     ],
     "appeal": 5,
     "appeal_note": "A labeled 3D aerial illustration of the whole 21-acre site's land-use framework -- blocks, streets and open space in one wide, colorful view -- reads well at card size and establishes the whole site rather than one building.",
+    "figure": "illustrative",
     "url": "https://pierandpoint.org/assets/img/d4d_p23_land_use_framework.jpg"
    }
   ],
   "open_questions": [
    "No design review approval or construction-start date found for Block 11; the most recent primary source found (the 2024 annual compliance report) describes design as 'under review', not approved.",
    "The combined 430,000 sq ft figure for Blocks 11+12 comes from the project's MEP engineer, not a Planning Department document; no Planning Commission or Planning Director approval memo for Block 11 was found to confirm or break out this figure.",
-   "The Chronicle's July 2026 report of a proposed +15 ft height increase is tied to a pending Development Agreement/Planning Code amendment (BOS Files 260724 and 260770) that had not been adopted as of this dossier's last-verified date."
+   "The Chronicle's July 2026 report of a proposed +15 ft height increase is tied to a pending Development Agreement/Planning Code amendment (BOS Files 260724 and 260770) that had not been adopted as of this dossier's last-verified date.",
+   "2026-09-29 audit: DataSF Parcels lists an active, unaddressed lot (4232021, recorded 2022-08-30) overlapping most of this block's approximate footprint; whether it is Block 11's parcel is not established (owner decision on the geometry)."
   ],
   "sources": [
    {
     "id": "src-d4d-final-table311",
     "title": "Potrero Power Station Design for Development, final (February 26, 2020), Table 3.1.1 Permitted Uses",
-    "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+    "publisher": "SF Planning",
     "date": "2020-02-26",
     "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
     "accessed": "2026-09-17"
@@ -414,7 +471,7 @@
    {
     "id": "src-d4d-final-fig623",
     "title": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 Building Height Plan",
-    "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+    "publisher": "SF Planning",
     "date": "2020-02-26",
     "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
     "accessed": "2026-09-17"
@@ -423,7 +480,6 @@
     "id": "src-meyersplus",
     "title": "Potrero Power Station - Blocks 11, 12 & 15 (MEP engineering project page)",
     "publisher": "Meyers+ Engineers (consultant's own material)",
-    "date": "2026",
     "url": "https://www.meyersplus.com/potrero-power-station",
     "accessed": "2026-09-17"
    },
@@ -446,7 +502,7 @@
    },
    {
     "id": "src-chronicle-2026-07",
-    "title": "One of San Francisco's biggest developments is changing its plans -- but not its biggest promise",
+    "title": "One of S.F.’s biggest developments is changing its plans — but not its biggest promise",
     "publisher": "San Francisco Chronicle (Laura Waxmann)",
     "date": "2026-07-29",
     "url": "https://www.sfchronicle.com/realestate/article/one-s-f-s-biggest-developments-changing-plans-22365461.php",
@@ -488,18 +544,13 @@
    {
     "id": "src-d4d-fig161",
     "title": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 1.6.1: Land Use Framework, p.23",
-    "publisher": "SF Planning / California Barrel Company",
+    "publisher": "SF Planning",
     "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
     "accessed": "2026-09-22",
     "date": "2020-02-26"
-   },
-   {
-    "id": null,
-    "title": "default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf",
-    "url": "https://default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf"
    }
   ],
-  "notes": "Approximate polygon for a real, D4D-adopted block -- see accuracy_caveat.",
+  "notes": "Approximate polygon for a real, D4D-adopted block (final D4D, Feb 26, 2020: Table 3.1.1 and Figure 6.2.3) -- see accuracy_caveat. Status 'planned': design under review per the 2024 annual compliance report (March 28, 2025). Use 'commercial': office, laboratory and life science uses are permitted and residential is not (D4D Table 3.1.1).",
   "has_record_file": true,
   "last_verified": "2026-09-20",
   "tenants": [],

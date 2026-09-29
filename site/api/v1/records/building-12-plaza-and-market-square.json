@@ -43,10 +43,10 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- derived from a real, street-polygonized city block (not a diagram pixel-trace), subtracting Building 2, Parcel D, and Building 12's own committed geometries. This is a deliberate departure from pure diagram-tracing: since Figure 6.4.2's own green fill didn't precisely reach the real (satellite-corrected) edges of Building 2 and Building 12, using the real block boundary instead better matches both the drawing's evident intent (this block reads as fully built-out, buildings plus plaza, no gaps) and the satellite ground truth. The block polygon's north edge stops slightly short of Parcel D's own north edge (~14m, since the not-yet-built '21st St (NEW)' isn't in real street data) -- unioned with D's own extent to avoid an artificial gap there. Area (~1.38 acres) is close to, but still a bit under, the D4D's cited ~1.5 acres for this named space -- the remaining gap most likely reflects the plaza's true extent continuing south past the mid-block passage (labeled '15' on the diagram) into the block south of Building 12, which is not part of this feature.",
+    "accuracy_caveat": "APPROXIMATE -- derived from a real, street-polygonized city block (not a diagram pixel-trace), subtracting Building 2, Parcel D, and Building 12's own committed geometries. This is a deliberate departure from pure diagram-tracing: since Figure 6.4.2's own green fill didn't precisely reach the real (satellite-corrected) edges of Building 2 and Building 12, using the real block boundary instead better matches both the drawing's evident intent (this block reads as fully built-out, buildings plus plaza, no gaps) and the satellite ground truth. The block polygon's north edge stops slightly short of Parcel D's own north edge (~14m, since the not-yet-built '21st St (NEW)' isn't in real street data) -- unioned with D's own extent to avoid an artificial gap there. Area (~1.38 acres) is close to, but still a bit under, the D4D's cited ~1.5 acres for this named space -- the cause of the gap is not established: the D4D (Section 3.9) also counts a Maryland Street Platform along Maryland St as part of the space and places the Building 12 Entry Plaza south of Building 12 on 22nd St, so the plaza's extent here may differ from the D4D's in more than one way (the dashed '15' box on the diagram is the legend's approximate location of the mid-block passage beside Building 15, not a boundary of this space).",
     "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155); named per Figure 3.4.1 - Overview of Public Spaces (p.52), zone 5.",
-    "why_no_real_parcel": "Open space with no subdivided Assessor parcel of its own within Brookfield's largely unaddressed 28-acre site.",
-    "regulatory_context": "Part of the Pier 70 D4D's Open Space Network (Section 3.9), approximately 1.5 acres, wrapping the historic Building 12 (and Building 2) on their west and south sides between Louisiana St and Maryland St."
+    "why_no_real_parcel": "Open space with no Assessor lot of its own identified: DataSF's Assessor layer (repo copy data/raw/parcels.geojson) shows the Pier 70 28-acre site re-mapped into many active P70-MU lots (blocks 4052 and 4110-4117, mostly added 2019-02-07), so the earlier statement that the site is unaddressed and not subdivided is withdrawn; whether the plaza's block has its own lot has not been checked against the recorded final map.",
+    "regulatory_context": "Part of the Pier 70 D4D's Open Space Network (Section 3.9), approximately 1.5 acres. Per Section 3.9, Market Square lies north of Building 12 (between Building 2 and Parcel D, entered from 21st St), the Building 12 Entry Plaza south of Building 12 on 22nd St, and the Maryland Street Platform along Building 12's Maryland St side; the file's block spans Louisiana St to Maryland St."
    }
   },
   "centroid": {
@@ -91,9 +91,10 @@
    },
    {
     "key": "phase",
-    "value": "Within the Phase 1 area (Port's 2026 Exhibit A) and part of the three acres of Phase 1 parks",
+    "value": "Within the Phase 1 area (Port's 2026 Exhibit A); Port Item 9B (2017, Table A) lists Building 12 Plaza (OS-1) and Market Square (OS-2) among the Phase 1 parks, and Port Item 11A cites three acres of Phase 1 parks overall",
     "sources": [
-     "src-port-11a-2026"
+     "src-port-11a-2026",
+     "src-port-9b-2017"
     ]
    }
   ],
@@ -139,11 +140,11 @@
     "relation": "tracked"
    },
    {
-    "date": "2020",
-    "date_label": "~2020",
+    "date": "2018",
+    "date_label": "~2018",
     "status": null,
     "status_label": null,
-    "text": "Building 15 lifted and moved from its temporary location to its permanent location over the newly built 22nd Street during Phase 1 infrastructure work (2018-2020)",
+    "text": "Building 15 lifted and moved from its temporary location to its permanent location over the newly built 22nd Street during Phase 1 infrastructure work (dated in the Port's deck only to the 2018-2020 'Phase 1 Infrastructure Completed' window)",
     "expected": false,
     "approximate": true,
     "sources": [
@@ -291,13 +292,13 @@
     "date_label": "Aug 7, 2026",
     "status": "planned",
     "status_label": "Planned",
-    "text": "Port reports that although Phase 1 horizontal infrastructure and Building 12's rehabilitation are complete, construction of the balance of Phase 1, 'largely comprised of the Phase 1 parks and open space,' will be built 'on a schedule that coincides with the delivery of adjacent vertical development,' which 'has not moved forward' since 2022 because of pandemic-driven office-vacancy increases, construction-cost escalation and higher financing costs",
+    "text": "Port reports that although Phase 1 horizontal infrastructure and Building 12's rehabilitation are complete, construction of the balance of Phase 1, 'largely comprised of the Phase 1 parks and open space,' will be built 'on a schedule that coincides with the delivery of adjacent vertical development,' which 'has not moved forward' because of pandemic-driven office-vacancy increases, construction-cost escalation and higher financing costs",
     "expected": false,
     "approximate": false,
     "sources": [
      {
       "id": "src-port-11a-2026",
-      "title": "Port Commission staff report, Item 11A: Informational presentation on updates to the Pier 70 28-Acre Site Project, including potential amendments to the transaction structure (meeting of August 11, 2026)",
+      "title": "Port Commission staff report, Item 11A: Informational presentation on updates to the Pier 70 28-Acre Site Project, including potential amendments to the transaction structure (memo dated August 7, 2026)",
       "publisher": "Port of San Francisco",
       "url": "https://www.sfport.com/sites/default/files/2026-08/item_11a_p70_project_update_-_term_sheet_overview_-_information.pdf",
       "accessed": "2026-09-17",
@@ -330,7 +331,7 @@
     "date_label": "2042",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Completion expected only by the Pier 70 28-Acre Project's whole-project buildout target, since the plaza's Phase 1 DDA schedule has lapsed and the adjacent vertical development it is tied to remains paused",
+    "text": "No completion date is sourced for the plaza: its Phase 1 park schedule is tied to adjacent vertical development, which has not moved forward. The only outer bound in the documents is the 2017 DDA's whole-project Phase 3 outside date (about 2042), shown here as a soft placeholder",
     "expected": true,
     "approximate": true,
     "sources": [
@@ -346,7 +347,7 @@
      },
      {
       "id": "src-port-11a-2026",
-      "title": "Port Commission staff report, Item 11A: Informational presentation on updates to the Pier 70 28-Acre Site Project, including potential amendments to the transaction structure (meeting of August 11, 2026)",
+      "title": "Port Commission staff report, Item 11A: Informational presentation on updates to the Pier 70 28-Acre Site Project, including potential amendments to the transaction structure (memo dated August 7, 2026)",
       "publisher": "Port of San Francisco",
       "url": "https://www.sfport.com/sites/default/files/2026-08/item_11a_p70_project_update_-_term_sheet_overview_-_information.pdf",
       "accessed": "2026-09-17",
@@ -377,14 +378,43 @@
   ],
   "changes": [
    {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The plaza's layout is now described as the D4D gives it (Market Square north of Building 12, the entry plaza south, the Maryland Street Platform on its east side), and the map notes no longer claim the site was never subdivided by the Assessor or explain the acreage gap as a fact. The 2042 completion milestone is now a soft placeholder (the 2017 Phase 3 outside date, tolled by down market delay) rather than a forecast, and the Building 15 move is dated to the 2018-2020 window the Port gives. Image credits no longer name design firms the figure does not credit or say 'adopted 2017', and Phase 1 park membership is cited to Port Item 9B.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_building12_plaza",
+     "slug": "building-12-plaza-and-market-square",
+     "name": "Building 12 Plaza and Market Square",
+     "permalink": "https://pierandpoint.org/parcels/building-12-plaza-and-market-square/",
+     "api": "https://pierandpoint.org/api/v1/records/building-12-plaza-and-market-square.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-17",
     "kind": "added",
     "kind_label": "Added",
-    "text": "Building 12 Plaza and Market Square added, filling its block between Buildings 2, D and 12.",
-    "source": "Pier 70 D4D, Figure 6.4.2",
+    "text": "Building 12 Plaza and Market Square added, filling its block between Buildings 2, D and 12. The event date is the Planning Commission's Aug 24, 2017 approval of the Pier 70 D4D that defines the space (Resolution 19980).",
+    "source": "Pier 70 D4D, Figure 6.4.2; Port Item 9B (Sept 22, 2017)",
     "sources": [
      {
-      "title": "Pier 70 D4D, Figure 6.4.2"
+      "title": "Pier 70 D4D, Figure 6.4.2; Port Item 9B (Sept 22, 2017)"
      }
     ],
     "category": "open_space",
@@ -425,7 +455,7 @@
     "path": "data/manual/images/pier70_d4d_fig_3_9_1_building12_plaza.jpg",
     "kind": "document",
     "taken": "2022-04-26",
-    "credit": "Pier 70 Design for Development (Port of San Francisco), Figure 3.9.1 'Illustrative Building 12 Plaza and Market Square Plan', p.67 (illustrative plan by James Corner Field Operations / SITELAB urban studio, Forest City project team)",
+    "credit": "Pier 70 Design for Development (Port of San Francisco), Figure 3.9.1 'Illustrative Building 12 Plaza and Market Square Plan', p.67 (the figure carries no author credit; the D4D's project team is listed on its credits page)",
     "license": "public-record",
     "source_url": "https://www.sfport.com/media/8123/download?inline=",
     "license_evidence": "https://www.sfport.com/media/8123/download?inline=",
@@ -440,11 +470,11 @@
     "kind": "rendering",
     "scope": "site",
     "taken": "2022-04-26",
-    "credit": "Port of San Francisco / SF Planning, Pier 70 Special Use District Design for Development (D4D, adopted 2017, updated April 26, 2022), Figure 1.1.2, p.5",
+    "credit": "Port of San Francisco / SF Planning, Pier 70 Special Use District Design for Development (D4D, updated April 26, 2022), Figure 1.1.2, p.5",
     "license": "public-record",
     "source_url": "https://www.sfport.com/media/8123/download?inline=",
     "license_evidence": "https://www.sfport.com/media/8123/download?inline=",
-    "license_note": "An adopted Port of San Francisco / SF Planning planning document (the Pier 70 Special Use District Design for Development); an adopted D4D is a public-record planning document. Read 2026-09-22.",
+    "license_note": "A Port of San Francisco / SF Planning planning document (the Pier 70 Special Use District Design for Development), approved by the Planning Commission on Aug 24, 2017 (Resolution 19980, per Port Item 9B) and published by the Port at its own domain; treated as a public-record planning document. Read 2026-09-22.",
     "caption": "Figure 1.1.2: Site Location and Context, Pier 70 Special Use District Design for Development (D4D), p.5",
     "source_crop": "python3 src/extract_pdf_figure.py https://www.sfport.com/media/8123/download?inline= 21 data/manual/images/pier70/d4d_p5_site_context.jpg --rect auto --dpi 300",
     "focus": [
@@ -467,7 +497,7 @@
    {
     "id": "src-d4d",
     "title": "Pier 70 Special Use District Design for Development (D4D), updated April 26, 2022",
-    "publisher": "Port of San Francisco / SF Planning (adopted planning document; project team SITELAB urban studio)",
+    "publisher": "Port of San Francisco / SF Planning (planning document; project team SITELAB urban studio)",
     "url": "https://www.sfport.com/media/8123/download?inline=",
     "accessed": "2026-09-17",
     "date": "2022-04-26",
@@ -476,7 +506,7 @@
    },
    {
     "id": "src-port-11a-2026",
-    "title": "Port Commission staff report, Item 11A: Informational presentation on updates to the Pier 70 28-Acre Site Project, including potential amendments to the transaction structure (meeting of August 11, 2026)",
+    "title": "Port Commission staff report, Item 11A: Informational presentation on updates to the Pier 70 28-Acre Site Project, including potential amendments to the transaction structure (memo dated August 7, 2026)",
     "publisher": "Port of San Francisco",
     "url": "https://www.sfport.com/sites/default/files/2026-08/item_11a_p70_project_update_-_term_sheet_overview_-_information.pdf",
     "accessed": "2026-09-17",
@@ -495,6 +525,14 @@
     "overview": true
    },
    {
+    "id": "src-port-mtg-2026-08-11",
+    "title": "Port Commission meeting page, August 11, 2026 (agenda; lists item 11A, the Pier 70 project update)",
+    "publisher": "Port of San Francisco",
+    "url": "https://www.sfport.com/meetings/port-commission-august-11-2026",
+    "accessed": "2026-09-29",
+    "date": "2026-08-11"
+   },
+   {
     "id": "src-port-update-2025-06",
     "title": "Pier 70 Project Update, June 2025 (slide deck)",
     "publisher": "Port of San Francisco / Brookfield Properties",
@@ -503,7 +541,7 @@
     "date": "2025-06"
    }
   ],
-  "notes": "Newly added 2026-09-16 as part of a systematic pass adding this site's previously-untracked open space; geometry REDONE TWICE 2026-09-17 after user-caught issues -- see digitization_method.",
+  "notes": "Newly added 2026-09-16 as part of a systematic pass adding this site's previously-untracked open space; geometry REDONE TWICE 2026-09-17 after user-caught issues -- see digitization_method. Status 'planned' as of Port Item 11A (memo dated Aug 7, 2026): the balance of Phase 1, largely the Phase 1 parks and open space, will be built on a schedule that coincides with adjacent vertical development.",
   "has_record_file": true,
   "last_verified": "2026-09-20",
   "tenants": [],

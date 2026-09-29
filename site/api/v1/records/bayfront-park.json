@@ -29,7 +29,7 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "A roughly 5.5-acre waterfront park at 16th Street and Terry A. Francois Boulevard, directly across from Chase Center, built by the Mission Bay Development Group for the Port of San Francisco with open lawns, a stretch of the Bay Trail, multiple plazas, and benches and sculptures made from reclaimed Bay Bridge steel; it had its public grand-opening celebration on October 22, 2024.",
+  "summary": "A 5.4-acre waterfront park at 16th Street and Terry A. Francois Boulevard, directly across from Chase Center, built by the Mission Bay Development Group for the Port of San Francisco with open lawns, a stretch of the Bay Trail, multiple plazas, and shade structures and other site furnishings made from reclaimed Bay Bridge steel; it had its public grand-opening celebration on October 22, 2024.",
   "summary_sources": [
    "src-sfgov-bayfront-open",
    "src-sfport-bayfront"
@@ -40,8 +40,8 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "HIGH CONFIDENCE -- real, community-surveyed OSM polygon, independently confirmed via its Port of San Francisco operator tag and Wikidata id. Opened Oct 22, 2024 (5.4 acres at 16th St and Terry A. Francois Blvd, opposite Chase Center); occupies the plan's former P21/P22 open-space parcels (Mission Bay South Design Controls Plan Boundary/Block Map).",
-    "digitized_from": "OpenStreetMap (way 1329130170, leisure=park, operator=Port of San Francisco, wikidata=Q3398575, sfport.com)"
+    "accuracy_caveat": "REAL -- community-surveyed OSM polygon (way 1329130170). The way carries a website tag (sfport.com/bayfrontpark) and operator:wikidata=Q3398575 (the operator's Wikidata item, not the park's); it has no operator name tag or Wikidata tag of its own, so the confidence judgement is ours. Opened Oct 22, 2024 (5.4 acres at 16th St and Terry A. Francois Blvd, opposite Chase Center). Which plan parcels it occupies is not settled: Lotus Water's page calls it 'P-22'; that it also occupies P21 is not stated by any cited source (SF.gov notes a previously completed portion of Bayfront Park to the north).",
+    "digitized_from": "OpenStreetMap (way 1329130170, leisure=park, name=Bayfront Park, operator:wikidata=Q3398575, website=https://www.sfport.com/bayfrontpark)"
    }
   },
   "centroid": {
@@ -129,7 +129,7 @@
     "date_label": "Oct 22, 2024",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Grand opening celebration held at 16th Street Plaza in Bayfront Park, with Mayor London Breed",
+    "text": "Grand opening celebration held at Bayfront Park, with Mayor London Breed",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -163,6 +163,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The summary said roughly 5.5 acres; both cited sources say 5.4 acres (SF.gov) or over five acres (the Port), so it now says 5.4. It said benches and sculptures were made from reclaimed Bay Bridge steel; SF.gov says shade structures and other site furnishings. The opening milestone no longer names '16th Street Plaza', which the release does not. The shape record no longer says the OSM way was confirmed by a Port operator tag and Wikidata id (it has only operator:wikidata for the Port's item), its digitized_from now lists the actual tags, the CFD contrast in the notes was removed, and the P-number note no longer calls Lotus Water the landscape architect. The claim that the park occupies plan parcels P21 and P22 is not stated by any cited source and is flagged for the owner to check against the Design Controls Plan map. The Wikimedia aerial's credit names only the Commons username Firstcultural.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_bayfront_park",
+     "slug": "bayfront-park",
+     "name": "Bayfront Park",
+     "permalink": "https://pierandpoint.org/parcels/bayfront-park/",
+     "api": "https://pierandpoint.org/api/v1/records/bayfront-park.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-24",
     "kind": "added",
@@ -199,7 +228,7 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-05-20",
-    "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+    "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
     "license": "public-domain",
     "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
     "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
@@ -221,12 +250,12 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-02-10",
-    "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+    "credit": "Firstcultural, via Wikimedia Commons; CC0; downscaled to 1600 px",
     "license": "cc0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural. Read 2026-09-23.",
+    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area",
     "aerial": true,
     "focus": [
      0.35,
@@ -243,7 +272,8 @@
    "Reported size varies across sources (roughly 5.4 to 6 acres depending on the outlet); not resolved to one figure here.",
    "October 22, 2024 is the public grand-opening celebration date; a separate physical-construction-completion date (permit final, certificate of occupancy) was not found in any source checked.",
    "The groundbreaking article (SF YIMBY, Aug 10, 2022) says the ceremony was 'held last week,' so early August 2022 is used rather than a specific day; the article's own stated completion target (fall 2023) was superseded by the actual October 2024 opening, which is not itself explained in any source checked.",
-   "This record's own geometry file (data/manual/mission_bay_bayfront_park.geojson) notes the park occupies the Mission Bay South Design Controls Plan's former P21/P22 open-space parcels; OCII's own September 2023 open-space transition presentation (sfocii.org, Item 2) lists P21 as already Port-managed by that date but P22 as still 'when built' -- consistent with part of the site predating this park's 2024 completion, but not independently broken out here."
+   "This record's own geometry file (data/manual/mission_bay_bayfront_park.geojson) notes the park occupies the Mission Bay South Design Controls Plan's former P21/P22 open-space parcels; OCII's own September 2023 open-space transition presentation (sfocii.org, Item 2) lists P21 as already Port-managed by that date but P22 as still 'when built' -- consistent with part of the site predating this park's 2024 completion, but not independently broken out here.",
+   "The venue named for the October 22, 2024 celebration ('16th Street Plaza') was removed: the SF.gov release names no plaza as the venue, saying only that the park has multiple plazas."
   ],
   "sources": [
    {
@@ -296,7 +326,7 @@
     "url": "https://sfstandard.com/2024/10/22/san-francisco-opens-two-new-waterfront-parks/"
    }
   ],
-  "notes": "Opened Oct 22, 2024, per SF Port and multiple press accounts; a Port-managed public park, not an OCII Community Facilities District park like the earlier-completed ones above.",
+  "notes": "Opened Oct 22, 2024, per the SF.gov press release of that date; a public park to be owned and maintained by the Port of San Francisco (SF.gov).",
   "has_record_file": true,
   "last_verified": "2026-09-24",
   "tenants": [],

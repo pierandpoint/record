@@ -46,8 +46,8 @@
    "notes": {
     "accuracy_caveat": "APPROXIMATE ONLY -- digitized from an illustrative planning figure, not a surveyed record, then clipped to the real Port jurisdiction boundary on its water-facing side and opened to remove a spike artifact (see digitization_method). The corrected centroid falls east of the real Sophie Maxwell and UCSF Block 2 parcels, consistent with a bay-side location, and area now closely matches the EIR's stated ~1.6 acres for this piece. Treat vertex positions as accurate to roughly tens of meters on the land-facing sides (still convex-hull-smoothed over the true shape there), but the water-facing edge is now a real boundary, not hand-traced. Do not use for anything requiring exact boundaries.",
     "digitized_from": "Draft EIR Figure 2-2, \"Project Site Sub-Areas and Ownership\" (Potrero Power Station Mixed-Use Development Project Draft EIR, Case No. 2017-011878ENV, October 2018, p. 2-6), which shows the Port-owned \"Port sub-area\" (SF Port ownership, ~2.9 acres total in 3 non-contiguous pieces) at true scale with a north arrow and a 400-ft scale bar.",
-    "why_no_real_parcel": "This land has no Assessor's Block/Lot number at all -- confirmed directly in the same Draft EIR, footnote 1, p. 2-5: \"The Port sub-area, and City sub-area described below, are not assessed properties, and therefore do not have assigned Assessor's Block numbers.\" It therefore cannot appear in DataSF's Parcels - Active and Retired dataset and cannot be joined via status.csv/blklot.",
-    "regulatory_context": "Prequel Park is the ~2-acre interim open-space project (BCDC Application 2019.006.02, a non-material amendment issued June 19, 2025; SF Port Commission Resolution 25-70, Nov 18, 2025, amending Lease L-16662 with California Barrel Company LLC) of which ~0.4 acres sits on this Port sub-area land near the future recreational dock. Construction targeted Q3 2026, public opening targeted Q3 2027 per the Port's Nov 14 2025 memo (Calendar Item 10A)."
+    "why_no_real_parcel": "This land has no Assessor's Block/Lot number at all -- confirmed directly in the same Draft EIR, footnote 1, p. 2-5: \"The Port sub-area, and City sub-area described below, are not assessed properties, and therefore do not have assigned Assessor's Block numbers.\" It would therefore not be expected to appear in DataSF's Parcels - Active and Retired dataset or to join via status.csv/blklot (our inference from that footnote; a DataSF spatial query over the Port sub-area was not run to confirm).",
+    "regulatory_context": "Prequel Park is the ~2-acre interim open-space project (BCDC Application 2019.006.02, a non-material amendment for which BCDC received the application on June 19, 2025 and issued the amendment on June 26, 2026 per its permit application tracker; SF Port Commission Resolution 25-70, Nov 18, 2025, amending Lease L-16662 with California Barrel Company LLC) of which ~0.4 acres sits on this Port sub-area land near the future recreational dock. Construction targeted Q3 2026, public opening targeted Q3 2027 per the Port's Nov 14 2025 memo (Calendar Item 10A)."
    }
   },
   "centroid": {
@@ -57,7 +57,7 @@
   "facts": [
    {
     "key": "developer",
-    "value": "Fifth Space (formerly Associate Capital); property owner and Port lessee California Barrel Company LLC; project sponsor Enrique Landa",
+    "value": "Fifth Space (formerly Associate Capital); Port lessee California Barrel Company LLC (the Port memo's 'Developer'; the Port owns this shoreline property); project sponsor Enrique Landa",
     "sources": [
      "src-ica-2025-10-28",
      "src-sfyimby-2025-10-24",
@@ -292,7 +292,7 @@
     "date_label": "Feb 25, 2020",
     "status": "planned",
     "status_label": "Planned",
-    "text": "Port Commission adoption of Resolution 20-12 (consent to the Development Agreement and approval of Lease L-16662) first designates this Port sub-area parcel for planned public open space use, ahead of the interim Prequel Park proposal",
+    "text": "Port Commission adoption of Resolution 20-12 (consent to the Development Agreement and approval of Lease L-16662, 66 years, of Port shoreline lands for publicly accessible open space), well before the interim Prequel Park proposal",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -558,38 +558,6 @@
     "relation": "tracked"
    },
    {
-    "date": "2025-06-19",
-    "date_label": "Jun 19, 2025",
-    "status": null,
-    "status_label": null,
-    "text": "BCDC permit amendment issued",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "title": "BCDC Application 2019.006.02"
-     }
-    ],
-    "source": "BCDC Application 2019.006.02",
-    "origin": "csv",
-    "category": "milestone",
-    "category_label": "Milestone",
-    "record": {
-     "id": "prequel_park_port_subarea",
-     "slug": "prequel-park-port-sub-area",
-     "name": "Prequel Park (Port sub-area)",
-     "permalink": "https://pierandpoint.org/parcels/prequel-park-port-sub-area/",
-     "api": "https://pierandpoint.org/api/v1/records/prequel-park-port-sub-area.json"
-    },
-    "site": {
-     "slug": "potrero",
-     "name": "Potrero Power Station",
-     "short": "Potrero Station",
-     "url": "https://pierandpoint.org/sites/potrero/"
-    },
-    "relation": "tracked"
-   },
-   {
     "date": "2025-10-22",
     "date_label": "Oct 22, 2025",
     "status": null,
@@ -720,10 +688,10 @@
     "approximate": false,
     "sources": [
      {
-      "title": "sfport.com"
+      "title": "Port Commission minutes, Nov 18, 2025, https://www.sfport.com/media/10953/download?inline"
      }
     ],
-    "source": "sfport.com",
+    "source": "Port Commission minutes, Nov 18, 2025, https://www.sfport.com/media/10953/download?inline",
     "origin": "csv",
     "category": "milestone",
     "category_label": "Milestone",
@@ -807,6 +775,38 @@
     ],
     "source": "San Francisco Bay Conservation and Development Commission",
     "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "prequel_park_port_subarea",
+     "slug": "prequel-park-port-sub-area",
+     "name": "Prequel Park (Port sub-area)",
+     "permalink": "https://pierandpoint.org/parcels/prequel-park-port-sub-area/",
+     "api": "https://pierandpoint.org/api/v1/records/prequel-park-port-sub-area.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2026-06-26",
+    "date_label": "Jun 26, 2026",
+    "status": null,
+    "status_label": null,
+    "text": "BCDC permit amendment issued",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "title": "https://www.bcdc.ca.gov/programs/permits/permit-application-tracker/"
+     }
+    ],
+    "source": "https://www.bcdc.ca.gov/programs/permits/permit-application-tracker/",
+    "origin": "csv",
     "category": "milestone",
     "category_label": "Milestone",
     "record": {
@@ -958,6 +958,35 @@
   ],
   "changes": [
    {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The BCDC permit tracker gives June 19, 2025 as the date the application for non-material amendment 2019.006.02 was received and June 26, 2026 as the date it was issued; the map notes and the site timeline row had shown June 19, 2025 as the issue date and now show June 26, 2026. The timeline row for the November 18, 2025 Port Commission vote now cites the meeting minutes instead of a bare domain. The record no longer calls California Barrel Company the property owner (the Port owns this land; the company is its lessee), no longer says Resolution 20-12 'first designates' the Port sub-area for open space, and now names California Barrel Company LLC alongside Fifth Space as publisher of the developer's website.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "prequel_park_port_subarea",
+     "slug": "prequel-park-port-sub-area",
+     "name": "Prequel Park (Port sub-area)",
+     "permalink": "https://pierandpoint.org/parcels/prequel-park-port-sub-area/",
+     "api": "https://pierandpoint.org/api/v1/records/prequel-park-port-sub-area.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-23",
     "kind": "correction",
     "kind_label": "Correction",
@@ -1016,7 +1045,7 @@
    }
   ],
   "open_questions": [
-   "BCDC amendment 2019.006.02: the repo's geometry file and data/milestones.csv say it was 'issued June 19, 2025'. The BCDC permit tracker gives June 19, 2025 as the date the application was RECEIVED and June 26, 2026 as the date ISSUED. The amendment document itself was not found on bcdc.ca.gov (2018-2019 DRB/Commission URLs now return 404; the tracker is an embedded table that could not be saved as text). Treat 2025-06-19 as application date, 2026-06-26 as issuance.",
+   "BCDC amendment 2019.006.02: this repo's geometry file and data/milestones.csv said it was 'issued June 19, 2025' (corrected 2026-09-29). The BCDC permit tracker gives June 19, 2025 as the date the application was RECEIVED and June 26, 2026 as the date ISSUED. The amendment document itself was not found on bcdc.ca.gov (2018-2019 DRB/Commission URLs now return 404; the tracker is an embedded table that could not be saved as text). Treat 2025-06-19 as application date, 2026-06-26 as issuance.",
    "Port memo 10A is internally inconsistent: p.2 says construction start Q1 2026 / opening Q1 2027; p.4 says Q3 2026 / Q3 2027. Both are recorded; the p.4 dates follow the DBI-submittal sentence and are the more detailed statement.",
    "No dated source confirms that Prequel Park construction has started as of 2026-09-17 (searched sfport.com, sfplanning.org, Chronicle, SF YIMBY, Potrero View, SF Standard, developer site, ICA SF). The geometry file marks the Power Station sub-area half 'under_construction' without a source.",
    "The 'Spring 2026 SF development pipeline' listing ('Potrero Power Station - Prequel Park', developer FIFTH SPACE, scope demolition/grading/utilities/stormwater/landscaping) cited in the geometry file could not be located online; no URL is on file.",
@@ -1063,7 +1092,7 @@
    {
     "id": "src-dpps",
     "title": "Power Station website: home page and Open Space page (Prequel Park blurb)",
-    "publisher": "Fifth Space (developer's own material)",
+    "publisher": "California Barrel Company LLC / Fifth Space (developer's own material; the site's disclaimer names California Barrel Company LLC)",
     "url": "https://dogpatchpowerstation.com/",
     "accessed": "2026-09-17"
    },

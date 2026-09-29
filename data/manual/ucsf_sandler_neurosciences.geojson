@@ -10,13 +10,15 @@
     "use": "institutional",
     "geometry_type": "real",
     "digitized_from": "OpenStreetMap (way 135103715, 675 Nelson Rising Lane)",
-    "digitization_method": "ADDED 2026-09-18 for Mission Bay's UCSF campus pass: real OSM building footprint.",
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against data/raw/parcels.geojson and DataSF's Assessor tax roll -- e.g. blklot 8711507 at 675 Nelson Rising Lane alone is ~13 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
-    "notes": "~237,000 sq ft, five stories, ~$200 million project cost; houses roughly 100 principal investigators and 500+ researchers/staff. Architect Skidmore, Owings & Merrill (SOM), SF office. Opened May 2012 (construction started May 2010), per the architect's own project page and trade press -- corrects this project's own working assumption of 2011.",
+    "digitization_method": "ADDED 2026-09-18 for Mission Bay's UCSF campus pass: real OSM building footprint. 2026-09-29 accuracy audit: the notes' 'construction started May 2010' was a misreading of SOM's 'Design Finish Year 2010' and 'opened May 2012' rested on the Tradeline article (403, unreadable); both were removed, the year 2012 is kept (SOM; Clark Construction). Occupant counts and the cost were re-sourced to Clark Construction and Edgemoor's project pages (added to source_doc_urls).",
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against data/raw/parcels.geojson and DataSF's Assessor tax roll -- e.g. blklot 8711507 (675 Mission Bay Blvd in the repo's DataSF parcels copy) alone is about 12.2 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
+    "notes": "~237,000 sq ft, five stories (SOM; Clark Construction); houses about 100 principal investigators and more than 500 additional researchers and staff (Clark Construction); project cost $208 million per the developer's (Edgemoor) project page. Architect Skidmore, Owings & Merrill (SOM). Completed 2012 (SOM's 'Completion Year 2012'; Clark Construction); the opening month and the construction start are not sourced -- the earlier 'opened May 2012 (construction started May 2010)' rested on an unreadable trade-press article and a misreading of SOM's 'Design Finish Year 2010'.",
     "source_doc_urls": [
      "https://www.openstreetmap.org/way/135103715",
      "https://www.tradelineinc.com/news/2012-6/uc-san-francisco-opens-sandler-neurosciences-center",
-     "https://www.som.com/projects/ucsf-sandler-neurosciences-center/"
+     "https://www.som.com/projects/ucsf-sandler-neurosciences-center/",
+     "https://www.clarkconstruction.com/our-work/projects/ucsf-sandler-neurosciences-center",
+     "https://www.edgemoor.com/projects/ucsf-sandler-neurosciences-center"
     ]
    },
    "geometry": {

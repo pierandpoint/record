@@ -10,11 +10,12 @@
     "use": "residential",
     "geometry_type": "real",
     "digitized_from": "OpenStreetMap (relation 3831604, 255 Berry St)",
-    "digitization_method": "ADDED 2026-09-18 for Mission Bay's North-blocks pass: real OSM building footprint, a multipolygon with two small interior courtyard/light-well holes preserved rather than filled in. 255 Berry -- a Signature Properties condo building, built 2004, informally 'Signature I' to 235 Berry St's 'Signature II' (see that file's note on naming).",
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I/II/III, Madrone, Arden, One Mission Bay, Radiance).",
-    "notes": "Unit count and architect not confirmed by any source found in this pass; left out rather than guessed.",
+    "digitization_method": "ADDED 2026-09-18 for Mission Bay's North-blocks pass: real OSM building footprint, a multipolygon with two small interior courtyard/light-well holes preserved rather than filled in. 255 Berry -- a Signature Properties condo building, built 2004, informally 'Signature I' to 235 Berry St's 'Signature II' (see that file's note on naming). 2026-09-29 accuracy audit: (1) The developer is Signature Development Group, not 'Signature Properties', and its project page (signaturedevelopment.com/development/255-berry/) gives a development date range of 2001-2004 rather than a built year; neither is in the cited OSM relation. It describes 255 Berry as an 'eco-chic condominium development ... 99 lofts and condominium units'. (2) The informal 'Signature I' / 'Signature II' naming is withdrawn: no cited source uses it.",
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I, Madrone and Radiance, re-checked against data/raw/parcels.geojson in the 2026-09 audit; Avalon II and III are not condo-mapped, and Arden and One Mission Bay were not re-checked).",
+    "notes": "99 lofts and condominium units and the architect (McLarand Vasquez Emsiek & Partners) per Signature Development Group's project page; the OSM relation itself gives only building=yes.",
     "source_doc_urls": [
-     "https://www.openstreetmap.org/relation/3831604"
+     "https://www.openstreetmap.org/relation/3831604",
+     "https://signaturedevelopment.com/development/255-berry/"
     ]
    },
    "geometry": {

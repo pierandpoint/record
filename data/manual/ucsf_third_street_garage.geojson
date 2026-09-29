@@ -10,14 +10,16 @@
     "use": "parking",
     "geometry_type": "real",
     "digitized_from": "OpenStreetMap (way 27369503, 1650 3rd St)",
-    "digitization_method": "ADDED 2026-09-18 for Mission Bay's UCSF-garages pass: real OSM building footprint for UCSF's Third Street Garage, 1650 3rd St -- 8 levels per OSM tagging, originally designed by Stanley Saitowitz/Natoma Architects; its exterior channel-glass facade was replaced in 2021 with IwamotoScott's 'Cellular Origami' aluminum-panel facade. CONFIRMED 2026-09-22: UCSF's own June 2025 CAC presentation (campus map updated December 2024) labels this same building 'Third Street Garage (23B)' -- matches this project's own architect-source URL below, which already carried '23b' in its own slug.",
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. Same situation as this project's other UCSF Mission Bay campus buildings: UCSF is state land, not carried in DataSF's Assessor secured tax roll (no blklot to join), so the real building footprint is the correct non-fabricated geometry.",
-    "notes": "OCII plan block 23B on UCSF's own campus map. Exact capacity and completion year not confirmed by any source found; left out rather than guessed.",
+    "digitization_method": "ADDED 2026-09-18 for Mission Bay's UCSF-garages pass: real OSM building footprint for UCSF's Third Street Garage, 1650 3rd St -- 8 levels per OSM tagging, originally designed by Stanley Saitowitz/Natoma Architects; its exterior channel-glass facade was replaced in 2021 with IwamotoScott's 'Cellular Origami' aluminum-panel facade. CONFIRMED 2026-09-22: UCSF's own June 2025 CAC presentation (campus map updated December 2024) labels this same building 'Third Street Garage (23B)' -- matches this project's own architect-source URL below, which already carried '23b' in its own slug. 2026-09-29 accuracy audit: the facade sentence above is corrected: Facades+ (March 15, 2021; added to source_doc_urls) says the original channel-glass facade was removed in 2015 and gives the completion date of IwamotoScott's 'Cellular Origami' facade of white anodized metal panels as January 2020, not 2021 (2021 is the article's date); the Architect's Newspaper page cited above returned 403 and could not be read, so 'aluminum-panel' and 'replaced in 2021' are not confirmed by it.",
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. Same situation as this project's other UCSF Mission Bay campus buildings: 2026-09-29 audit correction: the footprint lies wholly inside active parcel 8711509, which the repo's DataSF parcels copy shows in the Assessor secured roll, so the earlier statement that UCSF land is not carried in the roll and has no blklot was wrong for this building. That parcel is a large multi-building parcel shared with other UCSF buildings, so the OSM building footprint is still the non-overlapping geometry used here.",
+    "notes": "OCII plan block 23B on UCSF's own campus map. Capacity: Overaa Construction's portfolio page (the general contractor) states 882 parking stalls on nine levels (256,276 sq ft) with no completion year, while the 2003 Regents budget item described 822 spaces plus 52 surface spaces; OSM tags 8 levels. The completion year is not confirmed by any source found; left out rather than guessed.",
     "source_doc_urls": [
      "https://www.openstreetmap.org/way/27369503",
      "https://www.archpaper.com/2021/03/iwamotoscott-cellular-origami-3rd-street-garage-facade/",
      "https://www.saitowitz.com/ucsf-gateway-building-23b",
-     "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf"
+     "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
+     "https://www.overaa.com/projects/ucsf-mission-bay-building-23b-parking-structure/",
+     "https://facadesplus.com/iwamotoscotts-cellular-origami-transforms-a-san-francisco-garage/"
     ]
    },
    "geometry": {

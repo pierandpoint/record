@@ -31,13 +31,15 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "The 1.5-acre former Port parking lot at 20th and Illinois Streets, sold in February 2019 to a TMG Partners / Presidio Bay Ventures joint venture under a Vertical DDA after a competitive offering, generating $24.2 million of land proceeds for the Pier 70 project. Planning approved a 65-ft, 245-unit for-sale condominium building over ground-floor retail (377,506 gsf, Handel Architects) in November 2019; as of 2026 it remains fully entitled but unbuilt.",
+  "summary": "The 1.5-acre former Port parking lot at 20th and Illinois Streets, sold in February 2019 to a TMG Partners / Presidio Bay Ventures joint venture under a Vertical DDA after a competitive offering, generating $24.2 million of land proceeds for the Pier 70 project. Planning approved a 65-ft, 245-unit for-sale condominium building over ground-floor retail (377,506 gsf, Handel Architects) in November 2019; the developers' pages call it fully entitled and Handel lists it 'In Design', and no construction start was found.",
   "summary_sources": [
    "src-port-pkn",
    "src-legistar-190055",
    "src-port-11a-2026",
    "src-pln-pkn-2019",
-   "src-potreroview-2025-11"
+   "src-tmg-pkn",
+   "src-handel-pkn",
+   "src-port-9b-2017"
   ],
   "shape": {
    "kind": "approximate",
@@ -45,10 +47,10 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- this block is not yet built and does not correspond to any subdivided Assessor parcel: it currently sits on vacant/graded land, surface parking, or an existing industrial building slated for demolition within Brookfield's 28-acre district (unaddressed in DataSF's Assessor roll). RE-TRACED 2026-09-17 directly from Figure 6.4.2 at the correct source resolution (see digitization_method) -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. This deliberately does NOT match today's satellite imagery of the parking lot -- this parcel's boundary represents the D4D's planned footprint, including '21ST ST (NEW)' and the '20th Street Plaza' open-space strip (data/manual/pier70_pkn_frontage_plaza.geojson), neither of which is built yet.",
+    "accuracy_caveat": "APPROXIMATE -- this block is not yet built (the developers' pages call it 'fully entitled' and Handel Architects lists it 'In Design'; no groundbreaking was found in any source read), and no source read identifies its Assessor lot: it was sold by the Port outright (Presidio Bay's page calls it 'the only privately-owned land in the Pier 70 Special Use District'), and DataSF's Assessor parcels list active P70-MU lots at about this location (for example lot 4110012 at 919 Illinois St, and lot 4110009 with no address), but which of them is Parcel K North's was not established. It currently sits on vacant/graded land, surface parking, or an existing industrial building slated for demolition within Brookfield's 28-acre district. RE-TRACED 2026-09-17 directly from Figure 6.4.2 at the correct source resolution (see digitization_method) -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. This deliberately does NOT match today's satellite imagery of the parking lot -- this parcel's boundary represents the D4D's planned footprint, including '21ST ST (NEW)' and the '20th Street Plaza' open-space strip (data/manual/pier70_pkn_frontage_plaza.geojson), neither of which is built yet.",
     "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-    "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of Brookfield's larger, largely unaddressed 28-acre site), but it has not been subdivided per the masterplan's individual named parcels -- this uses hand-traced approximate geometry instead.",
-    "regulatory_context": "Residential, 65 ft max / 6 stories, 245 for-sale condominium units, 377,506 sf building, Handel Architects. Developer is TMG Partners + Presidio Bay Ventures -- NOT Brookfield; this parcel was purchased directly from the Port in Feb 2019 and is 'fully entitled' but has no confirmed groundbreaking as of the most recent research pass (2026)."
+    "why_no_real_parcel": "No source read identifies this parcel's Assessor lot. The Port sold Parcel K North outright in 2019 (Presidio Bay's page: 'the only privately-owned land in the Pier 70 Special Use District'), and DataSF's Assessor parcels list active P70-MU lots at about this location (for example lot 4110012 at 919 Illinois St, and lot 4110009 with no address), but which of them is Parcel K North's was not established, so this uses hand-traced approximate geometry instead.",
+    "regulatory_context": "Residential, 65 ft max / 6 stories. The Port's Parcel K North page describes a 65-foot, 377,506 square foot mixed use building containing 245 for-sale residential units over ground-floor retail, and Handel Architects lists 245 units (Presidio Bay's page says ±241 condominium homes and 411,273 sq ft). Developer is TMG Partners + Presidio Bay Ventures -- NOT Brookfield; Presidio Bay says it 'closed on the land acquisition from the Port of San Francisco in February 2019', and both developers' pages call the project 'fully entitled'. No groundbreaking was found in any source read (searched through 2026-09-29)."
    }
   },
   "centroid": {
@@ -155,7 +157,7 @@
   "costs": [
    {
     "amount_usd": 24200000,
-    "what": "Land proceeds from the Port's sale of Parcel K North, applied to the developer's entitlement and horizontal costs under the DDA financing plan",
+    "what": "Land proceeds from the Port's sale of Parcel K North (Port Item 11A lists them among early sources of project funding; the 2017 Port memo says proceeds will be used to reimburse the Developer for its entitlement costs)",
     "date": "2019-02",
     "approximate": false,
     "sources": [
@@ -166,6 +168,44 @@
    }
   ],
   "milestones": [
+   {
+    "date": "2017-09",
+    "date_label": "~2017",
+    "status": null,
+    "status_label": null,
+    "text": "Port's Sept 2017 disposition plan for Parcel K North: Colliers International to market the parcel (0.5% commission), with initial offers due November 2017, a short list by December 2017 and best-and-final offers by January 2018, and Cushman & Wakefield to appraise it for the City's Real Estate Division (a plan; the memo does not show these steps happened, and the sale closed in February 2019)",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-port-9b-2017",
+      "title": "Port Commission staff report, Item 9B: Pier 70 Mixed-Use Project approvals (Resolutions 17-43 through 17-52), meeting of September 26, 2017",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/sites/default/files/Item%209B%20Pier%2070%20Approval%20092217.pdf",
+      "accessed": "2026-09-17",
+      "date": "2017-09-22",
+      "note": "184-page memo dated Sept 22, 2017 with the DDA major-terms table (Table 3), the Parcel K North sale process, the affordable housing plan and the financing plan."
+     }
+    ],
+    "source": "Port of San Francisco, 2017-09-22",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_pkn",
+     "slug": "pier-70-parcel-k-north-pkn",
+     "name": "Pier 70 Parcel K North (PKN)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-k-north-pkn/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-k-north-pkn.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked"
+   },
    {
     "date": "2017-09-26",
     "date_label": "Sep 26, 2017",
@@ -209,7 +249,7 @@
     "date_label": "Sep 26, 2017",
     "status": "planned",
     "status_label": "Planned",
-    "text": "Port Commission Resolution 17-52 approves the terms of the Port's sale of Parcel K North and a form of Vertical DDA, formally establishing Parcel K North as a subdivided future development site; this transaction is separate from FC Pier 70's 28-Acre Project DDA, and the parcel's Feb 2019 sale to TMG Partners/Presidio Bay Ventures is a later ownership change, not the point it entered the plan",
+    "text": "Port Commission Resolution 17-52 approves the terms of the Port's sale of Parcel K North and a form of Vertical DDA, and records the Port's intent to merge and then subdivide the parcel into four new parcels (it does not itself subdivide anything); this transaction is separate from FC Pier 70's 28-Acre Project DDA, and the parcel's Feb 2019 sale to TMG Partners/Presidio Bay Ventures is a later ownership change, not the point it entered the plan",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -227,44 +267,6 @@
     "origin": "record",
     "category": "status",
     "category_label": "Status",
-    "record": {
-     "id": "pier70_pkn",
-     "slug": "pier-70-parcel-k-north-pkn",
-     "name": "Pier 70 Parcel K North (PKN)",
-     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-k-north-pkn/",
-     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-k-north-pkn.json"
-    },
-    "site": {
-     "slug": "pier-70",
-     "name": "Pier 70",
-     "short": "Pier 70",
-     "url": "https://pierandpoint.org/sites/pier-70/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2017-11",
-    "date_label": "~2017",
-    "status": null,
-    "status_label": null,
-    "text": "Marketing by Colliers International (0.5% commission) with initial offers due November 2017, a short list by December 2017 and best-and-final offers by January 2018, per the Port's disposition plan; Cushman & Wakefield appraises the parcel for the City's Real Estate Division",
-    "expected": false,
-    "approximate": true,
-    "sources": [
-     {
-      "id": "src-port-9b-2017",
-      "title": "Port Commission staff report, Item 9B: Pier 70 Mixed-Use Project approvals (Resolutions 17-43 through 17-52), meeting of September 26, 2017",
-      "publisher": "Port of San Francisco",
-      "url": "https://www.sfport.com/sites/default/files/Item%209B%20Pier%2070%20Approval%20092217.pdf",
-      "accessed": "2026-09-17",
-      "date": "2017-09-22",
-      "note": "184-page memo dated Sept 22, 2017 with the DDA major-terms table (Table 3), the Parcel K North sale process, the affordable housing plan and the financing plan."
-     }
-    ],
-    "source": "Port of San Francisco, 2017-09-22",
-    "origin": "record",
-    "category": "milestone",
-    "category_label": "Milestone",
     "record": {
      "id": "pier70_pkn",
      "slug": "pier-70-parcel-k-north-pkn",
@@ -445,7 +447,7 @@
     "date_label": "~2020",
     "status": null,
     "status_label": null,
-    "text": "Design and permitting phase per the Port's project page (2020-2021)",
+    "text": "The Port's project page lists '2020 - 2021 Design and Permitting' in its project schedule (a schedule entry; the page does not say the work took place)",
     "expected": false,
     "approximate": true,
     "sources": [
@@ -476,29 +478,22 @@
      "url": "https://pierandpoint.org/sites/pier-70/"
     },
     "relation": "tracked"
-   },
+   }
+  ],
+  "changes": [
    {
-    "date": "2025-11",
-    "date_label": "~2025",
-    "status": null,
-    "status_label": null,
-    "text": "Potrero View reports no housing has yet been built at Pier 70; the Port says development 'is currently delayed due to ongoing market feasibility challenges'",
-    "expected": false,
-    "approximate": true,
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Sept 2017 Port memo's marketing and offer steps are now described as a plan (the sale closed in February 2019); the Port's '2020-2021 design and permitting' entry is described as a schedule line; the Resolution 17-52 milestone no longer says it established a subdivided site (it records the Port's intent to subdivide); the Nov 2025 Potrero View milestone was removed because that article concerns Brookfield's site and does not mention Parcel K North; the summary no longer says the parcel is unbuilt 'as of 2026' without a current source; the $24.2M use is stated as the memo says (reimbursing the developer's entitlement costs); the map notes cite the Port, TMG, Presidio Bay and Handel pages for units, size and developer, and no longer say the block has no Assessor lot; the 55-67 ft right-of-way range is noted as not applying to Michigan Street; the D4D plaza figure no longer credits private firms without a credit on the figure; the Aug 11, 2026 Port Commission minutes now back the informational hearing.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
     "sources": [
      {
-      "id": "src-potreroview-2025-11",
-      "title": "Housing at Pier 70 Yet to Materialize",
-      "publisher": "The Potrero View (Jessica Zimmer)",
-      "url": "https://www.potreroview.net/housing-at-pier-70-yet-to-materialize/",
-      "accessed": "2026-09-17",
-      "date": "2025-11"
+      "title": "docs/audits/2026-09-accuracy-audit.md"
      }
     ],
-    "source": "The Potrero View (Jessica Zimmer), 2025-11",
-    "origin": "record",
-    "category": "milestone",
-    "category_label": "Milestone",
+    "category": "correction",
+    "category_label": "Correction",
     "record": {
      "id": "pier70_pkn",
      "slug": "pier-70-parcel-k-north-pkn",
@@ -512,19 +507,18 @@
      "short": "Pier 70",
      "url": "https://pierandpoint.org/sites/pier-70/"
     },
-    "relation": "tracked"
-   }
-  ],
-  "changes": [
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-23",
     "kind": "correction",
     "kind_label": "Correction",
-    "text": "See HDY1/2's changelog row for the move. Parcel K North's own $24.2M land-sale-proceeds figure stays on the record with kind: land_or_lease and scope: record.",
-    "source": "docs/record-schema.md",
+    "text": "See HDY1/2's changelog row for the move. Parcel K North's own $24.2M land-sale-proceeds figure (Port Item 11A, Aug 2026: '$24.2 million of land proceeds from the sale of Parcel K North in February 2019') stays on the record with kind: land_or_lease and scope: record.",
+    "source": "https://www.sfport.com/sites/default/files/2026-08/item_11a_p70_project_update_-_term_sheet_overview_-_information.pdf",
     "sources": [
      {
-      "title": "docs/record-schema.md"
+      "title": "https://www.sfport.com/sites/default/files/2026-08/item_11a_p70_project_update_-_term_sheet_overview_-_information.pdf"
      }
     ],
     "category": "correction",
@@ -565,7 +559,7 @@
     "path": "data/manual/images/pier70_sud_land_use_plan_2018.jpg",
     "kind": "document",
     "taken": "2018-03-13",
-    "credit": "Port of San Francisco, Pier 70 SUD Land Use Plan, Exhibit A4-1 (03/13/2018)",
+    "credit": "Port of San Francisco, Pier 70 SUD Land Use Plan, Exhibit A4-1 (03/13/2018); the sheet carries the SITELAB urban studio logo",
     "license": "public-record",
     "source_url": "https://sfport.com/files/2021-11/pier_70_sud_land_use_plan.pdf",
     "license_evidence": "https://sfport.com/files/2021-11/pier_70_sud_land_use_plan.pdf",
@@ -579,7 +573,7 @@
     "path": "data/manual/images/pier70_d4d_fig_3_10_1_20th_street_plaza.jpg",
     "kind": "document",
     "taken": "2022-04-26",
-    "credit": "Pier 70 Design for Development (Port of San Francisco), Figure 3.10.1 'Illustrative 20th Street Plaza Plan', p.71 (illustrative plan by James Corner Field Operations / SITELAB urban studio, Forest City project team)",
+    "credit": "Pier 70 Design for Development (Port of San Francisco), Figure 3.10.1 'Illustrative 20th Street Plaza Plan', p.71 (the figure carries no author credit; the D4D's team page lists James Corner Field Operations as landscape architect and SITELAB urban studio as lead author)",
     "license": "public-record",
     "source_url": "https://www.sfport.com/media/8123/download?inline=",
     "license_evidence": "https://www.sfport.com/media/8123/download?inline=",
@@ -594,11 +588,11 @@
     "kind": "rendering",
     "scope": "site",
     "taken": "2022-04-26",
-    "credit": "Port of San Francisco / SF Planning, Pier 70 Special Use District Design for Development (D4D, adopted 2017, updated April 26, 2022), Figure 1.1.2, p.5",
+    "credit": "Port of San Francisco / SF Planning, Pier 70 Special Use District Design for Development (D4D, updated April 26, 2022; approved in 2017 per Port Item 9B, Resolution 17-45), Figure 1.1.2, p.5",
     "license": "public-record",
     "source_url": "https://www.sfport.com/media/8123/download?inline=",
     "license_evidence": "https://www.sfport.com/media/8123/download?inline=",
-    "license_note": "An adopted Port of San Francisco / SF Planning planning document (the Pier 70 Special Use District Design for Development); an adopted D4D is a public-record planning document. Read 2026-09-22.",
+    "license_note": "A Port of San Francisco / SF Planning planning document approved in 2017 (Port Item 9B, Resolution 17-45) (the Pier 70 Special Use District Design for Development); an adopted D4D is a public-record planning document. Read 2026-09-22.",
     "caption": "Figure 1.1.2: Site Location and Context, Pier 70 Special Use District Design for Development (D4D), p.5",
     "source_crop": "python3 src/extract_pdf_figure.py https://www.sfport.com/media/8123/download?inline= 21 data/manual/images/pier70/d4d_p5_site_context.jpg --rect auto --dpi 300",
     "focus": [
@@ -614,16 +608,17 @@
   ],
   "open_questions": [
    "The purchase price: the only figure found is the Port's '$24.2 million of land proceeds from the sale of Parcel K North in February 2019'; the executed Vertical DDA and the Budget and Legislative Analyst report attached to File 190055 were not opened.",
-   "No groundbreaking or building permit was found. Bisnow's June 2019 piece says TMG and Presidio Bay 'broke ground after recent purchase', which conflicts with the Port page's 2020-2021 design-and-permitting timeline and with the November 2025 Potrero View report that no Pier 70 housing has materialized; treat the 2019 claim as unverified.",
+   "No groundbreaking or building permit was found. Bisnow's June 2019 piece says TMG and Presidio Bay 'broke ground after recent purchase', which conflicts with the Port page's 2020-2021 design-and-permitting timeline and no groundbreaking was found in any source read; treat the 2019 claim as unverified. (The November 2025 Potrero View article about Pier 70 housing concerns Brookfield's site and does not mention Parcel K North, so it is not used here.)",
    "Affordable housing on PKN: the 2017 memo calls the units market-rate and the 2026 report says condo projects pay an in-lieu fee toward the stand-alone affordable sites, while the Planning conditions reference Section 415 affordable units; the actual obligation is unresolved.",
    "Unit and square-footage figures disagree between the Port page (245 units, 377,506 gsf) and the two developer pages (241 units / 411,273 sq ft; 275,000 sq ft residential).",
-   "No basis for an expected-completion date was found: Parcel K North was sold to a private developer in 2019 and sits outside the 28-Acre Project's DDA phasing plan, so no Development Agreement phase window applies to it; the only schedule statement found is the Port's November 2025 comment that development 'is currently delayed due to ongoing market feasibility challenges,' with no target date, and the developers' own pages (TMG, Presidio Bay, Handel Architects) give no construction start or completion date, so this record stays undated."
+   "No basis for an expected-completion date was found: Parcel K North was sold to a private developer in 2019 and sits outside the 28-Acre Project's DDA phasing plan, so no Development Agreement phase window applies to it; no PKN-specific schedule statement was found (the Port's November 2025 comment reported by Potrero View concerns Pier 70 generally), and the developers' own pages (TMG, Presidio Bay, Handel Architects) give no construction start or completion date, so this record stays undated.",
+   "Current build status of Parcel K North: the developers' pages (undated) call it 'fully entitled' and Handel lists 'In Design'; no source dated 2026 that names Parcel K North was found beyond Port Item 11A's mention of the 2019 sale."
   ],
   "sources": [
    {
     "id": "src-d4d",
     "title": "Pier 70 Special Use District Design for Development (D4D), updated April 26, 2022",
-    "publisher": "Port of San Francisco / SF Planning (adopted planning document; project team SITELAB urban studio)",
+    "publisher": "Port of San Francisco / SF Planning (planning document approved in 2017 per Port Item 9B, Resolution 17-45; project team SITELAB urban studio)",
     "url": "https://www.sfport.com/media/8123/download?inline=",
     "accessed": "2026-09-17",
     "date": "2022-04-26",
@@ -703,11 +698,27 @@
     "publisher": "TMG Partners (developer's claim)",
     "url": "https://www.tmgpartners.com/portfolio/pier-70-parcel-k-north-managed-pkn-manager-llc",
     "accessed": "2026-09-17"
+   },
+   {
+    "id": "src-port-minutes-2026-08-11",
+    "title": "Port Commission minutes, August 11, 2026 (Item 11A, Pier 70 28-Acre Site update: informational item, presented by Port staff; no action)",
+    "publisher": "Port of San Francisco",
+    "url": "https://www.sfport.com/media/11558/download?inline",
+    "accessed": "2026-09-29",
+    "date": "2026-08-11"
+   },
+   {
+    "id": "src-port-mtg-2026-08-11",
+    "title": "Port Commission meeting page, August 11, 2026 (agenda listing Item 11A, Pier 70 28-Acre Site update)",
+    "publisher": "Port of San Francisco",
+    "url": "https://www.sfport.com/meetings/port-commission-august-11-2026",
+    "accessed": "2026-09-29",
+    "date": "2026-08-11"
    }
   ],
-  "notes": "Approximate polygon for a real, D4D-adopted parcel -- see accuracy_caveat.",
+  "notes": "Approximate polygon for a real, D4D-adopted parcel -- see accuracy_caveat. Status planned: the developers' pages call the project 'fully entitled' and Handel Architects lists it 'In Design'; no construction start was found.",
   "has_record_file": true,
-  "last_verified": "2026-09-20",
+  "last_verified": "2026-09-29",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

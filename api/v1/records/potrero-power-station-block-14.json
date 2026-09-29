@@ -29,10 +29,12 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "Small planned mixed-use block on the Potrero Power Station masterplan with a flat 90 ft height limit; program not confirmed beyond the D4D's generic use table, and no design review approval or construction start found.",
+  "summary": "Small planned mixed-use block on the Potrero Power Station masterplan with a flat 90 ft height limit, located within PG&E's switchyard sub-area (whose redevelopment depends on PG&E's long-range facilities planning); program not confirmed beyond the D4D's generic use table, and no design review approval or construction start found.",
   "summary_sources": [
    "src-d4d-final-fig623",
-   "src-d4d-final-table311"
+   "src-d4d-final-table311",
+   "src-d4d-final-figE134",
+   "src-sfplanning-pps"
   ],
   "shape": {
    "kind": "approximate",
@@ -40,10 +42,10 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- this block is not yet built and does not correspond to any subdivided Assessor parcel: it currently sits on vacant/graded land within the former power station site (unaddressed in DataSF's Assessor roll). Traced from an adopted regulatory diagram via multi-point real-street georeferencing (see digitization_method), but this diagram is dated 2020 and may not reflect later design changes (as already found for the UCSF/Sophie Maxwell area -- see digitization_method). Treat vertex positions as accurate to roughly 10-25m, not survey-grade, and treat the block's applicability itself as somewhat more provisional than Mission Rock's or Pier 70's equivalent entries. Rebuilt 2026-09-16 via GDAL GCP/TPS georeferencing, then corrected same-day after a mis-traced chamfer corner was caught by this project's geometry-quality check -- see digitization_method. This block's NE corner is genuinely angled (chamfered) per the source diagram, not a tracing artifact -- do not treat that corner's non-90-degree angle as an error.",
+    "accuracy_caveat": "APPROXIMATE -- this block is not yet built and does not correspond to any subdivided Assessor parcel: it lies within the PG&E Sub-area, PG&E's roughly 4.8-acre switchyard parcel at 22nd and Illinois Streets, which SF Planning's project page describes as 'currently owned and operated by PG&E as an electrical switchyard' (in the final D4D's Appendix E no-PG&E-Sub-area scenario, Figure E.13.4, printed p.434, Blocks 13 and 14 are replaced by a single 'PG&E Sub-area'), so it is not vacant developer land; it is also unaddressed in DataSF's Assessor roll (our own observation). Traced from an adopted regulatory diagram via multi-point real-street georeferencing (see digitization_method), but this diagram is dated 2020 and may not reflect later design changes (as already found for the UCSF/Sophie Maxwell area -- see digitization_method). Treat vertex positions as accurate to roughly 10-25m, not survey-grade, and treat the block's applicability itself as somewhat more provisional than Mission Rock's or Pier 70's equivalent entries. Rebuilt 2026-09-16 via GDAL GCP/TPS georeferencing, then corrected same-day after a mis-traced chamfer corner was caught by this project's geometry-quality check -- see digitization_method. This block's NE corner is genuinely angled (chamfered) per the source diagram, not a tracing artifact -- do not treat that corner's non-90-degree angle as an error.",
     "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
-    "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead.",
-    "regulatory_context": "Flat 90 ft max height per Figure 6.2.3. Program/use not independently confirmed by any source found beyond this figure; recorded here as 'mixed' as a neutral default rather than guessing a specific use."
+    "why_no_real_parcel": "Block 14 lies within PG&E's separate roughly 4.8-acre PG&E Sub-area (a portion of Assessor's Block 4175/Lot 018 per the 2018 draft EIR, Vol. 1 Ch. 2), not the developer's 21-acre parcel, and that land has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead. (This is our own parcel-search narration, not something the cited Design for Development can establish; the D4D does not address Assessor parcels.) A parcel search for this block should target PG&E's switchyard parcel.",
+    "regulatory_context": "Flat 90 ft max height per Figure 6.2.3 (the block is labelled '14 90'' on the colour-coded plan). The final D4D's Table 3.1.1 (printed p.47) permits residential, institutional, retail and non-retail sales/services (office) uses on Block 14 and does not permit laboratory or life-science uses; recorded here as 'mixed' as a summary of that table, not a confirmed program. Block 14 is within the PG&E Sub-area: the D4D's Appendix E says redevelopment of that sub-area is subject to PG&E's long-range facilities planning and that portions of it 'may or may not ultimately be redeveloped', and SF Planning's project page says built-out of the PG&E lands depends on relocation of the switchyard; 'planned' reflects the D4D and the October 2020 Phase 1 approval (Phase 2), not a committed project."
    }
   },
   "centroid": {
@@ -67,9 +69,18 @@
    },
    {
     "key": "phasing",
-    "value": "Not listed among the six Phase 1 blocks (2, 7, 8, 11, 12, 15) named in the 2024 annual compliance report, which does not mention Block 14 at all",
+    "value": "Not listed among the six Phase 1 blocks (2, 7, 8, 11, 12, 15) named in the 2024 annual compliance report, which does not mention Block 14 at all; the October 7, 2020 Phase 1 approval places it in Phase 2",
     "sources": [
-     "src-annual-2024"
+     "src-annual-2024",
+     "src-phase1-2020"
+    ]
+   },
+   {
+    "key": "ownership_context",
+    "value": "Lies within the PG&E Sub-area, PG&E's roughly 4.8-acre switchyard parcel at 22nd and Illinois Streets (in the D4D's no-PG&E-Sub-area scenario, Blocks 13 and 14 are replaced by a single 'PG&E Sub-area'); the D4D says portions of the PG&E Sub-area 'may or may not ultimately be redeveloped'",
+    "sources": [
+     "src-d4d-final-figE134",
+     "src-sfplanning-pps"
     ]
    }
   ],
@@ -80,7 +91,7 @@
     "date_label": "Apr 21, 2020",
     "status": "planned",
     "status_label": "Planned",
-    "text": "Board of Supervisors approves the Potrero Power Station project and Development Agreement (Ordinance No. 62-20, Board File 200040), the entitlement that first names Block 14 as a development block under the adopted Design for Development's Land Use Table; the Development Agreement's own effective date is May 25, 2020, distinct from the D4D's own February 26, 2020 final-document date",
+    "text": "Board of Supervisors approves the Potrero Power Station project and Development Agreement (Ordinance No. 62-20, Board File 200040), the entitlement covering the adopted Design for Development, whose Land Use Table (Table 3.1.1) lists Block 14; the Development Agreement's own effective date is May 25, 2020, distinct from the D4D's own February 26, 2020 final-document date",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -99,9 +110,17 @@
       "publisher": "SF Planning",
       "url": "https://sfplanning.org/potrero-power-station",
       "accessed": "2026-09-20"
+     },
+     {
+      "id": "src-d4d-final-table311",
+      "title": "Potrero Power Station Design for Development, final (February 26, 2020), Table 3.1.1 Permitted Uses",
+      "publisher": "SF Planning (document adopted by the Planning Commission; the D4D names no publisher)",
+      "date": "2020-02-26",
+      "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+      "accessed": "2026-09-17"
      }
     ],
-    "source": "Port of San Francisco, 2025-11-14; SF Planning",
+    "source": "Port of San Francisco, 2025-11-14; SF Planning; SF Planning (document adopted by the Planning Commission; the D4D names no publisher), 2020-02-26",
     "origin": "record",
     "category": "status",
     "category_label": "Status",
@@ -121,11 +140,11 @@
     "relation": "tracked"
    },
    {
-    "date": "2035",
-    "date_label": "2035",
+    "date": "2030",
+    "date_label": "2030",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Completion expected: Block 14 is not named in any Phase 1-3 block list found (the 2024 annual compliance report does not mention Block 14 at all); only the whole-project buildout target applies",
+    "text": "Completion expected: Block 14 is in Phase 2 of the October 2020 re-phased program; SocketSite's block-by-block schedule for that program shows vertical development on Block 14 from 2029 to 2030, contingent on relocation of PG&E's switchyard",
     "expected": true,
     "approximate": true,
     "sources": [
@@ -167,7 +186,37 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Block 14's notes no longer describe it as vacant developer land: the Design for Development's Appendix E and site-ownership figure show it inside the PG&E Sub-area, PG&E's roughly 4.8-acre switchyard parcel, which the D4D says may or may not ultimately be redeveloped. The expected completion changed from the 2035 whole-project date to 2030, following the October 2020 Phase 1 approval (Phase 2) and SocketSite's schedule table (vertical development 2029-2030), marked as a soft 2020 forecast that depends on PG&E relocating its switchyard. The use note now cites the D4D's permitted-uses table, the 'first names Block 14' wording was removed, the dead 2019 draft link was replaced with the final February 2020 document, the land-use figure is tagged as a document rather than a rendering, and publisher names were corrected.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_block_14",
+     "slug": "potrero-power-station-block-14",
+     "name": "Potrero Power Station Block 14",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-14/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-14.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/potrero_d4d_final_height_plan_p245.jpg",
@@ -185,10 +234,10 @@
    },
    {
     "path": "data/manual/images/potrero/d4d_p23_land_use_framework.jpg",
-    "kind": "rendering",
+    "kind": "document",
     "scope": "site",
     "taken": "2020-02-26",
-    "credit": "SF Planning / California Barrel Company, Potrero Power Station Design for Development, final (February 26, 2020), Figure 1.6.1: Land Use Framework, p.23",
+    "credit": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 1.6.1: Land Use Framework, p.23 (the D4D names no author)",
     "license": "public-record",
     "source_url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
     "license_evidence": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
@@ -209,13 +258,13 @@
   "open_questions": [
    "No design review approval or construction-start date found for Block 14; it is not one of the six buildings named in the 2024 annual compliance report's Phase 1 list (Blocks 2, 7, 8, 11, 12, 15), and no later-phase design review approval was found either.",
    "No source found for a specific intended use of Block 14 beyond the D4D's generic permitted-uses table; it is the smallest block on the site per the D4D's own Land Use Plan figure.",
-   "No phase-specific schedule found for Block 14; the added expected-completion milestone therefore uses only the whole-project buildout target (2035, SocketSite Oct 2020), not a block-specific date."
+   "No block-specific schedule found beyond the 2020 forecast in SocketSite's table (Block 14 vertical development 2029-2030, Phase 2), which depends on PG&E relocating its switchyard; no PG&E relocation date was found."
   ],
   "sources": [
    {
     "id": "src-d4d-final-table311",
     "title": "Potrero Power Station Design for Development, final (February 26, 2020), Table 3.1.1 Permitted Uses",
-    "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+    "publisher": "SF Planning (document adopted by the Planning Commission; the D4D names no publisher)",
     "date": "2020-02-26",
     "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
     "accessed": "2026-09-17"
@@ -223,7 +272,7 @@
    {
     "id": "src-d4d-final-fig623",
     "title": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 Building Height Plan",
-    "publisher": "Port/City of San Francisco, adopted by SF Planning Commission",
+    "publisher": "SF Planning (document adopted by the Planning Commission; the D4D names no publisher)",
     "date": "2020-02-26",
     "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
     "accessed": "2026-09-17"
@@ -272,19 +321,22 @@
    {
     "id": "src-d4d-fig161",
     "title": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 1.6.1: Land Use Framework, p.23",
-    "publisher": "SF Planning / California Barrel Company",
+    "publisher": "SF Planning (hosts the D4D; the D4D names no author)",
     "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
     "accessed": "2026-09-22",
     "date": "2020-02-26",
     "overview": true
    },
    {
-    "id": null,
-    "title": "default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf",
-    "url": "https://default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf"
+    "id": "src-d4d-final-figE134",
+    "title": "Potrero Power Station Design for Development, final (February 26, 2020), Appendix E, Figure E.13.4 Building Height Plan (No PG&E Sub-area Scenario), printed p.434, and Figure 1.2.1 Site Boundaries and Ownership, printed p.12",
+    "publisher": "SF Planning (document adopted by the Planning Commission; the D4D names no publisher)",
+    "date": "2020-02-26",
+    "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
+    "accessed": "2026-09-29"
    }
   ],
-  "notes": "Approximate polygon for a real, D4D-adopted block -- see accuracy_caveat.",
+  "notes": "Approximate polygon for a real, D4D-adopted block (Block 14 is listed in the final D4D's Table 3.1.1, printed p.47) -- see accuracy_caveat.",
   "has_record_file": true,
   "last_verified": "2026-09-20",
   "tenants": [],

@@ -3,45 +3,36 @@
   "names": [
     "Sandler Neurosciences Center"
   ],
-  "summary": "A ~237,000 sq ft, five-story neuroscience research building at 675 Nelson Rising Lane housing roughly 100 principal investigators and 500+ researchers and staff, which opened May 2012.",
+  "summary": "A ~237,000 sq ft, five-story neuroscience research building at 675 Nelson Rising Lane (OpenStreetMap) that houses about 100 principal investigators and more than 500 additional researchers and staff (Clark Construction), completed in 2012 (SOM; Clark Construction). The month of opening and the construction start are not sourced.",
   "summary_sources": [
-    "src-tradeline-2012",
-    "src-som-sandler"
+    "src-som-sandler",
+    "src-clark-sandler",
+    "src-osm-sandler"
   ],
   "milestones": [
     {
-      "date": "2010-05",
-      "status": "under_construction",
-      "text": "Construction begins on Sandler Neurosciences Center",
-      "sources": [
-        "src-som-sandler"
-      ],
-      "expected": false,
-      "approximate": false
-    },
-    {
-      "date": "2012-05",
+      "date": "2012",
       "status": "complete",
-      "text": "Sandler Neurosciences Center opens",
+      "text": "Sandler Neurosciences Center completed (SOM's project page lists Completion Year 2012 and Clark Construction lists completion 2012; the month is not sourced -- a June 2012 Tradeline report cited earlier could not be read)",
       "sources": [
-        "src-tradeline-2012",
-        "src-som-sandler"
+        "src-som-sandler",
+        "src-clark-sandler"
       ],
       "expected": false,
-      "approximate": false
+      "approximate": true
     }
   ],
   "costs": [
     {
-      "amount_usd": 200000000,
-      "what": "Project cost",
+      "amount_usd": 208000000,
+      "what": "Project cost stated on the developer's (Edgemoor) project page for the Design-Build-Finance-Operate-Maintain partnership with UCSF; the page gives no date",
       "date": "2012",
+      "kind": "development",
+      "scope": "record",
       "approximate": true,
       "sources": [
-        "src-tradeline-2012"
-      ],
-      "kind": "development",
-      "scope": "record"
+        "src-edgemoor-sandler"
+      ]
     }
   ],
   "facts": [
@@ -54,7 +45,7 @@
     },
     {
       "key": "architect",
-      "value": "Skidmore, Owings & Merrill (SOM), San Francisco office",
+      "value": "Skidmore, Owings & Merrill (SOM)",
       "sources": [
         "src-som-sandler"
       ]
@@ -75,8 +66,9 @@
     },
     {
       "key": "occupants",
-      "value": "~100 principal investigators (including a Nobel laureate) and 500+ researchers/staff",
+      "value": "About 100 principal investigators and more than 500 additional researchers and staff",
       "sources": [
+        "src-clark-sandler",
         "src-tradeline-2012"
       ]
     },
@@ -94,11 +86,11 @@
       "kind": "now",
       "scope": "site",
       "taken": "2024-05-20",
-      "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+      "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
       "license": "public-domain",
       "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
       "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
-      "license_note": "USDA's data.gov catalog record for NAIP imagery sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0); the USDA FSA policies page says public-domain information may be freely distributed with credit requested ('U.S. Department of Agriculture, Farm Service Agency'). Read 2026-09-22.",
+      "license_note": "USDA's data.gov catalog record for NAIP imagery sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0); the USDA FSA policies page says public-domain information may be freely distributed with credit requested ('U.S. Department of Agriculture, Farm Service Agency'). Read 2026-09-22. The data.gov record names the publisher as USDA's Farm Production and Conservation Business Center (FPAC-BC); date 2024-05-20 from the NAIP ImageServer tile name m_3712213_se_10_060_20240520 (checked 2026-09-29).",
       "caption": "USDA NAIP aerial orthophoto (2024 flight), cropped to the Mission Bay project area and its immediate surroundings",
       "aerial": true,
       "focus": [
@@ -115,12 +107,12 @@
       "kind": "now",
       "scope": "site",
       "taken": "2024-02-10",
-      "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+      "credit": "Firstcultural (Alfred Twu, per the Commons user page User:Firstcultural), via Wikimedia Commons; CC0; downscaled to 1600 px",
       "license": "cc0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
       "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-      "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-      "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+      "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural; the Commons user page User:Firstcultural gives the name Alfred Twu. File page read 2026-09-23, user page read 2026-09-29.",
+      "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area",
       "aerial": true,
       "focus": [
         0.35,
@@ -163,12 +155,27 @@
       "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
       "accessed": "2026-09-24",
       "overview": true
+    },
+    {
+      "id": "src-clark-sandler",
+      "title": "UCSF Sandler Neurosciences Center",
+      "publisher": "Clark Construction (contractor's own material)",
+      "url": "https://www.clarkconstruction.com/our-work/projects/ucsf-sandler-neurosciences-center",
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "src-edgemoor-sandler",
+      "title": "UCSF Sandler Neurosciences Center",
+      "publisher": "Edgemoor Infrastructure & Real Estate (developer's own material)",
+      "url": "https://www.edgemoor.com/projects/ucsf-sandler-neurosciences-center",
+      "accessed": "2026-09-29"
     }
   ],
   "open_questions": [
     "This record corrects this project's own earlier working assumption of a 2011 opening; May 2012 is well-supported by both the architect's own page and trade press.",
     "No openly licensed image was found; none is hosted here.",
-    "Images: no plan drawing, elevation or openly-licensed photograph was found for this building specifically. Searched: UCSF Real Estate's Mission Bay campus-site and LRDP pages (realestate.ucsf.edu, blocked to automated fetches with a 403); the UCSF 2014 LRDP EIR's CEQAnet filing (SCH 2013092047, whose pre-2016 attachments aren't hosted on CEQAnet itself); a May 2000 Regents Committee on Grounds and Buildings design-approval item for an early Mission Bay building (text-only, no figures); the 2008 \"UCSF Mission Bay Planning Principles\" appendix (a citywide-scale community map, no individual buildings labeled); and a UCSF wayfinding campus map (not an adopted plan, EIR or permit filing, so not eligible as public-record even though found). Not pursued further in this pass; the record's own project sources above remain the citation for the building's history."
+    "Images: no plan drawing, elevation or openly-licensed photograph was found for this building specifically. Searched: UCSF Real Estate's Mission Bay campus-site and LRDP pages (realestate.ucsf.edu, blocked to automated fetches with a 403); the UCSF 2014 LRDP EIR's CEQAnet filing (SCH 2013092047, whose pre-2016 attachments aren't hosted on CEQAnet itself); a May 2000 Regents Committee on Grounds and Buildings design-approval item for an early Mission Bay building (text-only, no figures); the 2008 \"UCSF Mission Bay Planning Principles\" appendix (a citywide-scale community map, no individual buildings labeled); and a UCSF wayfinding campus map (not an adopted plan, EIR or permit filing, so not eligible as public-record even though found). Not pursued further in this pass; the record's own project sources above remain the citation for the building's history.",
+    "2026-09-29 accuracy audit: no readable source dates the start of construction (SOM gives only 'Design Finish Year 2010'; the earlier '2010-05 construction begins' had no source) or the opening month (SOM and Clark give the year 2012 only); the Tradeline June 2012 article that gave May 2012, $200 million and the occupant counts returned 403 and could not be read. The project cost is now the $208 million on Edgemoor's project page (undated), which conflicts with the $200 million earlier attributed to Tradeline."
   ],
   "last_verified": "2026-09-18"
 }

@@ -69,9 +69,11 @@
     },
     {
       "date": "2026-08-11",
-      "text": "Port's proposed phasing plan places Building 21 with Parcels E1 and E4 in Phase 2C",
+      "text": "Port staff report for the Commission's Aug 11, 2026 meeting (informational item, no action; report dated Aug 7) shows the proposed phasing plan placing Building 21 with Parcels E1 and E4 in Phase 2C",
       "sources": [
-        "src-port-11a-2026"
+        "src-port-11a-2026",
+        "src-port-minutes-2026-08-11",
+        "src-port-mtg-2026-08-11"
       ],
       "expected": false,
       "approximate": false
@@ -159,55 +161,13 @@
     },
     {
       "key": "reported_program_2021",
-      "value": "SF YIMBY's summary of the 2021 filing gives ~115,000 gsf of retail and arts space 'from rehabilitation' of Building 21, an implausible figure for a 10,172 sq ft building",
+      "value": "SF YIMBY's summary of the 2021 filing says approximately 115,000 gsf of retail and arts space would result from the rehabilitation of Buildings 12 and 21 combined (a figure that cannot be split between them from that source)",
       "sources": [
         "src-sfyimby-2021-10"
       ]
     }
   ],
-  "images": [
-    {
-      "path": "data/manual/images/building21.jpg",
-      "kind": "document",
-      "taken": "2017",
-      "credit": "Forest City / Shae Rocco, 'Double Gable Roof at Building 21', from the Pier 70 Design for Development (Port of San Francisco)",
-      "license": "public-record",
-      "source_url": "https://www.sfport.com/media/8123/download?inline=",
-      "note": "Cropped 2026-09-18 to remove a blank margin and rotated Photo Credit strip baked into the right edge of the scan; the credit above is unchanged and is this image's canonical credit.",
-      "license_evidence": "https://www.sfport.com/media/8123/download?inline=",
-      "license_note": "Figure or photograph from an adopted Port/Planning regulatory document (a Design for Development, SUD Land Use Plan or Design Controls) or a Port Commission agenda exhibit, published by the agency itself at its own domain as the public record of the adopted plan or noticed meeting item. Read 2026-09-18.",
-      "figure": "positioning",
-      "appeal": 4,
-      "appeal_note": "A graphic, near-symmetrical shot of Building 21's double-gable end against blue sky -- a distinctive silhouette in good light."
-    },
-    {
-      "path": "data/manual/images/building21_exterior.jpg",
-      "kind": "document",
-      "taken": "2017",
-      "credit": "Shae Rocco / Forest City, 'Building 21 - Exterior', from the Pier 70 Design for Development (Port of San Francisco)",
-      "license": "public-record",
-      "source_url": "https://www.sfport.com/media/8123/download?inline=",
-      "note": "Cropped 2026-09-18 to remove a second thumbnail and rotated credit strip baked into the left edge of the scan; the credit above is unchanged and is this image's canonical credit.",
-      "license_evidence": "https://www.sfport.com/media/8123/download?inline=",
-      "license_note": "Figure or photograph from an adopted Port/Planning regulatory document (a Design for Development, SUD Land Use Plan or Design Controls) or a Port Commission agenda exhibit, published by the agency itself at its own domain as the public record of the adopted plan or noticed meeting item. Read 2026-09-18.",
-      "figure": "positioning",
-      "appeal": 3,
-      "appeal_note": "A wider exterior view of Building 21 that includes chain-link fencing and warning signage in the foreground -- informative but visually busier than the gable-end shot."
-    },
-    {
-      "path": "data/manual/images/pier70_d4d_fig_6_6_1_historic_buildings.jpg",
-      "kind": "document",
-      "taken": "2022-04-26",
-      "credit": "Pier 70 Design for Development (Port of San Francisco), Figure 6.6.1 'Pier 70 Project Buildings to be Rehabilitated' and Figure 6.6.2, p.160",
-      "license": "public-record",
-      "source_url": "https://www.sfport.com/media/8123/download?inline=",
-      "license_evidence": "https://www.sfport.com/media/8123/download?inline=",
-      "license_note": "Figure or photograph from an adopted Port/Planning regulatory document (a Design for Development, SUD Land Use Plan or Design Controls) or a Port Commission agenda exhibit, published by the agency itself at its own domain as the public record of the adopted plan or noticed meeting item. Read 2026-09-18.",
-      "figure": "positioning",
-      "appeal": 2,
-      "appeal_note": "A full D4D report page combining a small key plan with three thumbnail building photos and body text -- too busy and text-heavy to read well at card size."
-    }
-  ],
+  "images": [],
   "sources": [
     {
       "id": "src-d4d",
@@ -262,14 +222,30 @@
       "accessed": "2026-09-17",
       "date": "2021-10-27",
       "overview": true
+    },
+    {
+      "id": "src-port-minutes-2026-08-11",
+      "title": "Port Commission minutes, August 11, 2026 (Item 11A, Pier 70 28-Acre Site update: informational item, presented by Port staff; no action)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/media/11558/download?inline",
+      "accessed": "2026-09-29",
+      "date": "2026-08-11"
+    },
+    {
+      "id": "src-port-mtg-2026-08-11",
+      "title": "Port Commission meeting page, August 11, 2026 (agenda listing Item 11A, Pier 70 28-Acre Site update)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/meetings/port-commission-august-11-2026",
+      "accessed": "2026-09-29",
+      "date": "2026-08-11"
     }
   ],
   "open_questions": [
     "'Relocated': the D4D labels Building 21 'Substation No. 5 (relocated)', but the NRHP nomination describes it in place west of the Noonan Building and no source records a move; whether the label anticipates relocation or records one is unresolved (the geometry file uses the surveyed footprint).",
     "The Port's 28-Acre Site page shows only a rendering of Building 21, consistent with no work having started; no lease, permit or tax-credit application was found.",
-    "SF YIMBY's ~115,000 gsf figure for Building 21 likely belongs to another line of the filing; the filing itself was not retrieved.",
-    "building21.jpg and building21_exterior.jpg are straight architectural photographs taken in 2017, not scanned drawings or plans; `kind: document` fits the schema's 'page from a source document' reading but they may read better as `before` (pre-rehabilitation condition) if the record's kind taxonomy is revisited.",
+    "SF YIMBY attributes ~115,000 gsf to the rehabilitation of Buildings 12 and 21 together; the filing itself was not retrieved, so Building 21's own share is unknown.",
+    "The two D4D photographs of Building 21 were removed from this record on 2026-09-29: the D4D credits them to Forest City / Shae Rocco, a private photographer, and grants no reuse licence.",
     "No date found for the changelog correction from Complete to Existing (2026-09-13): the source that prompted it (sfport.com's Pier 70 28-acre site page) states the current, undated fact that Building 21's rehabilitation is still to come, not when its status actually changed; no dated milestone or other source found ties this specific correction to a real-world date."
   ],
-  "last_verified": "2026-09-18"
+  "last_verified": "2026-09-29"
 }

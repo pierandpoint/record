@@ -29,10 +29,11 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "A grass, semicircular traffic median immediately east of the 'Mission Bay Circle' roundabout, west of the Parklab Gardens soccer field; a real, already-landscaped median island per satellite imagery, hand-traced with the property owner's guidance and fit to an idealized semicircle. OCII's own September 2023 Mission Bay Parks Open Space transition presentation lists 'P11/11A' together among the parcels already managed by SF Recreation and Parks (not among the still-pending 'when built' parcels), consistent with it being complete by that date.",
+  "summary": "A grass, semicircular traffic median immediately east of the 'Mission Bay Circle' roundabout, west of the P12 soccer field (labeled 'SFF Soccer + Fitness Court' in OCII's Nov 2024 CAC update); per this repository's own satellite trace (no outside source describes the median), an already-landscaped median island, hand-traced with the property owner's guidance and fit to an idealized semicircle. OCII's own September 2023 Mission Bay Parks Open Space transition presentation lists 'P11/11A' together among the parcels SF Recreation and Parks will manage (not among the 'when built' parcels), consistent with it being complete by that date.",
   "summary_sources": [
    "src-geom-p11a",
-   "src-ocii-transition-2023"
+   "src-ocii-transition-2023",
+   "src-ocii-openspace-2024"
   ],
   "shape": {
    "kind": "approximate",
@@ -56,13 +57,13 @@
     "date_label": "~2023",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Already part of RPD's managed open-space inventory as 'P11/11A' (not listed among the still-pending 'when built' parcels), per OCII's Mission Bay Parks Open Space transition presentation to the Mission Bay CAC -- an upper bound on when this median was built, not its actual construction date",
+    "text": "Listed as 'P11/11A' among the parcels RPD will manage (not among the 'when built' parcels) in OCII's Mission Bay Parks Open Space transition presentation -- an upper bound on when this median was built, not its actual construction date",
     "expected": false,
     "approximate": true,
     "sources": [
      {
       "id": "src-ocii-transition-2023",
-      "title": "Mission Bay Parks Open Space (CAC Item 2, September 2023)",
+      "title": "Mission Bay Parks Open Space transition presentation (September 2023; file name 'Item 2 Mission Bay Open Space Transition.pdf')",
       "publisher": "Office of Community Investment and Infrastructure (sfocii.org)",
       "url": "https://sfocii.org/sites/default/files/inline-files/Item%202%20Mission%20Bay%20Open%20Space%20Transition.pdf",
       "date": "2023-09",
@@ -90,14 +91,44 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The P11A median's shape file cited nothing. It now lists the OCII Dec 2019 Land Use Map (P11A labeled just east of the circle) and the OCII Sept 2023 transition presentation ('P11/11A' among parcels Rec & Park will manage). The summary and shape log said the median sits west of the Parklab Gardens soccer field; OCII's Nov 2024 update puts the SFF soccer field on P12 and Parklab Gardens on P15, so the wording now says the P12 soccer field. 'Already managed' became 'will manage' to match the deck, the P-number note now cites the 2019 map and 2023 deck instead of saying it was resolved only by owner identification, and the own-log source is labelled as this repository's own narrative. The Wikimedia aerial credit names only the Commons username Firstcultural, and the OCII deck's title no longer says 'CAC Item 2' (that came from its file name).",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_p11a_median",
+     "slug": "p11a",
+     "name": "P11A",
+     "permalink": "https://pierandpoint.org/parcels/p11a/",
+     "api": "https://pierandpoint.org/api/v1/records/p11a.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
     "kind": "now",
     "scope": "site",
     "taken": "2024-05-20",
-    "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+    "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
     "license": "public-domain",
     "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
     "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
@@ -119,12 +150,12 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-02-10",
-    "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+    "credit": "Firstcultural, via Wikimedia Commons; CC0; downscaled to 1600 px",
     "license": "cc0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural. Read 2026-09-23.",
+    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area",
     "aerial": true,
     "focus": [
      0.35,
@@ -144,18 +175,31 @@
   "sources": [
    {
     "id": "src-geom-p11a",
-    "title": "digitization_method log for mission_bay_p11a_median.geojson",
+    "title": "digitization_method log for mission_bay_p11a_median.geojson (this repository's own mapping narrative, not an outside source)",
     "publisher": "Pier & Point geometry records (this repository, data/manual/mission_bay_p11a_median.geojson)",
     "accessed": "2026-09-21"
    },
    {
     "id": "src-ocii-transition-2023",
-    "title": "Mission Bay Parks Open Space (CAC Item 2, September 2023)",
+    "title": "Mission Bay Parks Open Space transition presentation (September 2023; file name 'Item 2 Mission Bay Open Space Transition.pdf')",
     "publisher": "Office of Community Investment and Infrastructure (sfocii.org)",
     "url": "https://sfocii.org/sites/default/files/inline-files/Item%202%20Mission%20Bay%20Open%20Space%20Transition.pdf",
     "date": "2023-09",
     "accessed": "2026-09-21",
     "overview": true
+   },
+   {
+    "id": "src-ocii-openspace-2024",
+    "title": "Mission Bay Commons Parks (P12, P13, P15); Active Recreation Parks (P7, P9) -- Mission Bay Future Parks (CAC Update, November 14, 2024)",
+    "publisher": "Office of Community Investment and Infrastructure (sfocii.org)",
+    "date": "2024-11-14",
+    "url": "https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf",
+    "accessed": "2026-09-29"
+   },
+   {
+    "id": null,
+    "title": "sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
+    "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf"
    }
   ],
   "notes": "Traffic median island, landscaped with grass, immediately adjacent to a thin connector strip (P11) leading to the roundabout.",

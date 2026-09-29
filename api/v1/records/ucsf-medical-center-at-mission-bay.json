@@ -32,10 +32,11 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "A 289-bed, six-story integrated hospital complex at 1975 4th St combining UCSF Benioff Children's Hospital, UCSF Bakar Cancer Hospital and Betty Irene Moore Women's Hospital under one roof, which opened February 1, 2015 after roughly 10 years of planning and 5 years of construction.",
+  "summary": "A 289-bed, six-story integrated hospital complex at 1975 4th St combining UCSF Benioff Children's Hospital, UCSF Bakar Cancer Hospital and Betty Irene Moore Women's Hospital under one roof, which opened February 1, 2015 after over a decade of planning, design and construction.",
   "summary_sources": [
    "src-ucsf-2014-11",
-   "src-dpr"
+   "src-dpr",
+   "src-osm-hospital"
   ],
   "shape": {
    "kind": "approximate",
@@ -43,7 +44,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against data/raw/parcels.geojson and DataSF's Assessor tax roll -- e.g. blklot 8711507 at 675 Nelson Rising Lane alone is ~13 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against data/raw/parcels.geojson and DataSF's Assessor tax roll -- e.g. blklot 8711507 alone is about 12-13 acres: 675 Nelson Rising Ln with a lot area of 572,576 sq ft (13.1 acres) on the Assessor roll, 675 Mission Bay Blvd and 12.2 acres in DataSF's Parcels layer, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
     "digitized_from": "OpenStreetMap (way 580277612, name=UCSF Medical Center at Mission Bay, amenity=hospital, operator=University of California San Francisco, 1975 4th St)"
    }
   },
@@ -61,7 +62,7 @@
    },
    {
     "key": "architect",
-    "value": "Anshen+Allen (architect of record, later absorbed into Stantec); design collaborator William McDonough + Partners",
+    "value": "Stantec (formerly Anshen+Allen) and William McDonough + Partners are both credited as architects on McDonough's project page; DPR's project page credits Stantec Architecture",
     "sources": [
      "src-mcdonough",
      "src-dpr"
@@ -100,7 +101,8 @@
     "key": "use",
     "value": "Acute-care hospital: pediatric, women's, and cancer care",
     "sources": [
-     "src-ucsf-2014-11"
+     "src-ucsf-2014-11",
+     "src-mcdonough"
     ]
    }
   ],
@@ -111,7 +113,8 @@
     "date": "2015",
     "approximate": false,
     "sources": [
-     "src-ucsf-2014-11"
+     "src-ucsf-2014-11",
+     "src-dpr"
     ],
     "kind": "development",
     "scope": "record"
@@ -180,9 +183,16 @@
       "date": "2014-11",
       "url": "https://www.ucsf.edu/news/2014/11/121086/ucsf-medical-center-opens-15-billion-next-generation-hospital-complex-mission",
       "accessed": "2026-09-18"
+     },
+     {
+      "id": "src-dpr",
+      "title": "UCSF Medical Center at Mission Bay",
+      "publisher": "DPR Construction (general contractor, own material)",
+      "url": "https://www.dpr.com/projects/ucsf-medical-center-at-mission-bay",
+      "accessed": "2026-09-18"
      }
     ],
-    "source": "UCSF, 2014-11",
+    "source": "UCSF, 2014-11; DPR Construction (general contractor, own material)",
     "origin": "record",
     "category": "status",
     "category_label": "Status",
@@ -211,10 +221,10 @@
     "approximate": false,
     "sources": [
      {
-      "title": "ucsf.edu"
+      "title": "https://www.dpr.com/projects/ucsf-medical-center-at-mission-bay"
      }
     ],
-    "source": "ucsf.edu",
+    "source": "https://www.dpr.com/projects/ucsf-medical-center-at-mission-bay",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -235,6 +245,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The opening milestone in the tables cited only ucsf.edu; it now cites DPR's project page, which says the 289-bed, six-story, 878,000 sq ft, $1.52 billion facility opened for patients on February 1, 2015, and the record's milestone and cost entry cite DPR alongside the UCSF news post (which blocks automated fetches). The '10 years of planning and 5 years of construction' split is not in DPR, which says 'over a decade of planning, design and construction', so the summary and notes now say that. The architect credit now follows McDonough's project page (Stantec, formerly Anshen+Allen, and William McDonough + Partners as architects) and DPR (Stantec Architecture), the hospital's use cites McDonough's page, the address cites OSM, the shape caveat's parcel example now reads 675 Mission Bay Blvd, about 12.2 acres, and the Wikimedia aerial credit names only the Commons username Firstcultural.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "ucsf_mission_bay_hospital",
+     "slug": "ucsf-medical-center-at-mission-bay",
+     "name": "UCSF Medical Center at Mission Bay",
+     "permalink": "https://pierandpoint.org/parcels/ucsf-medical-center-at-mission-bay/",
+     "api": "https://pierandpoint.org/api/v1/records/ucsf-medical-center-at-mission-bay.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-19",
     "kind": "added",
@@ -313,7 +352,7 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-05-20",
-    "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+    "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
     "license": "public-domain",
     "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
     "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
@@ -335,12 +374,12 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-02-10",
-    "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+    "credit": "Firstcultural, via Wikimedia Commons; CC0; downscaled to 1600 px",
     "license": "cc0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural. Read 2026-09-23.",
+    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area",
     "aerial": true,
     "focus": [
      0.35,
@@ -355,7 +394,8 @@
   ],
   "open_questions": [
    "UCSF's own official press-kit page and several ucsf.edu archive pages returned HTTP 403 during research and could not be read directly; the figures above come from a UCSF news post plus the contractor's own project page, not the hospital's own current fact sheet.",
-   "No openly licensed image was found; none is hosted here."
+   "No openly licensed image was found; none is hosted here.",
+   "The UCSF news post (2014-11) cited for the opening, the $1.5 billion cost and the hospital's use returns 403 to automated fetches and could not be read in the 2026-09 audit; DPR's project page (read) states the $1.52 billion cost, the 289-bed, six-story, 878,000 sq ft facility and the February 1, 2015 opening, and McDonough's page lists 'Children, women's, and cancer hospitals'. The earlier '10 years of planning and 5 years of construction' split appears only in the unreadable UCSF release; DPR says 'over a decade of planning, design and construction'."
   ],
   "sources": [
    {
@@ -410,7 +450,7 @@
     "url": "https://www.ucsfhealth.org/"
    }
   ],
-  "notes": "289-bed hospital complex (183-bed Benioff Children's Hospital, 36-bed Betty Irene Moore Women's Hospital, 70-bed Bakar Cancer Hospital), ~878,000 sq ft, ~$1.52 billion project cost. Architect of record Anshen+Allen (later absorbed into Stantec), design collaborator William McDonough + Partners. Opened Feb 1, 2015 after ~10 years of planning and 5 years of construction.",
+  "notes": "289-bed hospital complex (183-bed Benioff Children's Hospital, 36-bed Betty Irene Moore Women's Hospital, 70-bed Bakar Cancer Hospital), ~878,000 sq ft, ~$1.52 billion project cost. McDonough's project page credits Stantec (formerly Anshen+Allen) and William McDonough + Partners as architects; DPR's page credits Stantec Architecture. Opened Feb 1, 2015 (DPR) after over a decade of planning, design and construction.",
   "has_record_file": true,
   "last_verified": "2026-09-21",
   "tenants": [],

@@ -29,7 +29,7 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "Seven-acre Port of San Francisco waterfront park on the former shipyard shoreline between 19th and Mariposa Streets east of Illinois Street, built around historic Slipway 4 and two gantry cranes with a pocket beach, lawn and Bay Trail link. Planned from 2011, built under a $17.8 million contract awarded to Gordon N. Ball in November 2018, and opened September 30, 2020 at a total cost of $36.7 million; the playgrounds and dog run followed on December 12, 2025.",
+  "summary": "Seven-acre Port of San Francisco waterfront park on the former shipyard shoreline between 19th and Mariposa Streets east of Illinois Street, built around historic Slipway 4 and a stabilized historic gantry crane, with a pocket beach and lawn, as a Blue Greenway waterfront park. Planned from 2011, built under a $17.8 million contract awarded to Gordon N. Ball in November 2018, and opened September 30, 2020 at a total cost of $36.7 million; the playgrounds and dog run followed on December 12, 2025.",
   "summary_sources": [
    "src-port-capital-plan-2024",
    "src-ccp-2018-11",
@@ -42,10 +42,10 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "HIGH CONFIDENCE -- real, community-surveyed OSM polygon (not a hand trace or estimate), independently confirmed via its own leisure=park/operator/wikidata tags. Its area (~6.26 acres) is somewhat smaller than the ~7-8 acres commonly cited for the park in press/Port sources -- likely because this specific traced way covers the core landscaped park and not every associated feature (e.g. the boat launch apron or beach edge); not adjusted to match the citation since the citation isn't itself a boundary.",
+    "accuracy_caveat": "HIGH CONFIDENCE -- real, community-surveyed OSM polygon (not a hand trace or estimate), independently confirmed via its own leisure=park/operator/wikidata tags. Its area (~6.26 acres) is somewhat smaller than the ~7 acres given on the Port's project page (the Port's 2018 Item 12B calls it an 'approximately eight acre site') -- likely because this specific traced way covers the core landscaped park and not every associated feature (e.g. the boat launch apron or beach edge); not adjusted to match the citation since the citation isn't itself a boundary.",
     "digitized_from": "OpenStreetMap (way 853562207, leisure=park, operator=Port of San Francisco, wikidata=Q108550863) -- a real, community-surveyed park boundary, not a diagram trace.",
-    "why_no_real_parcel": "Port-owned public open space with no subdivided Assessor parcel of its own.",
-    "regulatory_context": "Delivered under the Port of San Francisco's Pier 70 Preferred Master Plan (2010) as the public-open-space component of the overall 69-acre Pier 70 site, distinct from and adjacent to Brookfield's 28-acre D4D redevelopment parcel this project's other Pier 70 features are drawn from. Centered on two restored historic shipyard cranes; includes a human-powered boating center and public waterfront/beach access."
+    "why_no_real_parcel": "Port-owned public open space (OSM operator tag: Port of San Francisco). DataSF's Assessor parcels show active lots at this location without street addresses (for example lot 3941041, added 2019-02-07), so whether the park has its own Assessor lot was not established from a cited source; this feature uses the OSM boundary instead.",
+    "regulatory_context": "Delivered under the Port of San Francisco's Pier 70 Preferred Master Plan (2010) as the public-open-space component of the Pier 70 area (Port Item 12B, Sept 2018: identified in the 2010 Preferred Master Plan; HPC 2013 packet: a separate project), distinct from and adjacent to Brookfield's 28-acre D4D redevelopment parcel this project's other Pier 70 features are drawn from. Built around a stabilized historic gantry crane and the historic Slipway 4 (Port Resolution 18-61 lists 'stabilization of historic gantry crane (non-functional)'; the crane cabs were eliminated); a human-powered boating center was listed only as a future development opportunity, and Dogpatch Paddle rentals operate from the adjacent YMCA building (Port park page)."
    }
   },
   "centroid": {
@@ -71,7 +71,7 @@
    },
    {
     "key": "location",
-    "value": "Between 19th and Mariposa Streets east of Illinois Street; entrance at 18th/19th and Illinois",
+    "value": "Between 19th and Mariposa Streets east of Illinois Street (the Port's 2025 release says the park is at 18th and Illinois streets)",
     "sources": [
      "src-ccp-2018-09",
      "src-port-ccp-play-2025"
@@ -79,7 +79,7 @@
    },
    {
     "key": "designer",
-    "value": "AECOM (master planning, preliminary and final design, construction support)",
+    "value": "AECOM (planning and design consultant: master plan, cost estimate, phasing, design and construction support; the 2018 report says the Port's detail design was at SFPW's option)",
     "sources": [
      "src-ccp-2018-09"
     ]
@@ -93,11 +93,13 @@
    },
    {
     "key": "features",
-    "value": "Pocket beach with Bay access for kayaks and paddle boards, restored Slipway 4, two historic gantry cranes, multi-purpose lawn with picnic and barbecue areas, Crane Plaza, dog run, two play areas, restrooms, Bay Trail / Blue Greenway link, sediment cap along the shoreline",
+    "value": "Pocket beach with Bay access for kayaks and paddle boards (Port park page), restored Slipway 4, a stabilized historic gantry crane (Res. 18-61; the 2015 approval refers to 'cranes'), multi-purpose lawn with picnic and barbecue areas, Crane Plaza, dog run, two play areas, restrooms, Blue Greenway / Bay Trail connections, sediment cap along the shoreline",
     "sources": [
      "src-cpc-ifd-2017",
      "src-ccp-2018-09",
-     "src-port-ccp-play-2025"
+     "src-port-ccp-play-2025",
+     "src-ccp-park-page",
+     "src-ccp-2018-11"
     ]
    },
    {
@@ -117,7 +119,7 @@
    },
    {
     "key": "building_49",
-    "value": "Historic Building 49 retrofitted for restrooms, an aquatic (human-powered boating) center and concessions; core-and-shell work done July 2021; the Port's park page lists a YMCA Dogpatch wellness center and Dogpatch Paddle rentals adjacent to the park",
+    "value": "Historic Building 49 retrofitted for park support and restrooms (Res. 18-61); a human-powered boat aquatic center, visitors' center and cafe were listed only as future development opportunities; core-and-shell retrofit and the permanent public restrooms completed July 2021 (Capital Plan); the Port's park page lists a YMCA Dogpatch wellness center and Dogpatch Paddle rentals adjacent to the park",
     "sources": [
      "src-ccp-2018-11",
      "src-port-capital-plan-2024",
@@ -129,7 +131,8 @@
     "value": "Delivered by the Port under the 2010 Preferred Master Plan, separate from Brookfield's 28-Acre Site; the plan's two development 'pads' along Illinois Street were dropped at community request during park design review",
     "sources": [
      "src-ccp-2018-09",
-     "src-hpc-2013"
+     "src-hpc-2013",
+     "src-port-hc-2019"
     ]
    }
   ],
@@ -191,7 +194,7 @@
    },
    {
     "amount_usd": 3100000,
-    "what": "Budget set aside from park funding for the Building 49 scope (restrooms, aquatic center, concessions), with a further ~$4 million hoped for from Parks Alliance fundraising",
+    "what": "Budget set aside from park funding for the Building 49 scope of work (park support and restrooms; a human-powered boat aquatic center, visitors' center and cafe were listed only as future development opportunities); a separate ~$4 million, for the crane tops and children's play structures, was to be raised with the San Francisco Parks Alliance and the Dogpatch community",
     "date": "2018-11-13",
     "approximate": true,
     "sources": [
@@ -264,7 +267,7 @@
     "date_label": "Jun 14, 2011",
     "status": null,
     "status_label": null,
-    "text": "Port Commission awards the master planning and preliminary design contract (AECOM, selected competitively); initial estimate about $30 million for the whole park, with $10 million secured from the 2008 Parks GO Bond",
+    "text": "Port Commission calendar lists a request to award the master planning and preliminary design contract (June 14, 2011; AECOM, selected competitively); initial estimate about $30 million for the whole park, with $10 million secured from the 2008 Parks GO Bond (the cited hearing index returned HTTP 403, so the award itself is confirmed only by the 2018 report's statement that the Commission approved a contract with AECOM)",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -626,15 +629,15 @@
     "sources": [
      {
       "id": "src-port-capital-plan-2024",
-      "title": "Port of San Francisco 10-Year Capital Plan FY2024-2033 (draft presented May 9, 2023)",
+      "title": "Port of San Francisco 10-Year Capital Plan FY2024-2033 (draft)",
       "publisher": "Port of San Francisco",
       "url": "https://www.sfport.com/files/2023-05/050923-9a.1_capital_plan_draft_2024-2033.pdf",
       "accessed": "2026-09-17",
-      "date": "2023-05-09",
+      "date": "2023-05",
       "overview": true
      }
     ],
-    "source": "Port of San Francisco, 2023-05-09",
+    "source": "Port of San Francisco, 2023-05",
     "origin": "record",
     "category": "status",
     "category_label": "Status",
@@ -737,15 +740,15 @@
     "sources": [
      {
       "id": "src-port-capital-plan-2024",
-      "title": "Port of San Francisco 10-Year Capital Plan FY2024-2033 (draft presented May 9, 2023)",
+      "title": "Port of San Francisco 10-Year Capital Plan FY2024-2033 (draft)",
       "publisher": "Port of San Francisco",
       "url": "https://www.sfport.com/files/2023-05/050923-9a.1_capital_plan_draft_2024-2033.pdf",
       "accessed": "2026-09-17",
-      "date": "2023-05-09",
+      "date": "2023-05",
       "overview": true
      }
     ],
-    "source": "Port of San Francisco, 2023-05-09",
+    "source": "Port of San Francisco, 2023-05",
     "origin": "record",
     "category": "milestone",
     "category_label": "Milestone",
@@ -812,10 +815,39 @@
   ],
   "changes": [
    {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The record now describes a stabilized historic gantry crane (not two restored cranes), a boating center and cafe as future development opportunities for Building 49 rather than built scope, and the ~$4 million fundraising as for the crane tops and play structures; the entrance claim and 'preliminary and final design' were removed; the 2017 photo caption no longer calls Nov 2018 a construction start; the Tbo47 panorama is dated 2026-06-28 from its Exif date on Wikimedia Commons; the schematic-design exhibit is dated by its Oct. 8, 2015 memo and Oct. 13 meeting; the map notes no longer say the park has no Assessor lot, that Figure 6.4.2 covers only 28 acres or that the 69-acre plan has four components with ~5- and ~28-acre parts; two changelog rows about Port Commission agenda items now say they were requests, not approvals; the 2011 award is described as a request listed by the Port.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_crane_cove_park",
+     "slug": "crane-cove-park",
+     "name": "Crane Cove Park",
+     "permalink": "https://pierandpoint.org/parcels/crane-cove-park/",
+     "api": "https://pierandpoint.org/api/v1/records/crane-cove-park.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-26",
     "kind": "added",
     "kind_label": "Added",
-    "text": "10B. Retroactive authorization to modify Construction Contract No. 2812, Crane Cove Park Improvements and 19th St. Parking Lot, to extend the substantial and final completion date",
+    "text": "Consent item 10B on the December 8, 2020 Port Commission agenda requested retroactive authorization to modify Construction Contract No. 2812, Crane Cove Park Improvements and 19th St. Parking Lot, to extend the substantial and final completion date; the agenda does not show that it was approved.",
     "source": "https://sanfrancisco.granicus.com/AgendaViewer.php?view_id=92&clip_id=37252",
     "sources": [
      {
@@ -844,7 +876,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "Request to authorize Port staff to modify Construction Contract No. 2814R, Crane Cove Park Building 49 Re-bid, to increase the authorization for the contract amount not to exceed an additional $565,000",
+    "text": "An April 12, 2022 Port Commission consent-calendar item requested authority to modify Construction Contract No. 2814R, Crane Cove Park Building 49 Re-bid, to increase the contract amount by an additional amount not to exceed $565,000; the agenda does not show the vote or the modification.",
     "source": "https://sanfrancisco.granicus.com/AgendaViewer.php?view_id=92&clip_id=40995",
     "sources": [
      {
@@ -902,11 +934,11 @@
     "date": "2026-09-17",
     "kind": "added",
     "kind_label": "Added",
-    "text": "Crane Cove Park added with its real OpenStreetMap boundary (Port of SF park, opened 2020). It sits outside the Pier 70 D4D figure, so it was never traced from it.",
-    "source": "OpenStreetMap way 853562207",
+    "text": "Crane Cove Park added with its real OpenStreetMap boundary (a Port of SF park, operator tag per OpenStreetMap; the Port's FY2024-33 Capital Plan says 'The park opened to the public on September 30, 2020'). It sits outside the Pier 70 D4D figure, so it was never traced from it.",
+    "source": "OpenStreetMap way 853562207; Port 10-Year Capital Plan FY2024-2033 (https://www.sfport.com/files/2023-05/050923-9a.1_capital_plan_draft_2024-2033.pdf)",
     "sources": [
      {
-      "title": "OpenStreetMap way 853562207"
+      "title": "OpenStreetMap way 853562207; Port 10-Year Capital Plan FY2024-2033 (https://www.sfport.com/files/2023-05/050923-9a.1_capital_plan_draft_2024-2033.pdf)"
      }
     ],
     "category": "open_space",
@@ -949,9 +981,10 @@
     "license": "cc0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Crane_Cove_Park.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Crane_Cove_Park.jpg",
-    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 1.0 (public domain dedication), credited 'Own work' by Tbo47. Read 2026-09-19. No taken date recorded: Commons gave only an upload timestamp for this file, not a photographed date, so `taken` is left unset rather than guessed.",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 1.0 (public domain dedication), credited 'Own work' by Tbo47. Read 2026-09-19. The file page's date field reads 'According to Exif data 2026-06-28', recorded here as taken.",
     "appeal": 3,
     "appeal_note": "A wide panorama of the beach, cranes and moored boats; strong content but the extreme aspect ratio crops awkwardly to the card panel.",
+    "taken": "2026-06-28",
     "url": "https://pierandpoint.org/assets/img/wikimedia_crane_cove_park_panorama.jpg"
    },
    {
@@ -963,7 +996,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Abandoned_cranes_in_San_Francisco.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Abandoned_cranes_in_San_Francisco.jpg",
     "license_note": "Wikimedia Commons' license box on the file page confirms CC BY-SA 4.0, credited 'Own work' by Dllu. Read 2026-09-19.",
-    "caption": "The two preserved gantry cranes standing in the fenced industrial yard, before construction (Feb 2017, within two years of the park's Nov 2018 construction-start milestone)",
+    "caption": "Cranes standing in the fenced industrial yard, before construction (Feb 2017; the park's construction contract was awarded in Nov 2018 and construction began in January 2019 per NBC Bay Area)",
     "appeal": 3,
     "appeal_note": "Clear shot of the cranes, but a fenced industrial-yard setting rather than the finished park.",
     "url": "https://pierandpoint.org/assets/img/wikimedia_crane_cove_cranes_2017.jpg"
@@ -972,11 +1005,11 @@
     "path": "data/manual/images/pier70/crane_cove_park_schematic_design_ex1.jpg",
     "kind": "document",
     "taken": "2015-10",
-    "credit": "Port of San Francisco, Crane Cove Park schematic design, Exhibit 1 (Port Commission staff report, Oct. 15, 2015 approval item)",
+    "credit": "Port of San Francisco, Crane Cove Park schematic design, Exhibit 1 (Port Commission staff report dated Oct. 8, 2015, for the Oct. 13, 2015 meeting)",
     "license": "public-record",
     "source_url": "https://sfport.com/sites/default/files/2015-10-15%20Staff%20Report%20Crane%20Cove.pdf#page=11",
     "license_evidence": "https://sfport.com/sites/default/files/2015-10-15%20Staff%20Report%20Crane%20Cove.pdf",
-    "license_note": "Exhibit attached to a Port Commission staff report (Oct. 15, 2015, approving the project and a GO Bond sale); a commission agenda exhibit is public record. Read 2026-09-19.",
+    "license_note": "Exhibit attached to a Port Commission staff report (dated Oct. 8, 2015, for the Oct. 13, 2015 meeting, approving the project and a GO Bond sale); a commission agenda exhibit is public record. Read 2026-09-19.",
     "caption": "\"Crane Cove Park schematic design\" (Exhibit 1), labeled in the drawing itself",
     "source_crop": "python3 src/extract_pdf_figure.py https://sfport.com/sites/default/files/2015-10-15%20Staff%20Report%20Crane%20Cove.pdf 11 data/manual/images/pier70/crane_cove_park_schematic_design_ex1.jpg --rect auto",
     "figure": "illustrative",
@@ -989,11 +1022,11 @@
     "kind": "rendering",
     "scope": "site",
     "taken": "2022-04-26",
-    "credit": "Port of San Francisco / SF Planning, Pier 70 Special Use District Design for Development (D4D, adopted 2017, updated April 26, 2022), Figure 1.1.2, p.5",
+    "credit": "Port of San Francisco / SF Planning, Pier 70 Special Use District Design for Development (D4D, updated April 26, 2022; approved in 2017 per Port Item 9B, Resolution 17-45), Figure 1.1.2, p.5",
     "license": "public-record",
     "source_url": "https://www.sfport.com/media/8123/download?inline=",
     "license_evidence": "https://www.sfport.com/media/8123/download?inline=",
-    "license_note": "An adopted Port of San Francisco / SF Planning planning document (the Pier 70 Special Use District Design for Development); an adopted D4D is a public-record planning document. Read 2026-09-22.",
+    "license_note": "A Port of San Francisco / SF Planning planning document approved in 2017 (Port Item 9B, Resolution 17-45) (the Pier 70 Special Use District Design for Development); an adopted D4D is a public-record planning document. Read 2026-09-22.",
     "caption": "Figure 1.1.2: Site Location and Context, Pier 70 Special Use District Design for Development (D4D), p.5",
     "source_crop": "python3 src/extract_pdf_figure.py https://www.sfport.com/media/8123/download?inline= 21 data/manual/images/pier70/d4d_p5_site_context.jpg --rect auto --dpi 300",
     "focus": [
@@ -1010,7 +1043,8 @@
   "open_questions": [
    "No image is hosted: the Port's park photographs carry no stated license, and no Wikimedia Commons or public-domain photo was checked in this pass. The Port's opening-day photos are linked from the sources.",
    "The 2015 approval spoke of a ten-acre park delivered in phases; whether a Phase II (the remaining acreage, to be funded from IFD proceeds per the 2018 report) is still planned is not stated in any later document found.",
-   "The exact total spent through 2025, including the playground and dog-run work, is not published; the $36.7 million figure is from the FY2024-33 capital plan."
+   "The exact total spent through 2025, including the playground and dog-run work, is not published; the $36.7 million figure is from the FY2024-33 capital plan.",
+   "The Port's 'presentations and documents - Crane Cove Park' hearing index returned HTTP 403 on 2026-09-29 (a Wayback snapshot exists: web.archive.org/web/20251208070941/https://www.sfport.com/projects-programs/completed-projects/presentations-and-documents-crane-cove-park); the June 14, 2011 award date rests on the Port project page's list entry 'Request to award master planning and preliminary design'."
   ],
   "sources": [
    {
@@ -1070,7 +1104,7 @@
    {
     "id": "src-cpc-ifd-2017",
     "title": "Pier 70 Special Use District Resolutions of Intent (IFD Sub-Project Areas G-2/G-3/G-4 and IRFD No. 2, Hoedown Yard), presentation to the Capital Planning Committee",
-    "publisher": "Port of San Francisco / OEWD",
+    "publisher": "Port of San Francisco",
     "url": "https://onesanfrancisco.org/sites/default/files/2019-05/Agenda%20Item%206-%20Pier%2070%20IFD%20Presentation.pdf",
     "accessed": "2026-09-17",
     "date": "2017-09-11"
@@ -1093,11 +1127,11 @@
    },
    {
     "id": "src-port-capital-plan-2024",
-    "title": "Port of San Francisco 10-Year Capital Plan FY2024-2033 (draft presented May 9, 2023)",
+    "title": "Port of San Francisco 10-Year Capital Plan FY2024-2033 (draft)",
     "publisher": "Port of San Francisco",
     "url": "https://www.sfport.com/files/2023-05/050923-9a.1_capital_plan_draft_2024-2033.pdf",
     "accessed": "2026-09-17",
-    "date": "2023-05-09",
+    "date": "2023-05",
     "overview": true
    },
    {
@@ -1111,7 +1145,7 @@
    {
     "id": "src-d4d",
     "title": "Pier 70 Special Use District Design for Development (D4D), updated April 26, 2022",
-    "publisher": "Port of San Francisco / SF Planning (adopted planning document; project team SITELAB urban studio)",
+    "publisher": "Port of San Francisco / SF Planning (planning document approved in 2017 per Port Item 9B, Resolution 17-45; project team SITELAB urban studio)",
     "url": "https://www.sfport.com/media/8123/download?inline=",
     "accessed": "2026-09-17",
     "date": "2022-04-26",
@@ -1131,11 +1165,24 @@
     "publisher": "Port Commission",
     "url": "https://sanfrancisco.granicus.com/AgendaViewer.php?view_id=92&clip_id=37252",
     "accessed": "2026-09-26"
+   },
+   {
+    "id": "src-port-hc-2019",
+    "title": "Port Commission staff report, Item 12A: Project Update for the Pier 70 Historic Core (Jan 4, 2019)",
+    "publisher": "Port of San Francisco",
+    "url": "https://www.sfport.com/media/4465/download",
+    "accessed": "2026-09-29",
+    "date": "2019-01-04"
+   },
+   {
+    "id": null,
+    "title": "sfport.com/sites/default/files/2026-08/item_11a_p70_project_update_-_term_sheet_overview_-_information.pdf",
+    "url": "https://www.sfport.com/sites/default/files/2026-08/item_11a_p70_project_update_-_term_sheet_overview_-_information.pdf"
    }
   ],
-  "notes": "Added 2026-09-17 after a user question about whether this map covers the full Pier 70 master plan surfaced that Figure 6.4.2 only covers Brookfield's 28 of the site's 69 acres.",
+  "notes": "Added 2026-09-17 after a user question about whether this map covers the full Pier 70 master plan surfaced that Figure 6.4.2 does not include Crane Cove Park; the figure covers the Pier 70 Special Use District (the 28-Acre Site plus Parcels K North and K South and the Hoedown Yard, about 35 acres per Port Item 11A), not the whole Pier 70 area.",
   "has_record_file": true,
-  "last_verified": "2026-09-26",
+  "last_verified": "2026-09-29",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

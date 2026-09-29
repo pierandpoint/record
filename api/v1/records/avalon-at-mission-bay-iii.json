@@ -39,7 +39,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- official DataSF Assessor parcel boundary (blklot 8705006), ~6093 sq m, not a hand trace or plan estimate. 353-383 King St, 260 units per secondary sources; grand opening June 18, 2009 per AvalonBay's own investor-relations press release. This is the whole site/land parcel, not just the building's rooftop -- it includes any courtyard, landscaping or parking within the lot line. The parcel is condo-mapped for ownership purposes across many individually owned per-unit lots sharing this same footprint (confirmed against data/raw/parcels.geojson), so no single blklot represents one owner and it cannot be joined via status.csv the way a single-owner parcel can.",
+    "accuracy_caveat": "REAL -- official DataSF Assessor parcel boundary (blklot 8705006), ~6093 sq m, not a hand trace or plan estimate. 353-383 King St and 260 units per the DataSF Assessor roll (parcel 8705006; AvalonBay's release also gives 260 units, and DataSF Parcels gives the address range 200-298 Berry St); grand opening June 18, 2009 per AvalonBay's own investor-relations press release. This is the whole site/land parcel, not just the building's rooftop -- it includes any courtyard, landscaping or parking within the lot line. Correction 2026-09-29: this is a single Assessor parcel; no per-unit condominium lots map to 8705006 in data/raw/parcels.geojson (the earlier condo-mapping statement was wrong), and why it is not joined via status.csv is not established here.",
     "digitized_from": "DataSF Parcels -- Active and Retired (blklot 8705006, real cadastral land-parcel boundary)"
    }
   },
@@ -55,15 +55,15 @@
     "date_label": "Dec 7, 2007",
     "status": "under_construction",
     "status_label": "Under construction",
-    "text": "Avalon at Mission Bay Phase III (addressed as 240 Berry St in contemporary coverage; same 260-unit, mid-2009-delivery project as 353 King St) tops out and starts its ascent",
+    "text": "Avalon at Mission Bay Phase III (addressed as 240 Berry St in contemporary coverage; same project as 353 King St) under way: SocketSite's post 'Starts Its Ascent' notes a construction webcam and flyers advertising 260 apartments, a 17-story tower and an 8-story mid-rise, coming mid-2009",
     "expected": false,
     "approximate": false,
     "sources": [
      {
-      "title": "socketsite.com"
+      "title": "https://socketsite.com/archives/2007/12/avalon_at_mission_bay_phase_iii_240_berry_starts_to_ris.html"
      }
     ],
-    "source": "socketsite.com",
+    "source": "https://socketsite.com/archives/2007/12/avalon_at_mission_bay_phase_iii_240_berry_starts_to_ris.html",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -92,10 +92,10 @@
     "approximate": false,
     "sources": [
      {
-      "title": "investors.avalonbay.com"
+      "title": "https://investors.avalonbay.com/news-events/press-releases/detail/333/avalonbay-celebrates-grand-opening-of-avalon-at-mission-bay-iii-a-community-committed-to-sustainable-living"
      }
     ],
-    "source": "investors.avalonbay.com",
+    "source": "https://investors.avalonbay.com/news-events/press-releases/detail/333/avalonbay-celebrates-grand-opening-of-avalon-at-mission-bay-iii-a-community-committed-to-sustainable-living",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -115,7 +115,37 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The geometry notes said the parcel's many per-unit condo lots share its footprint; data/raw/parcels.geojson has only the parcel itself, so the claim was replaced with a correction. The 353-383 King St address and 260 units now cite the DataSF Assessor roll, the 'three phases along King St' note was reduced to what AvalonBay's release says, the 2009 grand-opening milestone links the release, and the 2007 milestone links the SocketSite post and no longer says the building topped out.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_avalon_phase_iii",
+     "slug": "avalon-at-mission-bay-iii",
+     "name": "Avalon at Mission Bay III",
+     "permalink": "https://pierandpoint.org/parcels/avalon-at-mission-bay-iii/",
+     "api": "https://pierandpoint.org/api/v1/records/avalon-at-mission-bay-iii.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/mission_bay/owner_20260923_102212.jpg",
@@ -175,11 +205,16 @@
     "id": null,
     "title": "data.sfgov.org/Geographic-Locations-and-Boundaries/Parcels-Active-and-Retired/acdm-wktn",
     "url": "https://data.sfgov.org/Geographic-Locations-and-Boundaries/Parcels-Active-and-Retired/acdm-wktn"
+   },
+   {
+    "id": null,
+    "title": "data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8705006",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8705006"
    }
   ],
-  "notes": "One of three AvalonBay phases along King St.",
+  "notes": "Third phase of AvalonBay's Mission Bay development (AvalonBay press release, June 18, 2009), managed together with Avalon at Mission Bay North; the DataSF Assessor roll lists this parcel at 353-383 King St.",
   "has_record_file": true,
-  "last_verified": "2026-09-27",
+  "last_verified": "2026-09-29",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

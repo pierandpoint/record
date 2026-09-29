@@ -3,10 +3,11 @@
   "names": [
     "Strata at Mission Bay"
   ],
-  "summary": "Strata at Mission Bay is a roughly 192-193 unit apartment building at 555 Mission Rock St; SocketSite reported in January 2009 that its units were scheduled to come online that March, and DataSF Assessor records give 2009 as the building's construction-completion year.",
+  "summary": "Strata at Mission Bay is a roughly 192-193 unit apartment building at 555 Mission Rock St; DBI records its construction permit complete on 2009-07-15 and DataSF Assessor records give 2009 as the building's year built; SocketSite reported in January 2009 that its units were expected to come online that March.",
   "summary_sources": [
     "src-socketsite-strata-2009",
-    "src-datasf-assessor-strata"
+    "src-datasf-assessor-strata",
+    "src-datasf-permit-strata"
   ],
   "milestones": [
     {
@@ -20,15 +21,16 @@
       "approximate": false
     },
     {
-      "date": "2009-03",
+      "date": "2009-07-15",
       "status": "complete",
-      "text": "Strata at Mission Bay's rental units come online, per contemporaneous real estate press; DataSF Assessor records also give 2009 as this building's construction-completion year",
+      "text": "DBI recorded the construction permit (8 stories, 192 dwelling units) complete on 2009-07-15, and the Assessor gives 2009 as the year built. SocketSite had forecast in January 2009 that the rental units would come online that March and reported in February 2009 that move-ins were scheduled for March 1 with 'a long way to go'; no source read confirms when tenants moved in.",
       "sources": [
-        "src-socketsite-strata-2009",
-        "src-datasf-assessor-strata"
+        "src-datasf-permit-strata",
+        "src-datasf-assessor-strata",
+        "src-socketsite-strata-2009"
       ],
       "expected": false,
-      "approximate": true
+      "approximate": false
     }
   ],
   "costs": [
@@ -51,7 +53,7 @@
       "kind": "now",
       "scope": "site",
       "taken": "2024-05-20",
-      "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+      "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
       "license": "public-domain",
       "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
       "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
@@ -72,12 +74,12 @@
       "kind": "now",
       "scope": "site",
       "taken": "2024-02-10",
-      "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+      "credit": "Firstcultural, via Wikimedia Commons; CC0; downscaled to 1600 px",
       "license": "cc0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
       "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-      "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-      "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+      "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural. Read 2026-09-23.",
+      "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area",
       "aerial": true,
       "focus": [
         0.35,
@@ -129,7 +131,8 @@
     "No opening date found for Insomnia Cookies (1215 4th St): checked its own Yelp listing and site for a firm date; retail_confirmed.csv's own opened field is also blank.",
     "No opening date found for One Medical (1285 4th St): checked its own location page for a firm date; retail_confirmed.csv's own opened field is also blank.",
     "No opening date found for The UPS Store #6609 (1225 4th St): checked its own location page for a firm date; retail_confirmed.csv's own opened field is also blank.",
-    "No opening date found for Teappo (1225 4th St Unit 616): checked its own site for a firm date; retail_confirmed.csv's own opened field is also blank."
+    "Teappo was removed from the retail table: shopteappo.com is an online Shopify store with no address or storefront. 1225 4th St is The UPS Store #6609's address, and DataSF business registrations there use unit/PMB numbers, so 'Unit 616' is not evidence of a storefront.",
+    "Insomnia Cookies (1215 4th St) has not been re-confirmed as open: its Yelp listing returns 403 to automated fetches. A DataSF business registration exists at that address from 2022-02-16 with no end date, but a registration is not evidence of an operating storefront; the owner should check Insomnia Cookies' own store locator."
   ],
   "last_verified": "2026-09-21"
 }

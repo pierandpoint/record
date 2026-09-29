@@ -29,10 +29,12 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "A 7-10 story mid-rise student/faculty housing building at 525 Nelson Rising Lane, one of four connected buildings (with Hearst Tower, the West and South buildings) in UCSF's Mission Bay housing complex, built together and opened together around 2005.",
+  "summary": "A 7-10 story mid-rise student and postdoctoral-scholar housing building at 525 Nelson Rising Lane (OpenStreetMap), one of four buildings in UCSF's Mission Bay Block 20 housing complex (with Hearst Tower and the West and South buildings, per UCSF's housing page). The November 2002 UC Regents item anticipated full occupancy of the complex by October 2005; no source read states when it actually opened.",
   "summary_sources": [
    "src-langan-housing",
-   "src-ucsf-housing"
+   "src-ucsf-housing",
+   "src-ucregents-2002-11-block20",
+   "src-osm-housing-north"
   ],
   "shape": {
    "kind": "approximate",
@@ -40,7 +42,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against data/raw/parcels.geojson and DataSF's Assessor tax roll -- e.g. blklot 8711507 at 675 Nelson Rising Lane alone is ~13 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against data/raw/parcels.geojson and DataSF's Assessor tax roll -- e.g. blklot 8711507 (675 Mission Bay Blvd in the repo's DataSF parcels copy) alone is about 12.2 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
     "digitized_from": "OpenStreetMap (way 84808588, 525 Nelson Rising Lane)"
    }
   },
@@ -65,16 +67,18 @@
    },
    {
     "key": "use",
-    "value": "UCSF student and faculty housing",
+    "value": "UCSF student, postdoctoral scholar and family housing",
     "sources": [
-     "src-ucsf-housing"
+     "src-langan-housing",
+     "src-ucregents-2002-11-block20"
     ]
    },
    {
     "key": "complex",
-    "value": "One of four connected buildings (Hearst Tower, North Building, West Building, South Building) totaling 298,800 sq ft for 750+ residents around a shared at-grade courtyard",
+    "value": "One of four connected buildings (Hearst Tower, North Building, West Building, South Building) totaling 298,800 sq ft for more than 750 students, postdoctoral scholars and their families (Langan) around a shared at-grade courtyard",
     "sources": [
-     "src-ucsf-housing"
+     "src-ucsf-housing",
+     "src-langan-housing"
     ]
    }
   ],
@@ -85,7 +89,7 @@
     "date_label": "Nov 13, 2002",
     "status": "planned",
     "status_label": "Planned",
-    "text": "UC Regents approve a $112,816,000 budget and external financing for the Mission Bay Block 20 Housing and Retail Project -- one 15-story tower (Hearst Tower) and three mid-rise buildings, including this one, around a shared courtyard, 298,800 residential asf and 430 apartment units total -- with construction to begin June 2003 and full occupancy anticipated by October 2005",
+    "text": "UC Regents' Grounds and Buildings and Finance committees approve, and vote to present to the Board, a $112,816,000 budget and external financing for the Mission Bay Block 20 Housing and Retail Project -- one 15-story tower (Hearst Tower) and three mid-rise buildings, including this one, around a shared courtyard, 298,800 residential asf and 430 apartment units total -- with construction to begin June 2003 and full occupancy anticipated by October 2005",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -118,23 +122,24 @@
     "relation": "tracked"
    },
    {
-    "date": "2005",
-    "date_label": "~2005",
+    "date": "2005-10",
+    "date_label": "2005",
     "status": "complete",
     "status_label": "Complete",
-    "text": "UCSF Mission Bay Housing North Building opens",
-    "expected": false,
+    "text": "Full occupancy of the Block 20 student housing complex anticipated by October 2005 (November 2002 Regents item); no source read states when this building actually opened",
+    "expected": true,
     "approximate": true,
     "sources": [
      {
-      "id": "src-langan-housing",
-      "title": "UCSF Mission Bay - Student Housing",
-      "publisher": "Langan (engineering firm, own material)",
-      "url": "https://www.langan.com/portfolio/ucsf-mission-bay-student-housing",
-      "accessed": "2026-09-18"
+      "id": "src-ucregents-2002-11-block20",
+      "title": "Amendment of the Budget for Capital Improvements and the Capital Improvement Program and Approval of External Financing for Mission Bay Block 20 Housing and Retail Project, San Francisco Campus (Committee on Grounds and Buildings / Committee on Finance, joint meeting, November 13, 2002)",
+      "publisher": "The Regents of the University of California",
+      "date": "2002-11",
+      "url": "https://regents.universityofcalifornia.edu/minutes/2002/gbf1102.pdf",
+      "accessed": "2026-09-21"
      }
     ],
-    "source": "Langan (engineering firm, own material)",
+    "source": "The Regents of the University of California, 2002-11",
     "origin": "record",
     "category": "status",
     "category_label": "Status",
@@ -154,19 +159,19 @@
     "relation": "tracked"
    },
    {
-    "date": "2005-06",
-    "date_label": "~2005",
+    "date": "2005-10",
+    "date_label": "2005",
     "status": "complete",
     "status_label": "Complete",
-    "text": "UCSF Mission Bay Housing North Building opens",
-    "expected": false,
+    "text": "UCSF Mission Bay Housing North Building: full occupancy of the Block 20 housing complex anticipated by October 2005 (UC Regents, Nov 2002); no source read states the actual opening",
+    "expected": true,
     "approximate": true,
     "sources": [
      {
-      "title": "langan.com; campuslifeserviceshome.ucsf.edu"
+      "title": "https://regents.universityofcalifornia.edu/minutes/2002/gbf1102.pdf"
      }
     ],
-    "source": "langan.com; campuslifeserviceshome.ucsf.edu",
+    "source": "https://regents.universityofcalifornia.edu/minutes/2002/gbf1102.pdf",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -187,6 +192,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The record no longer says the building opened around 2005 or in June 2005: no source read gives an opening date (Langan gives none and UCSF's housing page could not be read), so the milestone now carries the October 2005 full occupancy that the November 2002 Regents item anticipated, marked expected. The Regents approval is described as the committees approving and forwarding to the Board. Use now reads student, postdoctoral scholar and family housing (Langan, Regents) instead of student and faculty, the complex facts cite Langan, the parcel-size example says about 12.2 acres at 675 Mission Bay Blvd, the SOM architect attribution cites arcCA Digest, and the aerial photo's caption no longer says 'from a departing flight'.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "ucsf_housing_north",
+     "slug": "ucsf-mission-bay-housing-north-building",
+     "name": "UCSF Mission Bay Housing North Building",
+     "permalink": "https://pierandpoint.org/parcels/ucsf-mission-bay-housing-north-building/",
+     "api": "https://pierandpoint.org/api/v1/records/ucsf-mission-bay-housing-north-building.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-23",
     "kind": "added",
@@ -223,11 +257,11 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-05-20",
-    "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+    "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
     "license": "public-domain",
     "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
     "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
-    "license_note": "USDA's data.gov catalog record for NAIP imagery sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0); the USDA FSA policies page says public-domain information may be freely distributed with credit requested ('U.S. Department of Agriculture, Farm Service Agency'). Read 2026-09-22.",
+    "license_note": "USDA's data.gov catalog record for NAIP imagery sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0); the USDA FSA policies page says public-domain information may be freely distributed with credit requested ('U.S. Department of Agriculture, Farm Service Agency'). Read 2026-09-22. The data.gov record names the publisher as USDA's Farm Production and Conservation Business Center (FPAC-BC); date 2024-05-20 from the NAIP ImageServer tile name m_3712213_se_10_060_20240520 (checked 2026-09-29).",
     "caption": "USDA NAIP aerial orthophoto (2024 flight), cropped to the Mission Bay project area and its immediate surroundings",
     "aerial": true,
     "focus": [
@@ -245,12 +279,12 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-02-10",
-    "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+    "credit": "Firstcultural (Alfred Twu, per the Commons user page User:Firstcultural), via Wikimedia Commons; CC0; downscaled to 1600 px",
     "license": "cc0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural; the Commons user page User:Firstcultural gives the name Alfred Twu. File page read 2026-09-23, user page read 2026-09-29.",
+    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area",
     "aerial": true,
     "focus": [
      0.35,
@@ -269,7 +303,8 @@
    "No openly licensed image was found; none is hosted here.",
    "Images: no plan drawing, elevation or openly-licensed photograph was found for this building specifically. Searched: UCSF Real Estate's Mission Bay campus-site and LRDP pages (realestate.ucsf.edu, blocked to automated fetches with a 403); the UCSF 2014 LRDP EIR's CEQAnet filing (SCH 2013092047, whose pre-2016 attachments aren't hosted on CEQAnet itself); a May 2000 Regents Committee on Grounds and Buildings design-approval item for an early Mission Bay building (text-only, no figures); the 2008 \"UCSF Mission Bay Planning Principles\" appendix (a citywide-scale community map, no individual buildings labeled); and a UCSF wayfinding campus map (not an adopted plan, EIR or permit filing, so not eligible as public-record even though found). Not pursued further in this pass; the record's own project sources above remain the citation for the building's history. The same September 2008 Regents presentation (used for Byers Hall, Genentech Hall, Rock Hall and Rutter Center) includes one more photo on its \"Architectural Context\" slide labeled only \"Housing,\" showing what looks like more than one building together; it wasn't used here because it can't be confidently attributed to this specific one.",
    "2026-09-21 pass: the November 2002 Regents item covers the whole Block 20 project (one tower plus three mid-rise buildings) rather than naming this building individually; identification of this record as one of the three mid-rise buildings follows from its own facts entry, not a direct name match in the Regents record.",
-   "2026-09-23 pass: searched for a cost figure specific to this building alone (versus the whole four-building Block 20 project). The only figure found anywhere is the November 2002 Regents item's own $112,816,000 project budget, which the Regents item itself states as a whole-project total covering Hearst Tower and all three mid-rise buildings together -- no source breaks it down per building, so no record-scope figure is added here; a per-project figure belongs in a site- or phase-scope table, not this record's own costs array."
+   "2026-09-23 pass: searched for a cost figure specific to this building alone (versus the whole four-building Block 20 project). The only figure found anywhere is the November 2002 Regents item's own $112,816,000 project budget, which the Regents item itself states as a whole-project total covering Hearst Tower and all three mid-rise buildings together -- no source breaks it down per building, so no record-scope figure is added here; a per-project figure belongs in a site- or phase-scope table, not this record's own costs array.",
+   "2026-09-29 accuracy audit: no source read states when the building actually opened; the 2005 opening earlier shown had only a housing page that could not be read in the audit and Langan, which gives no date. The milestone now carries the October 2005 full occupancy anticipated by the November 2002 Regents item, marked expected. 'Student and faculty' was changed to 'student, postdoctoral scholar and family' housing because Langan and the Regents item say so and no readable source mentions faculty."
   ],
   "sources": [
    {
@@ -318,7 +353,7 @@
     "overview": true
    }
   ],
-  "notes": "Part of a single UCSF Mission Bay student/faculty housing complex (Hearst Tower plus North, West and South/Student Housing buildings) built together in Mission Bay's first development phase and opened together around 2005 -- four connected buildings totaling 298,800 sq ft for 750+ residents, surrounding a shared at-grade courtyard, per UCSF's own housing-office description. Architect Skidmore, Owings & Merrill (SOM) with Fisher Friedman Associates. This building: the North Building, 525 Nelson Rising Lane, a 7-10 story mid-rise.",
+  "notes": "Part of a single UCSF Mission Bay student housing complex (Hearst Tower plus North, West and South/Student Housing buildings; the building names come from UCSF's housing-office page, which could not be read in the 2026-09 audit) -- UC's Block 20 Housing and Retail Project: four buildings totaling 298,800 sq ft housing more than 750 UCSF students, postdoctoral scholars and their families around a shared courtyard (Langan). The November 2002 UC Regents item anticipated full occupancy by October 2005; no source read states the actual opening. Architect Skidmore, Owings & Merrill (SOM) with Fisher Friedman Associates (arcCA Digest: 'student apartment complex by SOM with Fisher-Friedman'). This building: the North Building, 525 Nelson Rising Lane (OpenStreetMap), a 7-10 story mid-rise.",
   "has_record_file": true,
   "last_verified": "2026-09-21",
   "tenants": [],

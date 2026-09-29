@@ -3,20 +3,22 @@
   "names": [
     "1670 Owens Garage"
   ],
-  "summary": "A UCSF parking structure at 1670 Owens Street in Mission Bay, on Owens Street opposite Kaiser Permanente Mission Bay, with entrance access from C Street; a real-estate assessor-data aggregator gives its year built as 2010, but no UCSF announcement or primary construction record was found.",
+  "summary": "A parking garage at 1670 Owens Street in Mission Bay (Assessor class 'Garages (Commercial)', 7 stories on the roll; DBI permit 200801243180 describes a 6-story, 823-space garage), completed 2010 per the DBI permit (completed 2010-01-29) and the Assessor's year built. No UCSF announcement was found; UCSF operation, the location opposite Kaiser Permanente Mission Bay and a C Street entrance are not confirmed by any source read.",
   "summary_sources": [
-    "src-propertyshark-1670owens"
+    "src-datasf-permit-1670owens",
+    "src-datasf-assessor-8709022"
   ],
   "milestones": [
     {
-      "date": "2010",
+      "date": "2010-01-29",
       "status": "complete",
-      "text": "Parking structure completed (year built, per a real-estate assessor-data aggregator; no UCSF or Regents construction record was found for this specific address)",
+      "text": "DBI recorded the garage's construction permit (6 stories, 823 spaces) complete on 2010-01-29; the Assessor roll gives 2010 as the year built (PropertyShark, the aggregator first cited, also says 2010 but could not be read in the audit)",
       "sources": [
-        "src-propertyshark-1670owens"
+        "src-datasf-permit-1670owens",
+        "src-datasf-assessor-8709022"
       ],
       "expected": false,
-      "approximate": true
+      "approximate": false
     }
   ],
   "costs": [
@@ -32,18 +34,26 @@
       ]
     }
   ],
-  "facts": [],
+  "facts": [
+    {
+      "key": "capacity",
+      "value": "823 spaces (DBI permit description: 'erect 6 stories parking garage (823 spaces)')",
+      "sources": [
+        "src-datasf-permit-1670owens"
+      ]
+    }
+  ],
   "images": [
     {
       "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
       "kind": "now",
       "scope": "site",
       "taken": "2024-05-20",
-      "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+      "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
       "license": "public-domain",
       "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
       "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
-      "license_note": "USDA's data.gov catalog record for NAIP imagery sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0); the USDA FSA policies page says public-domain information may be freely distributed with credit requested ('U.S. Department of Agriculture, Farm Service Agency'). Read 2026-09-22.",
+      "license_note": "USDA's data.gov catalog record for NAIP imagery (published by the Farm Production and Conservation Business Center, Geospatial Enterprise Operations Branch) sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0). Read 2026-09-22 and 2026-09-29.",
       "caption": "USDA NAIP aerial orthophoto (2024 flight), cropped to the Mission Bay project area and its immediate surroundings",
       "aerial": true,
       "focus": [
@@ -60,12 +70,12 @@
       "kind": "now",
       "scope": "site",
       "taken": "2024-02-10",
-      "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+      "credit": "Firstcultural, via Wikimedia Commons; CC0; downscaled to 1600 px",
       "license": "cc0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
       "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-      "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-      "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+      "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural. Read 2026-09-23.",
+      "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area",
       "aerial": true,
       "focus": [
         0.35,
@@ -100,12 +110,19 @@
       "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
       "accessed": "2026-09-24",
       "overview": true
+    },
+    {
+      "id": "src-datasf-assessor-8709022",
+      "title": "Assessor Historical Secured Property Tax Rolls (parcel 8709022, 1670 Owens St: Garages (Commercial), year built 2010, 7 stories)",
+      "publisher": "DataSF / SF Office of the Assessor-Recorder",
+      "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8709022",
+      "accessed": "2026-09-29"
     }
   ],
   "open_questions": [
-    "No primary UCSF or Regents-of-the-University-of-California source was found dating this specific garage. This project's own established finding for Mission Bay's UCSF buildings is that UCSF is state land and not carried in DataSF's Assessor secured tax roll (no blklot to join); the 2010 year-built figure here comes from PropertyShark, a third-party real-estate aggregator, not from DataSF or a UCSF announcement -- treat it as approximate and secondary-sourced, not UCSF-confirmed.",
+    "Correction (2026-09-29): 1670 Owens is on the Assessor secured roll as parcel 8709022 (Garages (Commercial), year built 2010, 7 stories, with a College/University exemption in the 2025 roll), so a blklot exists; the DBI permit for the garage (200801243180) was filed on block 8709 lot 009 and is complete (2010-01-29). No UCSF announcement or Regents document dating this specific garage was found; the earlier note that the year built comes only from PropertyShark and that UCSF land is not on the secured roll no longer holds for this parcel.",
     "Searched UC Regents Committee on Grounds and Buildings agenda items for a 'Mission Bay' parking structure at Owens Street or matching this garage's ~820-874 space, ~250,000 gsf, nine-level profile (the November 2003 item for the separate Building 23B/Third Street Garage has very similar statistics, so a same-era Owens Street garage item likely exists but was not located in this pass); WRNS Studio's own award-winning 'Mission Bay Parking Structure'/'UCSF Parking Structure' project (2010 AIA SF Citation Award, cited elsewhere as 'Mission Bay Block 27 Parking Structure', 1,420 spaces on seven floors) was considered but not used here, since its capacity and floor count don't match this record's OSM tagging (5 levels) and its address was never confirmed to be 1670 Owens -- left unlinked rather than guessed.",
-    "A ~820-space capacity figure appears in parking aggregators (ParkChirp, Waze/Parkopedia) but is not independently confirmed by a UCSF or SF YIMBY source -- the same caveat already recorded in this record's own geometry file -- so it is left out of facts here as well.",
+    "Capacity: DBI's permit description says 823 spaces (now recorded as a fact); parking aggregators' ~820 figure agrees.",
     "No architect or design-build team was identified for this specific address.",
     "2026-09-22 pass: another candidate was checked and ruled out. UCSF's William J. Rutter Community Center (Block 21B, architect Ricardo Legorreta with MBT/Perkins+Will, per a May 2000 Regents design-approval item and Forell/Elsesser's own project page) has its own, separately-addressed parking garage -- confirmed via UCSF-affiliated contact pages and parking directories to be at 1625 Owens St, not this record's 1670 Owens St. These are two distinct structures a few hundred feet apart; the Rutter Center's own garage material does not apply to this record."
   ],

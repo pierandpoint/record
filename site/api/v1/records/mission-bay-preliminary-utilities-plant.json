@@ -39,7 +39,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against data/raw/parcels.geojson and DataSF's Assessor tax roll -- e.g. blklot 8711507 at 675 Nelson Rising Lane alone is ~13 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap outline of the plant's fenced compound (OSM way 135103720 is tagged landuse=industrial with a fence barrier, not as a building), not a hand trace or plan estimate; the polygon is the fenced site, not a building footprint. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against data/raw/parcels.geojson and DataSF's Assessor tax roll -- e.g. blklot 8711507 at 675 Nelson Rising Lane alone is ~13 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
     "digitized_from": "OpenStreetMap (way 135103720, operator=UCSF Mission Bay, 1480 4th St)"
    }
   },
@@ -50,7 +50,7 @@
   "facts": [
    {
     "key": "address",
-    "value": "This project's geometry is tagged 1480 4th St from OpenStreetMap, but a CEQA filing for the campus utility plant gives 1500 Owens St, Block 16B -- these may be the same facility under different address conventions, or two different plants from different construction phases; not merged or resolved",
+    "value": "OpenStreetMap tags this feature 1480 4th St (way 135103720); the CEQA filing cited places the plant on Block 16B but gives no street address",
     "sources": [
      "src-osm-pup",
      "src-ceqa-pup"
@@ -66,14 +66,44 @@
   ],
   "costs": [],
   "milestones": [],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The record described its shape as a real OpenStreetMap building footprint; OSM way 135103720 is actually a fenced industrial compound (landuse=industrial, barrier=fence, no building tag), and the record now says so. It also said a CEQA filing gave the plant's address as 1500 Owens St, conflicting with OSM's 1480 4th St. The CEQA filing cited gives only Block 16B and no street address, and no record read gives 1500 Owens St, so the conflict was removed from the notes, the address fact and the open questions. The aerial photo credit names the Commons account Firstcultural (Alfred Twu, per its user page) and drops the unsupported 'departing flight' wording.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "ucsf_utilities_plant",
+     "slug": "mission-bay-preliminary-utilities-plant",
+     "name": "Mission Bay Preliminary Utilities Plant",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-preliminary-utilities-plant/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-preliminary-utilities-plant.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
     "kind": "now",
     "scope": "site",
     "taken": "2024-05-20",
-    "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+    "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
     "license": "public-domain",
     "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
     "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
@@ -95,12 +125,12 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-02-10",
-    "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+    "credit": "Firstcultural (Alfred Twu, per the Wikimedia Commons user page User:Firstcultural), via Wikimedia Commons; CC0; downscaled to 1600 px",
     "license": "cc0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural, who states it is their own work; the Commons user page User:Firstcultural names the account holder as Alfred Twu. Read 2026-09-23 (file page) and 2026-09-29 (user page).",
+    "caption": "Aerial photo of San Francisco's Mission Bay, ballpark, and Caltrain area",
     "aerial": true,
     "focus": [
      0.35,
@@ -116,7 +146,7 @@
   "open_questions": [
    "2026-09-21 pass: searched again for a dated construction record specifically for this plant (Block 16B), including UC Regents Committee on Grounds and Buildings agenda items (found a May 2000 item for the separate Mission Bay Developmental Biology and Genetics Building (19B), which notes that building got its own 'stand-alone utility plant, due to the lack of central facility support during Phase 1 development at Mission Bay' -- a different, building-specific plant, not this campus-wide one) and a 2021 CEQA addendum describing utility-line connections from 'the existing Preliminary Utility Plant (PUP) on Block 16B' to the Weill Neurosciences Building -- confirming 'PUP' as this plant's standard abbreviation and that it predates the Weill building (opened 2021), but giving no construction date of its own. Still no dated milestone found; none added rather than guessed.",
    "No construction date, architect, or engineer found in any source checked -- deliberately left undated rather than guessed.",
-   "Address conflict between this feature's OSM tag (1480 4th St) and the one CEQA source with an address (1500 Owens St, Block 16B): may be the same facility described two ways, or two distinct plants (an original 'Preliminary' plant from Phase 1 construction circa 2001-2003, vs. a newer Phase 2 plant). Not resolved -- exactly the kind of ambiguity this project's never-fabricate rule keeps out of the data until it can be confirmed.",
+   "Street address: the OSM tag is 1480 4th St; the cited CEQA filing gives Block 16B but no street address. An earlier version of this record said a CEQA filing gave 1500 Owens St; no record read states that, so it was removed on 2026-09-29 (a 1500 Owens St address exists as a UCSF Health radiology clinic, which is a different use). No street address for the plant is confirmed beyond the OSM tag.",
    "No openly licensed image was found; none is hosted here.",
    "Images: no plan drawing, elevation or openly-licensed photograph was found for this building specifically. Searched: UCSF Real Estate's Mission Bay campus-site and LRDP pages (realestate.ucsf.edu, blocked to automated fetches with a 403); the UCSF 2014 LRDP EIR's CEQAnet filing (SCH 2013092047, whose pre-2016 attachments aren't hosted on CEQAnet itself); a May 2000 Regents Committee on Grounds and Buildings design-approval item for an early Mission Bay building (text-only, no figures); the 2008 \"UCSF Mission Bay Planning Principles\" appendix (a citywide-scale community map, no individual buildings labeled); and a UCSF wayfinding campus map (not an adopted plan, EIR or permit filing, so not eligible as public-record even though found). Not pursued further in this pass; the record's own project sources above remain the citation for the building's history."
   ],
@@ -145,7 +175,7 @@
     "overview": true
    }
   ],
-  "notes": "Existence confirmed (CEQA filings reference a UCSF Mission Bay utility plant/distribution system on Block 16B), but construction date, architect and size were not found in any source checked. One CEQA record gives its address as 1500 Owens St, which does not match this feature's OSM address tag (1480 4th St) -- these may be the same facility under different address conventions, or two different plants from different construction phases; not merged or resolved here, per the project's never-fabricate rule.",
+  "notes": "Existence confirmed (CEQA filings reference a UCSF Mission Bay utility plant/distribution system on Block 16B), but construction date, architect and size were not found in any source checked. The OSM address tag on this feature is 1480 4th St; the CEQA record cited here places the plant on Block 16B but gives no street address. An earlier note that a CEQA record gave 1500 Owens St could not be traced to any record read and was removed on 2026-09-29.",
   "has_record_file": true,
   "last_verified": "2026-09-21",
   "tenants": [],

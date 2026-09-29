@@ -31,10 +31,12 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "UCSF's nine-level, 822-space Building 23B Parking Structure at 1650 3rd Street in Mission Bay, on Block 23 between 3rd and 4th Streets; the Regents approved its $23.3M budget in November 2003 with construction slated to run March 2004 to July 2005. Designed by Stanley Saitowitz/Natoma Architects, its original channel-glass facade was replaced in 2021 with IwamotoScott's 'Cellular Origami' aluminum-panel facade.",
+  "summary": "UCSF's nine-level Building 23B Parking Structure at 1650 3rd Street in Mission Bay, on Block 23 between 3rd and 4th Streets: a $23.3M budget was submitted to the Regents in November 2003 for approval, with construction slated to run March 2004 to July 2005 (no source read reports the actual dates). Designed by Stanley Saitowitz/Natoma Architects; its original channel-glass facade was removed in 2015 and IwamotoScott's 'Cellular Origami' facade of white anodized metal panels was completed in January 2020 (Facades+, March 2021). The contractor's page gives 882 parking stalls; the 2003 budget item gave 822 spaces.",
   "summary_sources": [
    "src-regents-2003-11",
-   "src-saitowitz-23b"
+   "src-saitowitz-23b",
+   "src-facadesplus-2021",
+   "src-overaa-23b"
   ],
   "shape": {
    "kind": "approximate",
@@ -42,7 +44,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. Same situation as this project's other UCSF Mission Bay campus buildings: UCSF is state land, not carried in DataSF's Assessor secured tax roll (no blklot to join), so the real building footprint is the correct non-fabricated geometry.",
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. Same situation as this project's other UCSF Mission Bay campus buildings: 2026-09-29 audit correction: the footprint lies wholly inside active parcel 8711509, which the repo's DataSF parcels copy shows in the Assessor secured roll, so the earlier statement that UCSF land is not carried in the roll and has no blklot was wrong for this building. That parcel is a large multi-building parcel shared with other UCSF buildings, so the OSM building footprint is still the non-overlapping geometry used here.",
     "digitized_from": "OpenStreetMap (way 27369503, 1650 3rd St)"
    }
   },
@@ -67,7 +69,7 @@
    },
    {
     "key": "total_cost",
-    "value": "$23,298,000 (2003 Regents-approved budget, fully externally financed)",
+    "value": "$23,298,000 (budget submitted for Regents approval in November 2003, to be fully externally financed; the item does not record the vote)",
     "sources": [
      "src-regents-2003-11"
     ]
@@ -83,7 +85,7 @@
   "costs": [
    {
     "amount_usd": 23298000,
-    "what": "Total project budget the UC Regents approved and fully externally financed in November 2003 for the Mission Bay Building 23B Parking Structure Project (822 spaces on nine levels plus 52 surface spaces)",
+    "what": "Total project budget of $23,298,000 for which the UC Regents' committees were asked to approve external financing at the November 19, 2003 joint meeting (the item requests approval and does not record the vote) for the Mission Bay Building 23B Parking Structure Project (822 spaces on nine levels plus 52 surface spaces)",
     "date": "2003-11",
     "kind": "development",
     "scope": "record",
@@ -99,7 +101,7 @@
     "date_label": "Nov 19, 2003",
     "status": null,
     "status_label": null,
-    "text": "UC Regents' Committee on Grounds and Buildings and Committee on Finance approve the $23,298,000 budget and external financing for the Mission Bay Building 23B Parking Structure Project (822 spaces on nine levels plus 52 surface spaces, Block 23)",
+    "text": "UC Regents' Committee on Grounds and Buildings and Committee on Finance are asked to approve a $23,298,000 budget, to be funded from external financing, for the Mission Bay Building 23B Parking Structure Project (822 spaces on nine levels plus 52 surface spaces, Block 23); the item, dated November 6, 2003, requests approval and does not record the vote",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -133,11 +135,11 @@
    },
    {
     "date": "2004-03",
-    "date_label": "~2004",
+    "date_label": "2004",
     "status": null,
     "status_label": null,
-    "text": "Construction slated to begin, per the 2003 Regents budget item",
-    "expected": false,
+    "text": "Construction slated to begin in March 2004, per the 2003 Regents budget item (a plan, not a reported start)",
+    "expected": true,
     "approximate": true,
     "sources": [
      {
@@ -151,8 +153,8 @@
     ],
     "source": "Regents of the University of California, 2003-11-06",
     "origin": "record",
-    "category": "milestone",
-    "category_label": "Milestone",
+    "category": "coming_up",
+    "category_label": "Coming up",
     "record": {
      "id": "ucsf_third_street_garage",
      "slug": "third-street-garage",
@@ -170,11 +172,11 @@
    },
    {
     "date": "2005-07",
-    "date_label": "~2005",
+    "date_label": "2005",
     "status": "complete",
     "status_label": "Complete",
     "text": "Garage slated for completion alongside the Mission Bay Block 20 campus housing project, per the 2003 Regents budget item's projected schedule (an actual opening announcement was not found)",
-    "expected": false,
+    "expected": true,
     "approximate": true,
     "sources": [
      {
@@ -206,24 +208,61 @@
     "relation": "tracked"
    },
    {
-    "date": "2021",
-    "date_label": "~2021",
+    "date": "2015",
+    "date_label": "~2015",
     "status": null,
     "status_label": null,
-    "text": "Original channel-glass exterior facade replaced with IwamotoScott Architecture's 'Cellular Origami' aluminum-panel facade",
+    "text": "Original channel-glass facade removed from the garage, 'leaving the building barren with worn and exposed concrete' (Facades+, March 15, 2021)",
     "expected": false,
     "approximate": true,
     "sources": [
      {
-      "id": "src-archpaper-2021",
-      "title": "IwamotoScott's Cellular Origami transforms SF's 3rd Street Garage",
-      "publisher": "The Architect's Newspaper",
-      "date": "2021-03",
-      "url": "https://www.archpaper.com/2021/03/iwamotoscott-cellular-origami-3rd-street-garage-facade/",
-      "accessed": "2026-09-18"
+      "id": "src-facadesplus-2021",
+      "title": "IwamotoScott's Cellular Origami transforms a San Francisco garage",
+      "publisher": "Facades+ (trade publication)",
+      "date": "2021-03-15",
+      "url": "https://facadesplus.com/iwamotoscotts-cellular-origami-transforms-a-san-francisco-garage/",
+      "accessed": "2026-09-29"
      }
     ],
-    "source": "The Architect's Newspaper, 2021-03",
+    "source": "Facades+ (trade publication), 2021-03-15",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "ucsf_third_street_garage",
+     "slug": "third-street-garage",
+     "name": "Third Street Garage",
+     "permalink": "https://pierandpoint.org/parcels/third-street-garage/",
+     "api": "https://pierandpoint.org/api/v1/records/third-street-garage.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2020-01",
+    "date_label": "Jan 2020",
+    "status": null,
+    "status_label": null,
+    "text": "IwamotoScott's 'Cellular Origami' facade of white anodized metal panels is completed on the garage (Facades+, March 15, 2021: 'Completion Date: January 2020'), replacing the original channel-glass facade, which the same article says was removed in 2015",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-facadesplus-2021",
+      "title": "IwamotoScott's Cellular Origami transforms a San Francisco garage",
+      "publisher": "Facades+ (trade publication)",
+      "date": "2021-03-15",
+      "url": "https://facadesplus.com/iwamotoscotts-cellular-origami-transforms-a-san-francisco-garage/",
+      "accessed": "2026-09-29"
+     }
+    ],
+    "source": "Facades+ (trade publication), 2021-03-15",
     "origin": "record",
     "category": "milestone",
     "category_label": "Milestone",
@@ -245,10 +284,39 @@
   ],
   "changes": [
    {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The 2021 facade replacement was wrong: Facades+ (March 2021) says the channel-glass facade was removed in 2015 and IwamotoScott's new facade was completed in January 2020, so the record now shows both. The November 2003 Regents item requests approval of the $23,298,000 budget and does not record the vote, so the record and its changelog row now say it was submitted for approval. The March 2004 construction start and July 2005 completion are the 2003 item's plan and are marked expected (no report of the actual dates was found). The geometry caveat no longer says UCSF land has no Assessor parcel (the footprint is inside active parcel 8711509), the capacity note now cites the contractor's 882 stalls, and the aerial photo caption no longer says 'from a departing flight'.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "ucsf_third_street_garage",
+     "slug": "third-street-garage",
+     "name": "Third Street Garage",
+     "permalink": "https://pierandpoint.org/parcels/third-street-garage/",
+     "api": "https://pierandpoint.org/api/v1/records/third-street-garage.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-23",
     "kind": "added",
     "kind_label": "Added",
-    "text": "The figure was already recorded as a `total_cost` fact on this record, citing the same November 2003 UC Regents item; added as a structured costs entry (kind: development) so it's captured consistently with every other record.",
+    "text": "The figure was already recorded as a `total_cost` fact on this record, citing the same November 2003 UC Regents item, which requests approval and does not record the vote; added as a structured costs entry (kind: development) so it's captured consistently with every other record.",
     "source": "docs/record-schema.md",
     "sources": [
      {
@@ -280,11 +348,11 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-05-20",
-    "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+    "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
     "license": "public-domain",
     "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
     "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
-    "license_note": "USDA's data.gov catalog record for NAIP imagery sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0); the USDA FSA policies page says public-domain information may be freely distributed with credit requested ('U.S. Department of Agriculture, Farm Service Agency'). Read 2026-09-22.",
+    "license_note": "USDA's data.gov catalog record for NAIP imagery sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0); the USDA FSA policies page says public-domain information may be freely distributed with credit requested ('U.S. Department of Agriculture, Farm Service Agency'). Read 2026-09-22. The data.gov record names the publisher as USDA's Farm Production and Conservation Business Center (FPAC-BC); date 2024-05-20 from the NAIP ImageServer tile name m_3712213_se_10_060_20240520 (checked 2026-09-29).",
     "caption": "USDA NAIP aerial orthophoto (2024 flight), cropped to the Mission Bay project area and its immediate surroundings",
     "aerial": true,
     "focus": [
@@ -302,12 +370,12 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-02-10",
-    "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+    "credit": "Firstcultural (Alfred Twu, per the Commons user page User:Firstcultural), via Wikimedia Commons; CC0; downscaled to 1600 px",
     "license": "cc0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural; the Commons user page User:Firstcultural gives the name Alfred Twu. File page read 2026-09-23, user page read 2026-09-29.",
+    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area",
     "aerial": true,
     "focus": [
      0.35,
@@ -324,7 +392,8 @@
    "No source confirms the garage's actual completion date; the 2005-07 milestone above is the 2003 budget item's projected schedule, not a completion announcement -- a UC construction schedule commonly slips, so this date is flagged approximate.",
    "The 2003 Regents item describes a nine-level, 822-space structure; this record's own geometry file cites OpenStreetMap tagging of 8 levels -- not reconciled here, since OSM levels and the Regents' 'nine levels (including a half level at the top)' description are plausibly the same building described two ways. The building's own general contractor (Overaa, added 2026-09-22) separately gives 882 stalls -- likely the as-built figure versus the Regents' pre-construction budget estimate, but not reconciled here either.",
    "Exact capacity today (after any reconfiguration) is not confirmed by any source found, per this record's own geometry file notes.",
-   "The general contractor for the original 2004-2005 construction was not identified in this pass."
+   "The general contractor for the original 2004-2005 construction was not identified in this pass.",
+   "2026-09-29 accuracy audit: the earlier '2021 facade replacement' was wrong: Facades+ (March 15, 2021) gives the completion date as January 2020 and says the channel-glass facade was removed in 2015; The Architect's Newspaper article cited before returned 403 and could not be read. The November 2003 Regents item is a request for approval; the committee minutes recording the vote were not found (minutes/2003 URL patterns returned 404)."
   ],
   "sources": [
    {
@@ -368,6 +437,14 @@
     "overview": true
    },
    {
+    "id": "src-facadesplus-2021",
+    "title": "IwamotoScott's Cellular Origami transforms a San Francisco garage",
+    "publisher": "Facades+ (trade publication)",
+    "date": "2021-03-15",
+    "url": "https://facadesplus.com/iwamotoscotts-cellular-origami-transforms-a-san-francisco-garage/",
+    "accessed": "2026-09-29"
+   },
+   {
     "id": null,
     "title": "openstreetmap.org/way/27369503",
     "url": "https://www.openstreetmap.org/way/27369503"
@@ -378,7 +455,7 @@
     "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf"
    }
   ],
-  "notes": "OCII plan block 23B on UCSF's own campus map. Exact capacity and completion year not confirmed by any source found; left out rather than guessed.",
+  "notes": "OCII plan block 23B on UCSF's own campus map. Capacity: Overaa Construction's portfolio page (the general contractor) states 882 parking stalls on nine levels (256,276 sq ft) with no completion year, while the 2003 Regents budget item described 822 spaces plus 52 surface spaces; OSM tags 8 levels. The completion year is not confirmed by any source found; left out rather than guessed.",
   "has_record_file": true,
   "last_verified": "2026-09-22",
   "tenants": [],

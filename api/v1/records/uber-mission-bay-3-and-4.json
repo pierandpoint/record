@@ -31,10 +31,13 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "Two 11-story, LEED Gold office towers at 1655 & 1725 3rd St (combined ~584,000-586,208 sq ft, sources disagree on the exact figure), developed by a joint venture of Alexandria Real Estate Equities, Uber Technologies and the Golden State Warriors, designed by SHoP Architects, completed 2021, and leased in full by Uber as its San Francisco/global headquarters since January 2022 on a 20-year lease for ~4,000 employees.",
+  "summary": "Two 11-story office towers at 1655 & 1725 3rd St (combined ~584,000-586,200 sq ft, sources differ on the exact figure), LEED v4 Gold per Office Snapshots, developed by a joint venture of Alexandria Real Estate Equities (10%), Uber Technologies (45%) and the Golden State Warriors (45%), with SHoP Architects credited as architect by ArchDaily, completed in 2021 per SF Standard. Uber and the Warriors each lease office space at the property for their headquarters (The Real Deal, 2025); in 2023 Uber marketed all of 1725 3rd St for sublease and said that building was unoccupied (SF Standard).",
   "summary_sources": [
    "src-commercialsearch-2020",
-   "src-officesnapshots-2022"
+   "src-officesnapshots-2022",
+   "src-sfstandard-2023-uber",
+   "src-trd-2025-uber",
+   "src-archdaily-uber"
   ],
   "shape": {
    "kind": "approximate",
@@ -55,49 +58,55 @@
     "key": "address",
     "value": "1655 3rd St (Building 3) and 1725 3rd St (Building 4)",
     "sources": [
-     "src-commercialsearch-2020"
+     "src-commercialsearch-2020",
+     "src-trd-2025-uber",
+     "src-sfstandard-2023-uber"
     ]
    },
    {
     "key": "developer",
-    "value": "Joint venture of Alexandria Real Estate Equities, Uber Technologies and the Golden State Warriors",
+    "value": "Joint venture (Event Center Office Partners) of the Golden State Warriors (45%), Uber Technologies (45%) and Alexandria Real Estate Equities (10%)",
     "sources": [
-     "src-commercialsearch-2020"
+     "src-trd-2025-uber"
     ]
    },
    {
     "key": "architect",
-    "value": "SHoP Architects",
+    "value": "SHoP Architects, per ArchDaily's 'Uber Headquarters' project page (its listed area, 423,000 ft2, differs from these two towers' combined size); interiors of Buildings 3 and 4 by Huntsman Architectural Group (Office Snapshots)",
     "sources": [
-     "src-commercialsearch-2020"
+     "src-archdaily-uber",
+     "src-officesnapshots-2022"
     ]
    },
    {
     "key": "gross_sqft",
-    "value": "~584,000-586,208 combined (sources disagree on the exact figure)",
+    "value": "~584,000 (Office Snapshots) to ~586,200 (The Real Deal, 2025) combined; 'more than 586,000' (CommercialCafe, 2020); sources disagree on the exact figure",
     "sources": [
-     "src-commercialsearch-2020"
+     "src-commercialsearch-2020",
+     "src-officesnapshots-2022",
+     "src-trd-2025-uber"
     ]
    },
    {
     "key": "leed",
-    "value": "LEED Gold",
+    "value": "LEED v4 Gold (also WELL), per Office Snapshots",
     "sources": [
-     "src-commercialsearch-2020"
+     "src-officesnapshots-2022"
     ]
    },
    {
     "key": "tenant",
-    "value": "Uber Technologies, Inc. leases the entire office component as its San Francisco/global headquarters: 20-year lease, ~4,000 employees, 145 dedicated parking spaces",
+    "value": "Uber Technologies and the Golden State Warriors each lease office space at the property for their headquarters (The Real Deal, 2025). In May 2023 Uber marketed all of 1725 Third St for sublease and said that building was unoccupied; the marketing materials cite 73 parking spaces for that building; Uber's 2022 blog post (as quoted by SF Standard) said more than 3,500 employees would be based at its four-building headquarters.",
     "sources": [
-     "src-officesnapshots-2022"
+     "src-trd-2025-uber",
+     "src-sfstandard-2023-uber"
     ]
    }
   ],
   "costs": [],
   "milestones": [
    {
-    "date": "2018-02",
+    "date": "2018-01",
     "date_label": "~2018",
     "status": null,
     "status_label": null,
@@ -129,19 +138,19 @@
     "relation": "tracked"
    },
    {
-    "date": "2018-02-27",
-    "date_label": "Feb 27, 2018",
+    "date": "2018-02",
+    "date_label": "~2018",
     "status": "under_construction",
     "status_label": "Under construction",
-    "text": "Structural steel erection begins on the two Chase Center office towers (1655 & 1725 3rd St) -- 6,000 tons, fabricated by Gayle Manufacturing Co. and erected by Cal Erectors, distinct from the arena's own 10,590-ton steel package",
+    "text": "Structural steel erection on the two Chase Center office towers (1655 & 1725 3rd St) is scheduled to begin (Mortenson, Nov 20, 2017: office-building steel work 2/27/2018 to 8/18/2018) -- 6,000 tons, fabricated by Gayle Manufacturing Co. and erected by Cal Erectors, distinct from the arena's own 10,590-ton steel package; no report of the actual start found",
     "expected": false,
-    "approximate": false,
+    "approximate": true,
     "sources": [
      {
-      "title": "Mortenson Construction, \"Chase Center Construction Goes Vertical\" (mortenson.com/news-insights/chase-center-structural-steel)"
+      "title": "https://mortenson.com/news-insights/chase-center-structural-steel"
      }
     ],
-    "source": "Mortenson Construction, \"Chase Center Construction Goes Vertical\" (mortenson.com/news-insights/chase-center-structural-steel)",
+    "source": "https://mortenson.com/news-insights/chase-center-structural-steel",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -161,19 +170,19 @@
     "relation": "tracked"
    },
    {
-    "date": "2018-08-18",
-    "date_label": "Aug 18, 2018",
+    "date": "2018-08",
+    "date_label": "~2018",
     "status": "under_construction",
     "status_label": "Under construction",
-    "text": "Structural steel erection completes on the two office towers (\"topping out\")",
+    "text": "Mortenson's Nov 2017 schedule has structural steel erection on the two office towers ending 8/18/2018; the project's 'topping out' is the completion of all structural steel, scheduled for 9/1/2018; no report of the actual completion found",
     "expected": false,
-    "approximate": false,
+    "approximate": true,
     "sources": [
      {
-      "title": "Mortenson Construction, \"Chase Center Construction Goes Vertical\""
+      "title": "https://mortenson.com/news-insights/chase-center-structural-steel"
      }
     ],
-    "source": "Mortenson Construction, \"Chase Center Construction Goes Vertical\"",
+    "source": "https://mortenson.com/news-insights/chase-center-structural-steel",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -197,19 +206,28 @@
     "date_label": "~2021",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Both towers complete construction",
+    "text": "Both towers complete construction (SF Standard: the four-building campus was initially completed during the pandemic in 2021; Office Snapshots lists a 2021 completion date)",
     "expected": false,
     "approximate": true,
     "sources": [
      {
-      "id": "src-commercialsearch-2020",
-      "title": "Uber & Golden State Warriors Secure $600M CMBS Refi from J.P. Morgan for Mission Bay Towers",
-      "publisher": "CommercialCafe / CommercialSearch",
-      "url": "https://www.commercialcafe.com/blog/uber-golden-state-warriors-secure-600m-cmbs-refi-j-p-morgan-mission-bay-towers/",
+      "id": "src-sfstandard-2023-uber",
+      "title": "Uber looks to sublease fully furnished San Francisco office it never occupied",
+      "publisher": "The San Francisco Standard",
+      "date": "2023-05-18",
+      "url": "https://sfstandard.com/2023/05/18/uber-looks-to-sublease-fully-furnished-san-francisco-office-it-never-occupied/",
+      "accessed": "2026-09-29"
+     },
+     {
+      "id": "src-officesnapshots-2022",
+      "title": "Uber Mission Bay Headquarters - San Francisco",
+      "publisher": "Office Snapshots (secondary design press)",
+      "date": "2022-01-24",
+      "url": "https://officesnapshots.com/2022/01/24/uber-mission-bay-headquarters-san-francisco/",
       "accessed": "2026-09-23"
      }
     ],
-    "source": "CommercialCafe / CommercialSearch",
+    "source": "The San Francisco Standard, 2023-05-18; Office Snapshots (secondary design press), 2022-01-24",
     "origin": "record",
     "category": "status",
     "category_label": "Status",
@@ -229,7 +247,7 @@
     "relation": "tracked"
    },
    {
-    "date": "2021-06",
+    "date": "2021",
     "date_label": "~2021",
     "status": "complete",
     "status_label": "Complete",
@@ -238,10 +256,10 @@
     "approximate": true,
     "sources": [
      {
-      "title": "commercialsearch.com"
+      "title": "https://sfstandard.com/2023/05/18/uber-looks-to-sublease-fully-furnished-san-francisco-office-it-never-occupied/; https://officesnapshots.com/2022/01/24/uber-mission-bay-headquarters-san-francisco/"
      }
     ],
-    "source": "commercialsearch.com",
+    "source": "https://sfstandard.com/2023/05/18/uber-looks-to-sublease-fully-furnished-san-francisco-office-it-never-occupied/; https://officesnapshots.com/2022/01/24/uber-mission-bay-headquarters-san-francisco/",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -261,24 +279,24 @@
     "relation": "tracked"
    },
    {
-    "date": "2022-01",
-    "date_label": "~2022",
+    "date": "2023-05-18",
+    "date_label": "May 18, 2023",
     "status": null,
     "status_label": null,
-    "text": "Uber occupies both towers as its San Francisco/global headquarters, on a 20-year lease covering ~584,000-586,000 sq ft for ~4,000 employees",
+    "text": "SF Standard reports that Uber is marketing the entirety of 1725 Third St for sublease and that the building was never occupied by Uber; an Uber spokesperson says one of its four Mission Bay buildings is currently unoccupied",
     "expected": false,
-    "approximate": true,
+    "approximate": false,
     "sources": [
      {
-      "id": "src-officesnapshots-2022",
-      "title": "Uber Mission Bay Headquarters - San Francisco",
-      "publisher": "Office Snapshots (secondary design press)",
-      "date": "2022-01-24",
-      "url": "https://officesnapshots.com/2022/01/24/uber-mission-bay-headquarters-san-francisco/",
-      "accessed": "2026-09-23"
+      "id": "src-sfstandard-2023-uber",
+      "title": "Uber looks to sublease fully furnished San Francisco office it never occupied",
+      "publisher": "The San Francisco Standard",
+      "date": "2023-05-18",
+      "url": "https://sfstandard.com/2023/05/18/uber-looks-to-sublease-fully-furnished-san-francisco-office-it-never-occupied/",
+      "accessed": "2026-09-29"
      }
     ],
-    "source": "Office Snapshots (secondary design press), 2022-01-24",
+    "source": "The San Francisco Standard, 2023-05-18",
     "origin": "record",
     "category": "milestone",
     "category_label": "Milestone",
@@ -298,14 +316,45 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The record no longer says Uber has occupied both towers since January 2022 on a 20-year lease for about 4,000 employees, or that it leases the entire office component: The Real Deal (2025) says Uber and the Warriors each lease office space there, and SF Standard (2023) says Uber never occupied 1725 Third St and was marketing it for sublease. SHoP Architects is now cited to ArchDaily (with Huntsman credited for the interiors by Office Snapshots), the joint venture to The Real Deal, LEED v4 Gold to Office Snapshots, and completion to 2021 (SF Standard, Office Snapshots) instead of June 2021. The steel-erection dates are now labelled as Mortenson's November 2017 schedule rather than recorded events, and the Alexandria supplemental is dated January 2018, when it was filed. The note that Uber 'never fully staffed' 1725 Third St now says 'never occupied', as SF Standard does.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_uber_3_4",
+     "slug": "uber-mission-bay-3-and-4",
+     "name": "Uber Mission Bay 3 & 4",
+     "permalink": "https://pierandpoint.org/parcels/uber-mission-bay-3-and-4/",
+     "api": "https://pierandpoint.org/api/v1/records/uber-mission-bay-3-and-4.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [],
   "open_questions": [
    "2026-09-23: this record's geometry was migrated off status.csv (record_id changed from the blklot '8722063' to 'mission_bay_uber_3_4') because DataSF's own Assessor Parcel dataset gives this parcel and the neighboring Chase Center arena byte-identical geometry (one shared master-condo superblock parcel). The new geometry is the union of both towers' own real OpenStreetMap building footprints (OSM ways 1410182008 and 1410183655) instead -- see the geojson's own digitization_method.",
-   "As of 2025 SEC filings, Uber still lists 1725 3rd St as its corporate HQ address, though a 2023 report said that specific building had never been fully staffed and was being marketed for sublease -- current occupancy is genuinely unclear and not resolved here.",
+   "Uber's SEC EDGAR company record lists 1725 3rd Street as its business address (read 2026-09-29), though a May 2023 SF Standard report said that specific building had never been occupied by Uber and was being marketed for sublease -- current occupancy is genuinely unclear and not resolved here.",
    "This project's own DataSF business-registration data shows several Uber-internal registrations here (Bon Appetit @ Uber cafeteria service across multiple floors, Uber Freight Holding Corporation, a Mercedes-Benz-branded garage/showroom) not otherwise researched or added as facts in this pass.",
    "No dedicated primary source (an Alexandria or Uber press release specifically) was found for the exact completion date of each tower individually; 2021 is used as a combined year.",
-   "2026-09-23 pass: searched for a total development or construction cost for the two towers. Press coverage only turns up financing and lease figures -- Uber's $136,000,000 payment for a 45% joint-venture stake, its $1,000,000,000 in lease payments over 20 years, and the $600,000,000 CMBS refinancing already cited above -- none of which is a stated construction or development cost, so none is recorded here."
+   "2026-09-23 pass: searched for a total development or construction cost for the two towers. Press coverage only turns up financing and lease figures -- Uber's $136,000,000 payment for a 45% joint-venture stake, its $1,000,000,000 in lease payments over 20 years, and the $600,000,000 CMBS refinancing already cited above -- none of which is a stated construction or development cost, so none is recorded here.",
+   "2026-09-29 accuracy audit: the 'January 2022 occupancy', '20-year lease', '~4,000 employees' and '145 parking spaces' claims were removed because no readable source states them (Office Snapshots has no lease or headcount; SF Standard cites Uber's 2022 blog for 'more than 3,500 employees' across four buildings and says 1725 3rd St was never occupied). The ArchDaily page credits SHoP Architects but lists 423,000 ft2 and a 2022 year, so which buildings it covers is not confirmed. Completion is dated 2021 (SF Standard, Office Snapshots); no month is sourced."
   ],
   "sources": [
    {
@@ -333,19 +382,33 @@
     "overview": true
    },
    {
+    "id": "src-sfstandard-2023-uber",
+    "title": "Uber looks to sublease fully furnished San Francisco office it never occupied",
+    "publisher": "The San Francisco Standard",
+    "date": "2023-05-18",
+    "url": "https://sfstandard.com/2023/05/18/uber-looks-to-sublease-fully-furnished-san-francisco-office-it-never-occupied/",
+    "accessed": "2026-09-29"
+   },
+   {
+    "id": "src-trd-2025-uber",
+    "title": "Warriors, Uber, Alexandria bag $500M loan for office complex",
+    "publisher": "The Real Deal",
+    "date": "2025-02-14",
+    "url": "https://therealdeal.com/san-francisco/2025/02/14/warriors-uber-alexandria-bag-500m-loan-for-office-complex/",
+    "accessed": "2026-09-29"
+   },
+   {
+    "id": "src-archdaily-uber",
+    "title": "Uber Headquarters / SHoP Architects",
+    "publisher": "ArchDaily",
+    "date": "2023-09-04",
+    "url": "https://www.archdaily.com/1006339/uber-headquarters-shop-architects",
+    "accessed": "2026-09-29"
+   },
+   {
     "id": null,
     "title": "commercialsearch.com/news/uber-jv-lands-500m-for-san-francisco-hq",
     "url": "https://www.commercialsearch.com/news/uber-jv-lands-500m-for-san-francisco-hq/"
-   },
-   {
-    "id": null,
-    "title": "therealdeal.com/san-francisco/2025/02/14/warriors-uber-alexandria-bag-500m-loan-for-office-complex",
-    "url": "https://therealdeal.com/san-francisco/2025/02/14/warriors-uber-alexandria-bag-500m-loan-for-office-complex/"
-   },
-   {
-    "id": null,
-    "title": "sfstandard.com/2023/05/18/uber-looks-to-sublease-fully-furnished-san-francisco-office-it-never-occupied",
-    "url": "https://sfstandard.com/2023/05/18/uber-looks-to-sublease-fully-furnished-san-francisco-office-it-never-occupied/"
    },
    {
     "id": null,
@@ -356,11 +419,16 @@
     "id": null,
     "title": "openstreetmap.org/way/1410183655",
     "url": "https://www.openstreetmap.org/way/1410183655"
+   },
+   {
+    "id": null,
+    "title": "data.sec.gov/submissions/CIK0001543151.json",
+    "url": "https://data.sec.gov/submissions/CIK0001543151.json"
    }
   ],
-  "notes": "1725 3rd St directly adjoins Chase Center. As of 2025 SEC filings, Uber still lists 1725 3rd St as its corporate HQ address, though a 2023 report said that specific building had never been fully staffed and was being marketed for sublease -- current occupancy is genuinely unclear and not resolved here.",
+  "notes": "1725 3rd St directly adjoins Chase Center. Uber's SEC EDGAR company record lists 1725 3rd Street as its business address (read 2026-09-29), though a May 2023 SF Standard report said that specific building had never been occupied by Uber and was being marketed for sublease (an Uber spokesperson: 'currently unoccupied') -- current occupancy is genuinely unclear and not resolved here.",
   "has_record_file": true,
-  "last_verified": "2026-09-23",
+  "last_verified": "2026-09-29",
   "tenants": [],
   "geometry": {
    "type": "MultiPolygon",

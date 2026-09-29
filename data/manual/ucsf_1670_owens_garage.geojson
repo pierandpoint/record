@@ -10,9 +10,9 @@
     "use": "parking",
     "geometry_type": "real",
     "digitized_from": "OpenStreetMap (way 46263441, 1670 Owens St)",
-    "digitization_method": "ADDED 2026-09-18 for Mission Bay's UCSF-garages pass: real OSM building footprint for UCSF's 1670 Owens Garage (entrance on C St off Owens, opposite Kaiser Permanente Mission Bay). OSM tags 5 levels/16 m height.",
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. Same situation as this project's other UCSF Mission Bay campus buildings: UCSF is state land, not carried in DataSF's Assessor secured tax roll (no blklot to join), so the real building footprint is the correct non-fabricated geometry.",
-    "notes": "A capacity figure (~820 spaces) appears in one secondary aggregator (parkchirp.com) only and is not independently confirmed; left out of facts rather than stated as fact.",
+    "digitization_method": "ADDED 2026-09-18 for Mission Bay's UCSF-garages pass: real OSM building footprint for UCSF's 1670 Owens Garage (entrance on C St off Owens, opposite Kaiser Permanente Mission Bay). OSM tags 5 levels/16 m height. 2026-09-29 accuracy audit: 'UCSF's garage; entrance on C St off Owens, opposite Kaiser Permanente Mission Bay' is not stated by the cited sources: the Mission Bay TMA lists '1670 Owens St. Garage' without the 'UCSF' prefix it gives the three UCSF garages, and nothing cited mentions C St or Kaiser. UCSF operation is plausible (the Assessor roll for parcel 8709022 shows a College/University exemption, queried 2026-09-29) but is not in a cited source.",
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. The footprint lies in active Assessor parcel 8709022 (1670 Owens St; in the secured roll, class 'Garages (Commercial)', year built 2010, 7 stories, College/University exemption in the 2025 roll), so a blklot exists that could be joined through status.csv; the real OSM building footprint is kept as the geometry. Neither cited source (OSM, the Mission Bay TMA rates page) says the garage is UCSF-owned.",
+    "notes": "DBI permit 200801243180 (filed 2008-01-24, completed 2010-01-29) describes 'erect 6 stories parking garage (823 spaces)'; the ~820-space figure on parking aggregators agrees with it.",
     "source_doc_urls": [
      "https://www.openstreetmap.org/way/46263441",
      "https://www.missionbaytma.org/parking-facilities-rates/"

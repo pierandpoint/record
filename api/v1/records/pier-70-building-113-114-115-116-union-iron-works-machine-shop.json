@@ -46,8 +46,8 @@
    "notes": {
     "accuracy_caveat": "Real, surveyed building footprints -- high confidence in each piece's outline and in the group's overall position (confirmed to sit within Figure 6.4.2's own '113-116' box). Individual identification of which piece(s) correspond to Building 113 vs 114 vs 115 vs 116 specifically is NOT possible from the sources checked -- Figure 6.4.2 draws them as one undifferentiated box, and the 2013 HPC packet's textual description ('115 and 116 abut Building 113/114') does not give a precise position. Rather than guess, this feature represents the combined complex, consistent with how it is actually shown in the source diagram. The combined footprint here (~9751 sq m / ~104,957 sqft) is larger than Building 113/114 alone (~86,100 sqft per its documented 492ft x 175ft footprint) and smaller than 113/114 + 115/116's combined documented GSF (~95,000 + ~38,000 = ~133,000 GSF) -- broadly consistent given GSF can include multi-level floor area not captured by a footprint, but not independently verified piece-by-piece.",
     "digitized_from": "DataSF Building Footprints dataset (real, surveyed building outlines; not tied to an Assessor parcel).",
-    "why_no_real_parcel": "This parcel (blklot 4111004) has no street address in DataSF's Assessor roll. The real Assessor lot groups Buildings 113/114 and 115/116 into one polygon with no further official subdivision -- this feature uses the real building footprints instead, matched to the specific area of the lot that Figure 6.4.2 itself draws as the historic '113-116' complex.",
-    "regulatory_context": "Union Iron Works Machine Shop and Foundry, Buildings 113/114, on the south side of 20th Street just east of Illinois Street -- 'one of the most valuable and most vulnerable historic resources on the site' per the 2013 HPC packet (2013.1168E). Two unreinforced brick structures (Machine Shop, built 1885, and Foundry, built 1886) joined in 1914 by a reinforced concrete connector; building-length skylights, rows of high arched windows; ~95,000 GSF, 492ft long by 175ft wide, ~62ft tall. Buildings 115 and 116 abut Building 113/114, constructed 1916-1917, ~38,000 GSF, 57ft tall, with 'unusual windows and monitor skylights.' At review time the complex was red-tagged and subject to an engineer's advisory of imminent collapse. Rehab by Orton Development Inc. (ODI) included demolition/relocation of later metal additions on the west and south facades, a new steel seismic system tied into the brick perimeter, and demolition of two minor eastern appendages (Buildings 23/24, ~1,500 GSF). Proposed for industrial/warehouse/maker-space use (food, tech, life science, biotech, education, arts production) with ancillary office, showroom, and retail, alongside Building 14, framing a shared ~45,000 sf courtyard."
+    "why_no_real_parcel": "The former Assessor lot blklot 4111004, which held these buildings, has no street address and was retired by DataSF on 2018-10-02 (active=false). Block 4111 now has active P70-MU lots 4111005-4111010 (added 2019-02-07) and this footprint falls within active lot 4111008, also with no street address; no source cited here ties a current lot to Buildings 113-116. This feature uses the real building footprints instead, matched to the specific area that Figure 6.4.2 itself draws as the historic '113-116' complex.",
+    "regulatory_context": "Union Iron Works Machine Shop and Foundry, Buildings 113/114, on the south side of 20th Street just east of Illinois Street -- 'one of the most valuable and most vulnerable historic resources on the site' per the 2013 HPC packet (2013.1168E). Two unreinforced brick structures (built in 1885 and 1886 per the HPC packet; the National Register nomination says the eastern, 1885 portion housed the blacksmith and boiler shop and the western, 1886 portion the machine shop) joined in 1914 by a reinforced concrete connector; building-length skylights, rows of high arched windows; ~95,000 GSF, 492ft long by 175ft wide, ~62ft tall. Buildings 115 and 116 abut Building 113/114, constructed 1916-1917, ~38,000 GSF, 57ft tall, with 'unusual windows and monitor skylights.' At review time the complex was red-tagged and subject to an engineer's advisory of imminent collapse. Rehab by Orton Development Inc. (ODI) was proposed (HPC packet) to include 'abatement, demolition or relocation of metal additions to the building on the western and southern facades', a new steel seismic system tied into the brick perimeter, and demolition of two minor eastern appendages (Buildings 23/24, ~1,500 GSF). Proposed for industrial/warehouse/maker-space use (food, tech, life science, biotech, education, arts production) with ancillary office, showroom, and retail, alongside Building 14, framing a shared ~45,000 sf courtyard."
    }
   },
   "centroid": {
@@ -945,11 +945,11 @@
     "relation": "tracked"
    },
    {
-    "date": "2019-01-08",
-    "date_label": "Jan 8, 2019",
+    "date": "2019-01-04",
+    "date_label": "Jan 4, 2019",
     "status": null,
     "status_label": null,
-    "text": "Port Commission update: six of eight buildings complete, Buildings 101 and 102 still under construction, project 100% subleased except two atrium retail spaces; total cost revised from $81.9M to an estimated $127.0M",
+    "text": "Port staff update to the Commission (memo dated Jan 4, 2019): six of eight buildings complete, Buildings 101 and 102 still under construction, project 100% subleased except two atrium retail spaces; total cost revised from $81.9M to an estimated $127.0M",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -1022,6 +1022,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The map file no longer calls 21st St a not-yet-built street, since DataSF lists it as an active street and the Port says its improvements were built from 2019 and accepted in 2024. It now says the 1885 and 1886 brick structures are not named 'Machine Shop' and 'Foundry' in the planning packet, and gives the packet's metal-additions wording as written. It also says the old Assessor lot 4111004 was retired in 2018, replaces two bare-homepage source links, and dates the Port's January 2019 update to its Jan 4 memo.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_building_113_116",
+     "slug": "pier-70-building-113-114-115-116-union-iron-works-machine-shop",
+     "name": "Pier 70 Building 113/114/115/116 (Union Iron Works Machine Shop)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-113-114-115-116-union-iron-works-machine-shop/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-113-114-115-116-union-iron-works-machine-shop.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-23",
     "kind": "correction",
@@ -1098,11 +1127,11 @@
     "kind": "rendering",
     "scope": "site",
     "taken": "2022-04-26",
-    "credit": "Port of San Francisco / SF Planning, Pier 70 Special Use District Design for Development (D4D, adopted 2017, updated April 26, 2022), Figure 1.1.2, p.5",
+    "credit": "Port of San Francisco / SF Planning, Pier 70 Special Use District Design for Development (D4D, updated April 26, 2022), Figure 1.1.2, p.5",
     "license": "public-record",
     "source_url": "https://www.sfport.com/media/8123/download?inline=",
     "license_evidence": "https://www.sfport.com/media/8123/download?inline=",
-    "license_note": "An adopted Port of San Francisco / SF Planning planning document (the Pier 70 Special Use District Design for Development); an adopted D4D is a public-record planning document. Read 2026-09-22.",
+    "license_note": "A Port of San Francisco / SF Planning planning document (the Pier 70 Special Use District Design for Development), approved by the Planning Commission on Aug 24, 2017 (Resolution 19980, per Port Item 9B) and published by the Port at its own domain; treated as a public-record planning document. Read 2026-09-22.",
     "caption": "Figure 1.1.2: Site Location and Context, Pier 70 Special Use District Design for Development (D4D), p.5",
     "source_crop": "python3 src/extract_pdf_figure.py https://www.sfport.com/media/8123/download?inline= 21 data/manual/images/pier70/d4d_p5_site_context.jpg --rect auto --dpi 300",
     "focus": [
@@ -1192,22 +1221,12 @@
    {
     "id": "src-d4d",
     "title": "Pier 70 Special Use District Design for Development (D4D), updated April 26, 2022",
-    "publisher": "Port of San Francisco / SF Planning (adopted planning document; project team SITELAB urban studio)",
+    "publisher": "Port of San Francisco / SF Planning (planning document; project team SITELAB urban studio)",
     "url": "https://www.sfport.com/media/8123/download?inline=",
     "accessed": "2026-09-17",
     "date": "2022-04-26",
     "note": "292-page PDF. Figure 1.1.2 (p.5) is the whole-site aerial context illustration used as the site's lead image.",
     "overview": true
-   },
-   {
-    "id": null,
-    "title": "structuremag.org",
-    "url": "https://www.structuremag.org/"
-   },
-   {
-    "id": null,
-    "title": "savingplaces.org",
-    "url": "https://savingplaces.org/"
    }
   ],
   "notes": "Split 2026-09-16 from the combined 'Union Iron Works Machine Shop & Foundry' entry; CORRECTED same day to merge back a mistaken 113/114-vs-115/116 sub-split once it was found to conflict with Figure 6.4.2's own undifferentiated box -- see digitization_method.",

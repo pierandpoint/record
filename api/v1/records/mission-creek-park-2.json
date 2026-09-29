@@ -29,7 +29,7 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "The stretch of landscaped park -- lawn, paths and trees -- between the already-tracked Mission Creek Park Pavilion and the 4th Street bridge, on Mission Creek's north/west bank; already built, per satellite imagery, and traced with the property owner's direct, iterative guidance after this project's own PDF-pixel transform repeatedly mis-located the stretch. No independently published source names, dates or definitively labels this specific segment.",
+  "summary": "The stretch of landscaped park -- paths, trees and grass -- between the already-tracked Mission Creek Park Pavilion and the 4th Street bridge, on the south/east (Channel St) bank of Mission Creek; already built, per satellite imagery, and traced with the property owner's direct, iterative guidance after this project's own PDF-pixel transform repeatedly mis-located the stretch. OCII's Nov 2024 CAC update map labels this stretch 'Mission Creek Park P1'; no independently published source dates it.",
   "summary_sources": [
    "src-geom-p1p3"
   ],
@@ -39,7 +39,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- hand-traced from satellite imagery with the owner's direct, iterative guidance (not a surveyed footprint or GIS file from the project team, and not derived from the PDF-pixel transform, which was unreliable for this specific stretch). Status 'complete' since the landscaping is clearly already built (lawn, paths, trees visible), not a future plan.",
+    "accuracy_caveat": "APPROXIMATE -- hand-traced from satellite imagery with the owner's direct, iterative guidance (not a surveyed footprint or GIS file from the project team, and not derived from the PDF-pixel transform, which was unreliable for this specific stretch). Status 'complete' because landscaping (paths, trees and grass) is visible on the strip in USDA NAIP imagery (viewed 2026-09-29) and in the earlier Esri imagery; the cited OCII deck shows 'Mission Creek Park (P3)' as a photo slide with no status text, and no cited source dates or confirms completion of P1.",
     "digitized_from": "Hand-traced from satellite imagery (contextily/Esri World Imagery), guided step-by-step by the owner (who knows this stretch directly) rather than the PDF-pixel transform, which repeatedly mis-located this segment."
    }
   },
@@ -50,14 +50,44 @@
   "facts": [],
   "costs": [],
   "milestones": [],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The record said this park stretch is on Mission Creek's north/west bank; it is on the Channel St (south/east) bank. The geometry notes said OCII's map did not resolve P1 versus P3; the map's labels put P1 on this stretch and P3 east of 4th St, so the P-number and notes now say P1, and the 'complete' status is attributed to imagery, since the cited deck gives no status. The file name is left for the owner to rename. The aerial photo credit no longer says it was taken from a departing flight.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_creek_park_p1_p3",
+     "slug": "mission-creek-park-2",
+     "name": "Mission Creek Park",
+     "permalink": "https://pierandpoint.org/parcels/mission-creek-park-2/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-creek-park-2.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
     "kind": "now",
     "scope": "site",
     "taken": "2024-05-20",
-    "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+    "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
     "license": "public-domain",
     "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
     "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
@@ -79,12 +109,12 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-02-10",
-    "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+    "credit": "Firstcultural (Alfred Twu, per the photographer's Wikimedia Commons user page), via Wikimedia Commons; CC0; downscaled to 1600 px",
     "license": "cc0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by the author Firstcultural; the author's Commons user page (https://commons.wikimedia.org/wiki/User:Firstcultural) gives the name Alfred Twu. File page read 2026-09-23, user page read 2026-09-29.",
+    "caption": "Aerial photo of San Francisco's Mission Bay, ballpark, and Caltrain area",
     "aerial": true,
     "focus": [
      0.35,
@@ -101,7 +131,8 @@
    "No independently published source dates when this specific stretch was built; it was hand-traced from satellite imagery because it was visibly already landscaped, not because any source dated its construction.",
    "This record's own digitization_method log says OCII's plan labels P1 and P3 both fall somewhere in this general stretch, per that log's reading of the Nov 2024 CAC 'Remaining Mission Bay Open Space Parcels Update' -- but that deck's own extractable text only labels the whole wider park 'Mission Creek Park (P3)' and does not break out a separate P1 sub-area within this specific reach; which label (if either) applies to this exact segment, versus to the separately tracked Mission Creek Park record's own P1 (an amphitheater, per OCII's current open-space page), is not resolved.",
    "Name/operator: presumed to be part of the same SF Recreation and Park Department-managed Mission Creek Park system as its neighbors, but not independently confirmed for this specific segment.",
-   "2026-09-22 pass, flagged for the owner rather than resolved: this record is currently classified 'Mission Bay South' (approximate_projects.csv) and its own sourcing leans on Mission Bay South's P1/P3 plan labels (see above). But this record's own coordinates sit at the same latitude as other already-tracked Mission Bay North records (The Beacon, Rich Sorro Commons), north of the core of the separately-tracked, South-side mission_bay_creek_park record. A landscape architecture firm's own project page (Munden Fry Landscape Associates, mflastudio.com/mission-creek-park-north) independently describes real, differently-numbered 'NP1 Mission Creek Park Promenade' and 'NP2 Mission Creek Park' parcels for Catellus, built 1999-2011, on Mission Creek's north bank -- a description (residential to the north, the creek and a houseboat community to the south) that matches this record's own traced bank. Whether this segment is actually part of Mission Bay North's NP1/NP2 system rather than South's P1/P3 is an open identity question bigger than a date, not resolved here -- flagged for a closer look, possibly including whether this record's site classification itself should change."
+   "2026-09-22 pass, flagged for the owner rather than resolved: this record is currently classified 'Mission Bay South' (approximate_projects.csv) and its own sourcing leans on Mission Bay South's P1/P3 plan labels (see above). But this record's own coordinates sit at the same latitude as other already-tracked Mission Bay North records (The Beacon, Rich Sorro Commons), north of the core of the separately-tracked, South-side mission_bay_creek_park record. A landscape architecture firm's own project page (Munden Fry Landscape Associates, mflastudio.com/mission-creek-park-north) independently describes real, differently-numbered 'NP1 Mission Creek Park Promenade' and 'NP2 Mission Creek Park' parcels for Catellus, built 1999-2011, on Mission Creek's north bank -- a description (residential to the north, the creek and a houseboat community to the south) that matches this record's own traced bank. Whether this segment is actually part of Mission Bay North's NP1/NP2 system rather than South's P1/P3 is an open identity question bigger than a date, not resolved here -- flagged for a closer look, possibly including whether this record's site classification itself should change.",
+   "2026-09-29 audit: the summary previously said this stretch is on Mission Creek's north/west bank; the traced polygon sits on the Channel St side (south/east bank), as does the Pavilion, and OCII's Nov 2024 map shows the P1 label on the south-bank strip. Berry St, the north bank, is about 200 m away."
   ],
   "sources": [
    {
@@ -118,11 +149,16 @@
     "date": "2024-11-14",
     "accessed": "2026-09-21",
     "overview": true
+   },
+   {
+    "id": null,
+    "title": "sfocii.org/projects/mission-bay-south/open-space",
+    "url": "https://sfocii.org/projects/mission-bay-south/open-space"
    }
   ],
-  "notes": "Covers OCII plan labels P1 and P3 as one combined record -- see digitization_method for why they aren't split.",
+  "notes": "OCII plan label P1 (see p_number); an earlier version of this note said the record covers P1 and P3 combined, which the Nov 2024 map does not support. OCII's open-space page lists 'P1 Amphitheater at Mission Creek Park' and 'P3 Mission Creek Park'.",
   "has_record_file": true,
-  "last_verified": "2026-09-22",
+  "last_verified": "2026-09-29",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

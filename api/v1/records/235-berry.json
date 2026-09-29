@@ -39,7 +39,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I/II/III, Madrone, Arden, One Mission Bay, Radiance).",
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I, Madrone and Radiance, re-checked against data/raw/parcels.geojson in the 2026-09 audit; Avalon II and III are not condo-mapped, and Arden and One Mission Bay were not re-checked).",
     "digitized_from": "OpenStreetMap (way 46264105, 235 Berry St)"
    }
   },
@@ -55,15 +55,15 @@
     "date_label": "Sep 26, 2006",
     "status": "under_construction",
     "status_label": "Under construction",
-    "text": "235 Berry (Signature Development Group) under construction and about 50% sold, developer targeting closings and occupancy by end of 2006",
+    "text": "235 Berry (Signature Development Group): SocketSite (Sept 26, 2006, headline 'Under 50% Sold?') noted that at least four of the six units released in June were still available and reported the developer was shooting for closings and occupancy by the end of 2006",
     "expected": false,
     "approximate": false,
     "sources": [
      {
-      "title": "socketsite.com"
+      "title": "https://socketsite.com/archives/2006/09/235_berry_street_update_under_50_sold.html"
      }
     ],
-    "source": "socketsite.com",
+    "source": "https://socketsite.com/archives/2006/09/235_berry_street_update_under_50_sold.html",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -87,15 +87,15 @@
     "date_label": "~2007",
     "status": "complete",
     "status_label": "Complete",
-    "text": "235 Berry (Signature Development Group) opens",
+    "text": "235 Berry (Signature Development Group) completed: Skybox Realty's page says 'Built in 2007'",
     "expected": false,
     "approximate": true,
     "sources": [
      {
-      "title": "lmsarch.com; skyboxrealty.com"
+      "title": "https://skyboxrealty.com/portfolio/235-berry/"
      }
     ],
-    "source": "lmsarch.com; skyboxrealty.com",
+    "source": "https://skyboxrealty.com/portfolio/235-berry/",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -115,7 +115,37 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The geometry notes said 235 Berry is informally 'Signature II' to 255 Berry's 'Signature I'; no cited source uses those names, so the claim was withdrawn in a dated note. The condo-mapped-tower comparison no longer lists Avalon II and III, which are not condo-mapped. The 2007 completion milestone now cites Skybox Realty's 'Built in 2007', and the 2006 milestone cites the SocketSite post and no longer states 50% sold.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_235_berry",
+     "slug": "235-berry",
+     "name": "235 Berry",
+     "permalink": "https://pierandpoint.org/parcels/235-berry/",
+     "api": "https://pierandpoint.org/api/v1/records/235-berry.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/mission_bay/owner_20260923_102523.jpg",
@@ -169,7 +199,7 @@
   ],
   "notes": null,
   "has_record_file": true,
-  "last_verified": "2026-09-27",
+  "last_verified": "2026-09-29",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

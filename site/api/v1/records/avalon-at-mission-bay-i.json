@@ -49,51 +49,19 @@
   "costs": [],
   "milestones": [
    {
-    "date": "2000-10-23",
-    "date_label": "Oct 23, 2000",
-    "status": "under_construction",
-    "status_label": "Under construction",
-    "text": "Groundbreaking for AvalonBay's 16-story apartment tower on the King/3rd/Berry/4th block (became Avalon at Mission Bay I, 255 King St), one of three buildings breaking ground together that day",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "title": "sfgate.com"
-     }
-    ],
-    "source": "sfgate.com",
-    "origin": "csv",
-    "category": "status",
-    "category_label": "Status",
-    "record": {
-     "id": "mission_bay_avalon_phase_i",
-     "slug": "avalon-at-mission-bay-i",
-     "name": "Avalon at Mission Bay I",
-     "permalink": "https://pierandpoint.org/parcels/avalon-at-mission-bay-i/",
-     "api": "https://pierandpoint.org/api/v1/records/avalon-at-mission-bay-i.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2003-06",
+    "date": "2003",
     "date_label": "~2003",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Avalon at Mission Bay I (255 King St) completed",
+    "text": "Avalon at Mission Bay I (255 King St) completed (DataSF Assessor year built 2003; no source read gives a month)",
     "expected": false,
     "approximate": true,
     "sources": [
      {
-      "title": "arquitectonica.com"
+      "title": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8706010"
      }
     ],
-    "source": "arquitectonica.com",
+    "source": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8706010",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -114,6 +82,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The shape log said Phase I of a three-phase AvalonBay complex, about 250 units, built circa 2003, architect Arquitectonica. OSM gives only the address, and the Arquitectonica page describes a 260-unit project that matches the third phase, so the log now carries a dated correction: the Assessor roll for 255 King St shows year built 2003, 256 units and 19 stories, no source read names the architect, and the phase numbering and project name are this repository's label. The shape notes no longer say 'first of three phases' as fact. The June 2003 completion month (bare arquitectonica.com citation) is now 2003 citing the Assessor roll, and the October 2000 groundbreaking milestone (bare sfgate.com citation, unverifiable, 16-story claim contradicted by the Assessor's 19 stories) was removed. The Thy Spa retail entry could not be re-checked because the tenant's site blocks automated fetches and is unchanged.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_avalon_phase_i",
+     "slug": "avalon-at-mission-bay-i",
+     "name": "Avalon at Mission Bay I",
+     "permalink": "https://pierandpoint.org/parcels/avalon-at-mission-bay-i/",
+     "api": "https://pierandpoint.org/api/v1/records/avalon-at-mission-bay-i.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-22",
     "kind": "added",
@@ -158,7 +155,7 @@
     "url": "https://arquitectonica.com/architecture/project/avalon-mission-bay/"
    }
   ],
-  "notes": "First of three AvalonBay phases along King St; a companion OSM landuse way (867565682) covers the same site but the building way used here is the actual footprint.",
+  "notes": "The building way used here is the actual footprint; a companion OSM landuse way (867565682) may cover the same site but was not checked. That this is the 'first of three AvalonBay phases along King St' is not stated by any cited source: the name and numbering 'Avalon at Mission Bay I' are this repository's label, since OSM way 945538326 has no name and Arquitectonica titles its page 'Avalon Mission Bay'.",
   "has_record_file": false,
   "last_verified": null,
   "tenants": [

@@ -39,7 +39,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I/II/III, Madrone, Arden, One Mission Bay, Radiance).",
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I, Madrone and Radiance, re-checked against data/raw/parcels.geojson in the 2026-09 audit; Avalon II and III are not condo-mapped, and Arden and One Mission Bay were not re-checked).",
     "digitized_from": "OpenStreetMap (way 48569995, 300 Berry St)"
    }
   },
@@ -55,15 +55,15 @@
     "date_label": "Jul 30, 2007",
     "status": "under_construction",
     "status_label": "Under construction",
-    "text": "Arterra (300 Berry St) tops off at 16 floors, aiming for spring 2008 opening",
+    "text": "Arterra (300 Berry St) tops off at 16 floors per Intracorp, which expected completion and closing of escrows in spring 2008",
     "expected": false,
     "approximate": false,
     "sources": [
      {
-      "title": "socketsite.com"
+      "title": "https://socketsite.com/archives/2007/07/arterra_300_berry_tops_off_and_aims_for_a_spring_openin.html"
      }
     ],
-    "source": "socketsite.com",
+    "source": "https://socketsite.com/archives/2007/07/arterra_300_berry_tops_off_and_aims_for_a_spring_openin.html",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -87,15 +87,15 @@
     "date_label": "~2009",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Arterra opens",
+    "text": "Arterra (300 Berry St) completed: the per-unit condominium lots carry year built 2009 in the DataSF Assessor roll",
     "expected": false,
     "approximate": true,
     "sources": [
      {
-      "title": "socketsite.com"
+      "title": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8704012"
      }
     ],
-    "source": "socketsite.com",
+    "source": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8704012",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -115,7 +115,37 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The geometry notes said about 275 units; the cited SocketSite post says 268, so a dated note was appended. The 2009 built year now cites the DataSF Assessor roll for the per-unit condominium lots at 300 Berry, the 2007 topping-out milestone cites its SocketSite post (16 floors, spring 2008 target), and the condo-tower comparison no longer lists Avalon II and III.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_arterra",
+     "slug": "arterra",
+     "name": "Arterra",
+     "permalink": "https://pierandpoint.org/parcels/arterra/",
+     "api": "https://pierandpoint.org/api/v1/records/arterra.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/mission_bay/owner_20260923_102245.jpg",
@@ -159,6 +189,11 @@
     "id": null,
     "title": "socketsite.com/archives/2006/04/the_arterra_cle.html",
     "url": "https://socketsite.com/archives/2006/04/the_arterra_cle.html"
+   },
+   {
+    "id": null,
+    "title": "data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8704012",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8704012"
    }
   ],
   "notes": null,

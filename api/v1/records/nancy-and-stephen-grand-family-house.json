@@ -30,9 +30,11 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "The Nancy & Stephen Grand Family House is an 80-bedroom, ~92,000 sq ft nonprofit facility at 540 Mission Bay Blvd North (Mission Bay Block 7 East) providing free housing for families of children treated at UCSF Benioff Children's Hospital. DataSF Assessor records date its construction to 2016, matching UC San Francisco's own news office, which reported the building opened in May 2016.",
+  "summary": "The Nancy & Stephen Grand Family House is an 80-bedroom nonprofit facility of about 89,000 sq ft (the Assessor's property area; OCII's 2014 resolution describes a planned 96,000 sq ft facility) at 540 Mission Bay Blvd North (Mission Bay Block 7 East), providing free housing for families of patients primarily receiving treatment at UCSF Mission Bay Medical Center. DataSF Assessor records date its construction to 2016, matching UC San Francisco's own news office, which reported the building opened in May 2016.",
   "summary_sources": [
    "src-datasf-8711227",
+   "src-familyhouse-rooms",
+   "src-ocii-reso-10-2014",
    "src-ucsf-familyhouse-2016"
   ],
   "shape": {
@@ -57,7 +59,7 @@
     "date_label": "Mar 4, 2014",
     "status": "planned",
     "status_label": "Planned",
-    "text": "The Commission on Community Investment and Infrastructure (OCII), successor to the Mission Bay Redevelopment Agency, adopts Resolution No. 10-2014, adopting CEQA findings and conditionally approving the combined basic concept and schematic design for Family House, Inc.'s institutional building on Block 7 East",
+    "text": "The Commission on Community Investment and Infrastructure (OCII) adopts Resolution No. 10-2014, adopting CEQA findings and conditionally approving the combined basic concept and schematic design for Family House, Inc.'s institutional building on Block 7 East",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -134,14 +136,44 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The shape log said OCII's commission meeting was March 18; OCII's own Resolution No. 10-2014 is dated March 4, 2014, and the log now says so (and notes that Citizen Portal is an automated summary, not a primary source). The 2012 parcel recording date now cites the DataSF Parcels row. The record said Family House serves children treated at UCSF Benioff Children's Hospital; OCII's resolution says families of patients primarily treated at UCSF Mission Bay Medical Center, so the summary and notes now use that wording. Founding year, the earlier Judah St. building, nightly capacity, families served and 'low-income-qualified' were removed because no readable cited page states them. The summary's ~92,000 sq ft was replaced by the Assessor's 89,197 sq ft with OCII's planned 96,000 sq ft noted, the Nancy & Stephen Grand name now cites Family House's rooms page, and the milestone no longer calls OCII successor to the 'Mission Bay Redevelopment Agency'. The Wikimedia aerial credit names only the Commons username Firstcultural. The May 2016 opening rests on a UCSF page that blocks automated fetches and remains flagged in the record's open questions.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_family_house",
+     "slug": "nancy-and-stephen-grand-family-house",
+     "name": "Nancy & Stephen Grand Family House",
+     "permalink": "https://pierandpoint.org/parcels/nancy-and-stephen-grand-family-house/",
+     "api": "https://pierandpoint.org/api/v1/records/nancy-and-stephen-grand-family-house.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
     "kind": "now",
     "scope": "site",
     "taken": "2024-05-20",
-    "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+    "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
     "license": "public-domain",
     "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
     "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
@@ -163,12 +195,12 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-02-10",
-    "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+    "credit": "Firstcultural, via Wikimedia Commons; CC0; downscaled to 1600 px",
     "license": "cc0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural. Read 2026-09-23.",
+    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area",
     "aerial": true,
     "focus": [
      0.35,
@@ -184,7 +216,8 @@
   "open_questions": [
    "The UCSF News article could not be directly rendered in this session (its host returned 403 to automated fetches, and archive.org is blocked by this session's egress policy); its May 2016 opening date is taken from the article's own title/URL slug and is corroborated by independent secondary reporting (an SF Examiner 10-year-anniversary piece and a Hoodline article on the move), but the page's full text was not read firsthand here -- worth a follow-up direct read.",
    "Exact day within May 2016 is not sourced, only the month.",
-   "A separate Family House article title found in search ('Grand Family House Grand Opening Ribbon Cutting... March 2, 2016') suggests a ribbon-cutting ceremony preceded the May 2016 move-in date, but that page returned 404 when fetched directly and its content could not be confirmed -- not used as a citation here."
+   "A separate Family House article title found in search ('Grand Family House Grand Opening Ribbon Cutting... March 2, 2016') suggests a ribbon-cutting ceremony preceded the May 2016 move-in date, but that page returned 404 when fetched directly and its content could not be confirmed -- not used as a citation here.",
+   "No readable source says the Family House serves children treated at UCSF Benioff Children's Hospital specifically; OCII's 2014 resolution describes 'families of patients primarily receiving treatment at UCSF Mission Bay Medical Center'. The founding year (1981), the earlier Judah St. building, capacity (250 people a night), families served (3,000+ a year) and 'low-income-qualified' were removed from the shape notes because no readable cited page states them; Family House's own history page likely does."
   ],
   "sources": [
    {
@@ -220,9 +253,11 @@
     "overview": true
    },
    {
-    "id": null,
-    "title": "familyhouseinc.org/rooms",
-    "url": "https://familyhouseinc.org/rooms/"
+    "id": "src-familyhouse-rooms",
+    "title": "Rooms (Nancy & Stephen Grand Family House; 'always 100% free of charge')",
+    "publisher": "Family House, Inc. (own material)",
+    "url": "https://familyhouseinc.org/rooms/",
+    "accessed": "2026-09-29"
    },
    {
     "id": null,
@@ -235,7 +270,7 @@
     "url": "https://citizenportal.ai/articles/7096368/California/San-Francisco-County/San-Francisco-City/Commission-approves-Family-House-schematic-design-for-Mission-Bay-Block-7-East"
    }
   ],
-  "notes": "5-story, 80-room nonprofit 'home away from home' for families of children being treated at UCSF Benioff Children's Hospital -- free lodging, low-income-qualified, run by the 501(c)(3) Family House, Inc. (founded 1981). Opened at this Mission Bay location in 2016 after moving from an earlier Judah St. building; accommodates up to 250 people/night, serves 3,000+ families/year. Assessor's welfare exemption on the parcel matches its nonprofit operation.",
+  "notes": "5-story, 80-room nonprofit 'home away from home' for families of patients primarily receiving treatment at UCSF Mission Bay Medical Center (OCII Resolution No. 10-2014) -- free lodging ('always 100% free of charge' per Family House's rooms page), run by Family House, Inc. Opened at this Mission Bay location in 2016 (Assessor year built 2016). Assessor's welfare exemption on the parcel matches its nonprofit operation.",
   "has_record_file": true,
   "last_verified": "2026-09-21",
   "tenants": [],

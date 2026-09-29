@@ -29,7 +29,7 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "Mission Walk is a below-market-rate condominium development at 330 and 335 Berry St, built under the San Francisco Redevelopment Agency's Affordable Homeownership Program; this building (335 Berry St) was completed in 2009 per DataSF Assessor records, with its BMR units among the 131 across both addresses allocated by a lottery in January 2009.",
+  "summary": "Mission Walk is a below-market-rate for-sale condominium development at 330 and 335 Berry St in Mission Bay North; this building (335 Berry St) was completed in 2009 per DataSF Assessor records, and a lottery for the development's 131 BMR units was announced in 2008 for January 28, 2009.",
   "summary_sources": [
    "src-datasf-assessor-335berry",
    "src-socketsite-missionwalk-2008"
@@ -40,7 +40,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8707120), cross-referenced by position against an OpenStreetMap building/address point (way 56656114) for the name and street address; not a hand trace or plan estimate. Opening year and unit count not confirmed by any source found in this pass.",
+    "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8707120), cross-referenced by position against an OpenStreetMap building/address point (way 56656114) for the name and street address; not a hand trace or plan estimate. Built 2009 per the DataSF Assessor (year_property_built) and San Francisco Condo Market; the unit count for 335 Berry alone is unsettled (Condo Market lists 39 units, while the 131 below-market-rate condos in SocketSite's 2008 post span both 330 and 335 Berry).",
     "digitized_from": "DataSF Building Footprints (mblr SF8707120); name/address from OpenStreetMap way 56656114 (335 Berry St)"
    }
   },
@@ -48,7 +48,16 @@
    "lon": -122.396326,
    "lat": 37.77293
   },
-  "facts": [],
+  "facts": [
+   {
+    "key": "affordable_units",
+    "value": "131 family for-sale affordable units at Mission Walk (Blocks N4-A, N4-A2), completed 2009, per a 2023 city memo; the same 131 BMR condos span 330 and 335 Berry per SocketSite 2008",
+    "sources": [
+     "src-mohcd-400cb-2023",
+     "src-socketsite-missionwalk-2008"
+    ]
+   }
+  ],
   "costs": [],
   "milestones": [
    {
@@ -132,14 +141,44 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The record said Mission Walk was built under the San Francisco Redevelopment Agency's Affordable Homeownership Program and that its below-market units were allocated by a lottery in January 2009. Neither cited source says the first, and SocketSite (2008) only announced the lottery for January 28, 2009, so the summary now says that. A 2023 city memo listing Mission Walk as 131 family for-sale affordable units completed in 2009 is now cited. The geometry notes said the opening year and unit count were unconfirmed; they now state the 2009 build year (Assessor and Condo Market SF) and that the unit count for this address alone is unsettled. The aerial photo credit names the Commons account Firstcultural (Alfred Twu, per its user page) and drops the unsupported 'departing flight' wording.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_mission_walk_335",
+     "slug": "mission-walk-335-berry-st",
+     "name": "Mission Walk (335 Berry St)",
+     "permalink": "https://pierandpoint.org/parcels/mission-walk-335-berry-st/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-walk-335-berry-st.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
     "kind": "now",
     "scope": "site",
     "taken": "2024-05-20",
-    "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+    "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
     "license": "public-domain",
     "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
     "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
@@ -161,12 +200,12 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-02-10",
-    "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+    "credit": "Firstcultural (Alfred Twu, per the Wikimedia Commons user page User:Firstcultural), via Wikimedia Commons; CC0; downscaled to 1600 px",
     "license": "cc0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural, who states it is their own work; the Commons user page User:Firstcultural names the account holder as Alfred Twu. Read 2026-09-23 (file page) and 2026-09-29 (user page).",
+    "caption": "Aerial photo of San Francisco's Mission Bay, ballpark, and Caltrain area",
     "aerial": true,
     "focus": [
      0.35,
@@ -244,12 +283,20 @@
     "overview": true
    },
    {
+    "id": "src-mohcd-400cb-2023",
+    "title": "400 China Basin: requesting an additional $8,000,000 in gap funding (memorandum to the Citywide Affordable Housing Loan Committee, table of Mission Bay affordable housing developments, listing Mission Walk: 131 units, family for-sale, completed 2009)",
+    "publisher": "San Francisco Mayor's Office of Housing and Community Development, with OCII and others",
+    "date": "2023-10-20",
+    "url": "https://media.api.sf.gov/documents/Approved_400_China_Basin_Additional_Gap_Funding_-_LC_10-20-23.pdf",
+    "accessed": "2026-09-29"
+   },
+   {
     "id": null,
     "title": "openstreetmap.org/way/56656114",
     "url": "https://www.openstreetmap.org/way/56656114"
    }
   ],
-  "notes": "Opening year and unit count not confirmed by any source found in this pass.",
+  "notes": "Built 2009 per the DataSF Assessor (year_property_built) and San Francisco Condo Market; the unit count for 335 Berry alone is unsettled (Condo Market lists 39 units, while the 131 below-market-rate condos in SocketSite's 2008 post span both 330 and 335 Berry).",
   "has_record_file": true,
   "last_verified": "2026-09-21",
   "tenants": [],

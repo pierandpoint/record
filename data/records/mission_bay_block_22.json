@@ -16,11 +16,11 @@
       "kind": "now",
       "scope": "site",
       "taken": "2024-05-20",
-      "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+      "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
       "license": "public-domain",
       "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
       "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
-      "license_note": "USDA's data.gov catalog record for NAIP imagery sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0); the USDA FSA policies page says public-domain information may be freely distributed with credit requested ('U.S. Department of Agriculture, Farm Service Agency'). Read 2026-09-22.",
+      "license_note": "USDA's data.gov catalog record for NAIP imagery (published by the Farm Production and Conservation Business Center, Geospatial Enterprise Operations Branch) sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0). Read 2026-09-22 and 2026-09-29. The USDA export URL returned a 504 on 2026-09-29, so the 2024-05-20 flight date was not re-read.",
       "caption": "USDA NAIP aerial orthophoto (2024 flight), cropped to the Mission Bay project area and its immediate surroundings",
       "aerial": true,
       "focus": [
@@ -37,12 +37,12 @@
       "kind": "now",
       "scope": "site",
       "taken": "2024-02-10",
-      "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+      "credit": "Firstcultural, via Wikimedia Commons; CC0; downscaled to 1600 px",
       "license": "cc0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
       "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-      "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-      "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+      "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural. Read 2026-09-23.",
+      "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area",
       "aerial": true,
       "focus": [
         0.35,
@@ -74,7 +74,8 @@
   "open_questions": [
     "No independently published source (SF Recreation & Park Department, OCII, news coverage) names or dates this park; the only evidence found is this repo's own satellite-imagery review and the owner's September 2026 on-site confirmation that it is already built, both recorded in the geometry file's own digitization_method log -- not a substitute for a dated public-record source, so no completion milestone is asserted here.",
     "This project's earlier DataSF Assessor Parcels/Building Footprints check (recorded in the same digitization_method log) traced the dominant underlying parcel to a retired 1998 'COMMON_AREAS' placeholder (blklot 8799TBA3, dropped 2005) plus scattered UCSF campus parcel fragments -- consistent with open, non-built land, but that doesn't establish when the current landscaping was actually built.",
-    "Not clear whether this block corresponds to any of OCII's lettered/numbered open-space plan parcels (P1-P27) tracked elsewhere in this project; no such label was found for it in any source checked."
+    "Not clear whether this block corresponds to any of OCII's lettered/numbered open-space plan parcels (P1-P27) tracked elsewhere in this project; no such label was found for it in any source checked.",
+    "Possible identity, not confirmed: UCSF's June 12, 2025 CAC presentation (p.3 map, 'MAP UPDATED: DECEMBER 2024', read directly 2026-09-29) labels a park 'KORET QUAD (22)' in the North Campus, and OCII's Nov 14, 2024 'Mission Bay Future Parks' CAC update (p.2 map) is reported to label a completed park 'Koret Quad' in this block's position, and Wikipedia's Mission Bay article lists Koret Quad among parks complete by fall 2010. The owner should confirm whether this block is Koret Quad before the record is renamed or its 'complete' status is sourced to that map; until then the status rests on the owner's 2026-09 visit only."
   ],
   "last_verified": "2026-09-21"
 }

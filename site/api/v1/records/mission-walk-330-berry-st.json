@@ -29,7 +29,7 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "Mission Walk is a below-market-rate condominium development at 330 and 335 Berry St, built under the San Francisco Redevelopment Agency's Affordable Homeownership Program; this building (330 Berry St) was completed in 2009 per DataSF Assessor records, with its BMR units among the 131 across both addresses allocated by a lottery in January 2009.",
+  "summary": "Mission Walk is a below-market-rate condominium development at 330 and 335 Berry St: SocketSite (Oct 27, 2008) reported applications for its 131 BMR condos across both addresses, for buyers earning up to 80-100% of area median income, with applications due January 22, 2009 and a lottery scheduled for January 28, 2009; this building (330 Berry St) was completed in 2009 per DataSF Assessor records.",
   "summary_sources": [
    "src-datasf-assessor-330berry",
    "src-socketsite-missionwalk-2008"
@@ -41,7 +41,7 @@
    "display_reason": null,
    "notes": {
     "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8704278), cross-referenced by position against an OpenStreetMap building/address point (way 56656119) for the name and street address, but trimmed against the adjacent, already-committed Arterra footprint to remove a 712 sq m overlap (see digitization_method). The trimmed shape may understate this building's true footprint along the shared edge with Arterra; not a hand trace or plan estimate otherwise. Updated 2026-09-20: extended north by a real-gap-fragment piece sized to this building's own footprint width, per the owner's direct cut -- not independently sourced or verified against a building footprint of its own.",
-    "digitized_from": "DataSF Building Footprints (mblr SF8704278); name/address from OpenStreetMap way 56656119 (330 Berry St)"
+    "digitized_from": "DataSF Building Footprints (mblr SF8704278) for the building portion only (about 970 sq m of the ~2,863 sq m polygon, after trimming the Arterra overlap); the remaining ~1,893 sq m is the owner-directed 2026-09-20 northward real-gap-fragment extension, which no footprint or OSM outline supports (see digitization_method); name/address from OpenStreetMap way 56656119 (330 Berry St)"
    }
   },
   "centroid": {
@@ -132,18 +132,48 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The summary said the condos were built under the Redevelopment Agency's Affordable Homeownership Program and allocated by a January 2009 lottery; the SocketSite post only announces 131 BMR condos and a scheduled lottery, so the summary now says that. The geometry file's digitized_from now states that about two thirds of the shape is an owner-directed extension rather than a real footprint, and the stale 'opening year and unit count not confirmed' note now cites 2009 and 41 units from the record's own sources. The NAIP photo credit now names the Farm Production and Conservation Business Center.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_mission_walk_330",
+     "slug": "mission-walk-330-berry-st",
+     "name": "Mission Walk (330 Berry St)",
+     "permalink": "https://pierandpoint.org/parcels/mission-walk-330-berry-st/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-walk-330-berry-st.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
     "kind": "now",
     "scope": "site",
     "taken": "2024-05-20",
-    "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+    "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
     "license": "public-domain",
     "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
     "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
-    "license_note": "USDA's data.gov catalog record for NAIP imagery sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0); the USDA FSA policies page says public-domain information may be freely distributed with credit requested ('U.S. Department of Agriculture, Farm Service Agency'). Read 2026-09-22.",
+    "license_note": "USDA's data.gov catalog record for NAIP imagery (published by the Farm Production and Conservation Business Center) sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0). Read 2026-09-22; publisher name re-read 2026-09-29.",
     "caption": "USDA NAIP aerial orthophoto (2024 flight), cropped to the Mission Bay project area and its immediate surroundings",
     "aerial": true,
     "focus": [
@@ -161,12 +191,12 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-02-10",
-    "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+    "credit": "Firstcultural (Alfred Twu, per the photographer's Wikimedia Commons user page), via Wikimedia Commons; CC0; downscaled to 1600 px",
     "license": "cc0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by the author Firstcultural; the author's Commons user page (https://commons.wikimedia.org/wiki/User:Firstcultural) gives the name Alfred Twu. File page read 2026-09-23, user page read 2026-09-29.",
+    "caption": "Aerial photo of San Francisco's Mission Bay, ballpark, and Caltrain area",
     "aerial": true,
     "focus": [
      0.35,
@@ -183,7 +213,8 @@
    "Precise completion month in 2009 is not sourced beyond the bare Assessor year.",
    "DataSF Assessor's own use_code/unit-count fields for this specific parcel (Single Family Residential, 0 units, 2 stories) look like a condo common-element or garage lot rather than the full building, while listing sites describe a larger residential building at this address; not reconciled here.",
    "Unit count for this address alone (as distinct from the combined 131-unit BMR program across both 330 and 335 Berry St) is not confirmed from a single source.",
-   "Developer/architect not confirmed from any source checked in this pass."
+   "Developer/architect not confirmed from any source checked in this pass.",
+   "Whether the 131 BMR units were actually allocated by the scheduled January 28, 2009 lottery, and which program they were sold under, are not stated by any source checked: SocketSite's post announces the lottery and names neither the program nor the Redevelopment Agency."
   ],
   "sources": [
    {
@@ -228,9 +259,9 @@
     "url": "https://www.openstreetmap.org/way/56656119"
    }
   ],
-  "notes": "This footprint's east edge originally overlapped the already-tracked Arterra building (300 Berry St) in DataSF's own footprint layer -- the two buildings sit immediately adjacent/share a party wall. Trimmed to the non-overlapping remainder rather than guessed; a future pass could re-verify the true shared boundary against a site plan or higher-resolution imagery. Opening year and unit count not confirmed.",
+  "notes": "This footprint's east edge originally overlapped the already-tracked Arterra building (300 Berry St) in DataSF's own footprint layer -- the two buildings sit immediately adjacent/share a party wall. Trimmed to the non-overlapping remainder rather than guessed; a future pass could re-verify the true shared boundary against a site plan or higher-resolution imagery. Year built 2009 and 41 units per sanfranciscocondomarket.com (a secondary listing site) and the Assessor's 2009 year; the DataSF Assessor unit fields for the parcel look like a common-element lot (see the record's open_questions).",
   "has_record_file": true,
-  "last_verified": "2026-09-21",
+  "last_verified": "2026-09-29",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

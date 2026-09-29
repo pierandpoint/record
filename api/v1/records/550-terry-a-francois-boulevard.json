@@ -29,9 +29,11 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "550 Terry A. Francois Boulevard is a 6-story Class A office building in Mission Bay, built in 2002 per DataSF Assessor records; it was long the Gap Inc./Old Navy corporate headquarters, purchased by DivcoWest from Gap in 2022 and later subleased to OpenAI.",
+  "summary": "550 Terry A. Francois Boulevard is a 6-story Class A office building in Mission Bay, built in 2002 per DataSF Assessor records; it once served as Old Navy's headquarters, was bought by DivcoWest from parent company Gap in 2022, and was later subleased to OpenAI.",
   "summary_sources": [
-   "src-datasf-550terry"
+   "src-datasf-550terry",
+   "src-trd-2024-550terry",
+   "src-rebo-2022-550terry"
   ],
   "shape": {
    "kind": "approximate",
@@ -123,14 +125,44 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The record's summary and geometry notes called 550 Terry A. Francois Boulevard the longtime Gap Inc./Old Navy corporate headquarters. The Real Deal (2024) and REBusinessOnline (2022) say only that it once served as Old Navy's headquarters and that DivcoWest bought it from parent company Gap in 2022, so the summary now says that and cites both articles. The aerial photo credit now names the Commons account Firstcultural (Alfred Twu, per that account's user page) and drops the 'departing flight' wording, which the file page does not state.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_550_terry_francois",
+     "slug": "550-terry-a-francois-boulevard",
+     "name": "550 Terry A. Francois Boulevard",
+     "permalink": "https://pierandpoint.org/parcels/550-terry-a-francois-boulevard/",
+     "api": "https://pierandpoint.org/api/v1/records/550-terry-a-francois-boulevard.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
     "kind": "now",
     "scope": "site",
     "taken": "2024-05-20",
-    "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+    "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
     "license": "public-domain",
     "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
     "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
@@ -152,12 +184,12 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-02-10",
-    "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+    "credit": "Firstcultural (Alfred Twu, per the Wikimedia Commons user page User:Firstcultural), via Wikimedia Commons; CC0; downscaled to 1600 px",
     "license": "cc0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural, who states it is their own work; the Commons user page User:Firstcultural names the account holder as Alfred Twu. Read 2026-09-23 (file page) and 2026-09-29 (user page).",
+    "caption": "Aerial photo of San Francisco's Mission Bay, ballpark, and Caltrain area",
     "aerial": true,
     "focus": [
      0.35,
@@ -200,19 +232,25 @@
     "overview": true
    },
    {
+    "id": "src-trd-2024-550terry",
+    "title": "OpenAI subleases 350K sf building in San Francisco's Mission Bay",
+    "publisher": "The Real Deal",
+    "date": "2024-09-23",
+    "url": "https://therealdeal.com/san-francisco/2024/09/23/openai-subleases-350k-sf-building-in-sfs-mission-bay/",
+    "accessed": "2026-09-29"
+   },
+   {
+    "id": "src-rebo-2022-550terry",
+    "title": "DivcoWest Buys 320,000 SF Office Building in San Francisco's Mission Bay",
+    "publisher": "REBusinessOnline",
+    "date": "2022-05-25",
+    "url": "https://rebusinessonline.com/divcowest-buys-320000-sf-office-building-in-san-franciscos-mission-bay/",
+    "accessed": "2026-09-29"
+   },
+   {
     "id": null,
     "title": "divcowest.com/property/550-terry-francois",
     "url": "https://divcowest.com/property/550-terry-francois/"
-   },
-   {
-    "id": null,
-    "title": "therealdeal.com/san-francisco/2024/09/23/openai-subleases-350k-sf-building-in-sfs-mission-bay",
-    "url": "https://therealdeal.com/san-francisco/2024/09/23/openai-subleases-350k-sf-building-in-sfs-mission-bay/"
-   },
-   {
-    "id": null,
-    "title": "rebusinessonline.com/divcowest-buys-320000-sf-office-building-in-san-franciscos-mission-bay",
-    "url": "https://rebusinessonline.com/divcowest-buys-320000-sf-office-building-in-san-franciscos-mission-bay/"
    }
   ],
   "notes": "No OSM building/name tag found on this footprint; address and history confirmed via DataSF Assessor parcel data and news coverage instead.",

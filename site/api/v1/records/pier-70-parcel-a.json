@@ -30,11 +30,12 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "Phase 1 office parcel at 20th and Maryland Streets, entitled for roughly 350,000 gross square feet of commercial office over retail and underground parking; appraised in 2020 at $66 million for a 99-year prepaid lease, but Brookfield declined to proceed in June 2020 and no vertical development has started. King Street Properties announced a life-science plan for it in 2023.",
+  "summary": "Phase 1 office parcel at 20th and Maryland Streets (per D4D Figure 6.4.2), entitled for roughly 350,000 gross square feet of commercial office over retail and underground parking; appraised at $66 million (reported February 2020) for a 99-year prepaid lease, but Brookfield declined to proceed in June 2020 and no vertical development has started. King Street Properties announced a life-science plan for it in 2023.",
   "summary_sources": [
    "src-port-12b-2020",
    "src-port-11a-2026",
-   "src-bisnow-2023-02"
+   "src-bisnow-2023-02",
+   "src-d4d"
   ],
   "shape": {
    "kind": "approximate",
@@ -42,10 +43,10 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- this block is not yet built and does not correspond to any subdivided Assessor parcel: it currently sits on vacant/graded land, surface parking, or an existing industrial building slated for demolition within Brookfield's 28-acre district (unaddressed in DataSF's Assessor roll). Redone 2026-09-14 with a corrected, shear-free transform (see digitization_method) -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects this transform's 1-8m residual error, not a deliberate encroachment. EXTENDED SOUTH 2026-09-17 (user-flagged): this block's south edge fell ~11m short of the real sidewalk visible in satellite imagery, leaving a strip of unclaimed vacant land between the block and the street -- consistent with this site's known local scale error for parcels far from the transform's Illinois/Michigan St anchors (see Parcel E1's digitization_method for the same root cause). The diagram itself (Figure 6.4.2) shows this block's fill running right up to the street with no setback, so extended the two south vertices by 11m (measured via satellite pixel-color transition to the real sidewalk, 3 sample transects) to close the gap, matching the diagram's own convention rather than re-deriving the whole transform.",
+    "accuracy_caveat": "APPROXIMATE -- this block is not yet built (Port Item 11A, Aug 2026: the developer 'has not exercised an option of any Phase 1 option parcels'), and no source read ties it to a specific Assessor lot: DataSF's Assessor parcels include new lots created for the 28-acre district in 2019, without street addresses, but which lot (if any) is Parcel A's was not established. It currently sits on vacant/graded land, surface parking, or an existing industrial building slated for demolition within Brookfield's 28-acre district. Redone 2026-09-14 with a corrected, shear-free transform (see digitization_method) -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects this transform's 1-8m residual error, not a deliberate encroachment. EXTENDED SOUTH 2026-09-17 (user-flagged): this block's south edge fell ~11m short of the real sidewalk visible in satellite imagery, leaving a strip of unclaimed vacant land between the block and the street -- consistent with this site's known local scale error for parcels far from the transform's Illinois/Michigan St anchors (see Parcel E1's digitization_method for the same root cause). The diagram itself (Figure 6.4.2) shows this block's fill running right up to the street with no setback, so extended the two south vertices by 11m (measured via satellite pixel-color transition to the real sidewalk, 3 sample transects) to close the gap, matching the diagram's own convention rather than re-deriving the whole transform.",
     "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-    "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of Brookfield's larger, largely unaddressed 28-acre site), but it has not been subdivided per the masterplan's individual named parcels -- this uses hand-traced approximate geometry instead.",
-    "regulatory_context": "Commercial/life-science, 90 ft max / 6 stories per Figure 6.4.2. Current design (DES Architects + Grimshaw, ~356,000-365,000 GSF, for King Street Properties' life-science program) superseded an earlier (2019) Hacker Architects + Quezada Architecture mass-timber office design (~300,000-310,000 sf, billed as one of the largest CLT office buildings in North America) -- both designs are real, the mass-timber one was simply replaced, not fabricated. No construction-start source found."
+    "why_no_real_parcel": "No source read ties this block to a specific Assessor lot. DataSF's Assessor parcels include lots created for Brookfield's 28-acre district in 2019 (for example, Port Item 12B, Feb 2020, gives Parcel E2 as Block 4116, Lot 008), but Parcel A's own lot was not identified, so this uses hand-traced approximate geometry instead.",
+    "regulatory_context": "Commercial/life-science, 90 ft max / 6 stories per Figure 6.4.2. A revised design by Grimshaw with DES Architects + Engineers (356,400 sq ft, six stories, 90 ft) was reported by SF YIMBY in Oct 2021 with the refiled Development Agreement; King Street Properties announced in Feb 2023 a six-story, roughly 300,000 sq ft speculative life-science building on Parcel A (Bisnow). No source read links the Grimshaw design to King Street's plan, and no source read supports the earlier mention of a 2019 mass-timber design or a 365,000 GSF figure (removed 2026-09-29). No construction-start source found."
    }
   },
   "centroid": {
@@ -283,7 +284,7 @@
     "date_label": "Nov 15, 2017",
     "status": null,
     "status_label": null,
-    "text": "Mayor Lee signs the Development Agreement ordinance (Ordinance 224-17) and the rest of the project legislation after Board of Supervisors approval on October 31, 2017",
+    "text": "Mayor Lee signs the Development Agreement ordinance (Ordinance 224-17) and the rest of the project legislation; the Board of Supervisors passed it on first reading on October 31, 2017 and finally on November 14, 2017",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -615,7 +616,7 @@
     "date_label": "Oct 27, 2021",
     "status": null,
     "status_label": null,
-    "text": "Revised Parcel A design filed with SF Planning: six stories, 90 ft, 356,400 sq ft (244,720 sq ft rentable office, 8,690 sq ft retail), 152 below-grade parking spaces, Grimshaw with DES Architects + Engineers, Truebeck Construction as general contractor",
+    "text": "SF YIMBY reports (Oct 27, 2021) new illustrations of a revised Parcel A design that came with the refiled Development Agreement: six stories, 90 ft, 356,400 sq ft (244,720 sq ft rentable office, 8,690 sq ft retail), 152 below-grade parking spaces, Grimshaw with DES Architects + Engineers, Truebeck Construction as general contractor; the filing date itself is not stated",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -649,11 +650,11 @@
     "relation": "tracked"
    },
    {
-    "date": "2022-04",
+    "date": "2022",
     "date_label": "~2022",
     "status": null,
     "status_label": null,
-    "text": "Brookfield halts construction at the end of Phase 1 horizontal work, citing market conditions",
+    "text": "Brookfield halts construction at the end of Phase 1 horizontal work, citing market conditions (The Real Deal, April 2023: 'last year'; Bisnow, Oct 2022: 'earlier this year')",
     "expected": false,
     "approximate": true,
     "sources": [
@@ -768,11 +769,11 @@
     "relation": "tracked"
    },
    {
-    "date": "2023-02-23",
-    "date_label": "Feb 23, 2023",
+    "date": "2023-02-22",
+    "date_label": "Feb 22, 2023",
     "status": null,
     "status_label": null,
-    "text": "King Street Properties announces a six-story, roughly 300,000 sq ft speculative life-science building on Parcel A in partnership with Brookfield",
+    "text": "King Street Properties announces (on Wednesday, Feb 22, 2023, per Bisnow's Feb 23 report) a six-story, roughly 300,000 sq ft speculative life-science building on Parcel A in partnership with Brookfield",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -927,48 +928,11 @@
     "relation": "tracked"
    },
    {
-    "date": "2026-07-16",
-    "date_label": "Jul 16, 2026",
-    "status": null,
-    "status_label": null,
-    "text": "Brookfield says it is 'looking to start construction on a 300,000-square-foot office building if San Francisco's office recovery gains traction'",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-trd-2026-07",
-      "title": "Brookfield ups market-rate unit count, building heights at Pier 70 project",
-      "publisher": "The Real Deal (citing SF Chronicle)",
-      "url": "https://therealdeal.com/san-francisco/2026/07/16/brookfield-wants-more-apartments-at-pier-70-project/",
-      "accessed": "2026-09-17",
-      "date": "2026-07-16"
-     }
-    ],
-    "source": "The Real Deal (citing SF Chronicle), 2026-07-16",
-    "origin": "record",
-    "category": "milestone",
-    "category_label": "Milestone",
-    "record": {
-     "id": "pier70_a",
-     "slug": "pier-70-parcel-a",
-     "name": "Pier 70 Parcel A",
-     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-a/",
-     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-a.json"
-    },
-    "site": {
-     "slug": "pier-70",
-     "name": "Pier 70",
-     "short": "Pier 70",
-     "url": "https://pierandpoint.org/sites/pier-70/"
-    },
-    "relation": "tracked"
-   },
-   {
     "date": "2026-08-07",
     "date_label": "Aug 7, 2026",
     "status": "planned",
     "status_label": "Planned",
-    "text": "Port reports that although Phase 1 horizontal infrastructure and Building 12's rehabilitation are complete, construction of Phase 1 vertical buildings and parks 'has not moved forward' since 2022 because of pandemic-driven office-vacancy increases, 20-30% construction-cost escalation and higher financing costs",
+    "text": "Port reports that although Phase 1 horizontal infrastructure and Building 12's rehabilitation are complete, construction of Phase 1 vertical buildings and parks 'has not moved forward' because of pandemic-driven office-vacancy increases, 20-30% construction-cost escalation and higher financing costs",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -1007,7 +971,7 @@
     "date_label": "Aug 11, 2026",
     "status": null,
     "status_label": null,
-    "text": "Port Commission hears an informational report on proposed DDA amendments: parcel-specific outside dates, a Project-wide affordable rate of no less than 20% (327 stand-alone affordable units kept), 65-to-90 ft height increases on certain residential parcels, developer return cut from 18% to 14%, and a new phasing plan",
+    "text": "Port Commission hears an informational report (staff report dated Aug 7; no action taken) on proposed DDA amendments: parcel-specific outside dates, a Project-wide affordable rate of no less than 20% (327 stand-alone affordable units kept), 65-to-90 ft height increases on certain residential parcels, developer return cut from 18% to 14%, and a new phasing plan",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -1020,9 +984,25 @@
       "date": "2026-08-07",
       "note": "Informational only; amendments to the DDA to go to the Port Commission and Board of Supervisors 'by the end of this year or early next year'. Exhibit A is the proposed phasing plan.",
       "overview": true
+     },
+     {
+      "id": "src-port-minutes-2026-08-11",
+      "title": "Port Commission minutes, August 11, 2026 (Item 11A, Pier 70 28-Acre Site update: informational item, presented by Port staff; no action)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/media/11558/download?inline",
+      "accessed": "2026-09-29",
+      "date": "2026-08-11"
+     },
+     {
+      "id": "src-port-mtg-2026-08-11",
+      "title": "Port Commission meeting page, August 11, 2026 (agenda listing Item 11A, Pier 70 28-Acre Site update)",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/meetings/port-commission-august-11-2026",
+      "accessed": "2026-09-29",
+      "date": "2026-08-11"
      }
     ],
-    "source": "Port of San Francisco, 2026-08-07",
+    "source": "Port of San Francisco, 2026-08-07; Port of San Francisco, 2026-08-11; Port of San Francisco, 2026-08-11",
     "origin": "record",
     "category": "milestone",
     "category_label": "Milestone",
@@ -1124,7 +1104,7 @@
     "date_label": "2042",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Completion expected only by the Pier 70 28-Acre Project's whole-project buildout target, since Phase 1's own DDA schedule has lapsed and vertical construction on this parcel remains paused",
+    "text": "Completion expected only by the Pier 70 28-Acre Project's whole-project buildout target; Phase 1's own DDA deadlines have been tolled by the down market delay (extended to December 26, 2026) and vertical construction on this parcel remains paused",
     "expected": true,
     "approximate": true,
     "sources": [
@@ -1168,7 +1148,37 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Phase 1 schedule is now described as tolled by the down market delay (extended to December 26, 2026, Port Item 11A) rather than lapsed, with the 2042 whole-project date kept as a soft, superseded outside date; the King Street announcement is dated Feb 22, 2023 (Bisnow's 'on Wednesday'); the October 2021 design entry says the article date is not a filing date; the 2026-07 Real Deal quote was removed as a Parcel A milestone because it does not name a parcel; the unsupported 2019 mass-timber design and 365,000 GSF figure were dropped from the map notes; claims that no Assessor lot exists were replaced with what the sources show; the board vote on the Development Agreement now shows first reading on Oct 31 and final passage on Nov 14, 2017; the Aug 11, 2026 Port Commission minutes now back the informational hearing; also the Brookfield construction halt is dated 2022 (approximate) rather than April 2022, since neither source gives the month.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_a",
+     "slug": "pier-70-parcel-a",
+     "name": "Pier 70 Parcel A",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-a/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-a.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/pier70_d4d_fig_6_4_2_building_height.jpg",
@@ -1217,11 +1227,11 @@
     "kind": "rendering",
     "scope": "site",
     "taken": "2022-04-26",
-    "credit": "Port of San Francisco / SF Planning, Pier 70 Special Use District Design for Development (D4D, adopted 2017, updated April 26, 2022), Figure 1.1.2, p.5",
+    "credit": "Port of San Francisco / SF Planning, Pier 70 Special Use District Design for Development (D4D, updated April 26, 2022; approved in 2017 per Port Item 9B, Resolution 17-45), Figure 1.1.2, p.5",
     "license": "public-record",
     "source_url": "https://www.sfport.com/media/8123/download?inline=",
     "license_evidence": "https://www.sfport.com/media/8123/download?inline=",
-    "license_note": "An adopted Port of San Francisco / SF Planning planning document (the Pier 70 Special Use District Design for Development); an adopted D4D is a public-record planning document. Read 2026-09-22.",
+    "license_note": "A Port of San Francisco / SF Planning planning document approved in 2017 (Port Item 9B, Resolution 17-45) (the Pier 70 Special Use District Design for Development); an adopted D4D is a public-record planning document. Read 2026-09-22.",
     "caption": "Figure 1.1.2: Site Location and Context, Pier 70 Special Use District Design for Development (D4D), p.5",
     "source_crop": "python3 src/extract_pdf_figure.py https://www.sfport.com/media/8123/download?inline= 21 data/manual/images/pier70/d4d_p5_site_context.jpg --rect auto --dpi 300",
     "focus": [
@@ -1240,8 +1250,9 @@
    "Per-parcel gross square footage and unit counts are not published in the D4D (which sets height, stories and land-use scenarios, not parcel programs); the SUD's per-parcel programs would be in the SUD ordinance (Planning Code Sec. 249.79) or the Phase Submittal, neither of which was retrieved.",
    "Whether the King Street Properties partnership is still in effect: the Port's June 2025 deck speaks of the life-science effort in the past tense ('prior to collapse of that industry') and the July 2026 Real Deal report describes a 300,000 sq ft office building, not a lab.",
    "The Feb 2020 staff memo says Parcel A is entitled for ~350,000 GSF while Resolution 20-07's recital says ~240,000 GSF; which figure the DDA option actually carries is unresolved.",
-   "An earlier (2019) mass-timber office design by Hacker Architects with Quezada Architecture is recorded in this parcel's geometry file; the architects' pages returned 404/empty during this pass, so it is not restated here.",
-   "Construction cost estimates for the office building: none found."
+   "No source read supports an earlier (2019) mass-timber office design by Hacker Architects with Quezada Architecture that this parcel's geometry file used to mention; it was removed on 2026-09-29.",
+   "Construction cost estimates for the office building: none found.",
+   "The Real Deal (July 16, 2026, citing the SF Chronicle) reports Brookfield is 'looking to start construction on a 300,000-square-foot office building if San Francisco's office recovery gains traction'; the report does not name a parcel, so it is not recorded as a Parcel A milestone."
   ],
   "sources": [
    {
@@ -1271,7 +1282,7 @@
    {
     "id": "src-d4d",
     "title": "Pier 70 Special Use District Design for Development (D4D), updated April 26, 2022",
-    "publisher": "Port of San Francisco / SF Planning (adopted planning document; project team SITELAB urban studio)",
+    "publisher": "Port of San Francisco / SF Planning (planning document approved in 2017 per Port Item 9B, Resolution 17-45; project team SITELAB urban studio)",
     "url": "https://www.sfport.com/media/8123/download?inline=",
     "accessed": "2026-09-17",
     "date": "2022-04-26",
@@ -1353,11 +1364,27 @@
     "url": "https://therealdeal.com/san-francisco/2026/07/16/brookfield-wants-more-apartments-at-pier-70-project/",
     "accessed": "2026-09-17",
     "date": "2026-07-16"
+   },
+   {
+    "id": "src-port-minutes-2026-08-11",
+    "title": "Port Commission minutes, August 11, 2026 (Item 11A, Pier 70 28-Acre Site update: informational item, presented by Port staff; no action)",
+    "publisher": "Port of San Francisco",
+    "url": "https://www.sfport.com/media/11558/download?inline",
+    "accessed": "2026-09-29",
+    "date": "2026-08-11"
+   },
+   {
+    "id": "src-port-mtg-2026-08-11",
+    "title": "Port Commission meeting page, August 11, 2026 (agenda listing Item 11A, Pier 70 28-Acre Site update)",
+    "publisher": "Port of San Francisco",
+    "url": "https://www.sfport.com/meetings/port-commission-august-11-2026",
+    "accessed": "2026-09-29",
+    "date": "2026-08-11"
    }
   ],
   "notes": "Approximate polygon for a real, D4D-adopted parcel -- see accuracy_caveat.",
   "has_record_file": true,
-  "last_verified": "2026-09-20",
+  "last_verified": "2026-09-29",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

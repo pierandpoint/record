@@ -9,6 +9,7 @@
   "summary_sources": [
     "src-sfpw-project",
     "src-sfpw-opening",
+    "src-sfpw-unveiled",
     "src-cavagnero"
   ],
   "milestones": [
@@ -33,8 +34,9 @@
     {
       "date": "2011-10",
       "status": "under_construction",
-      "text": "Physical construction begins on site (ENR: \"construction underway\")",
+      "text": "Physical construction begins on site: SF Public Works says construction began in October 2011; ENR reported on September 22, 2011 that Pankow, after a groundbreaking ceremony earlier that month, 'has begun construction'",
       "sources": [
+        "src-sfpw-project",
         "src-enr-2011"
       ],
       "expected": false,
@@ -53,8 +55,9 @@
     {
       "date": "2015-04-16",
       "status": "complete",
-      "text": "Grand opening of the new SFPD headquarters/Public Safety Building, with Chief Gregory Suhr and Mayor Ed Lee",
+      "text": "Grand opening of the new SFPD headquarters/Public Safety Building: city leaders including Mayor Ed Lee and Police Chief Greg Suhr gathered for the ribbon-cutting, and SF Public Works reported the campus 'fully operational this week' (press release dated April 16, 2015)",
       "sources": [
+        "src-sfpw-unveiled",
         "src-sfpw-opening"
       ],
       "expected": false,
@@ -139,14 +142,16 @@
       "key": "general_contractor",
       "value": "Charles Pankow Builders",
       "sources": [
-        "src-sfpw-project"
+        "src-sfpw-project",
+        "src-cavagnero"
       ]
     },
     {
       "key": "construction_manager",
       "value": "Vanir Construction Management; project managers Charles A. Higueras, FAIA and Samuel Chui",
       "sources": [
-        "src-sfpw-project"
+        "src-sfpw-project",
+        "src-cavagnero"
       ]
     },
     {
@@ -188,15 +193,17 @@
       "key": "use",
       "value": "Joint public-safety facility: SFPD Police Command Center/HQ (~110,000 sf), Southern District Police Station (~20,000 sf), Mission Bay Fire Station No. 4 (~17,000 sf), ~25,000 sf community space, ~128,000 sf parking structure",
       "sources": [
+        "src-enr-2011",
         "src-citizenportal"
       ]
     },
     {
       "key": "leed",
-      "value": "LEED Gold certified (SFPD's and the architect's own pages state this; neither gives a certification date)",
+      "value": "LEED Gold certified (SF Public Works and the architect's page say Gold; SFPD's page says only 'a LEED building'; no certification date given)",
       "sources": [
-        "src-sfpd-hq",
-        "src-cavagnero"
+        "src-sfpw-project",
+        "src-cavagnero",
+        "src-sfpd-hq"
       ]
     },
     {
@@ -241,7 +248,7 @@
       "kind": "now",
       "scope": "site",
       "taken": "2024-05-20",
-      "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+      "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
       "license": "public-domain",
       "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
       "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
@@ -262,12 +269,12 @@
       "kind": "now",
       "scope": "site",
       "taken": "2024-02-10",
-      "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+      "credit": "Firstcultural (Alfred Twu, per the Commons user page User:Firstcultural), via Wikimedia Commons; CC0; downscaled to 1600 px",
       "license": "cc0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
       "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-      "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-      "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+      "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural; the Commons user page User:Firstcultural gives the name Alfred Twu. File page read 2026-09-23, user page read 2026-09-29.",
+      "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area",
       "aerial": true,
       "focus": [
         0.35,
@@ -368,6 +375,14 @@
       "publisher": "DBI (Building Permits)",
       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201509106609",
       "accessed": "2026-09-26"
+    },
+    {
+      "id": "src-sfpw-unveiled",
+      "title": "San Francisco Police Department's New Headquarters Unveiled",
+      "publisher": "SF Public Works (press release)",
+      "date": "2015-04-16",
+      "url": "https://sfpublicworks.org/project/san-francisco-police-department%E2%80%99s-new-headquarters-unveiled",
+      "accessed": "2026-09-29"
     }
   ],
   "open_questions": [
@@ -375,13 +390,14 @@
     "The ceremonial groundbreaking (Sep 8, 2011, SF Public Works) and 'construction began October 2011' (ENR) may describe the same or different milestones; both are recorded here as approximate.",
     "No LEED Gold certification date was found; SFPD's and the architect's pages both state the rating without a date, so it is recorded as a fact rather than a dated milestone.",
     "No sourced record of renovations, expansions, or notable incidents at the building since its 2015 opening was found.",
-    "No openly licensed image was found; all located images are on agency/firm project pages under their own copyright, so none is hosted here -- see the source links above."
+    "No openly licensed image was found; all located images are on agency/firm project pages under their own copyright, so none is hosted here -- see the source links above.",
+    "2026-09-29 accuracy audit: 'Vanir Construction Management' and 'Charles Pankow Builders' are stated on the architect's page (General Contractor; Project/Construction Manager), not on SF Public Works' project page, which lists only 'Pankow Builders'."
   ],
   "last_verified": "2026-09-26",
   "permits": [
     {
       "permit_number": "201110066246",
-      "permit_type": "additions alterations or repairs",
+      "permit_type": "new construction",
       "description": "Building permit 201110066246 status recorded as complete",
       "completed_date": "2017-01-11",
       "valuation": 164000000,

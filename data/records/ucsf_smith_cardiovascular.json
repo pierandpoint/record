@@ -3,16 +3,18 @@
   "names": [
     "Smith Cardiovascular Research Building"
   ],
-  "summary": "The ~236,000 sq ft, five-story headquarters of the UCSF Cardiovascular Research Institute, an L-shaped lab building with wet labs, an outpatient clinic and a vivarium, opened in 2010.",
+  "summary": "The five-story headquarters of the UCSF Cardiovascular Research Institute, a lab building with an outpatient clinic and a vivarium, opened in 2010; its size is given as about 236,000 sq ft in an Architizer listing (not readable in the 2026-09 audit) and as 323,000 sq ft by two contractor pages, so it is not settled here.",
   "summary_sources": [
     "src-ucsf-history-2010s",
+    "src-tutorperini-smith",
+    "src-rs-smith",
     "src-architizer-smith"
   ],
   "milestones": [
     {
       "date": "2007-09-18",
       "status": "planned",
-      "text": "UC Regents Committee on Grounds and Buildings holds a preliminary design review of the Mission Bay Cardiovascular Research Building; the campus reports it is expecting a $100 million cash gift and a matching $50 million gift (bringing gifts in hand toward the ~$254 million project budget) and plans to seek full design approval in November 2007",
+      "text": "UC Regents Committee on Grounds and Buildings holds a preliminary design review of the Mission Bay Cardiovascular Research Building; the campus reports it is expecting a $100 million cash gift and a matching $50 million gift (bringing the campus close to $180 million in gifts in hand; the minutes give no project budget) and plans to seek full design approval in November 2007",
       "sources": [
         "src-ucregents-2007-09-cvrb"
       ],
@@ -53,22 +55,27 @@
     },
     {
       "key": "gross_sqft",
-      "value": "236,000",
+      "value": "236,000 (Architizer listing credited to SmithGroup, which could not be read in the 2026-09 audit); two contractor pages (Tutor Perini; Rudolph and Sletten) give 323,000, so the sources conflict",
       "sources": [
-        "src-architizer-smith"
+        "src-architizer-smith",
+        "src-tutorperini-smith",
+        "src-rs-smith"
       ]
     },
     {
       "key": "stories",
       "value": "5",
       "sources": [
-        "src-architizer-smith"
+        "src-architizer-smith",
+        "src-tutorperini-smith",
+        "src-rs-smith"
       ]
     },
     {
       "key": "use",
-      "value": "Cardiovascular research: wet labs, outpatient clinic, vivarium",
+      "value": "Cardiovascular research: laboratories, an outpatient clinic and a vivarium on the top floor (Tutor Perini); Architizer's listing, not readable in the audit, adds 'wet labs'",
       "sources": [
+        "src-tutorperini-smith",
         "src-architizer-smith"
       ]
     }
@@ -79,11 +86,11 @@
       "kind": "now",
       "scope": "site",
       "taken": "2024-05-20",
-      "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+      "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
       "license": "public-domain",
       "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
       "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
-      "license_note": "USDA's data.gov catalog record for NAIP imagery sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0); the USDA FSA policies page says public-domain information may be freely distributed with credit requested ('U.S. Department of Agriculture, Farm Service Agency'). Read 2026-09-22.",
+      "license_note": "USDA's data.gov catalog record for NAIP imagery sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0); the USDA FSA policies page says public-domain information may be freely distributed with credit requested ('U.S. Department of Agriculture, Farm Service Agency'). Read 2026-09-22. The data.gov record names the publisher as USDA's Farm Production and Conservation Business Center (FPAC-BC); date 2024-05-20 from the NAIP ImageServer tile name m_3712213_se_10_060_20240520 (checked 2026-09-29).",
       "caption": "USDA NAIP aerial orthophoto (2024 flight), cropped to the Mission Bay project area and its immediate surroundings",
       "aerial": true,
       "focus": [
@@ -100,12 +107,12 @@
       "kind": "now",
       "scope": "site",
       "taken": "2024-02-10",
-      "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+      "credit": "Firstcultural (Alfred Twu, per the Commons user page User:Firstcultural), via Wikimedia Commons; CC0; downscaled to 1600 px",
       "license": "cc0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
       "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-      "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-      "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+      "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural; the Commons user page User:Firstcultural gives the name Alfred Twu. File page read 2026-09-23, user page read 2026-09-29.",
+      "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area",
       "aerial": true,
       "focus": [
         0.35,
@@ -163,13 +170,28 @@
       "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
       "accessed": "2026-09-24",
       "overview": true
+    },
+    {
+      "id": "src-tutorperini-smith",
+      "title": "UCSF Smith Cardiovascular Research Building",
+      "publisher": "Tutor Perini Building Corp. (contractor's own material)",
+      "url": "https://www.tutorperini.com/projects/education/ucsf-smith-cardiovascular-research-building/",
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "src-rs-smith",
+      "title": "UCSF, Smith Cardiovascular Research Building",
+      "publisher": "Rudolph and Sletten (contractor's own material)",
+      "url": "https://www.rsconstruction.com/projects/education/ucsf-smith-cardiovascular-research-building/",
+      "accessed": "2026-09-29"
     }
   ],
   "open_questions": [
     "Exact opening month/day not confirmed by a primary source; a specific Nov 1, 2010 date found in one web-search summary was not traceable to a primary document, so it isn't used here.",
     "No openly licensed image was found; none is hosted here.",
     "Images: no plan drawing, elevation or openly-licensed photograph was found for this building specifically. Searched: UCSF Real Estate's Mission Bay campus-site and LRDP pages (realestate.ucsf.edu, blocked to automated fetches with a 403); the UCSF 2014 LRDP EIR's CEQAnet filing (SCH 2013092047, whose pre-2016 attachments aren't hosted on CEQAnet itself); a May 2000 Regents Committee on Grounds and Buildings design-approval item for an early Mission Bay building (text-only, no figures); the 2008 \"UCSF Mission Bay Planning Principles\" appendix (a citywide-scale community map, no individual buildings labeled); and a UCSF wayfinding campus map (not an adopted plan, EIR or permit filing, so not eligible as public-record even though found). Not pursued further in this pass; the record's own project sources above remain the citation for the building's history.",
-    "2026-09-21 pass: found a May 2008 Regents item amending this project's budget/financing (to $254,000,000, matching this record's own cost figure) but could not retrieve the original full-approval item's exact date in this pass; the September 2007 preliminary design review, which is dated and clearly building-specific, is used instead as the earlier milestone."
+    "2026-09-21 pass: found a May 2008 Regents item amending this project's budget/financing (to $254,000,000, matching this record's own cost figure) but could not retrieve the original full-approval item's exact date in this pass; the September 2007 preliminary design review, which is dated and clearly building-specific, is used instead as the earlier milestone.",
+    "2026-09-29 accuracy audit: the size, cost, architect credits and 'L-shaped' description rest on an Architizer listing that returns 403; two readable contractor pages (Tutor Perini; Rudolph and Sletten) give 323,000 sq ft, five stories, completion 2010, a $196 million 'contract amount' and the architect as 'SmithGroupJJR', which conflict with 236,000 sq ft and $254 million (the latter matches a May 2008 Regents budget item that could not be re-read). The September 2007 Regents minutes give no project budget."
   ],
   "last_verified": "2026-09-21"
 }

@@ -5,7 +5,7 @@
     "Mission Rock Parcel B",
     "1090 Dr. Maya Angelou Lane"
   ],
-  "summary": "WORKac's 8-story commercial building on Parcel B, built with Tishman Speyer's life-science arm Breakthrough Properties as lab-ready space and marketed as Class A office/life science after its June 2023 TCO. It houses the district's blackwater recycling plant and has since leased to the Golden State Warriors (71,000 sq ft, October 2024), Coinbase (150,000 sq ft, 2025) and Nvidia (45,000 sq ft, November 2025).",
+  "summary": "WORKac's 8-story commercial building on Parcel B, with Breakthrough Properties assisting on the life-science real estate (SF YIMBY, 2022) and marketed as Class A office/life science after its June 2023 TCO. It houses the district's blackwater recycling plant and has since leased to the Golden State Warriors (71,000 sq ft, October 2024), Coinbase (150,000 sq ft, 2025) and Nvidia (45,000 sq ft, November 2025).",
   "summary_sources": [
     "src-port-2023-10",
     "src-port-2024-04",
@@ -17,8 +17,9 @@
   "milestones": [
     {
       "date": "2018-01-30",
-      "text": "Port Commission approves the Mission Rock DDA, Design Controls and related documents (Resolutions 18-03 to 18-10)",
+      "text": "Port Commission adopts Resolutions 18-03 to 18-10, approving the Mission Rock DDA, Design Controls and related documents",
       "sources": [
+        "src-port-min-2018-01-30",
         "src-port-2018-01",
         "src-port-2023-10"
       ],
@@ -79,7 +80,8 @@
       "date": "2020-10-06",
       "text": "Port executes the 75-year prepaid Parcel B lease (Lease No. L-16704) with Mission Rock Parcel B Owner, L.L.C.; memorandum recorded October 7, 2020",
       "sources": [
-        "src-port-2023-10"
+        "src-port-2023-10",
+        "src-port-2019-09"
       ],
       "expected": false,
       "approximate": false
@@ -105,12 +107,12 @@
     },
     {
       "date": "2022-03",
-      "text": "Topped out",
+      "text": "Topped out by March 7, 2022 (SF YIMBY: 'We recently celebrated the topping off of Building B')",
       "sources": [
         "src-sfyimby-2022-03"
       ],
       "expected": false,
-      "approximate": false
+      "approximate": true
     },
     {
       "date": "2023-06",
@@ -159,15 +161,6 @@
       ],
       "expected": false,
       "approximate": false
-    },
-    {
-      "date": "2026-03",
-      "text": "Nvidia lease scheduled to commence after finish-out (per the November 2025 report; commencement not independently confirmed)",
-      "sources": [
-        "src-trd-2025-11"
-      ],
-      "expected": false,
-      "approximate": true
     },
     {
       "date": "2021-05-19",
@@ -240,7 +233,7 @@
   "facts": [
     {
       "key": "address",
-      "value": "1090 Dr. Maya Angelou Lane (SF Standard, Commercial Property Executive); 1051 3rd Street in the Warriors press release and the CommercialSearch listing",
+      "value": "1090 Dr. Maya Angelou Lane (SF Standard, Commercial Property Executive); 1051 3rd Street in the Warriors press release (Mitsui Fudosan America's repost)",
       "sources": [
         "src-sfstandard-2025-11",
         "src-cpe-2025-05",
@@ -249,7 +242,7 @@
     },
     {
       "key": "developer",
-      "value": "Mission Rock Partners (San Francisco Giants and Tishman Speyer) with Breakthrough Properties (Tishman Speyer and Bellco Capital life-science venture); vertical owner Mission Rock Parcel B Owner, L.L.C.",
+      "value": "Mission Rock Partners (San Francisco Giants and Tishman Speyer); Breakthrough Properties, named by SF YIMBY (March 2022) as assisting with the life-science real estate; vertical owner Mission Rock Parcel B Owner, L.L.C.",
       "sources": [
         "src-port-2023-10",
         "src-sfyimby-2022-03",
@@ -315,10 +308,11 @@
     },
     {
       "key": "use",
-      "value": "lab-ready office (built for life science, marketed as Class A office/life science) over ground-floor retail",
+      "value": "office over ground-floor retail, marketed as Class A office/life science (Port, April 2024); SF YIMBY (March 2022) said the building was expected to host a biotech company",
       "sources": [
         "src-workac-b",
-        "src-port-2024-04"
+        "src-port-2024-04",
+        "src-sfyimby-2022-03"
       ]
     },
     {
@@ -396,11 +390,11 @@
       "kind": "document",
       "scope": "area",
       "taken": "2018-04-24",
-      "credit": "Port of San Francisco / Mission Rock Partners, Mission Rock Design Controls (adopted April 24, 2018), Figure 1.1 – Land Use Plan, p.10",
+      "credit": "Port of San Francisco, Mission Rock Design Controls (dated April 24, 2018), Figure 1.1 – Land Use Plan, p.10",
       "license": "public-record",
       "source_url": "https://www.sfport.com/sites/default/files/2025-07/Mission%20Rock%20Design%20Controls%204.24.18_FINAL_Reduced%20File.pdf#page=10",
       "license_evidence": "https://www.sfport.com/sites/default/files/2025-07/Mission%20Rock%20Design%20Controls%204.24.18_FINAL_Reduced%20File.pdf",
-      "license_note": "Adopted Port of San Francisco planning document (Mission Rock Design Controls, p.10); an adopted plan from a public agency is public record. Read 2026-09-19.",
+      "license_note": "Port of San Francisco planning document dated April 24, 2018 (Mission Rock Design Controls, p.10); a plan published by a public agency is public record. Read 2026-09-19.",
       "caption": "FIGURE 1.1 - Land Use Plan (Mission Rock Design Controls, p.10)",
       "source_crop": "python3 src/extract_pdf_figure.py https://www.sfport.com/sites/default/files/2025-07/Mission%20Rock%20Design%20Controls%204.24.18_FINAL_Reduced%20File.pdf 10 data/manual/images/mission_rock/design_controls_fig1.1_p10.jpg --rect auto",
       "focus": [
@@ -432,15 +426,15 @@
     },
     {
       "id": "src-loeb-coinbase",
-      "title": "Represented Coinbase in its lease at Building B of San Francisco's Mission Rock (150,000 square feet)",
+      "title": "Represented a Leading Cryptocurrency Company in its Lease at Building B of San Francisco's Mission Rock (150,000 square feet)",
       "publisher": "Loeb & Loeb LLP (tenant's counsel)",
       "url": "https://www.loeb.com/en/experience/represented-coinbase-in-its-lease-at-building-b-of-san-franciscos-mission-rock",
       "accessed": "2026-09-17"
     },
     {
       "id": "src-mfa-2024-10",
-      "title": "Golden State Warriors plant flag at San Francisco's Mission Rock (press release)",
-      "publisher": "Mitsui Fudosan America (equity partner's press release)",
+      "title": "Golden State Warriors plant flag at San Francisco's Mission Rock (The Real Deal article reposted on Mitsui Fudosan America's press page)",
+      "publisher": "The Real Deal (article by 'TRD Staff', reposted on Mitsui Fudosan America's press page)",
       "date": "2024-10-17",
       "url": "https://www.mfamerica.com/press/golden-state-warriors-plant-flag-at-san-franciscos-mission-rock",
       "accessed": "2026-09-17"
@@ -474,7 +468,7 @@
       "id": "src-port-2021-12",
       "title": "Mission Rock construction update, public art plan summary and street rooms (Port Commission Item 13A)",
       "publisher": "Port of San Francisco",
-      "date": "2021-12-14",
+      "date": "2021-12-10",
       "url": "https://sfport.com/files/2022-01/12142021_Item%2013A%20MR%20Public%20Art%20Info_final.pdf",
       "accessed": "2026-09-17"
     },
@@ -512,9 +506,9 @@
     },
     {
       "id": "src-port-discl-fy2025",
-      "title": "Port of San Francisco continuing disclosure annual report for the fiscal year ended June 30, 2025 (Mission Rock CFD bonds)",
+      "title": "Port of San Francisco continuing disclosure annual report for the fiscal year ended June 30, 2025 (Port Revenue Bonds, Series 2014A, 2020A and 2020B; mentions Mission Rock CFD bonds only among other obligations), issued March 27, 2026",
       "publisher": "Port of San Francisco",
-      "date": "2025",
+      "date": "2026-03-27",
       "url": "https://sfport.com/media/11175/download?inline=",
       "accessed": "2026-09-17"
     },
@@ -568,7 +562,7 @@
     },
     {
       "id": "src-trd-2025-11",
-      "title": "Nvidia rolls into Mission Rock with first-ever SF lease (lease scheduled to commence in March 2026). Article could not be opened from this project (blank response); only the search excerpt was read.",
+      "title": "Nvidia rolls into Mission Rock with first-ever SF lease",
       "publisher": "The Real Deal",
       "date": "2025-11-21",
       "url": "https://therealdeal.com/san-francisco/2025/11/21/nvidia-leases-first-ever-san-francisco-offices/",
@@ -646,6 +640,14 @@
       "publisher": "DBI (Building Permits)",
       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202410253714",
       "accessed": "2026-09-24"
+    },
+    {
+      "id": "src-port-min-2018-01-30",
+      "title": "Minutes of the Special Port Commission Meeting, January 30, 2018 (Item 11A, Resolutions 18-03 to 18-10 adopted)",
+      "publisher": "Port of San Francisco",
+      "date": "2018-01-30",
+      "url": "https://www.sfport.com/media/3353/download",
+      "accessed": "2026-09-29"
     }
   ],
   "open_questions": [
@@ -654,8 +656,10 @@
     "Square footage: four different figures across sources (272,770 / 281,639 / 295,000 / 313,952). The repo's status.csv figure (258,994 office + 13,773 retail) matches none of them exactly.",
     "Address: 1090 Dr. Maya Angelou Lane vs 1051 3rd St vs the repo's 1089 3rd St (DataSF). Flagged in the PR.",
     "Lease terms and rents for the Warriors, Coinbase and Nvidia: undisclosed in every report read.",
-    "Whether the Nvidia lease commenced in March 2026 as scheduled: no later source found.",
-    "Images: no 'before' photo is hosted (until 2020 the parcel was the Seawall Lot 337 surface parking lot) and no rendering is hosted because the architects' renderings are not openly licensed; they are reachable through the architect sources listed here."
+    "Images: no 'before' photo is hosted (until 2020 the parcel was the Seawall Lot 337 surface parking lot) and no rendering is hosted because the architects' renderings are not openly licensed; they are reachable through the architect sources listed here.",
+    "When Nvidia's lease commences: The Real Deal (Nov 21, 2025) says only that it 'is slated to occupy 45,000 square feet'; no commencement date appears in any source read.",
+    "Loeb & Loeb's page describes a 150,000 sq ft Building B lease for 'a leading cryptocurrency company' without naming Coinbase in its text (the name appears only in the page URL); the Coinbase attribution rests on Commercial Property Executive (May 2025).",
+    "MNT Studio's Mission Rock page lists the location with the 'opening class schedule' live and 'final week of founding memberships'; it has not been confirmed that the studio is open. Grey's Florals' August 2026 opening inside MNT's space has not been confirmed either."
   ],
   "last_verified": "2026-09-24",
   "site_cost_refs": [
@@ -687,17 +691,17 @@
     {
       "permit_number": "202412247382",
       "permit_type": "additions alterations or repairs",
-      "description": "Building permit approved for office tenant improvement (non-structural partitions, ceilings, lighting, MEP, AV/IT) on levels 3 and 4, including new stepped aisle and stepped seating in a slab opening",
-      "issued_date": "2025-05-19",
+      "description": "Building permit approved for office tenant improvement (non-structural partitions, ceilings, lighting, MEP, AV/IT) on levels 3 and 4, including new stepped aisle and stepped seating in a slab opening (DataSF: filed 2025-01-23, status approved on 2025-05-19; no issued date is recorded)",
       "sources": [
         "src-watch-dbi-building-permits-4"
-      ]
+      ],
+      "filed_date": "2025-01-23"
     },
     {
       "permit_number": "202509266165",
       "permit_type": "additions alterations or repairs",
-      "description": "Building permit 202509266165 approved (filed October 10, 2025) for alteration of existing floor plates on levels 6, 7 and 8 — demolishing slab to create floor openings for future tenant improvements",
-      "filed_date": "2026-01-13",
+      "description": "Building permit 202509266165 approved (filed October 10, 2025) for alteration of existing floor plates on levels 6, 7 and 8 — demolishing slab to create floor openings for future tenant improvements (DataSF: filed 2025-10-10, status approved on 2026-01-13; no issued date is recorded)",
+      "filed_date": "2025-10-10",
       "valuation": 1750000,
       "sources": [
         "src-watch-dbi-building-permits-5"
@@ -706,17 +710,17 @@
     {
       "permit_number": "202506209141",
       "permit_type": "otc alterations permit",
-      "description": "DBI over-the-counter alteration permit 202506209141 approved for a revision to the Golden State Warriors tenant improvement (base building bathrooms), referencing permit application 202412247382 and Port permit B-2024-0274",
-      "issued_date": "2025-08-06",
+      "description": "DBI over-the-counter alteration permit 202506209141 approved for a revision to the Golden State Warriors tenant improvement (base building bathrooms), referencing permit application 202412247382 and Port permit B-2024-0274 (DataSF: filed 2025-06-20, status approved on 2025-08-06; no issued date is recorded)",
       "sources": [
         "src-watch-dbi-building-permits-6"
-      ]
+      ],
+      "filed_date": "2025-06-20"
     },
     {
       "permit_number": "202410253714",
       "permit_type": "additions alterations or repairs",
-      "description": "Alteration permit approved to demolish a portion of the existing 4th floor slab for a future stair connection between levels 3 and 4, including a 2-hour rated smoke barrier around the new floor opening (DBI permit 202410253714, filed 2024-11-20)",
-      "filed_date": "2025-03-07",
+      "description": "Alteration permit approved to demolish a portion of the existing 4th floor slab for a future stair connection between levels 3 and 4, including a 2-hour rated smoke barrier around the new floor opening (DBI permit 202410253714, filed 2024-11-20) (DataSF: filed 2024-11-20, status approved on 2025-03-07; no issued date is recorded)",
+      "filed_date": "2024-11-20",
       "valuation": 221000,
       "sources": [
         "src-watch-dbi-building-permits-7"

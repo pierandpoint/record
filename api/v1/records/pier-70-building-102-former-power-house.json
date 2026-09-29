@@ -44,10 +44,10 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "Real, surveyed building footprint -- high confidence in the outline itself. This footprint's area (~1955 m2 / ~21,043 sqft) is roughly double the '11,266 sf' figure this project's own earlier research attached to 'Building 102 (former Compressor House)' -- that figure was not independently re-verified this pass, and could describe interior/leasable area rather than the full building footprint, or could itself be imprecise. Flagging this discrepancy rather than silently picking one number; treat the footprint geometry (real, surveyed) as more reliable than the previously-cited sqft figure.",
+    "accuracy_caveat": "Real, surveyed building footprint -- high confidence in the outline itself. CORRECTED 2026-09-29: this footprint's area (~1955 m2 / ~21,043 sqft) does not match the building. The National Register nomination gives Building 102's dimensions as 128 ft 6 in by 42 ft 4 in (about 5,440 sqft, ~505 m2 as a rectangle), so this outline is roughly four times the building's own footprint and probably includes neighboring structures or other area; the '11,266 sf' Port figure is not the likely source of the discrepancy. The geometry is signed off and was not changed; the outline should not be read as the building's own footprint.",
     "digitized_from": "DataSF Building Footprints dataset (real, surveyed building outline; not tied to an Assessor parcel).",
-    "why_no_real_parcel": "This parcel (blklot 4046001) has no street address in DataSF's Assessor roll. The real Assessor lot groups 5 named buildings into one polygon with no further official subdivision -- this feature uses the real building footprint instead, extracted and matched individually.",
-    "regulatory_context": "The former Power House, built 1912, part of the same 20th Street Historic Core rehabilitation by Orton Development Inc. (ODI) as Building 101 (HPC packet 2013.1168E, Nov 26 2013 review). Per that packet, Building 102 was 'in fairly good condition' at the time and in use as the powerhouse facility. No confirmed real-world tenant identified by any source found."
+    "why_no_real_parcel": "The former Assessor lot blklot 4046001 (which held Buildings 101, 102, 104 and 122/123 in the 2013 HPC packet) was retired on 2018-10-02 (DataSF Assessor parcels, active=false); in DataSF's current layer this footprint falls within active lot 3941041, which has no street address. No cited source ties the building to a current lot, so this feature uses the real building footprint instead, extracted and matched individually.",
+    "regulatory_context": "The former Power House, built 1912, part of the same 20th Street Historic Core rehabilitation by Orton Development Inc. (ODI) as Building 101 (HPC packet 2013.1168E, Nov 26 2013 review). Per that packet, Building 102 was 'in fairly good condition' at the time and in use as the powerhouse facility. Port Item 12A (memo dated Jan 4, 2019) names JUUL Labs as the ten-year sublessee of the entire building less the Port's basement electrical equipment room, and Potrero View (Mar 2019) says JUUL 'sublets offices in Building 102'; no source after 2020 confirms a current occupant."
    }
   },
   "centroid": {
@@ -558,9 +558,9 @@
    {
     "date": "2019",
     "date_label": "~2019",
-    "status": "complete",
-    "status_label": "Complete",
-    "text": "Rehabilitation and tenant improvements scheduled for completion (Port's 2019 milestone list)",
+    "status": null,
+    "status_label": null,
+    "text": "Port's January 2019 update lists completing the Building 102 rehabilitation and tenant improvements among its 2019 remaining milestones (a schedule item, not a confirmation that it was finished)",
     "expected": false,
     "approximate": true,
     "sources": [
@@ -577,8 +577,8 @@
     ],
     "source": "Port of San Francisco, 2019-01-04",
     "origin": "record",
-    "category": "status",
-    "category_label": "Status",
+    "category": "retail",
+    "category_label": "Retail",
     "record": {
      "id": "pier70_building_102",
      "slug": "pier-70-building-102-former-power-house",
@@ -634,11 +634,48 @@
     "relation": "tracked"
    },
    {
-    "date": "2019-01-08",
-    "date_label": "Jan 8, 2019",
+    "date": "2019-01",
+    "date_label": "~2019",
     "status": null,
     "status_label": null,
-    "text": "Port Commission update: six of eight buildings complete, Buildings 101 and 102 still under construction, project 100% subleased except two atrium retail spaces; total cost revised from $81.9M to an estimated $127.0M",
+    "text": "Port Commission meeting on JUUL Labs' ten-year sublease of Building 102: attendees ask whether the City can evict JUUL; per Potrero View (Mar 2019), commissioners want to shorten the lease or pass an ordinance, but the Port Director says the Port's hands are tied and the City Attorney is examining JUUL's compliance",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-potreroview-2019-03",
+      "title": "City Ponders Ways to Oust JUUL from Pier 70",
+      "publisher": "The Potrero View (Rebekah Moan)",
+      "url": "https://www.potreroview.net/city-ponders-ways-to-oust-juul-from-pier-70/",
+      "accessed": "2026-09-17",
+      "date": "2019-03"
+     }
+    ],
+    "source": "The Potrero View (Rebekah Moan), 2019-03",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "pier70_building_102",
+     "slug": "pier-70-building-102-former-power-house",
+     "name": "Pier 70 Building 102 (former Power House)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-102-former-power-house/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-102-former-power-house.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2019-01-04",
+    "date_label": "Jan 4, 2019",
+    "status": null,
+    "status_label": null,
+    "text": "Port staff update to the Commission (memo dated Jan 4, 2019): six of eight buildings complete, Buildings 101 and 102 still under construction, project 100% subleased except two atrium retail spaces; total cost revised from $81.9M to an estimated $127.0M",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -673,27 +710,22 @@
     "relation": "tracked"
    },
    {
-    "date": "2019-03",
-    "date_label": "~2019",
-    "status": null,
-    "status_label": null,
-    "text": "Port commissioners discuss shortening or ending JUUL Labs' ten-year sublease of Building 102 (and 104); no action taken",
+    "date": "2020-11",
+    "date_label": "~2020",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Rehabilitation of Building 102 described as finished in a magazine profile; no completion date is sourced",
     "expected": false,
     "approximate": true,
     "sources": [
      {
-      "id": "src-potreroview-2019-03",
-      "title": "City Ponders Ways to Oust JUUL from Pier 70",
-      "publisher": "The Potrero View (Rebekah Moan)",
-      "url": "https://www.potreroview.net/city-ponders-ways-to-oust-juul-from-pier-70/",
-      "accessed": "2026-09-17",
-      "date": "2019-03"
+      "title": "Retrofit magazine, Nov 9, 2020 (Rejuvenation of a Historic Powerhouse)"
      }
     ],
-    "source": "The Potrero View (Rebekah Moan), 2019-03",
-    "origin": "record",
-    "category": "milestone",
-    "category_label": "Milestone",
+    "source": "Retrofit magazine, Nov 9, 2020 (Rejuvenation of a Historic Powerhouse)",
+    "origin": "csv",
+    "category": "status",
+    "category_label": "Status",
     "record": {
      "id": "pier70_building_102",
      "slug": "pier-70-building-102-former-power-house",
@@ -711,12 +743,12 @@
    },
    {
     "date": "2020-11-09",
-    "date_label": "Nov 9, 2020",
-    "status": null,
-    "status_label": null,
-    "text": "Rehabilitation profiled: seismic bracing, mezzanine, 2,600 sq ft rear addition with rooftop deck, one of four historic compressors retained; Marcy Wong Donn Logan wins a Metamorphosis Award for it",
+    "date_label": "~2020",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Rehabilitation profiled: seismic bracing, mezzanine, 2,600 sq ft rear addition with rooftop deck, one of four historic compressors retained; Marcy Wong Donn Logan wins a Metamorphosis Award for it; the profile describes the finished building but gives no completion date",
     "expected": false,
-    "approximate": false,
+    "approximate": true,
     "sources": [
      {
       "id": "src-retrofit-2020",
@@ -729,38 +761,6 @@
     ],
     "source": "Retrofit magazine (KJ Fields), 2020-11-09",
     "origin": "record",
-    "category": "milestone",
-    "category_label": "Milestone",
-    "record": {
-     "id": "pier70_building_102",
-     "slug": "pier-70-building-102-former-power-house",
-     "name": "Pier 70 Building 102 (former Power House)",
-     "permalink": "https://pierandpoint.org/parcels/pier-70-building-102-former-power-house/",
-     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-102-former-power-house.json"
-    },
-    "site": {
-     "slug": "pier-70",
-     "name": "Pier 70",
-     "short": "Pier 70",
-     "url": "https://pierandpoint.org/sites/pier-70/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2020-12",
-    "date_label": "~2020",
-    "status": "complete",
-    "status_label": "Complete",
-    "text": "Rehab of Buildings 101, 102, 104, 122 and 123 completed in stages, ~2017–2020",
-    "expected": false,
-    "approximate": true,
-    "sources": [
-     {
-      "title": "SF Planning HPC packet 2013.1168E"
-     }
-    ],
-    "source": "SF Planning HPC packet 2013.1168E",
-    "origin": "csv",
     "category": "status",
     "category_label": "Status",
     "record": {
@@ -817,6 +817,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Building 102's completion is now sourced to Retrofit magazine's Nov 2020 profile of the finished rehabilitation (no completion date given) instead of a 2013 planning packet, and the Port's 2019 memo is described as a schedule, not a completed milestone. The JUUL Labs sublease discussion is dated to the January 2019 Commission meeting, and the map notes now name JUUL Labs as the sublessee per the Port memo. The map note also says the old Assessor lot 4046001 was retired in 2018, and that the mapped footprint is about four times the building's size per the National Register dimensions.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_building_102",
+     "slug": "pier-70-building-102-former-power-house",
+     "name": "Pier 70 Building 102 (former Power House)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-102-former-power-house/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-102-former-power-house.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-23",
     "kind": "correction",
@@ -875,11 +904,11 @@
     "kind": "rendering",
     "scope": "site",
     "taken": "2022-04-26",
-    "credit": "Port of San Francisco / SF Planning, Pier 70 Special Use District Design for Development (D4D, adopted 2017, updated April 26, 2022), Figure 1.1.2, p.5",
+    "credit": "Port of San Francisco / SF Planning, Pier 70 Special Use District Design for Development (D4D, updated April 26, 2022), Figure 1.1.2, p.5",
     "license": "public-record",
     "source_url": "https://www.sfport.com/media/8123/download?inline=",
     "license_evidence": "https://www.sfport.com/media/8123/download?inline=",
-    "license_note": "An adopted Port of San Francisco / SF Planning planning document (the Pier 70 Special Use District Design for Development); an adopted D4D is a public-record planning document. Read 2026-09-22.",
+    "license_note": "A Port of San Francisco / SF Planning planning document (the Pier 70 Special Use District Design for Development), approved by the Planning Commission on Aug 24, 2017 (Resolution 19980, per Port Item 9B) and published by the Port at its own domain; treated as a public-record planning document. Read 2026-09-22.",
     "caption": "Figure 1.1.2: Site Location and Context, Pier 70 Special Use District Design for Development (D4D), p.5",
     "source_crop": "python3 src/extract_pdf_figure.py https://www.sfport.com/media/8123/download?inline= 21 data/manual/images/pier70/d4d_p5_site_context.jpg --rect auto --dpi 300",
     "focus": [
@@ -977,7 +1006,7 @@
    {
     "id": "src-d4d",
     "title": "Pier 70 Special Use District Design for Development (D4D), updated April 26, 2022",
-    "publisher": "Port of San Francisco / SF Planning (adopted planning document; project team SITELAB urban studio)",
+    "publisher": "Port of San Francisco / SF Planning (planning document; project team SITELAB urban studio)",
     "url": "https://www.sfport.com/media/8123/download?inline=",
     "accessed": "2026-09-17",
     "date": "2022-04-26",
@@ -985,7 +1014,7 @@
     "overview": true
    }
   ],
-  "notes": "Split 2026-09-16 from the combined 'Historic Core, north side' entry -- see digitization_method and accuracy_caveat (sqft discrepancy).",
+  "notes": "Split 2026-09-16 from the combined 'Historic Core, north side' entry -- see digitization_method and accuracy_caveat (sqft discrepancy). Status 'complete' is supported by Retrofit magazine's Nov 9, 2020 profile of the finished rehabilitation (no completion date given); the 2013 HPC packet cited for the geometry only proposed the work.",
   "has_record_file": true,
   "last_verified": "2026-09-18",
   "tenants": [],

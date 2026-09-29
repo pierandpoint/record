@@ -37,8 +37,8 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "MEDIUM CONFIDENCE -- real, community-surveyed OSM polygon for the current interim installation (Parklab Gardens; the wider parcel also hosts Spark Social SF, Stagecoach Greens mini golf, Urban Sprouts community garden and an SFF soccer field per SF Rec & Park's own Future Parks Project page). Marked 'existing' rather than 'complete' because this is explicitly an interim use, not the plan's final build-out: OCII's Mission Bay Future Parks Project will redesign parcels P12/P13/P15 into a permanent, unified extension of the Commons (planning 2024-25, design mid-2026, construction targeted late 2028, public opening targeted early 2030). This feature traces only the Parklab Gardens sub-area, the most clearly-bounded of several interim uses on the same parcels -- a second pass could digitize the soccer-field/Stagecoach Greens portions separately.",
-    "digitized_from": "OpenStreetMap (way 446183018, leisure=garden, parklab.com)"
+    "accuracy_caveat": "MEDIUM CONFIDENCE -- real, community-surveyed OSM polygon for the current interim installation (Parklab Gardens; the wider parcel also hosts Spark Social SF, Stagecoach Greens mini golf, Urban Sprouts community garden and an SFF soccer field per SF Rec & Park's own Future Parks Project page). Marked 'existing' rather than 'complete' because this is explicitly an interim use, not the plan's final build-out: OCII's Mission Bay Future Parks Project will redesign parcels P12/P13/P15 into a permanent, unified extension of the Commons (planning 2024-25, design mid-2026, construction targeted late 2028, public opening targeted early 2030). This feature traces OSM way 446183018 (leisure=park, name 'Parklab', about 14,665 sq m and roughly 420 m long), the whole Parklab park strip: it fully contains the separately mapped Parklab Gardens way (437595662, about 2,212 sq m) and the Spark Social SF way (437591532, about 1,519 sq m), so it is not only the Parklab Gardens sub-area.",
+    "digitized_from": "OpenStreetMap (way 446183018, leisure=park, name=Parklab, parklab.com)"
    }
   },
   "centroid": {
@@ -53,15 +53,15 @@
     "date_label": "~2018",
     "status": "existing",
     "status_label": "Existing, not yet redeveloped",
-    "text": "Parklab Gardens (the specific interim installation this record traces, distinct from the earlier 2016 Spark Social SF food-truck park on the same wider parcel) opens, per SF Chronicle coverage pairing its opening with Stagecoach Greens mini-golf",
+    "text": "Parklab Gardens (one interim installation inside the mapped Parklab park strip; OCII's Nov 2024 map puts it on P15) opens, per SF Chronicle coverage pairing its opening with Stagecoach Greens mini-golf. Interim-use pilots on the Commons parcels began on P13 in 2016, P15 in 2017 and P12 in 2018 (SF Rec & Park Workshop 3 deck, p.15).",
     "expected": false,
     "approximate": true,
     "sources": [
      {
-      "title": "SF Chronicle, \"Outdoor mini golf right here in SF? Yes, and with food trucks and a beer garden\" (Aug 2018)"
+      "title": "SF Chronicle, \"Outdoor mini golf right here in SF? Yes, and with food trucks and a beer garden\" (Aug 2018); https://sfrecpark.org/DocumentCenter/View/25986/20250429-PRESENTATION-Workshop-3"
      }
     ],
-    "source": "SF Chronicle, \"Outdoor mini golf right here in SF? Yes, and with food trucks and a beer garden\" (Aug 2018)",
+    "source": "SF Chronicle, \"Outdoor mini golf right here in SF? Yes, and with food trucks and a beer garden\" (Aug 2018); https://sfrecpark.org/DocumentCenter/View/25986/20250429-PRESENTATION-Workshop-3",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -122,10 +122,10 @@
     "approximate": true,
     "sources": [
      {
-      "title": "sfrecpark.org/1832/Mission-Bay-Future-Parks-Project"
+      "title": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project"
      }
     ],
-    "source": "sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
+    "source": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -146,6 +146,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The shape notes said the polygon traces only the Parklab Gardens sub-area; it is OSM way 446183018, the whole 'Parklab' park strip (about 14,665 sq m), which contains both the Parklab Gardens and Spark Social SF ways, and its OSM tag is leisure=park, not garden. The notes also said P15's concept matches Spark Social SF's use of that parcel; OCII's Nov 2024 CAC update puts Spark Social SF and the community garden on P13 and Parklab Gardens and Stagecoach Greens on P15, and the Workshop 3 deck dates interim-use pilots to P13 (2016), P15 (2017) and P12 (2018). The claim that a design team was selected through an August 2025 RFQ now says what SF Rec & Park reports: an RFQ was released and a team was expected by mid-October. The 'early 2030' opening milestone is relabelled as a whole-project estimate (basis project) with a note that Workshop 3 shows an earlier construction window. The shape log carries a dated correction; notes and digitized_from were corrected in place.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_commons_interim_west",
+     "slug": "parklab-gardens-and-mission-bay-commons-interim-west",
+     "name": "Parklab Gardens & Mission Bay Commons (interim, west)",
+     "permalink": "https://pierandpoint.org/parcels/parklab-gardens-and-mission-bay-commons-interim-west/",
+     "api": "https://pierandpoint.org/api/v1/records/parklab-gardens-and-mission-bay-commons-interim-west.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-24",
     "kind": "added",
@@ -179,7 +208,7 @@
     "date": "2026-09-23",
     "kind": "added",
     "kind_label": "Added",
-    "text": "The owner asked whether the P12/P13/P15 sources (the interim parcels hosting Spark Social SF, Stagecoach Greens and Urban Sprouts) included SF Rec & Park's own community-workshop decks. They didn't yet; added all three, each verified by fetching the PDF directly. Community Meeting #3 (Apr 29, 2025, 83 pages) has individually labeled concept-plan pages for P12, P13 and P15 -- food trucks, outdoor dining and a pavilion on P15, matching Spark Social SF's current use; soccer pitches and outdoor fitness on P12 -- plus an alternative option for P12. Design-workshop concepts, not an adopted final plan: the design team was only selected via an Aug 2025 OCII/MBDG RFQ, after Workshop 3.",
+    "text": "The owner asked whether the P12/P13/P15 sources (the interim parcels; OCII's Nov 2024 CAC update labels P13 as Community Garden & SPARK Social SF, P15 as Parklab Gardens & Stagecoach Greens and P12 as the SFF Soccer + Fitness Court) included SF Rec & Park's own community-workshop decks. They didn't yet; added all three, each verified by fetching the PDF directly. Community Meeting #3 (Apr 29, 2025, 83 pages) has individually labeled concept-plan pages for P12, P13 and P15 -- food trucks, outdoor dining and a pavilion on P15; soccer pitches and outdoor fitness on P12 -- plus an alternative option for P12. Design-workshop concepts, not an adopted final plan: SF Rec & Park's Future Parks page later reported (August 2025) that a design-team RFQ had been released and a team was expected to be selected by mid-October; no selection is reported there.",
     "source": "https://sfrecpark.org/DocumentCenter/View/25986/20250429-PRESENTATION-Workshop-3",
     "sources": [
      {
@@ -239,7 +268,7 @@
     "url": "https://sfrecpark.org/DocumentCenter/View/25986/20250429-PRESENTATION-Workshop-3"
    }
   ],
-  "notes": "Interim open-space use on the future P12/P13/P15 parcels; will be rebuilt as part of the Mission Bay Future Parks Project (SF Rec & Park, planning underway 2024-2026, construction not expected before late 2028).",
+  "notes": "Interim open-space use on the future P12/P13/P15 parcels; will be rebuilt as part of the Mission Bay Future Parks Project. SF Rec & Park's project page gives planning 2024-2025, design mid-2026, construction beginning late 2028 and public opening early 2030; its Workshop 3 deck (p.15) shows construction 'mid-2027 thru 2028', so the schedules differ.",
   "has_record_file": false,
   "last_verified": null,
   "tenants": [

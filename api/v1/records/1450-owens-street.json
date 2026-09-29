@@ -23,7 +23,7 @@
   },
   "status": "complete",
   "status_label": "Complete",
-  "use": "institutional",
+  "use": "commercial",
   "relation": "tracked",
   "adjacent_to": null,
   "distance_note": null,
@@ -98,9 +98,9 @@
    {
     "date": "2021-08",
     "date_label": "Aug 2021",
-    "status": "under_construction",
-    "status_label": "Under construction",
-    "text": "Building permit issued for the 7-story lab/office building; construction estimated at ~$70 million.",
+    "status": null,
+    "status_label": null,
+    "text": "New building permits issued for the 7-story lab/office building (August 2021, per San Francisco YIMBY); construction estimated at ~$70 million. The source dates the permit, not the start of construction.",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -115,8 +115,8 @@
     ],
     "source": "San Francisco YIMBY, 2023-02",
     "origin": "record",
-    "category": "status",
-    "category_label": "Status",
+    "category": "milestone",
+    "category_label": "Milestone",
     "record": {
      "id": "8709017",
      "slug": "1450-owens-street",
@@ -350,57 +350,6 @@
     "relation": "tracked"
    },
    {
-    "date": "2024",
-    "date_label": "~2024",
-    "status": "complete",
-    "status_label": "Complete",
-    "text": "Building came online; anchor tenant Gladstone Institutes signed a 105,000+ sq ft lease for its data science and genomic immunology institutes.",
-    "expected": false,
-    "approximate": true,
-    "sources": [
-     {
-      "id": "src-cpe-2026",
-      "title": "Alexandria Lands Life Science Tenant in San Francisco",
-      "publisher": "Commercial Property Executive / Commercial Search",
-      "url": "https://www.commercialsearch.com/news/alexandria-lands-life-science-tenant-in-san-francisco/",
-      "date": "2026-03",
-      "accessed": "2026-09-21"
-     },
-     {
-      "id": "src-gladstone-2026",
-      "title": "Gladstone Institutes expands research footprint with 105,000 square feet of new laboratory space",
-      "publisher": "Gladstone Institutes",
-      "url": "https://gladstone.org/news/gladstone-expands-research-footprint-105000-square-feet-new-laboratory-space",
-      "accessed": "2026-09-21"
-     },
-     {
-      "id": "src-bisnow-2024",
-      "title": "Gladstone Institutes Leases 105K SF In Mission Bay",
-      "publisher": "Bisnow",
-      "url": "https://www.bisnow.com/san-francisco/news/life-sciences/gladstone-institutes-leases-105k-sf-mission-bay-133827",
-      "accessed": "2026-09-21"
-     }
-    ],
-    "source": "Commercial Property Executive / Commercial Search, 2026-03; Gladstone Institutes; Bisnow",
-    "origin": "record",
-    "category": "status",
-    "category_label": "Status",
-    "record": {
-     "id": "8709017",
-     "slug": "1450-owens-street",
-     "name": "1450 Owens Street",
-     "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
-     "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    },
-    "relation": "tracked"
-   },
-   {
     "date": "2024-01-30",
     "date_label": "Jan 30, 2024",
     "status": null,
@@ -579,9 +528,83 @@
      "url": "https://pierandpoint.org/sites/mission-bay/"
     },
     "relation": "tracked"
+   },
+   {
+    "date": "2026-03-25",
+    "date_label": "Mar 25, 2026",
+    "status": null,
+    "status_label": null,
+    "text": "Gladstone Institutes announced it had secured 105,000+ sq ft of laboratory space in the building (about 20 labs for its data science and genomic immunology institutes), with move-in expected in early 2027; Alexandria's executive chairman called Gladstone the anchor tenant.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-gladstone-2026",
+      "title": "Gladstone Expands Research Footprint With 105,000 Square Feet of New Laboratory Space",
+      "publisher": "Gladstone Institutes",
+      "url": "https://gladstone.org/news/gladstone-expands-research-footprint-105000-square-feet-new-laboratory-space",
+      "accessed": "2026-09-21",
+      "date": "2026-03-25"
+     },
+     {
+      "id": "src-bisnow-2026",
+      "title": "Gladstone Institutes Leases Additional 105K SF In Mission Bay",
+      "publisher": "Bisnow",
+      "url": "https://www.bisnow.com/san-francisco/news/life-sciences/gladstone-institutes-leases-105k-sf-mission-bay-133827",
+      "accessed": "2026-09-21",
+      "date": "2026-03-25"
+     }
+    ],
+    "source": "Gladstone Institutes, 2026-03-25; Bisnow, 2026-03-25",
+    "origin": "record",
+    "category": "retail",
+    "category_label": "Retail",
+    "record": {
+     "id": "8709017",
+     "slug": "1450-owens-street",
+     "name": "1450 Owens Street",
+     "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
+     "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
    }
   ],
   "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The record said Gladstone signed its 105,000+ sq ft lease in 2024 and that the building came online in 2024. Gladstone's release and Bisnow are both dated 2026-03-25 and describe a lease announced then, with Gladstone's labs opening in early 2027; no source dates the lease to 2024. The record now shows DBI's shell-and-core permit complete on 2025-05-19 and says sources disagree on when the building came online. The August 2021 milestone no longer claims construction started (SF YIMBY dates the permits, not the start of work). The Bisnow source was renamed and dated 2026-03-25, the Gladstone source title and date were fixed, the Wikimedia aerial's credit now names only the Commons username Firstcultural, and the land use in status.csv is now commercial (the Assessor classes the building as Commercial Office).",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8709017",
+     "slug": "1450-owens-street",
+     "name": "1450 Owens Street",
+     "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
+     "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-26",
     "kind": "added",
@@ -1311,11 +1334,11 @@
     "date": "2026-09-20",
     "kind": "added",
     "kind_label": "Added",
-    "text": "1450 Owens Street added as a real status.csv record: a 7-story, ~1-acre Alexandria Center for Science and Technology lab/office building (came online 2024), identified by the owner while reviewing the numbered real-gap-fragment map for the positioning-review batch. Gladstone Institutes (whose own separate 1650 Owens St headquarters is already tracked) signed a 105,000+ sq ft lease here in 2024, confirmed via Gladstone's own press release and real-estate trade press -- this record tracks the real Alexandria-owned building, not a separate Gladstone-owned site. DataSF's Building Footprints layer only captures small roof fragments of this real ~4,607 sqm parcel, so the real Assessor parcel boundary is used directly.",
-    "source": "docs/briefs/mission-bay-geometry.md",
+    "text": "1450 Owens Street added as a real status.csv record: a 7-story, ~1-acre Alexandria Center for Science and Technology lab/office building (DBI shows its shell-and-core construction permit 202012281760 complete on 2025-05-19; sources differ on when it came online), identified by the owner while reviewing the numbered real-gap-fragment map for the positioning-review batch. Gladstone Institutes (whose own separate 1650 Owens St headquarters is already tracked) announced in March 2026 that it had secured 105,000+ sq ft of laboratory space here (per Gladstone's own release and Bisnow, both dated 2026-03-25) -- this record tracks the real Alexandria-owned building, not a separate Gladstone-owned site. DataSF's Building Footprints layer only captures small roof fragments of this real ~4,607 sqm parcel, so the real Assessor parcel boundary is used directly.",
+    "source": "https://gladstone.org/news/gladstone-expands-research-footprint-105000-square-feet-new-laboratory-space",
     "sources": [
      {
-      "title": "docs/briefs/mission-bay-geometry.md"
+      "title": "https://gladstone.org/news/gladstone-expands-research-footprint-105000-square-feet-new-laboratory-space"
      }
     ],
     "category": "coverage",
@@ -1343,7 +1366,7 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-05-20",
-    "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+    "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
     "license": "public-domain",
     "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
     "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
@@ -1365,12 +1388,12 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-02-10",
-    "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+    "credit": "Firstcultural, via Wikimedia Commons; CC0; downscaled to 1600 px",
     "license": "cc0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural. Read 2026-09-23.",
+    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area",
     "aerial": true,
     "focus": [
      0.35,
@@ -1412,17 +1435,19 @@
    },
    {
     "id": "src-gladstone-2026",
-    "title": "Gladstone Institutes expands research footprint with 105,000 square feet of new laboratory space",
+    "title": "Gladstone Expands Research Footprint With 105,000 Square Feet of New Laboratory Space",
     "publisher": "Gladstone Institutes",
     "url": "https://gladstone.org/news/gladstone-expands-research-footprint-105000-square-feet-new-laboratory-space",
-    "accessed": "2026-09-21"
+    "accessed": "2026-09-21",
+    "date": "2026-03-25"
    },
    {
-    "id": "src-bisnow-2024",
-    "title": "Gladstone Institutes Leases 105K SF In Mission Bay",
+    "id": "src-bisnow-2026",
+    "title": "Gladstone Institutes Leases Additional 105K SF In Mission Bay",
     "publisher": "Bisnow",
     "url": "https://www.bisnow.com/san-francisco/news/life-sciences/gladstone-institutes-leases-105k-sf-mission-bay-133827",
-    "accessed": "2026-09-21"
+    "accessed": "2026-09-21",
+    "date": "2026-03-25"
    },
    {
     "id": "src-sfyimby-2023",
@@ -1545,7 +1570,7 @@
     "url": "https://data.sf.gov/resource/wv5m-vpq2.json"
    }
   ],
-  "notes": "1450 Owens Street -- a 7-story, ~1-acre laboratory/office building at the Alexandria Center for Science and Technology's Mission Bay Megacampus, completed/came online 2024 (133,000 sq ft lab space, ~50,000 sq ft office, 2,600 sq ft ground-level retail per Commercial Property Executive/EurekAlert coverage of the building). Owner-identified while reviewing the numbered real-gap-fragment map for this session's positioning check. Gladstone Institutes (whose own separate headquarters at 1650 Owens St, blklot 8709008, is already tracked) signed a 105,000+ sq ft lease here in 2024 for its data science and genomic immunology institutes, per Gladstone's own press release and multiple real-estate trade press reports -- this record tracks the real Alexandria-owned building/parcel, not a separate Gladstone-owned site. DataSF Assessor confirms blklot 8709017 at 1450 Owens St; the DataSF Building Footprints layer only captures small roof fragments (~688 sq m total) of this real ~4,607 sq m parcel, so this record uses the real Assessor parcel boundary directly, consistent with how this project handles other footprint-layer gaps (e.g. 1300 Fourth Street, Block 6E).",
+  "notes": "1450 Owens Street -- a 7-story, ~1-acre laboratory/office building at the Alexandria Center for Science and Technology's Mission Bay Megacampus, shell-and-core construction permit shown complete by DBI on 2025-05-19 (one trade-press report says the building came online in 2024; Bisnow says 2027 for the leased space; the sources disagree) (133,000 sq ft lab space, ~50,000 sq ft office, 2,600 sq ft ground-level retail per Commercial Property Executive/EurekAlert coverage of the building). Owner-identified while reviewing the numbered real-gap-fragment map for this session's positioning check. Gladstone Institutes (whose own separate headquarters at 1650 Owens St, blklot 8709008, is already tracked) announced in March 2026 that it had secured 105,000+ sq ft of laboratory space here (occupancy expected in early 2027) for its data science and genomic immunology institutes, per Gladstone's own release and Bisnow (both dated 2026-03-25) -- this record tracks the real Alexandria-owned building/parcel, not a separate Gladstone-owned site. DataSF Assessor confirms blklot 8709017 at 1450 Owens St; the DataSF Building Footprints layer only captures small roof fragments (~688 sq m total) of this real ~4,607 sq m parcel, so this record uses the real Assessor parcel boundary directly, consistent with how this project handles other footprint-layer gaps (e.g. 1300 Fourth Street, Block 6E).",
   "has_record_file": true,
   "last_verified": "2026-09-26",
   "tenants": [],

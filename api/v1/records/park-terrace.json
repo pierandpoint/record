@@ -39,7 +39,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I/II/III, Madrone, Arden, One Mission Bay, Radiance).",
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I, Madrone and Radiance, re-checked against data/raw/parcels.geojson in the 2026-09 audit; Avalon II and III are not condo-mapped, and Arden and One Mission Bay were not re-checked).",
     "digitized_from": "OpenStreetMap (way 46264112, 325 Berry St)"
    }
   },
@@ -60,10 +60,10 @@
     "approximate": false,
     "sources": [
      {
-      "title": "socketsite.com"
+      "title": "https://socketsite.com/archives/2006/05/new_development_8.html"
      }
     ],
-    "source": "socketsite.com",
+    "source": "https://socketsite.com/archives/2006/05/new_development_8.html",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -87,15 +87,15 @@
     "date_label": "~2007",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Park Terrace opens",
+    "text": "Park Terrace (325 Berry St) completed: the condominium lots carry year built 2007 in the DataSF Assessor roll",
     "expected": false,
     "approximate": true,
     "sources": [
      {
-      "title": "OpenStreetMap-tagged address match; year from real-estate listing sources"
+      "title": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8707009"
      }
     ],
-    "source": "OpenStreetMap-tagged address match; year from real-estate listing sources",
+    "source": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8707009",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -115,7 +115,37 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The geometry notes gave 110 units and a 2007 build with only an OSM way cited, and said the developer was not confirmed. A dated note now cites SocketSite (May 2006: 110 units, seven stories, developers Opus West and Phoenix Property Company) and the DataSF Assessor roll (year built 2007). The 2006 and 2007 milestones cite those pages instead of a bare domain and an uncheckable listing, and the condo-tower comparison no longer lists Avalon II and III.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_park_terrace",
+     "slug": "park-terrace",
+     "name": "Park Terrace",
+     "permalink": "https://pierandpoint.org/parcels/park-terrace/",
+     "api": "https://pierandpoint.org/api/v1/records/park-terrace.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/mission_bay/owner_20260923_102231.jpg",
@@ -154,11 +184,21 @@
     "publisher": "OpenStreetMap contributors",
     "url": "https://www.openstreetmap.org/way/46264112",
     "accessed": "2026-09-27"
+   },
+   {
+    "id": null,
+    "title": "socketsite.com/archives/2006/05/new_development_8.html",
+    "url": "https://socketsite.com/archives/2006/05/new_development_8.html"
+   },
+   {
+    "id": null,
+    "title": "data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8707009",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8707009"
    }
   ],
-  "notes": "Developer not confirmed by any source found in this pass; left out rather than guessed.",
+  "notes": "Developers Opus West and Phoenix Property Company per SocketSite (May 5, 2006).",
   "has_record_file": true,
-  "last_verified": "2026-09-27",
+  "last_verified": "2026-09-29",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

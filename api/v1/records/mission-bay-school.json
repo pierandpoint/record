@@ -29,11 +29,14 @@
   "distance_note": null,
   "how_to_comment": [],
   "positions": [],
-  "address": "1415 Owens St (SFUSD, at 6th St/Mission Bay Blvd S)",
-  "summary": "SFUSD's Mission Bay School is an 81,800 sq ft, four-story TK-5 campus at 1415 Owens St designed by DLR Group and built by McCarthy Building Companies under a $95.39M design-build contract funded by the 2016 Proposition A school facilities bond; it opened to its first PreK/TK/K students on August 17, 2026, becoming Mission Bay's first public school and SFUSD's first new school in two decades.",
+  "address": "1415 Owens St (SFUSD)",
+  "summary": "SFUSD's Mission Bay School is a four-story TK-5 campus at 1415 Owens St (about 81,800 sq ft per the design team; SF Standard says approximately 80,000) designed by DLR Group and built by McCarthy Building Companies, the design-build team SFUSD hired in 2022, under a reported $95.4 million construction contract funded by SFUSD's 2016 bond program (Proposition A). SFUSD held the ribbon cutting on August 6, 2026 and scheduled the first PreK/TK/K students for August 2026, making it Mission Bay's first public elementary school and SFUSD's first new school in about a decade.",
   "summary_sources": [
    "src-sfstandard-2026",
-   "src-sfusd-school"
+   "src-sfusd-school",
+   "src-sfusd-announce",
+   "src-zweiglist-2022",
+   "src-registry-deliver"
   ],
   "shape": {
    "kind": "parcel",
@@ -49,14 +52,15 @@
   "facts": [
    {
     "key": "address",
-    "value": "1415 Owens St (at 6th St/Mission Bay Blvd S)",
+    "value": "1415 Owens St (site bounded by Owen Street, Nelson Rising Lane, Mission Bay Boulevard and 6th Street)",
     "sources": [
-     "src-sfusd-school"
+     "src-sfusd-school",
+     "src-zweiglist-2022"
     ]
    },
    {
     "key": "architect",
-    "value": "DLR Group (design architect); Multistudio (bridging-documents architect)",
+    "value": "DLR Group (design architect)",
     "sources": [
      "src-zweiglist-2022"
     ]
@@ -65,7 +69,8 @@
     "key": "contractor",
     "value": "McCarthy Building Companies (design-build)",
     "sources": [
-     "src-sfyimby-hire"
+     "src-sfyimby-hire",
+     "src-zweiglist-2022"
     ]
    },
    {
@@ -86,7 +91,8 @@
     "key": "funding_source",
     "value": "SFUSD's 2016 Proposition A school facilities bond (voter-approved)",
     "sources": [
-     "src-sfstandard-2026"
+     "src-sfstandard-2026",
+     "src-sfusd-announce"
     ]
    },
    {
@@ -100,7 +106,7 @@
    },
    {
     "key": "sustainability",
-    "value": "Designed to be twice as sustainable as SFUSD's standard, aligned with the Architecture 2030 Challenge; Universal Design for Learning with movable glass partitions joining classrooms; ground-floor spaces with direct outdoor access; built-in classroom observation rooms for teacher training on each floor",
+    "value": "Designed to be twice as sustainable as SFUSD's standard; Universal Design for Learning with movable glass partitions joining classrooms; ground-floor spaces with direct outdoor access; built-in classroom observation rooms for teacher training on each floor",
     "sources": [
      "src-sfstandard-2026",
      "src-zweiglist-2022"
@@ -108,9 +114,11 @@
    },
    {
     "key": "fourth_floor_use",
-    "value": "A 'Mission Bay Hub' STEM/Linked Learning program serving high schoolers from six SF high schools (health/bioscience career pathway), plus district professional-development space",
+    "value": "A 'Mission Bay Hub' STEM program serving high schoolers from six SF high schools (SF Standard); described in 2022 as a STEM-focused linked learning hub preparing students for careers in health, bioscience and STEM fields, plus district professional-development space",
     "sources": [
-     "src-sfstandard-2026"
+     "src-sfstandard-2026",
+     "src-zweiglist-2022",
+     "src-sfyimby-hire"
     ]
    },
    {
@@ -123,12 +131,12 @@
   ],
   "costs": [
    {
-    "amount_usd": 95390000,
-    "what": "SFUSD's design-build construction contract with McCarthy Building Companies",
-    "date": "2022",
-    "approximate": false,
+    "amount_usd": 95400000,
+    "what": "Construction contract for the school, reported as $95.4 million at the August 2026 opening",
+    "date": "2026-08",
+    "approximate": true,
     "sources": [
-     "src-sfyimby-hire"
+     "src-sfstandard-2026"
     ],
     "kind": "construction",
     "scope": "record"
@@ -165,24 +173,32 @@
   ],
   "milestones": [
    {
-    "date": "1998",
-    "date_label": "~1998",
+    "date": "1998-11",
+    "date_label": "Nov 1998",
     "status": null,
     "status_label": null,
-    "text": "The Mission Bay Redevelopment Plan designates this site for a future public school",
+    "text": "The Board of Supervisors adopts the Mission Bay Redevelopment Plan; a neighborhood elementary school was part of its original vision",
     "expected": false,
-    "approximate": true,
+    "approximate": false,
     "sources": [
      {
+      "id": "src-sfstandard-2026",
+      "title": "SF plans to close schools -- but Mission Bay just got a new one",
+      "publisher": "The San Francisco Standard",
+      "date": "2026-08-06",
+      "url": "https://sfstandard.com/2026/08/06/mission-bay-school-opens/",
+      "accessed": "2026-09-18"
+     },
+     {
       "id": "src-hoodline-2025",
-      "title": "New Elementary School Set to Open in San Francisco's Mission Bay by 2026 to Ease Classroom Crunch",
+      "title": "Mission Bay Gets Its First Elementary School After 27 Years of Waiting",
       "publisher": "Hoodline",
       "date": "2025-10",
       "url": "https://hoodline.com/2025/10/new-elementary-school-set-to-open-in-san-francisco-s-mission-bay-by-2026-to-ease-classroom-crunch/",
       "accessed": "2026-09-18"
      }
     ],
-    "source": "Hoodline, 2025-10",
+    "source": "The San Francisco Standard, 2026-08-06; Hoodline, 2025-10",
     "origin": "record",
     "category": "milestone",
     "category_label": "Milestone",
@@ -202,50 +218,13 @@
     "relation": "tracked"
    },
    {
-    "date": "2022",
+    "date": "2022-07",
     "date_label": "~2022",
     "status": null,
     "status_label": null,
-    "text": "UCSF transfers the school site to SFUSD (set aside for a school since 1988 per this project's own sourcing)",
+    "text": "SFUSD announces it has hired DLR Group (design architect) and McCarthy Building Companies (design-build contractor)",
     "expected": false,
     "approximate": true,
-    "sources": [
-     {
-      "id": "src-sfusd-announce",
-      "title": "Mission Bay School opens August 2026",
-      "publisher": "SFUSD (primary/official announcement)",
-      "date": "2025-10-10",
-      "url": "https://www.sfusd.edu/announcements/2025-10-10-mission-bay-school-opens-august-2026",
-      "accessed": "2026-09-18"
-     }
-    ],
-    "source": "SFUSD (primary/official announcement), 2025-10-10",
-    "origin": "record",
-    "category": "milestone",
-    "category_label": "Milestone",
-    "record": {
-     "id": "8709025",
-     "slug": "mission-bay-school",
-     "name": "Mission Bay School",
-     "permalink": "https://pierandpoint.org/parcels/mission-bay-school/",
-     "api": "https://pierandpoint.org/api/v1/records/mission-bay-school.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2022-07-14",
-    "date_label": "Jul 14, 2022",
-    "status": null,
-    "status_label": null,
-    "text": "SFUSD announces it has hired DLR Group (design architect) and McCarthy Building Companies (design-build contractor); Multistudio serves as bridging-documents architect",
-    "expected": false,
-    "approximate": false,
     "sources": [
      {
       "id": "src-zweiglist-2022",
@@ -254,9 +233,17 @@
       "date": "2022-07-14",
       "url": "https://zweiglist.com/mccarthy-and-dlr-group-partner-to-win-new-school-in-san-francisco/",
       "accessed": "2026-09-18"
+     },
+     {
+      "id": "src-registry-deliver",
+      "title": "McCarthy and DLR Group Partner to Deliver 81,800 SQFT Mission Bay School",
+      "publisher": "The Registry SF (commercial real estate trade press)",
+      "url": "https://news.theregistrysf.com/mccarthy-and-dlr-group-partner-to-deliver-81800-sqft-mission-bay-school/",
+      "accessed": "2026-09-18",
+      "date": "2022-07-08"
      }
     ],
-    "source": "Zweig Group's Zweig List (industry trade press), 2022-07-14",
+    "source": "Zweig Group's Zweig List (industry trade press), 2022-07-14; The Registry SF (commercial real estate trade press), 2022-07-08",
     "origin": "record",
     "category": "milestone",
     "category_label": "Milestone",
@@ -280,7 +267,7 @@
     "date_label": "Oct 27, 2022",
     "status": "under_construction",
     "status_label": "Under construction",
-    "text": "Official groundbreaking ceremony, attended by Mayor London Breed, Board of Education President Jenny Lam and SFUSD Superintendent Dr. Matt Wayne",
+    "text": "Official groundbreaking ceremony, attended by the project team, students, children and Mayor London Breed",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -351,9 +338,9 @@
    {
     "date": "2026-01",
     "date_label": "~2026",
-    "status": "complete",
-    "status_label": "Complete",
-    "text": "Construction completed",
+    "status": null,
+    "status_label": null,
+    "text": "SFUSD's October 2025 announcement scheduled construction to be completed by January 2026; no completion report was found",
     "expected": false,
     "approximate": true,
     "sources": [
@@ -367,6 +354,50 @@
      }
     ],
     "source": "SFUSD (primary/official announcement), 2025-10-10",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8709025",
+     "slug": "mission-bay-school",
+     "name": "Mission Bay School",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-school/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-school.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2026-08",
+    "date_label": "~2026",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "First students (Pre-K, TK, combined TK-K special ed, and Kindergarten) begin attending under Principal Monette Benitez",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-sfstandard-2026",
+      "title": "SF plans to close schools -- but Mission Bay just got a new one",
+      "publisher": "The San Francisco Standard",
+      "date": "2026-08-06",
+      "url": "https://sfstandard.com/2026/08/06/mission-bay-school-opens/",
+      "accessed": "2026-09-18"
+     },
+     {
+      "id": "src-sfusd-school",
+      "title": "Mission Bay School (school profile page)",
+      "publisher": "SFUSD (primary/official)",
+      "url": "https://www.sfusd.edu/school/mission-bay-school",
+      "accessed": "2026-09-18"
+     }
+    ],
+    "source": "The San Francisco Standard, 2026-08-06; SFUSD (primary/official)",
     "origin": "record",
     "category": "status",
     "category_label": "Status",
@@ -422,63 +453,19 @@
     "relation": "tracked"
    },
    {
-    "date": "2026-08-17",
-    "date_label": "Aug 17, 2026",
+    "date": "2026-08",
+    "date_label": "~2026",
     "status": "complete",
     "status_label": "Complete",
-    "text": "First students (Pre-K, TK, combined TK-K special ed, and Kindergarten) begin attending under Principal Monette Benitez",
+    "text": "Mission Bay School welcomes its first students (SFUSD: August 2026)",
     "expected": false,
-    "approximate": false,
+    "approximate": true,
     "sources": [
      {
-      "id": "src-sfstandard-2026",
-      "title": "SF plans to close schools -- but Mission Bay just got a new one",
-      "publisher": "The San Francisco Standard",
-      "date": "2026-08-06",
-      "url": "https://sfstandard.com/2026/08/06/mission-bay-school-opens/",
-      "accessed": "2026-09-18"
-     },
-     {
-      "id": "src-sfusd-school",
-      "title": "Mission Bay School (school profile page)",
-      "publisher": "SFUSD (primary/official)",
-      "url": "https://www.sfusd.edu/school/mission-bay-school",
-      "accessed": "2026-09-18"
+      "title": "https://sfstandard.com/2026/08/06/mission-bay-school-opens/"
      }
     ],
-    "source": "The San Francisco Standard, 2026-08-06; SFUSD (primary/official)",
-    "origin": "record",
-    "category": "status",
-    "category_label": "Status",
-    "record": {
-     "id": "8709025",
-     "slug": "mission-bay-school",
-     "name": "Mission Bay School",
-     "permalink": "https://pierandpoint.org/parcels/mission-bay-school/",
-     "api": "https://pierandpoint.org/api/v1/records/mission-bay-school.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2026-08-17",
-    "date_label": "Aug 17, 2026",
-    "status": "complete",
-    "status_label": "Complete",
-    "text": "Mission Bay School welcomes its first students",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "title": "sfusd.edu"
-     }
-    ],
-    "source": "sfusd.edu",
+    "source": "https://sfstandard.com/2026/08/06/mission-bay-school-opens/",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -502,7 +489,7 @@
     "date_label": "Aug 2032",
     "status": null,
     "status_label": null,
-    "text": "School is planned to grow one grade per year into a full TK-5 (with Preschool) campus",
+    "text": "School is planned to grow one grade at a time into a full TK-5 (with Preschool) campus by 2032",
     "expected": true,
     "approximate": false,
     "sources": [
@@ -512,9 +499,25 @@
       "publisher": "SFUSD (primary/official)",
       "url": "https://www.sfusd.edu/school/mission-bay-school",
       "accessed": "2026-09-18"
+     },
+     {
+      "id": "src-sfusd-announce",
+      "title": "Mission Bay School opens August 2026",
+      "publisher": "SFUSD (primary/official announcement)",
+      "date": "2025-10-10",
+      "url": "https://www.sfusd.edu/announcements/2025-10-10-mission-bay-school-opens-august-2026",
+      "accessed": "2026-09-18"
+     },
+     {
+      "id": "src-sfstandard-2026",
+      "title": "SF plans to close schools -- but Mission Bay just got a new one",
+      "publisher": "The San Francisco Standard",
+      "date": "2026-08-06",
+      "url": "https://sfstandard.com/2026/08/06/mission-bay-school-opens/",
+      "accessed": "2026-09-18"
      }
     ],
-    "source": "SFUSD (primary/official)",
+    "source": "SFUSD (primary/official); SFUSD (primary/official announcement), 2025-10-10; The San Francisco Standard, 2026-08-06",
     "origin": "record",
     "category": "coming_up",
     "category_label": "Coming up",
@@ -535,6 +538,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The record now gives the construction contract as about $95.4 million (SF Standard, Aug 2026) instead of $95,390,000, and says SFUSD scheduled construction to finish by January 2026 rather than stating that it was completed. The first day of school is shown as August 2026, since the readable sources give only the month. The 2022 UCSF site transfer and 1988 set-aside, the Multistudio architect credit, the Architecture 2030 claim, the attendee list at the 2022 groundbreaking and the 'first new school in 20 years' wording were removed or corrected because no cited source supports them. Sources were added for the design-build team, the Proposition A bond and the fourth-floor program.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8709025",
+     "slug": "mission-bay-school",
+     "name": "Mission Bay School",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-school/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-school.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-25",
     "kind": "correction",
@@ -716,7 +748,7 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-05-20",
-    "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+    "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
     "license": "public-domain",
     "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
     "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
@@ -738,12 +770,12 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-02-10",
-    "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+    "credit": "Firstcultural, aerial view, via Wikimedia Commons; CC0; downscaled to 1600 px",
     "license": "cc0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by the uploader Firstcultural. Read 2026-09-23.",
+    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area",
     "aerial": true,
     "focus": [
      0.35,
@@ -761,7 +793,8 @@
    "Total project cost is ambiguous: SFUSD's construction contract with McCarthy was $95.39M, but a trade-press piece at the 2026 opening cites $129M as the project total, with no breakdown of the difference found.",
    "No SFUSD document names a square-footage figure officially; the 81,800/82,000 sq ft figures come from trade press, not the district itself.",
    "No openly licensed image was found; none is hosted here.",
-   "CORRECTED 2026-09-24: the 2032-08 grade-growth milestone (school growing one grade per year to full TK-5) carried `status: \"planned\"`, which the site's timeline reads as the whole record reverting to pre-construction 'planned' status for any date past August 2032 -- even though the school is already built and open (same bug mechanism reported by a site visitor on 'Prequel Park (Power Station sub-area)', found here by auditing every record for the same pattern). That milestone describes enrollment growth, not a change in construction status, so it should never have carried a status field at all; removed it. The milestone's date, text and sources are unchanged."
+   "CORRECTED 2026-09-24: the 2032-08 grade-growth milestone (school growing one grade per year to full TK-5) carried `status: \"planned\"`, which the site's timeline reads as the whole record reverting to pre-construction 'planned' status for any date past August 2032 -- even though the school is already built and open (same bug mechanism reported by a site visitor on 'Prequel Park (Power Station sub-area)', found here by auditing every record for the same pattern). That milestone describes enrollment growth, not a change in construction status, so it should never have carried a status field at all; removed it. The milestone's date, text and sources are unchanged.",
+   "2026-09-29: no source was found for a 2022 UCSF transfer of the school site to SFUSD or a 1988 set-aside, so both were removed; no post-completion report was found for the January 2026 construction-completion schedule; the exact first day of school (Aug 17, 2026 per a SF Chronicle article that could not be fetched) is not confirmed from a readable source."
   ],
   "sources": [
    {
@@ -789,7 +822,7 @@
    },
    {
     "id": "src-hoodline-2025",
-    "title": "New Elementary School Set to Open in San Francisco's Mission Bay by 2026 to Ease Classroom Crunch",
+    "title": "Mission Bay Gets Its First Elementary School After 27 Years of Waiting",
     "publisher": "Hoodline",
     "date": "2025-10",
     "url": "https://hoodline.com/2025/10/new-elementary-school-set-to-open-in-san-francisco-s-mission-bay-by-2026-to-ease-classroom-crunch/",
@@ -824,7 +857,8 @@
     "title": "McCarthy and DLR Group Partner to Deliver 81,800 SQFT Mission Bay School",
     "publisher": "The Registry SF (commercial real estate trade press)",
     "url": "https://news.theregistrysf.com/mccarthy-and-dlr-group-partner-to-deliver-81800-sqft-mission-bay-school/",
-    "accessed": "2026-09-18"
+    "accessed": "2026-09-18",
+    "date": "2022-07-08"
    },
    {
     "id": "src-registry-ribbon",
@@ -865,9 +899,9 @@
     "overview": true
    }
   ],
-  "notes": "Mission Bay School, 1415 Owens St (SFUSD, at 6th St/Mission Bay Blvd S) -- a four-story, ~$95.4M TK-5 public school (the neighborhood's first, and SFUSD's first new school in 20 years), built by McCarthy Building Company on land UCSF transferred to SFUSD in 2022 (set aside for a school since 1988). Construction completed January 2026; welcomed its first students (pre-K/TK/K, with grades phasing in through 2032) Aug 17, 2026 (sfusd.edu; sfchronicle.com).",
+  "notes": "Mission Bay School, 1415 Owens St (SFUSD) -- a four-story TK-5 public school (Mission Bay's first public elementary school; SF Standard calls it SFUSD's first new school in about a decade), designed by DLR Group and built by McCarthy Building Companies under a reported $95.4 million construction contract (SF Standard, Aug 2026). SFUSD scheduled construction to be completed by January 2026 (Oct 2025 announcement; no completion report found). Ribbon cutting Aug 6, 2026; first students (pre-K/TK/K, with grades phasing in through 2032) in August 2026 (sfusd.edu; sfstandard.com).",
   "has_record_file": true,
-  "last_verified": "2026-09-24",
+  "last_verified": "2026-09-29",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

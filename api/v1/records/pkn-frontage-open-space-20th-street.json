@@ -30,7 +30,7 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "The roughly half-acre '20th Street Plaza' of the D4D open-space network (Section 3.10), the landscaped entry plaza on Parcel K North's 20th Street frontage at Illinois Street, designed as the gateway from Dogpatch to the Historic Core with an entry plaza, seating terrace and planted garden. The Port's Parcel K North project lists a 20th St/Illinois St plaza among the buyer's obligations; it has not been built.",
+  "summary": "The roughly half-acre '20th Street Plaza' of the D4D open-space network (Section 3.10), the landscaped entry plaza on Parcel K North's 20th Street frontage at Illinois Street, designed as the gateway from Dogpatch to the Historic Core with an entry plaza, seating terrace and planted garden. The Port's Parcel K North project lists a 20th St/Illinois St plaza among the buyer's obligations; no source found reports it built (the Port's Parcel K North page schedule stops at 2020-2021 design and permitting).",
   "summary_sources": [
    "src-d4d",
    "src-port-pkn"
@@ -41,10 +41,10 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "LOW-MODERATE CONFIDENCE -- Figure 3.3.1 is an illustrative, non-dimensioned rendering (no scale-accurate internal boundaries, unlike the D4D's own numbered-parcel figures), so this is a simplified bounding-box trace, not a precise outline. No specific proper name was found for this feature in the D4D text found so far (unlike Irish Hill Remnant, Waterfront Terrace, Slipways Commons, and the Waterfront Promenade, which are each the subject of their own named, detailed sub-figure elsewhere in the document) -- treat this name as a neutral, location-based placeholder pending a better source, not a confirmed D4D name. Its south/east/west edges match PKN's newly-retraced boundary (see digitization_method); its north edge is now ground-truthed against the real 20th St centerline (6.8m curb offset) rather than Figure 3.3.1's own illustrative depth, which turned out to extend past the real street entirely. Resulting strip is real but thin (~305 sq m) -- narrower than the diagram's own illustrative rendering implies.",
+    "accuracy_caveat": "LOW-MODERATE CONFIDENCE -- Figure 3.3.1 is an illustrative, non-dimensioned rendering (no scale-accurate internal boundaries, unlike the D4D's own numbered-parcel figures), so this is a simplified bounding-box trace, not a precise outline. The D4D does name this space: Section 3.10 '20th Street Plaza' (approximately 0.5 acre, with its own Figures 3.10.1-3.10.5); this file's project_name 'PKN Frontage Open Space (20th Street)' is the earlier location-based placeholder and is kept only as the file's key. Its south/east/west edges match PKN's newly-retraced boundary (see digitization_method); its north edge is now ground-truthed against the real 20th St centerline (6.8m curb offset) rather than Figure 3.3.1's own illustrative depth, which turned out to extend past the real street entirely. Resulting strip is real but thin (~305 sq m) -- narrower than the diagram's own illustrative rendering implies.",
     "digitized_from": "Pier 70 Design for Development, Figure 3.3.1 - Illustrative Open Space Plan (p.51).",
-    "why_no_real_parcel": "Open space with no subdivided Assessor parcel of its own within Brookfield's largely unaddressed 28-acre site.",
-    "regulatory_context": "Part of the Pier 70 D4D's Open Space Network (Section 3), shown on Figure 3.3.1 as landscaped open space along Parcel K North's 20th Street frontage. No further detail (name, area, specific program) found in the D4D text located so far."
+    "why_no_real_parcel": "Open space with no Assessor lot of its own identified. The plaza is on the Illinois & 20th Street Parcel (Block 4110/Lot 001 per Port Item 9B), which Port Resolution 17-52 has the Port merge with a vacated piece of Michigan St and subdivide into four parcels including its own 'Plaza Parcel'; that parcel is outside Brookfield's 28-Acre Site, so the earlier statement that it lies within Brookfield's site is withdrawn. The Plaza Parcel's Assessor lot has not been checked.",
+    "regulatory_context": "Part of the Pier 70 D4D's Open Space Network: Section 3.10 '20th Street Plaza', approximately 0.5 acre, an entry plaza with a seating terrace and planted garden along Parcel K North's 20th Street frontage (Figures 3.10.1-3.10.5), shown on Figure 3.3.1 as landscaped open space. Port Item 9B (2017) lists the 20th Street Plaza among the infrastructure obligations retained for the adjacent Illinois Street Parcels."
    }
   },
   "centroid": {
@@ -89,7 +89,7 @@
    },
    {
     "key": "maintenance_funding",
-    "value": "CFD special taxes from Parcel K North and the Hoedown Yard were projected in 2017 to fund maintenance of open space and streets north of 20th Street",
+    "value": "CFD special taxes from Parcel K North and the Hoedown Yard were projected in 2017 to fund maintenance of Irish Hill Park, Michigan Street, Crane Cove Park and other areas north of 20th Street; Port Item 9B does not name the 20th Street Plaza among them",
     "sources": [
      "src-port-9b-2017"
     ]
@@ -180,7 +180,7 @@
     "date_label": "Nov 13, 2019",
     "status": null,
     "status_label": null,
-    "text": "Planning's Parcel K North design approval covers the vertical improvement; the Port's project page describes the project as the building 'with a plaza and street improvements'",
+    "text": "Planning's Parcel K North design approval covers the vertical improvement; the Port's project page says the project 'will also include a 20th St/Illinois St Plaza and improvements to Michigan St.'",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -224,14 +224,43 @@
   ],
   "changes": [
    {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The map notes now use the D4D's name '20th Street Plaza' with its 0.5-acre area and program instead of saying no name was found, and say the plaza sits on the Port's Illinois & 20th Street Parcel outside Brookfield's site. The maintenance-funding fact lists only what Port Item 9B names, the Port page is quoted as written, the summary says no source reports the plaza built, and image credits no longer name design firms the figure does not credit or say 'adopted 2017'. The place's map key name is unchanged. The D4D source no longer calls itself an 'adopted' document.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_pkn_frontage_plaza",
+     "slug": "pkn-frontage-open-space-20th-street",
+     "name": "PKN Frontage Open Space (20th Street)",
+     "permalink": "https://pierandpoint.org/parcels/pkn-frontage-open-space-20th-street/",
+     "api": "https://pierandpoint.org/api/v1/records/pkn-frontage-open-space-20th-street.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-16",
     "kind": "added",
     "kind_label": "Added",
-    "text": "Pier 70’s 20th Street frontage open space added, the first of a pass adding untracked open space.",
-    "source": "Pier 70 Design for Development",
+    "text": "Pier 70’s 20th Street frontage open space added, the first of a pass adding untracked open space. The event date is the Planning Commission's Aug 24, 2017 approval of the Pier 70 D4D that defines the space (Resolution 19980).",
+    "source": "Pier 70 Design for Development; Port Item 9B (Sept 22, 2017)",
     "sources": [
      {
-      "title": "Pier 70 Design for Development"
+      "title": "Pier 70 Design for Development; Port Item 9B (Sept 22, 2017)"
      }
     ],
     "category": "open_space",
@@ -272,7 +301,7 @@
     "path": "data/manual/images/pier70_d4d_fig_3_10_1_20th_street_plaza.jpg",
     "kind": "document",
     "taken": "2022-04-26",
-    "credit": "Pier 70 Design for Development (Port of San Francisco), Figure 3.10.1 'Illustrative 20th Street Plaza Plan', p.71 (illustrative plan by James Corner Field Operations / SITELAB urban studio, Forest City project team)",
+    "credit": "Pier 70 Design for Development (Port of San Francisco), Figure 3.10.1 'Illustrative 20th Street Plaza Plan', p.71 (the figure carries no author credit; the D4D's project team is listed on its credits page)",
     "license": "public-record",
     "source_url": "https://www.sfport.com/media/8123/download?inline=",
     "license_evidence": "https://www.sfport.com/media/8123/download?inline=",
@@ -287,11 +316,11 @@
     "kind": "rendering",
     "scope": "site",
     "taken": "2022-04-26",
-    "credit": "Port of San Francisco / SF Planning, Pier 70 Special Use District Design for Development (D4D, adopted 2017, updated April 26, 2022), Figure 1.1.2, p.5",
+    "credit": "Port of San Francisco / SF Planning, Pier 70 Special Use District Design for Development (D4D, updated April 26, 2022), Figure 1.1.2, p.5",
     "license": "public-record",
     "source_url": "https://www.sfport.com/media/8123/download?inline=",
     "license_evidence": "https://www.sfport.com/media/8123/download?inline=",
-    "license_note": "An adopted Port of San Francisco / SF Planning planning document (the Pier 70 Special Use District Design for Development); an adopted D4D is a public-record planning document. Read 2026-09-22.",
+    "license_note": "A Port of San Francisco / SF Planning planning document (the Pier 70 Special Use District Design for Development), approved by the Planning Commission on Aug 24, 2017 (Resolution 19980, per Port Item 9B) and published by the Port at its own domain; treated as a public-record planning document. Read 2026-09-22.",
     "caption": "Figure 1.1.2: Site Location and Context, Pier 70 Special Use District Design for Development (D4D), p.5",
     "source_crop": "python3 src/extract_pdf_figure.py https://www.sfport.com/media/8123/download?inline= 21 data/manual/images/pier70/d4d_p5_site_context.jpg --rect auto --dpi 300",
     "focus": [
@@ -306,7 +335,7 @@
    }
   ],
   "open_questions": [
-   "This project's geometry file records the zone as an unnamed 'PKN frontage open space'; the D4D names it the 20th Street Plaza (Section 3.10, Figure 3.10.1). Worth updating the geometry file's regulatory_context (not done here per the brief).",
+   "This project's geometry file now records the D4D name '20th Street Plaza' in its notes, but its project_name is still the placeholder 'PKN Frontage Open Space (20th Street)', which is the file's key and page slug; a rename is left to the owner.",
    "Whether the 'Plaza Parcel' created in 2017 was conveyed with Parcel K North or retained by the Port, and who will build the plaza if the PKN building stays unbuilt, is not stated in the retrieved documents.",
    "No basis for an expected-completion date was found: this plaza is delivered by the Parcel K North buyer, whose own building has no target date (see the Parcel K North record's open questions), and no separate schedule for the plaza itself was found, so this record stays undated."
   ],
@@ -314,7 +343,7 @@
    {
     "id": "src-d4d",
     "title": "Pier 70 Special Use District Design for Development (D4D), updated April 26, 2022",
-    "publisher": "Port of San Francisco / SF Planning (adopted planning document; project team SITELAB urban studio)",
+    "publisher": "Port of San Francisco / SF Planning (planning document; project team SITELAB urban studio)",
     "url": "https://www.sfport.com/media/8123/download?inline=",
     "accessed": "2026-09-17",
     "date": "2022-04-26",

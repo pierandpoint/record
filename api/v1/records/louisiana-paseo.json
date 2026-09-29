@@ -43,10 +43,10 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- a simplified straight-sided approximation of a landscaped pedestrian paseo; the diagram does not show this as a simple rectangle (it likely has planting/path detail not captured here). Positional accuracy matches whatever the adjoining Block 15/7/11 files currently carry (see their own accuracy_caveat) since this polygon is built directly from their vertices.",
-    "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
-    "why_no_real_parcel": "Open space with no subdivided Assessor parcel of its own within the largely unaddressed former power-station site.",
-    "regulatory_context": "A landscaped pedestrian paseo per the D4D's own Figure 6.2.3 label, connecting Humboldt Street to 23rd Street and opening into Power Station Park."
+    "accuracy_caveat": "APPROXIMATE -- a simplified straight-sided approximation of a car-free pedestrian paseo; the final D4D's enlargement concept plan (Figure 4.30.1) shows it as a non-rectangular space with planting and plaza areas not captured here. Positional accuracy matches whatever the adjoining Block 15/7/11 files currently carry (see their own accuracy_caveat) since this polygon is built directly from their vertices.",
+    "digitized_from": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
+    "why_no_real_parcel": "Open space with no subdivided Assessor parcel of its own within the largely unaddressed former power-station site. DataSF Parcels (checked 2026-09-29) shows this polygon overlapping the active, unaddressed lots 4232011, 4232012 and 4175024 (all recorded 2022-08-30); the 2018 Draft EIR says the Port and City sub-areas have no Assessor's Block numbers and puts the privately owned remainder on Blocks 4175 and 4232.",
+    "regulatory_context": "A car-free, flexible-use pedestrian paseo and plaza space (D4D Sections 4.25 and 4.30), labelled 'LOUISIANA PASEO' on the final D4D's Figure 6.2.3 and running from Humboldt Street to 23rd Street between Block 15 and Blocks 7/11, opening into Power Station Park."
    }
   },
   "centroid": {
@@ -672,11 +672,11 @@
     "relation": "tracked"
    },
    {
-    "date": "2028",
-    "date_label": "2028",
+    "date": "2029",
+    "date_label": "2029",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Completion expected: Louisiana Paseo is a Phase 1 open space delivered with Block 15, whose construction is scheduled to complete in 2028 under the revised Development Agreement phasing",
+    "text": "Completion expected: Louisiana Paseo is a Phase 1 open space delivered with Block 15; SocketSite's October 2020 schedule table lists Phase 1 open space 2025-2029, and the Phase 1 approval sets a 'Phase 1 Development Schedule: Years 2020 - 2029'",
     "expected": true,
     "approximate": true,
     "sources": [
@@ -695,9 +695,17 @@
       "date": "2020-10-09",
       "url": "https://socketsite.com/archives/2020/10/revised-phasing-for-massive-potrero-power-plant-redevelopment.html",
       "accessed": "2026-09-20"
+     },
+     {
+      "id": "src-legistar-260724",
+      "title": "BOS File No. 260724: Amended and Restated Development Agreement - California Barrel Company LLC (introduced June 30, 2026; noticed Sept 11, 2026) and its Legislative Digest",
+      "publisher": "SF Board of Supervisors (Legistar)",
+      "date": "2026-09-11",
+      "url": "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8127453&GUID=CC4AC1DD-BF51-4585-86E8-0A5D44AA3745",
+      "accessed": "2026-09-17"
      }
     ],
-    "source": "California Barrel Company / SF Planning (M-Files: 'Potrero Power Station Phase 1 and Phasing Plan Amendment Applications'), 2020-10; SocketSite, 2020-10-09",
+    "source": "California Barrel Company / SF Planning (M-Files: 'Potrero Power Station Phase 1 and Phasing Plan Amendment Applications'), 2020-10; SocketSite, 2020-10-09; SF Board of Supervisors (Legistar), 2026-09-11",
     "origin": "record",
     "category": "status",
     "category_label": "Status",
@@ -719,14 +727,43 @@
   ],
   "changes": [
    {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Louisiana Paseo map notes now cite the final Design for Development (Feb 26, 2020; Figure 6.2.3 and Sections 4.25 and 4.30) instead of a dead 2019 draft link, describe it as a car-free plaza and pedestrian space rather than 'landscaped', and list the active unaddressed Assessor lots its footprint overlaps. The expected completion moved from 2028 to 2029: SocketSite's October 2020 schedule table gives the Phase 1 open-space window as 2025-2029 (the 2028 figure was the Phase 1 building forecast), and the basis note now says the 2020 forecast has slipped for Block 15 and the phasing is being amended. The 'added as its own record' row now cites the Draft EIR and the D4D.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_louisiana_paseo",
+     "slug": "louisiana-paseo",
+     "name": "Louisiana Paseo",
+     "permalink": "https://pierandpoint.org/parcels/louisiana-paseo/",
+     "api": "https://pierandpoint.org/api/v1/records/louisiana-paseo.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-16",
     "kind": "added",
     "kind_label": "Added",
     "text": "Louisiana Paseo added as its own record. It was previously only mentioned in other blocks’ notes.",
-    "source": "Potrero Power Station D4D",
+    "source": "Potrero Power Station Draft EIR, Volume 1 (Oct 2018), which first describes the proposed open space; D4D (Feb 26, 2020)",
     "sources": [
      {
-      "title": "Potrero Power Station D4D"
+      "title": "Potrero Power Station Draft EIR, Volume 1 (Oct 2018), which first describes the proposed open space; D4D (Feb 26, 2020)"
      }
     ],
     "category": "open_space",
@@ -787,7 +824,7 @@
    }
   ],
   "open_questions": [
-   "No construction start or completion date found through 2026-09-17; delivery is tied to Block 15 (Station A), whose construction start is not documented in the corpus beyond the 2024 brick stabilization. The added expected-completion milestone therefore uses Phase 1's overall window (2028, SocketSite Oct 2020), not a paseo-specific date.",
+   "No construction start or completion date found through 2026-09-17; delivery is tied to Block 15 (Station A), whose construction start is not documented in the corpus beyond the 2024 brick stabilization. The expected-completion milestone uses Phase 1's open-space window (2029, SocketSite Oct 2020) and the Phase 1 approval's 2020-2029 schedule, not a paseo-specific date, and is a stale 2020 forecast.",
    "No cost figure found for the paseo.",
    "The DEIR describes the paseo as 'adjacent to Blocks 6 and 10' (2018 block numbering); the D4D/Design Review place it between Block 15 and Blocks 7/11. Block renumbering between DEIR and D4D not traced.",
    "The Phase 1 application calls it 'Louisiana Plaza' at 0.63 acres versus 0.7 acres elsewhere; whether this is a scope change or a measurement difference is not stated.",
@@ -930,14 +967,9 @@
     "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
     "accessed": "2026-09-22",
     "date": "2020-02-26"
-   },
-   {
-    "id": null,
-    "title": "default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf",
-    "url": "https://default.sfplanning.org/plans-and-programs/plans-by-neighborhood/potrero-power-plant/potrero_power_D4D_draft-082219.pdf"
    }
   ],
-  "notes": "Newly added 2026-09-16; previously mentioned only in passing in other blocks' notes, never tracked as its own feature.",
+  "notes": "Newly added 2026-09-16; previously mentioned only in passing in other blocks' notes, never tracked as its own feature. Status 'planned': design review approved (annual reports: 8/3/21; memo June 2022) and no construction reported as of the March 2025 annual report. Use 'park': the final D4D treats it as open space (Section 4.25).",
   "has_record_file": true,
   "last_verified": "2026-09-20",
   "tenants": [],

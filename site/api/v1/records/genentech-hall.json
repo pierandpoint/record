@@ -29,10 +29,11 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "UCSF's first Mission Bay building and the first structure completed on the 303-acre campus, opened January 2003 at 600 16th St, housing the biochemistry, biophysics and structural biology programs.",
+  "summary": "UCSF's first Mission Bay building, opened January 2003 at 600 16th St, housing programs in structural and chemical biology, molecular, cell and developmental biology, and the Molecular Design Institute.",
   "summary_sources": [
    "src-tradeline-2003",
-   "src-ucsf-history-1990s"
+   "src-ucsf-history-1990s",
+   "src-osm-genentech"
   ],
   "shape": {
    "kind": "approximate",
@@ -40,7 +41,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against data/raw/parcels.geojson and DataSF's Assessor tax roll -- e.g. blklot 8711507 at 675 Nelson Rising Lane alone is ~13 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against data/raw/parcels.geojson and DataSF's Assessor tax roll -- e.g. blklot 8711507 at 675 Mission Bay Blvd alone is ~12.2 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
     "digitized_from": "OpenStreetMap (way 135103725, 600 16th St)"
    }
   },
@@ -58,7 +59,7 @@
    },
    {
     "key": "architect",
-    "value": "SmithGroup (San Francisco office)",
+    "value": "SmithGroup",
     "sources": [
      "src-clark-genentech"
     ]
@@ -74,19 +75,22 @@
     "key": "gross_sqft",
     "value": "400,000-435,000 (sources vary)",
     "sources": [
-     "src-tradeline-2003"
+     "src-tradeline-2003",
+     "src-ucsf-history-1990s",
+     "src-clark-genentech"
     ]
    },
    {
     "key": "stories",
     "value": "5",
     "sources": [
-     "src-tradeline-2003"
+     "src-tradeline-2003",
+     "src-clark-genentech"
     ]
    },
    {
     "key": "use",
-    "value": "Biochemistry, biophysics and structural biology research",
+    "value": "Programs in structural and chemical biology, molecular, cell and developmental biology, the Molecular Design Institute, the Center for Advanced Technology, a library, an auditorium and commercial space",
     "sources": [
      "src-ucsf-history-1990s"
     ]
@@ -190,10 +194,10 @@
     "approximate": true,
     "sources": [
      {
-      "title": "tradelineinc.com; history.library.ucsf.edu"
+      "title": "https://www.tradelineinc.com/news/2003-2/ucsf-mission-bay-genentech-hall-now-open; https://history.library.ucsf.edu/1990.html"
      }
     ],
-    "source": "tradelineinc.com; history.library.ucsf.edu",
+    "source": "https://www.tradelineinc.com/news/2003-2/ucsf-mission-bay-genentech-hall-now-open; https://history.library.ucsf.edu/1990.html",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -214,6 +218,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The '303-acre campus' wording was dropped (that is the whole Mission Bay area; UCSF's history and Clark describe a 43-acre campus), the programs housed now follow UCSF's history page (structural and chemical biology, molecular, cell and developmental biology, the Molecular Design Institute) rather than 'biochemistry, biophysics', and the unsupported 'San Francisco office' for SmithGroup was removed. Size and story-count facts now also cite UCSF's history and Clark. The parcel caveat now gives 675 Mission Bay Blvd at about 12.2 acres, and a dated note says the tax-roll claim for 600 16th St is unsupported (the parcel is addressed 1700 4th St). The Block 24A/B label now cites UCSF's June 2025 CAC map. The 2008 photo no longer carries a 'taken' date because the source dates only the presentation, and the Wikimedia credit no longer names an author or a flight the file page does not state. The January 2003 opening and 'first building' claims rest on a Tradeline article that could not be read and were left in place.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "ucsf_genentech_hall",
+     "slug": "genentech-hall",
+     "name": "Genentech Hall",
+     "permalink": "https://pierandpoint.org/parcels/genentech-hall/",
+     "api": "https://pierandpoint.org/api/v1/records/genentech-hall.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-23",
     "kind": "added",
@@ -249,12 +282,11 @@
     "path": "data/manual/images/mission_bay/ucsf_regents_2008_byers_genentech.jpg",
     "kind": "now",
     "scope": "area",
-    "taken": "2008",
     "credit": "Byers Hall (left) and Genentech Hall (right), UCSF Mission Bay campus; \"UCSF Medical Center at Mission Bay,\" presentation to the UC Regents Committee on Grounds and Buildings, September 2008, \"Architectural Context\" slide",
     "license": "public-record",
     "source_url": "https://regents.universityofcalifornia.edu/regmeet/sept08/j1pp.pdf#page=13",
     "license_evidence": "https://regents.universityofcalifornia.edu/regmeet/sept08/j1pp.pdf",
-    "license_note": "Slide from the presentation attached to the UC Regents Committee on Grounds and Buildings' September 2008 meeting item approving the UCSF Medical Center at Mission Bay -- a public governing board's meeting record. Read 2026-09-19.",
+    "license_note": "Slide from the presentation attached to the UC Regents Committee on Grounds and Buildings' September 2008 meeting item approving the UCSF Medical Center at Mission Bay -- a public governing board's meeting record. Read 2026-09-19. The presentation is dated September 2008; the photograph's own date is not stated.",
     "caption": "Byers Hall and Genentech Hall",
     "source_crop": "python3 src/extract_pdf_figure.py https://regents.universityofcalifornia.edu/regmeet/sept08/j1pp.pdf 13 data/manual/images/mission_bay/ucsf_regents_2008_byers_genentech.jpg --rect 0.5985,0.0745,0.9371,0.3137",
     "focus": [
@@ -272,7 +304,7 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-05-20",
-    "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+    "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
     "license": "public-domain",
     "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
     "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
@@ -294,12 +326,12 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-02-10",
-    "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+    "credit": "Firstcultural, aerial view, via Wikimedia Commons; CC0; downscaled to 1600 px",
     "license": "cc0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by the uploader Firstcultural. Read 2026-09-23.",
+    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area",
     "aerial": true,
     "focus": [
      0.35,
@@ -317,7 +349,8 @@
    "Square footage varies 400,000-435,000 sq ft across sources; not resolved to one authoritative figure.",
    "No openly licensed image was found; none is hosted here.",
    "Images: the only photograph found of Genentech Hall is undated beyond appearing in a September 2008 UC Regents presentation slide (shared with its neighbor); its exact capture date isn't confirmed. No site plan or architectural rendering specific to this building was found in a public-record source.",
-   "2026-09-21 pass: identified the March 1999 Regents budget/design approval for 'UC Hall Seismic Replacement, Mission Bay (Building 24)' as this building's likely earlier stage, via a January 2000 Regents item that recounts it and gives 433,828 gsf (matching this record's own 400,000-435,000 range). The March 1999 item itself was not retrieved directly in this pass; the January 2000 item's own recap is the source used."
+   "2026-09-21 pass: identified the March 1999 Regents budget/design approval for 'UC Hall Seismic Replacement, Mission Bay (Building 24)' as this building's likely earlier stage, via a January 2000 Regents item that recounts it and gives 433,828 gsf (matching this record's own 400,000-435,000 range). The March 1999 item itself was not retrieved directly in this pass; the January 2000 item's own recap is the source used.",
+   "2026-09-29 accuracy audit: the Tradeline article (source of 'January 2003', 'first Mission Bay building' and the five stories) returned HTTP 403 and could not be re-read; UCSF's history page confirms only the 2003 opening and 'more than 400,000 gross square feet', and Clark gives '435,000-square-foot, five-story' (sidebar: 415,000). The earlier '303-acre campus' wording was dropped: 303 acres is the whole Mission Bay redevelopment area, while UCSF's history and Clark describe a 43-acre campus. The 2008 Regents slide dates the presentation, not the photograph, so the image's 'taken' date was removed."
   ],
   "sources": [
    {
@@ -365,11 +398,19 @@
     "date": "2000-01",
     "url": "https://regents.universityofcalifornia.edu/regmeet/jan00/3a.pdf",
     "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-ucsf-cac-2025-06",
+    "title": "UCSF Mission Bay Development Overview, Mission Bay CAC Meeting, June 12, 2025 (Item 2; map updated December 2024)",
+    "publisher": "UCSF, via OCII",
+    "date": "2025-06-12",
+    "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
+    "accessed": "2026-09-29"
    }
   ],
-  "notes": "OCII plan block 24A/B. UCSF's first Mission Bay building and the first structure completed on the 303-acre campus. ~400,000-435,000 sq ft (sources vary), five stories. Architect SmithGroup (SF office). Opened January 2003 (a Jan 8, 2003 first-researcher-moved-in anecdote and a Feb 2003 trade-press \"now open\" piece support the month; not an official UCSF dedication-date citation).",
+  "notes": "OCII plan block 24A/B. UCSF's first Mission Bay building. ~400,000-435,000 sq ft (sources vary), five stories. Architect SmithGroup. Opened January 2003 (a Jan 8, 2003 first-researcher-moved-in anecdote and a Feb 2003 trade-press \"now open\" piece support the month; not an official UCSF dedication-date citation).",
   "has_record_file": true,
-  "last_verified": "2026-09-21",
+  "last_verified": "2026-09-29",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

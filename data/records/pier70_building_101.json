@@ -44,7 +44,7 @@
     },
     {
       "date": "2013-11-26",
-      "text": "Historic Preservation Commission informational hearing on the rehabilitation of the ten 20th Street Historic Buildings (case 2013.1168E): ~270,000 gsf existing plus ~69,000 gsf of new mezzanines, ~334,000 gsf total",
+      "text": "Historic Preservation Commission informational packet (memo dated Nov 26, 2013; the hearing date is not stated in the packet) on the rehabilitation of the ten 20th Street Historic Buildings (case 2013.1168E): ~270,000 gsf existing plus ~69,000 gsf of new mezzanines, ~334,000 gsf total",
       "sources": [
         "src-hpc-2013"
       ],
@@ -91,8 +91,8 @@
       "approximate": true
     },
     {
-      "date": "2019-01-08",
-      "text": "Port Commission update: six of eight buildings complete, Buildings 101 and 102 still under construction, project 100% subleased except two atrium retail spaces; total cost revised from $81.9M to an estimated $127.0M",
+      "date": "2019-01-04",
+      "text": "Port staff update (memo dated Jan 4, 2019): six of eight buildings complete, Buildings 101 and 102 still under construction, project 100% subleased except two atrium retail spaces; total cost revised from $81.9M to an estimated $127.0M",
       "sources": [
         "src-port-hc-2019"
       ],
@@ -137,22 +137,22 @@
     },
     {
       "date": "2020",
-      "text": "Rehabilitation and tenant improvements scheduled for completion (Port's 2019 milestone list)",
+      "text": "Port's Jan 2019 update lists 'Complete Building 101 rehabilitation and tenant improvements' among its 2020 milestones (a forecast; the report does not say it happened, and RH opened in May 2022)",
       "sources": [
         "src-port-hc-2019"
       ],
       "expected": false,
-      "approximate": true,
-      "status": "complete"
+      "approximate": true
     },
     {
       "date": "2022-05-13",
-      "text": "RH San Francisco opens at 590 20th Street: five floors, ~80,000 sq ft of galleries, the Palm Court restaurant, two wine bars and a rooftop park",
+      "text": "RH San Francisco opens at 590 20th Street in the restored 80,000-square-foot building (RH's figure for the whole building): five floors, the Palm Court restaurant, two wine bars and a rooftop park",
       "sources": [
         "src-rh-2022"
       ],
       "expected": false,
-      "approximate": false
+      "approximate": false,
+      "status": "complete"
     }
   ],
   "costs": [
@@ -365,11 +365,11 @@
       "kind": "rendering",
       "scope": "site",
       "taken": "2022-04-26",
-      "credit": "Port of San Francisco / SF Planning, Pier 70 Special Use District Design for Development (D4D, adopted 2017, updated April 26, 2022), Figure 1.1.2, p.5",
+      "credit": "Port of San Francisco / SF Planning, Pier 70 Special Use District Design for Development (D4D, updated April 26, 2022; approved in 2017 per Port Item 9B, Resolution 17-45), Figure 1.1.2, p.5",
       "license": "public-record",
       "source_url": "https://www.sfport.com/media/8123/download?inline=",
       "license_evidence": "https://www.sfport.com/media/8123/download?inline=",
-      "license_note": "An adopted Port of San Francisco / SF Planning planning document (the Pier 70 Special Use District Design for Development); an adopted D4D is a public-record planning document. Read 2026-09-22.",
+      "license_note": "A Port of San Francisco / SF Planning planning document approved in 2017 (Port Item 9B, Resolution 17-45) (the Pier 70 Special Use District Design for Development); an adopted D4D is a public-record planning document. Read 2026-09-22.",
       "caption": "Figure 1.1.2: Site Location and Context, Pier 70 Special Use District Design for Development (D4D), p.5",
       "source_crop": "python3 src/extract_pdf_figure.py https://www.sfport.com/media/8123/download?inline= 21 data/manual/images/pier70/d4d_p5_site_context.jpg --rect auto --dpi 300",
       "focus": [
@@ -394,7 +394,7 @@
     {
       "id": "src-d4d",
       "title": "Pier 70 Special Use District Design for Development (D4D), updated April 26, 2022",
-      "publisher": "Port of San Francisco / SF Planning (adopted planning document)",
+      "publisher": "Port of San Francisco / SF Planning (planning document approved in 2017 per Port Item 9B, Resolution 17-45; project team SITELAB urban studio)",
       "url": "https://www.sfport.com/media/8123/download?inline=",
       "accessed": "2026-09-17",
       "date": "2022-04-26",
@@ -464,7 +464,7 @@
     {
       "id": "src-structuremag",
       "title": "Pier 70 Building 113/114 Renovation",
-      "publisher": "STRUCTURE magazine (Michael Gemmill, S.E., Nabih Youssef Structural Engineers)",
+      "publisher": "STRUCTURE magazine (Michael Gemmill, S.E.)",
       "url": "https://www.structuremag.org/article/pier-70-building-113-114-renovation/",
       "accessed": "2026-09-17"
     }
@@ -473,9 +473,10 @@
     "The exact completion / certificate of occupancy date for Building 101 (the Port's 2019 memo anticipated 2020; RH opened May 2022) was not found.",
     "Whether Buildings 122 and 123, the two outbuildings behind Building 104 that share the master lease, are on this parcel or the Building 104 parcel is not settled by any source; this repo's status.csv groups them with the north-side lot.",
     "No 'now' photograph with a stated license was found; RH's press images are the tenant's copyright and are linked, not hosted.",
-    "The HAER survey named in the brief was not located in the Library of Congress catalog (see PR description); the NRHP nomination is used as the historic primary source."
+    "The HAER survey named in the brief was not located in the Library of Congress catalog (see PR description); the NRHP nomination is used as the historic primary source.",
+    "RH San Francisco and its Palm Court restaurant have not been re-confirmed as operating since RH's May 13, 2022 opening release: RH's own pages returned HTTP 403 and OpenTable HTTP 503 on 2026-09-29, and no other readable dated source was found."
   ],
-  "last_verified": "2026-09-18",
+  "last_verified": "2026-09-29",
   "site_cost_refs": [
     "pier70-historic-core-rehab-2019"
   ]

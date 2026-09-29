@@ -29,9 +29,11 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "A six-story, 193-unit rental apartment building at 355 Berry Street on Mission Creek in Mission Bay North. DataSF's Assessor tax roll (block 8707, lot 003) records the building's construction year as 2007.",
+  "summary": "A six-story, 193-unit apartment building at 355 Berry Street in Mission Bay North (Assessor block 8707 lot 003, class Apartment 15 Units or more, built 2007). Its footprint is on the north bank of Mission Creek on the OCII land use map and OSM.",
   "summary_sources": [
-   "src-datasf-assessor-8707003"
+   "src-datasf-assessor-8707003",
+   "src-osm-edgewater",
+   "src-ocii-landusemap-2019"
   ],
   "shape": {
    "kind": "approximate",
@@ -39,7 +41,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I/II/III, Madrone, Arden, One Mission Bay, Radiance).",
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. Correction 2026-09-29: 355 Berry is a single Assessor parcel (8707003, active) in data/raw/parcels.geojson, not condo-mapped; the condo-mapped lots on this block are 325 Berry (111) and 335 Berry (67), and the earlier condo-mapping statement, with its comparison to other condo-mapped towers, was wrong for this building. The footprint is the real OSM building outline.",
     "digitized_from": "OpenStreetMap (way 46264111, 355 Berry St)"
    }
   },
@@ -137,14 +139,43 @@
   ],
   "changes": [
    {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The geometry notes called Edgewater a condo complex made of many per-unit lots; 355 Berry is a single Assessor parcel classed as an apartment building, so those statements were corrected. The old note that year built and unit count were unconfirmed now cites the Assessor (2007, 193 units) and the permit (194 units). The summary no longer says 'rental', its location is attributed to the map and OSM, an earlier changelog row now names permit #200502085025, and the Commons photo no longer says it was taken from a departing flight.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_edgewater",
+     "slug": "edgewater",
+     "name": "Edgewater",
+     "permalink": "https://pierandpoint.org/parcels/edgewater/",
+     "api": "https://pierandpoint.org/api/v1/records/edgewater.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-23",
     "kind": "added",
     "kind_label": "Added",
-    "text": "SF Department of Building Inspection permit revised-cost valuation (DataSF).",
-    "source": "docs/record-schema.md",
+    "text": "SF Department of Building Inspection permit #200502085025 (355 Berry St, 194 dwelling units) revised-cost valuation of $32,625,000, against an initial filed estimate of $5,000,000 (DataSF Building Permits).",
+    "source": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200502085025",
     "sources": [
      {
-      "title": "docs/record-schema.md"
+      "title": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200502085025"
      }
     ],
     "category": "correction",
@@ -172,7 +203,7 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-05-20",
-    "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+    "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
     "license": "public-domain",
     "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
     "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
@@ -194,12 +225,12 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-02-10",
-    "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+    "credit": "Firstcultural (Alfred Twu, per the photographer's Wikimedia Commons user page), via Wikimedia Commons; CC0; downscaled to 1600 px",
     "license": "cc0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by the author Firstcultural; the author's Commons user page (https://commons.wikimedia.org/wiki/User:Firstcultural) gives the name Alfred Twu. File page read 2026-09-23, user page read 2026-09-29.",
+    "caption": "Aerial photo of San Francisco's Mission Bay, ballpark, and Caltrain area",
     "aerial": true,
     "focus": [
      0.35,
@@ -256,14 +287,16 @@
     "overview": true
    },
    {
-    "id": null,
-    "title": "openstreetmap.org/way/46264111",
-    "url": "https://www.openstreetmap.org/way/46264111"
+    "id": "src-osm-edgewater",
+    "title": "OpenStreetMap way 46264111 (Edgewater, 355 Berry Street)",
+    "publisher": "OpenStreetMap contributors",
+    "url": "https://www.openstreetmap.org/way/46264111",
+    "accessed": "2026-09-29"
    }
   ],
-  "notes": "Developer, year built and total unit count not confirmed: sources found were inconsistent (one listing site's '6 units' reads as a floorplan-type count, not the building total) or unsourced. Left out of facts rather than picking one arbitrarily; flagged as an open question for a future record-dossier pass.",
+  "notes": "Assessor roll (parcel 8707003) gives year built 2007 and 193 units, and the 2005 DBI permit gives 194 units; developer not confirmed by any source found.",
   "has_record_file": true,
-  "last_verified": "2026-09-21",
+  "last_verified": "2026-09-29",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

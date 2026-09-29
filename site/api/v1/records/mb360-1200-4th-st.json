@@ -29,10 +29,11 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "MB360 (1200 4th St) is a 177-unit residential building, the second of two blocks (alongside 701 China Basin St, mission_bay_mb360.geojson) in a single two-block Mission Bay apartment development originally built by BRE Properties (acquired by Essex Property Trust in 2014), with MVE + Partners as prime architect. DataSF Assessor records and the project architect's own project page both give 2016 as this block's construction-completion year.",
+  "summary": "MB360 (1200 4th St) is a 177-unit residential building, the second of two blocks (alongside 701 China Basin St, mission_bay_mb360.geojson) in a single two-block Mission Bay apartment development originally built by BRE Properties (now Essex Property Trust), with MVE + Partners as prime architect. DataSF Assessor records and the project architect's own project page both give 2016 as this block's construction-completion year.",
   "summary_sources": [
    "src-datasf-assessor-mb360-4th",
-   "src-ignitionarch-mb360"
+   "src-ignitionarch-mb360",
+   "src-datasf-assessor-mb360-cb"
   ],
   "shape": {
    "kind": "approximate",
@@ -67,9 +68,16 @@
       "date": "2013-05-01",
       "url": "https://news.theregistrysf.com/bre-starts-construction-on-mission-bay-project/",
       "accessed": "2026-09-21"
+     },
+     {
+      "id": "src-ignitionarch-mb360",
+      "title": "MB 360º -- Mission Bay, Blocks 5/11, San Francisco, CA",
+      "publisher": "Ignition Architecture (associate design architect on the project)",
+      "url": "https://ignitionarch.com/project/mb360/",
+      "accessed": "2026-09-21"
      }
     ],
-    "source": "The Registry (Northern California real estate news), 2013-05-01",
+    "source": "The Registry (Northern California real estate news), 2013-05-01; Ignition Architecture (associate design architect on the project)",
     "origin": "record",
     "category": "status",
     "category_label": "Status",
@@ -132,18 +140,48 @@
     "relation": "tracked"
    }
   ],
-  "changes": [],
+  "changes": [
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The geometry notes attributed the two-address premise to apartments.com and Zillow listings that are not cited; the two-block development is now cited to Ignition Architecture's project page (Blocks 5/11), and the 701 China Basin St address to the Assessor roll. The summary no longer gives a 2014 Essex acquisition year, the CBS News source title matches its displayed headline, the NAIP photo credit names the Farm Production and Conservation Business Center, and the Commons photo no longer says it was taken from a departing flight.",
+    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "sources": [
+     {
+      "title": "docs/audits/2026-09-accuracy-audit.md"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_mb360_1200_4th",
+     "slug": "mb360-1200-4th-st",
+     "name": "MB360 (1200 4th St)",
+     "permalink": "https://pierandpoint.org/parcels/mb360-1200-4th-st/",
+     "api": "https://pierandpoint.org/api/v1/records/mb360-1200-4th-st.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
   "images": [
    {
     "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
     "kind": "now",
     "scope": "site",
     "taken": "2024-05-20",
-    "credit": "U.S. Department of Agriculture, Farm Service Agency, NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+    "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
     "license": "public-domain",
     "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
     "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
-    "license_note": "USDA's data.gov catalog record for NAIP imagery sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0); the USDA FSA policies page says public-domain information may be freely distributed with credit requested ('U.S. Department of Agriculture, Farm Service Agency'). Read 2026-09-22.",
+    "license_note": "USDA's data.gov catalog record for NAIP imagery (published by the Farm Production and Conservation Business Center) sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0). Read 2026-09-22; publisher name re-read 2026-09-29.",
     "caption": "USDA NAIP aerial orthophoto (2024 flight), cropped to the Mission Bay project area and its immediate surroundings",
     "aerial": true,
     "focus": [
@@ -161,12 +199,12 @@
     "kind": "now",
     "scope": "site",
     "taken": "2024-02-10",
-    "credit": "Firstcultural (Alfred Twu), aerial view from a departing flight, via Wikimedia Commons; CC0; downscaled to 1600 px",
+    "credit": "Firstcultural (Alfred Twu, per the photographer's Wikimedia Commons user page), via Wikimedia Commons; CC0; downscaled to 1600 px",
     "license": "cc0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
     "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
-    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural (Alfred Twu). Read 2026-09-23.",
-    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area from a departing flight",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by the author Firstcultural; the author's Commons user page (https://commons.wikimedia.org/wiki/User:Firstcultural) gives the name Alfred Twu. File page read 2026-09-23, user page read 2026-09-29.",
+    "caption": "Aerial photo of San Francisco's Mission Bay, ballpark, and Caltrain area",
     "aerial": true,
     "focus": [
      0.35,
@@ -218,7 +256,7 @@
    },
    {
     "id": "src-fire-cbs-2014",
-    "title": "Investigators Report San Francisco Mission Bay Fire At MB360 Development Was Accidental, Likely Caused By Welding",
+    "title": "Investigators Report San Francisco Mission Bay Fire Was Accidental, Likely Caused By Welding | CBS News SF | 2014-05-07",
     "publisher": "CBS News San Francisco",
     "date": "2014-05-07",
     "url": "https://www.cbsnews.com/sanfrancisco/news/investigators-report-san-francisco-mission-bay-fire-at-mb360-development-was-accidental-likely-caused-by-welding/",
@@ -234,6 +272,13 @@
     "overview": true
    },
    {
+    "id": "src-datasf-assessor-mb360-cb",
+    "title": "Assessor Historical Secured Property Tax Rolls -- 701 China Basin St (block 8710, lot 009)",
+    "publisher": "DataSF / SF Office of the Assessor-Recorder",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json?block=8710&lot=009",
+    "accessed": "2026-09-29"
+   },
+   {
     "id": null,
     "title": "trulia.com/building/mb360-1200-4th-st-san-francisco-ca-94158-1001482983",
     "url": "https://www.trulia.com/building/mb360-1200-4th-st-san-francisco-ca-94158-1001482983"
@@ -244,9 +289,9 @@
     "url": "https://www.redfin.com/CA/San-Francisco/MB360/apartment/110043175"
    }
   ],
-  "notes": "Treated as a second volume of the same MB360 development as mission_bay_mb360.geojson (701 China Basin St) rather than a wholly separate project, per apartment-listing sources using both addresses for one marketed community; not independently confirmed via a primary developer source. This footprint originally overlapped the adjacent Mission Bay Kids' Park by 69 sq m; trimmed to the non-overlapping remainder.",
+  "notes": "Treated as a second volume of the same MB360 development as mission_bay_mb360.geojson (701 China Basin St) rather than a wholly separate project, per apartment-listing sources using both addresses for one marketed community; the two-block development is supported by Ignition Architecture's project page ('Mission Bay, Blocks 5/11'), which is not a developer source. This footprint originally overlapped the adjacent Mission Bay Kids' Park by 69 sq m; trimmed to the non-overlapping remainder.",
   "has_record_file": true,
-  "last_verified": "2026-09-21",
+  "last_verified": "2026-09-29",
   "tenants": [],
   "geometry": {
    "type": "Polygon",
