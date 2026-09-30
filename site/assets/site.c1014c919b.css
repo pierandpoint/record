@@ -419,6 +419,7 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .crumbs { font: 12px var(--mono); color: var(--paper-faint); display: flex; flex-wrap: wrap; gap: 8px; }
 .page-head h1 { font: 500 clamp(32px, 5vw, 56px)/1.04 var(--serif); letter-spacing: -.015em; margin: 12px 0 8px; }
 .page-head .sub { color: var(--paper-soft); font-size: 17px; }
+.feed-links { display: flex; align-items: center; gap: 14px; font-size: 14px !important; }
 .page-head .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
 .page-head .docs { margin-top: 16px; max-width: 72ch; }
 .light .chip { background: var(--paper-2); border-color: var(--paper-line); color: var(--paper-ink); }
@@ -638,6 +639,18 @@ details.notes[open] summary .chevron::before { content: "Hide ‹"; }
 .footer-tagline { grid-column: 1 / -1; color: var(--text-2); font-size: 14px; margin: 0; }
 .site-footer nav { display: flex; flex-direction: column; gap: 8px; }
 .site-footer nav a { color: var(--text-2); }
+/* .feed-menu reuses .filter-dropdown/.filter-dropdown-panel's own (paper-theme) look by default
+   -- correct as-is inside a .light section (the /changes/ pages). Inside the dark footer it
+   needs the ink-theme colors instead, scoped below so the two contexts don't fight. */
+.feed-menu summary::after { content: ' ▾'; }
+.feed-menu[open] summary::after { content: ' ▴'; }
+.feed-menu .filter-dropdown-panel { gap: 6px; }
+.feed-menu .filter-dropdown-panel a { font-size: 14px; white-space: nowrap; }
+.site-footer .feed-menu summary { color: var(--text-2); background: none; border: none; padding: 0; min-height: auto; min-width: auto; }
+.site-footer .feed-menu summary::after { color: var(--faint); font-size: 11px; }
+.site-footer .feed-menu .filter-dropdown-panel { top: auto; bottom: calc(100% + 6px); background: var(--ink-2); border-color: var(--line-3); box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+.site-footer .feed-menu .filter-dropdown-panel a { color: var(--text-2); }
+.site-footer .feed-menu .filter-dropdown-panel a:hover { color: var(--brass); }
 .site-footer .small { font: 12px var(--mono); color: var(--faint); grid-column: 1 / -1; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; border-top: 1px solid var(--line); padding-top: 20px; }
 
 @media (prefers-reduced-motion: reduce) { .bar span { transition: none; } html { scroll-behavior: auto; } }
@@ -651,6 +664,11 @@ details.notes[open] summary .chevron::before { content: "Hide ‹"; }
 .newsletter input[type=email] { flex: 1 1 200px; min-height: 44px; padding: 0 14px; border-radius: 8px; border: 1px solid var(--line-3); background: var(--ink-2); color: var(--text); font: 15px var(--sans); }
 .newsletter input[type=email]::placeholder { color: var(--faint); }
 .newsletter .btn { flex-shrink: 0; }
+.newsletter-prefs { grid-column: 1 / -1; border: 0; margin: 0; padding: 0; }
+.newsletter-prefs legend { font: 500 13px var(--sans); color: var(--faint); text-transform: uppercase; letter-spacing: .04em; padding: 0 0 8px; }
+.newsletter-topics { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-bottom: 10px; }
+.newsletter-prefs .filter-check { color: var(--soft); font-size: 14px; }
+.newsletter-alert-check { align-items: flex-start; white-space: normal; max-width: 56ch; }
 
 /* feedback page form */
 .feedback-form { display: flex; flex-direction: column; gap: 6px; max-width: 60ch; margin-top: 14px; }
