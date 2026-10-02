@@ -329,6 +329,26 @@
     return 1 + Math.floor((m - 1) / 12) * 12;
   }
 
+  // Below 720px the timeline is no longer pinned to the top of the screen (audit F8: it took 21% of
+  // a phone for the rest of the page). It sits in the page under the map it drives, like any other
+  // block; once it has scrolled off the top, this one-line readout (site.css's .timeline-mini)
+  // takes its place so the date being shown is still on screen, with a link back up to change it.
+  // It only ever shows below 720px, and in Status mode (setViewVisibility: Use has no date).
+  var miniDate = null;
+  var fullTimeline = document.querySelector('.timeline');
+  if (fullTimeline && 'IntersectionObserver' in window) {
+    var mini = document.createElement('div');
+    mini.className = 'timeline-mini';
+    mini.setAttribute('data-view-mode', 'status');
+    mini.innerHTML = '<div class="wrap"><span class="timeline-mini-date" aria-hidden="true"></span><a href="#timeline">Change date</a></div>';
+    document.body.appendChild(mini);
+    miniDate = mini.querySelector('.timeline-mini-date');
+    new IntersectionObserver(function (entries) {
+      var en = entries[entries.length - 1];
+      mini.classList.toggle('is-away', !en.isIntersecting && en.boundingClientRect.bottom < 0);
+    }).observe(fullTimeline);
+  }
+
   function paint(m) {
     shapes.forEach(function (n) {
       var r = byId[n.getAttribute('data-id')];
@@ -344,6 +364,16 @@
         titleEl.textContent = (mode === 'use' && r.useCategory)
           ? r.name + ' · ' + R.useLabels[r.useCategory]
           : r.name + ' · ' + R.labels[r.status];
+      }
+      // The link around the shape names it for assistive tech as "name, status" (sitegen/pages.py's
+      // record_shape()); keep that in step with the month on the slider and the active colour mode,
+      // the same words the tooltip above uses. Tenant count stays on the end, as rendered.
+      var link = n.closest('a');
+      if (link) {
+        var word = (mode === 'use' && r.useCategory) ? R.useLabels[r.useCategory] : (a.s ? R.labels[a.s] : 'no dated status yet');
+        var tn = +link.getAttribute('data-tenants') || 0;
+        link.setAttribute('aria-label', r.name + ', ' + word.toLowerCase() + (a.expected && mode !== 'use' ? ' (expected)' : '') +
+          (tn ? ' · ' + tn + (tn === 1 ? ' tenant' : ' tenants') : ''));
       }
       n.removeAttribute('stroke-dasharray');
       n.setAttribute('fill-opacity', '1');
@@ -418,6 +448,7 @@
     var label = windowLabel(m);
     readDate.textContent = label;
     readPhase.textContent = m < TODAY ? 'Recorded history' : m === TODAY ? 'Today' : 'Expected';
+    if (miniDate) miniDate.textContent = label + ' · ' + readPhase.textContent;
     slider.setAttribute('aria-valuetext', label + ', ' + readPhase.textContent);
     if (yearJump) yearJump.value = String(yearOptionFor(m));
   }

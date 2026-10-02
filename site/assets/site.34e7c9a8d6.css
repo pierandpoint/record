@@ -2,7 +2,7 @@
   --ink: #161d1f; --ink-2: #1d2528; --ink-3: #091d2a; --line: #2a3336; --line-2: #3a4347; --line-3: #4b5559;
   --text: #eae6da; --text-2: #d7d3c7; --soft: #a9b3ae; --faint: #84939a;
   --brass: #d3a35e; --brass-hi: #e6bd7d; --terracotta: #b4694c;
-  --paper: #efece2; --paper-2: #faf8f1; --paper-line: #d8d2bf; --paper-ink: #1c2b30; --paper-soft: #51636b; --paper-faint: #6b7a74; --paper-brass: #7a5527;
+  --paper: #efece2; --paper-2: #faf8f1; --paper-line: #d8d2bf; --paper-ink: #1c2b30; --paper-soft: #51636b; --paper-faint: #566460; --paper-brass: #7a5527;
   --complete: #2ca25f; --under_construction: #e08e2b; --planned: #4f7fc0; --existing: #a39e8f; --being_removed: #d73027;
   --serif: 'Source Serif 4', Georgia, serif; --sans: 'Public Sans', system-ui, sans-serif; --mono: 'IBM Plex Mono', ui-monospace, monospace;
   --gutter: 16px; --max: 1344px;
@@ -16,6 +16,12 @@ h1, h2, h3, p { margin: 0; text-wrap: pretty; }
 a { color: var(--brass); text-decoration: none; }
 a:hover { color: var(--brass-hi); text-decoration: underline; text-underline-offset: 3px; }
 :focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; border-radius: 4px; }
+/* A link inside running text is told from the text around it by more than colour (WCAG 1.4.1: its
+   contrast with the surrounding text is 1.84:1 on dark and 2.2:1 on paper). Navigation, buttons,
+   chips, tabs and citation numbers are recognisable by their shape and place, so they stay plain. */
+p a, li a, dd a, td a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.site-nav a, .jump a, .tabs a, .section-jump a, .crumbs a, .btn, .chip, sup.cites a, .tenant-card-links a, .tenant-legend-link { text-decoration: none; }
+.site-nav a:hover, .jump a:hover, .tabs a:hover, .section-jump a:hover, .crumbs a:hover { text-decoration: none; }
 img { max-width: 100%; display: block; }
 .wrap { width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin: 0 auto; padding: 0 var(--gutter); }
 .mono { font-family: var(--mono); }
@@ -36,6 +42,7 @@ img { max-width: 100%; display: block; }
 .brand-text small { font: 600 8px/1 var(--sans); letter-spacing: .42em; color: #8a978f; }
 .site-nav { display: flex; align-items: center; gap: 4px 20px; flex-wrap: wrap; font-size: 14px; font-weight: 500; }
 .site-nav a { color: var(--soft); padding: 10px 0; }
+.site-nav a.beta { padding: 6px 12px; }
 .site-nav a[aria-current="page"] { color: var(--text); box-shadow: inset 0 -1.5px 0 var(--brass); }
 .beta { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12px; color: var(--brass); border: 1px solid #5a4a32; border-radius: 999px; padding: 6px 12px; }
 .beta-mobile { display: none; }
@@ -242,6 +249,16 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .overview .ov-narrow { display: none; }
 @media (max-width: 719px) { .overview .ov-wide { display: none; } .overview .ov-narrow { display: block; } }
 .map-caption { font-size: 13px; color: var(--faint); margin-top: 10px; }
+/* "Skip map": out of sight until a keyboard user lands on it, then in the flow just above the map
+   it skips (position:absolute keeps it out of any flex gap while hidden). */
+.skip-map { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip-map:focus { position: static; display: inline-block; width: auto; height: auto; overflow: visible; clip: auto; margin: 0 0 10px; padding: 8px 12px; border-radius: 6px; background: var(--brass); color: var(--ink); font: 600 14px var(--sans); text-decoration: none; }
+.map-after { height: 0; }
+.light .skip-map:focus { color: var(--ink); }
+/* The compact key directly under a map (audit F7); the full legend with live counts stays further down. */
+.legend-compact { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 10px; font-size: 12.5px; color: var(--soft); }
+.legend-compact[hidden] { display: none; }
+.legend-compact > span { display: inline-flex; align-items: center; gap: 6px; }
 .jump { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 12px; }
 @media (min-width: 720px) { .jump { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .jump a { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; border: 1px solid var(--line-2); border-radius: 8px; color: var(--text-2); font-size: 14px; font-weight: 500; }
@@ -278,6 +295,17 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .timeline .readout strong { font: 500 18px/1.2 var(--mono); }
 .timeline .readout span { font: 12px/1.3 var(--mono); color: var(--brass); }
 .timeline noscript { font-size: 13px; color: var(--faint); }
+/* Below 720px the timeline scrolls with the page instead of riding along: pinned, it took 21% of a
+   phone for the rest of the page (audit F8). Once it has scrolled off, app.js shows this one-line
+   readout in its place; it never shows on a wide screen, where the timeline stays pinned. */
+.timeline-mini { display: none; }
+@media (max-width: 719px) {
+  .timeline { position: static; }
+  html { scroll-padding-top: 56px; }
+  .timeline-mini.is-away:not([hidden]) { display: block; position: fixed; top: 0; left: 0; right: 0; z-index: 10; background: rgba(22,29,31,.96); border-bottom: 1px solid var(--line); }
+  .timeline-mini .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; font: 500 14px var(--mono); }
+  .timeline-mini a { display: inline-flex; align-items: center; min-height: 44px; font: 500 13px var(--sans); }
+}
 /* Stands in for the slider/Play/readout in Use mode (owner decision 2026-09-28, 9th round): Use
    no longer encodes status or time, so there's nothing left for those controls to drive. */
 .timeline-use-note { margin: 0; padding: 6px 0; font-size: 14px; color: var(--faint); }
@@ -351,7 +379,12 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .light { background: var(--paper); color: var(--paper-ink); }
 .light a { color: var(--paper-brass); }
 .light a:hover { color: #9c6f34; }
-.light .eyebrow { color: #9c6f34; }
+.light .eyebrow { color: var(--paper-brass); }
+/* .light a (above) is more specific than .btn-primary, so a primary button on paper got the link
+   colour (2.91:1 on brass); its own label colour has to be restated inside .light (audit F2). */
+.light .btn-primary, .light .btn-primary:hover { color: var(--ink); }
+/* The brass focus ring is 1.94:1 on paper; the ink one is 12.36:1. */
+.light :focus-visible { outline-color: var(--paper-ink); }
 .light .source { color: var(--paper-faint); }
 .light .basis-note { color: var(--paper-faint); }
 .section { padding-top: 56px; padding-bottom: 56px; }
@@ -366,6 +399,8 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .feed .kind.status, .feed .kind.coming_up { background: #f6e3cc; color: #8a4f0d; }
 .feed .body { display: flex; flex-direction: column; gap: 4px; font-size: 15px; }
 @media (max-width: 719px) { .feed li { grid-template-columns: auto 1fr; } .feed .body { grid-column: 1 / -1; } }
+.section.overdue { padding-top: 0; }
+.overdue-note { max-width: 64ch; margin: -8px 0 20px; }
 .feed.compact li { grid-template-columns: auto 1fr; }
 .feed.compact .body { grid-column: 1 / -1; }
 
@@ -423,6 +458,10 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .page-head h1 { font: 500 clamp(32px, 5vw, 56px)/1.04 var(--serif); letter-spacing: -.015em; margin: 12px 0 8px; }
 .page-head .sub { color: var(--paper-soft); font-size: 17px; }
 .feed-links { display: flex; align-items: center; gap: 14px; font-size: 14px !important; }
+.rec-status { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 14px; }
+.rec-fresh { font: 13px var(--mono); color: var(--paper-faint); }
+.rec-about { margin-top: 10px; max-width: 72ch; font-size: 14px; color: var(--paper-soft); }
+.rec-fallback { font-size: 13px; color: var(--paper-faint); }
 .page-head .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
 .page-head .docs { margin-top: 16px; max-width: 72ch; }
 .light .chip { background: var(--paper-2); border-color: var(--paper-line); color: var(--paper-ink); }
@@ -445,7 +484,7 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
   .rec-aside-rest { order: 4; }
 }
 .card { background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 14px; }
-.card h2 { font: 500 12px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: #9c6f34; }
+.card h2 { font: 500 12px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--paper-brass); }
 .facts { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 10px 12px; margin: 0; font-size: 14px; }
 .facts dt { color: var(--paper-faint); }
 .facts dd { margin: 0; overflow-wrap: anywhere; }
@@ -701,6 +740,7 @@ sup.cites a { text-decoration: none; }
    so a permit's own declared valuation doesn't read as a vetted cost figure like the Costs box
    above it. */
 .permit-valuation { font-size: 13px; color: var(--paper-faint); }
+.questions, .questions li, .prose ul, .prose-page li, .feed .body, .page-head .summary { overflow-wrap: anywhere; }
 .questions { margin: 0 0 12px; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.55; color: var(--paper-soft); }
 .gallery-kind { font: 600 13px var(--mono); color: var(--paper-soft); margin: 4px 0 -4px; }
 .sources li:target { background: #f6e3cc; border-radius: 4px; }
