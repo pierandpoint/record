@@ -43,7 +43,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against data/raw/parcels.geojson and DataSF's Assessor tax roll -- e.g. blklot 8711507 at 675 Nelson Rising Lane alone is ~13 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against DataSF's Assessor parcels and tax roll -- e.g. block/lot 8711507 at 675 Nelson Rising Lane alone is ~13 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
     "digitized_from": "OpenStreetMap (way 255652151, official_name=Global Health & Clinical Sciences Building, 500 16th St)"
    }
   },
@@ -54,7 +54,7 @@
   "facts": [
    {
     "key": "address",
-    "value": "OpenStreetMap tags this building 500 16th St. An earlier pass recorded 550 16th St from UCSF's release, which could not be re-read (HTTP 403); WRNS's page gives no street address. Not resolved.",
+    "value": "OpenStreetMap tags this building 500 16th St. An earlier version of this record gave 550 16th St from UCSF's release, which could not be re-checked; WRNS's page gives no street address. Not resolved.",
     "sources": [
      "src-osm-mission-hall",
      "src-ucsf-2014-10"
@@ -358,10 +358,10 @@
    }
   ],
   "open_questions": [
-   "Street address is inconsistent: this project's geometry file carries OSM's own 500 16th St tag, but an earlier pass recorded 550 16th St from UCSF's press release, which could not be re-read (403); the architect's page gives no street address. Not resolved; both this file and its geometry file flag it rather than silently picking one.",
+   "Street address is inconsistent: this record's map shape carries OpenStreetMap's own 500 16th St tag, but an earlier version of this record gave 550 16th St from UCSF's press release, which could not be re-checked; the architect's page gives no street address. Not resolved; both this record and its map notes flag it rather than silently picking one.",
    "No openly licensed image was found; none is hosted here.",
-   "Images: no plan drawing, elevation or openly-licensed photograph was found for this building specifically. Searched: UCSF Real Estate's Mission Bay campus-site and LRDP pages (realestate.ucsf.edu, blocked to automated fetches with a 403); the UCSF 2014 LRDP EIR's CEQAnet filing (SCH 2013092047, whose pre-2016 attachments aren't hosted on CEQAnet itself); a May 2000 Regents Committee on Grounds and Buildings design-approval item for an early Mission Bay building (text-only, no figures); the 2008 \"UCSF Mission Bay Planning Principles\" appendix (a citywide-scale community map, no individual buildings labeled); and a UCSF wayfinding campus map (not an adopted plan, EIR or permit filing, so not eligible as public-record even though found). Not pursued further in this pass; the record's own project sources above remain the citation for the building's history.",
-   "2026-09-29 accuracy audit: UCSF's 2014 news page (source of the September 2014 occupancy and October 2014 ribbon-cutting) returned HTTP 403 and could not be re-read; WRNS and Rudolph and Sletten confirm a 2014 completion only. No readable source gives a story count (OpenStreetMap: 6 levels) or names the Office of the Chancellor as an occupant, so 'seven-story' and the Chancellor were removed."
+   "Images: no plan drawing, elevation or openly-licensed photograph was found for this building specifically. Searched: UCSF Real Estate's Mission Bay campus-site and LRDP pages (realestate.ucsf.edu, which could not be checked); the UCSF 2014 LRDP EIR's CEQAnet filing (SCH 2013092047, whose pre-2016 attachments aren't hosted on CEQAnet itself); a May 2000 Regents Committee on Grounds and Buildings design-approval item for an early Mission Bay building (text-only, no figures); the 2008 \"UCSF Mission Bay Planning Principles\" appendix (a citywide-scale community map, no individual buildings labeled); and a UCSF wayfinding campus map (not an adopted plan, EIR or permit filing, so not eligible as public-record even though found). Not pursued further; the record's own project sources above remain the citation for the building's history.",
+   "As of 2026-09-29, UCSF's 2014 news page (source of the September 2014 occupancy and October 2014 ribbon-cutting) could not be re-checked; WRNS and Rudolph and Sletten confirm a 2014 completion only. No readable source gives a story count (OpenStreetMap: 6 levels) or names the Office of the Chancellor as an occupant, so 'seven-story' and the Chancellor were removed."
   ],
   "sources": [
    {
@@ -417,7 +417,7 @@
     "accessed": "2026-09-29"
    }
   ],
-  "notes": "Built to consolidate UCSF's global health programs and house approximately 1,500 faculty, staff, fellows and residents (Rudolph and Sletten) in a 266,000 sq ft building (WRNS; Rudolph and Sletten gives 264,000); OpenStreetMap tags it six levels. Architect WRNS Studio (design-builder Rudolph and Sletten per its own project page; landscape Andrea Cochran Landscape Architecture per its own project page). Opened for occupancy September 2014, ribbon-cutting October 2014. Address note: this project's geometry is tagged 500 16th St from OpenStreetMap's own addr:housenumber, but an earlier pass recorded 550 16th St from UCSF's press release (which could not be re-read; the architect's project page gives no street address) -- flagging the discrepancy rather than silently picking one.",
+  "notes": "Built to consolidate UCSF's global health programs and house approximately 1,500 faculty, staff, fellows and residents (Rudolph and Sletten) in a 266,000 sq ft building (WRNS; Rudolph and Sletten gives 264,000); OpenStreetMap tags it six levels. Architect WRNS Studio (design-builder Rudolph and Sletten per its own project page; landscape Andrea Cochran Landscape Architecture per its own project page). Opened for occupancy September 2014, ribbon-cutting October 2014. Address note: this record's map shape is tagged 500 16th St from OpenStreetMap's own house-number tag, but an earlier version of this record gave 550 16th St from UCSF's press release (which could not be re-checked; the architect's project page gives no street address) -- flagging the discrepancy rather than silently picking one.",
   "has_record_file": true,
   "last_verified": "2026-09-29",
   "tenants": [],

@@ -197,7 +197,7 @@
     },
     {
       "key": "tenants",
-      "value": "Uber Technologies and the Golden State Warriors each lease office space in the adjacent Mission Bay 3 & 4 towers (1655 & 1725 3rd St) for their headquarters (The Real Deal, 2025); see the mission_bay_uber_3_4 record for details and for Uber's 2023 sublease marketing of 1725 3rd St",
+      "value": "Uber Technologies and the Golden State Warriors each lease office space in the adjacent Mission Bay 3 & 4 towers (1655 & 1725 3rd St) for their headquarters (The Real Deal, 2025); see the Uber Mission Bay 3 & 4 record for details and for Uber's 2023 sublease marketing of 1725 3rd St",
       "sources": [
         "src-trd-2025-uber"
       ]
@@ -237,7 +237,7 @@
       "path": "data/manual/images/mission_bay/wikimedia_chase_center_exterior_2019.jpg",
       "kind": "now",
       "taken": "2019-07-27",
-      "credit": "Gregory Varnum, \"Chase Center - July 2019 (7980)\", via Wikimedia Commons; CC BY-SA 4.0; downscaled to 1280 px (a Wikimedia thumbnail derivative -- the origin server persistently rate-limited full-resolution downloads this session)",
+      "credit": "Gregory Varnum, \"Chase Center - July 2019 (7980)\", via Wikimedia Commons; CC BY-SA 4.0; downscaled to 1280 px (a Wikimedia thumbnail derivative)",
       "license": "cc-by-sa",
       "source_url": "https://commons.wikimedia.org/wiki/File:Chase_Center_-_July_2019_(7980).jpg",
       "license_evidence": "https://commons.wikimedia.org/wiki/File:Chase_Center_-_July_2019_(7980).jpg",
@@ -249,7 +249,7 @@
       "path": "data/manual/images/mission_bay/wikimedia_chase_center_interior_2019.jpg",
       "kind": "completed",
       "taken": "2019-12-27",
-      "credit": "Américo Toledano, \"San Francisco - Chase Center 001\", via Wikimedia Commons; CC BY-SA 4.0; downscaled to 1280 px (a Wikimedia thumbnail derivative -- the origin server persistently rate-limited full-resolution downloads this session)",
+      "credit": "Américo Toledano, \"San Francisco - Chase Center 001\", via Wikimedia Commons; CC BY-SA 4.0; downscaled to 1280 px (a Wikimedia thumbnail derivative)",
       "license": "cc-by-sa",
       "source_url": "https://commons.wikimedia.org/wiki/File:San_Francisco_-_Chase_Center_001.jpg",
       "license_evidence": "https://commons.wikimedia.org/wiki/File:San_Francisco_-_Chase_Center_001.jpg",
@@ -409,14 +409,14 @@
     }
   ],
   "open_questions": [
-    "2026-09-23: this record's geometry was migrated off status.csv (record_id changed from the blklot '8722025' to 'mission_bay_chase_center') because DataSF's own Assessor Parcel dataset gives this parcel and the neighboring Uber Mission Bay 3 & 4 towers byte-identical geometry (one shared master-condo superblock parcel). The new geometry is the full Assessor parcel with both Uber towers' own real OSM building footprints subtracted out -- see the geojson's own digitization_method. Two small structures inside the resulting polygon are not yet identified: an oval building in the west plaza, and possibly others not yet checked against a satellite pass.",
+    "2026-09-23: this record's map shape was moved off its Assessor parcel record (the record was previously keyed to block/lot 8722025) because DataSF's own Assessor Parcel dataset gives this parcel and the neighboring Uber Mission Bay 3 & 4 towers byte-identical geometry (one shared master-condo superblock parcel). The new geometry is the full Assessor parcel with both Uber towers' own real OSM building footprints subtracted out; how it was built is logged in its data file in the public data repository (https://github.com/pierandpoint/record). Two small structures inside the resulting polygon are not yet identified: an oval building in the west plaza, and possibly others not yet checked against satellite imagery.",
     "Chase Center's cost: $1.4B is the most-repeated figure (Construction Dive's headline and Wikipedia's infobox). A $1.3B alternate figure attributed to a Warriors executive had no support in its cited source and was removed on 2026-09-29. A separate 2019 Construction Dive piece on the (distinct, unbuilt) hotel/condo proposal used '$1.5B Chase Center' in its own headline, which appears to conflate the arena with that proposal; that figure is not used here.",
     "Uber's and the Warriors' current lease status was not independently verified beyond The Real Deal's February 2025 report; an earlier '20-year lease', '~4,000 employees' and '145 parking spaces' claim was removed on 2026-09-29 because no readable source states it.",
     "The Warriors-proposed hotel/condo/retail complex on adjacent Blocks 29-30 is financially and physically tied to Chase Center but may sit on a separate parcel; whether it falls within blklot 8722025 or is a distinct, not-yet-built record is not confirmed. Current 2026 construction status is also unconfirmed.",
     "No primary Port of San Francisco or OCII page dedicated specifically to Chase Center was found (as a privately financed project, it may not have one); the only agency-level source found was SFPUC/CleanPowerSF's sustainability write-up.",
     "No openly licensed image was found; recommend linking rather than hosting until one is confirmed.",
     "No opening date found for The Sarap Shop (1 Warriors Way): checked its own Thrive City vendor page for a firm date; retail_confirmed.csv's own opened field is also blank.",
-    "2026-09-29 accuracy audit: the first photo (exterior, taken 2019-07-27) shows the arena under construction, before the 2019-09-06 opening milestone, so it fits none of the schema's kinds; it keeps kind 'now' pending an owner decision. The interior photo (2019-12-27) was re-tagged 'completed' (within a year after opening). Chase Center's Thrive City tenant list was read on its live page on 2026-09-29 ('Open Now'); tenants not on it (Siren, b8ta, Mission Bay Wine Bar) have not been re-confirmed open."
+    "As of 2026-09-29: the first photo (exterior, taken 2019-07-27) shows the arena under construction, before the 2019-09-06 opening milestone, so it fits none of the image categories used here; it keeps the 'now' category pending a decision. The interior photo (2019-12-27) was re-tagged 'completed' (within a year after opening). Chase Center's Thrive City tenant list was read on its live page on 2026-09-29 ('Open Now'); tenants not on it (Siren, b8ta, Mission Bay Wine Bar) have not been re-confirmed open."
   ],
   "last_verified": "2026-09-29"
 }

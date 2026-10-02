@@ -43,7 +43,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- traced directly from Figure 6.4.2's own 'Public Open Space' fill color (programmatic color-region contour extraction), then clipped against PKS/HDY3/C1/C2/HDY1-2's own committed geometries. Now extends north to touch '21ST ST (NEW)' directly in the gap between PKS and C1, matching the diagram's own drawn fill. The geometry is now a single Polygon: an earlier trace produced a separate small piece near Illinois St (the Irish Hill Corner Plaza zone), but it reconnects to the main body through the corridor between HDY3 and HDY1/2 (see digitization_method), and on the rendered Figure 6.4.2 the green band between HDY3 and HDY1/2 runs continuously to the Illinois/22nd corner.",
+    "accuracy_caveat": "APPROXIMATE -- traced directly from Figure 6.4.2's own 'Public Open Space' fill color (outlined automatically by color), then trimmed to the mapped shapes of PKS, HDY3, C1, C2 and HDY1/2. Now extends north to touch '21ST ST (NEW)' directly in the gap between PKS and C1, matching the diagram's own drawn fill. The geometry is now a single Polygon: an earlier trace produced a separate small piece near Illinois St (the Irish Hill Corner Plaza zone), but it reconnects to the main body through the corridor between HDY3 and HDY1/2 (see the mapping log), and on the rendered Figure 6.4.2 the green band between HDY3 and HDY1/2 runs continuously to the Illinois/22nd corner. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
     "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155); named per Figure 3.4.1 - Overview of Public Spaces (p.52), zones 7 and 8.",
     "why_no_real_parcel": "Open space with no Assessor lot of its own identified. Port Item 9B (2017) lists Irish Hill Park among 'Port improvements outside of the 28-Acre Site' and as a 'Port or Hoedown Yard Vertical Developer obligation, at Port's discretion', so it is not within Brookfield's 28-acre site; the earlier statement that it is is withdrawn. Which Assessor lot(s) it lies on has not been checked.",
     "regulatory_context": "Part of the Pier 70 D4D's Open Space Network (Section 3.4): Irish Hill Playground (Section 3.12, ~2.0 acres), described as an open space adjacent to the existing remnant of Irish Hill (Section 3.2) -- an approximately 35-foot tall serpentine outcropping, today approximately seven percent of what the hill once was (D4D Section 3.2); the National Register nomination says Building 12 (1941) was built on newly leveled ground where most of Irish Hill once stood. The D4D does not say when or how the rest was removed. Irish Hill Corner Plaza (Section 3.11) is a separate, smaller named zone at the southwest corner of this same open area, near the Illinois St/22nd St corner."
@@ -379,8 +379,8 @@
   ],
   "open_questions": [
    "No design approval, construction contract or completion for the playground or corner plaza was found; the site depends on the City's unexercised option on the PG&E Hoedown Yard and on Parcel K South, neither of which has moved.",
-   "How much of Irish Hill was quarried, when, and by whom is not stated in the retrieved primary sources beyond the NRHP nomination's site descriptions; the geometry file's 'quarried away in the early 20th century' summary is unsourced here.",
-   "This record combines two D4D zones (3.11 and 3.12) into one geometry, per the geometry file's caveat.",
+   "How much of Irish Hill was quarried, when, and by whom is not stated in the retrieved primary sources beyond the NRHP nomination's site descriptions; the map notes' 'quarried away in the early 20th century' summary is unsourced here.",
+   "This record combines two D4D zones (3.11 and 3.12) into one geometry, per the shape's accuracy caveat.",
    "No basis for an expected-completion date was found: the 2017 DDA's Schedule of Performance ties Irish Hill Park's outside date to 1-1.5 years after the last temporary certificate of occupancy for HDY1 or HDY2 ('a Port or Hoedown Yard Vertical Developer obligation, at Port's discretion,' Port Commission Item 9B, Sept 22, 2017, Table A, p.8), but the Hoedown Yard itself is outside the 28-Acre Project and has no reported schedule (see the HDY1/2 and HDY3 records), so no window can be dated here."
   ],
   "sources": [
@@ -430,7 +430,7 @@
     "overview": true
    }
   ],
-  "notes": "Newly added 2026-09-17 as part of closing a gap the user pointed out: not all of Figure 3.4.1's 8 named open-space zones had been traced onto the map. Geometry redone multiple times the same day -- see digitization_method for the full history, including a full replacement after a user flagged this shape as looking misplaced.",
+  "notes": "Added 2026-09-17, after it was found that not all of Figure 3.4.1's 8 named open-space zones had been traced onto the map. The shape was redrawn several times the same day, including a full replacement after it was found to look misplaced. The full history is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
   "has_record_file": true,
   "last_verified": "2026-09-20",
   "tenants": [],

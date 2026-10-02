@@ -37,8 +37,8 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "PARTIALLY REAL -- the outer boundary is a real polygonized city block from real street geometry, not hand-traced, except for its east edge (which now runs along 18C's real, already-tracked west edge) and its west edge (the equal-area bisection line shared with 18A, approximate since no real street divides this block into A and B). The extension into the former access-lane gap on this block's east side is an inferred fill (convex hull minus 18C minus streets), not independently confirmed as driveway/parking pavement rather than a walkway.",
-    "digitized_from": "Real block boundary from real street geometry (src/block_fit.py load_blocks(), trimmed against src/street_geometry.py's fuller street buffer); the plan's own A/B internal split has no mapped street, so it's an equal-area bisection along the block's long axis, not a real line."
+    "accuracy_caveat": "PARTIALLY REAL -- the outer boundary is a real polygonized city block from real street geometry, not hand-traced, except for its east edge (which now runs along 18C's real, already-tracked west edge) and its west edge (the equal-area bisection line shared with 18A, approximate since no real street divides this block into A and B). The extension into the former access-lane gap on this block's east side is an inferred fill (the ground left between 18C and the street lines), not independently confirmed as driveway/parking pavement rather than a walkway.",
+    "digitized_from": "Real block boundary built from DataSF's official street centerlines, trimmed back from the full street width; the plan's own A/B internal split has no mapped street, so it's an equal-area bisection along the block's long axis, not a real line."
    }
   },
   "centroid": {
@@ -126,7 +126,7 @@
     "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf"
    }
   ],
-  "notes": "No building is recorded on this site as of this project's own 2026-09-19 satellite and building-footprint check (the imagery is not cited or saved here), and it appears to be a surface parking lot west of the Owens St curve, back-to-back with the block to its east that this project records as 18C (see mission_bay_block_18c.geojson). OCII's Dec 2019 Land Use Map shows Block 18B in the UCSF-designated color, but UCSF's own June 2025 CAC presentation (page 3; its map is dated December 2024) labels it 'FUTURE PARKING GARAGE (18B)' and lists 'Block 18B - Parking' among the undeveloped parcels remaining, so the planned use is parking, not a building for institutional use. No specific project, developer or timeline was found.",
+  "notes": "No building is recorded on this site as of this project's own 2026-09-19 satellite and building-footprint check (the imagery is not cited or saved here), and it appears to be a surface parking lot west of the Owens St curve, back-to-back with the block to its east that this project records as 18C (see the Block 18C record). OCII's Dec 2019 Land Use Map shows Block 18B in the UCSF-designated color, but UCSF's own June 2025 CAC presentation (page 3; its map is dated December 2024) labels it 'FUTURE PARKING GARAGE (18B)' and lists 'Block 18B - Parking' among the undeveloped parcels remaining, so the planned use is parking, not a building for institutional use. No specific project, developer or timeline was found.",
   "has_record_file": false,
   "last_verified": null,
   "tenants": [],

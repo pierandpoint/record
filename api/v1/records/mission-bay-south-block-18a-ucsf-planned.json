@@ -37,8 +37,8 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "PARTIALLY REAL -- the outer boundary is a real polygonized city block from real street geometry, not hand-traced; only the internal A/B split line is approximate (an equal-area bisection, since no real street divides this block into A and B). The east extension into the former access-lane gap is an inferred fill (convex hull minus 18C minus streets), not independently confirmed as driveway/parking pavement rather than a walkway.",
-    "digitized_from": "Real block boundary from real street geometry (src/block_fit.py load_blocks(), trimmed against src/street_geometry.py's fuller street buffer); the plan's own A/B internal split has no mapped street, so it's a straight bisection along the block's long axis, not a real line."
+    "accuracy_caveat": "PARTIALLY REAL -- the outer boundary is a real polygonized city block from real street geometry, not hand-traced; only the internal A/B split line is approximate (an equal-area bisection, since no real street divides this block into A and B). The east extension into the former access-lane gap is an inferred fill (the block's overall outline less Block 18C and the streets), not independently confirmed as driveway/parking pavement rather than a walkway.",
+    "digitized_from": "Real block boundary built from mapped street centerlines (trimmed against the full street width); the plan's own A/B internal split has no mapped street, so it's a straight bisection along the block's long axis, not a real line."
    }
   },
   "centroid": {
@@ -131,7 +131,7 @@
     "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf"
    }
   ],
-  "notes": "No building on this site as of UCSF's June 2025 CAC deck ('Undeveloped parcels remaining'; 'Block 18A - Research'); vehicles fill the block in USDA NAIP imagery (viewed 2026-09-29), an imagery observation no cited document states. The block is south of Nelson Rising Lane and east of the Owens St curve; in UCSF's map, 18B (future parking garage) lies between it and 18C to the east. The OCII plan's Dec 2019 Land Use Map colors this block for UCSF (no use type given); UCSF's deck designates it Research. No specific project, developer, or timeline was found in this pass.",
+  "notes": "No building on this site as of UCSF's June 2025 CAC deck ('Undeveloped parcels remaining'; 'Block 18A - Research'); vehicles fill the block in USDA NAIP imagery (viewed 2026-09-29), an imagery observation no cited document states. The block is south of Nelson Rising Lane and east of the Owens St curve; in UCSF's map, 18B (future parking garage) lies between it and 18C to the east. The OCII plan's Dec 2019 Land Use Map colors this block for UCSF (no use type given); UCSF's deck designates it Research. No source found for a specific project, developer, or timeline.",
   "has_record_file": false,
   "last_verified": null,
   "tenants": [],

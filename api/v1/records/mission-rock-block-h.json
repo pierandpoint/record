@@ -43,9 +43,9 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE (planned, unbuilt block): no Assessor lot of its own yet. It sits on lot 8719A006, the ~37,400 m2 undivided remainder of Seawall Lot 337 that also holds Blocks C, D, E, H, I, J, Mission Rock Square, Channel Lane and the unbuilt internal streets. Traced 2026-09-17 from the adopted Design Controls' Figure 6.2 through a transform with 0.7 m RMS residual on 16 real lot corners, with vertices snapped to recorded lot lines where the figure draws the block against one (see digitization_method): treat street-facing and lot-line edges as accurate to ~1 m and interior edges (against unbuilt streets and open spaces) to ~1-3 m. The block's shape is the Design Controls' block, not a building footprint; a building may sit back from these lines.",
+    "accuracy_caveat": "APPROXIMATE (planned, unbuilt block): no Assessor lot of its own yet. It sits on lot 8719A006, the ~37,400 m2 undivided remainder of Seawall Lot 337 that also holds Blocks C, D, E, H, I, J, Mission Rock Square, Channel Lane and the unbuilt internal streets. Traced 2026-09-17 from the adopted Design Controls' Figure 6.2 through a transform with 0.7 m RMS residual on 16 real lot corners, with vertices snapped to recorded lot lines where the figure draws the block against one: treat street-facing and lot-line edges as accurate to ~1 m and interior edges (against unbuilt streets and open spaces) to ~1-3 m. The block's shape is the Design Controls' block, not a building footprint; a building may sit back from these lines.",
     "digitized_from": "Mission Rock Design Controls (Port of San Francisco, dated April 24, 2018), Figure 6.2 - Maximum Height Plan (p.151); land use from Figure 1.1 - Land Use Plan (p.10); block corners snapped to the recorded DataSF Assessor lot lines of the 2020 Seawall Lot 337 subdivision where they fall within 3 m.",
-    "why_no_real_parcel": "A real Assessor lot exists under this block -- 8719A006, the undivided remainder of Seawall Lot 337 recorded 2020-06-12 -- but it has not been subdivided per block, so joining status.csv to it would paint the same ~9-acre parking-lot shape for every unbuilt block. Hand-derived geometry is used instead, with the lot's own lines wherever this block touches them.",
+    "why_no_real_parcel": "A real Assessor lot exists under this block -- 8719A006, the undivided remainder of Seawall Lot 337 recorded 2020-06-12 -- but it has not been subdivided per block, so using that lot would paint the same ~9-acre parking-lot shape for every unbuilt block. Hand-derived geometry is used instead, with the lot's own lines wherever this block touches them.",
     "regulatory_context": "Flex block (Residential Mixed Use or Commercial Mixed Use, developer's choice) per the Design Controls (Table 6.4, 'BLOCK H (FLEX)'). Max height 90 ft if built commercial, 120 ft if built residential -- the '*90'/120'' notation in Figure 6.2. Southernmost block on the Bridgeview St/Terry A. Francois Blvd side, fronting Mission Rock Street."
    }
   },
@@ -656,7 +656,7 @@
     "accessed": "2026-09-29"
    }
   ],
-  "notes": "Approximate polygon for a block of the Mission Rock Design Controls' Land Use Plan (dated April 24, 2018), unbuilt as of the Port's June 2026 Phase 2 update (which describes the site as 'a surface parking lot' and puts Phase 2 construction 'as early as 2027'), with no distinct real parcel yet. See accuracy_caveat.",
+  "notes": "Approximate polygon for a block of the Mission Rock Design Controls' Land Use Plan (dated April 24, 2018), unbuilt as of the Port's June 2026 Phase 2 update (which describes the site as 'a surface parking lot' and puts Phase 2 construction 'as early as 2027'), with no distinct real parcel yet. See the accuracy note.",
   "has_record_file": true,
   "last_verified": "2026-09-20",
   "tenants": [],

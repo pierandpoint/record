@@ -29,7 +29,7 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "A grass, semicircular traffic median immediately east of the 'Mission Bay Circle' roundabout, west of the P12 soccer field (labeled 'SFF Soccer + Fitness Court' in OCII's Nov 2024 CAC update); per this repository's own satellite trace (no outside source describes the median), an already-landscaped median island, hand-traced with the property owner's guidance and fit to an idealized semicircle. OCII's own September 2023 Mission Bay Parks Open Space transition presentation lists 'P11/11A' together among the parcels SF Recreation and Parks will manage (not among the 'when built' parcels), consistent with it being complete by that date.",
+  "summary": "A grass, semicircular traffic median immediately east of the 'Mission Bay Circle' roundabout, west of the P12 soccer field (labeled 'SFF Soccer + Fitness Court' in OCII's Nov 2024 CAC update); per Pier & Point's own satellite trace (no outside source describes the median), an already-landscaped median island, hand-traced from satellite imagery and fit to an idealized semicircle. OCII's own September 2023 Mission Bay Parks Open Space transition presentation lists 'P11/11A' together among the parcels SF Recreation and Parks will manage (not among the 'when built' parcels), consistent with it being complete by that date.",
   "summary_sources": [
    "src-geom-p11a",
    "src-ocii-transition-2023",
@@ -41,8 +41,8 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- owner-guided satellite trace, idealized to a fitted semicircle rather than left as a raw hand-traced outline. Not a surveyed footprint or GIS file from the project team. street_clip_exempt=true: this is a real traffic median, inherently adjacent to/overlapping the street right-of-way in DataSF's curb data at its crosswalk corner -- clipping it against the generic street buffer would cut a real, visible piece of the median, not a mispositioning artifact. Owner-approved exception.",
-    "digitized_from": "Hand-traced from satellite imagery, guided directly by the owner's own marked-up screenshot (their drawn outline extracted from the photo via ORB feature-matching/homography rather than re-estimated by eye), then fit to an idealized semicircle per the owner's description of the real shape."
+    "accuracy_caveat": "APPROXIMATE -- satellite trace by Pier & Point, idealized to a fitted semicircle rather than left as a raw hand-traced outline. Not a surveyed footprint or GIS file from the project team. Deliberately not trimmed to the street line: this is a real traffic median, inherently adjacent to/overlapping the street right-of-way in DataSF's curb data at its crosswalk corner, so trimming it back to the street would cut a real, visible piece of the median rather than correct a positioning error. An accepted exception.",
+    "digitized_from": "Hand-traced from satellite imagery: an outline drawn by hand on a satellite screenshot was transferred onto the map by matching features between the screenshot and the imagery (rather than re-estimated by eye), then fit to an idealized semicircle following Pier & Point's description of the real shape."
    }
   },
   "centroid": {
@@ -170,13 +170,13 @@
   ],
   "open_questions": [
    "No public source names this specific median island or gives its own construction date; the Sept 2023 OCII document only establishes it existed and was already RPD-managed by that date (grouped with P11), which is an upper bound, not a build date.",
-   "This record was previously only a weak ~33m proximity guess with no real source before the property owner drew its actual outline directly on a satellite screenshot (per this record's own digitization_method log); the P-number itself, and any name/operator, remain unconfirmed by any independent published source."
+   "This record was previously only a weak ~33m proximity guess with no real source, before its actual outline was drawn by hand on a satellite image (the mapping log is in the public data repository, https://github.com/pierandpoint/record); the P-number itself, and any name/operator, remain unconfirmed by any independent published source."
   ],
   "sources": [
    {
     "id": "src-geom-p11a",
-    "title": "digitization_method log for mission_bay_p11a_median.geojson (this repository's own mapping narrative, not an outside source)",
-    "publisher": "Pier & Point geometry records (this repository, data/manual/mission_bay_p11a_median.geojson)",
+    "title": "Mapping log for this record's shape (Pier & Point's own mapping narrative, not an outside source)",
+    "publisher": "Pier & Point public data repository",
     "accessed": "2026-09-21"
    },
    {

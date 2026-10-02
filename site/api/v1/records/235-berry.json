@@ -39,7 +39,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I, Madrone and Radiance, re-checked against data/raw/parcels.geojson in the 2026-09 audit; Avalon II and III are not condo-mapped, and Arden and One Mission Bay were not re-checked).",
+    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against DataSF's Assessor parcel data), so no single blklot represents the whole building and the record cannot be tied to one Assessor lot the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I, Madrone and Radiance, re-checked against DataSF's Assessor parcel data in September 2026; Avalon II and III are not condo-mapped, and Arden and One Mission Bay were not re-checked).",
     "digitized_from": "OpenStreetMap (way 46264105, 235 Berry St)"
    }
   },
@@ -176,7 +176,7 @@
    }
   ],
   "open_questions": [
-   "This record file was created on 2026-09-27 to host the owner's own field photos. Its summary is limited to what its cited source was re-read to confirm that day; fuller details already in this repo's status.csv notes or geometry file (developer, architect, unit count, year built) were left out where that source didn't state them. No research pass yet: no milestones, costs or facts."
+   "This record was created on 2026-09-27 to carry Pier & Point's own field photos. Its summary is limited to what its cited source confirmed when re-read that day; fuller details recorded elsewhere in Pier & Point's data (developer, architect, unit count, year built) were left out where that source didn't state them. Not yet researched: no milestones, costs or facts."
   ],
   "sources": [
    {

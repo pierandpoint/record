@@ -43,7 +43,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL, surveyed building footprint (DataSF Building Footprints) -- high confidence in the outline itself and its match to Building 14: position matches Figure 6.4.2's own label (39m away, the closest and only plausible candidate among the lot's other footprint pieces once 113/114/115/116's own pieces are excluded) and its area independently matches the previously-cited 16,315 GSF within 3%. As with the other buildings split from oversized Assessor lots this project, the match rests on position and size, not an explicit building-number attribute in the footprint dataset itself (no such attribute exists there).",
+    "accuracy_caveat": "REAL, surveyed building footprint (DataSF Building Footprints) -- high confidence in the outline itself and its match to Building 14: position matches Figure 6.4.2's own label (39m away, the closest and only plausible candidate among the lot's other footprint pieces once 113/114/115/116's own pieces are excluded) and its area independently matches the previously-cited 16,315 GSF within 3%. As with the other buildings Pier & Point has split from oversized Assessor lots, the match rests on position and size, not an explicit building-number attribute in the footprint dataset itself (no such attribute exists there).",
     "digitized_from": "DataSF Building Footprints dataset (real, surveyed building outline; not tied to an Assessor parcel).",
     "why_no_real_parcel": "This structure has no street address in DataSF's Assessor roll and no distinct Assessor lot of its own. Its footprint lay about 76% on the former lot blklot 4052001 and about 24% on former lot 4111003, both retired by DataSF on 2018-10-02; it now falls within active lot 4111008 (no street address, shared with Buildings 113-116). The 2013 HPC packet lists Block 4046 Lot 001, Block 4111 Lots 003 and 004 and a portion of Block 4052 Lot 001 as the project location for the ten historic buildings; the earlier statement that Buildings 101/102/104/113-116/21 shared one lot with Building 14 is withdrawn (101/102/104 lay on 4046001 and 113-116 on 4111004). This feature uses the real building footprint instead, matched individually.",
     "regulatory_context": "Building 14, a basic heavy warehouse dated to 1941 (per the 2013 HPC packet, 2013.1168E) with approximately 16,000 GSF of space and a 66 foot height, sits immediately east of the Union Iron Works Machine Shop complex (Buildings 113/114/115/116), framing, with them, an approximately 45,000 square foot courtyard per the 2013 HPC packet's rehabilitation concept (not the D4D). Rehabbed by Orton Development Inc. (ODI) as part of the same 20th Street Historic Core project; proposed for the same industrial/warehouse/maker-space use (food, tech, life science, biotech, education, arts production) with ancillary office, showroom, and retail as its neighbors."
@@ -873,7 +873,7 @@
   "open_questions": [
    "Obscura Digital's seven-year sublease from September 2017 would have ended around 2024; no source names the current occupant.",
    "The construction date conflict (1941 in the NRHP nomination vs 1944 in the Port's documents) is unresolved; the nomination's date is used in the summary.",
-   "Building 14 sits on the same Assessor lot as Building 2 and the shipyard (4052001); this record follows the repo's split of Building 14 from that lot."
+   "Building 14 sits on the same Assessor lot as Building 2 and the shipyard (4052001); Pier & Point maps Building 14 separately from that lot."
   ],
   "sources": [
    {
@@ -969,7 +969,7 @@
     "overview": true
    }
   ],
-  "notes": "Split 2026-09-17 from the oversized combined blklot 4052001 row -- see digitization_method. This resolves a major real-vs-approximate overlap that had gone undetected because check_geometry_quality.py only ever checked approximate-vs-approximate sibling overlaps, never real-vs-approximate ones.",
+  "notes": "Split 2026-09-17 from the oversized combined block/lot 4052001 entry. This resolved a major overlap between this real footprint and an approximate shape, which had gone undetected because the map's automated quality check only compared approximate shapes with each other, never real shapes with approximate ones. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
   "has_record_file": true,
   "last_verified": "2026-09-18",
   "tenants": [],

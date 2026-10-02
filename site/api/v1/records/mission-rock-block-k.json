@@ -43,9 +43,9 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE but high confidence: every edge is a recorded DataSF lot line (the Assessor has not made Block K its own lot; it is still part of the China Basin Park lot 8719A005 as of the parcels fetch), and the Design Controls figure trace agrees with those lines within 1.3 m at every corner. Planned, unbuilt residential block (120 ft maximum height). ANGLE CHECK: check_geometry_quality.py flags a 12.3-12.6 deg corner here (its tolerance is 12 deg). Every vertex of this polygon is a real, recorded DataSF Assessor lot corner (see digitization_method) -- the deviation is the real lot's own shape (Bridgeview Way's paseo lot 8719A007 and the Exposition Street lot 8719A010 meet the park lot 8719A005 at a corner that is not exactly square), not a shear or a misread trace. Accepted; see docs/site-definition-of-done.md.",
+    "accuracy_caveat": "APPROXIMATE but high confidence: every edge is a recorded DataSF lot line (the Assessor has not made Block K its own lot; it is still part of the China Basin Park lot 8719A005 in the most recent DataSF Assessor parcel data checked), and the Design Controls figure trace agrees with those lines within 1.3 m at every corner. Planned, unbuilt residential block (120 ft maximum height). ANGLE CHECK: one corner here is 12.3-12.6 degrees off square, beyond the 12-degree tolerance of Pier & Point's automated shape check. Every vertex of this polygon is a real, recorded DataSF Assessor lot corner (how this shape was traced, including earlier versions, is logged in its data file in the public data repository, https://github.com/pierandpoint/record) -- the deviation is the real lot's own shape (Bridgeview Way's paseo lot 8719A007 and the Exposition Street lot 8719A010 meet the park lot 8719A005 at a corner that is not exactly square), not a shear or a misread trace. Accepted as a known exception.",
     "digitized_from": "DataSF Assessor lot lines (lots 8719A005, 8719A007, 8719A010, 8719A003) bounding the lobe the plan's Block K occupies, cross-checked against Mission Rock Design Controls Figure 6.2 (p.151) and the Block K standards sheet (Appendix p.198).",
-    "why_no_real_parcel": "Block K's land is still part of lot 8719A005 (China Basin Park), a lot recorded 2020-06-12 in DataSF's Assessor parcels (data/raw/parcels.geojson, fetched from DataSF Parcels acdm-wktn); the lot lines around it exist but the Assessor has not split K off in that data. Joining status.csv to 8719A005 would show the park and the block as one shape.",
+    "why_no_real_parcel": "Block K's land is still part of lot 8719A005 (China Basin Park), a lot recorded 2020-06-12 in DataSF's Assessor parcels (the DataSF Parcels dataset); the lot lines around it exist but the Assessor has not split K off in that data. Using lot 8719A005 would show the park and the block as one shape.",
     "regulatory_context": "Residential Mixed Use, fronting China Basin Park and the Pier 48 entry along Terry A. Francois Blvd. Max height 120 ft -- tied for the lowest residential height limit on the site (Flex Blocks H, I and J also allow 120 ft if residential, Figure 6.2 p.151); the March 2012 Revised Proposal's narrative says 'the shortest residential tower would be on Block K facing Mission Rock Park,' preserving sightlines/stepping the skyline down toward the water. Originally slated for Phase 1 (with A, B, G) before a real, Port-confirmed 2019 swap with Block F -- the sponsors proposed changing Phase 1 from {A, B, G, K} to {A, B, G, F} to accelerate ~100 more units (~40 more affordable) and create a four-corner pedestrian intersection instead of a linear one; an interim-parking-preservation rationale sometimes cited for this swap is not supported by any source found."
    }
   },
@@ -609,7 +609,7 @@
    }
   ],
   "open_questions": [
-   "The geometry file quotes the Design Controls as saying 'the shortest residential tower would be on Block K facing Mission Rock Park'; that sentence was not found in the April 2018 Design Controls text or the D4D, though the 120-ft cap is confirmed by the Block K standards page.",
+   "The notes on this record's map shape quote the Design Controls as saying 'the shortest residential tower would be on Block K facing Mission Rock Park'; that sentence was not found in the April 2018 Design Controls text or the D4D, though the 120-ft cap is confirmed by the Block K standards page.",
    "The swap's stated reasons (units, affordable units, intersection form) are documented; no source mentions interim-parking preservation as a reason.",
    "No construction start, Phase 2 budget approval or vertical design submittal for this block was found in Port Commission agendas through February 2026; the block remains part of the Seawall Lot 337 surface parking lot (Lot A).",
    "Which blocks the December 2022 Phase 2 Submittal covers is not stated in the Port memos read; only the Phase 2 parking garage is named.",
@@ -763,7 +763,7 @@
     "url": "https://data.sf.gov/resource/acdm-wktn.json?blklot=8719A005"
    }
   ],
-  "notes": "Approximate polygon for a block of the Mission Rock Design Controls' Land Use Plan (dated April 24, 2018), unbuilt as of the Port's June 2026 Phase 2 update (which describes the site as 'a surface parking lot' and puts Phase 2 construction 'as early as 2027'), with no distinct real parcel yet. See accuracy_caveat.",
+  "notes": "Approximate polygon for a block of the Mission Rock Design Controls' Land Use Plan (dated April 24, 2018), unbuilt as of the Port's June 2026 Phase 2 update (which describes the site as 'a surface parking lot' and puts Phase 2 construction 'as early as 2027'), with no distinct real parcel yet. See the accuracy note for this shape.",
   "has_record_file": true,
   "last_verified": "2026-09-20",
   "tenants": [],

@@ -40,7 +40,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- this block is not yet built (Port Item 11A, Aug 2026: the developer 'has not exercised an option of any Phase 1 option parcels'), and no source read ties it to a specific Assessor lot: DataSF's Assessor parcels include new lots created for the 28-acre district in 2019, without street addresses, but which lot (if any) is this block's was not established. It currently sits on vacant/graded land, surface parking, or an existing industrial building slated for demolition within Brookfield's 28-acre district. Redone 2026-09-14 with a corrected, shear-free transform (see digitization_method) -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects this transform's 1-8m residual error, not a deliberate encroachment. Street-facing edge re-clipped 2026-09-17 against official curb-referenced street data -- see digitization_method.",
+    "accuracy_caveat": "APPROXIMATE -- this block is not yet built (Port Item 11A, Aug 2026: the developer 'has not exercised an option of any Phase 1 option parcels'), and no source read ties it to a specific Assessor lot: DataSF's Assessor parcels include new lots created for the 28-acre district in 2019, without street addresses, but which lot (if any) is this block's was not established. It currently sits on vacant/graded land, surface parking, or an existing industrial building slated for demolition within Brookfield's 28-acre district. Redone 2026-09-14 with a corrected, shear-free transform -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects this transform's 1-8m residual error, not a deliberate encroachment. Street-facing edge re-clipped 2026-09-17 against official curb-referenced street data.",
     "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
     "why_no_real_parcel": "No source read ties this block to a specific Assessor lot. DataSF's Assessor parcels include lots created for Brookfield's 28-acre district in 2019 (for example, Port Item 12B, Feb 2020, gives Parcel E2 as Block 4116, Lot 008), but this block's own lot was not identified, so this uses hand-traced approximate geometry instead.",
     "regulatory_context": "Flexible commercial-office/residential parcel: D4D Figure 1.5.5 (baseline) shows H2 residential and only the Maximum Office scenario shows it commercial; 90 ft max per Figure 6.4.2; six stories for commercial buildings and nine for residential (D4D Section 6.4.2). An earlier note of the same ~430,000 RSF program as Parcel H1 was removed 2026-09-29 (no source read gives an RSF figure for H1/H2). No construction-start source found."
@@ -834,7 +834,7 @@
   "open_questions": [
    "No construction start, building permit or vertical DDA for this parcel was found in any Port Commission document through the August 11, 2026 informational report, which says the developer 'has not exercised an option of any Phase 1 option parcels'.",
    "Per-parcel gross square footage and unit counts are not published in the D4D (which sets height, stories and land-use scenarios, not parcel programs); the SUD's per-parcel programs would be in the SUD ordinance (Planning Code Sec. 249.79) or the Phase Submittal, neither of which was retrieved.",
-   "Brookfield's leasing brochure reportedly gives a combined '+/- 430,000 RSF' for H1-H2 and calls H1 pure office; the brochure was not retrieved, so those statements were removed from the geometry file on 2026-09-29.",
+   "Brookfield's leasing brochure reportedly gives a combined '+/- 430,000 RSF' for H1-H2 and calls H1 pure office; the brochure was not retrieved, so those statements were removed from this record's map notes on 2026-09-29.",
    "Whether the Elevation Sky Park interim venue extends onto H2 (the Port described it as 'where 22nd Street meets the Bay' on 'Phase 2/3 sites'): unresolved; see the Parcel E3 record."
   ],
   "sources": [
@@ -934,7 +934,7 @@
     "date": "2026-08-11"
    }
   ],
-  "notes": "Approximate polygon for a real, D4D-adopted parcel -- see accuracy_caveat. Status planned: Port Item 11A (Aug 2026) says construction of Phase 1 vertical projects and parks has not moved forward.",
+  "notes": "Approximate polygon for a real, D4D-adopted parcel -- see the accuracy note. Status planned: Port Item 11A (Aug 2026) says construction of Phase 1 vertical projects and parks has not moved forward.",
   "has_record_file": true,
   "last_verified": "2026-09-29",
   "tenants": [],

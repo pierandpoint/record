@@ -37,8 +37,8 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE BOUNDARY -- derived from the numbered real-gap-fragment technique (bbox minus real streets minus already-tracked polygons) rather than a specific real parcel or building-footprint source; the owner picked this union directly off a rendered numbered map. The small morphological closing used to bridge two internal walkway gaps may slightly overstate area at those two seams. IDENTITY: the 'UCSF at Mission Bay Child Development Center' name and this building's identification as that facility are the owner's own on-the-ground read, not independently confirmed against a parcel record, building footprint, or the UCSF document itself -- the UCSF map's 'Block 18C' label carries no address or cross-reference. Marked 'existing' rather than 'complete' because the UCSF map treats this as an interim use ahead of a long-term 'Open Space' redesignation, not a finished build-out.",
-    "digitized_from": "Real block boundary from real street geometry (src/block_fit.py load_blocks(), trimmed against src/street_geometry.py's fuller street buffer)."
+    "accuracy_caveat": "APPROXIMATE BOUNDARY -- traced as the leftover open ground between the mapped street lines and neighbouring mapped shapes, rather than from a specific real parcel or building-footprint source; the pieces making up this shape were chosen and combined by hand. The small smoothing step used to bridge two internal walkway gaps may slightly overstate area at those two seams. IDENTITY: the 'UCSF at Mission Bay Child Development Center' name and this building's identification as that facility rest on Pier & Point's own on-the-ground observation, not independently confirmed against a parcel record, building footprint, or the UCSF document itself -- the UCSF map's 'Block 18C' label carries no address or cross-reference. Marked 'existing' rather than 'complete' because the UCSF map treats this as an interim use ahead of a long-term 'Open Space' redesignation, not a finished build-out.",
+    "digitized_from": "Real block boundary built from mapped street centerlines (trimmed against the full street width)."
    }
   },
   "centroid": {
@@ -98,7 +98,7 @@
     "url": "https://www.brighthorizons.com/daycare-centers/ca/san-francisco/727-nelson-rising-lane-94143"
    }
   ],
-  "notes": "Sited immediately west of Sandler Neurosciences Center. Per UCSF's own Dec 2024-updated campus map (June 2025 CAC presentation), this is Block 18C, long-term planned as Open Space, with childcare flagged as its near-term/current use -- read here as this already-operating Child Development Center. Address/operator (727 Nelson Rising Lane, Bright Horizons, since 2006) from web sources, not from a source document in this repo's own chain.",
+  "notes": "Sited immediately west of Sandler Neurosciences Center. Per UCSF's own Dec 2024-updated campus map (June 2025 CAC presentation), this is Block 18C, long-term planned as Open Space, with childcare flagged as its near-term/current use -- read here as this already-operating Child Development Center. Address/operator (727 Nelson Rising Lane, Bright Horizons, since 2006) from web sources, not from a cited source document.",
   "has_record_file": false,
   "last_verified": null,
   "tenants": [],
