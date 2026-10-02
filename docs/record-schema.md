@@ -413,7 +413,7 @@ belongs in a milestone instead). Columns: `date`, `kind` (`added`,
 `correction` or `status`), `category` (`status`, `milestone`,
 `construction`, `retail`, `open_space`, `correction`, `coverage` or
 `coming_up`), `record_id` (optional, links the row to a record page),
-`summary`, `text`, `source` and `event_date`.
+`summary`, `text`, `source`, `event_date` and `public_text`.
 
 `summary` is one complete, plain-language sentence, at most 140 characters,
 derived strictly from the row's own `text` -- no new facts, no new claims,
@@ -427,8 +427,32 @@ length, cutting mid-word) rather than a written sentence.
 this on every row, and `src/watch/apply.py` runs the same check before a
 weekly-watch proposal is ever written, dropping one that fails it. The
 changes pages (`/changes/`) show the date, a category chip, a site chip
-(derived from `record_id`, or "all sites" when blank), the record link and
-the summary; the full `text` sits behind a details disclosure.
+(derived from `record_id`, or "all sites" when blank), the record link, the
+public text and the source.
+
+`text` is the internal log: the full account of the change as it was made,
+including how it was found and which tools were involved. It stays in this
+file, is never rendered on the site, and is dropped from the copy
+`src/publish.py` writes to the public repository. `public_text` is what a
+reader sees: the same facts and the same doubts, at the same strength, in
+plain prose, with no process narration (no pass or batch names, script,
+file or field names, briefs, or who noticed what). Every public surface (the
+changes pages, a record's or site's Changes box, `api/v1/changes.json`, the
+RSS feeds, the SQLite export and the digest) shows `public_text` when it is
+set and `summary` otherwise, so `public_text` is left empty only when the
+`summary` already says everything a reader needs.
+
+`source` is the citation printed under the entry, and it must be one a
+reader can open: a public document, dataset or URL (`Publisher, date
+(URL)`, several joined by `; `). It is never a path into this repository
+(`docs/...`, `data/...`, `src/...`, `sitegen/...`) or a `.md`/`.py` file. A
+row that records Pier & Point's own decision (coverage, schema, scope)
+takes exactly `Pier & Point editorial decision` instead, and a correction
+that removed a claim no document supports takes `Pier & Point editorial
+review` (or cites the source that failed to support it, followed by "(does
+not state this)"). Either label stands alone in the field; the site renders
+it in its own style, never as a citation or a link.
+`src/validate_records.py`'s `changelog_source_problem()` enforces both.
 
 `event_date` (`YYYY`, `YYYY-MM` or `YYYY-MM-DD`) is the date of the
 real-world event `text` describes, as distinct from `date` (the day the row

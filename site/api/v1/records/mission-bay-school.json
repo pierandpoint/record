@@ -543,10 +543,10 @@
     "kind": "correction",
     "kind_label": "Correction",
     "text": "The record now gives the construction contract as about $95.4 million (SF Standard, Aug 2026) instead of $95,390,000, and says SFUSD scheduled construction to finish by January 2026 rather than stating that it was completed. The first day of school is shown as August 2026, since the readable sources give only the month. The 2022 UCSF site transfer and 1988 set-aside, the Multistudio architect credit, the Architecture 2030 claim, the attendee list at the 2022 groundbreaking and the 'first new school in 20 years' wording were removed or corrected because no cited source supports them. Sources were added for the design-build team, the Proposition A bond and the fourth-floor program.",
-    "source": "docs/audits/2026-09-accuracy-audit.md",
+    "source": "The San Francisco Standard, 2026-08-06 (https://sfstandard.com/2026/08/06/mission-bay-school-opens/); SFUSD, 2025-10-10 (https://www.sfusd.edu/announcements/2025-10-10-mission-bay-school-opens-august-2026); SFUSD, Mission Bay School profile (https://www.sfusd.edu/school/mission-bay-school); Zweig List, 2022-07-14 (https://zweiglist.com/mccarthy-and-dlr-group-partner-to-win-new-school-in-san-francisco/)",
     "sources": [
      {
-      "title": "docs/audits/2026-09-accuracy-audit.md"
+      "title": "The San Francisco Standard, 2026-08-06 (https://sfstandard.com/2026/08/06/mission-bay-school-opens/); SFUSD, 2025-10-10 (https://www.sfusd.edu/announcements/2025-10-10-mission-bay-school-opens-august-2026); SFUSD, Mission Bay School profile (https://www.sfusd.edu/school/mission-bay-school); Zweig List, 2022-07-14 (https://zweiglist.com/mccarthy-and-dlr-group-partner-to-win-new-school-in-san-francisco/)"
      }
     ],
     "category": "correction",
@@ -571,11 +571,11 @@
     "date": "2026-09-25",
     "kind": "correction",
     "kind_label": "Correction",
-    "text": "A DBI-sourced permit inside the record's own construction window keeps its place as a milestone; its cost entry's kind changes to permit_valuation (docs/record-schema.md), excluded from cost totals like a financing entry, since a permit's self-reported valuation isn't a vetted development-cost figure.",
-    "source": "docs/briefs/watch-rules.md",
+    "text": "A building permit inside the record's own construction window stays on the timeline, but its cost is now listed as a permit valuation rather than a construction cost and is left out of cost totals, like a financing entry, since a permit's self-reported valuation is not a vetted development-cost figure.",
+    "source": "Pier & Point editorial decision",
     "sources": [
      {
-      "title": "docs/briefs/watch-rules.md"
+      "title": "Pier & Point editorial decision"
      }
     ],
     "category": "correction",
@@ -600,7 +600,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "revised_cost: 102600.0",
+    "text": "A new fire water line from Owens Street to the new building was permitted for $102,600.",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202408027795",
     "sources": [
      {
@@ -629,7 +629,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "issued_date: 2024-08-02T09:31:37.000",
+    "text": "A permit was issued for a new fire water line from Owens Street to the building.",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202408027795",
     "sources": [
      {
@@ -658,7 +658,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "Chair Scott announced that she attended a ribbon-cutting event at the Mission Bay grade school near the Chase Center.",
+    "text": "OCII's chair reported attending a ribbon-cutting at the nearby Mission Bay grade school.",
     "source": "https://sfocii.org/files/minutes/2026-08/20260818_Minutes.pdf",
     "sources": [
      {
@@ -687,7 +687,7 @@
     "date": "2026-09-24",
     "kind": "added",
     "kind_label": "Added",
-    "text": "description: revise fdc from a 2 way to a 4 way detail and site plan ref pa# 2024-0802-7795 estimated_cost: 102600.0",
+    "text": "A permit to revise the fire department connection from 2-way to 4-way was estimated at $102,600.",
     "source": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202412056214",
     "sources": [
      {
@@ -716,11 +716,11 @@
     "date": "2026-09-24",
     "kind": "correction",
     "kind_label": "Correction",
-    "text": "An audit for other records with the same bug reported on 'Prequel Park (Power Station sub-area)' found this record's 2032-08 milestone (\"School is planned to grow one grade per year into a full TK-5 (with Preschool) campus\") carried status: 'planned', even though the school is already built and open (live status: complete). The site's timeline renderer treats any dated status-setting milestone as the record's status as of that date, so scrubbing the timeline past August 2032 would have shown this already-open school reverting to 'planned' (pre-construction). The milestone describes enrollment growth, not a change in construction status, so it should never have carried a status field at all -- removed it. The milestone's date, text and sources are unchanged.",
-    "source": "audit of every record for the same status/milestone mismatch pattern as prequel_park_power_station_subarea (data/records/8709025.json)",
+    "text": "A check for the same timeline bug found on 'Prequel Park (Power Station sub-area)' found that this record's August 2032 milestone ('School is planned to grow one grade per year into a full TK-5 (with Preschool) campus') was tagged 'planned', even though the school is already built and open. Scrubbing the timeline past August 2032 would have shown the open school reverting to 'planned'. The milestone describes enrollment growth, not a change in construction status, so the tag was removed; its date, text and sources are unchanged.",
+    "source": "SFUSD, Mission Bay School (https://www.sfusd.edu/school/mission-bay-school); SFUSD, Mission Bay School opens August 2026, 2025-10-10 (https://www.sfusd.edu/announcements/2025-10-10-mission-bay-school-opens-august-2026); The San Francisco Standard, 2026-08-06 (https://sfstandard.com/2026/08/06/mission-bay-school-opens/)",
     "sources": [
      {
-      "title": "audit of every record for the same status/milestone mismatch pattern as prequel_park_power_station_subarea (data/records/8709025.json)"
+      "title": "SFUSD, Mission Bay School (https://www.sfusd.edu/school/mission-bay-school); SFUSD, Mission Bay School opens August 2026, 2025-10-10 (https://www.sfusd.edu/announcements/2025-10-10-mission-bay-school-opens-august-2026); The San Francisco Standard, 2026-08-06 (https://sfstandard.com/2026/08/06/mission-bay-school-opens/)"
      }
     ],
     "category": "correction",

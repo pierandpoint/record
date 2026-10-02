@@ -58,6 +58,9 @@ img { max-width: 100%; display: block; }
 .source { font-family: var(--mono); font-size: 12px; color: var(--faint); overflow-wrap: anywhere; }
 .basis-note { display: block; font-family: var(--mono); font-size: 12px; color: var(--faint); margin-top: 2px; }
 .source::before { content: "↳ "; }
+/* an editorial label (sitegen/pages.py EDITORIAL_SOURCES) is not a citation: no arrow, no mono */
+.source.editorial { font-family: var(--sans); font-style: italic; }
+.source.editorial::before { content: none; }
 /* glossary: first-use terms (sitegen/glossary.py), on both the dark and paper backgrounds */
 abbr[title] { text-decoration: underline dotted; text-decoration-color: currentColor; text-decoration-thickness: 1px; text-underline-offset: 3px; cursor: help; }
 
