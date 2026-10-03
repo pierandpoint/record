@@ -446,14 +446,22 @@
       el.style.flexGrow = counts[el.getAttribute('data-bar')] || 0;
     });
     var label = windowLabel(m);
-    readDate.textContent = label;
-    readPhase.textContent = m < TODAY ? 'Recorded history' : m === TODAY ? 'Today' : 'Expected';
-    if (miniDate) miniDate.textContent = label + ' · ' + readPhase.textContent;
-    slider.setAttribute('aria-valuetext', label + ', ' + readPhase.textContent);
+    var phase = m < TODAY ? 'Recorded history' : m === TODAY ? 'Today' : 'Expected';
+    // readDate/readPhase (pp-date/pp-phase): part of timeline()'s own visible scrubber, absent
+    // on a page that embeds record data and a slider without the rest of that widget (/near/,
+    // docs/briefs/near-me.md) -- it wants the Status/Use/Satellite toggle paint() drives, pinned
+    // at today with no time-travel UI of its own, not a second, redundant date readout.
+    if (readDate) readDate.textContent = label;
+    if (readPhase) readPhase.textContent = phase;
+    if (miniDate) miniDate.textContent = label + ' · ' + phase;
+    slider.setAttribute('aria-valuetext', label + ', ' + phase);
     if (yearJump) yearJump.value = String(yearOptionFor(m));
   }
 
-  function stop() { if (timer) { clearInterval(timer); timer = null; } play.setAttribute('aria-pressed', 'false'); play.querySelector('span').textContent = 'Play'; }
+  // play (pp-play): also part of timeline()'s own widget, absent on /near/ for the same reason
+  // readDate/readPhase are above -- guarded the same way rather than assuming every page that
+  // embeds record data and a slider also renders the full scrubber.
+  function stop() { if (timer) { clearInterval(timer); timer = null; } if (play) { play.setAttribute('aria-pressed', 'false'); play.querySelector('span').textContent = 'Play'; } }
   function startTimer() {
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var step = (reduce ? 12 : 1) * SPEEDS[speedIdx];
@@ -464,7 +472,7 @@
     }, reduce ? 700 : 140);
   }
   slider.addEventListener('input', function () { stop(); paint(+slider.value); });
-  play.addEventListener('click', function () {
+  if (play) play.addEventListener('click', function () {
     if (timer) { stop(); return; }
     if (+slider.value >= MAX) slider.value = 0;
     play.setAttribute('aria-pressed', 'true'); play.querySelector('span').textContent = 'Pause';
@@ -531,6 +539,13 @@
         return { el: label, fontSize: parseFloat(label.getAttribute('font-size')) || 9,
                  strokeWidth: parseFloat(label.getAttribute('stroke-width')) || 3 };
       });
+      // Landmark names (sitegen/pages.py's landmark_layer(), class landmark-label): same deal as
+      // the site-name pins above -- always visible, counter-scaled so "ORACLE PARK" reads at a
+      // constant size rather than growing with the shape as the map zooms in.
+      var landmarkLabels = Array.prototype.map.call(svg.querySelectorAll('.landmark-label'), function (label) {
+        return { el: label, fontSize: parseFloat(label.getAttribute('font-size')) || 9,
+                 strokeWidth: parseFloat(label.getAttribute('stroke-width')) || 3 };
+      });
 
       function updateLabels() {
         var show = view.w < LABEL_AT;
@@ -568,6 +583,10 @@
           label.style.strokeWidth = (entry.strokeWidth * scale).toFixed(2) + 'px';
         });
         sitePins.forEach(function (entry) {
+          entry.el.style.fontSize = (entry.fontSize * scale).toFixed(2) + 'px';
+          entry.el.style.strokeWidth = (entry.strokeWidth * scale).toFixed(2) + 'px';
+        });
+        landmarkLabels.forEach(function (entry) {
           entry.el.style.fontSize = (entry.fontSize * scale).toFixed(2) + 'px';
           entry.el.style.strokeWidth = (entry.strokeWidth * scale).toFixed(2) + 'px';
         });
@@ -1281,6 +1300,11 @@
 
   var NEAR_M = 1500, CLOSE_M = 250, MAP_WIDTH_M = 400;
   var watchId = null;
+  // mapSection (build.py's #near-map-section) wraps the map-toolbar (Status/Use/Satellite),
+  // the map-frame itself and its caption as one unit -- hidden/shown together, so the toggle
+  // row and caption never show above a map that isn't there yet. mapFrame stays the inner
+  // .map-frame alone: svgs/ppSetView/ppReset all still address the map itself, not the wrapper.
+  var mapSection = document.getElementById('near-map-section');
   var mapFrame = document.getElementById('near-map-frame');
   var svgs = mapFrame ? Array.prototype.slice.call(mapFrame.querySelectorAll('.pp-map')) : [];
   var statusEl = document.getElementById('near-status');
@@ -1392,7 +1416,7 @@
 
     var p = project(lon, lat);
     var w = MAP_WIDTH_M / METRES_PER_UNIT;
-    mapFrame.hidden = false;
+    mapSection.hidden = false;
     svgs.forEach(function (svg) {
       clearOverlay(svg);
       setPinsVisible(svg, false);
@@ -1413,7 +1437,7 @@
     var nearest = ranked[0];
     closeWrap.hidden = true;
     finderSection.hidden = false;
-    mapFrame.hidden = false;
+    mapSection.hidden = false;
     var deg = nearest ? bearing(nearest.r.lat, nearest.r.lon, lat, lon) : 0;
     svgs.forEach(function (svg) {
       clearOverlay(svg);
@@ -1467,7 +1491,7 @@
     if (lastFixLat === null) {
       showStatus('Location unavailable' + (err && err.message ? ' (' + err.message + ')' : '') + ' — showing every tracked record instead.');
       resetPanels();
-      mapFrame.hidden = true;
+      mapSection.hidden = true;
       finderSection.hidden = false;
     }
     // PERMISSION_DENIED (code 1) is terminal for this watch -- the browser won't grant itself

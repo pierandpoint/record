@@ -415,8 +415,13 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
    way .btn and .zoom-controls do above -- app.js sets a filtered-out <li>'s hidden property, and
    without this it would keep rendering in the grid regardless. */
 .feed.changes li[hidden] { display: none; }
-@media (max-width: 719px) { .feed.changes li { grid-template-columns: auto 1fr; } .feed.changes .site-chip { grid-column: 2; } }
+@media (max-width: 719px) { .feed.changes li { grid-template-columns: auto 1fr; } .feed.changes .chip-group { grid-column: 2; } }
 .site-chip { align-self: start; justify-self: start; background: none; border: 1px solid var(--paper-line); color: var(--paper-faint); font-size: 12px; font-weight: 500; padding: 3px 8px; }
+/* A nearby-project record's own tag (pages.py's NEARBY_TAG) used to sit inline in the entry's
+   body text; grouped here with its site chip instead, since it's the same kind of label, not
+   part of the sentence. Column, not row: the 100px-wide site_chip column is too narrow for both
+   chips side by side without wrapping mid-word. */
+.chip-group { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
 .feed-details { margin-top: 4px; }
 .feed-details summary { cursor: pointer; font: 12px var(--mono); color: var(--paper-brass); }
 .feed-details p { margin-top: 6px; color: var(--paper-soft); font-size: 14px; }
