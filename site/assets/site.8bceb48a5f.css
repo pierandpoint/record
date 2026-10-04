@@ -452,20 +452,26 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .page-head-lead { display: flex; gap: 32px; flex-wrap: wrap-reverse; align-items: center; }
 .page-head-lead .page-head-text { flex: 1 1 360px; min-width: 0; }
 .site-lead-page { flex: 1 1 260px; max-width: 320px; margin: 0; }
-.site-lead-page img { width: 100%; height: 190px; object-fit: cover; border-radius: 12px; background: var(--paper-line); }
-.site-lead-page figcaption { margin-top: 6px; }
+.site-lead-page img { height: 190px; }
 @media (max-width: 719px) { .site-lead-page { max-width: none; } }
 .crumbs { font: 12px var(--mono); color: var(--paper-faint); display: flex; flex-wrap: wrap; gap: 8px; }
 .page-head h1 { font: 500 clamp(32px, 5vw, 56px)/1.04 var(--serif); letter-spacing: -.015em; margin: 12px 0 8px; }
 .page-head .sub { color: var(--paper-soft); font-size: 17px; }
 .feed-links { display: flex; align-items: center; gap: 14px; font-size: 14px !important; }
-.rec-status { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 14px; }
-.rec-fresh { font: 13px var(--mono); color: var(--paper-faint); }
-.rec-about { margin-top: 10px; max-width: 72ch; font-size: 14px; color: var(--paper-soft); }
-.rec-fallback { font-size: 13px; color: var(--paper-faint); }
+.page-status { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 14px; }
+.page-fresh { font: 13px var(--mono); color: var(--paper-faint); }
+.page-about { margin-top: 10px; max-width: 72ch; font-size: 14px; color: var(--paper-soft); }
+.page-fallback { font-size: 13px; color: var(--paper-faint); }
 .page-head .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
 .page-head .docs { margin-top: 16px; max-width: 72ch; }
 .light .chip { background: var(--paper-2); border-color: var(--paper-line); color: var(--paper-ink); }
+/* The gallery band and the map band (sitegen/pages.py's gallery_section()/map_band(), shared by site
+   and record pages). The map band is dark like the page itself; it only needs spacing. */
+.gallery-band { padding-top: 24px; padding-bottom: 40px; }
+.gallery-body { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; max-width: 760px; }
+.map-band { padding-top: 24px; }
+.map-legends { padding-bottom: 32px; }
+.box-row { margin-top: 40px; }
 .grid-main { display: grid; grid-template-columns: minmax(0, 1fr); gap: 48px; padding-top: 40px; padding-bottom: 72px; }
 @media (min-width: 1000px) { .grid-main { grid-template-columns: minmax(0, 1fr) 380px; } }
 .stack { display: flex; flex-direction: column; gap: 48px; min-width: 0; }
@@ -473,13 +479,12 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
    column below 1000px, and document order would then put the whole main column -- gallery,
    map, milestones, retail, costs, notes -- before "At a glance" ever shows up, since that card
    lives in the second (sidebar) column on desktop. display:contents on the two column wrappers
-   here promotes their own children (.rec-top/.rec-rest, .rec-glance/.rec-aside-rest) to be
+   here promotes their own children (.rec-rest, .rec-glance/.rec-aside-rest) to be
    direct grid-main items instead, so `order` can put "At a glance" right after the map without
    touching the desktop layout at all -- those wrappers stay real flex columns (with their own
    gap) above 1000px, where source order already matches the two visual columns. */
 @media (max-width: 999px) {
   .grid-main > .stack, .grid-main > aside { display: contents; }
-  .rec-top { order: 1; }
   .rec-glance { order: 2; }
   .rec-rest { order: 3; }
   .rec-aside-rest { order: 4; }
@@ -727,7 +732,6 @@ details.notes[open] summary .chevron::before { content: "Hide ‹"; }
 
 /* record dossiers (data/records/*.json on the record page) */
 .page-head .summary { max-width: 72ch; margin-top: 14px; font-size: 17px; line-height: 1.55; color: var(--paper-ink); }
-.page-head .intro-sources { max-width: 72ch; margin-top: 8px; font-size: 13px; }
 .page-head .aliases { font: 13px var(--mono); color: var(--paper-faint); margin-top: 6px; }
 sup.cites { font: 11px var(--mono); line-height: 0; margin-left: 2px; }
 sup.cites a { text-decoration: none; }

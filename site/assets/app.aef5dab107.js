@@ -362,6 +362,9 @@
   // colour, and a dark casing (a non-interactive twin of the shape drawn just beneath it, wider
   // by SAT_CASING_EXTRA px in total) so the stroke reads on light roofs and dark water alike.
   // The twin is created on first use and hidden again by paint() whenever satellite is off.
+  // Over the photo every parcel paints at full strength: a record page's map dims every parcel but
+  // its own (data-dim, 0.45) against the flat basemap, and that dimming left the satellite colours
+  // washed out next to a site page's. The record's own brass outline still sets it apart.
   function satPaint(n, color, width, fillOpacity, dash, opacity) {
     n.setAttribute('fill', fillOpacity ? color : 'none');
     n.setAttribute('fill-opacity', fillOpacity);
@@ -398,7 +401,7 @@
         // satellite map it is put back exactly as record_shape() rendered it.
         if (n.classList.contains('nearby')) {
           if (satOn && !!satFrame && n.closest('.map-frame') === satFrame) {
-            satPaint(n, mode === 'use' ? '#a9b3ae' : SAT_NEARBY_COLOR, SAT_STROKE, 0, '5 3', n.getAttribute('data-dim') || '1');
+            satPaint(n, mode === 'use' ? '#a9b3ae' : SAT_NEARBY_COLOR, SAT_STROKE, 0, '5 3', '1');
           } else {
             if (n.satCasing) n.satCasing.style.display = 'none';
             n.removeAttribute('fill-opacity');
@@ -448,7 +451,7 @@
       // dark casing, no status or use signal at all, dashed exactly where the shape is
       // approximate -- the photo, not the parcel colour, carries the information here.
       if (sat && mode === 'none') {
-        satPaint(n, SAT_NONE_COLOR, SAT_NONE_STROKE, 0, approx ? '4 3' : '', n.getAttribute('data-dim') || '1');
+        satPaint(n, SAT_NONE_COLOR, SAT_NONE_STROKE, 0, approx ? '4 3' : '', '1');
         return;
       }
       if (!a.s) {
@@ -470,7 +473,7 @@
         // unaffected and still apply here exactly as in Status mode.
         var uc = R.useColors[r.useCategory];
         if (sat) {
-          satPaint(n, uc, SAT_STROKE, outline ? 0 : (approx ? SAT_FILL_OPACITY_APPROX : SAT_FILL_OPACITY), approx ? '4 3' : '', n.getAttribute('data-dim') || '1');
+          satPaint(n, uc, SAT_STROKE, outline ? 0 : (approx ? SAT_FILL_OPACITY_APPROX : SAT_FILL_OPACITY), approx ? '4 3' : '', '1');
           return;
         }
         n.setAttribute('fill', outline ? 'none' : (approx ? 'url(#h-use-' + r.useCategory + ')' : uc));
@@ -481,7 +484,7 @@
         var c = R.colors[a.s];
         if (sat) {
           satPaint(n, c, SAT_STROKE, outline ? 0 : (approx ? SAT_FILL_OPACITY_APPROX : SAT_FILL_OPACITY),
-                   approx ? '4 3' : (a.expected ? '3 2' : ''), a.expected ? '0.62' : (n.getAttribute('data-dim') || '1'));
+                   approx ? '4 3' : (a.expected ? '3 2' : ''), a.expected ? '0.62' : '1');
           return;
         }
         n.setAttribute('fill', outline ? 'none' : (approx ? 'url(#h-' + a.s + ')' : c));
