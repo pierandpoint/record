@@ -79,7 +79,14 @@
   var requestedView = viewParams.get('view');
   var mode = requestedView === 'use' ? 'use' : (requestedView === 'none' && satOn ? 'none' : 'status');
   if (!toggle) mode = 'status';
-  var SAT_NONE_COLOR = '#e7e2d2';
+  var SAT_NONE_COLOR = '#ffffff';
+  var SAT_NEARBY_COLOR = '#8a63b3'; // pages.py's NEARBY_COLOR
+  // Satellite parcel paint (owner request 2026-10-04): a translucent fill of the category colour,
+  // a constant-pixel stroke in the same colour, and a dark casing under that stroke so it reads on
+  // light roofs and dark water alike. Widths are screen pixels (vector-effect: non-scaling-stroke,
+  // set on every shape by pages.py's record_shape()), so they hold at every zoom.
+  var SAT_STROKE = 2.2, SAT_NONE_STROKE = 1.5, SAT_CASING_EXTRA = 3, SAT_CASING = '#0f1618';
+  var SAT_FILL_OPACITY = 0.3, SAT_FILL_OPACITY_APPROX = 0.14;
 
   function setLegendMode(m) {
     document.querySelectorAll('[data-legend-mode]').forEach(function (el) {
@@ -159,7 +166,8 @@
   }
 
   // ---------- satellite layer (docs/briefs/satellite-layer.md) ----------
-  // The map-unit box a NAIP frame is drawn at is fixed per map (satData.box); which frame is
+  // The map-unit box a NAIP frame is drawn at is that frame's own georeferenced box
+  // (frame.box, from its returned extent -- sitegen/satellite_geo.py); which frame is
   // current follows the timeline slider, "the NAIP frame nearest to and not after the slider's
   // month" -- before the first NAIP year, the earliest frame stands in, labelled as such rather
   // than silently implied to be dated to whatever month the slider is on.
@@ -186,7 +194,7 @@
     return picked.before ? text + ' (earliest available)' : text;
   }
   // One <image> per .pp-sat-slot (the home overview carries two, its wide and narrow variants;
-  // a site page carries one) -- both ever placed at the same satData.box, since both variants
+  // a site page carries one) -- both placed at the same frame box, since both variants
   // share one underlying map-unit coordinate system (sitegen/geo.py's image_box_from_view).
   // Created once, on the first time satellite is turned on ("no imagery bytes until Satellite is
   // first turned on"); its href is only ever set to the one frame actually needed next.
@@ -199,11 +207,9 @@
     // unchanged" (the brief's own scope line).
     (satFrame || document).querySelectorAll('.pp-sat-slot').forEach(function (slot) {
       var img = document.createElementNS('http://www.w3.org/2000/svg', 'image');
-      img.setAttribute('x', satData.box[0]);
-      img.setAttribute('y', satData.box[1]);
-      img.setAttribute('width', satData.box[2]);
-      img.setAttribute('height', satData.box[3]);
+      // Placed per frame in updateSatFrame() from that frame's own georeferenced box.
       img.setAttribute('preserveAspectRatio', 'none');
+      img.setAttribute('filter', 'url(#sat-mute)');
       slot.appendChild(img);
       satData.imgEls.push(img);
     });
@@ -215,8 +221,11 @@
     if (!satOn || !satData) return;
     var picked = pickSatFrame(m);
     if (!picked) return;
+    var box = picked.frame.box;
     satData.imgEls.forEach(function (img) {
       if (img.getAttribute('href') !== picked.frame.href) img.setAttribute('href', picked.frame.href);
+      img.setAttribute('x', box[0]); img.setAttribute('y', box[1]);
+      img.setAttribute('width', box[2]); img.setAttribute('height', box[3]);
     });
     var text = satCreditText(picked);
     document.querySelectorAll('.sat-credit').forEach(function (el) { el.textContent = text; });
@@ -349,10 +358,56 @@
     }).observe(fullTimeline);
   }
 
+  // The satellite look of one shape: translucent category fill, a SAT_STROKE-px stroke in the same
+  // colour, and a dark casing (a non-interactive twin of the shape drawn just beneath it, wider
+  // by SAT_CASING_EXTRA px in total) so the stroke reads on light roofs and dark water alike.
+  // The twin is created on first use and hidden again by paint() whenever satellite is off.
+  function satPaint(n, color, width, fillOpacity, dash, opacity) {
+    n.setAttribute('fill', fillOpacity ? color : 'none');
+    n.setAttribute('fill-opacity', fillOpacity);
+    n.setAttribute('stroke', color);
+    n.setAttribute('stroke-width', width);
+    n.setAttribute('opacity', opacity);
+    if (dash) n.setAttribute('stroke-dasharray', dash); else n.removeAttribute('stroke-dasharray');
+    var cs = n.satCasing;
+    if (!cs) {
+      cs = n.cloneNode(false);
+      cs.removeAttribute('data-id'); cs.removeAttribute('data-mode');
+      cs.setAttribute('class', 'rec-casing');
+      cs.setAttribute('fill', 'none');
+      cs.setAttribute('stroke', SAT_CASING);
+      cs.setAttribute('pointer-events', 'none');
+      cs.setAttribute('aria-hidden', 'true');
+      n.parentNode.insertBefore(cs, n);
+      n.satCasing = cs;
+    }
+    cs.style.display = '';
+    cs.setAttribute('stroke-width', width + SAT_CASING_EXTRA);
+    cs.setAttribute('opacity', opacity);
+    if (dash) cs.setAttribute('stroke-dasharray', dash); else cs.removeAttribute('stroke-dasharray');
+  }
+
   function paint(m) {
     shapes.forEach(function (n) {
       var r = byId[n.getAttribute('data-id')];
-      if (!r) return;
+      if (!r) {
+        // A nearby (adjacent) project is left out of R.records on purpose, so it never takes a
+        // status or use colour -- but over the photo its plain 1.8 px dashed outline all but
+        // disappears, so on the satellite map it gets the same casing treatment in its own
+        // fixed purple (grey in Use mode, matching site.css's .mode-use .rec.nearby). Off the
+        // satellite map it is put back exactly as record_shape() rendered it.
+        if (n.classList.contains('nearby')) {
+          if (satOn && !!satFrame && n.closest('.map-frame') === satFrame) {
+            satPaint(n, mode === 'use' ? '#a9b3ae' : SAT_NEARBY_COLOR, SAT_STROKE, 0, '5 3', n.getAttribute('data-dim') || '1');
+          } else {
+            if (n.satCasing) n.satCasing.style.display = 'none';
+            n.removeAttribute('fill-opacity');
+            n.setAttribute('stroke', SAT_NEARBY_COLOR); n.setAttribute('stroke-width', '1.8');
+            n.setAttribute('stroke-dasharray', '5 3'); n.setAttribute('opacity', n.getAttribute('data-dim') || '1');
+          }
+        }
+        return;
+      }
       var a = statusAt(r, m);
       var outline = n.getAttribute('data-mode') === 'outline';
       // The hover tooltip (record_shape()'s own <title>, server-rendered once from the record's
@@ -387,25 +442,24 @@
       // colour toggle must never produce: Status, Use or None, never a mix of them on the same
       // page at once.
       var sat = satOn && !!satFrame && n.closest('.map-frame') === satFrame;
-      // Satellite's None colour (docs/briefs/satellite-layer.md): a thin neutral outline, no
-      // status or use signal at all, dashed exactly where the shape is approximate -- the whole
-      // point is that the photo, not the parcel colour, carries the information here.
+      if (!sat) { if (n.satCasing) n.satCasing.style.display = 'none'; }
+      var approx = r.confidence === 'approximate';
+      // Satellite's None colour (docs/briefs/satellite-layer.md): a thin white outline with its
+      // dark casing, no status or use signal at all, dashed exactly where the shape is
+      // approximate -- the photo, not the parcel colour, carries the information here.
       if (sat && mode === 'none') {
-        n.setAttribute('fill', 'none');
-        n.setAttribute('stroke', SAT_NONE_COLOR);
-        n.setAttribute('opacity', n.getAttribute('data-dim') || '1');
-        if (r.confidence === 'approximate') n.setAttribute('stroke-dasharray', '4 3');
+        satPaint(n, SAT_NONE_COLOR, SAT_NONE_STROKE, 0, approx ? '4 3' : '', n.getAttribute('data-dim') || '1');
         return;
       }
       if (!a.s) {
+        if (sat) { satPaint(n, '#a9b3ae', SAT_NONE_STROKE, 0, '2 2', '1'); return; }
         n.setAttribute('fill', 'rgba(169,179,174,0.06)'); n.setAttribute('stroke', '#7d8a8e'); n.setAttribute('stroke-dasharray', '2 2'); n.setAttribute('opacity', '1');
         return;
       }
-      // With satellite on (Status or Use), a parcel is an outline over the photo instead of a
-      // fill: `sat` forces fill to 'none' -- the approximate-shape hatch would draw over the photo
-      // otherwise -- and its stroke to the mode's own colour, with a dashed stroke standing in for
-      // the hatch's own "this shape is approximate" honesty marker (applied once, below, after
-      // either branch -- both read it the same way).
+      // With satellite on (Status or Use), a parcel is a translucent fill plus a casing-backed
+      // stroke over the photo instead of the flat fill: the approximate-shape hatch would draw
+      // over the photo, so a dashed stroke and a fainter fill stand in for it as the "this shape
+      // is approximate" honesty marker (satPaint()).
       if (mode === 'use' && r.useCategory) {
         // A clean single-variable map (owner decision 2026-09-28, 9th round): every parcel shows
         // its use at full strength, regardless of status -- the validated palette (dataviz skill's
@@ -415,18 +469,26 @@
         // markers (hatch, outline, dashed) are geometry/data-quality, not status, so they're
         // unaffected and still apply here exactly as in Status mode.
         var uc = R.useColors[r.useCategory];
-        n.setAttribute('fill', (outline || sat) ? 'none' : (r.confidence === 'approximate' ? 'url(#h-use-' + r.useCategory + ')' : uc));
-        n.setAttribute('stroke', sat ? uc : ((outline || r.confidence === 'approximate') ? uc : '#0f1618'));
+        if (sat) {
+          satPaint(n, uc, SAT_STROKE, outline ? 0 : (approx ? SAT_FILL_OPACITY_APPROX : SAT_FILL_OPACITY), approx ? '4 3' : '', n.getAttribute('data-dim') || '1');
+          return;
+        }
+        n.setAttribute('fill', outline ? 'none' : (approx ? 'url(#h-use-' + r.useCategory + ')' : uc));
+        n.setAttribute('stroke', (outline || approx) ? uc : '#0f1618');
         if (!outline) n.setAttribute('stroke-width', '0.6');
         n.setAttribute('opacity', n.getAttribute('data-dim') || '1');
       } else {
         var c = R.colors[a.s];
-        n.setAttribute('fill', (outline || sat) ? 'none' : (r.confidence === 'approximate' ? 'url(#h-' + a.s + ')' : c));
-        n.setAttribute('stroke', sat ? c : ((outline || r.confidence === 'approximate') ? c : '#0f1618'));
+        if (sat) {
+          satPaint(n, c, SAT_STROKE, outline ? 0 : (approx ? SAT_FILL_OPACITY_APPROX : SAT_FILL_OPACITY),
+                   approx ? '4 3' : (a.expected ? '3 2' : ''), a.expected ? '0.62' : (n.getAttribute('data-dim') || '1'));
+          return;
+        }
+        n.setAttribute('fill', outline ? 'none' : (approx ? 'url(#h-' + a.s + ')' : c));
+        n.setAttribute('stroke', (outline || approx) ? c : '#0f1618');
         n.setAttribute('opacity', a.expected ? '0.62' : (n.getAttribute('data-dim') || '1'));
         if (a.expected) n.setAttribute('stroke-dasharray', '3 2');
       }
-      if (sat && r.confidence === 'approximate') n.setAttribute('stroke-dasharray', '4 3');
     });
     updateSatFrame(m);
     var counts = {};

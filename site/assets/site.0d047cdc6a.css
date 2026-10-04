@@ -131,23 +131,19 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
    - .pp-basemap-detail (pages.py's basemap_uses()) is the flat land/building/street fill; hidden
      once a real photo is standing in for it. The plain water rect it sits inside stays visible as
      a fallback background for whatever a zoomed-out pan reveals past the photo's own extent.
-   - Every parcel's fill is already set to 'none' by app.js's paint() while satellite is on (an
-     "at most a very light fill" that settled on none, over a photo -- see paint()'s own note);
-     what CSS adds is a dark-edge-then-light-glow halo around its stroke. Checked with the
-     dataviz skill's validate_palette.js, `--surface` set to a sampled dark imagery tone
-     (#1e4743, shadowed water/vegetation) and a sampled light one (#e3e2d1, sunlit concrete/
-     roofing) from a decoded NAIP frame: every status and use colour here reads a plain WCAG
-     contrast in the 1.7-2.9:1 range against at least one of the two -- a flat outline alone is
-     not reliably legible on a photo, which is exactly why the brief calls for a halo rather than
-     a bare outline. A single-colour halo only helps on the tone it contrasts with; stacking a
-     close dark edge with a wider, softer light glow (two zero-offset drop-shadows, applied in
-     that order so the second's shadow traces the first's already-widened silhouette) gives every
-     outline an edge that reads against a dark patch of the photo *and* a light one, the map
-     equivalent of the "visible labels" relief the skill calls for on a plain contrast WARN.
+   - While satellite is on, the photo is muted by the #sat-mute SVG filter (pages.py, applied to
+     the <image> by app.js) and each parcel is painted by app.js's satPaint(): a translucent fill
+     of its category colour, a 2.2 px stroke in that colour and a dark casing (.rec-casing, a
+     non-interactive twin drawn just beneath it, 3 px wider in total). All widths are screen
+     pixels (vector-effect: non-scaling-stroke on every shape), so they hold at any zoom. The
+     casing replaces the earlier drop-shadow halo: it reads on light roofs and dark water alike.
+     Plain contrast of each status/use colour against the muted photo is 1.1-5.4:1 (measured
+     2026-10-04, docs/satellite-imagery.md addendum); the casing, not the colour alone, carries
+     legibility.
    - .mode-none is the None colour option: reachable only while .mode-sat is also set (view_
      toggle()'s own None segment stays hidden otherwise), a thin neutral outline with no colour
-     signal at all -- paint() sets its stroke colour directly (SAT_NONE_COLOR), so this rule only
-     needs the shared halo above, already covered by .mode-sat .rec.
+     signal at all -- paint() sets its stroke colour directly (SAT_NONE_COLOR, white) and the shared
+     casing above carries it.
    - .pp-sat-slot itself must hide when satellite is off, not just .pp-basemap-detail: the photo's
      <image> sits above the plain WATER rect but below the land/building/street fill (pages.py's
      basemap_uses()), so that fill only ever covers it where there's built land -- water and any
@@ -155,7 +151,7 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
      turned off, since app.js never removes the <image> itself, only toggles this class. */
 .pp-map:not(.mode-sat) .pp-sat-slot { display: none; }
 .pp-map.mode-sat .pp-basemap-detail { display: none; }
-.pp-map.mode-sat .rec { filter: drop-shadow(0 0 1.2px rgba(0,0,0,.92)) drop-shadow(0 0 1.6px rgba(255,255,255,.65)); }
+.rec-casing { pointer-events: none; }
 /* Press-and-hold peek (docs/briefs/satellite-layer.md): holding the Satellite chip, or a
    stationary long-press on the map itself, hides every overlay -- parcels, labels, tenant
    markers -- so the photo shows clean, restored the instant the hold ends. .pp-peeking is toggled
