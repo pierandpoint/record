@@ -547,6 +547,16 @@
                  strokeWidth: parseFloat(label.getAttribute('stroke-width')) || 3 };
       });
 
+      // The numbered site badges themselves (overview_map()'s <a class="site-pin">: a circle and
+      // its number), not just their name labels above: sized to read at the overview's own fitted
+      // scale, they ballooned into a giant disc once the map zoomed in. Counter-scaled about each
+      // badge's own centre by the same view.w / base.w factor, so the badge holds a constant
+      // on-screen size while it stays pinned to the site it marks.
+      var pinBadges = Array.prototype.map.call(svg.querySelectorAll('a.site-pin'), function (a) {
+        var c = a.querySelector('circle');
+        return { el: a, cx: c ? parseFloat(c.getAttribute('cx')) || 0 : 0, cy: c ? parseFloat(c.getAttribute('cy')) || 0 : 0 };
+      });
+
       function updateLabels() {
         var show = view.w < LABEL_AT;
         var scale = view.w / base.w;
@@ -589,6 +599,10 @@
         landmarkLabels.forEach(function (entry) {
           entry.el.style.fontSize = (entry.fontSize * scale).toFixed(2) + 'px';
           entry.el.style.strokeWidth = (entry.strokeWidth * scale).toFixed(2) + 'px';
+        });
+        pinBadges.forEach(function (entry) {
+          entry.el.setAttribute('transform', 'translate(' + entry.cx + ' ' + entry.cy + ') scale(' + scale.toFixed(4) +
+            ') translate(' + (-entry.cx) + ' ' + (-entry.cy) + ')');
         });
       }
 
@@ -764,6 +778,11 @@
           var shape = svg.querySelector('.rec[data-id="' + id + '"]');
           var bb = shape && shape.getBBox ? shape.getBBox() : null;
           var bboxFit = (bb && bb.width && bb.height) ? Math.min(bb.width, bb.height) / (Math.max(cols, rows) + 0.6) : Infinity;
+          // overview_map() (/near/) draws its shapes inside a rotate(-90) group, so getBBox()'s
+          // width/height are the parcel's on-screen height/width -- read the right side for the
+          // "wide enough on screen to split" test. bboxFit above takes the min of the two, which
+          // a 90-degree turn leaves unchanged.
+          var bboxScreenW = bb ? (DATA.rotated ? bb.height : bb.width) : 0;
           var markers = d.tenants.map(function (t, i) {
             var g = svgEl('g');
             g.setAttribute('class', 'tenant-marker');
@@ -814,7 +833,7 @@
           markersLayer.appendChild(pillG);
           var pill = { el: pillG, rect: rect, text: text, ox: 0, oy: 0, hide: false, mergedCount: n };
           var p = { id: id, cx: d.cx, cy: d.cy, count: n, cols: cols, rows: rows, record: d.record, split: false,
-                   bboxWidth: bb ? bb.width : 0, bboxFit: bboxFit, markers: markers, pill: pill };
+                   bboxWidth: bboxScreenW, bboxFit: bboxFit, markers: markers, pill: pill };
           pillG.addEventListener('click', function () { zoomToParcel(p); });
           pillG.addEventListener('keydown', function (e) {
             if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); zoomToParcel(p); }
@@ -953,7 +972,10 @@
           if (legendCaption) legendCaption.hidden = !on;
           if (!on) closeCard();
         }
-        tenantChip.addEventListener('click', function () { setTenantsOn(tenantChip.getAttribute('aria-pressed') !== 'true'); });
+        // Each map flips from its own state, not the chip's aria-pressed: /near/ carries two maps
+        // (wide and compact) sharing the one chip, and the second listener would otherwise read
+        // the first one's already-flipped value and switch its own map back off.
+        tenantChip.addEventListener('click', function () { setTenantsOn(!svg.classList.contains('tenants-on')); });
 
         updateTenantMarkers = function () {
           var factor = view.w / base.w;
