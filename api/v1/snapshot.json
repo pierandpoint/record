@@ -2,7 +2,7 @@
  "snapshot_version": "0",
  "api_version": "0",
  "date": "2026-10-06",
- "commit": "e64fd3867310efedde5da1a2865c8ace9c57e129",
+ "commit": "dd8b8689879de43c96018b3ff14b36afe2ad763e",
  "tree": "clean",
  "records_sha256": "b7727269499a0e9d219db7590d03e972eca74601914525840a60857e532e8dd0",
  "llms_sha256": "bb5d1f831633a361c11e7d63ea0715969083b643dc584791c74a07a8904b1176",
@@ -25,8 +25,8 @@
    "bytes": 1164118
   },
   "api/v1/feed.xml": {
-   "sha256": "46104c0f938189366a9afd2c6c2f1406c359a0bf7f9fc1b28ee87c71f95bc4ab",
-   "bytes": 157237
+   "sha256": "c4a76463a4c6e4da7a2ae940ff3748681134a1e76a7832b8cd9d4e1bb9389e01",
+   "bytes": 277131
   },
   "api/v1/pierandpoint.sqlite": {
    "sha256": "8f8407ee521456464e60b533fe5225e85ca019b0f6b3224ce9b1f25b1cceabb2",
@@ -45,6 +45,15 @@
  "note": "commit is git HEAD when this build ran, in the private pipeline repository; it is not itself published. records_sha256 and llms_sha256 are the hashes pierandpoint/record's attest workflow signs on publish; reproduce them by rebuilding this commit with PP_TODAY=date.",
  "signature": null,
  "recent_publishes": [
+  {
+   "date": "2026-10-06",
+   "commit": "1b5cc5cbf05828ab8ed558d6571e124ccc98027e",
+   "tree": "516cc9bf1415600fa594d69e18eb48ba9df66b32",
+   "records_sha256": "b7727269499a0e9d219db7590d03e972eca74601914525840a60857e532e8dd0",
+   "llms_sha256": "bb5d1f831633a361c11e7d63ea0715969083b643dc584791c74a07a8904b1176",
+   "records": "183",
+   "bundle": "https://github.com/pierandpoint/record/blob/main/attestations/2026-10-06-1b5cc5c.sigstore.json"
+  },
   {
    "date": "2026-10-06",
    "commit": "9acce5ae293be127d51119eba1b0253815d3b0f9",
@@ -80,15 +89,6 @@
    "llms_sha256": "281114dcd796bde6e48e41a1dab758331e0ce8c20f5658c6b1911798de4a3fcd",
    "records": "183",
    "bundle": "https://github.com/pierandpoint/record/blob/main/attestations/2026-10-05-ac194d1.sigstore.json"
-  },
-  {
-   "date": "2026-10-04",
-   "commit": "be24f7267907e019f3a3cebc366e7ce828766c84",
-   "tree": "fd82ae681f59d6110f3c04cb923fd77be5f1180a",
-   "records_sha256": "b9b2adf78891684e7594226148418af891e3dedf19f97413ba3841edd641c3b0",
-   "llms_sha256": "e5a87391fb23e64a3ab3e0a884a598a8277864fce4e053f1242405f24d9eb660",
-   "records": "183",
-   "bundle": "https://github.com/pierandpoint/record/blob/main/attestations/2026-10-04-be24f72.sigstore.json"
   }
  ],
  "recent_publishes_status": "ok"

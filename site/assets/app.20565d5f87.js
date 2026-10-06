@@ -505,7 +505,14 @@
       }
     });
     document.querySelectorAll('[data-count]').forEach(function (el) {
-      el.textContent = counts[el.getAttribute('data-count')] || 0;
+      var n = counts[el.getAttribute('data-count')] || 0;
+      el.textContent = n;
+      // A map legend lists only what is on that map right now (design review B5): a row with a
+      // count of 0 ("Being removed 0", "No dated status yet 0") is hidden, and comes back if the
+      // timeline moves to a date where it applies. The home page's PROGRESS block is not a map
+      // legend and keeps its zeros.
+      var row = el.parentNode;
+      if (row && row.tagName === 'SPAN' && el.closest('.legend[data-legend-mode]')) row.hidden = n === 0;
     });
     document.querySelectorAll('[data-bar]').forEach(function (el) {
       el.style.flexGrow = counts[el.getAttribute('data-bar')] || 0;
@@ -1420,6 +1427,7 @@
   var farList = document.getElementById('near-far-list');
   var farLine = document.getElementById('near-far-line');
   var finderSection = document.getElementById('near-finder');
+  var urlQuery = (new URLSearchParams(window.location.search).get('q') || '').trim();
 
   function svgEl(tag) { return document.createElementNS('http://www.w3.org/2000/svg', tag); }
 
@@ -1517,7 +1525,8 @@
     furtherWrap.hidden = further.length === 0;
     closeWrap.hidden = false;
     farLine.hidden = true;
-    finderSection.hidden = true;
+    // Someone who came here from the header search wants those results, location or not.
+    finderSection.hidden = !urlQuery;
 
     var p = project(lon, lat);
     var w = MAP_WIDTH_M / METRES_PER_UNIT;
@@ -1643,6 +1652,13 @@
   }
 })();
 
+// The header search keeps what was typed after it submits, on /near/ (where ?q= is read).
+(function () {
+  var input = document.getElementById('header-search-q');
+  var q = new URLSearchParams(window.location.search).get('q');
+  if (input && q && window.location.pathname === '/near/') input.value = q;
+})();
+
 // /near/'s finder (docs/briefs/near-me.md): search + site/status filters + sort, over the
 // server-rendered, fully crawlable #finder-list above -- degrades to that plain list with
 // JavaScript off. Its own IIFE, independent of the geolocation one above.
@@ -1657,6 +1673,10 @@
   var resetBtn = document.getElementById('finder-reset');
   var emptyNote = document.getElementById('finder-empty');
   var STATUS_ORDER = ['complete', 'under_construction', 'planned', 'existing', 'being_removed'];
+  // The header search (sitegen/pages.py's HEADER_SEARCH) submits here as /near/?q=...: read it on
+  // load, so the finder opens already filtered. Name, parcel (the record id) and address all match.
+  var initialQ = new URLSearchParams(window.location.search).get('q');
+  if (initialQ) search.value = initialQ;
 
   function apply() {
     var q = (search.value || '').trim().toLowerCase();
@@ -1665,7 +1685,8 @@
     items.forEach(function (li) {
       var ok = (!site || li.getAttribute('data-site') === site) &&
         (!status || li.getAttribute('data-status') === status) &&
-        (!q || li.getAttribute('data-name').indexOf(q) !== -1 || li.getAttribute('data-address').indexOf(q) !== -1);
+        (!q || li.getAttribute('data-name').indexOf(q) !== -1 || li.getAttribute('data-address').indexOf(q) !== -1 ||
+          (li.getAttribute('data-id') || '').toLowerCase().indexOf(q) !== -1);
       li.hidden = !ok;
       if (ok) shown++;
     });
@@ -1758,7 +1779,8 @@
     var caption = a.closest('figure').querySelector('figcaption');
     imgEl.src = a.getAttribute('href');
     imgEl.alt = thumb ? thumb.getAttribute('alt') || '' : '';
-    capEl.innerHTML = caption ? caption.innerHTML : '';
+    // data-full: a figure whose visible credit is the short form (site page lead) keeps the full one here.
+    capEl.innerHTML = caption ? (caption.getAttribute('data-full') || caption.innerHTML) : '';
     if (countEl) countEl.textContent = (current + 1) + ' of ' + frames.length;
   }
   // Prev/next/swipe/keyboard all step through the filter, not straight to current+/-1: skips any
