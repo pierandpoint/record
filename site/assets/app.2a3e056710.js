@@ -1209,7 +1209,10 @@
 (function () {
   document.querySelectorAll('.box[data-total]').forEach(function (box) {
     var count = parseInt(box.getAttribute('data-total'), 10) || 0;
-    var lead = box.hasAttribute('data-lead');
+    // data-lead: how many of the list's own first items stay visible while collapsed (1 for Changes
+    // and Costs; Records keeps 3).
+    var leadCount = parseInt(box.getAttribute('data-lead'), 10) || 0;
+    var lead = leadCount > 0;
     var list = box.querySelector('.box-list');
     if (!list) return;
     var items = Array.prototype.slice.call(list.querySelectorAll('[data-box-item]'));
@@ -1217,8 +1220,14 @@
     // (pages.py's lead_entry() skips correction/coverage rows, which can otherwise sort more
     // recent than the row actually worth leading with) -- Costs has no such row to skip, so its
     // already-sorted-newest-first list's own first item stands in.
-    var leadEl = list.querySelector('[data-box-lead]') || items[0];
+    var leadEls = list.querySelector('[data-box-lead]') ? [list.querySelector('[data-box-lead]')] : items.slice(0, leadCount);
     var tail = list.querySelector('[data-box-tail]');
+    // A preview (a site's Records box, pages.py's record_preview_list()): its own short list of
+    // example rows, shown instead of the full list while collapsed with no chip selected. It ships
+    // hidden, so with JavaScript off only the full list shows.
+    var preview = list.querySelector('[data-box-preview]');
+    var previewCount = preview ? preview.querySelectorAll('li').length : 0;
+    var allLabel = box.getAttribute('data-all-label') || '';
     var bar = box.querySelector('.bx-bar');
     var status = box.querySelector('[data-box-status]');
     var chips = box.querySelector('.bx-chips');
@@ -1251,12 +1260,18 @@
     }
     function render() {
       var shown = 0;
+      var previewing = !!preview && !activeCat && !expanded;
+      if (preview) preview.hidden = !previewing;
+      if (previewing) shown = previewCount;
       items.forEach(function (el) {
         var ok = activeCat ? el.getAttribute('data-category') === activeCat
-                            : (expanded || (lead && el === leadEl));
+                            : (expanded || (!previewing && lead && leadEls.indexOf(el) !== -1));
         el.hidden = !ok;
         if (ok && !isClosed(el)) shown++;
       });
+      // The full list's own top border would sit under the preview as an empty rule.
+      var fullList = list.querySelector('#' + box.id + '-list');
+      if (fullList && preview) fullList.hidden = previewing;
       if (tail) tail.hidden = !(expanded || activeCat);
       // The Closed group's own count follows the same filter as everything else (previously it
       // stayed a static server-rendered number regardless of which chip was active): shown with
@@ -1277,12 +1292,15 @@
         var left, right;
         if (activeCat) {
           left = itemCount(activeCat) + ' ' + chipLabel(activeCat) + ' of ' + count;
-          right = 'Show all ' + count;
+          right = allLabel || 'Show all ' + count;
         } else if (expanded) {
           left = 'All ' + count;
           right = 'Show less ▴';
+        } else if (previewing) {
+          left = previewCount + ' example' + (previewCount === 1 ? '' : 's') + ' of ' + count;
+          right = (allLabel || 'Show all ' + count) + ' ▾';
         } else if (lead) {
-          left = '+' + (count - 1) + ' earlier';
+          left = '+' + (count - leadEls.length) + (leadCount > 1 ? ' more' : ' earlier');
           right = 'Show all ▾';
         } else {
           left = 'All ' + count;

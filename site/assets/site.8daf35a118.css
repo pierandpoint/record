@@ -479,15 +479,15 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
    column below 1000px, and document order would then put the whole main column -- gallery,
    map, milestones, retail, costs, notes -- before "At a glance" ever shows up, since that card
    lives in the second (sidebar) column on desktop. display:contents on the two column wrappers
-   here promotes their own children (.rec-rest, .rec-glance/.rec-aside-rest) to be
+   here promotes their own children (.page-main, .page-glance/.page-aside-rest) to be
    direct grid-main items instead, so `order` can put "At a glance" right after the map without
    touching the desktop layout at all -- those wrappers stay real flex columns (with their own
    gap) above 1000px, where source order already matches the two visual columns. */
 @media (max-width: 999px) {
   .grid-main > .stack, .grid-main > aside { display: contents; }
-  .rec-glance { order: 2; }
-  .rec-rest { order: 3; }
-  .rec-aside-rest { order: 4; }
+  .page-glance { order: 2; }
+  .page-main { order: 3; }
+  .page-aside-rest { order: 4; }
 }
 .card { background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 14px; }
 .card h2 { font: 500 12px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--paper-brass); }
@@ -496,7 +496,7 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .facts dd { margin: 0; overflow-wrap: anywhere; }
 .sources { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; overflow-wrap: anywhere; }
 .cite { background: var(--paper-ink); color: var(--text); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 12px; }
-.cite h2 { font: 500 12px var(--mono); letter-spacing: .12em; color: var(--brass); }
+.cite h2 { font: 500 12px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--brass); }
 .cite code { font: 12px var(--mono); background: var(--ink); color: var(--soft); padding: 10px 12px; border-radius: 6px; overflow-wrap: anywhere; }
 .cite p { font-size: 14px; color: var(--text-2); }
 .gallery-lead, .gallery-thumbs { display: grid; gap: 16px; }
@@ -564,6 +564,17 @@ details.notes h3 { font: 600 13px var(--mono); color: var(--paper-soft); margin:
 .record-list .what { display: flex; align-items: center; gap: 10px; font-weight: 500; min-width: 0; }
 .record-list .what a { overflow-wrap: anywhere; }
 .record-list .detail { font: 12px var(--mono); color: var(--paper-faint); text-align: right; }
+/* Below 720px the name gets the whole row and the status · shape · use line sits under it: side by
+   side, the detail column took its full width and squeezed the name to a letter or two per line. */
+@media (max-width: 719px) {
+  .record-list li { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .record-list .detail { text-align: left; padding-left: 20px; }
+}
+.box-intro { margin: 10px 0 0; font-size: 14px; color: var(--paper-soft); }
+.record-preview[hidden], .record-list[hidden] { display: none; }
+.record-preview .thumb.thumb-none { display: inline-block; background: none; }
+.record-preview .detail { display: flex; align-items: center; gap: 6px; padding-left: 0; }
+.record-preview .detail .dot { width: 8px; height: 8px; flex-shrink: 0; }
 .status-group + .status-group { margin-top: 32px; }
 .status-group h3 { display: flex; align-items: center; gap: 10px; font: 600 15px var(--sans); margin-bottom: 10px; }
 .status-group h3 .count { font: 13px var(--mono); color: var(--paper-faint); font-weight: 400; }
@@ -593,7 +604,7 @@ details.notes h3 { font: 600 13px var(--mono); color: var(--paper-soft); margin:
    padding instead, which doesn't collapse. */
 .box-pair { display: grid; grid-template-columns: 1fr; gap: 40px; }
 @media (min-width: 900px) { .box-pair { grid-template-columns: 1fr 1fr; gap: 56px; } }
-.tenant[hidden], .feed li[hidden], .tenant-group[hidden], .sources li[hidden], .costs tr[hidden] { display: none; }
+.tenant[hidden], .feed li[hidden], .record-list li[hidden], .tenant-group[hidden], .sources li[hidden], .costs tr[hidden] { display: none; }
 
 /* The chip row (docs/briefs/box-pattern.md): single-select category filter, one pill per
    category that actually has entries. Server-rendered as plain text (.bx-chip span); app.js
