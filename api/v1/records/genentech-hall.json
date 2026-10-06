@@ -29,11 +29,12 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "UCSF's first Mission Bay building, opened January 2003 at 600 16th St, housing programs in structural and chemical biology, molecular, cell and developmental biology, and the Molecular Design Institute.",
+  "summary": "UCSF's first Mission Bay building, opened in 2003 at 600 16th St, housing programs in structural and chemical biology, molecular, cell and developmental biology, and the Molecular Design Institute.",
   "summary_sources": [
    "src-tradeline-2003",
    "src-ucsf-history-1990s",
-   "src-osm-genentech"
+   "src-osm-genentech",
+   "src-gladstone-history"
   ],
   "shape": {
    "kind": "approximate",
@@ -148,14 +149,28 @@
     "relation": "tracked"
    },
    {
-    "date": "2003-01",
+    "date": "2003",
     "date_label": "~2003",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Genentech Hall opens, UCSF's first Mission Bay building",
+    "text": "Genentech Hall opens, UCSF's first Mission Bay building (UCSF's history page gives 2003; Gladstone's history says UCSF's first Mission Bay building opened in 2003); the January month rests on a Tradeline page that could not be re-read",
     "expected": false,
     "approximate": true,
     "sources": [
+     {
+      "id": "src-ucsf-history-1990s",
+      "title": "1990-2009",
+      "publisher": "A History of UCSF (UCSF-affiliated historical archive)",
+      "url": "https://history.library.ucsf.edu/1990.html",
+      "accessed": "2026-10-06"
+     },
+     {
+      "id": "src-gladstone-history",
+      "title": "Our History",
+      "publisher": "Gladstone Institutes",
+      "url": "https://gladstone.org/about/history",
+      "accessed": "2026-10-06"
+     },
      {
       "id": "src-tradeline-2003",
       "title": "UCSF Mission Bay Genentech Hall Now Open",
@@ -165,7 +180,7 @@
       "accessed": "2026-09-18"
      }
     ],
-    "source": "Tradeline Inc. (trade press), 2003-02",
+    "source": "A History of UCSF (UCSF-affiliated historical archive); Gladstone Institutes; Tradeline Inc. (trade press), 2003-02",
     "origin": "record",
     "category": "status",
     "category_label": "Status",
@@ -185,19 +200,19 @@
     "relation": "tracked"
    },
    {
-    "date": "2003-01",
+    "date": "2003",
     "date_label": "~2003",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Genentech Hall opens -- UCSF's first Mission Bay building",
+    "text": "Genentech Hall opens -- UCSF's first Mission Bay building (2003 per UCSF's history page and Gladstone's history; the January month is not confirmed)",
     "expected": false,
     "approximate": true,
     "sources": [
      {
-      "title": "https://www.tradelineinc.com/news/2003-2/ucsf-mission-bay-genentech-hall-now-open; https://history.library.ucsf.edu/1990.html"
+      "title": "https://history.library.ucsf.edu/1990.html; https://gladstone.org/about/history; https://www.tradelineinc.com/news/2003-2/ucsf-mission-bay-genentech-hall-now-open"
      }
     ],
-    "source": "https://www.tradelineinc.com/news/2003-2/ucsf-mission-bay-genentech-hall-now-open; https://history.library.ucsf.edu/1990.html",
+    "source": "https://history.library.ucsf.edu/1990.html; https://gladstone.org/about/history; https://www.tradelineinc.com/news/2003-2/ucsf-mission-bay-genentech-hall-now-open",
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
@@ -218,6 +233,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-06",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Genentech Hall's January 2003 opening month came from a page that could not be re-read; the opening is now dated 2003, as UCSF's own history page gives it.",
+    "source": "https://history.library.ucsf.edu/1990.html; https://gladstone.org/about/history",
+    "sources": [
+     {
+      "title": "https://history.library.ucsf.edu/1990.html; https://gladstone.org/about/history"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "ucsf_genentech_hall",
+     "slug": "genentech-hall",
+     "name": "Genentech Hall",
+     "permalink": "https://pierandpoint.org/parcels/genentech-hall/",
+     "api": "https://pierandpoint.org/api/v1/records/genentech-hall.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-29",
     "kind": "correction",
@@ -366,7 +410,7 @@
     "title": "1990-2009",
     "publisher": "A History of UCSF (UCSF-affiliated historical archive)",
     "url": "https://history.library.ucsf.edu/1990.html",
-    "accessed": "2026-09-18"
+    "accessed": "2026-10-06"
    },
    {
     "id": "src-clark-genentech",
@@ -406,6 +450,13 @@
     "date": "2025-06-12",
     "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
     "accessed": "2026-09-29"
+   },
+   {
+    "id": "src-gladstone-history",
+    "title": "Our History",
+    "publisher": "Gladstone Institutes",
+    "url": "https://gladstone.org/about/history",
+    "accessed": "2026-10-06"
    }
   ],
   "notes": "OCII plan block 24A/B. UCSF's first Mission Bay building. ~400,000-435,000 sq ft (sources vary), five stories. Architect SmithGroup. Opened January 2003 (a Jan 8, 2003 first-researcher-moved-in anecdote and a Feb 2003 trade-press \"now open\" piece support the month; not an official UCSF dedication-date citation).",

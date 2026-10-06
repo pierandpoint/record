@@ -90,7 +90,7 @@
       "publisher": "SFGate",
       "date": "2024-09",
       "url": "https://discoveryink.wordpress.com/2024/09/08/crumbling-sf-pier-closing-down-forcing-iconic-businesses-to-move/",
-      "accessed": "2026-09-28"
+      "accessed": "2026-10-06"
      }
     ],
     "source": "SFGate, 2024-09",
@@ -113,27 +113,35 @@
     "relation": "adjacent"
    },
    {
-    "date": "2024-12",
-    "date_label": "~2024",
+    "date": "2024-07-15",
+    "date_label": "Jul 15, 2024",
     "status": null,
     "status_label": null,
-    "text": "Port announces Pier 54 will permanently close at the end of 2024, displacing its tenant businesses.",
+    "text": "Port sends Pier 54's tenants formal written notice of the pier's closure; its August 9, 2024 memo says the 11 tenants will need to vacate by the end of 2024. SFGate reported the closure in September 2024.",
     "expected": false,
-    "approximate": true,
+    "approximate": false,
     "sources": [
+     {
+      "id": "src-port-pier54-memo-2024-08",
+      "title": "Pier 54 Tenant Relocation and Rental Assistance Program (Port Commission Item 12A, August 13, 2024)",
+      "publisher": "Port of San Francisco",
+      "date": "2024-08-09",
+      "url": "https://www.sfport.com/files/2024-08/081324_12a_pier_54_tenant_relocation_rental_assistance_program_final.pdf",
+      "accessed": "2026-10-06"
+     },
      {
       "id": "src-sfgate-2024-09",
       "title": "Crumbling SF pier closing down, forcing iconic businesses to move",
       "publisher": "SFGate",
       "date": "2024-09",
       "url": "https://discoveryink.wordpress.com/2024/09/08/crumbling-sf-pier-closing-down-forcing-iconic-businesses-to-move/",
-      "accessed": "2026-09-28"
+      "accessed": "2026-10-06"
      }
     ],
-    "source": "SFGate, 2024-09",
+    "source": "Port of San Francisco, 2024-08-09; SFGate, 2024-09",
     "origin": "record",
-    "category": "retail",
-    "category_label": "Retail",
+    "category": "milestone",
+    "category_label": "Milestone",
     "record": {
      "id": "pier_54",
      "slug": "pier-54",
@@ -154,8 +162,8 @@
     "date_label": "Feb 2026",
     "status": null,
     "status_label": null,
-    "text": "Port's draft Five-Year Capital Improvement Program (FY2027-31) budgets a \"Pier 54 Shed Demolition\" line item totaling $2.0M: $500,000 in FY2026-27 and $1,500,000 in FY2027-28. No line item for full substructure removal appears in the same document.",
-    "expected": true,
+    "text": "Port's draft Five-Year Capital Improvement Program (FY2027-31) budgets a \"Pier 54 Shed Demolition\" line item totaling $2.0M: $500,000 in FY2026-27 and $1,500,000 in FY2027-28. No line item for full substructure removal appears in the same document, and no source read says the demolition has started.",
+    "expected": false,
     "approximate": false,
     "sources": [
      {
@@ -164,14 +172,14 @@
       "publisher": "Port of San Francisco",
       "date": "2026-02",
       "url": "https://www.sfport.com/sites/default/files/2026-02/item_10a.5_attachment_v_fy_2027-31_five-year_cip_draft.pdf",
-      "accessed": "2026-09-28",
+      "accessed": "2026-10-06",
       "overview": true
      }
     ],
     "source": "Port of San Francisco, 2026-02",
     "origin": "record",
-    "category": "coming_up",
-    "category_label": "Coming up",
+    "category": "milestone",
+    "category_label": "Milestone",
     "record": {
      "id": "pier_54",
      "slug": "pier-54",
@@ -189,6 +197,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-06",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Pier 54's closure notice was dated December 2024; the Port's own memo shows tenants were formally notified on July 15, 2024, so it is now dated then. The February 2026 draft capital plan entry no longer shows as an upcoming event.",
+    "source": "https://www.sfport.com/files/2024-08/081324_12a_pier_54_tenant_relocation_rental_assistance_program_final.pdf",
+    "sources": [
+     {
+      "title": "https://www.sfport.com/files/2024-08/081324_12a_pier_54_tenant_relocation_rental_assistance_program_final.pdf"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier_54",
+     "slug": "pier-54",
+     "name": "Pier 54",
+     "permalink": "https://pierandpoint.org/parcels/pier-54/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-54.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "adjacent",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-28",
     "kind": "added",
@@ -222,6 +259,7 @@
   "images": [],
   "open_questions": [
    "No funded plan yet for removing the pier's substructure beyond the shed demolition.",
+   "Corrected 2026-10-06 (accuracy audit, October 2026): the closure-announcement milestone was dated December 2024, but the Port's August 9, 2024 memo says formal written notice went to tenants on July 15, 2024 and SFGate reported the closure in September 2024; it is now dated July 15, 2024. The February 2026 draft CIP milestone was flagged expected although the draft was published then; the flag was removed. Whether the shed demolition has started, and so whether 'being removed' is the right map status, is for the owner to confirm: no source read says it has.",
    "That the Port planned to fence the pier to prevent vandalism is reported only in a search-engine summary of the SFGate article, not independently re-verified here against the full original article text (which sits behind a paywall; the mirror used for this record's other facts may not repeat that detail).",
    "This record's site grouping (\"Mission Bay South\") reflects DataSF's official redevelopment-project-area boundary, which reaches this stretch of Terry A. Francois Blvd -- not a claim that Pier 54 is a Mission Bay OCII development block, which it is not."
   ],
@@ -232,7 +270,15 @@
     "publisher": "SFGate",
     "date": "2024-09",
     "url": "https://discoveryink.wordpress.com/2024/09/08/crumbling-sf-pier-closing-down-forcing-iconic-businesses-to-move/",
-    "accessed": "2026-09-28"
+    "accessed": "2026-10-06"
+   },
+   {
+    "id": "src-port-pier54-memo-2024-08",
+    "title": "Pier 54 Tenant Relocation and Rental Assistance Program (Port Commission Item 12A, August 13, 2024)",
+    "publisher": "Port of San Francisco",
+    "date": "2024-08-09",
+    "url": "https://www.sfport.com/files/2024-08/081324_12a_pier_54_tenant_relocation_rental_assistance_program_final.pdf",
+    "accessed": "2026-10-06"
    },
    {
     "id": "src-port-cip-2026-02",
@@ -240,7 +286,7 @@
     "publisher": "Port of San Francisco",
     "date": "2026-02",
     "url": "https://www.sfport.com/sites/default/files/2026-02/item_10a.5_attachment_v_fy_2027-31_five-year_cip_draft.pdf",
-    "accessed": "2026-09-28",
+    "accessed": "2026-10-06",
     "overview": true
    }
   ],
