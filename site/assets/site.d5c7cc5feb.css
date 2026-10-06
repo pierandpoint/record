@@ -836,3 +836,10 @@ sup.cites a { text-decoration: none; }
 /* founder portrait on the independence page */
 .prose-page img.portrait { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; float: left; margin: 4px 24px 12px 0; border: 1px solid var(--paper-line); }
 @media (max-width: 600px) { .prose-page img.portrait { float: none; display: block; margin: 0 0 16px; width: 120px; height: 120px; } }
+/* Status | Use | None + Tenants + Satellite must stay on one row on a phone: turning Satellite on adds
+   the None segment, which used to push the Satellite chip itself onto a second line. */
+@media (max-width: 719px) {
+  .map-toolbar { gap: 6px; }
+  .toggle-seg { padding: 0 9px; }
+  .toggle-chip { padding: 0 12px; }
+}

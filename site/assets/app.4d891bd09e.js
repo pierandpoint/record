@@ -210,6 +210,15 @@
       // Placed per frame in updateSatFrame() from that frame's own georeferenced box.
       img.setAttribute('preserveAspectRatio', 'none');
       img.setAttribute('filter', 'url(#sat-mute)');
+      // The overview-frame backdrop (frame.back, build.py's satellite_map_assets()) goes in first, so
+      // it sits beneath the sharp site frame; only maps whose frames carry one get it.
+      if (satData.frames.some(function (f) { return f.back; })) {
+        var back = document.createElementNS('http://www.w3.org/2000/svg', 'image');
+        back.setAttribute('preserveAspectRatio', 'none');
+        back.setAttribute('filter', 'url(#sat-mute)');
+        slot.appendChild(back);
+        satData.backEls = (satData.backEls || []).concat(back);
+      }
       slot.appendChild(img);
       satData.imgEls.push(img);
     });
@@ -226,6 +235,13 @@
       if (img.getAttribute('href') !== picked.frame.href) img.setAttribute('href', picked.frame.href);
       img.setAttribute('x', box[0]); img.setAttribute('y', box[1]);
       img.setAttribute('width', box[2]); img.setAttribute('height', box[3]);
+    });
+    (satData.backEls || []).forEach(function (img) {
+      var b = picked.frame.back;
+      if (!b) { img.removeAttribute('href'); return; }
+      if (img.getAttribute('href') !== b.href) img.setAttribute('href', b.href);
+      img.setAttribute('x', b.box[0]); img.setAttribute('y', b.box[1]);
+      img.setAttribute('width', b.box[2]); img.setAttribute('height', b.box[3]);
     });
     var text = satCreditText(picked);
     document.querySelectorAll('.sat-credit').forEach(function (el) { el.textContent = text; });
