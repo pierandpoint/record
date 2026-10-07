@@ -1776,6 +1776,9 @@
     (frames.length > 1 ? '<button type="button" class="lightbox-prev" aria-label="Previous image">‹</button>' +
       '<button type="button" class="lightbox-next" aria-label="Next image">›</button>' : '') +
     kindsHtml +
+    '<div class="lightbox-zoom" role="group" aria-label="Zoom">' +
+    '<button type="button" class="lightbox-zoom-out" aria-label="Zoom out">\u2212</button>' +
+    '<button type="button" class="lightbox-zoom-in" aria-label="Zoom in">+</button></div>' +
     '<figure><img alt="" draggable="false"><figcaption></figcaption>' +
     (frames.length > 1 ? '<p class="lightbox-count" aria-hidden="true"></p>' : '') + '</figure>';
   document.body.appendChild(overlay);
@@ -1793,6 +1796,7 @@
     var a = frames[current];
     var thumb = a.querySelector('img');
     var caption = a.closest('figure').querySelector('figcaption');
+    if (typeof resetZoom === 'function') resetZoom();
     imgEl.src = a.getAttribute('href');
     imgEl.alt = thumb ? thumb.getAttribute('alt') || '' : '';
     // data-full: a figure whose visible credit is the short form (site page lead) keeps the full one here.
@@ -1849,15 +1853,125 @@
     });
   }
 
-  // Swipe left/right to page -- a threshold before it counts as a swipe (the same drag-vs-tap
-  // distinction the map's own pan/zoom uses, sitegen/static/app.js's initZoom() above), so a
-  // plain tap on the image or the backdrop doesn't accidentally turn the page.
+  // Zoom (a diagram or a page from a plan is unreadable at fit-to-screen size on a phone): pinch, or
+  // double-tap / double-click, or the +/- buttons, the + - 0 keys and the mouse wheel. Once zoomed,
+  // one finger pans the image (kept within the original frame's edges, so no blank space is ever
+  // dragged into view) and does not page; at fit-to-screen size one finger swipes to the next image
+  // as before. Moving to another image resets the zoom. The transform is the only thing touched --
+  // the image file is the same full-size one the lightbox always loaded.
+  var MAX_SCALE = 6;
+  var zoom = { s: 1, x: 0, y: 0 };
+  var pointers = {};            // pointerId -> {x, y}
+  var pinch = null;             // {dist, s} while two fingers are down
+  var lastTap = null;           // {t, x, y} of the previous tap, for double-tap
+  var gestureMoved = false;     // this gesture was a pinch or a pan, so it must not page or tap-zoom
+  function applyZoom() {
+    imgEl.style.transform = zoom.s === 1 ? '' : 'translate(' + zoom.x + 'px,' + zoom.y + 'px) scale(' + zoom.s + ')';
+    overlay.classList.toggle('is-zoomed', zoom.s > 1);
+  }
+  function clampPan() {
+    var w = imgEl.offsetWidth, h = imgEl.offsetHeight;
+    var mx = Math.max(0, (w * zoom.s - w) / 2), my = Math.max(0, (h * zoom.s - h) / 2);
+    zoom.x = Math.max(-mx, Math.min(mx, zoom.x));
+    zoom.y = Math.max(-my, Math.min(my, zoom.y));
+  }
+  function resetZoom() { zoom.s = 1; zoom.x = 0; zoom.y = 0; pinch = null; pointers = {}; applyZoom(); }
+  // Zoom to `next` keeping the point under (clientX, clientY) where it is.
+  function zoomAt(next, clientX, clientY) {
+    next = Math.max(1, Math.min(MAX_SCALE, next));
+    var r = imgEl.getBoundingClientRect();
+    var fx = clientX - (r.left + r.width / 2), fy = clientY - (r.top + r.height / 2);
+    var k = next / zoom.s;
+    zoom.x = zoom.x + fx - fx * k;
+    zoom.y = zoom.y + fy - fy * k;
+    zoom.s = next;
+    if (next === 1) { zoom.x = 0; zoom.y = 0; }
+    clampPan();
+    applyZoom();
+  }
+  function zoomCentre(factor) {
+    var r = imgEl.getBoundingClientRect();
+    zoomAt(zoom.s * factor, r.left + r.width / 2, r.top + r.height / 2);
+  }
+  function dist(a, b) { return Math.sqrt(Math.pow(a.x - b.x, 2) + Math.pow(a.y - b.y, 2)); }
   var swipeStartX = null;
-  overlay.addEventListener('pointerdown', function (e) { swipeStartX = e.clientX; });
+  imgEl.addEventListener('pointerdown', function (e) {
+    pointers[e.pointerId] = { x: e.clientX, y: e.clientY };
+    try { imgEl.setPointerCapture(e.pointerId); } catch (err) { /* not capturable: harmless */ }
+    var ids = Object.keys(pointers);
+    if (ids.length === 1) { gestureMoved = false; swipeStartX = e.clientX; }
+    if (ids.length === 2) {
+      gestureMoved = true; swipeStartX = null;
+      pinch = { dist: dist(pointers[ids[0]], pointers[ids[1]]), s: zoom.s };
+    }
+  });
+  imgEl.addEventListener('pointermove', function (e) {
+    var p = pointers[e.pointerId];
+    if (!p) return;
+    var ids = Object.keys(pointers);
+    if (ids.length === 2 && pinch) {
+      pointers[e.pointerId] = { x: e.clientX, y: e.clientY };
+      var a = pointers[ids[0]], b = pointers[ids[1]];
+      var d = dist(a, b);
+      if (pinch.dist > 0) zoomAt(pinch.s * d / pinch.dist, (a.x + b.x) / 2, (a.y + b.y) / 2);
+      return;
+    }
+    if (ids.length === 1 && zoom.s > 1) {
+      var dx = e.clientX - p.x, dy = e.clientY - p.y;
+      pointers[e.pointerId] = { x: e.clientX, y: e.clientY };
+      if (Math.abs(dx) + Math.abs(dy) > 0) gestureMoved = true;
+      zoom.x += dx; zoom.y += dy;
+      clampPan();
+      applyZoom();
+    }
+  });
+  function endPointer(e) {
+    delete pointers[e.pointerId];
+    // Lifting one finger of a pinch leaves the other as a pan (gestureMoved stays set), never a swipe.
+    if (Object.keys(pointers).length < 2) pinch = null;
+  }
+  imgEl.addEventListener('pointercancel', endPointer);
+  imgEl.addEventListener('pointerup', function (e) {
+    var wasMoved = gestureMoved;
+    var x0 = swipeStartX;
+    endPointer(e);
+    if (wasMoved || Object.keys(pointers).length) return;
+    // A tap (no pan, no pinch). Two quick taps near each other toggle zoom.
+    var now = Date.now();
+    var dxTap = x0 === null ? 0 : Math.abs(e.clientX - x0);
+    if (dxTap > 10) return; // a swipe: handled on the overlay below
+    if (lastTap && now - lastTap.t < 320 && Math.abs(e.clientX - lastTap.x) < 30 && Math.abs(e.clientY - lastTap.y) < 30) {
+      lastTap = null;
+      zoomAt(zoom.s > 1 ? 1 : 2.5, e.clientX, e.clientY);
+      swipeStartX = null;
+    } else {
+      lastTap = { t: now, x: e.clientX, y: e.clientY };
+    }
+  });
+  overlay.addEventListener('wheel', function (e) {
+    if (overlay.hidden) return;
+    e.preventDefault();
+    zoomAt(zoom.s * (e.deltaY < 0 ? 1.2 : 1 / 1.2), e.clientX, e.clientY);
+  }, { passive: false });
+  overlay.querySelector('.lightbox-zoom-in').addEventListener('click', function () { zoomCentre(1.6); });
+  overlay.querySelector('.lightbox-zoom-out').addEventListener('click', function () { zoomCentre(1 / 1.6); });
+  document.addEventListener('keydown', function (e) {
+    if (overlay.hidden) return;
+    if (e.key === '+' || e.key === '=') zoomCentre(1.6);
+    else if (e.key === '-') zoomCentre(1 / 1.6);
+    else if (e.key === '0') resetZoom();
+  });
+
+  // Swipe left/right to page, only at fit-to-screen size -- a threshold before it counts as a swipe
+  // (the same drag-vs-tap distinction the map's own pan/zoom uses, initZoom() above), so a plain
+  // tap on the image or the backdrop doesn't accidentally turn the page. A pinch, a pan of a zoomed
+  // image and a double-tap never page.
+  overlay.addEventListener('pointerdown', function (e) { if (e.target !== imgEl) swipeStartX = e.clientX; });
   overlay.addEventListener('pointerup', function (e) {
-    if (swipeStartX === null || frames.length < 2) return;
+    if (swipeStartX === null || frames.length < 2) { swipeStartX = null; return; }
     var dx = e.clientX - swipeStartX;
     swipeStartX = null;
+    if (zoom.s > 1) return;
     if (dx > 40) step(-1);
     else if (dx < -40) step(1);
   });
