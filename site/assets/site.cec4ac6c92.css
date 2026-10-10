@@ -410,6 +410,12 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 /* .light a (above) is more specific than .btn-primary, so a primary button on paper got the link
    colour (2.91:1 on brass); its own label colour has to be restated inside .light (audit F2). */
 .light .btn-primary, .light .btn-primary:hover { color: var(--ink); }
+/* Map keys and captions are styled for the dark map band; /near/ draws its map on paper, where
+   that grey text measured 1.82:1 (key) and 2.68:1 (caption). Paper text colours: 5.3:1 and up
+   (UX audit 2026-10-05, L4). */
+.light .legend-compact, .light .legend, .light .tenant-legend { color: var(--paper-soft); }
+.light .legend b { color: var(--paper-ink); }
+.light .map-caption, .light .tenant-legend-note { color: var(--paper-faint); }
 /* The brass focus ring is 1.94:1 on paper; the ink one is 12.36:1. */
 .light :focus-visible { outline-color: var(--paper-ink); }
 .light .source { color: var(--paper-faint); }

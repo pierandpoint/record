@@ -887,7 +887,7 @@
             var g = svgEl('g');
             g.setAttribute('class', 'tenant-marker');
             g.setAttribute('data-status', t.status);
-            g.setAttribute('tabindex', '0');
+            g.setAttribute('tabindex', '-1'); // reachable by Tab only while Tenants is on (setTenantsOn)
             g.setAttribute('role', 'button');
             g.setAttribute('aria-label', t.name + ', ' + (STATUS_WORD[t.status] || t.status));
             var circle = svgEl('circle');
@@ -920,7 +920,7 @@
 
           var pillG = svgEl('g');
           pillG.setAttribute('class', 'tenant-pill');
-          pillG.setAttribute('tabindex', '0');
+          pillG.setAttribute('tabindex', '-1'); // as the markers above
           pillG.setAttribute('role', 'button');
           pillG.setAttribute('aria-label', n + (n === 1 ? ' tenant' : ' tenants') + ' at ' + d.recordName + ', press to zoom in');
           var rect = svgEl('rect');
@@ -1066,8 +1066,13 @@
           if (card && !card.hidden && !card.contains(e.target) && !markersLayer.contains(e.target)) closeCard();
         }, true);
 
+        // While Tenants is off the layer is invisible (site.css: opacity 0) and aria-hidden, so its
+        // markers must not take keyboard focus either: Tab used to land on dozens of invisible
+        // markers and scroll the page to wherever the off-screen ones sat (UX audit 2026-10-05, L3).
         function setTenantsOn(on) {
           svg.classList.toggle('tenants-on', on);
+          if (on) markersLayer.removeAttribute('aria-hidden'); else markersLayer.setAttribute('aria-hidden', 'true');
+          markersLayer.querySelectorAll('[role="button"]').forEach(function (el) { el.setAttribute('tabindex', on ? '0' : '-1'); });
           tenantChip.setAttribute('aria-pressed', on ? 'true' : 'false');
           if (legendCaption) legendCaption.hidden = !on;
           if (!on) closeCard();
