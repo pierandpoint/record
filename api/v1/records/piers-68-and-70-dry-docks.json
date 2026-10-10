@@ -30,9 +30,9 @@
   "distance_note": "Piers 68 & 70's dry-dock and ship-repair facility sits immediately north of Brookfield's tracked 28-acre Pier 70 redevelopment parcel and Crane Cove Park, outside both -- Port materials describe it as a separate 13-acre facility, closed in 2017, at the complex's northeast corner.",
   "how_to_comment": [
    {
-    "channel": "Port Commission meeting calendar",
-    "detail": "Agenda items on the Pier 68/70 dry docks",
-    "url": "https://sfport.com/meetings-events"
+    "channel": "Port Commission meetings",
+    "detail": "Meeting schedule, agendas and public comment: items on the Pier 68/70 dry docks",
+    "url": "https://www.sfport.com/commission"
    },
    {
     "channel": "Clerk of the Board of Supervisors",
@@ -53,10 +53,10 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- two hand-traced hull outlines from satellite imagery, accurate to a few metres at best, not a surveyed footprint and not a Port or Assessor geometry. Which hull is Dry Dock No. 2 and which is the Eureka is inferred from their measured lengths against the lengths the Port memo and Mission Local give; no source read places them. The outlines cover the two floating hulls only, not the 13-acre shipyard: the Pier 68 wharf arms, the quay, the cranes, the sheds and four unidentified floating tank sections west of the Eureka are left out. Needs replacement with a real digitized footprint if a Port GIS layer or the Dry Dock Memorandum's own site figure becomes available.",
-    "digitized_from": "No Assessor block/lot exists for this Port tideland/water-lot facility (confirmed: DataSF's 'Parcels - Active and Retired' Socrata dataset, acdm-wktn, has no PIER-numbered street_name entries at all near this site, consistent with pier and dry-dock structures sitting outside the Assessor's secured roll). No Port GIS shapefile or site-plan figure for the Piers 68/70 shipyard footprint was available to digitize from directly, so this is a coarse locational box only, centered near the shipyard's known entrance at 20th and Illinois St (a real intersection in DataSF's official street centerlines) and sized to sit between the tracked Pier 70 parcel's own northern edge (Crane Cove Park, max latitude 37.76406) and Mission Bay South's nearest tracked features (the UCSF Illinois Street Garage and the P24 waterfront lawn, both of which reach south to roughly latitude 37.7644-37.7648) -- the real Piers 68/70 shipyard, described in Port materials as a 13-acre facility at the 'northeast corner' of the complex including Dry Dock No. 2 and the Eureka Dry Dock, occupies this narrow shoreline gap and extends east into the Bay itself, which this box does not attempt to trace. CORRECTED 2026-10-10: the outline is now two hand-traced hull outlines -- Dry Dock No. 2 and the Eureka Dry Dock -- on Esri World Imagery (zoom 20, imagery captured 2025-08-29 per docs/satellite-imagery.md). The earlier placeholder box lay in open water north of the shipyard. Hulls were told apart by length: the Port Commission memo (Calendar Item 9A, 2026-01-09) and Mission Local (2026-02) give Dry Dock No. 2 as a 900 ft (274 m) floating dock built in 1970 and the Eureka as 528 ft (161 m), built in 1945; the large eastern hull measures about 283 m and the central hull about 169 m including wing walls. No source read says which hull sits where, so this match is Pier & Point's own inference. Still no Assessor parcel, Port GIS layer or site-plan figure to trace from.",
-    "why_no_real_parcel": "Port tideland/water-lot facility; not on the Assessor's secured roll (data.sf.gov acdm-wktn has no PIER-numbered parcels near this site).",
-    "regulatory_context": "Dry Dock No. 2 (a ~1940s-era floating dry dock) developed excessive listing after hull tears and uncontrolled ballast-tank flooding in November 2025; the Port Commission President and Executive Director declared an emergency on 2025-12-08 (Port Commission memo, Calendar Item 9A, 2026-01-09). Port staff anticipate advertising a demolition-services contract in summer 2026 for Dry Dock No. 2 and the neighboring Eureka Dry Dock (a second floating dry dock at Piers 68/70, formerly USS Steadfast/AFDM-14 -- not the 1890 ferryboat Eureka at Hyde Street Pier/SF Maritime NHP). Total estimated cost of stabilization and disposal is $61.2M (Capital Planning Committee memo, 2026-02-09); see the record file for the funding breakdown and what remains unfunded."
+    "accuracy_caveat": "APPROXIMATE -- two hand-traced hull outlines from satellite imagery, accurate to a few metres at best, not a surveyed footprint and not a Port or Assessor geometry. Which hull is Dry Dock No. 2 and which is the Eureka is inferred from their measured lengths against the 900 ft the Port memo gives for Dry Dock No. 2 and the Eureka lengths Mission Local (528 ft) and Potrero View (570 ft) give, which disagree; no source read places them. The outlines cover the two floating hulls only, not the 13-acre shipyard: the Pier 68 wharf arms, the quay, the cranes, the sheds and four unidentified floating tank sections west of the Eureka are left out. Needs replacement with a real digitized footprint if a Port GIS layer or the Dry Dock Memorandum's own site figure becomes available.",
+    "digitized_from": "Assessor lot: both hulls lie inside lot 9900068 (98% of the outline). DataSF's 'Parcels - Active and Retired' dataset (acdm-wktn), queried by blklot on 2026-10-10, returns {\"blklot\":\"9900068\",\"block_num\":\"9900\",\"lot_num\":\"068\",\"date_rec_drop\":\"2018-10-02T00:00:00.000\",\"active\":true}. The dataset's own column description for date_rec_drop reads 'This is the date that the documents related the to dropping/retiring of the parcel was recorded, as tracked by Public Works.' The same row has no map-drop date, is flagged active, and reads true for in_asr_secured_roll in the copy loaded 2026-10-01. The dataset does not say why a recorded drop date and an active flag appear together, so this record states only what the row shows. The lot is the whole shipyard lot, not an outline of the two hulls: the traced hulls cover 18% of it. Port structures carry no street name in that dataset, so a search for PIER-numbered street names finds nothing. Outline: two hand-traced hull outlines -- Dry Dock No. 2 and the Eureka Dry Dock -- on Esri World Imagery (zoom 20, imagery captured 2025-08-29 per docs/satellite-imagery.md). The earlier placeholder box lay in open water north of the shipyard. Hulls were told apart by length. The Port Commission memo (Calendar Item 9A, 2026-01-09, PDF p. 3) says: 'DD2 is a 900-foot single-section steel floating dry dock constructed by the Bethlehem Steel Corporation in 1970.' Mission Local (2026-02-23) says: 'Dry Dock No. 2, which was built in 1970, ...' and 'The adjacent dry dock, Eureka, which was built in 1945, is 528 feet long'. Potrero View (2026-07-15) gives the Eureka as longer: 'Eureka Drydock is 570 feet.' The sources disagree on the Eureka's length (528 ft is 161 m; 570 ft is 174 m) and agree on its 1945 build. The large eastern hull measures about 283 m (Dry Dock No. 2: 900 ft is 274 m) and the central hull about 169 m including wing walls, so the central hull is the shorter dock whichever Eureka length is right. No source read says which hull sits where, so this match is Pier & Point's own inference. Still no Port GIS layer or site-plan figure to trace from.",
+    "why_no_real_parcel": "Both hulls lie inside Assessor lot 9900068, the whole shipyard lot (DataSF Parcels, acdm-wktn, checked 2026-10-10), which this record does not use as an outline because the hulls cover only 18% of it. That row carries a recorded drop date of 2018-10-02 yet reads active; see digitized_from.",
+    "regulatory_context": "Dry Dock No. 2 (a 900-foot floating dry dock built in 1970) developed excessive listing after hull tears and uncontrolled ballast-tank flooding in November 2025; the Port Commission President and Executive Director declared an emergency on 2025-12-08 (Port Commission memo, Calendar Item 9A, 2026-01-09). Port staff anticipate advertising a demolition-services contract in summer 2026 for Dry Dock No. 2 and the neighboring Eureka Dry Dock (a second floating dry dock at Piers 68/70, formerly USS Steadfast/AFDM-14 -- not the 1890 ferryboat Eureka at Hyde Street Pier/SF Maritime NHP). Total estimated cost of stabilization and disposal is $61.2M (Capital Planning Committee memo, 2026-02-09); see the record file for the funding breakdown and what remains unfunded."
    }
   },
   "centroid": {
@@ -69,6 +69,23 @@
     "value": "Two floating dry docks: Dry Dock No. 2 and the Eureka Dry Dock (the latter formerly USS Steadfast, AFDM-14 -- not the 1890 ferryboat Eureka preserved at Hyde Street Pier/SF Maritime NHP)",
     "sources": [
      "src-port-memo-2026-01"
+    ]
+   },
+   {
+    "key": "dry_dock_no_2",
+    "value": "A 900-foot steel floating dry dock built in 1970 (by Bethlehem Steel Corporation, per the Port memo)",
+    "sources": [
+     "src-port-memo-2026-01",
+     "src-missionlocal-2026-02",
+     "src-pv-2026-07"
+    ]
+   },
+   {
+    "key": "eureka_dry_dock",
+    "value": "Built in 1945. Its length is reported as 528 feet by Mission Local and 570 feet by Potrero View; the Port memo gives no length (see open questions)",
+    "sources": [
+     "src-missionlocal-2026-02",
+     "src-pv-2026-07"
     ]
    }
   ],
@@ -367,7 +384,7 @@
     "date_label": "~2026",
     "status": null,
     "status_label": null,
-    "text": "Potrero View reports the Port has directed an outside engineering firm to prepare preliminary engineering plans for demolition of both dry docks and help secure permits; a Port spokesperson says that package will be used to advertise a future design-build contract, with initial plans expected by March 2027 and the demolition contract tendered in the second half of 2027. This is later than the summer 2026 advertising the January 2026 Port memo anticipated.",
+    "text": "Potrero View reports the Port has directed an outside engineering firm to prepare preliminary engineering plans for demolition of both dry docks and help secure permits; a Port spokesperson is quoted saying the package will be used \"to advertise for a future design-build contract\". Separately, in its own words rather than as a quotation, Potrero View says the Port expects initial plans to be completed by March 2027 and a demolition contract tendered in the second half of 2027 (the Port, as reported by Potrero View). This is later than the summer 2026 advertising the January 2026 Port memo anticipated.",
     "expected": false,
     "approximate": true,
     "sources": [
@@ -375,12 +392,12 @@
       "id": "src-pv-2026-07",
       "title": "Large Ship Repair Fades into San Francisco History",
       "publisher": "Potrero View",
-      "date": "2026-07",
+      "date": "2026-07-15",
       "url": "https://www.potreroview.net/large-ship-repair-fades-into-san-francisco-history/",
       "accessed": "2026-10-10"
      }
     ],
-    "source": "Potrero View, 2026-07",
+    "source": "Potrero View, 2026-07-15",
     "origin": "record",
     "category": "milestone",
     "category_label": "Milestone",
@@ -404,7 +421,7 @@
     "date_label": "~2027",
     "status": null,
     "status_label": null,
-    "text": "Demolition contract expected to be tendered in the second half of 2027 (Port spokesperson, as reported in July 2026); preliminary demolition plans expected by March 2027.",
+    "text": "Demolition contract expected to be tendered in the second half of 2027, and initial plans completed by March 2027 (the Port, as reported by Potrero View on 2026-07-15, in the article's own wording rather than a quotation).",
     "expected": true,
     "approximate": true,
     "sources": [
@@ -412,12 +429,12 @@
       "id": "src-pv-2026-07",
       "title": "Large Ship Repair Fades into San Francisco History",
       "publisher": "Potrero View",
-      "date": "2026-07",
+      "date": "2026-07-15",
       "url": "https://www.potreroview.net/large-ship-repair-fades-into-san-francisco-history/",
       "accessed": "2026-10-10"
      }
     ],
-    "source": "Potrero View, 2026-07",
+    "source": "Potrero View, 2026-07-15",
     "origin": "record",
     "category": "coming_up",
     "category_label": "Coming up",
@@ -497,6 +514,64 @@
     "permalink": "https://pierandpoint.org/changes/#record"
    },
    {
+    "date": "2026-10-10",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The two dry docks sit inside Assessor lot 9900068, the lot for the whole shipyard. This record had said no lot exists, because the search used to check looked for street names. The lot's entry shows a drop date of 2018 but still reads active, and the dataset does not explain that. The outlines on the map are unchanged.",
+    "source": "DataSF, Parcels - Active and Retired (acdm-wktn), row blklot 9900068, queried 2026-10-10",
+    "sources": [
+     {
+      "title": "DataSF, Parcels - Active and Retired (acdm-wktn), row blklot 9900068, queried 2026-10-10"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_dry_docks",
+     "slug": "piers-68-and-70-dry-docks",
+     "name": "Piers 68 & 70 Dry Docks",
+     "permalink": "https://pierandpoint.org/parcels/piers-68-and-70-dry-docks/",
+     "api": "https://pierandpoint.org/api/v1/records/piers-68-and-70-dry-docks.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "adjacent",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-10",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Dry Dock No. 2 was built in 1970; the record had also called it a 1940s dock, which is the Eureka's era. The Eureka's length is reported as 528 feet by one outlet and 570 feet by another, so both are shown. The 2027 dates for the demolition plans and contract come from Potrero View's own wording, not a quotation from the Port.",
+    "source": "Port of San Francisco, Calendar Item 9A memo, 2026-01-09; Mission Local, 2026-02-23; Potrero View, 2026-07-15",
+    "sources": [
+     {
+      "title": "Port of San Francisco, Calendar Item 9A memo, 2026-01-09; Mission Local, 2026-02-23; Potrero View, 2026-07-15"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_dry_docks",
+     "slug": "piers-68-and-70-dry-docks",
+     "name": "Piers 68 & 70 Dry Docks",
+     "permalink": "https://pierandpoint.org/parcels/piers-68-and-70-dry-docks/",
+     "api": "https://pierandpoint.org/api/v1/records/piers-68-and-70-dry-docks.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "adjacent",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-28",
     "kind": "added",
     "kind_label": "Added",
@@ -528,6 +603,7 @@
   ],
   "images": [],
   "open_questions": [
+   "The Eureka Dry Dock's length is given as 528 feet by Mission Local (2026-02-23) and as 570 feet by Potrero View (2026-07-15); the Port's January 2026 memo gives no length for it, so neither figure is shown as settled here. Both sources give 1945 as its build year and 900 feet and 1970 for Dry Dock No. 2.",
    "Whether the $18.5M Port Commission Resolution 24-51 authorization (Oct 2024) is a subset of, or additional to, the $61.2M total cost figure presented in the Feb 2026 Capital Planning Committee memo is not established by the sources reviewed here.",
    "Whether demolition will be completed \"before winter storms\" (a claim in an unsourced summary, not repeated in this record) is not supported by any primary source found; SFist (2026-03-05) reports it will likely be a year before the dry dock situation is resolved, and roughly $41.2M of the $61.2M total remained unfunded as of Feb 2026.",
    "Has the Port advertised or awarded a demolition contract for the dry docks? As of 2026-10-10 no Port Commission item or Port contract notice was found reporting an advertisement or award; the July 2026 Potrero View report describes the design-build contract as still to come.",
@@ -556,9 +632,9 @@
     "id": "src-missionlocal-2026-02",
     "title": "Port of S.F. is budgeting $61M to demolish its massive dry docks",
     "publisher": "Mission Local",
-    "date": "2026-02",
+    "date": "2026-02-23",
     "url": "https://missionlocal.org/2026/02/port-of-san-francisco-dry-dock-pier-68-70/",
-    "accessed": "2026-09-28"
+    "accessed": "2026-10-10"
    },
    {
     "id": "src-sfist-2026-03",
@@ -572,14 +648,14 @@
     "id": "src-pv-2026-07",
     "title": "Large Ship Repair Fades into San Francisco History",
     "publisher": "Potrero View",
-    "date": "2026-07",
+    "date": "2026-07-15",
     "url": "https://www.potreroview.net/large-ship-repair-fades-into-san-francisco-history/",
     "accessed": "2026-10-10"
    }
   ],
   "notes": "Distinct from and outside the boundary of Brookfield's tracked 28-acre Pier 70 D4D redevelopment parcel and the separately-delivered Crane Cove Park, per the Port's own description of the Pier 70 shipyard/dry docks as a separate 13-acre facility (closed 2017) at the complex's northeast corner.",
   "has_record_file": true,
-  "last_verified": "2026-09-28",
+  "last_verified": "2026-10-10",
   "tenants": [],
   "geometry": {
    "type": "MultiPolygon",

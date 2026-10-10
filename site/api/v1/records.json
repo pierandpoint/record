@@ -138876,9 +138876,9 @@
    "distance_note": "Piers 68 & 70's dry-dock and ship-repair facility sits immediately north of Brookfield's tracked 28-acre Pier 70 redevelopment parcel and Crane Cove Park, outside both -- Port materials describe it as a separate 13-acre facility, closed in 2017, at the complex's northeast corner.",
    "how_to_comment": [
     {
-     "channel": "Port Commission meeting calendar",
-     "detail": "Agenda items on the Pier 68/70 dry docks",
-     "url": "https://sfport.com/meetings-events"
+     "channel": "Port Commission meetings",
+     "detail": "Meeting schedule, agendas and public comment: items on the Pier 68/70 dry docks",
+     "url": "https://www.sfport.com/commission"
     },
     {
      "channel": "Clerk of the Board of Supervisors",
@@ -138899,10 +138899,10 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- two hand-traced hull outlines from satellite imagery, accurate to a few metres at best, not a surveyed footprint and not a Port or Assessor geometry. Which hull is Dry Dock No. 2 and which is the Eureka is inferred from their measured lengths against the lengths the Port memo and Mission Local give; no source read places them. The outlines cover the two floating hulls only, not the 13-acre shipyard: the Pier 68 wharf arms, the quay, the cranes, the sheds and four unidentified floating tank sections west of the Eureka are left out. Needs replacement with a real digitized footprint if a Port GIS layer or the Dry Dock Memorandum's own site figure becomes available.",
-     "digitized_from": "No Assessor block/lot exists for this Port tideland/water-lot facility (confirmed: DataSF's 'Parcels - Active and Retired' Socrata dataset, acdm-wktn, has no PIER-numbered street_name entries at all near this site, consistent with pier and dry-dock structures sitting outside the Assessor's secured roll). No Port GIS shapefile or site-plan figure for the Piers 68/70 shipyard footprint was available to digitize from directly, so this is a coarse locational box only, centered near the shipyard's known entrance at 20th and Illinois St (a real intersection in DataSF's official street centerlines) and sized to sit between the tracked Pier 70 parcel's own northern edge (Crane Cove Park, max latitude 37.76406) and Mission Bay South's nearest tracked features (the UCSF Illinois Street Garage and the P24 waterfront lawn, both of which reach south to roughly latitude 37.7644-37.7648) -- the real Piers 68/70 shipyard, described in Port materials as a 13-acre facility at the 'northeast corner' of the complex including Dry Dock No. 2 and the Eureka Dry Dock, occupies this narrow shoreline gap and extends east into the Bay itself, which this box does not attempt to trace. CORRECTED 2026-10-10: the outline is now two hand-traced hull outlines -- Dry Dock No. 2 and the Eureka Dry Dock -- on Esri World Imagery (zoom 20, imagery captured 2025-08-29 per docs/satellite-imagery.md). The earlier placeholder box lay in open water north of the shipyard. Hulls were told apart by length: the Port Commission memo (Calendar Item 9A, 2026-01-09) and Mission Local (2026-02) give Dry Dock No. 2 as a 900 ft (274 m) floating dock built in 1970 and the Eureka as 528 ft (161 m), built in 1945; the large eastern hull measures about 283 m and the central hull about 169 m including wing walls. No source read says which hull sits where, so this match is Pier & Point's own inference. Still no Assessor parcel, Port GIS layer or site-plan figure to trace from.",
-     "why_no_real_parcel": "Port tideland/water-lot facility; not on the Assessor's secured roll (data.sf.gov acdm-wktn has no PIER-numbered parcels near this site).",
-     "regulatory_context": "Dry Dock No. 2 (a ~1940s-era floating dry dock) developed excessive listing after hull tears and uncontrolled ballast-tank flooding in November 2025; the Port Commission President and Executive Director declared an emergency on 2025-12-08 (Port Commission memo, Calendar Item 9A, 2026-01-09). Port staff anticipate advertising a demolition-services contract in summer 2026 for Dry Dock No. 2 and the neighboring Eureka Dry Dock (a second floating dry dock at Piers 68/70, formerly USS Steadfast/AFDM-14 -- not the 1890 ferryboat Eureka at Hyde Street Pier/SF Maritime NHP). Total estimated cost of stabilization and disposal is $61.2M (Capital Planning Committee memo, 2026-02-09); see the record file for the funding breakdown and what remains unfunded."
+     "accuracy_caveat": "APPROXIMATE -- two hand-traced hull outlines from satellite imagery, accurate to a few metres at best, not a surveyed footprint and not a Port or Assessor geometry. Which hull is Dry Dock No. 2 and which is the Eureka is inferred from their measured lengths against the 900 ft the Port memo gives for Dry Dock No. 2 and the Eureka lengths Mission Local (528 ft) and Potrero View (570 ft) give, which disagree; no source read places them. The outlines cover the two floating hulls only, not the 13-acre shipyard: the Pier 68 wharf arms, the quay, the cranes, the sheds and four unidentified floating tank sections west of the Eureka are left out. Needs replacement with a real digitized footprint if a Port GIS layer or the Dry Dock Memorandum's own site figure becomes available.",
+     "digitized_from": "Assessor lot: both hulls lie inside lot 9900068 (98% of the outline). DataSF's 'Parcels - Active and Retired' dataset (acdm-wktn), queried by blklot on 2026-10-10, returns {\"blklot\":\"9900068\",\"block_num\":\"9900\",\"lot_num\":\"068\",\"date_rec_drop\":\"2018-10-02T00:00:00.000\",\"active\":true}. The dataset's own column description for date_rec_drop reads 'This is the date that the documents related the to dropping/retiring of the parcel was recorded, as tracked by Public Works.' The same row has no map-drop date, is flagged active, and reads true for in_asr_secured_roll in the copy loaded 2026-10-01. The dataset does not say why a recorded drop date and an active flag appear together, so this record states only what the row shows. The lot is the whole shipyard lot, not an outline of the two hulls: the traced hulls cover 18% of it. Port structures carry no street name in that dataset, so a search for PIER-numbered street names finds nothing. Outline: two hand-traced hull outlines -- Dry Dock No. 2 and the Eureka Dry Dock -- on Esri World Imagery (zoom 20, imagery captured 2025-08-29 per docs/satellite-imagery.md). The earlier placeholder box lay in open water north of the shipyard. Hulls were told apart by length. The Port Commission memo (Calendar Item 9A, 2026-01-09, PDF p. 3) says: 'DD2 is a 900-foot single-section steel floating dry dock constructed by the Bethlehem Steel Corporation in 1970.' Mission Local (2026-02-23) says: 'Dry Dock No. 2, which was built in 1970, ...' and 'The adjacent dry dock, Eureka, which was built in 1945, is 528 feet long'. Potrero View (2026-07-15) gives the Eureka as longer: 'Eureka Drydock is 570 feet.' The sources disagree on the Eureka's length (528 ft is 161 m; 570 ft is 174 m) and agree on its 1945 build. The large eastern hull measures about 283 m (Dry Dock No. 2: 900 ft is 274 m) and the central hull about 169 m including wing walls, so the central hull is the shorter dock whichever Eureka length is right. No source read says which hull sits where, so this match is Pier & Point's own inference. Still no Port GIS layer or site-plan figure to trace from.",
+     "why_no_real_parcel": "Both hulls lie inside Assessor lot 9900068, the whole shipyard lot (DataSF Parcels, acdm-wktn, checked 2026-10-10), which this record does not use as an outline because the hulls cover only 18% of it. That row carries a recorded drop date of 2018-10-02 yet reads active; see digitized_from.",
+     "regulatory_context": "Dry Dock No. 2 (a 900-foot floating dry dock built in 1970) developed excessive listing after hull tears and uncontrolled ballast-tank flooding in November 2025; the Port Commission President and Executive Director declared an emergency on 2025-12-08 (Port Commission memo, Calendar Item 9A, 2026-01-09). Port staff anticipate advertising a demolition-services contract in summer 2026 for Dry Dock No. 2 and the neighboring Eureka Dry Dock (a second floating dry dock at Piers 68/70, formerly USS Steadfast/AFDM-14 -- not the 1890 ferryboat Eureka at Hyde Street Pier/SF Maritime NHP). Total estimated cost of stabilization and disposal is $61.2M (Capital Planning Committee memo, 2026-02-09); see the record file for the funding breakdown and what remains unfunded."
     }
    },
    "centroid": {
@@ -138915,6 +138915,23 @@
      "value": "Two floating dry docks: Dry Dock No. 2 and the Eureka Dry Dock (the latter formerly USS Steadfast, AFDM-14 -- not the 1890 ferryboat Eureka preserved at Hyde Street Pier/SF Maritime NHP)",
      "sources": [
       "src-port-memo-2026-01"
+     ]
+    },
+    {
+     "key": "dry_dock_no_2",
+     "value": "A 900-foot steel floating dry dock built in 1970 (by Bethlehem Steel Corporation, per the Port memo)",
+     "sources": [
+      "src-port-memo-2026-01",
+      "src-missionlocal-2026-02",
+      "src-pv-2026-07"
+     ]
+    },
+    {
+     "key": "eureka_dry_dock",
+     "value": "Built in 1945. Its length is reported as 528 feet by Mission Local and 570 feet by Potrero View; the Port memo gives no length (see open questions)",
+     "sources": [
+      "src-missionlocal-2026-02",
+      "src-pv-2026-07"
      ]
     }
    ],
@@ -139213,7 +139230,7 @@
      "date_label": "~2026",
      "status": null,
      "status_label": null,
-     "text": "Potrero View reports the Port has directed an outside engineering firm to prepare preliminary engineering plans for demolition of both dry docks and help secure permits; a Port spokesperson says that package will be used to advertise a future design-build contract, with initial plans expected by March 2027 and the demolition contract tendered in the second half of 2027. This is later than the summer 2026 advertising the January 2026 Port memo anticipated.",
+     "text": "Potrero View reports the Port has directed an outside engineering firm to prepare preliminary engineering plans for demolition of both dry docks and help secure permits; a Port spokesperson is quoted saying the package will be used \"to advertise for a future design-build contract\". Separately, in its own words rather than as a quotation, Potrero View says the Port expects initial plans to be completed by March 2027 and a demolition contract tendered in the second half of 2027 (the Port, as reported by Potrero View). This is later than the summer 2026 advertising the January 2026 Port memo anticipated.",
      "expected": false,
      "approximate": true,
      "sources": [
@@ -139221,12 +139238,12 @@
        "id": "src-pv-2026-07",
        "title": "Large Ship Repair Fades into San Francisco History",
        "publisher": "Potrero View",
-       "date": "2026-07",
+       "date": "2026-07-15",
        "url": "https://www.potreroview.net/large-ship-repair-fades-into-san-francisco-history/",
        "accessed": "2026-10-10"
       }
      ],
-     "source": "Potrero View, 2026-07",
+     "source": "Potrero View, 2026-07-15",
      "origin": "record",
      "category": "milestone",
      "category_label": "Milestone",
@@ -139250,7 +139267,7 @@
      "date_label": "~2027",
      "status": null,
      "status_label": null,
-     "text": "Demolition contract expected to be tendered in the second half of 2027 (Port spokesperson, as reported in July 2026); preliminary demolition plans expected by March 2027.",
+     "text": "Demolition contract expected to be tendered in the second half of 2027, and initial plans completed by March 2027 (the Port, as reported by Potrero View on 2026-07-15, in the article's own wording rather than a quotation).",
      "expected": true,
      "approximate": true,
      "sources": [
@@ -139258,12 +139275,12 @@
        "id": "src-pv-2026-07",
        "title": "Large Ship Repair Fades into San Francisco History",
        "publisher": "Potrero View",
-       "date": "2026-07",
+       "date": "2026-07-15",
        "url": "https://www.potreroview.net/large-ship-repair-fades-into-san-francisco-history/",
        "accessed": "2026-10-10"
       }
      ],
-     "source": "Potrero View, 2026-07",
+     "source": "Potrero View, 2026-07-15",
      "origin": "record",
      "category": "coming_up",
      "category_label": "Coming up",
@@ -139343,6 +139360,64 @@
      "permalink": "https://pierandpoint.org/changes/#record"
     },
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The two dry docks sit inside Assessor lot 9900068, the lot for the whole shipyard. This record had said no lot exists, because the search used to check looked for street names. The lot's entry shows a drop date of 2018 but still reads active, and the dataset does not explain that. The outlines on the map are unchanged.",
+     "source": "DataSF, Parcels - Active and Retired (acdm-wktn), row blklot 9900068, queried 2026-10-10",
+     "sources": [
+      {
+       "title": "DataSF, Parcels - Active and Retired (acdm-wktn), row blklot 9900068, queried 2026-10-10"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_dry_docks",
+      "slug": "piers-68-and-70-dry-docks",
+      "name": "Piers 68 & 70 Dry Docks",
+      "permalink": "https://pierandpoint.org/parcels/piers-68-and-70-dry-docks/",
+      "api": "https://pierandpoint.org/api/v1/records/piers-68-and-70-dry-docks.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "adjacent",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Dry Dock No. 2 was built in 1970; the record had also called it a 1940s dock, which is the Eureka's era. The Eureka's length is reported as 528 feet by one outlet and 570 feet by another, so both are shown. The 2027 dates for the demolition plans and contract come from Potrero View's own wording, not a quotation from the Port.",
+     "source": "Port of San Francisco, Calendar Item 9A memo, 2026-01-09; Mission Local, 2026-02-23; Potrero View, 2026-07-15",
+     "sources": [
+      {
+       "title": "Port of San Francisco, Calendar Item 9A memo, 2026-01-09; Mission Local, 2026-02-23; Potrero View, 2026-07-15"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_dry_docks",
+      "slug": "piers-68-and-70-dry-docks",
+      "name": "Piers 68 & 70 Dry Docks",
+      "permalink": "https://pierandpoint.org/parcels/piers-68-and-70-dry-docks/",
+      "api": "https://pierandpoint.org/api/v1/records/piers-68-and-70-dry-docks.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "adjacent",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-09-28",
      "kind": "added",
      "kind_label": "Added",
@@ -139374,6 +139449,7 @@
    ],
    "images": [],
    "open_questions": [
+    "The Eureka Dry Dock's length is given as 528 feet by Mission Local (2026-02-23) and as 570 feet by Potrero View (2026-07-15); the Port's January 2026 memo gives no length for it, so neither figure is shown as settled here. Both sources give 1945 as its build year and 900 feet and 1970 for Dry Dock No. 2.",
     "Whether the $18.5M Port Commission Resolution 24-51 authorization (Oct 2024) is a subset of, or additional to, the $61.2M total cost figure presented in the Feb 2026 Capital Planning Committee memo is not established by the sources reviewed here.",
     "Whether demolition will be completed \"before winter storms\" (a claim in an unsourced summary, not repeated in this record) is not supported by any primary source found; SFist (2026-03-05) reports it will likely be a year before the dry dock situation is resolved, and roughly $41.2M of the $61.2M total remained unfunded as of Feb 2026.",
     "Has the Port advertised or awarded a demolition contract for the dry docks? As of 2026-10-10 no Port Commission item or Port contract notice was found reporting an advertisement or award; the July 2026 Potrero View report describes the design-build contract as still to come.",
@@ -139402,9 +139478,9 @@
      "id": "src-missionlocal-2026-02",
      "title": "Port of S.F. is budgeting $61M to demolish its massive dry docks",
      "publisher": "Mission Local",
-     "date": "2026-02",
+     "date": "2026-02-23",
      "url": "https://missionlocal.org/2026/02/port-of-san-francisco-dry-dock-pier-68-70/",
-     "accessed": "2026-09-28"
+     "accessed": "2026-10-10"
     },
     {
      "id": "src-sfist-2026-03",
@@ -139418,14 +139494,14 @@
      "id": "src-pv-2026-07",
      "title": "Large Ship Repair Fades into San Francisco History",
      "publisher": "Potrero View",
-     "date": "2026-07",
+     "date": "2026-07-15",
      "url": "https://www.potreroview.net/large-ship-repair-fades-into-san-francisco-history/",
      "accessed": "2026-10-10"
     }
    ],
    "notes": "Distinct from and outside the boundary of Brookfield's tracked 28-acre Pier 70 D4D redevelopment parcel and the separately-delivered Crane Cove Park, per the Port's own description of the Pier 70 shipyard/dry docks as a separate 13-acre facility (closed 2017) at the complex's northeast corner.",
    "has_record_file": true,
-   "last_verified": "2026-09-28",
+   "last_verified": "2026-10-10",
    "tenants": [],
    "geometry": {
     "type": "MultiPolygon",
@@ -139520,9 +139596,9 @@
    "distance_note": "On Terry A. Francois Blvd, within the stretch DataSF's official 'Former San Francisco Redevelopment Agency Project Areas' boundary marks as Mission Bay South, and about 30m from Mission Bay South's own nearest tracked feature (the UCSF Illinois Street Garage/P24 waterfront lawn) -- versus roughly 470m from Mission Rock's own tracked footprint (Pier 48/50). Recorded as adjacent to Mission Bay, not Mission Rock, on that basis. Pier 54 itself predates and is not part of Mission Bay's OCII development program -- it is Port-jurisdiction maritime infrastructure.",
    "how_to_comment": [
     {
-     "channel": "Port Commission meeting calendar",
-     "detail": "Agenda items on Pier 54 and the Five-Year CIP",
-     "url": "https://sfport.com/meetings-events"
+     "channel": "Port Commission meetings",
+     "detail": "Meeting schedule, agendas and public comment: items on Pier 54 and the Five-Year CIP",
+     "url": "https://www.sfport.com/commission"
     },
     {
      "channel": "Clerk of the Board of Supervisors",
@@ -139543,9 +139619,9 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- a hand trace of the pier deck's visible outer edge on satellite imagery (accurate to a few metres at best), not a surveyed footprint and not a Port or Assessor geometry. It covers the deck and shed only, not the pilings or aprons beneath or beside it, and the pier's true outline under the shed roof cannot be seen.",
-     "digitized_from": "No Assessor block/lot exists for this Port pier structure (confirmed: DataSF's 'Parcels - Active and Retired' dataset, acdm-wktn, has no parcels with PIER-numbered street names). No Port GIS shapefile or site-plan figure was available, so this is a coarse locational box centered on the real DataSF street-centerline address range 500-599 Terry A. Francois Blvd, the address range covering the Pier 52/54 area (California State Parks Division of Boating and Waterways lists a combined 'Pier 54 & Pier 52 BLF' boat-launch facility on Terry A. Francois Blvd in this same stretch). CORRECTED 2026-10-10: the outline is now a hand trace of the pier deck's outer edge on Esri World Imagery (zoom 20, imagery captured 2025-08-29 per docs/satellite-imagery.md), read off a latitude/longitude grid and checked by overlay with the owner. The earlier placeholder box lay in open water south of the pier. Still no Assessor parcel, Port GIS layer or site-plan figure to trace from.",
-     "why_no_real_parcel": "Port pier structure; not on the Assessor's secured roll (data.sf.gov acdm-wktn has no PIER-numbered parcels near this site).",
+     "accuracy_caveat": "APPROXIMATE -- a hand trace of the pier deck's visible outer edge on satellite imagery (accurate to a few metres at best), not a surveyed footprint and not a Port or Assessor geometry. It covers the deck and shed only, not the pilings or aprons beneath or beside it, and the pier's true outline under the shed roof cannot be seen. The Assessor's own outline for the pier is lot 9900054 (see digitized_from); this trace and that lot differ at the edges, with 92% of the trace inside the lot.",
+     "digitized_from": "Outline: a hand trace of the pier deck's outer edge on Esri World Imagery (zoom 20, imagery captured 2025-08-29 per docs/satellite-imagery.md), read off a latitude/longitude grid and checked by overlay with the owner. No Port GIS shapefile or site-plan figure was available to trace from. Assessor lot: Pier 54 is lot 9900054 (block 9900, lot 054). DataSF's 'Parcels - Active and Retired' dataset (acdm-wktn), queried by blklot on 2026-10-10, returns {\"blklot\":\"9900054\",\"block_num\":\"9900\",\"lot_num\":\"054\",\"active\":true}, and its in_asr_secured_roll field reads true in the copy loaded 2026-10-01. Port piers carry no street name in that dataset, so a search for PIER-numbered street names finds none: they are block 9900, with the pier number as the lot. This hand trace lies 92% inside lot 9900054 and covers 89% of it; the lot outline has not been used in its place. The earlier placeholder box was anchored to the 500-599 Terry A. Francois Blvd address range (California State Parks Division of Boating and Waterways lists a combined 'Pier 54 & Pier 52 BLF' boat-launch facility on Terry A. Francois Blvd in this same stretch) and lay in open water south of the pier.",
+     "why_no_real_parcel": "Pier 54 has its own Assessor lot, 9900054 (DataSF Parcels, acdm-wktn, checked 2026-10-10). This record still draws a hand trace of the deck rather than that lot's outline.",
      "regulatory_context": "Condemned and red-tagged in 2024; the Port announced it would permanently close at the end of 2024, displacing the pier's tenant businesses (SFGate, Sept 2024). The Port's draft Five-Year Capital Improvement Program (FY2027-31, Feb 2026) budgets a 'Pier 54 Shed Demolition' line item totaling $2.0M ($500,000 in FY2026-27 and $1,500,000 in FY2027-28); no line item for full substructure removal appears in that document."
     }
    },
@@ -139719,6 +139795,35 @@
      "permalink": "https://pierandpoint.org/changes/#record"
     },
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Pier 54 does have its own Assessor lot, number 9900054. This record had said it had none, because the search used to check looked for street names and Port piers do not have one. The outline on the map is unchanged: it is still a hand trace of the pier deck.",
+     "source": "DataSF, Parcels - Active and Retired (acdm-wktn), row blklot 9900054, queried 2026-10-10",
+     "sources": [
+      {
+       "title": "DataSF, Parcels - Active and Retired (acdm-wktn), row blklot 9900054, queried 2026-10-10"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier_54",
+      "slug": "pier-54",
+      "name": "Pier 54",
+      "permalink": "https://pierandpoint.org/parcels/pier-54/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-54.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "adjacent",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-06",
      "kind": "correction",
      "kind_label": "Correction",
@@ -139870,14 +139975,9 @@
    "distance_note": "Sited near Agua Vista Park on Terry A. Francois Blvd, within the stretch DataSF's official 'Former San Francisco Redevelopment Agency Project Areas' boundary marks as Mission Bay South, and about 270m from Mission Bay South's own nearest tracked feature -- versus roughly 1,000m from Mission Rock's tracked footprint. The City's 2018 environmental review places the project area at the former Pier 64, which the Port's Waterfront Land Use Plan documents call \"Pier 64½\". Recorded as adjacent to Mission Bay rather than tracked because it is a Port/WETA transit facility, not a Mission Bay OCII development block.",
    "how_to_comment": [
     {
-     "channel": "SFCTA Board and committee meeting calendar",
-     "detail": "Prop L funding actions for this project",
-     "url": "https://www.sfcta.org/civic-engagement/meetings"
-    },
-    {
-     "channel": "Port Commission meeting calendar",
-     "detail": "Agenda items on the Mission Bay Ferry Landing",
-     "url": "https://sfport.com/meetings-events"
+     "channel": "Port Commission meetings",
+     "detail": "Meeting schedule, agendas and public comment: items on the Mission Bay Ferry Landing",
+     "url": "https://www.sfport.com/commission"
     }
    ],
    "positions": [],
@@ -139895,8 +139995,8 @@
     "display_reason": null,
     "notes": {
      "accuracy_caveat": "APPROXIMATE -- the two landings as drawn in the City's 2018 layout plan (Final Mitigated Negative Declaration, Figure 3), placed on satellite imagery by overlay, accurate to a few metres at best. This is the 2018 design, not an as-built survey: imagery captured 2025-08-29 shows no landing built yet, and no later plan was found, so the design or its position may have changed. Each shape joins the landing's pieces (Ferry Landing: connecting ramp and pier, gangway, float; Water Taxi Landing: platform, gangway, float). Lengths measured off the drawing differ from the sizes the document states: the gangways scale to about 70 ft against the stated 85 ft (ferry) and 80 ft (water taxi), and the ferry float to about 128 ft against 135 ft. The shapes follow the drawing. The Ferry Landing's landward end is trimmed to Bayfront Park's boundary, where the drawn corner overlapped it by about 35 m2. Landside improvements, dredge areas and the fender piles are not included.",
-     "digitized_from": "No Assessor block/lot exists for this Port/WETA ferry facility (confirmed: DataSF's 'Parcels - Active and Retired' Socrata dataset, acdm-wktn, has no PIER-numbered street_name entries near this site). No Port/WETA/SFCTA GIS shapefile or site-plan figure was available, so this is a coarse locational box centered near Agua Vista Park (801 Terry A. Francois Blvd, a real, addressed park immediately next to the project per the Port's own project page), using the real address range in DataSF's official street centerlines for that stretch of Terry A. Francois Blvd. CORRECTED 2026-10-10: the outline is now two shapes traced from the layout plan in the City's own environmental review -- Figure 3 (PDF p. 10) of the Final Mitigated Negative Declaration, San Francisco Planning Case No. 2017-008824ENV, amended 2018-06-18 (https://sfmea.sfplanning.org/Mission%20Bay%20Ferry_Final%20MND_061818.pdf) -- the Ferry Landing (connecting ramp, pier, gangway and float) and the Water Taxi Landing (platform, gangway and float). The plan was placed by overlaying its own aerial backdrop on Esri World Imagery (zoom 20, captured 2025-08-29): its printed structure sizes set the scale (about 0.21 m per plan pixel), no rotation was needed, and the existing Agua Vista Park fishing pier, the shoreline and the roadway match the satellite image. These are the structures as designed in 2018, not as built.",
-     "why_no_real_parcel": "Port/WETA ferry facility; not on the Assessor's secured roll (data.sf.gov acdm-wktn has no PIER-numbered parcels near this site).",
+     "digitized_from": "Assessor lots: the City's environmental review gives the project's lots as 9900/064 and 9900/064H (Final Mitigated Negative Declaration, San Francisco Planning Case No. 2017-008824ENV, cover page, PDF p. 1: 'Block/Lot:         9900/064 and 9900/064H', 'Lot Size:         153,257 square feet'). DataSF's 'Parcels - Active and Retired' dataset (acdm-wktn), queried by blklot on 2026-10-10, returns both: {\"blklot\":\"9900064\",\"block_num\":\"9900\",\"lot_num\":\"064\",\"active\":true} and {\"blklot\":\"9900064H\",\"block_num\":\"9900\",\"lot_num\":\"064H\",\"active\":true}. The traced shapes do not follow those lot outlines: 33% of the Ferry Landing shape lies inside lot 9900064, and 12% of the Water Taxi Landing shape lies inside lot 9900064H; the rest of each lies outside the lots. A search for PIER-numbered street names finds nothing, because Port parcels carry no street name there. Outline: two shapes traced from the layout plan in the City's own environmental review -- Figure 3 (PDF p. 10) of the Final Mitigated Negative Declaration, San Francisco Planning Case No. 2017-008824ENV, amended 2018-06-18 (https://sfmea.sfplanning.org/Mission%20Bay%20Ferry_Final%20MND_061818.pdf) -- the Ferry Landing (connecting ramp, pier, gangway and float) and the Water Taxi Landing (platform, gangway and float). The plan was placed by overlaying its own aerial backdrop on Esri World Imagery (zoom 20, captured 2025-08-29): its printed structure sizes set the scale (about 0.21 m per plan pixel), no rotation was needed, and the existing Agua Vista Park fishing pier, the shoreline and the roadway match the satellite image. These are the structures as designed in 2018, not as built.",
+     "why_no_real_parcel": "The City's environmental review names Assessor lots 9900064 and 9900064H for this project, and DataSF Parcels (acdm-wktn, checked 2026-10-10) lists both as active. The traced landings lie mostly outside those lots' outlines, so this record keeps the traced shapes.",
      "regulatory_context": "A WETA/Port of San Francisco ferry terminal project. Marine demolition of derelict piles (Phase 2a) was reported complete in 2025; ferry-landing and upland construction (Phase 2b) is under way, with completion targeted by the end of 2027. The San Francisco County Transportation Authority approved sales-tax (Prop L) funding toward the project, including a further allocation reported in April 2026."
     }
    },
@@ -140091,6 +140191,35 @@
      "sources": [
       {
        "title": "San Francisco Planning Department, Final Mitigated Negative Declaration, Case No. 2017-008824ENV (2018)"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_ferry_landing",
+      "slug": "mission-bay-ferry-landing",
+      "name": "Mission Bay Ferry Landing",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-ferry-landing/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-ferry-landing.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "adjacent",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The City's environmental review names two Assessor lots for the ferry landing project, 9900064 and 9900064H. This record had said no lot exists. The landings drawn on the map are the 2018 design and mostly lie outside those lots' outlines, so the map is unchanged.",
+     "source": "San Francisco Planning Department, Final Mitigated Negative Declaration, Case No. 2017-008824ENV, cover page; DataSF, Parcels - Active and Retired (acdm-wktn), rows blklot 9900064 and 9900064H, queried 2026-10-10",
+     "sources": [
+      {
+       "title": "San Francisco Planning Department, Final Mitigated Negative Declaration, Case No. 2017-008824ENV, cover page; DataSF, Parcels - Active and Retired (acdm-wktn), rows blklot 9900064 and 9900064H, queried 2026-10-10"
       }
      ],
      "category": "correction",
@@ -140659,9 +140788,9 @@
    "distance_note": "Piers 38 and 40, at the foot of King St/Townsend St (89 King St), sit about 420-460m north of Mission Rock's own tracked boundary (Pier 48/50), just north of and adjacent to South Beach Harbor.",
    "how_to_comment": [
     {
-     "channel": "Port Commission meeting calendar",
-     "detail": "Agenda items on Piers 38 & 40",
-     "url": "https://sfport.com/meetings-events"
+     "channel": "Port Commission meetings",
+     "detail": "Meeting schedule, agendas and public comment: items on Piers 38 & 40",
+     "url": "https://www.sfport.com/commission"
     },
     {
      "channel": "Port of San Francisco project page",
@@ -140681,9 +140810,9 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- two hand-traced deck outlines (Pier 38 and Pier 40) from satellite imagery, accurate to a few metres at best, not a surveyed footprint and not a Port or Assessor geometry. Each is drawn as a parallelogram (opposite edges parallel). They cover the main decks only: the Pier 38 bulkhead building along the Embarcadero, the narrow dock off Pier 40's east end, and any pile-supported aprons are left out. Needs replacement with a real digitized footprint if a Port GIS layer or site-plan figure becomes available.",
-     "digitized_from": "No Assessor block/lot exists for this Port pier facility (confirmed: DataSF's 'Parcels - Active and Retired' Socrata dataset, acdm-wktn, has no PIER-numbered street_name entries). No Port GIS shapefile or site-plan figure was available. CORRECTED 2026-09-30: the box's location is now the union of OpenStreetMap's own two named building entries for the piers -- 'Pier 40' (way 104599990, bounding box lat 37.7815294-37.7819100, lon -122.3870563--122.3855684) and 'Pier 38' (way 104599982, bounding box lat 37.7818929-37.7829023, lon -122.3879887--122.3847049), both confirmed via OpenStreetMap Nominatim on 2026-09-30 -- not a traced footprint of either building, just their combined location, since no Port GIS figure or site plan exists to trace from. CORRECTED 2026-10-10: the outline is now two hand-traced deck outlines (Pier 38 to the north, Pier 40 to the south) on Esri World Imagery (zoom 20, imagery captured 2025-08-29 per docs/satellite-imagery.md), placed by calibrating against the previous box's known corners and corrected corner by corner in review with the owner. Still no Assessor parcel, Port GIS layer or site-plan figure to trace from.",
-     "why_no_real_parcel": "Port pier facility; not on the Assessor's secured roll (data.sf.gov acdm-wktn has no PIER-numbered parcels near this site).",
+     "accuracy_caveat": "APPROXIMATE -- two hand-traced deck outlines (Pier 38 and Pier 40) from satellite imagery, accurate to a few metres at best, not a surveyed footprint and not a Port or Assessor geometry. Each is drawn as a parallelogram (opposite edges parallel). They cover the main decks only: the Pier 38 bulkhead building along the Embarcadero, the narrow dock off Pier 40's east end, and any pile-supported aprons are left out. Needs replacement with a real digitized footprint if a Port GIS layer or site-plan figure becomes available. Each pier also has its own Assessor lot (9900038 and 9900040; see digitized_from), which these traces do not follow.",
+     "digitized_from": "Assessor lots: Pier 38 is lot 9900038 and Pier 40 is lot 9900040 (block 9900, with the pier number as the lot). DataSF's 'Parcels - Active and Retired' dataset (acdm-wktn), queried by blklot on 2026-10-10, returns {\"blklot\":\"9900038\",\"block_num\":\"9900\",\"lot_num\":\"038\",\"active\":true} and {\"blklot\":\"9900040\",\"block_num\":\"9900\",\"lot_num\":\"040\",\"active\":true,\"street_name\":\"KING\",\"from_address_num\":\"5\",\"to_address_num\":\"5\"}; both read true for in_asr_secured_roll in the copy loaded 2026-10-01. A search for PIER-numbered street names does not find them. The Pier 38 trace lies entirely inside lot 9900038 and covers 79% of it; the Pier 40 trace lies 89% inside lot 9900040 and covers 94% of it. The lot outlines have not been used in place of the traces. Outline: two hand-traced deck outlines (Pier 38 to the north, Pier 40 to the south) on Esri World Imagery (zoom 20, imagery captured 2025-08-29 per docs/satellite-imagery.md), placed by calibrating against the previous box's known corners and corrected corner by corner in review with the owner. No Port GIS shapefile or site-plan figure was available to trace from. The previous single box was the union of OpenStreetMap's own two named building entries for the piers -- 'Pier 40' (way 104599990, bounding box lat 37.7815294-37.7819100, lon -122.3870563--122.3855684) and 'Pier 38' (way 104599982, bounding box lat 37.7818929-37.7829023, lon -122.3879887--122.3847049), both confirmed via OpenStreetMap Nominatim on 2026-09-30 -- not a traced footprint of either building.",
+     "why_no_real_parcel": "Each pier has its own Assessor lot: Pier 38 is 9900038 and Pier 40 is 9900040 (DataSF Parcels, acdm-wktn, checked 2026-10-10). This record is one project over two lots and keeps its two hand-traced deck outlines rather than the lot outlines.",
      "regulatory_context": "Developer: San Francisco Waterfront Partners III, LLC (SFWP), an affiliate of Pacific Waterfront Partners (PWP). Original Exclusive Negotiating Agreement: Port Commission Resolution 21-10 (2021-02-23), expired 2023-03-15 for missed performance dates. PWP separately owed the Port over $980,000 in back rent on three unrelated leases (Pier 28, two Agriculture Building suites), unpaid since it vacated them 2024-01-31. On 2026-04-28 the Port Commission adopted a Settlement Agreement (Resolution 26-21: PWP to pay $720,000 over 3 years, with the remainder of the debt forgiven on compliance) and an Amended and Restated ENA (Resolution 26-22: a 12-month 'Evaluation Period' to explore value engineering, project phasing and a new financial partner, with a new Schedule of Performance due before the period ends around April 2027). No lease, term sheet or CEQA review is in place as of this record's own last_verified date."
     }
    },
@@ -140985,6 +141114,35 @@
      "sources": [
       {
        "title": "Satellite imagery, Pier & Point's own reading (Esri World Imagery, captured 2025-08-29)"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "piers_38_40",
+      "slug": "piers-38-and-40",
+      "name": "Piers 38 & 40",
+      "permalink": "https://pierandpoint.org/parcels/piers-38-and-40/",
+      "api": "https://pierandpoint.org/api/v1/records/piers-38-and-40.json"
+     },
+     "site": {
+      "slug": "mission-rock",
+      "name": "Mission Rock",
+      "short": "Mission Rock",
+      "url": "https://pierandpoint.org/sites/mission-rock/"
+     },
+     "relation": "adjacent",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Pier 38 and Pier 40 each have their own Assessor lot (9900038 and 9900040). This record had said they had none, because the search used to check looked for street names and Port piers do not have one. The outlines on the map are unchanged: they are still hand traces of the two pier decks.",
+     "source": "DataSF, Parcels - Active and Retired (acdm-wktn), rows blklot 9900038 and 9900040, queried 2026-10-10",
+     "sources": [
+      {
+       "title": "DataSF, Parcels - Active and Retired (acdm-wktn), rows blklot 9900038 and 9900040, queried 2026-10-10"
       }
      ],
      "category": "correction",

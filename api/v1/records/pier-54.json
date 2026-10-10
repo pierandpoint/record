@@ -28,9 +28,9 @@
   "distance_note": "On Terry A. Francois Blvd, within the stretch DataSF's official 'Former San Francisco Redevelopment Agency Project Areas' boundary marks as Mission Bay South, and about 30m from Mission Bay South's own nearest tracked feature (the UCSF Illinois Street Garage/P24 waterfront lawn) -- versus roughly 470m from Mission Rock's own tracked footprint (Pier 48/50). Recorded as adjacent to Mission Bay, not Mission Rock, on that basis. Pier 54 itself predates and is not part of Mission Bay's OCII development program -- it is Port-jurisdiction maritime infrastructure.",
   "how_to_comment": [
    {
-    "channel": "Port Commission meeting calendar",
-    "detail": "Agenda items on Pier 54 and the Five-Year CIP",
-    "url": "https://sfport.com/meetings-events"
+    "channel": "Port Commission meetings",
+    "detail": "Meeting schedule, agendas and public comment: items on Pier 54 and the Five-Year CIP",
+    "url": "https://www.sfport.com/commission"
    },
    {
     "channel": "Clerk of the Board of Supervisors",
@@ -51,9 +51,9 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- a hand trace of the pier deck's visible outer edge on satellite imagery (accurate to a few metres at best), not a surveyed footprint and not a Port or Assessor geometry. It covers the deck and shed only, not the pilings or aprons beneath or beside it, and the pier's true outline under the shed roof cannot be seen.",
-    "digitized_from": "No Assessor block/lot exists for this Port pier structure (confirmed: DataSF's 'Parcels - Active and Retired' dataset, acdm-wktn, has no parcels with PIER-numbered street names). No Port GIS shapefile or site-plan figure was available, so this is a coarse locational box centered on the real DataSF street-centerline address range 500-599 Terry A. Francois Blvd, the address range covering the Pier 52/54 area (California State Parks Division of Boating and Waterways lists a combined 'Pier 54 & Pier 52 BLF' boat-launch facility on Terry A. Francois Blvd in this same stretch). CORRECTED 2026-10-10: the outline is now a hand trace of the pier deck's outer edge on Esri World Imagery (zoom 20, imagery captured 2025-08-29 per docs/satellite-imagery.md), read off a latitude/longitude grid and checked by overlay with the owner. The earlier placeholder box lay in open water south of the pier. Still no Assessor parcel, Port GIS layer or site-plan figure to trace from.",
-    "why_no_real_parcel": "Port pier structure; not on the Assessor's secured roll (data.sf.gov acdm-wktn has no PIER-numbered parcels near this site).",
+    "accuracy_caveat": "APPROXIMATE -- a hand trace of the pier deck's visible outer edge on satellite imagery (accurate to a few metres at best), not a surveyed footprint and not a Port or Assessor geometry. It covers the deck and shed only, not the pilings or aprons beneath or beside it, and the pier's true outline under the shed roof cannot be seen. The Assessor's own outline for the pier is lot 9900054 (see digitized_from); this trace and that lot differ at the edges, with 92% of the trace inside the lot.",
+    "digitized_from": "Outline: a hand trace of the pier deck's outer edge on Esri World Imagery (zoom 20, imagery captured 2025-08-29 per docs/satellite-imagery.md), read off a latitude/longitude grid and checked by overlay with the owner. No Port GIS shapefile or site-plan figure was available to trace from. Assessor lot: Pier 54 is lot 9900054 (block 9900, lot 054). DataSF's 'Parcels - Active and Retired' dataset (acdm-wktn), queried by blklot on 2026-10-10, returns {\"blklot\":\"9900054\",\"block_num\":\"9900\",\"lot_num\":\"054\",\"active\":true}, and its in_asr_secured_roll field reads true in the copy loaded 2026-10-01. Port piers carry no street name in that dataset, so a search for PIER-numbered street names finds none: they are block 9900, with the pier number as the lot. This hand trace lies 92% inside lot 9900054 and covers 89% of it; the lot outline has not been used in its place. The earlier placeholder box was anchored to the 500-599 Terry A. Francois Blvd address range (California State Parks Division of Boating and Waterways lists a combined 'Pier 54 & Pier 52 BLF' boat-launch facility on Terry A. Francois Blvd in this same stretch) and lay in open water south of the pier.",
+    "why_no_real_parcel": "Pier 54 has its own Assessor lot, 9900054 (DataSF Parcels, acdm-wktn, checked 2026-10-10). This record still draws a hand trace of the deck rather than that lot's outline.",
     "regulatory_context": "Condemned and red-tagged in 2024; the Port announced it would permanently close at the end of 2024, displacing the pier's tenant businesses (SFGate, Sept 2024). The Port's draft Five-Year Capital Improvement Program (FY2027-31, Feb 2026) budgets a 'Pier 54 Shed Demolition' line item totaling $2.0M ($500,000 in FY2026-27 and $1,500,000 in FY2027-28); no line item for full substructure removal appears in that document."
    }
   },
@@ -206,6 +206,35 @@
     "sources": [
      {
       "title": "Satellite imagery, Pier & Point's own reading (Esri World Imagery, captured 2025-08-29)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier_54",
+     "slug": "pier-54",
+     "name": "Pier 54",
+     "permalink": "https://pierandpoint.org/parcels/pier-54/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-54.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "adjacent",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-10",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Pier 54 does have its own Assessor lot, number 9900054. This record had said it had none, because the search used to check looked for street names and Port piers do not have one. The outline on the map is unchanged: it is still a hand trace of the pier deck.",
+    "source": "DataSF, Parcels - Active and Retired (acdm-wktn), row blklot 9900054, queried 2026-10-10",
+    "sources": [
+     {
+      "title": "DataSF, Parcels - Active and Retired (acdm-wktn), row blklot 9900054, queried 2026-10-10"
      }
     ],
     "category": "correction",

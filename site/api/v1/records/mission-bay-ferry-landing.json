@@ -28,14 +28,9 @@
   "distance_note": "Sited near Agua Vista Park on Terry A. Francois Blvd, within the stretch DataSF's official 'Former San Francisco Redevelopment Agency Project Areas' boundary marks as Mission Bay South, and about 270m from Mission Bay South's own nearest tracked feature -- versus roughly 1,000m from Mission Rock's tracked footprint. The City's 2018 environmental review places the project area at the former Pier 64, which the Port's Waterfront Land Use Plan documents call \"Pier 64½\". Recorded as adjacent to Mission Bay rather than tracked because it is a Port/WETA transit facility, not a Mission Bay OCII development block.",
   "how_to_comment": [
    {
-    "channel": "SFCTA Board and committee meeting calendar",
-    "detail": "Prop L funding actions for this project",
-    "url": "https://www.sfcta.org/civic-engagement/meetings"
-   },
-   {
-    "channel": "Port Commission meeting calendar",
-    "detail": "Agenda items on the Mission Bay Ferry Landing",
-    "url": "https://sfport.com/meetings-events"
+    "channel": "Port Commission meetings",
+    "detail": "Meeting schedule, agendas and public comment: items on the Mission Bay Ferry Landing",
+    "url": "https://www.sfport.com/commission"
    }
   ],
   "positions": [],
@@ -53,8 +48,8 @@
    "display_reason": null,
    "notes": {
     "accuracy_caveat": "APPROXIMATE -- the two landings as drawn in the City's 2018 layout plan (Final Mitigated Negative Declaration, Figure 3), placed on satellite imagery by overlay, accurate to a few metres at best. This is the 2018 design, not an as-built survey: imagery captured 2025-08-29 shows no landing built yet, and no later plan was found, so the design or its position may have changed. Each shape joins the landing's pieces (Ferry Landing: connecting ramp and pier, gangway, float; Water Taxi Landing: platform, gangway, float). Lengths measured off the drawing differ from the sizes the document states: the gangways scale to about 70 ft against the stated 85 ft (ferry) and 80 ft (water taxi), and the ferry float to about 128 ft against 135 ft. The shapes follow the drawing. The Ferry Landing's landward end is trimmed to Bayfront Park's boundary, where the drawn corner overlapped it by about 35 m2. Landside improvements, dredge areas and the fender piles are not included.",
-    "digitized_from": "No Assessor block/lot exists for this Port/WETA ferry facility (confirmed: DataSF's 'Parcels - Active and Retired' Socrata dataset, acdm-wktn, has no PIER-numbered street_name entries near this site). No Port/WETA/SFCTA GIS shapefile or site-plan figure was available, so this is a coarse locational box centered near Agua Vista Park (801 Terry A. Francois Blvd, a real, addressed park immediately next to the project per the Port's own project page), using the real address range in DataSF's official street centerlines for that stretch of Terry A. Francois Blvd. CORRECTED 2026-10-10: the outline is now two shapes traced from the layout plan in the City's own environmental review -- Figure 3 (PDF p. 10) of the Final Mitigated Negative Declaration, San Francisco Planning Case No. 2017-008824ENV, amended 2018-06-18 (https://sfmea.sfplanning.org/Mission%20Bay%20Ferry_Final%20MND_061818.pdf) -- the Ferry Landing (connecting ramp, pier, gangway and float) and the Water Taxi Landing (platform, gangway and float). The plan was placed by overlaying its own aerial backdrop on Esri World Imagery (zoom 20, captured 2025-08-29): its printed structure sizes set the scale (about 0.21 m per plan pixel), no rotation was needed, and the existing Agua Vista Park fishing pier, the shoreline and the roadway match the satellite image. These are the structures as designed in 2018, not as built.",
-    "why_no_real_parcel": "Port/WETA ferry facility; not on the Assessor's secured roll (data.sf.gov acdm-wktn has no PIER-numbered parcels near this site).",
+    "digitized_from": "Assessor lots: the City's environmental review gives the project's lots as 9900/064 and 9900/064H (Final Mitigated Negative Declaration, San Francisco Planning Case No. 2017-008824ENV, cover page, PDF p. 1: 'Block/Lot:         9900/064 and 9900/064H', 'Lot Size:         153,257 square feet'). DataSF's 'Parcels - Active and Retired' dataset (acdm-wktn), queried by blklot on 2026-10-10, returns both: {\"blklot\":\"9900064\",\"block_num\":\"9900\",\"lot_num\":\"064\",\"active\":true} and {\"blklot\":\"9900064H\",\"block_num\":\"9900\",\"lot_num\":\"064H\",\"active\":true}. The traced shapes do not follow those lot outlines: 33% of the Ferry Landing shape lies inside lot 9900064, and 12% of the Water Taxi Landing shape lies inside lot 9900064H; the rest of each lies outside the lots. A search for PIER-numbered street names finds nothing, because Port parcels carry no street name there. Outline: two shapes traced from the layout plan in the City's own environmental review -- Figure 3 (PDF p. 10) of the Final Mitigated Negative Declaration, San Francisco Planning Case No. 2017-008824ENV, amended 2018-06-18 (https://sfmea.sfplanning.org/Mission%20Bay%20Ferry_Final%20MND_061818.pdf) -- the Ferry Landing (connecting ramp, pier, gangway and float) and the Water Taxi Landing (platform, gangway and float). The plan was placed by overlaying its own aerial backdrop on Esri World Imagery (zoom 20, captured 2025-08-29): its printed structure sizes set the scale (about 0.21 m per plan pixel), no rotation was needed, and the existing Agua Vista Park fishing pier, the shoreline and the roadway match the satellite image. These are the structures as designed in 2018, not as built.",
+    "why_no_real_parcel": "The City's environmental review names Assessor lots 9900064 and 9900064H for this project, and DataSF Parcels (acdm-wktn, checked 2026-10-10) lists both as active. The traced landings lie mostly outside those lots' outlines, so this record keeps the traced shapes.",
     "regulatory_context": "A WETA/Port of San Francisco ferry terminal project. Marine demolition of derelict piles (Phase 2a) was reported complete in 2025; ferry-landing and upland construction (Phase 2b) is under way, with completion targeted by the end of 2027. The San Francisco County Transportation Authority approved sales-tax (Prop L) funding toward the project, including a further allocation reported in April 2026."
    }
   },
@@ -249,6 +244,35 @@
     "sources": [
      {
       "title": "San Francisco Planning Department, Final Mitigated Negative Declaration, Case No. 2017-008824ENV (2018)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_ferry_landing",
+     "slug": "mission-bay-ferry-landing",
+     "name": "Mission Bay Ferry Landing",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-ferry-landing/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-ferry-landing.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "adjacent",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-10",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The City's environmental review names two Assessor lots for the ferry landing project, 9900064 and 9900064H. This record had said no lot exists. The landings drawn on the map are the 2018 design and mostly lie outside those lots' outlines, so the map is unchanged.",
+    "source": "San Francisco Planning Department, Final Mitigated Negative Declaration, Case No. 2017-008824ENV, cover page; DataSF, Parcels - Active and Retired (acdm-wktn), rows blklot 9900064 and 9900064H, queried 2026-10-10",
+    "sources": [
+     {
+      "title": "San Francisco Planning Department, Final Mitigated Negative Declaration, Case No. 2017-008824ENV, cover page; DataSF, Parcels - Active and Retired (acdm-wktn), rows blklot 9900064 and 9900064H, queried 2026-10-10"
      }
     ],
     "category": "correction",
