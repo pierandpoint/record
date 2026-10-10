@@ -7,7 +7,18 @@
   "summary_sources": [
     "src-osm-235-berry"
   ],
-  "milestones": [],
+  "milestones": [
+    {
+      "date": "2007-10-04",
+      "text": "Construction permit completed: DBI recorded new-construction permit 200103023320 (7 stories, residential with retail, 235 Berry St) as completed on this date. A permit's completion date is not an opening date.",
+      "sources": [
+        "src-dbi-permit-200103023320"
+      ],
+      "status": "complete",
+      "expected": false,
+      "approximate": false
+    }
+  ],
   "costs": [],
   "facts": [],
   "images": [
@@ -44,10 +55,18 @@
       "publisher": "OpenStreetMap contributors",
       "url": "https://www.openstreetmap.org/way/46264105",
       "accessed": "2026-09-27"
+    },
+    {
+      "id": "src-dbi-permit-200103023320",
+      "title": "DBI building permit 200103023320 (new construction, 235 Berry St), DataSF Building Permits dataset (i98e-djp9)",
+      "publisher": "San Francisco Department of Building Inspection, via DataSF",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200103023320",
+      "accessed": "2026-10-10"
     }
   ],
   "open_questions": [
-    "This record was created on 2026-09-27 to carry Pier & Point's own field photos. Its summary is limited to what its cited source confirmed when re-read that day; fuller details recorded elsewhere in Pier & Point's data (developer, architect, unit count, year built) were left out where that source didn't state them. Not yet researched: no milestones, costs or facts."
+    "This record was created on 2026-09-27 to carry Pier & Point's own field photos. Its summary is limited to what its cited source confirmed when re-read that day; fuller details recorded elsewhere in Pier & Point's data (developer, architect, unit count, year built) were left out where that source didn't state them. Not yet researched: no milestones, costs or facts.",
+    "DBI files the permit under block 8708, lot 005. This record is drawn from OpenStreetMap rather than an Assessor parcel, so the block and lot are not a join to the record."
   ],
-  "last_verified": "2026-09-29"
+  "last_verified": "2026-10-10"
 }

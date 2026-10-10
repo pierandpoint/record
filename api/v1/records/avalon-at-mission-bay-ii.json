@@ -85,6 +85,49 @@
     "relation": "tracked"
    },
    {
+    "date": "2006-10-23",
+    "date_label": "Oct 23, 2006",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Construction permit completed: DBI recorded new-construction permit 200105249986 (17 stories, 301 King St) as completed on this date. A permit's completion date is not an opening date.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dbi-permit-200105249986",
+      "title": "DBI building permit 200105249986 (new construction, 301 King St), DataSF Building Permits dataset (i98e-djp9)",
+      "publisher": "San Francisco Department of Building Inspection, via DataSF",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200105249986",
+      "accessed": "2026-10-10"
+     },
+     {
+      "id": "src-datasf-assessor-8705011",
+      "title": "Assessor Historical Secured Property Tax Rolls (parcel 8705011, 301 King St: 313 units, year built 2006)",
+      "publisher": "DataSF / SF Office of the Assessor-Recorder",
+      "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8705011",
+      "accessed": "2026-09-29"
+     }
+    ],
+    "source": "San Francisco Department of Building Inspection, via DataSF; DataSF / SF Office of the Assessor-Recorder",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_avalon_phase_ii",
+     "slug": "avalon-at-mission-bay-ii",
+     "name": "Avalon at Mission Bay II",
+     "permalink": "https://pierandpoint.org/parcels/avalon-at-mission-bay-ii/",
+     "api": "https://pierandpoint.org/api/v1/records/avalon-at-mission-bay-ii.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
     "date": "2006-12",
     "date_label": "~2006",
     "status": "complete",
@@ -118,6 +161,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-10",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "Avalon at Mission Bay II now shows its construction permit as completed on Oct 23, 2006.",
+    "source": "DBI building permits via DataSF (https://data.sf.gov/resource/i98e-djp9.json?permit_number=200105249986)",
+    "sources": [
+     {
+      "title": "DBI building permits via DataSF (https://data.sf.gov/resource/i98e-djp9.json?permit_number=200105249986)"
+     }
+    ],
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "mission_bay_avalon_phase_ii",
+     "slug": "avalon-at-mission-bay-ii",
+     "name": "Avalon at Mission Bay II",
+     "permalink": "https://pierandpoint.org/parcels/avalon-at-mission-bay-ii/",
+     "api": "https://pierandpoint.org/api/v1/records/avalon-at-mission-bay-ii.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-29",
     "kind": "correction",
@@ -191,7 +263,8 @@
   ],
   "open_questions": [
    "This record was created on 2026-09-27 to carry Pier & Point's own field photos. Its summary is limited to what its cited source confirmed when re-read that day; fuller details recorded elsewhere in Pier & Point's data (developer, architect, unit count, year built) were left out where that source didn't state them. Not yet researched: no milestones, costs or facts.",
-   "The architect of this building is not confirmed: the Arquitectonica 'Avalon Mission Bay' page describes a 260-unit development that matches Avalon at Mission Bay North III, not this 313-unit building. The 'Avalon at Mission Bay II' name is Pier & Point's label; AvalonBay's releases call it 'Avalon at Mission Bay North II'."
+   "The architect of this building is not confirmed: the Arquitectonica 'Avalon Mission Bay' page describes a 260-unit development that matches Avalon at Mission Bay North III, not this 313-unit building. The 'Avalon at Mission Bay II' name is Pier & Point's label; AvalonBay's releases call it 'Avalon at Mission Bay North II'.",
+   "The DBI permit for 301 King St (200105249986) is filed under block 3796, lot 003, not this record's parcel (8705/011), and lists 174 dwelling units where the Assessor roll lists 313. The address matches and the permit's completion (Oct 23, 2006) falls in the same year as the Assessor's year built (2006), but the unit-count difference is unresolved."
   ],
   "sources": [
    {
@@ -217,6 +290,13 @@
     "accessed": "2026-09-29"
    },
    {
+    "id": "src-dbi-permit-200105249986",
+    "title": "DBI building permit 200105249986 (new construction, 301 King St), DataSF Building Permits dataset (i98e-djp9)",
+    "publisher": "San Francisco Department of Building Inspection, via DataSF",
+    "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200105249986",
+    "accessed": "2026-10-10"
+   },
+   {
     "id": null,
     "title": "arquitectonica.com/architecture/project/avalon-mission-bay",
     "url": "https://arquitectonica.com/architecture/project/avalon-mission-bay/"
@@ -229,7 +309,7 @@
   ],
   "notes": "AvalonBay's releases name this building 'Avalon at Mission Bay North II'. That it is one of three AvalonBay phases along King St is not stated by any source read, and 'Avalon at Mission Bay II' is Pier & Point's label.",
   "has_record_file": true,
-  "last_verified": "2026-09-27",
+  "last_verified": "2026-10-10",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

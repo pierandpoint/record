@@ -113,9 +113,74 @@
      "url": "https://pierandpoint.org/sites/mission-bay/"
     },
     "relation": "tracked"
+   },
+   {
+    "date": "2007-10-10",
+    "date_label": "Oct 10, 2007",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Construction permit completed: DBI recorded new-construction permit 200504180213 (7 stories, 110 dwelling units, 325 Berry St) as completed on this date. A permit's completion date is not an opening date.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dbi-permit-200504180213",
+      "title": "DBI building permit 200504180213 (new construction, 325 Berry St), DataSF Building Permits dataset (i98e-djp9)",
+      "publisher": "San Francisco Department of Building Inspection, via DataSF",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200504180213",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "San Francisco Department of Building Inspection, via DataSF",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_park_terrace",
+     "slug": "park-terrace",
+     "name": "Park Terrace",
+     "permalink": "https://pierandpoint.org/parcels/park-terrace/",
+     "api": "https://pierandpoint.org/api/v1/records/park-terrace.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-10",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "Park Terrace now shows its construction permit as completed on Oct 10, 2007.",
+    "source": "DBI building permits via DataSF (https://data.sf.gov/resource/i98e-djp9.json?permit_number=200504180213)",
+    "sources": [
+     {
+      "title": "DBI building permits via DataSF (https://data.sf.gov/resource/i98e-djp9.json?permit_number=200504180213)"
+     }
+    ],
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "mission_bay_park_terrace",
+     "slug": "park-terrace",
+     "name": "Park Terrace",
+     "permalink": "https://pierandpoint.org/parcels/park-terrace/",
+     "api": "https://pierandpoint.org/api/v1/records/park-terrace.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-29",
     "kind": "correction",
@@ -175,7 +240,8 @@
    }
   ],
   "open_questions": [
-   "Pier & Point's own field photos are shown on this record. Its summary is limited to what its cited source was re-read to confirm on 2026-09-27; fuller details shown in this record's map notes (developer, architect, unit count, year built) were left out where that source didn't state them. Not yet researched: no milestones, costs or facts."
+   "Pier & Point's own field photos are shown on this record. Its summary is limited to what its cited source was re-read to confirm on 2026-09-27; fuller details shown in this record's map notes (developer, architect, unit count, year built) were left out where that source didn't state them. Not yet researched: no milestones, costs or facts.",
+   "DBI files the permit under block 8707, lot 001. This record is drawn from OpenStreetMap rather than an Assessor parcel, so the block and lot are not a join to the record."
   ],
   "sources": [
    {
@@ -184,6 +250,13 @@
     "publisher": "OpenStreetMap contributors",
     "url": "https://www.openstreetmap.org/way/46264112",
     "accessed": "2026-09-27"
+   },
+   {
+    "id": "src-dbi-permit-200504180213",
+    "title": "DBI building permit 200504180213 (new construction, 325 Berry St), DataSF Building Permits dataset (i98e-djp9)",
+    "publisher": "San Francisco Department of Building Inspection, via DataSF",
+    "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200504180213",
+    "accessed": "2026-10-10"
    },
    {
     "id": null,
@@ -198,7 +271,7 @@
   ],
   "notes": "Developers Opus West and Phoenix Property Company per SocketSite (May 5, 2006).",
   "has_record_file": true,
-  "last_verified": "2026-09-29",
+  "last_verified": "2026-10-10",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

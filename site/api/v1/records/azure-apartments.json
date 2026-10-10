@@ -111,9 +111,74 @@
      "url": "https://pierandpoint.org/sites/mission-bay/"
     },
     "relation": "tracked"
+   },
+   {
+    "date": "2015-12-11",
+    "date_label": "Dec 11, 2015",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Construction permit completed: DBI recorded new-construction permit 201207054130 (16 stories, 273 units, 690 Long Bridge St) as completed on this date. A permit's completion date is not an opening date.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dbi-permit-201207054130",
+      "title": "DBI building permit 201207054130 (new construction, 690 Long Bridge St), DataSF Building Permits dataset (i98e-djp9)",
+      "publisher": "San Francisco Department of Building Inspection, via DataSF",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=201207054130",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "San Francisco Department of Building Inspection, via DataSF",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "8711013",
+     "slug": "azure-apartments",
+     "name": "Azure Apartments",
+     "permalink": "https://pierandpoint.org/parcels/azure-apartments/",
+     "api": "https://pierandpoint.org/api/v1/records/azure-apartments.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-10",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "Azure Apartments now shows its construction permit as completed on Dec 11, 2015.",
+    "source": "DBI building permits via DataSF (https://data.sf.gov/resource/i98e-djp9.json?permit_number=201207054130)",
+    "sources": [
+     {
+      "title": "DBI building permits via DataSF (https://data.sf.gov/resource/i98e-djp9.json?permit_number=201207054130)"
+     }
+    ],
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8711013",
+     "slug": "azure-apartments",
+     "name": "Azure Apartments",
+     "permalink": "https://pierandpoint.org/parcels/azure-apartments/",
+     "api": "https://pierandpoint.org/api/v1/records/azure-apartments.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-29",
     "kind": "correction",
@@ -174,7 +239,8 @@
   ],
   "open_questions": [
    "This record was created on 2026-09-27 to host Pier & Point's own field photos. Its summary is limited to what its cited source was re-read to confirm that day; fuller details given in this record's other notes (developer, architect, unit count, year built) were left out of the summary where that source didn't state them. Not yet researched: no milestones, costs or facts.",
-   "Opening month for Azure Apartments is not sourced: the only readable press item (Aug 2014 topping-out release) forecasts 'Opening in Spring of 2015', the operator page (equityapartments.com) could not be checked, and the DataSF Assessor roll gives only year built 2015."
+   "Opening month for Azure Apartments is not sourced: the only readable press item (Aug 2014 topping-out release) forecasts 'Opening in Spring of 2015', the operator page (equityapartments.com) could not be checked, and the DataSF Assessor roll gives only year built 2015.",
+   "DBI's completion date for the construction permit is Dec 11, 2015, on the same block and lot as this record (8711/013). It is a permit date, not an opening date; the Assessor roll's year built of 2015 is consistent with it."
   ],
   "sources": [
    {
@@ -183,6 +249,13 @@
     "publisher": "MultifamilyBiz",
     "url": "https://www.multifamilybiz.com/pressreleases/2525/equity_residential_and_nibbi_brothers_celebrate_the",
     "accessed": "2026-09-27"
+   },
+   {
+    "id": "src-dbi-permit-201207054130",
+    "title": "DBI building permit 201207054130 (new construction, 690 Long Bridge St), DataSF Building Permits dataset (i98e-djp9)",
+    "publisher": "San Francisco Department of Building Inspection, via DataSF",
+    "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=201207054130",
+    "accessed": "2026-10-10"
    },
    {
     "id": null,
@@ -197,7 +270,7 @@
   ],
   "notes": "Azure Apartments, 690 Long Bridge St -- a 16-story, 273-unit rental apartment tower (234,825 sq ft and year built 2015 per the DataSF Assessor tax roll; the developer's August 2014 press release gives 396,200 sq ft for the development, a figure not reconciled with the Assessor's), developed by Equity Residential with Nibbi Brothers as general contractor, architect HKS with NC2 Studio (interiors) and Cliff Lowe Associates (landscape). The same release forecast an opening in spring 2015; no post-opening source was read.",
   "has_record_file": true,
-  "last_verified": "2026-09-29",
+  "last_verified": "2026-10-10",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

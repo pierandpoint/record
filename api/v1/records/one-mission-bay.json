@@ -55,6 +55,42 @@
     "date_label": "~2018",
     "status": "complete",
     "status_label": "Complete",
+    "text": "Completed: developer Strada's One Mission Bay project page says \"This exciting project was completed in 2018.\" The page is undated and gives the year only.",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-strada-omb",
+      "title": "One Mission Bay",
+      "publisher": "Strada Investment Group",
+      "url": "https://stradasf.com/what-we-do/development/one-mission-bay/",
+      "accessed": "2026-09-27"
+     }
+    ],
+    "source": "Strada Investment Group",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_one_mission_bay",
+     "slug": "one-mission-bay",
+     "name": "One Mission Bay",
+     "permalink": "https://pierandpoint.org/parcels/one-mission-bay/",
+     "api": "https://pierandpoint.org/api/v1/records/one-mission-bay.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2018",
+    "date_label": "~2018",
+    "status": "complete",
+    "status_label": "Complete",
     "text": "One Mission Bay (110 Channel St/1000 3rd St) completed (Strada's project page: 'completed in 2018'; no month given)",
     "expected": false,
     "approximate": true,
@@ -81,9 +117,81 @@
      "url": "https://pierandpoint.org/sites/mission-bay/"
     },
     "relation": "tracked"
+   },
+   {
+    "date": "2020-11-20",
+    "date_label": "Nov 20, 2020",
+    "status": null,
+    "status_label": null,
+    "text": "DBI recorded the new-construction permits for both One Mission Bay buildings (201408133766 at 110 Channel St, 152 units; 201408133775 at 1000 3rd St, 198 units) as completed. This is the permits' closure date, not an opening or completion date.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dbi-permit-201408133766",
+      "title": "DBI building permit 201408133766 (new construction, 110 Channel St), DataSF Building Permits dataset (i98e-djp9)",
+      "publisher": "San Francisco Department of Building Inspection, via DataSF",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=201408133766",
+      "accessed": "2026-10-10"
+     },
+     {
+      "id": "src-dbi-permit-201408133775",
+      "title": "DBI building permit 201408133775 (new construction, 1000 3rd St), DataSF Building Permits dataset (i98e-djp9)",
+      "publisher": "San Francisco Department of Building Inspection, via DataSF",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=201408133775",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "San Francisco Department of Building Inspection, via DataSF; San Francisco Department of Building Inspection, via DataSF",
+    "origin": "record",
+    "category": "retail",
+    "category_label": "Retail",
+    "record": {
+     "id": "mission_bay_one_mission_bay",
+     "slug": "one-mission-bay",
+     "name": "One Mission Bay",
+     "permalink": "https://pierandpoint.org/parcels/one-mission-bay/",
+     "api": "https://pierandpoint.org/api/v1/records/one-mission-bay.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-10",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "One Mission Bay now shows completion in 2018, with its two permits' Nov 20, 2020 closure kept separate.",
+    "source": "DBI building permits via DataSF (https://data.sf.gov/resource/i98e-djp9.json?permit_number=201408133766; https://data.sf.gov/resource/i98e-djp9.json?permit_number=201408133775); Strada, One Mission Bay (https://stradasf.com/what-we-do/development/one-mission-bay/)",
+    "sources": [
+     {
+      "title": "DBI building permits via DataSF (https://data.sf.gov/resource/i98e-djp9.json?permit_number=201408133766; https://data.sf.gov/resource/i98e-djp9.json?permit_number=201408133775); Strada, One Mission Bay (https://stradasf.com/what-we-do/development/one-mission-bay/)"
+     }
+    ],
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "mission_bay_one_mission_bay",
+     "slug": "one-mission-bay",
+     "name": "One Mission Bay",
+     "permalink": "https://pierandpoint.org/parcels/one-mission-bay/",
+     "api": "https://pierandpoint.org/api/v1/records/one-mission-bay.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-29",
     "kind": "correction",
@@ -158,7 +266,9 @@
    }
   ],
   "open_questions": [
-   "This record was created on 2026-09-27 to host Pier & Point's own field photos. Its summary is limited to what its cited source was re-read to confirm that day; fuller details given in this record's other notes (developer, architect, unit count, year built) were left out of the summary where that source didn't state them. Not yet researched: no milestones, costs or facts."
+   "This record was created on 2026-09-27 to host Pier & Point's own field photos. Its summary is limited to what its cited source was re-read to confirm that day; fuller details given in this record's other notes (developer, architect, unit count, year built) were left out of the summary where that source didn't state them. Not yet researched: no milestones, costs or facts.",
+   "The completion year and the permit closure are two different kinds of date, not a conflict. Strada's project page (undated) says the project was completed in 2018, which is the year shown as the status change. DBI closed both new-construction permits on Nov 20, 2020, shown separately as permit closures; DBI also shows tenant-improvement permits for the 110 Channel St ground floor in 2018. The exact completion or opening month is not sourced.",
+   "DBI files both permits under block 8715, lot 004; this record's geometry joins the retired parcel 8715007, and later permits for the two buildings use lots 006 and 007."
   ],
   "sources": [
    {
@@ -167,6 +277,20 @@
     "publisher": "Strada Investment Group",
     "url": "https://stradasf.com/what-we-do/development/one-mission-bay/",
     "accessed": "2026-09-27"
+   },
+   {
+    "id": "src-dbi-permit-201408133766",
+    "title": "DBI building permit 201408133766 (new construction, 110 Channel St), DataSF Building Permits dataset (i98e-djp9)",
+    "publisher": "San Francisco Department of Building Inspection, via DataSF",
+    "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=201408133766",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-dbi-permit-201408133775",
+    "title": "DBI building permit 201408133775 (new construction, 1000 3rd St), DataSF Building Permits dataset (i98e-djp9)",
+    "publisher": "San Francisco Department of Building Inspection, via DataSF",
+    "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=201408133775",
+    "accessed": "2026-10-10"
    },
    {
     "id": null,
@@ -186,7 +310,7 @@
   ],
   "notes": "350 condominium units across two connected structures (a high-rise tower plus a lower perimeter building) at 1000 3rd St and 110 Channel St; Strada's project page lists 350 units and 20,000 sq ft of ground-floor retail, and the Compass building page lists a pool and concierge (other amenities and the 495-1,528 sq ft unit sizes are not confirmed by any cited page). A claimed ~50,000 sq ft of ground-floor retail could not be confirmed as specific to this building -- not asserted here. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
   "has_record_file": true,
-  "last_verified": "2026-09-27",
+  "last_verified": "2026-10-10",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

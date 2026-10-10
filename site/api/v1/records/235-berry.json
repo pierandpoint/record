@@ -113,9 +113,74 @@
      "url": "https://pierandpoint.org/sites/mission-bay/"
     },
     "relation": "tracked"
+   },
+   {
+    "date": "2007-10-04",
+    "date_label": "Oct 4, 2007",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Construction permit completed: DBI recorded new-construction permit 200103023320 (7 stories, residential with retail, 235 Berry St) as completed on this date. A permit's completion date is not an opening date.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dbi-permit-200103023320",
+      "title": "DBI building permit 200103023320 (new construction, 235 Berry St), DataSF Building Permits dataset (i98e-djp9)",
+      "publisher": "San Francisco Department of Building Inspection, via DataSF",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200103023320",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "San Francisco Department of Building Inspection, via DataSF",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_235_berry",
+     "slug": "235-berry",
+     "name": "235 Berry",
+     "permalink": "https://pierandpoint.org/parcels/235-berry/",
+     "api": "https://pierandpoint.org/api/v1/records/235-berry.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-10",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "235 Berry now shows its construction permit as completed on Oct 4, 2007.",
+    "source": "DBI building permits via DataSF (https://data.sf.gov/resource/i98e-djp9.json?permit_number=200103023320)",
+    "sources": [
+     {
+      "title": "DBI building permits via DataSF (https://data.sf.gov/resource/i98e-djp9.json?permit_number=200103023320)"
+     }
+    ],
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "mission_bay_235_berry",
+     "slug": "235-berry",
+     "name": "235 Berry",
+     "permalink": "https://pierandpoint.org/parcels/235-berry/",
+     "api": "https://pierandpoint.org/api/v1/records/235-berry.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-06",
     "kind": "correction",
@@ -205,7 +270,8 @@
    }
   ],
   "open_questions": [
-   "This record was created on 2026-09-27 to carry Pier & Point's own field photos. Its summary is limited to what its cited source confirmed when re-read that day; fuller details recorded elsewhere in Pier & Point's data (developer, architect, unit count, year built) were left out where that source didn't state them. Not yet researched: no milestones, costs or facts."
+   "This record was created on 2026-09-27 to carry Pier & Point's own field photos. Its summary is limited to what its cited source confirmed when re-read that day; fuller details recorded elsewhere in Pier & Point's data (developer, architect, unit count, year built) were left out where that source didn't state them. Not yet researched: no milestones, costs or facts.",
+   "DBI files the permit under block 8708, lot 005. This record is drawn from OpenStreetMap rather than an Assessor parcel, so the block and lot are not a join to the record."
   ],
   "sources": [
    {
@@ -214,6 +280,13 @@
     "publisher": "OpenStreetMap contributors",
     "url": "https://www.openstreetmap.org/way/46264105",
     "accessed": "2026-09-27"
+   },
+   {
+    "id": "src-dbi-permit-200103023320",
+    "title": "DBI building permit 200103023320 (new construction, 235 Berry St), DataSF Building Permits dataset (i98e-djp9)",
+    "publisher": "San Francisco Department of Building Inspection, via DataSF",
+    "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200103023320",
+    "accessed": "2026-10-10"
    },
    {
     "id": null,
@@ -228,7 +301,7 @@
   ],
   "notes": null,
   "has_record_file": true,
-  "last_verified": "2026-09-29",
+  "last_verified": "2026-10-10",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

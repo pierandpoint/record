@@ -7,7 +7,18 @@
   "summary_sources": [
     "src-osm-park-terrace"
   ],
-  "milestones": [],
+  "milestones": [
+    {
+      "date": "2007-10-10",
+      "text": "Construction permit completed: DBI recorded new-construction permit 200504180213 (7 stories, 110 dwelling units, 325 Berry St) as completed on this date. A permit's completion date is not an opening date.",
+      "sources": [
+        "src-dbi-permit-200504180213"
+      ],
+      "status": "complete",
+      "expected": false,
+      "approximate": false
+    }
+  ],
   "costs": [],
   "facts": [],
   "images": [
@@ -43,10 +54,18 @@
       "publisher": "OpenStreetMap contributors",
       "url": "https://www.openstreetmap.org/way/46264112",
       "accessed": "2026-09-27"
+    },
+    {
+      "id": "src-dbi-permit-200504180213",
+      "title": "DBI building permit 200504180213 (new construction, 325 Berry St), DataSF Building Permits dataset (i98e-djp9)",
+      "publisher": "San Francisco Department of Building Inspection, via DataSF",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200504180213",
+      "accessed": "2026-10-10"
     }
   ],
   "open_questions": [
-    "Pier & Point's own field photos are shown on this record. Its summary is limited to what its cited source was re-read to confirm on 2026-09-27; fuller details shown in this record's map notes (developer, architect, unit count, year built) were left out where that source didn't state them. Not yet researched: no milestones, costs or facts."
+    "Pier & Point's own field photos are shown on this record. Its summary is limited to what its cited source was re-read to confirm on 2026-09-27; fuller details shown in this record's map notes (developer, architect, unit count, year built) were left out where that source didn't state them. Not yet researched: no milestones, costs or facts.",
+    "DBI files the permit under block 8707, lot 001. This record is drawn from OpenStreetMap rather than an Assessor parcel, so the block and lot are not a join to the record."
   ],
-  "last_verified": "2026-09-29"
+  "last_verified": "2026-10-10"
 }
