@@ -549,7 +549,40 @@
   // play (pp-play): also part of timeline()'s own widget, absent on /near/ for the same reason
   // readDate/readPhase are above -- guarded the same way rather than assuming every page that
   // embeds record data and a slider also renders the full scrubber.
-  function stop() { if (timer) { clearInterval(timer); timer = null; } if (play) { play.setAttribute('aria-pressed', 'false'); play.querySelector('span').textContent = 'Play'; } }
+  // The timeline's position in the address (docs/briefs/next-five.md, A10), so "Pier 70 in 2030"
+  // can be shared: ?year=2030 for a January, ?year=2030-06 for any other month, nothing at today.
+  // Only on a page with the visible timeline (readDate): a record page's or /near/'s hidden slider
+  // stays pinned at today whatever the address says. Written when the visitor stops moving it,
+  // never during play; read once, before the first paint. Nothing is sent anywhere.
+  function yearParam(m) {
+    if (m === TODAY) return '';
+    if (m <= 0) return String(START - 1);
+    if (m >= MAX) return String(END + 1);
+    var y = START + Math.floor((m - 1) / 12), mo = (m - 1) % 12;
+    return mo === 0 ? String(y) : y + '-' + (mo < 9 ? '0' : '') + (mo + 1);
+  }
+  function indexForYearParam(v) {
+    var match = /^(\d{4})(?:-(\d{2}))?$/.exec(v || '');
+    if (!match) return null;
+    var y = +match[1], mo = match[2] ? +match[2] : 1;
+    if (mo < 1 || mo > 12) return null;
+    if (y < START) return 0;
+    if (y > END) return MAX;
+    return 1 + (y - START) * 12 + (mo - 1);
+  }
+  function syncYearParam() {
+    if (!readDate || !window.history || !window.history.replaceState) return;
+    var params = new URLSearchParams(window.location.search);
+    var v = yearParam(+slider.value);
+    if (v) { params.set('year', v); } else { params.delete('year'); }
+    var qs = params.toString();
+    window.history.replaceState(null, '', window.location.pathname + (qs ? '?' + qs : '') + window.location.hash);
+  }
+
+  function stop() {
+    if (timer) { clearInterval(timer); timer = null; syncYearParam(); }
+    if (play) { play.setAttribute('aria-pressed', 'false'); play.querySelector('span').textContent = 'Play'; }
+  }
   function startTimer() {
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var step = (reduce ? 12 : 1) * SPEEDS[speedIdx];
@@ -560,6 +593,7 @@
     }, reduce ? 700 : 140);
   }
   slider.addEventListener('input', function () { stop(); paint(+slider.value); });
+  slider.addEventListener('change', syncYearParam);
   if (play) play.addEventListener('click', function () {
     if (timer) { stop(); return; }
     if (+slider.value >= MAX) slider.value = 0;
@@ -572,9 +606,13 @@
     speedBtn.setAttribute('aria-label', 'Playback speed: ' + SPEEDS[speedIdx] + ' times normal, press to change');
     if (timer) { clearInterval(timer); startTimer(); } // re-pace an already-running play without touching its pressed state
   });
-  if (yearJump) yearJump.addEventListener('change', function () { stop(); slider.value = yearJump.value; paint(+yearJump.value); });
+  if (yearJump) yearJump.addEventListener('change', function () { stop(); slider.value = yearJump.value; paint(+yearJump.value); syncYearParam(); });
   document.querySelectorAll('.timeline').forEach(function (t) { t.hidden = false; });
   if (toggle) toggle.hidden = false;
+  if (readDate) {
+    var fromUrl = indexForYearParam(new URLSearchParams(window.location.search).get('year'));
+    if (fromUrl !== null) slider.value = fromUrl;
+  }
   paint(+slider.value);
 })();
 

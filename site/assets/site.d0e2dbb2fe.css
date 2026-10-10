@@ -89,6 +89,7 @@ img { max-width: 100%; display: block; }
 .btn-primary:hover { background: var(--brass-hi); color: var(--ink); }
 .source { font-family: var(--mono); font-size: 12px; color: var(--faint); overflow-wrap: anywhere; }
 .basis-note { display: block; font-family: var(--mono); font-size: 12px; color: var(--faint); margin-top: 2px; }
+.also-records { display: block; margin-top: 4px; font-size: 14px; }
 .source::before { content: "↳ "; }
 /* an editorial label (sitegen/pages.py EDITORIAL_SOURCES) is not a citation: no arrow, no mono */
 .source.editorial { font-family: var(--sans); font-style: italic; }
@@ -554,6 +555,16 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .facts { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 10px 12px; margin: 0; font-size: 14px; }
 .facts dt { color: var(--paper-faint); }
 .facts dd { margin: 0; overflow-wrap: anywhere; }
+/* By use (docs/briefs/next-five.md): a site page's records by use category and status, inside At a glance. */
+.by-use { border-top: 1px solid var(--paper-line); padding-top: 14px; }
+.by-use h3 { font: 500 12px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--paper-brass); margin: 0 0 8px; }
+.by-use-table { width: 100%; border-collapse: collapse; font-size: 14px; font-variant-numeric: tabular-nums; }
+.by-use-table th, .by-use-table td { padding: 5px 0; border-bottom: 1px solid var(--paper-line); text-align: right; }
+.by-use-table thead th { font: 12px var(--mono); color: var(--paper-faint); }
+.by-use-table th[scope="row"], .by-use-table thead th:first-child { text-align: left; font: 14px var(--sans); color: var(--paper-ink); }
+.by-use-table thead th:first-child { font: 12px var(--mono); color: var(--paper-faint); }
+.by-use-table .swatch { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 8px; vertical-align: -1px; }
+.by-use .empty-note { margin-top: 8px; font-size: 12px; }
 .sources { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; overflow-wrap: anywhere; }
 .cite { background: var(--paper-ink); color: var(--text); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 12px; }
 .cite h2 { font: 500 12px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--brass); }
@@ -877,3 +888,22 @@ sup.cites a { text-decoration: none; }
 }
 /* A zoomed image grows over the whole overlay; its controls stay on top of it and tappable. */
 .lightbox-close, .lightbox-prev, .lightbox-next, .lightbox-kinds { z-index: 4; }
+
+/* Print (docs/briefs/next-five.md, A9): the record's text, facts, What's next, changes and sources
+   on paper, without the screen chrome. Maps, the timeline and the gallery don't print usefully
+   in ink; every row of a collapsible box prints, since paper can't expand one. */
+.print-foot { display: none; }
+@media print {
+  .site-header, .site-footer, .skip, .map-band, .gallery-band, .timeline, nav.section-jump, .bx-bar, .bx-chips,
+  [data-box-preview], .box-tail, .zoom-controls, .page-about, .newsletter, form { display: none !important; }
+  html, body, section.light, .card, .whats-next, .cite { background: #fff !important; color: #000 !important; box-shadow: none !important; }
+  .cite * { color: #000 !important; }
+  a { color: #000 !important; }
+  .box-list li[hidden] { display: list-item !important; }
+  .box-list ul[hidden]:not([data-box-preview]), .box-list div[hidden] { display: block !important; }
+  .box-list tr[hidden] { display: table-row !important; }
+  .grid-main { display: block !important; }
+  .grid-main > aside { margin-top: 24px; }
+  li, tr, .card, .whats-next { break-inside: avoid; }
+  .print-foot { display: block; margin: 24px 0 0; padding-top: 6px; border-top: 1px solid #000; font: 9pt var(--mono); color: #000; }
+}
