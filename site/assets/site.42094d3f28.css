@@ -892,6 +892,15 @@ sup.cites a { text-decoration: none; }
 /* Print (docs/briefs/next-five.md, A9): the record's text, facts, What's next, changes and sources
    on paper, without the screen chrome. Maps, the timeline and the gallery don't print usefully
    in ink; every row of a collapsible box prints, since paper can't expand one. */
+/* How complete is the record? (docs/briefs/completeness.md) */
+.table-scroll { overflow-x: auto; margin: 18px 0 8px; }
+.completeness-table { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 14px; font-variant-numeric: tabular-nums; }
+.completeness-table th, .completeness-table td { padding: 8px 10px; border-bottom: 1px solid var(--paper-line); text-align: right; vertical-align: top; }
+.completeness-table thead th { font: 12px var(--mono); color: var(--paper-faint); border-bottom: 1px solid var(--paper-ink); }
+.completeness-table th[scope="row"], .completeness-table thead th:first-child { text-align: left; }
+.completeness-table th[scope="row"] { font-weight: 500; color: var(--paper-ink); }
+.completeness-table th[scope="row"] span { display: block; font-weight: 400; font-size: 12px; color: var(--paper-soft); margin-top: 2px; }
+.completeness-table td:last-child { font-weight: 600; }
 .print-foot { display: none; }
 @media print {
   .site-header, .site-footer, .skip, .map-band, .gallery-band, .timeline, nav.section-jump, .bx-bar, .bx-chips,
