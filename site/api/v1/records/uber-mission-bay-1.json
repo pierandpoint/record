@@ -12,7 +12,9 @@
   "permalink": "https://pierandpoint.org/parcels/uber-mission-bay-1/",
   "api": "https://pierandpoint.org/api/v1/records/uber-mission-bay-1.json",
   "names": [
-   "Uber Mission Bay 1"
+   "Uber Mission Bay 1",
+   "1455 3rd St",
+   "Uber Headquarters, 1455 Third Street"
   ],
   "site": {
    "slug": "mission-bay",
@@ -29,8 +31,13 @@
   "how_to_comment": [],
   "positions": [],
   "address": "1455 3rd St",
-  "summary": null,
-  "summary_sources": [],
+  "summary": "The eleven-story tower at 1455 Third Street, part of the Uber headquarters campus designed by SHoP Architects (per ArchDaily) and developed by a joint venture of Alexandria Real Estate Equities (51 percent) and Uber (49 percent) formed in September 2014; the Department of Building Inspection shows its new-construction permit completed on 2021-04-01, and Uber confirmed in October 2023 that OpenAI is leasing 1455 and 1515 Third Street from it.",
+  "summary_sources": [
+   "src-alexandria-3q14",
+   "src-archdaily-uber",
+   "src-dbi-1455-newcon",
+   "src-sfstd-2023-openai"
+  ],
   "shape": {
    "kind": "parcel",
    "parcel": "8721035",
@@ -42,9 +49,263 @@
    "lon": -122.388387,
    "lat": 37.770143
   },
-  "facts": [],
-  "costs": [],
+  "facts": [
+   {
+    "key": "address",
+    "value": "1455 3rd St",
+    "sources": [
+     "src-dbi-1455-newcon"
+    ]
+   },
+   {
+    "key": "developer",
+    "value": "Joint venture of Alexandria Real Estate Equities (51%) and Uber Technologies (49%), formed September 2014, per Alexandria's 3Q14 report",
+    "sources": [
+     "src-alexandria-3q14"
+    ]
+   },
+   {
+    "key": "architect",
+    "value": "SHoP Architects (ArchDaily lists the project year as 2022)",
+    "sources": [
+     "src-archdaily-uber"
+    ]
+   },
+   {
+    "key": "stories",
+    "value": "11 on the Assessor roll (lot 8721033, 2022); 12 proposed on the new-construction permit; ArchDaily: 'an eleven-story tower at 1455 Third Street'",
+    "sources": [
+     "src-assessor-8721033",
+     "src-dbi-1455-newcon",
+     "src-archdaily-uber"
+    ]
+   },
+   {
+    "key": "gross_sqft",
+    "value": "422,980 rentable sq ft for both 1455 and 1515 Third Street together (Alexandria, 2014); ArchDaily: 423,000 sq ft for the two-building project",
+    "sources": [
+     "src-alexandria-3q14",
+     "src-archdaily-uber"
+    ]
+   },
+   {
+    "key": "land_cost",
+    "value": "$125.0 million purchase price for both parcels (1455/1515 Third Street) including 423 parking structure spaces, foundation piles, plans and permits, 49 percent funded by Uber (Alexandria, 2014); not split by building",
+    "sources": [
+     "src-alexandria-3q14"
+    ]
+   },
+   {
+    "key": "tenant",
+    "value": "OpenAI leases 1455 and 1515 Third St from Uber (October 2023)",
+    "sources": [
+     "src-sfstd-2023-openai"
+    ]
+   }
+  ],
+  "costs": [
+   {
+    "amount_usd": 66591018,
+    "what": "Estimated cost stated on new-construction permit 201508245071 (self-reported for the permit fee)",
+    "date": "2015-08",
+    "kind": "permit_valuation",
+    "scope": "record",
+    "approximate": false,
+    "sources": [
+     "src-dbi-1455-newcon"
+    ]
+   }
+  ],
   "milestones": [
+   {
+    "date": "2014-09",
+    "date_label": "Sep 2014",
+    "status": null,
+    "status_label": null,
+    "text": "Alexandria Real Estate Equities and Uber form a joint venture and acquire the 1455/1515 Third Street land parcels for ground-up development of two Class A buildings (422,980 rentable sq ft together); 15-year lease to Uber for 100 percent of the project",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-alexandria-3q14",
+      "title": "Alexandria Real Estate Equities third quarter 2014 supplemental information (Exhibit 99.1)",
+      "publisher": "Alexandria Real Estate Equities, filed with the SEC (company-reported)",
+      "date": "2014",
+      "url": "https://www.sec.gov/Archives/edgar/data/1035443/000103544314000075/a3q14-ex991.htm",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "Alexandria Real Estate Equities, filed with the SEC (company-reported), 2014",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8721035",
+     "slug": "uber-mission-bay-1",
+     "name": "Uber Mission Bay 1",
+     "permalink": "https://pierandpoint.org/parcels/uber-mission-bay-1/",
+     "api": "https://pierandpoint.org/api/v1/records/uber-mission-bay-1.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2015-08-24",
+    "date_label": "Aug 24, 2015",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Department of Building Inspection new-construction permit application 201508245071 filed to erect 12 stories for office and daycare at 1455 3rd St (estimated cost $66,591,018)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dbi-1455-newcon",
+      "title": "Building permit 201508245071, new construction, 1455 3rd St (block 8721 lot 033)",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201508245071",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "DataSF / SF Department of Building Inspection",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "8721035",
+     "slug": "uber-mission-bay-1",
+     "name": "Uber Mission Bay 1",
+     "permalink": "https://pierandpoint.org/parcels/uber-mission-bay-1/",
+     "api": "https://pierandpoint.org/api/v1/records/uber-mission-bay-1.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2016-09-06",
+    "date_label": "Sep 6, 2016",
+    "status": null,
+    "status_label": null,
+    "text": "SocketSite reports pile drivers arriving and permit paperwork filed to start driving piles for the headquarters building",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-socketsite-2016-uber",
+      "title": "Uber about to Start Building New San Francisco HQ",
+      "publisher": "SocketSite",
+      "date": "2016-09-06",
+      "url": "https://socketsite.com/archives/2016/09/uber-about-to-start-building-new-san-francisco-hq.html",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "SocketSite, 2016-09-06",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8721035",
+     "slug": "uber-mission-bay-1",
+     "name": "Uber Mission Bay 1",
+     "permalink": "https://pierandpoint.org/parcels/uber-mission-bay-1/",
+     "api": "https://pierandpoint.org/api/v1/records/uber-mission-bay-1.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2016-10-18",
+    "date_label": "Oct 18, 2016",
+    "status": null,
+    "status_label": null,
+    "text": "Permit 201606039050 for installation of foundation piles (114 piles) issued",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dbi-1455-piles",
+      "title": "Building permit 201606039050, pile installation, 1455 3rd St (block 8721 lot 033)",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201606039050",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "DataSF / SF Department of Building Inspection",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8721035",
+     "slug": "uber-mission-bay-1",
+     "name": "Uber Mission Bay 1",
+     "permalink": "https://pierandpoint.org/parcels/uber-mission-bay-1/",
+     "api": "https://pierandpoint.org/api/v1/records/uber-mission-bay-1.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2021-04",
+    "date_label": "Apr 2021",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Department of Building Inspection records new-construction permit 201508245071 as complete (completed date 2021-04-01); the Assessor roll lists 2021 as year built for the building",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dbi-1455-newcon",
+      "title": "Building permit 201508245071, new construction, 1455 3rd St (block 8721 lot 033)",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201508245071",
+      "accessed": "2026-10-10"
+     },
+     {
+      "id": "src-assessor-8721033",
+      "title": "Assessor secured property tax roll, parcel 8721033 (1455 3rd St), 2022 roll",
+      "publisher": "DataSF / SF Assessor-Recorder",
+      "url": "https://data.sfgov.org/resource/wv5m-vpq2.json?parcel_number=8721033",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "DataSF / SF Department of Building Inspection; DataSF / SF Assessor-Recorder",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "8721035",
+     "slug": "uber-mission-bay-1",
+     "name": "Uber Mission Bay 1",
+     "permalink": "https://pierandpoint.org/parcels/uber-mission-bay-1/",
+     "api": "https://pierandpoint.org/api/v1/records/uber-mission-bay-1.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
    {
     "date": "2022",
     "date_label": "~2022",
@@ -108,9 +369,75 @@
      "url": "https://pierandpoint.org/sites/mission-bay/"
     },
     "relation": "tracked"
+   },
+   {
+    "date": "2023-10-27",
+    "date_label": "Oct 27, 2023",
+    "status": null,
+    "status_label": null,
+    "text": "An Uber spokesperson confirms OpenAI is leasing two buildings from Uber's Mission Bay headquarters, 1455 and 1515 Third St",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfstd-2023-openai",
+      "title": "ChatGPT-maker OpenAI officially inks massive San Francisco office lease",
+      "publisher": "The San Francisco Standard",
+      "date": "2023-10-27",
+      "url": "https://sfstandard.com/2023/10/27/openai-uber-headquarters-mission-bay/",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "The San Francisco Standard, 2023-10-27",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8721035",
+     "slug": "uber-mission-bay-1",
+     "name": "Uber Mission Bay 1",
+     "permalink": "https://pierandpoint.org/parcels/uber-mission-bay-1/",
+     "api": "https://pierandpoint.org/api/v1/records/uber-mission-bay-1.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-10",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "Added a sourced dossier for Uber Mission Bay 1.",
+    "source": "https://www.sec.gov/Archives/edgar/data/1035443/000103544314000075/a3q14-ex991.htm",
+    "sources": [
+     {
+      "title": "https://www.sec.gov/Archives/edgar/data/1035443/000103544314000075/a3q14-ex991.htm"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "8721035",
+     "slug": "uber-mission-bay-1",
+     "name": "Uber Mission Bay 1",
+     "permalink": "https://pierandpoint.org/parcels/uber-mission-bay-1/",
+     "api": "https://pierandpoint.org/api/v1/records/uber-mission-bay-1.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-29",
     "kind": "correction",
@@ -200,32 +527,82 @@
    }
   ],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "Parcel 8721035 first appears on the Assessor roll for 2023 with the same location as lot 8721033 (rolls to 2022) and a lot area of 38,459 sq ft; the permits are filed under lot 033. No source read explains the lot merger, so the permit and 2021 year-built evidence is attached to this record through the shared 1455 3rd St address.",
+   "The map note's 486,600 sq ft combined OpenAI sublease figure and 'largest SF office lease since 2018' (The Real Deal) could not be opened (HTTP 403); the San Francisco Standard says only 'nearly a half-million square feet' and 'largest office lease in San Francisco since 2018'.",
+   "No source read gives a groundbreaking date or an opening or move-in month; the Department of Building Inspection completed date is a permit closeout date. SocketSite (2016) expected occupancy by mid-2018; the permit shows 2021.",
+   "Sources disagree on stories (11 on the Assessor roll, 12 proposed on the permit, eleven in ArchDaily)."
+  ],
   "sources": [
+   {
+    "id": "src-alexandria-3q14",
+    "title": "Alexandria Real Estate Equities third quarter 2014 supplemental information (Exhibit 99.1)",
+    "publisher": "Alexandria Real Estate Equities, filed with the SEC (company-reported)",
+    "date": "2014",
+    "url": "https://www.sec.gov/Archives/edgar/data/1035443/000103544314000075/a3q14-ex991.htm",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-socketsite-2016-uber",
+    "title": "Uber about to Start Building New San Francisco HQ",
+    "publisher": "SocketSite",
+    "date": "2016-09-06",
+    "url": "https://socketsite.com/archives/2016/09/uber-about-to-start-building-new-san-francisco-hq.html",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-archdaily-uber",
+    "title": "Uber Headquarters / SHoP Architects",
+    "publisher": "ArchDaily (architect-provided text)",
+    "date": "2023-09-04",
+    "url": "https://www.archdaily.com/1006339/uber-headquarters-shop-architects",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-sfstd-2023-openai",
+    "title": "ChatGPT-maker OpenAI officially inks massive San Francisco office lease",
+    "publisher": "The San Francisco Standard",
+    "date": "2023-10-27",
+    "url": "https://sfstandard.com/2023/10/27/openai-uber-headquarters-mission-bay/",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-dbi-1455-newcon",
+    "title": "Building permit 201508245071, new construction, 1455 3rd St (block 8721 lot 033)",
+    "publisher": "DataSF / SF Department of Building Inspection",
+    "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201508245071",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-dbi-1455-piles",
+    "title": "Building permit 201606039050, pile installation, 1455 3rd St (block 8721 lot 033)",
+    "publisher": "DataSF / SF Department of Building Inspection",
+    "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201606039050",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-assessor-8721033",
+    "title": "Assessor secured property tax roll, parcel 8721033 (1455 3rd St), 2022 roll",
+    "publisher": "DataSF / SF Assessor-Recorder",
+    "url": "https://data.sfgov.org/resource/wv5m-vpq2.json?parcel_number=8721033",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-assessor-8721035",
+    "title": "Assessor secured property tax roll, parcel 8721035 (1455 3rd St), 2023 to 2025 rolls",
+    "publisher": "DataSF / SF Assessor-Recorder",
+    "url": "https://data.sfgov.org/resource/wv5m-vpq2.json?parcel_number=8721035",
+    "accessed": "2026-10-10"
+   },
    {
     "id": null,
     "title": "therealdeal.com/san-francisco/2023/10/29/openai-subleases-two-san-francisco-buildings-from-uber",
     "url": "https://therealdeal.com/san-francisco/2023/10/29/openai-subleases-two-san-francisco-buildings-from-uber/"
-   },
-   {
-    "id": null,
-    "title": "sfstandard.com/2023/10/27/openai-uber-headquarters-mission-bay",
-    "url": "https://sfstandard.com/2023/10/27/openai-uber-headquarters-mission-bay/"
-   },
-   {
-    "id": null,
-    "title": "archdaily.com/1006339/uber-headquarters-shop-architects",
-    "url": "https://www.archdaily.com/1006339/uber-headquarters-shop-architects"
-   },
-   {
-    "id": null,
-    "title": "sec.gov/Archives/edgar/data/1035443/000103544314000075/a3q14-ex991.htm",
-    "url": "https://www.sec.gov/Archives/edgar/data/1035443/000103544314000075/a3q14-ex991.htm"
    }
   ],
   "notes": "Uber Mission Bay 1, 1455 3rd St -- an 11-story Class A office tower developed by a joint venture of Alexandria Real Estate Equities (51%) and Uber Technologies (49%), formed in September 2014 per Alexandria's 3Q14 supplemental, designed by SHoP Architects, part of Uber's four-building Mission Bay headquarters campus (ArchDaily lists the project as 2022; the Assessor gives no year built for this parcel). Subleased to OpenAI along with 1515 3rd St in an October 2023 deal (~486,600 sq ft combined), reported as the largest SF office lease since 2018.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-10-10",
   "tenants": [
    {
     "slug": "openai",

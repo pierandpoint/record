@@ -12,7 +12,7 @@
   "permalink": "https://pierandpoint.org/parcels/25b/",
   "api": "https://pierandpoint.org/api/v1/records/25b.json",
   "names": [
-   "25B"
+   "Mission Bay South Block 25B"
   ],
   "site": {
    "slug": "mission-bay",
@@ -29,8 +29,10 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "UCSF's June 2025 presentation to the Mission Bay Citizens Advisory Committee lists Block 25B, with a use of research, among the undeveloped parcels remaining under its Long Range Development Plan; the same presentation says UCSF has no building plans at Mission Bay right now.",
+  "summary_sources": [
+   "src-ucsf-cac-2025"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -45,7 +47,15 @@
    "lon": -122.389479,
    "lat": 37.767295
   },
-  "facts": [],
+  "facts": [
+   {
+    "key": "planned_use",
+    "value": "Research (UCSF Long Range Development Plan use for Block 25B, slide 3 of the June 2025 presentation)",
+    "sources": [
+     "src-ucsf-cac-2025"
+    ]
+   }
+  ],
   "costs": [],
   "milestones": [
    {
@@ -82,6 +92,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-10",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "Added a sourced dossier for Mission Bay South Block 25B.",
+    "source": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
+    "sources": [
+     {
+      "title": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "mission_bay_25b_parking_lot",
+     "slug": "25b",
+     "name": "25B",
+     "permalink": "https://pierandpoint.org/parcels/25b/",
+     "api": "https://pierandpoint.org/api/v1/records/25b.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-06",
     "kind": "correction",
@@ -142,12 +181,29 @@
    }
   ],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "No project, developer, architect, design or schedule for Block 25B was found in any source read.",
+   "That the site is a surface parking lot today (the record's name) rests on this project's imagery checks; no source read says so.",
+   "The record status 'planned' reflects a land-use designation in UCSF's long-range plan, not an active project; the slide itself says there are no building plans at Mission Bay right now.",
+   "The slide's map label 'Future Research (25B)' is in the slide image; only the slide's text list was read as text."
+  ],
   "sources": [
    {
-    "id": null,
-    "title": "sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
-    "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf"
+    "id": "src-ucsf-cac-2025",
+    "title": "UCSF Mission Bay Planned Development (presentation to the Mission Bay Citizens Advisory Committee, June 12, 2025)",
+    "publisher": "UCSF, presented to OCII Mission Bay Citizens Advisory Committee",
+    "date": "2025-06-12",
+    "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
+    "accessed": "2026-10-10",
+    "overview": true
+   },
+   {
+    "id": "src-ocii-lum-2019",
+    "title": "Attachment 1: Mission Bay Land Use Map (December 2019)",
+    "publisher": "Office of Community Investment and Infrastructure (OCII)",
+    "date": "2019-12",
+    "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
+    "accessed": "2026-10-10"
    },
    {
     "id": null,
@@ -156,8 +212,8 @@
    }
   ],
   "notes": "OCII plan block 25B, shown by UCSF's own Dec 2024-updated campus map (June 2025 CAC deck) as 'Future Research (25B)' and listed under 'Undeveloped parcels remaining'. Immediately east of Mission Hall (25A), between it and 3rd St, north of 16th St; the position matches the deck's map. The block is a surface parking lot in USDA NAIP imagery (viewed 2026-09-29), an imagery observation the deck does not state. Currently undeveloped/planned per the plan designation.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-10-10",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

@@ -12,7 +12,8 @@
   "permalink": "https://pierandpoint.org/parcels/avalon-at-mission-bay-i/",
   "api": "https://pierandpoint.org/api/v1/records/avalon-at-mission-bay-i.json",
   "names": [
-   "Avalon at Mission Bay I"
+   "Avalon at Mission Bay I",
+   "255 King St"
   ],
   "site": {
    "slug": "mission-bay",
@@ -29,8 +30,11 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "A residential building at 255 King Street: the Department of Building Inspection filed its new-construction permit in July 2000 (16 stories, 250 units) and recorded it completed on 2004-09-21, while the Assessor roll gives 2003 as year built, 256 units and 19 stories.",
+  "summary_sources": [
+   "src-dbi-255king-newcon",
+   "src-assessor-8706010"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -45,9 +49,125 @@
    "lon": -122.393173,
    "lat": 37.776504
   },
-  "facts": [],
-  "costs": [],
+  "facts": [
+   {
+    "key": "address",
+    "value": "255 King St",
+    "sources": [
+     "src-dbi-255king-newcon",
+     "src-assessor-8706010"
+    ]
+   },
+   {
+    "key": "units",
+    "value": "256 on the Assessor roll (2023, 2024); 250 proposed on the permit",
+    "sources": [
+     "src-assessor-8706010",
+     "src-dbi-255king-newcon"
+    ]
+   },
+   {
+    "key": "stories",
+    "value": "19 on the Assessor roll; 16 proposed on the permit",
+    "sources": [
+     "src-assessor-8706010",
+     "src-dbi-255king-newcon"
+    ]
+   },
+   {
+    "key": "gross_sqft",
+    "value": "250,908 (Assessor roll property_area)",
+    "sources": [
+     "src-assessor-8706010"
+    ]
+   }
+  ],
+  "costs": [
+   {
+    "amount_usd": 12000000,
+    "what": "Estimated cost stated on new-construction permit 200007155245 (self-reported for the permit fee)",
+    "date": "2000-07",
+    "kind": "permit_valuation",
+    "scope": "record",
+    "approximate": false,
+    "sources": [
+     "src-dbi-255king-newcon"
+    ]
+   }
+  ],
   "milestones": [
+   {
+    "date": "2000-07-15",
+    "date_label": "Jul 15, 2000",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Department of Building Inspection new-construction permit application 200007155245 filed to erect an apartment, parking and retail building at 255 King St (16 stories, 250 units proposed; estimated cost $12,000,000)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dbi-255king-newcon",
+      "title": "Building permit 200007155245, new construction, 255 King St (block 8706 lot 001)",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=200007155245",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "DataSF / SF Department of Building Inspection",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_avalon_phase_i",
+     "slug": "avalon-at-mission-bay-i",
+     "name": "Avalon at Mission Bay I",
+     "permalink": "https://pierandpoint.org/parcels/avalon-at-mission-bay-i/",
+     "api": "https://pierandpoint.org/api/v1/records/avalon-at-mission-bay-i.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2000-10-19",
+    "date_label": "Oct 19, 2000",
+    "status": null,
+    "status_label": null,
+    "text": "New-construction permit 200007155245 issued",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dbi-255king-newcon",
+      "title": "Building permit 200007155245, new construction, 255 King St (block 8706 lot 001)",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=200007155245",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "DataSF / SF Department of Building Inspection",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "mission_bay_avalon_phase_i",
+     "slug": "avalon-at-mission-bay-i",
+     "name": "Avalon at Mission Bay I",
+     "permalink": "https://pierandpoint.org/parcels/avalon-at-mission-bay-i/",
+     "api": "https://pierandpoint.org/api/v1/records/avalon-at-mission-bay-i.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
    {
     "date": "2003",
     "date_label": "~2003",
@@ -79,9 +199,81 @@
      "url": "https://pierandpoint.org/sites/mission-bay/"
     },
     "relation": "tracked"
+   },
+   {
+    "date": "2004-09",
+    "date_label": "~2004",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Department of Building Inspection records new-construction permit 200007155245 as completed on 2004-09-21; the Assessor roll lists 2003 as year built",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-dbi-255king-newcon",
+      "title": "Building permit 200007155245, new construction, 255 King St (block 8706 lot 001)",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=200007155245",
+      "accessed": "2026-10-10"
+     },
+     {
+      "id": "src-assessor-8706010",
+      "title": "Assessor secured property tax roll, parcel 8706010 (255 King St), 2023 and 2024 rolls",
+      "publisher": "DataSF / SF Assessor-Recorder",
+      "url": "https://data.sfgov.org/resource/wv5m-vpq2.json?parcel_number=8706010",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "DataSF / SF Department of Building Inspection; DataSF / SF Assessor-Recorder",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_avalon_phase_i",
+     "slug": "avalon-at-mission-bay-i",
+     "name": "Avalon at Mission Bay I",
+     "permalink": "https://pierandpoint.org/parcels/avalon-at-mission-bay-i/",
+     "api": "https://pierandpoint.org/api/v1/records/avalon-at-mission-bay-i.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-10",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "Added a sourced dossier for Avalon at Mission Bay I.",
+    "source": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=200007155245",
+    "sources": [
+     {
+      "title": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=200007155245"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "mission_bay_avalon_phase_i",
+     "slug": "avalon-at-mission-bay-i",
+     "name": "Avalon at Mission Bay I",
+     "permalink": "https://pierandpoint.org/parcels/avalon-at-mission-bay-i/",
+     "api": "https://pierandpoint.org/api/v1/records/avalon-at-mission-bay-i.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-29",
     "kind": "correction",
@@ -142,8 +334,27 @@
    }
   ],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "No source read states that 255 King St is the AvalonBay property called 'Avalon at Mission Bay' or that it is the first of three phases: 'Avalon at Mission Bay I' is this project's own label. Rental-listing pages name 255 King St 'Avalon at Mission Bay' but give conflicting unit counts, and were seen only as search snippets, not opened.",
+   "Developer (AvalonBay Communities) and architect not confirmed by any source read; Arquitectonica's 'Avalon Mission Bay' page (407,000 SF, 260 units) gives no address or year and may describe a different phase.",
+   "The permit completed date (2004-09-21) and the Assessor year built (2003) disagree by about a year; the permit date is a closeout record. No opening month found.",
+   "The permit is recorded under block 8706 lot 001, a different lot from the Assessor parcel 8706010; the relationship (condominium or subdivision lots) is not explained in any source read."
+  ],
   "sources": [
+   {
+    "id": "src-dbi-255king-newcon",
+    "title": "Building permit 200007155245, new construction, 255 King St (block 8706 lot 001)",
+    "publisher": "DataSF / SF Department of Building Inspection",
+    "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=200007155245",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-assessor-8706010",
+    "title": "Assessor secured property tax roll, parcel 8706010 (255 King St), 2023 and 2024 rolls",
+    "publisher": "DataSF / SF Assessor-Recorder",
+    "url": "https://data.sfgov.org/resource/wv5m-vpq2.json?parcel_number=8706010",
+    "accessed": "2026-10-10"
+   },
    {
     "id": null,
     "title": "openstreetmap.org/way/945538326",
@@ -156,8 +367,8 @@
    }
   ],
   "notes": "The building way used here is the actual footprint; a companion OSM landuse way (867565682) may cover the same site but was not checked. That this is the 'first of three AvalonBay phases along King St' is not stated by any cited source: the name and numbering 'Avalon at Mission Bay I' are Pier & Point's own label, since OSM way 945538326 has no name and Arquitectonica titles its page 'Avalon Mission Bay'.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-10-10",
   "tenants": [
    {
     "slug": "thy-spa",

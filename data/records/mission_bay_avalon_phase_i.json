@@ -1,0 +1,114 @@
+{
+  "record_id": "mission_bay_avalon_phase_i",
+  "names": [
+    "Avalon at Mission Bay I",
+    "255 King St"
+  ],
+  "summary": "A residential building at 255 King Street: the Department of Building Inspection filed its new-construction permit in July 2000 (16 stories, 250 units) and recorded it completed on 2004-09-21, while the Assessor roll gives 2003 as year built, 256 units and 19 stories.",
+  "summary_sources": [
+    "src-dbi-255king-newcon",
+    "src-assessor-8706010"
+  ],
+  "milestones": [
+    {
+      "date": "2000-07-15",
+      "status": "planned",
+      "text": "Department of Building Inspection new-construction permit application 200007155245 filed to erect an apartment, parking and retail building at 255 King St (16 stories, 250 units proposed; estimated cost $12,000,000)",
+      "sources": [
+        "src-dbi-255king-newcon"
+      ],
+      "expected": false,
+      "approximate": false
+    },
+    {
+      "date": "2000-10-19",
+      "text": "New-construction permit 200007155245 issued",
+      "sources": [
+        "src-dbi-255king-newcon"
+      ],
+      "expected": false,
+      "approximate": false
+    },
+    {
+      "date": "2004-09",
+      "status": "complete",
+      "text": "Department of Building Inspection records new-construction permit 200007155245 as completed on 2004-09-21; the Assessor roll lists 2003 as year built",
+      "sources": [
+        "src-dbi-255king-newcon",
+        "src-assessor-8706010"
+      ],
+      "expected": false,
+      "approximate": true
+    }
+  ],
+  "costs": [
+    {
+      "amount_usd": 12000000,
+      "what": "Estimated cost stated on new-construction permit 200007155245 (self-reported for the permit fee)",
+      "date": "2000-07",
+      "kind": "permit_valuation",
+      "scope": "record",
+      "approximate": false,
+      "sources": [
+        "src-dbi-255king-newcon"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "key": "address",
+      "value": "255 King St",
+      "sources": [
+        "src-dbi-255king-newcon",
+        "src-assessor-8706010"
+      ]
+    },
+    {
+      "key": "units",
+      "value": "256 on the Assessor roll (2023, 2024); 250 proposed on the permit",
+      "sources": [
+        "src-assessor-8706010",
+        "src-dbi-255king-newcon"
+      ]
+    },
+    {
+      "key": "stories",
+      "value": "19 on the Assessor roll; 16 proposed on the permit",
+      "sources": [
+        "src-assessor-8706010",
+        "src-dbi-255king-newcon"
+      ]
+    },
+    {
+      "key": "gross_sqft",
+      "value": "250,908 (Assessor roll property_area)",
+      "sources": [
+        "src-assessor-8706010"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-dbi-255king-newcon",
+      "title": "Building permit 200007155245, new construction, 255 King St (block 8706 lot 001)",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=200007155245",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "src-assessor-8706010",
+      "title": "Assessor secured property tax roll, parcel 8706010 (255 King St), 2023 and 2024 rolls",
+      "publisher": "DataSF / SF Assessor-Recorder",
+      "url": "https://data.sfgov.org/resource/wv5m-vpq2.json?parcel_number=8706010",
+      "accessed": "2026-10-10"
+    }
+  ],
+  "open_questions": [
+    "No source read states that 255 King St is the AvalonBay property called 'Avalon at Mission Bay' or that it is the first of three phases: 'Avalon at Mission Bay I' is this project's own label. Rental-listing pages name 255 King St 'Avalon at Mission Bay' but give conflicting unit counts, and were seen only as search snippets, not opened.",
+    "Developer (AvalonBay Communities) and architect not confirmed by any source read; Arquitectonica's 'Avalon Mission Bay' page (407,000 SF, 260 units) gives no address or year and may describe a different phase.",
+    "The permit completed date (2004-09-21) and the Assessor year built (2003) disagree by about a year; the permit date is a closeout record. No opening month found.",
+    "The permit is recorded under block 8706 lot 001, a different lot from the Assessor parcel 8706010; the relationship (condominium or subdivision lots) is not explained in any source read."
+  ],
+  "images": [],
+  "last_verified": "2026-10-10"
+}

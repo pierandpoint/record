@@ -12,7 +12,9 @@
   "permalink": "https://pierandpoint.org/parcels/luma-hotel-san-francisco/",
   "api": "https://pierandpoint.org/api/v1/records/luma-hotel-san-francisco.json",
   "names": [
-   "LUMA Hotel San Francisco"
+   "LUMA Hotel San Francisco",
+   "100 Channel St",
+   "Marriott SoMa Mission Bay Hotel (2018 working name)"
   ],
   "site": {
    "slug": "mission-bay",
@@ -29,8 +31,12 @@
   "how_to_comment": [],
   "positions": [],
   "address": "100 Channel St (at the corner of Channel and 3rd Streets, per Hoodline's 2018 groundbreaking report)",
-  "summary": null,
-  "summary_sources": [],
+  "summary": "A 299-room hotel at 100 Channel Street designed by Hornberger + Worstell, which Potrero View reports opened in June 2022 as Mission Bay's first hotel after a March 2018 groundbreaking by developer Lawrence Lui (SOMA Hotel, a Stanford Hotel affiliate per Hoodline).",
+  "summary_sources": [
+   "src-pv-2022-luma",
+   "src-sfc-2018-hotel",
+   "src-hoodline-2018-hotel"
+  ],
   "shape": {
    "kind": "parcel",
    "parcel": "8715008",
@@ -42,9 +48,188 @@
    "lon": -122.390389,
    "lat": 37.774834
   },
-  "facts": [],
-  "costs": [],
+  "facts": [
+   {
+    "key": "address",
+    "value": "100 Channel St, at the corner of Channel and Third Streets",
+    "sources": [
+     "src-pv-2022-luma",
+     "src-hoodline-2018-hotel"
+    ]
+   },
+   {
+    "key": "developer",
+    "value": "Lawrence Lui (SOMA Hotels president) per the San Francisco Chronicle; 'Stanford Hotel affiliate developer SOMA Hotel' per Hoodline",
+    "sources": [
+     "src-sfc-2018-hotel",
+     "src-hoodline-2018-hotel"
+    ]
+   },
+   {
+    "key": "architect",
+    "value": "Hornberger + Worstell",
+    "sources": [
+     "src-pv-2022-luma",
+     "src-sfc-2018-hotel"
+    ]
+   },
+   {
+    "key": "general_contractor",
+    "value": "Hathaway Dinwiddie (per Hoodline, 2018)",
+    "sources": [
+     "src-hoodline-2018-hotel"
+    ]
+   },
+   {
+    "key": "rooms",
+    "value": "299 guestrooms and suites at opening (Potrero View, 2022); 250 rooms in 2018 coverage and on the permit",
+    "sources": [
+     "src-pv-2022-luma",
+     "src-sfc-2018-hotel",
+     "src-dbi-luma-newcon"
+    ]
+   },
+   {
+    "key": "stories",
+    "value": "17 per the San Francisco Chronicle (2018) and the permit; Hoodline said 16",
+    "sources": [
+     "src-sfc-2018-hotel",
+     "src-dbi-luma-newcon",
+     "src-hoodline-2018-hotel"
+    ]
+   }
+  ],
+  "costs": [
+   {
+    "amount_usd": 60000000,
+    "what": "Estimated cost stated on new-construction permit 201509227707 (self-reported for the permit fee)",
+    "date": "2015-09",
+    "kind": "permit_valuation",
+    "scope": "record",
+    "approximate": false,
+    "sources": [
+     "src-dbi-luma-newcon"
+    ]
+   }
+  ],
   "milestones": [
+   {
+    "date": "2015-09-22",
+    "date_label": "Sep 22, 2015",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Department of Building Inspection new-construction permit application 201509227707 filed to erect a 17-story, 250-room hotel with no basement at 100 Channel St (estimated cost $60,000,000)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dbi-luma-newcon",
+      "title": "Building permit 201509227707, new construction, 100 Channel St",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201509227707",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "DataSF / SF Department of Building Inspection",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "8715008",
+     "slug": "luma-hotel-san-francisco",
+     "name": "LUMA Hotel San Francisco",
+     "permalink": "https://pierandpoint.org/parcels/luma-hotel-san-francisco/",
+     "api": "https://pierandpoint.org/api/v1/records/luma-hotel-san-francisco.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2016-10-05",
+    "date_label": "Oct 5, 2016",
+    "status": null,
+    "status_label": null,
+    "text": "New-construction permit 201509227707 issued",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dbi-luma-newcon",
+      "title": "Building permit 201509227707, new construction, 100 Channel St",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201509227707",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "DataSF / SF Department of Building Inspection",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8715008",
+     "slug": "luma-hotel-san-francisco",
+     "name": "LUMA Hotel San Francisco",
+     "permalink": "https://pierandpoint.org/parcels/luma-hotel-san-francisco/",
+     "api": "https://pierandpoint.org/api/v1/records/luma-hotel-san-francisco.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2018-03-29",
+    "date_label": "Mar 29, 2018",
+    "status": "under_construction",
+    "status_label": "Under construction",
+    "text": "Groundbreaking ceremony with Mayor Mark Farrell for the hotel, then called Marriott SoMa Mission Bay, scheduled to open in 2020",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfc-2018-hotel",
+      "title": "Groundbreaking for SF hotel marks milestone for Mission Bay",
+      "publisher": "San Francisco Chronicle",
+      "date": "2018-03-31",
+      "url": "https://www.sfchronicle.com/bayarea/article/Groundbreaking-for-SF-hotel-marks-milestone-for-12795570.php",
+      "accessed": "2026-10-10"
+     },
+     {
+      "id": "src-hoodline-2018-hotel",
+      "title": "'Marriott SOMA Mission Bay' Hotel Breaks Ground",
+      "publisher": "Hoodline",
+      "date": "2018-03",
+      "url": "https://hoodline.com/2018/03/marriott-soma-mission-bay-hotel-breaks-ground/",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "San Francisco Chronicle, 2018-03-31; Hoodline, 2018-03",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "8715008",
+     "slug": "luma-hotel-san-francisco",
+     "name": "LUMA Hotel San Francisco",
+     "permalink": "https://pierandpoint.org/parcels/luma-hotel-san-francisco/",
+     "api": "https://pierandpoint.org/api/v1/records/luma-hotel-san-francisco.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
    {
     "date": "2018-03-29",
     "date_label": "Mar 29, 2018",
@@ -60,6 +245,43 @@
     ],
     "source": "https://hoodline.com/2018/03/marriott-soma-mission-bay-hotel-breaks-ground/; https://www.sfchronicle.com/bayarea/article/Groundbreaking-for-SF-hotel-marks-milestone-for-12795570.php; https://www.potreroview.net/luma-becomes-mission-bays-first-hotel/",
     "origin": "csv",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "8715008",
+     "slug": "luma-hotel-san-francisco",
+     "name": "LUMA Hotel San Francisco",
+     "permalink": "https://pierandpoint.org/parcels/luma-hotel-san-francisco/",
+     "api": "https://pierandpoint.org/api/v1/records/luma-hotel-san-francisco.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2022-06",
+    "date_label": "Jun 2022",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "LUMA Hotel opens at 100 Channel Street, Mission Bay's first hotel",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-pv-2022-luma",
+      "title": "LUMA Becomes Mission Bay's First Hotel",
+      "publisher": "Potrero View",
+      "date": "2022-09",
+      "url": "https://www.potreroview.net/luma-becomes-mission-bays-first-hotel/",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "Potrero View, 2022-09",
+    "origin": "record",
     "category": "status",
     "category_label": "Status",
     "record": {
@@ -108,9 +330,75 @@
      "url": "https://pierandpoint.org/sites/mission-bay/"
     },
     "relation": "tracked"
+   },
+   {
+    "date": "2022-09",
+    "date_label": "Sep 2022",
+    "status": null,
+    "status_label": null,
+    "text": "Potrero View reports the 17th-floor Sky Lounge rooftop bar planned to debut in the fall",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-pv-2022-luma",
+      "title": "LUMA Becomes Mission Bay's First Hotel",
+      "publisher": "Potrero View",
+      "date": "2022-09",
+      "url": "https://www.potreroview.net/luma-becomes-mission-bays-first-hotel/",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "Potrero View, 2022-09",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8715008",
+     "slug": "luma-hotel-san-francisco",
+     "name": "LUMA Hotel San Francisco",
+     "permalink": "https://pierandpoint.org/parcels/luma-hotel-san-francisco/",
+     "api": "https://pierandpoint.org/api/v1/records/luma-hotel-san-francisco.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-10",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "Added a sourced dossier for LUMA Hotel San Francisco.",
+    "source": "https://www.potreroview.net/luma-becomes-mission-bays-first-hotel/",
+    "sources": [
+     {
+      "title": "https://www.potreroview.net/luma-becomes-mission-bays-first-hotel/"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "8715008",
+     "slug": "luma-hotel-san-francisco",
+     "name": "LUMA Hotel San Francisco",
+     "permalink": "https://pierandpoint.org/parcels/luma-hotel-san-francisco/",
+     "api": "https://pierandpoint.org/api/v1/records/luma-hotel-san-francisco.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-06",
     "kind": "correction",
@@ -200,32 +488,53 @@
    }
   ],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "Hospitality Net's opening announcement (cited in the map note) could not be opened (HTTP 403); the opening month comes from Potrero View alone (article dated September 2022: 'In June, LUMA Hotel opened').",
+   "Cole Martinez Curtis & Associates as interior designer (map note) is not stated by any source read.",
+   "Construction cost, and why the opening moved from the 2020 target to 2022, are not stated in any source read.",
+   "The Department of Building Inspection shows the new-construction permit completed on 2024-05-07, long after the June 2022 opening; this is a permit closeout date and is not used as the completion date."
+  ],
   "sources": [
+   {
+    "id": "src-pv-2022-luma",
+    "title": "LUMA Becomes Mission Bay's First Hotel",
+    "publisher": "Potrero View",
+    "date": "2022-09",
+    "url": "https://www.potreroview.net/luma-becomes-mission-bays-first-hotel/",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-sfc-2018-hotel",
+    "title": "Groundbreaking for SF hotel marks milestone for Mission Bay",
+    "publisher": "San Francisco Chronicle",
+    "date": "2018-03-31",
+    "url": "https://www.sfchronicle.com/bayarea/article/Groundbreaking-for-SF-hotel-marks-milestone-for-12795570.php",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-hoodline-2018-hotel",
+    "title": "'Marriott SOMA Mission Bay' Hotel Breaks Ground",
+    "publisher": "Hoodline",
+    "date": "2018-03",
+    "url": "https://hoodline.com/2018/03/marriott-soma-mission-bay-hotel-breaks-ground/",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-dbi-luma-newcon",
+    "title": "Building permit 201509227707, new construction, 100 Channel St",
+    "publisher": "DataSF / SF Department of Building Inspection",
+    "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201509227707",
+    "accessed": "2026-10-10"
+   },
    {
     "id": null,
     "title": "hospitalitynet.org/announcement/41008223/luma-hotel-san-francisco-opens-in-san-francisco-californias-mission-bay-neighborhood",
     "url": "https://www.hospitalitynet.org/announcement/41008223/luma-hotel-san-francisco-opens-in-san-francisco-californias-mission-bay-neighborhood"
-   },
-   {
-    "id": null,
-    "title": "potreroview.net/luma-becomes-mission-bays-first-hotel",
-    "url": "https://www.potreroview.net/luma-becomes-mission-bays-first-hotel/"
-   },
-   {
-    "id": null,
-    "title": "hoodline.com/2018/03/marriott-soma-mission-bay-hotel-breaks-ground",
-    "url": "https://hoodline.com/2018/03/marriott-soma-mission-bay-hotel-breaks-ground/"
-   },
-   {
-    "id": null,
-    "title": "sfchronicle.com/bayarea/article/Groundbreaking-for-SF-hotel-marks-milestone-for-12795570.php",
-    "url": "https://www.sfchronicle.com/bayarea/article/Groundbreaking-for-SF-hotel-marks-milestone-for-12795570.php"
    }
   ],
   "notes": "LUMA Hotel San Francisco, 100 Channel St (at the corner of Channel and 3rd Streets, per Hoodline's 2018 groundbreaking report) -- a 299-room independent hotel with a rooftop bar on its 17th floor (the 2018 groundbreaking coverage gave 16 stories, Hoodline, or 17, SF Chronicle), developed by SOMA Hotel, a Stanford Hotel affiliate (Hoodline, 2018), architect Hornberger + Worstell with Cole Martinez Curtis & Associates (interiors), opened June 2022 as Mission Bay's first hotel. Confirmed inside the Mission Bay South project area: this parcel's zoning district in DataSF's Assessor parcel data is 'MISSION BAY REDEVELOPMENT' (zoning code MB-RA), and it sits on the Mission Bay South side of the Channel St boundary in DataSF's official redevelopment-area layer.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-10-10",
   "tenants": [
    {
     "slug": "cavana-luma",

@@ -1,0 +1,136 @@
+{
+  "record_id": "mission_bay_the_beacon",
+  "names": [
+    "The Beacon",
+    "250 King St",
+    "260 King St"
+  ],
+  "summary": "Two residential towers at 250 and 260 King Street, for which the Department of Building Inspection filed new-construction permits in November 2000 (17 stories each; 279 and 307 dwelling units) and recorded both as completed on 2004-10-06; the Assessor roll gives 2004 as year built for the condominium lots at 250 King Street, and two listing sites give 595 residential units and Catellus as developer.",
+  "summary_sources": [
+    "src-dbi-beacon-250",
+    "src-dbi-beacon-260",
+    "src-assessor-8702015",
+    "src-sfhighrises-beacon",
+    "src-afi-beacon"
+  ],
+  "milestones": [
+    {
+      "date": "2000-11-30",
+      "status": "planned",
+      "text": "Department of Building Inspection new-construction permit applications 200011306843 (250 King St: 17 stories, 279 dwelling units, mixed use) and 200011306844 (260 King St: 17 stories, 307 units, mixed use) filed, each with an estimated cost of $73,000,000",
+      "sources": [
+        "src-dbi-beacon-250",
+        "src-dbi-beacon-260"
+      ],
+      "expected": false,
+      "approximate": false
+    },
+    {
+      "date": "2001-08-06",
+      "text": "Both new-construction permits issued",
+      "sources": [
+        "src-dbi-beacon-250",
+        "src-dbi-beacon-260"
+      ],
+      "expected": false,
+      "approximate": false
+    },
+    {
+      "date": "2004-10",
+      "status": "complete",
+      "text": "Department of Building Inspection records both new-construction permits as completed on 2004-10-06; the Assessor roll lists 2004 as year built for the condominium lots at 250 King St (listing sites say 2003)",
+      "sources": [
+        "src-dbi-beacon-250",
+        "src-dbi-beacon-260",
+        "src-assessor-8702015",
+        "src-sfhighrises-beacon"
+      ],
+      "expected": false,
+      "approximate": false
+    }
+  ],
+  "costs": [],
+  "facts": [
+    {
+      "key": "address",
+      "value": "250 and 260 King St",
+      "sources": [
+        "src-dbi-beacon-250",
+        "src-dbi-beacon-260"
+      ]
+    },
+    {
+      "key": "units",
+      "value": "Permits propose 279 (250 King St) and 307 (260 King St) dwelling units, 586 together; two listing sites give 595 residential units. The counts are not reconciled.",
+      "sources": [
+        "src-dbi-beacon-250",
+        "src-dbi-beacon-260",
+        "src-sfhighrises-beacon",
+        "src-afi-beacon"
+      ]
+    },
+    {
+      "key": "stories",
+      "value": "17 on both permits; SFHighrises lists 16 floors and Afi + Associates 'two sixteen-story towers'",
+      "sources": [
+        "src-dbi-beacon-250",
+        "src-dbi-beacon-260",
+        "src-sfhighrises-beacon",
+        "src-afi-beacon"
+      ]
+    },
+    {
+      "key": "developer",
+      "value": "Catellus, per SFHighrises (listing-site profile; no primary source read)",
+      "sources": [
+        "src-sfhighrises-beacon"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-dbi-beacon-250",
+      "title": "Building permit 200011306843, new construction, 250 King St (block 8702)",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=200011306843",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "src-dbi-beacon-260",
+      "title": "Building permit 200011306844, new construction, 260 King St (block 8702)",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=200011306844",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "src-assessor-8702015",
+      "title": "Assessor secured property tax roll, parcel 8702015 (250 King St unit lot), 2022 roll",
+      "publisher": "DataSF / SF Assessor-Recorder",
+      "url": "https://data.sfgov.org/resource/wv5m-vpq2.json?parcel_number=8702015",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "src-sfhighrises-beacon",
+      "title": "The Beacon in Mission Bay (SFHighrises, listing-site profile; secondary source)",
+      "publisher": "SFHighrises.com",
+      "url": "https://sfhighrises.com/building/the-beacon/",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "src-afi-beacon",
+      "title": "The Beacon - 250 & 260 King St (Afi + Associates portfolio page; secondary source)",
+      "publisher": "Afi + Associates",
+      "url": "https://afirealestate.com/buildings/?building=beacon",
+      "accessed": "2026-10-10"
+    }
+  ],
+  "open_questions": [
+    "Developer is stated only by a listing site (SFHighrises); the Catellus Mission Bay page cited in the map's geometry file does not mention The Beacon. No primary source read confirms it.",
+    "Architect not recorded: Afi + Associates says Skidmore, Owings and Merrill; other attributions seen earlier by the project are unsourced here.",
+    "The permits do not use the name 'The Beacon'; the link from the name to 250 and 260 King St rests on the OpenStreetMap addr:housename tag cited in the geometry file and on SFHighrises and Afi + Associates, which both give 250 and 260 King St.",
+    "No construction start date or opening month found; the permit completed date is a closeout date, not an occupancy date.",
+    "The building permit for 260 King St has status 'reinstated' in the Department of Building Inspection data; the meaning is not explained in the data."
+  ],
+  "images": [],
+  "last_verified": "2026-10-10"
+}

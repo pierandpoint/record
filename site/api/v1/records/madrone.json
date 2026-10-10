@@ -12,7 +12,9 @@
   "permalink": "https://pierandpoint.org/parcels/madrone/",
   "api": "https://pierandpoint.org/api/v1/records/madrone.json",
   "names": [
-   "Madrone"
+   "Madrone",
+   "Madrone Mission Bay",
+   "480 Mission Bay Blvd N"
   ],
   "site": {
    "slug": "mission-bay",
@@ -29,8 +31,12 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "A two-tower condominium complex by Bosa Development, whose project page says Madrone's two connected 16-storey towers were completed a few years after Radiance (2008); the Assessor roll gives 2012 as year built for the condominium lots at 420 and 480 Mission Bay Boulevard North and 435 China Basin Street, where the Department of Building Inspection recorded a 16-story, 329-unit new-construction permit completed in 2014.",
+  "summary_sources": [
+   "src-bosa-madrone",
+   "src-assessor-8720-2022",
+   "src-dbi-435cb-newcon"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -45,9 +51,125 @@
    "lon": -122.388643,
    "lat": 37.771664
   },
-  "facts": [],
-  "costs": [],
+  "facts": [
+   {
+    "key": "developer",
+    "value": "Bosa Development (its project page lists Radiance, Madrone and Arden)",
+    "sources": [
+     "src-bosa-madrone"
+    ]
+   },
+   {
+    "key": "stories",
+    "value": "16 (Bosa: two connected 16-storey towers; the permit for 435 China Basin St also says 16)",
+    "sources": [
+     "src-bosa-madrone",
+     "src-dbi-435cb-newcon"
+    ]
+   },
+   {
+    "key": "units",
+    "value": "329 per the 2012 permit correction for 435 China Basin St (originally 319 proposed); Bosa gives 693 units for Radiance, Madrone and Arden combined",
+    "sources": [
+     "src-dbi-435cb-units",
+     "src-dbi-435cb-newcon",
+     "src-bosa-madrone"
+    ]
+   },
+   {
+    "key": "address",
+    "value": "420 and 480 Mission Bay Blvd N and 435 China Basin St (Assessor lots)",
+    "sources": [
+     "src-assessor-8720-2022"
+    ]
+   }
+  ],
+  "costs": [
+   {
+    "amount_usd": 82000000,
+    "what": "Estimated cost stated on new-construction permit 200509274032 for 435 China Basin St (self-reported for the permit fee)",
+    "date": "2005-09",
+    "kind": "permit_valuation",
+    "scope": "record",
+    "approximate": false,
+    "sources": [
+     "src-dbi-435cb-newcon"
+    ]
+   }
+  ],
   "milestones": [
+   {
+    "date": "2005-09-27",
+    "date_label": "Sep 27, 2005",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Department of Building Inspection new-construction permit application 200509274032 filed to erect a 16-story residential, retail, office and parking building at 435 China Basin St (319 dwelling units proposed; estimated cost $82,000,000)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dbi-435cb-newcon",
+      "title": "Building permit 200509274032, new construction, 435 China Basin St (block 8720)",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=200509274032",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "DataSF / SF Department of Building Inspection",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_madrone",
+     "slug": "madrone",
+     "name": "Madrone",
+     "permalink": "https://pierandpoint.org/parcels/madrone/",
+     "api": "https://pierandpoint.org/api/v1/records/madrone.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2007-04-03",
+    "date_label": "Apr 3, 2007",
+    "status": null,
+    "status_label": null,
+    "text": "New-construction permit 200509274032 issued",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dbi-435cb-newcon",
+      "title": "Building permit 200509274032, new construction, 435 China Basin St (block 8720)",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=200509274032",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "DataSF / SF Department of Building Inspection",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "mission_bay_madrone",
+     "slug": "madrone",
+     "name": "Madrone",
+     "permalink": "https://pierandpoint.org/parcels/madrone/",
+     "api": "https://pierandpoint.org/api/v1/records/madrone.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
    {
     "date": "2010-07-29",
     "date_label": "Jul 29, 2010",
@@ -63,6 +185,49 @@
     ],
     "source": "https://socketsite.com/archives/2010/07/radiance_west_325_china_basin_phase_two_construction_un.html",
     "origin": "csv",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_madrone",
+     "slug": "madrone",
+     "name": "Madrone",
+     "permalink": "https://pierandpoint.org/parcels/madrone/",
+     "api": "https://pierandpoint.org/api/v1/records/madrone.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2012",
+    "date_label": "~2012",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Assessor roll lists 2012 as year built for the condominium lots at 420 and 480 Mission Bay Blvd N and 435 China Basin St (Bosa: towers completed 'a few years' after Radiance, 2008)",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-assessor-8720-2022",
+      "title": "Assessor secured property tax roll, block 8720, 2022 roll (lots at 420 and 480 Mission Bay Blvd N and 435 China Basin St)",
+      "publisher": "DataSF / SF Assessor-Recorder",
+      "url": "https://data.sfgov.org/resource/wv5m-vpq2.json?block=8720&closed_roll_year=2022",
+      "accessed": "2026-10-10"
+     },
+     {
+      "id": "src-bosa-madrone",
+      "title": "Radiance, Madrone and Arden Mission Bay (project page; developer-reported)",
+      "publisher": "Bosa Development",
+      "url": "https://bosadevelopment.com/project/radiance-madrone-mission-bay/",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "DataSF / SF Assessor-Recorder; Bosa Development",
+    "origin": "record",
     "category": "status",
     "category_label": "Status",
     "record": {
@@ -111,9 +276,117 @@
      "url": "https://pierandpoint.org/sites/mission-bay/"
     },
     "relation": "tracked"
+   },
+   {
+    "date": "2012-05-17",
+    "date_label": "May 17, 2012",
+    "status": null,
+    "status_label": null,
+    "text": "Permit 201205170704 filed to correct the record to 329 units for the work approved under 200509274032",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dbi-435cb-units",
+      "title": "Building permit 201205170704, unit count correction, 435 China Basin St",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201205170704",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "DataSF / SF Department of Building Inspection",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "mission_bay_madrone",
+     "slug": "madrone",
+     "name": "Madrone",
+     "permalink": "https://pierandpoint.org/parcels/madrone/",
+     "api": "https://pierandpoint.org/api/v1/records/madrone.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2014-10",
+    "date_label": "Oct 2014",
+    "status": null,
+    "status_label": null,
+    "text": "Department of Building Inspection final-inspection permit 201305167126 (filed 2013-05-16) recorded complete on 2014-10-27; new-construction permit 200509274032 recorded complete on 2014-11-12",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dbi-435cb-final",
+      "title": "Building permit 201305167126, final inspection request, 435 China Basin St",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201305167126",
+      "accessed": "2026-10-10"
+     },
+     {
+      "id": "src-dbi-435cb-newcon",
+      "title": "Building permit 200509274032, new construction, 435 China Basin St (block 8720)",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=200509274032",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "DataSF / SF Department of Building Inspection; DataSF / SF Department of Building Inspection",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "mission_bay_madrone",
+     "slug": "madrone",
+     "name": "Madrone",
+     "permalink": "https://pierandpoint.org/parcels/madrone/",
+     "api": "https://pierandpoint.org/api/v1/records/madrone.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-10",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "Added a sourced dossier for Madrone.",
+    "source": "https://bosadevelopment.com/project/radiance-madrone-mission-bay/",
+    "sources": [
+     {
+      "title": "https://bosadevelopment.com/project/radiance-madrone-mission-bay/"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "mission_bay_madrone",
+     "slug": "madrone",
+     "name": "Madrone",
+     "permalink": "https://pierandpoint.org/parcels/madrone/",
+     "api": "https://pierandpoint.org/api/v1/records/madrone.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-29",
     "kind": "correction",
@@ -145,17 +418,52 @@
    }
   ],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "No source read names Madrone together with the 435 China Basin St permit: the link rests on Bosa's 'two connected 16-storey towers', the 16-story permit with an 'east tower', and the 2012 Assessor year-built grouping of the 420 and 480 Mission Bay Blvd N and 435 China Basin St lots. The Department of Building Inspection permit 201509036096 for 420 Mission Bay Blvd N refers to '435 china basin str' as an alternate address.",
+   "The 2012 date is the Assessor year built, not an opening month; no sales or move-in announcement was found.",
+   "Architect not found in any source read (earlier notes in the geometry file naming one were withdrawn).",
+   "Bosa's page was read as extracted text and does not give a completion year for Madrone."
+  ],
   "sources": [
+   {
+    "id": "src-bosa-madrone",
+    "title": "Radiance, Madrone and Arden Mission Bay (project page; developer-reported)",
+    "publisher": "Bosa Development",
+    "url": "https://bosadevelopment.com/project/radiance-madrone-mission-bay/",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-dbi-435cb-newcon",
+    "title": "Building permit 200509274032, new construction, 435 China Basin St (block 8720)",
+    "publisher": "DataSF / SF Department of Building Inspection",
+    "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=200509274032",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-dbi-435cb-final",
+    "title": "Building permit 201305167126, final inspection request, 435 China Basin St",
+    "publisher": "DataSF / SF Department of Building Inspection",
+    "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201305167126",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-dbi-435cb-units",
+    "title": "Building permit 201205170704, unit count correction, 435 China Basin St",
+    "publisher": "DataSF / SF Department of Building Inspection",
+    "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201205170704",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-assessor-8720-2022",
+    "title": "Assessor secured property tax roll, block 8720, 2022 roll (lots at 420 and 480 Mission Bay Blvd N and 435 China Basin St)",
+    "publisher": "DataSF / SF Assessor-Recorder",
+    "url": "https://data.sfgov.org/resource/wv5m-vpq2.json?block=8720&closed_roll_year=2022",
+    "accessed": "2026-10-10"
+   },
    {
     "id": null,
     "title": "openstreetmap.org/way/142845124",
     "url": "https://www.openstreetmap.org/way/142845124"
-   },
-   {
-    "id": null,
-    "title": "bosadevelopment.com/project/radiance-madrone-mission-bay",
-    "url": "https://bosadevelopment.com/project/radiance-madrone-mission-bay/"
    },
    {
     "id": null,
@@ -164,8 +472,8 @@
    }
   ],
   "notes": "Unit count and opening year are not established by any cited source: Bosa's project page gives 693 units for Radiance, Madrone and Arden combined and says only that Madrone's towers were completed 'a few years' after Radiance (2008); the Assessor roll gives year built 2012 for the condominium lots at 420 and 480 Mission Bay Blvd N and 435 China Basin St.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-10-10",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

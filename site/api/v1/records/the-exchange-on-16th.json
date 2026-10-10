@@ -12,7 +12,8 @@
   "permalink": "https://pierandpoint.org/parcels/the-exchange-on-16th/",
   "api": "https://pierandpoint.org/api/v1/records/the-exchange-on-16th.json",
   "names": [
-   "The Exchange on 16th"
+   "The Exchange on 16th",
+   "1800 Owens St"
   ],
   "site": {
    "slug": "mission-bay",
@@ -29,8 +30,12 @@
   "how_to_comment": [],
   "positions": [],
   "address": "1800 Owens St",
-  "summary": null,
-  "summary_sources": [],
+  "summary": "A four-building, 750,000 sq ft campus (736,000 sq ft of office and 14,000 sq ft of retail, per Kilroy Realty) developed by Kilroy Realty and fully leased to Dropbox under a 15-year lease signed in October 2017; Kilroy reported completing construction and starting rent recognition on its first phase (about 52 percent) in May and June 2019, and the Department of Building Inspection shows the new-construction permit completed on 2019-09-19.",
+  "summary_sources": [
+   "src-kilroy-q3-2017",
+   "src-kilroy-q2-2019",
+   "src-dbi-exchange-newcon"
+  ],
   "shape": {
    "kind": "parcel",
    "parcel": "8727008",
@@ -42,9 +47,94 @@
    "lon": -122.393068,
    "lat": 37.76601
   },
-  "facts": [],
-  "costs": [],
+  "facts": [
+   {
+    "key": "developer",
+    "value": "Kilroy Realty Corporation",
+    "sources": [
+     "src-kilroy-q3-2017"
+    ]
+   },
+   {
+    "key": "tenant",
+    "value": "Dropbox, Inc. (15-year lease for 100% of the office space, commencing in phases from the fourth quarter of 2018 through the fourth quarter of 2019)",
+    "sources": [
+     "src-kilroy-q3-2017",
+     "src-kilroy-q2-2019"
+    ]
+   },
+   {
+    "key": "gross_sqft",
+    "value": "750,000 sq ft total: 736,000 sq ft office and 14,000 sq ft retail, four buildings (Kilroy, October 2017)",
+    "sources": [
+     "src-kilroy-q3-2017"
+    ]
+   },
+   {
+    "key": "stories",
+    "value": "12 (proposed stories on the new-construction permit)",
+    "sources": [
+     "src-dbi-exchange-newcon"
+    ]
+   },
+   {
+    "key": "address",
+    "value": "1800 Owens St; the Department of Building Inspection assigned 701, 703, 705, 707 16th St and 1802 Owens St as commercial addresses, with 1800 Owens St as the building address, block 8727 lot 008",
+    "sources": [
+     "src-dbi-exchange-address"
+    ]
+   }
+  ],
+  "costs": [
+   {
+    "amount_usd": 150000000,
+    "what": "Estimated cost stated on new-construction permit 201409045458 (self-reported for the permit fee)",
+    "date": "2014-09",
+    "kind": "permit_valuation",
+    "scope": "record",
+    "approximate": false,
+    "sources": [
+     "src-dbi-exchange-newcon"
+    ]
+   }
+  ],
   "milestones": [
+   {
+    "date": "2014-09-04",
+    "date_label": "Sep 4, 2014",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Department of Building Inspection new-construction permit application 201409045458 filed for a 12-story building at 1800 Owens St (estimated cost $150,000,000)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dbi-exchange-newcon",
+      "title": "Building permit 201409045458, new construction, 1800 Owens St (block 8727)",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201409045458",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "DataSF / SF Department of Building Inspection",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "8727008",
+     "slug": "the-exchange-on-16th",
+     "name": "The Exchange on 16th",
+     "permalink": "https://pierandpoint.org/parcels/the-exchange-on-16th/",
+     "api": "https://pierandpoint.org/api/v1/records/the-exchange-on-16th.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
    {
     "date": "2015-09",
     "date_label": "~2015",
@@ -62,6 +152,79 @@
     "origin": "csv",
     "category": "status",
     "category_label": "Status",
+    "record": {
+     "id": "8727008",
+     "slug": "the-exchange-on-16th",
+     "name": "The Exchange on 16th",
+     "permalink": "https://pierandpoint.org/parcels/the-exchange-on-16th/",
+     "api": "https://pierandpoint.org/api/v1/records/the-exchange-on-16th.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2015-11-12",
+    "date_label": "Nov 12, 2015",
+    "status": null,
+    "status_label": null,
+    "text": "Permit 201409045458 issued",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dbi-exchange-newcon",
+      "title": "Building permit 201409045458, new construction, 1800 Owens St (block 8727)",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201409045458",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "DataSF / SF Department of Building Inspection",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8727008",
+     "slug": "the-exchange-on-16th",
+     "name": "The Exchange on 16th",
+     "permalink": "https://pierandpoint.org/parcels/the-exchange-on-16th/",
+     "api": "https://pierandpoint.org/api/v1/records/the-exchange-on-16th.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2017-10",
+    "date_label": "Oct 2017",
+    "status": null,
+    "status_label": null,
+    "text": "Kilroy Realty signs a 15-year lease with Dropbox for 100 percent of the office space; project described as under construction",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-kilroy-q3-2017",
+      "title": "Kilroy Realty Corporation third quarter 2017 supplemental financial report (Exhibit 99.2)",
+      "publisher": "Kilroy Realty Corporation, filed with the SEC (company-reported)",
+      "date": "2017",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001025996/000102599617000189/exhibit992q317.htm",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "Kilroy Realty Corporation, filed with the SEC (company-reported), 2017",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
     "record": {
      "id": "8727008",
      "slug": "the-exchange-on-16th",
@@ -108,9 +271,127 @@
      "url": "https://pierandpoint.org/sites/mission-bay/"
     },
     "relation": "tracked"
+   },
+   {
+    "date": "2019-06",
+    "date_label": "~2019",
+    "status": null,
+    "status_label": null,
+    "text": "Kilroy reports completing construction and starting revenue on Phase I of The Exchange on 16th (about 52 percent of the 750,000 sq ft project) in May and June 2019",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-kilroy-q2-2019",
+      "title": "Kilroy Realty Corporation second quarter 2019 supplemental financial report (Exhibit 99.1)",
+      "publisher": "Kilroy Realty Corporation, filed with the SEC (company-reported)",
+      "date": "2019",
+      "url": "https://www.sec.gov/Archives/edgar/data/1025996/000102599619000149/exhibit991.htm",
+      "accessed": "2026-10-10"
+     },
+     {
+      "id": "src-kilroy-q3-2019",
+      "title": "Kilroy Realty Corporation third quarter 2019 supplemental financial report (Exhibit 99.1)",
+      "publisher": "Kilroy Realty Corporation, filed with the SEC (company-reported)",
+      "date": "2019",
+      "url": "https://www.sec.gov/Archives/edgar/data/1025996/000102599619000197/exhibit991.htm",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "Kilroy Realty Corporation, filed with the SEC (company-reported), 2019; Kilroy Realty Corporation, filed with the SEC (company-reported), 2019",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8727008",
+     "slug": "the-exchange-on-16th",
+     "name": "The Exchange on 16th",
+     "permalink": "https://pierandpoint.org/parcels/the-exchange-on-16th/",
+     "api": "https://pierandpoint.org/api/v1/records/the-exchange-on-16th.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2019-09-19",
+    "date_label": "~2019",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Department of Building Inspection records new-construction permit 201409045458 as complete (status 'complete', completed date 2019-09-19); Kilroy's Q3 2019 report still describes later phases as not yet generating revenue",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-dbi-exchange-newcon",
+      "title": "Building permit 201409045458, new construction, 1800 Owens St (block 8727)",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201409045458",
+      "accessed": "2026-10-10"
+     },
+     {
+      "id": "src-kilroy-q3-2019",
+      "title": "Kilroy Realty Corporation third quarter 2019 supplemental financial report (Exhibit 99.1)",
+      "publisher": "Kilroy Realty Corporation, filed with the SEC (company-reported)",
+      "date": "2019",
+      "url": "https://www.sec.gov/Archives/edgar/data/1025996/000102599619000197/exhibit991.htm",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "DataSF / SF Department of Building Inspection; Kilroy Realty Corporation, filed with the SEC (company-reported), 2019",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "8727008",
+     "slug": "the-exchange-on-16th",
+     "name": "The Exchange on 16th",
+     "permalink": "https://pierandpoint.org/parcels/the-exchange-on-16th/",
+     "api": "https://pierandpoint.org/api/v1/records/the-exchange-on-16th.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-10",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "Added a sourced dossier for The Exchange on 16th.",
+    "source": "https://www.sec.gov/Archives/edgar/data/0001025996/000102599617000189/exhibit992q317.htm",
+    "sources": [
+     {
+      "title": "https://www.sec.gov/Archives/edgar/data/0001025996/000102599617000189/exhibit992q317.htm"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "8727008",
+     "slug": "the-exchange-on-16th",
+     "name": "The Exchange on 16th",
+     "permalink": "https://pierandpoint.org/parcels/the-exchange-on-16th/",
+     "api": "https://pierandpoint.org/api/v1/records/the-exchange-on-16th.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-29",
     "kind": "correction",
@@ -229,8 +510,52 @@
    }
   ],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "The map note's 2021 sale to KKR and Longfellow Real Estate Partners for $1.08B (Business Wire), the 2022 life-science conversion (The Real Deal, 2022) and the 2026 OpenAI sublease (The Real Deal, 2026) could not be opened (HTTP 403 for the cited pages), so none of them is recorded here.",
+   "No single source read states one whole-project completion date: Kilroy reports Phase I (about 52 percent) delivered in May and June 2019 and later phases stabilizing through 2020 in its reports; the 2019-09-19 date is the Department of Building Inspection permit completion date, which is a permit-closeout record, not an opening date.",
+   "Architect and general contractor not found in any source read.",
+   "The Business Wire page for the October 2017 lease announcement could not be opened (HTTP 403); the lease facts come from Kilroy's SEC filings instead.",
+   "The new-construction permit is recorded under block 8727 lot 005 in the Department of Building Inspection data and the building address was later assigned to lot 008 (permit M887587); the lot relationship is not explained in any source read."
+  ],
   "sources": [
+   {
+    "id": "src-kilroy-q3-2017",
+    "title": "Kilroy Realty Corporation third quarter 2017 supplemental financial report (Exhibit 99.2)",
+    "publisher": "Kilroy Realty Corporation, filed with the SEC (company-reported)",
+    "date": "2017",
+    "url": "https://www.sec.gov/Archives/edgar/data/0001025996/000102599617000189/exhibit992q317.htm",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-kilroy-q2-2019",
+    "title": "Kilroy Realty Corporation second quarter 2019 supplemental financial report (Exhibit 99.1)",
+    "publisher": "Kilroy Realty Corporation, filed with the SEC (company-reported)",
+    "date": "2019",
+    "url": "https://www.sec.gov/Archives/edgar/data/1025996/000102599619000149/exhibit991.htm",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-kilroy-q3-2019",
+    "title": "Kilroy Realty Corporation third quarter 2019 supplemental financial report (Exhibit 99.1)",
+    "publisher": "Kilroy Realty Corporation, filed with the SEC (company-reported)",
+    "date": "2019",
+    "url": "https://www.sec.gov/Archives/edgar/data/1025996/000102599619000197/exhibit991.htm",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-dbi-exchange-newcon",
+    "title": "Building permit 201409045458, new construction, 1800 Owens St (block 8727)",
+    "publisher": "DataSF / SF Department of Building Inspection",
+    "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201409045458",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-dbi-exchange-address",
+    "title": "Building permit M887587, address assignment, block 8727 lot 008",
+    "publisher": "DataSF / SF Department of Building Inspection",
+    "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=M887587",
+    "accessed": "2026-10-10"
+   },
    {
     "id": null,
     "title": "businesswire.com/news/home/20210308005258/en/Kilroy-Realty-to-Sell-The-Exchange-on-16th-for-%241.08-Billion",
@@ -245,16 +570,11 @@
     "id": null,
     "title": "therealdeal.com/san-francisco/2026/03/16/openai-inks-another-mission-bay-lease",
     "url": "https://therealdeal.com/san-francisco/2026/03/16/openai-inks-another-mission-bay-lease/"
-   },
-   {
-    "id": null,
-    "title": "sec.gov/Archives/edgar/data/0001025996/000102599617000189/exhibit992q317.htm",
-    "url": "https://www.sec.gov/Archives/edgar/data/0001025996/000102599617000189/exhibit992q317.htm"
    }
   ],
   "notes": "The Exchange on 16th, 1800 Owens St -- formerly Dropbox's headquarters, now partly rebranded 'Icona: Labs at Mission Bay' -- a 750,370 sq ft, 12-story office/life-science campus on a ~3.25-acre lot (141,415 sq ft per the Assessor roll), built by Kilroy Realty Corporation in 2018 as Dropbox's single-tenant headquarters (15-year lease, per Kilroy's October 2017 announcement as reproduced in its Q3 2017 SEC supplemental). Sold in 2021 for $1.08B to KKR and Longfellow Real Estate Partners, who by May 2022 were marketing more than 406,000 sq ft as 'lab-capable' space and building out turnkey labs (The Real Deal, May 18, 2022); OpenAI signed a roughly 280,000 sq ft sublease, reported in March 2026 with confirmation from a March 2026 Newmark market report (The Real Deal, Mar 16, 2026), which also reports Dropbox is planning to vacate the building entirely. Blklot confirmed against the DataSF Assessor Historical Secured Property Tax Rolls dataset (wv5m-vpq2), whose property_location and square-footage/year-built fields match the published building exactly, since the base parcel map's own address field is a stale street-frontage number (701-707 16th St) rather than the building's current mailing address. OCII plan block 40 (per OCII's own Dec 2019 Land Use Map, cross-checked 2026-09-22 -- this parcel had earlier been left out of Pier & Point's block inventory entirely, with block 40 wrongly lumped into the UCSF Medical Center hospital superblock instead, which stays fully covered by blocks 36-39 alone).",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-10-10",
   "tenants": [
    {
     "slug": "openai-3",

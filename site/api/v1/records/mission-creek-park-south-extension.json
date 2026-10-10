@@ -12,7 +12,8 @@
   "permalink": "https://pierandpoint.org/parcels/mission-creek-park-south-extension/",
   "api": "https://pierandpoint.org/api/v1/records/mission-creek-park-south-extension.json",
   "names": [
-   "Mission Creek Park South Extension"
+   "Mission Creek Park South Extension -- P8 segment",
+   "Parcel P8"
   ],
   "site": {
    "slug": "mission-bay",
@@ -29,8 +30,10 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "P8 is one of two parcels (P2 and P8) of the planned Mission Creek Park South Extension, which San Francisco Recreation and Parks says OCII and the Mission Bay Development Group are responsible for developing; the department's page gives construction as starting late 2026 or early 2027 and the opening date as to be determined.",
+  "summary_sources": [
+   "src-rp-mcp-south"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -45,7 +48,43 @@
    "lon": -122.397051,
    "lat": 37.770586
   },
-  "facts": [],
+  "facts": [
+   {
+    "key": "project_area_acres",
+    "value": "5.7 additional acres of new open space west of the Mission Creek Park Pavilion (the whole final segment, not P8 alone)",
+    "sources": [
+     "src-rp-mcp-south"
+    ]
+   },
+   {
+    "key": "funding",
+    "value": "Design and construction fully funded through OCII (no amount stated on the page)",
+    "sources": [
+     "src-rp-mcp-south"
+    ]
+   },
+   {
+    "key": "future_operator",
+    "value": "San Francisco Recreation and Parks Department, which will own and operate the park on completion",
+    "sources": [
+     "src-rp-mcp-south"
+    ]
+   },
+   {
+    "key": "ocii_plan_phase",
+    "value": "Phase II Future Park in the December 2015 Long-Range Property Management Plan (estimated lease termination 2019, a date that has passed)",
+    "sources": [
+     "src-ocii-lrpmp-2015"
+    ]
+   },
+   {
+    "key": "nearby_proposed_facility",
+    "value": "The schematic design places a 'proposed Pump Station No.4' immediately east of the freeway (proposed in the schematic; no source read says it was built)",
+    "sources": [
+     "src-rp-schematic-p2p8"
+    ]
+   }
+  ],
   "costs": [],
   "milestones": [
    {
@@ -113,6 +152,50 @@
     "relation": "tracked"
    },
    {
+    "date": "2026",
+    "date_label": "~2026",
+    "status": null,
+    "status_label": null,
+    "text": "Construction expected to begin 'Late 2026 / Early 2027' for the Mission Creek Park South Extension (parcels P2 and P8), per Rec and Park's project page; a July 2025 update said construction was expected to begin in 2026 with an 18-month duration",
+    "expected": true,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-rp-mcp-south",
+      "title": "Mission Creek Park South Extension Project (project page)",
+      "publisher": "San Francisco Recreation and Parks Department",
+      "url": "https://sfrecpark.org/1833/Mission-Creek-Park-South-Extension-Proje",
+      "accessed": "2026-10-10"
+     },
+     {
+      "id": "src-rp-mcp-update-2025-07",
+      "title": "Mission Creek Park South Extension Project | Project update, July 2025",
+      "publisher": "San Francisco Recreation and Parks Department (News Flash)",
+      "date": "2025-07-30",
+      "url": "https://sfrecpark.org/CivicAlerts.aspx?AID=2355",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "San Francisco Recreation and Parks Department; San Francisco Recreation and Parks Department (News Flash), 2025-07-30",
+    "origin": "record",
+    "category": "coming_up",
+    "category_label": "Coming up",
+    "record": {
+     "id": "mission_bay_p8_open_space",
+     "slug": "mission-creek-park-south-extension",
+     "name": "Mission Creek Park South Extension",
+     "permalink": "https://pierandpoint.org/parcels/mission-creek-park-south-extension/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-creek-park-south-extension.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
     "date": "2026-10",
     "date_label": "~2026",
     "status": "under_construction",
@@ -146,6 +229,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-10",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "Added a sourced dossier for Mission Creek Park South Extension: P8 segment.",
+    "source": "https://sfrecpark.org/1833/Mission-Creek-Park-South-Extension-Proje",
+    "sources": [
+     {
+      "title": "https://sfrecpark.org/1833/Mission-Creek-Park-South-Extension-Proje"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "mission_bay_p8_open_space",
+     "slug": "mission-creek-park-south-extension",
+     "name": "Mission Creek Park South Extension",
+     "permalink": "https://pierandpoint.org/parcels/mission-creek-park-south-extension/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-creek-park-south-extension.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-06",
     "kind": "correction",
@@ -206,17 +318,52 @@
    }
   ],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "No source read gives a construction start date more specific than 'Late 2026 / Early 2027' or any opening date (the page says 'TBD'). As of 2026-10-10 the pages read do not say construction has started.",
+   "No construction cost or budget amount was found; the page says only that the project is fully funded through OCII.",
+   "The Rec and Park schematic design is undated; its one dated item is a plan sheet of June 23, 2006. The February 10, 2022 Citizens Advisory Committee overview deck linked from the project page could not be opened (connection reset) and is not cited.",
+   "Designer and contractor for P8 were not found. The schematic design names Catellus and the San Francisco Redevelopment Agency as partners but it is not a statement of who is designing or building the current version.",
+   "Status 'planned' matches the sources read (project page schedule and the 2015 plan's 'Vacant Lot/Land' category), but no source read says in so many words that the P8 parcel is undeveloped today."
+  ],
   "sources": [
    {
-    "id": null,
-    "title": "sfrecpark.org/1833/Mission-Creek-Park-South-Extension-Proje",
-    "url": "https://sfrecpark.org/1833/Mission-Creek-Park-South-Extension-Proje"
+    "id": "src-rp-mcp-south",
+    "title": "Mission Creek Park South Extension Project (project page)",
+    "publisher": "San Francisco Recreation and Parks Department",
+    "url": "https://sfrecpark.org/1833/Mission-Creek-Park-South-Extension-Proje",
+    "accessed": "2026-10-10"
    },
    {
-    "id": null,
-    "title": "sfrecpark.org/DocumentCenter/View/25950/Mission-Creek-Park-South-Extension-Project---Schematic-P2-P8",
-    "url": "https://sfrecpark.org/DocumentCenter/View/25950/Mission-Creek-Park-South-Extension-Project---Schematic-P2-P8"
+    "id": "src-rp-mcp-update-2025-07",
+    "title": "Mission Creek Park South Extension Project | Project update, July 2025",
+    "publisher": "San Francisco Recreation and Parks Department (News Flash)",
+    "date": "2025-07-30",
+    "url": "https://sfrecpark.org/CivicAlerts.aspx?AID=2355",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-ocii-lrpmp-2015",
+    "title": "Approved Long-Range Property Management Plan, Mission Bay North and South (December 2015)",
+    "publisher": "Successor Agency to the San Francisco Redevelopment Agency (OCII)",
+    "date": "2015-12",
+    "url": "https://sfocii.org/sites/default/files/inline-files/02%20Mission%20Bay.pdf",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-rp-schematic-p2p8",
+    "title": "Mission Bay P2-P8, Preliminary Concept - Schematic Design (undated; includes a plan sheet dated June 23, 2006)",
+    "publisher": "San Francisco Recreation and Parks Department (document names Catellus and the San Francisco Redevelopment Agency)",
+    "url": "https://sfrecpark.org/DocumentCenter/View/25950/Mission-Creek-Park-South-Extension-Project---Schematic-P2-P8",
+    "accessed": "2026-10-10",
+    "overview": true
+   },
+   {
+    "id": "src-ocii-lum-2019",
+    "title": "Attachment 1: Mission Bay Land Use Map (December 2019)",
+    "publisher": "Office of Community Investment and Infrastructure (OCII)",
+    "date": "2019-12",
+    "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
+    "accessed": "2026-10-10"
    },
    {
     "id": null,
@@ -230,8 +377,8 @@
    }
   ],
   "notes": "Mission Creek Park South Extension Project, P8 segment (see P2's row in the block inventory for the project's other parcel). Design principles per the schematic: respect the Mission Creek Harbor Association community, relocate/expand the existing community garden, add teaching and perennial gardens, meadow planting and native shrub berms partially under the freeway. Project manager: Monica Scott (SF Rec & Park), monica.scott@sfgov.org, as listed on the project page on 2026-09-29. Extended 2026-09-20 to a fuller P8 extent drawn by Pier & Point: the roundabout-side lawn plus the freeway-median strips and turf beside the proposed Pump Station No. 4 site between the I-280 ramps, west of the roundabout.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-10-10",
   "tenants": [],
   "geometry": {
    "type": "MultiPolygon",

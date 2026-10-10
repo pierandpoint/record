@@ -1,0 +1,150 @@
+{
+  "record_id": "mission_bay_radiance",
+  "names": [
+    "Radiance",
+    "Radiance at Mission Bay"
+  ],
+  "summary": "Radiance is a Bosa Development condominium building of about 99 homes (DBI's permit says 98) at 325 China Basin Street, the first of Bosa's three Mission Bay condominium projects; DBI's new-construction permit for a nine-story building was filed in May 2005 and recorded complete in January 2010, the Assessor gives 2008 as the year built, and the San Francisco Chronicle (via SFGate) reported the homes on offer in March 2009.",
+  "summary_sources": [
+    "src-dbi-radiance",
+    "src-assessor-radiance",
+    "src-sfgate-radiance",
+    "src-pcad-radiance"
+  ],
+  "milestones": [
+    {
+      "date": "2005-05-11",
+      "status": "planned",
+      "text": "DBI new-construction permit 200505112126 filed at 325 China Basin St: 'erect a 9 stories 98 dwelling residential condos'; issued 2006-02-09",
+      "sources": [
+        "src-dbi-radiance"
+      ],
+      "expected": false,
+      "approximate": false
+    },
+    {
+      "date": "2008",
+      "status": "complete",
+      "text": "Completed: the Assessor's 2022 roll gives 2008 as year built for the 99 unit parcels on block 8720 that carry that year (the count matches the 99-unit figure in the press and architecture-database sources); the Chronicle's March 22, 2009 article already describes Radiance Phase One as built, with model homes",
+      "sources": [
+        "src-assessor-radiance",
+        "src-sfgate-radiance"
+      ],
+      "expected": false,
+      "approximate": true
+    },
+    {
+      "date": "2010-01-19",
+      "text": "DBI records the new-construction permit complete (final sign-off); later than the Assessor's 2008 year built, so it does not date occupancy",
+      "sources": [
+        "src-dbi-radiance"
+      ],
+      "expected": false,
+      "approximate": false
+    }
+  ],
+  "costs": [
+    {
+      "amount_usd": 38000000,
+      "what": "DBI permit 200505112126's revised construction cost (estimated cost $27,000,000) for the 9-story, 98-unit building at 325 China Basin St; a permit valuation, not a vetted development cost",
+      "date": "2010-01",
+      "kind": "permit_valuation",
+      "scope": "record",
+      "approximate": true,
+      "sources": [
+        "src-dbi-radiance"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "key": "developer",
+      "value": "Bosa Development (Nat Bosa)",
+      "sources": [
+        "src-sfgate-radiance",
+        "src-pcad-radiance"
+      ]
+    },
+    {
+      "key": "address",
+      "value": "325 China Basin Street (DBI permit)",
+      "sources": [
+        "src-dbi-radiance"
+      ]
+    },
+    {
+      "key": "units",
+      "value": "99 (San Francisco Chronicle via SFGate, March 2009; architecture database); DBI's permit says 98; the Assessor has 99 parcels with year built 2008 on block 8720",
+      "sources": [
+        "src-sfgate-radiance",
+        "src-pcad-radiance",
+        "src-dbi-radiance",
+        "src-assessor-radiance"
+      ]
+    },
+    {
+      "key": "stories",
+      "value": "DBI permit: 9 stories. The Chronicle describes 'a nine-story building and a six-story building' linked at the fourth floors, so the two sources agree on 9 as the tallest",
+      "sources": [
+        "src-dbi-radiance",
+        "src-sfgate-radiance"
+      ]
+    }
+  ],
+  "images": [],
+  "sources": [
+    {
+      "id": "src-dbi-radiance",
+      "title": "Building Permits: permit 200505112126 (325 China Basin St, block 8720 lot 001), new construction, filed 2005-05-11, completed 2010-01-19",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200505112126",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "src-assessor-radiance",
+      "title": "Assessor Historical Secured Property Tax Rolls, 2022 roll, block 8720: count of parcels by year built (99 with 2008)",
+      "publisher": "DataSF / San Francisco Office of the Assessor-Recorder",
+      "url": "https://data.sf.gov/resource/wv5m-vpq2.json?$select=year_property_built,count(*)&$group=year_property_built&$where=closed_roll_year='2022' AND block='8720'",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "src-sfgate-radiance",
+      "title": "Radiance offers first homes in Mission Bay",
+      "publisher": "San Francisco Chronicle via SFGate (Judy Richter)",
+      "date": "2009-03-22",
+      "url": "https://www.sfgate.com/realestate/article/Radiance-offers-first-homes-in-Mission-Bay-3247162.php",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "src-pcad-radiance",
+      "title": "Bosa Development Corporation, Radiance at Mission Bay, Apartments (building record 10004)",
+      "publisher": "Pacific Coast Architecture Database, University of Washington",
+      "url": "https://pcad.lib.washington.edu/building/10004/",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "src-socketsite-radw",
+      "title": "Radiance West (325 China Basin Phase Two) Construction Underway",
+      "publisher": "SocketSite",
+      "date": "2010-07-29",
+      "url": "https://socketsite.com/archives/2010/07/radiance_west_325_china_basin_phase_two_construction_un.html",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "src-bosa-mb",
+      "title": "Mission Bay (Radiance, Madrone, Arden) project page",
+      "publisher": "Bosa Development",
+      "url": "https://bosadevelopment.com/project/radiance-madrone-mission-bay/",
+      "accessed": "2026-10-10"
+    }
+  ],
+  "open_questions": [
+    "No primary opening date: the Assessor's 2008 is a year; DBI's permit sign-off is 2010-01-19; the Chronicle article of March 22, 2009 is the earliest dated report read.",
+    "Phase question: SocketSite (July 2010) called a 318-unit 'Radiance West' the 'Phase Two' at 325 China Basin, while Bosa's own page names the later 16-storey towers 'Madrone' and DBI's 16-story, 319-unit permit is at 435 China Basin (completed 2014-11-12). This dossier covers only the 99-unit building; whether the map's footprint includes any of that later phase is not established by anything read.",
+    "Architect not confirmed from a source read (a brokerage page naming one could not be opened).",
+    "Unit count 98 (DBI) versus 99 (press, architecture database, Assessor parcel count).",
+    "Bosa's own page lists 'Status Active 2005 - 2015' for all three Mission Bay buildings together and '693' units; it gives no Radiance-specific date or unit count.",
+    "No OCII design-review or commission item for the block was located."
+  ],
+  "last_verified": "2026-10-10"
+}

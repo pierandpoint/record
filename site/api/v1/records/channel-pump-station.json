@@ -12,7 +12,8 @@
   "permalink": "https://pierandpoint.org/parcels/channel-pump-station/",
   "api": "https://pierandpoint.org/api/v1/records/channel-pump-station.json",
   "names": [
-   "Channel Pump Station"
+   "Channel Pump Station",
+   "455 Berry St"
   ],
   "site": {
    "slug": "mission-bay",
@@ -29,8 +30,10 @@
   "how_to_comment": [],
   "positions": [],
   "address": "455 Berry St",
-  "summary": null,
-  "summary_sources": [],
+  "summary": "An above-grade wastewater pump station at 455 Berry Street between 6th and 7th Streets, constructed in 1979 and upgraded in 2010, with a capacity of 103 million gallons per day, which SF Planning's 2020 sea level rise assessment describes as operating continuously in dry and wet weather and conveying flows to the Southeast Treatment Plant.",
+  "summary_sources": [
+   "src-sf-slr-2020"
+  ],
   "shape": {
    "kind": "parcel",
    "parcel": "3806006",
@@ -42,9 +45,75 @@
    "lon": -122.398765,
    "lat": 37.770448
   },
-  "facts": [],
+  "facts": [
+   {
+    "key": "address",
+    "value": "455 Berry St, near Mission Bay between 6th and 7th Streets",
+    "sources": [
+     "src-sf-slr-2020"
+    ]
+   },
+   {
+    "key": "owner_operator",
+    "value": "San Francisco Public Utilities Commission Wastewater Enterprise manages the city's wastewater assets (chapter-level statement, not specific to this station)",
+    "sources": [
+     "src-sf-slr-2020"
+    ]
+   },
+   {
+    "key": "capacity",
+    "value": "103 million gallons per day",
+    "sources": [
+     "src-sf-slr-2020"
+    ]
+   },
+   {
+    "key": "function",
+    "value": "Serves the Channel and Northshore drainage basins; conveys wastewater through the Channel force main to the Southeast Treatment Plant",
+    "sources": [
+     "src-sf-slr-2020"
+    ]
+   }
+  ],
   "costs": [],
   "milestones": [
+   {
+    "date": "1979",
+    "date_label": "1979",
+    "status": "existing",
+    "status_label": "Existing, not yet redeveloped",
+    "text": "Channel Pump Station constructed",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sf-slr-2020",
+      "title": "Sea Level Rise Vulnerability and Consequences Assessment, Chapter 7 Wastewater (Photo 7.1 and section 7.1.1.1)",
+      "publisher": "SF Planning",
+      "date": "2020-02",
+      "url": "https://sfplanning.s3.amazonaws.com/default/files/plans-and-programs/planning-for-the-city/sea-level-rise/SLRVCA_Report_07.pdf",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "SF Planning, 2020-02",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "3806006",
+     "slug": "channel-pump-station",
+     "name": "Channel Pump Station",
+     "permalink": "https://pierandpoint.org/parcels/channel-pump-station/",
+     "api": "https://pierandpoint.org/api/v1/records/channel-pump-station.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
    {
     "date": "1979",
     "date_label": "~1979",
@@ -76,9 +145,75 @@
      "url": "https://pierandpoint.org/sites/mission-bay/"
     },
     "relation": "tracked"
+   },
+   {
+    "date": "2010",
+    "date_label": "2010",
+    "status": null,
+    "status_label": null,
+    "text": "Channel Pump Station upgraded",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sf-slr-2020",
+      "title": "Sea Level Rise Vulnerability and Consequences Assessment, Chapter 7 Wastewater (Photo 7.1 and section 7.1.1.1)",
+      "publisher": "SF Planning",
+      "date": "2020-02",
+      "url": "https://sfplanning.s3.amazonaws.com/default/files/plans-and-programs/planning-for-the-city/sea-level-rise/SLRVCA_Report_07.pdf",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "SF Planning, 2020-02",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "3806006",
+     "slug": "channel-pump-station",
+     "name": "Channel Pump Station",
+     "permalink": "https://pierandpoint.org/parcels/channel-pump-station/",
+     "api": "https://pierandpoint.org/api/v1/records/channel-pump-station.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-10",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "Added a sourced dossier for Channel Pump Station.",
+    "source": "https://sfplanning.s3.amazonaws.com/default/files/plans-and-programs/planning-for-the-city/sea-level-rise/SLRVCA_Report_07.pdf",
+    "sources": [
+     {
+      "title": "https://sfplanning.s3.amazonaws.com/default/files/plans-and-programs/planning-for-the-city/sea-level-rise/SLRVCA_Report_07.pdf"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "3806006",
+     "slug": "channel-pump-station",
+     "name": "Channel Pump Station",
+     "permalink": "https://pierandpoint.org/parcels/channel-pump-station/",
+     "api": "https://pierandpoint.org/api/v1/records/channel-pump-station.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-29",
     "kind": "correction",
@@ -110,22 +245,29 @@
    }
   ],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "No source read records the construction of the 1979 station beyond the year, or what the 2010 upgrade involved.",
+   "The report is dated by its PDF metadata (February 2020); it is the only source read, so the station's current operating state is as described in 2020.",
+   "Whether the station sits inside the Mission Bay redevelopment area boundary was not re-checked here; the map note places it in Mission Bay South."
+  ],
   "sources": [
+   {
+    "id": "src-sf-slr-2020",
+    "title": "Sea Level Rise Vulnerability and Consequences Assessment, Chapter 7 Wastewater (Photo 7.1 and section 7.1.1.1)",
+    "publisher": "SF Planning",
+    "date": "2020-02",
+    "url": "https://sfplanning.s3.amazonaws.com/default/files/plans-and-programs/planning-for-the-city/sea-level-rise/SLRVCA_Report_07.pdf",
+    "accessed": "2026-10-10"
+   },
    {
     "id": null,
     "title": "data.sf.gov/resource/wv5m-vpq2.json?parcel_number=3806006",
     "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=3806006"
-   },
-   {
-    "id": null,
-    "title": "sfplanning.s3.amazonaws.com/default/files/plans-and-programs/planning-for-the-city/sea-level-rise/SLRVCA_Report_07.pdf",
-    "url": "https://sfplanning.s3.amazonaws.com/default/files/plans-and-programs/planning-for-the-city/sea-level-rise/SLRVCA_Report_07.pdf"
    }
   ],
   "notes": "Channel Pump Station, 455 Berry St -- an above-grade SFPUC wastewater pump station between 6th and 7th Streets, constructed in 1979 and upgraded in 2010, with a pumping capacity of 103 million gallons per day, operating continuously in both dry and wet weather; conveys flows through the Channel force main to the Southeast Treatment Plant (source: SF Planning, Sea Level Rise Vulnerability and Consequences Assessment, ch. 7 Wastewater, 2020, which describes it as operating). OCII's own Dec 2019 Land Use Map marks this site 'X1' in its gray/non-developable category; X1 had earlier been left without a record here after an unrelated mislabeling of a street cluster. DataSF Assessor confirms blklot 3806006 as 'Industrial Gov Mixed/Other Use' at this address, with no building data on the roll. Status 'existing' (the 2020 SF Planning report above describes the station as operating; not touched by Mission Bay's redevelopment, staying as-is) per this project's own convention for pre-existing infrastructure untouched by redevelopment (e.g. UCSF's own Utilities Plant, Pier 70's Building 21).",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-10-10",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

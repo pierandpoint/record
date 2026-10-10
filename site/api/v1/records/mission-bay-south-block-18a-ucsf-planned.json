@@ -12,6 +12,7 @@
   "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-18a-ucsf-planned/",
   "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-18a-ucsf-planned.json",
   "names": [
+   "Block 18A",
    "Mission Bay South Block 18A (UCSF planned)"
   ],
   "site": {
@@ -29,8 +30,11 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "Block 18A is a UCSF parcel in Mission Bay's North Campus, designated Research in UCSF's Long Range Development Plan as listed in its June 2025 presentation, which says UCSF has 'no building plans at Mission Bay right now'. UCSF's January 2018 environmental notice describes it as a 'temporary shuttle yard' until the lot is 'developed with permanent uses'; no project, developer or date is stated in any source found.",
+  "summary_sources": [
+   "src-ucsf-cac-2025",
+   "src-ceqa-18a-2018"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -45,9 +49,105 @@
    "lon": -122.395155,
    "lat": 37.769049
   },
-  "facts": [],
+  "facts": [
+   {
+    "key": "planned_use",
+    "value": "Research (UCSF June 2025 presentation, citing its Long Range Development Plan)",
+    "sources": [
+     "src-ucsf-cac-2025"
+    ]
+   },
+   {
+    "key": "interim_use",
+    "value": "Temporary shuttle yard (UCSF notice, January 2018), 'until such time that the lot is developed with permanent uses'",
+    "sources": [
+     "src-ceqa-18a-2018"
+    ]
+   },
+   {
+    "key": "timing_stated",
+    "value": "None stated for this block. UCSF's June 12, 2025 Mission Bay CAC presentation says 'No building plans at Mission Bay right now'; the only date in it, 'After 2035', is attached to South Campus Phase 2 (hospital, parking), not to this block",
+    "sources": [
+     "src-ucsf-cac-2025"
+    ]
+   }
+  ],
   "costs": [],
   "milestones": [
+   {
+    "date": "2016-09",
+    "date_label": "~2016",
+    "status": null,
+    "status_label": null,
+    "text": "UCSF's September 13, 2016 Note to File analysed temporary shuttle parking on Block 18 (recounted in Addendum #4)",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-lrdp-add4",
+      "title": "Addendum #4 to the UCSF 2014 Long Range Development Plan EIR (Weill Neurosciences Building, Block 23A)",
+      "publisher": "UCSF Campus Planning / UC Regents",
+      "date": "2017-04-28",
+      "url": "https://regents.universityofcalifornia.edu/regmeet/may17/f4attach7.pdf",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "UCSF Campus Planning / UC Regents, 2017-04-28",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "mission_bay_block_18a",
+     "slug": "mission-bay-south-block-18a-ucsf-planned",
+     "name": "Mission Bay South Block 18A (UCSF planned)",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-18a-ucsf-planned/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-18a-ucsf-planned.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2018-01-18",
+    "date_label": "Jan 18, 2018",
+    "status": null,
+    "status_label": null,
+    "text": "UCSF files a Notice of Determination to install temporary electric-vehicle charging in about 30 shuttle parking spaces at the 'Block 18A temporary shuttle yard, until such time that the lot is developed with permanent uses'",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ceqa-18a-2018",
+      "title": "UCSF Mission Bay Block 18A Shuttle Yard Electric Vehicle Charging Station Installation (Notice of Determination, CEQAnet SCH 2013092047)",
+      "publisher": "Regents of the University of California, via CEQAnet",
+      "date": "2018-01-18",
+      "url": "https://ceqanet.lci.ca.gov/2013092047/17",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "Regents of the University of California, via CEQAnet, 2018-01-18",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "mission_bay_block_18a",
+     "slug": "mission-bay-south-block-18a-ucsf-planned",
+     "name": "Mission Bay South Block 18A (UCSF planned)",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-18a-ucsf-planned/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-18a-ucsf-planned.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
    {
     "date": "2019-12",
     "date_label": "Dec 2019",
@@ -79,9 +179,75 @@
      "url": "https://pierandpoint.org/sites/mission-bay/"
     },
     "relation": "tracked"
+   },
+   {
+    "date": "2025-06-12",
+    "date_label": "Jun 12, 2025",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "UCSF's Mission Bay CAC presentation lists 'Block 18A – Research' among undeveloped parcels remaining 'per UCSF's Long Range Development Plan' and states 'No building plans at Mission Bay right now'",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ucsf-cac-2025",
+      "title": "UCSF Mission Bay Planned Development (Mission Bay CAC presentation, June 12, 2025)",
+      "publisher": "UCSF, posted by the Office of Community Investment and Infrastructure (OCII)",
+      "date": "2025-06-12",
+      "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "UCSF, posted by the Office of Community Investment and Infrastructure (OCII), 2025-06-12",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_block_18a",
+     "slug": "mission-bay-south-block-18a-ucsf-planned",
+     "name": "Mission Bay South Block 18A (UCSF planned)",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-18a-ucsf-planned/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-18a-ucsf-planned.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-10",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "Added a sourced dossier for Block 18A.",
+    "source": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
+    "sources": [
+     {
+      "title": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "mission_bay_block_18a",
+     "slug": "mission-bay-south-block-18a-ucsf-planned",
+     "name": "Mission Bay South Block 18A (UCSF planned)",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-18a-ucsf-planned/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-18a-ucsf-planned.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-06",
     "kind": "correction",
@@ -142,27 +308,55 @@
    }
   ],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "No source found states when Block 18A research space will be built, by whom, or how large: UCSF's June 2025 deck lists the use and says it has no building plans at Mission Bay right now.",
+   "Whether the temporary shuttle yard of 2016-2018 is still the block's use in 2026 is not stated in any document read.",
+   "The 2014 Long Range Development Plan itself could not be opened here (UCSF Real Estate pages returned a block page); its Block 18A use comes from UCSF's 2025 deck.",
+   "The 18A/18B boundary and the 'A/B' naming come from the OCII land use map and UCSF's deck; no source read gives a dimensioned boundary.",
+   "The OCII land use map labels the parcel 18A (colour fill is graphic, not read as text)."
+  ],
   "sources": [
+   {
+    "id": "src-ucsf-cac-2025",
+    "title": "UCSF Mission Bay Planned Development (Mission Bay CAC presentation, June 12, 2025)",
+    "publisher": "UCSF, posted by the Office of Community Investment and Infrastructure (OCII)",
+    "date": "2025-06-12",
+    "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-ceqa-18a-2018",
+    "title": "UCSF Mission Bay Block 18A Shuttle Yard Electric Vehicle Charging Station Installation (Notice of Determination, CEQAnet SCH 2013092047)",
+    "publisher": "Regents of the University of California, via CEQAnet",
+    "date": "2018-01-18",
+    "url": "https://ceqanet.lci.ca.gov/2013092047/17",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-lrdp-add4",
+    "title": "Addendum #4 to the UCSF 2014 Long Range Development Plan EIR (Weill Neurosciences Building, Block 23A)",
+    "publisher": "UCSF Campus Planning / UC Regents",
+    "date": "2017-04-28",
+    "url": "https://regents.universityofcalifornia.edu/regmeet/may17/f4attach7.pdf",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-ocii-landuse-2019",
+    "title": "Mission Bay Land Use Map",
+    "publisher": "Office of Community Investment and Infrastructure (OCII)",
+    "date": "2019-12",
+    "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
+    "accessed": "2026-10-10"
+   },
    {
     "id": null,
     "title": "data/manual/_reference/mission_bay_land_use_map_2019.png",
     "url": "data/manual/_reference/mission_bay_land_use_map_2019.png"
-   },
-   {
-    "id": null,
-    "title": "sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
-    "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf"
-   },
-   {
-    "id": null,
-    "title": "sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
-    "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf"
    }
   ],
   "notes": "No building on this site as of UCSF's June 2025 CAC deck ('Undeveloped parcels remaining'; 'Block 18A - Research'); vehicles fill the block in USDA NAIP imagery (viewed 2026-09-29), an imagery observation no cited document states. The block is south of Nelson Rising Lane and east of the Owens St curve; in UCSF's map, 18B (future parking garage) lies between it and 18C to the east. The OCII plan's Dec 2019 Land Use Map colors this block for UCSF (no use type given); UCSF's deck designates it Research. No source found for a specific project, developer, or timeline.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-10-10",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

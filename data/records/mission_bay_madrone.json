@@ -1,0 +1,156 @@
+{
+  "record_id": "mission_bay_madrone",
+  "names": [
+    "Madrone",
+    "Madrone Mission Bay",
+    "480 Mission Bay Blvd N"
+  ],
+  "summary": "A two-tower condominium complex by Bosa Development, whose project page says Madrone's two connected 16-storey towers were completed a few years after Radiance (2008); the Assessor roll gives 2012 as year built for the condominium lots at 420 and 480 Mission Bay Boulevard North and 435 China Basin Street, where the Department of Building Inspection recorded a 16-story, 329-unit new-construction permit completed in 2014.",
+  "summary_sources": [
+    "src-bosa-madrone",
+    "src-assessor-8720-2022",
+    "src-dbi-435cb-newcon"
+  ],
+  "milestones": [
+    {
+      "date": "2005-09-27",
+      "status": "planned",
+      "text": "Department of Building Inspection new-construction permit application 200509274032 filed to erect a 16-story residential, retail, office and parking building at 435 China Basin St (319 dwelling units proposed; estimated cost $82,000,000)",
+      "sources": [
+        "src-dbi-435cb-newcon"
+      ],
+      "expected": false,
+      "approximate": false
+    },
+    {
+      "date": "2007-04-03",
+      "text": "New-construction permit 200509274032 issued",
+      "sources": [
+        "src-dbi-435cb-newcon"
+      ],
+      "expected": false,
+      "approximate": false
+    },
+    {
+      "date": "2012",
+      "status": "complete",
+      "text": "Assessor roll lists 2012 as year built for the condominium lots at 420 and 480 Mission Bay Blvd N and 435 China Basin St (Bosa: towers completed 'a few years' after Radiance, 2008)",
+      "sources": [
+        "src-assessor-8720-2022",
+        "src-bosa-madrone"
+      ],
+      "expected": false,
+      "approximate": true
+    },
+    {
+      "date": "2012-05-17",
+      "text": "Permit 201205170704 filed to correct the record to 329 units for the work approved under 200509274032",
+      "sources": [
+        "src-dbi-435cb-units"
+      ],
+      "expected": false,
+      "approximate": false
+    },
+    {
+      "date": "2014-10",
+      "text": "Department of Building Inspection final-inspection permit 201305167126 (filed 2013-05-16) recorded complete on 2014-10-27; new-construction permit 200509274032 recorded complete on 2014-11-12",
+      "sources": [
+        "src-dbi-435cb-final",
+        "src-dbi-435cb-newcon"
+      ],
+      "expected": false,
+      "approximate": false
+    }
+  ],
+  "costs": [
+    {
+      "amount_usd": 82000000,
+      "what": "Estimated cost stated on new-construction permit 200509274032 for 435 China Basin St (self-reported for the permit fee)",
+      "date": "2005-09",
+      "kind": "permit_valuation",
+      "scope": "record",
+      "approximate": false,
+      "sources": [
+        "src-dbi-435cb-newcon"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "key": "developer",
+      "value": "Bosa Development (its project page lists Radiance, Madrone and Arden)",
+      "sources": [
+        "src-bosa-madrone"
+      ]
+    },
+    {
+      "key": "stories",
+      "value": "16 (Bosa: two connected 16-storey towers; the permit for 435 China Basin St also says 16)",
+      "sources": [
+        "src-bosa-madrone",
+        "src-dbi-435cb-newcon"
+      ]
+    },
+    {
+      "key": "units",
+      "value": "329 per the 2012 permit correction for 435 China Basin St (originally 319 proposed); Bosa gives 693 units for Radiance, Madrone and Arden combined",
+      "sources": [
+        "src-dbi-435cb-units",
+        "src-dbi-435cb-newcon",
+        "src-bosa-madrone"
+      ]
+    },
+    {
+      "key": "address",
+      "value": "420 and 480 Mission Bay Blvd N and 435 China Basin St (Assessor lots)",
+      "sources": [
+        "src-assessor-8720-2022"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-bosa-madrone",
+      "title": "Radiance, Madrone and Arden Mission Bay (project page; developer-reported)",
+      "publisher": "Bosa Development",
+      "url": "https://bosadevelopment.com/project/radiance-madrone-mission-bay/",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "src-dbi-435cb-newcon",
+      "title": "Building permit 200509274032, new construction, 435 China Basin St (block 8720)",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=200509274032",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "src-dbi-435cb-final",
+      "title": "Building permit 201305167126, final inspection request, 435 China Basin St",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201305167126",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "src-dbi-435cb-units",
+      "title": "Building permit 201205170704, unit count correction, 435 China Basin St",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201205170704",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "src-assessor-8720-2022",
+      "title": "Assessor secured property tax roll, block 8720, 2022 roll (lots at 420 and 480 Mission Bay Blvd N and 435 China Basin St)",
+      "publisher": "DataSF / SF Assessor-Recorder",
+      "url": "https://data.sfgov.org/resource/wv5m-vpq2.json?block=8720&closed_roll_year=2022",
+      "accessed": "2026-10-10"
+    }
+  ],
+  "open_questions": [
+    "No source read names Madrone together with the 435 China Basin St permit: the link rests on Bosa's 'two connected 16-storey towers', the 16-story permit with an 'east tower', and the 2012 Assessor year-built grouping of the 420 and 480 Mission Bay Blvd N and 435 China Basin St lots. The Department of Building Inspection permit 201509036096 for 420 Mission Bay Blvd N refers to '435 china basin str' as an alternate address.",
+    "The 2012 date is the Assessor year built, not an opening month; no sales or move-in announcement was found.",
+    "Architect not found in any source read (earlier notes in the geometry file naming one were withdrawn).",
+    "Bosa's page was read as extracted text and does not give a completion year for Madrone."
+  ],
+  "images": [],
+  "last_verified": "2026-10-10"
+}

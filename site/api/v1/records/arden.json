@@ -12,7 +12,8 @@
   "permalink": "https://pierandpoint.org/parcels/arden/",
   "api": "https://pierandpoint.org/api/v1/records/arden.json",
   "names": [
-   "Arden"
+   "Arden",
+   "Arden at Mission Bay"
   ],
   "site": {
    "slug": "mission-bay",
@@ -29,8 +30,13 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": null,
-  "summary_sources": [],
+  "summary": "Arden is a 16-story condominium development at 708-718 Long Bridge Street along Mission Creek, developed by Bosa Development; the Assessor lists 267 unit parcels there with 2016 as the year built, while DBI's new-construction permit (263 dwelling units, 16 stories, filed December 2012) was not recorded complete until February 2019.",
+  "summary_sources": [
+   "src-dbi-arden",
+   "src-assessor-arden",
+   "src-kino-arden",
+   "src-sfh-arden"
+  ],
   "shape": {
    "kind": "approximate",
    "parcel": null,
@@ -45,9 +51,165 @@
    "lon": -122.394179,
    "lat": 37.771702
   },
-  "facts": [],
-  "costs": [],
+  "facts": [
+   {
+    "key": "developer",
+    "value": "Bosa Development Corporation",
+    "sources": [
+     "src-kino-arden",
+     "src-sfh-arden",
+     "src-bosa-mb"
+    ]
+   },
+   {
+    "key": "architect",
+    "value": "Chris Dikeakos Architects Inc. (sales-agent page); the Pacific Coast Architecture Database writes 'Christos Dikeakos Architects' of Vancouver. Both are secondary; no primary source read",
+    "sources": [
+     "src-kino-arden",
+     "src-pcad-arden"
+    ]
+   },
+   {
+    "key": "address",
+    "value": "708-718 Long Bridge Street (sales-agent page); DBI's permit is filed at 718 Long Bridge St, block 8710 lot 007",
+    "sources": [
+     "src-kino-arden",
+     "src-dbi-arden"
+    ]
+   },
+   {
+    "key": "units",
+    "value": "267 (SF Highrises; the Assessor's 2022 roll has 267 unit parcels at 708 and 718 Long Bridge, counted from the roll); DBI's permit and the architecture database say 263",
+    "sources": [
+     "src-sfh-arden",
+     "src-assessor-arden",
+     "src-dbi-arden",
+     "src-pcad-arden"
+    ]
+   },
+   {
+    "key": "stories",
+    "value": "16 (DBI permit description; SF Highrises)",
+    "sources": [
+     "src-dbi-arden",
+     "src-sfh-arden"
+    ]
+   },
+   {
+    "key": "site",
+    "value": "Block 12 East, formerly a storage building (architecture database)",
+    "sources": [
+     "src-pcad-arden"
+    ]
+   }
+  ],
+  "costs": [
+   {
+    "amount_usd": 106000000,
+    "what": "DBI permit 201212246822's estimated and revised construction cost (both $106,000,000) for the 16-story, 263-unit building at 718 Long Bridge St; a permit valuation, not a vetted development cost",
+    "date": "2013-10",
+    "kind": "permit_valuation",
+    "scope": "record",
+    "approximate": true,
+    "sources": [
+     "src-dbi-arden"
+    ]
+   }
+  ],
   "milestones": [
+   {
+    "date": "2012-12-24",
+    "date_label": "Dec 24, 2012",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "DBI new-construction permit 201212246822 filed at 718 Long Bridge St: 'erect 16 stories & 263 dwelling apartment & parking'; issued 2013-10-02",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dbi-arden",
+      "title": "Building Permits: permit 201212246822 (718 Long Bridge St, block 8710 lot 007), new construction, filed 2012-12-24, completed 2019-02-08",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=201212246822",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "DataSF / SF Department of Building Inspection",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_arden",
+     "slug": "arden",
+     "name": "Arden",
+     "permalink": "https://pierandpoint.org/parcels/arden/",
+     "api": "https://pierandpoint.org/api/v1/records/arden.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2016",
+    "date_label": "~2016",
+    "status": "complete",
+    "status_label": "Complete",
+    "text": "Completed: the Assessor's 2022 roll gives 2016 as year built for the building's unit parcels at 708 and 718 Long Bridge; a sales-agent page says 'Completed in 2016 by Bosa Development'. An architecture database says 'constructed 2014' and Bosa's own page puts its three Mission Bay buildings under 'Active 2005 - 2015', so the year is not firm",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-assessor-arden",
+      "title": "Assessor Historical Secured Property Tax Rolls, 2022 roll: unit parcels at 708 and 718 Long Bridge St (block 8710)",
+      "publisher": "DataSF / San Francisco Office of the Assessor-Recorder",
+      "url": "https://data.sf.gov/resource/wv5m-vpq2.json?$where=property_location like '%LONG BRIDGE%' AND closed_roll_year='2022'",
+      "accessed": "2026-10-10"
+     },
+     {
+      "id": "src-kino-arden",
+      "title": "Arden - 708-718 Long Bridge Street, San Francisco (development page)",
+      "publisher": "Kinoko Real Estate (sales agent)",
+      "url": "https://kinokorealestate.com/developments/arden",
+      "accessed": "2026-10-10"
+     },
+     {
+      "id": "src-sfh-arden",
+      "title": "Arden in Mission Bay, San Francisco",
+      "publisher": "SF Highrises",
+      "url": "https://sfhighrises.com/building/arden/",
+      "accessed": "2026-10-10"
+     },
+     {
+      "id": "src-pcad-arden",
+      "title": "Madrone/Arden entry: Bosa Development Corporation, Arden (building record 19031)",
+      "publisher": "Pacific Coast Architecture Database, University of Washington",
+      "url": "https://pcad.lib.washington.edu/building/19031/",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "DataSF / San Francisco Office of the Assessor-Recorder; Kinoko Real Estate (sales agent); SF Highrises; Pacific Coast Architecture Database, University of Washington",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_arden",
+     "slug": "arden",
+     "name": "Arden",
+     "permalink": "https://pierandpoint.org/parcels/arden/",
+     "api": "https://pierandpoint.org/api/v1/records/arden.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
    {
     "date": "2016",
     "date_label": "~2016",
@@ -79,9 +241,74 @@
      "url": "https://pierandpoint.org/sites/mission-bay/"
     },
     "relation": "tracked"
+   },
+   {
+    "date": "2019-02-08",
+    "date_label": "Feb 8, 2019",
+    "status": null,
+    "status_label": null,
+    "text": "DBI records the new-construction permit complete (final sign-off); later than the Assessor's 2016 year built, so it does not date occupancy",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dbi-arden",
+      "title": "Building Permits: permit 201212246822 (718 Long Bridge St, block 8710 lot 007), new construction, filed 2012-12-24, completed 2019-02-08",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=201212246822",
+      "accessed": "2026-10-10"
+     }
+    ],
+    "source": "DataSF / SF Department of Building Inspection",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "mission_bay_arden",
+     "slug": "arden",
+     "name": "Arden",
+     "permalink": "https://pierandpoint.org/parcels/arden/",
+     "api": "https://pierandpoint.org/api/v1/records/arden.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-10",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "Added a sourced dossier for Arden.",
+    "source": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=201212246822",
+    "sources": [
+     {
+      "title": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=201212246822"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "mission_bay_arden",
+     "slug": "arden",
+     "name": "Arden",
+     "permalink": "https://pierandpoint.org/parcels/arden/",
+     "api": "https://pierandpoint.org/api/v1/records/arden.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-29",
     "kind": "correction",
@@ -113,22 +340,66 @@
    }
   ],
   "images": [],
-  "open_questions": [],
+  "open_questions": [
+   "No primary opening or first-occupancy date found: the Assessor's 2016 is a year only, and the DBI permit's 2019-02-08 completion is a permit sign-off. The sales-agent page, SF Highrises and the Assessor say 2016; the architecture database says 2014 (and 2013-2014 for construction).",
+   "Unit count differs: 263 (DBI, architecture database) versus 267 (SF Highrises; 267 Assessor unit parcels counted).",
+   "Architect rests on a sales-agent page and the architecture database (both secondary); no OCII, Planning or architect source read.",
+   "Groundbreaking date not found (the DBI permit's first construction document date, 2013-12-06, is not a groundbreaking).",
+   "A Business Times article cited by the architecture database ('Bosa prepares next Mission Bay site', March 2013) could not be opened (blocked); not relied on.",
+   "No OCII design-review or commission item for Block 12 East was located."
+  ],
   "sources": [
+   {
+    "id": "src-dbi-arden",
+    "title": "Building Permits: permit 201212246822 (718 Long Bridge St, block 8710 lot 007), new construction, filed 2012-12-24, completed 2019-02-08",
+    "publisher": "DataSF / SF Department of Building Inspection",
+    "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=201212246822",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-assessor-arden",
+    "title": "Assessor Historical Secured Property Tax Rolls, 2022 roll: unit parcels at 708 and 718 Long Bridge St (block 8710)",
+    "publisher": "DataSF / San Francisco Office of the Assessor-Recorder",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json?$where=property_location like '%LONG BRIDGE%' AND closed_roll_year='2022'",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-kino-arden",
+    "title": "Arden - 708-718 Long Bridge Street, San Francisco (development page)",
+    "publisher": "Kinoko Real Estate (sales agent)",
+    "url": "https://kinokorealestate.com/developments/arden",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-sfh-arden",
+    "title": "Arden in Mission Bay, San Francisco",
+    "publisher": "SF Highrises",
+    "url": "https://sfhighrises.com/building/arden/",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-pcad-arden",
+    "title": "Madrone/Arden entry: Bosa Development Corporation, Arden (building record 19031)",
+    "publisher": "Pacific Coast Architecture Database, University of Washington",
+    "url": "https://pcad.lib.washington.edu/building/19031/",
+    "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-bosa-mb",
+    "title": "Mission Bay (Radiance, Madrone, Arden) project page",
+    "publisher": "Bosa Development",
+    "url": "https://bosadevelopment.com/project/radiance-madrone-mission-bay/",
+    "accessed": "2026-10-10"
+   },
    {
     "id": null,
     "title": "openstreetmap.org/way/394698460",
     "url": "https://www.openstreetmap.org/way/394698460"
-   },
-   {
-    "id": null,
-    "title": "kinokorealestate.com/developments/arden",
-    "url": "https://kinokorealestate.com/developments/arden"
    }
   ],
   "notes": "Architect attribution rests on one secondary (realtor) source; would benefit from primary confirmation.",
-  "has_record_file": false,
-  "last_verified": null,
+  "has_record_file": true,
+  "last_verified": "2026-10-10",
   "tenants": [],
   "geometry": {
    "type": "Polygon",
