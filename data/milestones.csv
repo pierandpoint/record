@@ -5,8 +5,9 @@
 #   status:    optional; set it when the event changes the record's status (complete, under_construction, planned, existing, being_removed)
 #   expected:  yes = a planned/targeted date, not yet happened
 #   approximate: yes = only the year (or a range) is sourced; shown as "~YYYY"
-#   basis:     required when expected=yes and status=complete (a future completion): record / phase / project (docs/record-schema.md)
-#   basis_note: one sentence, required with basis=phase or basis=project
+#   basis:     required when expected=yes and status=complete (a future completion): record / phase / project (docs/record-schema.md);
+#              legal_deadline for a DDA/DA outside date, a term or a lease end the cited source itself calls one (never drives a status)
+#   basis_note: one sentence, required with basis=phase, basis=project or basis=legal_deadline (the last quotes the source's own words)
 record_id,date,status,text,source,expected,approximate,basis,basis_note
 mission_rock_china_basin_park,2024-04-25,complete,China Basin Park has its official opening (ribbon cutting),https://sfyimby.com/2024/04/mision-rock-opens-waterfront-park-starts-leasing-for-verde-san-francisco.html,no,no,,
 pier70_building_102,2020-11,complete,Rehabilitation of Building 102 described as finished in a magazine profile; no completion date is sourced,"Retrofit magazine, Nov 9, 2020 (Rejuvenation of a Historic Powerhouse)",no,yes,,

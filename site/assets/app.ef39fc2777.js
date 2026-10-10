@@ -1525,7 +1525,7 @@
     var bits = [fmtDistance(distanceM), r.statusLabel, r.use];
     if (r.expectedLabel) bits.push('Expected ' + r.expectedLabel);
     return '<li class="near-item">' + thumb + '<div class="near-item-body"><a href="/parcels/' + r.slug + '/">' + r.name + '</a>' +
-      '<span class="detail">' + bits.join(' · ') + '</span></div></li>';
+      '<span class="detail">' + bits.join(' · ') + '</span>' + (r.nextHtml || '') + '</div></li>';
   }
 
   function showStatus(text) {

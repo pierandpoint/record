@@ -1134,8 +1134,8 @@
    {
     "date": "2042",
     "date_label": "~2042",
-    "status": "complete",
-    "status_label": "Complete",
+    "status": null,
+    "status_label": null,
     "text": "No completion date is sourced for this parcel: its Phase 1 schedule is tolled and vertical construction has not moved forward. The only outer bound in the documents is the 2017 DDA's whole-project Phase 3 outside date (about 2042), shown here as a soft placeholder",
     "expected": true,
     "approximate": true,
@@ -1162,8 +1162,8 @@
     ],
     "source": "Port of San Francisco, 2017-09-22; Port of San Francisco, 2026-08-07",
     "origin": "record",
-    "category": "status",
-    "category_label": "Status",
+    "category": "coming_up",
+    "category_label": "Coming up",
     "record": {
      "id": "pier70_e2",
      "slug": "pier-70-parcel-e2-block",
@@ -1181,6 +1181,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-06",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The 2042 date on this record was drawn as an expected completion. The Port's 2017 staff report calls it an outside date in the Development Agreement's Schedule of Performance (Phase 3 within approximately 25 years of approval), not a construction schedule. It is now labelled a legal deadline and no longer moves this record's status on the map or the timeline.",
+    "source": "https://www.sfport.com/sites/default/files/Item%209B%20Pier%2070%20Approval%20092217.pdf",
+    "sources": [
+     {
+      "title": "https://www.sfport.com/sites/default/files/Item%209B%20Pier%2070%20Approval%20092217.pdf"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_e2",
+     "slug": "pier-70-parcel-e2-block",
+     "name": "Pier 70 Parcel E2 (block)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-e2-block/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-e2-block.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-29",
     "kind": "correction",

@@ -503,6 +503,25 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .page-fresh { font: 13px var(--mono); color: var(--paper-faint); }
 .page-about { margin-top: 10px; max-width: 72ch; font-size: 14px; color: var(--paper-soft); }
 .page-fallback { font-size: 13px; color: var(--paper-faint); }
+/* What's next (sitegen/pages.py whats_next_block, next_short_html, next_up_section): the earliest
+   future expected step, always with "Expected, not confirmed"; a legal deadline reads as a plain,
+   quieter box so it never looks like a schedule. */
+.whats-next { margin-top: 14px; max-width: 72ch; padding: 12px 14px; border: 1px solid var(--paper-brass); border-radius: 8px; background: var(--paper-2); color: var(--paper-ink); }
+.whats-next-label { font: 600 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--paper-brass); margin: 0 0 4px; }
+.whats-next-main { margin: 0; font-size: 16px; line-height: 1.45; overflow-wrap: anywhere; }
+.whats-next-meta { margin: 6px 0 0; font: 13px var(--mono); color: var(--paper-soft); }
+.whats-next-completion { margin-top: 10px; }
+.whats-next-legal { border-style: dashed; border-color: var(--paper-line); }
+.whats-next-legal .whats-next-label { color: var(--paper-soft); }
+.whats-next-none .whats-next-main { color: var(--paper-soft); }
+.next-line { display: block; margin-top: 2px; font-size: 13px; line-height: 1.45; color: var(--paper-soft); overflow-wrap: anywhere; }
+.next-line b { color: var(--paper-ink); }
+.next-meta, .next-src { font-family: var(--mono); font-size: 12px; color: var(--paper-faint); }
+.next-legal { font-style: italic; }
+.next-up { list-style: none; margin: 0 0 12px; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.next-up li { line-height: 1.5; overflow-wrap: anywhere; }
+.next-up .next-for { display: block; font-size: 14px; }
+.legal-note { font-style: italic; }
 .page-head .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
 .page-head .docs { margin-top: 16px; max-width: 72ch; }
 .light .chip { background: var(--paper-2); border-color: var(--paper-line); color: var(--paper-ink); }

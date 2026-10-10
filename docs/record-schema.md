@@ -88,8 +88,36 @@ doesn't exist in `status.csv` or `approximate_projects.csv` fails validation.
   whole-project buildout target is known, softer still). Prefer `record`
   over `phase` over `project`: use the weakest basis the documents actually
   support, never a stronger label than the source justifies. A future
-  completion with no `basis` fails validation.
-- `basis_note` is required alongside `basis: phase` or `basis: project`: one
+  completion with no `basis` fails validation. A fourth value, `legal_deadline`,
+  is not a forecast at all (below).
+- `legal_deadline` is for a contractual or statutory outer date: a DDA or DA
+  outside date, a development-agreement term, a lease end. Tag a milestone this
+  way **only** when its own cited source explicitly calls the date an outside
+  date, a deadline, a term or a lease end, and put the source's own phrase in
+  quotation marks in `basis_note` (required; the validator checks for the
+  quotes and for `expected: true`). Anything the source doesn't call that, or a
+  proposed deadline in a not-yet-adopted amendment, is not tagged. A legal
+  deadline **never drives a status**: the build clears its `status` (sitegen/
+  load.py), so the map, the timeline, the home status-by-year chart, the API and
+  the feeds read it as a plain dated milestone, and it never counts toward the
+  timeline range check (below). It shows as a labelled deadline ("Legal deadline
+  (not a schedule): 2042") in the milestone list and in What's next, never as an
+  expected completion; the existing `status` in the file is left alone. Retagging
+  a milestone gets a `correction` row in `data/changelog.csv`.
+- What's next (record pages, /near/ rows, site pages' "Next up"): the earliest
+  `expected` milestone whose date has not passed, with its date, `basis` in plain
+  words (`record` "this building", `phase` "this phase", `project` "whole
+  project"), "Expected, not confirmed" and its citation. A year-only date counts as
+  the end of that year and a month-only date as the end of that month. Real
+  expectations win over legal deadlines; a record whose only future milestone is a
+  legal deadline shows it labelled as one; none at all reads "No dated next step
+  found" (sitegen/nextstep.py).
+- Timeline range check: the build counts distinct records with an expected
+  `under_construction` or `complete` milestone dated after `WINDOW_END`
+  (sitegen/pages.py) whose basis is not `legal_deadline`. Three or more fail the
+  build, one or two print a warning and label the bar's end ("2038+ · 1 record
+  expected later (2041)").
+- `basis_note` is required alongside `basis: phase`, `basis: project` or `basis: legal_deadline`: one
   sentence naming the phase or the buildout target and its document, e.g.
   "Phase 3 in the 2018 Development Agreement's phasing schedule, Exhibit N;
   not a parcel-specific date". Optional (usually omitted) for `basis:
