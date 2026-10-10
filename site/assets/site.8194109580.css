@@ -606,7 +606,7 @@ details.notes h3 { font: 600 13px var(--mono); color: var(--paper-soft); margin:
    side, the detail column took its full width and squeezed the name to a letter or two per line. */
 @media (max-width: 719px) {
   .record-list li { grid-template-columns: minmax(0, 1fr); gap: 4px; }
-  .record-list .detail { text-align: left; padding-left: 20px; }
+  .record-list li:not(.near-item) .detail { text-align: left; padding-left: 20px; }
 }
 .box-intro { margin: 10px 0 0; font-size: 14px; color: var(--paper-soft); }
 .record-preview[hidden], .record-list[hidden] { display: none; }
