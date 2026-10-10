@@ -51,15 +51,15 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- a coarse placeholder box (the union of the two piers' real OpenStreetMap-sourced bounding boxes), not a traced footprint of the pier structures themselves, since no parcel or source figure exists for this Port facility -- see digitized_from. It does not represent the true shape or extent of either pier, only their combined location. Needs replacement with a real digitized footprint if a Port GIS layer or site-plan figure becomes available.",
-    "digitized_from": "No Assessor block/lot exists for this Port pier facility (confirmed: DataSF's 'Parcels - Active and Retired' Socrata dataset, acdm-wktn, has no PIER-numbered street_name entries). No Port GIS shapefile or site-plan figure was available. CORRECTED 2026-09-30: the box's location is now the union of OpenStreetMap's own two named building entries for the piers -- 'Pier 40' (way 104599990, bounding box lat 37.7815294-37.7819100, lon -122.3870563--122.3855684) and 'Pier 38' (way 104599982, bounding box lat 37.7818929-37.7829023, lon -122.3879887--122.3847049), both confirmed via OpenStreetMap Nominatim on 2026-09-30 -- not a traced footprint of either building, just their combined location, since no Port GIS figure or site plan exists to trace from.",
+    "accuracy_caveat": "APPROXIMATE -- two hand-traced deck outlines (Pier 38 and Pier 40) from satellite imagery, accurate to a few metres at best, not a surveyed footprint and not a Port or Assessor geometry. Each is drawn as a parallelogram (opposite edges parallel). They cover the main decks only: the Pier 38 bulkhead building along the Embarcadero, the narrow dock off Pier 40's east end, and any pile-supported aprons are left out. Needs replacement with a real digitized footprint if a Port GIS layer or site-plan figure becomes available.",
+    "digitized_from": "No Assessor block/lot exists for this Port pier facility (confirmed: DataSF's 'Parcels - Active and Retired' Socrata dataset, acdm-wktn, has no PIER-numbered street_name entries). No Port GIS shapefile or site-plan figure was available. CORRECTED 2026-09-30: the box's location is now the union of OpenStreetMap's own two named building entries for the piers -- 'Pier 40' (way 104599990, bounding box lat 37.7815294-37.7819100, lon -122.3870563--122.3855684) and 'Pier 38' (way 104599982, bounding box lat 37.7818929-37.7829023, lon -122.3879887--122.3847049), both confirmed via OpenStreetMap Nominatim on 2026-09-30 -- not a traced footprint of either building, just their combined location, since no Port GIS figure or site plan exists to trace from. CORRECTED 2026-10-10: the outline is now two hand-traced deck outlines (Pier 38 to the north, Pier 40 to the south) on Esri World Imagery (zoom 20, imagery captured 2025-08-29 per docs/satellite-imagery.md), placed by calibrating against the previous box's known corners and corrected corner by corner in review with the owner. Still no Assessor parcel, Port GIS layer or site-plan figure to trace from.",
     "why_no_real_parcel": "Port pier facility; not on the Assessor's secured roll (data.sf.gov acdm-wktn has no PIER-numbered parcels near this site).",
     "regulatory_context": "Developer: San Francisco Waterfront Partners III, LLC (SFWP), an affiliate of Pacific Waterfront Partners (PWP). Original Exclusive Negotiating Agreement: Port Commission Resolution 21-10 (2021-02-23), expired 2023-03-15 for missed performance dates. PWP separately owed the Port over $980,000 in back rent on three unrelated leases (Pier 28, two Agriculture Building suites), unpaid since it vacated them 2024-01-31. On 2026-04-28 the Port Commission adopted a Settlement Agreement (Resolution 26-21: PWP to pay $720,000 over 3 years, with the remainder of the debt forgiven on compliance) and an Amended and Restated ENA (Resolution 26-22: a 12-month 'Evaluation Period' to explore value engineering, project phasing and a new financial partner, with a new Schedule of Performance due before the period ends around April 2027). No lease, term sheet or CEQA review is in place as of this record's own last_verified date."
    }
   },
   "centroid": {
-   "lon": -122.386675,
-   "lat": 37.782079
+   "lon": -122.386749,
+   "lat": 37.782181
   },
   "facts": [
    {
@@ -347,6 +347,35 @@
     "permalink": "https://pierandpoint.org/changes/#record"
    },
    {
+    "date": "2026-10-10",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Piers 38 and 40 now sit on the two real decks. Their outline had been one rough box that also covered the water between them. The new outlines are traced by hand from satellite imagery, so they are still approximate.",
+    "source": "Satellite imagery, Pier & Point's own reading (Esri World Imagery, captured 2025-08-29)",
+    "sources": [
+     {
+      "title": "Satellite imagery, Pier & Point's own reading (Esri World Imagery, captured 2025-08-29)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "piers_38_40",
+     "slug": "piers-38-and-40",
+     "name": "Piers 38 & 40",
+     "permalink": "https://pierandpoint.org/parcels/piers-38-and-40/",
+     "api": "https://pierandpoint.org/api/v1/records/piers-38-and-40.json"
+    },
+    "site": {
+     "slug": "mission-rock",
+     "name": "Mission Rock",
+     "short": "Mission Rock",
+     "url": "https://pierandpoint.org/sites/mission-rock/"
+    },
+    "relation": "adjacent",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-28",
     "kind": "added",
     "kind_label": "Added",
@@ -449,28 +478,54 @@
   "last_verified": "2026-09-28",
   "tenants": [],
   "geometry": {
-   "type": "Polygon",
+   "type": "MultiPolygon",
    "coordinates": [
     [
      [
-      -122.3879887,
-      37.7815294
-     ],
+      [
+       -122.387846,
+       37.78272
+      ],
+      [
+       -122.384689,
+       37.782917
+      ],
+      [
+       -122.384722,
+       37.782558
+      ],
+      [
+       -122.38788,
+       37.782361
+      ],
+      [
+       -122.387846,
+       37.78272
+      ]
+     ]
+    ],
+    [
      [
-      -122.3879887,
-      37.7829023
-     ],
-     [
-      -122.3847049,
-      37.7829023
-     ],
-     [
-      -122.3847049,
-      37.7815294
-     ],
-     [
-      -122.3879887,
-      37.7815294
+      [
+       -122.387802,
+       37.781813
+      ],
+      [
+       -122.38555,
+       37.78195
+      ],
+      [
+       -122.38555,
+       37.781548
+      ],
+      [
+       -122.387802,
+       37.781411
+      ],
+      [
+       -122.387802,
+       37.781813
+      ]
      ]
     ]
    ]
