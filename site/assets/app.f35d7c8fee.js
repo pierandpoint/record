@@ -244,7 +244,7 @@
       img.setAttribute('width', b.box[2]); img.setAttribute('height', b.box[3]);
     });
     var text = satCreditText(picked);
-    document.querySelectorAll('.sat-credit').forEach(function (el) { el.textContent = text; });
+    document.querySelectorAll('.sat-credit [data-sat-credit-text]').forEach(function (el) { el.textContent = text; });
     document.querySelectorAll('[data-sat-credit-legend]').forEach(function (el) { el.textContent = text; });
   }
   function setSatOn(on, pushUrl) {
@@ -360,6 +360,15 @@
   // takes its place so the date being shown is still on screen, with a link back up to change it.
   // It only ever shows below 720px, and in Status mode (setViewVisibility: Use has no date).
   var miniDate = null;
+  var mapDate = null;
+  var mainFrame = readDate && document.querySelector('#map-band .map-frame');
+  if (mainFrame) {
+    mapDate = document.createElement('p');
+    mapDate.className = 'map-date';
+    mapDate.setAttribute('aria-hidden', 'true'); // the slider's aria-valuetext already says it
+    mapDate.hidden = true;
+    mainFrame.appendChild(mapDate);
+  }
   var fullTimeline = document.querySelector('.timeline');
   if (fullTimeline && 'IntersectionObserver' in window) {
     var mini = document.createElement('div');
@@ -528,7 +537,7 @@
       // timeline moves to a date where it applies. The home page's PROGRESS block is not a map
       // legend and keeps its zeros.
       var row = el.parentNode;
-      if (row && row.tagName === 'SPAN' && el.closest('.legend[data-legend-mode]')) row.hidden = n === 0;
+      if (row && row.tagName === 'SPAN' && el.closest('.legend[data-legend-mode], .legend-compact')) row.hidden = n === 0;
     });
     document.querySelectorAll('[data-bar]').forEach(function (el) {
       el.style.flexGrow = counts[el.getAttribute('data-bar')] || 0;
@@ -542,6 +551,9 @@
     if (readDate) readDate.textContent = label;
     if (readPhase) readPhase.textContent = phase;
     if (miniDate) miniDate.textContent = label + ' · ' + phase;
+    // The date being shown, in the map's own corner, whenever it isn't today (UX audit 2026-10-05,
+    // F12: on a phone the readout sits below the map, so a 2010 map had no year beside it).
+    if (mapDate) { mapDate.textContent = label; mapDate.hidden = m === TODAY; }
     slider.setAttribute('aria-valuetext', label + ', ' + phase);
     if (yearJump) yearJump.value = String(yearOptionFor(m));
   }
