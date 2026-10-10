@@ -590,6 +590,18 @@
     document.querySelectorAll('.pp-zoomable').forEach(function (svg) {
       var frame = svg.closest('.map-frame');
       var controls = frame ? frame.querySelector('.zoom-controls') : null;
+      // A site page's map carries a 4:3 view for phones (build.py's narrow_box): at 21:9 the
+      // frame was 356x153 px at 390 (UX audit 2026-10-05, F1). Swapped in once, before the
+      // fitted view below is read, so zoom, reset and the satellite layer all start from it.
+      var narrowView = svg.getAttribute('data-narrow-view');
+      if (narrowView && window.matchMedia && window.matchMedia('(max-width: 719px)').matches) {
+        svg.setAttribute('viewBox', narrowView);
+        // The water label's phone position (pages.py's site_map), clamped into this view.
+        Array.prototype.forEach.call(svg.querySelectorAll('.water-label[data-narrow-x]'), function (t) {
+          t.setAttribute('x', t.getAttribute('data-narrow-x'));
+          t.setAttribute('y', t.getAttribute('data-narrow-y'));
+        });
+      }
       var parts = (svg.getAttribute('viewBox') || '0 0 100 100').split(' ').map(Number);
       var base = { x: parts[0], y: parts[1], w: parts[2], h: parts[3] };
       var view = { x: base.x, y: base.y, w: base.w, h: base.h };

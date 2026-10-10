@@ -112,6 +112,8 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
    widens the hit area back to the full shape regardless of what's actually painted. */
 .pp-map .rec[data-mode="outline"] { pointer-events: all; }
 .pp-map a:hover .rec, .pp-map a:focus .rec { filter: brightness(1.35); }
+/* A site map's water label that doesn't fit the phone view whole (pages.py's site_map) */
+@media (max-width: 719px) { .pp-map .water-label.wide-only { display: none; } }
 .map-frame { position: relative; border-radius: 12px; overflow: hidden; border: 1px solid #24343c; background: var(--ink-3); }
 .pp-map.pp-zoomable { cursor: grab; touch-action: none; }
 .pp-map.pp-zoomable:active { cursor: grabbing; }
