@@ -130716,15 +130716,15 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- a coarse placeholder box, not a traced footprint, for the same reasons as the Pier 70 dry docks shape (no parcel, no source figure). The box does not represent the real pier structure's true shape or its full extent into the Bay.",
-     "digitized_from": "No Assessor block/lot exists for this Port pier structure (confirmed: DataSF's 'Parcels - Active and Retired' dataset, acdm-wktn, has no parcels with PIER-numbered street names). No Port GIS shapefile or site-plan figure was available, so this is a coarse locational box centered on the real DataSF street-centerline address range 500-599 Terry A. Francois Blvd, the address range covering the Pier 52/54 area (California State Parks Division of Boating and Waterways lists a combined 'Pier 54 & Pier 52 BLF' boat-launch facility on Terry A. Francois Blvd in this same stretch).",
+     "accuracy_caveat": "APPROXIMATE -- a hand trace of the pier deck's visible outer edge on satellite imagery (accurate to a few metres at best), not a surveyed footprint and not a Port or Assessor geometry. It covers the deck and shed only, not the pilings or aprons beneath or beside it, and the pier's true outline under the shed roof cannot be seen.",
+     "digitized_from": "No Assessor block/lot exists for this Port pier structure (confirmed: DataSF's 'Parcels - Active and Retired' dataset, acdm-wktn, has no parcels with PIER-numbered street names). No Port GIS shapefile or site-plan figure was available, so this is a coarse locational box centered on the real DataSF street-centerline address range 500-599 Terry A. Francois Blvd, the address range covering the Pier 52/54 area (California State Parks Division of Boating and Waterways lists a combined 'Pier 54 & Pier 52 BLF' boat-launch facility on Terry A. Francois Blvd in this same stretch). CORRECTED 2026-10-10: the outline is now a hand trace of the pier deck's outer edge on Esri World Imagery (zoom 20, imagery captured 2025-08-29 per docs/satellite-imagery.md), read off a latitude/longitude grid and checked by overlay with the owner. The earlier placeholder box lay in open water south of the pier. Still no Assessor parcel, Port GIS layer or site-plan figure to trace from.",
      "why_no_real_parcel": "Port pier structure; not on the Assessor's secured roll (data.sf.gov acdm-wktn has no PIER-numbered parcels near this site).",
      "regulatory_context": "Condemned and red-tagged in 2024; the Port announced it would permanently close at the end of 2024, displacing the pier's tenant businesses (SFGate, Sept 2024). The Port's draft Five-Year Capital Improvement Program (FY2027-31, Feb 2026) budgets a 'Pier 54 Shed Demolition' line item totaling $2.0M ($500,000 in FY2026-27 and $1,500,000 in FY2027-28); no line item for full substructure removal appears in that document."
     }
    },
    "centroid": {
-    "lon": -122.38478,
-    "lat": 37.76952
+    "lon": -122.384713,
+    "lat": 37.770114
    },
    "facts": [],
    "costs": [
@@ -130863,6 +130863,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Pier 54 now sits on the real pier. Its outline had been a rough box drawn in open water just south of it. The new outline is traced by hand from satellite imagery, so it is still approximate.",
+     "source": "Satellite imagery, Pier & Point's own reading (Esri World Imagery, captured 2025-08-29)",
+     "sources": [
+      {
+       "title": "Satellite imagery, Pier & Point's own reading (Esri World Imagery, captured 2025-08-29)"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier_54",
+      "slug": "pier-54",
+      "name": "Pier 54",
+      "permalink": "https://pierandpoint.org/parcels/pier-54/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-54.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "adjacent",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-06",
      "kind": "correction",
      "kind_label": "Correction",
@@ -130955,7 +130984,7 @@
      "overview": true
     }
    ],
-   "notes": "This is a Port maritime/pier facility, not an OCII Mission Bay South development block -- grouped under the Mission Bay South site here because that is the nearest tracked site and because DataSF's official 'Former San Francisco Redevelopment Agency Project Areas' boundary for Mission Bay South extends north along the Terry A. Francois Blvd shoreline to include this stretch. It is materially farther from Mission Rock's own tracked footprint (Pier 48/50, ~470m away) than from Mission Bay South's nearest tracked features (the UCSF Illinois Street Garage/P24 lawn, ~30m away). Recorded as adjacent rather than tracked because it is Port-jurisdiction maritime infrastructure being demolished, not a Mission Bay OCII development parcel like this site's other tracked records.",
+   "notes": "This is a Port maritime/pier facility, not an OCII Mission Bay South development block -- grouped under the Mission Bay South site here because that is the nearest tracked site and because DataSF's official 'Former San Francisco Redevelopment Agency Project Areas' boundary for Mission Bay South extends north along the Terry A. Francois Blvd shoreline to include this stretch. It is materially farther from Mission Rock's own tracked footprint (Pier 48/50, ~470m away) than from Mission Bay South's nearest tracked features (the UCSF Illinois Street Garage/P24 lawn, ~30m away). Recorded as adjacent rather than tracked because it is Port-jurisdiction maritime infrastructure being demolished, not a Mission Bay OCII development parcel like this site's other tracked records. A derelict timber pier stands just north of this footprint, separate from it (probably Pier 52, a separate Port asset; the identification is not confirmed by a source and it is not part of this record).",
    "has_record_file": true,
    "last_verified": "2026-09-28",
    "tenants": [],
@@ -130964,24 +130993,28 @@
     "coordinates": [
      [
       [
-       -122.3851,
-       37.7692
+       -122.38561,
+       37.77066
       ],
       [
-       -122.3851,
-       37.77
+       -122.38313,
+       37.769763
       ],
       [
-       -122.3843,
-       37.77
+       -122.38335,
+       37.76938
       ],
       [
-       -122.3843,
-       37.7692
+       -122.38501,
+       37.76998
       ],
       [
-       -122.3851,
-       37.7692
+       -122.38557,
+       37.77024
+      ],
+      [
+       -122.38561,
+       37.77066
       ]
      ]
     ]
