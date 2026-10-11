@@ -79615,15 +79615,15 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- this block is not yet built and does not correspond to any subdivided Assessor parcel: it currently sits on vacant/graded land within the former power station site (unaddressed in DataSF's Assessor roll). Traced from an adopted regulatory diagram, fitted to real street positions at multiple points, but this diagram is dated 2020 and may not reflect later design changes (as already found for the UCSF/Sophie Maxwell area). Treat vertex positions as accurate to roughly 10-25m, not survey-grade, and treat the block's applicability itself as somewhat more provisional than Mission Rock's or Pier 70's equivalent entries. The shape was rebuilt on 2026-09-16 with a more careful fit of the diagram to the map, re-measured the same day consistently across the whole block layout, and corrected again that day after one mis-measured reference point was fixed. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record). CLIPPED 2026-09-17: although this record's regulatory notes already said the shape was 'clipped to exclude Sophie Maxwell's real footprint,' a fresh check of overlaps between real parcels and approximate shapes found this polygon still overlapped Sophie Maxwell (block/lot 4232020) by 1,082 sq m -- the clip described in that text was apparently never actually applied to (or was lost from) the published shape. It was then re-clipped against block/lot 4232020's real parcel boundary; area dropped from ~4,965 to ~3,883 sq m. This overlap had gone undetected because Pier & Point's automated shape check only compared approximate shapes with each other, never with real parcels. The vacant/graded and unaddressed-in-the-Assessor-roll wording is our own observation, not something the cited 2020 D4D can show; 'not yet built' is consistent with the 2024 annual compliance report (March 2025), which says the developer had submitted no building permits for any market-rate housing projects. The 2020 date of the diagram is confirmed by the final D4D's footer (February 26, 2020). DataSF Parcels (queried 2026-09-29) lists active lots in Assessor blocks 4175 and 4232 added in December 2023 after the Phase 1 Final Map, most unaddressed; whether one of them corresponds to this block was not checked, so the statement that no subdivided Assessor parcel exists for it is unverified.",
-     "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
-     "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead. (This is Pier & Point's own parcel search, not something the cited Design for Development can establish; the D4D does not address Assessor parcels.) DataSF Parcels (queried 2026-09-29) shows at least 22 active lots in Assessor blocks 4175 and 4232 added in December 2023 following the Phase 1 Final Map recorded July 26, 2022 (most unaddressed; e.g. 4232022 = 151 Humboldt St, 4232020 = 1212 Maryland St); whether one of them matches this block was not checked.",
+     "accuracy_caveat": "The outline is Assessor lot 4232019, so its edges are recorded lot lines, not a trace. That this is the lot of Block 7 (remaining portion) is Pier & Point's own inference from location, shape and size (our earlier trace of the D4D figure measured 3,877 m2 against the lot's 3,614 m2; 92% of the trace lies inside the lot and the trace covers 98% of it). No Port document read ties the lot number to it. A building may sit back from the lot lines. Block 7 (remaining portion) is not yet built, which is consistent with the 2024 annual compliance report (March 2025), which says the developer had submitted no building permits for any market-rate housing projects.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4232019 (recorded 2022-08-30; mapped 2023-12-01; active); cross-checked against Potrero Power Station Design for Development Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
+     "why_no_real_parcel": "No single Assessor lot is documented as Block 7 (remaining portion). Lot 4232019 (active) matches its location, shape and size, so its outline is Assessor lot 4232019; the identification is Pier & Point's inference, as the accuracy note says.",
      "regulatory_context": "Figure 6.2.3 of the final D4D (printed p.245) shows Block 7 as one numbered block, with its height zones read from the figure's colour-coded labels: the north-west part (on Humboldt St at Louisiana Paseo) is labelled 240'/85' (maximum height 240 ft, maximum base height 85 ft) and the rest of the block (east side and south strip) is 85'; the two '150'MAX' markings are plan dimensions of the tower, not heights. The D4D numbers only 'Block 7'; 'Block 7A' and 'Block 7B' are the names SF Planning's own approvals use for the two buildings (e.g. 'Approval of the Design Review Application of Block 7A', March 2, 2022, Case 2017-011878PHA-04, and Block 7B, March 2, 2022). The Sophie Maxwell Building ('Block 7b, the Sophie Maxwell Building' in the 2024 annual compliance report; real blklot 4232020, addressed 1212 MARYLAND in DataSF Parcels; already mapped separately in this dataset) occupies part of this block; this polygon is the REMAINING portion, clipped to exclude Sophie Maxwell's real footprint (the clipping is our own work). The remainder is presumed to correspond to 'Block 7A' (Foster + Partners-designed rental tower, press-reported heights of 240-264 ft depending on source, consistent with this figure's 240 ft max) -- design review approved March 2, 2022; the 2024 annual compliance report says no market-rate building permits had been submitted; no construction-start source found."
     }
    },
    "centroid": {
-    "lon": -122.383904,
-    "lat": 37.756694
+    "lon": -122.383935,
+    "lat": 37.756651
    },
    "facts": [
     {
@@ -80247,6 +80247,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Potrero Power Station Block 7 (remaining portion) now uses real Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 4232019",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 4232019"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_block_7remaining",
+      "slug": "potrero-power-station-block-7-remaining-portion",
+      "name": "Potrero Power Station Block 7 (remaining portion)",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-7-remaining-portion/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-7-remaining-portion.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-06",
      "kind": "correction",
      "kind_label": "Correction",
@@ -80496,7 +80525,7 @@
      "date": "2020-02-26"
     }
    ],
-   "notes": "Approximate polygon for a real, D4D-adopted block (listed as 'Block 7' in the final D4D's Table 3.1.1; '(remaining portion)' in the project name is our own label, and SF Planning's design review approval calls this portion Block 7A) -- see the accuracy note for this shape.",
+   "notes": "Block 7 (remaining portion) of the Potrero Power Station Design for Development, shown as Assessor lot 4232019 (see the accuracy note). Approximate polygon for a real, D4D-adopted block (listed as 'Block 7' in the final D4D's Table 3.1.1; '(remaining portion)' in the project name is our own label, and SF Planning's design review approval calls this portion Block 7A) -- see the accuracy note for this shape.",
    "has_record_file": true,
    "last_verified": "2026-10-10",
    "tenants": [],
@@ -80504,14 +80533,6 @@
     "type": "Polygon",
     "coordinates": [
      [
-      [
-       -122.38378247599645,
-       37.756927582397374
-      ],
-      [
-       -122.383980813,
-       37.756915671
-      ],
       [
        -122.383959748,
        37.756713125
@@ -80525,24 +80546,28 @@
        37.756586011
       ],
       [
-       -122.3835606778901,
-       37.75660007128788
+       -122.383539552,
+       37.75660134
       ],
       [
-       -122.383535,
-       37.756348
+       -122.383516994,
+       37.756384642
       ],
       [
-       -122.384389,
-       37.756303
+       -122.384396436,
+       37.756339869
       ],
       [
-       -122.384451,
-       37.756894
+       -122.384453427,
+       37.756887285
       ],
       [
-       -122.38378247599645,
-       37.756927582397374
+       -122.383980832,
+       37.756915669
+      ],
+      [
+       -122.383959748,
+       37.756713125
       ]
      ]
     ]
@@ -81065,15 +81090,15 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- this block is not yet built (design under review as of the March 2025 annual compliance report) and this approximate footprint has not been matched to an Assessor parcel: DataSF Parcels lists an active, unaddressed lot, 4232021 (recorded 2022-08-30), that overlaps about three quarters of it, but that lot has not been confirmed as this block's parcel. Traced from an adopted regulatory diagram, fitted to the real street grid at several points, but this diagram is dated 2020 and may not reflect later design changes. Treat vertex positions as accurate to roughly 10-25m, not survey-grade. South edge corrected 2026-09-16 (second correction) using the source diagram's own measured depth rather than a search for the curb in satellite imagery -- the diagram-derived depth should be reliable to within a few meters, but this edge has NOT been independently confirmed against a visible real-world curb. This block's WEST-EAST WIDTH is also known to disagree with the diagram (~55m actual vs ~70m implied by the 2026-09-29 re-measurement, originally recorded as ~92m) and has NOT been corrected -- flagged as an open follow-up, not resolved. Rebuilt 2026-09-16 by fitting the diagram to surveyed reference points. Re-measured 2026-09-16 (third correction) in one consistent measurement across the whole block layout. Re-corrected 2026-09-16 (fourth correction) after one mis-measured reference point was fixed. Each step is logged in this shape's data file in the public data repository (https://github.com/pierandpoint/record).",
-     "digitized_from": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
-     "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead. DataSF Parcels (checked 2026-09-29) lists an active, unaddressed lot, 4232021 (recorded 2022-08-30, PPS-MU zoning), overlapping about three quarters of this approximate footprint; it has not been confirmed as this block's parcel.",
+     "accuracy_caveat": "The outline is Assessor lot 4232021, so its edges are recorded lot lines, not a trace. That this is the lot of Block 11 is Pier & Point's own inference from location, shape and size (our earlier trace of the D4D figure measured 2,908 m2 against the lot's 2,776 m2; 77% of the trace lies inside the lot and the trace covers 81% of it). No Port document read ties the lot number to it. A building may sit back from the lot lines. Block 11 is not yet built (design under review as of the March 2025 annual compliance report).",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4232021 (recorded 2022-08-30; mapped 2023-12-01; active); cross-checked against Potrero Power Station Design for Development Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
+     "why_no_real_parcel": "No single Assessor lot is documented as Block 11. Lot 4232021 (active) matches its location, shape and size, so its outline is Assessor lot 4232021; the identification is Pier & Point's inference, as the accuracy note says.",
      "regulatory_context": "Flat 130 ft max height per Figure 6.2.3 of the final D4D (the colour-coded height label). The D4D's Permitted Uses table (Table 3.1.1) shows Non-Retail Sales and Services (including office), Laboratory and Life Science uses permitted (subject to the table's note 13) and Residential not permitted here. Blocks 11 and 12 together are described as approximately 430,000 sq ft of office by the project's MEP engineer (Meyers+ Engineers project page, a consultant's own material, not a Planning document). The Meyers+ page and the June 7, 2020 pre-application community meeting slides list Herzog & de Meuron + Adamson Associates as architect for Blocks 11, 12 and 15. No construction-start source found."
     }
    },
    "centroid": {
-    "lon": -122.384001,
-    "lat": 37.755852
+    "lon": -122.383899,
+    "lat": 37.755835
    },
    "facts": [
     {
@@ -81410,6 +81435,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Potrero Power Station Block 11 now uses real Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 4232021",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 4232021"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_block_11",
+      "slug": "potrero-power-station-block-11",
+      "name": "Potrero Power Station Block 11",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-11/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-11.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-09-29",
      "kind": "correction",
      "kind_label": "Correction",
@@ -81575,7 +81629,7 @@
      "date": "2020-02-26"
     }
    ],
-   "notes": "Approximate polygon for a real, D4D-adopted block (final D4D, Feb 26, 2020: Table 3.1.1 and Figure 6.2.3) -- see its accuracy caveat. Status 'planned': design under review per the 2024 annual compliance report (March 28, 2025). Use 'commercial': office, laboratory and life science uses are permitted and residential is not (D4D Table 3.1.1).",
+   "notes": "Block 11 of the Potrero Power Station Design for Development, shown as Assessor lot 4232021 (see the accuracy note). Approximate polygon for a real, D4D-adopted block (final D4D, Feb 26, 2020: Table 3.1.1 and Figure 6.2.3) -- see its accuracy caveat. Status 'planned': design under review per the 2024 annual compliance report (March 28, 2025). Use 'commercial': office, laboratory and life science uses are permitted and residential is not (D4D Table 3.1.1).",
    "has_record_file": true,
    "last_verified": "2026-09-20",
    "tenants": [],
@@ -81584,24 +81638,28 @@
     "coordinates": [
      [
       [
-       -122.384356,
-       37.755971
+       -122.383451352,
+       37.755754045
       ],
       [
-       -122.383501,
-       37.75602
+       -122.384315528,
+       37.755702907
       ],
       [
-       -122.383469,
-       37.755675
+       -122.384330035,
+       37.755702048
       ],
       [
-       -122.384325,
-       37.755624
+       -122.384363484,
+       37.756023354
       ],
       [
-       -122.384356,
-       37.755971
+       -122.383484777,
+       37.756075143
+      ],
+      [
+       -122.383451352,
+       37.755754045
       ]
      ]
     ]
@@ -81642,15 +81700,15 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- this block is not yet built and does not correspond to any subdivided Assessor parcel: it currently sits on vacant/graded land within the former power station site (unaddressed in DataSF's Assessor roll). Traced from an adopted regulatory diagram by fitting it to multiple real street points (see the mapping log), but this diagram is dated 2020 and may not reflect later design changes. Treat vertex positions as accurate to roughly 10-25m, not survey-grade. South edge corrected 2026-09-16 using the source diagram's own measured depth -- should be reliable to within a few meters, but has NOT been independently confirmed against a visible real-world curb. Rebuilt 2026-09-16 by re-fitting the diagram to real street points. Re-measured 2026-09-16 (a third time) in a single consistent measurement across the whole block layout. Re-corrected 2026-09-16 (a fourth time) after fixing a mis-measured reference point. That the block is not yet built is consistent with the 2024 annual compliance report (March 2025), which says vertical applications are under review for Blocks 11 and 12; the vacant/graded and unaddressed-in-Assessor-roll wording is Pier & Point's own observation. The 2020 date of the diagram is confirmed by the final D4D's footer (February 26, 2020). How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
-     "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
-     "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead. (This reflects Pier & Point's own parcel search, not something the cited Design for Development can establish; the D4D does not address Assessor parcels.)",
+     "accuracy_caveat": "The outline is Assessor lot 4232023, so its edges are recorded lot lines, not a trace. That this is the lot of Block 12 is Pier & Point's own inference from location, shape and size (our earlier trace of the D4D figure measured 2,940 m2 against the lot's 2,645 m2; 77% of the trace lies inside the lot and the trace covers 85% of it). No Port document read ties the lot number to it. A building may sit back from the lot lines. Block 12 is not yet built, which is consistent with the 2024 annual compliance report (March 2025), which says vertical applications are under review for Blocks 11 and 12.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4232023 (recorded 2022-08-30; mapped 2023-12-01; active); cross-checked against Potrero Power Station Design for Development Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
+     "why_no_real_parcel": "No single Assessor lot is documented as Block 12. Lot 4232023 (active) matches its location, shape and size, so its outline is Assessor lot 4232023; the identification is Pier & Point's inference, as the accuracy note says.",
      "regulatory_context": "Flat 100 ft max height per Figure 6.2.3. Paired with Block 11 on the project's MEP engineer's page (Meyers+), which describes the two blocks together as about 430,000 sq ft of office with below-grade parking (see that entry for the combined GSF estimate); the final D4D's Table 3.1.1 permits laboratory and life-science uses on Block 12, but no cited source calls the pair a life-science campus. No construction-start source found; the 2024 annual compliance report (March 2025) says vertical applications for Blocks 11 and 12 were under review."
     }
    },
    "centroid": {
-    "lon": -122.382904,
-    "lat": 37.755921
+    "lon": -122.382742,
+    "lat": 37.755925
    },
    "facts": [
     {
@@ -81979,6 +82037,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Potrero Power Station Block 12 now uses real Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 4232023",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 4232023"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_block_12",
+      "slug": "potrero-power-station-block-12",
+      "name": "Potrero Power Station Block 12",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-12/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-12.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-06",
      "kind": "correction",
      "kind_label": "Correction",
@@ -82181,7 +82268,7 @@
      "accessed": "2026-10-06"
     }
    ],
-   "notes": "Approximate polygon for a real, D4D-adopted block -- see the accuracy caveat.",
+   "notes": "Block 12 of the Potrero Power Station Design for Development, shown as Assessor lot 4232023 (see the accuracy note).",
    "has_record_file": true,
    "last_verified": "2026-09-20",
    "tenants": [],
@@ -82190,24 +82277,24 @@
     "coordinates": [
      [
       [
-       -122.383257,
-       37.756038
+       -122.382393325,
+       37.755816644
       ],
       [
-       -122.382408,
-       37.756096
+       -122.383230578,
+       37.755767108
       ],
       [
-       -122.382373,
-       37.755746
+       -122.383264024,
+       37.756088413
       ],
       [
-       -122.383224,
-       37.755685
+       -122.382426766,
+       37.75613795
       ],
       [
-       -122.383257,
-       37.756038
+       -122.382393325,
+       37.755816644
       ]
      ]
     ]
@@ -83015,15 +83102,15 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- this block is Station A, an existing historic building (the 1901 turbine hall; DBI permit 202406053802 in 2024 describes the unoccupied 'station a building'), so it is not vacant land; the approved vertical addition has not been started. No Assessor lot of its own has been matched to it: DataSF Parcels (checked 2026-09-29) lists an active, unaddressed lot, 4175026 (recorded 2022-08-30), that overlaps about 85% of this approximate footprint, but that lot has not been confirmed as this block's parcel. Traced from an adopted regulatory diagram, fitted to real street positions at multiple points, but this diagram is dated 2020 and may not reflect later design changes (as already found for the UCSF/Sophie Maxwell area). Treat vertex positions as accurate to roughly 10-25m, not survey-grade, and treat the block's applicability itself as somewhat more provisional than Mission Rock's or Pier 70's equivalent entries. The shape was rebuilt on 2026-09-16 with a more careful fit of the diagram to the map, re-measured the same day consistently across the whole block layout, and corrected again that day after one mis-measured reference point was fixed. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
-     "digitized_from": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
-     "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead. DataSF Parcels (checked 2026-09-29) lists an active, unaddressed lot, 4175026 (recorded 2022-08-30), overlapping about 85% of this footprint; it has not been confirmed as this block's parcel.",
+     "accuracy_caveat": "The outline is Assessor lot 4175026, so its edges are recorded lot lines, not a trace. That this is the lot of Block 15 (Station A) is Pier & Point's own inference from location, shape and size (our earlier trace of the D4D figure measured 5,104 m2 against the lot's 4,315 m2; 85% of the trace lies inside the lot and the trace covers 100% of it). No Port document read ties the lot number to it. A building may sit back from the lot lines. Block 15 is Station A, an existing historic building (the 1901 turbine hall; DBI permit 202406053802 in 2024 describes the unoccupied 'station a building'), so it is not vacant land; the approved vertical addition has not been started.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4175026 (recorded 2022-08-30; mapped 2023-12-01; active); cross-checked against Potrero Power Station Design for Development Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
+     "why_no_real_parcel": "No single Assessor lot is documented as Block 15 (Station A). Lot 4175026 (active) matches its location, shape and size, so its outline is Assessor lot 4175026; the identification is Pier & Point's inference, as the accuracy note says.",
      "regulatory_context": "Station A: the site's historic 1901 unreinforced-brick turbine hall (a four-story brick structure per the 2018 Draft EIR), vacant/unoccupied. The design review approves adaptive reuse into approximately 403,750 GSF of office (the Planning Commission granted the office allocation on Oct 22, 2020, Motion 20801) via an eight-story vertical addition above the retained historic shell and a public mid-block passage between Georgia Lane and Power Station Park, designed by Herzog & de Meuron with Adamson Associates; the Planning Director approved the Design Review Application on March 2, 2022. Max height 205 ft total (historic base plus addition), per the Design Review Approval. Construction of the addition had not started per SF YIMBY (Aug 27, 2025) and the 2024 annual compliance report (March 2025), which describes only 2024 brick stabilization work. The 2018 Draft EIR project proposed demolishing Station A (its Alternative D retained it); SF YIMBY (June 2021) says the adaptive reuse was included following community pushback against demolition, and no source found names who advocated for it."
     }
    },
    "centroid": {
-    "lon": -122.384848,
-    "lat": 37.756352
+    "lon": -122.384747,
+    "lat": 37.756154
    },
    "facts": [
     {
@@ -83623,6 +83710,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Potrero Power Station Block 15 now uses real Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 4175026",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 4175026"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_block_15",
+      "slug": "potrero-power-station-block-15-station-a",
+      "name": "Potrero Power Station Block 15 / Station A",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-15-station-a/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-15-station-a.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-06",
      "kind": "correction",
      "kind_label": "Correction",
@@ -84094,7 +84210,7 @@
      "accessed": "2026-10-06"
     }
    ],
-   "notes": "Approximate polygon for a real, D4D-adopted block (final D4D, Feb 26, 2020: Table 3.1.1 and Figure 6.2.3) -- see the accuracy note for this shape. Status 'existing': Station A is a standing historic building (2018 Draft EIR; DBI permit 202406053802 in 2024). Use 'commercial': office is the approved use and residential is not permitted on Block 15 (D4D Table 3.1.1).",
+   "notes": "Block 15 (Station A) of the Potrero Power Station Design for Development, shown as Assessor lot 4175026 (see the accuracy note). Approximate polygon for a real, D4D-adopted block (final D4D, Feb 26, 2020: Table 3.1.1 and Figure 6.2.3) -- see the accuracy note for this shape. Status 'existing': Station A is a standing historic building (2018 Draft EIR; DBI permit 202406053802 in 2024). Use 'commercial': office is the approved use and residential is not permitted on Block 15 (D4D Table 3.1.1).",
    "has_record_file": true,
    "last_verified": "2026-09-24",
    "tenants": [],
@@ -84103,24 +84219,24 @@
     "coordinates": [
      [
       [
-       -122.385057,
-       37.756858
+       -122.384549418,
+       37.755688953
       ],
       [
-       -122.384656,
-       37.756883
+       -122.384923883,
+       37.755666609
       ],
       [
-       -122.384534,
-       37.755593
+       -122.385038898,
+       37.756852119
       ],
       [
-       -122.384938,
-       37.755568
+       -122.384672872,
+       37.756874104
       ],
       [
-       -122.385057,
-       37.756858
+       -122.384549418,
+       37.755688953
       ]
      ]
     ]
@@ -84162,15 +84278,15 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- this block is not yet built (not started as of the 2024 annual compliance report, March 2025; construction expected to begin in fall 2026 per the Chronicle of Aug 3, 2026) and this record has not matched it to an Assessor parcel. DataSF Parcels (checked 2026-09-29) lists an active lot, 4232022 at 151 Humboldt St (recorded 2022-08-30), which is the address the Chronicle gives for the Block 8 building and which lies almost entirely within this approximate footprint; the Block 8 design-review memo itself lists the parent lots 4175/017, 4175/002, 4232/001 and 4232/006. Whether this polygon should be replaced by lot 4232022 is undecided (a decision for Pier & Point). Traced from an adopted regulatory diagram, fitted to real street positions at multiple points, but this diagram is dated Feb 2020 and may not reflect later design changes (as already found for the adjacent UCSF/Sophie Maxwell area). Treat vertex positions as accurate to roughly 10-25m, not survey-grade. The shape was rebuilt on 2026-09-16 with a more careful fit of the diagram to the map, re-measured the same day consistently across the whole block layout, and corrected again that day after one mis-measured reference point was fixed. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
-     "digitized_from": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
-     "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead. DataSF Parcels (checked 2026-09-29) lists an active lot, 4232022 (151 Humboldt St, recorded 2022-08-30), that lies almost entirely within this footprint; the Block 8 design-review memo lists four parent lots (4175/017, 4175/002, 4232/001, 4232/006), so the block spanned several real lots before the 2022 subdivision.",
+     "accuracy_caveat": "The outline is Assessor lot 4232022, so its edges are recorded lot lines, not a trace. DataSF lists this lot at 151 Humboldt St, which is the address the Chronicle (Aug 3, 2026) gives for the Block 8 building; that is the only link between the lot and the block, and the Block 8 design-review memo itself lists four parent lots (4175/017, 4175/002, 4232/001, 4232/006) that predate the 2022 subdivision. A building may sit back from the lot lines. Block 8 is not yet built (not started as of the 2024 annual compliance report, March 2025; construction expected to begin in fall 2026 per the Chronicle of Aug 3, 2026).",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4232022 (recorded 2022-08-30; mapped 2023-12-01; active); cross-checked against Potrero Power Station Design for Development Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
+     "why_no_real_parcel": "Lot 4232022 (151 Humboldt St, active, recorded 2022-08-30) lies almost entirely within the block and carries the address the Chronicle gives for the Block 8 building, so the outline is that lot; the identification rests on that address match and location, not on a document naming the lot.",
      "regulatory_context": "Figure 6.2.3 of the final D4D shows Block 8 with two height limits by its colour-coded labels: 125 ft (along Humboldt and Maryland Streets) and 85 ft (its south-east part); the two '90'MAX' labels are tick-ended dimension lines, not heights (the design-review staff memo describes D4D standard A.8.1 as letting the part of the building above the streetwall extend up to 90 feet in depth from the Humboldt Street and Maryland Street property lines). The D4D's Permitted Uses table (Table 3.1.1) confirms residential is permitted here (Laboratory and Life Science are not). Foster + Partners is the design architect per the March 2022 design-review approval and the Chronicle (Aug 3, 2026). Unit counts differ by source: 249 (SF YIMBY, March 2021), 339 (2022 design-review approval), 342 (Chronicle, Aug 2026). The approved height is about 125 ft to the last occupied floor plus up to 20 ft of screened mechanical (plan set); SF YIMBY reported 140 ft (March 2021) and 156 ft (March 2022). Construction had not started as of the 2024 annual compliance report (March 2025); the Chronicle (Aug 3, 2026) says it is expected to begin in the fall."
     }
    },
    "centroid": {
-    "lon": -122.382987,
-    "lat": 37.75674
+    "lon": -122.382817,
+    "lat": 37.75665
    },
    "facts": [
     {
@@ -84730,6 +84846,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Potrero Power Station Block 8 now uses real Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 4232022",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 4232022"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_block_8",
+      "slug": "potrero-power-station-block-8",
+      "name": "Potrero Power Station Block 8",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-8/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-8.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-09-29",
      "kind": "correction",
      "kind_label": "Correction",
@@ -84912,7 +85057,7 @@
      "accessed": "2026-09-29"
     }
    ],
-   "notes": "Approximate polygon for a real, D4D-adopted block (final D4D, Feb 26, 2020: Table 3.1.1 and Figure 6.2.3) -- see the accuracy note for this shape. Status 'planned': not started as of March 2025, and the Chronicle (Aug 3, 2026) expects construction to begin in the fall. Use 'residential': Table 3.1.1 permits residential, and the design review approved a 339-unit residential building.",
+   "notes": "Block 8 of the Potrero Power Station Design for Development, shown as Assessor lot 4232022 (see the accuracy note). Approximate polygon for a real, D4D-adopted block (final D4D, Feb 26, 2020: Table 3.1.1 and Figure 6.2.3) -- see the accuracy note for this shape. Status 'planned': not started as of March 2025, and the Chronicle (Aug 3, 2026) expects construction to begin in the fall. Use 'residential': Table 3.1.1 permits residential, and the design review approved a 339-unit residential building.",
    "has_record_file": true,
    "last_verified": "2026-09-20",
    "tenants": [],
@@ -84921,24 +85066,24 @@
     "coordinates": [
      [
       [
-       -122.383351,
-       37.756954
+       -122.382458958,
+       37.756447244
       ],
       [
-       -122.3825,
-       37.757005
+       -122.383296219,
+       37.756397706
       ],
       [
-       -122.382443,
-       37.756421
+       -122.383354054,
+       37.756953311
       ],
       [
-       -122.383291,
-       37.756365
+       -122.382516863,
+       37.757003585
       ],
       [
-       -122.383351,
-       37.756954
+       -122.382458958,
+       37.756447244
       ]
      ]
     ]
@@ -85738,15 +85883,15 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- Figure 6.2.3 labels this open space directly but draws it in the final D4D as two plain green rectangles (the one between Blocks 7 and 11 is labelled 'POWER STATION PARK'; an unlabelled one lies between Blocks 8 and 12; Maryland Street runs between them and Block 9 is separate, east of Delaware Street); this is a two-part rectangular approximation (split 2026-09-16 by the real Maryland Street corridor that separates the Block 7/11 side from the Block 8/12 side), a trace of the diagram's rectangles. Each part shares an exact edge with its own two blocks by construction, so accuracy tracks whatever those block shapes carry. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
-     "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
-     "why_no_real_parcel": "Open space with no subdivided Assessor parcel of its own within the largely unaddressed former power-station site. (This is Pier & Point's own parcel search, not something the cited Design for Development can establish; the D4D does not address Assessor parcels.)",
+     "accuracy_caveat": "APPROXIMATE -- the outline is built from recorded Assessor lot lines except one cut. The two lots were assigned by the owner: Louisiana Paseo is the north-south strip made of lot 4232012 and the west strip of lot 4232011, and Power Station Park is the east-west arm of lot 4232011. The line between them, about 33 m long through lot 4232011, is not a recorded lot line: it is the straight extension of the strip's east edge, which the recorded vertices of both lots lie on to within 0.1 m. The final D4D draws the park as two green rectangles; the second, unlabelled one (between Blocks 8 and 12) has no matching lot and is not drawn here. The park is planned and not yet built.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lots 4232011 and 4232012 (recorded 2022-08-30; active), split along a straight line; cross-checked against Potrero Power Station Design for Development Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
+     "why_no_real_parcel": "Power Station Park is the east arm of Assessor lot 4232011 (active, recorded 2022-08-30), assigned by the owner; no document names the lot as the park, and its west edge is a straight extension, not a recorded lot line.",
      "regulatory_context": "The site's central public open space, per the D4D's own Figure 6.2.3 label -- two rectangles, one between Blocks 7 and 11 (labelled 'POWER STATION PARK') and one between Blocks 8 and 12, on either side of Maryland Street; Block 9 lies east of Delaware Street and does not border it. Not yet built: consistent with the 2024 annual compliance report (March 2025) and the SF Chronicle of Aug 3, 2026 (Block 8 construction 'expected to begin in the fall'). Of the blocks around it, Block 7B (the Sophie Maxwell Building) sits 'between Humboldt Street, Maryland Street, Louisiana Paseo and Power Station Park' (2024 annual compliance report) and opened in October 2025 (SF YIMBY, Oct 24, 2025); the others are still planned."
     }
    },
    "centroid": {
-    "lon": -122.383486,
-    "lat": 37.756223
+    "lon": -122.384032,
+    "lat": 37.756244
    },
    "facts": [
     {
@@ -86517,6 +86662,64 @@
      "date": "2026-10-10",
      "kind": "correction",
      "kind_label": "Correction",
+     "text": "Potrero Power Station Park now follows Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 4232011 and 4232012",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 4232011 and 4232012"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_power_station_park",
+      "slug": "power-station-park",
+      "name": "Power Station Park",
+      "permalink": "https://pierandpoint.org/parcels/power-station-park/",
+      "api": "https://pierandpoint.org/api/v1/records/power-station-park.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Potrero Power Station Park was trimmed where it overlapped Blocks 11 and 12.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 4232021, 4232023",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 4232021, 4232023"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_power_station_park",
+      "slug": "power-station-park",
+      "name": "Power Station Park",
+      "permalink": "https://pierandpoint.org/parcels/power-station-park/",
+      "api": "https://pierandpoint.org/api/v1/records/power-station-park.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
      "text": "Power Station Park's summary no longer names Plural Studio as its designer, because no approval document read names one.",
      "source": "Pier & Point editorial review",
      "sources": [
@@ -86786,59 +86989,33 @@
      "date": "2020-02-26"
     }
    ],
-   "notes": "Simplified two-part rectangular approximation of a labeled open space (drawn in the final D4D as two rectangles) -- see the accuracy note for this shape.",
+   "notes": "Power Station Park (the part between Blocks 7 and 11) of the Potrero Power Station Design for Development, shown as part of Assessor lots 4232011 and 4232012 (see the accuracy note).",
    "has_record_file": true,
    "last_verified": "2026-10-10",
    "tenants": [],
    "geometry": {
-    "type": "MultiPolygon",
+    "type": "Polygon",
     "coordinates": [
      [
       [
-       [
-        -122.384389,
-        37.756303
-       ],
-       [
-        -122.383535,
-        37.756348
-       ],
-       [
-        -122.383501,
-        37.75602
-       ],
-       [
-        -122.384356,
-        37.755971
-       ],
-       [
-        -122.384389,
-        37.756303
-       ]
-      ]
-     ],
-     [
+       -122.384395842,
+       37.756339899
+      ],
       [
-       [
-        -122.383291,
-        37.756365
-       ],
-       [
-        -122.382443,
-        37.756421
-       ],
-       [
-        -122.382408,
-        37.756096
-       ],
-       [
-        -122.383257,
-        37.756038
-       ],
-       [
-        -122.383291,
-        37.756365
-       ]
+       -122.383516994,
+       37.756384642
+      ],
+      [
+       -122.383487648,
+       37.756102721
+      ],
+      [
+       -122.384365849,
+       37.756050753
+      ],
+      [
+       -122.384395842,
+       37.756339899
       ]
      ]
     ]
@@ -88293,15 +88470,15 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- a simplified straight-sided approximation of a car-free pedestrian paseo; the final D4D's enlargement concept plan (Figure 4.30.1) shows it as a non-rectangular space with planting and plaza areas not captured here. Positional accuracy matches whatever the adjoining Block 15/7/11 records currently carry (see their own accuracy caveats) since this polygon is built directly from their vertices.",
-     "digitized_from": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
-     "why_no_real_parcel": "Open space with no subdivided Assessor parcel of its own within the largely unaddressed former power-station site. DataSF Parcels (checked 2026-09-29) shows this polygon overlapping the active, unaddressed lots 4232011, 4232012 and 4175024 (all recorded 2022-08-30); the 2018 Draft EIR says the Port and City sub-areas have no Assessor's Block numbers and puts the privately owned remainder on Blocks 4175 and 4232.",
+     "accuracy_caveat": "APPROXIMATE -- the outline is built from recorded Assessor lot lines except one cut. The two lots were assigned by the owner: Louisiana Paseo is the north-south strip made of lot 4232012 and the west strip of lot 4232011, and Power Station Park is the east-west arm of lot 4232011. The line between them, about 33 m long through lot 4232011, is not a recorded lot line: it is the straight extension of the strip's east edge, which the recorded vertices of both lots lie on to within 0.1 m. The paseo is planned: design review approved (annual reports: 8/3/21; memo June 2022) and no construction reported as of the March 2025 annual report.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lots 4232011 and 4232012 (recorded 2022-08-30; active), split along a straight line; cross-checked against Potrero Power Station Design for Development Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
+     "why_no_real_parcel": "Louisiana Paseo is the strip made of Assessor lot 4232012 and the west strip of lot 4232011 (both active, recorded 2022-08-30), assigned by the owner; no document names these lots as the paseo, and the line through lot 4232011 is a straight extension, not a recorded lot line.",
      "regulatory_context": "A car-free, flexible-use pedestrian paseo and plaza space (D4D Sections 4.25 and 4.30), labelled 'LOUISIANA PASEO' on the final D4D's Figure 6.2.3 and running from Humboldt Street to 23rd Street between Block 15 and Blocks 7/11, opening into Power Station Park."
     }
    },
    "centroid": {
-    "lon": -122.384481,
-    "lat": 37.756307
+    "lon": -122.384331,
+    "lat": 37.75616
    },
    "facts": [
     {
@@ -88927,6 +89104,35 @@
      "date": "2026-10-10",
      "kind": "correction",
      "kind_label": "Correction",
+     "text": "Potrero Power Station Louisiana Paseo now follows Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 4232011 and 4232012",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 4232011 and 4232012"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_louisiana_paseo",
+      "slug": "louisiana-paseo",
+      "name": "Louisiana Paseo",
+      "permalink": "https://pierandpoint.org/parcels/louisiana-paseo/",
+      "api": "https://pierandpoint.org/api/v1/records/louisiana-paseo.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
      "text": "Louisiana Paseo's summary no longer names Plural Studio as its designer, because no approval document read names one.",
      "source": "Pier & Point editorial review",
      "sources": [
@@ -89225,7 +89431,7 @@
      "date": "2020-02-26"
     }
    ],
-   "notes": "Newly added 2026-09-16; previously mentioned only in passing in other blocks' notes, never tracked as its own feature. Status 'planned': design review approved (annual reports: 8/3/21; memo June 2022) and no construction reported as of the March 2025 annual report. Use 'park': the final D4D treats it as open space (Section 4.25).",
+   "notes": "Louisiana Paseo of the Potrero Power Station Design for Development, shown as part of Assessor lots 4232011 and 4232012 (see the accuracy note). Newly added 2026-09-16; previously mentioned only in passing in other blocks' notes, never tracked as its own feature. Status 'planned': design review approved (annual reports: 8/3/21; memo June 2022) and no construction reported as of the March 2025 annual report. Use 'park': the final D4D treats it as open space (Section 4.25).",
    "has_record_file": true,
    "last_verified": "2026-10-10",
    "tenants": [],
@@ -89234,32 +89440,60 @@
     "coordinates": [
      [
       [
-       -122.384656,
-       37.756883
+       -122.384551302,
+       37.756039778
       ],
       [
-       -122.384451,
-       37.756894
+       -122.384551302,
+       37.756039778
       ],
       [
-       -122.384389,
-       37.756303
+       -122.384638379,
+       37.756876176
       ],
       [
-       -122.384356,
-       37.755971
+       -122.384453427,
+       37.756887285
       ],
       [
-       -122.384325,
-       37.755624
+       -122.384396436,
+       37.756339869
       ],
       [
-       -122.384534,
-       37.755593
+       -122.384395842,
+       37.756339899
       ],
       [
-       -122.384656,
-       37.756883
+       -122.384365849,
+       37.756050753
+      ],
+      [
+       -122.383487648,
+       37.756102721
+      ],
+      [
+       -122.383484777,
+       37.756075143
+      ],
+      [
+       -122.384363484,
+       37.756023354
+      ],
+      [
+       -122.384330035,
+       37.755702048
+      ],
+      [
+       -122.384514934,
+       37.755691106
+      ],
+      [
+       -122.384551023,
+       37.756037105
+      ],
+      [
+       -122.384551302,
+       37.756039778
       ]
      ]
     ]

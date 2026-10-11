@@ -40,15 +40,15 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- this block is not yet built (design under review as of the March 2025 annual compliance report) and this approximate footprint has not been matched to an Assessor parcel: DataSF Parcels lists an active, unaddressed lot, 4232021 (recorded 2022-08-30), that overlaps about three quarters of it, but that lot has not been confirmed as this block's parcel. Traced from an adopted regulatory diagram, fitted to the real street grid at several points, but this diagram is dated 2020 and may not reflect later design changes. Treat vertex positions as accurate to roughly 10-25m, not survey-grade. South edge corrected 2026-09-16 (second correction) using the source diagram's own measured depth rather than a search for the curb in satellite imagery -- the diagram-derived depth should be reliable to within a few meters, but this edge has NOT been independently confirmed against a visible real-world curb. This block's WEST-EAST WIDTH is also known to disagree with the diagram (~55m actual vs ~70m implied by the 2026-09-29 re-measurement, originally recorded as ~92m) and has NOT been corrected -- flagged as an open follow-up, not resolved. Rebuilt 2026-09-16 by fitting the diagram to surveyed reference points. Re-measured 2026-09-16 (third correction) in one consistent measurement across the whole block layout. Re-corrected 2026-09-16 (fourth correction) after one mis-measured reference point was fixed. Each step is logged in this shape's data file in the public data repository (https://github.com/pierandpoint/record).",
-    "digitized_from": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
-    "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead. DataSF Parcels (checked 2026-09-29) lists an active, unaddressed lot, 4232021 (recorded 2022-08-30, PPS-MU zoning), overlapping about three quarters of this approximate footprint; it has not been confirmed as this block's parcel.",
+    "accuracy_caveat": "The outline is Assessor lot 4232021, so its edges are recorded lot lines, not a trace. That this is the lot of Block 11 is Pier & Point's own inference from location, shape and size (our earlier trace of the D4D figure measured 2,908 m2 against the lot's 2,776 m2; 77% of the trace lies inside the lot and the trace covers 81% of it). No Port document read ties the lot number to it. A building may sit back from the lot lines. Block 11 is not yet built (design under review as of the March 2025 annual compliance report).",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4232021 (recorded 2022-08-30; mapped 2023-12-01; active); cross-checked against Potrero Power Station Design for Development Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
+    "why_no_real_parcel": "No single Assessor lot is documented as Block 11. Lot 4232021 (active) matches its location, shape and size, so its outline is Assessor lot 4232021; the identification is Pier & Point's inference, as the accuracy note says.",
     "regulatory_context": "Flat 130 ft max height per Figure 6.2.3 of the final D4D (the colour-coded height label). The D4D's Permitted Uses table (Table 3.1.1) shows Non-Retail Sales and Services (including office), Laboratory and Life Science uses permitted (subject to the table's note 13) and Residential not permitted here. Blocks 11 and 12 together are described as approximately 430,000 sq ft of office by the project's MEP engineer (Meyers+ Engineers project page, a consultant's own material, not a Planning document). The Meyers+ page and the June 7, 2020 pre-application community meeting slides list Herzog & de Meuron + Adamson Associates as architect for Blocks 11, 12 and 15. No construction-start source found."
    }
   },
   "centroid": {
-   "lon": -122.384001,
-   "lat": 37.755852
+   "lon": -122.383899,
+   "lat": 37.755835
   },
   "facts": [
    {
@@ -385,6 +385,35 @@
   ],
   "changes": [
    {
+    "date": "2026-10-10",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Potrero Power Station Block 11 now uses real Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 4232021",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 4232021"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_block_11",
+     "slug": "potrero-power-station-block-11",
+     "name": "Potrero Power Station Block 11",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-11/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-11.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-29",
     "kind": "correction",
     "kind_label": "Correction",
@@ -550,7 +579,7 @@
     "date": "2020-02-26"
    }
   ],
-  "notes": "Approximate polygon for a real, D4D-adopted block (final D4D, Feb 26, 2020: Table 3.1.1 and Figure 6.2.3) -- see its accuracy caveat. Status 'planned': design under review per the 2024 annual compliance report (March 28, 2025). Use 'commercial': office, laboratory and life science uses are permitted and residential is not (D4D Table 3.1.1).",
+  "notes": "Block 11 of the Potrero Power Station Design for Development, shown as Assessor lot 4232021 (see the accuracy note). Approximate polygon for a real, D4D-adopted block (final D4D, Feb 26, 2020: Table 3.1.1 and Figure 6.2.3) -- see its accuracy caveat. Status 'planned': design under review per the 2024 annual compliance report (March 28, 2025). Use 'commercial': office, laboratory and life science uses are permitted and residential is not (D4D Table 3.1.1).",
   "has_record_file": true,
   "last_verified": "2026-09-20",
   "tenants": [],
@@ -559,24 +588,28 @@
    "coordinates": [
     [
      [
-      -122.384356,
-      37.755971
+      -122.383451352,
+      37.755754045
      ],
      [
-      -122.383501,
-      37.75602
+      -122.384315528,
+      37.755702907
      ],
      [
-      -122.383469,
-      37.755675
+      -122.384330035,
+      37.755702048
      ],
      [
-      -122.384325,
-      37.755624
+      -122.384363484,
+      37.756023354
      ],
      [
-      -122.384356,
-      37.755971
+      -122.383484777,
+      37.756075143
+     ],
+     [
+      -122.383451352,
+      37.755754045
      ]
     ]
    ]

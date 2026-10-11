@@ -44,15 +44,15 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- Figure 6.2.3 labels this open space directly but draws it in the final D4D as two plain green rectangles (the one between Blocks 7 and 11 is labelled 'POWER STATION PARK'; an unlabelled one lies between Blocks 8 and 12; Maryland Street runs between them and Block 9 is separate, east of Delaware Street); this is a two-part rectangular approximation (split 2026-09-16 by the real Maryland Street corridor that separates the Block 7/11 side from the Block 8/12 side), a trace of the diagram's rectangles. Each part shares an exact edge with its own two blocks by construction, so accuracy tracks whatever those block shapes carry. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
-    "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
-    "why_no_real_parcel": "Open space with no subdivided Assessor parcel of its own within the largely unaddressed former power-station site. (This is Pier & Point's own parcel search, not something the cited Design for Development can establish; the D4D does not address Assessor parcels.)",
+    "accuracy_caveat": "APPROXIMATE -- the outline is built from recorded Assessor lot lines except one cut. The two lots were assigned by the owner: Louisiana Paseo is the north-south strip made of lot 4232012 and the west strip of lot 4232011, and Power Station Park is the east-west arm of lot 4232011. The line between them, about 33 m long through lot 4232011, is not a recorded lot line: it is the straight extension of the strip's east edge, which the recorded vertices of both lots lie on to within 0.1 m. The final D4D draws the park as two green rectangles; the second, unlabelled one (between Blocks 8 and 12) has no matching lot and is not drawn here. The park is planned and not yet built.",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lots 4232011 and 4232012 (recorded 2022-08-30; active), split along a straight line; cross-checked against Potrero Power Station Design for Development Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
+    "why_no_real_parcel": "Power Station Park is the east arm of Assessor lot 4232011 (active, recorded 2022-08-30), assigned by the owner; no document names the lot as the park, and its west edge is a straight extension, not a recorded lot line.",
     "regulatory_context": "The site's central public open space, per the D4D's own Figure 6.2.3 label -- two rectangles, one between Blocks 7 and 11 (labelled 'POWER STATION PARK') and one between Blocks 8 and 12, on either side of Maryland Street; Block 9 lies east of Delaware Street and does not border it. Not yet built: consistent with the 2024 annual compliance report (March 2025) and the SF Chronicle of Aug 3, 2026 (Block 8 construction 'expected to begin in the fall'). Of the blocks around it, Block 7B (the Sophie Maxwell Building) sits 'between Humboldt Street, Maryland Street, Louisiana Paseo and Power Station Park' (2024 annual compliance report) and opened in October 2025 (SF YIMBY, Oct 24, 2025); the others are still planned."
    }
   },
   "centroid": {
-   "lon": -122.383486,
-   "lat": 37.756223
+   "lon": -122.384032,
+   "lat": 37.756244
   },
   "facts": [
    {
@@ -823,6 +823,64 @@
     "date": "2026-10-10",
     "kind": "correction",
     "kind_label": "Correction",
+    "text": "Potrero Power Station Park now follows Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lots 4232011 and 4232012",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lots 4232011 and 4232012"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_power_station_park",
+     "slug": "power-station-park",
+     "name": "Power Station Park",
+     "permalink": "https://pierandpoint.org/parcels/power-station-park/",
+     "api": "https://pierandpoint.org/api/v1/records/power-station-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-10",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Potrero Power Station Park was trimmed where it overlapped Blocks 11 and 12.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lots 4232021, 4232023",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lots 4232021, 4232023"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_power_station_park",
+     "slug": "power-station-park",
+     "name": "Power Station Park",
+     "permalink": "https://pierandpoint.org/parcels/power-station-park/",
+     "api": "https://pierandpoint.org/api/v1/records/power-station-park.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-10",
+    "kind": "correction",
+    "kind_label": "Correction",
     "text": "Power Station Park's summary no longer names Plural Studio as its designer, because no approval document read names one.",
     "source": "Pier & Point editorial review",
     "sources": [
@@ -1092,59 +1150,33 @@
     "date": "2020-02-26"
    }
   ],
-  "notes": "Simplified two-part rectangular approximation of a labeled open space (drawn in the final D4D as two rectangles) -- see the accuracy note for this shape.",
+  "notes": "Power Station Park (the part between Blocks 7 and 11) of the Potrero Power Station Design for Development, shown as part of Assessor lots 4232011 and 4232012 (see the accuracy note).",
   "has_record_file": true,
   "last_verified": "2026-10-10",
   "tenants": [],
   "geometry": {
-   "type": "MultiPolygon",
+   "type": "Polygon",
    "coordinates": [
     [
      [
-      [
-       -122.384389,
-       37.756303
-      ],
-      [
-       -122.383535,
-       37.756348
-      ],
-      [
-       -122.383501,
-       37.75602
-      ],
-      [
-       -122.384356,
-       37.755971
-      ],
-      [
-       -122.384389,
-       37.756303
-      ]
-     ]
-    ],
-    [
+      -122.384395842,
+      37.756339899
+     ],
      [
-      [
-       -122.383291,
-       37.756365
-      ],
-      [
-       -122.382443,
-       37.756421
-      ],
-      [
-       -122.382408,
-       37.756096
-      ],
-      [
-       -122.383257,
-       37.756038
-      ],
-      [
-       -122.383291,
-       37.756365
-      ]
+      -122.383516994,
+      37.756384642
+     ],
+     [
+      -122.383487648,
+      37.756102721
+     ],
+     [
+      -122.384365849,
+      37.756050753
+     ],
+     [
+      -122.384395842,
+      37.756339899
      ]
     ]
    ]

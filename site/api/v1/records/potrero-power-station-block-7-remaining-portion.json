@@ -43,15 +43,15 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- this block is not yet built and does not correspond to any subdivided Assessor parcel: it currently sits on vacant/graded land within the former power station site (unaddressed in DataSF's Assessor roll). Traced from an adopted regulatory diagram, fitted to real street positions at multiple points, but this diagram is dated 2020 and may not reflect later design changes (as already found for the UCSF/Sophie Maxwell area). Treat vertex positions as accurate to roughly 10-25m, not survey-grade, and treat the block's applicability itself as somewhat more provisional than Mission Rock's or Pier 70's equivalent entries. The shape was rebuilt on 2026-09-16 with a more careful fit of the diagram to the map, re-measured the same day consistently across the whole block layout, and corrected again that day after one mis-measured reference point was fixed. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record). CLIPPED 2026-09-17: although this record's regulatory notes already said the shape was 'clipped to exclude Sophie Maxwell's real footprint,' a fresh check of overlaps between real parcels and approximate shapes found this polygon still overlapped Sophie Maxwell (block/lot 4232020) by 1,082 sq m -- the clip described in that text was apparently never actually applied to (or was lost from) the published shape. It was then re-clipped against block/lot 4232020's real parcel boundary; area dropped from ~4,965 to ~3,883 sq m. This overlap had gone undetected because Pier & Point's automated shape check only compared approximate shapes with each other, never with real parcels. The vacant/graded and unaddressed-in-the-Assessor-roll wording is our own observation, not something the cited 2020 D4D can show; 'not yet built' is consistent with the 2024 annual compliance report (March 2025), which says the developer had submitted no building permits for any market-rate housing projects. The 2020 date of the diagram is confirmed by the final D4D's footer (February 26, 2020). DataSF Parcels (queried 2026-09-29) lists active lots in Assessor blocks 4175 and 4232 added in December 2023 after the Phase 1 Final Map, most unaddressed; whether one of them corresponds to this block was not checked, so the statement that no subdivided Assessor parcel exists for it is unverified.",
-    "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
-    "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead. (This is Pier & Point's own parcel search, not something the cited Design for Development can establish; the D4D does not address Assessor parcels.) DataSF Parcels (queried 2026-09-29) shows at least 22 active lots in Assessor blocks 4175 and 4232 added in December 2023 following the Phase 1 Final Map recorded July 26, 2022 (most unaddressed; e.g. 4232022 = 151 Humboldt St, 4232020 = 1212 Maryland St); whether one of them matches this block was not checked.",
+    "accuracy_caveat": "The outline is Assessor lot 4232019, so its edges are recorded lot lines, not a trace. That this is the lot of Block 7 (remaining portion) is Pier & Point's own inference from location, shape and size (our earlier trace of the D4D figure measured 3,877 m2 against the lot's 3,614 m2; 92% of the trace lies inside the lot and the trace covers 98% of it). No Port document read ties the lot number to it. A building may sit back from the lot lines. Block 7 (remaining portion) is not yet built, which is consistent with the 2024 annual compliance report (March 2025), which says the developer had submitted no building permits for any market-rate housing projects.",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4232019 (recorded 2022-08-30; mapped 2023-12-01; active); cross-checked against Potrero Power Station Design for Development Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
+    "why_no_real_parcel": "No single Assessor lot is documented as Block 7 (remaining portion). Lot 4232019 (active) matches its location, shape and size, so its outline is Assessor lot 4232019; the identification is Pier & Point's inference, as the accuracy note says.",
     "regulatory_context": "Figure 6.2.3 of the final D4D (printed p.245) shows Block 7 as one numbered block, with its height zones read from the figure's colour-coded labels: the north-west part (on Humboldt St at Louisiana Paseo) is labelled 240'/85' (maximum height 240 ft, maximum base height 85 ft) and the rest of the block (east side and south strip) is 85'; the two '150'MAX' markings are plan dimensions of the tower, not heights. The D4D numbers only 'Block 7'; 'Block 7A' and 'Block 7B' are the names SF Planning's own approvals use for the two buildings (e.g. 'Approval of the Design Review Application of Block 7A', March 2, 2022, Case 2017-011878PHA-04, and Block 7B, March 2, 2022). The Sophie Maxwell Building ('Block 7b, the Sophie Maxwell Building' in the 2024 annual compliance report; real blklot 4232020, addressed 1212 MARYLAND in DataSF Parcels; already mapped separately in this dataset) occupies part of this block; this polygon is the REMAINING portion, clipped to exclude Sophie Maxwell's real footprint (the clipping is our own work). The remainder is presumed to correspond to 'Block 7A' (Foster + Partners-designed rental tower, press-reported heights of 240-264 ft depending on source, consistent with this figure's 240 ft max) -- design review approved March 2, 2022; the 2024 annual compliance report says no market-rate building permits had been submitted; no construction-start source found."
    }
   },
   "centroid": {
-   "lon": -122.383904,
-   "lat": 37.756694
+   "lon": -122.383935,
+   "lat": 37.756651
   },
   "facts": [
    {
@@ -675,6 +675,35 @@
   ],
   "changes": [
    {
+    "date": "2026-10-10",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Potrero Power Station Block 7 (remaining portion) now uses real Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 4232019",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 4232019"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_block_7remaining",
+     "slug": "potrero-power-station-block-7-remaining-portion",
+     "name": "Potrero Power Station Block 7 (remaining portion)",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-7-remaining-portion/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-7-remaining-portion.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-10-06",
     "kind": "correction",
     "kind_label": "Correction",
@@ -924,7 +953,7 @@
     "date": "2020-02-26"
    }
   ],
-  "notes": "Approximate polygon for a real, D4D-adopted block (listed as 'Block 7' in the final D4D's Table 3.1.1; '(remaining portion)' in the project name is our own label, and SF Planning's design review approval calls this portion Block 7A) -- see the accuracy note for this shape.",
+  "notes": "Block 7 (remaining portion) of the Potrero Power Station Design for Development, shown as Assessor lot 4232019 (see the accuracy note). Approximate polygon for a real, D4D-adopted block (listed as 'Block 7' in the final D4D's Table 3.1.1; '(remaining portion)' in the project name is our own label, and SF Planning's design review approval calls this portion Block 7A) -- see the accuracy note for this shape.",
   "has_record_file": true,
   "last_verified": "2026-10-10",
   "tenants": [],
@@ -932,14 +961,6 @@
    "type": "Polygon",
    "coordinates": [
     [
-     [
-      -122.38378247599645,
-      37.756927582397374
-     ],
-     [
-      -122.383980813,
-      37.756915671
-     ],
      [
       -122.383959748,
       37.756713125
@@ -953,24 +974,28 @@
       37.756586011
      ],
      [
-      -122.3835606778901,
-      37.75660007128788
+      -122.383539552,
+      37.75660134
      ],
      [
-      -122.383535,
-      37.756348
+      -122.383516994,
+      37.756384642
      ],
      [
-      -122.384389,
-      37.756303
+      -122.384396436,
+      37.756339869
      ],
      [
-      -122.384451,
-      37.756894
+      -122.384453427,
+      37.756887285
      ],
      [
-      -122.38378247599645,
-      37.756927582397374
+      -122.383980832,
+      37.756915669
+     ],
+     [
+      -122.383959748,
+      37.756713125
      ]
     ]
    ]

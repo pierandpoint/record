@@ -43,15 +43,15 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- this block is Station A, an existing historic building (the 1901 turbine hall; DBI permit 202406053802 in 2024 describes the unoccupied 'station a building'), so it is not vacant land; the approved vertical addition has not been started. No Assessor lot of its own has been matched to it: DataSF Parcels (checked 2026-09-29) lists an active, unaddressed lot, 4175026 (recorded 2022-08-30), that overlaps about 85% of this approximate footprint, but that lot has not been confirmed as this block's parcel. Traced from an adopted regulatory diagram, fitted to real street positions at multiple points, but this diagram is dated 2020 and may not reflect later design changes (as already found for the UCSF/Sophie Maxwell area). Treat vertex positions as accurate to roughly 10-25m, not survey-grade, and treat the block's applicability itself as somewhat more provisional than Mission Rock's or Pier 70's equivalent entries. The shape was rebuilt on 2026-09-16 with a more careful fit of the diagram to the map, re-measured the same day consistently across the whole block layout, and corrected again that day after one mis-measured reference point was fixed. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
-    "digitized_from": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
-    "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead. DataSF Parcels (checked 2026-09-29) lists an active, unaddressed lot, 4175026 (recorded 2022-08-30), overlapping about 85% of this footprint; it has not been confirmed as this block's parcel.",
+    "accuracy_caveat": "The outline is Assessor lot 4175026, so its edges are recorded lot lines, not a trace. That this is the lot of Block 15 (Station A) is Pier & Point's own inference from location, shape and size (our earlier trace of the D4D figure measured 5,104 m2 against the lot's 4,315 m2; 85% of the trace lies inside the lot and the trace covers 100% of it). No Port document read ties the lot number to it. A building may sit back from the lot lines. Block 15 is Station A, an existing historic building (the 1901 turbine hall; DBI permit 202406053802 in 2024 describes the unoccupied 'station a building'), so it is not vacant land; the approved vertical addition has not been started.",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4175026 (recorded 2022-08-30; mapped 2023-12-01; active); cross-checked against Potrero Power Station Design for Development Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
+    "why_no_real_parcel": "No single Assessor lot is documented as Block 15 (Station A). Lot 4175026 (active) matches its location, shape and size, so its outline is Assessor lot 4175026; the identification is Pier & Point's inference, as the accuracy note says.",
     "regulatory_context": "Station A: the site's historic 1901 unreinforced-brick turbine hall (a four-story brick structure per the 2018 Draft EIR), vacant/unoccupied. The design review approves adaptive reuse into approximately 403,750 GSF of office (the Planning Commission granted the office allocation on Oct 22, 2020, Motion 20801) via an eight-story vertical addition above the retained historic shell and a public mid-block passage between Georgia Lane and Power Station Park, designed by Herzog & de Meuron with Adamson Associates; the Planning Director approved the Design Review Application on March 2, 2022. Max height 205 ft total (historic base plus addition), per the Design Review Approval. Construction of the addition had not started per SF YIMBY (Aug 27, 2025) and the 2024 annual compliance report (March 2025), which describes only 2024 brick stabilization work. The 2018 Draft EIR project proposed demolishing Station A (its Alternative D retained it); SF YIMBY (June 2021) says the adaptive reuse was included following community pushback against demolition, and no source found names who advocated for it."
    }
   },
   "centroid": {
-   "lon": -122.384848,
-   "lat": 37.756352
+   "lon": -122.384747,
+   "lat": 37.756154
   },
   "facts": [
    {
@@ -651,6 +651,35 @@
   ],
   "changes": [
    {
+    "date": "2026-10-10",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Potrero Power Station Block 15 now uses real Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 4175026",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 4175026"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_block_15",
+     "slug": "potrero-power-station-block-15-station-a",
+     "name": "Potrero Power Station Block 15 / Station A",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-15-station-a/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-15-station-a.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-10-06",
     "kind": "correction",
     "kind_label": "Correction",
@@ -1122,7 +1151,7 @@
     "accessed": "2026-10-06"
    }
   ],
-  "notes": "Approximate polygon for a real, D4D-adopted block (final D4D, Feb 26, 2020: Table 3.1.1 and Figure 6.2.3) -- see the accuracy note for this shape. Status 'existing': Station A is a standing historic building (2018 Draft EIR; DBI permit 202406053802 in 2024). Use 'commercial': office is the approved use and residential is not permitted on Block 15 (D4D Table 3.1.1).",
+  "notes": "Block 15 (Station A) of the Potrero Power Station Design for Development, shown as Assessor lot 4175026 (see the accuracy note). Approximate polygon for a real, D4D-adopted block (final D4D, Feb 26, 2020: Table 3.1.1 and Figure 6.2.3) -- see the accuracy note for this shape. Status 'existing': Station A is a standing historic building (2018 Draft EIR; DBI permit 202406053802 in 2024). Use 'commercial': office is the approved use and residential is not permitted on Block 15 (D4D Table 3.1.1).",
   "has_record_file": true,
   "last_verified": "2026-09-24",
   "tenants": [],
@@ -1131,24 +1160,24 @@
    "coordinates": [
     [
      [
-      -122.385057,
-      37.756858
+      -122.384549418,
+      37.755688953
      ],
      [
-      -122.384656,
-      37.756883
+      -122.384923883,
+      37.755666609
      ],
      [
-      -122.384534,
-      37.755593
+      -122.385038898,
+      37.756852119
      ],
      [
-      -122.384938,
-      37.755568
+      -122.384672872,
+      37.756874104
      ],
      [
-      -122.385057,
-      37.756858
+      -122.384549418,
+      37.755688953
      ]
     ]
    ]

@@ -41,15 +41,15 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- this block is not yet built (not started as of the 2024 annual compliance report, March 2025; construction expected to begin in fall 2026 per the Chronicle of Aug 3, 2026) and this record has not matched it to an Assessor parcel. DataSF Parcels (checked 2026-09-29) lists an active lot, 4232022 at 151 Humboldt St (recorded 2022-08-30), which is the address the Chronicle gives for the Block 8 building and which lies almost entirely within this approximate footprint; the Block 8 design-review memo itself lists the parent lots 4175/017, 4175/002, 4232/001 and 4232/006. Whether this polygon should be replaced by lot 4232022 is undecided (a decision for Pier & Point). Traced from an adopted regulatory diagram, fitted to real street positions at multiple points, but this diagram is dated Feb 2020 and may not reflect later design changes (as already found for the adjacent UCSF/Sophie Maxwell area). Treat vertex positions as accurate to roughly 10-25m, not survey-grade. The shape was rebuilt on 2026-09-16 with a more careful fit of the diagram to the map, re-measured the same day consistently across the whole block layout, and corrected again that day after one mis-measured reference point was fixed. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
-    "digitized_from": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
-    "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead. DataSF Parcels (checked 2026-09-29) lists an active lot, 4232022 (151 Humboldt St, recorded 2022-08-30), that lies almost entirely within this footprint; the Block 8 design-review memo lists four parent lots (4175/017, 4175/002, 4232/001, 4232/006), so the block spanned several real lots before the 2022 subdivision.",
+    "accuracy_caveat": "The outline is Assessor lot 4232022, so its edges are recorded lot lines, not a trace. DataSF lists this lot at 151 Humboldt St, which is the address the Chronicle (Aug 3, 2026) gives for the Block 8 building; that is the only link between the lot and the block, and the Block 8 design-review memo itself lists four parent lots (4175/017, 4175/002, 4232/001, 4232/006) that predate the 2022 subdivision. A building may sit back from the lot lines. Block 8 is not yet built (not started as of the 2024 annual compliance report, March 2025; construction expected to begin in fall 2026 per the Chronicle of Aug 3, 2026).",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4232022 (recorded 2022-08-30; mapped 2023-12-01; active); cross-checked against Potrero Power Station Design for Development Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
+    "why_no_real_parcel": "Lot 4232022 (151 Humboldt St, active, recorded 2022-08-30) lies almost entirely within the block and carries the address the Chronicle gives for the Block 8 building, so the outline is that lot; the identification rests on that address match and location, not on a document naming the lot.",
     "regulatory_context": "Figure 6.2.3 of the final D4D shows Block 8 with two height limits by its colour-coded labels: 125 ft (along Humboldt and Maryland Streets) and 85 ft (its south-east part); the two '90'MAX' labels are tick-ended dimension lines, not heights (the design-review staff memo describes D4D standard A.8.1 as letting the part of the building above the streetwall extend up to 90 feet in depth from the Humboldt Street and Maryland Street property lines). The D4D's Permitted Uses table (Table 3.1.1) confirms residential is permitted here (Laboratory and Life Science are not). Foster + Partners is the design architect per the March 2022 design-review approval and the Chronicle (Aug 3, 2026). Unit counts differ by source: 249 (SF YIMBY, March 2021), 339 (2022 design-review approval), 342 (Chronicle, Aug 2026). The approved height is about 125 ft to the last occupied floor plus up to 20 ft of screened mechanical (plan set); SF YIMBY reported 140 ft (March 2021) and 156 ft (March 2022). Construction had not started as of the 2024 annual compliance report (March 2025); the Chronicle (Aug 3, 2026) says it is expected to begin in the fall."
    }
   },
   "centroid": {
-   "lon": -122.382987,
-   "lat": 37.75674
+   "lon": -122.382817,
+   "lat": 37.75665
   },
   "facts": [
    {
@@ -609,6 +609,35 @@
   ],
   "changes": [
    {
+    "date": "2026-10-10",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Potrero Power Station Block 8 now uses real Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 4232022",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 4232022"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_block_8",
+     "slug": "potrero-power-station-block-8",
+     "name": "Potrero Power Station Block 8",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-8/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-8.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-29",
     "kind": "correction",
     "kind_label": "Correction",
@@ -791,7 +820,7 @@
     "accessed": "2026-09-29"
    }
   ],
-  "notes": "Approximate polygon for a real, D4D-adopted block (final D4D, Feb 26, 2020: Table 3.1.1 and Figure 6.2.3) -- see the accuracy note for this shape. Status 'planned': not started as of March 2025, and the Chronicle (Aug 3, 2026) expects construction to begin in the fall. Use 'residential': Table 3.1.1 permits residential, and the design review approved a 339-unit residential building.",
+  "notes": "Block 8 of the Potrero Power Station Design for Development, shown as Assessor lot 4232022 (see the accuracy note). Approximate polygon for a real, D4D-adopted block (final D4D, Feb 26, 2020: Table 3.1.1 and Figure 6.2.3) -- see the accuracy note for this shape. Status 'planned': not started as of March 2025, and the Chronicle (Aug 3, 2026) expects construction to begin in the fall. Use 'residential': Table 3.1.1 permits residential, and the design review approved a 339-unit residential building.",
   "has_record_file": true,
   "last_verified": "2026-09-20",
   "tenants": [],
@@ -800,24 +829,24 @@
    "coordinates": [
     [
      [
-      -122.383351,
-      37.756954
+      -122.382458958,
+      37.756447244
      ],
      [
-      -122.3825,
-      37.757005
+      -122.383296219,
+      37.756397706
      ],
      [
-      -122.382443,
-      37.756421
+      -122.383354054,
+      37.756953311
      ],
      [
-      -122.383291,
-      37.756365
+      -122.382516863,
+      37.757003585
      ],
      [
-      -122.383351,
-      37.756954
+      -122.382458958,
+      37.756447244
      ]
     ]
    ]
