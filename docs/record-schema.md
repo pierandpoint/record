@@ -374,7 +374,7 @@ Potrero Power Station that Pier & Point records without taking a side on
     {"channel": "SF Planning project page", "detail": "Case No. 2026-XXXXXX",
      "url": "https://sfplanning.org/..."},
     {"channel": "Hearing notice", "detail": "Planning Commission calendar",
-     "url": "https://sfplanning.org/calendar"}
+     "url": "https://sfplanning.org/hearings-events"}
   ],
   "positions": [
     {"who": "Supervisor X", "statement": "Quoted or paraphrased position, one sentence.",
