@@ -40,15 +40,15 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- this block is not yet built (Port Item 11A, Aug 2026: the developer 'has not exercised an option of any Phase 1 option parcels'), and no source read ties it to a specific Assessor lot: DataSF's Assessor parcels include new lots created for the 28-acre district in 2019, without street addresses, but which lot (if any) is this block's was not established. It currently sits on vacant/graded land, surface parking, or an existing industrial building slated for demolition within Brookfield's 28-acre district. Redone 2026-09-14 with a corrected, shear-free transform -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects this transform's 1-8m residual error, not a deliberate encroachment. Street-facing edge re-clipped 2026-09-17 against official curb-referenced street data.",
-    "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-    "why_no_real_parcel": "No source read ties this block to a specific Assessor lot. DataSF's Assessor parcels include lots created for Brookfield's 28-acre district in 2019 (for example, Port Item 12B, Feb 2020, gives Parcel E2 as Block 4116, Lot 008), but this block's own lot was not identified, so this uses hand-traced approximate geometry instead.",
+    "accuracy_caveat": "The outline is Assessor lot 4117003, so its edges are recorded lot lines, not a trace. The lots were assigned by the owner from the plan diagrams: the parcel number is placed at the upper left of its parcel, and the H1 and H2 labels sit on either side of the dashed mid-block passage, so lots 4117002 and 4117001 are H1 and lot 4117003 is H2. No document read names these lots. The lots extend south of the block edge the D4D draws, into the former power-plant ground, so the outline is larger than the diagram's block. A building may sit back from the lot lines. No vertical construction is reported on this block (Port Item 11A, Aug 7, 2026: construction of Phase 1 vertical projects and parks has not moved forward, and the developer has not exercised an option on any Phase 1 option parcel).",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4117003 (recorded 2019-02-07; mapped 2019-03-14; active); cross-checked against Pier 70 Design for Development Figure 6.4.2 - Building Height Maximum (p.155).",
+    "why_no_real_parcel": "No document names the Assessor lot of Parcel H2. Lot 4117003 (active) was assigned to it by the owner from the plan diagrams, so its outline is that lot.",
     "regulatory_context": "Flexible commercial-office/residential parcel: D4D Figure 1.5.5 (baseline) shows H2 residential and only the Maximum Office scenario shows it commercial; 90 ft max per Figure 6.4.2; six stories for commercial buildings and nine for residential (D4D Section 6.4.2). An earlier note of the same ~430,000 RSF program as Parcel H1 was removed 2026-09-29 (no source read gives an RSF figure for H1/H2). No construction-start source found."
    }
   },
   "centroid": {
-   "lon": -122.38226,
-   "lat": 37.758109
+   "lon": -122.381967,
+   "lat": 37.758136
   },
   "facts": [
    {
@@ -736,6 +736,35 @@
   ],
   "changes": [
    {
+    "date": "2026-10-10",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Pier 70 Parcel H2 now uses real Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 4117003",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 4117003"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_h2",
+     "slug": "pier-70-parcel-h2",
+     "name": "Pier 70 Parcel H2",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-h2/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-h2.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-10-06",
     "kind": "correction",
     "kind_label": "Correction",
@@ -963,7 +992,7 @@
     "date": "2026-08-11"
    }
   ],
-  "notes": "Approximate polygon for a real, D4D-adopted parcel -- see the accuracy note. Status planned: Port Item 11A (Aug 2026) says construction of Phase 1 vertical projects and parks has not moved forward.",
+  "notes": "Parcel H2 of the Pier 70 Design for Development, shown as Assessor lot 4117003 (see the accuracy note). Status planned: Port Item 11A (Aug 2026) says construction of Phase 1 vertical projects and parks has not moved forward.",
   "has_record_file": true,
   "last_verified": "2026-09-29",
   "tenants": [],
@@ -972,24 +1001,36 @@
    "coordinates": [
     [
      [
-      -122.3820118,
-      37.7580115
+      -122.381924534,
+      37.75825417
      ],
      [
-      -122.3826863,
-      37.7579527
+      -122.381641664,
+      37.758270869
      ],
      [
-      -122.38270693095971,
-      37.75826122049542
+      -122.381634482,
+      37.758194182
      ],
      [
-      -122.38188508577663,
-      37.75830656526749
+      -122.381793417,
+      37.757809716
      ],
      [
-      -122.3820118,
-      37.7580115
+      -122.38242263,
+      37.757772571
+     ],
+     [
+      -122.382467315,
+      37.758249666
+     ],
+     [
+      -122.3819271,
+      37.758281558
+     ],
+     [
+      -122.381924534,
+      37.75825417
      ]
     ]
    ]

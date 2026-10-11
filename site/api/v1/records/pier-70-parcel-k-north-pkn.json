@@ -47,15 +47,15 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- this block is not yet built (the developers' pages call it 'fully entitled' and Handel Architects lists it 'In Design'; no groundbreaking was found in any source read), and no source read identifies its Assessor lot: it was sold by the Port outright (Presidio Bay's page calls it 'the only privately-owned land in the Pier 70 Special Use District'), and DataSF's Assessor parcels list active P70-MU lots at about this location (for example lot 4110012 at 919 Illinois St, and lot 4110009 with no address), but which of them is Parcel K North's was not established. It currently sits on vacant/graded land, surface parking, or an existing industrial building slated for demolition within Brookfield's 28-acre district. RE-TRACED 2026-09-17 directly from Figure 6.4.2 at the correct source resolution (how the shape was traced, including earlier versions, is logged in its data file in the public data repository, https://github.com/pierandpoint/record) -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. This deliberately does NOT match today's satellite imagery of the parking lot -- this parcel's boundary represents the D4D's planned footprint, including '21ST ST (NEW)' and the '20th Street Plaza' open-space strip (mapped separately as the PKN Frontage Open Space), neither of which is built yet.",
-    "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-    "why_no_real_parcel": "No source read identifies this parcel's Assessor lot. The Port sold Parcel K North outright in 2019 (Presidio Bay's page: 'the only privately-owned land in the Pier 70 Special Use District'), and DataSF's Assessor parcels list active P70-MU lots at about this location (for example lot 4110012 at 919 Illinois St, and lot 4110009 with no address), but which of them is Parcel K North's was not established, so this uses hand-traced approximate geometry instead.",
+    "accuracy_caveat": "The outline is Assessor lot 4110012, so its edges are recorded lot lines, not a trace. That this is the lot of Parcel K North is Pier & Point's own inference from location, shape and size (our earlier trace of the D4D figure measured 7,450 m2 against the lot's 6,313 m2; 83% of the trace lies inside the lot and the trace covers 98% of it). No Port document read ties the lot number to it. A building may sit back from the lot lines. This block is not yet built (the developers' pages call it 'fully entitled' and Handel Architects lists it 'In Design'; no groundbreaking was found in any source read). The Port sold it outright (Presidio Bay's page calls it 'the only privately-owned land in the Pier 70 Special Use District').",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4110012 (recorded 2019-02-07; mapped 2019-03-14; active); cross-checked against Pier 70 Design for Development Figure 6.4.2 - Building Height Maximum (p.155).",
+    "why_no_real_parcel": "No single Assessor lot is documented as Parcel K North. Lot 4110012 (active) matches its location, shape and size, so its outline is Assessor lot 4110012; the identification is Pier & Point's inference, as the accuracy note says.",
     "regulatory_context": "Residential, 65 ft max / 6 stories. The Port's Parcel K North page describes a 65-foot, 377,506 square foot mixed use building containing 245 for-sale residential units over ground-floor retail, and Handel Architects lists 245 units (Presidio Bay's page says ±241 condominium homes and 411,273 sq ft). Developer is TMG Partners + Presidio Bay Ventures -- NOT Brookfield; Presidio Bay says it 'closed on the land acquisition from the Port of San Francisco in February 2019', and both developers' pages call the project 'fully entitled'. No groundbreaking was found in any source read (searched through 2026-09-29)."
    }
   },
   "centroid": {
-   "lon": -122.387121,
-   "lat": 37.759982
+   "lon": -122.386899,
+   "lat": 37.75982
   },
   "facts": [
    {
@@ -482,6 +482,35 @@
   ],
   "changes": [
    {
+    "date": "2026-10-10",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Pier 70 Parcel K North now uses real Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 4110012",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 4110012"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_pkn",
+     "slug": "pier-70-parcel-k-north-pkn",
+     "name": "Pier 70 Parcel K North (PKN)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-k-north-pkn/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-k-north-pkn.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-29",
     "kind": "correction",
     "kind_label": "Correction",
@@ -716,7 +745,7 @@
     "date": "2026-08-11"
    }
   ],
-  "notes": "Approximate polygon for a real, D4D-adopted parcel -- see its accuracy caveat. Status planned: the developers' pages call the project 'fully entitled' and Handel Architects lists it 'In Design'; no construction start was found.",
+  "notes": "Parcel K North of the Pier 70 Design for Development, shown as Assessor lot 4110012 (see the accuracy note). Status planned: the developers' pages call the project 'fully entitled' and Handel Architects lists it 'In Design'; no construction start was found.",
   "has_record_file": true,
   "last_verified": "2026-09-29",
   "tenants": [],
@@ -725,24 +754,36 @@
    "coordinates": [
     [
      [
-      -122.38749408074938,
-      37.7603473121985
+      -122.387308514,
+      37.759400618
      ],
      [
-      -122.387340383,
-      37.75938460077196
+      -122.387390839,
+      37.760278942
      ],
      [
-      -122.386588,
-      37.75942521624687
+      -122.386700894,
+      37.760319702
      ],
      [
-      -122.386689,
-      37.76040431788392
+      -122.386659497,
+      37.760322147
      ],
      [
-      -122.38749408074938,
-      37.7603473121985
+      -122.386625065,
+      37.759954752
+     ],
+     [
+      -122.38657718,
+      37.759443822
+     ],
+     [
+      -122.386618576,
+      37.759441376
+     ],
+     [
+      -122.387308514,
+      37.759400618
      ]
     ]
    ]

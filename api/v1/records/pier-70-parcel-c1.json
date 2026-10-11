@@ -43,15 +43,15 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- no vertical construction is reported on this block (Port Item 11A, Aug 7, 2026: construction of Phase 1 vertical projects and parks has not moved forward, and the developer has not exercised an option on any Phase 1 option parcel). It has not been matched to a specific Assessor lot: DataSF's Assessor parcel layer shows the 28-acre site re-mapped into many active P70-MU lots (blocks 4052 and 4110-4117, mostly added 2019-02-07, most with no street address) and Port Item 12B (Feb 2020) gives Parcel E2 as Block 4116 Lot 008, so which lot, if any, corresponds to this block has not been checked against the recorded final map. Redone 2026-09-14 with a corrected, shear-free fit of the plan drawing to the map -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects that fit's 1-8m residual error, not a deliberate encroachment. RESOLVED 2026-09-16: no longer overlaps 'Pier 70 Building 2 (Warehouse No. 2)' -- that building's placement was corrected to its real position elsewhere on the site. CORRECTED 2026-09-17: this block was found to carry the same image-scale error in tracing already found on Parcel K North, Parcel K South and Hoedown Yard 3. Its true south edge sits ~26m further north than previously recorded, which had been silently eating into Irish Hill Playground's real extent. CLIPPED 2026-09-17 against the real, rehabilitated Building 113-116 footprint (not a planned-demolition overlap). Each of these changes is logged in this shape's data file in the public data repository (https://github.com/pierandpoint/record).",
-    "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-    "why_no_real_parcel": "Not matched to a specific Assessor lot. DataSF's Assessor parcel layer shows the Pier 70 28-acre site re-mapped into many active P70-MU lots in blocks 4052 and 4110-4117 (mostly added 2019-02-07), so the earlier statement that it has not been subdivided is withdrawn; which lot corresponds to this block has not been checked against the recorded final map, so this record uses hand-traced approximate geometry instead.",
+    "accuracy_caveat": "The outline is the union of Assessor lots 4112001, 4112002 and 4112003, so its edges are recorded lot lines, not a trace. That this is the lot of Parcel C1 is Pier & Point's own inference from location, shape and size (our earlier trace of the D4D figure measured 4,803 m2 against the lot's 4,721 m2; 86% of the trace lies inside the lot and the trace covers 88% of it). No Port document read ties the lot number to it. A building may sit back from the lot lines. No vertical construction is reported on this block (Port Item 11A, Aug 7, 2026: construction of Phase 1 vertical projects and parks has not moved forward, and the developer has not exercised an option on any Phase 1 option parcel).",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lots 4112001, 4112002 and 4112003 (recorded 2019-02-07; mapped 2019-03-14; active), joined into one outline; cross-checked against Pier 70 Design for Development Figure 6.4.2 - Building Height Maximum (p.155).",
+    "why_no_real_parcel": "No single Assessor lot is documented as Parcel C1. Lots 4112001, 4112002 and 4112003 (active) match its location, shape and size, so its outline is the union of Assessor lots 4112001, 4112002 and 4112003; the identification is Pier & Point's inference, as the accuracy note says.",
     "regulatory_context": "Flexible use: the D4D's Figure 2.1.1 stripes C1 Commercial-Office, Residential and Parking Garage, and its land-use scenarios show a garage or partial garage, 'permitted to be residential or commercial based on future parking needs' (use set to 'mixed' on the map); 90 ft max per Figure 6.4.2 (a uniform height, not a 65-90 ft range). C1B (a sub-portion of this parcel) is a 100%-affordable housing parcel: Port Resolution 20-07 (Item 12B, Feb 2020) names 'the 100% affordable housing parcels (Parcels C1B and C2A)', and Port Item 11A (Aug 2026) lists three designated affordable parcels, C2A (Phase 1), Parcel K South (Phase 2) and C1B (Phase 3). No construction-start source found."
    }
   },
   "centroid": {
-   "lon": -122.385905,
-   "lat": 37.759224
+   "lon": -122.385595,
+   "lat": 37.759222
   },
   "facts": [
    {
@@ -790,6 +790,35 @@
   ],
   "changes": [
    {
+    "date": "2026-10-10",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Pier 70 Parcel C1 now uses real Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lots 4112001, 4112002 and 4112003",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lots 4112001, 4112002 and 4112003"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_c1",
+     "slug": "pier-70-parcel-c1",
+     "name": "Pier 70 Parcel C1",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-c1/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-c1.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-10-06",
     "kind": "correction",
     "kind_label": "Correction",
@@ -1017,7 +1046,7 @@
     "date": "2023-04-17"
    }
   ],
-  "notes": "Approximate polygon for a real, D4D-adopted parcel -- see the Accuracy note. Status 'planned' as of Port Item 11A (memo dated Aug 7, 2026), which says construction of Phase 1 vertical projects and parks has not moved forward.",
+  "notes": "Parcel C1 of the Pier 70 Design for Development, shown as the union of Assessor lots 4112001, 4112002 and 4112003 (see the accuracy note). Status 'planned' as of Port Item 11A (memo dated Aug 7, 2026), which says construction of Phase 1 vertical projects and parks has not moved forward.",
   "has_record_file": true,
   "last_verified": "2026-09-20",
   "tenants": [],
@@ -1026,24 +1055,44 @@
    "coordinates": [
     [
      [
-      -122.3865381082706,
-      37.759319516299016
+      -122.386330023,
+      37.759323466
      ],
      [
-      -122.38498236798651,
-      37.75939463447994
+      -122.385852343,
+      37.759351654
      ],
      [
-      -122.38495070360933,
-      37.75908110051639
+      -122.385248645,
+      37.759387277
      ],
      [
-      -122.38651713699615,
-      37.75900598233546
+      -122.38497612,
+      37.759403357
      ],
      [
-      -122.3865381082706,
-      37.759319516299016
+      -122.384955767,
+      37.759371235
+     ],
+     [
+      -122.384926053,
+      37.759053809
+     ],
+     [
+      -122.385215828,
+      37.759036712
+     ],
+     [
+      -122.385819524,
+      37.759001089
+     ],
+     [
+      -122.38629717,
+      37.758972903
+     ],
+     [
+      -122.386330023,
+      37.759323466
      ]
     ]
    ]

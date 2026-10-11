@@ -50070,15 +50070,15 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- this block is not yet built (Port Item 11A, Aug 2026: the developer 'has not exercised an option of any Phase 1 option parcels'), and no source read ties it to a specific Assessor lot: DataSF's Assessor parcels include new lots created for the 28-acre district in 2019, without street addresses, but which lot (if any) is Parcel A's was not established. It currently sits on vacant/graded land, surface parking, or an existing industrial building slated for demolition within Brookfield's 28-acre district. Redone 2026-09-14 with a corrected, shear-free transform (see the mapping log) -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects this transform's 1-8m residual error, not a deliberate encroachment. EXTENDED SOUTH 2026-09-17: this block's south edge fell ~11m short of the real sidewalk visible in satellite imagery, leaving a strip of unclaimed vacant land between the block and the street -- consistent with this site's known local scale error for parcels far from the transform's Illinois/Michigan St anchors (Parcel E1's shape has the same root cause; see its mapping log). The diagram itself (Figure 6.4.2) shows this block's fill running right up to the street with no setback, so extended the two south vertices by 11m (measured in satellite imagery where the ground color changes to the real sidewalk, along 3 sample lines) to close the gap, matching the diagram's own convention rather than re-deriving the whole transform. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
-     "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-     "why_no_real_parcel": "No source read ties this block to a specific Assessor lot. DataSF's Assessor parcels include lots created for Brookfield's 28-acre district in 2019 (for example, Port Item 12B, Feb 2020, gives Parcel E2 as Block 4116, Lot 008), but Parcel A's own lot was not identified, so this uses hand-traced approximate geometry instead.",
+     "accuracy_caveat": "The outline is Assessor lot 4111009, so its edges are recorded lot lines, not a trace. That this is the lot of Parcel A is Pier & Point's own inference from location, shape and size (our earlier trace of the D4D figure measured 5,307 m2 against the lot's 5,013 m2; 76% of the trace lies inside the lot and the trace covers 81% of it). No Port document read ties the lot number to it. A building may sit back from the lot lines. This block is not yet built (Port Item 11A, Aug 2026: the developer 'has not exercised an option of any Phase 1 option parcels'). It currently sits on vacant/graded land, surface parking, or an existing industrial building slated for demolition within Brookfield's 28-acre district.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4111009 (recorded 2019-02-07; mapped 2019-03-14; active); cross-checked against Pier 70 Design for Development Figure 6.4.2 - Building Height Maximum (p.155).",
+     "why_no_real_parcel": "No single Assessor lot is documented as Parcel A. Lot 4111009 (active) matches its location, shape and size, so its outline is Assessor lot 4111009; the identification is Pier & Point's inference, as the accuracy note says.",
      "regulatory_context": "Commercial/life-science, 90 ft max / 6 stories per Figure 6.4.2. A revised design by Grimshaw with DES Architects + Engineers (356,400 sq ft, six stories, 90 ft) was reported by SF YIMBY in Oct 2021 with the refiled Development Agreement; King Street Properties announced in Feb 2023 a six-story, roughly 300,000 sq ft speculative life-science building on Parcel A (Bisnow). No source read links the Grimshaw design to King Street's plan, and no source read supports the earlier mention of a 2019 mass-timber design or a 365,000 GSF figure (removed 2026-09-29). No construction-start source found."
     }
    },
    "centroid": {
-    "lon": -122.384385,
-    "lat": 37.760399
+    "lon": -122.384214,
+    "lat": 37.760288
    },
    "facts": [
     {
@@ -51177,6 +51177,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Pier 70 Parcel A now uses real Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 4111009",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 4111009"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_a",
+      "slug": "pier-70-parcel-a",
+      "name": "Pier 70 Parcel A",
+      "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-a/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-a.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-06",
      "kind": "correction",
      "kind_label": "Correction",
@@ -51438,7 +51467,7 @@
      "date": "2026-08-11"
     }
    ],
-   "notes": "Approximate polygon for a real, D4D-adopted parcel -- see the accuracy caveat.",
+   "notes": "Parcel A of the Pier 70 Design for Development, shown as Assessor lot 4111009 (see the accuracy note).",
    "has_record_file": true,
    "last_verified": "2026-09-29",
    "tenants": [],
@@ -51447,24 +51476,48 @@
     "coordinates": [
      [
       [
-       -122.3846753,
-       37.7606914
+       -122.384269012,
+       37.760588225
       ],
       [
-       -122.3846325,
-       37.7599003
+       -122.383909375,
+       37.760609461
       ],
       [
-       -122.3839476,
-       37.75996
+       -122.383882889,
+       37.760326751
       ],
       [
-       -122.3839939,
-       37.7607508
+       -122.383856403,
+       37.76004404
       ],
       [
-       -122.3846753,
-       37.7606914
+       -122.383843976,
+       37.759910681
+      ],
+      [
+       -122.383911084,
+       37.759895706
+      ],
+      [
+       -122.384562221,
+       37.759857292
+      ],
+      [
+       -122.384595432,
+       37.760212088
+      ],
+      [
+       -122.384628643,
+       37.760566884
+      ],
+      [
+       -122.384628647,
+       37.760566988
+      ],
+      [
+       -122.384269012,
+       37.760588225
       ]
      ]
     ]
@@ -51505,15 +51558,15 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- no vertical construction is reported on this block (Port Item 11A, Aug 7, 2026: construction of Phase 1 vertical projects and parks has not moved forward, and the developer has not exercised an option on any Phase 1 option parcel). It has not been matched to a specific Assessor lot: DataSF's Assessor layer shows the 28-acre site re-mapped into many active P70-MU lots (blocks 4052 and 4110-4117, mostly added 2019-02-07, most with no street address) and Port Item 12B (Feb 2020) gives Parcel E2 as Block 4116 Lot 008, so which lot, if any, corresponds to this block has not been checked against the recorded final map. Redone 2026-09-14 with a corrected, shear-free transform (see the mapping log in the public data repository (https://github.com/pierandpoint/record)) -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects this transform's 1-8m residual error, not a deliberate encroachment.",
-     "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-     "why_no_real_parcel": "Not matched to a specific Assessor lot. DataSF's Assessor layer shows the Pier 70 28-acre site re-mapped into many active P70-MU lots in blocks 4052 and 4110-4117 (mostly added 2019-02-07), so the earlier statement that it has not been subdivided is withdrawn; which lot corresponds to this block has not been checked against the recorded final map, so this record uses hand-traced approximate geometry instead.",
+     "accuracy_caveat": "The outline is the union of Assessor lots 4052008 and 4052012, so its edges are recorded lot lines, not a trace. That this is the lot of Parcel B is Pier & Point's own inference from location, shape and size (our earlier trace of the D4D figure measured 6,199 m2 against the lot's 8,742 m2; 100% of the trace lies inside the lot and the trace covers 71% of it). No Port document read ties the lot number to it. A building may sit back from the lot lines. No vertical construction is reported on this block (Port Item 11A, Aug 7, 2026: construction of Phase 1 vertical projects and parks has not moved forward, and the developer has not exercised an option on any Phase 1 option parcel).",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lots 4052008 and 4052012 (recorded 2019-02-07; mapped 2019-03-14; active), joined into one outline; cross-checked against Pier 70 Design for Development Figure 6.4.2 - Building Height Maximum (p.155).",
+     "why_no_real_parcel": "No single Assessor lot is documented as Parcel B. Lots 4052008 and 4052012 (active) match its location, shape and size, so its outline is the union of Assessor lots 4052008 and 4052012; the identification is Pier & Point's inference, as the accuracy note says.",
      "regulatory_context": "Office (Commercial-Office in all three D4D land-use scenarios, Figures 1.5.5-1.5.7; not residential/mixed-use), 90 ft max per Figure 6.4.2 (6-story cap for commercial buildings per D4D Section 6.4.2, not the sometimes-cited '6-8 stories'). Phase 3B in the Port's proposed 2026 phasing plan (Port Item 11A, Exhibit A; the pump station site is shown as included in the earlier of 3A or 3B). No square footage for this parcel is stated in the D4D or Port Items 9B and 11A; a ~500,000 RSF figure previously recorded here came from an uncited leasing brochure and has been dropped. No construction-start source found."
     }
    },
    "centroid": {
-    "lon": -122.383091,
-    "lat": 37.76029
+    "lon": -122.383009,
+    "lat": 37.760191
    },
    "facts": [
     {
@@ -52194,6 +52247,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Pier 70 Parcel B now uses real Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 4052008 and 4052012",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 4052008 and 4052012"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_b",
+      "slug": "pier-70-parcel-b",
+      "name": "Pier 70 Parcel B",
+      "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-b/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-b.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-06",
      "kind": "correction",
      "kind_label": "Correction",
@@ -52413,7 +52495,7 @@
      "date": "2023-04-17"
     }
    ],
-   "notes": "Approximate polygon for a real, D4D-adopted parcel -- see the accuracy caveat.",
+   "notes": "Parcel B of the Pier 70 Design for Development, shown as the union of Assessor lots 4052008 and 4052012 (see the accuracy note).",
    "has_record_file": true,
    "last_verified": "2026-09-20",
    "tenants": [],
@@ -52422,28 +52504,48 @@
     "coordinates": [
      [
       [
-       -122.3836219,
-       37.7599972
+       -122.383637968,
+       37.759934017
       ],
       [
-       -122.3836815,
-       37.7605332
+       -122.383702389,
+       37.760621683
       ],
       [
-       -122.3827081,
-       37.7606008
+       -122.383012438,
+       37.760662421
       ],
       [
-       -122.38248,
-       37.76053
+       -122.38269437,
+       37.7606812
       ],
       [
-       -122.38243,
-       37.76008
+       -122.382327019,
+       37.760399707
       ],
       [
-       -122.3836219,
-       37.7599972
+       -122.382290843,
+       37.76001347
+      ],
+      [
+       -122.382360887,
+       37.759998388
+      ],
+      [
+       -122.382877139,
+       37.759967909
+      ],
+      [
+       -122.382946996,
+       37.759963784
+      ],
+      [
+       -122.383614862,
+       37.759924351
+      ],
+      [
+       -122.383637968,
+       37.759934017
       ]
      ]
     ]
@@ -52491,15 +52593,15 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- this block is not yet built (the developers' pages call it 'fully entitled' and Handel Architects lists it 'In Design'; no groundbreaking was found in any source read), and no source read identifies its Assessor lot: it was sold by the Port outright (Presidio Bay's page calls it 'the only privately-owned land in the Pier 70 Special Use District'), and DataSF's Assessor parcels list active P70-MU lots at about this location (for example lot 4110012 at 919 Illinois St, and lot 4110009 with no address), but which of them is Parcel K North's was not established. It currently sits on vacant/graded land, surface parking, or an existing industrial building slated for demolition within Brookfield's 28-acre district. RE-TRACED 2026-09-17 directly from Figure 6.4.2 at the correct source resolution (how the shape was traced, including earlier versions, is logged in its data file in the public data repository, https://github.com/pierandpoint/record) -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. This deliberately does NOT match today's satellite imagery of the parking lot -- this parcel's boundary represents the D4D's planned footprint, including '21ST ST (NEW)' and the '20th Street Plaza' open-space strip (mapped separately as the PKN Frontage Open Space), neither of which is built yet.",
-     "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-     "why_no_real_parcel": "No source read identifies this parcel's Assessor lot. The Port sold Parcel K North outright in 2019 (Presidio Bay's page: 'the only privately-owned land in the Pier 70 Special Use District'), and DataSF's Assessor parcels list active P70-MU lots at about this location (for example lot 4110012 at 919 Illinois St, and lot 4110009 with no address), but which of them is Parcel K North's was not established, so this uses hand-traced approximate geometry instead.",
+     "accuracy_caveat": "The outline is Assessor lot 4110012, so its edges are recorded lot lines, not a trace. That this is the lot of Parcel K North is Pier & Point's own inference from location, shape and size (our earlier trace of the D4D figure measured 7,450 m2 against the lot's 6,313 m2; 83% of the trace lies inside the lot and the trace covers 98% of it). No Port document read ties the lot number to it. A building may sit back from the lot lines. This block is not yet built (the developers' pages call it 'fully entitled' and Handel Architects lists it 'In Design'; no groundbreaking was found in any source read). The Port sold it outright (Presidio Bay's page calls it 'the only privately-owned land in the Pier 70 Special Use District').",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4110012 (recorded 2019-02-07; mapped 2019-03-14; active); cross-checked against Pier 70 Design for Development Figure 6.4.2 - Building Height Maximum (p.155).",
+     "why_no_real_parcel": "No single Assessor lot is documented as Parcel K North. Lot 4110012 (active) matches its location, shape and size, so its outline is Assessor lot 4110012; the identification is Pier & Point's inference, as the accuracy note says.",
      "regulatory_context": "Residential, 65 ft max / 6 stories. The Port's Parcel K North page describes a 65-foot, 377,506 square foot mixed use building containing 245 for-sale residential units over ground-floor retail, and Handel Architects lists 245 units (Presidio Bay's page says ±241 condominium homes and 411,273 sq ft). Developer is TMG Partners + Presidio Bay Ventures -- NOT Brookfield; Presidio Bay says it 'closed on the land acquisition from the Port of San Francisco in February 2019', and both developers' pages call the project 'fully entitled'. No groundbreaking was found in any source read (searched through 2026-09-29)."
     }
    },
    "centroid": {
-    "lon": -122.387121,
-    "lat": 37.759982
+    "lon": -122.386899,
+    "lat": 37.75982
    },
    "facts": [
     {
@@ -52926,6 +53028,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Pier 70 Parcel K North now uses real Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 4110012",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 4110012"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_pkn",
+      "slug": "pier-70-parcel-k-north-pkn",
+      "name": "Pier 70 Parcel K North (PKN)",
+      "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-k-north-pkn/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-k-north-pkn.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-09-29",
      "kind": "correction",
      "kind_label": "Correction",
@@ -53160,7 +53291,7 @@
      "date": "2026-08-11"
     }
    ],
-   "notes": "Approximate polygon for a real, D4D-adopted parcel -- see its accuracy caveat. Status planned: the developers' pages call the project 'fully entitled' and Handel Architects lists it 'In Design'; no construction start was found.",
+   "notes": "Parcel K North of the Pier 70 Design for Development, shown as Assessor lot 4110012 (see the accuracy note). Status planned: the developers' pages call the project 'fully entitled' and Handel Architects lists it 'In Design'; no construction start was found.",
    "has_record_file": true,
    "last_verified": "2026-09-29",
    "tenants": [],
@@ -53169,24 +53300,36 @@
     "coordinates": [
      [
       [
-       -122.38749408074938,
-       37.7603473121985
+       -122.387308514,
+       37.759400618
       ],
       [
-       -122.387340383,
-       37.75938460077196
+       -122.387390839,
+       37.760278942
       ],
       [
-       -122.386588,
-       37.75942521624687
+       -122.386700894,
+       37.760319702
       ],
       [
-       -122.386689,
-       37.76040431788392
+       -122.386659497,
+       37.760322147
       ],
       [
-       -122.38749408074938,
-       37.7603473121985
+       -122.386625065,
+       37.759954752
+      ],
+      [
+       -122.38657718,
+       37.759443822
+      ],
+      [
+       -122.386618576,
+       37.759441376
+      ],
+      [
+       -122.387308514,
+       37.759400618
       ]
      ]
     ]
@@ -53644,8 +53787,8 @@
     }
    },
    "centroid": {
-    "lon": -122.382174,
-    "lat": 37.759427
+    "lon": -122.382034,
+    "lat": 37.759455
    },
    "facts": [
     {
@@ -54077,6 +54220,64 @@
    ],
    "changes": [
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The Pier 70 waterfront open space was trimmed where it overlapped a neighbouring Assessor lot.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 4116009, 4052008, 4052012",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 4116009, 4052008, 4052012"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_waterfront_open_space",
+      "slug": "pier-70-waterfront-open-space-waterfront-terrace-slipways-commons-waterfront-promenade-pier-70-shoreline",
+      "name": "Pier 70 Waterfront Open Space (Waterfront Terrace / Slipways Commons / Waterfront Promenade / Pier 70 Shoreline)",
+      "permalink": "https://pierandpoint.org/parcels/pier-70-waterfront-open-space-waterfront-terrace-slipways-commons-waterfront-promenade-pier-70-shoreline/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-70-waterfront-open-space-waterfront-terrace-slipways-commons-waterfront-promenade-pier-70-shoreline.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The Pier 70 waterfront open space was cut back from the street beside Parcel B.",
+     "source": "DataSF Street Centerline (https://data.sfgov.org/dataset/Street-Centerline/3psu-pn9h)",
+     "sources": [
+      {
+       "title": "DataSF Street Centerline (https://data.sfgov.org/dataset/Street-Centerline/3psu-pn9h)"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_waterfront_open_space",
+      "slug": "pier-70-waterfront-open-space-waterfront-terrace-slipways-commons-waterfront-promenade-pier-70-shoreline",
+      "name": "Pier 70 Waterfront Open Space (Waterfront Terrace / Slipways Commons / Waterfront Promenade / Pier 70 Shoreline)",
+      "permalink": "https://pierandpoint.org/parcels/pier-70-waterfront-open-space-waterfront-terrace-slipways-commons-waterfront-promenade-pier-70-shoreline/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-70-waterfront-open-space-waterfront-terrace-slipways-commons-waterfront-promenade-pier-70-shoreline.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-06",
      "kind": "correction",
      "kind_label": "Correction",
@@ -54393,24 +54594,164 @@
     "coordinates": [
      [
       [
-       -122.38151,
-       37.7582883
+       -122.381865839,
+       37.758307627
       ],
       [
-       -122.3818834,
-       37.7582679
+       -122.381621218,
+       37.758321124
       ],
       [
-       -122.3818224,
-       37.7584059
+       -122.381615256,
+       37.758321747
       ],
       [
-       -122.3818279,
-       37.7584982
+       -122.381609383,
+       37.758322952
       ],
       [
-       -122.38187471233988,
-       37.75929031041109
+       -122.381603658,
+       37.758324727
+      ],
+      [
+       -122.381598133,
+       37.758327054
+      ],
+      [
+       -122.381592864,
+       37.758329912
+      ],
+      [
+       -122.381587899,
+       37.758333272
+      ],
+      [
+       -122.381583288,
+       37.758337103
+      ],
+      [
+       -122.381579075,
+       37.758341367
+      ],
+      [
+       -122.3815753,
+       37.758346024
+      ],
+      [
+       -122.381572,
+       37.758351029
+      ],
+      [
+       -122.381569206,
+       37.758356332
+      ],
+      [
+       -122.381566946,
+       37.758361884
+      ],
+      [
+       -122.38156524,
+       37.758367631
+      ],
+      [
+       -122.381564106,
+       37.758373518
+      ],
+      [
+       -122.381563554,
+       37.758379487
+      ],
+      [
+       -122.381563591,
+       37.758385481
+      ],
+      [
+       -122.381564214,
+       37.758391443
+      ],
+      [
+       -122.381565419,
+       37.758397316
+      ],
+      [
+       -122.381567194,
+       37.758403041
+      ],
+      [
+       -122.381569521,
+       37.758408566
+      ],
+      [
+       -122.381572379,
+       37.758413835
+      ],
+      [
+       -122.381575739,
+       37.7584188
+      ],
+      [
+       -122.38157957,
+       37.758423411
+      ],
+      [
+       -122.381583834,
+       37.758427624
+      ],
+      [
+       -122.381588491,
+       37.758431399
+      ],
+      [
+       -122.381593496,
+       37.758434699
+      ],
+      [
+       -122.381598799,
+       37.758437493
+      ],
+      [
+       -122.381604351,
+       37.758439753
+      ],
+      [
+       -122.381610098,
+       37.758441459
+      ],
+      [
+       -122.381615985,
+       37.758442593
+      ],
+      [
+       -122.381621954,
+       37.758443145
+      ],
+      [
+       -122.381627948,
+       37.758443108
+      ],
+      [
+       -122.381823973,
+       37.758432292
+      ],
+      [
+       -122.381825195,
+       37.758452809
+      ],
+      [
+       -122.381644095,
+       37.7584635
+      ],
+      [
+       -122.381702703,
+       37.759089313
+      ],
+      [
+       -122.381862277,
+       37.759079893
+      ],
+      [
+       -122.381874712,
+       37.75929031
       ],
       [
        -122.3818754,
@@ -54425,12 +54766,12 @@
        37.7591589
       ],
       [
-       -122.3836699,
-       37.7590801
+       -122.383598406,
+       37.759085914
       ],
       [
-       -122.3836931,
-       37.7594275
+       -122.383631842,
+       37.759432842
       ],
       [
        -122.383536,
@@ -54469,12 +54810,316 @@
        37.7596213
       ],
       [
-       -122.3823467,
-       37.7600535
+       -122.382334201,
+       37.759866582
       ],
       [
-       -122.3821877,
-       37.7600702
+       -122.382197625,
+       37.759874781
+      ],
+      [
+       -122.382196567,
+       37.759874897
+      ],
+      [
+       -122.382195495,
+       37.759874946
+      ],
+      [
+       -122.38219358,
+       37.759875224
+      ],
+      [
+       -122.382191666,
+       37.759875433
+      ],
+      [
+       -122.382190623,
+       37.759875652
+      ],
+      [
+       -122.382189562,
+       37.759875806
+      ],
+      [
+       -122.382187685,
+       37.75987627
+      ],
+      [
+       -122.3821858,
+       37.759876666
+      ],
+      [
+       -122.382184782,
+       37.759876987
+      ],
+      [
+       -122.382183742,
+       37.759877244
+      ],
+      [
+       -122.382181919,
+       37.75987789
+      ],
+      [
+       -122.382180083,
+       37.759878469
+      ],
+      [
+       -122.382179099,
+       37.759878889
+      ],
+      [
+       -122.382178092,
+       37.759879246
+      ],
+      [
+       -122.382176345,
+       37.759880065
+      ],
+      [
+       -122.38217457,
+       37.759880823
+      ],
+      [
+       -122.382173637,
+       37.759881335
+      ],
+      [
+       -122.382172664,
+       37.759881791
+      ],
+      [
+       -122.382170998,
+       37.759882782
+      ],
+      [
+       -122.382169314,
+       37.759883706
+      ],
+      [
+       -122.382168434,
+       37.759884308
+      ],
+      [
+       -122.382167513,
+       37.759884856
+      ],
+      [
+       -122.382165952,
+       37.759886006
+      ],
+      [
+       -122.382164366,
+       37.759887091
+      ],
+      [
+       -122.382163552,
+       37.759887774
+      ],
+      [
+       -122.382162686,
+       37.759888412
+      ],
+      [
+       -122.382161244,
+       37.75988971
+      ],
+      [
+       -122.382159774,
+       37.759890944
+      ],
+      [
+       -122.382159028,
+       37.759891706
+      ],
+      [
+       -122.382158232,
+       37.759892423
+      ],
+      [
+       -122.382156939,
+       37.759893841
+      ],
+      [
+       -122.382155581,
+       37.759895228
+      ],
+      [
+       -122.382154905,
+       37.759896071
+      ],
+      [
+       -122.382154192,
+       37.759896852
+      ],
+      [
+       -122.382153045,
+       37.759898388
+      ],
+      [
+       -122.382151829,
+       37.759899903
+      ],
+      [
+       -122.382151245,
+       37.759900798
+      ],
+      [
+       -122.382150605,
+       37.759901655
+      ],
+      [
+       -122.382149604,
+       37.759903313
+      ],
+      [
+       -122.382148553,
+       37.759904924
+      ],
+      [
+       -122.38214806,
+       37.75990587
+      ],
+      [
+       -122.382147507,
+       37.759906787
+      ],
+      [
+       -122.382146674,
+       37.759908533
+      ],
+      [
+       -122.382145785,
+       37.759910241
+      ],
+      [
+       -122.382145388,
+       37.759911229
+      ],
+      [
+       -122.382144926,
+       37.759912198
+      ],
+      [
+       -122.38214427,
+       37.759914013
+      ],
+      [
+       -122.382143551,
+       37.759915804
+      ],
+      [
+       -122.38214325,
+       37.759916836
+      ],
+      [
+       -122.382142889,
+       37.759917836
+      ],
+      [
+       -122.382142414,
+       37.759919707
+      ],
+      [
+       -122.382141874,
+       37.759921559
+      ],
+      [
+       -122.382141678,
+       37.759922602
+      ],
+      [
+       -122.382141413,
+       37.759923646
+      ],
+      [
+       -122.382141123,
+       37.759925559
+      ],
+      [
+       -122.382140768,
+       37.759927451
+      ],
+      [
+       -122.382140674,
+       37.759928523
+      ],
+      [
+       -122.382140515,
+       37.759929573
+      ],
+      [
+       -122.382140415,
+       37.759931484
+      ],
+      [
+       -122.382140245,
+       37.759933422
+      ],
+      [
+       -122.382140257,
+       37.759934495
+      ],
+      [
+       -122.382140201,
+       37.759935559
+      ],
+      [
+       -122.38214029,
+       37.759937493
+      ],
+      [
+       -122.382140311,
+       37.759939417
+      ],
+      [
+       -122.382140427,
+       37.759940475
+      ],
+      [
+       -122.382140476,
+       37.759941547
+      ],
+      [
+       -122.382190028,
+       37.760461846
+      ],
+      [
+       -122.382190945,
+       37.760468064
+      ],
+      [
+       -122.382192496,
+       37.760474154
+      ],
+      [
+       -122.382194664,
+       37.760480053
+      ],
+      [
+       -122.382197427,
+       37.760485698
+      ],
+      [
+       -122.382200756,
+       37.760491029
+      ],
+      [
+       -122.382204614,
+       37.76049599
+      ],
+      [
+       -122.382208962,
+       37.760500528
+      ],
+      [
+       -122.382213754,
+       37.760504595
+      ],
+      [
+       -122.382219951,
+       37.760509329
       ],
       [
        -122.3822273,
@@ -54525,16 +55170,16 @@
        37.7594164
       ],
       [
-       -122.38149641875717,
-       37.75930329362839
+       -122.381496419,
+       37.759303294
       ],
       [
        -122.3814467,
        37.759305
       ],
       [
-       -122.38144687568196,
-       37.758518998901366
+       -122.381446876,
+       37.758518999
       ],
       [
        -122.3814322,
@@ -54551,6 +55196,14 @@
       [
        -122.38151,
        37.7582883
+      ],
+      [
+       -122.3818834,
+       37.7582679
+      ],
+      [
+       -122.381865839,
+       37.758307627
       ]
      ]
     ]
@@ -55955,15 +56608,15 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- derived from a real, street-polygonized city block (not a diagram pixel-trace), subtracting Building 2, Parcel D, and Building 12's own mapped shapes. This is a deliberate departure from pure diagram-tracing: since Figure 6.4.2's own green fill didn't precisely reach the real (satellite-corrected) edges of Building 2 and Building 12, using the real block boundary instead better matches both the drawing's evident intent (this block reads as fully built-out, buildings plus plaza, no gaps) and the satellite ground truth. The block polygon's north edge stops slightly short of Parcel D's own north edge (~14m, since the not-yet-built '21st St (NEW)' isn't in real street data) -- unioned with D's own extent to avoid an artificial gap there. Area (~1.38 acres) is close to, but still a bit under, the D4D's cited ~1.5 acres for this named space -- the cause of the gap is not established: the D4D (Section 3.9) also counts a Maryland Street Platform along Maryland St as part of the space and places the Building 12 Entry Plaza south of Building 12 on 22nd St, so the plaza's extent here may differ from the D4D's in more than one way (the dashed '15' box on the diagram is the legend's approximate location of the mid-block passage beside Building 15, not a boundary of this space).",
-     "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155); named per Figure 3.4.1 - Overview of Public Spaces (p.52), zone 5.",
-     "why_no_real_parcel": "Open space with no Assessor lot of its own identified: DataSF's Assessor layer shows the Pier 70 28-acre site re-mapped into many active P70-MU lots (blocks 4052 and 4110-4117, mostly added 2019-02-07), so the earlier statement that the site is unaddressed and not subdivided is withdrawn; whether the plaza's block has its own lot has not been checked against the recorded final map.",
+     "accuracy_caveat": "The outline is the union of Assessor lots 4114008 and 4114004, so its edges are recorded lot lines, not a trace. The lot choice was made by the owner on a reading of the diagram and the satellite imagery; no document read ties these lots to the plaza. The lots do not cover all of the open ground the D4D draws around Buildings 2 and 12, so the earlier outline's extent is not reproduced. A building may sit back from the lot lines. The plaza is planned (Port Item 11A, memo dated Aug 7, 2026: the balance of Phase 1, largely the Phase 1 parks and open space, will be built on a schedule that coincides with adjacent vertical development).",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lots 4114008 and 4114004 (recorded 2019-02-07, 2020-10-23; mapped 2019-03-14, 2021-07-07; active), joined into one outline; cross-checked against Pier 70 Design for Development Figure 6.4.2 - Building Height Maximum (p.155).",
+     "why_no_real_parcel": "The outline is the union of Assessor lots 4114008 and 4114004 (active), chosen by the owner as the lots under the plaza; no document names them as the plaza.",
      "regulatory_context": "Part of the Pier 70 D4D's Open Space Network (Section 3.9), approximately 1.5 acres. Per Section 3.9, Market Square lies north of Building 12 (between Building 2 and Parcel D, entered from 21st St), the Building 12 Entry Plaza south of Building 12 on 22nd St, and the Maryland Street Platform along Building 12's Maryland St side; the mapped block spans Louisiana St to Maryland St."
     }
    },
    "centroid": {
-    "lon": -122.38416,
-    "lat": 37.758933
+    "lon": -122.384295,
+    "lat": 37.759145
    },
    "facts": [
     {
@@ -56290,6 +56943,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Pier 70 Building 12 Plaza now uses real Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 4114008 and 4114004",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 4114008 and 4114004"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_building12_plaza",
+      "slug": "building-12-plaza-and-market-square",
+      "name": "Building 12 Plaza and Market Square",
+      "permalink": "https://pierandpoint.org/parcels/building-12-plaza-and-market-square/",
+      "api": "https://pierandpoint.org/api/v1/records/building-12-plaza-and-market-square.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-06",
      "kind": "correction",
      "kind_label": "Correction",
@@ -56482,7 +57164,7 @@
      "date": "2025-06"
     }
    ],
-   "notes": "Added 2026-09-16 together with this site's other previously untracked open space; geometry REDONE TWICE 2026-09-17 after problems with the shape were found. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record). Status 'planned' as of Port Item 11A (memo dated Aug 7, 2026): the balance of Phase 1, largely the Phase 1 parks and open space, will be built on a schedule that coincides with adjacent vertical development.",
+   "notes": "The Building 12 Plaza of the Pier 70 Design for Development, shown as the union of Assessor lots 4114008 and 4114004 (see the accuracy note). Added 2026-09-16 together with this site's other previously untracked open space; geometry REDONE TWICE 2026-09-17 after problems with the shape were found. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record). Status 'planned' as of Port Item 11A (memo dated Aug 7, 2026): the balance of Phase 1, largely the Phase 1 parks and open space, will be built on a schedule that coincides with adjacent vertical development.",
    "has_record_file": true,
    "last_verified": "2026-09-20",
    "tenants": [],
@@ -56491,138 +57173,8 @@
     "coordinates": [
      [
       [
-       -122.3845694,
-       37.7592119
-      ],
-      [
-       -122.38460398340065,
-       37.75972811052297
-      ],
-      [
-       -122.38457972724987,
-       37.75972962063541
-      ],
-      [
-       -122.38445146037776,
-       37.75973762200864
-      ],
-      [
-       -122.3844601,
-       37.7598664
-      ],
-      [
-       -122.3844474,
-       37.7596771
-      ],
-      [
-       -122.3841672,
-       37.7597015
-      ],
-      [
-       -122.3841496,
-       37.75949
-      ],
-      [
-       -122.3839109,
-       37.7595108
-      ],
-      [
-       -122.3839378,
-       37.7599119
-      ],
-      [
-       -122.38392830063574,
-       37.759770257063096
-      ],
-      [
-       -122.38384866615598,
-       37.75977522471518
-      ],
-      [
-       -122.38384581558155,
-       37.75974034268103
-      ],
-      [
-       -122.38380012186293,
-       37.759162922018746
-      ],
-      [
-       -122.38380005383222,
-       37.759162127352944
-      ],
-      [
-       -122.3837276538322,
-       37.75837592729266
-      ],
-      [
-       -122.3837275222394,
-       37.758375077101725
-      ],
-      [
-       -122.38372747296023,
-       37.7583742214554
-      ],
-      [
-       -122.38372641427739,
-       37.758365399098494
-      ],
-      [
-       -122.38373157494395,
-       37.758365561290695
-      ],
-      [
-       -122.3837326200502,
-       37.758365553560346
-      ],
-      [
-       -122.38373366280935,
-       37.75836560944207
-      ],
-      [
-       -122.38373746646981,
-       37.75836551771277
-      ],
-      [
-       -122.38374127173276,
-       37.75836548956633
-      ],
-      [
-       -122.3837423108481,
-       37.758365400885445
-      ],
-      [
-       -122.38374335551424,
-       37.758365375692215
-      ],
-      [
-       -122.38466325551425,
-       37.75830737575326
-      ],
-      [
-       -122.38466724156318,
-       37.75830696801722
-      ],
-      [
-       -122.38467123571652,
-       37.758306613296476
-      ],
-      [
-       -122.38469367401974,
-       37.75830373315909
-      ],
-      [
-       -122.38477540084924,
-       37.759193943727986
-      ],
-      [
-       -122.3845694,
-       37.7592119
-      ]
-     ],
-     [
-      [
-       -122.383821034,
-       37.758742698
+       -122.383788838,
+       37.7583987
       ],
       [
        -122.38385323,
@@ -56633,36 +57185,64 @@
        37.759050978
       ],
       [
-       -122.384458524,
-       37.759049609
+       -122.384489198,
+       37.759377322
       ],
       [
-       -122.384736714,
-       37.759033196
+       -122.384473675,
+       37.759378238
       ],
       [
-       -122.384719716,
-       37.758851888
+       -122.384500952,
+       37.759669646
       ],
       [
-       -122.384693402,
-       37.758571204
+       -122.384516475,
+       37.75966873
+      ],
+      [
+       -122.384520372,
+       37.75971036
+      ],
+      [
+       -122.384798659,
+       37.759693941
+      ],
+      [
+       -122.384800007,
+       37.759708321
+      ],
+      [
+       -122.384385798,
+       37.759732758
+      ],
+      [
+       -122.384346705,
+       37.759315092
+      ],
+      [
+       -122.383791301,
+       37.759347858
+      ],
+      [
+       -122.383767333,
+       37.759091763
+      ],
+      [
+       -122.383697496,
+       37.758347777
+      ],
+      [
+       -122.384667087,
+       37.758290519
       ],
       [
        -122.384672343,
        37.758346575
       ],
       [
-       -122.384230689,
-       37.758372632
-      ],
-      [
        -122.383788838,
        37.7583987
-      ],
-      [
-       -122.383821034,
-       37.758742698
       ]
      ]
     ]
@@ -57230,15 +57810,15 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- no vertical construction is reported on this block (Port Item 11A, Aug 7, 2026: construction of Phase 1 vertical projects and parks has not moved forward). It is Parcel K South, a Port-retained parcel created from the Port's Illinois & 20th Street Parcel (Port Item 9B, Res 17-52), outside the 28-Acre Site and the developer's vertical option, so it is not within Brookfield's 28-acre district. It has not been matched to a specific Assessor lot: DataSF's Assessor layer shows the surrounding Pier 70 land re-mapped into many active P70-MU lots (mostly added 2019-02-07, most with no street address), and Port Item 9B gives the Illinois & 20th Street Parcel as Block 4110 Lot 001 (DataSF lists 4110001 as retired 2018-10-02). RE-TRACED 2026-09-17 directly from Figure 6.4.2 at the correct source resolution (how the shape was traced, including earlier versions, is logged in its data file in the public data repository, https://github.com/pierandpoint/record) -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. This deliberately does NOT match today's satellite imagery of the parking lot -- this parcel's boundary represents the D4D's planned footprint, including '21ST ST (NEW)', which is not built yet.",
-     "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-     "why_no_real_parcel": "Not matched to a specific Assessor lot. PKS is part of the Port's Illinois & 20th Street Parcel (Assessor's Block 4110/Lot 001 per Port Item 9B), which Resolution 17-52 has the Port subdivide into four parcels; it is outside Brookfield's 28-acre site, so the earlier statement that it is part of that site is withdrawn. DataSF lists 4110001 as retired (2018-10-02); which current lot corresponds to PKS has not been checked, so this record uses hand-traced approximate geometry instead.",
+     "accuracy_caveat": "The outline is Assessor lot 4110013, so its edges are recorded lot lines, not a trace. That this is the lot of Parcel K South is Pier & Point's own inference from location, shape and size (our earlier trace of the D4D figure measured 1,709 m2 against the lot's 1,637 m2; 83% of the trace lies inside the lot and the trace covers 86% of it). No Port document read ties the lot number to it. A building may sit back from the lot lines. No vertical construction is reported on this block (Port Item 11A, Aug 7, 2026: construction of Phase 1 vertical projects and parks has not moved forward). It is Parcel K South, a Port-retained parcel created from the Port's Illinois & 20th Street Parcel (Port Item 9B, Res 17-52), outside the 28-Acre Site and the developer's vertical option; Port Item 9B gives that parent parcel as Block 4110 Lot 001, which DataSF lists as retired 2018-10-02.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4110013 (recorded 2019-02-07; mapped 2019-03-14; active); cross-checked against Pier 70 Design for Development Figure 6.4.2 - Building Height Maximum (p.155).",
+     "why_no_real_parcel": "No single Assessor lot is documented as Parcel K South. Lot 4110013 (active) matches its location, shape and size, so its outline is Assessor lot 4110013; the identification is Pier & Point's inference, as the accuracy note says.",
      "regulatory_context": "Residential in every D4D land-use scenario (Figures 1.5.5-1.5.7), 65 ft max per Figure 6.4.2, and a 100%-affordable housing site under Port Item 9B. A real parcel distinct from Parcel K North: Port Resolution 17-52 (Item 9B, Sept 2017) has the Port subdivide the 20th/Illinois parcel into four parcels including Parcel K North and Parcel K South, and the Port's Item 12B memo (Feb 2020) names 'the Illinois/20th Street parcels known as Parcel K North and Parcel K South' (its Resolution 20-07 recital says 'the Illinois/20th Street parcel known as Parcel K', singular). No source found gives a specific unit count, architect, or construction-status beyond this."
     }
    },
    "centroid": {
-    "lon": -122.387018,
-    "lat": 37.759185
+    "lon": -122.386908,
+    "lat": 37.759127
    },
    "facts": [
     {
@@ -57511,6 +58091,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Pier 70 Parcel K South now uses real Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 4110013",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 4110013"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_pks",
+      "slug": "pier-70-parcel-k-south-pks",
+      "name": "Pier 70 Parcel K South (PKS)",
+      "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-k-south-pks/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-k-south-pks.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-06",
      "kind": "correction",
      "kind_label": "Correction",
@@ -57679,7 +58288,7 @@
      "date": "2026-08-11"
     }
    ],
-   "notes": "Approximate polygon for a real, D4D-adopted parcel -- see its accuracy caveat.",
+   "notes": "Parcel K South of the Pier 70 Design for Development, shown as Assessor lot 4110013 (see the accuracy note).",
    "has_record_file": true,
    "last_verified": "2026-09-20",
    "tenants": [],
@@ -57688,24 +58297,24 @@
     "coordinates": [
      [
       [
-       -122.387328272,
-       37.759263996562474
+       -122.386649851,
+       37.759034838
       ],
       [
-       -122.386576,
-       37.75929800422032
+       -122.387270792,
+       37.758998156
       ],
       [
-       -122.386554,
-       37.75906638453553
+       -122.387295936,
+       37.759266418
       ],
       [
-       -122.387305014,
-       37.759032376877684
+       -122.386674993,
+       37.759303101
       ],
       [
-       -122.387328272,
-       37.759263996562474
+       -122.386649851,
+       37.759034838
       ]
      ]
     ]
@@ -57755,8 +58364,8 @@
     }
    },
    "centroid": {
-    "lon": -122.386854,
-    "lat": 37.758885
+    "lon": -122.386902,
+    "lat": 37.75895
    },
    "facts": [
     {
@@ -58063,6 +58672,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Hoedown Yard 3 was trimmed where it overlapped a neighbouring Assessor lot.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 4110013",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 4110013"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_hdy3",
+      "slug": "pier-70-hoedown-yard-3-hdy3",
+      "name": "Pier 70 Hoedown Yard 3 (HDY3)",
+      "permalink": "https://pierandpoint.org/parcels/pier-70-hoedown-yard-3-hdy3/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-70-hoedown-yard-3-hdy3.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-09-29",
      "kind": "correction",
      "kind_label": "Correction",
@@ -58237,23 +58875,39 @@
      [
       [
        -122.386554,
-       37.75906638453553
+       37.759066385
+      ],
+      [
+       -122.386642543,
+       37.7589507
+      ],
+      [
+       -122.387216842,
+       37.758307401
       ],
       [
        -122.387305014,
-       37.759032376877684
+       37.759032377
       ],
       [
-       -122.38721684202655,
-       37.75830740136974
+       -122.387274131,
+       37.759033775
       ],
       [
-       -122.38664254280157,
-       37.7589506997877
+       -122.387270792,
+       37.758998156
+      ],
+      [
+       -122.386649851,
+       37.759034838
+      ],
+      [
+       -122.38665239,
+       37.759061929
       ],
       [
        -122.386554,
-       37.75906638453553
+       37.759066385
       ]
      ]
     ]
@@ -58846,15 +59500,15 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- no vertical construction is reported on this block (Port Item 11A, Aug 7, 2026: construction of Phase 1 vertical projects and parks has not moved forward, and the developer has not exercised an option on any Phase 1 option parcel). It has not been matched to a specific Assessor lot: DataSF's Assessor parcel layer shows the 28-acre site re-mapped into many active P70-MU lots (blocks 4052 and 4110-4117, mostly added 2019-02-07, most with no street address) and Port Item 12B (Feb 2020) gives Parcel E2 as Block 4116 Lot 008, so which lot, if any, corresponds to this block has not been checked against the recorded final map. Redone 2026-09-14 with a corrected, shear-free fit of the plan drawing to the map -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects that fit's 1-8m residual error, not a deliberate encroachment. RESOLVED 2026-09-16: no longer overlaps 'Pier 70 Building 2 (Warehouse No. 2)' -- that building's placement was corrected to its real position elsewhere on the site. CORRECTED 2026-09-17: this block was found to carry the same image-scale error in tracing already found on Parcel K North, Parcel K South and Hoedown Yard 3. Its true south edge sits ~26m further north than previously recorded, which had been silently eating into Irish Hill Playground's real extent. CLIPPED 2026-09-17 against the real, rehabilitated Building 113-116 footprint (not a planned-demolition overlap). Each of these changes is logged in this shape's data file in the public data repository (https://github.com/pierandpoint/record).",
-     "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-     "why_no_real_parcel": "Not matched to a specific Assessor lot. DataSF's Assessor parcel layer shows the Pier 70 28-acre site re-mapped into many active P70-MU lots in blocks 4052 and 4110-4117 (mostly added 2019-02-07), so the earlier statement that it has not been subdivided is withdrawn; which lot corresponds to this block has not been checked against the recorded final map, so this record uses hand-traced approximate geometry instead.",
+     "accuracy_caveat": "The outline is the union of Assessor lots 4112001, 4112002 and 4112003, so its edges are recorded lot lines, not a trace. That this is the lot of Parcel C1 is Pier & Point's own inference from location, shape and size (our earlier trace of the D4D figure measured 4,803 m2 against the lot's 4,721 m2; 86% of the trace lies inside the lot and the trace covers 88% of it). No Port document read ties the lot number to it. A building may sit back from the lot lines. No vertical construction is reported on this block (Port Item 11A, Aug 7, 2026: construction of Phase 1 vertical projects and parks has not moved forward, and the developer has not exercised an option on any Phase 1 option parcel).",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lots 4112001, 4112002 and 4112003 (recorded 2019-02-07; mapped 2019-03-14; active), joined into one outline; cross-checked against Pier 70 Design for Development Figure 6.4.2 - Building Height Maximum (p.155).",
+     "why_no_real_parcel": "No single Assessor lot is documented as Parcel C1. Lots 4112001, 4112002 and 4112003 (active) match its location, shape and size, so its outline is the union of Assessor lots 4112001, 4112002 and 4112003; the identification is Pier & Point's inference, as the accuracy note says.",
      "regulatory_context": "Flexible use: the D4D's Figure 2.1.1 stripes C1 Commercial-Office, Residential and Parking Garage, and its land-use scenarios show a garage or partial garage, 'permitted to be residential or commercial based on future parking needs' (use set to 'mixed' on the map); 90 ft max per Figure 6.4.2 (a uniform height, not a 65-90 ft range). C1B (a sub-portion of this parcel) is a 100%-affordable housing parcel: Port Resolution 20-07 (Item 12B, Feb 2020) names 'the 100% affordable housing parcels (Parcels C1B and C2A)', and Port Item 11A (Aug 2026) lists three designated affordable parcels, C2A (Phase 1), Parcel K South (Phase 2) and C1B (Phase 3). No construction-start source found."
     }
    },
    "centroid": {
-    "lon": -122.385905,
-    "lat": 37.759224
+    "lon": -122.385595,
+    "lat": 37.759222
    },
    "facts": [
     {
@@ -59593,6 +60247,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Pier 70 Parcel C1 now uses real Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 4112001, 4112002 and 4112003",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 4112001, 4112002 and 4112003"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_c1",
+      "slug": "pier-70-parcel-c1",
+      "name": "Pier 70 Parcel C1",
+      "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-c1/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-c1.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-06",
      "kind": "correction",
      "kind_label": "Correction",
@@ -59820,7 +60503,7 @@
      "date": "2023-04-17"
     }
    ],
-   "notes": "Approximate polygon for a real, D4D-adopted parcel -- see the Accuracy note. Status 'planned' as of Port Item 11A (memo dated Aug 7, 2026), which says construction of Phase 1 vertical projects and parks has not moved forward.",
+   "notes": "Parcel C1 of the Pier 70 Design for Development, shown as the union of Assessor lots 4112001, 4112002 and 4112003 (see the accuracy note). Status 'planned' as of Port Item 11A (memo dated Aug 7, 2026), which says construction of Phase 1 vertical projects and parks has not moved forward.",
    "has_record_file": true,
    "last_verified": "2026-09-20",
    "tenants": [],
@@ -59829,24 +60512,44 @@
     "coordinates": [
      [
       [
-       -122.3865381082706,
-       37.759319516299016
+       -122.386330023,
+       37.759323466
       ],
       [
-       -122.38498236798651,
-       37.75939463447994
+       -122.385852343,
+       37.759351654
       ],
       [
-       -122.38495070360933,
-       37.75908110051639
+       -122.385248645,
+       37.759387277
       ],
       [
-       -122.38651713699615,
-       37.75900598233546
+       -122.38497612,
+       37.759403357
       ],
       [
-       -122.3865381082706,
-       37.759319516299016
+       -122.384955767,
+       37.759371235
+      ],
+      [
+       -122.384926053,
+       37.759053809
+      ],
+      [
+       -122.385215828,
+       37.759036712
+      ],
+      [
+       -122.385819524,
+       37.759001089
+      ],
+      [
+       -122.38629717,
+       37.758972903
+      ],
+      [
+       -122.386330023,
+       37.759323466
       ]
      ]
     ]
@@ -60989,8 +61692,8 @@
     }
    },
    "centroid": {
-    "lon": -122.384138,
-    "lat": 37.759629
+    "lon": -122.384219,
+    "lat": 37.75965
    },
    "facts": [
     {
@@ -61746,6 +62449,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Pier 70 Parcel D was trimmed where it overlapped a neighbouring Assessor lot.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 4114008, 4114004",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 4114008, 4114004"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_d",
+      "slug": "pier-70-parcel-d",
+      "name": "Pier 70 Parcel D",
+      "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-d/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-d.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-06",
      "kind": "correction",
      "kind_label": "Correction",
@@ -61981,10 +62713,6 @@
     "coordinates": [
      [
       [
-       -122.3839109,
-       37.7595108
-      ],
-      [
        -122.3841496,
        37.75949
       ],
@@ -61993,20 +62721,32 @@
        37.7597015
       ],
       [
-       -122.3844474,
-       37.7596771
+       -122.384381129,
+       37.759682871
       ],
       [
-       -122.3844515835559,
-       37.75973945804195
+       -122.384385798,
+       37.759732758
       ],
       [
-       -122.3839283421648,
-       37.7597708762937
+       -122.384450876,
+       37.759728919
+      ],
+      [
+       -122.384451584,
+       37.759739458
+      ],
+      [
+       -122.383928342,
+       37.759770876
       ],
       [
        -122.3839109,
        37.7595108
+      ],
+      [
+       -122.3841496,
+       37.75949
       ]
      ]
     ]
@@ -63037,15 +63777,15 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- Parcel E2 is not yet built (Port Item 11A, memo dated Aug 7, 2026: construction of Phase 1 vertical projects has not moved forward, and no Phase 1 option parcel has been exercised) and it does have its own Assessor lot: Port Item 12B (Feb 2020) gives Parcel E2 as Assessor's Block 4116, Lot 008 (185 Maryland Street), and DataSF's Assessor layer lists 4116008 as an active P70-MU lot added 2019-02-07 with no street address. This record still uses hand-traced approximate geometry from the D4D diagram; whether to replace it with the real lot has not been decided (Pier 70's map shapes are signed off as they stand). Redone 2026-09-14 with a corrected, shear-free fit of the plan figure to the map (how this shape was traced, including earlier versions, is logged in its data file in the public data repository, https://github.com/pierandpoint/record) -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects this fit's 1-8m residual error, not a deliberate encroachment. EXTENDED SOUTH 2026-09-17: this block's south edge fell well short of the real sidewalk visible in satellite imagery -- 13m short at the SW corner, 25m short at the SE corner (a growing gap toward the east, consistent with this site's known local scale error for parcels far from the Illinois/Michigan St reference points used to fit the plan figure to the map). Extended each south vertex independently by its own measured gap (rather than a uniform shift) so the block's south edge now reaches the real sidewalk across its full width, matching Figure 6.4.2's own convention of drawing blocks flush to the street.",
-     "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-     "why_no_real_parcel": "Parcel E2 has its own Assessor lot: Port Item 12B (Feb 2020) gives Block 4116, Lot 008 (185 Maryland Street) and DataSF lists 4116008 as an active P70-MU lot. The earlier statement that the site has not been subdivided per the masterplan's named parcels is withdrawn for E2. This record still uses hand-traced approximate geometry from the D4D diagram; whether to replace it with the real lot has not been decided (Pier 70's map shapes are signed off as they stand).",
+     "accuracy_caveat": "The outline is Assessor lot 4116008, so its edges are recorded lot lines, not a trace. Port Item 12B (Feb 2020) gives Parcel E2 as Assessor's Block 4116, Lot 008 (185 Maryland Street), and DataSF's Assessor layer lists 4116008 as an active P70-MU lot added 2019-02-07 with no street address, so for E2 the identification rests on a Port document. A building may sit back from the lot lines. Parcel E2 is not yet built (Port Item 11A, memo dated Aug 7, 2026: construction of Phase 1 vertical projects has not moved forward, and no Phase 1 option parcel has been exercised).",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4116008 (recorded 2019-02-07; mapped 2019-03-14; active); cross-checked against Pier 70 Design for Development Figure 6.4.2 - Building Height Maximum (p.155).",
+     "why_no_real_parcel": "Parcel E2 has its own Assessor lot: Port Item 12B (Feb 2020) gives Block 4116, Lot 008 (185 Maryland Street) and DataSF lists 4116008 as an active P70-MU lot; the outline is that lot.",
      "regulatory_context": "Shown at 70 ft max per Figure 6.4.2, the same height tier as Parcel E3. The Port's sources treat this as the one Parcel E2: Port Item 12B (Feb 2020) describes E2 (185 Maryland Street) as a residential parcel entitled for approximately 280 rental dwelling units, and Port Item 9B (2017, Table A) ties Slipways Commons (SC-1) to one year after the TCO for Parcel E2; no source found describes a second 'E2', so the earlier 'possible labeling inconsistency' flag is withdrawn. No construction-start source found for this block."
     }
    },
    "centroid": {
-    "lon": -122.38332,
-    "lat": 37.758812
+    "lon": -122.383166,
+    "lat": 37.758598
    },
    "facts": [
     {
@@ -64177,6 +64917,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Pier 70 Parcel E2 now uses real Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 4116008",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 4116008"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_e2",
+      "slug": "pier-70-parcel-e2-block",
+      "name": "Pier 70 Parcel E2 (block)",
+      "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-e2-block/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-e2-block.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-06",
      "kind": "correction",
      "kind_label": "Correction",
@@ -64463,7 +65232,7 @@
      "accessed": "2026-09-24"
     }
    ],
-   "notes": "Approximate polygon for a real, D4D-adopted parcel -- see the accuracy note for this shape.",
+   "notes": "Parcel E2 of the Pier 70 Design for Development, shown as Assessor lot 4116008 (see the accuracy note).",
    "has_record_file": true,
    "last_verified": "2026-09-24",
    "tenants": [],
@@ -64472,24 +65241,24 @@
     "coordinates": [
      [
       [
-       -122.3836657,
-       37.7590691
+       -122.383490004,
+       37.75835452
       ],
       [
-       -122.3828389,
-       37.7591412
+       -122.383542214,
+       37.758911863
       ],
       [
-       -122.3828024,
-       37.7583714
+       -122.382679795,
+       37.758962782
       ],
       [
-       -122.3836292,
-       37.7584072
+       -122.382627592,
+       37.75840544
       ],
       [
-       -122.3836657,
-       37.7590691
+       -122.383490004,
+       37.75835452
       ]
      ]
     ]
@@ -64535,15 +65304,15 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- this block's boundary is a hand-traced D4D diagram parcel, not a surveyed lot; treat vertex positions as accurate to roughly 5-15m, not survey-grade (the transform's validation is recorded in this shape's mapping log in the public data repository, https://github.com/pierandpoint/record). EXTENDED SOUTH 2026-09-17: this block's south edge fell ~22m short of the real sidewalk visible in satellite imagery, part of the same local scale error documented on Parcel A/E2 (parcels far from the transform's Illinois/Michigan St anchors land short of their true extent). Extended both south vertices by 22m to reach the sidewalk. Note this is still the D4D diagram's original 'E3' boundary, not a re-survey of ESP's own real tent/dome footprint -- see the ESP-merge note below for that separate uncertainty. CURRENT USE, POST-LEASE FUTURE UNCLEAR (added 2026-09-17): this parcel is being treated as the site of Elevation Sky Park, a real interim entertainment venue confirmed to be under a 5-year lease (see the regulatory context) -- that part is sourced fact. What is NOT known, and should not be assumed, is what happens here after that lease ends: the D4D's original masterplan designates this parcel 70ft-max residential, but that plan was adopted years before ESP's interim lease existed, and no source found ties ESP's lease expiration to an actual scheduled residential construction start, or confirms the D4D's original boundary/use for this specific parcel will still be pursued unchanged by then. Do not read the 'entertainment' use here as a permanent reclassification, or assume 'residential' will automatically resume -- both are open questions. The parcel-level match to ESP itself is also still an approximation: no scaled site plan for the venue was found (an earlier note cited a rendering in an SFGATE article, but no article link was recorded, so that corroboration is not relied on), and ESP's real footprint may still extend slightly into neighboring E2/E4, as the pre-merge overlap analysis found.",
-     "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-     "why_no_real_parcel": "No source read ties this parcel to a specific Assessor lot. DataSF's Assessor parcels include lots created for the 28-acre district in 2019 (Port Item 12B, Feb 2020, gives Parcel E2 as Block 4116, Lot 008), and an active lot 4116009 with no street address lies at about this location next to E2's lot, but no source read confirms it as E3's; this uses hand-traced approximate geometry instead.",
+     "accuracy_caveat": "The outline is Assessor lot 4116009, so its edges are recorded lot lines, not a trace. That this is the lot of Parcel E3 is Pier & Point's own inference from location, shape and size (our earlier trace of the D4D figure measured 6,413 m2 against the lot's 5,158 m2; 61% of the trace lies inside the lot and the trace covers 76% of it). No Port document read ties the lot number to it. A building may sit back from the lot lines.  CURRENT USE, POST-LEASE FUTURE UNCLEAR (added 2026-09-17): this parcel is being treated as the site of Elevation Sky Park, a real interim entertainment venue confirmed to be under a 5-year lease (see the regulatory context) -- that part is sourced fact. What is NOT known, and should not be assumed, is what happens here after that lease ends: the D4D's original masterplan designates this parcel 70ft-max residential, but that plan was adopted years before ESP's interim lease existed, and no source found ties ESP's lease expiration to an actual scheduled residential construction start, or confirms the D4D's original boundary/use for this specific parcel will still be pursued unchanged by then. Do not read the 'entertainment' use here as a permanent reclassification, or assume 'residential' will automatically resume -- both are open questions. The parcel-level match to ESP itself is also still an approximation: no scaled site plan for the venue was found (an earlier note cited a rendering in an SFGATE article, but no article link was recorded, so that corroboration is not relied on), and ESP's real footprint may still extend slightly into neighboring E2/E4, as the pre-merge overlap analysis found.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4116009 (recorded 2019-02-07; mapped 2019-03-14; active); cross-checked against Pier 70 Design for Development Figure 6.4.2 - Building Height Maximum (p.155).",
+     "why_no_real_parcel": "No single Assessor lot is documented as Parcel E3. Lot 4116009 (active) matches its location, shape and size, so its outline is Assessor lot 4116009; the identification is Pier & Point's inference, as the accuracy note says.",
      "regulatory_context": "D4D-designated use: residential, 70 ft max per Figure 6.4.2 (no construction-start source ever found for that plan). CURRENT REAL USE: Elevation Sky Park (Elevation XR, in partnership with Brookfield Properties), a 165,000 sq ft interim entertainment venue (3 geodesic domes + a pyramid) under a 5-year lease, to be fully permitted through the Port of San Francisco (community engagement deck, June 2025, future tense). A one-day festival, RASA World's 'Pier Play San Francisco', was held on the site on September 19, 2026; the venue's own page (Sept 2026) calls the site 'the future home of Elevation Sky Park' and invites sign-ups for opening announcements, and the July 2026 release had said the campus would open in phases beginning September 2026. No source shows the venue open. Port materials describe it as an 'interim activation on Phase 2/3 sites within Pier 70 development zone' -- confirming it is temporary by design, though not tied to a specific successor project or date."
     }
    },
    "centroid": {
-    "lon": -122.382352,
-    "lat": 37.758923
+    "lon": -122.382199,
+    "lat": 37.758781
    },
    "facts": [
     {
@@ -65460,6 +66229,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Pier 70 Parcel E3 now uses real Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 4116009",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 4116009"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_e3",
+      "slug": "pier-70-parcel-e3",
+      "name": "Pier 70 Parcel E3",
+      "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-e3/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-e3.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-06",
      "kind": "correction",
      "kind_label": "Correction",
@@ -65811,7 +66609,7 @@
      "url": "https://www.sfchronicle.com/bayarea/article/entertainment-complex-pier-70-20368547.php"
     }
    ],
-   "notes": "Approximate polygon for a real, D4D-adopted parcel. MERGED 2026-09-17 with the separate Elevation Sky Park entry (a Pier & Point judgment, not a sourced boundary) -- see the accuracy note and the mapping log. Status planned (corrected 2026-09-29 from existing): the venue's own page (Sept 2026) reports that RASA World's one-day festival Pier Play San Francisco was held on Sept 19, 2026 on 'the future home of Elevation Sky Park', offers sign-ups for 'opening announcements', and gives no opening date; no source shows the venue open.",
+   "notes": "Parcel E3 of the Pier 70 Design for Development, shown as Assessor lot 4116009 (see the accuracy note). Status planned (corrected 2026-09-29 from existing): the venue's own page (Sept 2026) reports that RASA World's one-day festival Pier Play San Francisco was held on Sept 19, 2026 on 'the future home of Elevation Sky Park', offers sign-ups for 'opening announcements', and gives no opening date; no source shows the venue open.",
    "has_record_file": true,
    "last_verified": "2026-09-29",
    "tenants": [
@@ -65844,24 +66642,32 @@
     "coordinates": [
      [
       [
-       -122.382691,
-       37.7592194
+       -122.382541322,
+       37.759039806
       ],
       [
-       -122.381885,
-       37.7592897
+       -122.381702703,
+       37.759089313
       ],
       [
-       -122.381844,
-       37.7584792
+       -122.381644095,
+       37.7584635
       ],
       [
-       -122.38265,
-       37.7584089
+       -122.381942489,
+       37.758445885
       ],
       [
-       -122.382691,
-       37.7592194
+       -122.382482705,
+       37.758413993
+      ],
+      [
+       -122.382534909,
+       37.758971336
+      ],
+      [
+       -122.382541322,
+       37.759039806
       ]
      ]
     ]
@@ -66989,15 +67795,15 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- no vertical construction is reported on this block (Port Item 11A, Aug 7, 2026: construction of Phase 1 vertical projects and parks has not moved forward, and the developer has not exercised an option on any Phase 1 option parcel). It has not been matched to a specific Assessor lot: DataSF's Assessor layer shows the 28-acre site re-mapped into many active P70-MU lots (blocks 4052 and 4110-4117, mostly added 2019-02-07, most with no street address) and Port Item 12B (Feb 2020) gives Parcel E2 as Block 4116 Lot 008, so which lot, if any, corresponds to this block has not been checked against the recorded final map. Redone 2026-09-14 with a corrected, shear-free transform -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects this transform's 1-8m residual error, not a deliberate encroachment. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
-     "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-     "why_no_real_parcel": "Not matched to a specific Assessor lot. DataSF's Assessor layer shows the Pier 70 28-acre site re-mapped into many active P70-MU lots in blocks 4052 and 4110-4117 (mostly added 2019-02-07), so the earlier statement that it has not been subdivided is withdrawn; which lot corresponds to this block has not been checked against the recorded final map, so this record uses hand-traced approximate geometry instead.",
+     "accuracy_caveat": "The outline is the union of three real Assessor lots (4115001, 4115003 and 4115004), so its edges are recorded lot lines, not a trace. That these three lots are Parcels F/G is Pier & Point's own inference from their location, shape and size (7,674 m2, against about 7,260 m2 measured on D4D Figure 6.4.2; both show the same pointed west tip and slanted south-west edge along the curving road). No Port document read ties these lot numbers to F/G. A building may sit back from the lot lines. No vertical construction is reported on this block (Port Item 11A, Aug 7, 2026: construction of Phase 1 vertical projects and parks has not moved forward, and the developer has not exercised an option on any Phase 1 option parcel).",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lots 4115001, 4115003 and 4115004 (recorded 2019-02-07, mapped 2019-03-14, active), joined into one outline; cross-checked against Pier 70 Design for Development Figure 6.4.2 - Building Height Maximum (p.155).",
+     "why_no_real_parcel": "No single Assessor lot matches F/G. Three adjacent active lots in block 4115 (4115001, 4115003 and 4115004) together cover it, so its shape is their union rather than one status.csv row; the identification is Pier & Point's inference, as the accuracy note says.",
      "regulatory_context": "Flexible use: the D4D's Figure 2.1.1 stripes F/G Commercial-Office and Residential (commercial in the Mid-Point baseline scenario; 'life science' does not appear in the D4D for F/G), shown as ONE combined parcel 'F/G' in the D4D's own Figure 6.4.2 (not two separate parcels 'F' and 'G'), 90 ft max, and per D4D Section 6.4.2 commercial buildings are limited to six stories (a residential building may have nine), so the six-story figure holds only if F/G is built as commercial. It is in subphase 2A of the Port's proposed 2026 phasing plan (Port Item 11A, Exhibit A). A '+/- 410,000 RSF' figure previously recorded here came from an uncited leasing brochure and has been dropped. No construction-start source found."
     }
    },
    "centroid": {
-    "lon": -122.384455,
-    "lat": 37.757939
+    "lon": -122.385095,
+    "lat": 37.758049
    },
    "facts": [
     {
@@ -67670,6 +68476,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Pier 70 Parcels F/G now uses real Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 4115001, 4115003, 4115004",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 4115001, 4115003, 4115004"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_fg",
+      "slug": "pier-70-parcels-f-g",
+      "name": "Pier 70 Parcels F/G",
+      "permalink": "https://pierandpoint.org/parcels/pier-70-parcels-f-g/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-70-parcels-f-g.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-06",
      "kind": "correction",
      "kind_label": "Correction",
@@ -67889,7 +68724,7 @@
      "date": "2023-04-17"
     }
    ],
-   "notes": "Approximate polygon for a real, D4D-adopted parcel -- see the Accuracy note. Status 'planned' as of Port Item 11A (memo dated Aug 7, 2026), which says construction of Phase 1 vertical projects has not moved forward.",
+   "notes": "Parcels F/G of the Pier 70 Design for Development, shown as the union of Assessor lots 4115001, 4115003 and 4115004 (see the accuracy note). Status 'planned' as of Port Item 11A (memo dated Aug 7, 2026), which says construction of Phase 1 vertical projects has not moved forward.",
    "has_record_file": true,
    "last_verified": "2026-09-20",
    "tenants": [],
@@ -67898,36 +68733,360 @@
     "coordinates": [
      [
       [
-       -122.3838039,
-       37.7578581
+       -122.385129095,
+       37.757612754
       ],
       [
-       -122.3848883751193,
-       37.757765719065894
+       -122.385211639,
+       37.757753286
       ],
       [
-       -122.384895979,
-       37.757766868
+       -122.385513578,
+       37.758014151
       ],
       [
-       -122.38482149205069,
-       37.757801675
+       -122.385493093,
+       37.758015361
       ],
       [
-       -122.38485406263148,
-       37.758124182
+       -122.385441981,
+       37.758043166
       ],
       [
-       -122.384747035,
-       37.758141741
+       -122.385351719,
+       37.758048497
       ],
       [
-       -122.3838265871683,
-       37.75819797262668
+       -122.385346231,
+       37.758048831
       ],
       [
-       -122.3838039,
-       37.7578581
+       -122.385340745,
+       37.758049188
+      ],
+      [
+       -122.385335261,
+       37.758049564
+      ],
+      [
+       -122.385329779,
+       37.758049962
+      ],
+      [
+       -122.3853243,
+       37.758050382
+      ],
+      [
+       -122.385318823,
+       37.758050822
+      ],
+      [
+       -122.38531335,
+       37.758051283
+      ],
+      [
+       -122.385307878,
+       37.758051765
+      ],
+      [
+       -122.385302411,
+       37.758052268
+      ],
+      [
+       -122.385296946,
+       37.758052793
+      ],
+      [
+       -122.385291484,
+       37.758053338
+      ],
+      [
+       -122.385286026,
+       37.758053905
+      ],
+      [
+       -122.385280572,
+       37.758054492
+      ],
+      [
+       -122.385275121,
+       37.7580551
+      ],
+      [
+       -122.385269673,
+       37.758055729
+      ],
+      [
+       -122.385264231,
+       37.758056379
+      ],
+      [
+       -122.385258791,
+       37.758057051
+      ],
+      [
+       -122.385253356,
+       37.758057743
+      ],
+      [
+       -122.385247925,
+       37.758058456
+      ],
+      [
+       -122.385242499,
+       37.75805919
+      ],
+      [
+       -122.385237077,
+       37.758059945
+      ],
+      [
+       -122.38523166,
+       37.75806072
+      ],
+      [
+       -122.385226247,
+       37.758061516
+      ],
+      [
+       -122.38522084,
+       37.758062334
+      ],
+      [
+       -122.385215437,
+       37.758063171
+      ],
+      [
+       -122.38521004,
+       37.75806403
+      ],
+      [
+       -122.385204648,
+       37.75806491
+      ],
+      [
+       -122.385199262,
+       37.75806581
+      ],
+      [
+       -122.385193881,
+       37.75806673
+      ],
+      [
+       -122.385188505,
+       37.758067672
+      ],
+      [
+       -122.385183136,
+       37.758068634
+      ],
+      [
+       -122.385177773,
+       37.758069618
+      ],
+      [
+       -122.385172415,
+       37.758070621
+      ],
+      [
+       -122.385167063,
+       37.758071645
+      ],
+      [
+       -122.385161719,
+       37.75807269
+      ],
+      [
+       -122.385156381,
+       37.758073755
+      ],
+      [
+       -122.385151048,
+       37.758074841
+      ],
+      [
+       -122.385145723,
+       37.758075947
+      ],
+      [
+       -122.385140404,
+       37.758077074
+      ],
+      [
+       -122.385135093,
+       37.75807822
+      ],
+      [
+       -122.385130242,
+       37.758079267
+      ],
+      [
+       -122.385125384,
+       37.758080293
+      ],
+      [
+       -122.385120519,
+       37.758081299
+      ],
+      [
+       -122.385115647,
+       37.758082282
+      ],
+      [
+       -122.385110768,
+       37.758083245
+      ],
+      [
+       -122.385105884,
+       37.758084188
+      ],
+      [
+       -122.385100992,
+       37.75808511
+      ],
+      [
+       -122.385096096,
+       37.75808601
+      ],
+      [
+       -122.385091193,
+       37.75808689
+      ],
+      [
+       -122.385086282,
+       37.758087749
+      ],
+      [
+       -122.385081368,
+       37.758088587
+      ],
+      [
+       -122.385076448,
+       37.758089404
+      ],
+      [
+       -122.385071521,
+       37.7580902
+      ],
+      [
+       -122.38506659,
+       37.758090975
+      ],
+      [
+       -122.385061653,
+       37.758091728
+      ],
+      [
+       -122.385056712,
+       37.75809246
+      ],
+      [
+       -122.385051766,
+       37.758093172
+      ],
+      [
+       -122.385046814,
+       37.758093862
+      ],
+      [
+       -122.385041858,
+       37.758094532
+      ],
+      [
+       -122.385036898,
+       37.758095179
+      ],
+      [
+       -122.385031933,
+       37.758095806
+      ],
+      [
+       -122.385026965,
+       37.758096412
+      ],
+      [
+       -122.385021992,
+       37.758096996
+      ],
+      [
+       -122.385017015,
+       37.758097559
+      ],
+      [
+       -122.385012034,
+       37.758098101
+      ],
+      [
+       -122.385007051,
+       37.758098621
+      ],
+      [
+       -122.385002063,
+       37.75809912
+      ],
+      [
+       -122.384997072,
+       37.758099598
+      ],
+      [
+       -122.384992078,
+       37.758100054
+      ],
+      [
+       -122.384987081,
+       37.758100489
+      ],
+      [
+       -122.384982081,
+       37.758100903
+      ],
+      [
+       -122.384977079,
+       37.758101295
+      ],
+      [
+       -122.384972073,
+       37.758101666
+      ],
+      [
+       -122.384967066,
+       37.758102016
+      ],
+      [
+       -122.384962056,
+       37.758102344
+      ],
+      [
+       -122.384957043,
+       37.758102651
+      ],
+      [
+       -122.384509502,
+       37.758129081
+      ],
+      [
+       -122.384371517,
+       37.75813723
+      ],
+      [
+       -122.383681589,
+       37.758177972
+      ],
+      [
+       -122.383636895,
+       37.757700876
+      ],
+      [
+       -122.384326818,
+       37.757660135
+      ],
+      [
+       -122.384464804,
+       37.757651986
+      ],
+      [
+       -122.385129095,
+       37.757612754
       ]
      ]
     ]
@@ -67968,15 +69127,15 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- this block is not yet built (Port Item 11A, Aug 2026: the developer 'has not exercised an option of any Phase 1 option parcels'), and no source read ties it to a specific Assessor lot: DataSF's Assessor parcels include new lots created for the 28-acre district in 2019, without street addresses, but which lot (if any) is this block's was not established. It currently sits on vacant/graded land, surface parking, or an existing industrial building slated for demolition within Brookfield's 28-acre district. Redone 2026-09-14 with a corrected, shear-free fit of the plan drawing to the map -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects that fit's 1-8m residual error, not a deliberate encroachment. Street-facing edge re-clipped 2026-09-17 against official curb-referenced street data. Each of these changes is logged in this shape's data file in the public data repository (https://github.com/pierandpoint/record).",
-     "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-     "why_no_real_parcel": "No source read ties this block to a specific Assessor lot. DataSF's Assessor parcels include lots created for Brookfield's 28-acre district in 2019 (for example, Port Item 12B, Feb 2020, gives Parcel E2 as Block 4116, Lot 008), but this block's own lot was not identified, so this uses hand-traced approximate geometry instead.",
+     "accuracy_caveat": "The outline is the union of Assessor lots 4117002 and 4117001, so its edges are recorded lot lines, not a trace. The lots were assigned by the owner from the plan diagrams: the parcel number is placed at the upper left of its parcel, and the H1 and H2 labels sit on either side of the dashed mid-block passage, so lots 4117002 and 4117001 are H1 and lot 4117003 is H2. No document read names these lots. The lots extend south of the block edge the D4D draws, into the former power-plant ground, so the outline is larger than the diagram's block. A building may sit back from the lot lines. No vertical construction is reported on this block (Port Item 11A, Aug 7, 2026: construction of Phase 1 vertical projects and parks has not moved forward, and the developer has not exercised an option on any Phase 1 option parcel).",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lots 4117002 and 4117001 (recorded 2019-02-07; mapped 2019-03-14; active), joined into one outline; cross-checked against Pier 70 Design for Development Figure 6.4.2 - Building Height Maximum (p.155).",
+     "why_no_real_parcel": "No document names the Assessor lot of Parcel H1. Lots 4117002 and 4117001 (active) were assigned to it by the owner from the plan diagrams, so its outline is their union.",
      "regulatory_context": "Flexible commercial-office/residential parcel: D4D Figure 2.1.1 stripes H1 as Commercial-Office and Residential; the baseline (Mid-Point) and Maximum Residential scenarios show it residential and only the Maximum Office scenario shows it commercial. 90 ft max per Figure 6.4.2; six stories for commercial buildings and nine for residential (D4D Section 6.4.2). An earlier note citing Brookfield's leasing brochure (pure office use; a combined ~430,000 RSF for H1-H2) was removed 2026-09-29 because the brochure is not cited or retrieved. No construction-start source found."
     }
    },
    "centroid": {
-    "lon": -122.383015,
-    "lat": 37.758053
+    "lon": -122.382913,
+    "lat": 37.757949
    },
    "facts": [
     {
@@ -68664,6 +69823,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Pier 70 Parcel H1 now uses real Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 4117002 and 4117001",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 4117002 and 4117001"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_h1",
+      "slug": "pier-70-parcel-h1",
+      "name": "Pier 70 Parcel H1",
+      "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-h1/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-h1.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-06",
      "kind": "correction",
      "kind_label": "Correction",
@@ -68891,7 +70079,7 @@
      "date": "2026-08-11"
     }
    ],
-   "notes": "Approximate polygon for a real, D4D-adopted parcel -- see the Accuracy note. Status planned: Port Item 11A (Aug 2026) says construction of Phase 1 vertical projects and parks has not moved forward.",
+   "notes": "Parcel H1 of the Pier 70 Design for Development, shown as the union of Assessor lots 4117002 and 4117001 (see the accuracy note). Status planned: Port Item 11A (Aug 2026) says construction of Phase 1 vertical projects and parks has not moved forward.",
    "has_record_file": true,
    "last_verified": "2026-09-29",
    "tenants": [],
@@ -68900,24 +70088,32 @@
     "coordinates": [
      [
       [
-       -122.3826863,
-       37.7579527
+       -122.383429919,
+       37.757713097
       ],
       [
-       -122.38348242732751,
-       37.757883305419334
+       -122.383474611,
+       37.758190194
       ],
       [
-       -122.383514616,
-       37.758216657
+       -122.382605301,
+       37.75824152
       ],
       [
-       -122.38270693095971,
-       37.75826122049542
+       -122.382467315,
+       37.758249666
       ],
       [
-       -122.3826863,
-       37.7579527
+       -122.38242263,
+       37.757772571
+      ],
+      [
+       -122.382560614,
+       37.757764424
+      ],
+      [
+       -122.383429919,
+       37.757713097
       ]
      ]
     ]
@@ -68958,15 +70154,15 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- this block is not yet built (Port Item 11A, Aug 2026: the developer 'has not exercised an option of any Phase 1 option parcels'), and no source read ties it to a specific Assessor lot: DataSF's Assessor parcels include new lots created for the 28-acre district in 2019, without street addresses, but which lot (if any) is this block's was not established. It currently sits on vacant/graded land, surface parking, or an existing industrial building slated for demolition within Brookfield's 28-acre district. Redone 2026-09-14 with a corrected, shear-free transform -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects this transform's 1-8m residual error, not a deliberate encroachment. Street-facing edge re-clipped 2026-09-17 against official curb-referenced street data.",
-     "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-     "why_no_real_parcel": "No source read ties this block to a specific Assessor lot. DataSF's Assessor parcels include lots created for Brookfield's 28-acre district in 2019 (for example, Port Item 12B, Feb 2020, gives Parcel E2 as Block 4116, Lot 008), but this block's own lot was not identified, so this uses hand-traced approximate geometry instead.",
+     "accuracy_caveat": "The outline is Assessor lot 4117003, so its edges are recorded lot lines, not a trace. The lots were assigned by the owner from the plan diagrams: the parcel number is placed at the upper left of its parcel, and the H1 and H2 labels sit on either side of the dashed mid-block passage, so lots 4117002 and 4117001 are H1 and lot 4117003 is H2. No document read names these lots. The lots extend south of the block edge the D4D draws, into the former power-plant ground, so the outline is larger than the diagram's block. A building may sit back from the lot lines. No vertical construction is reported on this block (Port Item 11A, Aug 7, 2026: construction of Phase 1 vertical projects and parks has not moved forward, and the developer has not exercised an option on any Phase 1 option parcel).",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4117003 (recorded 2019-02-07; mapped 2019-03-14; active); cross-checked against Pier 70 Design for Development Figure 6.4.2 - Building Height Maximum (p.155).",
+     "why_no_real_parcel": "No document names the Assessor lot of Parcel H2. Lot 4117003 (active) was assigned to it by the owner from the plan diagrams, so its outline is that lot.",
      "regulatory_context": "Flexible commercial-office/residential parcel: D4D Figure 1.5.5 (baseline) shows H2 residential and only the Maximum Office scenario shows it commercial; 90 ft max per Figure 6.4.2; six stories for commercial buildings and nine for residential (D4D Section 6.4.2). An earlier note of the same ~430,000 RSF program as Parcel H1 was removed 2026-09-29 (no source read gives an RSF figure for H1/H2). No construction-start source found."
     }
    },
    "centroid": {
-    "lon": -122.38226,
-    "lat": 37.758109
+    "lon": -122.381967,
+    "lat": 37.758136
    },
    "facts": [
     {
@@ -69654,6 +70850,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Pier 70 Parcel H2 now uses real Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 4117003",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 4117003"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_h2",
+      "slug": "pier-70-parcel-h2",
+      "name": "Pier 70 Parcel H2",
+      "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-h2/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-h2.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-06",
      "kind": "correction",
      "kind_label": "Correction",
@@ -69881,7 +71106,7 @@
      "date": "2026-08-11"
     }
    ],
-   "notes": "Approximate polygon for a real, D4D-adopted parcel -- see the accuracy note. Status planned: Port Item 11A (Aug 2026) says construction of Phase 1 vertical projects and parks has not moved forward.",
+   "notes": "Parcel H2 of the Pier 70 Design for Development, shown as Assessor lot 4117003 (see the accuracy note). Status planned: Port Item 11A (Aug 2026) says construction of Phase 1 vertical projects and parks has not moved forward.",
    "has_record_file": true,
    "last_verified": "2026-09-29",
    "tenants": [],
@@ -69890,24 +71115,36 @@
     "coordinates": [
      [
       [
-       -122.3820118,
-       37.7580115
+       -122.381924534,
+       37.75825417
       ],
       [
-       -122.3826863,
-       37.7579527
+       -122.381641664,
+       37.758270869
       ],
       [
-       -122.38270693095971,
-       37.75826122049542
+       -122.381634482,
+       37.758194182
       ],
       [
-       -122.38188508577663,
-       37.75830656526749
+       -122.381793417,
+       37.757809716
       ],
       [
-       -122.3820118,
-       37.7580115
+       -122.38242263,
+       37.757772571
+      ],
+      [
+       -122.382467315,
+       37.758249666
+      ],
+      [
+       -122.3819271,
+       37.758281558
+      ],
+      [
+       -122.381924534,
+       37.75825417
       ]
      ]
     ]
@@ -69959,8 +71196,8 @@
     }
    },
    "centroid": {
-    "lon": -122.384732,
-    "lat": 37.759579
+    "lon": -122.384688,
+    "lat": 37.759568
    },
    "facts": [
     {
@@ -70248,6 +71485,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Pier 70 Building 2 was trimmed where it overlapped a neighbouring Assessor lot.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 4114008, 4114004",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 4114008, 4114004"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_block2",
+      "slug": "pier-70-building-2-warehouse-no-2",
+      "name": "Pier 70 Building 2 (Warehouse No. 2)",
+      "permalink": "https://pierandpoint.org/parcels/pier-70-building-2-warehouse-no-2/",
+      "api": "https://pierandpoint.org/api/v1/records/pier-70-building-2-warehouse-no-2.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-09-29",
      "kind": "correction",
      "kind_label": "Correction",
@@ -70431,24 +71697,40 @@
     "coordinates": [
      [
       [
-       -122.3848401,
-       37.7598247
+       -122.3845694,
+       37.7592119
       ],
       [
        -122.3847977,
        37.759192
       ],
       [
-       -122.3845694,
-       37.7592119
+       -122.3848401,
+       37.7598247
       ],
       [
        -122.3846116,
        37.7598418
       ],
       [
-       -122.3848401,
-       37.7598247
+       -122.384603435,
+       37.759719918
+      ],
+      [
+       -122.384800007,
+       37.759708321
+      ],
+      [
+       -122.384798659,
+       37.759693941
+      ],
+      [
+       -122.38460247,
+       37.759705516
+      ],
+      [
+       -122.3845694,
+       37.7592119
       ]
      ]
     ]

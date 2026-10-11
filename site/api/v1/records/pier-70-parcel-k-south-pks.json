@@ -42,15 +42,15 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- no vertical construction is reported on this block (Port Item 11A, Aug 7, 2026: construction of Phase 1 vertical projects and parks has not moved forward). It is Parcel K South, a Port-retained parcel created from the Port's Illinois & 20th Street Parcel (Port Item 9B, Res 17-52), outside the 28-Acre Site and the developer's vertical option, so it is not within Brookfield's 28-acre district. It has not been matched to a specific Assessor lot: DataSF's Assessor layer shows the surrounding Pier 70 land re-mapped into many active P70-MU lots (mostly added 2019-02-07, most with no street address), and Port Item 9B gives the Illinois & 20th Street Parcel as Block 4110 Lot 001 (DataSF lists 4110001 as retired 2018-10-02). RE-TRACED 2026-09-17 directly from Figure 6.4.2 at the correct source resolution (how the shape was traced, including earlier versions, is logged in its data file in the public data repository, https://github.com/pierandpoint/record) -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. This deliberately does NOT match today's satellite imagery of the parking lot -- this parcel's boundary represents the D4D's planned footprint, including '21ST ST (NEW)', which is not built yet.",
-    "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-    "why_no_real_parcel": "Not matched to a specific Assessor lot. PKS is part of the Port's Illinois & 20th Street Parcel (Assessor's Block 4110/Lot 001 per Port Item 9B), which Resolution 17-52 has the Port subdivide into four parcels; it is outside Brookfield's 28-acre site, so the earlier statement that it is part of that site is withdrawn. DataSF lists 4110001 as retired (2018-10-02); which current lot corresponds to PKS has not been checked, so this record uses hand-traced approximate geometry instead.",
+    "accuracy_caveat": "The outline is Assessor lot 4110013, so its edges are recorded lot lines, not a trace. That this is the lot of Parcel K South is Pier & Point's own inference from location, shape and size (our earlier trace of the D4D figure measured 1,709 m2 against the lot's 1,637 m2; 83% of the trace lies inside the lot and the trace covers 86% of it). No Port document read ties the lot number to it. A building may sit back from the lot lines. No vertical construction is reported on this block (Port Item 11A, Aug 7, 2026: construction of Phase 1 vertical projects and parks has not moved forward). It is Parcel K South, a Port-retained parcel created from the Port's Illinois & 20th Street Parcel (Port Item 9B, Res 17-52), outside the 28-Acre Site and the developer's vertical option; Port Item 9B gives that parent parcel as Block 4110 Lot 001, which DataSF lists as retired 2018-10-02.",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4110013 (recorded 2019-02-07; mapped 2019-03-14; active); cross-checked against Pier 70 Design for Development Figure 6.4.2 - Building Height Maximum (p.155).",
+    "why_no_real_parcel": "No single Assessor lot is documented as Parcel K South. Lot 4110013 (active) matches its location, shape and size, so its outline is Assessor lot 4110013; the identification is Pier & Point's inference, as the accuracy note says.",
     "regulatory_context": "Residential in every D4D land-use scenario (Figures 1.5.5-1.5.7), 65 ft max per Figure 6.4.2, and a 100%-affordable housing site under Port Item 9B. A real parcel distinct from Parcel K North: Port Resolution 17-52 (Item 9B, Sept 2017) has the Port subdivide the 20th/Illinois parcel into four parcels including Parcel K North and Parcel K South, and the Port's Item 12B memo (Feb 2020) names 'the Illinois/20th Street parcels known as Parcel K North and Parcel K South' (its Resolution 20-07 recital says 'the Illinois/20th Street parcel known as Parcel K', singular). No source found gives a specific unit count, architect, or construction-status beyond this."
    }
   },
   "centroid": {
-   "lon": -122.387018,
-   "lat": 37.759185
+   "lon": -122.386908,
+   "lat": 37.759127
   },
   "facts": [
    {
@@ -323,6 +323,35 @@
   ],
   "changes": [
    {
+    "date": "2026-10-10",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Pier 70 Parcel K South now uses real Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 4110013",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 4110013"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_pks",
+     "slug": "pier-70-parcel-k-south-pks",
+     "name": "Pier 70 Parcel K South (PKS)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-k-south-pks/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-k-south-pks.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-10-06",
     "kind": "correction",
     "kind_label": "Correction",
@@ -491,7 +520,7 @@
     "date": "2026-08-11"
    }
   ],
-  "notes": "Approximate polygon for a real, D4D-adopted parcel -- see its accuracy caveat.",
+  "notes": "Parcel K South of the Pier 70 Design for Development, shown as Assessor lot 4110013 (see the accuracy note).",
   "has_record_file": true,
   "last_verified": "2026-09-20",
   "tenants": [],
@@ -500,24 +529,24 @@
    "coordinates": [
     [
      [
-      -122.387328272,
-      37.759263996562474
+      -122.386649851,
+      37.759034838
      ],
      [
-      -122.386576,
-      37.75929800422032
+      -122.387270792,
+      37.758998156
      ],
      [
-      -122.386554,
-      37.75906638453553
+      -122.387295936,
+      37.759266418
      ],
      [
-      -122.387305014,
-      37.759032376877684
+      -122.386674993,
+      37.759303101
      ],
      [
-      -122.387328272,
-      37.759263996562474
+      -122.386649851,
+      37.759034838
      ]
     ]
    ]

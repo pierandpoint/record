@@ -45,15 +45,15 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- this block's boundary is a hand-traced D4D diagram parcel, not a surveyed lot; treat vertex positions as accurate to roughly 5-15m, not survey-grade (the transform's validation is recorded in this shape's mapping log in the public data repository, https://github.com/pierandpoint/record). EXTENDED SOUTH 2026-09-17: this block's south edge fell ~22m short of the real sidewalk visible in satellite imagery, part of the same local scale error documented on Parcel A/E2 (parcels far from the transform's Illinois/Michigan St anchors land short of their true extent). Extended both south vertices by 22m to reach the sidewalk. Note this is still the D4D diagram's original 'E3' boundary, not a re-survey of ESP's own real tent/dome footprint -- see the ESP-merge note below for that separate uncertainty. CURRENT USE, POST-LEASE FUTURE UNCLEAR (added 2026-09-17): this parcel is being treated as the site of Elevation Sky Park, a real interim entertainment venue confirmed to be under a 5-year lease (see the regulatory context) -- that part is sourced fact. What is NOT known, and should not be assumed, is what happens here after that lease ends: the D4D's original masterplan designates this parcel 70ft-max residential, but that plan was adopted years before ESP's interim lease existed, and no source found ties ESP's lease expiration to an actual scheduled residential construction start, or confirms the D4D's original boundary/use for this specific parcel will still be pursued unchanged by then. Do not read the 'entertainment' use here as a permanent reclassification, or assume 'residential' will automatically resume -- both are open questions. The parcel-level match to ESP itself is also still an approximation: no scaled site plan for the venue was found (an earlier note cited a rendering in an SFGATE article, but no article link was recorded, so that corroboration is not relied on), and ESP's real footprint may still extend slightly into neighboring E2/E4, as the pre-merge overlap analysis found.",
-    "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-    "why_no_real_parcel": "No source read ties this parcel to a specific Assessor lot. DataSF's Assessor parcels include lots created for the 28-acre district in 2019 (Port Item 12B, Feb 2020, gives Parcel E2 as Block 4116, Lot 008), and an active lot 4116009 with no street address lies at about this location next to E2's lot, but no source read confirms it as E3's; this uses hand-traced approximate geometry instead.",
+    "accuracy_caveat": "The outline is Assessor lot 4116009, so its edges are recorded lot lines, not a trace. That this is the lot of Parcel E3 is Pier & Point's own inference from location, shape and size (our earlier trace of the D4D figure measured 6,413 m2 against the lot's 5,158 m2; 61% of the trace lies inside the lot and the trace covers 76% of it). No Port document read ties the lot number to it. A building may sit back from the lot lines.  CURRENT USE, POST-LEASE FUTURE UNCLEAR (added 2026-09-17): this parcel is being treated as the site of Elevation Sky Park, a real interim entertainment venue confirmed to be under a 5-year lease (see the regulatory context) -- that part is sourced fact. What is NOT known, and should not be assumed, is what happens here after that lease ends: the D4D's original masterplan designates this parcel 70ft-max residential, but that plan was adopted years before ESP's interim lease existed, and no source found ties ESP's lease expiration to an actual scheduled residential construction start, or confirms the D4D's original boundary/use for this specific parcel will still be pursued unchanged by then. Do not read the 'entertainment' use here as a permanent reclassification, or assume 'residential' will automatically resume -- both are open questions. The parcel-level match to ESP itself is also still an approximation: no scaled site plan for the venue was found (an earlier note cited a rendering in an SFGATE article, but no article link was recorded, so that corroboration is not relied on), and ESP's real footprint may still extend slightly into neighboring E2/E4, as the pre-merge overlap analysis found.",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4116009 (recorded 2019-02-07; mapped 2019-03-14; active); cross-checked against Pier 70 Design for Development Figure 6.4.2 - Building Height Maximum (p.155).",
+    "why_no_real_parcel": "No single Assessor lot is documented as Parcel E3. Lot 4116009 (active) matches its location, shape and size, so its outline is Assessor lot 4116009; the identification is Pier & Point's inference, as the accuracy note says.",
     "regulatory_context": "D4D-designated use: residential, 70 ft max per Figure 6.4.2 (no construction-start source ever found for that plan). CURRENT REAL USE: Elevation Sky Park (Elevation XR, in partnership with Brookfield Properties), a 165,000 sq ft interim entertainment venue (3 geodesic domes + a pyramid) under a 5-year lease, to be fully permitted through the Port of San Francisco (community engagement deck, June 2025, future tense). A one-day festival, RASA World's 'Pier Play San Francisco', was held on the site on September 19, 2026; the venue's own page (Sept 2026) calls the site 'the future home of Elevation Sky Park' and invites sign-ups for opening announcements, and the July 2026 release had said the campus would open in phases beginning September 2026. No source shows the venue open. Port materials describe it as an 'interim activation on Phase 2/3 sites within Pier 70 development zone' -- confirming it is temporary by design, though not tied to a specific successor project or date."
    }
   },
   "centroid": {
-   "lon": -122.382352,
-   "lat": 37.758923
+   "lon": -122.382199,
+   "lat": 37.758781
   },
   "facts": [
    {
@@ -970,6 +970,35 @@
   ],
   "changes": [
    {
+    "date": "2026-10-10",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Pier 70 Parcel E3 now uses real Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 4116009",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 4116009"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_e3",
+     "slug": "pier-70-parcel-e3",
+     "name": "Pier 70 Parcel E3",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-e3/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-e3.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-10-06",
     "kind": "correction",
     "kind_label": "Correction",
@@ -1321,7 +1350,7 @@
     "url": "https://www.sfchronicle.com/bayarea/article/entertainment-complex-pier-70-20368547.php"
    }
   ],
-  "notes": "Approximate polygon for a real, D4D-adopted parcel. MERGED 2026-09-17 with the separate Elevation Sky Park entry (a Pier & Point judgment, not a sourced boundary) -- see the accuracy note and the mapping log. Status planned (corrected 2026-09-29 from existing): the venue's own page (Sept 2026) reports that RASA World's one-day festival Pier Play San Francisco was held on Sept 19, 2026 on 'the future home of Elevation Sky Park', offers sign-ups for 'opening announcements', and gives no opening date; no source shows the venue open.",
+  "notes": "Parcel E3 of the Pier 70 Design for Development, shown as Assessor lot 4116009 (see the accuracy note). Status planned (corrected 2026-09-29 from existing): the venue's own page (Sept 2026) reports that RASA World's one-day festival Pier Play San Francisco was held on Sept 19, 2026 on 'the future home of Elevation Sky Park', offers sign-ups for 'opening announcements', and gives no opening date; no source shows the venue open.",
   "has_record_file": true,
   "last_verified": "2026-09-29",
   "tenants": [
@@ -1354,24 +1383,32 @@
    "coordinates": [
     [
      [
-      -122.382691,
-      37.7592194
+      -122.382541322,
+      37.759039806
      ],
      [
-      -122.381885,
-      37.7592897
+      -122.381702703,
+      37.759089313
      ],
      [
-      -122.381844,
-      37.7584792
+      -122.381644095,
+      37.7584635
      ],
      [
-      -122.38265,
-      37.7584089
+      -122.381942489,
+      37.758445885
      ],
      [
-      -122.382691,
-      37.7592194
+      -122.382482705,
+      37.758413993
+     ],
+     [
+      -122.382534909,
+      37.758971336
+     ],
+     [
+      -122.382541322,
+      37.759039806
      ]
     ]
    ]

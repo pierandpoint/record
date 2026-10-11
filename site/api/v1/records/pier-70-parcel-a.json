@@ -43,15 +43,15 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- this block is not yet built (Port Item 11A, Aug 2026: the developer 'has not exercised an option of any Phase 1 option parcels'), and no source read ties it to a specific Assessor lot: DataSF's Assessor parcels include new lots created for the 28-acre district in 2019, without street addresses, but which lot (if any) is Parcel A's was not established. It currently sits on vacant/graded land, surface parking, or an existing industrial building slated for demolition within Brookfield's 28-acre district. Redone 2026-09-14 with a corrected, shear-free transform (see the mapping log) -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects this transform's 1-8m residual error, not a deliberate encroachment. EXTENDED SOUTH 2026-09-17: this block's south edge fell ~11m short of the real sidewalk visible in satellite imagery, leaving a strip of unclaimed vacant land between the block and the street -- consistent with this site's known local scale error for parcels far from the transform's Illinois/Michigan St anchors (Parcel E1's shape has the same root cause; see its mapping log). The diagram itself (Figure 6.4.2) shows this block's fill running right up to the street with no setback, so extended the two south vertices by 11m (measured in satellite imagery where the ground color changes to the real sidewalk, along 3 sample lines) to close the gap, matching the diagram's own convention rather than re-deriving the whole transform. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
-    "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-    "why_no_real_parcel": "No source read ties this block to a specific Assessor lot. DataSF's Assessor parcels include lots created for Brookfield's 28-acre district in 2019 (for example, Port Item 12B, Feb 2020, gives Parcel E2 as Block 4116, Lot 008), but Parcel A's own lot was not identified, so this uses hand-traced approximate geometry instead.",
+    "accuracy_caveat": "The outline is Assessor lot 4111009, so its edges are recorded lot lines, not a trace. That this is the lot of Parcel A is Pier & Point's own inference from location, shape and size (our earlier trace of the D4D figure measured 5,307 m2 against the lot's 5,013 m2; 76% of the trace lies inside the lot and the trace covers 81% of it). No Port document read ties the lot number to it. A building may sit back from the lot lines. This block is not yet built (Port Item 11A, Aug 2026: the developer 'has not exercised an option of any Phase 1 option parcels'). It currently sits on vacant/graded land, surface parking, or an existing industrial building slated for demolition within Brookfield's 28-acre district.",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4111009 (recorded 2019-02-07; mapped 2019-03-14; active); cross-checked against Pier 70 Design for Development Figure 6.4.2 - Building Height Maximum (p.155).",
+    "why_no_real_parcel": "No single Assessor lot is documented as Parcel A. Lot 4111009 (active) matches its location, shape and size, so its outline is Assessor lot 4111009; the identification is Pier & Point's inference, as the accuracy note says.",
     "regulatory_context": "Commercial/life-science, 90 ft max / 6 stories per Figure 6.4.2. A revised design by Grimshaw with DES Architects + Engineers (356,400 sq ft, six stories, 90 ft) was reported by SF YIMBY in Oct 2021 with the refiled Development Agreement; King Street Properties announced in Feb 2023 a six-story, roughly 300,000 sq ft speculative life-science building on Parcel A (Bisnow). No source read links the Grimshaw design to King Street's plan, and no source read supports the earlier mention of a 2019 mass-timber design or a 365,000 GSF figure (removed 2026-09-29). No construction-start source found."
    }
   },
   "centroid": {
-   "lon": -122.384385,
-   "lat": 37.760399
+   "lon": -122.384214,
+   "lat": 37.760288
   },
   "facts": [
    {
@@ -1150,6 +1150,35 @@
   ],
   "changes": [
    {
+    "date": "2026-10-10",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Pier 70 Parcel A now uses real Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 4111009",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 4111009"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_a",
+     "slug": "pier-70-parcel-a",
+     "name": "Pier 70 Parcel A",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-a/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-a.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-10-06",
     "kind": "correction",
     "kind_label": "Correction",
@@ -1411,7 +1440,7 @@
     "date": "2026-08-11"
    }
   ],
-  "notes": "Approximate polygon for a real, D4D-adopted parcel -- see the accuracy caveat.",
+  "notes": "Parcel A of the Pier 70 Design for Development, shown as Assessor lot 4111009 (see the accuracy note).",
   "has_record_file": true,
   "last_verified": "2026-09-29",
   "tenants": [],
@@ -1420,24 +1449,48 @@
    "coordinates": [
     [
      [
-      -122.3846753,
-      37.7606914
+      -122.384269012,
+      37.760588225
      ],
      [
-      -122.3846325,
-      37.7599003
+      -122.383909375,
+      37.760609461
      ],
      [
-      -122.3839476,
-      37.75996
+      -122.383882889,
+      37.760326751
      ],
      [
-      -122.3839939,
-      37.7607508
+      -122.383856403,
+      37.76004404
      ],
      [
-      -122.3846753,
-      37.7606914
+      -122.383843976,
+      37.759910681
+     ],
+     [
+      -122.383911084,
+      37.759895706
+     ],
+     [
+      -122.384562221,
+      37.759857292
+     ],
+     [
+      -122.384595432,
+      37.760212088
+     ],
+     [
+      -122.384628643,
+      37.760566884
+     ],
+     [
+      -122.384628647,
+      37.760566988
+     ],
+     [
+      -122.384269012,
+      37.760588225
      ]
     ]
    ]

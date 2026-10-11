@@ -10,7 +10,7 @@
         "use": "park",
         "geometry_type": "approximate",
         "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155); named/numbered per Figure 3.4.1 - Overview of Public Spaces (p.52).",
-        "digitization_method": "ADDED 2026-09-16 (Pier 70 systematic feature-by-feature pass): the D4D names four separate open spaces along this site's waterfront -- Waterfront Terrace (Fig 3.4.1 zone 1, near Parcel B), Slipways Commons (zone 2, the plaza between E1/E4 and E2/E3), Waterfront Promenade (zone 3, the shoreline path), and Pier 70 Shoreline (zone 4, near the point north of E4) -- but Figure 3.4.1 itself (and Figure 6.4.2's own 'Public Open Space' fill, used here) renders all four as ONE continuous, undivided green area with no internal boundary line drawn anywhere between them. Rather than fabricate a specific dividing line that no source shows, this is tracked as one combined feature covering all four. Traced via programmatic pixel-color detection (isolating Figure 6.4.2's 'Public Open Space' fill color, RGB [194,218,106], with morphological closing to bridge small text/icon gaps, then an OpenCV contour extraction simplified to ~35 vertices) rather than hand-clicking, since this is a long, irregularly-shaped (and intentionally jagged/riprap-shore-like, per the diagram's own hatching) strip. Converted via this site's validated 6-point affine transform. Clipped against Parcels E1, E4, E3, and H2's own already-committed geometries via shapely difference() (the raw pixel trace overlapped each by a small amount, and building parcels take priority over this open-space trace) -- this produced a MultiPolygon with one large piece (~3.0 acres) and a smaller ~0.23-acre piece separated by H2. NOT clipped against Building 21 or Elevation Sky Park (this site's own already-acknowledged low-confidence markers) for the same reason those aren't clipped against E1-E4 elsewhere in this dataset. GAP FILLED 2026-09-17 (user-flagged): a ~31m gap existed directly east of Parcel E3 -- this polygon's two pieces each nearly touched E3 near its NW and SW corners (per the earlier clip against E1/E4/E3/H2) but nothing filled the shoreline strip along E3's own east edge in between, even though Figure 6.4.2 shows this whole shoreline band as one continuous Public Open Space area with no break at E3. Added a connecting piece along E3's east edge, bounded on the east by the real Port Jurisdiction boundary (data/raw/port_jurisdiction.geojson, the same authoritative shoreline/bulkhead line already used elsewhere in this project) rather than an invented shoreline shape, and clipped against E3's current (2026-09-17, extended-south) geometry so it doesn't overlap it. 2026-10-02: public-text pass. notes reworded for readers (meaning unchanged; no change to the shape, status, use or geometry_type); previous wording -- notes: 'Newly added 2026-09-16 as part of a systematic pass adding this site's previously-untracked open space -- see accuracy_caveat for why this combines four named D4D spaces into one polygon.'.",
+        "digitization_method": "ADDED 2026-09-16 (Pier 70 systematic feature-by-feature pass): the D4D names four separate open spaces along this site's waterfront -- Waterfront Terrace (Fig 3.4.1 zone 1, near Parcel B), Slipways Commons (zone 2, the plaza between E1/E4 and E2/E3), Waterfront Promenade (zone 3, the shoreline path), and Pier 70 Shoreline (zone 4, near the point north of E4) -- but Figure 3.4.1 itself (and Figure 6.4.2's own 'Public Open Space' fill, used here) renders all four as ONE continuous, undivided green area with no internal boundary line drawn anywhere between them. Rather than fabricate a specific dividing line that no source shows, this is tracked as one combined feature covering all four. Traced via programmatic pixel-color detection (isolating Figure 6.4.2's 'Public Open Space' fill color, RGB [194,218,106], with morphological closing to bridge small text/icon gaps, then an OpenCV contour extraction simplified to ~35 vertices) rather than hand-clicking, since this is a long, irregularly-shaped (and intentionally jagged/riprap-shore-like, per the diagram's own hatching) strip. Converted via this site's validated 6-point affine transform. Clipped against Parcels E1, E4, E3, and H2's own already-committed geometries via shapely difference() (the raw pixel trace overlapped each by a small amount, and building parcels take priority over this open-space trace) -- this produced a MultiPolygon with one large piece (~3.0 acres) and a smaller ~0.23-acre piece separated by H2. NOT clipped against Building 21 or Elevation Sky Park (this site's own already-acknowledged low-confidence markers) for the same reason those aren't clipped against E1-E4 elsewhere in this dataset. GAP FILLED 2026-09-17 (user-flagged): a ~31m gap existed directly east of Parcel E3 -- this polygon's two pieces each nearly touched E3 near its NW and SW corners (per the earlier clip against E1/E4/E3/H2) but nothing filled the shoreline strip along E3's own east edge in between, even though Figure 6.4.2 shows this whole shoreline band as one continuous Public Open Space area with no break at E3. Added a connecting piece along E3's east edge, bounded on the east by the real Port Jurisdiction boundary (data/raw/port_jurisdiction.geojson, the same authoritative shoreline/bulkhead line already used elsewhere in this project) rather than an invented shoreline shape, and clipped against E3's current (2026-09-17, extended-south) geometry so it doesn't overlap it. 2026-10-02: public-text pass. notes reworded for readers (meaning unchanged; no change to the shape, status, use or geometry_type); previous wording -- notes: 'Newly added 2026-09-16 as part of a systematic pass adding this site's previously-untracked open space -- see accuracy_caveat for why this combines four named D4D spaces into one polygon.'. TRIMMED 2026-10-10 (overlap with a neighbour's Assessor lot; nothing else changed): Parcels E3 and B now use recorded Assessor lot lines as their outline, and this traced shape overlapped them by about 1,073 m2, so that area was cut from this shape (recorded lot lines win over a trace). Area 15,749 -> 14,676 m2. The earlier sign-off covered the traced shape; this trim was made at the owner's direction. TRIMMED 2026-10-10 (street clip made explicit; nothing else changed): the build already subtracts the DataSF street-centerline buffer from this shape, and Parcel B now uses its recorded Assessor lot lines (which are not street-clipped), so the raw edge beside Parcel B now carries that clip too, about 1,003 m2, and the two no longer appear to touch in the source file while a street gap separates them on the map. Area 14,676 -> 13,673 m2. The earlier sign-off covered the traced shape; this trim was made at the owner's direction.",
         "accuracy_caveat": "APPROXIMATE, AND KNOWINGLY UNSUBDIVIDED -- combines four D4D-named open spaces (Waterfront Terrace, Slipways Commons, Waterfront Promenade, Pier 70 Shoreline) into one polygon because the D4D figures used (3.4.1 and 6.4.2) show one continuous fill; the Port's SUD Land Use Plan (Exhibit A4-1, 03/13/2018) labels separate 'Open Space Segments' (WTP, SC-1, SC-2, WP-1, WP-2), which this polygon does not follow; do not treat this as a single named place. Total traced area (~4.0-4.3 acres before/after clipping) is a reasonable match to the D4D's own combined figures (a ~5.0-acre waterfront area covering the first three, plus part of a ~1,300-linear-foot shoreline) but is not a precise subdivision or survey. Programmatically traced from a diagram's fill color, not hand-verified vertex-by-vertex.",
         "why_no_real_parcel": "Open space within Brookfield's 28-acre site. No source read ties it to a specific Assessor lot: DataSF's Assessor parcels include lots created for the 28-acre district in 2019, without street addresses, but which lot (if any) covers this open space was not established.",
         "regulatory_context": "Part of the Pier 70 D4D's Open Space Network (Section 3) -- specifically Sections 3.5 (Waterfront Terrace), 3.6 (Slipways Commons), 3.7 (Waterfront Promenade), and 3.8 (Pier 70 Shoreline, ~1,300 linear feet). Together with Building 12 Plaza/Market Square, 20th Street Plaza, Irish Hill Corner Plaza, and Irish Hill Playground, these comprise the D4D's total nine acres of public open space (Section 3.4).",
@@ -26,24 +26,164 @@
         "coordinates": [
           [
             [
-              -122.38151,
-              37.7582883
+              -122.381865839,
+              37.758307627
             ],
             [
-              -122.3818834,
-              37.7582679
+              -122.381621218,
+              37.758321124
             ],
             [
-              -122.3818224,
-              37.7584059
+              -122.381615256,
+              37.758321747
             ],
             [
-              -122.3818279,
-              37.7584982
+              -122.381609383,
+              37.758322952
             ],
             [
-              -122.38187471233988,
-              37.75929031041109
+              -122.381603658,
+              37.758324727
+            ],
+            [
+              -122.381598133,
+              37.758327054
+            ],
+            [
+              -122.381592864,
+              37.758329912
+            ],
+            [
+              -122.381587899,
+              37.758333272
+            ],
+            [
+              -122.381583288,
+              37.758337103
+            ],
+            [
+              -122.381579075,
+              37.758341367
+            ],
+            [
+              -122.3815753,
+              37.758346024
+            ],
+            [
+              -122.381572,
+              37.758351029
+            ],
+            [
+              -122.381569206,
+              37.758356332
+            ],
+            [
+              -122.381566946,
+              37.758361884
+            ],
+            [
+              -122.38156524,
+              37.758367631
+            ],
+            [
+              -122.381564106,
+              37.758373518
+            ],
+            [
+              -122.381563554,
+              37.758379487
+            ],
+            [
+              -122.381563591,
+              37.758385481
+            ],
+            [
+              -122.381564214,
+              37.758391443
+            ],
+            [
+              -122.381565419,
+              37.758397316
+            ],
+            [
+              -122.381567194,
+              37.758403041
+            ],
+            [
+              -122.381569521,
+              37.758408566
+            ],
+            [
+              -122.381572379,
+              37.758413835
+            ],
+            [
+              -122.381575739,
+              37.7584188
+            ],
+            [
+              -122.38157957,
+              37.758423411
+            ],
+            [
+              -122.381583834,
+              37.758427624
+            ],
+            [
+              -122.381588491,
+              37.758431399
+            ],
+            [
+              -122.381593496,
+              37.758434699
+            ],
+            [
+              -122.381598799,
+              37.758437493
+            ],
+            [
+              -122.381604351,
+              37.758439753
+            ],
+            [
+              -122.381610098,
+              37.758441459
+            ],
+            [
+              -122.381615985,
+              37.758442593
+            ],
+            [
+              -122.381621954,
+              37.758443145
+            ],
+            [
+              -122.381627948,
+              37.758443108
+            ],
+            [
+              -122.381823973,
+              37.758432292
+            ],
+            [
+              -122.381825195,
+              37.758452809
+            ],
+            [
+              -122.381644095,
+              37.7584635
+            ],
+            [
+              -122.381702703,
+              37.759089313
+            ],
+            [
+              -122.381862277,
+              37.759079893
+            ],
+            [
+              -122.381874712,
+              37.75929031
             ],
             [
               -122.3818754,
@@ -58,12 +198,12 @@
               37.7591589
             ],
             [
-              -122.3836699,
-              37.7590801
+              -122.383598406,
+              37.759085914
             ],
             [
-              -122.3836931,
-              37.7594275
+              -122.383631842,
+              37.759432842
             ],
             [
               -122.383536,
@@ -102,12 +242,316 @@
               37.7596213
             ],
             [
-              -122.3823467,
-              37.7600535
+              -122.382334201,
+              37.759866582
             ],
             [
-              -122.3821877,
-              37.7600702
+              -122.382197625,
+              37.759874781
+            ],
+            [
+              -122.382196567,
+              37.759874897
+            ],
+            [
+              -122.382195495,
+              37.759874946
+            ],
+            [
+              -122.38219358,
+              37.759875224
+            ],
+            [
+              -122.382191666,
+              37.759875433
+            ],
+            [
+              -122.382190623,
+              37.759875652
+            ],
+            [
+              -122.382189562,
+              37.759875806
+            ],
+            [
+              -122.382187685,
+              37.75987627
+            ],
+            [
+              -122.3821858,
+              37.759876666
+            ],
+            [
+              -122.382184782,
+              37.759876987
+            ],
+            [
+              -122.382183742,
+              37.759877244
+            ],
+            [
+              -122.382181919,
+              37.75987789
+            ],
+            [
+              -122.382180083,
+              37.759878469
+            ],
+            [
+              -122.382179099,
+              37.759878889
+            ],
+            [
+              -122.382178092,
+              37.759879246
+            ],
+            [
+              -122.382176345,
+              37.759880065
+            ],
+            [
+              -122.38217457,
+              37.759880823
+            ],
+            [
+              -122.382173637,
+              37.759881335
+            ],
+            [
+              -122.382172664,
+              37.759881791
+            ],
+            [
+              -122.382170998,
+              37.759882782
+            ],
+            [
+              -122.382169314,
+              37.759883706
+            ],
+            [
+              -122.382168434,
+              37.759884308
+            ],
+            [
+              -122.382167513,
+              37.759884856
+            ],
+            [
+              -122.382165952,
+              37.759886006
+            ],
+            [
+              -122.382164366,
+              37.759887091
+            ],
+            [
+              -122.382163552,
+              37.759887774
+            ],
+            [
+              -122.382162686,
+              37.759888412
+            ],
+            [
+              -122.382161244,
+              37.75988971
+            ],
+            [
+              -122.382159774,
+              37.759890944
+            ],
+            [
+              -122.382159028,
+              37.759891706
+            ],
+            [
+              -122.382158232,
+              37.759892423
+            ],
+            [
+              -122.382156939,
+              37.759893841
+            ],
+            [
+              -122.382155581,
+              37.759895228
+            ],
+            [
+              -122.382154905,
+              37.759896071
+            ],
+            [
+              -122.382154192,
+              37.759896852
+            ],
+            [
+              -122.382153045,
+              37.759898388
+            ],
+            [
+              -122.382151829,
+              37.759899903
+            ],
+            [
+              -122.382151245,
+              37.759900798
+            ],
+            [
+              -122.382150605,
+              37.759901655
+            ],
+            [
+              -122.382149604,
+              37.759903313
+            ],
+            [
+              -122.382148553,
+              37.759904924
+            ],
+            [
+              -122.38214806,
+              37.75990587
+            ],
+            [
+              -122.382147507,
+              37.759906787
+            ],
+            [
+              -122.382146674,
+              37.759908533
+            ],
+            [
+              -122.382145785,
+              37.759910241
+            ],
+            [
+              -122.382145388,
+              37.759911229
+            ],
+            [
+              -122.382144926,
+              37.759912198
+            ],
+            [
+              -122.38214427,
+              37.759914013
+            ],
+            [
+              -122.382143551,
+              37.759915804
+            ],
+            [
+              -122.38214325,
+              37.759916836
+            ],
+            [
+              -122.382142889,
+              37.759917836
+            ],
+            [
+              -122.382142414,
+              37.759919707
+            ],
+            [
+              -122.382141874,
+              37.759921559
+            ],
+            [
+              -122.382141678,
+              37.759922602
+            ],
+            [
+              -122.382141413,
+              37.759923646
+            ],
+            [
+              -122.382141123,
+              37.759925559
+            ],
+            [
+              -122.382140768,
+              37.759927451
+            ],
+            [
+              -122.382140674,
+              37.759928523
+            ],
+            [
+              -122.382140515,
+              37.759929573
+            ],
+            [
+              -122.382140415,
+              37.759931484
+            ],
+            [
+              -122.382140245,
+              37.759933422
+            ],
+            [
+              -122.382140257,
+              37.759934495
+            ],
+            [
+              -122.382140201,
+              37.759935559
+            ],
+            [
+              -122.38214029,
+              37.759937493
+            ],
+            [
+              -122.382140311,
+              37.759939417
+            ],
+            [
+              -122.382140427,
+              37.759940475
+            ],
+            [
+              -122.382140476,
+              37.759941547
+            ],
+            [
+              -122.382190028,
+              37.760461846
+            ],
+            [
+              -122.382190945,
+              37.760468064
+            ],
+            [
+              -122.382192496,
+              37.760474154
+            ],
+            [
+              -122.382194664,
+              37.760480053
+            ],
+            [
+              -122.382197427,
+              37.760485698
+            ],
+            [
+              -122.382200756,
+              37.760491029
+            ],
+            [
+              -122.382204614,
+              37.76049599
+            ],
+            [
+              -122.382208962,
+              37.760500528
+            ],
+            [
+              -122.382213754,
+              37.760504595
+            ],
+            [
+              -122.382219951,
+              37.760509329
             ],
             [
               -122.3822273,
@@ -158,16 +602,16 @@
               37.7594164
             ],
             [
-              -122.38149641875717,
-              37.75930329362839
+              -122.381496419,
+              37.759303294
             ],
             [
               -122.3814467,
               37.759305
             ],
             [
-              -122.38144687568196,
-              37.758518998901366
+              -122.381446876,
+              37.758518999
             ],
             [
               -122.3814322,
@@ -184,6 +628,14 @@
             [
               -122.38151,
               37.7582883
+            ],
+            [
+              -122.3818834,
+              37.7582679
+            ],
+            [
+              -122.381865839,
+              37.758307627
             ]
           ]
         ]

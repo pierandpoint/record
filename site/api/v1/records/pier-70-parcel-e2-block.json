@@ -42,15 +42,15 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- Parcel E2 is not yet built (Port Item 11A, memo dated Aug 7, 2026: construction of Phase 1 vertical projects has not moved forward, and no Phase 1 option parcel has been exercised) and it does have its own Assessor lot: Port Item 12B (Feb 2020) gives Parcel E2 as Assessor's Block 4116, Lot 008 (185 Maryland Street), and DataSF's Assessor layer lists 4116008 as an active P70-MU lot added 2019-02-07 with no street address. This record still uses hand-traced approximate geometry from the D4D diagram; whether to replace it with the real lot has not been decided (Pier 70's map shapes are signed off as they stand). Redone 2026-09-14 with a corrected, shear-free fit of the plan figure to the map (how this shape was traced, including earlier versions, is logged in its data file in the public data repository, https://github.com/pierandpoint/record) -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects this fit's 1-8m residual error, not a deliberate encroachment. EXTENDED SOUTH 2026-09-17: this block's south edge fell well short of the real sidewalk visible in satellite imagery -- 13m short at the SW corner, 25m short at the SE corner (a growing gap toward the east, consistent with this site's known local scale error for parcels far from the Illinois/Michigan St reference points used to fit the plan figure to the map). Extended each south vertex independently by its own measured gap (rather than a uniform shift) so the block's south edge now reaches the real sidewalk across its full width, matching Figure 6.4.2's own convention of drawing blocks flush to the street.",
-    "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-    "why_no_real_parcel": "Parcel E2 has its own Assessor lot: Port Item 12B (Feb 2020) gives Block 4116, Lot 008 (185 Maryland Street) and DataSF lists 4116008 as an active P70-MU lot. The earlier statement that the site has not been subdivided per the masterplan's named parcels is withdrawn for E2. This record still uses hand-traced approximate geometry from the D4D diagram; whether to replace it with the real lot has not been decided (Pier 70's map shapes are signed off as they stand).",
+    "accuracy_caveat": "The outline is Assessor lot 4116008, so its edges are recorded lot lines, not a trace. Port Item 12B (Feb 2020) gives Parcel E2 as Assessor's Block 4116, Lot 008 (185 Maryland Street), and DataSF's Assessor layer lists 4116008 as an active P70-MU lot added 2019-02-07 with no street address, so for E2 the identification rests on a Port document. A building may sit back from the lot lines. Parcel E2 is not yet built (Port Item 11A, memo dated Aug 7, 2026: construction of Phase 1 vertical projects has not moved forward, and no Phase 1 option parcel has been exercised).",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4116008 (recorded 2019-02-07; mapped 2019-03-14; active); cross-checked against Pier 70 Design for Development Figure 6.4.2 - Building Height Maximum (p.155).",
+    "why_no_real_parcel": "Parcel E2 has its own Assessor lot: Port Item 12B (Feb 2020) gives Block 4116, Lot 008 (185 Maryland Street) and DataSF lists 4116008 as an active P70-MU lot; the outline is that lot.",
     "regulatory_context": "Shown at 70 ft max per Figure 6.4.2, the same height tier as Parcel E3. The Port's sources treat this as the one Parcel E2: Port Item 12B (Feb 2020) describes E2 (185 Maryland Street) as a residential parcel entitled for approximately 280 rental dwelling units, and Port Item 9B (2017, Table A) ties Slipways Commons (SC-1) to one year after the TCO for Parcel E2; no source found describes a second 'E2', so the earlier 'possible labeling inconsistency' flag is withdrawn. No construction-start source found for this block."
    }
   },
   "centroid": {
-   "lon": -122.38332,
-   "lat": 37.758812
+   "lon": -122.383166,
+   "lat": 37.758598
   },
   "facts": [
    {
@@ -1182,6 +1182,35 @@
   ],
   "changes": [
    {
+    "date": "2026-10-10",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Pier 70 Parcel E2 now uses real Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 4116008",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 4116008"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_e2",
+     "slug": "pier-70-parcel-e2-block",
+     "name": "Pier 70 Parcel E2 (block)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-e2-block/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-e2-block.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-10-06",
     "kind": "correction",
     "kind_label": "Correction",
@@ -1468,7 +1497,7 @@
     "accessed": "2026-09-24"
    }
   ],
-  "notes": "Approximate polygon for a real, D4D-adopted parcel -- see the accuracy note for this shape.",
+  "notes": "Parcel E2 of the Pier 70 Design for Development, shown as Assessor lot 4116008 (see the accuracy note).",
   "has_record_file": true,
   "last_verified": "2026-09-24",
   "tenants": [],
@@ -1477,24 +1506,24 @@
    "coordinates": [
     [
      [
-      -122.3836657,
-      37.7590691
+      -122.383490004,
+      37.75835452
      ],
      [
-      -122.3828389,
-      37.7591412
+      -122.383542214,
+      37.758911863
      ],
      [
-      -122.3828024,
-      37.7583714
+      -122.382679795,
+      37.758962782
      ],
      [
-      -122.3836292,
-      37.7584072
+      -122.382627592,
+      37.75840544
      ],
      [
-      -122.3836657,
-      37.7590691
+      -122.383490004,
+      37.75835452
      ]
     ]
    ]

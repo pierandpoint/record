@@ -42,15 +42,15 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- no vertical construction is reported on this block (Port Item 11A, Aug 7, 2026: construction of Phase 1 vertical projects and parks has not moved forward, and the developer has not exercised an option on any Phase 1 option parcel). It has not been matched to a specific Assessor lot: DataSF's Assessor layer shows the 28-acre site re-mapped into many active P70-MU lots (blocks 4052 and 4110-4117, mostly added 2019-02-07, most with no street address) and Port Item 12B (Feb 2020) gives Parcel E2 as Block 4116 Lot 008, so which lot, if any, corresponds to this block has not been checked against the recorded final map. Redone 2026-09-14 with a corrected, shear-free transform -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects this transform's 1-8m residual error, not a deliberate encroachment. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
-    "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-    "why_no_real_parcel": "Not matched to a specific Assessor lot. DataSF's Assessor layer shows the Pier 70 28-acre site re-mapped into many active P70-MU lots in blocks 4052 and 4110-4117 (mostly added 2019-02-07), so the earlier statement that it has not been subdivided is withdrawn; which lot corresponds to this block has not been checked against the recorded final map, so this record uses hand-traced approximate geometry instead.",
+    "accuracy_caveat": "The outline is the union of three real Assessor lots (4115001, 4115003 and 4115004), so its edges are recorded lot lines, not a trace. That these three lots are Parcels F/G is Pier & Point's own inference from their location, shape and size (7,674 m2, against about 7,260 m2 measured on D4D Figure 6.4.2; both show the same pointed west tip and slanted south-west edge along the curving road). No Port document read ties these lot numbers to F/G. A building may sit back from the lot lines. No vertical construction is reported on this block (Port Item 11A, Aug 7, 2026: construction of Phase 1 vertical projects and parks has not moved forward, and the developer has not exercised an option on any Phase 1 option parcel).",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lots 4115001, 4115003 and 4115004 (recorded 2019-02-07, mapped 2019-03-14, active), joined into one outline; cross-checked against Pier 70 Design for Development Figure 6.4.2 - Building Height Maximum (p.155).",
+    "why_no_real_parcel": "No single Assessor lot matches F/G. Three adjacent active lots in block 4115 (4115001, 4115003 and 4115004) together cover it, so its shape is their union rather than one status.csv row; the identification is Pier & Point's inference, as the accuracy note says.",
     "regulatory_context": "Flexible use: the D4D's Figure 2.1.1 stripes F/G Commercial-Office and Residential (commercial in the Mid-Point baseline scenario; 'life science' does not appear in the D4D for F/G), shown as ONE combined parcel 'F/G' in the D4D's own Figure 6.4.2 (not two separate parcels 'F' and 'G'), 90 ft max, and per D4D Section 6.4.2 commercial buildings are limited to six stories (a residential building may have nine), so the six-story figure holds only if F/G is built as commercial. It is in subphase 2A of the Port's proposed 2026 phasing plan (Port Item 11A, Exhibit A). A '+/- 410,000 RSF' figure previously recorded here came from an uncited leasing brochure and has been dropped. No construction-start source found."
    }
   },
   "centroid": {
-   "lon": -122.384455,
-   "lat": 37.757939
+   "lon": -122.385095,
+   "lat": 37.758049
   },
   "facts": [
    {
@@ -723,6 +723,35 @@
   ],
   "changes": [
    {
+    "date": "2026-10-10",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Pier 70 Parcels F/G now uses real Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lots 4115001, 4115003, 4115004",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lots 4115001, 4115003, 4115004"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_fg",
+     "slug": "pier-70-parcels-f-g",
+     "name": "Pier 70 Parcels F/G",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcels-f-g/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcels-f-g.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-10-06",
     "kind": "correction",
     "kind_label": "Correction",
@@ -942,7 +971,7 @@
     "date": "2023-04-17"
    }
   ],
-  "notes": "Approximate polygon for a real, D4D-adopted parcel -- see the Accuracy note. Status 'planned' as of Port Item 11A (memo dated Aug 7, 2026), which says construction of Phase 1 vertical projects has not moved forward.",
+  "notes": "Parcels F/G of the Pier 70 Design for Development, shown as the union of Assessor lots 4115001, 4115003 and 4115004 (see the accuracy note). Status 'planned' as of Port Item 11A (memo dated Aug 7, 2026), which says construction of Phase 1 vertical projects has not moved forward.",
   "has_record_file": true,
   "last_verified": "2026-09-20",
   "tenants": [],
@@ -951,36 +980,360 @@
    "coordinates": [
     [
      [
-      -122.3838039,
-      37.7578581
+      -122.385129095,
+      37.757612754
      ],
      [
-      -122.3848883751193,
-      37.757765719065894
+      -122.385211639,
+      37.757753286
      ],
      [
-      -122.384895979,
-      37.757766868
+      -122.385513578,
+      37.758014151
      ],
      [
-      -122.38482149205069,
-      37.757801675
+      -122.385493093,
+      37.758015361
      ],
      [
-      -122.38485406263148,
-      37.758124182
+      -122.385441981,
+      37.758043166
      ],
      [
-      -122.384747035,
-      37.758141741
+      -122.385351719,
+      37.758048497
      ],
      [
-      -122.3838265871683,
-      37.75819797262668
+      -122.385346231,
+      37.758048831
      ],
      [
-      -122.3838039,
-      37.7578581
+      -122.385340745,
+      37.758049188
+     ],
+     [
+      -122.385335261,
+      37.758049564
+     ],
+     [
+      -122.385329779,
+      37.758049962
+     ],
+     [
+      -122.3853243,
+      37.758050382
+     ],
+     [
+      -122.385318823,
+      37.758050822
+     ],
+     [
+      -122.38531335,
+      37.758051283
+     ],
+     [
+      -122.385307878,
+      37.758051765
+     ],
+     [
+      -122.385302411,
+      37.758052268
+     ],
+     [
+      -122.385296946,
+      37.758052793
+     ],
+     [
+      -122.385291484,
+      37.758053338
+     ],
+     [
+      -122.385286026,
+      37.758053905
+     ],
+     [
+      -122.385280572,
+      37.758054492
+     ],
+     [
+      -122.385275121,
+      37.7580551
+     ],
+     [
+      -122.385269673,
+      37.758055729
+     ],
+     [
+      -122.385264231,
+      37.758056379
+     ],
+     [
+      -122.385258791,
+      37.758057051
+     ],
+     [
+      -122.385253356,
+      37.758057743
+     ],
+     [
+      -122.385247925,
+      37.758058456
+     ],
+     [
+      -122.385242499,
+      37.75805919
+     ],
+     [
+      -122.385237077,
+      37.758059945
+     ],
+     [
+      -122.38523166,
+      37.75806072
+     ],
+     [
+      -122.385226247,
+      37.758061516
+     ],
+     [
+      -122.38522084,
+      37.758062334
+     ],
+     [
+      -122.385215437,
+      37.758063171
+     ],
+     [
+      -122.38521004,
+      37.75806403
+     ],
+     [
+      -122.385204648,
+      37.75806491
+     ],
+     [
+      -122.385199262,
+      37.75806581
+     ],
+     [
+      -122.385193881,
+      37.75806673
+     ],
+     [
+      -122.385188505,
+      37.758067672
+     ],
+     [
+      -122.385183136,
+      37.758068634
+     ],
+     [
+      -122.385177773,
+      37.758069618
+     ],
+     [
+      -122.385172415,
+      37.758070621
+     ],
+     [
+      -122.385167063,
+      37.758071645
+     ],
+     [
+      -122.385161719,
+      37.75807269
+     ],
+     [
+      -122.385156381,
+      37.758073755
+     ],
+     [
+      -122.385151048,
+      37.758074841
+     ],
+     [
+      -122.385145723,
+      37.758075947
+     ],
+     [
+      -122.385140404,
+      37.758077074
+     ],
+     [
+      -122.385135093,
+      37.75807822
+     ],
+     [
+      -122.385130242,
+      37.758079267
+     ],
+     [
+      -122.385125384,
+      37.758080293
+     ],
+     [
+      -122.385120519,
+      37.758081299
+     ],
+     [
+      -122.385115647,
+      37.758082282
+     ],
+     [
+      -122.385110768,
+      37.758083245
+     ],
+     [
+      -122.385105884,
+      37.758084188
+     ],
+     [
+      -122.385100992,
+      37.75808511
+     ],
+     [
+      -122.385096096,
+      37.75808601
+     ],
+     [
+      -122.385091193,
+      37.75808689
+     ],
+     [
+      -122.385086282,
+      37.758087749
+     ],
+     [
+      -122.385081368,
+      37.758088587
+     ],
+     [
+      -122.385076448,
+      37.758089404
+     ],
+     [
+      -122.385071521,
+      37.7580902
+     ],
+     [
+      -122.38506659,
+      37.758090975
+     ],
+     [
+      -122.385061653,
+      37.758091728
+     ],
+     [
+      -122.385056712,
+      37.75809246
+     ],
+     [
+      -122.385051766,
+      37.758093172
+     ],
+     [
+      -122.385046814,
+      37.758093862
+     ],
+     [
+      -122.385041858,
+      37.758094532
+     ],
+     [
+      -122.385036898,
+      37.758095179
+     ],
+     [
+      -122.385031933,
+      37.758095806
+     ],
+     [
+      -122.385026965,
+      37.758096412
+     ],
+     [
+      -122.385021992,
+      37.758096996
+     ],
+     [
+      -122.385017015,
+      37.758097559
+     ],
+     [
+      -122.385012034,
+      37.758098101
+     ],
+     [
+      -122.385007051,
+      37.758098621
+     ],
+     [
+      -122.385002063,
+      37.75809912
+     ],
+     [
+      -122.384997072,
+      37.758099598
+     ],
+     [
+      -122.384992078,
+      37.758100054
+     ],
+     [
+      -122.384987081,
+      37.758100489
+     ],
+     [
+      -122.384982081,
+      37.758100903
+     ],
+     [
+      -122.384977079,
+      37.758101295
+     ],
+     [
+      -122.384972073,
+      37.758101666
+     ],
+     [
+      -122.384967066,
+      37.758102016
+     ],
+     [
+      -122.384962056,
+      37.758102344
+     ],
+     [
+      -122.384957043,
+      37.758102651
+     ],
+     [
+      -122.384509502,
+      37.758129081
+     ],
+     [
+      -122.384371517,
+      37.75813723
+     ],
+     [
+      -122.383681589,
+      37.758177972
+     ],
+     [
+      -122.383636895,
+      37.757700876
+     ],
+     [
+      -122.384326818,
+      37.757660135
+     ],
+     [
+      -122.384464804,
+      37.757651986
+     ],
+     [
+      -122.385129095,
+      37.757612754
      ]
     ]
    ]
