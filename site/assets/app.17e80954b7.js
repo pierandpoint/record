@@ -1428,7 +1428,7 @@
 
 // Reveal a collapsed section when navigating to an id inside it -- a citation superscript
 // jumping into Sources, or a jump-nav link to a section itself (docs/briefs/page-sections.md).
-// Handles both the remaining <details> sections ("About this shape"/"Research notes") and the
+// Handles both the remaining <details> sections ("About this shape"/"How this record was put together") and the
 // .box pattern (docs/briefs/box-pattern.md), whose own collapse state isn't a <details open>
 // attribute the browser can restore on its own -- either way this doesn't depend on native
 // browser support for auto-expanding on fragment navigation, inconsistent enough across engines
@@ -2042,4 +2042,36 @@
     if (dx > 40) step(-1);
     else if (dx < -40) step(1);
   });
+})();
+
+// New since your last visit (docs/briefs/small-batch.md, A5): on /changes/recent/ and its Record
+// upkeep page, entries added since this browser last opened that page get a "New" mark and a line
+// above the list says how many. The date of the last visit (the page's own build date, so
+// "new" means new to the record) is kept only in this browser's localStorage, one key per page,
+// and never sent anywhere; with storage blocked or on a first visit, nothing is shown.
+(function () {
+  var list = document.querySelector('[data-recent-list]');
+  if (!list) return;
+  var today = list.getAttribute('data-today') || '';
+  var key = 'pp-last-visit:' + window.location.pathname;
+  var last = null;
+  try { last = window.localStorage.getItem(key); } catch (err) { return; }
+  var MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  function label(d) { return MON[+d.slice(5, 7) - 1] + ' ' + (+d.slice(8, 10)) + ', ' + d.slice(0, 4); }
+  if (last && /^\d{4}-\d{2}-\d{2}$/.test(last) && last < today) {
+    var n = 0;
+    Array.prototype.forEach.call(list.querySelectorAll('li[data-added-date]'), function (li) {
+      // A year- or month-only date is filed at its period's end (2026 -> 2026-12-31): one dated
+      // after the page's own build date can't be "new since" anything, so it is never marked.
+      var added = li.getAttribute('data-added-date');
+      if (added > last && added <= today) { li.classList.add('is-new'); n++; }
+    });
+    var note = document.createElement('p');
+    note.className = 'new-since';
+    note.textContent = n
+      ? n + (n === 1 ? ' entry' : ' entries') + ' added since your last visit (' + label(last) + '), marked New. Remembered in this browser only.'
+      : 'Nothing new since your last visit (' + label(last) + '). Remembered in this browser only.';
+    list.parentNode.insertBefore(note, list);
+  }
+  try { if (/^\d{4}-\d{2}-\d{2}$/.test(today)) window.localStorage.setItem(key, today); } catch (err) { /* storage blocked: nothing to remember */ }
 })();
