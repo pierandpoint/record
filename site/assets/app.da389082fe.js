@@ -1,5 +1,31 @@
 // Pier & Point timeline: recolors every map and count on the page for the chosen month.
 // Pages work without JavaScript; they are rendered at today's status.
+// What a visitor types into a search box (an address, a name) travels in the URL fragment,
+// /near/#q=..., which browsers never send to the server, so it can't reach a request or a log.
+// An older link or bookmark with /near/?q=... is still read, then rewritten to the fragment.
+var ppSearch = (function () {
+  function fromFragment() {
+    var m = /^#q=(.*)$/.exec(window.location.hash);
+    if (!m) return null;
+    try { return decodeURIComponent(m[1].replace(/\+/g, ' ')); } catch (err) { return m[1]; }
+  }
+  function get() {
+    var frag = fromFragment();
+    if (frag !== null) return frag;
+    var params = new URLSearchParams(window.location.search);
+    var old = params.get('q');
+    if (old === null) return '';
+    params.delete('q');
+    var rest = params.toString();
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState(null, '', window.location.pathname + (rest ? '?' + rest : '') + '#q=' + encodeURIComponent(old));
+    }
+    return old;
+  }
+  function url(q) { return '/near/#q=' + encodeURIComponent(q); }
+  return { get: get, url: url };
+})();
+
 (function () {
   var dataEl = document.getElementById('pp-record');
   var slider = document.getElementById('pp-slider');
@@ -1559,7 +1585,7 @@
   var farList = document.getElementById('near-far-list');
   var farLine = document.getElementById('near-far-line');
   var finderSection = document.getElementById('near-finder');
-  var urlQuery = (new URLSearchParams(window.location.search).get('q') || '').trim();
+  var urlQuery = ppSearch.get().trim();
 
   function svgEl(tag) { return document.createElementNS('http://www.w3.org/2000/svg', tag); }
 
@@ -1889,6 +1915,14 @@
     if (placeInput) placeInput.value = urlQuery;
     placeLookup(urlQuery, true);
   }
+  // The header search, used while already on this page, only changes the fragment.
+  window.addEventListener('hashchange', function () {
+    urlQuery = ppSearch.get().trim();
+    if (urlQuery && looksLikePlace(urlQuery)) {
+      if (placeInput) placeInput.value = urlQuery;
+      placeLookup(urlQuery, true);
+    }
+  });
 
   // If this browser already granted pierandpoint.org geolocation access -- from an earlier visit,
   // or an earlier click this same session -- skip straight to the map on the next load instead of
@@ -1907,11 +1941,23 @@
   }
 })();
 
-// The header search keeps what was typed after it submits, on /near/ (where ?q= is read).
+// The header search keeps what was typed after it submits, on /near/ (where #q= is read). The
+// form has no name on its field, so with JavaScript off it sends nothing; with it, the query goes
+// into the fragment (ppSearch above) and never to the server.
 (function () {
   var input = document.getElementById('header-search-q');
-  var q = new URLSearchParams(window.location.search).get('q');
-  if (input && q && window.location.pathname === '/near/') input.value = q;
+  if (!input) return;
+  var onNear = window.location.pathname === '/near/';
+  var q = onNear ? ppSearch.get() : '';
+  if (q) input.value = q;
+  if (!input.form) return;
+  input.form.addEventListener('submit', function (ev) {
+    var v = input.value.trim();
+    if (!v) return;
+    ev.preventDefault();
+    if (onNear) window.location.hash = 'q=' + encodeURIComponent(v);
+    else window.location.assign(ppSearch.url(v));
+  });
 })();
 
 // /near/'s finder (docs/briefs/near-me.md): search + site/status filters + sort, over the
@@ -1928,10 +1974,19 @@
   var resetBtn = document.getElementById('finder-reset');
   var emptyNote = document.getElementById('finder-empty');
   var STATUS_ORDER = ['complete', 'under_construction', 'planned', 'existing', 'being_removed'];
-  // The header search (sitegen/pages.py's HEADER_SEARCH) submits here as /near/?q=...: read it on
-  // load, so the finder opens already filtered. Name, parcel (the record id) and address all match.
-  var initialQ = new URLSearchParams(window.location.search).get('q');
+  // The header search (sitegen/pages.py's HEADER_SEARCH) sends visitors here as /near/#q=...: read
+  // it on load, and again when it changes, so the finder opens already filtered. Name, parcel (the
+  // record id) and address all match.
+  var initialQ = ppSearch.get();
   if (initialQ) search.value = initialQ;
+  window.addEventListener('hashchange', function () {
+    var q = ppSearch.get();
+    if (!q) return;
+    search.value = q;
+    apply();
+    var section = document.getElementById('near-finder');
+    if (section && !section.hidden) section.scrollIntoView();
+  });
 
   function apply() {
     var q = (search.value || '').trim().toLowerCase();
