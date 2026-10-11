@@ -1209,27 +1209,204 @@ var ppSearch = (function () {
   initZoom();
 })();
 
-// /changes/all/'s filters (docs/briefs/changes-ux.md): a plain GET form so the page still
-// works, unfiltered, with JavaScript off. With it on, this filters the already-inlined list
-// client-side (no server round trip, no third-party request) and keeps the filter state in
-// the URL query so a filtered view can be copied and shared. Runs on its own, independent of
-// the timeline/zoom IIFE above, since a changes page carries no pp-record data.
+// The pager component (docs/briefs/changes-all-v2.md, "The pager component"). A long list ships its
+// first page as HTML (pages.py's build_paged()) and the rest as one static data file named by
+// data-pager-src on the <ul>: {"rows": [{"h": "<li>...", ...fields}]}, in the list's own order. This
+// attaches to every such list: it shows the page ?page= names (?per= sets 20, 50 or 100), fetches the
+// data file only when a view needs rows the page does not hold, pushes history on a page turn (Back
+// steps through pages; filters and page size replace it), moves focus to the count line, and shows the
+// empty-result and load-failure notes. A list with its own filters passes cfg, see attach(); a list
+// with none needs nothing. The static pages (/<base>/2/ ...) work with this off.
+var PPPager = (function () {
+  var PER_CHOICES = [20, 50, 100], PER_DEFAULT = 50;
+  function fmt(n) { return n.toLocaleString('en-US'); }
+
+  // cfg (all optional; a list with no filters passes none):
+  //   state()            the filters' current value v, passed to everything below
+  //   match(row, v)      whether a data row passes the filters
+  //   inWindow(v)        whether the rows in the page are exactly the view v (default true)
+  //   writeParams(v, p)  put the filters in the URLSearchParams p
+  //   readUrl(p, first)  set the filters from the address (first: the first load)
+  //   countText(v, total, first, last)   the whole count line
+  //   rendered(v, res, data)             after each render; data is the loaded rows or null
+  //   url: false         a list inside a page (a box): never read or write the address or history
+  //   href(v, n)         the href for page n's link (default: the address of that view)
+  function attach(list, cfg) {
+    cfg = cfg || {};
+    var wrap = list.closest('[data-paged]') || list.parentNode;
+    var $ = function (sel) { return wrap.querySelector(sel); };
+    var countEl = $('[data-pager-count]'), emptyNote = $('[data-pager-empty]'), errorNote = $('[data-pager-error]');
+    var nav = $('[data-pager-nav]'), prev = $('[data-pager-prev]'), next = $('[data-pager-next]');
+    var where = $('[data-pager-where]'), perWrap = $('[data-pager-per]'), perSel = $('[data-pager-size]');
+    var top = $('[data-pager-top]');
+    var BASE = list.getAttribute('data-pager-url') || list.getAttribute('data-pager-base') || window.location.pathname;
+    var nouns = [list.getAttribute('data-noun-one') || 'item', list.getAttribute('data-noun-many') || 'items'];
+    var win = {
+      rows: Array.prototype.map.call(list.children, function (li) { return li.outerHTML; }),
+      offset: parseInt(list.getAttribute('data-offset'), 10) || 0,
+      total: parseInt(list.getAttribute('data-total'), 10) || 0
+    };
+    var page = 1, per = PER_DEFAULT, seq = 0, data = null, loading = null, shownHtml = win.rows.join('');
+    var useUrl = cfg.url !== false;
+
+    function readPer(params) {
+      var asked = parseInt(params.get('per'), 10);
+      return PER_CHOICES.indexOf(asked) !== -1 ? asked : PER_DEFAULT;
+    }
+    function urlFor(v, pg, pr) {
+      var params = new URLSearchParams();
+      if (cfg.writeParams) cfg.writeParams(v, params);
+      if (pg > 1) params.set('page', pg);
+      if (pr !== PER_DEFAULT) params.set('per', pr);
+      var qs = params.toString();
+      return BASE + (qs ? '?' + qs : '');
+    }
+    function load() {
+      if (data) return Promise.resolve(data);
+      if (!loading) {
+        loading = fetch(list.getAttribute('data-pager-src')).then(function (r) {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          return r.json();
+        }).then(function (j) { data = j.rows; return data; }).catch(function (err) { loading = null; throw err; });
+      }
+      return loading;
+    }
+    // { total, rows } for the view v, rows an array of <li> HTML for the current page, or null when
+    // they are not here yet. A view of exactly what the page holds is answered from the page whenever
+    // the wanted rows are inside its window.
+    function select(v) {
+      if (!cfg.inWindow || cfg.inWindow(v)) {
+        var pages = Math.max(1, Math.ceil(win.total / per));
+        if (page > pages) page = pages;
+        var start = (page - 1) * per, end = Math.min(start + per, win.total);
+        if (start >= win.offset && end <= win.offset + win.rows.length) {
+          return { total: win.total, rows: win.rows.slice(start - win.offset, end - win.offset) };
+        }
+      }
+      if (!data) return null;
+      var matched = cfg.match ? data.filter(function (row) { return cfg.match(row, v); }) : data;
+      var n = Math.max(1, Math.ceil(matched.length / per));
+      if (page > n) page = n;
+      return { total: matched.length, rows: matched.slice((page - 1) * per, page * per).map(function (row) { return row.h; }) };
+    }
+    function countText(v, total) {
+      var first = (page - 1) * per + 1, last = Math.min(page * per, total);
+      if (cfg.countText) return cfg.countText(v, total, first, last);
+      if (!total) return 'No ' + nouns[1];
+      return 'Showing ' + fmt(first) + '–' + fmt(last) + ' of ' + fmt(total) + ' ' + (total === 1 ? nouns[0] : nouns[1]) + (list.getAttribute('data-count-suffix') || '');
+    }
+    function setLink(a, to, pages, v) {
+      if (!a) return;
+      if (to < 1 || to > pages) { a.removeAttribute('href'); a.setAttribute('aria-disabled', 'true'); return; }
+      a.setAttribute('href', cfg.href ? cfg.href(v, to) : urlFor(v, to, per));
+      a.removeAttribute('aria-disabled');
+    }
+
+    // mode: 'replace' (a filter, the page size, the first load), 'push' (a page turn) or 'none' (the
+    // address already says so: Back and Forward). keepPage: anything but a filter change. focus: move
+    // focus to the count line once the new page is shown.
+    function refresh(keepPage, mode, focus) {
+      var v = cfg.state ? cfg.state() : null, mine = ++seq;
+      if (!keepPage) page = 1;
+      var res = select(v);
+      if (!res) {
+        if (countEl) countEl.textContent = 'Loading…';
+        list.setAttribute('aria-busy', 'true');
+        load().then(function () { if (mine === seq) refresh(keepPage, mode, focus); }, function () {
+          if (mine !== seq) return;
+          list.removeAttribute('aria-busy');
+          if (errorNote) errorNote.hidden = false;
+          if (countEl) countEl.textContent = 'Could not load the rest of the list.';
+        });
+        return;
+      }
+      list.removeAttribute('aria-busy');
+      if (errorNote) errorNote.hidden = true;
+      var pages = Math.max(1, Math.ceil(res.total / per));
+      var html = res.rows.join('');
+      if (html !== shownHtml) {
+        list.innerHTML = html; shownHtml = html;
+        list.dispatchEvent(new CustomEvent('pager-render', { bubbles: true }));
+      }
+      if (countEl) countEl.textContent = countText(v, res.total);
+      if (where) where.textContent = 'Page ' + page + ' of ' + pages;
+      setLink(prev, page - 1, pages, v);
+      setLink(next, page + 1, pages, v);
+      if (nav) nav.hidden = pages <= 1;
+      if (perWrap) perWrap.hidden = false;
+      if (perSel) perSel.value = String(per);
+      if (emptyNote) emptyNote.hidden = res.total !== 0;
+      if (cfg.rendered) cfg.rendered(v, res, data);
+      var url = urlFor(v, page, per);
+      if (useUrl && mode !== 'none' && url !== window.location.pathname + window.location.search) {
+        window.history[mode === 'push' ? 'pushState' : 'replaceState'](null, '', url);
+      }
+      if (focus && countEl) {
+        (top || list).scrollIntoView({ block: 'start' });
+        countEl.focus({ preventScroll: true });
+      }
+    }
+
+    var start = new URLSearchParams(useUrl ? window.location.search : '');
+    if (cfg.readUrl) cfg.readUrl(start, true);
+    per = readPer(start);
+    page = Math.max(1, parseInt(start.get('page'), 10) || parseInt(list.getAttribute('data-page'), 10) || 1);
+    refresh(true, 'replace', false);
+
+    [['prev', prev, -1], ['next', next, 1]].forEach(function (b) {
+      if (!b[1]) return;
+      b[1].addEventListener('click', function (e) {
+        if (this.getAttribute('aria-disabled') === 'true') { e.preventDefault(); return; }
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button) return; // a new-tab click goes to its link
+        e.preventDefault();
+        page += b[2];
+        refresh(true, 'push', true);
+      });
+    });
+    if (perSel) perSel.addEventListener('change', function () {
+      // Keep the first row the visitor was looking at on screen, on whatever page now holds it.
+      var firstRow = (page - 1) * per;
+      per = parseInt(perSel.value, 10) || PER_DEFAULT;
+      page = Math.floor(firstRow / per) + 1;
+      refresh(true, 'replace', false);
+    });
+    // Back and Forward step through the pages (and filters) the address names.
+    if (useUrl) window.addEventListener('popstate', function () {
+      var params = new URLSearchParams(window.location.search), before = page;
+      if (cfg.readUrl) cfg.readUrl(params, false);
+      per = readPer(params);
+      page = Math.max(1, parseInt(params.get('page'), 10) || 1);
+      refresh(true, 'none', false);
+      if (page !== before && top) top.scrollIntoView({ block: 'start' });
+    });
+    return { refresh: refresh };
+  }
+
+  // Lists with no filters of their own attach themselves; one that names filters
+  // (data-pager-filters) is attached by the code that owns them, with a cfg.
+  Array.prototype.forEach.call(document.querySelectorAll('[data-pager-src]'), function (list) {
+    if (!list.hasAttribute('data-pager-filters')) attach(list);
+  });
+  return { attach: attach };
+})();
+
+// /changes/all/'s filters (docs/briefs/changes-ux.md, changes-paging.md, changes-all-v2.md), a client of
+// the pager above. A plain GET form, so with JavaScript off the page still works unfiltered. With it,
+// the filter state, page and page size live in the URL query so any view can be linked. With nothing
+// filtered the view is "on the ground" (every category but record upkeep); the category filter is the
+// only way to change that.
 (function () {
-  var list = document.querySelector('[data-changes-list]');
+  var list = document.querySelector('[data-pager-filters="changes"]');
   var form = document.querySelector('.changes-filters');
   if (!list || !form) return;
-  var items = Array.prototype.slice.call(list.querySelectorAll('li'));
-  var emptyNote = document.querySelector('[data-filter-empty]');
+  function words(attr) { return (list.getAttribute(attr) || '').split(' ').filter(Boolean); }
+  var GROUND = words('data-ground'), UPKEEP = words('data-upkeep');
+  var ALL = GROUND.concat(UPKEEP);
+  // What the server put in the page: one window of the on-the-ground or the upkeep list.
+  var VIEW = list.getAttribute('data-view') === 'upkeep' ? UPKEEP : GROUND;
+  var totals = { all: parseInt(list.getAttribute('data-all-total'), 10) || 0, upkeep: parseInt(list.getAttribute('data-upkeep-total'), 10) || 0 };
   var resetBtn = form.querySelector('[data-filter-reset]');
-  // Pages (docs/briefs/changes-paging.md): the whole list stays in the page, so every filter
-  // and every record page's "All filters →" link still sees every entry; only the rows shown
-  // are paged, after filtering. ?page= and ?per= sit in the URL with the filters, so a page can
-  // be linked. With JavaScript off the pager stays hidden and the full list shows.
-  var PER_CHOICES = [20, 50, 100], PER_DEFAULT = 50;
-  var pagerTop = document.querySelector('[data-pager-top]');
-  var pagerBottom = document.querySelector('[data-pager]');
-  var perSel = document.getElementById('cf-per');
-  var page = 1, per = PER_DEFAULT;
+  var upkeepBox = document.querySelector('[data-include-upkeep]');
   var categoryDropdown = form.querySelector('.filter-dropdown');
   var categorySummary = form.querySelector('[data-filter-summary]');
   var fields = {
@@ -1238,14 +1415,19 @@ var ppSearch = (function () {
     datetype: Array.prototype.slice.call(form.querySelectorAll('input[name="datetype"]'))
   };
 
+  function sameSet(a, b) { return a.length === b.length && a.every(function (c) { return b.indexOf(c) !== -1; }); }
+  function has(set, items) { return items.every(function (c) { return set.indexOf(c) !== -1; }); }
+  function fmt(n) { return n.toLocaleString('en-US'); }
+
   // The category dropdown is a native <details>, so it already opens and closes on its own
   // summary click with no JS at all; this only adds the extra behavior a real dropdown widget
-  // is expected to have -- closing on an outside click or Escape, and a running "N categories"
-  // label -- as enhancements on top of that working baseline.
-  function categoryLabel(count) {
-    if (!count) return 'All categories';
-    if (count === 1) return '1 category';
-    return count + ' categories';
+  // is expected to have -- closing on an outside click or Escape, and a running label.
+  function categoryLabel(cats) {
+    var n = cats.length;
+    if (!n || n === ALL.length) return 'All categories';
+    if (sameSet(cats, GROUND)) return 'On the ground';
+    if (sameSet(cats, UPKEEP)) return 'Record upkeep';
+    return n === 1 ? '1 category' : n + ' categories';
   }
   if (categoryDropdown) {
     document.addEventListener('click', function (e) {
@@ -1256,11 +1438,16 @@ var ppSearch = (function () {
     });
   }
 
-  function readParams() {
-    var params = new URLSearchParams(window.location.search);
-    return { site: params.get('site') || '', category: params.getAll('category'),
-             from: params.get('from') || '', to: params.get('to') || '', record: params.get('record') || '',
-             datetype: params.get('datetype') === 'added' ? 'added' : 'event' };
+  // A filter other than category is in the address (page and per are not filters).
+  function narrowed(v) { return !!(v.site || v.record || v.from || v.to || v.datetype !== 'event'); }
+  // The address names no filter at all: on the ground. A link that names a record, site or dates
+  // but no category asks for all of them, record upkeep included.
+  function readParams(params, dflt) {
+    var v = { site: params.get('site') || '', category: params.getAll('category'),
+              from: params.get('from') || '', to: params.get('to') || '', record: params.get('record') || '',
+              datetype: params.get('datetype') === 'added' ? 'added' : 'event' };
+    if (!v.category.length && !narrowed(v)) v.category = dflt.slice();
+    return v;
   }
   function applyToFields(v) {
     fields.site.value = v.site;
@@ -1275,88 +1462,76 @@ var ppSearch = (function () {
              from: fields.from.value, to: fields.to.value, record: fields.record ? fields.record.value : '',
              datetype: checkedType ? checkedType.value : 'event' };
   }
-  function matches(li, v) {
-    if (v.site && li.getAttribute('data-site') !== v.site) return false;
-    if (v.record && li.getAttribute('data-record') !== v.record) return false;
-    if (v.category.length && v.category.indexOf(li.getAttribute('data-category')) === -1) return false;
-    // "When it happened" (default) reads data-date (the event date, falling back to the added
-    // date when none was recorded); "When we recorded it" reads data-added-date instead
-    // (docs/briefs/dates-and-closed.md).
-    var d = li.getAttribute(v.datetype === 'added' ? 'data-added-date' : 'data-date');
+  function isDefault(v) { return !narrowed(v) && sameSet(v.category, GROUND); }
+  function matches(row, v, ignoreCategory) {
+    if (v.site && row.s !== v.site) return false;
+    if (v.record && row.r !== v.record) return false;
+    if (!ignoreCategory && v.category.length && v.category.indexOf(row.c) === -1) return false;
+    // "When it happened" (default) reads the event date (the added date when none was recorded);
+    // "When we recorded it" reads the added date (docs/briefs/dates-and-closed.md).
+    var d = v.datetype === 'added' ? row.a : row.d;
     if (v.from && d < v.from) return false;
     if (v.to && d > v.to) return false;
     return true;
   }
-  function fmt(n) { return n.toLocaleString('en-US'); }
-  function renderPager(shown, pages) {
-    if (!pagerTop || !pagerBottom) return;
-    pagerTop.hidden = pagerBottom.hidden = shown === 0;
-    var first = (page - 1) * per + 1, last = Math.min(page * per, shown);
-    pagerTop.querySelector('[data-pager-count]').textContent =
-      'Showing ' + fmt(first) + '–' + fmt(last) + ' of ' + fmt(shown) + (shown === 1 ? ' change' : ' changes');
-    pagerBottom.querySelector('[data-pager-where]').textContent = 'Page ' + page + ' of ' + pages;
-    pagerBottom.querySelector('[data-pager-prev]').disabled = page <= 1;
-    pagerBottom.querySelector('[data-pager-next]').disabled = page >= pages;
-    pagerBottom.querySelector('[data-pager-nav]').hidden = pages <= 1;
-  }
-  // keepPage: a page turn or the initial load. Any filter change goes back to page 1.
-  function filter(keepPage) {
-    var v = currentValues(), shown = 0;
-    if (!keepPage) page = 1;
-    var matched = items.filter(function (li) { return matches(li, v); });
-    shown = matched.length;
-    var pages = Math.max(1, Math.ceil(shown / per));
-    if (page > pages) page = pages;
-    items.forEach(function (li) { li.hidden = true; });
-    matched.slice((page - 1) * per, page * per).forEach(function (li) { li.hidden = false; });
-    renderPager(shown, pages);
-    if (emptyNote) emptyNote.hidden = shown !== 0;
-    if (resetBtn) resetBtn.hidden = !(v.site || v.category.length || v.from || v.to || v.record || v.datetype !== 'event');
-    if (categorySummary) categorySummary.textContent = categoryLabel(v.category.length);
-    var params = new URLSearchParams();
-    if (v.site) params.set('site', v.site);
-    v.category.forEach(function (c) { params.append('category', c); });
-    if (v.from) params.set('from', v.from);
-    if (v.to) params.set('to', v.to);
-    if (v.record) params.set('record', v.record);
-    if (v.datetype !== 'event') params.set('datetype', v.datetype);
-    if (page > 1) params.set('page', page);
-    if (per !== PER_DEFAULT) params.set('per', per);
-    var qs = params.toString();
-    window.history.replaceState(null, '', window.location.pathname + (qs ? '?' + qs : ''));
-  }
 
-  applyToFields(readParams());
-  var start = new URLSearchParams(window.location.search);
-  var askedPer = parseInt(start.get('per'), 10);
-  if (PER_CHOICES.indexOf(askedPer) !== -1) per = askedPer;
-  if (perSel) perSel.value = String(per);
-  page = Math.max(1, parseInt(start.get('page'), 10) || 1);
-  filter(true);
-  function refilter() { filter(false); }
+  var pager = PPPager.attach(list, {
+    state: currentValues,
+    match: matches,
+    inWindow: function (v) { return !narrowed(v) && sameSet(v.category, VIEW); },
+    // Nothing in the address means on the ground, so a view of every category with no other filter is
+    // spelled out; a view with a record, site or dates and no category means every category, so that
+    // is left unspelled.
+    writeParams: function (v, params) {
+      if (v.site) params.set('site', v.site);
+      var every = !v.category.length || v.category.length === ALL.length;
+      if (!narrowed(v) && sameSet(v.category, GROUND)) { /* the default: nothing */ }
+      else if (every) { if (!narrowed(v)) ALL.forEach(function (c) { params.append('category', c); }); }
+      else v.category.forEach(function (c) { params.append('category', c); });
+      if (v.from) params.set('from', v.from);
+      if (v.to) params.set('to', v.to);
+      if (v.record) params.set('record', v.record);
+      if (v.datetype !== 'event') params.set('datetype', v.datetype);
+    },
+    readUrl: function (params, first) { applyToFields(readParams(params, first ? VIEW : GROUND)); },
+    countText: function (v, total, first, last) {
+      var what = sameSet(v.category, GROUND) ? ' on the ground' : sameSet(v.category, UPKEEP) ? ' in record upkeep' : '';
+      if (!total) return 'No changes' + (sameSet(v.category, GROUND) ? ' on the ground' : '');
+      var text = 'Showing ' + fmt(first) + '–' + fmt(last) + ' of ' + fmt(total) + (total === 1 ? ' change' : ' changes') + what;
+      if (isDefault(v)) text += ' · ' + fmt(totals.all) + ' including record upkeep';
+      return text;
+    },
+    rendered: function (v, res, data) {
+      if (upkeepBox) {
+        upkeepBox.hidden = false;
+        // With every row loaded, upkeep entries that pass the other filters; until then the view is
+        // unfiltered and the page's own total is the count.
+        var n = data ? data.filter(function (row) { return UPKEEP.indexOf(row.c) !== -1 && matches(row, v, true); }).length : totals.upkeep;
+        upkeepBox.querySelector('input').checked = has(v.category.length ? v.category : ALL, UPKEEP);
+        upkeepBox.querySelector('[data-upkeep-count]').textContent = fmt(n);
+      }
+      if (resetBtn) resetBtn.hidden = isDefault(v);
+      if (categorySummary) categorySummary.textContent = categoryLabel(v.category);
+    }
+  });
+
+  function refilter() { pager.refresh(false, 'replace', false); }
   form.addEventListener('submit', function (e) { e.preventDefault(); refilter(); });
   [fields.site].concat(fields.category, [fields.from, fields.to], fields.datetype).forEach(function (el) {
     el.addEventListener('change', refilter);
   });
-  function turn(to) {
-    page = to;
-    filter(true);
-    (pagerTop || list).scrollIntoView({ block: 'start' });
-  }
-  if (pagerBottom) {
-    pagerBottom.querySelector('[data-pager-prev]').addEventListener('click', function () { turn(page - 1); });
-    pagerBottom.querySelector('[data-pager-next]').addEventListener('click', function () { turn(page + 1); });
-  }
-  if (perSel) perSel.addEventListener('change', function () {
-    // Keep the first row the visitor was looking at on screen, on whatever page now holds it.
-    var firstRow = (page - 1) * per;
-    per = parseInt(perSel.value, 10) || PER_DEFAULT;
-    page = Math.floor(firstRow / per) + 1;
-    filter(true);
+  // "Include record upkeep" is the category filter's two upkeep boxes, nothing more.
+  if (upkeepBox) upkeepBox.querySelector('input').addEventListener('change', function (e) {
+    var v = currentValues(), eff = v.category.length ? v.category.slice() : ALL.slice();
+    if (e.target.checked) UPKEEP.forEach(function (c) { if (eff.indexOf(c) === -1) eff.push(c); });
+    else eff = eff.filter(function (c) { return UPKEEP.indexOf(c) === -1; });
+    if (!eff.length) eff = GROUND.slice();
+    fields.category.forEach(function (cb) { cb.checked = eff.indexOf(cb.value) !== -1; });
+    refilter();
   });
   if (resetBtn) {
     resetBtn.addEventListener('click', function () {
-      applyToFields({ site: '', category: [], from: '', to: '', record: '', datetype: 'event' });
+      applyToFields({ site: '', category: GROUND.slice(), from: '', to: '', record: '', datetype: 'event' });
       refilter();
     });
   }
@@ -1371,6 +1546,74 @@ var ppSearch = (function () {
 // box_bar(), against its own threshold -- Costs uses 1, not the shared BOX_THRESHOLD, so it
 // still collapses past a single entry): this only ever checks whether that markup exists, never
 // re-derives the threshold itself, so the two can't drift out of sync with each other.
+// A box whose list is paged (the pager component above: a site or record page's Changes box with more
+// than one page of rows). It holds one page of rows and fetches the rest when a chip or a page turn
+// needs it. While collapsed with no chip it shows only the lead row, which is its own list
+// ([data-box-lead-list]) so it needs no data; expanded or with a chip it shows the paged list. The
+// chips' counts, the header count and the bar's "of N" are the server's totals.
+function initPagedBox(box, list) {
+  var count = parseInt(box.getAttribute('data-total'), 10) || 0;
+  var pagedEl = list.querySelector('[data-pager-src]');
+  var wrap = pagedEl.closest('[data-paged]');
+  var leadList = list.querySelector('[data-box-lead-list]');
+  var tail = list.querySelector('[data-box-tail]');
+  var bar = box.querySelector('.bx-bar'), status = box.querySelector('[data-box-status]');
+  var chips = box.querySelector('.bx-chips');
+  var chipButtons = chips ? Array.prototype.slice.call(chips.querySelectorAll('button.bx-chip')) : [];
+  var hasBar = !!bar, activeCat = '', expanded = !hasBar, pager = null;
+  if (chips) {
+    Array.prototype.slice.call(chips.querySelectorAll('span.bx-chip')).forEach(function (el) { el.hidden = true; });
+    chipButtons.forEach(function (el) { el.hidden = false; });
+  }
+  function chipOf(cat) { return chipButtons.filter(function (b) { return b.getAttribute('data-cat') === cat; })[0]; }
+  function render() {
+    var collapsed = !expanded && !activeCat;
+    wrap.hidden = collapsed;
+    if (leadList) leadList.hidden = !collapsed;
+    if (tail) tail.hidden = collapsed;
+    chipButtons.forEach(function (btn) { btn.setAttribute('aria-pressed', btn.getAttribute('data-cat') === activeCat ? 'true' : 'false'); });
+    if (hasBar) {
+      var left, right, btn = activeCat ? chipOf(activeCat) : null;
+      if (activeCat) { left = (btn ? parseInt(btn.textContent, 10) : 0) + ' ' + (btn ? btn.getAttribute('data-label') : '') + ' of ' + count; right = 'Show all ' + count; }
+      else if (expanded) { left = 'All ' + count; right = 'Show less ▴'; }
+      else { left = '+' + (count - 1) + ' earlier'; right = 'Show all ▾'; }
+      bar.querySelector('.bx-bar-l').textContent = left;
+      bar.querySelector('.bx-bar-r').textContent = right;
+      bar.setAttribute('aria-expanded', (expanded || !!activeCat) ? 'true' : 'false');
+    }
+    if (status && collapsed) status.textContent = 'Showing 1 of ' + count + '.';
+    if (!collapsed && pager) pager.refresh(false, 'none', false);
+  }
+  var staticBase = pagedEl.getAttribute('data-pager-base') || '';
+  pager = PPPager.attach(pagedEl, {
+    url: false,
+    state: function () { return { cat: activeCat }; },
+    match: function (row, v) { return !v.cat || row.c === v.cat; },
+    inWindow: function (v) { return !v.cat; },
+    // Unfiltered, a link is the static page it stands for; filtered there is none, so it stays on the page.
+    href: function (v, n) { return v.cat ? '#' + box.id : staticBase + (n > 1 ? n + '/' : ''); },
+    rendered: function (v, res) { if (status) status.textContent = 'Showing ' + res.rows.length + ' of ' + count + '.'; }
+  });
+  chipButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var cat = btn.getAttribute('data-cat');
+      if (activeCat === cat) { activeCat = ''; expanded = !hasBar; } // tapping the selected chip again collapses
+      else activeCat = cat;
+      render();
+    });
+  });
+  if (hasBar) {
+    bar.hidden = false;
+    bar.addEventListener('click', function () {
+      if (activeCat) { activeCat = ''; expanded = true; } // "Show all N" clears the filter and expands
+      else expanded = !expanded;
+      render();
+    });
+  }
+  box._ppExpand = function () { activeCat = ''; expanded = true; render(); };
+  render();
+}
+
 (function () {
   document.querySelectorAll('.box[data-total]').forEach(function (box) {
     var count = parseInt(box.getAttribute('data-total'), 10) || 0;
@@ -1380,6 +1623,7 @@ var ppSearch = (function () {
     var lead = leadCount > 0;
     var list = box.querySelector('.box-list');
     if (!list) return;
+    if (list.querySelector('[data-pager-src]')) { initPagedBox(box, list); return; }
     var items = Array.prototype.slice.call(list.querySelectorAll('[data-box-item]'));
     // The lead row (docs/briefs/box-pattern.md): Changes marks its own pick explicitly
     // (pages.py's lead_entry() skips correction/coverage rows, which can otherwise sort more
@@ -2280,25 +2524,35 @@ var ppSearch = (function () {
   var list = document.querySelector('[data-recent-list]');
   if (!list) return;
   var today = list.getAttribute('data-today') || '';
-  var key = 'pp-last-visit:' + window.location.pathname;
+  // One key per list, not per static page (/changes/recent/upkeep/2/ is page 2 of the same list).
+  var key = 'pp-last-visit:' + (list.getAttribute('data-pager-url') || window.location.pathname);
   var last = null;
   try { last = window.localStorage.getItem(key); } catch (err) { return; }
   var MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   function label(d) { return MON[+d.slice(5, 7) - 1] + ' ' + (+d.slice(8, 10)) + ', ' + d.slice(0, 4); }
   if (last && /^\d{4}-\d{2}-\d{2}$/.test(last) && last < today) {
-    var n = 0;
-    Array.prototype.forEach.call(list.querySelectorAll('li[data-added-date]'), function (li) {
-      // A year- or month-only date is filed at its period's end (2026 -> 2026-12-31): one dated
-      // after the page's own build date can't be "new since" anything, so it is never marked.
-      var added = li.getAttribute('data-added-date');
-      if (added > last && added <= today) { li.classList.add('is-new'); n++; }
-    });
+    // A year- or month-only date is filed at its period's end (2026 -> 2026-12-31): one dated
+    // after the page's own build date can't be "new" since anything, so it is never marked.
+    function isNew(added) { return added > last && added <= today; }
+    // The rows shown now are marked, and again after the pager shows others.
+    function mark() {
+      Array.prototype.forEach.call(list.querySelectorAll('li[data-added-date]'), function (li) {
+        if (isNew(li.getAttribute('data-added-date'))) li.classList.add('is-new');
+      });
+    }
+    mark();
+    list.addEventListener('pager-render', mark);
+    // A paged list holds one page of rows, so the count comes from the date:count pairs the server wrote.
+    var n = 0, dates = list.getAttribute('data-new-dates');
+    if (dates) dates.split(',').forEach(function (pair) { var p = pair.split(':'); if (isNew(p[0])) n += parseInt(p[1], 10) || 0; });
+    else n = list.querySelectorAll('li.is-new').length;
     var note = document.createElement('p');
     note.className = 'new-since';
     note.textContent = n
       ? n + (n === 1 ? ' entry' : ' entries') + ' added since your last visit (' + label(last) + '), marked New. Remembered in this browser only.'
       : 'Nothing new since your last visit (' + label(last) + '). Remembered in this browser only.';
-    list.parentNode.insertBefore(note, list);
+    (list.closest('[data-paged]') || list).parentNode.insertBefore(note, list.closest('[data-paged]') || list);
   }
   try { if (/^\d{4}-\d{2}-\d{2}$/.test(today)) window.localStorage.setItem(key, today); } catch (err) { /* storage blocked: nothing to remember */ }
 })();
+

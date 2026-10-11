@@ -496,8 +496,11 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .pager-per select { min-height: 36px; padding: 0 8px; border-radius: 8px; border: 1px solid var(--paper-line); background: var(--paper-2); color: var(--paper-ink); font: 14px var(--sans); }
 .pager-nav { display: flex; align-items: center; justify-content: center; gap: 16px; margin: 20px 0 0; }
 .pager-where { font-size: 14px; color: var(--paper-soft); }
-.pager .btn[disabled] { opacity: .4; cursor: default; }
-.pager-top[hidden], .pager[hidden], .pager-nav[hidden] { display: none; }
+.pager .btn[aria-disabled="true"] { opacity: .4; cursor: default; pointer-events: none; }
+.pager-count:focus { outline: none; }
+.pager-count:focus-visible { outline: 2px solid var(--paper-brass); outline-offset: 2px; }
+[data-changes-list][aria-busy="true"] { opacity: .5; }
+.pager-top[hidden], .pager[hidden], .pager-nav[hidden], .include-upkeep[hidden], .pager-per[hidden] { display: none; }
 /* .btn itself sets display: inline-flex, which -- like .zoom-controls above -- overrides the
    browser's native [hidden] behaviour (an author display value always beats the UA stylesheet's
    [hidden] { display: none }, whatever the selector's specificity), so it needs the same explicit
@@ -938,11 +941,14 @@ sup.cites a { text-decoration: none; }
 .print-foot { display: none; }
 @media print {
   .site-header, .site-footer, .skip, .map-band, .gallery-band, .timeline, nav.section-jump, .bx-bar, .bx-chips,
-  [data-box-preview], .box-tail, .zoom-controls, .page-about, .newsletter, form, .pager, .pager-per { display: none !important; }
+  [data-box-preview], .box-tail, .zoom-controls, .page-about, .newsletter, form, .pager, .pager-per, .include-upkeep { display: none !important; }
   html, body, section.light, .card, .whats-next, .cite { background: #fff !important; color: #000 !important; box-shadow: none !important; }
   .cite * { color: #000 !important; }
   a { color: #000 !important; }
   .box-list li[hidden] { display: list-item !important; }
+  /* A paged Changes box prints its page of rows and the count line, not just the lead row. */
+  .box [data-paged][hidden] { display: block !important; }
+  .box .box-list ul.feed[data-box-lead-list] { display: none !important; }
   .box-list ul[hidden]:not([data-box-preview]), .box-list div[hidden] { display: block !important; }
   .box-list tr[hidden] { display: table-row !important; }
   .grid-main { display: block !important; }
