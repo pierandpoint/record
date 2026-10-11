@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-10-10",
+ "generated": "2026-10-11",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -41,18 +41,47 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- real landscaped/grassed land per Esri satellite imagery, traced as the leftover ground between the official street lines and neighbouring mapped shapes, not a surveyed footprint or named park record. Name and operator (likely SFMTA/Caltrans ramp landscaping or an OCII-era open-space installation, matching its P26 plan designation) not confirmed by any source found.",
+    "accuracy_caveat": "APPROXIMATE -- real landscaped/grassed land per Esri satellite imagery, traced as the leftover ground between the official street lines and neighbouring mapped shapes, not a surveyed footprint or named park record. Name and operator (likely SFMTA/Caltrans ramp landscaping or an OCII-era open-space installation, matching its P26 plan designation) not confirmed by any source found. Its west side is cut along the continuation of the curved west edge of the Assessor lot to its north (The Exchange on 16th), because the rest of the earlier shape lay over I-280 ramp lanes; that edge is an extension of the lot line, not a traced boundary.",
     "digitized_from": "Traced as the leftover open ground between DataSF's official street centerlines and neighbouring mapped shapes near the UCSF Medical Center campus, picked by hand by Pier & Point from a numbered map of such leftover pieces, not taken from a surveyed parcel. The chosen piece was then cut further by hand: it forks into two thin parallel strips (~13-21m wide, running north alongside a building courtyard) above a wider single base (up to 46m wide); the base was kept and both forks were dropped."
    }
   },
   "centroid": {
-   "lon": -122.392675,
-   "lat": 37.764608
+   "lon": -122.392616,
+   "lat": 37.764561
   },
   "facts": [],
   "costs": [],
   "milestones": [],
   "changes": [
+   {
+    "date": "2026-10-10",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "P26 is now a narrower triangle bounded by the continuation of The Exchange on 16th's curved edges.",
+    "source": "Esri World Imagery, viewed 2026-10-10",
+    "sources": [
+     {
+      "title": "Esri World Imagery, viewed 2026-10-10"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_p26_interchange_wedge",
+     "slug": "p26",
+     "name": "P26",
+     "permalink": "https://pierandpoint.org/parcels/p26/",
+     "api": "https://pierandpoint.org/api/v1/records/p26.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-29",
     "kind": "correction",
@@ -191,40 +220,244 @@
    "coordinates": [
     [
      [
-      -122.39286207038757,
-      37.76495
+      -122.392501625,
+      37.764863208
      ],
      [
-      -122.392860834,
-      37.764947741
+      -122.392502891,
+      37.764840316
      ],
      [
-      -122.392855221,
-      37.764937429
+      -122.392504275,
+      37.764817428
      ],
      [
-      -122.392849631,
-      37.764927109
+      -122.392505778,
+      37.764794545
      ],
      [
-      -122.392844068,
-      37.764916781
+      -122.392507398,
+      37.764771667
      ],
      [
-      -122.392838529,
-      37.764906443
+      -122.392509136,
+      37.764748794
      ],
      [
-      -122.392833016,
-      37.764896098
+      -122.392510992,
+      37.764725928
      ],
      [
-      -122.392827528,
-      37.764885744
+      -122.392512967,
+      37.764703067
      ],
      [
-      -122.392822064,
-      37.764875382
+      -122.392515058,
+      37.764680213
+     ],
+     [
+      -122.392517268,
+      37.764657366
+     ],
+     [
+      -122.392519595,
+      37.764634526
+     ],
+     [
+      -122.392522041,
+      37.764611694
+     ],
+     [
+      -122.392524604,
+      37.764588871
+     ],
+     [
+      -122.392527284,
+      37.764566055
+     ],
+     [
+      -122.392530082,
+      37.764543249
+     ],
+     [
+      -122.392532998,
+      37.764520452
+     ],
+     [
+      -122.392536031,
+      37.764497665
+     ],
+     [
+      -122.392539181,
+      37.764474887
+     ],
+     [
+      -122.392542449,
+      37.76445212
+     ],
+     [
+      -122.392545835,
+      37.764429364
+     ],
+     [
+      -122.392549337,
+      37.764406619
+     ],
+     [
+      -122.392552957,
+      37.764383886
+     ],
+     [
+      -122.392556694,
+      37.764361165
+     ],
+     [
+      -122.392560548,
+      37.764338456
+     ],
+     [
+      -122.39256452,
+      37.764315759
+     ],
+     [
+      -122.392568608,
+      37.764293076
+     ],
+     [
+      -122.392572813,
+      37.764270406
+     ],
+     [
+      -122.392577135,
+      37.76424775
+     ],
+     [
+      -122.392581573,
+      37.764225109
+     ],
+     [
+      -122.392582031,
+      37.764222835
+     ],
+     [
+      -122.392583177,
+      37.764226928
+     ],
+     [
+      -122.39258958,
+      37.764249271
+     ],
+     [
+      -122.392596122,
+      37.764271589
+     ],
+     [
+      -122.392602801,
+      37.764293881
+     ],
+     [
+      -122.392609619,
+      37.764316147
+     ],
+     [
+      -122.392616575,
+      37.764338386
+     ],
+     [
+      -122.392623668,
+      37.764360598
+     ],
+     [
+      -122.392630898,
+      37.764382781
+     ],
+     [
+      -122.392638266,
+      37.764404937
+     ],
+     [
+      -122.392645772,
+      37.764427063
+     ],
+     [
+      -122.392653414,
+      37.764449159
+     ],
+     [
+      -122.392661193,
+      37.764471226
+     ],
+     [
+      -122.392669108,
+      37.764493261
+     ],
+     [
+      -122.39267716,
+      37.764515266
+     ],
+     [
+      -122.392685348,
+      37.764537239
+     ],
+     [
+      -122.392693672,
+      37.76455918
+     ],
+     [
+      -122.392702132,
+      37.764581087
+     ],
+     [
+      -122.392710728,
+      37.764602962
+     ],
+     [
+      -122.392719459,
+      37.764624803
+     ],
+     [
+      -122.392728325,
+      37.764646609
+     ],
+     [
+      -122.392737326,
+      37.764668381
+     ],
+     [
+      -122.392746462,
+      37.764690117
+     ],
+     [
+      -122.392755733,
+      37.764711817
+     ],
+     [
+      -122.392765137,
+      37.764733481
+     ],
+     [
+      -122.392774676,
+      37.764755108
+     ],
+     [
+      -122.392784349,
+      37.764776697
+     ],
+     [
+      -122.392794155,
+      37.764798249
+     ],
+     [
+      -122.392804095,
+      37.764819761
+     ],
+     [
+      -122.392814168,
+      37.764841235
+     ],
+     [
+      -122.392824374,
+      37.764862669
      ],
      [
       -122.392816627,
@@ -235,92 +468,12 @@
       37.764873359
      ],
      [
-      -122.392477846,
-      37.764885426
+      -122.392500579,
+      37.764884056
      ],
      [
-      -122.39248402041014,
-      37.76495
-     ],
-     [
-      -122.3924585511658,
-      37.76495
-     ],
-     [
-      -122.392454672,
-      37.764860647
-     ],
-     [
-      -122.392467659,
-      37.764653325
-     ],
-     [
-      -122.392517591,
-      37.764327361
-     ],
-     [
-      -122.392561837,
-      37.764218807
-     ],
-     [
-      -122.392563814,
-      37.764213187
-     ],
-     [
-      -122.392565234,
-      37.764207401
-     ],
-     [
-      -122.392566084,
-      37.764201504
-     ],
-     [
-      -122.392566355,
-      37.764195552
-     ],
-     [
-      -122.392566045,
-      37.764189603
-     ],
-     [
-      -122.392565157,
-      37.764183711
-     ],
-     [
-      -122.39256056661043,
-      37.76416087929345
-     ],
-     [
-      -122.39256733363361,
-      37.76416045810164
-     ],
-     [
-      -122.39259262,
-      37.764241842
-     ],
-     [
-      -122.392594437,
-      37.764246895
-     ],
-     [
-      -122.392596691,
-      37.764251769
-     ],
-     [
-      -122.392599364,
-      37.764256427
-     ],
-     [
-      -122.392952733,
-      37.764813784
-     ],
-     [
-      -122.39303216376958,
-      37.76495
-     ],
-     [
-      -122.39286207038757,
-      37.76495
+      -122.392501625,
+      37.764863208
      ]
     ]
    ]
