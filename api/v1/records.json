@@ -7408,7 +7408,7 @@
    "distance_note": null,
    "how_to_comment": [],
    "positions": [],
-   "address": null,
+   "address": "1090 Dr. Maya Angelou Lane and 1089 3rd St",
    "summary": "WORKac's 8-story commercial building on Parcel B, with Breakthrough Properties assisting on the life-science real estate (SF YIMBY, 2022) and marketed as Class A office/life science after its June 2023 TCO. It houses the district's blackwater recycling plant and has since leased to the Golden State Warriors (71,000 sq ft, October 2024), Coinbase (150,000 sq ft, 2025) and Nvidia (45,000 sq ft, November 2025).",
    "summary_sources": [
     "src-port-2023-10",
@@ -7432,8 +7432,9 @@
    "facts": [
     {
      "key": "address",
-     "value": "1090 Dr. Maya Angelou Lane (SF Standard, Commercial Property Executive); 1051 3rd Street in the Warriors press release (Mitsui Fudosan America's repost)",
+     "value": "Two official addresses on parcel 8719C003, one on each street: 1090 Dr. Maya Angelou Lane (DataSF Enterprise Addressing System, eas_address_id 869906) and 1089 3rd St (eas_address_id 871659). SF Standard and Commercial Property Executive also give 1090 Dr. Maya Angelou Lane; the Warriors press release gives 1051 3rd Street, which is not an official address for this parcel",
      "sources": [
+      "src-datasf-eas",
       "src-sfstandard-2025-11",
       "src-cpe-2025-05",
       "src-mfa-2024-10"
@@ -8365,6 +8366,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Building B now shows both official addresses for its parcel, one on each street: 1090 Dr. Maya Angelou Lane (DataSF address 869906) and 1089 3rd St (DataSF address 871659). One press release gives 1051 3rd St, which is not an official address for this parcel; the record previously showed no address.",
+     "source": "DataSF Enterprise Addressing System (https://data.sf.gov/resource/3mea-di5p.json?parcel_number=8719C003)",
+     "sources": [
+      {
+       "title": "DataSF Enterprise Addressing System (https://data.sf.gov/resource/3mea-di5p.json?parcel_number=8719C003)"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "8719C003",
+      "slug": "building-b",
+      "name": "Building B",
+      "permalink": "https://pierandpoint.org/parcels/building-b/",
+      "api": "https://pierandpoint.org/api/v1/records/building-b.json"
+     },
+     "site": {
+      "slug": "mission-rock",
+      "name": "Mission Rock",
+      "short": "Mission Rock",
+      "url": "https://pierandpoint.org/sites/mission-rock/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-06",
      "kind": "correction",
      "kind_label": "Correction",
@@ -9104,7 +9134,7 @@
     "Construction cost: not stated in anything read.",
     "Groundbreaking date: only The Registry's paywalled June 22, 2021 headline; the Port's December 2021 update confirms piles were done that year.",
     "Square footage: four different figures across sources (272,770 / 281,639 / 295,000 / 313,952). The figure in this record's map notes (258,994 office + 13,773 retail) matches none of them exactly.",
-    "Address: three conflicting addresses and no source resolves them. 1090 Dr. Maya Angelou Lane (SF Standard, Nov 2025; Commercial Property Executive, May 2025); 1051 3rd Street (the Warriors press release, as reposted by Mitsui Fudosan America, Oct 2024); 1089 3rd St (DataSF Assessor parcel 8719C003, from_address_num 1089). Pier & Point shows no address for this record until it is resolved.",
+    "Address: one press release (the Warriors announcement, as reposted by Mitsui Fudosan America, Oct 2024) gives 1051 3rd Street, which is not an official address for this parcel; DataSF lists 1090 Dr. Maya Angelou Lane and 1089 3rd St.",
     "Lease terms and rents for the Warriors, Coinbase and Nvidia: undisclosed in every report read.",
     "Images: no 'before' photo is hosted (until 2020 the parcel was the Seawall Lot 337 surface parking lot) and no rendering is hosted because the architects' renderings are not openly licensed; they are reachable through the architect sources listed here.",
     "When Nvidia's lease commences: The Real Deal (Nov 21, 2025) says only that it 'is slated to occupy 45,000 square feet'; no commencement date appears in any source read.",
@@ -9353,6 +9383,13 @@
      "accessed": "2026-09-29"
     },
     {
+     "id": "src-datasf-eas",
+     "title": "San Francisco Addresses - Enterprise Addressing System, rows for parcel 8719C003 (eas_address_id 869906, 1090 DR MAYA ANGELOU LN; eas_address_id 871659, 1089 03RD ST)",
+     "publisher": "DataSF / SF Department of Building Inspection",
+     "url": "https://data.sf.gov/resource/3mea-di5p.json?parcel_number=8719C003",
+     "accessed": "2026-10-10"
+    },
+    {
      "id": null,
      "title": "nibbi.com/projects/mission-rock-building-b",
      "url": "https://www.nibbi.com/projects/mission-rock-building-b/"
@@ -9368,7 +9405,7 @@
      "url": "https://www.hathawaydinwiddie.com/project/mission-rock-building-b/"
     }
    ],
-   "notes": "Building B -- ~300,000 sf Class A office/life-science (Hathaway Dinwiddie, Nibbi's joint-venture partner, gives a 300,000 sq ft project size; a 258,994 sf office + 13,773 sf retail split came from Nibbi's project page, which could not be re-read in October 2026); TCO June 2023; tenants incl. Coinbase, Nvidia (45,000 sf, 'slated to occupy' per The Real Deal, Nov 2025); also houses the district's blackwater/non-potable water treatment plant (Port memo, Oct 2023; The Real Deal, Nov 2025; nibbi.com/projects/mission-rock-building-b). CORRECTED 2026-09-13: an earlier version of this record was matched to block/lot 8719001, a mistaken shape/position match (DataSF Parcels shows that lot record dropped on 2005-05-31 and lists no address for it). Re-identified from the Mission Rock Design Controls' Figure 1.1 (Land Use Plan) and Figure 6.2 (Height Plan), which place Block B south of Block A along 3rd St, and by address: 8719C003 is addressed 1089 3rd St in DataSF's Assessor roll and DBI permit rows (The Canyon, lot 8719B002, is 1011 3rd St in the same roll). The reading of the plan figures and the footprint size are Pier & Point's own.",
+   "notes": "Building B, 1090 Dr. Maya Angelou Lane and 1089 3rd St -- ~300,000 sf Class A office/life-science (Hathaway Dinwiddie, Nibbi's joint-venture partner, gives a 300,000 sq ft project size; a 258,994 sf office + 13,773 sf retail split came from Nibbi's project page, which could not be re-read in October 2026); TCO June 2023; tenants incl. Coinbase, Nvidia (45,000 sf, 'slated to occupy' per The Real Deal, Nov 2025); also houses the district's blackwater/non-potable water treatment plant (Port memo, Oct 2023; The Real Deal, Nov 2025; nibbi.com/projects/mission-rock-building-b). CORRECTED 2026-09-13: an earlier version of this record was matched to block/lot 8719001, a mistaken shape/position match (DataSF Parcels shows that lot record dropped on 2005-05-31 and lists no address for it). Re-identified from the Mission Rock Design Controls' Figure 1.1 (Land Use Plan) and Figure 6.2 (Height Plan), which place Block B south of Block A along 3rd St, and by address: 8719C003 is addressed 1089 3rd St in DataSF's Assessor roll and DBI permit rows (The Canyon, lot 8719B002, is 1011 3rd St in the same roll). The reading of the plan figures and the footprint size are Pier & Point's own.",
    "has_record_file": true,
    "last_verified": "2026-09-24",
    "tenants": [
@@ -103214,8 +103251,8 @@
     },
     {
      "id": null,
-     "title": "data/manual/_reference/mission_bay_land_use_map_2019.png",
-     "url": "data/manual/_reference/mission_bay_land_use_map_2019.png"
+     "title": "sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
+     "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf"
     },
     {
      "id": null,
@@ -121931,11 +121968,6 @@
      "date": "2019-12",
      "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
      "accessed": "2026-10-10"
-    },
-    {
-     "id": null,
-     "title": "data/manual/_reference/mission_bay_land_use_map_2019.png",
-     "url": "data/manual/_reference/mission_bay_land_use_map_2019.png"
     }
    ],
    "notes": "No building on this site as of UCSF's June 2025 CAC deck ('Undeveloped parcels remaining'); parked cars fill the block in USDA NAIP imagery (viewed 2026-09-29), an imagery observation that no cited document states. The OCII plan's Dec 2019 Land Use Map colors this block 'UCSF' (no use type); UCSF's own June 2025 deck, citing its Long Range Development Plan, lists Block 15 as Housing. No specific project, developer, or timeline was found.",
@@ -122309,11 +122341,6 @@
      "date": "2019-12",
      "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
      "accessed": "2026-10-10"
-    },
-    {
-     "id": null,
-     "title": "data/manual/_reference/mission_bay_land_use_map_2019.png",
-     "url": "data/manual/_reference/mission_bay_land_use_map_2019.png"
     }
    ],
    "notes": "No building on the site as of UCSF's June 2025 CAC deck ('Undeveloped parcels remaining'); parked cars fill the block in USDA NAIP imagery (viewed 2026-09-29), an imagery observation that no cited document states. The OCII plan's Dec 2019 Land Use Map colors this block 'UCSF' (no use type); UCSF's own June 2025 deck, citing its Long Range Development Plan, lists Block 15 as Housing. No specific project, developer, or timeline was found.",
@@ -122916,11 +122943,6 @@
      "date": "2019-12",
      "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
      "accessed": "2026-10-10"
-    },
-    {
-     "id": null,
-     "title": "data/manual/_reference/mission_bay_land_use_map_2019.png",
-     "url": "data/manual/_reference/mission_bay_land_use_map_2019.png"
     }
    ],
    "notes": "No building on this site as of UCSF's June 2025 CAC deck ('Undeveloped parcels remaining'; 'Block 16A & B - Research'); in USDA NAIP imagery (viewed 2026-09-29) the block reads as open graded ground with no visible parked cars, an imagery observation no cited document states. The OCII plan's Dec 2019 Land Use Map designates this block for UCSF (no use type given). This record's milestones list a May 2026 UC Regents approval of the UCSF Bakar Ear & Hearing Institute at Fifth Street and Nelson Rising Lane, citing a UCSF News page that could not be checked on 2026-09-29; whether that project is on this block is not confirmed by any source that could be checked.",
@@ -123327,8 +123349,8 @@
     },
     {
      "id": null,
-     "title": "data/manual/_reference/mission_bay_land_use_map_2019.png",
-     "url": "data/manual/_reference/mission_bay_land_use_map_2019.png"
+     "title": "sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
+     "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf"
     }
    ],
    "notes": "UCSF's June 12, 2025 Mission Bay CAC presentation lists Block 16A & B among UCSF Mission Bay's 'Undeveloped parcels remaining' (planned use per UCSF's Long Range Development Plan: Research) and says 'No building plans at Mission Bay right now'. The OCII plan's Dec 2019 Land Use Map designates this block for future UCSF institutional use, but no specific project, developer or timeline was found. Whether the block is currently used as surface parking is not confirmed: an earlier note said so (satellite- and building-footprint-confirmed as of 2026-09-19), but no imagery or other source is cited for it, and the plan map shows planned uses, not current conditions.",
@@ -124011,11 +124033,6 @@
      "date": "2019-12",
      "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
      "accessed": "2026-10-10"
-    },
-    {
-     "id": null,
-     "title": "data/manual/_reference/mission_bay_land_use_map_2019.png",
-     "url": "data/manual/_reference/mission_bay_land_use_map_2019.png"
     }
    ],
    "notes": "No building on this site as of UCSF's June 2025 CAC deck ('Undeveloped parcels remaining'; 'Block 18A - Research'); vehicles fill the block in USDA NAIP imagery (viewed 2026-09-29), an imagery observation no cited document states. The block is south of Nelson Rising Lane and east of the Owens St curve; in UCSF's map, 18B (future parking garage) lies between it and 18C to the east. The OCII plan's Dec 2019 Land Use Map colors this block for UCSF (no use type given); UCSF's deck designates it Research. No source found for a specific project, developer, or timeline.",
@@ -124272,11 +124289,6 @@
      "date": "2019-12",
      "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
      "accessed": "2026-10-10"
-    },
-    {
-     "id": null,
-     "title": "data/manual/_reference/mission_bay_land_use_map_2019.png",
-     "url": "data/manual/_reference/mission_bay_land_use_map_2019.png"
     }
    ],
    "notes": "No building is recorded on this site as of this project's own 2026-09-19 satellite and building-footprint check (the imagery is not cited or saved here), and it appears to be a surface parking lot west of the Owens St curve, back-to-back with the block to its east that this project records as 18C (see the Block 18C record). OCII's Dec 2019 Land Use Map shows Block 18B in the UCSF-designated color, but UCSF's own June 2025 CAC presentation (page 3; its map is dated December 2024) labels it 'FUTURE PARKING GARAGE (18B)' and lists 'Block 18B - Parking' among the undeveloped parcels remaining, so the planned use is parking, not a building for institutional use. No specific project, developer or timeline was found.",
@@ -124731,8 +124743,8 @@
     },
     {
      "id": null,
-     "title": "data/manual/_reference/mission_bay_land_use_map_2019.png",
-     "url": "data/manual/_reference/mission_bay_land_use_map_2019.png"
+     "title": "sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
+     "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf"
     },
     {
      "id": null,
@@ -125174,11 +125186,6 @@
      "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
      "accessed": "2026-09-24",
      "overview": true
-    },
-    {
-     "id": null,
-     "title": "data/manual/_reference/mission_bay_land_use_map_2019.png",
-     "url": "data/manual/_reference/mission_bay_land_use_map_2019.png"
     }
    ],
    "notes": "A Pier & Point site visit (2026-09-19) confirmed that this park is complete. No building footprint here (satellite- and building-footprint-confirmed); the OCII plan's own Dec 2019 Land Use Map designates this block's future land use as park (shown in park-green). No specific project name, developer, or completion date was found.",

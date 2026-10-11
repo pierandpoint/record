@@ -233,8 +233,9 @@
   "facts": [
     {
       "key": "address",
-      "value": "1090 Dr. Maya Angelou Lane (SF Standard, Commercial Property Executive); 1051 3rd Street in the Warriors press release (Mitsui Fudosan America's repost)",
+      "value": "Two official addresses on parcel 8719C003, one on each street: 1090 Dr. Maya Angelou Lane (DataSF Enterprise Addressing System, eas_address_id 869906) and 1089 3rd St (eas_address_id 871659). SF Standard and Commercial Property Executive also give 1090 Dr. Maya Angelou Lane; the Warriors press release gives 1051 3rd Street, which is not an official address for this parcel",
       "sources": [
+        "src-datasf-eas",
         "src-sfstandard-2025-11",
         "src-cpe-2025-05",
         "src-mfa-2024-10"
@@ -648,13 +649,20 @@
       "date": "2018-01-30",
       "url": "https://www.sfport.com/media/3353/download",
       "accessed": "2026-09-29"
+    },
+    {
+      "id": "src-datasf-eas",
+      "title": "San Francisco Addresses - Enterprise Addressing System, rows for parcel 8719C003 (eas_address_id 869906, 1090 DR MAYA ANGELOU LN; eas_address_id 871659, 1089 03RD ST)",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sf.gov/resource/3mea-di5p.json?parcel_number=8719C003",
+      "accessed": "2026-10-10"
     }
   ],
   "open_questions": [
     "Construction cost: not stated in anything read.",
     "Groundbreaking date: only The Registry's paywalled June 22, 2021 headline; the Port's December 2021 update confirms piles were done that year.",
     "Square footage: four different figures across sources (272,770 / 281,639 / 295,000 / 313,952). The figure in this record's map notes (258,994 office + 13,773 retail) matches none of them exactly.",
-    "Address: three conflicting addresses and no source resolves them. 1090 Dr. Maya Angelou Lane (SF Standard, Nov 2025; Commercial Property Executive, May 2025); 1051 3rd Street (the Warriors press release, as reposted by Mitsui Fudosan America, Oct 2024); 1089 3rd St (DataSF Assessor parcel 8719C003, from_address_num 1089). Pier & Point shows no address for this record until it is resolved.",
+    "Address: one press release (the Warriors announcement, as reposted by Mitsui Fudosan America, Oct 2024) gives 1051 3rd Street, which is not an official address for this parcel; DataSF lists 1090 Dr. Maya Angelou Lane and 1089 3rd St.",
     "Lease terms and rents for the Warriors, Coinbase and Nvidia: undisclosed in every report read.",
     "Images: no 'before' photo is hosted (until 2020 the parcel was the Seawall Lot 337 surface parking lot) and no rendering is hosted because the architects' renderings are not openly licensed; they are reachable through the architect sources listed here.",
     "When Nvidia's lease commences: The Real Deal (Nov 21, 2025) says only that it 'is slated to occupy 45,000 square feet'; no commencement date appears in any source read.",
