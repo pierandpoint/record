@@ -1530,7 +1530,7 @@
     });
   }
 
-  function drawYouAreHere(svg, cx, cy, accuracyM, viewW) {
+  function drawYouAreHere(svg, cx, cy, accuracyM, viewW, label) {
     var g = svgEl('g');
     g.setAttribute('class', 'near-overlay');
     if (accuracyM) {
@@ -1544,7 +1544,7 @@
     dot.setAttribute('class', 'near-you-dot');
     dot.setAttribute('cx', cx); dot.setAttribute('cy', cy);
     dot.setAttribute('r', Math.max(viewW * 0.014, 1.5));
-    var title = svgEl('title'); title.textContent = 'You are here';
+    var title = svgEl('title'); title.textContent = label || 'You are here';
     dot.appendChild(title);
     g.appendChild(dot);
     svg.appendChild(g);
@@ -1597,7 +1597,10 @@
     }).sort(function (a, b) { return a.dist - b.dist; });
   }
 
-  function showNear(lat, lon, accuracyM) {
+  // `label` is set for a typed address or corner (placeLookup below) and unset for the visitor's
+  // own position: it names the dot, and keeps the finder out of the way, since the visitor asked
+  // about one place rather than searching every record.
+  function showNear(lat, lon, accuracyM, label) {
     var ranked = withDistances(lat, lon);
     var close = ranked.filter(function (x) { return x.dist <= CLOSE_M; });
     var further = ranked.filter(function (x) { return x.dist > CLOSE_M; });
@@ -1609,7 +1612,7 @@
     closeWrap.hidden = false;
     farLine.hidden = true;
     // Someone who came here from the header search wants those results, location or not.
-    finderSection.hidden = !urlQuery;
+    finderSection.hidden = label ? true : !urlQuery;
 
     var p = project(lon, lat);
     var w = MAP_WIDTH_M / METRES_PER_UNIT;
@@ -1622,14 +1625,14 @@
       // view wherever a visitor last panned/zoomed it, so the map always frames what's actually
       // around them right now rather than fighting to stay in view as they move.
       if (svg.ppSetView) svg.ppSetView(p[0], p[1], w);
-      drawYouAreHere(svg, p[0], p[1], accuracyM, w);
+      drawYouAreHere(svg, p[0], p[1], accuracyM, w, label);
       close.forEach(function (x) {
         Array.prototype.forEach.call(svg.querySelectorAll('.rec[data-id="' + x.r.id + '"]'), function (el) { el.classList.add('near-highlight'); });
       });
     });
   }
 
-  function showFar(lat, lon) {
+  function showFar(lat, lon, label) {
     var ranked = withDistances(lat, lon);
     var nearest = ranked[0];
     closeWrap.hidden = true;
@@ -1643,7 +1646,7 @@
       if (nearest) drawArrow(svg, deg);
     });
     if (nearest) {
-      farLine.textContent = 'You are ' + fmtDistance(nearest.dist) + ' ' + compassOf(deg) + ' of ' + nearest.r.siteName + '.';
+      farLine.textContent = (label ? label + ' is ' : 'You are ') + fmtDistance(nearest.dist) + ' ' + compassOf(deg) + ' of ' + nearest.r.siteName + '.';
       farLine.hidden = false;
     } else {
       farLine.hidden = true;
@@ -1664,6 +1667,7 @@
   var lastFixLat = null, lastFixLon = null;
   var MOVE_THRESHOLD_M = 12;
   function success(pos) {
+    showingPlace = false;
     var lat = pos.coords.latitude, lon = pos.coords.longitude, acc = pos.coords.accuracy;
     if (lastFixLat !== null && haversine(lastFixLat, lastFixLon, lat, lon) < MOVE_THRESHOLD_M) return;
     lastFixLat = lat; lastFixLon = lon;
@@ -1719,6 +1723,124 @@
 
   btn.addEventListener('click', locate);
 
+  // Address and cross-street search (docs/briefs/address-search.md). A typed "1290 3rd St" or
+  // "Illinois & 20th" becomes a point from the City's own address list or street corners
+  // (sitegen/places.py), fetched from this site only once something address-like is typed, and
+  // the records around it are listed exactly as they are for the visitor's own position. Most
+  // records have no street address of their own, so this finds them by what is near them.
+  // Nothing typed is sent anywhere: the whole lookup runs here.
+  var placeForm = document.getElementById('near-place-form');
+  var placeInput = document.getElementById('near-place-q');
+  var placeIndex = null, showingPlace = false;
+  var TYPES = { STREET: 'ST', AVENUE: 'AVE', AV: 'AVE', BOULEVARD: 'BLVD', LANE: 'LN', PLACE: 'PL', ALLEY: 'ALY',
+    TERRACE: 'TER', DRIVE: 'DR', COURT: 'CT', ROAD: 'RD', CIRCLE: 'CIR', CROSSING: 'XING' };
+  function ordinal(n) {
+    var t = n % 100, u = n % 10;
+    return n + (t >= 11 && t <= 13 ? 'TH' : u === 1 ? 'ST' : u === 2 ? 'ND' : u === 3 ? 'RD' : 'TH');
+  }
+  function norm(q) {
+    return q.toUpperCase().replace(/[.,#'’]/g, ' ')
+      .replace(/\b(SAN FRANCISCO|SF|CALIFORNIA|CA|USA)\b/g, ' ').replace(/\b94\d{3}\b/g, ' ')
+      .replace(/\s+/g, ' ').trim();
+  }
+  // One street as typed -> the indexes of the streets it can mean, through places.py's own keys.
+  function streetsFor(part) {
+    var words = part.split(' ').filter(Boolean).map(function (w) {
+      if (/^\d+$/.test(w)) return ordinal(parseInt(w, 10));
+      var m = /^0*(\d+(ST|ND|RD|TH))$/.exec(w);
+      return m ? m[1] : (TYPES[w] || w);
+    });
+    var tries = [words.join(' ')];
+    if (words.length > 1) tries.push(words.slice(0, -1).join(' '));
+    for (var i = 0; i < tries.length; i++) if (placeIndex.keys[tries[i]]) return placeIndex.keys[tries[i]];
+    return [];
+  }
+  function looksLikePlace(q) {
+    var n = norm(q);
+    return /^\d+[A-Z½]?\s+\S/.test(n) || /\S\s*(&|\/|@|\bAND\b|\bAT\b)\s*\S/.test(n);
+  }
+  // {lat, lon, label, note} or null.
+  function findPlace(q) {
+    var n = norm(q), P = placeIndex;
+    var parts = n.split(/\s*(?:&|\/|@|\bAND\b|\bAT\b)\s*/).filter(Boolean);
+    if (parts.length === 2) {
+      var a = streetsFor(parts[0]), b = streetsFor(parts[1]);
+      for (var i = 0; i < P.corners.length; i++) {
+        var c = P.corners[i][0];
+        var sa = a.filter(function (x) { return c.indexOf(x) !== -1; })[0];
+        var sb = b.filter(function (x) { return c.indexOf(x) !== -1 && x !== sa; })[0];
+        if (sa !== undefined && sb !== undefined) {
+          return { lat: P.corners[i][1], lon: P.corners[i][2], label: P.streets[sa] + ' & ' + P.streets[sb] };
+        }
+      }
+      return null;
+    }
+    var m = /^(\d+)([A-Z½]?)\s+(.+)$/.exec(n);
+    if (!m) return null;
+    var streets = streetsFor(m[3]);
+    if (!streets.length) return null;
+    var want = m[1] + m[2], num = parseInt(m[1], 10), best = null, bestGap = Infinity;
+    for (var j = 0; j < P.addresses.length; j++) {
+      var ad = P.addresses[j];
+      if (streets.indexOf(ad[0]) === -1) continue;
+      if (ad[1] === want) return { lat: ad[2], lon: ad[3], label: ad[1] + ' ' + P.streets[ad[0]] };
+      // Otherwise the closest listed number within 200, on the same side of the street (same
+      // parity) first: an odd number is never answered with an even one while an odd one is near.
+      var other = parseInt(ad[1], 10), gap = Math.abs(other - num);
+      if (gap > 200) continue;
+      if (other % 2 !== num % 2) gap += 1000;
+      if (gap < bestGap) { bestGap = gap; best = ad; }
+    }
+    if (!best) return null;
+    return { lat: best[2], lon: best[3], label: best[1] + ' ' + P.streets[best[0]],
+      note: want + ' ' + P.streets[best[0]] + ' is not in the City’s address list; showing the nearest listed address, ' + best[1] + ' ' + P.streets[best[0]] + '.' };
+  }
+  function loadIndex() {
+    if (placeIndex) return Promise.resolve(placeIndex);
+    return fetch(D.places).then(function (res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    }).then(function (j) { placeIndex = j; return j; });
+  }
+  // fromUrl: a header search that happened to be an address. A miss there says nothing and
+  // leaves the finder's own name filter to answer, since "Building 12 and 21" is a name.
+  function placeLookup(q, fromUrl) {
+    return loadIndex().then(function () {
+      var hit = findPlace(q);
+      if (!hit) {
+        if (!fromUrl) showStatus('No address or street corner matching “' + q + '” near the four sites. Try a number and a street, like 1290 3rd St, or two streets, like Illinois & 20th.');
+        return;
+      }
+      if (watchId !== null) { navigator.geolocation.clearWatch(watchId); watchId = null; }
+      lastFixLat = lastFixLon = null;
+      showingPlace = true;
+      resetPanels();
+      var ranked = withDistances(hit.lat, hit.lon);
+      showStatus((hit.note ? hit.note + ' ' : '') + 'Tracked records near ' + hit.label + ':');
+      if (ranked.length && ranked[0].dist <= NEAR_M) showNear(hit.lat, hit.lon, 0, hit.label);
+      else showFar(hit.lat, hit.lon, hit.label);
+      if (fromUrl) {
+        var fs = document.getElementById('finder-search');
+        if (fs) { fs.value = ''; fs.dispatchEvent(new Event('input')); }
+      }
+    }).catch(function () {
+      if (!fromUrl) showStatus('The address list could not be loaded. Try again, or search by name below.');
+    });
+  }
+  if (placeForm && placeInput) {
+    placeForm.addEventListener('submit', function (ev) {
+      var q = placeInput.value.trim();
+      if (!q) return;
+      ev.preventDefault();
+      placeLookup(q, false);
+    });
+  }
+  var urlIsPlace = urlQuery && looksLikePlace(urlQuery);
+  if (urlIsPlace) {
+    if (placeInput) placeInput.value = urlQuery;
+    placeLookup(urlQuery, true);
+  }
+
   // If this browser already granted pierandpoint.org geolocation access -- from an earlier visit,
   // or an earlier click this same session -- skip straight to the map on the next load instead of
   // asking the visitor to press the button again every time. navigator.permissions.query() only
@@ -1730,7 +1852,8 @@
   // or reports the state as 'prompt' (not decided yet) or 'denied'.
   if (navigator.permissions && navigator.permissions.query) {
     navigator.permissions.query({ name: 'geolocation' }).then(function (status) {
-      if (status.state === 'granted') locate();
+      // A typed address on the way in wins over the visitor's own position.
+      if (status.state === 'granted' && !urlIsPlace && !showingPlace) locate();
     }).catch(function () { /* unsupported for this query in this browser -- button stays the only path */ });
   }
 })();
