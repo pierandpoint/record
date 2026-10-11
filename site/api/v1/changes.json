@@ -5,17 +5,17 @@
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
  "terms": "https://pierandpoint.org/terms/",
- "count": 872,
+ "count": 881,
  "changes": [
   {
    "date": "2026-10-11",
    "kind": "correction",
    "kind_label": "Correction",
    "text": "The Pier 54, Piers 38 & 40, Pier 70 dry docks and Mission Bay ferry landing pages quoted DataSF's parcel records in a form that did not match what DataSF returns. Each now states the same facts in plain words: the Assessor lot number, its block, that it is marked active, and for the dry docks lot its recorded drop date of 2018-10-02. The \"About this shape\" section is also headed \"Assessor parcel\" instead of \"Why there's no DataSF parcel\", which contradicted the text beneath it.",
-   "source": "DataSF, Parcels - Active and Retired (acdm-wktn), rows blklot 9900054, 9900038, 9900040, 9900068, 9900064 and 9900064H, queried 2026-10-11 (https://data.sf.gov/resource/acdm-wktn.json)",
+   "source": "DataSF, Parcels - Active and Retired (acdm-wktn), the rows for Assessor lots 9900054, 9900038, 9900040, 9900068, 9900064 and 9900064H, queried 2026-10-11 (https://data.sf.gov/resource/acdm-wktn.json)",
    "sources": [
     {
-     "title": "DataSF, Parcels - Active and Retired (acdm-wktn), rows blklot 9900054, 9900038, 9900040, 9900068, 9900064 and 9900064H, queried 2026-10-11 (https://data.sf.gov/resource/acdm-wktn.json)"
+     "title": "DataSF, Parcels - Active and Retired (acdm-wktn), the rows for Assessor lots 9900054, 9900038, 9900040, 9900068, 9900064 and 9900064H, queried 2026-10-11 (https://data.sf.gov/resource/acdm-wktn.json)"
     }
    ],
    "category": "correction",
@@ -23,6 +23,267 @@
    "record": null,
    "site": null,
    "relation": null,
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-10-11",
+   "kind": "correction",
+   "kind_label": "Correction",
+   "text": "The Pier 54 page told readers to 'see' a field name that the page itself shows as 'Traced from', and it named a DataSF column to say the lot is on the Assessor's secured roll. It now says 'see Traced from above' and 'on the Assessor's secured roll'. The page also said DataSF's record was checked on October 10, 2026; it was read on both October 10 and October 11, 2026, with the same result, and the page now says so. Nothing about the lot or the outline on the map changed.",
+   "source": "DataSF, Parcels - Active and Retired (acdm-wktn), the row for Assessor lot 9900054, read 2026-10-10 and 2026-10-11 (https://data.sf.gov/resource/acdm-wktn.json?blklot=9900054)",
+   "sources": [
+    {
+     "title": "DataSF, Parcels - Active and Retired (acdm-wktn), the row for Assessor lot 9900054, read 2026-10-10 and 2026-10-11 (https://data.sf.gov/resource/acdm-wktn.json?blklot=9900054)"
+    }
+   ],
+   "category": "correction",
+   "category_label": "Correction",
+   "record": {
+    "id": "pier_54",
+    "slug": "pier-54",
+    "name": "Pier 54",
+    "permalink": "https://pierandpoint.org/parcels/pier-54/",
+    "api": "https://pierandpoint.org/api/v1/records/pier-54.json"
+   },
+   "site": {
+    "slug": "mission-bay",
+    "name": "Mission Bay",
+    "short": "Mission Bay",
+    "url": "https://pierandpoint.org/sites/mission-bay/"
+   },
+   "relation": "adjacent",
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-10-11",
+   "kind": "correction",
+   "kind_label": "Correction",
+   "text": "The Piers 38 & 40 page told readers to 'see' a field name that the page itself shows as 'Traced from', and it named a DataSF column to say both lots are on the Assessor's secured roll. It now says 'see Traced from above' and 'on the Assessor's secured roll'. The page also said DataSF's record was checked on October 10, 2026; it was read on both October 10 and October 11, 2026, with the same result, and the page now says so. Nothing about the lot or the outline on the map changed.",
+   "source": "DataSF, Parcels - Active and Retired (acdm-wktn), the rows for Assessor lots 9900038 and 9900040, read 2026-10-10 and 2026-10-11 (https://data.sf.gov/resource/acdm-wktn.json?blklot=9900038; https://data.sf.gov/resource/acdm-wktn.json?blklot=9900040)",
+   "sources": [
+    {
+     "title": "DataSF, Parcels - Active and Retired (acdm-wktn), the rows for Assessor lots 9900038 and 9900040, read 2026-10-10 and 2026-10-11 (https://data.sf.gov/resource/acdm-wktn.json?blklot=9900038; https://data.sf.gov/resource/acdm-wktn.json?blklot=9900040)"
+    }
+   ],
+   "category": "correction",
+   "category_label": "Correction",
+   "record": {
+    "id": "piers_38_40",
+    "slug": "piers-38-and-40",
+    "name": "Piers 38 & 40",
+    "permalink": "https://pierandpoint.org/parcels/piers-38-and-40/",
+    "api": "https://pierandpoint.org/api/v1/records/piers-38-and-40.json"
+   },
+   "site": {
+    "slug": "mission-rock",
+    "name": "Mission Rock",
+    "short": "Mission Rock",
+    "url": "https://pierandpoint.org/sites/mission-rock/"
+   },
+   "relation": "adjacent",
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-10-11",
+   "kind": "correction",
+   "kind_label": "Correction",
+   "text": "The dry docks page told readers to 'see' a field name that the page itself shows as 'Traced from', and it used two DataSF column names, for the recorded drop date and for the Assessor's secured roll. It now says 'see Traced from above', 'a recorded drop date of 2018-10-02' and 'on the Assessor's secured roll'. The page also said DataSF's record was checked on October 10, 2026; it was read on both October 10 and October 11, 2026, with the same result, and the page now says so. The earlier entry on this page about the Port's expected demolition-contract timing now opens with 'On July 15, 2026, Potrero View reported that the Port expects', so the date reads as a report, not an event. Nothing about the lot or the outline on the map changed.",
+   "source": "DataSF, Parcels - Active and Retired (acdm-wktn), the row for Assessor lot 9900068, read 2026-10-10 and 2026-10-11 (https://data.sf.gov/resource/acdm-wktn.json?blklot=9900068)",
+   "sources": [
+    {
+     "title": "DataSF, Parcels - Active and Retired (acdm-wktn), the row for Assessor lot 9900068, read 2026-10-10 and 2026-10-11 (https://data.sf.gov/resource/acdm-wktn.json?blklot=9900068)"
+    }
+   ],
+   "category": "correction",
+   "category_label": "Correction",
+   "record": {
+    "id": "pier70_dry_docks",
+    "slug": "piers-68-and-70-dry-docks",
+    "name": "Piers 68 & 70 Dry Docks",
+    "permalink": "https://pierandpoint.org/parcels/piers-68-and-70-dry-docks/",
+    "api": "https://pierandpoint.org/api/v1/records/piers-68-and-70-dry-docks.json"
+   },
+   "site": {
+    "slug": "pier-70",
+    "name": "Pier 70",
+    "short": "Pier 70",
+    "url": "https://pierandpoint.org/sites/pier-70/"
+   },
+   "relation": "adjacent",
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-10-11",
+   "kind": "correction",
+   "kind_label": "Correction",
+   "text": "The Block 12 West page said OCII files minutes under the month they are approved. That generalised from one example, so it now says only what was observed: the September 1, 2026 minutes are filed in the 2026-10 folder. The October 6, 2026 meeting page, checked again on October 11, 2026, still lists no minutes and no outcome, so the approval stays unconfirmed. An earlier correction on this page was also reworded to read 'This corrects the note above: the approval is not confirmed.', because the note it corrects is still shown above it.",
+   "source": "OCII, Commission meeting page, Oct 6, 2026 (https://sfocii.org/public-meetings/commission-meeting/commission-meeting-october-6-2026); OCII, Commission meeting page, Sept 1, 2026 (https://sfocii.org/public-meetings/commission-meeting/commission-meeting-september-1-2026)",
+   "sources": [
+    {
+     "title": "OCII, Commission meeting page, Oct 6, 2026 (https://sfocii.org/public-meetings/commission-meeting/commission-meeting-october-6-2026); OCII, Commission meeting page, Sept 1, 2026 (https://sfocii.org/public-meetings/commission-meeting/commission-meeting-september-1-2026)"
+    }
+   ],
+   "category": "correction",
+   "category_label": "Correction",
+   "record": {
+    "id": "8710006",
+    "slug": "mission-bay-south-block-12-west",
+    "name": "Mission Bay South Block 12 West",
+    "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-12-west/",
+    "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-12-west.json"
+   },
+   "site": {
+    "slug": "mission-bay",
+    "name": "Mission Bay",
+    "short": "Mission Bay",
+    "url": "https://pierandpoint.org/sites/mission-bay/"
+   },
+   "relation": "tracked",
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-10-11",
+   "kind": "correction",
+   "kind_label": "Correction",
+   "text": "The Building B page credited its DataSF address source to the Department of Building Inspection; it now credits the City and County of San Francisco (DataSF), as the other address sources on the site do. An open question about the 1051 3rd Street address in a press release was removed, because the page's address entry already says that 1051 3rd Street is not an official address for this parcel.",
+   "source": "DataSF, San Francisco Addresses - Enterprise Addressing System (https://data.sf.gov/resource/3mea-di5p.json?parcel_number=8719C003)",
+   "sources": [
+    {
+     "title": "DataSF, San Francisco Addresses - Enterprise Addressing System (https://data.sf.gov/resource/3mea-di5p.json?parcel_number=8719C003)"
+    }
+   ],
+   "category": "correction",
+   "category_label": "Correction",
+   "record": {
+    "id": "8719C003",
+    "slug": "building-b",
+    "name": "Building B",
+    "permalink": "https://pierandpoint.org/parcels/building-b/",
+    "api": "https://pierandpoint.org/api/v1/records/building-b.json"
+   },
+   "site": {
+    "slug": "mission-rock",
+    "name": "Mission Rock",
+    "short": "Mission Rock",
+    "url": "https://pierandpoint.org/sites/mission-rock/"
+   },
+   "relation": "tracked",
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-10-11",
+   "kind": "correction",
+   "kind_label": "Correction",
+   "text": "The October 10, 2026 note about this change said the part of the east reach moved to P2 was about 3,800 square metres and that it included about 220 square metres overlapping P2. Measured again from the outlines before and after the change, the east reach lost about 3,740 square metres, and the two shapes had overlapped by about 1,220 square metres. The shape on the map is unchanged.",
+   "source": "Pier & Point editorial review",
+   "sources": [
+    {
+     "title": "Pier & Point editorial review"
+    }
+   ],
+   "category": "correction",
+   "category_label": "Correction",
+   "record": {
+    "id": "mission_bay_creek_park_p1_p3",
+    "slug": "mission-creek-park-2",
+    "name": "Mission Creek Park",
+    "permalink": "https://pierandpoint.org/parcels/mission-creek-park-2/",
+    "api": "https://pierandpoint.org/api/v1/records/mission-creek-park-2.json"
+   },
+   "site": {
+    "slug": "mission-bay",
+    "name": "Mission Bay",
+    "short": "Mission Bay",
+    "url": "https://pierandpoint.org/sites/mission-bay/"
+   },
+   "relation": "tracked",
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-10-11",
+   "kind": "correction",
+   "kind_label": "Correction",
+   "text": "The October 10, 2026 note about this change said P2 lost about 220 square metres that overlapped the east reach. Measured again from the outlines before and after the change, P2 lost nothing and gained about 2,520 square metres, and the two shapes had overlapped by about 1,220 square metres. The P2 accuracy note also said twice that P2 overlaps the existing Mission Creek Park shape; it now says so once. The shape on the map is unchanged.",
+   "source": "Pier & Point editorial review",
+   "sources": [
+    {
+     "title": "Pier & Point editorial review"
+    }
+   ],
+   "category": "correction",
+   "category_label": "Correction",
+   "record": {
+    "id": "mission_bay_p2_creek_channel",
+    "slug": "p2",
+    "name": "P2",
+    "permalink": "https://pierandpoint.org/parcels/p2/",
+    "api": "https://pierandpoint.org/api/v1/records/p2.json"
+   },
+   "site": {
+    "slug": "mission-bay",
+    "name": "Mission Bay",
+    "short": "Mission Bay",
+    "url": "https://pierandpoint.org/sites/mission-bay/"
+   },
+   "relation": "tracked",
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-10-11",
+   "kind": "correction",
+   "kind_label": "Correction",
+   "text": "The page said the UC Regents approved the Block 33 building's budget and design on January 26, 2017, citing a UCSF news page that was not read (and whose listed access date was wrong). It now cites the Regents' own records, which were read: the minutes of January 26, 2017 show the Board approving the Finance and Capital Strategies Committee's recommendations, which include a $237.13 million budget and the building's design. The agenda item gives a proposed schedule of completion by July 2019, with construction starting in June 2017. The Regents' documents call it the Mission Bay East Campus Phase 1 Building (Block 33), not the Valley Center for Vision, and describe a 343,000-gross-square-foot building, mostly academic and administrative workspace; the page now lists that as an open question.",
+   "source": "The Regents of the University of California, Minutes, January 26, 2017 (https://regents.universityofcalifornia.edu/minutes/2017/board%201.26.pdf); Finance and Capital Strategies Committee minutes, January 25, 2017 (https://regents.universityofcalifornia.edu/minutes/2017/fin1.pdf); action item F5, January 25, 2017 (https://regents.universityofcalifornia.edu/regmeet/jan17/f5.pdf)",
+   "sources": [
+    {
+     "title": "The Regents of the University of California, Minutes, January 26, 2017 (https://regents.universityofcalifornia.edu/minutes/2017/board%201.26.pdf); Finance and Capital Strategies Committee minutes, January 25, 2017 (https://regents.universityofcalifornia.edu/minutes/2017/fin1.pdf); action item F5, January 25, 2017 (https://regents.universityofcalifornia.edu/regmeet/jan17/f5.pdf)"
+    }
+   ],
+   "category": "correction",
+   "category_label": "Correction",
+   "record": {
+    "id": "ucsf_valley_center_for_vision_west",
+    "slug": "ucsf-wayne-and-gladys-valley-center-for-vision",
+    "name": "UCSF Wayne and Gladys Valley Center for Vision",
+    "permalink": "https://pierandpoint.org/parcels/ucsf-wayne-and-gladys-valley-center-for-vision/",
+    "api": "https://pierandpoint.org/api/v1/records/ucsf-wayne-and-gladys-valley-center-for-vision.json"
+   },
+   "site": {
+    "slug": "mission-bay",
+    "name": "Mission Bay",
+    "short": "Mission Bay",
+    "url": "https://pierandpoint.org/sites/mission-bay/"
+   },
+   "relation": "tracked",
+   "permalink": "https://pierandpoint.org/changes/#record"
+  },
+  {
+   "date": "2026-10-11",
+   "kind": "correction",
+   "kind_label": "Correction",
+   "text": "The page said 499 Illinois Street is Assessor lot 3940005. DataSF's records show lot 3940004 addressed as 499 Illinois St, lot 3940005 addressed as 409 to 499 Illinois St, and lot 3940003 addressed as 409 Illinois St, all active with one shared outline. Lot 3940001, which the 2006 building permit used, is retired. The page no longer speculates about lot-line adjustments. It also gave the dentistry school's date as 'targeted to open in late 2029'. American School & University magazine reports a completion date targeted for late 2029; SF Standard reports the building ready for occupants in the first quarter of 2029. The page now gives both, and the September 28, 2026 entry on this page that credited the late-2029 wording to SF Standard was wrong.",
+   "source": "DataSF, Parcels - Active and Retired (acdm-wktn), rows for block 3940, read 2026-10-11 (https://data.sf.gov/resource/acdm-wktn.json?block_num=3940); American School & University magazine, 2026-09-08 (https://www.asumag.com/planning-design/renovation/press-release/55403432/ucsf-selects-suffolk-co-architects-for-261000-square-foot-mission-bay-education-and-dental-center); SF Standard, 2025-12-17 (https://sfstandard.com/2025/12/17/ucsf-drops-767-million-expand-its-mission-bay-campus/)",
+   "sources": [
+    {
+     "title": "DataSF, Parcels - Active and Retired (acdm-wktn), rows for block 3940, read 2026-10-11 (https://data.sf.gov/resource/acdm-wktn.json?block_num=3940); American School & University magazine, 2026-09-08 (https://www.asumag.com/planning-design/renovation/press-release/55403432/ucsf-selects-suffolk-co-architects-for-261000-square-foot-mission-bay-education-and-dental-center); SF Standard, 2025-12-17 (https://sfstandard.com/2025/12/17/ucsf-drops-767-million-expand-its-mission-bay-campus/)"
+    }
+   ],
+   "category": "correction",
+   "category_label": "Correction",
+   "record": {
+    "id": "mission_bay_490_499_illinois",
+    "slug": "409-499-illinois-street",
+    "name": "409/499 Illinois Street",
+    "permalink": "https://pierandpoint.org/parcels/409-499-illinois-street/",
+    "api": "https://pierandpoint.org/api/v1/records/409-499-illinois-street.json"
+   },
+   "site": {
+    "slug": "mission-bay",
+    "name": "Mission Bay",
+    "short": "Mission Bay",
+    "url": "https://pierandpoint.org/sites/mission-bay/"
+   },
+   "relation": "tracked",
    "permalink": "https://pierandpoint.org/changes/#record"
   },
   {
@@ -377,7 +638,7 @@
    "date": "2026-10-10",
    "kind": "added",
    "kind_label": "Added",
-   "text": "The Port expects initial plans to be completed by next March, with a contract for demolition work tendered the second half of 2027 (the Port, as reported by Potrero View, July 15, 2026).",
+   "text": "On July 15, 2026, Potrero View reported that the Port expects initial plans to be completed by next March, with a contract for demolition work tendered the second half of 2027 (the reporter's wording, not a quotation).",
    "source": "https://www.potreroview.net/large-ship-repair-fades-into-san-francisco-history/",
    "sources": [
     {
@@ -2334,7 +2595,7 @@
    "date": "2026-10-10",
    "kind": "correction",
    "kind_label": "Correction",
-   "text": "An earlier note here recorded the OCII Commission's approval of the Block 12 West agreement on Oct 6, 2026. It rested on a copy of the resolution marked \"Adopted October 6, 2026\" that was created the day before the meeting and has an unsigned certification line. The meeting's minutes are not posted, and the meeting page lists no outcome. The approval is not confirmed, so the note was withdrawn and the question is open on the record page.",
+   "text": "An earlier note here recorded the OCII Commission's approval of the Block 12 West agreement on Oct 6, 2026. It rested on a copy of the resolution marked \"Adopted October 6, 2026\" that was created the day before the meeting and has an unsigned certification line. The meeting's minutes are not posted, and the meeting page lists no outcome. This corrects the note above: the approval is not confirmed. The question is open on the record page.",
    "source": "OCII, Commission meeting page, Oct 6, 2026 (https://sfocii.org/public-meetings/commission-meeting/commission-meeting-october-6-2026); OCII, Resolution No. 23-2026, unsigned copy (https://sfocii.org/files/inline-files/2026023.pdf)",
    "sources": [
     {
@@ -2567,10 +2828,10 @@
    "kind": "correction",
    "kind_label": "Correction",
    "text": "Pier 54 does have its own Assessor lot, number 9900054. This record had said it had none, because the search used to check looked for street names and Port piers do not have one. The outline on the map is unchanged: it is still a hand trace of the pier deck.",
-   "source": "DataSF, Parcels - Active and Retired (acdm-wktn), row blklot 9900054, queried 2026-10-10",
+   "source": "DataSF, Parcels - Active and Retired (acdm-wktn), the row for Assessor lot 9900054, queried 2026-10-10",
    "sources": [
     {
-     "title": "DataSF, Parcels - Active and Retired (acdm-wktn), row blklot 9900054, queried 2026-10-10"
+     "title": "DataSF, Parcels - Active and Retired (acdm-wktn), the row for Assessor lot 9900054, queried 2026-10-10"
     }
    ],
    "category": "correction",
@@ -2596,10 +2857,10 @@
    "kind": "correction",
    "kind_label": "Correction",
    "text": "Pier 38 and Pier 40 each have their own Assessor lot (9900038 and 9900040). This record had said they had none, because the search used to check looked for street names and Port piers do not have one. The outlines on the map are unchanged: they are still hand traces of the two pier decks.",
-   "source": "DataSF, Parcels - Active and Retired (acdm-wktn), rows blklot 9900038 and 9900040, queried 2026-10-10",
+   "source": "DataSF, Parcels - Active and Retired (acdm-wktn), the rows for Assessor lots 9900038 and 9900040, queried 2026-10-10",
    "sources": [
     {
-     "title": "DataSF, Parcels - Active and Retired (acdm-wktn), rows blklot 9900038 and 9900040, queried 2026-10-10"
+     "title": "DataSF, Parcels - Active and Retired (acdm-wktn), the rows for Assessor lots 9900038 and 9900040, queried 2026-10-10"
     }
    ],
    "category": "correction",
@@ -2625,10 +2886,10 @@
    "kind": "correction",
    "kind_label": "Correction",
    "text": "The two dry docks sit inside Assessor lot 9900068, the lot for the whole shipyard. This record had said no lot exists, because the search used to check looked for street names. The lot's entry shows a drop date of 2018 but still reads active, and the dataset does not explain that. The outlines on the map are unchanged.",
-   "source": "DataSF, Parcels - Active and Retired (acdm-wktn), row blklot 9900068, queried 2026-10-10",
+   "source": "DataSF, Parcels - Active and Retired (acdm-wktn), the row for Assessor lot 9900068, queried 2026-10-10",
    "sources": [
     {
-     "title": "DataSF, Parcels - Active and Retired (acdm-wktn), row blklot 9900068, queried 2026-10-10"
+     "title": "DataSF, Parcels - Active and Retired (acdm-wktn), the row for Assessor lot 9900068, queried 2026-10-10"
     }
    ],
    "category": "correction",
@@ -2683,10 +2944,10 @@
    "kind": "correction",
    "kind_label": "Correction",
    "text": "The City's environmental review names two Assessor lots for the ferry landing project, 9900064 and 9900064H. This record had said no lot exists. The landings drawn on the map are the 2018 design and mostly lie outside those lots' outlines, so the map is unchanged.",
-   "source": "San Francisco Planning Department, Final Mitigated Negative Declaration, Case No. 2017-008824ENV, cover page; DataSF, Parcels - Active and Retired (acdm-wktn), rows blklot 9900064 and 9900064H, queried 2026-10-10",
+   "source": "San Francisco Planning Department, Final Mitigated Negative Declaration, Case No. 2017-008824ENV, cover page; DataSF, Parcels - Active and Retired (acdm-wktn), the rows for Assessor lots 9900064 and 9900064H, queried 2026-10-10",
    "sources": [
     {
-     "title": "San Francisco Planning Department, Final Mitigated Negative Declaration, Case No. 2017-008824ENV, cover page; DataSF, Parcels - Active and Retired (acdm-wktn), rows blklot 9900064 and 9900064H, queried 2026-10-10"
+     "title": "San Francisco Planning Department, Final Mitigated Negative Declaration, Case No. 2017-008824ENV, cover page; DataSF, Parcels - Active and Retired (acdm-wktn), the rows for Assessor lots 9900064 and 9900064H, queried 2026-10-10"
     }
    ],
    "category": "correction",

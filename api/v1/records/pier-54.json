@@ -51,9 +51,9 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- a hand trace of the pier deck's visible outer edge on satellite imagery (accurate to a few metres at best), not a surveyed footprint and not a Port or Assessor geometry. It covers the deck and shed only, not the pilings or aprons beneath or beside it, and the pier's true outline under the shed roof cannot be seen. The Assessor's own outline for the pier is lot 9900054 (see digitized_from); this trace and that lot differ at the edges, with 92% of the trace inside the lot.",
-    "digitized_from": "Outline: a hand trace of the pier deck's outer edge on Esri World Imagery (zoom 20, imagery captured 2025-08-29), read off a latitude/longitude grid and checked by overlaying the trace on the imagery. No Port GIS shapefile or site-plan figure was available to trace from. Assessor lot: Pier 54 is lot 9900054 (block 9900, lot 054). DataSF's 'Parcels - Active and Retired' dataset (acdm-wktn), queried by lot number on 2026-10-10, lists Assessor lot 9900054 in block 9900 (lot 054), marked active, and its in_asr_secured_roll field reads true in the copy dated 2026-10-01. Port piers carry no street name in that dataset, so a search for PIER-numbered street names finds none: they are block 9900, with the pier number as the lot. This hand trace lies 92% inside lot 9900054 and covers 89% of it; the lot outline has not been used in its place. The earlier placeholder box was anchored to the 500-599 Terry A. Francois Blvd address range (California State Parks Division of Boating and Waterways lists a combined 'Pier 54 & Pier 52 BLF' boat-launch facility on Terry A. Francois Blvd in this same stretch) and lay in open water south of the pier.",
-    "why_no_real_parcel": "Pier 54 has its own Assessor lot, 9900054 (DataSF Parcels, acdm-wktn, checked 2026-10-10). This record still draws a hand trace of the deck rather than that lot's outline.",
+    "accuracy_caveat": "APPROXIMATE -- a hand trace of the pier deck's visible outer edge on satellite imagery (accurate to a few metres at best), not a surveyed footprint and not a Port or Assessor geometry. It covers the deck and shed only, not the pilings or aprons beneath or beside it, and the pier's true outline under the shed roof cannot be seen. The Assessor's own outline for the pier is lot 9900054 (see 'Traced from' above); this trace and that lot differ at the edges, with 92% of the trace inside the lot.",
+    "digitized_from": "Outline: a hand trace of the pier deck's outer edge on Esri World Imagery (zoom 20, imagery captured 2025-08-29), read off a latitude/longitude grid and checked by overlaying the trace on the imagery. No Port GIS shapefile or site-plan figure was available to trace from. Assessor lot: Pier 54 is lot 9900054 (block 9900, lot 054). DataSF's 'Parcels - Active and Retired' dataset (acdm-wktn), queried by lot number on 2026-10-10 and read again on 2026-10-11, lists Assessor lot 9900054 in block 9900 (lot 054), marked active and on the Assessor's secured roll, in the copy dated 2026-10-01. Port piers carry no street name in that dataset, so a search for PIER-numbered street names finds none: they are block 9900, with the pier number as the lot. This hand trace lies 92% inside lot 9900054 and covers 89% of it; the lot outline has not been used in its place. The earlier placeholder box was anchored to the 500-599 Terry A. Francois Blvd address range (California State Parks Division of Boating and Waterways lists a combined 'Pier 54 & Pier 52 BLF' boat-launch facility on Terry A. Francois Blvd in this same stretch) and lay in open water south of the pier.",
+    "why_no_real_parcel": "Pier 54 has its own Assessor lot, 9900054 (DataSF Parcels, acdm-wktn, checked 2026-10-10 and again 2026-10-11). This record still draws a hand trace of the deck rather than that lot's outline.",
     "regulatory_context": "Condemned and red-tagged in 2024; the Port announced it would permanently close at the end of 2024, displacing the pier's tenant businesses (SFGate, Sept 2024). The Port's draft Five-Year Capital Improvement Program (FY2027-31, Feb 2026) budgets a 'Pier 54 Shed Demolition' line item totaling $2.0M ($500,000 in FY2026-27 and $1,500,000 in FY2027-28); no line item for full substructure removal appears in that document."
    }
   },
@@ -198,6 +198,35 @@
   ],
   "changes": [
    {
+    "date": "2026-10-11",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Pier 54 page told readers to 'see' a field name that the page itself shows as 'Traced from', and it named a DataSF column to say the lot is on the Assessor's secured roll. It now says 'see Traced from above' and 'on the Assessor's secured roll'. The page also said DataSF's record was checked on October 10, 2026; it was read on both October 10 and October 11, 2026, with the same result, and the page now says so. Nothing about the lot or the outline on the map changed.",
+    "source": "DataSF, Parcels - Active and Retired (acdm-wktn), the row for Assessor lot 9900054, read 2026-10-10 and 2026-10-11 (https://data.sf.gov/resource/acdm-wktn.json?blklot=9900054)",
+    "sources": [
+     {
+      "title": "DataSF, Parcels - Active and Retired (acdm-wktn), the row for Assessor lot 9900054, read 2026-10-10 and 2026-10-11 (https://data.sf.gov/resource/acdm-wktn.json?blklot=9900054)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier_54",
+     "slug": "pier-54",
+     "name": "Pier 54",
+     "permalink": "https://pierandpoint.org/parcels/pier-54/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-54.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "adjacent",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-10-10",
     "kind": "correction",
     "kind_label": "Correction",
@@ -231,10 +260,10 @@
     "kind": "correction",
     "kind_label": "Correction",
     "text": "Pier 54 does have its own Assessor lot, number 9900054. This record had said it had none, because the search used to check looked for street names and Port piers do not have one. The outline on the map is unchanged: it is still a hand trace of the pier deck.",
-    "source": "DataSF, Parcels - Active and Retired (acdm-wktn), row blklot 9900054, queried 2026-10-10",
+    "source": "DataSF, Parcels - Active and Retired (acdm-wktn), the row for Assessor lot 9900054, queried 2026-10-10",
     "sources": [
      {
-      "title": "DataSF, Parcels - Active and Retired (acdm-wktn), row blklot 9900054, queried 2026-10-10"
+      "title": "DataSF, Parcels - Active and Retired (acdm-wktn), the row for Assessor lot 9900054, queried 2026-10-10"
      }
     ],
     "category": "correction",
