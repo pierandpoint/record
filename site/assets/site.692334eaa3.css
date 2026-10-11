@@ -909,7 +909,12 @@ sup.cites a { text-decoration: none; }
 .near-item-body { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 .near-item-body a { font-weight: 500; overflow-wrap: anywhere; }
 .near-item-body .detail { text-align: left; }
-.finder-item[hidden] { display: none; }
+/* The other name or tenant a finder search matched (docs/briefs/search-aliases.md). */
+.near-item-body .finder-match { font-size: 13px; color: var(--paper-brass); }
+.near-item-body .finder-match[hidden] { display: none; }
+/* As specific as `.record-list li.near-item { display: flex }` above and more, or that rule wins and
+   a filtered-out row stays on screen: every finder search showed all records until 2026-10-11. */
+.record-list li.finder-item[hidden] { display: none; }
 #finder-controls .btn[hidden] { display: none; }
 .near-accuracy-note { color: var(--paper-faint); font-size: 13px; max-width: 62ch; margin-top: 32px; padding-bottom: 8px; }
 

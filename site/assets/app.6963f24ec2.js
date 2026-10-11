@@ -2237,10 +2237,18 @@ function initPagedBox(box, list) {
     var site = siteSel.value, status = statusSel.value;
     var shown = 0;
     items.forEach(function (li) {
+      var direct = !q || li.getAttribute('data-name').indexOf(q) !== -1 || li.getAttribute('data-address').indexOf(q) !== -1 ||
+        (li.getAttribute('data-id') || '').toLowerCase().indexOf(q) !== -1;
+      // Otherwise one of its other names or tenants (docs/briefs/search-aliases.md): show the
+      // first line that matched, so the visitor sees why this record is listed.
+      var via = null;
+      Array.prototype.forEach.call(li.querySelectorAll('.finder-match'), function (m) {
+        var hit = !direct && !via && m.getAttribute('data-match').indexOf(q) !== -1;
+        if (hit) via = m;
+        m.hidden = !hit;
+      });
       var ok = (!site || li.getAttribute('data-site') === site) &&
-        (!status || li.getAttribute('data-status') === status) &&
-        (!q || li.getAttribute('data-name').indexOf(q) !== -1 || li.getAttribute('data-address').indexOf(q) !== -1 ||
-          (li.getAttribute('data-id') || '').toLowerCase().indexOf(q) !== -1);
+        (!status || li.getAttribute('data-status') === status) && (direct || via !== null);
       li.hidden = !ok;
       if (ok) shown++;
     });
