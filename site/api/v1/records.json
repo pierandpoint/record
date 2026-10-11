@@ -115109,12 +115109,12 @@
   },
   {
    "id": "mission_bay_490_499_illinois",
-   "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street",
-   "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision and 499 Illinois Street)",
-   "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street/",
-   "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street.json",
+   "slug": "409-499-illinois-street",
+   "name": "409/499 Illinois Street",
+   "permalink": "https://pierandpoint.org/parcels/409-499-illinois-street/",
+   "api": "https://pierandpoint.org/api/v1/records/409-499-illinois-street.json",
    "names": [
-    "UCSF Wayne and Gladys Valley Center for Vision",
+    "409/499 Illinois Street",
     "499 Illinois Street",
     "409 Illinois Street",
     "UCSF School of Dentistry and Interprofessional Education Center"
@@ -115134,9 +115134,9 @@
    "how_to_comment": [],
    "positions": [],
    "address": null,
-   "summary": "Three buildings tracked as one combined record (the two mapped footprints share DataSF Building Footprints id SF3940003, whose parcels are addressed 409 and 499 Illinois St; which footprint is 490 Illinois St is unresolved): UCSF's Wayne and Gladys Valley Center for Vision, a 347,500-sq-ft, 12-story eye-care tower at 490 Illinois Street that SF YIMBY reported open on November 27, 2020, at a reported cost of about $237 million (SmithGroup architect); 499 Illinois Street, a 6-story biotechnology building (its structural engineer describes a 500,000 sq ft center in two buildings) completed 2008 and owned by Alexandria Real Estate Equities until UCSF bought it; and 409 Illinois Street, which Alexandria also owned and which UCSF bought together with 499 Illinois St for $767,000,000 in December 2025 and is renovating into its new School of Dentistry and an Interprofessional Education Center, targeted to open in late 2029.",
+   "summary": "Two buildings tracked as one record, their mapped footprints sharing DataSF Building Footprints id SF3940003: 499 Illinois Street (the southern footprint), a 6-story biotechnology building (its structural engineer describes a 500,000 sq ft center in two buildings) completed 2008 and owned by Alexandria Real Estate Equities until UCSF bought it; and 409 Illinois Street (the northern footprint), which Alexandria also owned and which UCSF bought together with 499 Illinois St for $767,000,000 in December 2025 and is renovating into its new School of Dentistry and an Interprofessional Education Center, targeted to open in late 2029. UCSF's Valley Center for Vision at 490 Illinois St is a separate record, across Illinois St.",
    "summary_sources": [
-    "src-sfyimby-490illinois",
+    "src-datasf-eas-409-499-illinois",
     "src-datasf-499illinois",
     "src-sgh-499illinois",
     "src-sfstandard-2025-12",
@@ -115148,8 +115148,8 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF3940003), names/addresses from OpenStreetMap; not a hand trace or plan estimate. UCSF's own occupancy at 499 Illinois St (leased space and 90% of the building, then bought it with 409 Illinois St from Alexandria in Dec 2025, per SF Standard 2025-12-17) versus outright ownership at 490 Illinois St is not distinguished in this single combined record -- each wing's own mapping history is logged in this shape's data file in the public data repository (https://github.com/pierandpoint/record). As of 2026-09-29, which OSM way and footprint is 490 versus 499 Illinois St is unresolved.",
-     "digitized_from": "DataSF Building Footprints (mblr SF3940003); names/addresses from OpenStreetMap ways 84821715 (490 Illinois St) and 84821722 (499 Illinois St)."
+     "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF3940003); not a hand trace or plan estimate. UCSF leased space at 499 Illinois St, occupying 90% of the building, then bought it with 409 Illinois St from Alexandria in Dec 2025 (SF Standard 2025-12-17). OpenStreetMap labels the northern footprint (way 84821722) 490 Illinois St, but the City's address points place 409 Illinois St there and 490 Illinois St, UCSF's Valley Center for Vision, across Illinois St on block 33, so that label is not used. Each wing's own mapping history is logged in this shape's data file in the public data repository (https://github.com/pierandpoint/record).",
+     "digitized_from": "DataSF Building Footprints (mblr SF3940003); addresses from DataSF Addresses: the City's address point for 499 Illinois St falls inside the southern footprint and the one for 409 Illinois St inside the northern footprint."
     }
    },
    "centroid": {
@@ -115159,17 +115159,15 @@
    "facts": [
     {
      "key": "architect",
-     "value": "490 Illinois St (Valley Center for Vision): SmithGroup. 409 Illinois St renovation (School of Dentistry / Interprofessional Education Center): CO Architects, with Suffolk as design-build contractor.",
+     "value": "409 Illinois St renovation (School of Dentistry / Interprofessional Education Center): CO Architects, with Suffolk as design-build contractor.",
      "sources": [
-      "src-sfyimby-490illinois",
       "src-asumag-2026"
      ]
     },
     {
      "key": "gross_sqft",
-     "value": "490 Illinois St: 347,500 across three separate buildings (12-story tower, 5-story south wing, 3-story north wing) plus ~75,000 sq ft of parking for 200+ vehicles. 499 Illinois St: six stories per its 2006 DBI permit (its structural engineer, SGH, describes two five-story buildings over two levels of parking); size reported variously -- SGH: a 500,000 sq ft center in two buildings; SF Standard (2025): 409 and 499 together add up to 470,000 sq ft. 409 and 499 Illinois St combined (per UC's own Dec 2025 acquisition filing): ~525,421 rentable sq ft on 3.6 acres with a 587-space shared garage. 409 Illinois St's renovation into the School of Dentistry / Interprofessional Education Center is 261,117 gross sq ft.",
+     "value": "499 Illinois St: six stories per its 2006 DBI permit (its structural engineer, SGH, describes two five-story buildings over two levels of parking); size reported variously -- SGH: a 500,000 sq ft center in two buildings; SF Standard (2025): 409 and 499 together add up to 470,000 sq ft. 409 and 499 Illinois St combined (per UC's own Dec 2025 acquisition filing): ~525,421 rentable sq ft on 3.6 acres with a 587-space shared garage. 409 Illinois St's renovation into the School of Dentistry / Interprofessional Education Center is 261,117 gross sq ft.",
      "sources": [
-      "src-sfyimby-490illinois",
       "src-sgh-499illinois",
       "src-datasf-permit-499-illinois",
       "src-sfstandard-2025-12"
@@ -115177,33 +115175,28 @@
     },
     {
      "key": "developer",
-     "value": "490 Illinois St: opened for the University of California, San Francisco (SF YIMBY); fundraising led by the nonprofit That Man May See. 499 Illinois St: owned by Alexandria Real Estate Equities (its 2013 release calls it 'Alexandria's 499 Illinois Street'; sold to UC in Dec 2025 per SF Standard); no source read states who developed it.",
+     "value": "499 Illinois St: owned by Alexandria Real Estate Equities (its 2013 release calls it 'Alexandria's 499 Illinois Street'; sold to UC in Dec 2025 per SF Standard); no source read states who developed it.",
      "sources": [
-      "src-sfyimby-490illinois",
       "src-fierce-2013-499illinois",
       "src-sfstandard-2025-12"
      ]
     },
     {
      "key": "blklot",
-     "value": "409 Illinois St: 3940003. 499 Illinois St: 3940005 per DataSF's current Assessor parcel data (queried 2026-09-28) -- differs from the block/lot 001 the 2006 building permit used and the lot 004 an earlier source in this record cites; the Assessor's own lot numbering for this address has clearly changed more than once and is not fully reconciled here (see the open questions). 490 Illinois St's own blklot was not re-confirmed.",
+     "value": "409 Illinois St: 3940003. 499 Illinois St: 3940005 per DataSF's current Assessor parcel data (queried 2026-09-28) -- differs from the block/lot 001 the 2006 building permit used and the lot 004 an earlier source in this record cites; the Assessor's own lot numbering for this address has clearly changed more than once and is not fully reconciled here (see the open questions).",
      "sources": [
       "src-datasf-parcels-2026-09-28"
+     ]
+    },
+    {
+     "key": "address",
+     "value": "409 and 499 Illinois St: the City's address points (DataSF Addresses, IDs 701368 and 680852) fall inside the northern and southern footprints respectively.",
+     "sources": [
+      "src-datasf-eas-409-499-illinois"
      ]
     }
    ],
    "costs": [
-    {
-     "amount_usd": 237000000,
-     "what": "Construction cost, Wayne and Gladys Valley Center for Vision (490 Illinois St)",
-     "date": "2020",
-     "approximate": true,
-     "sources": [
-      "src-sfyimby-490illinois"
-     ],
-     "kind": "construction",
-     "scope": "record"
-    },
     {
      "amount_usd": 90000000,
      "what": "Estimated construction cost, 499 Illinois St (per its own 2006 building permit)",
@@ -115262,10 +115255,10 @@
      "category_label": "Status",
      "record": {
       "id": "mission_bay_490_499_illinois",
-      "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street",
-      "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision and 499 Illinois Street)",
-      "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street/",
-      "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street.json"
+      "slug": "409-499-illinois-street",
+      "name": "409/499 Illinois Street",
+      "permalink": "https://pierandpoint.org/parcels/409-499-illinois-street/",
+      "api": "https://pierandpoint.org/api/v1/records/409-499-illinois-street.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -115305,84 +115298,10 @@
      "category_label": "Status",
      "record": {
       "id": "mission_bay_490_499_illinois",
-      "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street",
-      "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision and 499 Illinois Street)",
-      "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street/",
-      "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2017-01-26",
-     "date_label": "Jan 26, 2017",
-     "status": "planned",
-     "status_label": "Planned",
-     "text": "UC Regents approve a $237,000,000 project budget and design for UCSF's new Center for Vision Neurosciences building at Mission Bay -- referred to in UCSF's own campus numbering as 'Block 33' (a different numbering system from the OCII plan-block numbers used elsewhere in this repo; see open_questions), combining the Department of Ophthalmology and the Francis I. Proctor Foundation in a 12-story tower with a 5-story south wing and 3-story north wing; construction was expected to begin June 2017 with completion targeted for July 2019",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-ucsf-2017-block33",
-       "title": "UC Regents Approve Budget, Design for Block 33 Building at Mission Bay",
-       "publisher": "UC San Francisco",
-       "date": "2017-02",
-       "url": "https://www.ucsf.edu/news/2017/02/405756/uc-regents-approve-budget-design-block-33-building-mission-bay",
-       "accessed": "2026-09-21"
-      }
-     ],
-     "source": "UC San Francisco, 2017-02",
-     "origin": "record",
-     "category": "status",
-     "category_label": "Status",
-     "record": {
-      "id": "mission_bay_490_499_illinois",
-      "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street",
-      "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision and 499 Illinois Street)",
-      "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street/",
-      "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2020-11",
-     "date_label": "~2020",
-     "status": "complete",
-     "status_label": "Complete",
-     "text": "SF YIMBY reports (2020-11-27) that UCSF's Wayne and Gladys Valley Center for Vision at 490 Illinois Street has opened; the exact opening date is not given",
-     "expected": false,
-     "approximate": true,
-     "sources": [
-      {
-       "id": "src-sfyimby-490illinois",
-       "title": "UCSF Opens Medical Facility at 490 Illinois Street, Mission Bay, San Francisco",
-       "publisher": "San Francisco YIMBY",
-       "date": "2020-11-27",
-       "url": "https://sfyimby.com/2020/11/ucsf-opens-medical-facility-at-490-illinois-street-mission-bay-san-francisco.html",
-       "accessed": "2026-09-21"
-      }
-     ],
-     "source": "San Francisco YIMBY, 2020-11-27",
-     "origin": "record",
-     "category": "status",
-     "category_label": "Status",
-     "record": {
-      "id": "mission_bay_490_499_illinois",
-      "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street",
-      "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision and 499 Illinois Street)",
-      "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street/",
-      "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street.json"
+      "slug": "409-499-illinois-street",
+      "name": "409/499 Illinois Street",
+      "permalink": "https://pierandpoint.org/parcels/409-499-illinois-street/",
+      "api": "https://pierandpoint.org/api/v1/records/409-499-illinois-street.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -115424,10 +115343,10 @@
      "category_label": "Milestone",
      "record": {
       "id": "mission_bay_490_499_illinois",
-      "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street",
-      "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision and 499 Illinois Street)",
-      "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street/",
-      "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street.json"
+      "slug": "409-499-illinois-street",
+      "name": "409/499 Illinois Street",
+      "permalink": "https://pierandpoint.org/parcels/409-499-illinois-street/",
+      "api": "https://pierandpoint.org/api/v1/records/409-499-illinois-street.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -115468,10 +115387,10 @@
      "category_label": "Status",
      "record": {
       "id": "mission_bay_490_499_illinois",
-      "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street",
-      "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision and 499 Illinois Street)",
-      "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street/",
-      "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street.json"
+      "slug": "409-499-illinois-street",
+      "name": "409/499 Illinois Street",
+      "permalink": "https://pierandpoint.org/parcels/409-499-illinois-street/",
+      "api": "https://pierandpoint.org/api/v1/records/409-499-illinois-street.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -115505,10 +115424,10 @@
      "category_label": "Milestone",
      "record": {
       "id": "mission_bay_490_499_illinois",
-      "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street",
-      "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision and 499 Illinois Street)",
-      "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street/",
-      "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street.json"
+      "slug": "409-499-illinois-street",
+      "name": "409/499 Illinois Street",
+      "permalink": "https://pierandpoint.org/parcels/409-499-illinois-street/",
+      "api": "https://pierandpoint.org/api/v1/records/409-499-illinois-street.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -115541,10 +115460,10 @@
      "category_label": "Status",
      "record": {
       "id": "mission_bay_490_499_illinois",
-      "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street",
-      "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision and 499 Illinois Street)",
-      "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street/",
-      "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street.json"
+      "slug": "409-499-illinois-street",
+      "name": "409/499 Illinois Street",
+      "permalink": "https://pierandpoint.org/parcels/409-499-illinois-street/",
+      "api": "https://pierandpoint.org/api/v1/records/409-499-illinois-street.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -115556,6 +115475,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "This record was named '490/499 Illinois Street' and also described UCSF's Valley Center for Vision at 490 Illinois St, which is the block 33 building across Illinois St (see that record). The City's address points show its two buildings are 499 Illinois St (south) and 409 Illinois St (north), so it is renamed '409/499 Illinois Street' and the Vision Center's facts moved to the block 33 record. Its old page address redirects to the new one.",
+     "source": "DataSF Addresses, address IDs 743049, 680852 and 701368 (https://data.sf.gov/resource/3mea-di5p.json); DataSF Parcels, parcel 8725001 (https://data.sf.gov/resource/acdm-wktn.json?blklot=8725001); SF YIMBY, 2020-11-27 (https://sfyimby.com/2020/11/ucsf-opens-medical-facility-at-490-illinois-street-mission-bay-san-francisco.html); UCSF Mission Bay Development Overview, Mission Bay CAC, 2025-06-12 (https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf); DataSF Building Footprints (https://data.sf.gov/resource/ynuv-fyni.json)",
+     "sources": [
+      {
+       "title": "DataSF Addresses, address IDs 743049, 680852 and 701368 (https://data.sf.gov/resource/3mea-di5p.json); DataSF Parcels, parcel 8725001 (https://data.sf.gov/resource/acdm-wktn.json?blklot=8725001); SF YIMBY, 2020-11-27 (https://sfyimby.com/2020/11/ucsf-opens-medical-facility-at-490-illinois-street-mission-bay-san-francisco.html); UCSF Mission Bay Development Overview, Mission Bay CAC, 2025-06-12 (https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf); DataSF Building Footprints (https://data.sf.gov/resource/ynuv-fyni.json)"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_490_499_illinois",
+      "slug": "409-499-illinois-street",
+      "name": "409/499 Illinois Street",
+      "permalink": "https://pierandpoint.org/parcels/409-499-illinois-street/",
+      "api": "https://pierandpoint.org/api/v1/records/409-499-illinois-street.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-10-06",
      "kind": "correction",
@@ -115571,10 +115519,10 @@
      "category_label": "Correction",
      "record": {
       "id": "mission_bay_490_499_illinois",
-      "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street",
-      "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision and 499 Illinois Street)",
-      "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street/",
-      "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street.json"
+      "slug": "409-499-illinois-street",
+      "name": "409/499 Illinois Street",
+      "permalink": "https://pierandpoint.org/parcels/409-499-illinois-street/",
+      "api": "https://pierandpoint.org/api/v1/records/409-499-illinois-street.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -115600,10 +115548,10 @@
      "category_label": "Correction",
      "record": {
       "id": "mission_bay_490_499_illinois",
-      "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street",
-      "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision and 499 Illinois Street)",
-      "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street/",
-      "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street.json"
+      "slug": "409-499-illinois-street",
+      "name": "409/499 Illinois Street",
+      "permalink": "https://pierandpoint.org/parcels/409-499-illinois-street/",
+      "api": "https://pierandpoint.org/api/v1/records/409-499-illinois-street.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -115629,10 +115577,10 @@
      "category_label": "Milestone",
      "record": {
       "id": "mission_bay_490_499_illinois",
-      "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street",
-      "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision and 499 Illinois Street)",
-      "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street/",
-      "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street.json"
+      "slug": "409-499-illinois-street",
+      "name": "409/499 Illinois Street",
+      "permalink": "https://pierandpoint.org/parcels/409-499-illinois-street/",
+      "api": "https://pierandpoint.org/api/v1/records/409-499-illinois-street.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -115658,10 +115606,10 @@
      "category_label": "Retail",
      "record": {
       "id": "mission_bay_490_499_illinois",
-      "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street",
-      "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision and 499 Illinois Street)",
-      "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street/",
-      "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street.json"
+      "slug": "409-499-illinois-street",
+      "name": "409/499 Illinois Street",
+      "permalink": "https://pierandpoint.org/parcels/409-499-illinois-street/",
+      "api": "https://pierandpoint.org/api/v1/records/409-499-illinois-street.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -115720,32 +115668,13 @@
     }
    ],
    "open_questions": [
-    "MERGED 2026-09-22: this record combines the former separate 490 Illinois St and 499 Illinois St records, matching the 2026-09-22 merge of their map shapes -- both buildings share one DataSF Building Footprints mblr (SF3940003) and are described together as a connected 490-499 Illinois campus in commercial listings. UCSF's own occupancy at 499 Illinois St (leased, then purchased) versus outright ownership at 490 Illinois St is not distinguished by a source found as of 2026-09-29.",
-    "Exact opening day within November 2020 (490 Illinois) is not given by the source found; only the month is confirmed. Exact month/day of the 2008 completion (499 Illinois) is likewise not sourced, only the year.",
+    "This record combines two footprints that share one DataSF Building Footprints id (SF3940003): 499 Illinois St (south) and 409 Illinois St (north). It was formerly named '490/499 Illinois Street' and also carried UCSF's Valley Center for Vision at 490 Illinois St, which is the building across Illinois St on block 33 and now has its own record (corrected 2026-10-10).",
+    "Exact month/day of the 2008 completion of 499 Illinois St is not sourced, only the year.",
     "The 2006 construction permit's own block/lot for 499 Illinois St (block 3940, lot 001) differs from the lot the Assessor now uses for this address (lot 004); the address, biotechnical/medical-research-facility description, 6 stories, and $90M cost all line up with this parcel, so this is treated as a lot renumbering, not a different building. The permit's own completion sign-off (2009-04-06) also runs slightly later than the Assessor's 2008 year, which may reflect a lag between substantial completion and permit closeout.",
-    "Found on 2026-09-21: the January 26, 2017 Regents budget/design approval item for 490 Illinois St (UCSF calls it 'Block 33' in its own campus numbering -- assumed at the time to be a coincidental name collision with this project's unrelated OCII-plan block 33). The ucsf.edu article itself could not be read directly; its content (matching $237,000,000 cost and 12-story/5-story/3-story massing figures already in this record) was confirmed via a search-engine summary rather than a direct read. A primary Regents PDF for the January 26, 2017 item itself was not located.",
-    "2026-09-22: the 'coincidental name collision' assumption above was reopened -- Pier & Point identified OCII plan block 33 (the UCSF Valley Center for Vision west building record, west of Illinois St, about 60-100m from this record's 490 Illinois St tower) as ALSO being Valley Center for Vision, not unrelated. Whether that west building is a second wing of this same facility, a distinct building sharing the name, or a misidentification, is unresolved -- see that record's own open questions; not re-investigated here.",
-    "No opening date found for Caffe Central (490 Illinois St): checked its own site for a firm date; retail_confirmed.csv's own opened field is also blank, and the building itself only opened Nov 2020.",
     "2026-09-28: exact month/day for 409 Illinois St's 2026 renovation start, and the exact date within 'late 2029' targeted for completion, are not given by any source found. Whether the Construction Dive-reported $278,000,000 figure is Suffolk's construction contract value alone or the total project cost (design, FF&E, etc.) is also not stated by that source. No SF Planning case number exists for this renovation because UC, as a state entity, is exempt from local planning review -- all environmental review runs through UC itself as CEQA lead agency; treat the absence of a Planning case number as confirmed, not unresearched. The Assessor's blklot for 499 Illinois St has been given as 3940001 (2006 permit), 3940004 (an earlier source in this record) and now 3940005 (a live 2026-09-28 query) -- not reconciled here; possibly repeated lot-line adjustments on a shared master parcel with 409 Illinois St, whose current blklot (3940003) is comparatively well-confirmed.",
-    "As of 2026-09-29: (a) OpenStreetMap tags way 84821715 as 499 Illinois St and way 84821722 as 490 Illinois St (both 6 levels, 28 m, source Yahoo), the opposite of the labels used for this record's map shape; DataSF Parcels (acdm-wktn) list lots 3940003 (409 Illinois), 3940004 (499) and 3940005 (409-499) under mapblklot 3940003 and none addressed 490, so the shared mblr SF3940003 is a 409/499 pairing. Which mapped footprint is the 490 Illinois St Vision Center is unresolved and still to be settled against satellite imagery. (b) The UCSF news page for the January 2017 Regents approval could not be read and the Regents date is unconfirmed. (c) SF YIMBY (2020-11-27) shows the Vision Center open by that date but gives no opening date. (d) No source read says who developed 499 Illinois St. SF Standard (2025-12-17) says UCSF's clinics, labs and offices leased space at 499 Illinois 'for more than a decade' and occupied 90% of the building before buying it (corrected 2026-10-06: an earlier version of this note said the article does not say 'for over a decade'; it does)."
+    "No source read says who developed 499 Illinois St. SF Standard (2025-12-17) says UCSF's clinics, labs and offices leased space at 499 Illinois 'for more than a decade' and occupied 90% of the building before buying it."
    ],
    "sources": [
-    {
-     "id": "src-sfyimby-490illinois",
-     "title": "UCSF Opens Medical Facility at 490 Illinois Street, Mission Bay, San Francisco",
-     "publisher": "San Francisco YIMBY",
-     "date": "2020-11-27",
-     "url": "https://sfyimby.com/2020/11/ucsf-opens-medical-facility-at-490-illinois-street-mission-bay-san-francisco.html",
-     "accessed": "2026-09-21"
-    },
-    {
-     "id": "src-ucsf-2017-block33",
-     "title": "UC Regents Approve Budget, Design for Block 33 Building at Mission Bay",
-     "publisher": "UC San Francisco",
-     "date": "2017-02",
-     "url": "https://www.ucsf.edu/news/2017/02/405756/uc-regents-approve-budget-design-block-33-building-mission-bay",
-     "accessed": "2026-09-21"
-    },
     {
      "id": "src-datasf-499illinois",
      "title": "Assessor Historical Secured Property Tax Rolls (blklot 3940004, 499 Illinois St): year_property_built 2008",
@@ -115831,6 +115760,13 @@
      "accessed": "2026-09-29"
     },
     {
+     "id": "src-datasf-eas-409-499-illinois",
+     "title": "DataSF Addresses (EAS): 499 Illinois St (address ID 680852, point -122.38778544, 37.76598214) and 409 Illinois St (701368, point -122.38781226, 37.76649526), both parcel 3940001",
+     "publisher": "City and County of San Francisco (DataSF)",
+     "url": "https://data.sf.gov/resource/3mea-di5p.json?street_name=ILLINOIS",
+     "accessed": "2026-10-10"
+    },
+    {
      "id": null,
      "title": "openstreetmap.org/way/84821715",
      "url": "https://www.openstreetmap.org/way/84821715"
@@ -115844,36 +115780,22 @@
      "id": null,
      "title": "ucsfhealth.org/locations/reproductive-health-mission-bay",
      "url": "https://www.ucsfhealth.org/locations/reproductive-health-mission-bay"
+    },
+    {
+     "id": null,
+     "title": "data.sf.gov/resource/3mea-di5p.json?eas_address_id=680852",
+     "url": "https://data.sf.gov/resource/3mea-di5p.json?eas_address_id=680852"
+    },
+    {
+     "id": null,
+     "title": "data.sf.gov/resource/3mea-di5p.json?eas_address_id=701368",
+     "url": "https://data.sf.gov/resource/3mea-di5p.json?eas_address_id=701368"
     }
    ],
    "notes": "OCII plan block X4 (Pier & Point's own block-by-block reconciliation of the plan treats X4 as absorbed into this building complex; the Land Use Map's text does not itself say what X4 is). UCSF Health's own location page gives a Reproductive Health clinic at 499 Illinois Street, Floor 6.",
    "has_record_file": true,
-   "last_verified": "2026-09-29",
-   "tenants": [
-    {
-     "slug": "caffe-central-490-illinois",
-     "name": "Caffe Central",
-     "category": "food and drink",
-     "status": "open",
-     "opened": null,
-     "closed": null,
-     "source": "https://www.caffecentral.com/490-illinois-street-mission-bay",
-     "unit_or_address": "490 Illinois St",
-     "record": {
-      "id": "mission_bay_490_499_illinois",
-      "slug": "490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street",
-      "name": "490/499 Illinois Street (UCSF Wayne and Gladys Valley Center for Vision and 499 Illinois Street)",
-      "permalink": "https://pierandpoint.org/parcels/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street/",
-      "api": "https://pierandpoint.org/api/v1/records/490-499-illinois-street-ucsf-wayne-and-gladys-valley-center-for-vision-and-499-illinois-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     }
-    }
-   ],
+   "last_verified": "2026-10-10",
+   "tenants": [],
    "geometry": {
     "type": "MultiPolygon",
     "coordinates": [
@@ -133995,12 +133917,14 @@
   },
   {
    "id": "ucsf_valley_center_for_vision_west",
-   "slug": "ucsf-valley-center-for-vision",
-   "name": "UCSF Valley Center for Vision",
-   "permalink": "https://pierandpoint.org/parcels/ucsf-valley-center-for-vision/",
-   "api": "https://pierandpoint.org/api/v1/records/ucsf-valley-center-for-vision.json",
+   "slug": "ucsf-wayne-and-gladys-valley-center-for-vision",
+   "name": "UCSF Wayne and Gladys Valley Center for Vision",
+   "permalink": "https://pierandpoint.org/parcels/ucsf-wayne-and-gladys-valley-center-for-vision/",
+   "api": "https://pierandpoint.org/api/v1/records/ucsf-wayne-and-gladys-valley-center-for-vision.json",
    "names": [
-    "UCSF Valley Center for Vision -- west building (OCII plan block 33)"
+    "UCSF Wayne and Gladys Valley Center for Vision",
+    "UCSF Valley Center for Vision",
+    "490 Illinois Street"
    ],
    "site": {
     "slug": "mission-bay",
@@ -134017,8 +133941,10 @@
    "how_to_comment": [],
    "positions": [],
    "address": null,
-   "summary": "A real, standing UCSF building on OCII plan block 33, between 3rd St and Illinois St, west of Illinois St. UCSF's own June 2025 CAC presentation map labels block 33 'VALLEY CENTER FOR VISION (33)', which supports the name. The tracked tower at 490 Illinois St, east of Illinois St, is a separate record also named Valley Center for Vision; that record's identification should be reviewed against the same UCSF map (see open questions). Its footprint here is approximate (see the shape's accuracy caveat).",
+   "summary": "UCSF's Wayne and Gladys Valley Center for Vision at 490 Illinois Street, a 347,500-sq-ft eye-care facility in three buildings (a 12-story tower with a 5-story south wing and a 3-story north wing) that SF YIMBY reported open on November 27, 2020, at a reported cost of about $237 million (SmithGroup architect). It stands on OCII plan block 33, between Third St and Illinois St: the City's address point for 490 Illinois St falls inside this outline, and UCSF's own 2025 campus map labels block 33 'Valley Center for Vision'. Its footprint here is approximate (see the shape's accuracy caveat).",
    "summary_sources": [
+    "src-sfyimby-490illinois",
+    "src-datasf-eas-490-illinois",
     "src-ucsf-cac-2025-06",
     "src-geom-valley-west"
    ],
@@ -134028,7 +133954,7 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL BUILDING, APPROXIMATE BOUNDARY -- a real, standing structure clearly visible in Esri satellite imagery (not open land), identified by Pier & Point as UCSF's Valley Center for Vision, which UCSF's June 2025 CAC presentation map supports (it labels block 33 'VALLEY CENTER FOR VISION (33)'). Boundary is the edge of the open ground left between the official street lines and neighbouring mapped shapes (following the estimated curb radius), with one corner redrawn to the real street angle (see the mapping log), not a hand-traced or surveyed building footprint. OPEN QUESTION, not resolved: this project also tracks a separate, already-committed record named 'Valley Center for Vision' at 490 Illinois St, about 60-100m east of this polygon, across Illinois St. UCSF's own map names block 33 (this building, between 3rd St and Illinois St) as the Valley Center for Vision, so it is the 490 Illinois St record whose label may be wrong; the two records have not yet been reconciled -- flagged here rather than silently merged or changed. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
+     "accuracy_caveat": "REAL BUILDING, APPROXIMATE BOUNDARY -- a real, standing structure clearly visible in Esri satellite imagery (not open land): UCSF's Wayne and Gladys Valley Center for Vision at 490 Illinois St. The City's official address point for 490 Illinois St (DataSF Addresses, address ID 743049, on Assessor parcel 8725001) lies inside this outline; UCSF's June 2025 CAC presentation map labels block 33, between Third St and Illinois St, 'VALLEY CENTER FOR VISION (33)'; and SF YIMBY (2020-11-27) places the facilities 'along 3rd Street, immediately across from the UCSF Medical Center'. Boundary is the edge of the open ground left between the official street lines and neighbouring mapped shapes (following the estimated curb radius), with one corner redrawn to the real street angle (see the mapping log), not a hand-traced or surveyed building footprint. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
      "digitized_from": "Outlined as the ground left between DataSF's official street lines and neighbouring mapped shapes, between 3rd St and Illinois St, south of 16th St. Pier & Point judged that this piece (12,421 sqm before cutting) covers two separate real buildings, not one, and cut it by hand at the visible gap between the two rooflines in Esri satellite imagery (lat 37.76578)."
     }
    },
@@ -134036,10 +133962,156 @@
     "lon": -122.388599,
     "lat": 37.766806
    },
-   "facts": [],
-   "costs": [],
-   "milestones": [],
+   "facts": [
+    {
+     "key": "address",
+     "value": "490 Illinois St: the City's address point (DataSF Addresses, address ID 743049) lies inside this record's outline, on Assessor parcel 8725001, which the Assessor itself addresses as 480 16th St.",
+     "sources": [
+      "src-datasf-eas-490-illinois",
+      "src-datasf-parcel-8725001"
+     ]
+    },
+    {
+     "key": "architect",
+     "value": "SmithGroup",
+     "sources": [
+      "src-sfyimby-490illinois"
+     ]
+    },
+    {
+     "key": "gross_sqft",
+     "value": "347,500 across three separate buildings (12-story tower, 5-story south wing, 3-story north wing), plus parking for over 200 vehicles across 75,000 sq ft",
+     "sources": [
+      "src-sfyimby-490illinois"
+     ]
+    },
+    {
+     "key": "developer",
+     "value": "Opened for the University of California, San Francisco; the nonprofit That Man May See provided fundraising for the construction (SF YIMBY).",
+     "sources": [
+      "src-sfyimby-490illinois"
+     ]
+    }
+   ],
+   "costs": [
+    {
+     "amount_usd": 237000000,
+     "what": "Construction cost, Wayne and Gladys Valley Center for Vision (490 Illinois St)",
+     "date": "2020",
+     "approximate": true,
+     "sources": [
+      "src-sfyimby-490illinois"
+     ],
+     "kind": "construction",
+     "scope": "record"
+    }
+   ],
+   "milestones": [
+    {
+     "date": "2017-01-26",
+     "date_label": "Jan 26, 2017",
+     "status": "planned",
+     "status_label": "Planned",
+     "text": "UC Regents approve a $237,000,000 project budget and design for UCSF's new Center for Vision Neurosciences building at Mission Bay, which UCSF calls 'Block 33', combining the Department of Ophthalmology and the Francis I. Proctor Foundation in a 12-story tower with a 5-story south wing and 3-story north wing; construction was expected to begin June 2017 with completion targeted for July 2019",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-ucsf-2017-block33",
+       "title": "UC Regents Approve Budget, Design for Block 33 Building at Mission Bay",
+       "publisher": "UC San Francisco",
+       "date": "2017-02",
+       "url": "https://www.ucsf.edu/news/2017/02/405756/uc-regents-approve-budget-design-block-33-building-mission-bay",
+       "accessed": "2026-09-21"
+      }
+     ],
+     "source": "UC San Francisco, 2017-02",
+     "origin": "record",
+     "category": "status",
+     "category_label": "Status",
+     "record": {
+      "id": "ucsf_valley_center_for_vision_west",
+      "slug": "ucsf-wayne-and-gladys-valley-center-for-vision",
+      "name": "UCSF Wayne and Gladys Valley Center for Vision",
+      "permalink": "https://pierandpoint.org/parcels/ucsf-wayne-and-gladys-valley-center-for-vision/",
+      "api": "https://pierandpoint.org/api/v1/records/ucsf-wayne-and-gladys-valley-center-for-vision.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2020-11",
+     "date_label": "~2020",
+     "status": "complete",
+     "status_label": "Complete",
+     "text": "SF YIMBY reports (2020-11-27) that UCSF's Wayne and Gladys Valley Center for Vision at 490 Illinois Street has opened; the exact opening date is not given",
+     "expected": false,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-sfyimby-490illinois",
+       "title": "UCSF Opens Medical Facility at 490 Illinois Street, Mission Bay, San Francisco",
+       "publisher": "San Francisco YIMBY",
+       "date": "2020-11-27",
+       "url": "https://sfyimby.com/2020/11/ucsf-opens-medical-facility-at-490-illinois-street-mission-bay-san-francisco.html",
+       "accessed": "2026-10-10"
+      }
+     ],
+     "source": "San Francisco YIMBY, 2020-11-27",
+     "origin": "record",
+     "category": "status",
+     "category_label": "Status",
+     "record": {
+      "id": "ucsf_valley_center_for_vision_west",
+      "slug": "ucsf-wayne-and-gladys-valley-center-for-vision",
+      "name": "UCSF Wayne and Gladys Valley Center for Vision",
+      "permalink": "https://pierandpoint.org/parcels/ucsf-wayne-and-gladys-valley-center-for-vision/",
+      "api": "https://pierandpoint.org/api/v1/records/ucsf-wayne-and-gladys-valley-center-for-vision.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    }
+   ],
    "changes": [
+    {
+     "date": "2026-10-10",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "UCSF's Wayne and Gladys Valley Center for Vision at 490 Illinois St is the block 33 building between Third St and Illinois St, not the pair of buildings east of Illinois St that this project had listed under that name. The City's address point for 490 Illinois St falls inside the block 33 outline; UCSF's 2025 campus map labels block 33 'Valley Center for Vision'; SF YIMBY places the facility 'along 3rd Street, immediately across from the UCSF Medical Center'; and the two buildings east of Illinois St were already standing, about six stories tall, in the City's 2010 building survey. The block 33 record is renamed 'UCSF Wayne and Gladys Valley Center for Vision' and now carries the 2017 Regents approval, the November 2020 opening, the $237 million cost, the SmithGroup design, the 347,500 sq ft size and the Caffe Central tenant. Its old page address redirects to the new one.",
+     "source": "DataSF Addresses, address IDs 743049, 680852 and 701368 (https://data.sf.gov/resource/3mea-di5p.json); DataSF Parcels, parcel 8725001 (https://data.sf.gov/resource/acdm-wktn.json?blklot=8725001); SF YIMBY, 2020-11-27 (https://sfyimby.com/2020/11/ucsf-opens-medical-facility-at-490-illinois-street-mission-bay-san-francisco.html); UCSF Mission Bay Development Overview, Mission Bay CAC, 2025-06-12 (https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf); DataSF Building Footprints (https://data.sf.gov/resource/ynuv-fyni.json)",
+     "sources": [
+      {
+       "title": "DataSF Addresses, address IDs 743049, 680852 and 701368 (https://data.sf.gov/resource/3mea-di5p.json); DataSF Parcels, parcel 8725001 (https://data.sf.gov/resource/acdm-wktn.json?blklot=8725001); SF YIMBY, 2020-11-27 (https://sfyimby.com/2020/11/ucsf-opens-medical-facility-at-490-illinois-street-mission-bay-san-francisco.html); UCSF Mission Bay Development Overview, Mission Bay CAC, 2025-06-12 (https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf); DataSF Building Footprints (https://data.sf.gov/resource/ynuv-fyni.json)"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "ucsf_valley_center_for_vision_west",
+      "slug": "ucsf-wayne-and-gladys-valley-center-for-vision",
+      "name": "UCSF Wayne and Gladys Valley Center for Vision",
+      "permalink": "https://pierandpoint.org/parcels/ucsf-wayne-and-gladys-valley-center-for-vision/",
+      "api": "https://pierandpoint.org/api/v1/records/ucsf-wayne-and-gladys-valley-center-for-vision.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-29",
      "kind": "correction",
@@ -134055,10 +134127,10 @@
      "category_label": "Correction",
      "record": {
       "id": "ucsf_valley_center_for_vision_west",
-      "slug": "ucsf-valley-center-for-vision",
-      "name": "UCSF Valley Center for Vision",
-      "permalink": "https://pierandpoint.org/parcels/ucsf-valley-center-for-vision/",
-      "api": "https://pierandpoint.org/api/v1/records/ucsf-valley-center-for-vision.json"
+      "slug": "ucsf-wayne-and-gladys-valley-center-for-vision",
+      "name": "UCSF Wayne and Gladys Valley Center for Vision",
+      "permalink": "https://pierandpoint.org/parcels/ucsf-wayne-and-gladys-valley-center-for-vision/",
+      "api": "https://pierandpoint.org/api/v1/records/ucsf-wayne-and-gladys-valley-center-for-vision.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -134117,12 +134189,11 @@
     }
    ],
    "open_questions": [
-    "This project already tracks a separate, independently sourced record also named Valley Center for Vision at 490 Illinois St (the 490/499 Illinois Street record), about 60-100m east of this building, across Illinois St. That record's own 2017 UC Regents source describes a single 12-story tower with a 5-story south wing and a 3-story north wing at 490 Illinois St -- it does not mention a separate west-of-Illinois-St building. Whether this west building is a second wing/annex of the same named facility built later, a distinct building that happens to share the name, or a misidentification of one of the two records, has not been resolved against any primary source -- flagged here rather than silently merged with, or silently treated as unrelated to, the 490 Illinois St record.",
-    "2026-09-22, new data point (not a resolution): matching DataSF's business-registration records to this building's shape by location, after the shape was added to the map, shows several registrations -- Buenafe #2, All May See, All May See Foundation, Simon Fung -- whose registered point-location falls inside THIS west building's polygon, but whose own listed street address is '490 Illinois St' (the other, east-of-Illinois-St tower's address), not a west-of-Illinois-St address. This could mean the two buildings genuinely share one administrative/mailing address, or it could simply be a DataSF geocoding artifact (a coarse or shared geocode for a multi-building campus) -- the match is by location only and is never treated as confirmed on its own, so this is logged as a data point for later review, not treated as confirming the relationship either way. Notably, the same matching for the neighboring UCSF Bayfront Medical Building and UCSF Illinois Street Garage records do show addresses consistent with their own already-sourced identities (520 Illinois St and 590 Illinois St respectively), which is corroborating, not contradictory, evidence for those two.",
-    "No address, opening date, architect, cost or square footage for this specific west building was found as of 2026-09-22; every fact this project has for 'Valley Center for Vision' construction, cost and massing lives in the 490 Illinois St record instead, and may or may not apply here.",
-    "Geometry: this building's east edge (its own real, digitized boundary) sits close to, but not necessarily exactly on, Illinois St's west curb line -- not independently verified against DataSF Building Footprints or an Assessor parcel; see the shape's accuracy caveat.",
-    "Added 2026-09-29: UCSF's June 12, 2025 CAC presentation (p.3 map, updated December 2024) labels block 33, between Third St and Illinois St, 'VALLEY CENTER FOR VISION (33)', which supports this record's identification. That reverses the open question above: the separate 490/499 Illinois St record, whose polygon is east of the Illinois St centerline, may be the one that is mislabelled as Valley Center for Vision. The two records have not yet been reconciled; nothing was changed here.",
-    "No source gives a completion date for this building. It has no address or parcel in this record, so no DBI permit or Assessor year built could be matched to it."
+    "No source read gives the exact opening day: SF YIMBY reported the building open on November 27, 2020, without a date.",
+    "UCSF's news page for the January 2017 Regents approval could not be read (it refuses automated fetches, and no archived copy was found); the Regents date and the expected 2017-2019 schedule rest on earlier notes of that page, not a direct read. Its $237,000,000 budget and 12-, 5- and 3-story massing match SF YIMBY's article, which was read.",
+    "No opening date was found for Caffe Central at 490 Illinois St: the cafe's own page lists the location and its hours but gives no date.",
+    "OpenStreetMap labels one of the 409/499 Illinois St buildings across Illinois St (way 84821722, 6 levels, 28 m) as 490 Illinois St. The City's address point, UCSF's 2025 campus map and SF YIMBY's description all place the 12-story Valley Center for Vision here instead, so that label is not used.",
+    "Geometry: this building's east edge sits close to, but not necessarily exactly on, Illinois St's west curb line; it has not been checked against a building footprint (DataSF Building Footprints, surveyed in 2010, predates the building)."
    ],
    "sources": [
     {
@@ -134147,12 +134218,66 @@
      "date": "2025-06-12",
      "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
      "accessed": "2026-09-29"
+    },
+    {
+     "id": "src-sfyimby-490illinois",
+     "title": "UCSF Opens Medical Facility at 490 Illinois Street, Mission Bay, San Francisco",
+     "publisher": "San Francisco YIMBY",
+     "date": "2020-11-27",
+     "url": "https://sfyimby.com/2020/11/ucsf-opens-medical-facility-at-490-illinois-street-mission-bay-san-francisco.html",
+     "accessed": "2026-10-10"
+    },
+    {
+     "id": "src-ucsf-2017-block33",
+     "title": "UC Regents Approve Budget, Design for Block 33 Building at Mission Bay",
+     "publisher": "UC San Francisco",
+     "date": "2017-02",
+     "url": "https://www.ucsf.edu/news/2017/02/405756/uc-regents-approve-budget-design-block-33-building-mission-bay",
+     "accessed": "2026-09-21"
+    },
+    {
+     "id": "src-datasf-eas-490-illinois",
+     "title": "DataSF Addresses (EAS), address ID 743049: 490 Illinois St (point -122.38851617, 37.76595802, parcel 8725001)",
+     "publisher": "City and County of San Francisco (DataSF)",
+     "url": "https://data.sf.gov/resource/3mea-di5p.json?eas_address_id=743049",
+     "accessed": "2026-10-10"
+    },
+    {
+     "id": "src-datasf-parcel-8725001",
+     "title": "Parcels - Active and Retired: parcel 8725001, active, addressed 480 16th St, zoning MB-RA",
+     "publisher": "DataSF / SF Office of the Assessor-Recorder",
+     "url": "https://data.sf.gov/resource/acdm-wktn.json?blklot=8725001",
+     "accessed": "2026-10-10"
     }
    ],
-   "notes": "OCII plan block 33. Between 3rd St and Illinois St, south of 16th St, immediately east of UCSF Medical Center at Mission Bay (across 3rd St), west of Illinois St. See the accuracy caveat for the unresolved naming question against the 490 Illinois St record.",
+   "notes": "OCII plan block 33. Between 3rd St and Illinois St, south of 16th St, across 3rd St from UCSF Medical Center at Mission Bay. Until October 10, 2026 this record was named as a separate 'west building', and the Valley Center for Vision's opening, cost and design were on the 409/499 Illinois Street record across Illinois St; they were moved here (see the changelog).",
    "has_record_file": true,
    "last_verified": "2026-10-10",
-   "tenants": [],
+   "tenants": [
+    {
+     "slug": "caffe-central-490-illinois",
+     "name": "Caffe Central",
+     "category": "food and drink",
+     "status": "open",
+     "opened": null,
+     "closed": null,
+     "source": "https://www.caffecentral.com/490-illinois-street-mission-bay",
+     "unit_or_address": "490 Illinois St",
+     "record": {
+      "id": "ucsf_valley_center_for_vision_west",
+      "slug": "ucsf-wayne-and-gladys-valley-center-for-vision",
+      "name": "UCSF Wayne and Gladys Valley Center for Vision",
+      "permalink": "https://pierandpoint.org/parcels/ucsf-wayne-and-gladys-valley-center-for-vision/",
+      "api": "https://pierandpoint.org/api/v1/records/ucsf-wayne-and-gladys-valley-center-for-vision.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     }
+    }
+   ],
    "geometry": {
     "type": "Polygon",
     "coordinates": [
