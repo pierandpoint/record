@@ -488,6 +488,16 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .filter-check input { min-height: auto; width: auto; }
 .filter-radio-group { display: flex; gap: 14px; flex-wrap: wrap; min-height: 40px; align-items: center; }
 .changes-filters .btn { align-self: flex-end; }
+/* /changes/all/'s pager (docs/briefs/changes-paging.md): a count and page size above the list,
+   Newer / Older below. [hidden] restated because display: flex beats the browser's own rule. */
+.pager-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; margin: 4px 0 8px; }
+.pager-count { font-size: 14px; color: var(--paper-soft); margin: 0; }
+.pager-per { font-size: 14px; color: var(--paper-soft); display: inline-flex; align-items: center; gap: 8px; }
+.pager-per select { min-height: 36px; padding: 0 8px; border-radius: 8px; border: 1px solid var(--paper-line); background: var(--paper-2); color: var(--paper-ink); font: 14px var(--sans); }
+.pager-nav { display: flex; align-items: center; justify-content: center; gap: 16px; margin: 20px 0 0; }
+.pager-where { font-size: 14px; color: var(--paper-soft); }
+.pager .btn[disabled] { opacity: .4; cursor: default; }
+.pager-top[hidden], .pager[hidden], .pager-nav[hidden] { display: none; }
 /* .btn itself sets display: inline-flex, which -- like .zoom-controls above -- overrides the
    browser's native [hidden] behaviour (an author display value always beats the UA stylesheet's
    [hidden] { display: none }, whatever the selector's specificity), so it needs the same explicit
@@ -928,7 +938,7 @@ sup.cites a { text-decoration: none; }
 .print-foot { display: none; }
 @media print {
   .site-header, .site-footer, .skip, .map-band, .gallery-band, .timeline, nav.section-jump, .bx-bar, .bx-chips,
-  [data-box-preview], .box-tail, .zoom-controls, .page-about, .newsletter, form { display: none !important; }
+  [data-box-preview], .box-tail, .zoom-controls, .page-about, .newsletter, form, .pager, .pager-per { display: none !important; }
   html, body, section.light, .card, .whats-next, .cite { background: #fff !important; color: #000 !important; box-shadow: none !important; }
   .cite * { color: #000 !important; }
   a { color: #000 !important; }

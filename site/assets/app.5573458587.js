@@ -1195,6 +1195,15 @@
   var items = Array.prototype.slice.call(list.querySelectorAll('li'));
   var emptyNote = document.querySelector('[data-filter-empty]');
   var resetBtn = form.querySelector('[data-filter-reset]');
+  // Pages (docs/briefs/changes-paging.md): the whole list stays in the page, so every filter
+  // and every record page's "All filters →" link still sees every entry; only the rows shown
+  // are paged, after filtering. ?page= and ?per= sit in the URL with the filters, so a page can
+  // be linked. With JavaScript off the pager stays hidden and the full list shows.
+  var PER_CHOICES = [20, 50, 100], PER_DEFAULT = 50;
+  var pagerTop = document.querySelector('[data-pager-top]');
+  var pagerBottom = document.querySelector('[data-pager]');
+  var perSel = document.getElementById('cf-per');
+  var page = 1, per = PER_DEFAULT;
   var categoryDropdown = form.querySelector('.filter-dropdown');
   var categorySummary = form.querySelector('[data-filter-summary]');
   var fields = {
@@ -1252,13 +1261,29 @@
     if (v.to && d > v.to) return false;
     return true;
   }
-  function filter() {
+  function fmt(n) { return n.toLocaleString('en-US'); }
+  function renderPager(shown, pages) {
+    if (!pagerTop || !pagerBottom) return;
+    pagerTop.hidden = pagerBottom.hidden = shown === 0;
+    var first = (page - 1) * per + 1, last = Math.min(page * per, shown);
+    pagerTop.querySelector('[data-pager-count]').textContent =
+      'Showing ' + fmt(first) + '–' + fmt(last) + ' of ' + fmt(shown) + (shown === 1 ? ' change' : ' changes');
+    pagerBottom.querySelector('[data-pager-where]').textContent = 'Page ' + page + ' of ' + pages;
+    pagerBottom.querySelector('[data-pager-prev]').disabled = page <= 1;
+    pagerBottom.querySelector('[data-pager-next]').disabled = page >= pages;
+    pagerBottom.querySelector('[data-pager-nav]').hidden = pages <= 1;
+  }
+  // keepPage: a page turn or the initial load. Any filter change goes back to page 1.
+  function filter(keepPage) {
     var v = currentValues(), shown = 0;
-    items.forEach(function (li) {
-      var ok = matches(li, v);
-      li.hidden = !ok;
-      if (ok) shown++;
-    });
+    if (!keepPage) page = 1;
+    var matched = items.filter(function (li) { return matches(li, v); });
+    shown = matched.length;
+    var pages = Math.max(1, Math.ceil(shown / per));
+    if (page > pages) page = pages;
+    items.forEach(function (li) { li.hidden = true; });
+    matched.slice((page - 1) * per, page * per).forEach(function (li) { li.hidden = false; });
+    renderPager(shown, pages);
     if (emptyNote) emptyNote.hidden = shown !== 0;
     if (resetBtn) resetBtn.hidden = !(v.site || v.category.length || v.from || v.to || v.record || v.datetype !== 'event');
     if (categorySummary) categorySummary.textContent = categoryLabel(v.category.length);
@@ -1269,20 +1294,44 @@
     if (v.to) params.set('to', v.to);
     if (v.record) params.set('record', v.record);
     if (v.datetype !== 'event') params.set('datetype', v.datetype);
+    if (page > 1) params.set('page', page);
+    if (per !== PER_DEFAULT) params.set('per', per);
     var qs = params.toString();
     window.history.replaceState(null, '', window.location.pathname + (qs ? '?' + qs : ''));
   }
 
   applyToFields(readParams());
-  filter();
-  form.addEventListener('submit', function (e) { e.preventDefault(); filter(); });
+  var start = new URLSearchParams(window.location.search);
+  var askedPer = parseInt(start.get('per'), 10);
+  if (PER_CHOICES.indexOf(askedPer) !== -1) per = askedPer;
+  if (perSel) perSel.value = String(per);
+  page = Math.max(1, parseInt(start.get('page'), 10) || 1);
+  filter(true);
+  function refilter() { filter(false); }
+  form.addEventListener('submit', function (e) { e.preventDefault(); refilter(); });
   [fields.site].concat(fields.category, [fields.from, fields.to], fields.datetype).forEach(function (el) {
-    el.addEventListener('change', filter);
+    el.addEventListener('change', refilter);
+  });
+  function turn(to) {
+    page = to;
+    filter(true);
+    (pagerTop || list).scrollIntoView({ block: 'start' });
+  }
+  if (pagerBottom) {
+    pagerBottom.querySelector('[data-pager-prev]').addEventListener('click', function () { turn(page - 1); });
+    pagerBottom.querySelector('[data-pager-next]').addEventListener('click', function () { turn(page + 1); });
+  }
+  if (perSel) perSel.addEventListener('change', function () {
+    // Keep the first row the visitor was looking at on screen, on whatever page now holds it.
+    var firstRow = (page - 1) * per;
+    per = parseInt(perSel.value, 10) || PER_DEFAULT;
+    page = Math.floor(firstRow / per) + 1;
+    filter(true);
   });
   if (resetBtn) {
     resetBtn.addEventListener('click', function () {
       applyToFields({ site: '', category: [], from: '', to: '', record: '', datetype: 'event' });
-      filter();
+      refilter();
     });
   }
 })();
