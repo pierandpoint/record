@@ -1274,20 +1274,23 @@ var PPPager = (function () {
     // { total, rows } for the view v, rows an array of <li> HTML for the current page, or null when
     // they are not here yet. A view of exactly what the page holds is answered from the page whenever
     // the wanted rows are inside its window.
-    function select(v) {
+    // `pg` is the page wanted; the result carries the page actually shown (`page`, clamped to the last).
+    // Nothing here changes the pager's own `page`: refresh() does that once the rows are in hand, so a
+    // failed fetch leaves the pager on the page it was showing.
+    function select(v, pg) {
       if (!cfg.inWindow || cfg.inWindow(v)) {
         var pages = Math.max(1, Math.ceil(win.total / per));
-        if (page > pages) page = pages;
-        var start = (page - 1) * per, end = Math.min(start + per, win.total);
+        if (pg > pages) pg = pages;
+        var start = (pg - 1) * per, end = Math.min(start + per, win.total);
         if (start >= win.offset && end <= win.offset + win.rows.length) {
-          return { total: win.total, rows: win.rows.slice(start - win.offset, end - win.offset) };
+          return { total: win.total, page: pg, rows: win.rows.slice(start - win.offset, end - win.offset) };
         }
       }
       if (!data) return null;
       var matched = cfg.match ? data.filter(function (row) { return cfg.match(row, v); }) : data;
       var n = Math.max(1, Math.ceil(matched.length / per));
-      if (page > n) page = n;
-      return { total: matched.length, rows: matched.slice((page - 1) * per, page * per).map(function (row) { return row.h; }) };
+      if (pg > n) pg = n;
+      return { total: matched.length, page: pg, rows: matched.slice((pg - 1) * per, pg * per).map(function (row) { return row.h; }) };
     }
     function countText(v, total) {
       var first = (page - 1) * per + 1, last = Math.min(page * per, total);
@@ -1304,15 +1307,16 @@ var PPPager = (function () {
 
     // mode: 'replace' (a filter, the page size, the first load), 'push' (a page turn) or 'none' (the
     // address already says so: Back and Forward). keepPage: anything but a filter change. focus: move
-    // focus to the count line once the new page is shown.
-    function refresh(keepPage, mode, focus) {
+    // focus to the count line once the new page is shown. toPage: the page a page turn asks for; it
+    // becomes `page` only when its rows are shown, so a failed fetch leaves the pager where it was and
+    // the next "Older" asks for the same page again, not the one after.
+    function refresh(keepPage, mode, focus, toPage) {
       var v = cfg.state ? cfg.state() : null, mine = ++seq;
-      if (!keepPage) page = 1;
-      var res = select(v);
+      var res = select(v, keepPage ? (toPage || page) : 1);
       if (!res) {
         if (countEl) countEl.textContent = 'Loading…';
         list.setAttribute('aria-busy', 'true');
-        load().then(function () { if (mine === seq) refresh(keepPage, mode, focus); }, function () {
+        load().then(function () { if (mine === seq) refresh(keepPage, mode, focus, toPage); }, function () {
           if (mine !== seq) return;
           list.removeAttribute('aria-busy');
           if (errorNote) errorNote.hidden = false;
@@ -1322,6 +1326,7 @@ var PPPager = (function () {
       }
       list.removeAttribute('aria-busy');
       if (errorNote) errorNote.hidden = true;
+      page = res.page;
       var pages = Math.max(1, Math.ceil(res.total / per));
       var html = res.rows.join('');
       if (html !== shownHtml) {
@@ -1339,7 +1344,9 @@ var PPPager = (function () {
       if (cfg.rendered) cfg.rendered(v, res, data);
       var url = urlFor(v, page, per);
       if (useUrl && mode !== 'none' && url !== window.location.pathname + window.location.search) {
-        window.history[mode === 'push' ? 'pushState' : 'replaceState'](null, '', url);
+        // A replace is the same view (a filter, the page size, the first load), so a #fragment the
+        // visitor arrived on stays; a page turn is a new view and starts without one.
+        window.history[mode === 'push' ? 'pushState' : 'replaceState'](null, '', mode === 'push' ? url : url + window.location.hash);
       }
       if (focus && countEl) {
         (top || list).scrollIntoView({ block: 'start' });
@@ -1350,7 +1357,16 @@ var PPPager = (function () {
     var start = new URLSearchParams(useUrl ? window.location.search : '');
     if (cfg.readUrl) cfg.readUrl(start, true);
     per = readPer(start);
-    page = Math.max(1, parseInt(start.get('page'), 10) || parseInt(list.getAttribute('data-page'), 10) || 1);
+    // The page: ?page= when the address names one. Otherwise the static page's own number, which counts
+    // in the size that page was built at; with a ?per= of a different size the number would name other
+    // rows, so the visitor's place is kept instead: the page of the asked size holding the static
+    // page's first row (as when the page size is changed in the list).
+    page = parseInt(start.get('page'), 10) || 0;
+    if (!page) {
+      page = parseInt(list.getAttribute('data-page'), 10) || 1;
+      if (start.has('per')) page = Math.floor(win.offset / per) + 1;
+    }
+    page = Math.max(1, page);
     refresh(true, 'replace', false);
 
     [['prev', prev, -1], ['next', next, 1]].forEach(function (b) {
@@ -1359,8 +1375,7 @@ var PPPager = (function () {
         if (this.getAttribute('aria-disabled') === 'true') { e.preventDefault(); return; }
         if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button) return; // a new-tab click goes to its link
         e.preventDefault();
-        page += b[2];
-        refresh(true, 'push', true);
+        refresh(true, 'push', true, page + b[2]);
       });
     });
     if (perSel) perSel.addEventListener('change', function () {
@@ -2217,7 +2232,16 @@ function initPagedBox(box, list) {
   var sortSel = document.getElementById('finder-sort');
   var resetBtn = document.getElementById('finder-reset');
   var emptyNote = document.getElementById('finder-empty');
+  var countEl = document.getElementById('finder-count');
   var STATUS_ORDER = ['complete', 'under_construction', 'planned', 'existing', 'being_removed'];
+  // Matching ignores case and accents on both sides ("cavana" finds "Cavaña"): the text is split into
+  // base letters and combining marks, and the marks dropped. Names are folded once, as they are read.
+  function fold(text) { return (text || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
+  function key(el, attr) {
+    var prop = '__fold' + attr;
+    if (el[prop] === undefined) el[prop] = fold(el.getAttribute(attr));
+    return el[prop];
+  }
   // The header search (sitegen/pages.py's HEADER_SEARCH) sends visitors here as /near/#q=...: read
   // it on load, and again when it changes, so the finder opens already filtered. Name, parcel (the
   // record id) and address all match.
@@ -2233,17 +2257,17 @@ function initPagedBox(box, list) {
   });
 
   function apply() {
-    var q = (search.value || '').trim().toLowerCase();
+    var q = fold((search.value || '').trim());
     var site = siteSel.value, status = statusSel.value;
     var shown = 0;
     items.forEach(function (li) {
-      var direct = !q || li.getAttribute('data-name').indexOf(q) !== -1 || li.getAttribute('data-address').indexOf(q) !== -1 ||
-        (li.getAttribute('data-id') || '').toLowerCase().indexOf(q) !== -1;
+      var direct = !q || key(li, 'data-name').indexOf(q) !== -1 || key(li, 'data-address').indexOf(q) !== -1 ||
+        key(li, 'data-id').indexOf(q) !== -1;
       // Otherwise one of its other names or tenants (docs/briefs/search-aliases.md): show the
       // first line that matched, so the visitor sees why this record is listed.
       var via = null;
       Array.prototype.forEach.call(li.querySelectorAll('.finder-match'), function (m) {
-        var hit = !direct && !via && m.getAttribute('data-match').indexOf(q) !== -1;
+        var hit = !direct && !via && key(m, 'data-match').indexOf(q) !== -1;
         if (hit) via = m;
         m.hidden = !hit;
       });
@@ -2253,6 +2277,12 @@ function initPagedBox(box, list) {
       if (ok) shown++;
     });
     if (emptyNote) emptyNote.hidden = shown !== 0;
+    // Announced to a screen reader as the filters change (role=status, always in the page so the
+    // change is announced); empty when nothing is filtered and the list is simply the whole list.
+    if (countEl) {
+      var filtered = !!(q || site || status);
+      countEl.textContent = filtered ? (shown === 0 ? 'No records match.' : shown === 1 ? '1 record shown.' : shown + ' records shown.') : '';
+    }
     if (resetBtn) resetBtn.hidden = !(q || site || status || sortSel.value);
 
     var by = sortSel.value;
