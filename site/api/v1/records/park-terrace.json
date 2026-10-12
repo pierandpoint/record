@@ -39,13 +39,13 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against DataSF's Assessor parcels), so no single block/lot represents the whole building and it cannot be matched to one parcel record the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I, Madrone and Radiance, re-checked against DataSF's Assessor parcels in September 2026; Avalon II and III are not condo-mapped, and Arden and One Mission Bay were not re-checked).",
-    "digitized_from": "OpenStreetMap (way 46264112, 325 Berry St)"
+    "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8707009 (3,868 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. The lot is condominium-mapped: 111 Assessor lots share this outline (the map lot 8707009 and 110 per-unit lots), so the outline is the building's shared lot, not any one unit. Until 2026-10-12 this record showed the surveyed building footprint (OpenStreetMap (way 46264112, 325 Berry St)); 95% of that outline lies inside the lot and it covered 95% of the lot.",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8707009 (mapped 2007-01-16; active); the earlier outline came from: OpenStreetMap (way 46264112, 325 Berry St)"
    }
   },
   "centroid": {
-   "lon": -122.395922,
-   "lat": 37.773404
+   "lon": -122.395656,
+   "lat": 37.773395
   },
   "facts": [],
   "costs": [],
@@ -152,6 +152,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Park Terrace now uses its Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 8707009",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 8707009"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_park_terrace",
+     "slug": "park-terrace",
+     "name": "Park Terrace",
+     "permalink": "https://pierandpoint.org/parcels/park-terrace/",
+     "api": "https://pierandpoint.org/api/v1/records/park-terrace.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-10",
     "kind": "added",
@@ -278,28 +307,24 @@
    "coordinates": [
     [
      [
-      -122.3962895,
-      37.7733523
+      -122.395253719,
+      37.773431843
      ],
      [
-      -122.3961201,
-      37.7734857
+      -122.395816574,
+      37.772987266
      ],
      [
-      -122.3957277,
-      37.7737947
+      -122.396259517,
+      37.773340598
      ],
      [
-      -122.3952753,
-      37.7734388
+      -122.395696663,
+      37.773785177
      ],
      [
-      -122.3958301,
-      37.7730018
-     ],
-     [
-      -122.3962895,
-      37.7733523
+      -122.395253719,
+      37.773431843
      ]
     ]
    ]

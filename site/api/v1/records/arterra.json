@@ -39,13 +39,13 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against DataSF's Assessor parcel data), so no single blklot represents the whole building and it cannot be mapped from one parcel the way a single-owner building can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I, Madrone and Radiance, re-checked against DataSF's parcel data in September 2026; Avalon II and III are not condo-mapped, and Arden and One Mission Bay were not re-checked).",
-    "digitized_from": "OpenStreetMap (way 48569995, 300 Berry St)"
+    "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8704008 (3,887 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. The lot is condominium-mapped: 270 Assessor lots share this outline (the map lot 8704008 and 269 per-unit lots), so the outline is the building's shared lot, not any one unit. Until 2026-10-12 this record showed the surveyed building footprint (OpenStreetMap (way 48569995, 300 Berry St)); 98% of that outline lies inside the lot and it covered 97% of the lot.",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8704008 (mapped 2008-07-29; active); the earlier outline came from: OpenStreetMap (way 48569995, 300 Berry St)"
    }
   },
   "centroid": {
-   "lon": -122.396265,
-   "lat": 37.773873
+   "lon": -122.396091,
+   "lat": 37.773938
   },
   "facts": [],
   "costs": [],
@@ -152,6 +152,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Arterra now uses its Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 8704008",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 8704008"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_arterra",
+     "slug": "arterra",
+     "name": "Arterra",
+     "permalink": "https://pierandpoint.org/parcels/arterra/",
+     "api": "https://pierandpoint.org/api/v1/records/arterra.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-10",
     "kind": "added",
@@ -278,48 +307,28 @@
    "coordinates": [
     [
      [
-      -122.3967606,
-      37.7738524
+      -122.39573146,
+      37.774002745
      ],
      [
-      -122.3965807,
-      37.7737095
+      -122.395851022,
+      37.773908309
      ],
      [
-      -122.3964826,
-      37.7736316
+      -122.396335373,
+      37.773525737
      ],
      [
-      -122.396348,
-      37.7735246
+      -122.396750256,
+      37.77385668
      ],
      [
-      -122.3960104,
-      37.77379
+      -122.396146344,
+      37.77433369
      ],
      [
-      -122.3959813,
-      37.7738129
-     ],
-     [
-      -122.3959629,
-      37.7738274
-     ],
-     [
-      -122.3957489,
-      37.7739956
-     ],
-     [
-      -122.3961161,
-      37.7742873
-     ],
-     [
-      -122.3961615,
-      37.7743234
-     ],
-     [
-      -122.3967606,
-      37.7738524
+      -122.39573146,
+      37.774002745
      ]
     ]
    ]

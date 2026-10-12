@@ -101988,13 +101988,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against DataSF's Assessor parcel data), so no single blklot represents the whole building and it cannot be mapped from one parcel the way a single-owner building can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same real-geometry-without-a-single-parcel pattern already used for several Pier 70 buildings (DataSF Building Footprints) and for Mission Bay's own real park polygons.",
-     "digitized_from": "OpenStreetMap (way 142845124, name=Madrone Mission Bay, 480 Mission Bay Blvd N)"
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8720117 (11,410 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. The lot is condominium-mapped: 332 Assessor lots share this outline (the map lot 8720117 and 331 per-unit lots), so the outline is the building's shared lot, not any one unit. Until 2026-10-12 this record showed the surveyed building footprint (OpenStreetMap (way 142845124, name=Madrone Mission Bay, 480 Mission Bay Blvd N)); 99% of that outline lies inside the lot and it covered 88% of the lot.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8720117 (mapped 2012-06-20; active); the earlier outline came from: OpenStreetMap (way 142845124, name=Madrone Mission Bay, 480 Mission Bay Blvd N)"
     }
    },
    "centroid": {
-    "lon": -122.388643,
-    "lat": 37.771664
+    "lon": -122.388455,
+    "lat": 37.771507
    },
    "facts": [
     {
@@ -102304,6 +102304,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Madrone now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8720117",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8720117"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_madrone",
+      "slug": "madrone",
+      "name": "Madrone",
+      "permalink": "https://pierandpoint.org/parcels/madrone/",
+      "api": "https://pierandpoint.org/api/v1/records/madrone.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-10",
      "kind": "added",
      "kind_label": "Added",
@@ -102425,676 +102454,36 @@
     "coordinates": [
      [
       [
-       -122.3879527,
-       37.7714381
+       -122.387782555,
+       37.771263568
       ],
       [
-       -122.3879513,
-       37.7714225
+       -122.388427266,
+       37.771224746
       ],
       [
-       -122.3879414,
-       37.7714231
+       -122.388703254,
+       37.771208126
       ],
       [
-       -122.3879396,
-       37.7714019
+       -122.389324228,
+       37.771170727
       ],
       [
-       -122.3879482,
-       37.7714014
+       -122.389396211,
+       37.771923806
       ],
       [
-       -122.3879472,
-       37.7713898
+       -122.388368896,
+       37.771985674
       ],
       [
-       -122.3879389,
-       37.7713902
+       -122.387854521,
+       37.772016648
       ],
       [
-       -122.3879363,
-       37.7713596
-      ],
-      [
-       -122.3879445,
-       37.7713591
-      ],
-      [
-       -122.3879437,
-       37.7713501
-      ],
-      [
-       -122.3879328,
-       37.7713507
-      ],
-      [
-       -122.3879308,
-       37.7713269
-      ],
-      [
-       -122.3879427,
-       37.7713263
-      ],
-      [
-       -122.3879414,
-       37.7713114
-      ],
-      [
-       -122.3879816,
-       37.7713093
-      ],
-      [
-       -122.3879777,
-       37.7712634
-      ],
-      [
-       -122.3881938,
-       37.771252
-      ],
-      [
-       -122.388193,
-       37.771244
-      ],
-      [
-       -122.3882198,
-       37.7712424
-      ],
-      [
-       -122.3882211,
-       37.7712566
-      ],
-      [
-       -122.3882524,
-       37.7712547
-      ],
-      [
-       -122.3882515,
-       37.7712452
-      ],
-      [
-       -122.3883421,
-       37.7712398
-      ],
-      [
-       -122.3883442,
-       37.771262
-      ],
-      [
-       -122.3883848,
-       37.7712596
-      ],
-      [
-       -122.3883852,
-       37.7712638
-      ],
-      [
-       -122.3884128,
-       37.7712621
-      ],
-      [
-       -122.3884114,
-       37.7712464
-      ],
-      [
-       -122.3889337,
-       37.7712156
-      ],
-      [
-       -122.3889362,
-       37.7712419
-      ],
-      [
-       -122.3889364,
-       37.7712444
-      ],
-      [
-       -122.3889504,
-       37.7712374
-      ],
-      [
-       -122.3889639,
-       37.7712311
-      ],
-      [
-       -122.3889612,
-       37.7712024
-      ],
-      [
-       -122.389151,
-       37.7711916
-      ],
-      [
-       -122.3891506,
-       37.7711865
-      ],
-      [
-       -122.3891792,
-       37.7711849
-      ],
-      [
-       -122.3891804,
-       37.7711984
-      ],
-      [
-       -122.3892079,
-       37.7711968
-      ],
-      [
-       -122.3892072,
-       37.7711889
-      ],
-      [
-       -122.3892979,
-       37.7711837
-      ],
-      [
-       -122.3892997,
-       37.7712035
-      ],
-      [
-       -122.3893423,
-       37.771201
-      ],
-      [
-       -122.3893446,
-       37.7712258
-      ],
-      [
-       -122.3893361,
-       37.7712263
-      ],
-      [
-       -122.3893368,
-       37.7712343
-      ],
-      [
-       -122.3893418,
-       37.7712355
-      ],
-      [
-       -122.3893516,
-       37.7713424
-      ],
-      [
-       -122.3893525,
-       37.7713525
-      ],
-      [
-       -122.3893629,
-       37.7713519
-      ],
-      [
-       -122.3893651,
-       37.7713768
-      ],
-      [
-       -122.3893156,
-       37.7713796
-      ],
-      [
-       -122.3893177,
-       37.7714018
-      ],
-      [
-       -122.3893299,
-       37.7714011
-      ],
-      [
-       -122.3893556,
-       37.7713996
-      ],
-      [
-       -122.3893583,
-       37.7714286
-      ],
-      [
-       -122.3893614,
-       37.7714616
-      ],
-      [
-       -122.389368,
-       37.7714613
-      ],
-      [
-       -122.3893718,
-       37.771502
-      ],
-      [
-       -122.3893652,
-       37.7715024
-      ],
-      [
-       -122.3893679,
-       37.7715318
-      ],
-      [
-       -122.3893708,
-       37.771563
-      ],
-      [
-       -122.3893785,
-       37.7715625
-      ],
-      [
-       -122.3893825,
-       37.7716056
-      ],
-      [
-       -122.3893749,
-       37.7716061
-      ],
-      [
-       -122.3893776,
-       37.7716349
-      ],
-      [
-       -122.3893803,
-       37.7716646
-      ],
-      [
-       -122.3893882,
-       37.7716642
-      ],
-      [
-       -122.3893924,
-       37.771709
-      ],
-      [
-       -122.3893845,
-       37.7717095
-      ],
-      [
-       -122.3893872,
-       37.7717378
-      ],
-      [
-       -122.38939,
-       37.7717679
-      ],
-      [
-       -122.3893981,
-       37.7717674
-      ],
-      [
-       -122.389402,
-       37.7718086
-      ],
-      [
-       -122.3893938,
-       37.771809
-      ],
-      [
-       -122.3893968,
-       37.7718405
-      ],
-      [
-       -122.3893998,
-       37.7718732
-      ],
-      [
-       -122.3894092,
-       37.7718726
-      ],
-      [
-       -122.3894131,
-       37.771914
-      ],
-      [
-       -122.3892874,
-       37.7719215
-      ],
-      [
-       -122.3892882,
-       37.7719316
-      ],
-      [
-       -122.389283,
-       37.7719319
-      ],
-      [
-       -122.389284,
-       37.7719416
-      ],
-      [
-       -122.3892528,
-       37.7719434
-      ],
-      [
-       -122.3892519,
-       37.7719341
-      ],
-      [
-       -122.3891255,
-       37.7719417
-      ],
-      [
-       -122.3891264,
-       37.771951
-      ],
-      [
-       -122.3890873,
-       37.7719533
-      ],
-      [
-       -122.3890864,
-       37.7719443
-      ],
-      [
-       -122.3890381,
-       37.7719472
-      ],
-      [
-       -122.389039,
-       37.7719562
-      ],
-      [
-       -122.3890027,
-       37.7719584
-      ],
-      [
-       -122.3890018,
-       37.7719486
-      ],
-      [
-       -122.3889509,
-       37.7719517
-      ],
-      [
-       -122.3889518,
-       37.7719614
-      ],
-      [
-       -122.388916,
-       37.7719636
-      ],
-      [
-       -122.3889151,
-       37.7719545
-      ],
-      [
-       -122.3888646,
-       37.7719575
-      ],
-      [
-       -122.3888654,
-       37.7719666
-      ],
-      [
-       -122.3888308,
-       37.7719686
-      ],
-      [
-       -122.3888299,
-       37.7719599
-      ],
-      [
-       -122.3887783,
-       37.771963
-      ],
-      [
-       -122.3887792,
-       37.7719717
-      ],
-      [
-       -122.3887421,
-       37.7719739
-      ],
-      [
-       -122.3887413,
-       37.7719657
-      ],
-      [
-       -122.3886918,
-       37.7719687
-      ],
-      [
-       -122.3886925,
-       37.7719769
-      ],
-      [
-       -122.3886547,
-       37.7719791
-      ],
-      [
-       -122.388654,
-       37.7719711
-      ],
-      [
-       -122.3886192,
-       37.7719732
-      ],
-      [
-       -122.3886168,
-       37.7719481
-      ],
-      [
-       -122.388596,
-       37.7719493
-      ],
-      [
-       -122.3885981,
-       37.7719716
-      ],
-      [
-       -122.3885436,
-       37.7719748
-      ],
-      [
-       -122.3885415,
-       37.7719526
-      ],
-      [
-       -122.3885098,
-       37.7719545
-      ],
-      [
-       -122.3885121,
-       37.7719785
-      ],
-      [
-       -122.3884995,
-       37.7719793
-      ],
-      [
-       -122.3885003,
-       37.7719884
-      ],
-      [
-       -122.3884638,
-       37.7719906
-      ],
-      [
-       -122.3884629,
-       37.7719814
-      ],
-      [
-       -122.3884137,
-       37.7719843
-      ],
-      [
-       -122.3884145,
-       37.7719935
-      ],
-      [
-       -122.3883779,
-       37.7719957
-      ],
-      [
-       -122.3883771,
-       37.7719867
-      ],
-      [
-       -122.3883263,
-       37.7719897
-      ],
-      [
-       -122.3883272,
-       37.7719987
-      ],
-      [
-       -122.3882915,
-       37.7720008
-      ],
-      [
-       -122.3882907,
-       37.7719919
-      ],
-      [
-       -122.3882403,
-       37.7719949
-      ],
-      [
-       -122.3882412,
-       37.7720038
-      ],
-      [
-       -122.3882047,
-       37.772006
-      ],
-      [
-       -122.388204,
-       37.7719977
-      ],
-      [
-       -122.3881373,
-       37.7720016
-      ],
-      [
-       -122.3881381,
-       37.77201
-      ],
-      [
-       -122.3881067,
-       37.7720118
-      ],
-      [
-       -122.388106,
-       37.7720042
-      ],
-      [
-       -122.3880944,
-       37.7720048
-      ],
-      [
-       -122.3880951,
-       37.7720125
-      ],
-      [
-       -122.3880526,
-       37.772015
-      ],
-      [
-       -122.3880519,
-       37.7720078
-      ],
-      [
-       -122.388006,
-       37.7720105
-      ],
-      [
-       -122.3879974,
-       37.771917
-      ],
-      [
-       -122.3879866,
-       37.7719177
-      ],
-      [
-       -122.3879847,
-       37.7718968
-      ],
-      [
-       -122.387996,
-       37.7718961
-      ],
-      [
-       -122.3879915,
-       37.7718469
-      ],
-      [
-       -122.3879808,
-       37.7718475
-      ],
-      [
-       -122.3879788,
-       37.7718259
-      ],
-      [
-       -122.3879896,
-       37.7718253
-      ],
-      [
-       -122.3879888,
-       37.7718166
-      ],
-      [
-       -122.3879853,
-       37.7717778
-      ],
-      [
-       -122.3879768,
-       37.7717782
-      ],
-      [
-       -122.3879749,
-       37.7717573
-      ],
-      [
-       -122.3879831,
-       37.7717569
-      ],
-      [
-       -122.3879787,
-       37.7717076
-      ],
-      [
-       -122.3879699,
-       37.7717081
-      ],
-      [
-       -122.387968,
-       37.7716875
-      ],
-      [
-       -122.3879759,
-       37.7716871
-      ],
-      [
-       -122.3879654,
-       37.7715678
-      ],
-      [
-       -122.3879559,
-       37.7715683
-      ],
-      [
-       -122.387954,
-       37.7715461
-      ],
-      [
-       -122.387962,
-       37.7715456
-      ],
-      [
-       -122.3879579,
-       37.7714985
-      ],
-      [
-       -122.3879491,
-       37.771499
-      ],
-      [
-       -122.387947,
-       37.7714748
-      ],
-      [
-       -122.3879558,
-       37.7714743
-      ],
-      [
-       -122.3879527,
-       37.7714381
+       -122.387782555,
+       37.771263568
       ]
      ]
     ]
@@ -103138,13 +102527,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against DataSF's Assessor parcel data), so no single blklot represents the whole building and the building cannot be mapped from a single Assessor parcel the way a single-owner building can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same real-geometry-without-a-single-parcel pattern already used for several Pier 70 buildings (DataSF Building Footprints) and for Mission Bay's own real park polygons.",
-     "digitized_from": "OpenStreetMap (way 394698460, addr:housenumber=708;718;738, Long Bridge St)"
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8710010 (7,880 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. The lot is condominium-mapped: 267 Assessor lots share this outline (the map lot 8710010 and 266 per-unit lots), so the outline is the building's shared lot, not any one unit. Until 2026-10-12 this record showed the surveyed building footprint (OpenStreetMap (way 394698460, addr:housenumber=708); 96% of that outline lies inside the lot and it covered 91% of the lot.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8710010 (mapped 2015-05-27; active); the earlier outline came from: OpenStreetMap (way 394698460, addr:housenumber=708;718;738, Long Bridge St)"
     }
    },
    "centroid": {
-    "lon": -122.394179,
-    "lat": 37.771702
+    "lon": -122.394155,
+    "lat": 37.771703
    },
    "facts": [
     {
@@ -103376,6 +102765,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Arden now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8710010",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8710010"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_arden",
+      "slug": "arden",
+      "name": "Arden",
+      "permalink": "https://pierandpoint.org/parcels/arden/",
+      "api": "https://pierandpoint.org/api/v1/records/arden.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-10",
      "kind": "added",
      "kind_label": "Added",
@@ -103501,48 +102919,28 @@
     "coordinates": [
      [
       [
-       -122.3944703,
-       37.7712375
+       -122.394468076,
+       37.771198502
       ],
       [
-       -122.3942421,
-       37.7714108
+       -122.394953099,
+       37.771585421
       ],
       [
-       -122.3941059,
-       37.7715206
+       -122.393905874,
+       37.772412577
       ],
       [
-       -122.3940314,
-       37.7715774
+       -122.393420851,
+       37.772025653
       ],
       [
-       -122.3937013,
-       37.7718423
+       -122.393711329,
+       37.771796222
       ],
       [
-       -122.3934651,
-       37.7720337
-      ],
-      [
-       -122.3938898,
-       37.7723718
-      ],
-      [
-       -122.3939424,
-       37.7724161
-      ],
-      [
-       -122.3949365,
-       37.7716272
-      ],
-      [
-       -122.3947183,
-       37.7714512
-      ],
-      [
-       -122.3944703,
-       37.7712375
+       -122.394468076,
+       37.771198502
       ]
      ]
     ]
@@ -104410,13 +103808,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against DataSF's Assessor parcel data and tax roll -- e.g. blklot 8711507 alone is about 12-13 acres: 675 Nelson Rising Ln with a lot area of 572,576 sq ft (13.1 acres) on the Assessor roll, 675 Mission Bay Blvd and 12.2 acres in DataSF's Parcels layer, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
-     "digitized_from": "OpenStreetMap (way 580277612, name=UCSF Medical Center at Mission Bay, amenity=hospital, operator=University of California San Francisco, 1975 4th St)"
+     "accuracy_caveat": "REAL lot geometry -- the outline is the union of Assessor lots 8723008, 3992003, 8724001 and 8729001 (59,505 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed the surveyed building footprint (OpenStreetMap (way 580277612, name=UCSF Medical Center at Mission Bay, amenity=hospital, operator=University of California San Francisco, 1975 4th St)); 94% of that outline lies inside the lot and it covered 93% of the lot. The outline has two parts because lot 8723008 (601 16th St) does not touch the others. That these four lots are the hospital's own is Pier & Point's inference from location, shape and size (each lies at least 90% inside the earlier outline); no source read ties the lot numbers to the hospital. Four other lots lie mostly inside the earlier outline and are left out, because nothing read ties them to it: 8728001 (770 Mariposa St) and 3943001, 3943003 and 3943007 (1800 and 1830 3rd St). Other UCSF buildings in Mission Bay stay on their building footprints because several buildings share one large lot (for example blklot 8711507, about 12 acres).",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lots 8723008, 3992003, 8724001 and 8729001 (mapped 1998-07-01, 2001-03-20, 2006-05-24; active), joined into one outline; the earlier outline came from: OpenStreetMap (way 580277612, name=UCSF Medical Center at Mission Bay, amenity=hospital, operator=University of California San Francisco, 1975 4th St)"
     }
    },
    "centroid": {
-    "lon": -122.390731,
-    "lat": 37.765475
+    "lon": -122.390727,
+    "lat": 37.765089
    },
    "facts": [
     {
@@ -104611,6 +104009,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "UCSF Medical Center at Mission Bay now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 8723008, 3992003, 8724001 and 8729001",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 8723008, 3992003, 8724001 and 8729001"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "ucsf_mission_bay_hospital",
+      "slug": "ucsf-medical-center-at-mission-bay",
+      "name": "UCSF Medical Center at Mission Bay",
+      "permalink": "https://pierandpoint.org/parcels/ucsf-medical-center-at-mission-bay/",
+      "api": "https://pierandpoint.org/api/v1/records/ucsf-medical-center-at-mission-bay.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-29",
      "kind": "correction",
@@ -104821,88 +104248,590 @@
    "last_verified": "2026-09-21",
    "tenants": [],
    "geometry": {
-    "type": "Polygon",
+    "type": "MultiPolygon",
     "coordinates": [
      [
       [
-       -122.3907074,
-       37.7643772
-      ],
+       [
+        -122.390335348,
+        37.764325898
+       ],
+       [
+        -122.390680889,
+        37.764305081
+       ],
+       [
+        -122.390693897,
+        37.764441155
+       ],
+       [
+        -122.390695491,
+        37.764462197
+       ],
+       [
+        -122.390696018,
+        37.764473933
+       ],
+       [
+        -122.390696289,
+        37.764485675
+       ],
+       [
+        -122.390696299,
+        37.764497418
+       ],
+       [
+        -122.390696053,
+        37.76450916
+       ],
+       [
+        -122.390695548,
+        37.764520896
+       ],
+       [
+        -122.390694786,
+        37.764532623
+       ],
+       [
+        -122.390693765,
+        37.764544339
+       ],
+       [
+        -122.390692488,
+        37.764556039
+       ],
+       [
+        -122.390690953,
+        37.764567719
+       ],
+       [
+        -122.390689162,
+        37.764579376
+       ],
+       [
+        -122.390687114,
+        37.764591006
+       ],
+       [
+        -122.390684811,
+        37.764602606
+       ],
+       [
+        -122.390682254,
+        37.764614172
+       ],
+       [
+        -122.390679443,
+        37.764625703
+       ],
+       [
+        -122.390676379,
+        37.764637191
+       ],
+       [
+        -122.390673063,
+        37.764648635
+       ],
+       [
+        -122.390669494,
+        37.764660032
+       ],
+       [
+        -122.390665677,
+        37.764671377
+       ],
+       [
+        -122.390661611,
+        37.764682668
+       ],
+       [
+        -122.390657298,
+        37.764693901
+       ],
+       [
+        -122.390652737,
+        37.764705073
+       ],
+       [
+        -122.390647931,
+        37.764716179
+       ],
+       [
+        -122.390642884,
+        37.764727217
+       ],
+       [
+        -122.390637592,
+        37.764738184
+       ],
+       [
+        -122.390613913,
+        37.764786018
+       ],
+       [
+        -122.390599452,
+        37.764816631
+       ],
+       [
+        -122.390591921,
+        37.764833837
+       ],
+       [
+        -122.390584771,
+        37.764851144
+       ],
+       [
+        -122.390578001,
+        37.764868547
+       ],
+       [
+        -122.390571615,
+        37.764886041
+       ],
+       [
+        -122.390565614,
+        37.764903621
+       ],
+       [
+        -122.390560003,
+        37.764921282
+       ],
+       [
+        -122.390554778,
+        37.764939018
+       ],
+       [
+        -122.390549945,
+        37.764956823
+       ],
+       [
+        -122.390545504,
+        37.764974693
+       ],
+       [
+        -122.390541457,
+        37.764992621
+       ],
+       [
+        -122.390537805,
+        37.765010603
+       ],
+       [
+        -122.390534548,
+        37.765028633
+       ],
+       [
+        -122.390531688,
+        37.765046705
+       ],
+       [
+        -122.390529225,
+        37.765064814
+       ],
+       [
+        -122.390527162,
+        37.765082955
+       ],
+       [
+        -122.390525497,
+        37.76510112
+       ],
+       [
+        -122.390524232,
+        37.765119306
+       ],
+       [
+        -122.390523367,
+        37.765137509
+       ],
+       [
+        -122.390522903,
+        37.765155719
+       ],
+       [
+        -122.390522839,
+        37.765173932
+       ],
+       [
+        -122.390523175,
+        37.765192145
+       ],
+       [
+        -122.390523912,
+        37.765210349
+       ],
+       [
+        -122.390525048,
+        37.765228541
+       ],
+       [
+        -122.390526585,
+        37.765246715
+       ],
+       [
+        -122.390542692,
+        37.765415213
+       ],
+       [
+        -122.390559969,
+        37.765595952
+       ],
+       [
+        -122.39080289,
+        37.765581317
+       ],
+       [
+        -122.390901734,
+        37.76661528
+       ],
+       [
+        -122.390637238,
+        37.76640426
+       ],
+       [
+        -122.390664692,
+        37.766691444
+       ],
+       [
+        -122.389596163,
+        37.76675581
+       ],
+       [
+        -122.389482818,
+        37.765569947
+       ],
+       [
+        -122.389556901,
+        37.766345039
+       ],
+       [
+        -122.389211938,
+        37.766365817
+       ],
+       [
+        -122.389024523,
+        37.764404857
+       ],
+       [
+        -122.390335348,
+        37.764325898
+       ]
+      ]
+     ],
+     [
       [
-       -122.3906699,
-       37.7643645
-      ],
-      [
-       -122.3891223,
-       37.7644917
-      ],
-      [
-       -122.3890954,
-       37.7645256
-      ],
-      [
-       -122.3890793,
-       37.7645786
-      ],
-      [
-       -122.3892586,
-       37.766337
-      ],
-      [
-       -122.3892993,
-       37.7667689
-      ],
-      [
-       -122.3893234,
-       37.7667901
-      ],
-      [
-       -122.3905465,
-       37.7667159
-      ],
-      [
-       -122.3923597,
-       37.7666036
-      ],
-      [
-       -122.392408,
-       37.7665908
-      ],
-      [
-       -122.392424,
-       37.7665527
-      ],
-      [
-       -122.3923516,
-       37.7663279
-      ],
-      [
-       -122.3922817,
-       37.7655498
-      ],
-      [
-       -122.3922296,
-       37.7650324
-      ],
-      [
-       -122.3908415,
-       37.7651151
-      ],
-      [
-       -122.3905358,
-       37.7650218
-      ],
-      [
-       -122.3906511,
-       37.7648034
-      ],
-      [
-       -122.3907208,
-       37.7645807
-      ],
-      [
-       -122.3907074,
-       37.7643772
+       [
+        -122.390785826,
+        37.765263866
+       ],
+       [
+        -122.390785439,
+        37.765259682
+       ],
+       [
+        -122.39078508,
+        37.765255496
+       ],
+       [
+        -122.390784747,
+        37.765251309
+       ],
+       [
+        -122.390784441,
+        37.76524712
+       ],
+       [
+        -122.390784162,
+        37.76524293
+       ],
+       [
+        -122.39078391,
+        37.765238739
+       ],
+       [
+        -122.390783684,
+        37.765234547
+       ],
+       [
+        -122.390783485,
+        37.765230354
+       ],
+       [
+        -122.390783314,
+        37.76522616
+       ],
+       [
+        -122.390783168,
+        37.765221966
+       ],
+       [
+        -122.390783051,
+        37.765217772
+       ],
+       [
+        -122.39078296,
+        37.765213576
+       ],
+       [
+        -122.390782896,
+        37.765209381
+       ],
+       [
+        -122.390782859,
+        37.765205185
+       ],
+       [
+        -122.390782849,
+        37.765200989
+       ],
+       [
+        -122.390782865,
+        37.765196793
+       ],
+       [
+        -122.390782909,
+        37.765192598
+       ],
+       [
+        -122.390782979,
+        37.765188402
+       ],
+       [
+        -122.390783077,
+        37.765184206
+       ],
+       [
+        -122.390783202,
+        37.765180012
+       ],
+       [
+        -122.390783353,
+        37.765175818
+       ],
+       [
+        -122.390783531,
+        37.765171624
+       ],
+       [
+        -122.390783735,
+        37.765167432
+       ],
+       [
+        -122.390783968,
+        37.765163241
+       ],
+       [
+        -122.390784227,
+        37.765159049
+       ],
+       [
+        -122.390784512,
+        37.76515486
+       ],
+       [
+        -122.390784825,
+        37.765150671
+       ],
+       [
+        -122.390785164,
+        37.765146484
+       ],
+       [
+        -122.39078553,
+        37.765142298
+       ],
+       [
+        -122.390785923,
+        37.765138114
+       ],
+       [
+        -122.390786344,
+        37.765133931
+       ],
+       [
+        -122.39078679,
+        37.76512975
+       ],
+       [
+        -122.390787264,
+        37.765125572
+       ],
+       [
+        -122.390787765,
+        37.765121395
+       ],
+       [
+        -122.390788292,
+        37.76511722
+       ],
+       [
+        -122.390788845,
+        37.765113047
+       ],
+       [
+        -122.390789427,
+        37.765108877
+       ],
+       [
+        -122.390790034,
+        37.765104709
+       ],
+       [
+        -122.390790668,
+        37.765100543
+       ],
+       [
+        -122.39079133,
+        37.765096381
+       ],
+       [
+        -122.390792017,
+        37.76509222
+       ],
+       [
+        -122.390792731,
+        37.765088062
+       ],
+       [
+        -122.390793472,
+        37.765083909
+       ],
+       [
+        -122.39079424,
+        37.765079757
+       ],
+       [
+        -122.390795034,
+        37.765075609
+       ],
+       [
+        -122.390795855,
+        37.765071464
+       ],
+       [
+        -122.390796702,
+        37.765067322
+       ],
+       [
+        -122.390797576,
+        37.765063184
+       ],
+       [
+        -122.390798477,
+        37.765059049
+       ],
+       [
+        -122.390799404,
+        37.765054919
+       ],
+       [
+        -122.390800357,
+        37.765050792
+       ],
+       [
+        -122.390801337,
+        37.765046669
+       ],
+       [
+        -122.390802344,
+        37.765042549
+       ],
+       [
+        -122.390803376,
+        37.765038435
+       ],
+       [
+        -122.390804435,
+        37.765034324
+       ],
+       [
+        -122.390805522,
+        37.765030217
+       ],
+       [
+        -122.390806633,
+        37.765026116
+       ],
+       [
+        -122.390807771,
+        37.765022018
+       ],
+       [
+        -122.390808936,
+        37.765017926
+       ],
+       [
+        -122.390810127,
+        37.765013838
+       ],
+       [
+        -122.390811343,
+        37.765009755
+       ],
+       [
+        -122.390812587,
+        37.765005677
+       ],
+       [
+        -122.390813856,
+        37.765001604
+       ],
+       [
+        -122.390815151,
+        37.764997535
+       ],
+       [
+        -122.390816472,
+        37.764993473
+       ],
+       [
+        -122.39081782,
+        37.764989416
+       ],
+       [
+        -122.390819194,
+        37.764985364
+       ],
+       [
+        -122.391022304,
+        37.764973127
+       ],
+       [
+        -122.391712216,
+        37.76493156
+       ],
+       [
+        -122.391988182,
+        37.764914932
+       ],
+       [
+        -122.392243276,
+        37.764899561
+       ],
+       [
+        -122.392282557,
+        37.765310386
+       ],
+       [
+        -122.392299839,
+        37.765491124
+       ],
+       [
+        -122.392404588,
+        37.766586615
+       ],
+       [
+        -122.390920824,
+        37.766676013
+       ],
+       [
+        -122.390916115,
+        37.766626754
+       ],
+       [
+        -122.390785826,
+        37.765263866
+       ]
       ]
      ]
     ]
@@ -111418,13 +111347,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against DataSF's Assessor parcel data), so no single blklot represents the whole building and it cannot be mapped from one parcel the way a single-owner building can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I, Madrone and Radiance, re-checked against DataSF's parcel data in September 2026; Avalon II and III are not condo-mapped, and Arden and One Mission Bay were not re-checked).",
-     "digitized_from": "OpenStreetMap (way 48569995, 300 Berry St)"
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8704008 (3,887 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. The lot is condominium-mapped: 270 Assessor lots share this outline (the map lot 8704008 and 269 per-unit lots), so the outline is the building's shared lot, not any one unit. Until 2026-10-12 this record showed the surveyed building footprint (OpenStreetMap (way 48569995, 300 Berry St)); 98% of that outline lies inside the lot and it covered 97% of the lot.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8704008 (mapped 2008-07-29; active); the earlier outline came from: OpenStreetMap (way 48569995, 300 Berry St)"
     }
    },
    "centroid": {
-    "lon": -122.396265,
-    "lat": 37.773873
+    "lon": -122.396091,
+    "lat": 37.773938
    },
    "facts": [],
    "costs": [],
@@ -111531,6 +111460,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Arterra now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8704008",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8704008"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_arterra",
+      "slug": "arterra",
+      "name": "Arterra",
+      "permalink": "https://pierandpoint.org/parcels/arterra/",
+      "api": "https://pierandpoint.org/api/v1/records/arterra.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-10-10",
      "kind": "added",
@@ -111657,48 +111615,28 @@
     "coordinates": [
      [
       [
-       -122.3967606,
-       37.7738524
+       -122.39573146,
+       37.774002745
       ],
       [
-       -122.3965807,
-       37.7737095
+       -122.395851022,
+       37.773908309
       ],
       [
-       -122.3964826,
-       37.7736316
+       -122.396335373,
+       37.773525737
       ],
       [
-       -122.396348,
-       37.7735246
+       -122.396750256,
+       37.77385668
       ],
       [
-       -122.3960104,
-       37.77379
+       -122.396146344,
+       37.77433369
       ],
       [
-       -122.3959813,
-       37.7738129
-      ],
-      [
-       -122.3959629,
-       37.7738274
-      ],
-      [
-       -122.3957489,
-       37.7739956
-      ],
-      [
-       -122.3961161,
-       37.7742873
-      ],
-      [
-       -122.3961615,
-       37.7743234
-      ],
-      [
-       -122.3967606,
-       37.7738524
+       -122.39573146,
+       37.774002745
       ]
      ]
     ]
@@ -111738,13 +111676,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against DataSF's Assessor parcels), so no single block/lot represents the whole building and it cannot be matched to one parcel record the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I, Madrone and Radiance, re-checked against DataSF's Assessor parcels in September 2026; Avalon II and III are not condo-mapped, and Arden and One Mission Bay were not re-checked).",
-     "digitized_from": "OpenStreetMap (way 46264112, 325 Berry St)"
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8707009 (3,868 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. The lot is condominium-mapped: 111 Assessor lots share this outline (the map lot 8707009 and 110 per-unit lots), so the outline is the building's shared lot, not any one unit. Until 2026-10-12 this record showed the surveyed building footprint (OpenStreetMap (way 46264112, 325 Berry St)); 95% of that outline lies inside the lot and it covered 95% of the lot.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8707009 (mapped 2007-01-16; active); the earlier outline came from: OpenStreetMap (way 46264112, 325 Berry St)"
     }
    },
    "centroid": {
-    "lon": -122.395922,
-    "lat": 37.773404
+    "lon": -122.395656,
+    "lat": 37.773395
    },
    "facts": [],
    "costs": [],
@@ -111851,6 +111789,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Park Terrace now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8707009",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8707009"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_park_terrace",
+      "slug": "park-terrace",
+      "name": "Park Terrace",
+      "permalink": "https://pierandpoint.org/parcels/park-terrace/",
+      "api": "https://pierandpoint.org/api/v1/records/park-terrace.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-10-10",
      "kind": "added",
@@ -111977,28 +111944,24 @@
     "coordinates": [
      [
       [
-       -122.3962895,
-       37.7733523
+       -122.395253719,
+       37.773431843
       ],
       [
-       -122.3961201,
-       37.7734857
+       -122.395816574,
+       37.772987266
       ],
       [
-       -122.3957277,
-       37.7737947
+       -122.396259517,
+       37.773340598
       ],
       [
-       -122.3952753,
-       37.7734388
+       -122.395696663,
+       37.773785177
       ],
       [
-       -122.3958301,
-       37.7730018
-      ],
-      [
-       -122.3962895,
-       37.7733523
+       -122.395253719,
+       37.773431843
       ]
      ]
     ]
@@ -112420,13 +112383,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against DataSF's Assessor parcel data), so no single blklot represents the whole building and the record cannot be tied to one Assessor lot the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I, Madrone and Radiance, re-checked against DataSF's Assessor parcel data in September 2026; Avalon II and III are not condo-mapped, and Arden and One Mission Bay were not re-checked).",
-     "digitized_from": "OpenStreetMap (way 46264105, 235 Berry St)"
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8708111 (3,989 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. The lot is condominium-mapped: 99 Assessor lots share this outline (the map lot 8708111 and 98 per-unit lots), so the outline is the building's shared lot, not any one unit. Until 2026-10-12 this record showed the surveyed building footprint (OpenStreetMap (way 46264105, 235 Berry St)); 100% of that outline lies inside the lot and it covered 86% of the lot.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8708111 (mapped 2006-10-02; active); the earlier outline came from: OpenStreetMap (way 46264105, 235 Berry St)"
     }
    },
    "centroid": {
-    "lon": -122.394196,
-    "lat": 37.774687
+    "lon": -122.394076,
+    "lat": 37.774784
    },
    "facts": [],
    "costs": [],
@@ -112533,6 +112496,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "235 Berry now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8708111",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8708111"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_235_berry",
+      "slug": "235-berry",
+      "name": "235 Berry",
+      "permalink": "https://pierandpoint.org/parcels/235-berry/",
+      "api": "https://pierandpoint.org/api/v1/records/235-berry.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-10-10",
      "kind": "added",
@@ -112689,24 +112681,24 @@
     "coordinates": [
      [
       [
-       -122.394576,
-       37.7746475
+       -122.394020613,
+       37.77510898
       ],
       [
-       -122.3941654,
-       37.7743195
+       -122.39357767,
+       37.774755639
       ],
       [
-       -122.3936209,
-       37.7747518
+       -122.394158179,
+       37.774297143
       ],
       [
-       -122.3940394,
-       37.7750693
+       -122.394601122,
+       37.774650481
       ],
       [
-       -122.394576,
-       37.7746475
+       -122.394020613,
+       37.77510898
       ]
      ]
     ]
@@ -112746,13 +112738,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against DataSF's Assessor parcel data), so no single blklot represents the whole building and the building cannot be mapped from a single Assessor parcel the way a single-owner building can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I, Madrone and Radiance, re-checked against the same parcel data in September 2026; Avalon II and III are not condo-mapped, and Arden and One Mission Bay were not re-checked).",
-     "digitized_from": "OpenStreetMap (relation 3831604, 255 Berry St)"
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8708009 (3,989 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. The lot is condominium-mapped: 100 Assessor lots share this outline (the map lot 8708009 and 99 per-unit lots), so the outline is the building's shared lot, not any one unit. Until 2026-10-12 this record showed the surveyed building footprint (OpenStreetMap (relation 3831604, 255 Berry St)); 94% of that outline lies inside the lot and it covered 91% of the lot.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8708009 (mapped 2003-09-22; active); the earlier outline came from: OpenStreetMap (relation 3831604, 255 Berry St)"
     }
    },
    "centroid": {
-    "lon": -122.39479,
-    "lat": 37.774238
+    "lon": -122.394743,
+    "lat": 37.774186
    },
    "facts": [],
    "costs": [],
@@ -112827,6 +112819,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "255 Berry now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8708009",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8708009"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_255_berry",
+      "slug": "255-berry",
+      "name": "255 Berry",
+      "permalink": "https://pierandpoint.org/parcels/255-berry/",
+      "api": "https://pierandpoint.org/api/v1/records/255-berry.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-10-10",
      "kind": "added",
@@ -112962,68 +112983,28 @@
     "coordinates": [
      [
       [
-       -122.3942783,
-       37.7742369
+       -122.394231757,
+       37.774239029
       ],
       [
-       -122.394842,
-       37.7737789
+       -122.394812259,
+       37.773780529
       ],
       [
-       -122.3952797,
-       37.774141
+       -122.395251541,
+       37.774130944
       ],
       [
-       -122.3947106,
-       37.7745932
+       -122.395255202,
+       37.774133865
       ],
       [
-       -122.3942783,
-       37.7742369
-      ]
-     ],
-     [
-      [
-       -122.3947549,
-       37.7743613
+       -122.394674701,
+       37.774592367
       ],
       [
-       -122.394707,
-       37.7743228
-      ],
-      [
-       -122.3946554,
-       37.7743633
-      ],
-      [
-       -122.3947032,
-       37.7744017
-      ],
-      [
-       -122.3947549,
-       37.7743613
-      ]
-     ],
-     [
-      [
-       -122.3949748,
-       37.7741846
-      ],
-      [
-       -122.3950264,
-       37.7741441
-      ],
-      [
-       -122.3949785,
-       37.7741057
-      ],
-      [
-       -122.3949269,
-       37.7741462
-      ],
-      [
-       -122.3949748,
-       37.7741846
+       -122.394231757,
+       37.774239029
       ]
      ]
     ]
@@ -114418,13 +114399,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8711028), cross-referenced by position against an OpenStreetMap building/address point (way 135103716) for the name and street address; not a hand trace or plan estimate. ",
-     "digitized_from": "DataSF Building Footprints (mblr SF8711028); name/address from OpenStreetMap way 135103716 (555 Mission Rock St)"
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8711033 (6,097 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. The lot is condominium-mapped: 194 Assessor lots share this outline (the map lots 8711028 and 8711033 and 192 per-unit lots), so the outline is the building's shared lot, not any one unit. Until 2026-10-12 this record showed the surveyed building footprint (DataSF Building Footprints (mblr SF8711028)); 97% of that outline lies inside the lot and it covered 98% of the lot.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8711033 (mapped 2010-07-13; active); the earlier outline came from: DataSF Building Footprints (mblr SF8711028); name/address from OpenStreetMap way 135103716 (555 Mission Rock St)"
     }
    },
    "centroid": {
-    "lon": -122.390876,
-    "lat": 37.772378
+    "lon": -122.39072,
+    "lat": 37.772473
    },
    "facts": [],
    "costs": [
@@ -114538,6 +114519,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Strata at Mission Bay now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8711033",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8711033"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_strata",
+      "slug": "strata-at-mission-bay",
+      "name": "Strata at Mission Bay",
+      "permalink": "https://pierandpoint.org/parcels/strata-at-mission-bay/",
+      "api": "https://pierandpoint.org/api/v1/records/strata-at-mission-bay.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-10-11",
      "kind": "added",
@@ -114981,548 +114991,24 @@
     "coordinates": [
      [
       [
-       -122.3904706,
-       37.772793
+       -122.390419661,
+       37.772793816
       ],
       [
-       -122.3904321,
-       37.7727951
+       -122.390347659,
+       37.772040655
       ],
       [
-       -122.390432,
-       37.772795
+       -122.391171321,
+       37.771991038
       ],
       [
-       -122.3904234,
-       37.7727005
+       -122.391243331,
+       37.772744199
       ],
       [
-       -122.3904237,
-       37.7727005
-      ],
-      [
-       -122.3904155,
-       37.7726061
-      ],
-      [
-       -122.390414,
-       37.7726062
-      ],
-      [
-       -122.390414,
-       37.7726062
-      ],
-      [
-       -122.3903749,
-       37.7722367
-      ],
-      [
-       -122.3903816,
-       37.7722363
-      ],
-      [
-       -122.3903704,
-       37.7721374
-      ],
-      [
-       -122.3903696,
-       37.7721374
-      ],
-      [
-       -122.3903696,
-       37.7721374
-      ],
-      [
-       -122.390361,
-       37.7720429
-      ],
-      [
-       -122.3904006,
-       37.7720406
-      ],
-      [
-       -122.3903996,
-       37.7720305
-      ],
-      [
-       -122.3904376,
-       37.7720281
-      ],
-      [
-       -122.3904377,
-       37.7720281
-      ],
-      [
-       -122.3904387,
-       37.7720385
-      ],
-      [
-       -122.3904876,
-       37.7720357
-      ],
-      [
-       -122.3904866,
-       37.7720262
-      ],
-      [
-       -122.3905229,
-       37.7720241
-      ],
-      [
-       -122.3905229,
-       37.7720241
-      ],
-      [
-       -122.3905237,
-       37.7720325
-      ],
-      [
-       -122.3905761,
-       37.7720295
-      ],
-      [
-       -122.3905752,
-       37.7720205
-      ],
-      [
-       -122.3906106,
-       37.7720189
-      ],
-      [
-       -122.3906106,
-       37.7720189
-      ],
-      [
-       -122.3906114,
-       37.7720275
-      ],
-      [
-       -122.3906602,
-       37.7720247
-      ],
-      [
-       -122.3906592,
-       37.7720148
-      ],
-      [
-       -122.3906972,
-       37.7720124
-      ],
-      [
-       -122.3906972,
-       37.7720125
-      ],
-      [
-       -122.3906982,
-       37.7720225
-      ],
-      [
-       -122.3907457,
-       37.7720198
-      ],
-      [
-       -122.3907447,
-       37.7720099
-      ],
-      [
-       -122.3907827,
-       37.7720075
-      ],
-      [
-       -122.3907828,
-       37.7720075
-      ],
-      [
-       -122.3907837,
-       37.7720176
-      ],
-      [
-       -122.3907983,
-       37.7720168
-      ],
-      [
-       -122.3907983,
-       37.7720168
-      ],
-      [
-       -122.3907984,
-       37.7720176
-      ],
-      [
-       -122.3909687,
-       37.7720076
-      ],
-      [
-       -122.3909687,
-       37.7720075
-      ],
-      [
-       -122.390977,
-       37.7720069
-      ],
-      [
-       -122.390976,
-       37.7719969
-      ],
-      [
-       -122.3909894,
-       37.771996
-      ],
-      [
-       -122.390989,
-       37.771991
-      ],
-      [
-       -122.3909888,
-       37.7719881
-      ],
-      [
-       -122.3910311,
-       37.7719856
-      ],
-      [
-       -122.3910318,
-       37.7719933
-      ],
-      [
-       -122.3910436,
-       37.7719925
-      ],
-      [
-       -122.3910446,
-       37.7720023
-      ],
-      [
-       -122.3911114,
-       37.7719978
-      ],
-      [
-       -122.3911106,
-       37.7719889
-      ],
-      [
-       -122.3911395,
-       37.7719872
-      ],
-      [
-       -122.3911388,
-       37.7719795
-      ],
-      [
-       -122.3911773,
-       37.7719776
-      ],
-      [
-       -122.3911784,
-       37.771991
-      ],
-      [
-       -122.3911823,
-       37.7719908
-      ],
-      [
-       -122.3911823,
-       37.7719908
-      ],
-      [
-       -122.3911838,
-       37.7720079
-      ],
-      [
-       -122.3912053,
-       37.7720068
-      ],
-      [
-       -122.391209,
-       37.7720521
-      ],
-      [
-       -122.3911878,
-       37.7720532
-      ],
-      [
-       -122.3911933,
-       37.7721146
-      ],
-      [
-       -122.3912168,
-       37.7721134
-      ],
-      [
-       -122.3912205,
-       37.7721612
-      ],
-      [
-       -122.3911991,
-       37.7721623
-      ],
-      [
-       -122.3912049,
-       37.7722355
-      ],
-      [
-       -122.3912281,
-       37.7722344
-      ],
-      [
-       -122.3912283,
-       37.7722375
-      ],
-      [
-       -122.3912317,
-       37.7722797
-      ],
-      [
-       -122.391208,
-       37.7722809
-      ],
-      [
-       -122.3912128,
-       37.7723352
-      ],
-      [
-       -122.3912365,
-       37.772334
-      ],
-      [
-       -122.3912373,
-       37.772343
-      ],
-      [
-       -122.3912426,
-       37.7724006
-      ],
-      [
-       -122.3912187,
-       37.7724018
-      ],
-      [
-       -122.3912206,
-       37.7724226
-      ],
-      [
-       -122.3912236,
-       37.7724564
-      ],
-      [
-       -122.3912483,
-       37.7724551
-      ],
-      [
-       -122.391252,
-       37.7725004
-      ],
-      [
-       -122.3912276,
-       37.7725017
-      ],
-      [
-       -122.3912276,
-       37.7725021
-      ],
-      [
-       -122.3912307,
-       37.7725019
-      ],
-      [
-       -122.3912307,
-       37.772502
-      ],
-      [
-       -122.3912362,
-       37.7725766
-      ],
-      [
-       -122.3912599,
-       37.7725754
-      ],
-      [
-       -122.3912602,
-       37.7725783
-      ],
-      [
-       -122.3912636,
-       37.7726207
-      ],
-      [
-       -122.3912383,
-       37.772622
-      ],
-      [
-       -122.3912437,
-       37.7726835
-      ],
-      [
-       -122.3912683,
-       37.7726822
-      ],
-      [
-       -122.391272,
-       37.7727276
-      ],
-      [
-       -122.3912477,
-       37.7727288
-      ],
-      [
-       -122.3912491,
-       37.7727442
-      ],
-      [
-       -122.3912389,
-       37.7727448
-      ],
-      [
-       -122.3912399,
-       37.7727561
-      ],
-      [
-       -122.391186,
-       37.772759
-      ],
-      [
-       -122.391186,
-       37.772759
-      ],
-      [
-       -122.3911853,
-       37.7727502
-      ],
-      [
-       -122.3911164,
-       37.7727543
-      ],
-      [
-       -122.3911171,
-       37.7727635
-      ],
-      [
-       -122.3910482,
-       37.7727667
-      ],
-      [
-       -122.3910475,
-       37.7727584
-      ],
-      [
-       -122.3910347,
-       37.7727592
-      ],
-      [
-       -122.3910347,
-       37.7727591
-      ],
-      [
-       -122.3910344,
-       37.7727479
-      ],
-      [
-       -122.3908691,
-       37.7727565
-      ],
-      [
-       -122.3908693,
-       37.7727693
-      ],
-      [
-       -122.3908559,
-       37.7727701
-      ],
-      [
-       -122.3908566,
-       37.7727782
-      ],
-      [
-       -122.3908185,
-       37.7727806
-      ],
-      [
-       -122.3908185,
-       37.7727805
-      ],
-      [
-       -122.3908177,
-       37.7727723
-      ],
-      [
-       -122.3907699,
-       37.7727752
-      ],
-      [
-       -122.3907706,
-       37.7727831
-      ],
-      [
-       -122.3907325,
-       37.7727855
-      ],
-      [
-       -122.3907325,
-       37.7727854
-      ],
-      [
-       -122.3907317,
-       37.7727775
-      ],
-      [
-       -122.3906838,
-       37.7727803
-      ],
-      [
-       -122.3906846,
-       37.7727885
-      ],
-      [
-       -122.3906464,
-       37.7727908
-      ],
-      [
-       -122.3906464,
-       37.7727908
-      ],
-      [
-       -122.3906456,
-       37.7727826
-      ],
-      [
-       -122.3905952,
-       37.7727856
-      ],
-      [
-       -122.390596,
-       37.7727934
-      ],
-      [
-       -122.3905579,
-       37.7727957
-      ],
-      [
-       -122.3905579,
-       37.7727957
-      ],
-      [
-       -122.3905571,
-       37.7727882
-      ],
-      [
-       -122.3905087,
-       37.7727908
-      ],
-      [
-       -122.3905096,
-       37.7727997
-      ],
-      [
-       -122.3904715,
-       37.772802
-      ],
-      [
-       -122.3904715,
-       37.772802
-      ],
-      [
-       -122.3904706,
-       37.772793
+       -122.390419661,
+       37.772793816
       ]
      ]
     ]
@@ -118479,13 +117965,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8711025), cross-referenced by position against an OpenStreetMap building/address point (way 255652150) for the name and street address; not a hand trace or plan estimate. The real, notable Edwin M. Lee Apartments (per SF YIMBY, May 2021: 118 units, about 123,700 sq ft, 62 units for formerly unhoused veterans and 56 for families, at 1150 3rd St, one block away) was investigated for this record but its address point sits ~37m (our own measurement) from this footprint's edge -- close enough to be the nearest available DataSF footprint, but not confidently its own separate outline in the building-footprint data checked. Left out rather than guessed; it should be re-checked with a dedicated satellite/plan comparison.",
-     "digitized_from": "DataSF Building Footprints (mblr SF8711025); name/address from OpenStreetMap way 255652150 (1155 4th St)"
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8711025 (4,417 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed the surveyed building footprint (DataSF Building Footprints (mblr SF8711025)); 97% of that outline lies inside the lot and it covered 95% of the lot.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8711025 (mapped 2006-05-22; active); the earlier outline came from: DataSF Building Footprints (mblr SF8711025); name/address from OpenStreetMap way 255652150 (1155 4th St)"
     }
    },
    "centroid": {
-    "lon": -122.390996,
-    "lat": 37.773447
+    "lon": -122.390874,
+    "lat": 37.773326
    },
    "facts": [],
    "costs": [],
@@ -118571,6 +118057,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Venue now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8711025",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8711025"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_venue",
+      "slug": "venue",
+      "name": "Venue",
+      "permalink": "https://pierandpoint.org/parcels/venue/",
+      "api": "https://pierandpoint.org/api/v1/records/venue.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-29",
      "kind": "correction",
@@ -118757,172 +118272,24 @@
     "coordinates": [
      [
       [
-       -122.3905828,
-       37.7729565
+       -122.390617163,
+       37.773598467
       ],
       [
-       -122.3912658,
-       37.7729161
+       -122.390556104,
+       37.772959802
       ],
       [
-       -122.3912863,
-       37.773117
+       -122.391259892,
+       37.772917406
       ],
       [
-       -122.3912665,
-       37.7731163
+       -122.391320955,
+       37.773556071
       ],
       [
-       -122.3912728,
-       37.7731592
-      ],
-      [
-       -122.3912998,
-       37.7731564
-      ],
-      [
-       -122.3913267,
-       37.7733409
-      ],
-      [
-       -122.3913078,
-       37.7733452
-      ],
-      [
-       -122.3913087,
-       37.7733709
-      ],
-      [
-       -122.391333,
-       37.7733702
-      ],
-      [
-       -122.3913536,
-       37.773559
-      ],
-      [
-       -122.391231,
-       37.773564
-      ],
-      [
-       -122.3912257,
-       37.7735339
-      ],
-      [
-       -122.3911797,
-       37.7735354
-      ],
-      [
-       -122.3911815,
-       37.7735675
-      ],
-      [
-       -122.3911355,
-       37.7735697
-      ],
-      [
-       -122.3911319,
-       37.7735561
-      ],
-      [
-       -122.3910824,
-       37.7735589
-      ],
-      [
-       -122.3910797,
-       37.7735446
-      ],
-      [
-       -122.3910391,
-       37.773546
-      ],
-      [
-       -122.39104,
-       37.7735653
-      ],
-      [
-       -122.3910427,
-       37.7735746
-      ],
-      [
-       -122.3910004,
-       37.7735775
-      ],
-      [
-       -122.3909986,
-       37.7735682
-      ],
-      [
-       -122.390949,
-       37.7735731
-      ],
-      [
-       -122.390949,
-       37.773551
-      ],
-      [
-       -122.3909094,
-       37.7735531
-      ],
-      [
-       -122.3909139,
-       37.7735846
-      ],
-      [
-       -122.3908598,
-       37.7735888
-      ],
-      [
-       -122.3908571,
-       37.7735731
-      ],
-      [
-       -122.390813,
-       37.7735759
-      ],
-      [
-       -122.3908112,
-       37.7735588
-      ],
-      [
-       -122.390768,
-       37.7735609
-      ],
-      [
-       -122.3907715,
-       37.7735888
-      ],
-      [
-       -122.3907364,
-       37.7735909
-      ],
-      [
-       -122.3907346,
-       37.7735845
-      ],
-      [
-       -122.3906787,
-       37.7735866
-      ],
-      [
-       -122.3906779,
-       37.7735687
-      ],
-      [
-       -122.39064,
-       37.7735716
-      ],
-      [
-       -122.3906203,
-       37.7733735
-      ],
-      [
-       -122.3906025,
-       37.7731746
-      ],
-      [
-       -122.3905828,
-       37.7729565
+       -122.390617163,
+       37.773598467
       ]
      ]
     ]
@@ -125255,13 +124622,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8711017), address confirmed via DataSF Assessor parcel data and apartment-listing sources; not a hand trace or plan estimate. Trimmed against the adjacent Mission Bay Kids' Park to remove a 69 sq m overlap.",
-     "digitized_from": "DataSF Building Footprints (mblr SF8711017); address confirmed via DataSF Assessor parcel data (blklot 8711017) and apartment-listing sources that name this address as part of the MB360 complex"
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8711017 (7,383 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed the surveyed building footprint (DataSF Building Footprints (mblr SF8711017)); 96% of that outline lies inside the lot and it covered 91% of the lot.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8711017 (mapped 2006-05-22; active); the earlier outline came from: DataSF Building Footprints (mblr SF8711017); address confirmed via DataSF Assessor parcel data (blklot 8711017) and apartment-listing sources that name this address as part of the MB360 complex"
     }
    },
    "centroid": {
-    "lon": -122.392066,
-    "lat": 37.772457
+    "lon": -122.391904,
+    "lat": 37.77261
    },
    "facts": [],
    "costs": [],
@@ -125355,6 +124722,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "MB360 (1200 4th St) now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8711017",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8711017"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_mb360_1200_4th",
+      "slug": "mb360-1200-4th-st",
+      "name": "MB360 (1200 4th St)",
+      "permalink": "https://pierandpoint.org/parcels/mb360-1200-4th-st/",
+      "api": "https://pierandpoint.org/api/v1/records/mb360-1200-4th-st.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-29",
      "kind": "correction",
@@ -125503,7 +124899,7 @@
      "url": "https://www.redfin.com/CA/San-Francisco/MB360/apartment/110043175"
     }
    ],
-   "notes": "Treated as a second volume of the same MB360 development as the MB360 block at 701 China Basin St rather than a wholly separate project, per apartment-listing sources using both addresses for one marketed community; the two-block development is supported by Ignition Architecture's project page ('Mission Bay, Blocks 5/11'), which is not a developer source. This footprint originally overlapped the adjacent Mission Bay Kids' Park by 69 sq m; trimmed to the non-overlapping remainder.",
+   "notes": "Treated as a second volume of the same MB360 development as the MB360 block at 701 China Basin St rather than a wholly separate project, per apartment-listing sources using both addresses for one marketed community; the two-block development is supported by Ignition Architecture's project page ('Mission Bay, Blocks 5/11'), which is not a developer source.",
    "has_record_file": true,
    "last_verified": "2026-09-29",
    "tenants": [],
@@ -125512,232 +124908,32 @@
     "coordinates": [
      [
       [
-       -122.3922117,
-       37.7727788
+       -122.391550105,
+       37.773258151
       ],
       [
-       -122.3916444,
-       37.7732324
+       -122.391427475,
+       37.771975607
       ],
       [
-       -122.3915687,
-       37.7732114
+       -122.392151981,
+       37.771931957
       ],
       [
-       -122.3915497,
-       37.772892
+       -122.392200023,
+       37.772434365
       ],
       [
-       -122.3915245,
-       37.77289
+       -122.392224134,
+       37.772686517
       ],
       [
-       -122.3915162,
-       37.7727604
+       -122.392227627,
+       37.772723043
       ],
       [
-       -122.3915354,
-       37.7727556
-      ],
-      [
-       -122.3914448,
-       37.7719565
-      ],
-      [
-       -122.3916021,
-       37.7719509
-      ],
-      [
-       -122.3916057,
-       37.7719699
-      ],
-      [
-       -122.3921163,
-       37.7719473
-      ],
-      [
-       -122.3921166,
-       37.7719504
-      ],
-      [
-       -122.3921146,
-       37.7719505
-      ],
-      [
-       -122.3921145,
-       37.7719505
-      ],
-      [
-       -122.3921145,
-       37.7719505
-      ],
-      [
-       -122.3921144,
-       37.7719505
-      ],
-      [
-       -122.3921144,
-       37.7719506
-      ],
-      [
-       -122.3921143,
-       37.7719506
-      ],
-      [
-       -122.3921143,
-       37.7719506
-      ],
-      [
-       -122.3921143,
-       37.7719506
-      ],
-      [
-       -122.3921142,
-       37.7719507
-      ],
-      [
-       -122.3921142,
-       37.7719507
-      ],
-      [
-       -122.3921142,
-       37.7719508
-      ],
-      [
-       -122.3921141,
-       37.7719508
-      ],
-      [
-       -122.3921141,
-       37.7719509
-      ],
-      [
-       -122.3921141,
-       37.7719509
-      ],
-      [
-       -122.3921141,
-       37.7719509
-      ],
-      [
-       -122.3921141,
-       37.771951
-      ],
-      [
-       -122.3921141,
-       37.771951
-      ],
-      [
-       -122.3921513,
-       37.7723366
-      ],
-      [
-       -122.3921513,
-       37.7723366
-      ],
-      [
-       -122.3921609,
-       37.772434
-      ],
-      [
-       -122.3921941,
-       37.7727804
-      ],
-      [
-       -122.3921941,
-       37.7727805
-      ],
-      [
-       -122.3921941,
-       37.7727805
-      ],
-      [
-       -122.3921941,
-       37.7727806
-      ],
-      [
-       -122.3921942,
-       37.7727806
-      ],
-      [
-       -122.3921942,
-       37.7727807
-      ],
-      [
-       -122.3921942,
-       37.7727807
-      ],
-      [
-       -122.3921942,
-       37.7727808
-      ],
-      [
-       -122.3921943,
-       37.7727808
-      ],
-      [
-       -122.3921943,
-       37.7727808
-      ],
-      [
-       -122.3921944,
-       37.7727808
-      ],
-      [
-       -122.3921944,
-       37.7727809
-      ],
-      [
-       -122.3921944,
-       37.7727809
-      ],
-      [
-       -122.3921945,
-       37.7727809
-      ],
-      [
-       -122.3921945,
-       37.7727809
-      ],
-      [
-       -122.3921946,
-       37.7727809
-      ],
-      [
-       -122.3921946,
-       37.7727809
-      ],
-      [
-       -122.3921947,
-       37.7727809
-      ],
-      [
-       -122.3921947,
-       37.7727809
-      ],
-      [
-       -122.3921948,
-       37.7727809
-      ],
-      [
-       -122.3921948,
-       37.7727808
-      ],
-      [
-       -122.3921949,
-       37.7727808
-      ],
-      [
-       -122.3921949,
-       37.7727808
-      ],
-      [
-       -122.3922105,
-       37.7727686
-      ],
-      [
-       -122.3922117,
-       37.7727788
+       -122.391550105,
+       37.773258151
       ]
      ]
     ]
@@ -139094,13 +138290,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- an idealized rectangle (constructed by Pier & Point: it shares Venue's real east edge and orientation, widened to the real 3rd St curb line), not a hand trace or surveyed footprint. The building it stands for is identified by DataSF's address point for 1150 3rd St (inside the polygon) and by parcel 8711026, which overlaps 93% of the polygon (99% of the parcel); no source read gives the building's own footprint.",
-     "digitized_from": "A construction by Pier & Point, not a hand trace: the east edge of Venue's outline as fitted to a rectangle (72.07m, the edge facing 3rd St), extended east as a rectangle of the same length and orientation and widened until it reaches the 3rd St curb line as estimated from DataSF's official street centerlines (half-width 6.8m)."
+     "accuracy_caveat": "REAL lot geometry -- the outline is the union of Assessor lots 8711026A and 8711026B (4,377 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed an idealized rectangle constructed by Pier & Point (no building footprint was available); 93% of that outline lies inside the lot and it covered 99% of the lot. The building it stands for is identified by DataSF's address point for 1150 3rd St, which lies inside the outline; the outline is the parcel that address point sits on (8711026), not the building's own footprint.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lots 8711026A and 8711026B (mapped 2021-06-02; active), joined into one outline; the earlier outline came from: A construction by Pier & Point, not a hand trace: the east edge of Venue's outline as fitted to a rectangle (72.07m, the edge facing 3rd St), extended east as a rectangle of the same length and orientation and widened until it reaches the 3rd St curb line as estimated from DataSF's official street centerlines (half-width 6.8m)."
     }
    },
    "centroid": {
-    "lon": -122.390311,
-    "lat": 37.773356
+    "lon": -122.390034,
+    "lat": 37.773334
    },
    "facts": [
     {
@@ -139159,7 +138355,7 @@
     },
     {
      "key": "location_match",
-     "value": "DataSF's official address point for 1150 3rd St (address ID 741013, parcel 8711026) lies inside this record's outline, 8.4 m from its nearest edge. Parcel 8711026 overlaps 93% of the outline, and the outline covers 99% of the parcel. The overlap and distance are Pier & Point's own calculation in a local metric projection; the outline itself is still an approximate rectangle, not a surveyed footprint.",
+     "value": "DataSF's official address point for 1150 3rd St (address ID 741013) is recorded on parcel 8711026, and this record's outline is that parcel (Assessor lots 8711026A and 8711026B). Until 2026-10-12 the outline was an idealized rectangle that the parcel overlapped by 93% and that covered 99% of the parcel (Pier & Point's own calculation in a local metric projection).",
      "sources": [
       "src-datasf-eas-1150-3rd",
       "src-datasf-parcel-8711026"
@@ -139452,6 +138648,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Edwin M. Lee Apartments (Block 3 East) now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 8711026A and 8711026B",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 8711026A and 8711026B"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_3e_venue_east",
+      "slug": "edwin-m-lee-apartments-block-3-east",
+      "name": "Edwin M. Lee Apartments (Block 3 East)",
+      "permalink": "https://pierandpoint.org/parcels/edwin-m-lee-apartments-block-3-east/",
+      "api": "https://pierandpoint.org/api/v1/records/edwin-m-lee-apartments-block-3-east.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-10",
      "kind": "added",
      "kind_label": "Added",
@@ -139541,7 +138766,7 @@
    ],
    "images": [],
    "open_questions": [
-    "Does the outline match the building's real footprint? The address point and the parcel fit it, but no source read gives the footprint, so the shape remains an approximation.",
+    "Does the outline match the building's real footprint? The outline is now the parcel the address point sits on, which can include yard or plaza around the building; no source read gives the building's own footprint.",
     "Unit count differs between sources: 119 (OCII report, permit, SFBay 2018 plan), 118 (Chinatown Community Development Center page, SF YIMBY, Examiner), and 62 veteran plus 57 family units per Swords to Plowshares against 62 plus 56 elsewhere. The sources do not reconcile these (the extra unit may be a manager's unit; that is not stated in any source read).",
     "Square footage differs: SF YIMBY gives 123,700 and the Chinatown Community Development Center page gives 81,295; not reconciled, so neither is recorded as a fact.",
     "The exact move-in date is not stated: the Examiner (May 2021) says residents since 'February' without naming the year, and the permit shows completion in June 2020. The 2020-06-17 milestone is the permit's own completion date, not an occupancy date.",
@@ -139641,24 +138866,48 @@
     "coordinates": [
      [
       [
-       -122.39062182492839,
-       37.773603161395194
+       -122.389889882,
+       37.773277015
       ],
       [
-       -122.39058280000002,
-       37.7729565
+       -122.389863541,
+       37.773001462
       ],
       [
-       -122.38984493436479,
-       37.77298432153685
+       -122.390032035,
+       37.772991314
       ],
       [
-       -122.38988395929316,
-       37.77363098293205
+       -122.390556104,
+       37.772959802
       ],
       [
-       -122.39062182492839,
-       37.773603161395194
+       -122.390617163,
+       37.773598467
+      ],
+      [
+       -122.389924608,
+       37.773640182
+      ],
+      [
+       -122.389907357,
+       37.773641221
+      ],
+      [
+       -122.389907237,
+       37.773639948
+      ],
+      [
+       -122.389892538,
+       37.773327028
+      ],
+      [
+       -122.389894514,
+       37.773325467
+      ],
+      [
+       -122.389889882,
+       37.773277015
       ]
      ]
     ]

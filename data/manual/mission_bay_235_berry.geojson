@@ -9,9 +9,9 @@
     "status": "complete",
     "use": "residential",
     "geometry_type": "real",
-    "digitized_from": "OpenStreetMap (way 46264105, 235 Berry St)",
-    "digitization_method": "ADDED 2026-09-18 for Mission Bay's North-blocks pass: real OSM building footprint (unnamed in OSM; identified by address match). 235 Berry -- a Signature Properties/Signature Development Group condo building, 99 units, built 2007, architect LMSA (Leddy Maytum Stacy Architects). Sometimes referred to informally as 'Signature II' alongside the earlier 255 Berry St building ('Signature I'), but neither building carries that name in its own marketing -- named here by address per its own leasing/HOA sites (berrystreetcondo.com, skyboxrealty.com) instead of the unconfirmed 'Signature II' label. 2026-09-29 accuracy audit: (1) The 'Signature II'/'Signature I' informal naming above is withdrawn: none of the cited sources (OSM way 46264105, the LMSA page, the Skybox page) uses it or mentions 255 Berry as 'Signature I', and nothing cited shows the negative claim about the buildings' own marketing. (2) The Skybox Realty page (skyboxrealty.com/portfolio/235-berry/) is a brokerage portfolio page, not strictly the building's own HOA site, and berrystreetcondo.com was not read; the address name rests on OSM and that page. Skybox states 'Built in 2007 along the channel, 235 Berry is home to 99 residences developed by Signature Development Group and designed by LMSA'. 2026-10-02: public-text pass. accuracy_caveat reworded for readers (meaning unchanged; no change to the shape, status, use or geometry_type); previous wording -- accuracy_caveat: 'REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I, Madrone and Radiance, re-checked against data/raw/parcels.geojson in the 2026-09 audit; Avalon II and III are not condo-mapped, and Arden and One Mission Bay were not re-checked).'.",
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against DataSF's Assessor parcel data), so no single blklot represents the whole building and the record cannot be tied to one Assessor lot the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I, Madrone and Radiance, re-checked against DataSF's Assessor parcel data in September 2026; Avalon II and III are not condo-mapped, and Arden and One Mission Bay were not re-checked).",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8708111 (mapped 2006-10-02; active); the earlier outline came from: OpenStreetMap (way 46264105, 235 Berry St)",
+    "digitization_method": "ADDED 2026-09-18 for Mission Bay's North-blocks pass: real OSM building footprint (unnamed in OSM; identified by address match). 235 Berry -- a Signature Properties/Signature Development Group condo building, 99 units, built 2007, architect LMSA (Leddy Maytum Stacy Architects). Sometimes referred to informally as 'Signature II' alongside the earlier 255 Berry St building ('Signature I'), but neither building carries that name in its own marketing -- named here by address per its own leasing/HOA sites (berrystreetcondo.com, skyboxrealty.com) instead of the unconfirmed 'Signature II' label. 2026-09-29 accuracy audit: (1) The 'Signature II'/'Signature I' informal naming above is withdrawn: none of the cited sources (OSM way 46264105, the LMSA page, the Skybox page) uses it or mentions 255 Berry as 'Signature I', and nothing cited shows the negative claim about the buildings' own marketing. (2) The Skybox Realty page (skyboxrealty.com/portfolio/235-berry/) is a brokerage portfolio page, not strictly the building's own HOA site, and berrystreetcondo.com was not read; the address name rests on OSM and that page. Skybox states 'Built in 2007 along the channel, 235 Berry is home to 99 residences developed by Signature Development Group and designed by LMSA'. 2026-10-02: public-text pass. accuracy_caveat reworded for readers (meaning unchanged; no change to the shape, status, use or geometry_type); previous wording -- accuracy_caveat: 'REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I, Madrone and Radiance, re-checked against data/raw/parcels.geojson in the 2026-09 audit; Avalon II and III are not condo-mapped, and Arden and One Mission Bay were not re-checked).'. REPLACED 2026-10-12 (shape; status and use unchanged): the owner approved building records whose outline matches an Assessor lot at 85% or better, both ways, using the lot (CLAUDE.md, 'An official parcel beats our drawing'). DataSF's Assessor layer (data/raw/parcels.geojson) has Assessor lot 8708111 (3,989 m2, active, mapped 2006-10-02); the earlier outline of 3,435 m2 and the lot overlap with IoU 0.86 (100% of the earlier outline lies inside the lot and it covers 86% of the lot). The outline is now that lot using the lots' own vertices (no simplification). The lot is condominium-mapped: 99 Assessor lots share this outline (the map lot 8708111 and 98 per-unit lots), so the outline is the building's shared lot, not any one unit. geometry_type stays 'real'. Previous digitized_from: 'OpenStreetMap (way 46264105, 235 Berry St)'. Previous accuracy_caveat: 'REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against DataSF's Assessor parcel data), so no single blklot represents the whole building and the record cannot be tied to one Assessor lot the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I, Madrone and Radiance, re-checked against DataSF's Assessor parcel data in September 2026; Avalon II and III are not condo-mapped, and Arden and One Mission Bay were not re-checked).'.",
+    "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8708111 (3,989 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. The lot is condominium-mapped: 99 Assessor lots share this outline (the map lot 8708111 and 98 per-unit lots), so the outline is the building's shared lot, not any one unit. Until 2026-10-12 this record showed the surveyed building footprint (OpenStreetMap (way 46264105, 235 Berry St)); 100% of that outline lies inside the lot and it covered 86% of the lot.",
     "notes": "",
     "source_doc_urls": [
      "https://www.openstreetmap.org/way/46264105",
@@ -22,29 +22,14 @@
    "geometry": {
     "type": "Polygon",
     "coordinates": [
-     [
-      [
-       -122.394576,
-       37.7746475
-      ],
-      [
-       -122.3941654,
-       37.7743195
-      ],
-      [
-       -122.3936209,
-       37.7747518
-      ],
-      [
-       -122.3940394,
-       37.7750693
-      ],
-      [
-       -122.394576,
-       37.7746475
-      ]
-     ]
-    ]
+          [
+            [-122.394020613, 37.77510898],
+            [-122.39357767, 37.774755639],
+            [-122.394158179, 37.774297143],
+            [-122.394601122, 37.774650481],
+            [-122.394020613, 37.77510898]
+          ]
+        ]
    }
   }
  ]

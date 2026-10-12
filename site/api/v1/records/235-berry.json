@@ -39,13 +39,13 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against DataSF's Assessor parcel data), so no single blklot represents the whole building and the record cannot be tied to one Assessor lot the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I, Madrone and Radiance, re-checked against DataSF's Assessor parcel data in September 2026; Avalon II and III are not condo-mapped, and Arden and One Mission Bay were not re-checked).",
-    "digitized_from": "OpenStreetMap (way 46264105, 235 Berry St)"
+    "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8708111 (3,989 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. The lot is condominium-mapped: 99 Assessor lots share this outline (the map lot 8708111 and 98 per-unit lots), so the outline is the building's shared lot, not any one unit. Until 2026-10-12 this record showed the surveyed building footprint (OpenStreetMap (way 46264105, 235 Berry St)); 100% of that outline lies inside the lot and it covered 86% of the lot.",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8708111 (mapped 2006-10-02; active); the earlier outline came from: OpenStreetMap (way 46264105, 235 Berry St)"
    }
   },
   "centroid": {
-   "lon": -122.394196,
-   "lat": 37.774687
+   "lon": -122.394076,
+   "lat": 37.774784
   },
   "facts": [],
   "costs": [],
@@ -152,6 +152,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "235 Berry now uses its Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 8708111",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 8708111"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_235_berry",
+     "slug": "235-berry",
+     "name": "235 Berry",
+     "permalink": "https://pierandpoint.org/parcels/235-berry/",
+     "api": "https://pierandpoint.org/api/v1/records/235-berry.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-10",
     "kind": "added",
@@ -308,24 +337,24 @@
    "coordinates": [
     [
      [
-      -122.394576,
-      37.7746475
+      -122.394020613,
+      37.77510898
      ],
      [
-      -122.3941654,
-      37.7743195
+      -122.39357767,
+      37.774755639
      ],
      [
-      -122.3936209,
-      37.7747518
+      -122.394158179,
+      37.774297143
      ],
      [
-      -122.3940394,
-      37.7750693
+      -122.394601122,
+      37.774650481
      ],
      [
-      -122.394576,
-      37.7746475
+      -122.394020613,
+      37.77510898
      ]
     ]
    ]

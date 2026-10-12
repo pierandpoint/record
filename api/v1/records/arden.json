@@ -43,13 +43,13 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against DataSF's Assessor parcel data), so no single blklot represents the whole building and the building cannot be mapped from a single Assessor parcel the way a single-owner building can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same real-geometry-without-a-single-parcel pattern already used for several Pier 70 buildings (DataSF Building Footprints) and for Mission Bay's own real park polygons.",
-    "digitized_from": "OpenStreetMap (way 394698460, addr:housenumber=708;718;738, Long Bridge St)"
+    "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8710010 (7,880 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. The lot is condominium-mapped: 267 Assessor lots share this outline (the map lot 8710010 and 266 per-unit lots), so the outline is the building's shared lot, not any one unit. Until 2026-10-12 this record showed the surveyed building footprint (OpenStreetMap (way 394698460, addr:housenumber=708); 96% of that outline lies inside the lot and it covered 91% of the lot.",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8710010 (mapped 2015-05-27; active); the earlier outline came from: OpenStreetMap (way 394698460, addr:housenumber=708;718;738, Long Bridge St)"
    }
   },
   "centroid": {
-   "lon": -122.394179,
-   "lat": 37.771702
+   "lon": -122.394155,
+   "lat": 37.771703
   },
   "facts": [
    {
@@ -281,6 +281,35 @@
   ],
   "changes": [
    {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Arden now uses its Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 8710010",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 8710010"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_arden",
+     "slug": "arden",
+     "name": "Arden",
+     "permalink": "https://pierandpoint.org/parcels/arden/",
+     "api": "https://pierandpoint.org/api/v1/records/arden.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-10-10",
     "kind": "added",
     "kind_label": "Added",
@@ -406,48 +435,28 @@
    "coordinates": [
     [
      [
-      -122.3944703,
-      37.7712375
+      -122.394468076,
+      37.771198502
      ],
      [
-      -122.3942421,
-      37.7714108
+      -122.394953099,
+      37.771585421
      ],
      [
-      -122.3941059,
-      37.7715206
+      -122.393905874,
+      37.772412577
      ],
      [
-      -122.3940314,
-      37.7715774
+      -122.393420851,
+      37.772025653
      ],
      [
-      -122.3937013,
-      37.7718423
+      -122.393711329,
+      37.771796222
      ],
      [
-      -122.3934651,
-      37.7720337
-     ],
-     [
-      -122.3938898,
-      37.7723718
-     ],
-     [
-      -122.3939424,
-      37.7724161
-     ],
-     [
-      -122.3949365,
-      37.7716272
-     ],
-     [
-      -122.3947183,
-      37.7714512
-     ],
-     [
-      -122.3944703,
-      37.7712375
+      -122.394468076,
+      37.771198502
      ]
     ]
    ]

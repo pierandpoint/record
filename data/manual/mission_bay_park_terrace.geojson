@@ -9,9 +9,9 @@
     "status": "complete",
     "use": "residential",
     "geometry_type": "real",
-    "digitized_from": "OpenStreetMap (way 46264112, 325 Berry St)",
-    "digitization_method": "ADDED 2026-09-18 for Mission Bay's North-blocks pass: real OSM building footprint. Park Terrace, 325 Berry St -- 110-unit condo building, built 2007. 2026-09-29 accuracy audit: citations for the '110-unit condo building, built 2007' line: 110 units and seven stories per SocketSite (May 5, 2006), which also names the developers as Opus West and Phoenix Property Company; year built 2007 per the DataSF Assessor roll for the condominium lots at 325 Berry St (parcel 8707009 and its siblings; data/raw/parcels.geojson shows about 111 per-unit lots there). Neither is in the cited OSM way. 2026-10-02: public-text pass. accuracy_caveat reworded for readers (meaning unchanged; no change to the shape, status, use or geometry_type); previous wording -- accuracy_caveat: 'REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I, Madrone and Radiance, re-checked against data/raw/parcels.geojson in the 2026-09 audit; Avalon II and III are not condo-mapped, and Arden and One Mission Bay were not re-checked).'.",
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against DataSF's Assessor parcels), so no single block/lot represents the whole building and it cannot be matched to one parcel record the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I, Madrone and Radiance, re-checked against DataSF's Assessor parcels in September 2026; Avalon II and III are not condo-mapped, and Arden and One Mission Bay were not re-checked).",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8707009 (mapped 2007-01-16; active); the earlier outline came from: OpenStreetMap (way 46264112, 325 Berry St)",
+    "digitization_method": "ADDED 2026-09-18 for Mission Bay's North-blocks pass: real OSM building footprint. Park Terrace, 325 Berry St -- 110-unit condo building, built 2007. 2026-09-29 accuracy audit: citations for the '110-unit condo building, built 2007' line: 110 units and seven stories per SocketSite (May 5, 2006), which also names the developers as Opus West and Phoenix Property Company; year built 2007 per the DataSF Assessor roll for the condominium lots at 325 Berry St (parcel 8707009 and its siblings; data/raw/parcels.geojson shows about 111 per-unit lots there). Neither is in the cited OSM way. 2026-10-02: public-text pass. accuracy_caveat reworded for readers (meaning unchanged; no change to the shape, status, use or geometry_type); previous wording -- accuracy_caveat: 'REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I, Madrone and Radiance, re-checked against data/raw/parcels.geojson in the 2026-09 audit; Avalon II and III are not condo-mapped, and Arden and One Mission Bay were not re-checked).'. REPLACED 2026-10-12 (shape; status and use unchanged): the owner approved building records whose outline matches an Assessor lot at 85% or better, both ways, using the lot (CLAUDE.md, 'An official parcel beats our drawing'). DataSF's Assessor layer (data/raw/parcels.geojson) has Assessor lot 8707009 (3,868 m2, active, mapped 2007-01-16); the earlier outline of 3,886 m2 and the lot overlap with IoU 0.90 (95% of the earlier outline lies inside the lot and it covers 95% of the lot). The outline is now that lot using the lots' own vertices (no simplification). The lot is condominium-mapped: 111 Assessor lots share this outline (the map lot 8707009 and 110 per-unit lots), so the outline is the building's shared lot, not any one unit. geometry_type stays 'real'. Previous digitized_from: 'OpenStreetMap (way 46264112, 325 Berry St)'. Previous accuracy_caveat: 'REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against DataSF's Assessor parcels), so no single block/lot represents the whole building and it cannot be matched to one parcel record the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same pattern already used for Mission Bay's other condo-mapped residential towers (Avalon I, Madrone and Radiance, re-checked against DataSF's Assessor parcels in September 2026; Avalon II and III are not condo-mapped, and Arden and One Mission Bay were not re-checked).'.",
+    "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8707009 (3,868 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. The lot is condominium-mapped: 111 Assessor lots share this outline (the map lot 8707009 and 110 per-unit lots), so the outline is the building's shared lot, not any one unit. Until 2026-10-12 this record showed the surveyed building footprint (OpenStreetMap (way 46264112, 325 Berry St)); 95% of that outline lies inside the lot and it covered 95% of the lot.",
     "notes": "Developers Opus West and Phoenix Property Company per SocketSite (May 5, 2006).",
     "source_doc_urls": [
      "https://www.openstreetmap.org/way/46264112",
@@ -22,33 +22,14 @@
    "geometry": {
     "type": "Polygon",
     "coordinates": [
-     [
-      [
-       -122.3962895,
-       37.7733523
-      ],
-      [
-       -122.3961201,
-       37.7734857
-      ],
-      [
-       -122.3957277,
-       37.7737947
-      ],
-      [
-       -122.3952753,
-       37.7734388
-      ],
-      [
-       -122.3958301,
-       37.7730018
-      ],
-      [
-       -122.3962895,
-       37.7733523
-      ]
-     ]
-    ]
+          [
+            [-122.395253719, 37.773431843],
+            [-122.395816574, 37.772987266],
+            [-122.396259517, 37.773340598],
+            [-122.395696663, 37.773785177],
+            [-122.395253719, 37.773431843]
+          ]
+        ]
    }
   }
  ]

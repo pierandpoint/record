@@ -9,9 +9,9 @@
     "status": "complete",
     "use": "residential",
     "geometry_type": "real",
-    "digitized_from": "OpenStreetMap (way 394698460, addr:housenumber=708;718;738, Long Bridge St)",
-    "digitization_method": "ADDED 2026-09-18 for Mission Bay's second real-site pass: real, address-tagged OpenStreetMap building footprint for Arden, a 267-unit, 16-story Bosa Development condominium tower at 708-718 Long Bridge St along Mission Creek, completed 2016, architect Chris Dikeakos Architects per a single realtor source (not independently confirmed on a primary permit or press document). Point-in-polygon checked against DataSF's official redevelopment-area layer: this site falls in Mission Bay South. 2026-09-29 accuracy audit: the '267-unit' figure above is not stated by either cited source (OSM way 394698460 carries no unit tag; the Kinoko Real Estate Arden page gives bedroom counts, unit sizes and a price range, not a unit total), so treat the unit count as unsourced and unconfirmed. 2026-10-02: public-text pass. accuracy_caveat reworded for readers (meaning unchanged; no change to the shape, status, use or geometry_type); previous wording -- accuracy_caveat: 'REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same real-geometry-without-a-single-parcel pattern already used for several Pier 70 buildings (DataSF Building Footprints) and for Mission Bay's own real park polygons.'.",
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against DataSF's Assessor parcel data), so no single blklot represents the whole building and the building cannot be mapped from a single Assessor parcel the way a single-owner building can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same real-geometry-without-a-single-parcel pattern already used for several Pier 70 buildings (DataSF Building Footprints) and for Mission Bay's own real park polygons.",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8710010 (mapped 2015-05-27; active); the earlier outline came from: OpenStreetMap (way 394698460, addr:housenumber=708;718;738, Long Bridge St)",
+    "digitization_method": "ADDED 2026-09-18 for Mission Bay's second real-site pass: real, address-tagged OpenStreetMap building footprint for Arden, a 267-unit, 16-story Bosa Development condominium tower at 708-718 Long Bridge St along Mission Creek, completed 2016, architect Chris Dikeakos Architects per a single realtor source (not independently confirmed on a primary permit or press document). Point-in-polygon checked against DataSF's official redevelopment-area layer: this site falls in Mission Bay South. 2026-09-29 accuracy audit: the '267-unit' figure above is not stated by either cited source (OSM way 394698460 carries no unit tag; the Kinoko Real Estate Arden page gives bedroom counts, unit sizes and a price range, not a unit total), so treat the unit count as unsourced and unconfirmed. 2026-10-02: public-text pass. accuracy_caveat reworded for readers (meaning unchanged; no change to the shape, status, use or geometry_type); previous wording -- accuracy_caveat: 'REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against data/raw/parcels.geojson), so no single blklot represents the whole building and it cannot be joined via status.csv the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same real-geometry-without-a-single-parcel pattern already used for several Pier 70 buildings (DataSF Building Footprints) and for Mission Bay's own real park polygons.'. REPLACED 2026-10-12 (shape; status and use unchanged): the owner approved building records whose outline matches an Assessor lot at 85% or better, both ways, using the lot (CLAUDE.md, 'An official parcel beats our drawing'). DataSF's Assessor layer (data/raw/parcels.geojson) has Assessor lot 8710010 (7,880 m2, active, mapped 2015-05-27); the earlier outline of 7,451 m2 and the lot overlap with IoU 0.87 (96% of the earlier outline lies inside the lot and it covers 91% of the lot). The outline is now that lot using the lots' own vertices (no simplification). The lot is condominium-mapped: 267 Assessor lots share this outline (the map lot 8710010 and 266 per-unit lots), so the outline is the building's shared lot, not any one unit. geometry_type stays 'real'. Previous digitized_from: 'OpenStreetMap (way 394698460, addr:housenumber=708;718;738, Long Bridge St)'. Previous accuracy_caveat: 'REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against DataSF's Assessor parcel data), so no single blklot represents the whole building and the building cannot be mapped from a single Assessor parcel the way a single-owner building can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same real-geometry-without-a-single-parcel pattern already used for several Pier 70 buildings (DataSF Building Footprints) and for Mission Bay's own real park polygons.'.",
+    "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8710010 (7,880 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. The lot is condominium-mapped: 267 Assessor lots share this outline (the map lot 8710010 and 266 per-unit lots), so the outline is the building's shared lot, not any one unit. Until 2026-10-12 this record showed the surveyed building footprint (OpenStreetMap (way 394698460, addr:housenumber=708); 96% of that outline lies inside the lot and it covered 91% of the lot.",
     "notes": "Architect attribution rests on one secondary (realtor) source; would benefit from primary confirmation.",
     "source_doc_urls": [
      "https://www.openstreetmap.org/way/394698460",
@@ -21,53 +21,15 @@
    "geometry": {
     "type": "Polygon",
     "coordinates": [
-     [
-      [
-       -122.3944703,
-       37.7712375
-      ],
-      [
-       -122.3942421,
-       37.7714108
-      ],
-      [
-       -122.3941059,
-       37.7715206
-      ],
-      [
-       -122.3940314,
-       37.7715774
-      ],
-      [
-       -122.3937013,
-       37.7718423
-      ],
-      [
-       -122.3934651,
-       37.7720337
-      ],
-      [
-       -122.3938898,
-       37.7723718
-      ],
-      [
-       -122.3939424,
-       37.7724161
-      ],
-      [
-       -122.3949365,
-       37.7716272
-      ],
-      [
-       -122.3947183,
-       37.7714512
-      ],
-      [
-       -122.3944703,
-       37.7712375
-      ]
-     ]
-    ]
+          [
+            [-122.394468076, 37.771198502],
+            [-122.394953099, 37.771585421],
+            [-122.393905874, 37.772412577],
+            [-122.393420851, 37.772025653],
+            [-122.393711329, 37.771796222],
+            [-122.394468076, 37.771198502]
+          ]
+        ]
    }
   }
  ]
