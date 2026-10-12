@@ -179,45 +179,13 @@
     "relation": "tracked"
    },
    {
-    "date": "2003",
-    "date_label": "~2003",
+    "date": "2004-10",
+    "date_label": "~2004",
     "status": "complete",
     "status_label": "Complete",
-    "text": "The Beacon (250/260 King St) completed (SFHighrises, a real-estate listing site, gives 'Year Built: 2003'; the year is not confirmed by a primary source)",
+    "text": "Department of Building Inspection records both new-construction permits as completed on 2004-10-06 (a permit closeout date, not an occupancy date); the Assessor roll lists 2004 as year built for the condominium lots at 250 King St. The listing site SFHighrises gives \"Year Built: 2003\", which conflicts; the conflict is not resolved",
     "expected": false,
     "approximate": true,
-    "sources": [
-     {
-      "title": "https://sfhighrises.com/building/the-beacon/"
-     }
-    ],
-    "source": "https://sfhighrises.com/building/the-beacon/",
-    "origin": "csv",
-    "category": "status",
-    "category_label": "Status",
-    "record": {
-     "id": "mission_bay_the_beacon",
-     "slug": "the-beacon",
-     "name": "The Beacon",
-     "permalink": "https://pierandpoint.org/parcels/the-beacon/",
-     "api": "https://pierandpoint.org/api/v1/records/the-beacon.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2004-10",
-    "date_label": "Oct 2004",
-    "status": "complete",
-    "status_label": "Complete",
-    "text": "Department of Building Inspection records both new-construction permits as completed on 2004-10-06; the Assessor roll lists 2004 as year built for the condominium lots at 250 King St (listing sites say 2003)",
-    "expected": false,
-    "approximate": false,
     "sources": [
      {
       "id": "src-dbi-beacon-250",
@@ -250,8 +218,8 @@
     ],
     "source": "DataSF / SF Department of Building Inspection; DataSF / SF Department of Building Inspection; DataSF / SF Assessor-Recorder; SFHighrises.com",
     "origin": "record",
-    "category": "milestone",
-    "category_label": "Milestone",
+    "category": "status",
+    "category_label": "Status",
     "record": {
      "id": "mission_bay_the_beacon",
      "slug": "the-beacon",
@@ -269,6 +237,64 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The AT&T store at 236 King St is shown as closed because a Yelp listing showed it closed as of March 2025. That is when the listing was seen, not when the store closed; the listing cannot be opened again and no other source was found, so no closing date is known.",
+    "source": "https://www.yelp.com/biz/at-and-t-san-francisco-5 (could not be opened)",
+    "sources": [
+     {
+      "title": "https://www.yelp.com/biz/at-and-t-san-francisco-5 (could not be opened)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_the_beacon",
+     "slug": "the-beacon",
+     "name": "The Beacon",
+     "permalink": "https://pierandpoint.org/parcels/the-beacon/",
+     "api": "https://pierandpoint.org/api/v1/records/the-beacon.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Beacon's completion year was listed as 2003 by one listing site and 2004 by city permit and Assessor records. The timeline now shows only the permit closeout in October 2004 and the open questions state the conflict.",
+    "source": "San Francisco Department of Building Inspection permits 200011306843 and 200011306844 (https://data.sfgov.org/resource/i98e-djp9.json?permit_number=200011306843); Assessor secured roll (https://data.sfgov.org/resource/wv5m-vpq2.json); SFHighrises (https://sfhighrises.com/building/the-beacon/)",
+    "sources": [
+     {
+      "title": "San Francisco Department of Building Inspection permits 200011306843 and 200011306844 (https://data.sfgov.org/resource/i98e-djp9.json?permit_number=200011306843); Assessor secured roll (https://data.sfgov.org/resource/wv5m-vpq2.json); SFHighrises (https://sfhighrises.com/building/the-beacon/)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_the_beacon",
+     "slug": "the-beacon",
+     "name": "The Beacon",
+     "permalink": "https://pierandpoint.org/parcels/the-beacon/",
+     "api": "https://pierandpoint.org/api/v1/records/the-beacon.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-12",
     "kind": "correction",
@@ -492,7 +518,9 @@
    "Architect not recorded: Afi + Associates says Skidmore, Owings and Merrill; other attributions seen earlier by the project are unsourced here.",
    "The permits do not use the name 'The Beacon'; the link from the name to 250 and 260 King St rests on the OpenStreetMap addr:housename tag cited in the geometry file and on SFHighrises and Afi + Associates, which both give 250 and 260 King St.",
    "No construction start date or opening month found; the permit completed date is a closeout date, not an occupancy date.",
-   "The building permit for 260 King St has status 'reinstated' in the Department of Building Inspection data; the meaning is not explained in the data."
+   "The building permit for 260 King St has status 'reinstated' in the Department of Building Inspection data; the meaning is not explained in the data.",
+   "The AT&T store at 236 King St is shown as closed on the strength of a Yelp listing that showed it closed as of March 2025 (that is when the listing was seen, not when the store closed); the listing could not be opened again (HTTP 403 on 2026-10-12) and no other page about the store was found. No opening or closing date is known. The address is assigned to The Beacon by Pier & Point; the listing does not name the building.",
+   "Update 2026-10-12, completion year: readable sources conflict. The Department of Building Inspection's data records both new-construction permits as completed on 2004-10-06 and the Assessor roll gives year built 2004 for 593 of 595 lots on King St, while SFHighrises (a listing site) says \"Year Built: 2003\". A permit closeout can follow occupancy, so 2003 is not ruled out and 2004 is not confirmed as the opening year; the timeline shows only the 2004-10 permit closeout, not a 2003 date."
   ],
   "sources": [
    {
@@ -548,7 +576,7 @@
   ],
   "notes": "Mixed-use condominium complex at 250 and 260 King St (two apartment-tagged buildings, per OpenStreetMap); the Assessor parcel is condo-mapped across per-unit lots (DataSF Assessor parcel data). A broker's portfolio page (Afi + Associates, read 2026-09-29) describes a 'gourmet grocery store, bank, spa' at the complex; that is a secondary source and does not name the tenants. Architect attribution conflicts between sources (Afi + Associates says Skidmore, Owings and Merrill; earlier research also recorded Brand + Allen Architects and SOM/HKS from sources not cited here) and is not resolved -- not recorded as a fact pending a primary-source confirmation.",
   "has_record_file": true,
-  "last_verified": "2026-10-10",
+  "last_verified": "2026-10-12",
   "tenants": [
    {
     "slug": "lucky-strike-san-francisco",

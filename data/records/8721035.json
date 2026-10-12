@@ -53,17 +53,18 @@
     {
       "date": "2021-04",
       "status": "complete",
-      "text": "Department of Building Inspection records new-construction permit 201508245071 as complete (completed date 2021-04-01); the Assessor roll lists 2021 as year built for the building",
+      "text": "Permit completion event: the Department of Building Inspection records new-construction permit 201508245071 (filed under Assessor lot 033) as complete, with a completed date of 2021-04-01 (a permit closeout date, not an occupancy date); the Assessor roll for lot 033 gives 2021 as year built. ArchDaily gives 2022 as the completion year (see the 2022 entry and the open questions)",
       "sources": [
         "src-dbi-1455-newcon",
-        "src-assessor-8721033"
+        "src-assessor-8721033",
+        "src-archdaily-uber"
       ],
       "expected": false,
       "approximate": false
     },
     {
       "date": "2023-10-27",
-      "text": "An Uber spokesperson confirms OpenAI is leasing two buildings from Uber's Mission Bay headquarters, 1455 and 1515 Third St",
+      "text": "An Uber spokesperson confirms OpenAI is leasing two buildings from Uber's Mission Bay headquarters, 1455 and 1515 Third St (a lease report, not a move-in date)",
       "sources": [
         "src-sfstd-2023-openai"
       ],
@@ -132,9 +133,10 @@
     },
     {
       "key": "tenant",
-      "value": "OpenAI leases 1455 and 1515 Third St from Uber (October 2023)",
+      "value": "OpenAI was reported in October 2023 to be leasing 1455 and 1515 Third St from Uber (a lease report, not a move-in date); The Real Deal (2023-10-29) describes them as two of the four buildings of Uber's Mission Bay headquarters and says Uber 'will continue to occupy the remaining buildings on its campus'",
       "sources": [
-        "src-sfstd-2023-openai"
+        "src-sfstd-2023-openai",
+        "src-realdeal-2023-openai"
       ]
     }
   ],
@@ -198,6 +200,52 @@
       "publisher": "DataSF / SF Assessor-Recorder",
       "url": "https://data.sfgov.org/resource/wv5m-vpq2.json?parcel_number=8721035",
       "accessed": "2026-10-10"
+    },
+    {
+      "id": "src-uber-ar-2025",
+      "title": "Uber Technologies 2025 Annual Report (Form 10-K for the fiscal year ended December 31, 2025)",
+      "publisher": "Uber Technologies, Inc. (company-hosted copy of its Form 10-K)",
+      "url": "https://s23.q4cdn.com/407969754/files/doc_events/2026/May/04/2025-Annual-Report.pdf",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": "src-realdeal-2023-openai",
+      "title": "OpenAI subleases two San Francisco buildings from Uber",
+      "publisher": "The Real Deal",
+      "date": "2023-10-29",
+      "url": "https://therealdeal.com/san-francisco/2023/10/29/openai-subleases-two-san-francisco-buildings-from-uber/",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": "src-datasf-registered-business",
+      "title": "Registered Business Locations, San Francisco (records for 1455 and 1515 3rd St)",
+      "publisher": "DataSF, City and County of San Francisco",
+      "url": "https://data.sf.gov/resource/g8m3-pdis.json",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": "src-sfstd-2026-02-openai",
+      "title": "OpenAI Mountain View expansion",
+      "publisher": "The San Francisco Standard",
+      "date": "2026-02-26",
+      "url": "https://sfstandard.com/2026/02/26/open-ai-mountain-view-expansion/",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": "src-hoodline-2026-01-openai",
+      "title": "OpenAI Poised To Gobble Up Dropbox Mission Bay HQ Space",
+      "publisher": "Hoodline",
+      "date": "2026-01-09",
+      "url": "https://hoodline.com/2026/01/openai-poised-to-gobble-up-dropbox-mission-bay-hq-space/",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": "src-realdeal-2026-03-openai",
+      "title": "OpenAI Inks Another Mission Bay Lease",
+      "publisher": "The Real Deal",
+      "date": "2026-03-16",
+      "url": "https://therealdeal.com/san-francisco/2026/03/16/openai-inks-another-mission-bay-lease/",
+      "accessed": "2026-10-12"
     }
   ],
   "open_questions": [
@@ -205,7 +253,9 @@
     "The map note's 486,600 sq ft combined OpenAI sublease figure and 'largest SF office lease since 2018' (The Real Deal) could not be opened (HTTP 403); the San Francisco Standard says only 'nearly a half-million square feet' and 'largest office lease in San Francisco since 2018'.",
     "No source read gives a groundbreaking date or an opening or move-in month; the Department of Building Inspection completed date is a permit closeout date. SocketSite (2016) expected occupancy by mid-2018; the permit shows 2021.",
     "Sources disagree on stories (11 on the Assessor roll, 12 proposed on the permit, eleven in ArchDaily).",
-    "Stories: ArchDaily describes \"an eleven-story tower at 1455 Third Street\" and the Assessor roll (parcel 8721033, roll year 2022) gives 11.0 stories, while DBI new-construction permit 201508245071 reads \"erect 12 stories for office, daycare\" with 12 proposed stories (DataSF i98e-djp9). The permit may count a level the other two do not; no source explains the difference."
+    "Stories: ArchDaily describes \"an eleven-story tower at 1455 Third Street\" and the Assessor roll (parcel 8721033, roll year 2022) gives 11.0 stories, while DBI new-construction permit 201508245071 reads \"erect 12 stories for office, daycare\" with 12 proposed stories (DataSF i98e-djp9). The permit may count a level the other two do not; no source explains the difference.",
+    "Completion year: sources give different dates of different kinds. The Department of Building Inspection shows new-construction permit 201508245071 complete on 2021-04-01 (permit completion event; DataSF i98e-djp9, filed under lot 033); the Assessor roll for lot 033 (2022 roll) gives year built 2021 (Assessor year built; parcel 8721035's own 2023 to 2025 rolls give none); ArchDaily's project page says 'Completed in 2022' (completion year for the two-building project). The page shows the 2021-04 and 2022 entries side by side, each labeled by kind; no source read reconciles them.",
+    "Whether OpenAI occupies 1455 3rd St, and since when, is not settled by any source read. Its status here is 'announced', the 2023 expected state from lease reports (the San Francisco Standard, 2023-10-27, says OpenAI 'will be taking over' the space). Later reports speak of OpenAI's footprint without naming a building as occupied: the San Francisco Standard (2026-02-26) says OpenAI 'now occupies more than 1 million square feet in San Francisco’s Mission Bay neighborhood'; Hoodline (2026-01-09) says the company 'controls about 486,600 square feet through a sublease it picked up from Uber at 1455 and 1515 Third Street'; The Real Deal (2026-03-16) says OpenAI 'in recent years has subleased two buildings from Uber at 1455 and 1515 Third Street'. DataSF Registered Business Locations lists OpenAI registrations at 1455 3rd St starting 2022-12-28 and 2024-03-05; those are registration dates, not opening dates."
   ],
   "images": [],
   "last_verified": "2026-10-10"

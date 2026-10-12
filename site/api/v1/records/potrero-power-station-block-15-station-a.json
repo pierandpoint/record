@@ -91,10 +91,18 @@
    },
    {
     "key": "height_ft",
-    "value": "205 ft total (existing base plus 8-story addition); a 145-foot and 160-foot building height maximum is described elsewhere in the same memo as the 'prevailing' limits subject to a 15% exterior-volume reduction for mass above the Station A walls, and the D4D's Figure 6.2.3 shows Block 15 with an upper-height callout of 230 ft on part of the block",
+    "value": "205 ft total (existing base plus 8-story addition), per the 2022 Design Review Approval; the same memo is recorded as describing 145-foot and 160-foot building height maximums as the 'prevailing' limits for the addition. The adopted D4D's section 6.14.5 says: 'New construction on Station A is allowed up to 145 feet in height along the northern half and 160 feet on the southern half of the building, as shown in Figure 6.2.3', and Figure 6.2.3 labels the block's two strips 145' and 160'; the figure's '230'MAX' label is a vertical dimension marker along the 160' strip, not a height limit",
     "sources": [
      "src-block15-approval-2022",
      "src-d4d-final-fig623"
+    ]
+   },
+   {
+    "key": "height_ft_2026_amendment",
+    "value": "The Sept 28, 2026 draft Design for Development attached to the Amended and Restated Development Agreement says in section 6.14.5: 'New construction on Station A is allowed up to 175 feet in height along the northern half and 190 feet on the southern half of the building, as shown in Figure 6.2.3', and the committee-amended ordinance text (Leg Ver3 of File 260770) shows the Block 15 midrise tower row of its bulk table changed from 146'-160' to 175'-190' in height. Not shown as enacted as of Oct 12, 2026, so the 145 ft and 160 ft limits above still govern until then",
+    "sources": [
+     "src-bos-da-draft-092826",
+     "src-bos-ver3-260770"
     ]
    },
    {
@@ -608,7 +616,7 @@
     "date_label": "~2026",
     "status": null,
     "status_label": null,
-    "text": "Developer (Fifth Space) requests a Development Agreement amendment to increase Station A's permitted height by 30 feet, among other changes, to make its 'smaller floorplate' more attractive to commercial tenants; the Planning Commission considered the request that week (Chronicle, July 29, 2026) and approved the amendment unanimously, sending it to the Board of Supervisors (SF Standard, August 3, 2026); no Board action had been read as of October 2026",
+    "text": "Developer (Fifth Space) requests a Development Agreement amendment to increase Station A's permitted height by 30 feet, among other changes, to make its 'smaller floorplate' more attractive to commercial tenants; the Planning Commission considered the request that week (Chronicle, July 29, 2026) and approved the amendment unanimously, sending it to the Board of Supervisors (SF Standard, August 3, 2026); the Board of Supervisors then passed the amendment package on first reading on Sept 29, 2026 (see the next entry)",
     "expected": false,
     "approximate": true,
     "sources": [
@@ -647,9 +655,112 @@
      "url": "https://pierandpoint.org/sites/potrero/"
     },
     "relation": "tracked"
+   },
+   {
+    "date": "2026-09-29",
+    "date_label": "Sep 29, 2026",
+    "status": null,
+    "status_label": null,
+    "text": "Board of Supervisors passes the Amended and Restated Development Agreement (BOS File 260724) and the Planning Code and Zoning Map ordinance for the Potrero Power Station Special Use District (BOS File 260770) on first reading; Legistar's history lists '9/29/2026 ... Board of Supervisors ... PASSED, ON FIRST READING ... Pass' for both. Legistar also lists 'Final action: 10/6/2026' and status 'Mayors Office', but the 10/6/2026 history row's action and result read 'Not available' and the enactment date and enactment number are blank, so enactment is not confirmed. All dates are legislative event dates as listed by the Clerk of the Board (page read October 12, 2026)",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-legistar-260724",
+      "title": "BOS File 260724: Ordinance approving an Amended and Restated Development Agreement, California Barrel Company LLC, Potrero Power Station (introduced June 30, 2026; Board first reading Sept 29, 2026; final action listed Oct 6, 2026)",
+      "publisher": "SF Board of Supervisors (Legistar)",
+      "date": "2026-10-06",
+      "url": "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8127453&GUID=CC4AC1DD-BF51-4585-86E8-0A5D44AA3745",
+      "accessed": "2026-10-12"
+     },
+     {
+      "id": "src-legistar-260770",
+      "title": "BOS File 260770: Ordinance amending the Planning Code and Zoning Map for the Potrero Power Station Special Use District (introduced June 30, 2026; Board first reading Sept 29, 2026; final action listed Oct 6, 2026)",
+      "publisher": "SF Board of Supervisors (Legistar)",
+      "date": "2026-10-06",
+      "url": "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8127456&GUID=998D0F6D-2280-47E5-ABBF-12FB5A9C2988",
+      "accessed": "2026-10-12"
+     }
+    ],
+    "source": "SF Board of Supervisors (Legistar), 2026-10-06; SF Board of Supervisors (Legistar), 2026-10-06",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_block_15",
+     "slug": "potrero-power-station-block-15-station-a",
+     "name": "Potrero Power Station Block 15 / Station A",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-15-station-a/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-15-station-a.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked"
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Potrero Block 15's shape log no longer claims the lot lines sit on block edges where the trace was a few metres off.",
+    "source": "Pier & Point's comparison of the traced outline with DataSF Assessor parcels (acdm-wktn)",
+    "sources": [
+     {
+      "title": "Pier & Point's comparison of the traced outline with DataSF Assessor parcels (acdm-wktn)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_block_15",
+     "slug": "potrero-power-station-block-15-station-a",
+     "name": "Potrero Power Station Block 15 / Station A",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-15-station-a/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-15-station-a.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Block 15 now shows the Development Agreement amendment as passed on first reading, and drops a false height conflict.",
+    "source": "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8127453&GUID=CC4AC1DD-BF51-4585-86E8-0A5D44AA3745; https://sfgov.legistar.com/LegislationDetail.aspx?ID=8127456&GUID=998D0F6D-2280-47E5-ABBF-12FB5A9C2988",
+    "sources": [
+     {
+      "title": "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8127453&GUID=CC4AC1DD-BF51-4585-86E8-0A5D44AA3745; https://sfgov.legistar.com/LegislationDetail.aspx?ID=8127456&GUID=998D0F6D-2280-47E5-ABBF-12FB5A9C2988"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_block_15",
+     "slug": "potrero-power-station-block-15-station-a",
+     "name": "Potrero Power Station Block 15 / Station A",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-15-station-a/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-15-station-a.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-11",
     "kind": "added",
@@ -1047,12 +1158,12 @@
   ],
   "open_questions": [
    "No construction-start date for the vertical addition is stated in any source found; the most recent primary source found (the 2024 annual compliance report, submitted March 2025) describes design approval and 2024 brick stabilization work, not adaptive-reuse construction. The Oct 22, 2020 Planning Commission minutes were not found at a checkable URL; the Design Review Approval memo is cited for that hearing instead.",
-   "The D4D's Figure 6.2.3 shows a 230-ft upper-height callout for part of Block 15, while the 2022 design review approval describes a 205-ft total height and references '145-foot and 160-foot' prevailing maximums for the vertical addition; these figures are not reconciled here.",
-   "The Chronicle's July 2026 report of a proposed +30 ft height increase for Station A is tied to a Development Agreement amendment (BOS File 260724 / Planning Code ordinance File 260770) that was still pending Board of Supervisors action as of 2026-09-24; it is recorded here as an expected/proposed change, not an adopted one.",
+   "The 2022 design review approval describes a 205-ft total height for the Station A addition, while the adopted D4D (section 6.14.5) allows new construction on Station A up to 145 feet on the northern half and 160 feet on the southern half; how the 205 ft relates to those limits (for example whether it includes the existing walls or rooftop elements) is not stated in the sources read. The '230'MAX' label in the D4D's Figure 6.2.3 is a dimension marker along the 160-ft strip, not a height.",
+   "The Chronicle's July 2026 report of a proposed +30 ft height increase for Station A is tied to the Development Agreement amendment (BOS File 260724) and Planning Code ordinance (File 260770), which passed the Board of Supervisors on first reading on Sept 29, 2026; Legistar lists 'Final action: 10/6/2026' and status 'Mayors Office' with the enactment date and number blank (page read Oct 12, 2026). It is recorded here as a proposed change, not an enacted one: the Sept 28, 2026 draft D4D would allow 175 and 190 feet where the adopted D4D allows 145 and 160.",
    "No source found stating a cost estimate for Station A's rehabilitation and vertical addition.",
    "The Draft EIR image shown here as a 'before' view is not a single photograph -- it is a composite DEIR report page carrying six separate existing-conditions photos of Station A's turbine hall and machine shop, each with its own caption. It may be better described as a document than as a single before photo.",
    "The February 17, 2020 photo is shown as a current ('now') view rather than a 'before' view because the most recent primary source found (the 2024 annual compliance report, submitted March 2025) describes no adaptive-reuse construction on Station A (only 2024 brick stabilization), so the building's exterior likely hasn't changed much since. If construction has started since 2026-09-24, this photo is out of date.",
-   "Corrected 2026-10-06 (accuracy audit, October 2026): the July 2026 Development Agreement amendment request was shown as an expected event after it had been made and heard; it is now shown as having happened, with the Planning Commission's unanimous approval (SF Standard, August 3, 2026). Board of Supervisors action is still to be confirmed."
+   "Corrected 2026-10-06 (accuracy audit, October 2026): the July 2026 Development Agreement amendment request was shown as an expected event after it had been made and heard; it is now shown as having happened, with the Planning Commission's unanimous approval (SF Standard, August 3, 2026). Update 2026-10-12: the Board of Supervisors passed the amendment package on first reading on Sept 29, 2026 (see milestones); enactment is not confirmed."
   ],
   "sources": [
    {
@@ -1174,6 +1285,38 @@
     "date": "2026-08-03",
     "url": "https://sfstandard.com/2026/08/03/jpm-sf-housing-potrero-power-station/",
     "accessed": "2026-10-06"
+   },
+   {
+    "id": "src-legistar-260724",
+    "title": "BOS File 260724: Ordinance approving an Amended and Restated Development Agreement, California Barrel Company LLC, Potrero Power Station (introduced June 30, 2026; Board first reading Sept 29, 2026; final action listed Oct 6, 2026)",
+    "publisher": "SF Board of Supervisors (Legistar)",
+    "date": "2026-10-06",
+    "url": "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8127453&GUID=CC4AC1DD-BF51-4585-86E8-0A5D44AA3745",
+    "accessed": "2026-10-12"
+   },
+   {
+    "id": "src-legistar-260770",
+    "title": "BOS File 260770: Ordinance amending the Planning Code and Zoning Map for the Potrero Power Station Special Use District (introduced June 30, 2026; Board first reading Sept 29, 2026; final action listed Oct 6, 2026)",
+    "publisher": "SF Board of Supervisors (Legistar)",
+    "date": "2026-10-06",
+    "url": "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8127456&GUID=998D0F6D-2280-47E5-ABBF-12FB5A9C2988",
+    "accessed": "2026-10-12"
+   },
+   {
+    "id": "src-bos-ver3-260770",
+    "title": "BOS File 260770, Leg Ver3: ordinance text as amended in committee, September 28, 2026",
+    "publisher": "SF Board of Supervisors (Legistar)",
+    "date": "2026-09-28",
+    "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=15966111&GUID=DAB64A6A-8824-4A3A-A082-83621DC9E0A8",
+    "accessed": "2026-10-12"
+   },
+   {
+    "id": "src-bos-da-draft-092826",
+    "title": "DRAFT Amended and Restated Development Agreement, \"JAL Draft 9.28.2026\", with exhibits including the 2026 Draft Design for Development (attachment to BOS File 260724)",
+    "publisher": "SF Board of Supervisors (Legistar)",
+    "date": "2026-09-28",
+    "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=15965951&GUID=CE9BC28F-E413-4795-87DF-96D83CFCC12B",
+    "accessed": "2026-10-12"
    }
   ],
   "notes": "Block 15 (Station A) of the Potrero Power Station Design for Development, shown as Assessor lot 4175026 (see the accuracy note). Approximate polygon for a real, D4D-adopted block (final D4D, Feb 26, 2020: Table 3.1.1 and Figure 6.2.3) -- see the accuracy note for this shape. Status 'existing': Station A is a standing historic building (2018 Draft EIR; DBI permit 202406053802 in 2024). Use 'commercial': office is the approved use and residential is not permitted on Block 15 (D4D Table 3.1.1).",

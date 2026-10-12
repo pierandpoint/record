@@ -39,7 +39,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "HIGH CONFIDENCE -- real, community-surveyed OSM polygon tagged with the Mission Bay Parks system's own missionbayparks.com URL for this facility. Covers only this one mapped lot (roughly the Mission Bay Blvd. lawn/plaza between the Radiance and Nektar/Bayer buildings); the wider Mission Bay Commons interim-use area further west (Spark Social SF, Stagecoach Greens, the soccer field) is a separate, still-interim installation tracked as its own record below (Parklab Gardens & Mission Bay Commons interim area) pending the Future Parks Project (construction to begin late 2028 and open to the public early 2030, per SF Rec & Park's project page).",
+    "accuracy_caveat": "HIGH CONFIDENCE -- real, community-surveyed OSM polygon tagged with the Mission Bay Parks system's own missionbayparks.com URL for this facility. Covers only this one mapped lot (roughly the Mission Bay Blvd. lawn/plaza between the Radiance and Nektar/Bayer buildings); the wider Mission Bay Commons interim-use area further west (Spark Social SF, Stagecoach Greens, the soccer field) is a separate, still-interim installation tracked as its own record below (Parklab Gardens & Mission Bay Commons interim area) pending the Future Parks Project. These are expected dates, not events, and the sources differ: SF Rec & Park's project page gives an estimated schedule of design mid-2026, construction beginning late 2028 and opening to the public early 2030, yet the same page says the remaining parks 'are anticipated to be complete by 2028'; OCII's Nov 14, 2024 CAC update lists 'Transfer to SF Rec Park and Park (end of 2028, upon completion)'. No source reconciles the 2028 and early-2030 completion dates.",
     "digitized_from": "OpenStreetMap (way 48569996, leisure=park, missionbayparks.com)"
    }
   },
@@ -97,6 +97,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The note on Mission Bay Commons now lists all the expected dates for the planned rebuild of its western parcels: construction late 2028 and opening early 2030 on Rec & Park's schedule, with the same page also saying the parks are 'anticipated to be complete by 2028' and OCII listing a transfer to Rec & Park at the end of 2028. These are expected dates, and the sources differ.",
+    "source": "SF Recreation and Park Department, Mission Bay Future Parks Project (https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project); OCII, Mission Bay Future Parks CAC Update, November 14, 2024, timeline slide (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf)",
+    "sources": [
+     {
+      "title": "SF Recreation and Park Department, Mission Bay Future Parks Project (https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project); OCII, Mission Bay Future Parks CAC Update, November 14, 2024, timeline slide (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_commons",
+     "slug": "mission-bay-commons",
+     "name": "Mission Bay Commons",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-commons/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-29",
     "kind": "correction",
@@ -176,6 +205,7 @@
   "open_questions": [
    "The only dated event found is SF Rec & Park's July 1, 2023 assumption of management from OCII, which is a management transfer, not a construction-completion date -- not used as a completion milestone, per Pier & Point's rule against attributing an area-wide/administrative event to an individual record's build status.",
    "As of 2026-09-22, OCII's own Nov 2024 CAC map places labels P16 and P17 specifically at the east end of the Mission Bay Commons strip (between 3rd St and Terry Francois Blvd), matching this record's own mapped lawn -- resolving which OCII labels apply here, versus the P11/P12/P13/P15 labels used for the separate, still-interim area further west (the Parklab Gardens & Mission Bay Commons (interim, west) record). The only dated source found (a Nov 2011 EPA press release) names just P16, not P17, and says the park was \"recently completed\" rather than giving a construction date or a dedication date -- so the milestone above is deliberately narrower than that OCII grouping might suggest.",
+   "The Future Parks Project that will rebuild the interim western parcels has expected dates that differ: SF Rec & Park's project page gives construction beginning late 2028 and opening to the public early 2030, yet also says the remaining parks 'are anticipated to be complete by 2028', and OCII's November 14, 2024 update lists 'Transfer to SF Rec Park and Park (end of 2028, upon completion)'. All three are expected dates, not events.",
    "The EPA release (2011-11-04) names P16 only and has no location; the location of P16 and P17 comes from OCII's Nov 2024 deck legend, and this record's mapped shape leaves the P-number unconfirmed, so the milestone is stated about the eastern Commons segments, not this exact lawn."
   ],
   "sources": [

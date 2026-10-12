@@ -1059,6 +1059,64 @@
   ],
   "changes": [
    {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "BVNK was listed as an open tenant at Verde, but the only evidence was a business registration from March 2025. A registration does not show an office opened, and no source naming BVNK at Mission Rock was found, so it is removed from the tenant list.",
+    "source": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
+    "sources": [
+     {
+      "title": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8719C001",
+     "slug": "verde",
+     "name": "Verde",
+     "permalink": "https://pierandpoint.org/parcels/verde/",
+     "api": "https://pierandpoint.org/api/v1/records/verde.json"
+    },
+    "site": {
+     "slug": "mission-rock",
+     "name": "Mission Rock",
+     "short": "Mission Rock",
+     "url": "https://pierandpoint.org/sites/mission-rock/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-12",
+    "kind": "status",
+    "kind_label": "Status",
+    "text": "Chipotle's own page for its Mission Rock restaurant (365 Toni Stone Xing, Unit C) gives an open date of September 23, 2026, with daily hours and online ordering, in data timestamped September 24, 2026. The restaurant was previously shown as announced, on a December 2025 post that expected a 2026 opening. The date is the company's own statement; no news report of the opening was found.",
+    "source": "https://locations.chipotle.com/ca/san-francisco/365-toni-stone-xing",
+    "sources": [
+     {
+      "title": "https://locations.chipotle.com/ca/san-francisco/365-toni-stone-xing"
+     }
+    ],
+    "category": "retail",
+    "category_label": "Retail",
+    "record": {
+     "id": "8719C001",
+     "slug": "verde",
+     "name": "Verde",
+     "permalink": "https://pierandpoint.org/parcels/verde/",
+     "api": "https://pierandpoint.org/api/v1/records/verde.json"
+    },
+    "site": {
+     "slug": "mission-rock",
+     "name": "Mission Rock",
+     "short": "Mission Rock",
+     "url": "https://pierandpoint.org/sites/mission-rock/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-10-06",
     "kind": "correction",
     "kind_label": "Correction",
@@ -1511,7 +1569,9 @@
    "Total square footage disagrees across sources (287,000 / 314,508 / 315,000); a permit record would settle it.",
    "Images: no 'before' photo is hosted (until 2020 the parcel was the Seawall Lot 337 surface parking lot) and no rendering is hosted because the architects' renderings are not openly licensed; they are reachable through the architect sources listed here.",
    "A Mapillary storefront photo of Ike's Love & Sandwiches (a sourced retail tenant, see the retail fact above) was hosted briefly and then removed: on review it read as too cluttered (a trash bin, a parked car and several pedestrians in front of the sign) to keep. Still on the shot list for a cleaner frame.",
-   "Arsicault Bakery's Verde shop is shown open on a March 11, 2025 release; it has not been re-confirmed since. BVNK's registration at 365 Toni Stone Xing (Fl 3) is not evidence of an operating office, so it is not shown as a tenant with an opening date."
+   "Arsicault Bakery's Verde shop is shown open on a March 11, 2025 release; it has not been re-confirmed since.",
+   "A business registration for BVNK at 365 Toni Stone Xing Fl 3 exists since 2025-03-30 (System Pay Services (Us), Inc., no end date, DataSF Registered Business Locations); no source read shows an office open there, so BVNK is not listed as a tenant. Searches found no page that names BVNK at Mission Rock.",
+   "Chipotle Mexican Grill is shown open from 2026-09-23. That date is the 'c_openDate' on Chipotle's own location page for 365 Toni Stone Xing (locations.chipotle.com, whose data carries a timestamp of 2026-09-24 and which was read on 2026-10-12); it is a date the company states, not one confirmed by a news report or a visit. The page lists daily hours of 10:45 a.m. to 10 p.m. and online ordering. DataSF has a registration for Chipotle Mexican Grill #5956 at suite C from 2026-08-25, which is a registration date, not an opening date."
   ],
   "sources": [
    {
@@ -1695,29 +1755,6 @@
   "last_verified": "2026-09-24",
   "tenants": [
    {
-    "slug": "chipotle-mission-rock",
-    "name": "Chipotle Mexican Grill",
-    "category": "food and drink",
-    "status": "announced",
-    "opened": null,
-    "closed": null,
-    "source": "https://x.com/SFBusinessTimes/status/2005866556429881431",
-    "unit_or_address": "365 Toni Stone Xing (suite C per DataSF registered business locations; the cited post gives no address)",
-    "record": {
-     "id": "8719C001",
-     "slug": "verde",
-     "name": "Verde",
-     "permalink": "https://pierandpoint.org/parcels/verde/",
-     "api": "https://pierandpoint.org/api/v1/records/verde.json"
-    },
-    "site": {
-     "slug": "mission-rock",
-     "name": "Mission Rock",
-     "short": "Mission Rock",
-     "url": "https://pierandpoint.org/sites/mission-rock/"
-    }
-   },
-   {
     "slug": "arsicault-bakery-mission-rock",
     "name": "Arsicault Bakery",
     "category": "food and drink",
@@ -1741,14 +1778,14 @@
     }
    },
    {
-    "slug": "bvnk",
-    "name": "BVNK",
-    "category": "office lobby or other",
+    "slug": "chipotle-mission-rock",
+    "name": "Chipotle Mexican Grill",
+    "category": "food and drink",
     "status": "open",
-    "opened": null,
+    "opened": "2026-09-23",
     "closed": null,
-    "source": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis",
-    "unit_or_address": "365 Toni Stone Xing Fl 3",
+    "source": "https://locations.chipotle.com/ca/san-francisco/365-toni-stone-xing",
+    "unit_or_address": "365 Toni Stone Xing, Unit C (Chipotle location page; DataSF registered business locations also gives suite C)",
     "record": {
      "id": "8719C001",
      "slug": "verde",

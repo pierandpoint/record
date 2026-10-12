@@ -108,9 +108,10 @@
    },
    {
     "key": "year_built",
-    "value": "1917",
+    "value": "1917 (NRHP nomination and the Port's 2019 Table 1; the Port memo's narrative text says 1915, see open questions)",
     "sources": [
-     "src-nrhp-2014"
+     "src-nrhp-2014",
+     "src-port-hc-2019"
     ]
    },
    {
@@ -670,7 +671,7 @@
     "date_label": "Jan 4, 2019",
     "status": null,
     "status_label": null,
-    "text": "Port staff update (memo dated Jan 4, 2019): six of eight buildings complete, Buildings 101 and 102 still under construction, project 100% subleased except two atrium retail spaces; total cost revised from $81.9M to an estimated $127.0M",
+    "text": "Port staff update (memo dated Jan 4, 2019): six of eight buildings complete, Buildings 101 and 102 still under construction, project 100% subleased except two atrium retail spaces; whole-Historic-Core project total costs (not the cost of this building alone) rose from $81.9M at 2014 approvals to $127.0M in Table 2's '2018, Actual' column, while the memo's text gives 'an estimated $125 million at project completion in 2020'; Table 2 marks one line (Building 102's $6.7M) as a future-expenditure estimate",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -852,6 +853,35 @@
   ],
   "changes": [
    {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Building 101's cost milestone now gives both Port totals, and its build year records the Port memo's 1915 as a conflict.",
+    "source": "Port of San Francisco, Port Commission Item 12A, 2019-01-04 (https://www.sfport.com/media/4465/download); SF Historic Preservation Commission informational packet, case 2013.1168E (https://default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf)",
+    "sources": [
+     {
+      "title": "Port of San Francisco, Port Commission Item 12A, 2019-01-04 (https://www.sfport.com/media/4465/download); SF Historic Preservation Commission informational packet, case 2013.1168E (https://default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_building_101",
+     "slug": "pier-70-building-101-bethlehem-steel-hq",
+     "name": "Pier 70 Building 101 (Bethlehem Steel HQ)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-101-bethlehem-steel-hq/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-101-bethlehem-steel-hq.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-29",
     "kind": "correction",
     "kind_label": "Correction",
@@ -1004,7 +1034,7 @@
     "license": "public-record",
     "source_url": "https://default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf#page=25",
     "license_evidence": "https://default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf",
-    "license_note": "Exhibit within the SF Historic Preservation Commission's public hearing packet for case 2013.1168E (Nov. 26, 2013 informational presentation); a commission hearing packet is public record. Read 2026-09-19.",
+    "license_note": "Exhibit within the SF Historic Preservation Commission's public hearing packet for case 2013.1168E (informational memo dated Nov. 26, 2013; the packet does not state the hearing date); a commission hearing packet is public record. Read 2026-09-19.",
     "source_crop": "python3 src/extract_pdf_figure.py https://default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf 25 data/manual/images/pier70/20th_st_historic_buildings_siteplan_2013.jpg --rect auto",
     "focus": [
      0.1363,
@@ -1041,6 +1071,7 @@
    }
   ],
   "open_questions": [
+   "Sources disagree on the year Building 101 was built. The Port's 2019 memo gives 1917 in its Table 1 (Year Built) and the 2013 Historic Preservation Commission packet says the building \"was built in 1917\", as does the National Register nomination this record cites; the same Port memo's narrative says the building \"was built in 1915\". Pier & Point shows 1917, the figure in the other sources and in the memo's own table; the 1915 figure is unexplained.",
    "The exact completion / certificate of occupancy date for Building 101 (the Port's 2019 memo anticipated 2020; RH opened May 2022) was not found.",
    "Whether Buildings 122 and 123, the two outbuildings behind Building 104 that share the master lease, are on this parcel or the Building 104 parcel is not settled by any source; Pier & Point's records group them with the north-side lot.",
    "No 'now' photograph with a stated license was found; RH's press images are the tenant's copyright and are linked, not hosted.",

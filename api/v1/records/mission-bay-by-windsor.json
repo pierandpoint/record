@@ -80,8 +80,8 @@
    {
     "date": "2013-12-26",
     "date_label": "Dec 26, 2013",
-    "status": "planned",
-    "status_label": "Planned",
+    "status": null,
+    "status_label": null,
     "text": "SF Dept. of Building Inspection permit #201312265046 filed to erect a 5-story, 129-unit residential building at 360 Berry St",
     "expected": false,
     "approximate": false,
@@ -96,8 +96,8 @@
     ],
     "source": "DataSF / SF Department of Building Inspection",
     "origin": "record",
-    "category": "status",
-    "category_label": "Status",
+    "category": "milestone",
+    "category_label": "Milestone",
     "record": {
      "id": "8704004",
      "slug": "mission-bay-by-windsor",
@@ -116,8 +116,8 @@
    {
     "date": "2015-02-19",
     "date_label": "Feb 19, 2015",
-    "status": "planned",
-    "status_label": "Planned",
+    "status": null,
+    "status_label": null,
     "text": "DBI permit #201312265046 issued for the 5-story, 129-unit residential building at 360 Berry St (approved 2015-01-29)",
     "expected": false,
     "approximate": false,
@@ -338,6 +338,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The 360 Berry St timeline no longer marks 2015-2016 as planned. The city's permit record gives only dates (filed December 2013, issued February 2015, first construction document May 2015) and a final status of complete in June 2017, so no status is shown between the filing and the 2017 completion.",
+    "source": "DataSF Building Permits, permit 201312265046 (https://data.sf.gov/resource/i98e-djp9.json?permit_number=201312265046)",
+    "sources": [
+     {
+      "title": "DataSF Building Permits, permit 201312265046 (https://data.sf.gov/resource/i98e-djp9.json?permit_number=201312265046)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8704004",
+     "slug": "mission-bay-by-windsor",
+     "name": "Mission Bay by Windsor",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-by-windsor/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-by-windsor.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-11",
     "kind": "added",
@@ -935,7 +964,8 @@
   "open_questions": [
    "Precise month of completion/first occupancy in 2017 is not sourced beyond the bare Assessor year and RentCafe's 'Building constructed in 2017' listing text; a claim of an April 9, 2017 opening date was found only on an unrelated commercial blog (not a real-estate or news outlet) and was not used.",
    "Trade press names The Integral Group as developer under its 'EVIVA' platform, and The Registry (news.theregistrysf.com) has an article announcing a groundbreaking ceremony for the project, but that article's date and details are behind a paywall and were not verified, so are not cited here.",
-   "No source checked as of 2026-09-29 confirms the architect."
+   "No source checked as of 2026-09-29 confirms the architect.",
+   "No source read says when construction started or gives a status for 2015-2016. DataSF records permit 201312265046 only as 'complete' (completed 2017-06-15), with the permit filed 2013-12-26, issued 2015-02-19 and its first construction document issued 2015-05-20; the timeline therefore shows no status between the filing and the 2017 completion rather than 'planned' (corrected 2026-10-12)."
   ],
   "sources": [
    {

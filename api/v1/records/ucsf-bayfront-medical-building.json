@@ -168,39 +168,24 @@
     "relation": "tracked"
    },
    {
-    "date": "2024-08-27",
-    "date_label": "Aug 27, 2024",
+    "date": "2024-08",
+    "date_label": "~2024",
     "status": "complete",
     "status_label": "Complete",
-    "text": "UCSF Health Bayfront Medical Building (520 Illinois St) opens",
+    "text": "UCSF Health Bayfront Medical Building opens to patients. Hospital Management's article of August 26, 2024, written the day before, says the building is \"due to start receiving patients on 27 August\"; that is a scheduled date, not a confirmed one, and no source written after the opening could be read, so only the month is shown",
     "expected": false,
-    "approximate": false,
+    "approximate": true,
     "sources": [
      {
-      "id": "src-ucsf-real-estate-bayfront",
-      "title": "Bayfront Medical Building and Illinois Street Garage (project page: Bayfront Medical Building, 520 Illinois St, five stories, opened as part of UCSF's Block 34 project)",
-      "publisher": "UCSF Real Estate",
-      "url": "https://realestate.ucsf.edu/projects/bayfront-medical-building-and-illinois-street-garage",
-      "accessed": "2026-09-21"
-     },
-     {
-      "id": "src-stantec-bayfront-2024",
-      "title": "Stantec-designed UCSF Bayfront Medical Building opens on growing Mission Bay campus",
-      "publisher": "Stantec",
-      "date": "2024-08",
-      "url": "https://www.stantec.com/en/news/2024/stantec-designed-ucsf-bayfront-medical-building-opens-mission-bay-campus",
-      "accessed": "2026-09-21"
-     },
-     {
-      "id": "src-cpe-bayfront-2024",
-      "title": "UCSF Opens $228M Health-Care Facility (Bayfront Medical Building opened Aug 27, 2024; the adjoining 500-space, nine-level parking garage \"came online\" in 2023; clinical building broke ground Sept 2021, the parking structure \"a few months later\" -- superseded by Clark Construction's own more specific account, in the neighboring Illinois Street Garage record)",
-      "publisher": "Commercial Property Executive (commercialsearch.com)",
-      "date": "2024",
-      "url": "https://www.commercialsearch.com/news/ucsf-opens-228m-health-care-facility/",
-      "accessed": "2026-09-22"
+      "id": "src-hm-bayfront-2024",
+      "title": "UCSF launches Mission Bay healthcare building (published August 26, 2024: \"due to start receiving patients on 27 August\")",
+      "publisher": "Hospital Management (hospitalmanagement.net)",
+      "date": "2024-08-26",
+      "url": "https://www.hospitalmanagement.net/news/ucsf-launches-mission-bay-building/",
+      "accessed": "2026-10-12"
      }
     ],
-    "source": "UCSF Real Estate; Stantec, 2024-08; Commercial Property Executive (commercialsearch.com), 2024",
+    "source": "Hospital Management (hospitalmanagement.net), 2024-08-26",
     "origin": "record",
     "category": "status",
     "category_label": "Status",
@@ -221,6 +206,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Bayfront Medical Building's opening was shown as August 27, 2024. The only article that could be read was published the day before and gives that day as the scheduled first day for patients, so the opening is now shown as August 2024 and the open questions list the sources that could not be read.",
+    "source": "Hospital Management, \"UCSF launches Mission Bay healthcare building\", August 26, 2024 (https://www.hospitalmanagement.net/news/ucsf-launches-mission-bay-building/)",
+    "sources": [
+     {
+      "title": "Hospital Management, \"UCSF launches Mission Bay healthcare building\", August 26, 2024 (https://www.hospitalmanagement.net/news/ucsf-launches-mission-bay-building/)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "ucsf_bayfront_medical_building",
+     "slug": "ucsf-bayfront-medical-building",
+     "name": "UCSF Bayfront Medical Building",
+     "permalink": "https://pierandpoint.org/parcels/ucsf-bayfront-medical-building/",
+     "api": "https://pierandpoint.org/api/v1/records/ucsf-bayfront-medical-building.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-11",
     "kind": "correction",
@@ -359,7 +373,8 @@
    "2026-09-22, corroborating data point: DataSF business registrations whose point-location falls inside this record's shape list '520 Illinois St # D2317' and '520 Illinois St # D1200' as their address -- matching the 520 Illinois St address already sourced from UCSF Real Estate's own project page, not contradicting it. That match is by location only and was not individually confirmed, so this is logged as corroboration, not an independent primary source.",
    "SPLIT 2026-09-22: this record was previously a single OCII plan block 34 record (a probable, geographically-inferred identity for the WHOLE of a mapped area that also included the Illinois Street Garage to its south). This was corrected: UCSF built three real structures where the OCII plan showed two, and Bayfront Medical Building is only the north piece of that area (the Illinois Street Garage record covers the south piece). The split follows a visible satellite roofline seam, not a surveyed or permitted lot line, and its exact boundary should be treated as indicative rather than authoritative.",
    "Total project cost is reported elsewhere as approximately $335.8 million for the combined clinical building and garage; not broken out per building and not independently verified against a primary UCSF or Regents document, so left out of costs.",
-   "As of 2026-09-29, UCSF Real Estate's project page and Stantec's news page could not be read; the address (520 Illinois St), story count, size, architect, contractor and opening date are now backed by Commercial Property Executive, SF YIMBY and Clark's release. The Regents outcome for the May 2020 Block 34 items was not found (only the committee agenda was read). The construction start is Clark's September 2021 groundbreaking announcement; CPE and Clark say the garage began earlier (April 2021). The 590 Illinois St address given for the Illinois Street Garage is not in any source that could be read. Whether CPE's $228 million includes the garage is not stated."
+   "As of 2026-09-29, UCSF Real Estate's project page and Stantec's news page could not be read; the address (520 Illinois St), story count, size, architect, contractor and opening date are now backed by Commercial Property Executive, SF YIMBY and Clark's release. The Regents outcome for the May 2020 Block 34 items was not found (only the committee agenda was read). The construction start is Clark's September 2021 groundbreaking announcement; CPE and Clark say the garage began earlier (April 2021). The 590 Illinois St address given for the Illinois Street Garage is not in any source that could be read. Whether CPE's $228 million includes the garage is not stated.",
+   "Update 2026-10-12: no source written after the opening could be read, so the opening day is not confirmed. Hospital Management (August 26, 2024) says the building was \"due to start receiving patients on 27 August\" (a scheduled date, published the day before); Commercial Property Executive's opening coverage (commercialsearch.com), Stantec's news page and UCSF Real Estate's project page all returned HTTP 403, as did UCSF's news site. The opening is therefore shown at month level. The $228 million figure and the garage \"came online in 2023\" statement also come from the Commercial Property Executive page, which could not be re-read. SF YIMBY (February 8, 2023) had said the building was \"expected to open later this year\"; the sources do not say when the opening date moved."
   ],
   "sources": [
    {
@@ -395,7 +410,7 @@
    },
    {
     "id": "src-cpe-bayfront-2024",
-    "title": "UCSF Opens $228M Health-Care Facility (Bayfront Medical Building opened Aug 27, 2024; the adjoining 500-space, nine-level parking garage \"came online\" in 2023; clinical building broke ground Sept 2021, the parking structure \"a few months later\" -- superseded by Clark Construction's own more specific account, in the neighboring Illinois Street Garage record)",
+    "title": "UCSF Opens $228M Health-Care Facility (this page returned HTTP 403 when re-read on 2026-10-12)",
     "publisher": "Commercial Property Executive (commercialsearch.com)",
     "date": "2024",
     "url": "https://www.commercialsearch.com/news/ucsf-opens-228m-health-care-facility/",
@@ -434,11 +449,19 @@
     "date": "2025-06-12",
     "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
     "accessed": "2026-09-29"
+   },
+   {
+    "id": "src-hm-bayfront-2024",
+    "title": "UCSF launches Mission Bay healthcare building (published August 26, 2024: \"due to start receiving patients on 27 August\")",
+    "publisher": "Hospital Management (hospitalmanagement.net)",
+    "date": "2024-08-26",
+    "url": "https://www.hospitalmanagement.net/news/ucsf-launches-mission-bay-building/",
+    "accessed": "2026-10-12"
    }
   ],
-  "notes": "OCII plan block 34 (north portion). Between 3rd St and Illinois St, south of block 33 (Valley Center for Vision), north of the Illinois Street Garage. 520 Illinois St (Commercial Property Executive), 5 stories (Clark), ~182,800 sq ft (SF YIMBY), architect Stantec, GC Clark Construction, opened Aug 27 2024 (Commercial Property Executive).",
+  "notes": "OCII plan block 34 (north portion). Between 3rd St and Illinois St, south of block 33 (Valley Center for Vision), north of the Illinois Street Garage. 520 Illinois St (Commercial Property Executive), 5 stories (Clark), ~182,800 sq ft (SF YIMBY), architect Stantec, GC Clark Construction, scheduled to open to patients on Aug 27 2024 (Hospital Management, Aug 26 2024); no source written after the opening could be read, so the day is unconfirmed.",
   "has_record_file": true,
-  "last_verified": "2026-09-29",
+  "last_verified": "2026-10-12",
   "tenants": [],
   "geometry": {
    "type": "Polygon",
