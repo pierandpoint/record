@@ -8,13 +8,13 @@
         "site": "Pier 70",
         "status": "planned",
         "use": "park",
-        "geometry_type": "approximate",
-        "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155); named/numbered per Figure 3.4.1 - Overview of Public Spaces (p.52).",
-        "digitization_method": "ADDED 2026-09-16 (Pier 70 systematic feature-by-feature pass): the D4D names four separate open spaces along this site's waterfront -- Waterfront Terrace (Fig 3.4.1 zone 1, near Parcel B), Slipways Commons (zone 2, the plaza between E1/E4 and E2/E3), Waterfront Promenade (zone 3, the shoreline path), and Pier 70 Shoreline (zone 4, near the point north of E4) -- but Figure 3.4.1 itself (and Figure 6.4.2's own 'Public Open Space' fill, used here) renders all four as ONE continuous, undivided green area with no internal boundary line drawn anywhere between them. Rather than fabricate a specific dividing line that no source shows, this is tracked as one combined feature covering all four. Traced via programmatic pixel-color detection (isolating Figure 6.4.2's 'Public Open Space' fill color, RGB [194,218,106], with morphological closing to bridge small text/icon gaps, then an OpenCV contour extraction simplified to ~35 vertices) rather than hand-clicking, since this is a long, irregularly-shaped (and intentionally jagged/riprap-shore-like, per the diagram's own hatching) strip. Converted via this site's validated 6-point affine transform. Clipped against Parcels E1, E4, E3, and H2's own already-committed geometries via shapely difference() (the raw pixel trace overlapped each by a small amount, and building parcels take priority over this open-space trace) -- this produced a MultiPolygon with one large piece (~3.0 acres) and a smaller ~0.23-acre piece separated by H2. NOT clipped against Building 21 or Elevation Sky Park (this site's own already-acknowledged low-confidence markers) for the same reason those aren't clipped against E1-E4 elsewhere in this dataset. GAP FILLED 2026-09-17 (user-flagged): a ~31m gap existed directly east of Parcel E3 -- this polygon's two pieces each nearly touched E3 near its NW and SW corners (per the earlier clip against E1/E4/E3/H2) but nothing filled the shoreline strip along E3's own east edge in between, even though Figure 6.4.2 shows this whole shoreline band as one continuous Public Open Space area with no break at E3. Added a connecting piece along E3's east edge, bounded on the east by the real Port Jurisdiction boundary (data/raw/port_jurisdiction.geojson, the same authoritative shoreline/bulkhead line already used elsewhere in this project) rather than an invented shoreline shape, and clipped against E3's current (2026-09-17, extended-south) geometry so it doesn't overlap it. 2026-10-02: public-text pass. notes reworded for readers (meaning unchanged; no change to the shape, status, use or geometry_type); previous wording -- notes: 'Newly added 2026-09-16 as part of a systematic pass adding this site's previously-untracked open space -- see accuracy_caveat for why this combines four named D4D spaces into one polygon.'. TRIMMED 2026-10-10 (overlap with a neighbour's Assessor lot; nothing else changed): Parcels E3 and B now use recorded Assessor lot lines as their outline, and this traced shape overlapped them by about 1,073 m2, so that area was cut from this shape (recorded lot lines win over a trace). Area 15,749 -> 14,676 m2. The earlier sign-off covered the traced shape; this trim was made at the owner's direction. TRIMMED 2026-10-10 (street clip made explicit; nothing else changed): the build already subtracts the DataSF street-centerline buffer from this shape, and Parcel B now uses its recorded Assessor lot lines (which are not street-clipped), so the raw edge beside Parcel B now carries that clip too, about 1,003 m2, and the two no longer appear to touch in the source file while a street gap separates them on the map. Area 14,676 -> 13,673 m2. The earlier sign-off covered the traced shape; this trim was made at the owner's direction.",
-        "accuracy_caveat": "APPROXIMATE, AND KNOWINGLY UNSUBDIVIDED -- combines four D4D-named open spaces (Waterfront Terrace, Slipways Commons, Waterfront Promenade, Pier 70 Shoreline) into one polygon because the D4D figures used (3.4.1 and 6.4.2) show one continuous fill; the Port's SUD Land Use Plan (Exhibit A4-1, 03/13/2018) labels separate 'Open Space Segments' (WTP, SC-1, SC-2, WP-1, WP-2), which this polygon does not follow; do not treat this as a single named place. Total traced area (~4.0-4.3 acres before/after clipping) is a reasonable match to the D4D's own combined figures (a ~5.0-acre waterfront area covering the first three, plus part of a ~1,300-linear-foot shoreline) but is not a precise subdivision or survey. Programmatically traced from a diagram's fill color, not hand-verified vertex-by-vertex.",
-        "why_no_real_parcel": "Open space within Brookfield's 28-acre site. No source read ties it to a specific Assessor lot: DataSF's Assessor parcels include lots created for the 28-acre district in 2019, without street addresses, but which lot (if any) covers this open space was not established.",
+        "geometry_type": "real",
+        "digitized_from": "DataSF Assessor parcels (acdm-wktn), lots 4052003, 4116001, 4116003 and 4116007 (recorded 2019-02-07; mapped 2019-03-14; active), joined into one outline; cross-checked against Pier 70 Design for Development Figure 6.4.2 - Building Height Maximum (p.155) and Figure 3.4.1 (Overview of Public Spaces, p.52).",
+        "digitization_method": "ADDED 2026-09-16 (Pier 70 systematic feature-by-feature pass): the D4D names four separate open spaces along this site's waterfront -- Waterfront Terrace (Fig 3.4.1 zone 1, near Parcel B), Slipways Commons (zone 2, the plaza between E1/E4 and E2/E3), Waterfront Promenade (zone 3, the shoreline path), and Pier 70 Shoreline (zone 4, near the point north of E4) -- but Figure 3.4.1 itself (and Figure 6.4.2's own 'Public Open Space' fill, used here) renders all four as ONE continuous, undivided green area with no internal boundary line drawn anywhere between them. Rather than fabricate a specific dividing line that no source shows, this is tracked as one combined feature covering all four. Traced via programmatic pixel-color detection (isolating Figure 6.4.2's 'Public Open Space' fill color, RGB [194,218,106], with morphological closing to bridge small text/icon gaps, then an OpenCV contour extraction simplified to ~35 vertices) rather than hand-clicking, since this is a long, irregularly-shaped (and intentionally jagged/riprap-shore-like, per the diagram's own hatching) strip. Converted via this site's validated 6-point affine transform. Clipped against Parcels E1, E4, E3, and H2's own already-committed geometries via shapely difference() (the raw pixel trace overlapped each by a small amount, and building parcels take priority over this open-space trace) -- this produced a MultiPolygon with one large piece (~3.0 acres) and a smaller ~0.23-acre piece separated by H2. NOT clipped against Building 21 or Elevation Sky Park (this site's own already-acknowledged low-confidence markers) for the same reason those aren't clipped against E1-E4 elsewhere in this dataset. GAP FILLED 2026-09-17 (user-flagged): a ~31m gap existed directly east of Parcel E3 -- this polygon's two pieces each nearly touched E3 near its NW and SW corners (per the earlier clip against E1/E4/E3/H2) but nothing filled the shoreline strip along E3's own east edge in between, even though Figure 6.4.2 shows this whole shoreline band as one continuous Public Open Space area with no break at E3. Added a connecting piece along E3's east edge, bounded on the east by the real Port Jurisdiction boundary (data/raw/port_jurisdiction.geojson, the same authoritative shoreline/bulkhead line already used elsewhere in this project) rather than an invented shoreline shape, and clipped against E3's current (2026-09-17, extended-south) geometry so it doesn't overlap it. 2026-10-02: public-text pass. notes reworded for readers (meaning unchanged; no change to the shape, status, use or geometry_type); previous wording -- notes: 'Newly added 2026-09-16 as part of a systematic pass adding this site's previously-untracked open space -- see accuracy_caveat for why this combines four named D4D spaces into one polygon.'. TRIMMED 2026-10-10 (overlap with a neighbour's Assessor lot; nothing else changed): Parcels E3 and B now use recorded Assessor lot lines as their outline, and this traced shape overlapped them by about 1,073 m2, so that area was cut from this shape (recorded lot lines win over a trace). Area 15,749 -> 14,676 m2. The earlier sign-off covered the traced shape; this trim was made at the owner's direction. TRIMMED 2026-10-10 (street clip made explicit; nothing else changed): the build already subtracts the DataSF street-centerline buffer from this shape, and Parcel B now uses its recorded Assessor lot lines (which are not street-clipped), so the raw edge beside Parcel B now carries that clip too, about 1,003 m2, and the two no longer appear to touch in the source file while a street gap separates them on the map. Area 14,676 -> 13,673 m2. The earlier sign-off covered the traced shape; this trim was made at the owner's direction. TRIMMED 2026-10-10 (overlap with a neighbour's Assessor lot; nothing else changed): Parcel E4 now uses recorded Assessor lot lines as their outline, and this traced shape overlapped it by about 1,050 m2, so that area was cut from this shape (recorded lot lines win over a trace). Area 13,673 -> 12,623 m2. The earlier sign-off covered the traced shape; this trim was made at the owner's direction. REPLACED 2026-10-10 (shape; status and use unchanged): the owner's assignment of Assessor lots to the Pier 70 blocks and open spaces from the plan diagram and the satellite imagery. DataSF's Assessor layer (data/raw/parcels.geojson) has the union of Assessor lots 4052003, 4116001, 4116003 and 4116007 (18,362 m2, active, recorded 2019-02-07), 76% of our earlier trace lies inside it and the trace covers 52% of it; against the satellite imagery the lot lines sit on the real block edges where the trace was a few metres off. The outline is now their union using the lots' own vertices (no simplification), in place of the traced shape of 12,623 m2. The lots were assigned by the owner; the earlier outline combined four D4D-named spaces traced from a diagram fill and then trimmed against neighbouring blocks. geometry_type is now 'real' because the edges are recorded lot lines. The earlier sign-off covered the traced shape; this replacement was made at the owner's direction. CHECKED 2026-10-11 (no change to the shape): Lot 4175028 (21,885 m2, DataSF, Delaware St) was also proposed for zone 3 but is not used: it covers Potrero Power Station Blocks 3, 4 and 9 and other Potrero shapes, and the owner has deferred it to the review of the Potrero Power Station site.",
+        "accuracy_caveat": "The outline is the union of Assessor lots 4052003, 4116001, 4116003 and 4116007, so its edges are recorded lot lines, not a trace. The lots were assigned by the owner from the plan diagram and the satellite imagery: 4052003 is zone 1 (Waterfront Terrace), 4116001 is zone 2 (Slipways Commons), and 4116003 and 4116007 are parts of zone 3 (Waterfront Promenade). No document read names these lots. Zone 4 (Pier 70 Shoreline) has no lot assigned and is not drawn, and the Port's SUD Land Use Plan splits these spaces into separate open space segments that this combined outline does not follow. The lots are the legal boundaries and may not follow the D4D's drawn edges. The open space is planned (Port Item 11A, memo dated Aug 7, 2026: the balance of Phase 1, largely the Phase 1 parks and open space, will be built on a schedule that coincides with adjacent vertical development). Lot 4175028 (21,885 m2, DataSF, Delaware St) was also proposed for zone 3 but is not used: it covers Potrero Power Station Blocks 3, 4 and 9 and other Potrero shapes, and the owner has deferred it to the review of the Potrero Power Station site.",
+        "why_no_real_parcel": "No document names the Assessor lots of the waterfront open space. Lots 4052003, 4116001, 4116003 and 4116007 (active) were assigned to its zones 1, 2 and 3 by the owner from the plan diagram, so its outline is their union.",
         "regulatory_context": "Part of the Pier 70 D4D's Open Space Network (Section 3) -- specifically Sections 3.5 (Waterfront Terrace), 3.6 (Slipways Commons), 3.7 (Waterfront Promenade), and 3.8 (Pier 70 Shoreline, ~1,300 linear feet). Together with Building 12 Plaza/Market Square, 20th Street Plaza, Irish Hill Corner Plaza, and Irish Hill Playground, these comprise the D4D's total nine acres of public open space (Section 3.4).",
-        "notes": "Newly added 2026-09-16, together with this site's other previously untracked open space -- see the Accuracy note for why this combines four named D4D spaces into one polygon.",
+        "notes": "The outline is the union of Assessor lots 4052003, 4116001, 4116003 and 4116007 (see the accuracy note). Newly added 2026-09-16, together with this site's other previously untracked open space -- see the Accuracy note for why this combines four named D4D spaces into one polygon.",
         "images": [],
         "source_doc_urls": [
           "https://www.sfport.com/media/8123/download?inline=",
@@ -26,148 +26,44 @@
         "coordinates": [
           [
             [
-              -122.381865839,
-              37.758307627
+              -122.381122016,
+              37.758271817
             ],
             [
-              -122.381621218,
-              37.758321124
+              -122.381115216,
+              37.758200616
             ],
             [
-              -122.381615256,
-              37.758321747
+              -122.381260171,
+              37.758192851
             ],
             [
-              -122.381609383,
-              37.758322952
+              -122.381255487,
+              37.758129795
             ],
             [
-              -122.381603658,
-              37.758324727
+              -122.381372576,
+              37.757912673
             ],
             [
-              -122.381598133,
-              37.758327054
+              -122.381386129,
+              37.757833759
             ],
             [
-              -122.381592864,
-              37.758329912
+              -122.381793417,
+              37.757809716
             ],
             [
-              -122.381587899,
-              37.758333272
+              -122.381634482,
+              37.758194182
             ],
             [
-              -122.381583288,
-              37.758337103
+              -122.381641664,
+              37.758270869
             ],
             [
-              -122.381579075,
-              37.758341367
-            ],
-            [
-              -122.3815753,
-              37.758346024
-            ],
-            [
-              -122.381572,
-              37.758351029
-            ],
-            [
-              -122.381569206,
-              37.758356332
-            ],
-            [
-              -122.381566946,
-              37.758361884
-            ],
-            [
-              -122.38156524,
-              37.758367631
-            ],
-            [
-              -122.381564106,
-              37.758373518
-            ],
-            [
-              -122.381563554,
-              37.758379487
-            ],
-            [
-              -122.381563591,
-              37.758385481
-            ],
-            [
-              -122.381564214,
-              37.758391443
-            ],
-            [
-              -122.381565419,
-              37.758397316
-            ],
-            [
-              -122.381567194,
-              37.758403041
-            ],
-            [
-              -122.381569521,
-              37.758408566
-            ],
-            [
-              -122.381572379,
-              37.758413835
-            ],
-            [
-              -122.381575739,
-              37.7584188
-            ],
-            [
-              -122.38157957,
-              37.758423411
-            ],
-            [
-              -122.381583834,
-              37.758427624
-            ],
-            [
-              -122.381588491,
-              37.758431399
-            ],
-            [
-              -122.381593496,
-              37.758434699
-            ],
-            [
-              -122.381598799,
-              37.758437493
-            ],
-            [
-              -122.381604351,
-              37.758439753
-            ],
-            [
-              -122.381610098,
-              37.758441459
-            ],
-            [
-              -122.381615985,
-              37.758442593
-            ],
-            [
-              -122.381621954,
-              37.758443145
-            ],
-            [
-              -122.381627948,
-              37.758443108
-            ],
-            [
-              -122.381823973,
-              37.758432292
-            ],
-            [
-              -122.381825195,
-              37.758452809
+              -122.381626139,
+              37.758271785
             ],
             [
               -122.381644095,
@@ -178,464 +74,736 @@
               37.759089313
             ],
             [
-              -122.381862277,
-              37.759079893
+              -122.382541322,
+              37.759039806
             ],
             [
-              -122.381874712,
-              37.75929031
+              -122.382534909,
+              37.758971336
             ],
             [
-              -122.3818754,
-              37.7593019
+              -122.383542214,
+              37.758911863
             ],
             [
-              -122.3827022,
-              37.7592298
+              -122.383575877,
+              37.759271219
             ],
             [
-              -122.3827009,
-              37.7591589
+              -122.383265751,
+              37.75928953
             ],
             [
-              -122.383598406,
-              37.759085914
+              -122.383264981,
+              37.759281314
             ],
             [
-              -122.383631842,
-              37.759432842
+              -122.382891207,
+              37.759303383
             ],
             [
-              -122.383536,
-              37.7594412
+              -122.382891977,
+              37.759311599
             ],
             [
-              -122.3835203,
-              37.7592944
+              -122.382538382,
+              37.759332475
             ],
             [
-              -122.3832722,
-              37.7593142
+              -122.382174727,
+              37.759425545
             ],
             [
-              -122.3832881,
-              37.7594628
+              -122.382190858,
+              37.759597777
             ],
             [
-              -122.3827882,
-              37.7595064
+              -122.382215512,
+              37.759861012
             ],
             [
-              -122.3827691,
-              37.7593275
+              -122.382114091,
+              37.759866999
             ],
             [
-              -122.3824308,
-              37.759417
+              -122.382158519,
+              37.760341358
             ],
             [
-              -122.3824486,
-              37.7595835
+              -122.382158773,
+              37.760343926
             ],
             [
-              -122.3823178,
-              37.7596213
+              -122.382159054,
+              37.760346493
             ],
             [
-              -122.382334201,
-              37.759866582
+              -122.382159363,
+              37.760349058
             ],
             [
-              -122.382197625,
-              37.759874781
+              -122.382159698,
+              37.760351622
             ],
             [
-              -122.382196567,
-              37.759874897
+              -122.382160061,
+              37.760354182
             ],
             [
-              -122.382195495,
-              37.759874946
+              -122.38216045,
+              37.760356741
             ],
             [
-              -122.38219358,
-              37.759875224
+              -122.382160867,
+              37.760359297
             ],
             [
-              -122.382191666,
-              37.759875433
+              -122.38216131,
+              37.76036185
             ],
             [
-              -122.382190623,
-              37.759875652
+              -122.38216178,
+              37.760364399
             ],
             [
-              -122.382189562,
-              37.759875806
+              -122.382162278,
+              37.760366946
             ],
             [
-              -122.382187685,
-              37.75987627
+              -122.382162803,
+              37.760369489
             ],
             [
-              -122.3821858,
-              37.759876666
+              -122.382163353,
+              37.760372029
             ],
             [
-              -122.382184782,
-              37.759876987
+              -122.382163931,
+              37.760374565
             ],
             [
-              -122.382183742,
-              37.759877244
+              -122.382164536,
+              37.760377096
             ],
             [
-              -122.382181919,
-              37.75987789
+              -122.382165166,
+              37.760379624
             ],
             [
-              -122.382180083,
-              37.759878469
+              -122.382165824,
+              37.760382148
             ],
             [
-              -122.382179099,
-              37.759878889
+              -122.382166509,
+              37.760384667
             ],
             [
-              -122.382178092,
-              37.759879246
+              -122.382167221,
+              37.760387181
             ],
             [
-              -122.382176345,
-              37.759880065
+              -122.382167957,
+              37.76038969
             ],
             [
-              -122.38217457,
-              37.759880823
+              -122.382168721,
+              37.760392195
             ],
             [
-              -122.382173637,
-              37.759881335
+              -122.382169512,
+              37.760394695
             ],
             [
-              -122.382172664,
-              37.759881791
+              -122.382170328,
+              37.760397188
             ],
             [
-              -122.382170998,
-              37.759882782
+              -122.382171172,
+              37.760399677
             ],
             [
-              -122.382169314,
-              37.759883706
+              -122.382172041,
+              37.76040216
             ],
             [
-              -122.382168434,
-              37.759884308
+              -122.382172936,
+              37.760404637
             ],
             [
-              -122.382167513,
-              37.759884856
+              -122.382173858,
+              37.760407108
             ],
             [
-              -122.382165952,
-              37.759886006
+              -122.382174805,
+              37.760409572
             ],
             [
-              -122.382164366,
-              37.759887091
+              -122.382175779,
+              37.760412031
             ],
             [
-              -122.382163552,
-              37.759887774
+              -122.382176778,
+              37.760414483
             ],
             [
-              -122.382162686,
-              37.759888412
+              -122.382177804,
+              37.760416928
             ],
             [
-              -122.382161244,
-              37.75988971
+              -122.382178855,
+              37.760419366
             ],
             [
-              -122.382159774,
-              37.759890944
+              -122.382179932,
+              37.760421798
             ],
             [
-              -122.382159028,
-              37.759891706
+              -122.382181034,
+              37.76042422
             ],
             [
-              -122.382158232,
-              37.759892423
+              -122.382182162,
+              37.760426637
             ],
             [
-              -122.382156939,
-              37.759893841
+              -122.382183315,
+              37.760429046
             ],
             [
-              -122.382155581,
-              37.759895228
+              -122.382184494,
+              37.760431447
             ],
             [
-              -122.382154905,
-              37.759896071
+              -122.382185698,
+              37.76043384
             ],
             [
-              -122.382154192,
-              37.759896852
+              -122.382186928,
+              37.760436225
             ],
             [
-              -122.382153045,
-              37.759898388
+              -122.382188182,
+              37.760438602
             ],
             [
-              -122.382151829,
-              37.759899903
+              -122.382189461,
+              37.76044097
             ],
             [
-              -122.382151245,
-              37.759900798
+              -122.382190765,
+              37.76044333
             ],
             [
-              -122.382150605,
-              37.759901655
+              -122.382192095,
+              37.760445681
             ],
             [
-              -122.382149604,
-              37.759903313
+              -122.382193448,
+              37.760448023
             ],
             [
-              -122.382148553,
-              37.759904924
+              -122.382194827,
+              37.760450356
             ],
             [
-              -122.38214806,
-              37.75990587
+              -122.382196231,
+              37.76045268
             ],
             [
-              -122.382147507,
-              37.759906787
+              -122.382197658,
+              37.760454994
             ],
             [
-              -122.382146674,
-              37.759908533
+              -122.382199109,
+              37.760457299
             ],
             [
-              -122.382145785,
-              37.759910241
+              -122.382200587,
+              37.760459594
             ],
             [
-              -122.382145388,
-              37.759911229
+              -122.382202087,
+              37.760461879
             ],
             [
-              -122.382144926,
-              37.759912198
+              -122.382203611,
+              37.760464154
             ],
             [
-              -122.38214427,
-              37.759914013
+              -122.38220516,
+              37.760466419
             ],
             [
-              -122.382143551,
-              37.759915804
+              -122.382206732,
+              37.760468673
             ],
             [
-              -122.38214325,
-              37.759916836
+              -122.382208328,
+              37.760470917
             ],
             [
-              -122.382142889,
-              37.759917836
+              -122.382209948,
+              37.760473151
             ],
             [
-              -122.382142414,
-              37.759919707
+              -122.382211591,
+              37.760475373
             ],
             [
-              -122.382141874,
-              37.759921559
+              -122.382213258,
+              37.760477584
             ],
             [
-              -122.382141678,
-              37.759922602
+              -122.382214948,
+              37.760479785
             ],
             [
-              -122.382141413,
-              37.759923646
+              -122.382216661,
+              37.760481973
             ],
             [
-              -122.382141123,
-              37.759925559
+              -122.382218397,
+              37.760484151
             ],
             [
-              -122.382140768,
-              37.759927451
+              -122.382220156,
+              37.760486316
             ],
             [
-              -122.382140674,
-              37.759928523
+              -122.382221938,
+              37.760488471
             ],
             [
-              -122.382140515,
-              37.759929573
+              -122.382223742,
+              37.760490613
             ],
             [
-              -122.382140415,
-              37.759931484
+              -122.382225569,
+              37.760492743
             ],
             [
-              -122.382140245,
-              37.759933422
+              -122.382227418,
+              37.76049486
             ],
             [
-              -122.382140257,
-              37.759934495
+              -122.38222929,
+              37.760496966
             ],
             [
-              -122.382140201,
-              37.759935559
+              -122.382231185,
+              37.760499059
             ],
             [
-              -122.38214029,
-              37.759937493
+              -122.3822331,
+              37.760501139
             ],
             [
-              -122.382140311,
-              37.759939417
+              -122.382235038,
+              37.760503206
             ],
             [
-              -122.382140427,
-              37.759940475
+              -122.382236997,
+              37.76050526
             ],
             [
-              -122.382140476,
-              37.759941547
+              -122.382238979,
+              37.760507302
             ],
             [
-              -122.382190028,
-              37.760461846
+              -122.382240981,
+              37.76050933
             ],
             [
-              -122.382190945,
-              37.760468064
+              -122.382243005,
+              37.760511345
             ],
             [
-              -122.382192496,
-              37.760474154
+              -122.38224505,
+              37.760513345
             ],
             [
-              -122.382194664,
-              37.760480053
+              -122.382247117,
+              37.760515333
             ],
             [
-              -122.382197427,
-              37.760485698
+              -122.382249203,
+              37.760517307
             ],
             [
-              -122.382200756,
-              37.760491029
+              -122.382251311,
+              37.760519266
             ],
             [
-              -122.382204614,
-              37.76049599
+              -122.38225344,
+              37.760521212
             ],
             [
-              -122.382208962,
-              37.760500528
+              -122.382255589,
+              37.760523144
             ],
             [
-              -122.382213754,
-              37.760504595
+              -122.382257758,
+              37.760525061
             ],
             [
-              -122.382219951,
-              37.760509329
+              -122.382259947,
+              37.760526964
             ],
             [
-              -122.3822273,
-              37.7606094
+              -122.382262156,
+              37.760528852
             ],
             [
-              -122.3826694,
-              37.7610283
+              -122.382264386,
+              37.760530725
             ],
             [
-              -122.3824803,
-              37.7609595
+              -122.382266635,
+              37.760532583
             ],
             [
-              -122.3822375,
-              37.7611256
+              -122.382268903,
+              37.760534426
             ],
             [
-              -122.3820351,
-              37.7608051
+              -122.382271191,
+              37.760536254
             ],
             [
-              -122.3819651,
-              37.7598623
+              -122.382273498,
+              37.760538067
             ],
             [
-              -122.3814333,
-              37.7598717
+              -122.382275825,
+              37.760539864
             ],
             [
-              -122.3814286,
-              37.7598011
+              -122.38260268,
+              37.760790327
             ],
             [
-              -122.3815416,
-              37.7597742
+              -122.382603388,
+              37.760790854
             ],
             [
-              -122.3814939,
-              37.7595284
+              -122.382604115,
+              37.760791366
             ],
             [
-              -122.3813969,
-              37.7594828
+              -122.382604859,
+              37.76079186
             ],
             [
-              -122.3815073,
-              37.7594164
+              -122.38260562,
+              37.760792338
             ],
             [
-              -122.381496419,
-              37.759303294
+              -122.382606398,
+              37.7607928
             ],
             [
-              -122.3814467,
-              37.759305
+              -122.382607191,
+              37.760793243
             ],
             [
-              -122.381446876,
-              37.758518999
+              -122.382608001,
+              37.760793669
             ],
             [
-              -122.3814322,
-              37.7585198
+              -122.382608825,
+              37.760794077
             ],
             [
-              -122.3813091,
-              37.7584308
+              -122.382609663,
+              37.760794465
             ],
             [
-              -122.3814469,
-              37.7584102
+              -122.382610514,
+              37.760794836
             ],
             [
-              -122.38151,
-              37.7582883
+              -122.382611378,
+              37.760795187
             ],
             [
-              -122.3818834,
-              37.7582679
+              -122.382612255,
+              37.760795519
             ],
             [
-              -122.381865839,
-              37.758307627
+              -122.382613143,
+              37.760795831
+            ],
+            [
+              -122.382614041,
+              37.760796123
+            ],
+            [
+              -122.382614948,
+              37.760796395
+            ],
+            [
+              -122.382615866,
+              37.760796646
+            ],
+            [
+              -122.382616793,
+              37.760796878
+            ],
+            [
+              -122.382617727,
+              37.760797088
+            ],
+            [
+              -122.382618668,
+              37.760797278
+            ],
+            [
+              -122.382619614,
+              37.760797446
+            ],
+            [
+              -122.382620567,
+              37.760797594
+            ],
+            [
+              -122.382621525,
+              37.76079772
+            ],
+            [
+              -122.382622487,
+              37.760797825
+            ],
+            [
+              -122.382623451,
+              37.760797908
+            ],
+            [
+              -122.382624419,
+              37.76079797
+            ],
+            [
+              -122.38262539,
+              37.760798009
+            ],
+            [
+              -122.382626359,
+              37.760798028
+            ],
+            [
+              -122.38262733,
+              37.760798025
+            ],
+            [
+              -122.382628301,
+              37.760798
+            ],
+            [
+              -122.38262927,
+              37.760797954
+            ],
+            [
+              -122.382704889,
+              37.76079349
+            ],
+            [
+              -122.382708993,
+              37.76083731
+            ],
+            [
+              -122.382522594,
+              37.760848315
+            ],
+            [
+              -122.382430119,
+              37.76074866
+            ],
+            [
+              -122.382155754,
+              37.760909128
+            ],
+            [
+              -122.382073056,
+              37.760881719
+            ],
+            [
+              -122.381993535,
+              37.760778683
+            ],
+            [
+              -122.381959222,
+              37.760721693
+            ],
+            [
+              -122.381956185,
+              37.760639338
+            ],
+            [
+              -122.381935551,
+              37.760610741
+            ],
+            [
+              -122.381953578,
+              37.76052125
+            ],
+            [
+              -122.381927426,
+              37.760458692
+            ],
+            [
+              -122.381921879,
+              37.760324194
+            ],
+            [
+              -122.381896007,
+              37.760267373
+            ],
+            [
+              -122.381865349,
+              37.759957991
+            ],
+            [
+              -122.381827414,
+              37.759912058
+            ],
+            [
+              -122.381815973,
+              37.759805336
+            ],
+            [
+              -122.381855935,
+              37.759729299
+            ],
+            [
+              -122.381844167,
+              37.759683556
+            ],
+            [
+              -122.381819061,
+              37.759668939
+            ],
+            [
+              -122.381807993,
+              37.759620293
+            ],
+            [
+              -122.381606707,
+              37.759632129
+            ],
+            [
+              -122.381256026,
+              37.759652749
+            ],
+            [
+              -122.381249241,
+              37.759581548
+            ],
+            [
+              -122.381392407,
+              37.759573114
+            ],
+            [
+              -122.381383138,
+              37.759514528
+            ],
+            [
+              -122.381383278,
+              37.759421152
+            ],
+            [
+              -122.381346723,
+              37.759358928
+            ],
+            [
+              -122.381345014,
+              37.759301272
+            ],
+            [
+              -122.38122411,
+              37.759306351
+            ],
+            [
+              -122.381218149,
+              37.759235102
+            ],
+            [
+              -122.38135784,
+              37.759226634
+            ],
+            [
+              -122.3813452,
+              37.759110416
+            ],
+            [
+              -122.381342366,
+              37.759084354
+            ],
+            [
+              -122.381305357,
+              37.758955846
+            ],
+            [
+              -122.381191415,
+              37.758961366
+            ],
+            [
+              -122.381184114,
+              37.758890196
+            ],
+            [
+              -122.3812962,
+              37.758883279
+            ],
+            [
+              -122.381289341,
+              37.758825864
+            ],
+            [
+              -122.381294628,
+              37.758754582
+            ],
+            [
+              -122.381278859,
+              37.758712462
+            ],
+            [
+              -122.381264682,
+              37.758611472
+            ],
+            [
+              -122.381159465,
+              37.758617653
+            ],
+            [
+              -122.381152631,
+              37.758545078
+            ],
+            [
+              -122.381275105,
+              37.758537953
+            ],
+            [
+              -122.3812546,
+              37.758444613
+            ],
+            [
+              -122.381297458,
+              37.758375653
+            ],
+            [
+              -122.38127498,
+              37.758306514
+            ],
+            [
+              -122.381263304,
+              37.758293203
+            ],
+            [
+              -122.381239395,
+              37.758265948
+            ],
+            [
+              -122.381122016,
+              37.758271817
             ]
           ]
         ]

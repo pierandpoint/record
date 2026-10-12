@@ -44,15 +44,15 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- RELOCATED 2026-09-16 from an incorrect west-lot placement (logged, with the rest of this shape's history, in its data file in the public data repository, https://github.com/pierandpoint/record) to Figure 6.4.2's own labeled '2' Historic Building box, in the same east-side node as Buildings 12 and 21. Traced automatically from the figure's legend color, not hand-verified vertex-by-vertex; treat vertex positions as accurate to roughly 5-15m, consistent with this site's other diagram-traced parcels. The close match (85%) between this trace's area and Warehouse No. 2's documented 236ft x 76ft footprint is a good independent sanity check, but this is still a simplified rectangle, not a surveyed building outline.",
-    "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-    "why_no_real_parcel": "Not matched to a specific Assessor lot. DataSF's Assessor layer shows the Pier 70 28-acre site re-mapped into many active P70-MU lots in blocks 4052 and 4110-4117 (mostly added 2019-02-07), so the earlier statement that it has not been subdivided is withdrawn; which lot corresponds to this block has not been checked against the recorded final map, so this record uses hand-traced approximate geometry instead.",
+    "accuracy_caveat": "The outline is Assessor lot 4114009, so its edges are recorded lot lines, not a trace. The lot was assigned by the owner from the plan diagram and the satellite imagery (the lot lies beside Parcel D and Building 12, where the D4D's Historic Building box labelled 2 is drawn); no document read names it. The lot is the legal boundary, not the building's footprint. Building 2 (Warehouse No. 2) is an existing building (the D4D draws it as a Historic Building).",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4114009 (recorded 2020-10-23; mapped 2021-07-07; active); cross-checked against Pier 70 Design for Development Figure 6.4.2 - Building Height Maximum (p.155).",
+    "why_no_real_parcel": "No document names the Assessor lot of Building 2. Lot 4114009 (active) was assigned to it by the owner from the plan diagram, so its outline is that lot.",
     "regulatory_context": "Officially 'Warehouse No. 2' per the D4D (Section 6.6.1), a historic industrial shop structure, footprint 236 ft x 76 ft. Its use is not settled: the D4D treats it as a flexible parcel (Figure 2.1.1 stripes it Commercial-Office/Residential; the land-use scenarios in Figures 1.5.5-1.5.7 show it Residential in the Mid-Point baseline and Maximum Residential and Commercial-Office in Maximum Office), a 2021 development-agreement filing summarised about 120 dwelling units (SF YIMBY), and Brookfield's leasing page (pier70sf.com/leasing) shows 'creative office'. The NRHP gross area is 98,804 sq ft; a ~100,000 RSF brochure figure and a '~50,000 GSF, Arts/Maker' description formerly recorded here are uncited and have been dropped. No source found confirms whether rehabilitation has started; absent from the Port's own June 2025 progress update."
    }
   },
   "centroid": {
-   "lon": -122.384688,
-   "lat": 37.759568
+   "lon": -122.38462,
+   "lat": 37.759307
   },
   "facts": [
    {
@@ -343,6 +343,35 @@
     "date": "2026-10-10",
     "kind": "correction",
     "kind_label": "Correction",
+    "text": "Pier 70 Building 2 now uses real Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 4114009",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 4114009"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_block2",
+     "slug": "pier-70-building-2-warehouse-no-2",
+     "name": "Pier 70 Building 2 (Warehouse No. 2)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-2-warehouse-no-2/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-2-warehouse-no-2.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-10",
+    "kind": "correction",
+    "kind_label": "Correction",
     "text": "Pier 70 Building 2 was trimmed where it overlapped a neighbouring Assessor lot.",
     "source": "DataSF Assessor parcels (acdm-wktn), lots 4114008, 4114004",
     "sources": [
@@ -543,7 +572,7 @@
     "overview": true
    }
   ],
-  "notes": "Approximate polygon for a real, D4D-adopted parcel -- see its accuracy caveat.",
+  "notes": "Building 2's outline is Assessor lot 4114009 (see the accuracy note).",
   "has_record_file": true,
   "last_verified": "2026-09-18",
   "tenants": [],
@@ -552,40 +581,60 @@
    "coordinates": [
     [
      [
-      -122.3845694,
-      37.7592119
+      -122.384736841,
+      37.759034565
      ],
      [
-      -122.3847977,
-      37.759192
+      -122.384737869,
+      37.75904552
      ],
      [
-      -122.3848401,
-      37.7598247
+      -122.38474603,
+      37.759132572
      ],
      [
-      -122.3846116,
-      37.7598418
-     ],
-     [
-      -122.384603435,
-      37.759719918
-     ],
-     [
-      -122.384800007,
-      37.759708321
+      -122.384772345,
+      37.759413256
      ],
      [
       -122.384798659,
       37.759693941
      ],
      [
-      -122.38460247,
-      37.759705516
+      -122.384520372,
+      37.75971036
      ],
      [
-      -122.3845694,
-      37.7592119
+      -122.384516475,
+      37.75966873
+     ],
+     [
+      -122.384500952,
+      37.759669646
+     ],
+     [
+      -122.384473675,
+      37.759378238
+     ],
+     [
+      -122.384489198,
+      37.759377322
+     ],
+     [
+      -122.384458652,
+      37.759050978
+     ],
+     [
+      -122.384458524,
+      37.759049609
+     ],
+     [
+      -122.384736714,
+      37.759033196
+     ],
+     [
+      -122.384736841,
+      37.759034565
      ]
     ]
    ]

@@ -41,15 +41,15 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- no vertical construction is reported on this block (Port Item 11A, Aug 7, 2026: construction of Phase 1 vertical projects and parks has not moved forward, and the developer has not exercised an option on any Phase 1 option parcel). It has not been matched to a specific Assessor lot: DataSF's Assessor layer shows the 28-acre site re-mapped into many active P70-MU lots (blocks 4052 and 4110-4117, mostly added 2019-02-07, most with no street address) and Port Item 12B (Feb 2020) gives Parcel E2 as Block 4116 Lot 008, so which lot, if any, corresponds to this block has not been checked against the recorded final map. Redone 2026-09-14 with a corrected, shear-free fit of the plan figure to the map -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects this fit's 1-8m residual error, not a deliberate encroachment. Street-facing edge re-clipped 2026-09-17 against official curb-referenced street data. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
-    "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
-    "why_no_real_parcel": "Not matched to a specific Assessor lot. DataSF's Assessor layer shows the Pier 70 28-acre site re-mapped into many active P70-MU lots in blocks 4052 and 4110-4117 (mostly added 2019-02-07), so the earlier statement that it has not been subdivided is withdrawn; which lot corresponds to this block has not been checked against the recorded final map, so this record uses hand-traced approximate geometry instead.",
+    "accuracy_caveat": "The outline is Assessor lot 4114007, so its edges are recorded lot lines, not a trace. The lot was assigned by the owner from the plan diagram and the satellite imagery (the lot lies west of Maryland St beside Building 2, where the D4D draws D); no document read names it. The D4D draws D as an L-shaped block; the lot is a plain rectangle, so the outline is not that L. A building may sit back from the lot lines. No vertical construction is reported on this block (Port Item 11A, Aug 7, 2026: construction of Phase 1 vertical projects and parks has not moved forward, and the developer has not exercised an option on any Phase 1 option parcel).",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4114007 (recorded 2019-02-07; mapped 2019-03-14; active); cross-checked against Pier 70 Design for Development Figure 6.4.2 - Building Height Maximum (p.155).",
+    "why_no_real_parcel": "No document names the Assessor lot of Parcel D. Lot 4114007 (active) was assigned to it by the owner from the plan diagram, so its outline is that lot.",
     "regulatory_context": "Residential (studio-3BR over 7 levels) + ground-floor retail + townhouses along 21st St, designed by Stanley Saitowitz/Natoma Architects, per the architect's own project page (saitowitz.com/pier-70-parcel-d): 'loft town houses along 21st street. Above are studio, one, two and three bedroom units stacked on seven levels', with a retail space along the grove, Market Square and Maryland Street. A weak secondary source implied a ~2020 completion, which no primary source supports: Port Item 11A (memo dated Aug 7, 2026) says construction of Phase 1 vertical projects has not moved forward and that no Phase 1 option parcel has been exercised. The Real Deal (Jul 16, 2026) reports Brookfield's development VP saying additional density would let the company 'break ground in 2027 on its first market-rate apartment building' (350 units, parcel not named), a conditional plan not specific to Parcel D. Treat as NOT yet built."
    }
   },
   "centroid": {
-   "lon": -122.384219,
-   "lat": 37.75965
+   "lon": -122.38414,
+   "lat": 37.759495
   },
   "facts": [
    {
@@ -808,6 +808,35 @@
     "date": "2026-10-10",
     "kind": "correction",
     "kind_label": "Correction",
+    "text": "Pier 70 Parcel D now uses real Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 4114007",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 4114007"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_d",
+     "slug": "pier-70-parcel-d",
+     "name": "Pier 70 Parcel D",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-parcel-d/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-parcel-d.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-10",
+    "kind": "correction",
+    "kind_label": "Correction",
     "text": "Pier 70 Parcel D was trimmed where it overlapped a neighbouring Assessor lot.",
     "source": "DataSF Assessor parcels (acdm-wktn), lots 4114008, 4114004",
     "sources": [
@@ -1060,7 +1089,7 @@
     "date": "2023-04-17"
    }
   ],
-  "notes": "Approximate polygon for a real, D4D-adopted parcel -- see the accuracy note for this shape. Status 'planned' as of Port Item 11A (memo dated Aug 7, 2026), which says construction of Phase 1 vertical projects has not moved forward.",
+  "notes": "Parcel D of the Pier 70 Design for Development, shown as Assessor lot 4114007 (see the accuracy note). Status 'planned' as of Port Item 11A (memo dated Aug 7, 2026), which says construction of Phase 1 vertical projects has not moved forward.",
   "has_record_file": true,
   "last_verified": "2026-09-20",
   "tenants": [],
@@ -1069,40 +1098,24 @@
    "coordinates": [
     [
      [
-      -122.3841496,
-      37.75949
-     ],
-     [
-      -122.3841672,
-      37.7597015
-     ],
-     [
-      -122.384381129,
-      37.759682871
+      -122.384346705,
+      37.759315092
      ],
      [
       -122.384385798,
       37.759732758
      ],
      [
-      -122.384450876,
-      37.759728919
+      -122.383830392,
+      37.759765524
      ],
      [
-      -122.384451584,
-      37.759739458
+      -122.383791301,
+      37.759347858
      ],
      [
-      -122.383928342,
-      37.759770876
-     ],
-     [
-      -122.3839109,
-      37.7595108
-     ],
-     [
-      -122.3841496,
-      37.75949
+      -122.384346705,
+      37.759315092
      ]
     ]
    ]
