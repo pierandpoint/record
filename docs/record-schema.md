@@ -55,6 +55,26 @@ doesn't exist in `status.csv` or `approximate_projects.csv` fails validation.
 }
 ```
 
+## `planned_change` (optional)
+
+For a record whose status is `existing` and whose own source names a change
+planned for it:
+
+```json
+"planned_change": {"text": "Adaptive reuse of Station A as part of the Power Station project",
+                   "sources": ["src-example"]}
+```
+
+`text` is one short, reader-facing phrase (at most 160 characters) saying what
+is planned, not a date or a status; `sources` are source ids from the record's
+own `sources`, and the validator requires at least one. Where it is set, the
+status label reads "Existing · change planned" (record page, record lists and
+the API's `status_label`), and the record page's "At a glance" box adds a
+"Planned change" row with the phrase and its citation. It is ignored for any
+other status. Set it only where a source read names the change; a proposal a
+source calls only a possibility does not qualify. `status` itself stays
+`existing`, so maps, counts and colours are unchanged.
+
 ## Rules the validator enforces
 
 - `record_id` matches the filename and exists in the manifest tables.

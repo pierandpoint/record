@@ -41,7 +41,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "HIGH CONFIDENCE -- real, community-surveyed OSM polygon (matches SF Rec & Park's own facility listing). Other OSM ways (579664205 further east, and 27369705) may cover parts of this same park; they are not cited and had not been checked as of September 2026; this feature uses the single most detailed, currently-tagged way covering the park's main extent along Mission Creek's south bank. A later revision could merge the full multi-segment shoreline extent. Updated 2026-09-20: now a MultiPolygon that also includes P1, P2 and P8's geometry (P1 a separate segment further along the same north/west bank; P2/P8 real scraps of land on the creek's opposite/south-east bank, not contiguous with this record's original OSM shape). Each sub-piece keeps its own sourcing/confidence as documented in its own original record (P1, P2, P8) -- this union does not upgrade their confidence to this record's own 'HIGH CONFIDENCE, real OSM' rating. The owner reads lot 3810006 (16,093 m2, active, Channel St 202) as covering both P1 and the already built Huffaker Park part of P2, and lot 8710002 (16,398 m2, active, recorded 1999-09-21) as covering the part of P2 not yet constructed and P5 (which has no shape of its own on this map). Lot 3810006 overlaps this record by 13,647 m2 and lot 8710002 by 7,854 m2; the shape here (an OpenStreetMap park outline unioned with P1, P2 and P8) is kept.",
+    "accuracy_caveat": "HIGH CONFIDENCE -- real, community-surveyed OSM polygon (matches SF Rec & Park's own facility listing). Other OSM ways (579664205 further east, and 27369705) may cover parts of this same park; they are not cited and had not been checked as of September 2026; this feature uses the single most detailed, currently-tagged way covering the park's main extent along Mission Creek's south bank. A later revision could merge the full multi-segment shoreline extent. Updated 2026-09-20: now a MultiPolygon that also includes P1, P2 and P8's geometry (P1 a separate segment further along the same north/west bank; P2/P8 real scraps of land on the creek's opposite/south-east bank, not contiguous with this record's original OSM shape). Each sub-piece keeps its own sourcing/confidence as documented in its own original record (P1, P2, P8) -- this union does not upgrade their confidence to this record's own 'HIGH CONFIDENCE, real OSM' rating. Pier & Point reads lot 3810006 (16,093 m2, active, Channel St 202) as covering both P1 and the already built Huffaker Park part of P2, and lot 8710002 (16,398 m2, active, recorded 1999-09-21) as covering the part of P2 not yet constructed and P5 (which has no shape of its own on this map). Lot 3810006 overlaps this record by 13,647 m2 and lot 8710002 by 7,854 m2; the shape here (an OpenStreetMap park outline unioned with P1, P2 and P8) is kept.",
     "digitized_from": "OpenStreetMap (way 56656116, leisure=park, sfrecpark.org facility page)"
    }
   },
@@ -177,6 +177,31 @@
     ],
     "category": "coverage",
     "category_label": "Coverage",
+    "record": {
+     "id": "mission_bay_creek_park",
+     "slug": "mission-creek-park",
+     "name": "Mission Creek Park",
+     "permalink": "https://pierandpoint.org/parcels/mission-creek-park/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-creek-park.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-11",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The record's text says Pier & Point, not 'the owner', where it names who read or chose the Assessor lots.",
+    "source": "",
+    "sources": [],
+    "category": "correction",
+    "category_label": "Correction",
     "record": {
      "id": "mission_bay_creek_park",
      "slug": "mission-creek-park",

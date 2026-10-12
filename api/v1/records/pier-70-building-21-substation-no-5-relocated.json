@@ -23,7 +23,7 @@
    "url": "https://pierandpoint.org/sites/pier-70/"
   },
   "status": "existing",
-  "status_label": "Existing",
+  "status_label": "Existing · change planned",
   "use": "mixed",
   "relation": "tracked",
   "adjacent_to": null,
@@ -43,7 +43,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL, surveyed building footprint (DataSF Building Footprints) as of 2026-09-17 -- high confidence in the outline itself and its match to Building 21: position rests on satellite imagery and the D4D's building figures (the NRHP nomination places Building 21 'just west of the Noonan Building'; the Port's 'fronting Slipways Commons' wording describes its planned position after a future relocation, not where it stands now) and its combined size (734.96 sq m) is within 4.4% of the 101ft x 75ft (~703.7 sq m) footprint given in D4D Figure 6.5.4. The match rests on position, size, and satellite corroboration, not an explicit building-number tag in the footprint dataset itself (no such attribute exists there). A small 49 sq m footprint ~9m away was not included. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record). Superseded history: STATUS CORRECTED 2026-09-13 -- this building's rehabilitation has not started as of the most recent primary sources found (see regulatory_context). The owner reads Assessor lot 4052010 (1,215 m2, active) as the lot on which the D4D's Building 21 box, the planned relocated position, falls; this surveyed footprint (734 m2) lies instead 587 m2 inside lot 4052009, which is assigned to Parcel E1, and 147 m2 inside lot 4052007. No document read names these lots, so the drawing from the surveyed footprint is kept.",
+    "accuracy_caveat": "REAL, surveyed building footprint (DataSF Building Footprints) as of 2026-09-17 -- high confidence in the outline itself and its match to Building 21: position rests on satellite imagery and the D4D's building figures (the NRHP nomination places Building 21 'just west of the Noonan Building'; the Port's 'fronting Slipways Commons' wording describes its planned position after a future relocation, not where it stands now) and its combined size (734.96 sq m) is within 4.4% of the 101ft x 75ft (~703.7 sq m) footprint given in D4D Figure 6.5.4. The match rests on position, size, and satellite corroboration, not an explicit building-number tag in the footprint dataset itself (no such attribute exists there). A small 49 sq m footprint ~9m away was not included. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record). Superseded history: STATUS CORRECTED 2026-09-13 -- this building's rehabilitation has not started as of the most recent primary sources found (see regulatory_context). Pier & Point reads Assessor lot 4052010 (1,215 m2, active) as the lot on which the D4D's Building 21 box, the planned relocated position, falls; this surveyed footprint (734 m2) lies instead 587 m2 inside lot 4052009, which is assigned to Parcel E1, and 147 m2 inside lot 4052007. No document read names these lots, so the drawing from the surveyed footprint is kept.",
     "digitized_from": "DataSF Building Footprints dataset (real, surveyed building outlines; not tied to an Assessor parcel), cross-confirmed against ESRI World Imagery satellite tiles. This replaced, on 2026-09-17, a long chain of diagram- and text-based approximations (their sources are kept below for history). How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record). Originally three converging real-world sources: (1) 2011 Port RFI \"Pier 70 Preferred Master Plan\" map (sfport.com/sites/default/files/FileCenter/Documents/939-Pier70_RFI_3-2-11_web.pdf, PDF p.11), a scaled map with real street labels (Illinois St, 20th St) showing Building 21 immediately adjacent to Building 12 near the historic core, annotated \"BUILDING 21 PROPOSED TO BE RELOCATED\"; (2) Aug 3 2017 Port Commission memo (sfport.com/sites/default/files/Commission/Item%2011A%20Pier%2070%20Final.pdf, Exhibit F p.68): \"Building 21 (Substation No. 5)... would be relocated approximately 75 feet to the southeast, and in its new location it would front Slipways Commons... sits directly next to the proposed new waterfront arts facility\" (future tense: a planned relocation as part of the rehabilitation); (3) D4D Figure 3.6.1 \"Illustrative Slipways Commons Plan\" (p.56/PDF p.72), a scaled plan with a real 0-50-100ft bar and \"MARYLAND ST\" label, captioned \"the historic node of Buildings 2, 12, and 21.\"",
     "why_no_real_parcel": "This structure has no street address in the Assessor parcel data and no distinct lot was identified for it: DataSF's Building Footprints carry the legacy lot id mblr SF4052001 for it and many other structures across central Pier 70, but blklot 4052001 was retired on 2018-10-02 (DataSF Assessor parcels, acdm-wktn), and which current lot holds Building 21 was not established from a cited source. This feature therefore uses the real building footprint instead, matched individually. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
     "regulatory_context": "Building 21, originally Substation No. 5, is planned to be relocated approximately 75 feet to the southeast as part of its rehabilitation (Port Item 9B, Sept 2017: \"would be relocated\"; no source records that the move has happened), and is one of three historic structures (with Buildings 2 and 12) the Pier 70 Design for Development commits to rehabilitating per the Secretary of the Interior's Standards (Pier 70 D4D S6.6.1). CORRECTED 2026-09-13: an earlier version of this row marked it \"complete,\" inferred (not directly cited) from Building 21 being grouped in the D4D's rehabilitation commitment alongside Buildings 2 and 12. Follow-up research found the Port's own 28-acre site page (sfport.com/projects-programs/pier-70-28-acre-site) describes Building 21's rehabilitation as still to come -- the page shows a rendering, not a photo, captioned \"Rendering of Pier 70 Building 21,\" under a \"Rehabilitation of three historic buildings\" heading, implying a future vision rather than a completed project. This is corroborated negatively by the Port's own June 2025 project-update deck (sfport.com/sites/default/files/2025-06/Pier%2070%20Update%20-%20June%202025%20v3.pdf), which shows Building 15's relocation and several Building 12 milestones but never mentions Building 21. Status corrected from complete to existing -- a standing historic structure, not yet rehabbed, with no confirmed construction timeline."
@@ -436,6 +436,56 @@
       "title": "DataSF Assessor parcels (acdm-wktn), lots 4052009, 4052010, 4052007"
      }
     ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "building21_substation",
+     "slug": "pier-70-building-21-substation-no-5-relocated",
+     "name": "Pier 70 Building 21 (Substation No. 5, relocated)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-21-substation-no-5-relocated/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-21-substation-no-5-relocated.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-11",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "The status label now reads 'Existing · change planned' because a source names a planned change.",
+    "source": "",
+    "sources": [],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "building21_substation",
+     "slug": "pier-70-building-21-substation-no-5-relocated",
+     "name": "Pier 70 Building 21 (Substation No. 5, relocated)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-21-substation-no-5-relocated/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-21-substation-no-5-relocated.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-11",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The record's text says Pier & Point, not 'the owner', where it names who read or chose the Assessor lots.",
+    "source": "",
+    "sources": [],
     "category": "correction",
     "category_label": "Correction",
     "record": {

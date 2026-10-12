@@ -31,12 +31,13 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "UCSF's Wayne and Gladys Valley Center for Vision at 490 Illinois Street, a 347,500-sq-ft eye-care facility in three buildings (a 12-story tower with a 5-story south wing and a 3-story north wing) that SF YIMBY reported open on November 27, 2020, at a reported cost of about $237 million (SmithGroup architect). It stands on OCII plan block 33, between Third St and Illinois St: the City's address point for 490 Illinois St falls inside this outline, and UCSF's own 2025 campus map labels block 33 'Valley Center for Vision'. Its footprint here is approximate (see the shape's accuracy caveat).",
+  "summary": "UCSF's Wayne and Gladys Valley Center for Vision at 490 Illinois Street, a 347,500-sq-ft eye-care facility in three buildings (a 12-story tower with a 5-story south wing and a 3-story north wing) that SF YIMBY reported open on November 27, 2020 (SmithGroup architect). The UC Regents approved a $237.13 million total project budget for it in January 2017: \"The total project cost of $237.13 million (including $12 million of capitalized interest incurred during construction)\"; that is a budget, not a construction cost. It stands on OCII plan block 33, between Third St and Illinois St: the City's address point for 490 Illinois St falls inside this outline, and UCSF's own 2025 campus map labels block 33 'Valley Center for Vision'. Its footprint here is approximate (see the shape's accuracy caveat).",
   "summary_sources": [
    "src-sfyimby-490illinois",
    "src-datasf-eas-490-illinois",
    "src-ucsf-cac-2025-06",
-   "src-geom-valley-west"
+   "src-geom-valley-west",
+   "src-ucregents-2017-01-item-f5"
   ],
   "shape": {
    "kind": "approximate",
@@ -86,14 +87,15 @@
   ],
   "costs": [
    {
-    "amount_usd": 237000000,
-    "what": "Construction cost, Wayne and Gladys Valley Center for Vision (490 Illinois St)",
-    "date": "2020",
-    "approximate": true,
+    "amount_usd": 237130000,
+    "what": "Total project budget for the Wayne and Gladys Valley Center for Vision (Block 33), as approved by the UC Regents; it includes $12 million of capitalized interest incurred during construction, so it is not a construction cost",
+    "date": "2017-01-26",
+    "approximate": false,
     "sources": [
-     "src-sfyimby-490illinois"
+     "src-ucregents-2017-01-item-f5",
+     "src-ucregents-2017-01-fin-minutes"
     ],
-    "kind": "construction",
+    "kind": "development",
     "scope": "record"
    }
   ],
@@ -228,6 +230,35 @@
     "sources": [
      {
       "title": "The Regents of the University of California, Minutes, January 26, 2017 (https://regents.universityofcalifornia.edu/minutes/2017/board%201.26.pdf); Finance and Capital Strategies Committee minutes, January 25, 2017 (https://regents.universityofcalifornia.edu/minutes/2017/fin1.pdf); action item F5, January 25, 2017 (https://regents.universityofcalifornia.edu/regmeet/jan17/f5.pdf)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "ucsf_valley_center_for_vision_west",
+     "slug": "ucsf-wayne-and-gladys-valley-center-for-vision",
+     "name": "UCSF Wayne and Gladys Valley Center for Vision",
+     "permalink": "https://pierandpoint.org/parcels/ucsf-wayne-and-gladys-valley-center-for-vision/",
+     "api": "https://pierandpoint.org/api/v1/records/ucsf-wayne-and-gladys-valley-center-for-vision.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-11",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Valley Center for Vision's $237 million is now shown as a total project budget, not a construction cost.",
+    "source": "UC Regents, Finance and Capital Strategies Committee action item F5, Jan 25, 2017, Financial Feasibility (https://regents.universityofcalifornia.edu/regmeet/jan17/f5.pdf)",
+    "sources": [
+     {
+      "title": "UC Regents, Finance and Capital Strategies Committee action item F5, Jan 25, 2017, Financial Feasibility (https://regents.universityofcalifornia.edu/regmeet/jan17/f5.pdf)"
      }
     ],
     "category": "correction",
@@ -433,7 +464,7 @@
   ],
   "notes": "OCII plan block 33. Between 3rd St and Illinois St, south of 16th St, across 3rd St from UCSF Medical Center at Mission Bay. Until October 10, 2026 this record was named as a separate 'west building', and the Valley Center for Vision's opening, cost and design were on the 409/499 Illinois Street record across Illinois St; they were moved here (see the changelog).",
   "has_record_file": true,
-  "last_verified": "2026-10-10",
+  "last_verified": "2026-10-11",
   "tenants": [
    {
     "slug": "caffe-central-490-illinois",

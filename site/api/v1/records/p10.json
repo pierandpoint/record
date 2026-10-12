@@ -41,7 +41,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- hand-traced from satellite imagery, not a surveyed footprint or GIS file from the project team. Deliberately not trimmed back from the street lines: this is a real roundabout center island, ringed by the circulating roadway in DataSF's street data -- trimming it against the standard street buffer would cut real, visible parts of the island, not correct a mispositioning. lot 8709003 (1400 Owens St per DataSF, MB-RA zoning, recorded 1999-09-21, active, 12,999 m2) lies under this island and its neighbours. The owner reads it as split between P10 (the roundabout island), P8 and P7 or P9 across from P8; against our drawings it overlaps P8 by 3,603 m2, P10 by 983 m2, P7 by 3,431 m2 and P9 by 136 m2. P10 has no lot of its own, so the drawing is kept.",
+    "accuracy_caveat": "APPROXIMATE -- hand-traced from satellite imagery, not a surveyed footprint or GIS file from the project team. Deliberately not trimmed back from the street lines: this is a real roundabout center island, ringed by the circulating roadway in DataSF's street data -- trimming it against the standard street buffer would cut real, visible parts of the island, not correct a mispositioning. lot 8709003 (1400 Owens St per DataSF, MB-RA zoning, recorded 1999-09-21, active, 12,999 m2) lies under this island and its neighbours. Pier & Point reads it as split between P10 (the roundabout island), P8 and P7 or P9 across from P8; against our drawings it overlaps P8 by 3,603 m2, P10 by 983 m2, P7 by 3,431 m2 and P9 by 136 m2. P10 has no lot of its own, so the drawing is kept.",
     "digitized_from": "Hand-traced from satellite imagery (Esri World Imagery), following an outline Pier & Point drew by hand on a marked-up screenshot, transferred onto the imagery by matching image features rather than re-estimated by eye -- the same technique used for P11/P11A."
    }
   },
@@ -156,6 +156,31 @@
       "title": "DataSF Assessor parcels (acdm-wktn), lot 8709003"
      }
     ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_p10_roundabout_island",
+     "slug": "p10",
+     "name": "P10",
+     "permalink": "https://pierandpoint.org/parcels/p10/",
+     "api": "https://pierandpoint.org/api/v1/records/p10.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-11",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The record's text says Pier & Point, not 'the owner', where it names who read or chose the Assessor lots.",
+    "source": "",
+    "sources": [],
     "category": "correction",
     "category_label": "Correction",
     "record": {

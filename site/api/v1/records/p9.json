@@ -40,7 +40,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- computed from real DataSF street/curb data plus a stopping line drawn by Pier & Point (not a surveyed parcel or GIS file from the project team). The north/west edges are exact real street-buffer boundary. The south edge is a line drawn by Pier & Point, not a mapped street or parcel boundary -- there appears to be bare ground between it and the buildings further south that isn't included here (an imagery observation, no document cited), since Pier & Point judged that the parcel doesn't extend that far. The P9/P7 split is a straight line, not sourced to any drawn plan boundary. SF Rec & Park's Mission Bay Future Parks Project page names P7 & P9 as future 'Active Recreation' parks (anticipated skate park, pickleball courts and a ballfield), fully funded through OCII, with construction to begin late 2028 and opening early 2030; no schematic design specific to P9 was found. lot 8709003 (1400 Owens St per DataSF, MB-RA zoning, recorded 1999-09-21, active, 12,999 m2) overlaps this drawing by only 136 m2; most of the lot lies under P7, P8 and P10. The owner reads it as split between P10 (the roundabout island), P8 and P7 or P9 across from P8; against our drawings it overlaps P8 by 3,603 m2, P10 by 983 m2, P7 by 3,431 m2 and P9 by 136 m2. P9 has no lot of its own, so the drawing is kept. the owner kept this drawing and cites the Assessor lots under P9 and its neighbour: active lot 8709002 (10,178 m2) overlaps this drawing by 2,321 m2 and lot 8709003 (12,999 m2) by 136 m2. The lot lines cross the space as diagonal bands and do not follow the park as it is on the ground, so neither is P9's own lot.",
+    "accuracy_caveat": "APPROXIMATE -- computed from real DataSF street/curb data plus a stopping line drawn by Pier & Point (not a surveyed parcel or GIS file from the project team). The north/west edges are exact real street-buffer boundary. The south edge is a line drawn by Pier & Point, not a mapped street or parcel boundary -- there appears to be bare ground between it and the buildings further south that isn't included here (an imagery observation, no document cited), since Pier & Point judged that the parcel doesn't extend that far. The P9/P7 split is a straight line, not sourced to any drawn plan boundary. SF Rec & Park's Mission Bay Future Parks Project page names P7 & P9 as future 'Active Recreation' parks (anticipated skate park, pickleball courts and a ballfield), fully funded through OCII, with construction to begin late 2028 and opening early 2030; no schematic design specific to P9 was found. lot 8709003 (1400 Owens St per DataSF, MB-RA zoning, recorded 1999-09-21, active, 12,999 m2) overlaps this drawing by only 136 m2; most of the lot lies under P7, P8 and P10. Pier & Point reads it as split between P10 (the roundabout island), P8 and P7 or P9 across from P8; against our drawings it overlaps P8 by 3,603 m2, P10 by 983 m2, P7 by 3,431 m2 and P9 by 136 m2. P9 has no lot of its own, so the drawing is kept. Pier & Point kept this drawing and cites the Assessor lots under P9 and its neighbour: active lot 8709002 (10,178 m2) overlaps this drawing by 2,321 m2 and lot 8709003 (12,999 m2) by 136 m2. The lot lines cross the space as diagonal bands and do not follow the park as it is on the ground, so neither is P9's own lot.",
     "digitized_from": "Computed from DataSF's official street centerline/curb data (a buffer around the official street lines, plus an extra generous buffer around Owens St's own centerline and around the P10 roundabout island) rather than hand-traced pixels. The west/north edge is the real Mission Bay Dr street-buffer boundary; the south edge is a line drawn by Pier & Point (marked on a screenshot of this project's own map and transferred onto it, as was done for P11/P11A with a satellite photo) placing the true stopping point well short of the two real buildings further south, not at their footprints."
    }
   },
@@ -371,6 +371,31 @@
       "title": "DataSF Assessor parcels (acdm-wktn), lots 8709002, 8709003"
      }
     ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_p9_open_space",
+     "slug": "p9",
+     "name": "P9",
+     "permalink": "https://pierandpoint.org/parcels/p9/",
+     "api": "https://pierandpoint.org/api/v1/records/p9.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-11",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The record's text says Pier & Point, not 'the owner', where it names who read or chose the Assessor lots.",
+    "source": "",
+    "sources": [],
     "category": "correction",
     "category_label": "Correction",
     "record": {
