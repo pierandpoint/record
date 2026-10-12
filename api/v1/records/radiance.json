@@ -43,13 +43,13 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against DataSF's Assessor parcel data), so no single blklot represents the whole building and it cannot be matched to a single parcel record the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same real-geometry-without-a-single-parcel pattern already used for several Pier 70 buildings (DataSF Building Footprints) and for Mission Bay's own real park polygons.",
-    "digitized_from": "OpenStreetMap (way 1258086102, name=Radiance at Mission Bay, 325 China Basin St)"
+    "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8720018 (5,405 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. The lot is condominium-mapped: 99 Assessor lots share this outline (the map lot 8720018 and 98 per-unit lots), so the outline is the building's shared lot, not any one unit. Until 2026-10-12 this record showed the surveyed building footprint (OpenStreetMap (way 1258086102, name=Radiance at Mission Bay, 325 China Basin St)); 100% of that outline lies inside the lot and it covered 83% of the lot.",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8720018 (mapped 2007-05-22; active); the earlier outline came from: OpenStreetMap (way 1258086102, name=Radiance at Mission Bay, 325 China Basin St)"
    }
   },
   "centroid": {
-   "lon": -122.387446,
-   "lat": 37.771692
+   "lon": -122.387417,
+   "lat": 37.771662
   },
   "facts": [
    {
@@ -251,6 +251,35 @@
   ],
   "changes": [
    {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Radiance now uses its Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 8720018",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 8720018"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_radiance",
+     "slug": "radiance",
+     "name": "Radiance",
+     "permalink": "https://pierandpoint.org/parcels/radiance/",
+     "api": "https://pierandpoint.org/api/v1/records/radiance.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-10-10",
     "kind": "added",
     "kind_label": "Added",
@@ -378,56 +407,36 @@
    "coordinates": [
     [
      [
-      -122.3871404,
-      37.7720441
+      -122.387782555,
+      37.771263568
      ],
      [
-      -122.3874522,
-      37.7720259
+      -122.387854521,
+      37.772016648
      ],
      [
-      -122.3877676,
-      37.7720074
+      -122.387129808,
+      37.772060284
      ],
      [
-      -122.387749,
-      37.7718095
+      -122.387124212,
+      37.772060621
      ],
      [
-      -122.3877447,
-      37.7717637
+      -122.38712265,
+      37.772044285
      ],
      [
-      -122.3877232,
-      37.7715348
+      -122.387052252,
+      37.771307541
      ],
      [
-      -122.3877192,
-      37.7714915
+      -122.387486206,
+      37.771281413
      ],
      [
-      -122.3876994,
-      37.7712805
-     ],
-     [
-      -122.3873774,
-      37.7712994
-     ],
-     [
-      -122.3870723,
-      37.7713173
-     ],
-     [
-      -122.3870926,
-      37.7715331
-     ],
-     [
-      -122.3871219,
-      37.7718465
-     ],
-     [
-      -122.3871404,
-      37.7720441
+      -122.387782555,
+      37.771263568
      ]
     ]
    ]

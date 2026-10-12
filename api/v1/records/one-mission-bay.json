@@ -39,13 +39,13 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- union of a surveyed OpenStreetMap building footprint and the boundary of blklot 8715007, a RETIRED DataSF parcel (active false; mapped 2014-02-11, dropped 2016-11-16; last Assessor roll 2017, property location 110 Channel St), not a hand trace or plan estimate -- the shape therefore includes a superseded boundary, and whether to keep it has not been decided. The per-unit condo lots were not identified in a September 2026 check (no active lot in DataSF Parcels carries mapblklot 8715007), and no single per-unit blklot represents the whole building so the building cannot be mapped from a single Assessor parcel the way a single-owner building can; blklot 8715007, a retired parcel, is the exception used here. Real-geometry-without-a-single-owner-parcel pattern already used for several Pier 70 buildings (DataSF Building Footprints) and for Mission Bay's own real park polygons.",
-    "digitized_from": "OpenStreetMap (way 563104192, name=One Mission Bay), unioned with the boundary of retired DataSF parcel blklot 8715007"
+    "accuracy_caveat": "REAL lot geometry -- the outline is the union of Assessor lots 8715208 and 8715009 (8,894 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed the union of an OpenStreetMap building footprint (way 563104192) and the boundary of retired parcel 8715007; 94% of that outline lies inside the lot and it covered 80% of the lot. Both lots are condominium-mapped: map lot 8715208 (110 and 112 Channel St) is shared by 153 Assessor lots and map lot 8715009 (1000 3rd St) by another 153; each outline is the building's shared lot, not any one unit. Retired parcels 8715007 and 8715006 had the same outlines and were dropped from the map on 2016-11-16, the day these two lots were added; no retired parcel is used now. About 6% of the earlier outline lay outside these two lots, mostly on the neighbouring promenade lot 8714002. The Luma Hotel (lot 8715008) sits between the two buildings and is a separate record.",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lots 8715208 and 8715009 (mapped 2016-11-16; active), joined into one outline; cross-checked against OpenStreetMap (way 563104192, name=One Mission Bay)"
    }
   },
   "centroid": {
-   "lon": -122.390848,
-   "lat": 37.775099
+   "lon": -122.390944,
+   "lat": 37.77492
   },
   "facts": [],
   "costs": [],
@@ -164,6 +164,35 @@
   ],
   "changes": [
    {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "One Mission Bay now uses its Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lots 8715208 and 8715009",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lots 8715208 and 8715009"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_one_mission_bay",
+     "slug": "one-mission-bay",
+     "name": "One Mission Bay",
+     "permalink": "https://pierandpoint.org/parcels/one-mission-bay/",
+     "api": "https://pierandpoint.org/api/v1/records/one-mission-bay.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-10-10",
     "kind": "added",
     "kind_label": "Added",
@@ -268,7 +297,7 @@
   "open_questions": [
    "This record was created on 2026-09-27 to host Pier & Point's own field photos. Its summary is limited to what its cited source was re-read to confirm that day; fuller details given in this record's other notes (developer, architect, unit count, year built) were left out of the summary where that source didn't state them. Not yet researched: no milestones, costs or facts.",
    "The completion year and the permit closure are two different kinds of date, not a conflict. Strada's project page (undated) says the project was completed in 2018, which is the year shown as the status change. DBI closed both new-construction permits on Nov 20, 2020, shown separately as permit closures; DBI also shows tenant-improvement permits for the 110 Channel St ground floor in 2018. The exact completion or opening month is not sourced.",
-   "DBI files both permits under block 8715, lot 004; this record's geometry joins the retired parcel 8715007, and later permits for the two buildings use lots 006 and 007."
+   "DBI files both permits under block 8715, lot 004; this record's outline is now the active map lots 8715208 and 8715009, which have the same outlines as the retired parcels 8715007 and 8715006 (dropped from the map on 2016-11-16, the day the two active lots were added), and later permits for the two buildings use lots 006 and 007."
   ],
   "sources": [
    {
@@ -325,60 +354,28 @@
       37.774664886
      ],
      [
-      -122.39166930917476,
-      37.774689392947764
+      -122.391664774,
+      37.774692975
      ],
      [
-      -122.3916905,
-      37.7747061
+      -122.39110063,
+      37.77513852
      ],
      [
-      -122.3909425,
-      37.7752982
+      -122.39091057,
+      37.775288622
      ],
      [
-      -122.390923,
-      37.7752828
+      -122.390124214,
+      37.775909647
      ],
      [
-      -122.3908282,
-      37.7753576
+      -122.390047371,
+      37.775105852
      ],
      [
-      -122.3908479,
-      37.7753731
-     ],
-     [
-      -122.3901746,
-      37.7759061
-     ],
-     [
-      -122.3901424,
-      37.7756657
-     ],
-     [
-      -122.3900866,
-      37.7751214
-     ],
-     [
-      -122.3903181,
-      37.7751066
-     ],
-     [
-      -122.3903569,
-      37.7754854
-     ],
-     [
-      -122.3906751,
-      37.775239
-     ],
-     [
-      -122.390787,
-      37.7753294
-     ],
-     [
-      -122.3908756321849,
-      37.77526075002112
+      -122.390259169,
+      37.775093095
      ],
      [
       -122.39046332,
@@ -391,6 +388,10 @@
      [
       -122.3906439,
       37.774630951
+     ],
+     [
+      -122.391520809,
+      37.774578126
      ],
      [
       -122.391586612,

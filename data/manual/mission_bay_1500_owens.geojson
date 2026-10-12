@@ -9,9 +9,9 @@
         "status": "complete",
         "use": "institutional",
         "geometry_type": "real",
-        "digitized_from": "DataSF Building Footprints (mblr SF8709018); name/address from OpenStreetMap way 84805709 (1500 Owens St)",
-        "digitization_method": "ADDED 2026-09-19 for Mission Bay's third real-buildings pass (remaining uncovered footprints inside the official Mission Bay North/South redevelopment-area boundary): 1500 Owens St, a UCSF Health outpatient medical building housing Radiology, Sports Medicine, Physical Therapy & Rehabilitation, Orthopedic Surgery Center, and Gynecology & Urogynecology clinics at Mission Bay. 2026-09-29 accuracy audit: of the clinics listed above, only Radiology (Musculoskeletal Imaging) is confirmed at 1500 Owens by the cited UCSF Health page and OSM way; Sports Medicine, Physical Therapy & Rehabilitation, Orthopedic Surgery Center and Gynecology & Urogynecology are not stated in any cited source.",
-        "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8709018), cross-referenced by position against an OpenStreetMap building/address point (way 84805709) for the name and street address; not a hand trace or plan estimate. Construction is dated by DBI permit 200611298694 (filed 2006-11-29, completed 2009-07-31) and the Assessor's year built (2009); the architect is not confirmed by any source found.",
+        "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8709018 (mapped 2010-01-12; active); the earlier outline came from: DataSF Building Footprints (mblr SF8709018); name/address from OpenStreetMap way 84805709 (1500 Owens St)",
+        "digitization_method": "ADDED 2026-09-19 for Mission Bay's third real-buildings pass (remaining uncovered footprints inside the official Mission Bay North/South redevelopment-area boundary): 1500 Owens St, a UCSF Health outpatient medical building housing Radiology, Sports Medicine, Physical Therapy & Rehabilitation, Orthopedic Surgery Center, and Gynecology & Urogynecology clinics at Mission Bay. 2026-09-29 accuracy audit: of the clinics listed above, only Radiology (Musculoskeletal Imaging) is confirmed at 1500 Owens by the cited UCSF Health page and OSM way; Sports Medicine, Physical Therapy & Rehabilitation, Orthopedic Surgery Center and Gynecology & Urogynecology are not stated in any cited source. REPLACED 2026-10-12 (shape; status and use unchanged): the owner approved building records whose outline matches an Assessor lot at 85% or better, both ways, using the lot (CLAUDE.md, 'An official parcel beats our drawing'). DataSF's Assessor layer (data/raw/parcels.geojson) has Assessor lot 8709018 (4,257 m2, active, mapped 2010-01-12); the earlier outline of 2,645 m2 and the lot overlap with IoU 0.62 (100% of the earlier outline lies inside the lot and it covers 62% of the lot). The outline is now that lot using the lots' own vertices (no simplification). geometry_type stays 'real'. Previous digitized_from: 'DataSF Building Footprints (mblr SF8709018); name/address from OpenStreetMap way 84805709 (1500 Owens St)'. Previous accuracy_caveat: 'REAL -- surveyed DataSF Building Footprints outline (mblr SF8709018), cross-referenced by position against an OpenStreetMap building/address point (way 84805709) for the name and street address; not a hand trace or plan estimate. Construction is dated by DBI permit 200611298694 (filed 2006-11-29, completed 2009-07-31) and the Assessor's year built (2009); the architect is not confirmed by any source found.'.",
+        "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8709018 (4,257 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed the surveyed building footprint (DataSF Building Footprints (mblr SF8709018)); 100% of that outline lies inside the lot and it covered 62% of the lot.",
         "notes": "Construction dated by DBI permit 200611298694 (filed 2006-11-29, completed 2009-07-31) and the Assessor's 2009 year built; architect not confirmed by any source found.",
         "source_doc_urls": [
           "https://www.ucsfhealth.org/locations/radiology-mission-bay-owens-st",
@@ -23,120 +23,400 @@
         "coordinates": [
           [
             [
-              -122.396135,
-              37.7690147
+              -122.395761297,
+              37.769266733
             ],
             [
-              -122.3959714,
-              37.7690819
+              -122.395757014,
+              37.769259836
             ],
             [
-              -122.3959737,
-              37.7690831
+              -122.395752705,
+              37.769252949
             ],
             [
-              -122.3959737,
-              37.7690832
+              -122.395748374,
+              37.769246072
             ],
             [
-              -122.3959339,
-              37.7691319
+              -122.395744016,
+              37.769239204
             ],
             [
-              -122.3959088,
-              37.7691076
+              -122.395739635,
+              37.769232346
             ],
             [
-              -122.3958068,
-              37.7691495
+              -122.395735229,
+              37.769225499
             ],
             [
-              -122.3957042,
-              37.7690149
+              -122.395730798,
+              37.769218661
             ],
             [
-              -122.3954592,
-              37.7688371
+              -122.395726342,
+              37.769211833
             ],
             [
-              -122.3954592,
-              37.768837
+              -122.395721863,
+              37.769205015
             ],
             [
-              -122.3954673,
-              37.7688315
+              -122.395717358,
+              37.769198208
             ],
             [
-              -122.3954672,
-              37.7688314
+              -122.395712831,
+              37.769191411
             ],
             [
-              -122.395452,
-              37.7688185
+              -122.395708278,
+              37.769184624
             ],
             [
-              -122.395452,
-              37.7688184
+              -122.395703701,
+              37.769177847
             ],
             [
-              -122.3954579,
-              37.7688139
+              -122.395699101,
+              37.76917108
             ],
             [
-              -122.3954394,
-              37.7687991
+              -122.395694475,
+              37.769164325
             ],
             [
-              -122.3954327,
-              37.7688044
+              -122.395689825,
+              37.769157579
             ],
             [
-              -122.3953226,
-              37.7687168
+              -122.395685151,
+              37.769150844
             ],
             [
-              -122.3953226,
-              37.7687166
+              -122.395680455,
+              37.769144119
             ],
             [
-              -122.3956105,
-              37.7684897
+              -122.395675732,
+              37.769137406
             ],
             [
-              -122.3959363,
-              37.7687459
+              -122.395670987,
+              37.769130702
             ],
             [
-              -122.3959906,
-              37.7687038
+              -122.395666217,
+              37.76912401
             ],
             [
-              -122.3960972,
-              37.7687873
+              -122.395661423,
+              37.769117328
             ],
             [
-              -122.3960955,
-              37.7687887
+              -122.395656606,
+              37.769110657
             ],
             [
-              -122.3960967,
-              37.7687897
+              -122.395651765,
+              37.769103997
             ],
             [
-              -122.3960488,
-              37.7688276
+              -122.395646899,
+              37.769097348
             ],
             [
-              -122.3961369,
-              37.7689
+              -122.395642011,
+              37.76909071
             ],
             [
-              -122.3961425,
-              37.7689046
+              -122.395637098,
+              37.769084083
             ],
             [
-              -122.396135,
-              37.7690147
+              -122.395632161,
+              37.769077467
+            ],
+            [
+              -122.395627202,
+              37.769070863
+            ],
+            [
+              -122.395622217,
+              37.769064269
+            ],
+            [
+              -122.39561721,
+              37.769057687
+            ],
+            [
+              -122.395612179,
+              37.769051116
+            ],
+            [
+              -122.395607126,
+              37.769044557
+            ],
+            [
+              -122.395602047,
+              37.769038008
+            ],
+            [
+              -122.395596947,
+              37.769031472
+            ],
+            [
+              -122.395591822,
+              37.769024946
+            ],
+            [
+              -122.395586673,
+              37.769018433
+            ],
+            [
+              -122.395581503,
+              37.769011931
+            ],
+            [
+              -122.395576308,
+              37.769005441
+            ],
+            [
+              -122.395571091,
+              37.768998962
+            ],
+            [
+              -122.39556585,
+              37.768992496
+            ],
+            [
+              -122.395560586,
+              37.768986041
+            ],
+            [
+              -122.395555299,
+              37.768979599
+            ],
+            [
+              -122.395549989,
+              37.768973167
+            ],
+            [
+              -122.395544656,
+              37.768966748
+            ],
+            [
+              -122.3955393,
+              37.768960341
+            ],
+            [
+              -122.395533921,
+              37.768953947
+            ],
+            [
+              -122.39552852,
+              37.768947564
+            ],
+            [
+              -122.395523095,
+              37.768941193
+            ],
+            [
+              -122.395517647,
+              37.768934835
+            ],
+            [
+              -122.395512178,
+              37.768928489
+            ],
+            [
+              -122.395506685,
+              37.768922156
+            ],
+            [
+              -122.39550117,
+              37.768915835
+            ],
+            [
+              -122.395495632,
+              37.768909526
+            ],
+            [
+              -122.395490071,
+              37.76890323
+            ],
+            [
+              -122.395484488,
+              37.768896946
+            ],
+            [
+              -122.395478882,
+              37.768890676
+            ],
+            [
+              -122.395473255,
+              37.768884417
+            ],
+            [
+              -122.395467604,
+              37.768878171
+            ],
+            [
+              -122.395461931,
+              37.768871939
+            ],
+            [
+              -122.395456236,
+              37.768865719
+            ],
+            [
+              -122.39545052,
+              37.768859512
+            ],
+            [
+              -122.39544478,
+              37.768853318
+            ],
+            [
+              -122.395439018,
+              37.768847136
+            ],
+            [
+              -122.395433235,
+              37.768840969
+            ],
+            [
+              -122.395427429,
+              37.768834813
+            ],
+            [
+              -122.395421601,
+              37.768828671
+            ],
+            [
+              -122.395415753,
+              37.768822542
+            ],
+            [
+              -122.39540988,
+              37.768816426
+            ],
+            [
+              -122.395403987,
+              37.768810325
+            ],
+            [
+              -122.395398072,
+              37.768804235
+            ],
+            [
+              -122.395392135,
+              37.768798159
+            ],
+            [
+              -122.395386176,
+              37.768792097
+            ],
+            [
+              -122.395380196,
+              37.768786048
+            ],
+            [
+              -122.395374194,
+              37.768780013
+            ],
+            [
+              -122.395368171,
+              37.768773991
+            ],
+            [
+              -122.395362126,
+              37.768767984
+            ],
+            [
+              -122.395356059,
+              37.768761989
+            ],
+            [
+              -122.395349971,
+              37.768756008
+            ],
+            [
+              -122.395343862,
+              37.768750041
+            ],
+            [
+              -122.39533773,
+              37.768744088
+            ],
+            [
+              -122.395331579,
+              37.768738149
+            ],
+            [
+              -122.395325405,
+              37.768732223
+            ],
+            [
+              -122.395319211,
+              37.768726311
+            ],
+            [
+              -122.395312996,
+              37.768720414
+            ],
+            [
+              -122.395306759,
+              37.768714531
+            ],
+            [
+              -122.395300502,
+              37.768708661
+            ],
+            [
+              -122.395294223,
+              37.768702806
+            ],
+            [
+              -122.395287923,
+              37.768696965
+            ],
+            [
+              -122.395281603,
+              37.768691138
+            ],
+            [
+              -122.395275261,
+              37.768685325
+            ],
+            [
+              -122.395268899,
+              37.768679527
+            ],
+            [
+              -122.395262516,
+              37.768673743
+            ],
+            [
+              -122.395256114,
+              37.768667974
+            ],
+            [
+              -122.39524969,
+              37.768662219
+            ],
+            [
+              -122.395588947,
+              37.768394237
+            ],
+            [
+              -122.396349885,
+              37.769001267
+            ],
+            [
+              -122.395761297,
+              37.769266733
             ]
           ]
         ]

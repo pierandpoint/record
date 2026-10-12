@@ -9,10 +9,10 @@
         "status": "complete",
         "use": "commercial",
         "geometry_type": "real",
-        "digitized_from": "DataSF Building Footprints (mblr SF8721011); address confirmed via DataSF Assessor parcel data (blklot 8721011) and independent commercial real-estate sources (no OSM name/address tag found on this footprint)",
-        "digitization_method": "ADDED 2026-09-19 for Mission Bay's block-by-block reconciliation pass, cross-checking OCII's own numbered Land Use Map (Dec 2019, data/manual/_reference/mission_bay_land_use_map_2019.png) against everything already tracked: 550 Terry A. Francois Blvd, a 6-story Class A office building built 2002; longtime Gap Inc./Old Navy corporate headquarters, purchased by DivcoWest from Gap in May 2022, then subleased to OpenAI in 2024 (reported as San Francisco's largest office lease that year). 2026-09-29 accuracy audit: corrected the description above. The Real Deal (2024-09-23) says the six-story building 'once served as Old Navy's headquarters' and that DivcoWest bought it from parent company Gap in 2022; REBusinessOnline (2022-05-25) says it 'recently served the headquarters of fashion retailer Old Navy'. Neither calls it the 'longtime' or the 'Gap Inc. corporate' headquarters, so read the earlier text as: a former Old Navy headquarters, owned by parent company Gap until DivcoWest bought it in 2022.",
-        "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8721011), address confirmed via DataSF Assessor parcel data (blklot 8721011) and independent commercial real-estate sources (no OSM name/address tag found on this footprint); not a hand trace or plan estimate. No OSM building/name tag found on this footprint; address and history confirmed via DataSF Assessor parcel data and news coverage instead.",
-        "notes": "No OSM building/name tag found on this footprint; address and history confirmed via DataSF Assessor parcel data and news coverage instead.",
+        "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8721011 (mapped 2001-03-20; active); the earlier outline came from: DataSF Building Footprints (mblr SF8721011); address confirmed via DataSF Assessor parcel data (blklot 8721011) and independent commercial real-estate sources (no OSM name/address tag found on this footprint)",
+        "digitization_method": "ADDED 2026-09-19 for Mission Bay's block-by-block reconciliation pass, cross-checking OCII's own numbered Land Use Map (Dec 2019, data/manual/_reference/mission_bay_land_use_map_2019.png) against everything already tracked: 550 Terry A. Francois Blvd, a 6-story Class A office building built 2002; longtime Gap Inc./Old Navy corporate headquarters, purchased by DivcoWest from Gap in May 2022, then subleased to OpenAI in 2024 (reported as San Francisco's largest office lease that year). 2026-09-29 accuracy audit: corrected the description above. The Real Deal (2024-09-23) says the six-story building 'once served as Old Navy's headquarters' and that DivcoWest bought it from parent company Gap in 2022; REBusinessOnline (2022-05-25) says it 'recently served the headquarters of fashion retailer Old Navy'. Neither calls it the 'longtime' or the 'Gap Inc. corporate' headquarters, so read the earlier text as: a former Old Navy headquarters, owned by parent company Gap until DivcoWest bought it in 2022. REPLACED 2026-10-12 (shape; status and use unchanged): the owner approved building records whose outline matches an Assessor lot at 85% or better, both ways, using the lot (CLAUDE.md, 'An official parcel beats our drawing'). DataSF's Assessor layer (data/raw/parcels.geojson) has Assessor lot 8721011 (7,486 m2, active, mapped 2001-03-20); the earlier outline of 5,216 m2 and the lot overlap with IoU 0.69 (99% of the earlier outline lies inside the lot and it covers 69% of the lot). The outline is now that lot using the lots' own vertices (no simplification). geometry_type stays 'real'. Previous digitized_from: 'DataSF Building Footprints (mblr SF8721011); address confirmed via DataSF Assessor parcel data (blklot 8721011) and independent commercial real-estate sources (no OSM name/address tag found on this footprint)'. Previous accuracy_caveat: 'REAL -- surveyed DataSF Building Footprints outline (mblr SF8721011), address confirmed via DataSF Assessor parcel data (blklot 8721011) and independent commercial real-estate sources (no OSM name/address tag found on this footprint); not a hand trace or plan estimate. No OSM building/name tag found on this footprint; address and history confirmed via DataSF Assessor parcel data and news coverage instead.'. Previous notes: 'No OSM building/name tag found on this footprint; address and history confirmed via DataSF Assessor parcel data and news coverage instead.'.",
+        "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8721011 (7,486 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed the surveyed building footprint (DataSF Building Footprints (mblr SF8721011)); 99% of that outline lies inside the lot and it covered 69% of the lot.",
+        "notes": "No OSM building/name tag found on the building's footprint; address and history confirmed via DataSF Assessor parcel data and news coverage instead.",
         "source_doc_urls": [
           "https://divcowest.com/property/550-terry-francois/",
           "https://therealdeal.com/san-francisco/2024/09/23/openai-subleases-350k-sf-building-in-sfs-mission-bay/",
@@ -24,192 +24,40 @@
         "coordinates": [
           [
             [
-              -122.3864971,
-              37.769526
+              -122.387246859,
+              37.769038733
             ],
             [
-              -122.3865629,
-              37.7695225
+              -122.387449533,
+              37.769026529
             ],
             [
-              -122.3865532,
-              37.7694208
+              -122.387521494,
+              37.76977961
             ],
             [
-              -122.3865115,
-              37.7694233
+              -122.386510013,
+              37.76984051
             ],
             [
-              -122.3865115,
-              37.7694232
+              -122.386481994,
+              37.769547246
             ],
             [
-              -122.3865039,
-              37.7693478
+              -122.386475453,
+              37.769478784
             ],
             [
-              -122.3865099,
-              37.7693472
+              -122.386438062,
+              37.769087428
             ],
             [
-              -122.3865019,
-              37.76928
+              -122.386556907,
+              37.769080274
             ],
             [
-              -122.3864709,
-              37.7692818
-            ],
-            [
-              -122.3864708,
-              37.7692816
-            ],
-            [
-              -122.3864571,
-              37.7691235
-            ],
-            [
-              -122.3866799,
-              37.7691113
-            ],
-            [
-              -122.38668,
-              37.7691114
-            ],
-            [
-              -122.386681,
-              37.7691229
-            ],
-            [
-              -122.3867427,
-              37.7691194
-            ],
-            [
-              -122.386738,
-              37.7690684
-            ],
-            [
-              -122.3874604,
-              37.7690261
-            ],
-            [
-              -122.3874604,
-              37.7690262
-            ],
-            [
-              -122.3874666,
-              37.7690927
-            ],
-            [
-              -122.3874626,
-              37.7690929
-            ],
-            [
-              -122.3874654,
-              37.7691229
-            ],
-            [
-              -122.3874916,
-              37.7693639
-            ],
-            [
-              -122.3869048,
-              37.7693995
-            ],
-            [
-              -122.3869081,
-              37.7694339
-            ],
-            [
-              -122.3869148,
-              37.7695038
-            ],
-            [
-              -122.3869212,
-              37.7695033
-            ],
-            [
-              -122.3869212,
-              37.7695035
-            ],
-            [
-              -122.3869212,
-              37.7695035
-            ],
-            [
-              -122.3869215,
-              37.7695035
-            ],
-            [
-              -122.3869215,
-              37.7695036
-            ],
-            [
-              -122.3869255,
-              37.7695244
-            ],
-            [
-              -122.387135,
-              37.7695489
-            ],
-            [
-              -122.3871351,
-              37.769549
-            ],
-            [
-              -122.3871518,
-              37.7697089
-            ],
-            [
-              -122.3871521,
-              37.7697157
-            ],
-            [
-              -122.3871609,
-              37.7697151
-            ],
-            [
-              -122.387161,
-              37.7697152
-            ],
-            [
-              -122.3871688,
-              37.769799
-            ],
-            [
-              -122.3869685,
-              37.7698108
-            ],
-            [
-              -122.3869685,
-              37.7698107
-            ],
-            [
-              -122.3869678,
-              37.769804
-            ],
-            [
-              -122.3868724,
-              37.7698028
-            ],
-            [
-              -122.3867535,
-              37.769791
-            ],
-            [
-              -122.3866364,
-              37.7697696
-            ],
-            [
-              -122.3865163,
-              37.769732
-            ],
-            [
-              -122.3865162,
-              37.7697319
-            ],
-            [
-              -122.3864971,
-              37.769526
+              -122.387246859,
+              37.769038733
             ]
           ]
         ]

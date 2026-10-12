@@ -99684,13 +99684,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against DataSF's Assessor parcel data), so no single blklot represents the whole building and it cannot be mapped from one parcel the way a single-owner building can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same real-geometry-without-a-single-parcel pattern already used for several Pier 70 buildings (DataSF Building Footprints) and for Mission Bay's own real park polygons.",
-     "digitized_from": "OpenStreetMap (ways 149253142 and 288671185, addr:housename=The Beacon, 250 & 260 King St)"
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8702011 (19,798 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. The lot is condominium-mapped: 614 Assessor lots share this outline (the map lot 8702011 and 613 per-unit lots), so the outline is the building's shared lot, not any one unit. Until 2026-10-12 this record showed the surveyed building footprint (OpenStreetMap (ways 149253142 and 288671185, addr:housename=The Beacon, 250 & 260 King St)); 97% of that outline lies inside the lot and it covered 85% of the lot.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8702011 (mapped 2003-12-15; active); the earlier outline came from: OpenStreetMap (ways 149253142 and 288671185, addr:housename=The Beacon, 250 & 260 King St)"
     }
    },
    "centroid": {
-    "lon": -122.393774,
-    "lat": 37.777187
+    "lon": -122.393154,
+    "lat": 37.777749
    },
    "facts": [
     {
@@ -99908,6 +99908,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The Beacon now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8702011",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8702011"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_the_beacon",
+      "slug": "the-beacon",
+      "name": "The Beacon",
+      "permalink": "https://pierandpoint.org/parcels/the-beacon/",
+      "api": "https://pierandpoint.org/api/v1/records/the-beacon.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-10-11",
      "kind": "added",
@@ -100156,7 +100185,7 @@
      "url": "https://www.catellus.com/mission-bay"
     }
    ],
-   "notes": "Mixed-use condominium complex at 250 and 260 King St (the two OSM apartment-tagged building footprints tracked here); the Assessor parcel is condo-mapped across per-unit lots (DataSF Assessor parcel data). A broker's portfolio page (Afi + Associates, read 2026-09-29) describes a 'gourmet grocery store, bank, spa' at the complex; that is a secondary source and does not name the tenants. Architect attribution conflicts between sources (Afi + Associates says Skidmore, Owings and Merrill; earlier research also recorded Brand + Allen Architects and SOM/HKS from sources not cited here) and is not resolved -- not recorded as a fact pending a primary-source confirmation.",
+   "notes": "Mixed-use condominium complex at 250 and 260 King St (two apartment-tagged buildings, per OpenStreetMap); the Assessor parcel is condo-mapped across per-unit lots (DataSF Assessor parcel data). A broker's portfolio page (Afi + Associates, read 2026-09-29) describes a 'gourmet grocery store, bank, spa' at the complex; that is a secondary source and does not name the tenants. Architect attribution conflicts between sources (Afi + Associates says Skidmore, Owings and Merrill; earlier research also recorded Brand + Allen Architects and SOM/HKS from sources not cited here) and is not resolved -- not recorded as a fact pending a primary-source confirmation.",
    "has_record_file": true,
    "last_verified": "2026-10-10",
    "tenants": [
@@ -100231,510 +100260,28 @@
     }
    ],
    "geometry": {
-    "type": "MultiPolygon",
+    "type": "Polygon",
     "coordinates": [
      [
       [
-       [
-        -122.3936801,
-        37.7779645
-       ],
-       [
-        -122.3936066,
-        37.7779079
-       ],
-       [
-        -122.3935385,
-        37.777855
-       ],
-       [
-        -122.3933894,
-        37.7777402
-       ],
-       [
-        -122.3933634,
-        37.7777203
-       ],
-       [
-        -122.3932308,
-        37.777617
-       ],
-       [
-        -122.3930666,
-        37.7774899
-       ],
-       [
-        -122.3930256,
-        37.777523
-       ],
-       [
-        -122.3929961,
-        37.7775002
-       ],
-       [
-        -122.3924782,
-        37.7779146
-       ],
-       [
-        -122.3925176,
-        37.7779454
-       ],
-       [
-        -122.3925352,
-        37.7779591
-       ],
-       [
-        -122.39249,
-        37.7779953
-       ],
-       [
-        -122.3924448,
-        37.77796
-       ],
-       [
-        -122.3923505,
-        37.7780089
-       ],
-       [
-        -122.3921695,
-        37.7781881
-       ],
-       [
-        -122.3923223,
-        37.7782974
-       ],
-       [
-        -122.3927452,
-        37.7786465
-       ],
-       [
-        -122.3927615,
-        37.7786344
-       ],
-       [
-        -122.3927985,
-        37.7786632
-       ],
-       [
-        -122.3932614,
-        37.7783004
-       ],
-       [
-        -122.3936801,
-        37.7779645
-       ]
-      ]
-     ],
-     [
+       -122.392099009,
+       37.77817749
+      ],
       [
-       [
-        -122.3938638,
-        37.7778054
-       ],
-       [
-        -122.3937938,
-        37.7777548
-       ],
-       [
-        -122.3937247,
-        37.7776982
-       ],
-       [
-        -122.3937452,
-        37.7776832
-       ],
-       [
-        -122.393697,
-        37.7776456
-       ],
-       [
-        -122.3935988,
-        37.7775724
-       ],
-       [
-        -122.3935693,
-        37.7775516
-       ],
-       [
-        -122.3934374,
-        37.7774559
-       ],
-       [
-        -122.3934156,
-        37.7774383
-       ],
-       [
-        -122.393405,
-        37.7774464
-       ],
-       [
-        -122.393277,
-        37.7773264
-       ],
-       [
-        -122.3933152,
-        37.777297
-       ],
-       [
-        -122.3932832,
-        37.7772713
-       ],
-       [
-        -122.3932822,
-        37.7772712
-       ],
-       [
-        -122.3933172,
-        37.7772442
-       ],
-       [
-        -122.3933022,
-        37.7772319
-       ],
-       [
-        -122.3933452,
-        37.777199
-       ],
-       [
-        -122.3933592,
-        37.7772107
-       ],
-       [
-        -122.3933842,
-        37.7771918
-       ],
-       [
-        -122.3933672,
-        37.7771788
-       ],
-       [
-        -122.3934112,
-        37.7771453
-       ],
-       [
-        -122.3934262,
-        37.7771578
-       ],
-       [
-        -122.3934522,
-        37.7771377
-       ],
-       [
-        -122.3934332,
-        37.7771224
-       ],
-       [
-        -122.3934762,
-        37.7770894
-       ],
-       [
-        -122.3934942,
-        37.7771042
-       ],
-       [
-        -122.3935202,
-        37.777084
-       ],
-       [
-        -122.3935022,
-        37.777069
-       ],
-       [
-        -122.3935442,
-        37.7770361
-       ],
-       [
-        -122.3935622,
-        37.7770506
-       ],
-       [
-        -122.3935872,
-        37.7770313
-       ],
-       [
-        -122.3935702,
-        37.7770177
-       ],
-       [
-        -122.3936122,
-        37.7769847
-       ],
-       [
-        -122.3936292,
-        37.7769979
-       ],
-       [
-        -122.3936552,
-        37.7769776
-       ],
-       [
-        -122.3936402,
-        37.7769656
-       ],
-       [
-        -122.3936832,
-        37.7769327
-       ],
-       [
-        -122.3936972,
-        37.7769442
-       ],
-       [
-        -122.3937232,
-        37.7769242
-       ],
-       [
-        -122.3937072,
-        37.7769116
-       ],
-       [
-        -122.3937492,
-        37.7768786
-       ],
-       [
-        -122.3937642,
-        37.7768907
-       ],
-       [
-        -122.3938032,
-        37.7768606
-       ],
-       [
-        -122.3938662,
-        37.7769113
-       ],
-       [
-        -122.393886,
-        37.776896
-       ],
-       [
-        -122.3939022,
-        37.7768835
-       ],
-       [
-        -122.3938332,
-        37.7768277
-       ],
-       [
-        -122.3938502,
-        37.7768147
-       ],
-       [
-        -122.3938422,
-        37.7768088
-       ],
-       [
-        -122.3938992,
-        37.7767646
-       ],
-       [
-        -122.3939062,
-        37.7767701
-       ],
-       [
-        -122.3939182,
-        37.7767611
-       ],
-       [
-        -122.3939112,
-        37.7767558
-       ],
-       [
-        -122.3939682,
-        37.7767116
-       ],
-       [
-        -122.3939742,
-        37.7767165
-       ],
-       [
-        -122.3939852,
-        37.7767082
-       ],
-       [
-        -122.3939782,
-        37.7767028
-       ],
-       [
-        -122.3940352,
-        37.7766586
-       ],
-       [
-        -122.3940422,
-        37.7766637
-       ],
-       [
-        -122.3940542,
-        37.7766543
-       ],
-       [
-        -122.3940462,
-        37.7766479
-       ],
-       [
-        -122.3941032,
-        37.7766037
-       ],
-       [
-        -122.3941102,
-        37.7766096
-       ],
-       [
-        -122.3941272,
-        37.7765968
-       ],
-       [
-        -122.3941492,
-        37.7766144
-       ],
-       [
-        -122.3941552,
-        37.7766098
-       ],
-       [
-        -122.3942112,
-        37.7766552
-       ],
-       [
-        -122.3942062,
-        37.7766589
-       ],
-       [
-        -122.3942092,
-        37.7766615
-       ],
-       [
-        -122.3942022,
-        37.7766674
-       ],
-       [
-        -122.3942742,
-        37.7767231
-       ],
-       [
-        -122.3942615,
-        37.776735
-       ],
-       [
-        -122.3942892,
-        37.7767576
-       ],
-       [
-        -122.3943082,
-        37.7767427
-       ],
-       [
-        -122.3943622,
-        37.7767863
-       ],
-       [
-        -122.3943702,
-        37.7767803
-       ],
-       [
-        -122.3944152,
-        37.7768165
-       ],
-       [
-        -122.3944072,
-        37.776822
-       ],
-       [
-        -122.3944352,
-        37.7768442
-       ],
-       [
-        -122.3944432,
-        37.7768384
-       ],
-       [
-        -122.3944872,
-        37.7768745
-       ],
-       [
-        -122.3944802,
-        37.77688
-       ],
-       [
-        -122.3945102,
-        37.7769035
-       ],
-       [
-        -122.3945172,
-        37.7768974
-       ],
-       [
-        -122.3945622,
-        37.7769336
-       ],
-       [
-        -122.3945552,
-        37.7769393
-       ],
-       [
-        -122.3945832,
-        37.7769619
-       ],
-       [
-        -122.3945902,
-        37.7769566
-       ],
-       [
-        -122.3946352,
-        37.7769928
-       ],
-       [
-        -122.3946282,
-        37.7769977
-       ],
-       [
-        -122.3946572,
-        37.7770208
-       ],
-       [
-        -122.3946642,
-        37.7770154
-       ],
-       [
-        -122.3947092,
-        37.7770516
-       ],
-       [
-        -122.3947022,
-        37.7770566
-       ],
-       [
-        -122.3947252,
-        37.7770752
-       ],
-       [
-        -122.3947092,
-        37.7770875
-       ],
-       [
-        -122.3947492,
-        37.7771192
-       ],
-       [
-        -122.3943125,
-        37.7774629
-       ],
-       [
-        -122.3942943,
-        37.7774484
-       ],
-       [
-        -122.3942678,
-        37.7774678
-       ],
-       [
-        -122.3942862,
-        37.7774831
-       ],
-       [
-        -122.3938638,
-        37.7778054
-       ]
+       -122.394099087,
+       37.77659788
+      ],
+      [
+       -122.394737264,
+       37.77710694
+      ],
+      [
+       -122.392737186,
+       37.77868656
+      ],
+      [
+       -122.392099009,
+       37.77817749
       ]
      ]
     ]
@@ -100776,13 +100323,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against DataSF's Assessor parcel data), so no single blklot represents the whole building and it cannot be mapped from one parcel the way a single-owner building can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same real-geometry-without-a-single-parcel pattern already used for several Pier 70 buildings (DataSF Building Footprints) and for Mission Bay's own real park polygons.",
-     "digitized_from": "OpenStreetMap (way 945538326, 255 King St)"
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8706010 (5,640 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. The lot is condominium-mapped: 253 Assessor lots share this outline (the map lots 8706010 and 8706011 and 251 per-unit lots), so the outline is the building's shared lot, not any one unit. Until 2026-10-12 this record showed the surveyed building footprint (OpenStreetMap (way 945538326, 255 King St)); 97% of that outline lies inside the lot and it covered 86% of the lot.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8706010 (mapped 2004-04-26; active); the earlier outline came from: OpenStreetMap (way 945538326, 255 King St)"
     }
    },
    "centroid": {
-    "lon": -122.393173,
-    "lat": 37.776504
+    "lon": -122.392986,
+    "lat": 37.776355
    },
    "facts": [
     {
@@ -100981,6 +100528,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Avalon at Mission Bay I now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8706010",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8706010"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_avalon_phase_i",
+      "slug": "avalon-at-mission-bay-i",
+      "name": "Avalon at Mission Bay I",
+      "permalink": "https://pierandpoint.org/parcels/avalon-at-mission-bay-i/",
+      "api": "https://pierandpoint.org/api/v1/records/avalon-at-mission-bay-i.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-11",
      "kind": "added",
      "kind_label": "Added",
@@ -101143,7 +100719,7 @@
      "url": "https://arquitectonica.com/architecture/project/avalon-mission-bay/"
     }
    ],
-   "notes": "The building way used here is the actual footprint; a companion OSM landuse way (867565682) may cover the same site but was not checked. That this is the 'first of three AvalonBay phases along King St' is not stated by any cited source: the name and numbering 'Avalon at Mission Bay I' are Pier & Point's own label, since OSM way 945538326 has no name and Arquitectonica titles its page 'Avalon Mission Bay'.",
+   "notes": "That this is the 'first of three AvalonBay phases along King St' is not stated by any cited source: the name and numbering 'Avalon at Mission Bay I' are Pier & Point's own label, since OSM way 945538326 has no name and Arquitectonica titles its page 'Avalon Mission Bay'.",
    "has_record_file": true,
    "last_verified": "2026-10-10",
    "tenants": [
@@ -101176,80 +100752,32 @@
     "coordinates": [
      [
       [
-       -122.3932098,
-       37.7766685
+       -122.392934977,
+       37.776212431
       ],
       [
-       -122.3928519,
-       37.7769472
+       -122.393255543,
+       37.775959251
       ],
       [
-       -122.3928325,
-       37.7769316
+       -122.393669207,
+       37.776289231
       ],
       [
-       -122.3928079,
-       37.7769508
+       -122.392803157,
+       37.776973223
       ],
       [
-       -122.3924295,
-       37.7766463
+       -122.392379733,
+       37.776635452
       ],
       [
-       -122.3932816,
-       37.7759846
+       -122.392925215,
+       37.776204643
       ],
       [
-       -122.393397,
-       37.7760774
-      ],
-      [
-       -122.3933362,
-       37.7761245
-      ],
-      [
-       -122.3934309,
-       37.7762008
-      ],
-      [
-       -122.3934871,
-       37.7761573
-      ],
-      [
-       -122.3936757,
-       37.7763094
-      ],
-      [
-       -122.3932714,
-       37.7766226
-      ],
-      [
-       -122.3932428,
-       37.7765995
-      ],
-      [
-       -122.393218,
-       37.7765657
-      ],
-      [
-       -122.3932186,
-       37.7765284
-      ],
-      [
-       -122.3931237,
-       37.7764571
-      ],
-      [
-       -122.3930939,
-       37.7765194
-      ],
-      [
-       -122.3931642,
-       37.7766217
-      ],
-      [
-       -122.3932098,
-       37.7766685
+       -122.392934977,
+       37.776212431
       ]
      ]
     ]
@@ -102980,13 +102508,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- union of a surveyed OpenStreetMap building footprint and the boundary of blklot 8715007, a RETIRED DataSF parcel (active false; mapped 2014-02-11, dropped 2016-11-16; last Assessor roll 2017, property location 110 Channel St), not a hand trace or plan estimate -- the shape therefore includes a superseded boundary, and whether to keep it has not been decided. The per-unit condo lots were not identified in a September 2026 check (no active lot in DataSF Parcels carries mapblklot 8715007), and no single per-unit blklot represents the whole building so the building cannot be mapped from a single Assessor parcel the way a single-owner building can; blklot 8715007, a retired parcel, is the exception used here. Real-geometry-without-a-single-owner-parcel pattern already used for several Pier 70 buildings (DataSF Building Footprints) and for Mission Bay's own real park polygons.",
-     "digitized_from": "OpenStreetMap (way 563104192, name=One Mission Bay), unioned with the boundary of retired DataSF parcel blklot 8715007"
+     "accuracy_caveat": "REAL lot geometry -- the outline is the union of Assessor lots 8715208 and 8715009 (8,894 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed the union of an OpenStreetMap building footprint (way 563104192) and the boundary of retired parcel 8715007; 94% of that outline lies inside the lot and it covered 80% of the lot. Both lots are condominium-mapped: map lot 8715208 (110 and 112 Channel St) is shared by 153 Assessor lots and map lot 8715009 (1000 3rd St) by another 153; each outline is the building's shared lot, not any one unit. Retired parcels 8715007 and 8715006 had the same outlines and were dropped from the map on 2016-11-16, the day these two lots were added; no retired parcel is used now. About 6% of the earlier outline lay outside these two lots, mostly on the neighbouring promenade lot 8714002. The Luma Hotel (lot 8715008) sits between the two buildings and is a separate record.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lots 8715208 and 8715009 (mapped 2016-11-16; active), joined into one outline; cross-checked against OpenStreetMap (way 563104192, name=One Mission Bay)"
     }
    },
    "centroid": {
-    "lon": -122.390848,
-    "lat": 37.775099
+    "lon": -122.390944,
+    "lat": 37.77492
    },
    "facts": [],
    "costs": [],
@@ -103105,6 +102633,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "One Mission Bay now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 8715208 and 8715009",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 8715208 and 8715009"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_one_mission_bay",
+      "slug": "one-mission-bay",
+      "name": "One Mission Bay",
+      "permalink": "https://pierandpoint.org/parcels/one-mission-bay/",
+      "api": "https://pierandpoint.org/api/v1/records/one-mission-bay.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-10",
      "kind": "added",
      "kind_label": "Added",
@@ -103209,7 +102766,7 @@
    "open_questions": [
     "This record was created on 2026-09-27 to host Pier & Point's own field photos. Its summary is limited to what its cited source was re-read to confirm that day; fuller details given in this record's other notes (developer, architect, unit count, year built) were left out of the summary where that source didn't state them. Not yet researched: no milestones, costs or facts.",
     "The completion year and the permit closure are two different kinds of date, not a conflict. Strada's project page (undated) says the project was completed in 2018, which is the year shown as the status change. DBI closed both new-construction permits on Nov 20, 2020, shown separately as permit closures; DBI also shows tenant-improvement permits for the 110 Channel St ground floor in 2018. The exact completion or opening month is not sourced.",
-    "DBI files both permits under block 8715, lot 004; this record's geometry joins the retired parcel 8715007, and later permits for the two buildings use lots 006 and 007."
+    "DBI files both permits under block 8715, lot 004; this record's outline is now the active map lots 8715208 and 8715009, which have the same outlines as the retired parcels 8715007 and 8715006 (dropped from the map on 2016-11-16, the day the two active lots were added), and later permits for the two buildings use lots 006 and 007."
    ],
    "sources": [
     {
@@ -103266,60 +102823,28 @@
        37.774664886
       ],
       [
-       -122.39166930917476,
-       37.774689392947764
+       -122.391664774,
+       37.774692975
       ],
       [
-       -122.3916905,
-       37.7747061
+       -122.39110063,
+       37.77513852
       ],
       [
-       -122.3909425,
-       37.7752982
+       -122.39091057,
+       37.775288622
       ],
       [
-       -122.390923,
-       37.7752828
+       -122.390124214,
+       37.775909647
       ],
       [
-       -122.3908282,
-       37.7753576
+       -122.390047371,
+       37.775105852
       ],
       [
-       -122.3908479,
-       37.7753731
-      ],
-      [
-       -122.3901746,
-       37.7759061
-      ],
-      [
-       -122.3901424,
-       37.7756657
-      ],
-      [
-       -122.3900866,
-       37.7751214
-      ],
-      [
-       -122.3903181,
-       37.7751066
-      ],
-      [
-       -122.3903569,
-       37.7754854
-      ],
-      [
-       -122.3906751,
-       37.775239
-      ],
-      [
-       -122.390787,
-       37.7753294
-      ],
-      [
-       -122.3908756321849,
-       37.77526075002112
+       -122.390259169,
+       37.775093095
       ],
       [
        -122.39046332,
@@ -103332,6 +102857,10 @@
       [
        -122.3906439,
        37.774630951
+      ],
+      [
+       -122.391520809,
+       37.774578126
       ],
       [
        -122.391586612,
@@ -103379,13 +102908,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. The underlying Assessor parcel is condo-mapped across many individually owned per-unit lots (confirmed against DataSF's Assessor parcel data), so no single blklot represents the whole building and it cannot be matched to a single parcel record the way a single-owner parcel can. Using the real building footprint from OSM instead of a fabricated or arbitrarily chosen 'representative' unit lot, the same real-geometry-without-a-single-parcel pattern already used for several Pier 70 buildings (DataSF Building Footprints) and for Mission Bay's own real park polygons.",
-     "digitized_from": "OpenStreetMap (way 1258086102, name=Radiance at Mission Bay, 325 China Basin St)"
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8720018 (5,405 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. The lot is condominium-mapped: 99 Assessor lots share this outline (the map lot 8720018 and 98 per-unit lots), so the outline is the building's shared lot, not any one unit. Until 2026-10-12 this record showed the surveyed building footprint (OpenStreetMap (way 1258086102, name=Radiance at Mission Bay, 325 China Basin St)); 100% of that outline lies inside the lot and it covered 83% of the lot.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8720018 (mapped 2007-05-22; active); the earlier outline came from: OpenStreetMap (way 1258086102, name=Radiance at Mission Bay, 325 China Basin St)"
     }
    },
    "centroid": {
-    "lon": -122.387446,
-    "lat": 37.771692
+    "lon": -122.387417,
+    "lat": 37.771662
    },
    "facts": [
     {
@@ -103587,6 +103116,35 @@
    ],
    "changes": [
     {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Radiance now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8720018",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8720018"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_radiance",
+      "slug": "radiance",
+      "name": "Radiance",
+      "permalink": "https://pierandpoint.org/parcels/radiance/",
+      "api": "https://pierandpoint.org/api/v1/records/radiance.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-10",
      "kind": "added",
      "kind_label": "Added",
@@ -103714,56 +103272,36 @@
     "coordinates": [
      [
       [
-       -122.3871404,
-       37.7720441
+       -122.387782555,
+       37.771263568
       ],
       [
-       -122.3874522,
-       37.7720259
+       -122.387854521,
+       37.772016648
       ],
       [
-       -122.3877676,
-       37.7720074
+       -122.387129808,
+       37.772060284
       ],
       [
-       -122.387749,
-       37.7718095
+       -122.387124212,
+       37.772060621
       ],
       [
-       -122.3877447,
-       37.7717637
+       -122.38712265,
+       37.772044285
       ],
       [
-       -122.3877232,
-       37.7715348
+       -122.387052252,
+       37.771307541
       ],
       [
-       -122.3877192,
-       37.7714915
+       -122.387486206,
+       37.771281413
       ],
       [
-       -122.3876994,
-       37.7712805
-      ],
-      [
-       -122.3873774,
-       37.7712994
-      ],
-      [
-       -122.3870723,
-       37.7713173
-      ],
-      [
-       -122.3870926,
-       37.7715331
-      ],
-      [
-       -122.3871219,
-       37.7718465
-      ],
-      [
-       -122.3871404,
-       37.7720441
+       -122.387782555,
+       37.771263568
       ]
      ]
     ]
@@ -112003,13 +111541,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint(s), not a hand trace or plan estimate. Correction 2026-09-29: 355 Berry is a single Assessor parcel (8707003, active) in DataSF's Assessor parcel data, not condo-mapped; the condo-mapped lots on this block are 325 Berry (111) and 335 Berry (67), and the earlier condo-mapping statement, with its comparison to other condo-mapped towers, was wrong for this building. The footprint is the real OSM building outline.",
-     "digitized_from": "OpenStreetMap (way 46264111, 355 Berry St)"
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8707003 (7,436 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed the surveyed building footprint (OpenStreetMap (way 46264111, 355 Berry St)); 96% of that outline lies inside the lot and it covered 79% of the lot.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8707003 (mapped 2006-05-22; active); the earlier outline came from: OpenStreetMap (way 46264111, 355 Berry St)"
     }
    },
    "centroid": {
-    "lon": -122.396876,
-    "lat": 37.772497
+    "lon": -122.397551,
+    "lat": 37.771958
    },
    "facts": [],
    "costs": [
@@ -112116,6 +111654,35 @@
      "sources": [
       {
        "title": "DataSF Building Permits i98e-djp9, permit 200502085025; DataSF Assessor Secured Roll wv5m-vpq2, parcel 8707003"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_edgewater",
+      "slug": "edgewater",
+      "name": "Edgewater",
+      "permalink": "https://pierandpoint.org/parcels/edgewater/",
+      "api": "https://pierandpoint.org/api/v1/records/edgewater.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Edgewater now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8707003",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8707003"
       }
      ],
      "category": "correction",
@@ -112302,48 +111869,336 @@
     "coordinates": [
      [
       [
-       -122.3963064,
-       37.7726284
+       -122.397446364,
+       37.771699915
       ],
       [
-       -122.3963633,
-       37.7725843
+       -122.397449403,
+       37.771706427
       ],
       [
-       -122.3965706,
-       37.7724198
+       -122.397452468,
+       37.771712932
       ],
       [
-       -122.3968768,
-       37.7721721
+       -122.397455557,
+       37.77171943
       ],
       [
-       -122.3971938,
-       37.7719325
+       -122.397458671,
+       37.77172592
       ],
       [
-       -122.3976389,
-       37.7722832
+       -122.397461812,
+       37.771732402
       ],
       [
-       -122.3975375,
-       37.7723556
+       -122.397464978,
+       37.771738877
       ],
       [
-       -122.3972315,
-       37.7726009
+       -122.397468169,
+       37.771745343
       ],
       [
-       -122.3968625,
-       37.7728851
+       -122.397471384,
+       37.771751801
       ],
       [
-       -122.3967451,
-       37.7729755
+       -122.397474626,
+       37.771758253
       ],
       [
-       -122.3963064,
-       37.7726284
+       -122.397477892,
+       37.771764696
+      ],
+      [
+       -122.397481183,
+       37.771771131
+      ],
+      [
+       -122.3974845,
+       37.771777558
+      ],
+      [
+       -122.397487842,
+       37.771783976
+      ],
+      [
+       -122.397491207,
+       37.771790386
+      ],
+      [
+       -122.3974946,
+       37.771796789
+      ],
+      [
+       -122.397498016,
+       37.771803182
+      ],
+      [
+       -122.397501457,
+       37.771809567
+      ],
+      [
+       -122.397504924,
+       37.771815944
+      ],
+      [
+       -122.397508415,
+       37.771822312
+      ],
+      [
+       -122.39751193,
+       37.771828672
+      ],
+      [
+       -122.397515471,
+       37.771835023
+      ],
+      [
+       -122.397519036,
+       37.771841365
+      ],
+      [
+       -122.397522626,
+       37.771847698
+      ],
+      [
+       -122.39752624,
+       37.771854023
+      ],
+      [
+       -122.39752988,
+       37.771860338
+      ],
+      [
+       -122.397533544,
+       37.771866646
+      ],
+      [
+       -122.397537232,
+       37.771872942
+      ],
+      [
+       -122.397540946,
+       37.771879232
+      ],
+      [
+       -122.397544683,
+       37.771885511
+      ],
+      [
+       -122.397548445,
+       37.771891781
+      ],
+      [
+       -122.397552231,
+       37.771898042
+      ],
+      [
+       -122.397556042,
+       37.771904294
+      ],
+      [
+       -122.397559878,
+       37.771910536
+      ],
+      [
+       -122.397563737,
+       37.771916769
+      ],
+      [
+       -122.397567621,
+       37.771922992
+      ],
+      [
+       -122.397571529,
+       37.771929206
+      ],
+      [
+       -122.397575461,
+       37.77193541
+      ],
+      [
+       -122.397579417,
+       37.771941605
+      ],
+      [
+       -122.397583398,
+       37.77194779
+      ],
+      [
+       -122.397587402,
+       37.771953964
+      ],
+      [
+       -122.397591431,
+       37.771960129
+      ],
+      [
+       -122.397595484,
+       37.771966284
+      ],
+      [
+       -122.39759956,
+       37.771972429
+      ],
+      [
+       -122.397603661,
+       37.771978564
+      ],
+      [
+       -122.397607785,
+       37.771984689
+      ],
+      [
+       -122.397611933,
+       37.771990804
+      ],
+      [
+       -122.397616106,
+       37.771996908
+      ],
+      [
+       -122.397620301,
+       37.772003002
+      ],
+      [
+       -122.397624521,
+       37.772009087
+      ],
+      [
+       -122.397628765,
+       37.77201516
+      ],
+      [
+       -122.397633032,
+       37.772021224
+      ],
+      [
+       -122.397637322,
+       37.772027275
+      ],
+      [
+       -122.397641636,
+       37.772033318
+      ],
+      [
+       -122.397645974,
+       37.772039349
+      ],
+      [
+       -122.397650335,
+       37.77204537
+      ],
+      [
+       -122.397654719,
+       37.77205138
+      ],
+      [
+       -122.397659127,
+       37.772057379
+      ],
+      [
+       -122.397663558,
+       37.772063368
+      ],
+      [
+       -122.397668013,
+       37.772069345
+      ],
+      [
+       -122.397672491,
+       37.772075311
+      ],
+      [
+       -122.397676993,
+       37.772081267
+      ],
+      [
+       -122.397681517,
+       37.772087211
+      ],
+      [
+       -122.397686064,
+       37.772093145
+      ],
+      [
+       -122.397690635,
+       37.772099066
+      ],
+      [
+       -122.397695229,
+       37.772104977
+      ],
+      [
+       -122.397699845,
+       37.772110877
+      ],
+      [
+       -122.397704486,
+       37.772116764
+      ],
+      [
+       -122.397709148,
+       37.772122641
+      ],
+      [
+       -122.397713833,
+       37.772128506
+      ],
+      [
+       -122.397718542,
+       37.772134361
+      ],
+      [
+       -122.397723273,
+       37.772140203
+      ],
+      [
+       -122.397728027,
+       37.772146033
+      ],
+      [
+       -122.397732804,
+       37.772151852
+      ],
+      [
+       -122.397737603,
+       37.772157658
+      ],
+      [
+       -122.397742425,
+       37.772163453
+      ],
+      [
+       -122.397727342,
+       37.772175367
+      ],
+      [
+       -122.397731003,
+       37.772178287
+      ],
+      [
+       -122.396725493,
+       37.772972535
+      ],
+      [
+       -122.396282549,
+       37.772619205
+      ],
+      [
+       -122.39715808,
+       37.771927631
+      ],
+      [
+       -122.397360405,
+       37.771767813
+      ],
+      [
+       -122.397446364,
+       37.771699915
       ]
      ]
     ]
@@ -113046,13 +112901,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8710009), cross-referenced by position against an OpenStreetMap building/address point (way 265724853) for the name and street address; not a hand trace or plan estimate. The 360-unit figure is the two-block total: Ignition Architecture's project page gives 362 units total (Block 5 = 170, Block 11 = 190), while the Assessor gives 188 units for this parcel (701 China Basin St); the Assessor's 188/177 split across the two parcels and Ignition's 170/190 are not reconciled here.",
-     "digitized_from": "DataSF Building Footprints (mblr SF8710009); name/address from OpenStreetMap way 265724853 (701 China Basin St)"
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8710009 (7,659 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed the surveyed building footprint (DataSF Building Footprints (mblr SF8710009)); 96% of that outline lies inside the lot and it covered 70% of the lot.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8710009 (mapped 2011-04-21; active); the earlier outline came from: DataSF Building Footprints (mblr SF8710009); name/address from OpenStreetMap way 265724853 (701 China Basin St)"
     }
    },
    "centroid": {
-    "lon": -122.393624,
-    "lat": 37.771259
+    "lon": -122.394354,
+    "lat": 37.771001
    },
    "facts": [],
    "costs": [],
@@ -113155,6 +113010,35 @@
      "sources": [
       {
        "title": "DataSF Assessor Secured Roll wv5m-vpq2, parcel 8710009; Ignition Architecture, MB 360º project page; CBS News San Francisco, 2014-05-07"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_mb360",
+      "slug": "mb360",
+      "name": "MB360",
+      "permalink": "https://pierandpoint.org/parcels/mb360/",
+      "api": "https://pierandpoint.org/api/v1/records/mb360.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "MB360 now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8710009",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8710009"
       }
      ],
      "category": "correction",
@@ -113371,336 +113255,268 @@
     "coordinates": [
      [
       [
-       -122.3937173,
-       37.7710161
+       -122.394420091,
+       37.770939774
       ],
       [
-       -122.3936781,
-       37.7710178
+       -122.394420222,
+       37.770941273
       ],
       [
-       -122.39367,
-       37.7709163
+       -122.394420323,
+       37.770942774
       ],
       [
-       -122.3936728,
-       37.7709162
+       -122.394420399,
+       37.770944274
       ],
       [
-       -122.3940079,
-       37.7708977
+       -122.394420448,
+       37.770945776
       ],
       [
-       -122.3940072,
-       37.770883
+       -122.394420468,
+       37.770947278
       ],
       [
-       -122.3943481,
-       37.7708556
+       -122.394420462,
+       37.77094878
       ],
       [
-       -122.3943512,
-       37.770891
+       -122.394420429,
+       37.770950283
       ],
       [
-       -122.394434,
-       37.7708867
+       -122.394420367,
+       37.770951783
       ],
       [
-       -122.3944442,
-       37.7709778
+       -122.394420279,
+       37.770953284
       ],
       [
-       -122.3944178,
-       37.7709821
+       -122.394420164,
+       37.770954784
       ],
       [
-       -122.3944195,
-       37.771005
+       -122.394420022,
+       37.770956281
       ],
       [
-       -122.3944273,
-       37.7710093
+       -122.394419852,
+       37.770957777
       ],
       [
-       -122.3941341,
-       37.7712427
+       -122.394419655,
+       37.770959271
       ],
       [
-       -122.3941137,
-       37.7712222
+       -122.394419431,
+       37.770960763
       ],
       [
-       -122.3940878,
-       37.7712427
+       -122.394419181,
+       37.770962252
       ],
       [
-       -122.3940962,
-       37.7712504
+       -122.394418903,
+       37.770963738
       ],
       [
-       -122.3939268,
-       37.77139
+       -122.394418598,
+       37.770965221
       ],
       [
-       -122.3938451,
-       37.7713208
+       -122.394418267,
+       37.7709667
       ],
       [
-       -122.3937826,
-       37.7713727
+       -122.394417908,
+       37.770968174
       ],
       [
-       -122.3938426,
-       37.7714219
+       -122.394417523,
+       37.770969645
       ],
       [
-       -122.393809,
-       37.7714457
+       -122.394417111,
+       37.770971112
       ],
       [
-       -122.3938318,
-       37.7714619
+       -122.394416673,
+       37.770972573
       ],
       [
-       -122.3936455,
-       37.7716103
+       -122.394416208,
+       37.770974029
       ],
       [
-       -122.3936545,
-       37.7716192
+       -122.394415717,
+       37.77097548
       ],
       [
-       -122.3935801,
-       37.7716776
+       -122.3944152,
+       37.770976924
       ],
       [
-       -122.3930628,
-       37.7717137
+       -122.394414656,
+       37.770978363
       ],
       [
-       -122.3930465,
-       37.7715039
+       -122.394414087,
+       37.770979796
       ],
       [
-       -122.3931734,
-       37.7714909
+       -122.394413492,
+       37.770981222
       ],
       [
-       -122.3931666,
-       37.7714408
+       -122.394412871,
+       37.770982641
       ],
       [
-       -122.3931021,
-       37.771445
+       -122.394412223,
+       37.770984053
       ],
       [
-       -122.3931003,
-       37.7714265
+       -122.394411551,
+       37.770985457
       ],
       [
-       -122.393067,
-       37.7714289
+       -122.394410854,
+       37.770986854
       ],
       [
-       -122.3930477,
-       37.771213
+       -122.394410131,
+       37.770988241
       ],
       [
-       -122.3930725,
-       37.7712112
+       -122.394409382,
+       37.770989621
       ],
       [
-       -122.3930707,
-       37.7711872
+       -122.394408609,
+       37.770990993
       ],
       [
-       -122.3930437,
-       37.771189
+       -122.394407811,
+       37.770992355
       ],
       [
-       -122.3930209,
-       37.7709584
+       -122.394406988,
+       37.770993708
       ],
       [
-       -122.3934919,
-       37.7709244
+       -122.394406143,
+       37.770995051
       ],
       [
-       -122.3935094,
-       37.7711319
+       -122.394405271,
+       37.770996384
       ],
       [
-       -122.3933063,
-       37.7711457
+       -122.394404376,
+       37.770997708
       ],
       [
-       -122.3933087,
-       37.7711738
+       -122.394403457,
+       37.770999022
       ],
       [
-       -122.3931976,
-       37.7711799
+       -122.394402513,
+       37.771000324
       ],
       [
-       -122.3932006,
-       37.7712381
+       -122.394401547,
+       37.771001615
       ],
       [
-       -122.3933219,
-       37.7712299
+       -122.394400557,
+       37.771002896
       ],
       [
-       -122.3933271,
-       37.7712782
+       -122.394399544,
+       37.771004165
       ],
       [
-       -122.3933511,
-       37.7712782
+       -122.394398509,
+       37.771005421
       ],
       [
-       -122.3933623,
-       37.7713891
+       -122.394397449,
+       37.771006667
       ],
       [
-       -122.3933428,
-       37.7713908
+       -122.394396369,
+       37.7710079
       ],
       [
-       -122.3933458,
-       37.7714355
+       -122.394395266,
+       37.771009121
       ],
       [
-       -122.3932211,
-       37.771442
+       -122.39439414,
+       37.771010328
       ],
       [
-       -122.3932233,
-       37.7714897
+       -122.394392994,
+       37.771011523
       ],
       [
-       -122.3933667,
-       37.7714797
+       -122.394391826,
+       37.771012705
       ],
       [
-       -122.393369,
-       37.7714928
+       -122.394390635,
+       37.771013873
       ],
       [
-       -122.3934396,
-       37.771488
+       -122.394389425,
+       37.771015027
       ],
       [
-       -122.3934629,
-       37.7714719
+       -122.394388192,
+       37.771016168
       ],
       [
-       -122.3934516,
-       37.7714612
+       -122.39438694,
+       37.771017294
       ],
       [
-       -122.3934959,
-       37.7714273
+       -122.394385668,
+       37.771018406
       ],
       [
-       -122.3935064,
-       37.7714344
+       -122.394384375,
+       37.771019503
       ],
       [
-       -122.393535,
-       37.7714172
+       -122.394383063,
+       37.771020586
       ],
       [
-       -122.393523,
-       37.7714076
+       -122.394381731,
+       37.771021652
       ],
       [
-       -122.3935538,
-       37.7713832
+       -122.393556977,
+       37.771673088
       ],
       [
-       -122.393568,
-       37.771391
+       -122.39306168,
+       37.771702935
       ],
       [
-       -122.3935973,
-       37.7713677
+       -122.39298966,
+       37.770949867
       ],
       [
-       -122.3935831,
-       37.7713582
+       -122.394412854,
+       37.770864098
       ],
       [
-       -122.3936161,
-       37.771332
-      ],
-      [
-       -122.3936319,
-       37.7713415
-      ],
-      [
-       -122.3936612,
-       37.7713213
-      ],
-      [
-       -122.3936469,
-       37.7713099
-      ],
-      [
-       -122.3936852,
-       37.7712843
-      ],
-      [
-       -122.3936942,
-       37.7712927
-      ],
-      [
-       -122.3937551,
-       37.7712492
-      ],
-      [
-       -122.3937386,
-       37.7712343
-      ],
-      [
-       -122.3937731,
-       37.7712111
-      ],
-      [
-       -122.3937866,
-       37.7712182
-      ],
-      [
-       -122.393846,
-       37.7711765
-      ],
-      [
-       -122.3938332,
-       37.7711658
-      ],
-      [
-       -122.3939324,
-       37.7710908
-      ],
-      [
-       -122.3939451,
-       37.7710997
-      ],
-      [
-       -122.3939782,
-       37.7710759
-      ],
-      [
-       -122.3939745,
-       37.7710181
-      ],
-      [
-       -122.393719,
-       37.7710345
-      ],
-      [
-       -122.3937173,
-       37.7710161
+       -122.394420091,
+       37.770939774
       ]
      ]
     ]
@@ -113743,13 +113559,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8711023), cross-referenced by position against an OpenStreetMap building/address point (way 1208613094) for the name and street address; not a hand trace or plan estimate. Opening year not confirmed by any source found.",
-     "digitized_from": "DataSF Building Footprints (mblr SF8711023); name/address from OpenStreetMap way 1208613094 (185 Channel St)"
+     "accuracy_caveat": "REAL lot geometry -- the outline is the union of Assessor lots 8711023B and 8711023C (8,375 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed the surveyed building footprint (DataSF Building Footprints (mblr SF8711023)); 96% of that outline lies inside the lot and it covered 73% of the lot.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lots 8711023B and 8711023C (mapped 2021-06-02; active), joined into one outline; the earlier outline came from: DataSF Building Footprints (mblr SF8711023); name/address from OpenStreetMap way 1208613094 (185 Channel St)"
     }
    },
    "centroid": {
-    "lon": -122.390802,
-    "lat": 37.774079
+    "lon": -122.39134,
+    "lat": 37.774101
    },
    "facts": [],
    "costs": [],
@@ -113843,6 +113659,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Channel Mission Bay now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 8711023B and 8711023C",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 8711023B and 8711023C"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_channel",
+      "slug": "channel-mission-bay",
+      "name": "Channel Mission Bay",
+      "permalink": "https://pierandpoint.org/parcels/channel-mission-bay/",
+      "api": "https://pierandpoint.org/api/v1/records/channel-mission-bay.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-29",
      "kind": "correction",
@@ -114120,244 +113965,336 @@
     "coordinates": [
      [
       [
-       -122.3910067,
-       37.7743553
+       -122.3913544,
+       37.773905677
       ],
       [
-       -122.3909904,
-       37.7741515
+       -122.391354953,
+       37.773911001
       ],
       [
-       -122.3911638,
-       37.7741438
+       -122.391355532,
+       37.773916324
       ],
       [
-       -122.3911616,
-       37.7741152
+       -122.391356136,
+       37.773921645
       ],
       [
-       -122.3911353,
-       37.7741158
+       -122.391356766,
+       37.773926965
       ],
       [
-       -122.3911227,
-       37.7739704
+       -122.391357424,
+       37.773932282
       ],
       [
-       -122.3911512,
-       37.7739686
+       -122.391358107,
+       37.773937598
       ],
       [
-       -122.3911445,
-       37.773934
+       -122.391358817,
+       37.773942911
       ],
       [
-       -122.3911272,
-       37.7739191
+       -122.391359551,
+       37.773948221
       ],
       [
-       -122.3910807,
-       37.7739215
+       -122.391360312,
+       37.773953531
       ],
       [
-       -122.3910837,
-       37.7739429
+       -122.391361099,
+       37.773958836
       ],
       [
-       -122.3908884,
-       37.773953
+       -122.391361912,
+       37.77396414
       ],
       [
-       -122.3908862,
-       37.7739178
+       -122.391362752,
+       37.773969441
       ],
       [
-       -122.3907653,
-       37.7739237
+       -122.391363617,
+       37.77397474
       ],
       [
-       -122.3907721,
-       37.7739624
+       -122.391364508,
+       37.773980036
       ],
       [
-       -122.3907953,
-       37.7739636
+       -122.391365425,
+       37.773985329
       ],
       [
-       -122.3907968,
-       37.7739934
+       -122.391366368,
+       37.773990619
       ],
       [
-       -122.3908223,
-       37.7739923
+       -122.391367337,
+       37.773995907
       ],
       [
-       -122.3908424,
-       37.774211
+       -122.391368331,
+       37.774001191
       ],
       [
-       -122.3908132,
-       37.7742116
+       -122.391369351,
+       37.774006472
       ],
       [
-       -122.3908243,
-       37.7743689
+       -122.391370398,
+       37.77401175
       ],
       [
-       -122.3905285,
-       37.7743848
+       -122.391371471,
+       37.774017024
       ],
       [
-       -122.3905076,
-       37.7741864
+       -122.391372569,
+       37.774022296
       ],
       [
-       -122.3905864,
-       37.7741823
+       -122.391373693,
+       37.774027563
       ],
       [
-       -122.390585,
-       37.7741602
+       -122.391374843,
+       37.774032828
       ],
       [
-       -122.3905654,
-       37.7741608
+       -122.391376018,
+       37.774038088
       ],
       [
-       -122.3905528,
-       37.774004
+       -122.39137722,
+       37.774043346
       ],
       [
-       -122.3905731,
-       37.7740017
+       -122.391378448,
+       37.774048599
       ],
       [
-       -122.3905708,
-       37.7739772
+       -122.391379701,
+       37.774053848
       ],
       [
-       -122.3905536,
-       37.7739647
+       -122.391380979,
+       37.774059094
       ],
       [
-       -122.390507,
-       37.7739659
+       -122.391382284,
+       37.774064336
       ],
       [
-       -122.390507,
-       37.7739838
+       -122.391383614,
+       37.774069573
       ],
       [
-       -122.3903013,
-       37.7739914
+       -122.391384972,
+       37.774074837
       ],
       [
-       -122.3902983,
-       37.7739741
+       -122.391386356,
+       37.774080096
       ],
       [
-       -122.3902503,
-       37.7739765
+       -122.391387765,
+       37.774085351
       ],
       [
-       -122.3902277,
-       37.7739938
+       -122.391389201,
+       37.774090601
       ],
       [
-       -122.3902322,
-       37.7740313
+       -122.391390663,
+       37.774095847
       ],
       [
-       -122.3902525,
-       37.7740313
+       -122.391392151,
+       37.774101089
       ],
       [
-       -122.3902666,
-       37.7741708
+       -122.391393664,
+       37.774106326
       ],
       [
-       -122.3902433,
-       37.7741737
+       -122.391395202,
+       37.774111558
       ],
       [
-       -122.3902471,
-       37.7742125
+       -122.391396767,
+       37.774116785
       ],
       [
-       -122.3903251,
-       37.7742083
+       -122.391398358,
+       37.774122008
       ],
       [
-       -122.39034,
-       37.7743973
+       -122.391399975,
+       37.774127225
       ],
       [
-       -122.3900262,
-       37.774412
+       -122.391401616,
+       37.774132437
       ],
       [
-       -122.3899733,
-       37.7738077
+       -122.391403284,
+       37.774137644
       ],
       [
-       -122.3907887,
-       37.7737568
+       -122.391404978,
+       37.774142847
       ],
       [
-       -122.390794,
-       37.7738069
+       -122.391406697,
+       37.774148043
       ],
       [
-       -122.390866,
-       37.773804
+       -122.391408442,
+       37.774153234
       ],
       [
-       -122.3908616,
-       37.7737509
+       -122.391410212,
+       37.77415842
       ],
       [
-       -122.3913691,
-       37.7737178
+       -122.391412007,
+       37.7741636
       ],
       [
-       -122.3914161,
-       37.774169
+       -122.391413828,
+       37.774168775
       ],
       [
-       -122.391386,
-       37.7741707
+       -122.391415676,
+       37.774173944
       ],
       [
-       -122.3913905,
-       37.7742107
+       -122.391417548,
+       37.774179107
       ],
       [
-       -122.3914423,
-       37.7742029
+       -122.391419446,
+       37.774184265
       ],
       [
-       -122.3914603,
-       37.7741958
+       -122.391421368,
+       37.774189416
       ],
       [
-       -122.3914941,
-       37.7742828
+       -122.391423317,
+       37.774194561
       ],
       [
-       -122.3914963,
-       37.7742947
+       -122.391425291,
+       37.774199701
       ],
       [
-       -122.3914888,
-       37.7743067
+       -122.391427289,
+       37.774204833
       ],
       [
-       -122.3914648,
-       37.7743258
+       -122.391429314,
+       37.77420996
       ],
       [
-       -122.3910067,
-       37.7743553
+       -122.391431364,
+       37.774215082
+      ],
+      [
+       -122.391433439,
+       37.774220196
+      ],
+      [
+       -122.391435539,
+       37.774225303
+      ],
+      [
+       -122.391437664,
+       37.774230404
+      ],
+      [
+       -122.391439814,
+       37.774235499
+      ],
+      [
+       -122.39144199,
+       37.774240587
+      ],
+      [
+       -122.39144419,
+       37.774245667
+      ],
+      [
+       -122.391446416,
+       37.774250742
+      ],
+      [
+       -122.391448666,
+       37.774255809
+      ],
+      [
+       -122.391450942,
+       37.774260869
+      ],
+      [
+       -122.391453243,
+       37.774265922
+      ],
+      [
+       -122.391455568,
+       37.774270968
+      ],
+      [
+       -122.391457919,
+       37.774276006
+      ],
+      [
+       -122.391460292,
+       37.774281038
+      ],
+      [
+       -122.391462692,
+       37.774286061
+      ],
+      [
+       -122.391426201,
+       37.774324928
+      ],
+      [
+       -122.391219062,
+       37.774337406
+      ],
+      [
+       -122.391225483,
+       37.774342528
+      ],
+      [
+       -122.389998813,
+       37.774416417
+      ],
+      [
+       -122.389998289,
+       37.77441094
+      ],
+      [
+       -122.389941166,
+       37.77381339
+      ],
+      [
+       -122.391337517,
+       37.773729279
+      ],
+      [
+       -122.391353874,
+       37.77390035
+      ],
+      [
+       -122.3913544,
+       37.773905677
       ]
      ]
     ]
@@ -117401,13 +117338,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8707120), cross-referenced by position against an OpenStreetMap building/address point (way 56656114) for the name and street address; not a hand trace or plan estimate. Built 2009 per the DataSF Assessor (year_property_built) and San Francisco Condo Market; the unit count for 335 Berry alone is unsettled (Condo Market lists 39 units, while the 131 below-market-rate condos in SocketSite's 2008 post span both 330 and 335 Berry).",
-     "digitized_from": "DataSF Building Footprints (mblr SF8707120); name/address from OpenStreetMap way 56656114 (335 Berry St)"
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8707120 (2,696 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. The lot is condominium-mapped: 67 Assessor lots share this outline (the map lot 8707120 and 66 per-unit lots), so the outline is the building's shared lot, not any one unit. Until 2026-10-12 this record showed the surveyed building footprint (DataSF Building Footprints (mblr SF8707120)); 97% of that outline lies inside the lot and it covered 67% of the lot.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8707120 (mapped 2010-01-11; active); the earlier outline came from: DataSF Building Footprints (mblr SF8707120); name/address from OpenStreetMap way 56656114 (335 Berry St)"
     }
    },
    "centroid": {
-    "lon": -122.396326,
-    "lat": 37.77293
+    "lon": -122.396224,
+    "lat": 37.772947
    },
    "facts": [
     {
@@ -117503,6 +117440,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Mission Walk (335 Berry St) now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8707120",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8707120"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_mission_walk_335",
+      "slug": "mission-walk-335-berry-st",
+      "name": "Mission Walk (335 Berry St)",
+      "permalink": "https://pierandpoint.org/parcels/mission-walk-335-berry-st/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-walk-335-berry-st.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-29",
      "kind": "correction",
@@ -117666,264 +117632,24 @@
     "coordinates": [
      [
       [
-       -122.3963385,
-       37.7730157
+       -122.395890149,
+       37.772929151
       ],
       [
-       -122.3963337,
-       37.7730214
+       -122.396282549,
+       37.772619205
       ],
       [
-       -122.3963673,
-       37.7730453
+       -122.396725493,
+       37.772972535
       ],
       [
-       -122.3965151,
-       37.7729233
+       -122.396333093,
+       37.773282483
       ],
       [
-       -122.3964875,
-       37.7728975
-      ],
-      [
-       -122.3964815,
-       37.7729042
-      ],
-      [
-       -122.3962734,
-       37.7727398
-      ],
-      [
-       -122.3962715,
-       37.7727382
-      ],
-      [
-       -122.3962715,
-       37.7727382
-      ],
-      [
-       -122.3962811,
-       37.7727305
-      ],
-      [
-       -122.3962689,
-       37.7727208
-      ],
-      [
-       -122.3962609,
-       37.7727272
-      ],
-      [
-       -122.3962124,
-       37.7726887
-      ],
-      [
-       -122.3962124,
-       37.7726887
-      ],
-      [
-       -122.3962797,
-       37.7726352
-      ],
-      [
-       -122.3962996,
-       37.772651
-      ],
-      [
-       -122.3963132,
-       37.7726402
-      ],
-      [
-       -122.3963661,
-       37.7726822
-      ],
-      [
-       -122.3965925,
-       37.7728616
-      ],
-      [
-       -122.3965925,
-       37.7728616
-      ],
-      [
-       -122.39659,
-       37.7728636
-      ],
-      [
-       -122.3966187,
-       37.7728865
-      ],
-      [
-       -122.3966553,
-       37.7729158
-      ],
-      [
-       -122.3966554,
-       37.7729159
-      ],
-      [
-       -122.396642,
-       37.7729257
-      ],
-      [
-       -122.396652,
-       37.7729336
-      ],
-      [
-       -122.3966695,
-       37.7729201
-      ],
-      [
-       -122.3966696,
-       37.77292
-      ],
-      [
-       -122.3967257,
-       37.7729642
-      ],
-      [
-       -122.3967257,
-       37.7729643
-      ],
-      [
-       -122.3967245,
-       37.7729652
-      ],
-      [
-       -122.3967017,
-       37.7729834
-      ],
-      [
-       -122.396715,
-       37.7729941
-      ],
-      [
-       -122.396715,
-       37.7729941
-      ],
-      [
-       -122.396438,
-       37.7732128
-      ],
-      [
-       -122.396425,
-       37.7732025
-      ],
-      [
-       -122.3964116,
-       37.773213
-      ],
-      [
-       -122.3964237,
-       37.7732226
-      ],
-      [
-       -122.3964237,
-       37.7732227
-      ],
-      [
-       -122.3963577,
-       37.7732747
-      ],
-      [
-       -122.3962914,
-       37.7732218
-      ],
-      [
-       -122.3962914,
-       37.7732217
-      ],
-      [
-       -122.3963026,
-       37.7732128
-      ],
-      [
-       -122.3962896,
-       37.7732024
-      ],
-      [
-       -122.396278,
-       37.7732116
-      ],
-      [
-       -122.3959776,
-       37.7729718
-      ],
-      [
-       -122.3959776,
-       37.7729718
-      ],
-      [
-       -122.3959878,
-       37.7729637
-      ],
-      [
-       -122.3959749,
-       37.7729534
-      ],
-      [
-       -122.3959638,
-       37.7729621
-      ],
-      [
-       -122.395917,
-       37.7729248
-      ],
-      [
-       -122.395917,
-       37.7729247
-      ],
-      [
-       -122.3959844,
-       37.7728715
-      ],
-      [
-       -122.396003,
-       37.7728863
-      ],
-      [
-       -122.3960167,
-       37.7728755
-      ],
-      [
-       -122.3959986,
-       37.772861
-      ],
-      [
-       -122.3959985,
-       37.7728609
-      ],
-      [
-       -122.3960638,
-       37.7728094
-      ],
-      [
-       -122.3961097,
-       37.7728461
-      ],
-      [
-       -122.3961097,
-       37.7728461
-      ],
-      [
-       -122.3961012,
-       37.7728529
-      ],
-      [
-       -122.3961144,
-       37.7728634
-      ],
-      [
-       -122.3961231,
-       37.7728565
-      ],
-      [
-       -122.3961235,
-       37.7728568
-      ],
-      [
-       -122.3963385,
-       37.7730157
+       -122.395890149,
+       37.772929151
       ]
      ]
     ]
@@ -118331,13 +118057,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8721010), cross-referenced by position against an OpenStreetMap building/address point (way 28844040) for the name and street address; not a hand trace or plan estimate. ",
-     "digitized_from": "DataSF Building Footprints (mblr SF8721010, all 3 real footprint pieces within this Assessor lot unioned)"
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8721010 (7,485 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed the surveyed building footprint (DataSF Building Footprints (mblr SF8721010, all 3 real footprint pieces within this Assessor lot unioned)); 98% of that outline lies inside the lot and it covered 70% of the lot.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8721010 (mapped 2001-03-20; active); the earlier outline came from: DataSF Building Footprints (mblr SF8721010, all 3 real footprint pieces within this Assessor lot unioned)"
     }
    },
    "centroid": {
-    "lon": -122.387182,
-    "lat": 37.770329
+    "lon": -122.386637,
+    "lat": 37.770747
    },
    "facts": [],
    "costs": [],
@@ -118423,6 +118149,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "500 Terry A. Francois Boulevard now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8721010",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8721010"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_500_terry_francois",
+      "slug": "500-terry-a-francois-boulevard",
+      "name": "500 Terry A. Francois Boulevard",
+      "permalink": "https://pierandpoint.org/parcels/500-terry-a-francois-boulevard/",
+      "api": "https://pierandpoint.org/api/v1/records/500-terry-a-francois-boulevard.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-29",
      "kind": "correction",
@@ -118577,7 +118332,7 @@
      "url": "https://www.openstreetmap.org/way/28844040"
     }
    ],
-   "notes": " GEOMETRY CORRECTED 2026-09-19: previously only captured 1 of 3 real footprint pieces; now unioned.",
+   "notes": null,
    "has_record_file": true,
    "last_verified": "2026-09-21",
    "tenants": [
@@ -118606,182 +118361,428 @@
     }
    ],
    "geometry": {
-    "type": "MultiPolygon",
+    "type": "Polygon",
     "coordinates": [
      [
       [
-       [
-        -122.3870031,
-        37.7702983
-       ],
-       [
-        -122.387003,
-        37.7702982
-       ],
-       [
-        -122.3870015,
-        37.7702824
-       ],
-       [
-        -122.3869528,
-        37.7702857
-       ],
-       [
-        -122.3869171,
-        37.7702319
-       ],
-       [
-        -122.386917,
-        37.7702318
-       ],
-       [
-        -122.3869188,
-        37.7699971
-       ],
-       [
-        -122.3870258,
-        37.7699903
-       ],
-       [
-        -122.3870259,
-        37.7699903
-       ],
-       [
-        -122.3870267,
-        37.7700011
-       ],
-       [
-        -122.3871124,
-        37.769996
-       ],
-       [
-        -122.3871114,
-        37.7699851
-       ],
-       [
-        -122.3875579,
-        37.7699601
-       ],
-       [
-        -122.3875579,
-        37.7699602
-       ],
-       [
-        -122.3875811,
-        37.7702197
-       ],
-       [
-        -122.3875716,
-        37.7702202
-       ],
-       [
-        -122.3875757,
-        37.7702641
-       ],
-       [
-        -122.3875536,
-        37.7702654
-       ],
-       [
-        -122.3875638,
-        37.7704126
-       ],
-       [
-        -122.3871045,
-        37.7704397
-       ],
-       [
-        -122.3870587,
-        37.7704432
-       ],
-       [
-        -122.3870586,
-        37.7704431
-       ],
-       [
-        -122.3870554,
-        37.7704081
-       ],
-       [
-        -122.3870495,
-        37.7703447
-       ],
-       [
-        -122.3870461,
-        37.7703073
-       ],
-       [
-        -122.3870519,
-        37.7703068
-       ],
-       [
-        -122.3870509,
-        37.7702954
-       ],
-       [
-        -122.3870031,
-        37.7702983
-       ]
-      ]
-     ],
-     [
+       -122.386528001,
+       37.77002878
+      ],
       [
-       [
-        -122.3875898,
-        37.7704191
-       ],
-       [
-        -122.3875919,
-        37.770419
-       ],
-       [
-        -122.387592,
-        37.7704191
-       ],
-       [
-        -122.3876139,
-        37.7706352
-       ],
-       [
-        -122.3874389,
-        37.7706453
-       ],
-       [
-        -122.3874466,
-        37.770731
-       ],
-       [
-        -122.3866426,
-        37.7707763
-       ],
-       [
-        -122.3866426,
-        37.7707762
-       ],
-       [
-        -122.3866224,
-        37.7705523
-       ],
-       [
-        -122.3866331,
-        37.7705517
-       ],
-       [
-        -122.3866258,
-        37.7704778
-       ],
-       [
-        -122.3875897,
-        37.770418
-       ],
-       [
-        -122.3875897,
-        37.7704181
-       ],
-       [
-        -122.3875898,
-        37.7704191
-       ]
+       -122.387539486,
+       37.76996788
+      ],
+      [
+       -122.387611449,
+       37.77072096
+      ],
+      [
+       -122.387408736,
+       37.770733165
+      ],
+      [
+       -122.386841843,
+       37.770767298
+      ],
+      [
+       -122.386634453,
+       37.770779784
+      ],
+      [
+       -122.386633889,
+       37.770779842
+      ],
+      [
+       -122.386633324,
+       37.770779893
+      ],
+      [
+       -122.386632757,
+       37.770779936
+      ],
+      [
+       -122.386632189,
+       37.770779971
+      ],
+      [
+       -122.386631621,
+       37.770779998
+      ],
+      [
+       -122.386631053,
+       37.770780017
+      ],
+      [
+       -122.386630484,
+       37.770780029
+      ],
+      [
+       -122.386629914,
+       37.770780033
+      ],
+      [
+       -122.386629346,
+       37.770780028
+      ],
+      [
+       -122.386628776,
+       37.770780016
+      ],
+      [
+       -122.386628208,
+       37.770779996
+      ],
+      [
+       -122.38662764,
+       37.770779968
+      ],
+      [
+       -122.386627073,
+       37.770779932
+      ],
+      [
+       -122.386626506,
+       37.770779889
+      ],
+      [
+       -122.386625942,
+       37.770779837
+      ],
+      [
+       -122.386625377,
+       37.770779777
+      ],
+      [
+       -122.386624814,
+       37.770779711
+      ],
+      [
+       -122.386624253,
+       37.770779636
+      ],
+      [
+       -122.386623693,
+       37.770779553
+      ],
+      [
+       -122.386623136,
+       37.770779463
+      ],
+      [
+       -122.38662258,
+       37.770779364
+      ],
+      [
+       -122.386622028,
+       37.770779259
+      ],
+      [
+       -122.386621476,
+       37.770779145
+      ],
+      [
+       -122.386620929,
+       37.770779024
+      ],
+      [
+       -122.386620383,
+       37.770778896
+      ],
+      [
+       -122.38661984,
+       37.770778759
+      ],
+      [
+       -122.386619301,
+       37.770778616
+      ],
+      [
+       -122.386618764,
+       37.770778465
+      ],
+      [
+       -122.386618231,
+       37.770778306
+      ],
+      [
+       -122.386617703,
+       37.77077814
+      ],
+      [
+       -122.386617176,
+       37.770777967
+      ],
+      [
+       -122.386616655,
+       37.770777787
+      ],
+      [
+       -122.386616137,
+       37.770777598
+      ],
+      [
+       -122.386615623,
+       37.770777404
+      ],
+      [
+       -122.386615114,
+       37.770777202
+      ],
+      [
+       -122.38661461,
+       37.770776993
+      ],
+      [
+       -122.38661411,
+       37.770776776
+      ],
+      [
+       -122.386613615,
+       37.770776554
+      ],
+      [
+       -122.386613125,
+       37.770776324
+      ],
+      [
+       -122.38661264,
+       37.770776088
+      ],
+      [
+       -122.386612161,
+       37.770775845
+      ],
+      [
+       -122.386611687,
+       37.770775596
+      ],
+      [
+       -122.386611217,
+       37.770775339
+      ],
+      [
+       -122.386610754,
+       37.770775077
+      ],
+      [
+       -122.386610297,
+       37.770774808
+      ],
+      [
+       -122.386609845,
+       37.770774533
+      ],
+      [
+       -122.386609401,
+       37.770774251
+      ],
+      [
+       -122.386608961,
+       37.770773963
+      ],
+      [
+       -122.386608529,
+       37.77077367
+      ],
+      [
+       -122.386608104,
+       37.77077337
+      ],
+      [
+       -122.386607684,
+       37.770773064
+      ],
+      [
+       -122.386607272,
+       37.770772754
+      ],
+      [
+       -122.386606866,
+       37.770772437
+      ],
+      [
+       -122.386606468,
+       37.770772114
+      ],
+      [
+       -122.386606077,
+       37.770771786
+      ],
+      [
+       -122.386605693,
+       37.770771453
+      ],
+      [
+       -122.386605316,
+       37.770771114
+      ],
+      [
+       -122.386604946,
+       37.770770771
+      ],
+      [
+       -122.386604584,
+       37.770770421
+      ],
+      [
+       -122.386604231,
+       37.770770068
+      ],
+      [
+       -122.386603885,
+       37.77076971
+      ],
+      [
+       -122.386603547,
+       37.770769346
+      ],
+      [
+       -122.386603217,
+       37.770768978
+      ],
+      [
+       -122.386602894,
+       37.770768605
+      ],
+      [
+       -122.38660258,
+       37.770768229
+      ],
+      [
+       -122.386602276,
+       37.770767847
+      ],
+      [
+       -122.386601979,
+       37.770767462
+      ],
+      [
+       -122.386601691,
+       37.770767073
+      ],
+      [
+       -122.38660141,
+       37.77076668
+      ],
+      [
+       -122.386601139,
+       37.770766282
+      ],
+      [
+       -122.386600877,
+       37.770765881
+      ],
+      [
+       -122.386600624,
+       37.770765477
+      ],
+      [
+       -122.386600379,
+       37.770765069
+      ],
+      [
+       -122.386600143,
+       37.770764658
+      ],
+      [
+       -122.386599917,
+       37.770764243
+      ],
+      [
+       -122.3865997,
+       37.770763826
+      ],
+      [
+       -122.386599491,
+       37.770763406
+      ],
+      [
+       -122.386599292,
+       37.770762982
+      ],
+      [
+       -122.386599103,
+       37.770762556
+      ],
+      [
+       -122.386598923,
+       37.770762128
+      ],
+      [
+       -122.386598752,
+       37.770761697
+      ],
+      [
+       -122.386598591,
+       37.770761264
+      ],
+      [
+       -122.386598439,
+       37.770760828
+      ],
+      [
+       -122.386598298,
+       37.77076039
+      ],
+      [
+       -122.386598165,
+       37.770759951
+      ],
+      [
+       -122.386598043,
+       37.77075951
+      ],
+      [
+       -122.386597929,
+       37.770759068
+      ],
+      [
+       -122.386597826,
+       37.770758623
+      ],
+      [
+       -122.386597733,
+       37.770758178
+      ],
+      [
+       -122.386597649,
+       37.770757731
+      ],
+      [
+       -122.386597575,
+       37.770757283
+      ],
+      [
+       -122.386597511,
+       37.770756834
+      ],
+      [
+       -122.386597457,
+       37.770756384
+      ],
+      [
+       -122.386597412,
+       37.770755934
+      ],
+      [
+       -122.386597379,
+       37.770755483
+      ],
+      [
+       -122.386597354,
+       37.770755032
+      ],
+      [
+       -122.386597338,
+       37.770754476
+      ],
+      [
+       -122.386578486,
+       37.770557171
+      ],
+      [
+       -122.386528001,
+       37.77002878
       ]
      ]
     ]
@@ -118825,13 +118826,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8709018), cross-referenced by position against an OpenStreetMap building/address point (way 84805709) for the name and street address; not a hand trace or plan estimate. Construction is dated by DBI permit 200611298694 (filed 2006-11-29, completed 2009-07-31) and the Assessor's year built (2009); the architect is not confirmed by any source found.",
-     "digitized_from": "DataSF Building Footprints (mblr SF8709018); name/address from OpenStreetMap way 84805709 (1500 Owens St)"
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8709018 (4,257 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed the surveyed building footprint (DataSF Building Footprints (mblr SF8709018)); 100% of that outline lies inside the lot and it covered 62% of the lot.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8709018 (mapped 2010-01-12; active); the earlier outline came from: DataSF Building Footprints (mblr SF8709018); name/address from OpenStreetMap way 84805709 (1500 Owens St)"
     }
    },
    "centroid": {
-    "lon": -122.395773,
-    "lat": 37.768877
+    "lon": -122.395534,
+    "lat": 37.768953
    },
    "facts": [],
    "costs": [],
@@ -118911,6 +118912,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "1500 Owens Street now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8709018",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8709018"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_1500_owens",
+      "slug": "1500-owens-street",
+      "name": "1500 Owens Street",
+      "permalink": "https://pierandpoint.org/parcels/1500-owens-street/",
+      "api": "https://pierandpoint.org/api/v1/records/1500-owens-street.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-29",
      "kind": "correction",
@@ -119048,120 +119078,400 @@
     "coordinates": [
      [
       [
-       -122.396135,
-       37.7690147
+       -122.395761297,
+       37.769266733
       ],
       [
-       -122.3959714,
-       37.7690819
+       -122.395757014,
+       37.769259836
       ],
       [
-       -122.3959737,
-       37.7690831
+       -122.395752705,
+       37.769252949
       ],
       [
-       -122.3959737,
-       37.7690832
+       -122.395748374,
+       37.769246072
       ],
       [
-       -122.3959339,
-       37.7691319
+       -122.395744016,
+       37.769239204
       ],
       [
-       -122.3959088,
-       37.7691076
+       -122.395739635,
+       37.769232346
       ],
       [
-       -122.3958068,
-       37.7691495
+       -122.395735229,
+       37.769225499
       ],
       [
-       -122.3957042,
-       37.7690149
+       -122.395730798,
+       37.769218661
       ],
       [
-       -122.3954592,
-       37.7688371
+       -122.395726342,
+       37.769211833
       ],
       [
-       -122.3954592,
-       37.768837
+       -122.395721863,
+       37.769205015
       ],
       [
-       -122.3954673,
-       37.7688315
+       -122.395717358,
+       37.769198208
       ],
       [
-       -122.3954672,
-       37.7688314
+       -122.395712831,
+       37.769191411
       ],
       [
-       -122.395452,
-       37.7688185
+       -122.395708278,
+       37.769184624
       ],
       [
-       -122.395452,
-       37.7688184
+       -122.395703701,
+       37.769177847
       ],
       [
-       -122.3954579,
-       37.7688139
+       -122.395699101,
+       37.76917108
       ],
       [
-       -122.3954394,
-       37.7687991
+       -122.395694475,
+       37.769164325
       ],
       [
-       -122.3954327,
-       37.7688044
+       -122.395689825,
+       37.769157579
       ],
       [
-       -122.3953226,
-       37.7687168
+       -122.395685151,
+       37.769150844
       ],
       [
-       -122.3953226,
-       37.7687166
+       -122.395680455,
+       37.769144119
       ],
       [
-       -122.3956105,
-       37.7684897
+       -122.395675732,
+       37.769137406
       ],
       [
-       -122.3959363,
-       37.7687459
+       -122.395670987,
+       37.769130702
       ],
       [
-       -122.3959906,
-       37.7687038
+       -122.395666217,
+       37.76912401
       ],
       [
-       -122.3960972,
-       37.7687873
+       -122.395661423,
+       37.769117328
       ],
       [
-       -122.3960955,
-       37.7687887
+       -122.395656606,
+       37.769110657
       ],
       [
-       -122.3960967,
-       37.7687897
+       -122.395651765,
+       37.769103997
       ],
       [
-       -122.3960488,
-       37.7688276
+       -122.395646899,
+       37.769097348
       ],
       [
-       -122.3961369,
-       37.7689
+       -122.395642011,
+       37.76909071
       ],
       [
-       -122.3961425,
-       37.7689046
+       -122.395637098,
+       37.769084083
       ],
       [
-       -122.396135,
-       37.7690147
+       -122.395632161,
+       37.769077467
+      ],
+      [
+       -122.395627202,
+       37.769070863
+      ],
+      [
+       -122.395622217,
+       37.769064269
+      ],
+      [
+       -122.39561721,
+       37.769057687
+      ],
+      [
+       -122.395612179,
+       37.769051116
+      ],
+      [
+       -122.395607126,
+       37.769044557
+      ],
+      [
+       -122.395602047,
+       37.769038008
+      ],
+      [
+       -122.395596947,
+       37.769031472
+      ],
+      [
+       -122.395591822,
+       37.769024946
+      ],
+      [
+       -122.395586673,
+       37.769018433
+      ],
+      [
+       -122.395581503,
+       37.769011931
+      ],
+      [
+       -122.395576308,
+       37.769005441
+      ],
+      [
+       -122.395571091,
+       37.768998962
+      ],
+      [
+       -122.39556585,
+       37.768992496
+      ],
+      [
+       -122.395560586,
+       37.768986041
+      ],
+      [
+       -122.395555299,
+       37.768979599
+      ],
+      [
+       -122.395549989,
+       37.768973167
+      ],
+      [
+       -122.395544656,
+       37.768966748
+      ],
+      [
+       -122.3955393,
+       37.768960341
+      ],
+      [
+       -122.395533921,
+       37.768953947
+      ],
+      [
+       -122.39552852,
+       37.768947564
+      ],
+      [
+       -122.395523095,
+       37.768941193
+      ],
+      [
+       -122.395517647,
+       37.768934835
+      ],
+      [
+       -122.395512178,
+       37.768928489
+      ],
+      [
+       -122.395506685,
+       37.768922156
+      ],
+      [
+       -122.39550117,
+       37.768915835
+      ],
+      [
+       -122.395495632,
+       37.768909526
+      ],
+      [
+       -122.395490071,
+       37.76890323
+      ],
+      [
+       -122.395484488,
+       37.768896946
+      ],
+      [
+       -122.395478882,
+       37.768890676
+      ],
+      [
+       -122.395473255,
+       37.768884417
+      ],
+      [
+       -122.395467604,
+       37.768878171
+      ],
+      [
+       -122.395461931,
+       37.768871939
+      ],
+      [
+       -122.395456236,
+       37.768865719
+      ],
+      [
+       -122.39545052,
+       37.768859512
+      ],
+      [
+       -122.39544478,
+       37.768853318
+      ],
+      [
+       -122.395439018,
+       37.768847136
+      ],
+      [
+       -122.395433235,
+       37.768840969
+      ],
+      [
+       -122.395427429,
+       37.768834813
+      ],
+      [
+       -122.395421601,
+       37.768828671
+      ],
+      [
+       -122.395415753,
+       37.768822542
+      ],
+      [
+       -122.39540988,
+       37.768816426
+      ],
+      [
+       -122.395403987,
+       37.768810325
+      ],
+      [
+       -122.395398072,
+       37.768804235
+      ],
+      [
+       -122.395392135,
+       37.768798159
+      ],
+      [
+       -122.395386176,
+       37.768792097
+      ],
+      [
+       -122.395380196,
+       37.768786048
+      ],
+      [
+       -122.395374194,
+       37.768780013
+      ],
+      [
+       -122.395368171,
+       37.768773991
+      ],
+      [
+       -122.395362126,
+       37.768767984
+      ],
+      [
+       -122.395356059,
+       37.768761989
+      ],
+      [
+       -122.395349971,
+       37.768756008
+      ],
+      [
+       -122.395343862,
+       37.768750041
+      ],
+      [
+       -122.39533773,
+       37.768744088
+      ],
+      [
+       -122.395331579,
+       37.768738149
+      ],
+      [
+       -122.395325405,
+       37.768732223
+      ],
+      [
+       -122.395319211,
+       37.768726311
+      ],
+      [
+       -122.395312996,
+       37.768720414
+      ],
+      [
+       -122.395306759,
+       37.768714531
+      ],
+      [
+       -122.395300502,
+       37.768708661
+      ],
+      [
+       -122.395294223,
+       37.768702806
+      ],
+      [
+       -122.395287923,
+       37.768696965
+      ],
+      [
+       -122.395281603,
+       37.768691138
+      ],
+      [
+       -122.395275261,
+       37.768685325
+      ],
+      [
+       -122.395268899,
+       37.768679527
+      ],
+      [
+       -122.395262516,
+       37.768673743
+      ],
+      [
+       -122.395256114,
+       37.768667974
+      ],
+      [
+       -122.39524969,
+       37.768662219
+      ],
+      [
+       -122.395588947,
+       37.768394237
+      ],
+      [
+       -122.396349885,
+       37.769001267
+      ],
+      [
+       -122.395761297,
+       37.769266733
       ]
      ]
     ]
@@ -119202,13 +119512,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8709007), cross-referenced by position against an OpenStreetMap building/address point (way 27955297) for the name and street address; not a hand trace or plan estimate. Construction date: DBI permit 200412282235 (research and development building at 1700 Owens) completed 2007-10-02 and the Assessor roll for 2009-2021 gives year built 2007; architect not confirmed by any source found.",
-     "digitized_from": "DataSF Building Footprints (mblr SF8709007); name/address from OpenStreetMap way 27955297 (1700 Owens St)"
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8709007 (3,991 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed the surveyed building footprint (DataSF Building Footprints (mblr SF8709007)); 99% of that outline lies inside the lot and it covered 83% of the lot.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8709007 (mapped 2001-03-20; active); the earlier outline came from: DataSF Building Footprints (mblr SF8709007); name/address from OpenStreetMap way 27955297 (1700 Owens St)"
     }
    },
    "centroid": {
-    "lon": -122.393598,
-    "lat": 37.766939
+    "lon": -122.39313,
+    "lat": 37.766859
    },
    "facts": [],
    "costs": [],
@@ -119287,6 +119597,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "1700 Owens Street now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8709007",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8709007"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_1700_owens",
+      "slug": "1700-owens-street",
+      "name": "1700 Owens Street",
+      "permalink": "https://pierandpoint.org/parcels/1700-owens-street/",
+      "api": "https://pierandpoint.org/api/v1/records/1700-owens-street.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-10-10",
      "kind": "correction",
@@ -119443,212 +119782,568 @@
     "coordinates": [
      [
       [
-       -122.3935257,
-       37.7671679
+       -122.393645439,
+       37.767372355
       ],
       [
-       -122.3935257,
-       37.7671678
+       -122.393644114,
+       37.767371152
       ],
       [
-       -122.3935277,
-       37.7671663
+       -122.39364279,
+       37.767369947
       ],
       [
-       -122.393527,
-       37.7671657
+       -122.393343587,
+       37.767097061
       ],
       [
-       -122.3934935,
-       37.767193
+       -122.393305956,
+       37.767063822
       ],
       [
-       -122.3934626,
-       37.7671684
+       -122.393284731,
+       37.767045978
       ],
       [
-       -122.3934571,
-       37.7671727
+       -122.393263117,
+       37.767028431
       ],
       [
-       -122.393195,
-       37.7669638
+       -122.393089133,
+       37.766889624
       ],
       [
-       -122.3931949,
-       37.7669637
+       -122.393087638,
+       37.766888395
       ],
       [
-       -122.3932003,
-       37.7669594
+       -122.393086821,
+       37.766887688
       ],
       [
-       -122.3931949,
-       37.7669551
+       -122.39308602,
+       37.766886971
       ],
       [
-       -122.3931948,
-       37.7669549
+       -122.393085234,
+       37.766886243
       ],
       [
-       -122.3932035,
-       37.7669478
+       -122.393084465,
+       37.766885504
       ],
       [
-       -122.3932021,
-       37.7669489
+       -122.393083711,
+       37.766884755
       ],
       [
-       -122.3931297,
-       37.7668908
+       -122.393082976,
+       37.766883995
       ],
       [
-       -122.3931297,
-       37.7668907
+       -122.393082255,
+       37.766883224
       ],
       [
-       -122.3931612,
-       37.7668079
+       -122.393081553,
+       37.766882445
       ],
       [
-       -122.3932654,
-       37.7668018
+       -122.393080868,
+       37.766881656
       ],
       [
-       -122.3932655,
-       37.7667877
+       -122.3930802,
+       37.766880857
       ],
       [
-       -122.3932656,
-       37.7667877
+       -122.39307955,
+       37.766880049
       ],
       [
-       -122.3932652,
-       37.7667834
+       -122.393078917,
+       37.766879233
       ],
       [
-       -122.3935158,
-       37.7667679
+       -122.393078303,
+       37.766878407
       ],
       [
-       -122.3935158,
-       37.766768
+       -122.393077708,
+       37.766877573
       ],
       [
-       -122.3935163,
-       37.7667736
+       -122.393077129,
+       37.766876732
       ],
       [
-       -122.393566,
-       37.7667708
+       -122.39307657,
+       37.766875882
       ],
       [
-       -122.393566,
-       37.7667709
+       -122.393076031,
+       37.766875024
       ],
       [
-       -122.3935667,
-       37.766779
+       -122.393075509,
+       37.766874159
       ],
       [
-       -122.3937057,
-       37.7667787
+       -122.393075007,
+       37.766873288
       ],
       [
-       -122.3937075,
-       37.7667711
+       -122.393074525,
+       37.766872409
       ],
       [
-       -122.3937556,
-       37.7667741
+       -122.39307406,
+       37.766871524
       ],
       [
-       -122.3937561,
-       37.7667697
+       -122.393073617,
+       37.766870633
       ],
       [
-       -122.3937584,
-       37.7667698
+       -122.393073193,
+       37.766869736
       ],
       [
-       -122.3937589,
-       37.7667666
+       -122.393072788,
+       37.766868832
       ],
       [
-       -122.3937596,
-       37.7667617
+       -122.393072403,
+       37.766867923
       ],
       [
-       -122.3937592,
-       37.7667562
+       -122.393072038,
+       37.766867009
       ],
       [
-       -122.3940708,
-       37.7667371
+       -122.393071693,
+       37.76686609
       ],
       [
-       -122.3941362,
-       37.7667878
+       -122.39307137,
+       37.766865167
       ],
       [
-       -122.3941363,
-       37.7667877
+       -122.393071066,
+       37.766864239
       ],
       [
-       -122.3942219,
-       37.7668553
+       -122.393070782,
+       37.766863307
       ],
       [
-       -122.3942219,
-       37.7668554
+       -122.39307052,
+       37.766862371
       ],
       [
-       -122.394155,
-       37.7669065
+       -122.393070277,
+       37.766861433
       ],
       [
-       -122.3941534,
-       37.7669053
+       -122.393070056,
+       37.76686049
       ],
       [
-       -122.3940775,
-       37.7669646
+       -122.393069856,
+       37.766859545
       ],
       [
-       -122.394073,
-       37.766961
+       -122.393069675,
+       37.766858597
       ],
       [
-       -122.3937795,
-       37.7671932
+       -122.393069515,
+       37.766857647
       ],
       [
-       -122.3937488,
-       37.7671692
+       -122.393069378,
+       37.766856694
       ],
       [
-       -122.3937291,
-       37.7671838
+       -122.39306926,
+       37.766855741
       ],
       [
-       -122.3937629,
-       37.7672103
+       -122.393069164,
+       37.766854784
       ],
       [
-       -122.3936365,
-       37.7673122
+       -122.393069089,
+       37.766853827
       ],
       [
-       -122.3935068,
-       37.7672109
+       -122.393069035,
+       37.76685287
       ],
       [
-       -122.3935428,
-       37.7671818
+       -122.393069001,
+       37.766851912
       ],
       [
-       -122.3935257,
-       37.7671679
+       -122.393068989,
+       37.766850953
+      ],
+      [
+       -122.393068998,
+       37.766849994
+      ],
+      [
+       -122.393069028,
+       37.766849037
+      ],
+      [
+       -122.39306908,
+       37.766848078
+      ],
+      [
+       -122.393069152,
+       37.766847121
+      ],
+      [
+       -122.393069245,
+       37.766846166
+      ],
+      [
+       -122.39306936,
+       37.766845211
+      ],
+      [
+       -122.393069494,
+       37.766844259
+      ],
+      [
+       -122.393069651,
+       37.766843308
+      ],
+      [
+       -122.393069827,
+       37.766842359
+      ],
+      [
+       -122.393070026,
+       37.766841413
+      ],
+      [
+       -122.393070244,
+       37.766840472
+      ],
+      [
+       -122.393070483,
+       37.766839532
+      ],
+      [
+       -122.393070743,
+       37.766838596
+      ],
+      [
+       -122.393071023,
+       37.766837663
+      ],
+      [
+       -122.393071324,
+       37.766836734
+      ],
+      [
+       -122.393071646,
+       37.766835811
+      ],
+      [
+       -122.393071987,
+       37.766834891
+      ],
+      [
+       -122.393072349,
+       37.766833976
+      ],
+      [
+       -122.393072731,
+       37.766833067
+      ],
+      [
+       -122.393073132,
+       37.766832162
+      ],
+      [
+       -122.393073553,
+       37.766831264
+      ],
+      [
+       -122.393073995,
+       37.766830372
+      ],
+      [
+       -122.393074455,
+       37.766829486
+      ],
+      [
+       -122.393074935,
+       37.766828606
+      ],
+      [
+       -122.393075435,
+       37.766827734
+      ],
+      [
+       -122.393075953,
+       37.766826867
+      ],
+      [
+       -122.393076491,
+       37.766826009
+      ],
+      [
+       -122.393077047,
+       37.766825158
+      ],
+      [
+       -122.393077622,
+       37.766824315
+      ],
+      [
+       -122.393078215,
+       37.76682348
+      ],
+      [
+       -122.393078826,
+       37.766822654
+      ],
+      [
+       -122.393079457,
+       37.766821835
+      ],
+      [
+       -122.393080104,
+       37.766821027
+      ],
+      [
+       -122.393080769,
+       37.766820226
+      ],
+      [
+       -122.393081452,
+       37.766819436
+      ],
+      [
+       -122.393082152,
+       37.766818654
+      ],
+      [
+       -122.393082869,
+       37.766817883
+      ],
+      [
+       -122.393083603,
+       37.766817122
+      ],
+      [
+       -122.393084354,
+       37.766816371
+      ],
+      [
+       -122.39308512,
+       37.766815631
+      ],
+      [
+       -122.393085903,
+       37.766814901
+      ],
+      [
+       -122.393086702,
+       37.766814182
+      ],
+      [
+       -122.393087518,
+       37.766813474
+      ],
+      [
+       -122.393088347,
+       37.766812778
+      ],
+      [
+       -122.393089193,
+       37.766812094
+      ],
+      [
+       -122.393090053,
+       37.76681142
+      ],
+      [
+       -122.393090928,
+       37.76681076
+      ],
+      [
+       -122.393091817,
+       37.766810111
+      ],
+      [
+       -122.393092721,
+       37.766809475
+      ],
+      [
+       -122.393093638,
+       37.766808852
+      ],
+      [
+       -122.393094568,
+       37.766808241
+      ],
+      [
+       -122.393095512,
+       37.766807643
+      ],
+      [
+       -122.39309647,
+       37.766807059
+      ],
+      [
+       -122.39309744,
+       37.766806487
+      ],
+      [
+       -122.393098422,
+       37.76680593
+      ],
+      [
+       -122.393099416,
+       37.766805386
+      ],
+      [
+       -122.393100422,
+       37.766804856
+      ],
+      [
+       -122.39310144,
+       37.76680434
+      ],
+      [
+       -122.393102469,
+       37.766803838
+      ],
+      [
+       -122.393103509,
+       37.76680335
+      ],
+      [
+       -122.393104559,
+       37.766802877
+      ],
+      [
+       -122.393105619,
+       37.766802419
+      ],
+      [
+       -122.39310669,
+       37.766801975
+      ],
+      [
+       -122.39310777,
+       37.766801546
+      ],
+      [
+       -122.393108859,
+       37.766801132
+      ],
+      [
+       -122.393110766,
+       37.766800452
+      ],
+      [
+       -122.393111879,
+       37.766800079
+      ],
+      [
+       -122.393113,
+       37.766799723
+      ],
+      [
+       -122.393114129,
+       37.766799381
+      ],
+      [
+       -122.393115265,
+       37.766799056
+      ],
+      [
+       -122.393116408,
+       37.766798747
+      ],
+      [
+       -122.393117557,
+       37.766798453
+      ],
+      [
+       -122.393118713,
+       37.766798175
+      ],
+      [
+       -122.393119874,
+       37.766797913
+      ],
+      [
+       -122.393121042,
+       37.766797668
+      ],
+      [
+       -122.393122215,
+       37.766797439
+      ],
+      [
+       -122.393123392,
+       37.766797225
+      ],
+      [
+       -122.393124575,
+       37.766797029
+      ],
+      [
+       -122.39312576,
+       37.766796848
+      ],
+      [
+       -122.39312695,
+       37.766796684
+      ],
+      [
+       -122.393128143,
+       37.766796537
+      ],
+      [
+       -122.393129339,
+       37.766796407
+      ],
+      [
+       -122.393130539,
+       37.766796292
+      ],
+      [
+       -122.393131739,
+       37.766796194
+      ],
+      [
+       -122.393132943,
+       37.766796114
+      ],
+      [
+       -122.394056379,
+       37.76674046
+      ],
+      [
+       -122.394249922,
+       37.766894868
+      ],
+      [
+       -122.394010646,
+       37.767083601
+      ],
+      [
+       -122.393645439,
+       37.767372355
       ]
      ]
     ]
@@ -121589,7 +122284,7 @@
    "how_to_comment": [],
    "positions": [],
    "address": null,
-   "summary": "A real oval running track with a central grass field, just south of the UCSF Medical Center at Mission Bay campus; identified by Pier & Point from satellite imagery as leftover open ground between the official street lines and neighbouring mapped shapes, picked by hand -- not a surveyed footprint or a named park record. OCII's own September 2023 Mission Bay Parks Open Space transition presentation lists 'P27' among the parcels RPD 'will manage ... when built,' i.e. not yet complete as of that date. Pier & Point's own reading of satellite imagery shows a built oval track, but that reading is not a source for this parcel's completion, and the oval is probably Mariposa Park (P26), so no completion is stated (see open questions). Name and operator not confirmed by any source found.",
+   "summary": "A real oval running track with a central grass field, just south of the UCSF Medical Center at Mission Bay campus; identified by Pier & Point from satellite imagery; since 2026-10-12 its outline is the union of Assessor lots 8723003, 8723004 and 8723006, the lots under the oval (earlier it was a hand-picked piece of leftover open ground that also took in the parking lot to the north) -- not a named park record. OCII's own September 2023 Mission Bay Parks Open Space transition presentation lists 'P27' among the parcels RPD 'will manage ... when built,' i.e. not yet complete as of that date. Pier & Point's own reading of satellite imagery shows a built oval track, but that reading is not a source for this parcel's completion, and the oval is probably Mariposa Park (P26), so no completion is stated (see open questions). Name and operator not confirmed by any source found.",
    "summary_sources": [
     "src-geom-p27",
     "src-ocii-transition-2023"
@@ -121600,13 +122295,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- real running track/field per Esri satellite imagery, traced as the open ground left between the official street lines and neighbouring mapped shapes; not a surveyed footprint or named park record. Name and operator not confirmed by any source found.",
-     "digitized_from": "Traced as the leftover open ground between DataSF's official street centerlines and neighbouring mapped shapes near the UCSF Medical Center campus. Of the separate pieces this left, Pier & Point picked by hand the one showing an oval running track and central field (clearly visible on satellite imagery) as P27's real extent; not taken from a surveyed parcel."
+     "accuracy_caveat": "REAL lot geometry -- the outline is the union of Assessor lots 8723003, 8723004 and 8723006 (8,217 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed the open ground left between street centerlines and neighbouring mapped shapes, hand-picked as the oval track and field (not a surveyed parcel); 70% of that outline lies inside the lot and it covered 100% of the lot. That these three lots are the track and field is Pier & Point's inference from location and imagery: they cover the oval and lie almost entirely inside the earlier outline; no source read ties the lot numbers to P27. The earlier outline also took in the parking lot to the north, which is part of lot 8723008 and is no longer in this record. Name and operator not confirmed by any source found.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lots 8723003, 8723004 and 8723006 (mapped 2001-03-20, 2003-02-05; active), joined into one outline; the earlier outline came from: Traced as the leftover open ground between DataSF's official street centerlines and neighbouring mapped shapes near the UCSF Medical Center campus. Of the separate pieces this left, Pier & Point picked by hand the one showing an oval running track and central field (clearly visible on satellite imagery) as P27's real extent; not taken from a surveyed parcel."
     }
    },
    "centroid": {
-    "lon": -122.390955,
-    "lat": 37.764755
+    "lon": -122.391722,
+    "lat": 37.764587
    },
    "facts": [],
    "costs": [],
@@ -121660,6 +122355,35 @@
      "sources": [
       {
        "title": "Pier & Point editorial review"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_p27_track_field",
+      "slug": "p27",
+      "name": "P27",
+      "permalink": "https://pierandpoint.org/parcels/p27/",
+      "api": "https://pierandpoint.org/api/v1/records/p27.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "P27 now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 8723003, 8723004 and 8723006",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 8723003, 8723004 and 8723006"
       }
      ],
      "category": "correction",
@@ -121784,896 +122508,62 @@
    "last_verified": "2026-09-21",
    "tenants": [],
    "geometry": {
-    "type": "Polygon",
+    "type": "MultiPolygon",
     "coordinates": [
      [
       [
-       -122.390904823,
-       37.764492727
-      ],
-      [
-       -122.390905113,
-       37.764486912
-      ],
-      [
-       -122.390904848,
-       37.764481096
-      ],
-      [
-       -122.39088465493852,
-       37.76426519107872
-      ],
-      [
-       -122.39226519094075,
-       37.76417926401142
-      ],
-      [
-       -122.392263429,
-       37.764182796
-      ],
-      [
-       -122.392261333,
-       37.764188248
-      ],
-      [
-       -122.392259768,
-       37.764193876
-      ],
-      [
-       -122.392258747,
-       37.764199628
-      ],
-      [
-       -122.39225828,
-       37.764205451
-      ],
-      [
-       -122.392248114,
-       37.764521604
-      ],
-      [
-       -122.392217575,
-       37.76486408
-      ],
-      [
-       -122.392217335,
-       37.764869831
-      ],
-      [
-       -122.392217637,
-       37.76487558
-      ],
-      [
-       -122.392233738,
-       37.76503668
-      ],
-      [
-       -122.392250563,
-       37.765225743
-      ],
-      [
-       -122.392251515,
-       37.765232338
-      ],
-      [
-       -122.39225318,
-       37.765238791
-      ],
-      [
-       -122.392281508,
-       37.765328132
-      ],
-      [
-       -122.392301797,
-       37.765548525
-      ],
-      [
-       -122.39229470051409,
-       37.765694516738336
-      ],
-      [
-       -122.3922817,
-       37.7655498
-      ],
-      [
-       -122.3922296,
-       37.7650324
-      ],
-      [
-       -122.3908415,
-       37.7651151
-      ],
-      [
-       -122.39069048005193,
-       37.765069008534006
-      ],
-      [
-       -122.390692246,
-       37.765068456
-      ],
-      [
-       -122.390697764,
-       37.765066114
-      ],
-      [
-       -122.390703026,
-       37.765063243
-      ],
-      [
-       -122.390707982,
-       37.765059869
-      ],
-      [
-       -122.390712583,
-       37.765056026
-      ],
-      [
-       -122.390716785,
-       37.765051751
-      ],
-      [
-       -122.390720547,
-       37.765047084
-      ],
-      [
-       -122.390723834,
-       37.765042071
-      ],
-      [
-       -122.390726614,
-       37.76503676
-      ],
-      [
-       -122.39072886,
-       37.765031202
-      ],
-      [
-       -122.390730551,
-       37.765025451
-      ],
-      [
-       -122.390731641,
-       37.765020933
-      ],
-      [
-       -122.390732718,
-       37.76501658
-      ],
-      [
-       -122.390733816,
-       37.765012241
-      ],
-      [
-       -122.390734941,
-       37.765007906
-      ],
-      [
-       -122.390736095,
-       37.765003557
-      ],
-      [
-       -122.390737271,
-       37.76499922
-      ],
-      [
-       -122.390738469,
-       37.764994897
-      ],
-      [
-       -122.390739695,
-       37.764990573
-      ],
-      [
-       -122.390740949,
-       37.764986243
-      ],
-      [
-       -122.390742224,
-       37.764981923
-      ],
-      [
-       -122.390743523,
-       37.764977618
-      ],
-      [
-       -122.390744851,
-       37.764973304
-      ],
-      [
-       -122.3907462,
-       37.764969001
-      ],
-      [
-       -122.390747577,
-       37.764964702
-      ],
-      [
-       -122.39074898,
-       37.764960398
-      ],
-      [
-       -122.390750406,
-       37.764956105
-      ],
-      [
-       -122.390751857,
-       37.764951815
-      ],
-      [
-       -122.390753331,
-       37.764947538
-      ],
-      [
-       -122.39075483,
-       37.764943266
-      ],
-      [
-       -122.39075636,
-       37.764938982
-      ],
-      [
-       -122.390757912,
-       37.764934707
-      ],
-      [
-       -122.390759484,
-       37.764930451
-      ],
-      [
-       -122.390761084,
-       37.764926193
-      ],
-      [
-       -122.390762707,
-       37.764921944
-      ],
-      [
-       -122.390764358,
-       37.764917696
-      ],
-      [
-       -122.390766036,
-       37.764913441
-      ],
-      [
-       -122.390767732,
-       37.764909209
-      ],
-      [
-       -122.390769453,
-       37.764904986
-      ],
-      [
-       -122.390771203,
-       37.764900757
-      ],
-      [
-       -122.390772978,
-       37.764896531
-      ],
-      [
-       -122.390774778,
-       37.76489231
-      ],
-      [
-       -122.390776596,
-       37.764888109
-      ],
-      [
-       -122.390778441,
-       37.764883911
-      ],
-      [
-       -122.390780315,
-       37.764879708
-      ],
-      [
-       -122.390782211,
-       37.764875515
-      ],
-      [
-       -122.390784128,
-       37.764871337
-      ],
-      [
-       -122.390786072,
-       37.764867161
-      ],
-      [
-       -122.390788045,
-       37.76486298
-      ],
-      [
-       -122.390790036,
-       37.764858819
-      ],
-      [
-       -122.390792054,
-       37.76485466
-      ],
-      [
-       -122.390793631,
-       37.764851452
-      ],
-      [
-       -122.390795425,
-       37.764848144
-      ],
-      [
-       -122.39079557,
-       37.764847875
-      ],
-      [
-       -122.390797923,
-       37.764843484
-      ],
-      [
-       -122.39079808,
-       37.76484319
-      ],
-      [
-       -122.390800407,
-       37.76483879
-      ],
-      [
-       -122.390800559,
-       37.764838499
-      ],
-      [
-       -122.39080286,
-       37.764834091
-      ],
-      [
-       -122.390803009,
-       37.764833804
-      ],
-      [
-       -122.390805285,
-       37.764829387
-      ],
-      [
-       -122.390805428,
-       37.764829108
-      ],
-      [
-       -122.390807679,
-       37.764824684
-      ],
-      [
-       -122.390807833,
-       37.76482438
-      ],
-      [
-       -122.390810058,
-       37.764819946
-      ],
-      [
-       -122.3908102,
-       37.76481966
-      ],
-      [
-       -122.390812399,
-       37.76481522
-      ],
-      [
-       -122.390812543,
-       37.764814928
-      ],
-      [
-       -122.390814717,
-       37.764810479
-      ],
-      [
-       -122.390814862,
-       37.76481018
-      ],
-      [
-       -122.39081701,
-       37.764805723
-      ],
-      [
-       -122.390817146,
-       37.764805438
-      ],
-      [
-       -122.390819269,
-       37.764800974
-      ],
-      [
-       -122.390819407,
-       37.764800683
-      ],
-      [
-       -122.390821505,
-       37.764796211
-      ],
-      [
-       -122.390821655,
-       37.764795889
-      ],
-      [
-       -122.390823725,
-       37.764791409
-      ],
-      [
-       -122.390823857,
-       37.76479112
-      ],
-      [
-       -122.390825902,
-       37.764786633
-      ],
-      [
-       -122.390826038,
-       37.764786333
-      ],
-      [
-       -122.390828057,
-       37.764781839
-      ],
-      [
-       -122.390828189,
-       37.764781544
-      ],
-      [
-       -122.390830183,
-       37.764777042
-      ],
-      [
-       -122.390830321,
-       37.764776729
-      ],
-      [
-       -122.390832288,
-       37.76477222
-      ],
-      [
-       -122.390832415,
-       37.764771927
-      ],
-      [
-       -122.390834357,
-       37.764767411
-      ],
-      [
-       -122.390834487,
-       37.764767106
-      ],
-      [
-       -122.390836403,
-       37.764762583
-      ],
-      [
-       -122.390836536,
-       37.764762266
-      ],
-      [
-       -122.390838425,
-       37.764757736
-      ],
-      [
-       -122.390838546,
-       37.764757444
-      ],
-      [
-       -122.39084041,
-       37.764752908
-      ],
-      [
-       -122.390840541,
-       37.764752585
-      ],
-      [
-       -122.390842378,
-       37.764748041
-      ],
-      [
-       -122.390842507,
-       37.764747721
-      ],
-      [
-       -122.390844317,
-       37.76474317
-      ],
-      [
-       -122.390844432,
-       37.764742878
-      ],
-      [
-       -122.390846217,
-       37.764738322
-      ],
-      [
-       -122.390846342,
-       37.764738
-      ],
-      [
-       -122.3908481,
-       37.764733437
-      ],
-      [
-       -122.390848215,
-       37.764733135
-      ],
-      [
-       -122.390849948,
-       37.764728565
-      ],
-      [
-       -122.390850067,
-       37.764728249
-      ],
-      [
-       -122.390851773,
-       37.764723674
-      ],
-      [
-       -122.390851892,
-       37.764723352
-      ],
-      [
-       -122.390853571,
-       37.764718771
-      ],
-      [
-       -122.390853687,
-       37.764718451
-      ],
-      [
-       -122.39085534,
-       37.764713862
-      ],
-      [
-       -122.390855449,
-       37.764713558
-      ],
-      [
-       -122.390857076,
-       37.764708965
-      ],
-      [
-       -122.390857192,
-       37.764708636
-      ],
-      [
-       -122.390858792,
-       37.764704036
-      ],
-      [
-       -122.390858903,
-       37.764703714
-      ],
-      [
-       -122.390860476,
-       37.764699109
-      ],
-      [
-       -122.390860584,
-       37.764698789
-      ],
-      [
-       -122.390862131,
-       37.764694177
-      ],
-      [
-       -122.390862234,
-       37.764693868
-      ],
-      [
-       -122.390863755,
-       37.764689252
-      ],
-      [
-       -122.390863862,
-       37.764688923
-      ],
-      [
-       -122.390865356,
-       37.764684301
-      ],
-      [
-       -122.390865462,
-       37.764683971
-      ],
-      [
-       -122.390866929,
-       37.764679343
-      ],
-      [
-       -122.390867028,
-       37.764679027
-      ],
-      [
-       -122.390868469,
-       37.764674394
-      ],
-      [
-       -122.390868569,
-       37.764674069
-      ],
-      [
-       -122.390869983,
-       37.764669432
-      ],
-      [
-       -122.390870087,
-       37.764669088
-      ],
-      [
-       -122.390871473,
-       37.764664445
-      ],
-      [
-       -122.390871564,
-       37.764664138
-      ],
-      [
-       -122.390872925,
-       37.76465949
-      ],
-      [
-       -122.390873021,
-       37.764659159
-      ],
-      [
-       -122.390874355,
-       37.764654506
-      ],
-      [
-       -122.390874449,
-       37.764654174
-      ],
-      [
-       -122.390875756,
-       37.764649516
-      ],
-      [
-       -122.390875847,
-       37.764649186
-      ],
-      [
-       -122.390877127,
-       37.764644524
-      ],
-      [
-       -122.390877218,
-       37.76464419
-      ],
-      [
-       -122.390878471,
-       37.764639523
-      ],
-      [
-       -122.390878559,
-       37.764639192
-      ],
-      [
-       -122.390879785,
-       37.764634521
-      ],
-      [
-       -122.390879872,
-       37.764634185
-      ],
-      [
-       -122.390881071,
-       37.764629509
-      ],
-      [
-       -122.390881152,
-       37.764629188
-      ],
-      [
-       -122.390882325,
-       37.764624508
-      ],
-      [
-       -122.390882412,
-       37.764624159
-      ],
-      [
-       -122.390883557,
-       37.764619474
-      ],
-      [
-       -122.390883637,
-       37.764619142
-      ],
-      [
-       -122.390884755,
-       37.764614454
-      ],
-      [
-       -122.390884832,
-       37.764614128
-      ],
-      [
-       -122.390885924,
-       37.764609435
-      ],
-      [
-       -122.390886003,
-       37.764609089
-      ],
-      [
-       -122.390887067,
-       37.764604393
-      ],
-      [
-       -122.39088714,
-       37.764604068
-      ],
-      [
-       -122.390888178,
-       37.764599368
-      ],
-      [
-       -122.390888257,
-       37.764599006
-      ],
-      [
-       -122.390889266,
-       37.764594302
-      ],
-      [
-       -122.390889332,
-       37.764593988
-      ],
-      [
-       -122.390890316,
-       37.76458928
-      ],
-      [
-       -122.39089039,
-       37.764588919
-      ],
-      [
-       -122.390891345,
-       37.764584208
-      ],
-      [
-       -122.390891411,
-       37.764583881
-      ],
-      [
-       -122.39089234,
-       37.764579166
-      ],
-      [
-       -122.390892406,
-       37.764578828
-      ],
-      [
-       -122.390893308,
-       37.76457411
-      ],
-      [
-       -122.390893371,
-       37.764573771
-      ],
-      [
-       -122.390894246,
-       37.76456905
-      ],
-      [
-       -122.39089431,
-       37.764568698
-      ],
-      [
-       -122.390895157,
-       37.764563974
-      ],
-      [
-       -122.390895217,
-       37.764563637
-      ],
-      [
-       -122.390896037,
-       37.764558911
-      ],
-      [
-       -122.390896096,
-       37.764558566
-      ],
-      [
-       -122.390896889,
-       37.764553835
-      ],
-      [
-       -122.390896947,
-       37.764553484
-      ],
-      [
-       -122.390897712,
-       37.764548751
-      ],
-      [
-       -122.390897764,
-       37.764548422
-      ],
-      [
-       -122.390898503,
-       37.764543686
-      ],
-      [
-       -122.390898559,
-       37.764543321
-      ],
-      [
-       -122.390899269,
-       37.764538583
-      ],
-      [
-       -122.390899315,
-       37.764538265
-      ],
-      [
-       -122.3909,
-       37.764533524
-      ],
-      [
-       -122.390900054,
-       37.764533145
-      ],
-      [
-       -122.390900709,
-       37.764528402
-      ],
-      [
-       -122.390900752,
-       37.764528086
-      ],
-      [
-       -122.390901382,
-       37.764523341
-      ],
-      [
-       -122.390901428,
-       37.764522983
-      ],
-      [
-       -122.39090203,
-       37.764518234
-      ],
-      [
-       -122.390902074,
-       37.764517882
-      ],
-      [
-       -122.390902648,
-       37.764513133
-      ],
-      [
-       -122.390902687,
-       37.764512801
-      ],
-      [
-       -122.390903235,
-       37.764508049
-      ],
-      [
-       -122.390903276,
-       37.76450768
-      ],
-      [
-       -122.390903795,
-       37.764502926
-      ],
-      [
-       -122.390903832,
-       37.764502583
-      ],
-      [
-       -122.390904324,
-       37.764497827
-      ],
-      [
-       -122.390904358,
-       37.764497484
-      ],
-      [
-       -122.390904823,
-       37.764492727
+       [
+        -122.391988182,
+        37.764914932
+       ],
+       [
+        -122.391712216,
+        37.76493156
+       ],
+       [
+        -122.391646757,
+        37.764246888
+       ],
+       [
+        -122.39192272,
+        37.764230261
+       ],
+       [
+        -122.392177812,
+        37.764214889
+       ],
+       [
+        -122.392243276,
+        37.764899561
+       ],
+       [
+        -122.391988182,
+        37.764914932
+       ]
+      ]
+     ],
+     [
+      [
+       [
+        -122.391646757,
+        37.764246889
+       ],
+       [
+        -122.391712216,
+        37.76493156
+       ],
+       [
+        -122.391022304,
+        37.764973127
+       ],
+       [
+        -122.390956852,
+        37.764288455
+       ],
+       [
+        -122.391646757,
+        37.764246889
+       ]
       ]
      ]
     ]
@@ -122717,13 +122607,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8721011), address confirmed via DataSF Assessor parcel data (blklot 8721011) and independent commercial real-estate sources (no OSM name/address tag found on this footprint); not a hand trace or plan estimate. No OSM building/name tag found on this footprint; address and history confirmed via DataSF Assessor parcel data and news coverage instead.",
-     "digitized_from": "DataSF Building Footprints (mblr SF8721011); address confirmed via DataSF Assessor parcel data (blklot 8721011) and independent commercial real-estate sources (no OSM name/address tag found on this footprint)"
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8721011 (7,486 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed the surveyed building footprint (DataSF Building Footprints (mblr SF8721011)); 99% of that outline lies inside the lot and it covered 69% of the lot.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8721011 (mapped 2001-03-20; active); the earlier outline came from: DataSF Building Footprints (mblr SF8721011); address confirmed via DataSF Assessor parcel data (blklot 8721011) and independent commercial real-estate sources (no OSM name/address tag found on this footprint)"
     }
    },
    "centroid": {
-    "lon": -122.38687,
-    "lat": 37.76945
+    "lon": -122.386881,
+    "lat": 37.769324
    },
    "facts": [],
    "costs": [],
@@ -122811,6 +122701,35 @@
      "sources": [
       {
        "title": "The San Francisco Standard, 2024-09-20; Hoodline, 2024-09-20; The Real Deal, 2024-09-23"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_550_terry_francois",
+      "slug": "550-terry-a-francois-boulevard",
+      "name": "550 Terry A. Francois Boulevard",
+      "permalink": "https://pierandpoint.org/parcels/550-terry-a-francois-boulevard/",
+      "api": "https://pierandpoint.org/api/v1/records/550-terry-a-francois-boulevard.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "550 Terry A. Francois Boulevard now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8721011",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8721011"
       }
      ],
      "category": "correction",
@@ -122975,7 +122894,7 @@
      "url": "https://divcowest.com/property/550-terry-francois/"
     }
    ],
-   "notes": "No OSM building/name tag found on this footprint; address and history confirmed via DataSF Assessor parcel data and news coverage instead.",
+   "notes": "No OSM building/name tag found on the building's footprint; address and history confirmed via DataSF Assessor parcel data and news coverage instead.",
    "has_record_file": true,
    "last_verified": "2026-09-21",
    "tenants": [],
@@ -122984,192 +122903,40 @@
     "coordinates": [
      [
       [
-       -122.3864971,
-       37.769526
+       -122.387246859,
+       37.769038733
       ],
       [
-       -122.3865629,
-       37.7695225
+       -122.387449533,
+       37.769026529
       ],
       [
-       -122.3865532,
-       37.7694208
+       -122.387521494,
+       37.76977961
       ],
       [
-       -122.3865115,
-       37.7694233
+       -122.386510013,
+       37.76984051
       ],
       [
-       -122.3865115,
-       37.7694232
+       -122.386481994,
+       37.769547246
       ],
       [
-       -122.3865039,
-       37.7693478
+       -122.386475453,
+       37.769478784
       ],
       [
-       -122.3865099,
-       37.7693472
+       -122.386438062,
+       37.769087428
       ],
       [
-       -122.3865019,
-       37.76928
+       -122.386556907,
+       37.769080274
       ],
       [
-       -122.3864709,
-       37.7692818
-      ],
-      [
-       -122.3864708,
-       37.7692816
-      ],
-      [
-       -122.3864571,
-       37.7691235
-      ],
-      [
-       -122.3866799,
-       37.7691113
-      ],
-      [
-       -122.38668,
-       37.7691114
-      ],
-      [
-       -122.386681,
-       37.7691229
-      ],
-      [
-       -122.3867427,
-       37.7691194
-      ],
-      [
-       -122.386738,
-       37.7690684
-      ],
-      [
-       -122.3874604,
-       37.7690261
-      ],
-      [
-       -122.3874604,
-       37.7690262
-      ],
-      [
-       -122.3874666,
-       37.7690927
-      ],
-      [
-       -122.3874626,
-       37.7690929
-      ],
-      [
-       -122.3874654,
-       37.7691229
-      ],
-      [
-       -122.3874916,
-       37.7693639
-      ],
-      [
-       -122.3869048,
-       37.7693995
-      ],
-      [
-       -122.3869081,
-       37.7694339
-      ],
-      [
-       -122.3869148,
-       37.7695038
-      ],
-      [
-       -122.3869212,
-       37.7695033
-      ],
-      [
-       -122.3869212,
-       37.7695035
-      ],
-      [
-       -122.3869212,
-       37.7695035
-      ],
-      [
-       -122.3869215,
-       37.7695035
-      ],
-      [
-       -122.3869215,
-       37.7695036
-      ],
-      [
-       -122.3869255,
-       37.7695244
-      ],
-      [
-       -122.387135,
-       37.7695489
-      ],
-      [
-       -122.3871351,
-       37.769549
-      ],
-      [
-       -122.3871518,
-       37.7697089
-      ],
-      [
-       -122.3871521,
-       37.7697157
-      ],
-      [
-       -122.3871609,
-       37.7697151
-      ],
-      [
-       -122.387161,
-       37.7697152
-      ],
-      [
-       -122.3871688,
-       37.769799
-      ],
-      [
-       -122.3869685,
-       37.7698108
-      ],
-      [
-       -122.3869685,
-       37.7698107
-      ],
-      [
-       -122.3869678,
-       37.769804
-      ],
-      [
-       -122.3868724,
-       37.7698028
-      ],
-      [
-       -122.3867535,
-       37.769791
-      ],
-      [
-       -122.3866364,
-       37.7697696
-      ],
-      [
-       -122.3865163,
-       37.769732
-      ],
-      [
-       -122.3865162,
-       37.7697319
-      ],
-      [
-       -122.3864971,
-       37.769526
+       -122.387246859,
+       37.769038733
       ]
      ]
     ]
@@ -123211,13 +122978,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8711014), address confirmed via DataSF Assessor parcel data (blklot 8711501) and architect/press project pages (no OSM name/address tag found on this footprint); not a hand trace or plan estimate. No OSM building/name tag found on this footprint; address and history confirmed via architect project pages and press coverage instead.",
-     "digitized_from": "DataSF Building Footprints (mblr SF8711014); address confirmed via DataSF Assessor parcel data (blklot 8711501) and architect/press project pages (no OSM name/address tag found on this footprint)"
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8711501 (6,026 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. The lot is condominium-mapped: 4 Assessor lots share this outline (the map lot 8711501 and 3 per-unit lots), so the outline is the building's shared lot, not any one unit. Until 2026-10-12 this record showed the surveyed building footprint (DataSF Building Footprints (mblr SF8711014)); 95% of that outline lies inside the lot and it covered 72% of the lot.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8711501 (mapped 2015-12-09; active); the earlier outline came from: DataSF Building Footprints (mblr SF8711014); address confirmed via DataSF Assessor parcel data (blklot 8711501) and architect/press project pages (no OSM name/address tag found on this footprint)"
     }
    },
    "centroid": {
-    "lon": -122.391881,
-    "lat": 37.773669
+    "lon": -122.39166,
+    "lat": 37.77396
    },
    "facts": [],
    "costs": [],
@@ -123342,6 +123109,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "1180 Fourth Street now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8711501",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8711501"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_1180_4th",
+      "slug": "1180-fourth-street",
+      "name": "1180 Fourth Street",
+      "permalink": "https://pierandpoint.org/parcels/1180-fourth-street/",
+      "api": "https://pierandpoint.org/api/v1/records/1180-fourth-street.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-10-10",
      "kind": "correction",
@@ -123589,7 +123385,7 @@
      "url": "https://www.dezeen.com/2016/07/21/1180-fourth-street-san-francisco-low-cost-housing-mithun-solomon-kennerly-architecture-planning-full-circle/"
     }
    ],
-   "notes": "No OSM building/name tag found on this footprint; address and history confirmed via architect project pages and press coverage instead.",
+   "notes": "No OSM building/name tag found on the building's footprint; address and history confirmed via architect project pages and press coverage instead.",
    "has_record_file": true,
    "last_verified": "2026-09-21",
    "tenants": [],
@@ -123598,158 +123394,272 @@
     "coordinates": [
      [
       [
-       -122.3916577,
-       37.7739487
+       -122.391654044,
+       37.774060404
       ],
       [
-       -122.3916472,
-       37.7739487
+       -122.391652383,
+       37.774055503
       ],
       [
-       -122.3916306,
-       37.7738805
+       -122.391650748,
+       37.774050597
       ],
       [
-       -122.3915948,
-       37.7735535
+       -122.391649139,
+       37.774045685
       ],
       [
-       -122.3916098,
-       37.7735501
+       -122.391647556,
+       37.774040768
       ],
       [
-       -122.3916075,
-       37.7735349
+       -122.391645998,
+       37.774035845
       ],
       [
-       -122.3915876,
-       37.7735325
+       -122.391644467,
+       37.774030918
       ],
       [
-       -122.3915756,
-       37.7735291
+       -122.391642962,
+       37.774025985
       ],
       [
-       -122.3915696,
-       37.7735215
+       -122.391641483,
+       37.774021048
       ],
       [
-       -122.3915678,
-       37.773512
+       -122.391640031,
+       37.774016105
       ],
       [
-       -122.391572,
-       37.7735048
+       -122.391638604,
+       37.774011157
       ],
       [
-       -122.3915817,
-       37.7734958
+       -122.391637204,
+       37.774006206
       ],
       [
-       -122.391902,
-       37.7732356
+       -122.39163583,
+       37.774001249
       ],
       [
-       -122.3921295,
-       37.7730573
+       -122.391634482,
+       37.773996289
       ],
       [
-       -122.3926194,
-       37.7734483
+       -122.39163316,
+       37.773991322
       ],
       [
-       -122.3921913,
-       37.7737841
+       -122.391631865,
+       37.773986352
       ],
       [
-       -122.3921887,
-       37.7737877
+       -122.391630596,
+       37.773981378
       ],
       [
-       -122.3921818,
-       37.7737934
+       -122.391629353,
+       37.7739764
       ],
       [
-       -122.392192,
-       37.7738037
+       -122.391628137,
+       37.773971417
       ],
       [
-       -122.3921871,
-       37.7738066
+       -122.391626947,
+       37.773966431
       ],
       [
-       -122.3918303,
-       37.7740877
+       -122.391625783,
+       37.77396144
       ],
       [
-       -122.3916868,
-       37.7741782
+       -122.391624647,
+       37.773956446
       ],
       [
-       -122.3916329,
-       37.7739755
+       -122.391623536,
+       37.773951448
       ],
       [
-       -122.3916615,
-       37.7739726
+       -122.391622452,
+       37.773946446
       ],
       [
-       -122.3916577,
-       37.7739487
-      ]
-     ],
-     [
-      [
-       -122.3922145,
-       37.773274
+       -122.391621394,
+       37.773941441
       ],
       [
-       -122.3918287,
-       37.773578
+       -122.391620363,
+       37.773936432
       ],
       [
-       -122.3918839,
-       37.7736228
+       -122.391619358,
+       37.77393142
       ],
       [
-       -122.3918166,
-       37.7736743
+       -122.39161838,
+       37.773926405
       ],
       [
-       -122.3919055,
-       37.773742
+       -122.391617427,
+       37.773921386
       ],
       [
-       -122.3918369,
-       37.7737925
+       -122.391616503,
+       37.773916365
       ],
       [
-       -122.3919222,
-       37.7738479
+       -122.391615604,
+       37.77391134
       ],
       [
-       -122.3920678,
-       37.7737278
+       -122.391614732,
+       37.773906312
       ],
       [
-       -122.3920752,
-       37.7737218
+       -122.391613886,
+       37.773901281
       ],
       [
-       -122.3920773,
-       37.7737207
+       -122.391613068,
+       37.773896248
       ],
       [
-       -122.3920052,
-       37.773662
+       -122.391612276,
+       37.773891212
       ],
       [
-       -122.3923502,
-       37.7733828
+       -122.39161151,
+       37.773886173
       ],
       [
-       -122.3922145,
-       37.773274
+       -122.391610772,
+       37.773881132
+      ],
+      [
+       -122.39161006,
+       37.773876087
+      ],
+      [
+       -122.391609374,
+       37.773871042
+      ],
+      [
+       -122.391608715,
+       37.773865994
+      ],
+      [
+       -122.391608084,
+       37.773860944
+      ],
+      [
+       -122.391607478,
+       37.773855891
+      ],
+      [
+       -122.3916069,
+       37.773850837
+      ],
+      [
+       -122.391606347,
+       37.773845781
+      ],
+      [
+       -122.391605822,
+       37.773840723
+      ],
+      [
+       -122.391605325,
+       37.773835662
+      ],
+      [
+       -122.39157189,
+       37.773485988
+      ],
+      [
+       -122.392174514,
+       37.773010037
+      ],
+      [
+       -122.392659536,
+       37.773396966
+      ],
+      [
+       -122.391716032,
+       37.774142142
+      ],
+      [
+       -122.391683557,
+       37.774136744
+      ],
+      [
+       -122.391681528,
+       37.774132025
+      ],
+      [
+       -122.391679525,
+       37.774127299
+      ],
+      [
+       -122.391677546,
+       37.774122567
+      ],
+      [
+       -122.391675592,
+       37.774117828
+      ],
+      [
+       -122.391673662,
+       37.774113082
+      ],
+      [
+       -122.391671758,
+       37.774108331
+      ],
+      [
+       -122.391669878,
+       37.774103574
+      ],
+      [
+       -122.391668023,
+       37.77409881
+      ],
+      [
+       -122.391666192,
+       37.774094041
+      ],
+      [
+       -122.391664386,
+       37.774089264
+      ],
+      [
+       -122.391662606,
+       37.774084483
+      ],
+      [
+       -122.391660849,
+       37.774079695
+      ],
+      [
+       -122.391659118,
+       37.774074903
+      ],
+      [
+       -122.391657412,
+       37.774070104
+      ],
+      [
+       -122.391655731,
+       37.774065299
+      ],
+      [
+       -122.391654044,
+       37.774060404
       ]
      ]
     ]
@@ -123789,13 +123699,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8706264), name/address from Mission Housing Development Corporation's own project page and press coverage; OpenStreetMap way 679290110 tags the footprint but carries no name/address of its own; not a hand trace or plan estimate. ",
-     "digitized_from": "DataSF Building Footprints (mblr SF8706264); name/address from Mission Housing Development Corporation's own project page and press coverage; OpenStreetMap way 679290110 tags the footprint but carries no name/address of its own"
+     "accuracy_caveat": "REAL lot geometry -- the outline is the union of Assessor lots 8706264 and 8706003 (6,453 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed the surveyed building footprint (DataSF Building Footprints (mblr SF8706264)); 95% of that outline lies inside the lot and it covered 69% of the lot. The building spans two Assessor lots, 8706264 and 8706003, which DataSF's Assessor layer records at the same address (150 Berry St); the roll cites lot 8706264.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lots 8706264 and 8706003 (mapped 2001-03-20, 2003-08-27; active), joined into one outline; the earlier outline came from: DataSF Building Footprints (mblr SF8706264); name/address from Mission Housing Development Corporation's own project page and press coverage; OpenStreetMap way 679290110 tags the footprint but carries no name/address of its own"
     }
    },
    "centroid": {
-    "lon": -122.392004,
-    "lat": 37.777132
+    "lon": -122.391928,
+    "lat": 37.777333
    },
    "facts": [],
    "costs": [],
@@ -123874,6 +123784,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Rich Sorro Commons now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 8706264 and 8706003",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 8706264 and 8706003"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_rich_sorro_commons",
+      "slug": "rich-sorro-commons",
+      "name": "Rich Sorro Commons",
+      "permalink": "https://pierandpoint.org/parcels/rich-sorro-commons/",
+      "api": "https://pierandpoint.org/api/v1/records/rich-sorro-commons.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-29",
      "kind": "correction",
@@ -124005,582 +123944,44 @@
     "coordinates": [
      [
       [
-       -122.3925118,
-       37.7770156
+       -122.392045039,
+       37.777571957
       ],
       [
-       -122.3924967,
-       37.7770017
+       -122.391739767,
+       37.777813046
       ],
       [
-       -122.3924967,
-       37.7770016
+       -122.391326104,
+       37.777483059
       ],
       [
-       -122.3925985,
-       37.7769223
+       -122.391631376,
+       37.777241972
       ],
       [
-       -122.3927143,
-       37.7770165
+       -122.391644964,
+       37.777231241
       ],
       [
-       -122.3927143,
-       37.7770166
+       -122.391635203,
+       37.777223453
       ],
       [
-       -122.3926903,
-       37.7770348
+       -122.392306151,
+       37.776693565
       ],
       [
-       -122.3927151,
-       37.7770553
+       -122.392729576,
+       37.777031336
       ],
       [
-       -122.3927151,
-       37.7770554
+       -122.392181265,
+       37.777464372
       ],
       [
-       -122.3920532,
-       37.7775777
-      ],
-      [
-       -122.3920514,
-       37.7775762
-      ],
-      [
-       -122.392037,
-       37.7775876
-      ],
-      [
-       -122.3920558,
-       37.7776028
-      ],
-      [
-       -122.3918629,
-       37.7777531
-      ],
-      [
-       -122.3918478,
-       37.7777409
-      ],
-      [
-       -122.3917906,
-       37.777786
-      ],
-      [
-       -122.3918052,
-       37.7777977
-      ],
-      [
-       -122.3917546,
-       37.7778386
-      ],
-      [
-       -122.3914656,
-       37.7776073
-      ],
-      [
-       -122.3914691,
-       37.7776045
-      ],
-      [
-       -122.3913371,
-       37.7774999
-      ],
-      [
-       -122.39135,
-       37.7774896
-      ],
-      [
-       -122.3913412,
-       37.7774826
-      ],
-      [
-       -122.3913412,
-       37.7774825
-      ],
-      [
-       -122.3914984,
-       37.7773583
-      ],
-      [
-       -122.3914995,
-       37.7773591
-      ],
-      [
-       -122.3915026,
-       37.7773566
-      ],
-      [
-       -122.3914981,
-       37.777353
-      ],
-      [
-       -122.3914981,
-       37.7773529
-      ],
-      [
-       -122.3915358,
-       37.7773241
-      ],
-      [
-       -122.3915396,
-       37.7773272
-      ],
-      [
-       -122.3915463,
-       37.7773219
-      ],
-      [
-       -122.3915421,
-       37.7773185
-      ],
-      [
-       -122.3915421,
-       37.7773185
-      ],
-      [
-       -122.3915798,
-       37.7772896
-      ],
-      [
-       -122.3915833,
-       37.7772925
-      ],
-      [
-       -122.3915887,
-       37.7772881
-      ],
-      [
-       -122.391585,
-       37.7772851
-      ],
-      [
-       -122.391585,
-       37.777285
-      ],
-      [
-       -122.3916227,
-       37.7772562
-      ],
-      [
-       -122.3916258,
-       37.7772587
-      ],
-      [
-       -122.3916382,
-       37.7772488
-      ],
-      [
-       -122.3916379,
-       37.7772485
-      ],
-      [
-       -122.3916379,
-       37.7772485
-      ],
-      [
-       -122.3916531,
-       37.7772351
-      ],
-      [
-       -122.391645,
-       37.7772269
-      ],
-      [
-       -122.391645,
-       37.7772269
-      ],
-      [
-       -122.3917065,
-       37.7771801
-      ],
-      [
-       -122.3917672,
-       37.7771314
-      ],
-      [
-       -122.3917641,
-       37.7771285
-      ],
-      [
-       -122.391764,
-       37.7771284
-      ],
-      [
-       -122.391786,
-       37.7771052
-      ],
-      [
-       -122.3918171,
-       37.7770873
-      ],
-      [
-       -122.3918203,
-       37.7770892
-      ],
-      [
-       -122.3918771,
-       37.7770442
-      ],
-      [
-       -122.391874,
-       37.7770405
-      ],
-      [
-       -122.391874,
-       37.7770405
-      ],
-      [
-       -122.3918969,
-       37.7770176
-      ],
-      [
-       -122.3919275,
-       37.7770001
-      ],
-      [
-       -122.3919307,
-       37.7770027
-      ],
-      [
-       -122.391988,
-       37.776957
-      ],
-      [
-       -122.3919849,
-       37.7769533
-      ],
-      [
-       -122.3919849,
-       37.7769532
-      ],
-      [
-       -122.3920064,
-       37.7769304
-      ],
-      [
-       -122.3920361,
-       37.7769129
-      ],
-      [
-       -122.3920402,
-       37.7769137
-      ],
-      [
-       -122.3920996,
-       37.7768689
-      ],
-      [
-       -122.392096,
-       37.7768656
-      ],
-      [
-       -122.392096,
-       37.7768655
-      ],
-      [
-       -122.3921179,
-       37.7768434
-      ],
-      [
-       -122.392149,
-       37.7768252
-      ],
-      [
-       -122.3921522,
-       37.7768289
-      ],
-      [
-       -122.39221,
-       37.7767824
-      ],
-      [
-       -122.3922055,
-       37.776779
-      ],
-      [
-       -122.3922055,
-       37.776779
-      ],
-      [
-       -122.392227,
-       37.7767558
-      ],
-      [
-       -122.3922577,
-       37.7767375
-      ],
-      [
-       -122.3922618,
-       37.7767398
-      ],
-      [
-       -122.3922912,
-       37.7767174
-      ],
-      [
-       -122.3923059,
-       37.7767289
-      ],
-      [
-       -122.3923264,
-       37.7767133
-      ],
-      [
-       -122.3923269,
-       37.7767138
-      ],
-      [
-       -122.3923278,
-       37.7767131
-      ],
-      [
-       -122.3923674,
-       37.7767453
-      ],
-      [
-       -122.3923674,
-       37.7767454
-      ],
-      [
-       -122.3923641,
-       37.7767479
-      ],
-      [
-       -122.3923627,
-       37.7767467
-      ],
-      [
-       -122.3923456,
-       37.7767597
-      ],
-      [
-       -122.3923867,
-       37.7767916
-      ],
-      [
-       -122.3923867,
-       37.7767916
-      ],
-      [
-       -122.392355,
-       37.7768145
-      ],
-      [
-       -122.392372,
-       37.7768303
-      ],
-      [
-       -122.3923721,
-       37.7768303
-      ],
-      [
-       -122.3923524,
-       37.7768534
-      ],
-      [
-       -122.3923208,
-       37.7768709
-      ],
-      [
-       -122.3923016,
-       37.7768565
-      ],
-      [
-       -122.3922448,
-       37.7769028
-      ],
-      [
-       -122.3922629,
-       37.7769173
-      ],
-      [
-       -122.3922629,
-       37.7769174
-      ],
-      [
-       -122.3922403,
-       37.7769412
-      ],
-      [
-       -122.3922112,
-       37.7769581
-      ],
-      [
-       -122.3921928,
-       37.7769433
-      ],
-      [
-       -122.392133,
-       37.7769892
-      ],
-      [
-       -122.3921525,
-       37.7770053
-      ],
-      [
-       -122.3921525,
-       37.7770054
-      ],
-      [
-       -122.3921296,
-       37.7770296
-      ],
-      [
-       -122.3921009,
-       37.7770454
-      ],
-      [
-       -122.3920813,
-       37.777031
-      ],
-      [
-       -122.3920235,
-       37.7770772
-      ],
-      [
-       -122.3920411,
-       37.7770918
-      ],
-      [
-       -122.3920411,
-       37.7770919
-      ],
-      [
-       -122.3920206,
-       37.7771151
-      ],
-      [
-       -122.3919904,
-       37.7771326
-      ],
-      [
-       -122.3919699,
-       37.7771179
-      ],
-      [
-       -122.3919135,
-       37.7771633
-      ],
-      [
-       -122.391932,
-       37.7771794
-      ],
-      [
-       -122.3919321,
-       37.7771795
-      ],
-      [
-       -122.3919087,
-       37.7772027
-      ],
-      [
-       -122.3918795,
-       37.7772202
-      ],
-      [
-       -122.3918613,
-       37.7772066
-      ],
-      [
-       -122.3918091,
-       37.7772495
-      ],
-      [
-       -122.3918582,
-       37.7772838
-      ],
-      [
-       -122.3918646,
-       37.7772785
-      ],
-      [
-       -122.3918957,
-       37.7773049
-      ],
-      [
-       -122.3919226,
-       37.7773272
-      ],
-      [
-       -122.3919226,
-       37.7773272
-      ],
-      [
-       -122.3919205,
-       37.7773288
-      ],
-      [
-       -122.3920374,
-       37.777433
-      ],
-      [
-       -122.3920704,
-       37.7774086
-      ],
-      [
-       -122.3920737,
-       37.7774061
-      ],
-      [
-       -122.3920913,
-       37.7773931
-      ],
-      [
-       -122.3920446,
-       37.7773566
-      ],
-      [
-       -122.3920446,
-       37.7773565
-      ],
-      [
-       -122.3924543,
-       37.7770358
-      ],
-      [
-       -122.3924597,
-       37.7770402
-      ],
-      [
-       -122.3924599,
-       37.7770401
-      ],
-      [
-       -122.3924815,
-       37.7770207
-      ],
-      [
-       -122.3924919,
-       37.7770293
-      ],
-      [
-       -122.3925118,
-       37.7770156
-      ]
-     ],
-     [
-      [
-       -122.3917751,
-       37.7773818
-      ],
-      [
-       -122.3916424,
-       37.7774884
-      ],
-      [
-       -122.3917504,
-       37.7775744
-      ],
-      [
-       -122.391883,
-       37.7774684
-      ],
-      [
-       -122.3917751,
-       37.7773818
+       -122.392045039,
+       37.777571957
       ]
      ]
     ]
@@ -125285,13 +124686,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8721032), address confirmed via DataSF Assessor parcel data (blklot 8721032) and the DataSF Assessor roll (parcel 8721032); not a hand trace or plan estimate. Building name/tenant not confirmed -- addressed by its street number only, consistent with how this project handles other buildings where no clean primary name was found (e.g. 1500/1700 Owens St).",
-     "digitized_from": "DataSF Building Footprints (mblr SF8721032); address confirmed via DataSF Assessor parcel data (blklot 8721032) and the DataSF Assessor roll (parcel 8721032)"
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8721032 (6,112 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed the surveyed building footprint (DataSF Building Footprints (mblr SF8721032)); 100% of that outline lies inside the lot and it covered 74% of the lot.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8721032 (mapped 2009-12-07; active); the earlier outline came from: DataSF Building Footprints (mblr SF8721032); address confirmed via DataSF Assessor parcel data (blklot 8721032) and the DataSF Assessor roll (parcel 8721032)"
     }
    },
    "centroid": {
-    "lon": -122.388349,
-    "lat": 37.77048
+    "lon": -122.388598,
+    "lat": 37.770435
    },
    "facts": [],
    "costs": [],
@@ -125370,6 +124771,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "1401 Third Street now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8721032",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8721032"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_1401_3rd",
+      "slug": "1401-third-street",
+      "name": "1401 Third Street",
+      "permalink": "https://pierandpoint.org/parcels/1401-third-street/",
+      "api": "https://pierandpoint.org/api/v1/records/1401-third-street.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-29",
      "kind": "correction",
@@ -125485,224 +124915,56 @@
     "coordinates": [
      [
       [
-       -122.3878514,
-       37.7706225
+       -122.389240234,
+       37.770473457
       ],
       [
-       -122.3878418,
-       37.7706231
+       -122.389254433,
+       37.770622018
       ],
       [
-       -122.3878418,
-       37.770623
+       -122.389016395,
+       37.770636355
       ],
       [
-       -122.3878383,
-       37.7705803
+       -122.388774907,
+       37.770650898
       ],
       [
-       -122.3878586,
-       37.7705786
+       -122.388374726,
+       37.770674998
       ],
       [
-       -122.3878574,
-       37.7705649
+       -122.387848626,
+       37.770706678
       ],
       [
-       -122.387857,
-       37.7705649
+       -122.387812642,
+       37.770330138
       ],
       [
-       -122.387857,
-       37.7705652
+       -122.387803409,
+       37.770233525
       ],
       [
-       -122.3878468,
-       37.7705657
+       -122.38834648,
+       37.770200822
       ],
       [
-       -122.3878468,
-       37.7705656
+       -122.388420926,
+       37.77019634
       ],
       [
-       -122.3878399,
-       37.7704888
+       -122.388426171,
+       37.770251218
       ],
       [
-       -122.3878452,
-       37.7704885
+       -122.389214454,
+       37.770203745
       ],
       [
-       -122.3878451,
-       37.7704877
-      ],
-      [
-       -122.3878502,
-       37.7704875
-      ],
-      [
-       -122.3878491,
-       37.7704748
-      ],
-      [
-       -122.3878441,
-       37.7704752
-      ],
-      [
-       -122.3878441,
-       37.7704751
-      ],
-      [
-       -122.3878392,
-       37.7704754
-      ],
-      [
-       -122.3878391,
-       37.7704753
-      ],
-      [
-       -122.3878261,
-       37.7703417
-      ],
-      [
-       -122.3882246,
-       37.770318
-      ],
-      [
-       -122.3882247,
-       37.7703181
-      ],
-      [
-       -122.388225,
-       37.7703216
-      ],
-      [
-       -122.3882278,
-       37.7703215
-      ],
-      [
-       -122.3882279,
-       37.7703216
-      ],
-      [
-       -122.3882284,
-       37.7703253
-      ],
-      [
-       -122.3882443,
-       37.7703247
-      ],
-      [
-       -122.3882439,
-       37.7703199
-      ],
-      [
-       -122.3882441,
-       37.7703199
-      ],
-      [
-       -122.3882437,
-       37.7703161
-      ],
-      [
-       -122.3884452,
-       37.7703044
-      ],
-      [
-       -122.3884453,
-       37.7703046
-      ],
-      [
-       -122.3884607,
-       37.77047
-      ],
-      [
-       -122.3886155,
-       37.7704596
-      ],
-      [
-       -122.3886,
-       37.7702961
-      ],
-      [
-       -122.3892166,
-       37.7702584
-      ],
-      [
-       -122.3892167,
-       37.7702585
-      ],
-      [
-       -122.3892394,
-       37.7704815
-      ],
-      [
-       -122.3892368,
-       37.7704817
-      ],
-      [
-       -122.3892368,
-       37.7704821
-      ],
-      [
-       -122.3892276,
-       37.7704827
-      ],
-      [
-       -122.389229,
-       37.7704974
-      ],
-      [
-       -122.389252,
-       37.770496
-      ],
-      [
-       -122.389252,
-       37.7704961
-      ],
-      [
-       -122.3892562,
-       37.7705394
-      ],
-      [
-       -122.3892456,
-       37.77054
-      ],
-      [
-       -122.3892524,
-       37.7706213
-      ],
-      [
-       -122.3887202,
-       37.7706546
-      ],
-      [
-       -122.3887202,
-       37.7706545
-      ],
-      [
-       -122.3887157,
-       37.7705935
-      ],
-      [
-       -122.3883874,
-       37.7706142
-      ],
-      [
-       -122.3883925,
-       37.7706745
-      ],
-      [
-       -122.38786,
-       37.7707045
-      ],
-      [
-       -122.38786,
-       37.7707044
-      ],
-      [
-       -122.3878514,
-       37.7706225
+       -122.389240234,
+       37.770473457
       ]
      ]
     ]
@@ -126099,13 +125361,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed DataSF building footprint, not a hand trace or plan estimate; trimmed 117 sq m at the shared boundary with the neighboring Five88 parcel (blklot 8711226). How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
-     "digitized_from": "DataSF Building Footprints (mblr SF8711227); address/name confirmed via DataSF Assessor Historical Secured Property Tax Roll (blklot 8711227, property_location '540 MISSION BAY BLVD NOR', use 'Commercial Hotel'/'Hotels - Other', year_property_built 2016, number_of_stories 5, exemption_code 'Welfare') and Family House Inc.'s own site"
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8711227 (2,828 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed the surveyed building footprint (DataSF Building Footprints (mblr SF8711227)); 99% of that outline lies inside the lot and it covered 69% of the lot.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8711227 (mapped 2012-10-22; active); the earlier outline came from: DataSF Building Footprints (mblr SF8711227); address/name confirmed via DataSF Assessor Historical Secured Property Tax Roll (blklot 8711227, property_location '540 MISSION BAY BLVD NOR', use 'Commercial Hotel'/'Hotels - Other', year_property_built 2016, number_of_stories 5, exemption_code 'Welfare') and Family House Inc.'s own site"
     }
    },
    "centroid": {
-    "lon": -122.389992,
-    "lat": 37.771479
+    "lon": -122.389911,
+    "lat": 37.771484
    },
    "facts": [],
    "costs": [],
@@ -126193,6 +125455,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Nancy & Stephen Grand Family House now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8711227",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8711227"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_family_house",
+      "slug": "nancy-and-stephen-grand-family-house",
+      "name": "Nancy & Stephen Grand Family House",
+      "permalink": "https://pierandpoint.org/parcels/nancy-and-stephen-grand-family-house/",
+      "api": "https://pierandpoint.org/api/v1/records/nancy-and-stephen-grand-family-house.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-29",
      "kind": "correction",
@@ -126335,64 +125626,28 @@
     "coordinates": [
      [
       [
-       -122.38969967,
-       37.771153814
+       -122.390068505,
+       37.771125857
       ],
       [
-       -122.39006830678954,
-       37.771129037831415
+       -122.390140494,
+       37.771878926
       ],
       [
-       -122.39008546204172,
-       37.77130849703501
+       -122.389758445,
+       37.771901938
       ],
       [
-       -122.390049043,
-       37.771312092
+       -122.389741547,
+       37.771725163
       ],
       [
-       -122.390040994,
-       37.771239143
+       -122.38968646,
+       37.771148868
       ],
       [
-       -122.389974324,
-       37.771242685
-      ],
-      [
-       -122.389977878,
-       37.771303474
-      ],
-      [
-       -122.389913908,
-       37.771309162
-      ],
-      [
-       -122.389964003,
-       37.771750428
-      ],
-      [
-       -122.39012723617617,
-       37.77174549165432
-      ],
-      [
-       -122.39014003027097,
-       37.771879112963624
-      ],
-      [
-       -122.39018394539251,
-       37.77187680957477
-      ],
-      [
-       -122.390184363,
-       37.771882026
-      ],
-      [
-       -122.389771655,
-       37.771906884
-      ],
-      [
-       -122.38969967,
-       37.771153814
+       -122.390068505,
+       37.771125857
       ]
      ]
     ]

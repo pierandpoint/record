@@ -9,10 +9,10 @@
         "status": "complete",
         "use": "residential",
         "geometry_type": "real",
-        "digitized_from": "DataSF Building Footprints (mblr SF8711014); address confirmed via DataSF Assessor parcel data (blklot 8711501) and architect/press project pages (no OSM name/address tag found on this footprint)",
-        "digitization_method": "ADDED 2026-09-19 for Mission Bay's block-by-block reconciliation pass, cross-checking OCII's own numbered Land Use Map (Dec 2019, data/manual/_reference/mission_bay_land_use_map_2019.png) against everything already tracked: 1180 Fourth Street, a 150-unit affordable housing development (50 units for formerly homeless residents) on a full city block, designed by Kennerly Architecture & Planning with Mithun|Solomon and Full Circle Architecture, opened 2015; 216,000 sq ft with ground-floor retail along 4th St and a mid-block courtyard. 2026-09-29 accuracy audit: corrections to the description above. (1) 'On a full city block' is not stated by any cited source; Mithun's project page gives 217,620 sf on 1.4 acres at the corner of Fourth and Channel Streets. (2) Mithun (formerly WRT/Solomon E.T.C., 'Mithun|Solomon') is the architect; Kennerly Architecture and Planning is the associate design architect and Full Circle Architects (not 'Architecture') the associate architect. (3) 'Opened 2015': Mithun gives completion 2014; DBI permit 201012036075 shows completed 2015-04-02 and the Assessor year built is 2015; the Mercy Housing opening celebration was in May 2015. (4) '216,000 sq ft' appears in no source read; Mithun gives 217,620 sf. 2026-10-10 link fix: the ULI case-study page (http://web.archive.org/web/20250526145718/https://casestudies.uli.org/1180-fourth-street/) now shows a landing page, so source_doc_urls points to its 2025-05-26 Internet Archive copy instead. The geometry is unchanged.",
-        "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8711014), address confirmed via DataSF Assessor parcel data (blklot 8711501) and architect/press project pages (no OSM name/address tag found on this footprint); not a hand trace or plan estimate. No OSM building/name tag found on this footprint; address and history confirmed via architect project pages and press coverage instead.",
-        "notes": "No OSM building/name tag found on this footprint; address and history confirmed via architect project pages and press coverage instead.",
+        "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8711501 (mapped 2015-12-09; active); the earlier outline came from: DataSF Building Footprints (mblr SF8711014); address confirmed via DataSF Assessor parcel data (blklot 8711501) and architect/press project pages (no OSM name/address tag found on this footprint)",
+        "digitization_method": "ADDED 2026-09-19 for Mission Bay's block-by-block reconciliation pass, cross-checking OCII's own numbered Land Use Map (Dec 2019, data/manual/_reference/mission_bay_land_use_map_2019.png) against everything already tracked: 1180 Fourth Street, a 150-unit affordable housing development (50 units for formerly homeless residents) on a full city block, designed by Kennerly Architecture & Planning with Mithun|Solomon and Full Circle Architecture, opened 2015; 216,000 sq ft with ground-floor retail along 4th St and a mid-block courtyard. 2026-09-29 accuracy audit: corrections to the description above. (1) 'On a full city block' is not stated by any cited source; Mithun's project page gives 217,620 sf on 1.4 acres at the corner of Fourth and Channel Streets. (2) Mithun (formerly WRT/Solomon E.T.C., 'Mithun|Solomon') is the architect; Kennerly Architecture and Planning is the associate design architect and Full Circle Architects (not 'Architecture') the associate architect. (3) 'Opened 2015': Mithun gives completion 2014; DBI permit 201012036075 shows completed 2015-04-02 and the Assessor year built is 2015; the Mercy Housing opening celebration was in May 2015. (4) '216,000 sq ft' appears in no source read; Mithun gives 217,620 sf. 2026-10-10 link fix: the ULI case-study page (http://web.archive.org/web/20250526145718/https://casestudies.uli.org/1180-fourth-street/) now shows a landing page, so source_doc_urls points to its 2025-05-26 Internet Archive copy instead. The geometry is unchanged. REPLACED 2026-10-12 (shape; status and use unchanged): the owner approved building records whose outline matches an Assessor lot at 85% or better, both ways, using the lot (CLAUDE.md, 'An official parcel beats our drawing'). DataSF's Assessor layer (data/raw/parcels.geojson) has Assessor lot 8711501 (6,026 m2, active, mapped 2015-12-09); the earlier outline of 4,614 m2 and the lot overlap with IoU 0.70 (95% of the earlier outline lies inside the lot and it covers 72% of the lot). The outline is now that lot using the lots' own vertices (no simplification). The lot is condominium-mapped: 4 Assessor lots share this outline (the map lot 8711501 and 3 per-unit lots), so the outline is the building's shared lot, not any one unit. geometry_type stays 'real'. Previous digitized_from: 'DataSF Building Footprints (mblr SF8711014); address confirmed via DataSF Assessor parcel data (blklot 8711501) and architect/press project pages (no OSM name/address tag found on this footprint)'. Previous accuracy_caveat: 'REAL -- surveyed DataSF Building Footprints outline (mblr SF8711014), address confirmed via DataSF Assessor parcel data (blklot 8711501) and architect/press project pages (no OSM name/address tag found on this footprint); not a hand trace or plan estimate. No OSM building/name tag found on this footprint; address and history confirmed via architect project pages and press coverage instead.'. Previous notes: 'No OSM building/name tag found on this footprint; address and history confirmed via architect project pages and press coverage instead.'.",
+        "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8711501 (6,026 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. The lot is condominium-mapped: 4 Assessor lots share this outline (the map lot 8711501 and 3 per-unit lots), so the outline is the building's shared lot, not any one unit. Until 2026-10-12 this record showed the surveyed building footprint (DataSF Building Footprints (mblr SF8711014)); 95% of that outline lies inside the lot and it covered 72% of the lot.",
+        "notes": "No OSM building/name tag found on the building's footprint; address and history confirmed via architect project pages and press coverage instead.",
         "source_doc_urls": [
           "http://web.archive.org/web/20250526145718/https://casestudies.uli.org/1180-fourth-street/",
           "https://mithun.com/project/1180-fourth-street/",
@@ -24,158 +24,272 @@
         "coordinates": [
           [
             [
-              -122.3916577,
-              37.7739487
+              -122.391654044,
+              37.774060404
             ],
             [
-              -122.3916472,
-              37.7739487
+              -122.391652383,
+              37.774055503
             ],
             [
-              -122.3916306,
-              37.7738805
+              -122.391650748,
+              37.774050597
             ],
             [
-              -122.3915948,
-              37.7735535
+              -122.391649139,
+              37.774045685
             ],
             [
-              -122.3916098,
-              37.7735501
+              -122.391647556,
+              37.774040768
             ],
             [
-              -122.3916075,
-              37.7735349
+              -122.391645998,
+              37.774035845
             ],
             [
-              -122.3915876,
-              37.7735325
+              -122.391644467,
+              37.774030918
             ],
             [
-              -122.3915756,
-              37.7735291
+              -122.391642962,
+              37.774025985
             ],
             [
-              -122.3915696,
-              37.7735215
+              -122.391641483,
+              37.774021048
             ],
             [
-              -122.3915678,
-              37.773512
+              -122.391640031,
+              37.774016105
             ],
             [
-              -122.391572,
-              37.7735048
+              -122.391638604,
+              37.774011157
             ],
             [
-              -122.3915817,
-              37.7734958
+              -122.391637204,
+              37.774006206
             ],
             [
-              -122.391902,
-              37.7732356
+              -122.39163583,
+              37.774001249
             ],
             [
-              -122.3921295,
-              37.7730573
+              -122.391634482,
+              37.773996289
             ],
             [
-              -122.3926194,
-              37.7734483
+              -122.39163316,
+              37.773991322
             ],
             [
-              -122.3921913,
-              37.7737841
+              -122.391631865,
+              37.773986352
             ],
             [
-              -122.3921887,
-              37.7737877
+              -122.391630596,
+              37.773981378
             ],
             [
-              -122.3921818,
-              37.7737934
+              -122.391629353,
+              37.7739764
             ],
             [
-              -122.392192,
-              37.7738037
+              -122.391628137,
+              37.773971417
             ],
             [
-              -122.3921871,
-              37.7738066
+              -122.391626947,
+              37.773966431
             ],
             [
-              -122.3918303,
-              37.7740877
+              -122.391625783,
+              37.77396144
             ],
             [
-              -122.3916868,
-              37.7741782
+              -122.391624647,
+              37.773956446
             ],
             [
-              -122.3916329,
-              37.7739755
+              -122.391623536,
+              37.773951448
             ],
             [
-              -122.3916615,
-              37.7739726
+              -122.391622452,
+              37.773946446
             ],
             [
-              -122.3916577,
-              37.7739487
-            ]
-          ],
-          [
-            [
-              -122.3922145,
-              37.773274
+              -122.391621394,
+              37.773941441
             ],
             [
-              -122.3918287,
-              37.773578
+              -122.391620363,
+              37.773936432
             ],
             [
-              -122.3918839,
-              37.7736228
+              -122.391619358,
+              37.77393142
             ],
             [
-              -122.3918166,
-              37.7736743
+              -122.39161838,
+              37.773926405
             ],
             [
-              -122.3919055,
-              37.773742
+              -122.391617427,
+              37.773921386
             ],
             [
-              -122.3918369,
-              37.7737925
+              -122.391616503,
+              37.773916365
             ],
             [
-              -122.3919222,
-              37.7738479
+              -122.391615604,
+              37.77391134
             ],
             [
-              -122.3920678,
-              37.7737278
+              -122.391614732,
+              37.773906312
             ],
             [
-              -122.3920752,
-              37.7737218
+              -122.391613886,
+              37.773901281
             ],
             [
-              -122.3920773,
-              37.7737207
+              -122.391613068,
+              37.773896248
             ],
             [
-              -122.3920052,
-              37.773662
+              -122.391612276,
+              37.773891212
             ],
             [
-              -122.3923502,
-              37.7733828
+              -122.39161151,
+              37.773886173
             ],
             [
-              -122.3922145,
-              37.773274
+              -122.391610772,
+              37.773881132
+            ],
+            [
+              -122.39161006,
+              37.773876087
+            ],
+            [
+              -122.391609374,
+              37.773871042
+            ],
+            [
+              -122.391608715,
+              37.773865994
+            ],
+            [
+              -122.391608084,
+              37.773860944
+            ],
+            [
+              -122.391607478,
+              37.773855891
+            ],
+            [
+              -122.3916069,
+              37.773850837
+            ],
+            [
+              -122.391606347,
+              37.773845781
+            ],
+            [
+              -122.391605822,
+              37.773840723
+            ],
+            [
+              -122.391605325,
+              37.773835662
+            ],
+            [
+              -122.39157189,
+              37.773485988
+            ],
+            [
+              -122.392174514,
+              37.773010037
+            ],
+            [
+              -122.392659536,
+              37.773396966
+            ],
+            [
+              -122.391716032,
+              37.774142142
+            ],
+            [
+              -122.391683557,
+              37.774136744
+            ],
+            [
+              -122.391681528,
+              37.774132025
+            ],
+            [
+              -122.391679525,
+              37.774127299
+            ],
+            [
+              -122.391677546,
+              37.774122567
+            ],
+            [
+              -122.391675592,
+              37.774117828
+            ],
+            [
+              -122.391673662,
+              37.774113082
+            ],
+            [
+              -122.391671758,
+              37.774108331
+            ],
+            [
+              -122.391669878,
+              37.774103574
+            ],
+            [
+              -122.391668023,
+              37.77409881
+            ],
+            [
+              -122.391666192,
+              37.774094041
+            ],
+            [
+              -122.391664386,
+              37.774089264
+            ],
+            [
+              -122.391662606,
+              37.774084483
+            ],
+            [
+              -122.391660849,
+              37.774079695
+            ],
+            [
+              -122.391659118,
+              37.774074903
+            ],
+            [
+              -122.391657412,
+              37.774070104
+            ],
+            [
+              -122.391655731,
+              37.774065299
+            ],
+            [
+              -122.391654044,
+              37.774060404
             ]
           ]
         ]

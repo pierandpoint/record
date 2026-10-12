@@ -43,13 +43,13 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed DataSF building footprint, not a hand trace or plan estimate; trimmed 117 sq m at the shared boundary with the neighboring Five88 parcel (blklot 8711226). How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
-    "digitized_from": "DataSF Building Footprints (mblr SF8711227); address/name confirmed via DataSF Assessor Historical Secured Property Tax Roll (blklot 8711227, property_location '540 MISSION BAY BLVD NOR', use 'Commercial Hotel'/'Hotels - Other', year_property_built 2016, number_of_stories 5, exemption_code 'Welfare') and Family House Inc.'s own site"
+    "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8711227 (2,828 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed the surveyed building footprint (DataSF Building Footprints (mblr SF8711227)); 99% of that outline lies inside the lot and it covered 69% of the lot.",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8711227 (mapped 2012-10-22; active); the earlier outline came from: DataSF Building Footprints (mblr SF8711227); address/name confirmed via DataSF Assessor Historical Secured Property Tax Roll (blklot 8711227, property_location '540 MISSION BAY BLVD NOR', use 'Commercial Hotel'/'Hotels - Other', year_property_built 2016, number_of_stories 5, exemption_code 'Welfare') and Family House Inc.'s own site"
    }
   },
   "centroid": {
-   "lon": -122.389992,
-   "lat": 37.771479
+   "lon": -122.389911,
+   "lat": 37.771484
   },
   "facts": [],
   "costs": [],
@@ -137,6 +137,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Nancy & Stephen Grand Family House now uses its Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 8711227",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 8711227"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_family_house",
+     "slug": "nancy-and-stephen-grand-family-house",
+     "name": "Nancy & Stephen Grand Family House",
+     "permalink": "https://pierandpoint.org/parcels/nancy-and-stephen-grand-family-house/",
+     "api": "https://pierandpoint.org/api/v1/records/nancy-and-stephen-grand-family-house.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-29",
     "kind": "correction",
@@ -279,64 +308,28 @@
    "coordinates": [
     [
      [
-      -122.38969967,
-      37.771153814
+      -122.390068505,
+      37.771125857
      ],
      [
-      -122.39006830678954,
-      37.771129037831415
+      -122.390140494,
+      37.771878926
      ],
      [
-      -122.39008546204172,
-      37.77130849703501
+      -122.389758445,
+      37.771901938
      ],
      [
-      -122.390049043,
-      37.771312092
+      -122.389741547,
+      37.771725163
      ],
      [
-      -122.390040994,
-      37.771239143
+      -122.38968646,
+      37.771148868
      ],
      [
-      -122.389974324,
-      37.771242685
-     ],
-     [
-      -122.389977878,
-      37.771303474
-     ],
-     [
-      -122.389913908,
-      37.771309162
-     ],
-     [
-      -122.389964003,
-      37.771750428
-     ],
-     [
-      -122.39012723617617,
-      37.77174549165432
-     ],
-     [
-      -122.39014003027097,
-      37.771879112963624
-     ],
-     [
-      -122.39018394539251,
-      37.77187680957477
-     ],
-     [
-      -122.390184363,
-      37.771882026
-     ],
-     [
-      -122.389771655,
-      37.771906884
-     ],
-     [
-      -122.38969967,
-      37.771153814
+      -122.390068505,
+      37.771125857
      ]
     ]
    ]
