@@ -42,8 +42,9 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL BUILDING, APPROXIMATE BOUNDARY -- a real, standing structure clearly visible in Esri satellite imagery (not open land). Boundary is the traced edge of the leftover open ground between the mapped streets (following the street's curb radius) and neighbouring mapped shapes, with the north edge (and, for the garage, the cut from the building to its north) re-aligned to the real street angle -- not a hand-traced or surveyed building footprint. The split between this building and its neighbor follows a visible satellite roofline seam, not a surveyed or permitted lot line -- treat the exact boundary as indicative, not authoritative. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
-    "digitized_from": "Traced as the leftover open ground between 3rd St and Illinois St, south of 16th St, extended down to Mariposa St, after removing the mapped streets (at full street width) and already-tracked neighbouring shapes. Pier & Point identified this area as capturing two separate real buildings, not one, and cut it at the visible gap between the two rooflines in Esri satellite imagery (lat 37.76578) -- the piece north of that cut is the UCSF Valley Center for Vision (west building) record."
+    "accuracy_caveat": "REAL BUILDING, APPROXIMATE BOUNDARY -- a real, standing structure clearly visible in Esri satellite imagery (not open land). Boundary is the traced edge of the leftover open ground between the mapped streets (following the street's curb radius) and neighbouring mapped shapes, with the north edge (and, for the garage, the cut from the building to its north) re-aligned to the real street angle -- not a hand-traced or surveyed building footprint. The split between this building and its neighbor follows a visible satellite roofline seam, not a surveyed or permitted lot line -- treat the exact boundary as indicative, not authoritative. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record). DataSF's Assessor layer has one active lot, 8725001 (480 16th St, MB-RA zoning, recorded 1999-09-21, 15,504 m2), under this building and the two other tracked buildings on this strip between Third St and Illinois St (UCSF Wayne and Gladys Valley Center for Vision, UCSF Bayfront Medical Building and UCSF Illinois Street Garage). No lot separates them, so this outline is a drawing of the building from imagery, kept because the lot is not this building's own.",
+    "digitized_from": "Traced as the leftover open ground between 3rd St and Illinois St, south of 16th St, extended down to Mariposa St, after removing the mapped streets (at full street width) and already-tracked neighbouring shapes. Pier & Point identified this area as capturing two separate real buildings, not one, and cut it at the visible gap between the two rooflines in Esri satellite imagery (lat 37.76578) -- the piece north of that cut is the UCSF Valley Center for Vision (west building) record.",
+    "why_no_real_parcel": "The strip holds one Assessor lot, 8725001, under three separately drawn buildings (see the accuracy note), so no lot of its own exists for this building."
    }
   },
   "centroid": {
@@ -220,6 +221,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-11",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "UCSF Bayfront Medical Building now cites the Assessor lot under it.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 8725001",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 8725001"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "ucsf_bayfront_medical_building",
+     "slug": "ucsf-bayfront-medical-building",
+     "name": "UCSF Bayfront Medical Building",
+     "permalink": "https://pierandpoint.org/parcels/ucsf-bayfront-medical-building/",
+     "api": "https://pierandpoint.org/api/v1/records/ucsf-bayfront-medical-building.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-29",
     "kind": "correction",

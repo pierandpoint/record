@@ -40,7 +40,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- real turf/median extent per Esri satellite imagery and a hand-drawn scheme by Pier & Point (traced as the leftover ground bounded by streets and the creek, not surveyed). The three freeway-median strips and the strip beside the site of the proposed Pump Station No. 4 (the schematic design calls that pump station 'proposed'; no source read says it has been built) are deliberately kept as separate polygons in a MultiPolygon (they are physically separated by pavement/ramp lanes, not one contiguous parcel). Overlaps the already-tracked real 'Mission Creek Park' polygon for part of its northeast extent -- not reconciled with it yet, per Pier & Point's own framing that Mission Creek Park will eventually evolve to encompass P1+P2+P8.",
+    "accuracy_caveat": "APPROXIMATE -- real turf/median extent per Esri satellite imagery and a hand-drawn scheme by Pier & Point (traced as the leftover ground bounded by streets and the creek, not surveyed). The three freeway-median strips and the strip beside the site of the proposed Pump Station No. 4 (the schematic design calls that pump station 'proposed'; no source read says it has been built) are deliberately kept as separate polygons in a MultiPolygon (they are physically separated by pavement/ramp lanes, not one contiguous parcel). Overlaps the already-tracked real 'Mission Creek Park' polygon for part of its northeast extent -- not reconciled with it yet, per Pier & Point's own framing that Mission Creek Park will eventually evolve to encompass P1+P2+P8. the owner chose to keep this drawing and cite the Assessor lots under it. Active lots 3809006 (164 m2, 150 m2 inside this drawing) and 3809002 (6,082 m2, 4,104 m2 inside it) are read as P8's lots, but they run under the freeway ramps and cover more than the drawn park, so the drawing is kept. Also lot 8709003 (1400 Owens St per DataSF, MB-RA zoning, recorded 1999-09-21, active, 12,999 m2), 3,603 m2 inside this drawing. The owner reads it as split between P10 (the roundabout island), P8 and P7 or P9 across from P8; against our drawings it overlaps P8 by 3,603 m2, P10 by 983 m2, P7 by 3,431 m2 and P9 by 136 m2. P8 has no lot of its own.",
     "digitized_from": "Hand-traced from satellite imagery (Esri World Imagery) against the currently-visible graded/disturbed extent, cross-checked against SF Recreation & Parks' own Mission Creek Park South Extension Project page and its Schematic Design document (P2 and P8; undated, it names Catellus and the San Francisco Redevelopment Agency and includes a plan sheet dated June 23, 2006) and the Feb 10, 2022 CAC overview deck of the project. UPDATED 2026-09-20: extended over the Mission Bay Circle roundabout area. The open ground left between DataSF's official street centerlines (widened to street width) and all neighbouring mapped shapes there fell into about 68 separate candidate pieces; Pier & Point chose five of them by hand from a numbered map and combined them. The result is not taken from a surveyed parcel."
    }
   },
@@ -229,6 +229,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-11",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Mission Bay P8 now records the Assessor lots it overlaps.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lots 3809006, 3809002, 8709003",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lots 3809006, 3809002, 8709003"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_p8_open_space",
+     "slug": "mission-creek-park-south-extension",
+     "name": "Mission Creek Park South Extension",
+     "permalink": "https://pierandpoint.org/parcels/mission-creek-park-south-extension/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-creek-park-south-extension.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-10",
     "kind": "added",

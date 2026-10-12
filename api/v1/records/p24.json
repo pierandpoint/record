@@ -41,8 +41,9 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- landscaped open land (lawn, curved path, scattered trees) as seen in Esri satellite imagery (an imagery observation; no document cited), outlined as the open ground left between the official street lines and neighbouring mapped shapes and cut by hand by Pier & Point at a point where the shape forks, rather than at a surveyed parcel boundary. Name and operator not confirmed by any source found; a hedged observation from imagery (no source cited) that it visually resembles Bayfront Park's own style and may be a continuation of it.",
-    "digitized_from": "Outlined as the open ground left between DataSF's official street lines and neighbouring mapped shapes around the 499 Illinois St / Bayfront Park area (one piece of 19,181.78 sqm before cutting). Pier & Point split that piece in three at its two natural narrow points (lat 37.7658 and 37.76665) and then cut it by hand the same way as P26: the wide, single 'head' was kept and the thin, branching 'horns' were dropped. Not taken from a surveyed parcel."
+    "accuracy_caveat": "APPROXIMATE -- landscaped open land (lawn, curved path, scattered trees) as seen in Esri satellite imagery (an imagery observation; no document cited), outlined as the open ground left between the official street lines and neighbouring mapped shapes and cut by hand by Pier & Point at a point where the shape forks, rather than at a surveyed parcel boundary. Name and operator not confirmed by any source found; a hedged observation from imagery (no source cited) that it visually resembles Bayfront Park's own style and may be a continuation of it. DataSF's Assessor layer has active lot 3941032 (MB-RA zoning, recorded 2018-10-02, active, 10,721 m2) near this park: 86% of this drawing lies inside it and the drawing covers 53% of the lot; the lot is larger than this park (10,721 m2 against 6,605 m2), so using it would claim ground beyond the park, so the lot is not this park's own and the drawing is kept.",
+    "digitized_from": "Outlined as the open ground left between DataSF's official street lines and neighbouring mapped shapes around the 499 Illinois St / Bayfront Park area (one piece of 19,181.78 sqm before cutting). Pier & Point split that piece in three at its two natural narrow points (lat 37.7658 and 37.76665) and then cut it by hand the same way as P26: the wide, single 'head' was kept and the thin, branching 'horns' were dropped. Not taken from a surveyed parcel.",
+    "why_no_real_parcel": "Open space with no Assessor lot of its own: lot 3941032 was compared and does not match (see the accuracy note)."
    }
   },
   "centroid": {
@@ -129,6 +130,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-11",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Mission Bay P24 now records why Assessor lot 3941032 is not used.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 3941032",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 3941032"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_p24_waterfront_park",
+     "slug": "p24",
+     "name": "P24",
+     "permalink": "https://pierandpoint.org/parcels/p24/",
+     "api": "https://pierandpoint.org/api/v1/records/p24.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-06",
     "kind": "correction",

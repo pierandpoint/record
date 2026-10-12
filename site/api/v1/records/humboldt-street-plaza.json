@@ -42,7 +42,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- Figure 6.2.3 labels this open space directly, shown as a small plaza area between Block 4 (north) and Block 9 (south). This polygon is a simplified rectangular approximation of that labeled area, built directly from the mapped corners of Block 4 and Block 9 (see the mapping log) so it shares an exact edge with both -- its accuracy is that of those two blocks' shapes. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
+    "accuracy_caveat": "APPROXIMATE -- Figure 6.2.3 labels this open space directly, shown as a small plaza area between Block 4 (north) and Block 9 (south). This polygon is a simplified rectangular approximation of that labeled area, built directly from the mapped corners of Block 4 and Block 9 (see the mapping log) so it shares an exact edge with both -- its accuracy is that of those two blocks' shapes. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record). DataSF's active lot 4175028 (21,885 m2, 1241 Delaware St, PPS-MU zoning, recorded 2022-08-30) holds 1,066 m2 of this drawing. It also holds Blocks 3, 4 and 9, Humboldt Street Plaza and parts of Prequel Park and Waterfront Park, so the owner reads it as an undivided parent lot; the plaza has no lot of its own and the drawing is kept.",
     "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
     "why_no_real_parcel": "Open space with no subdivided Assessor parcel of its own within the largely unaddressed former power-station site. (This reflects Pier & Point's own parcel search, not something the cited Design for Development can establish; the D4D does not address Assessor parcels.)",
     "regulatory_context": "A small public plaza per the D4D's own Figure 6.2.3 label, between Block 4 and Block 9 near the site's waterfront edge."
@@ -320,6 +320,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-11",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Humboldt Street Plaza now records the Assessor lots it overlaps.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lots 4175028, 4232010, 4232015, 4232016",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lots 4175028, 4232010, 4232015, 4232016"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_humboldt_street_plaza",
+     "slug": "humboldt-street-plaza",
+     "name": "Humboldt Street Plaza",
+     "permalink": "https://pierandpoint.org/parcels/humboldt-street-plaza/",
+     "api": "https://pierandpoint.org/api/v1/records/humboldt-street-plaza.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-29",
     "kind": "correction",

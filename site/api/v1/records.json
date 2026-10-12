@@ -79085,7 +79085,7 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- this block is not yet built (no design-review approval or construction start found; it is not in the 2024 annual compliance report's Phase 1 list) and no Assessor lot of its own was found: DataSF Parcels (checked 2026-09-29) shows its footprint lying within a much larger active lot, 4175028 (1241 Delaware St, about 21,900 sq m, recorded 2022-08-30), which also overlaps the Block 4 and Block 9 footprints. Traced from an adopted regulatory diagram by matching many points on the diagram to real street locations, but this diagram is dated 2020 and may not reflect later design changes. Treat vertex positions as accurate to roughly 10-25m, not survey-grade. West edge corrected 2026-09-16 (fifth revision) against Maryland Street's real, directly-measured near curb, cross-validated against the source diagram's own printed scale (which independently implies a similar block width) -- treat that edge as accurate to roughly 5-10m. The north, south, and east edges still carry the original 10-25m diagram-transform tolerance and have not been independently re-verified against satellite imagery. Rebuilt 2026-09-16 by re-fitting the diagram to the map through matched control points. Re-measured 2026-09-16 (third revision) in one consistent measurement of the diagram across the whole block layout. Re-corrected 2026-09-16 (fourth revision) after fixing a mis-measured control point. Each of these changes is logged in this shape's data file in the public data repository (https://github.com/pierandpoint/record).",
+     "accuracy_caveat": "APPROXIMATE -- this block is not yet built (no design-review approval or construction start found; it is not in the 2024 annual compliance report's Phase 1 list) and no Assessor lot of its own was found: DataSF Parcels (checked 2026-09-29) shows its footprint lying within a much larger active lot, 4175028 (1241 Delaware St, about 21,900 sq m, recorded 2022-08-30), which also overlaps the Block 4 and Block 9 footprints. Traced from an adopted regulatory diagram by matching many points on the diagram to real street locations, but this diagram is dated 2020 and may not reflect later design changes. Treat vertex positions as accurate to roughly 10-25m, not survey-grade. West edge corrected 2026-09-16 (fifth revision) against Maryland Street's real, directly-measured near curb, cross-validated against the source diagram's own printed scale (which independently implies a similar block width) -- treat that edge as accurate to roughly 5-10m. The north, south, and east edges still carry the original 10-25m diagram-transform tolerance and have not been independently re-verified against satellite imagery. Rebuilt 2026-09-16 by re-fitting the diagram to the map through matched control points. Re-measured 2026-09-16 (third revision) in one consistent measurement of the diagram across the whole block layout. Re-corrected 2026-09-16 (fourth revision) after fixing a mis-measured control point. Each of these changes is logged in this shape's data file in the public data repository (https://github.com/pierandpoint/record). DataSF's active lot 4175028 (21,885 m2, 1241 Delaware St, PPS-MU zoning, recorded 2022-08-30) holds 4,545 m2 of this drawing. It also holds Blocks 3, 4 and 9, Humboldt Street Plaza and parts of Prequel Park and Waterfront Park, so the owner reads it as an undivided parent lot; Block 3 has no lot of its own and the drawing is kept.",
      "digitized_from": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
      "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead. DataSF Parcels (checked 2026-09-29) shows this footprint within the much larger active lot 4175028 (1241 Delaware St), not a lot of its own.",
      "regulatory_context": "Flat 130 ft max height per Figure 6.2.3 of the final D4D (colour-coded height label). The D4D's Permitted Uses table (Table 3.1.1) marks Residential Not Permitted on this block, while Non-Retail Sales/Services (office), Laboratory and Life Science uses are permitted (subject to the table's note 13) -- i.e., planned as an office/lab block, not residential. In Figure 6.2.3 the block sits north of Humboldt Street between Maryland and Delaware Streets, so it does not front the Louisiana Paseo (which runs between Blocks 15 and 7). No construction-start source found."
@@ -79229,6 +79229,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-11",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Potrero Power Station Block 3 now records the Assessor lots it overlaps.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 4175028, 4232010, 4232015, 4232016",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 4175028, 4232010, 4232015, 4232016"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_block_3",
+      "slug": "potrero-power-station-block-3",
+      "name": "Potrero Power Station Block 3",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-3/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-3.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-29",
      "kind": "correction",
@@ -79452,7 +79481,7 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- this block is not yet built (no design-review approval or construction start found; the 2024 annual compliance report records environmental remediation of the Project's 'Tank Farm Area and Block 4', contracted in Q3 2021) and no Assessor lot of its own was found: DataSF Parcels (checked 2026-09-29) shows its footprint within a much larger active lot, 4175028 (1241 Delaware St, about 21,900 sq m, recorded 2022-08-30), which also overlaps the Block 3 and Block 9 footprints. Traced from an adopted regulatory diagram via multi-point real-street georeferencing (see the mapping log in the public data repository (https://github.com/pierandpoint/record)), but this diagram is dated 2020 and may not reflect later design changes (as already found for the UCSF/Sophie Maxwell area). Treat vertex positions as accurate to roughly 10-25m, not survey-grade, and treat the block's applicability itself as somewhat more provisional than Mission Rock's or Pier 70's equivalent entries. Rebuilt 2026-09-16 by georeferencing against many real-street control points. Re-measured 2026-09-16 (third revision) by detecting the block colours consistently across the whole block layout at once. Re-corrected 2026-09-16 (fourth revision) after fixing a mis-measured control point -- see the mapping log.",
+     "accuracy_caveat": "APPROXIMATE -- this block is not yet built (no design-review approval or construction start found; the 2024 annual compliance report records environmental remediation of the Project's 'Tank Farm Area and Block 4', contracted in Q3 2021) and no Assessor lot of its own was found: DataSF Parcels (checked 2026-09-29) shows its footprint within a much larger active lot, 4175028 (1241 Delaware St, about 21,900 sq m, recorded 2022-08-30), which also overlaps the Block 3 and Block 9 footprints. Traced from an adopted regulatory diagram via multi-point real-street georeferencing (see the mapping log in the public data repository (https://github.com/pierandpoint/record)), but this diagram is dated 2020 and may not reflect later design changes (as already found for the UCSF/Sophie Maxwell area). Treat vertex positions as accurate to roughly 10-25m, not survey-grade, and treat the block's applicability itself as somewhat more provisional than Mission Rock's or Pier 70's equivalent entries. Rebuilt 2026-09-16 by georeferencing against many real-street control points. Re-measured 2026-09-16 (third revision) by detecting the block colours consistently across the whole block layout at once. Re-corrected 2026-09-16 (fourth revision) after fixing a mis-measured control point -- see the mapping log. DataSF's active lot 4175028 (21,885 m2, 1241 Delaware St, PPS-MU zoning, recorded 2022-08-30) holds 3,041 m2 of this drawing. It also holds Blocks 3, 4 and 9, Humboldt Street Plaza and parts of Prequel Park and Waterfront Park, so the owner reads it as an undivided parent lot; Block 4 has no lot of its own and the drawing is kept.",
      "digitized_from": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
      "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead. DataSF Parcels (checked 2026-09-29) shows this footprint within the much larger active lot 4175028 (1241 Delaware St), not a lot of its own.",
      "regulatory_context": "The D4D's Permitted Uses table (Table 3.1.1) confirms residential is permitted here (Laboratory and Life Science are not). Figure 6.2.3 of the final D4D gives Block 4 two height limits by its colour-coded labels, 85 ft and 65 ft; the '100'MAX' label sits on a dimension line (a plan extent of the 85 ft zone), not a height, and Standard 6.2.2 places Block 4 among the lowrise buildings (up to 100 feet). The D4D's text on Figure 1.6.4 names Block 4, on the waterfront, among its 'differentiated buildings'. No construction-start source found."
@@ -79595,6 +79624,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-11",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Potrero Power Station Block 4 now records the Assessor lots it overlaps.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 4175028, 4232010, 4232015, 4232016",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 4175028, 4232010, 4232015, 4232016"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_block_4",
+      "slug": "potrero-power-station-block-4",
+      "name": "Potrero Power Station Block 4",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-4/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-4.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-29",
      "kind": "correction",
@@ -81270,7 +81328,7 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- this block is not yet built, and it is not vacant land: it is where the Unit 3 Power Block (partly demolished June 2023 to July 2024 per the 2024 annual compliance report) and the 300-ft Stack stand, and where the interim Prequel Park is planned. No Assessor lot of its own was found: DataSF Parcels (checked 2026-09-29) shows its footprint within the much larger active lot 4175028 (1241 Delaware St, about 21,900 sq m, recorded 2022-08-30), which also overlaps the Block 3 and Block 4 footprints. Traced from an adopted regulatory diagram, positioned by matching several points on it to real streets, but this diagram is dated 2020 and may not reflect later design changes (as already found for the UCSF/Sophie Maxwell area). Treat vertex positions as accurate to roughly 10-15m (rebuilt 2026-09-16 with a refined multi-point georeferencing of the site's diagram), and treat the block's applicability itself as somewhat more provisional than Mission Rock's or Pier 70's equivalent entries. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
+     "accuracy_caveat": "APPROXIMATE -- this block is not yet built, and it is not vacant land: it is where the Unit 3 Power Block (partly demolished June 2023 to July 2024 per the 2024 annual compliance report) and the 300-ft Stack stand, and where the interim Prequel Park is planned. No Assessor lot of its own was found: DataSF Parcels (checked 2026-09-29) shows its footprint within the much larger active lot 4175028 (1241 Delaware St, about 21,900 sq m, recorded 2022-08-30), which also overlaps the Block 3 and Block 4 footprints. Traced from an adopted regulatory diagram, positioned by matching several points on it to real streets, but this diagram is dated 2020 and may not reflect later design changes (as already found for the UCSF/Sophie Maxwell area). Treat vertex positions as accurate to roughly 10-15m (rebuilt 2026-09-16 with a refined multi-point georeferencing of the site's diagram), and treat the block's applicability itself as somewhat more provisional than Mission Rock's or Pier 70's equivalent entries. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record). DataSF's active lot 4175028 (21,885 m2, 1241 Delaware St, PPS-MU zoning, recorded 2022-08-30) holds 5,041 m2 of this drawing. It also holds Blocks 3, 4 and 9, Humboldt Street Plaza and parts of Prequel Park and Waterfront Park, so the owner reads it as an undivided parent lot; Block 9 has no lot of its own and the drawing is kept.",
      "digitized_from": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
      "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead. DataSF Parcels (checked 2026-09-29) shows this footprint within the much larger active lot 4175028 (1241 Delaware St), not a lot of its own.",
      "regulatory_context": "The D4D's Permitted Uses table (Table 3.1.1) permits Residential, Institutional, Retail (Hotel is permitted, note 10), Non-Retail Sales/Services (office, at the lowest floors only), Entertainment and limited PDR uses on Block 9, and not Laboratory or Life Science. Figure 6.2.3's 'Block 9 Building Configurations' inset shows two alternate massings, by its colour-coded labels: 'with Unit 3' 85 ft, 65 ft and 35 ft plus Unit 3 itself at about 130 ft ('~130''), and 'without Unit 3' 125 ft and 85 ft; the '177'MAX', '110'MAX' and '102'MAX' labels are tick-ended dimension lines, not heights, and Standard 6.2.2 lists Block 9 among the midrise buildings (101-145 ft). This block's real-world area is where Unit 3 and the Stack physically stand (confirmed by the D4D's Standard 6.2.1 and the Chronicle, May 2025; the Stack is mapped separately, as The Stack) and where Prequel Park's approximate interim-park geometry sits (Port Commission memo 10A; also mapped separately, and excluded here via clipping) -- treat this polygon as the block's outer development envelope, not a claim that all of it is buildable independent of those other real features."
@@ -81469,6 +81527,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-11",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Potrero Power Station Block 9 now records the Assessor lots it overlaps.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 4175028, 4232010, 4232015, 4232016",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 4175028, 4232010, 4232015, 4232016"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_block_9",
+      "slug": "potrero-power-station-block-9",
+      "name": "Potrero Power Station Block 9",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-9/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-9.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-29",
      "kind": "correction",
@@ -86064,7 +86151,7 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- Figure 6.2.3 marks this with a single point symbol and the label 'STACK / EXISTING STRUCTURE (~300')', not a footprint outline, but this polygon has been rebuilt 2026-09-16 (second revision) to trace the structure's actual visible footprint in satellite imagery (an earlier version read it as a fallen or lowered stack, which no source reports: the D4D, the 2018 Draft EIR and the Chronicle of May 22, 2025 all describe a standing ~300-ft Stack retained by the plan, so the polygon may instead trace the imaged lean of the standing Stack rather than its base; unconfirmed; details are in this shape's mapping log in the public data repository, https://github.com/pierandpoint/record) rather than a diagram-derived placeholder. Treat as accurate to roughly 5-10m -- limited mainly by how precisely the lon/lat grid overlay could be read against the image, not by diagram-transform error.",
+     "accuracy_caveat": "APPROXIMATE -- Figure 6.2.3 marks this with a single point symbol and the label 'STACK / EXISTING STRUCTURE (~300')', not a footprint outline, but this polygon has been rebuilt 2026-09-16 (second revision) to trace the structure's actual visible footprint in satellite imagery (an earlier version read it as a fallen or lowered stack, which no source reports: the D4D, the 2018 Draft EIR and the Chronicle of May 22, 2025 all describe a standing ~300-ft Stack retained by the plan, so the polygon may instead trace the imaged lean of the standing Stack rather than its base; unconfirmed; details are in this shape's mapping log in the public data repository, https://github.com/pierandpoint/record) rather than a diagram-derived placeholder. Treat as accurate to roughly 5-10m -- limited mainly by how precisely the lon/lat grid overlay could be read against the image, not by diagram-transform error. the active lots under this drawing are DataSF's active lot 4175028 (21,885 m2, 1241 Delaware St, PPS-MU zoning, recorded 2022-08-30) (253 m2 of it) and two thin roadside strips, 4232016 (614 m2, 71 m2 inside) and 4232015 (972 m2, 37 m2 inside), which are not the stack's own lots. DataSF also lists the retired lot 4232006 (38,592 m2) under it, and retired lots are not used. No active lot is the stack's own, so the drawing is kept.",
      "digitized_from": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
      "why_no_real_parcel": "This is an existing structure without its own subdivided Assessor parcel -- it sits within the larger, largely unaddressed former power-station site. DataSF Parcels (checked 2026-09-29) shows this polygon straddling active lots 4175028 (1241 Delaware St), 4232016 and 4232015; the 2018 Draft EIR lists the Power Station sub-area as Assessor's Block 4175 Lots 002/017 and Block 4232 Lots 001/006.",
      "regulatory_context": "The historic ~300 ft tall smokestack from the power station's Unit 3 generating block, called out on the D4D's own Figure 6.2.3 as 'EXISTING STRUCTURE (~300')' the plan retains (Standard 6.2.1 sets its height limit at its existing height) -- a literal, physical landmark left standing amid the redevelopment, sitting within Block 9's mapped development envelope (see the Potrero Power Station Block 9 record) at the site's waterfront edge. The Block 9 Building Configurations inset on the same figure shows two alternate massing options labeled 'WITH UNIT 3' and 'WITHOUT UNIT 3' -- meaning the adjacent Unit 3 power block building (distinct from the Stack itself) may or may not be retained; the diagram does not draw Unit 3's own footprint distinctly enough to trace separately, so it is not mapped here as its own feature."
@@ -86282,6 +86369,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-11",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The Stack now records the Assessor lots it overlaps.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 4175028, 4232010, 4232015, 4232016",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 4175028, 4232010, 4232015, 4232016"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_the_stack",
+      "slug": "the-stack-unit-3-smokestack",
+      "name": "The Stack (Unit 3 smokestack)",
+      "permalink": "https://pierandpoint.org/parcels/the-stack-unit-3-smokestack/",
+      "api": "https://pierandpoint.org/api/v1/records/the-stack-unit-3-smokestack.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-29",
      "kind": "correction",
@@ -90271,7 +90387,7 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- Figure 6.2.3 labels this open space directly, shown as a small plaza area between Block 4 (north) and Block 9 (south). This polygon is a simplified rectangular approximation of that labeled area, built directly from the mapped corners of Block 4 and Block 9 (see the mapping log) so it shares an exact edge with both -- its accuracy is that of those two blocks' shapes. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
+     "accuracy_caveat": "APPROXIMATE -- Figure 6.2.3 labels this open space directly, shown as a small plaza area between Block 4 (north) and Block 9 (south). This polygon is a simplified rectangular approximation of that labeled area, built directly from the mapped corners of Block 4 and Block 9 (see the mapping log) so it shares an exact edge with both -- its accuracy is that of those two blocks' shapes. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record). DataSF's active lot 4175028 (21,885 m2, 1241 Delaware St, PPS-MU zoning, recorded 2022-08-30) holds 1,066 m2 of this drawing. It also holds Blocks 3, 4 and 9, Humboldt Street Plaza and parts of Prequel Park and Waterfront Park, so the owner reads it as an undivided parent lot; the plaza has no lot of its own and the drawing is kept.",
      "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
      "why_no_real_parcel": "Open space with no subdivided Assessor parcel of its own within the largely unaddressed former power-station site. (This reflects Pier & Point's own parcel search, not something the cited Design for Development can establish; the D4D does not address Assessor parcels.)",
      "regulatory_context": "A small public plaza per the D4D's own Figure 6.2.3 label, between Block 4 and Block 9 near the site's waterfront edge."
@@ -90549,6 +90665,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-11",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Humboldt Street Plaza now records the Assessor lots it overlaps.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 4175028, 4232010, 4232015, 4232016",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 4175028, 4232010, 4232015, 4232016"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_humboldt_street_plaza",
+      "slug": "humboldt-street-plaza",
+      "name": "Humboldt Street Plaza",
+      "permalink": "https://pierandpoint.org/parcels/humboldt-street-plaza/",
+      "api": "https://pierandpoint.org/api/v1/records/humboldt-street-plaza.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-29",
      "kind": "correction",
@@ -91041,7 +91186,7 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "HIGH CONFIDENCE -- real, community-surveyed OSM polygon (matches SF Rec & Park's own facility listing). Other OSM ways (579664205 further east, and 27369705) may cover parts of this same park; they are not cited and had not been checked as of September 2026; this feature uses the single most detailed, currently-tagged way covering the park's main extent along Mission Creek's south bank. A later revision could merge the full multi-segment shoreline extent. Updated 2026-09-20: now a MultiPolygon that also includes P1, P2 and P8's geometry (P1 a separate segment further along the same north/west bank; P2/P8 real scraps of land on the creek's opposite/south-east bank, not contiguous with this record's original OSM shape). Each sub-piece keeps its own sourcing/confidence as documented in its own original record (P1, P2, P8) -- this union does not upgrade their confidence to this record's own 'HIGH CONFIDENCE, real OSM' rating.",
+     "accuracy_caveat": "HIGH CONFIDENCE -- real, community-surveyed OSM polygon (matches SF Rec & Park's own facility listing). Other OSM ways (579664205 further east, and 27369705) may cover parts of this same park; they are not cited and had not been checked as of September 2026; this feature uses the single most detailed, currently-tagged way covering the park's main extent along Mission Creek's south bank. A later revision could merge the full multi-segment shoreline extent. Updated 2026-09-20: now a MultiPolygon that also includes P1, P2 and P8's geometry (P1 a separate segment further along the same north/west bank; P2/P8 real scraps of land on the creek's opposite/south-east bank, not contiguous with this record's original OSM shape). Each sub-piece keeps its own sourcing/confidence as documented in its own original record (P1, P2, P8) -- this union does not upgrade their confidence to this record's own 'HIGH CONFIDENCE, real OSM' rating. The owner reads lot 3810006 (16,093 m2, active, Channel St 202) as covering both P1 and the already built Huffaker Park part of P2, and lot 8710002 (16,398 m2, active, recorded 1999-09-21) as covering the part of P2 not yet constructed and P5 (which has no shape of its own on this map). Lot 3810006 overlaps this record by 13,647 m2 and lot 8710002 by 7,854 m2; the shape here (an OpenStreetMap park outline unioned with P1, P2 and P8) is kept.",
      "digitized_from": "OpenStreetMap (way 56656116, leisure=park, sfrecpark.org facility page)"
     }
    },
@@ -91135,6 +91280,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-11",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Mission Creek Park now records the Assessor lots it overlaps.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 3810006, 8710002",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 3810006, 8710002"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_creek_park",
+      "slug": "mission-creek-park",
+      "name": "Mission Creek Park",
+      "permalink": "https://pierandpoint.org/parcels/mission-creek-park/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-creek-park.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-10-11",
      "kind": "added",
@@ -127846,7 +128020,7 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- real turf/median extent per Esri satellite imagery and a hand-drawn scheme by Pier & Point (traced as the leftover ground bounded by streets and the creek, not surveyed). The three freeway-median strips and the strip beside the site of the proposed Pump Station No. 4 (the schematic design calls that pump station 'proposed'; no source read says it has been built) are deliberately kept as separate polygons in a MultiPolygon (they are physically separated by pavement/ramp lanes, not one contiguous parcel). Overlaps the already-tracked real 'Mission Creek Park' polygon for part of its northeast extent -- not reconciled with it yet, per Pier & Point's own framing that Mission Creek Park will eventually evolve to encompass P1+P2+P8.",
+     "accuracy_caveat": "APPROXIMATE -- real turf/median extent per Esri satellite imagery and a hand-drawn scheme by Pier & Point (traced as the leftover ground bounded by streets and the creek, not surveyed). The three freeway-median strips and the strip beside the site of the proposed Pump Station No. 4 (the schematic design calls that pump station 'proposed'; no source read says it has been built) are deliberately kept as separate polygons in a MultiPolygon (they are physically separated by pavement/ramp lanes, not one contiguous parcel). Overlaps the already-tracked real 'Mission Creek Park' polygon for part of its northeast extent -- not reconciled with it yet, per Pier & Point's own framing that Mission Creek Park will eventually evolve to encompass P1+P2+P8. the owner chose to keep this drawing and cite the Assessor lots under it. Active lots 3809006 (164 m2, 150 m2 inside this drawing) and 3809002 (6,082 m2, 4,104 m2 inside it) are read as P8's lots, but they run under the freeway ramps and cover more than the drawn park, so the drawing is kept. Also lot 8709003 (1400 Owens St per DataSF, MB-RA zoning, recorded 1999-09-21, active, 12,999 m2), 3,603 m2 inside this drawing. The owner reads it as split between P10 (the roundabout island), P8 and P7 or P9 across from P8; against our drawings it overlaps P8 by 3,603 m2, P10 by 983 m2, P7 by 3,431 m2 and P9 by 136 m2. P8 has no lot of its own.",
      "digitized_from": "Hand-traced from satellite imagery (Esri World Imagery) against the currently-visible graded/disturbed extent, cross-checked against SF Recreation & Parks' own Mission Creek Park South Extension Project page and its Schematic Design document (P2 and P8; undated, it names Catellus and the San Francisco Redevelopment Agency and includes a plan sheet dated June 23, 2006) and the Feb 10, 2022 CAC overview deck of the project. UPDATED 2026-09-20: extended over the Mission Bay Circle roundabout area. The open ground left between DataSF's official street centerlines (widened to street width) and all neighbouring mapped shapes there fell into about 68 separate candidate pieces; Pier & Point chose five of them by hand from a numbered map and combined them. The result is not taken from a surveyed parcel."
     }
    },
@@ -128035,6 +128209,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-11",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Mission Bay P8 now records the Assessor lots it overlaps.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 3809006, 3809002, 8709003",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 3809006, 3809002, 8709003"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_p8_open_space",
+      "slug": "mission-creek-park-south-extension",
+      "name": "Mission Creek Park South Extension",
+      "permalink": "https://pierandpoint.org/parcels/mission-creek-park-south-extension/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-creek-park-south-extension.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-10-10",
      "kind": "added",
@@ -131240,7 +131443,7 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE, AND KNOWINGLY DISPLACED -- one of the two pieces making up this shape (the paved path further southeast) really lies about 17-22 m south of where it is drawn here; Pier & Point shifted it on purpose to close a real gap (a planting/tree strip between two paved features) with a single deliberate move rather than tracing that gap's own edges. The other piece (the strip along the creek's near bank) is a computed shape bounded by streets, the creek and neighbouring mapped shapes, not hand-traced. Overlaps the existing 'Mission Creek Park' shape (which Pier & Point intends to merge with this record and P8, on the view that Mission Creek Park will grow to cover P1+P2+P8); that overlap is not reconciled. Meets the Mission Creek Park -- east reach (Pavilion to 4th St bridge) record (P1) exactly along a line through the south-west end of the striped crosswalk beside the Pavilion (the crosswalk belongs to the east reach). Deliberately not trimmed back from the street lines: this record includes area covering today's paved road across the corridor (a park-corridor concept, not today's satellite extent) -- the same kind of exception as Pier 70's 20th Street Plaza. This is not a mispositioned trace; it is an intentional choice to keep the corridor continuous rather than split by a road the park is meant to cross at grade.",
+     "accuracy_caveat": "APPROXIMATE, AND KNOWINGLY DISPLACED -- one of the two pieces making up this shape (the paved path further southeast) really lies about 17-22 m south of where it is drawn here; Pier & Point shifted it on purpose to close a real gap (a planting/tree strip between two paved features) with a single deliberate move rather than tracing that gap's own edges. The other piece (the strip along the creek's near bank) is a computed shape bounded by streets, the creek and neighbouring mapped shapes, not hand-traced. Overlaps the existing 'Mission Creek Park' shape (which Pier & Point intends to merge with this record and P8, on the view that Mission Creek Park will grow to cover P1+P2+P8); that overlap is not reconciled. Meets the Mission Creek Park -- east reach (Pavilion to 4th St bridge) record (P1) exactly along a line through the south-west end of the striped crosswalk beside the Pavilion (the crosswalk belongs to the east reach). Deliberately not trimmed back from the street lines: this record includes area covering today's paved road across the corridor (a park-corridor concept, not today's satellite extent) -- the same kind of exception as Pier 70's 20th Street Plaza. This is not a mispositioned trace; it is an intentional choice to keep the corridor continuous rather than split by a road the park is meant to cross at grade. the owner chose to keep this drawing and cite the Assessor lots under it. The owner reads lot 3810006 (16,093 m2, active, Channel St 202) as covering both P1 and the already built Huffaker Park part of P2, and lot 8710002 (16,398 m2, active, recorded 1999-09-21) as covering the part of P2 not yet constructed and P5 (which has no shape of its own on this map). Against this drawing, lot 3810006 overlaps it by 7,982 m2 and lot 8710002 by 6,164 m2; the two lots together are about 32,500 m2 and run out over the creek and up the strip into P1, so neither is P2's own lot. Both lots also lie under the tracked Mission Creek Park, which already unions P1, P2 and P8.",
      "digitized_from": "Traced as the leftover open ground between DataSF's official street centerlines and all neighbouring mapped shapes along the creek corridor between Mission Creek and Channel St, which left a set of separate scraps of unclaimed land. Pier & Point, comparing them against Esri satellite imagery, picked two by hand and specified how to combine them: the paved/planted strip along the creek's near bank, and a paved path further southeast, separated from the first by a landscaping/tree strip not captured as its own piece."
     }
    },
@@ -131397,6 +131600,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-11",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Mission Bay P2 now records the Assessor lots it overlaps.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 3810006, 8710002",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 3810006, 8710002"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_p2_creek_channel",
+      "slug": "p2",
+      "name": "P2",
+      "permalink": "https://pierandpoint.org/parcels/p2/",
+      "api": "https://pierandpoint.org/api/v1/records/p2.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-10-11",
      "kind": "correction",
@@ -133168,7 +133400,7 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- hand-traced from satellite imagery, not a surveyed footprint or GIS file from the project team. Deliberately not trimmed back from the street lines: this is a real roundabout center island, ringed by the circulating roadway in DataSF's street data -- trimming it against the standard street buffer would cut real, visible parts of the island, not correct a mispositioning.",
+     "accuracy_caveat": "APPROXIMATE -- hand-traced from satellite imagery, not a surveyed footprint or GIS file from the project team. Deliberately not trimmed back from the street lines: this is a real roundabout center island, ringed by the circulating roadway in DataSF's street data -- trimming it against the standard street buffer would cut real, visible parts of the island, not correct a mispositioning. lot 8709003 (1400 Owens St per DataSF, MB-RA zoning, recorded 1999-09-21, active, 12,999 m2) lies under this island and its neighbours. The owner reads it as split between P10 (the roundabout island), P8 and P7 or P9 across from P8; against our drawings it overlaps P8 by 3,603 m2, P10 by 983 m2, P7 by 3,431 m2 and P9 by 136 m2. P10 has no lot of its own, so the drawing is kept.",
      "digitized_from": "Hand-traced from satellite imagery (Esri World Imagery), following an outline Pier & Point drew by hand on a marked-up screenshot, transferred onto the imagery by matching image features rather than re-estimated by eye -- the same technique used for P11/P11A."
     }
    },
@@ -133272,6 +133504,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-11",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Mission Bay P10 now records the Assessor lots it overlaps.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8709003",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8709003"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_p10_roundabout_island",
+      "slug": "p10",
+      "name": "P10",
+      "permalink": "https://pierandpoint.org/parcels/p10/",
+      "api": "https://pierandpoint.org/api/v1/records/p10.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-29",
      "kind": "correction",
@@ -133508,7 +133769,7 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- computed from real DataSF street/curb data plus a stopping line drawn by Pier & Point (not a surveyed parcel or GIS file from the project team). The north/west edges are exact real street-buffer boundary. The south edge is a line drawn by Pier & Point, not a mapped street or parcel boundary -- there appears to be bare ground between it and the buildings further south that isn't included here (an imagery observation, no document cited), since Pier & Point judged that the parcel doesn't extend that far. The P9/P7 split is a straight line, not sourced to any drawn plan boundary. SF Rec & Park's Mission Bay Future Parks Project page names P7 & P9 as future 'Active Recreation' parks (anticipated skate park, pickleball courts and a ballfield), fully funded through OCII, with construction to begin late 2028 and opening early 2030; no schematic design specific to P9 was found.",
+     "accuracy_caveat": "APPROXIMATE -- computed from real DataSF street/curb data plus a stopping line drawn by Pier & Point (not a surveyed parcel or GIS file from the project team). The north/west edges are exact real street-buffer boundary. The south edge is a line drawn by Pier & Point, not a mapped street or parcel boundary -- there appears to be bare ground between it and the buildings further south that isn't included here (an imagery observation, no document cited), since Pier & Point judged that the parcel doesn't extend that far. The P9/P7 split is a straight line, not sourced to any drawn plan boundary. SF Rec & Park's Mission Bay Future Parks Project page names P7 & P9 as future 'Active Recreation' parks (anticipated skate park, pickleball courts and a ballfield), fully funded through OCII, with construction to begin late 2028 and opening early 2030; no schematic design specific to P9 was found. lot 8709003 (1400 Owens St per DataSF, MB-RA zoning, recorded 1999-09-21, active, 12,999 m2) overlaps this drawing by only 136 m2; most of the lot lies under P7, P8 and P10. The owner reads it as split between P10 (the roundabout island), P8 and P7 or P9 across from P8; against our drawings it overlaps P8 by 3,603 m2, P10 by 983 m2, P7 by 3,431 m2 and P9 by 136 m2. P9 has no lot of its own, so the drawing is kept. the owner kept this drawing and cites the Assessor lots under P9 and its neighbour: active lot 8709002 (10,178 m2) overlaps this drawing by 2,321 m2 and lot 8709003 (12,999 m2) by 136 m2. The lot lines cross the space as diagonal bands and do not follow the park as it is on the ground, so neither is P9's own lot.",
      "digitized_from": "Computed from DataSF's official street centerline/curb data (a buffer around the official street lines, plus an extra generous buffer around Owens St's own centerline and around the P10 roundabout island) rather than hand-traced pixels. The west/north edge is the real Mission Bay Dr street-buffer boundary; the south edge is a line drawn by Pier & Point (marked on a screenshot of this project's own map and transferred onto it, as was done for P11/P11A with a satellite photo) placing the true stopping point well short of the two real buildings further south, not at their footprints."
     }
    },
@@ -133800,6 +134061,64 @@
    ],
    "changes": [
     {
+     "date": "2026-10-11",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Mission Bay P9 now records the Assessor lots it overlaps.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8709003",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8709003"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_p9_open_space",
+      "slug": "p9",
+      "name": "P9",
+      "permalink": "https://pierandpoint.org/parcels/p9/",
+      "api": "https://pierandpoint.org/api/v1/records/p9.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
+     "date": "2026-10-11",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Mission Bay P9 also cites lot 8709002.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 8709002, 8709003",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 8709002, 8709003"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_p9_open_space",
+      "slug": "p9",
+      "name": "P9",
+      "permalink": "https://pierandpoint.org/parcels/p9/",
+      "api": "https://pierandpoint.org/api/v1/records/p9.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-10",
      "kind": "added",
      "kind_label": "Added",
@@ -134031,7 +134350,7 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- computed from real DataSF street/curb data plus a stopping line drawn by Pier & Point (not a surveyed parcel or GIS file from the project team). The north edge follows the street edge exactly as estimated from DataSF's official street centerlines; the east edge is held off Owens St and the roundabout island by extra clearance rather than the standard street width alone. The south edge is a line drawn by Pier & Point, not a mapped street or parcel boundary -- there is real bare ground between it and the two buildings further south that isn't included here. The P9/P7 split is a straight line, not sourced to any drawn plan boundary. SF Rec & Park's Mission Bay Future Parks Project page names P7 & P9 as future 'Active Recreation' parks (anticipated skate park, pickleball courts and a ballfield), fully funded through OCII, with construction to begin late 2028 and opening early 2030; no schematic design specific to P7 was found.",
+     "accuracy_caveat": "APPROXIMATE -- computed from real DataSF street/curb data plus a stopping line drawn by Pier & Point (not a surveyed parcel or GIS file from the project team). The north edge follows the street edge exactly as estimated from DataSF's official street centerlines; the east edge is held off Owens St and the roundabout island by extra clearance rather than the standard street width alone. The south edge is a line drawn by Pier & Point, not a mapped street or parcel boundary -- there is real bare ground between it and the two buildings further south that isn't included here. The P9/P7 split is a straight line, not sourced to any drawn plan boundary. SF Rec & Park's Mission Bay Future Parks Project page names P7 & P9 as future 'Active Recreation' parks (anticipated skate park, pickleball courts and a ballfield), fully funded through OCII, with construction to begin late 2028 and opening early 2030; no schematic design specific to P7 was found. lot 8709003 (1400 Owens St per DataSF, MB-RA zoning, recorded 1999-09-21, active, 12,999 m2) lies under this drawing and its neighbours. The owner reads it as split between P10 (the roundabout island), P8 and P7 or P9 across from P8; against our drawings it overlaps P8 by 3,603 m2, P10 by 983 m2, P7 by 3,431 m2 and P9 by 136 m2. P7 has no lot of its own, so the drawing is kept. the owner kept this drawing and cites the Assessor lots under P7 and its neighbour: active lot 8709002 (10,178 m2) overlaps this drawing by 640 m2 and lot 8709003 (12,999 m2) by 3,431 m2. The lot lines cross the space as diagonal bands and do not follow the park as it is on the ground, so neither is P7's own lot.",
      "digitized_from": "Computed from DataSF's official street centerlines, with extra generous clearance around Owens St's own centerline and around the P10 roundabout island, rather than hand-traced from imagery. The north edge follows Mission Bay Dr's street edge all the way up to the roundabout; the east edge is held clear of Owens St and of the P10 island by that extra clearance; the south edge is a line drawn by Pier & Point on a marked-up image and transferred to the map by automatic image matching (the same way as for P11/P11A), confirming the parcel stops well short of the two real buildings further south."
     }
    },
@@ -134322,6 +134641,64 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-11",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Mission Bay P7 now records the Assessor lots it overlaps.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8709003",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8709003"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_p7_open_space",
+      "slug": "p7",
+      "name": "P7",
+      "permalink": "https://pierandpoint.org/parcels/p7/",
+      "api": "https://pierandpoint.org/api/v1/records/p7.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
+     "date": "2026-10-11",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Mission Bay P7 also cites lot 8709002.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lots 8709002, 8709003",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lots 8709002, 8709003"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_p7_open_space",
+      "slug": "p7",
+      "name": "P7",
+      "permalink": "https://pierandpoint.org/parcels/p7/",
+      "api": "https://pierandpoint.org/api/v1/records/p7.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-10-10",
      "kind": "added",
@@ -134663,8 +135040,9 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- real landscaped/paved open land per Esri satellite imagery, outlined as the open ground left between the official street lines and neighbouring mapped shapes and divided at seams chosen by hand by Pier & Point, rather than a surveyed parcel boundary. Operator: the Port of San Francisco per OCII's Sept 2023 transition presentation ('Port will manage P18, P21, P23 & P24'); SocketSite (April 2019) calls the combined P23/P24 area 'Mariposa Bayfront Park'; no source gives this lawn's own formal name. The remaining ~5,785 sqm of the original fragment (the building-hugging plaza strip, the panhandle, and P24's own dropped horns) is deliberately left off the map, pending further review of whether it is a separate plan parcel.",
-     "digitized_from": "Outlined as the open ground left between DataSF's official street lines and neighbouring mapped shapes around the UCSF Wayne and Gladys Valley Center for Vision / 499 Illinois St / Chase Center area (one piece of 19,181.78 sqm before cutting). Pier & Point split that piece in three at its two natural narrow points (lat 37.7658 and 37.76665) and then combined parts by hand: P23 is the north part (the lawn wedge by the Chase Center roundabout) with its thin building-hugging 'panhandle' dropped, plus the part of the middle piece (the plaza) that lies east of the line where the lawn narrows into that panhandle, extended south. Not taken from a surveyed parcel."
+     "accuracy_caveat": "APPROXIMATE -- real landscaped/paved open land per Esri satellite imagery, outlined as the open ground left between the official street lines and neighbouring mapped shapes and divided at seams chosen by hand by Pier & Point, rather than a surveyed parcel boundary. Operator: the Port of San Francisco per OCII's Sept 2023 transition presentation ('Port will manage P18, P21, P23 & P24'); SocketSite (April 2019) calls the combined P23/P24 area 'Mariposa Bayfront Park'; no source gives this lawn's own formal name. The remaining ~5,785 sqm of the original fragment (the building-hugging plaza strip, the panhandle, and P24's own dropped horns) is deliberately left off the map, pending further review of whether it is a separate plan parcel. DataSF's Assessor layer has active lot 3940002 (MB-RA|P zoning, active, 4,806 m2) near this park: 57% of this drawing lies inside it and the drawing covers 80% of the lot; the drawing and the lot overlap only in part, so the lot is not this park's own and the drawing is kept.",
+     "digitized_from": "Outlined as the open ground left between DataSF's official street lines and neighbouring mapped shapes around the UCSF Wayne and Gladys Valley Center for Vision / 499 Illinois St / Chase Center area (one piece of 19,181.78 sqm before cutting). Pier & Point split that piece in three at its two natural narrow points (lat 37.7658 and 37.76665) and then combined parts by hand: P23 is the north part (the lawn wedge by the Chase Center roundabout) with its thin building-hugging 'panhandle' dropped, plus the part of the middle piece (the plaza) that lies east of the line where the lawn narrows into that panhandle, extended south. Not taken from a surveyed parcel.",
+     "why_no_real_parcel": "Open space with no Assessor lot of its own: lot 3940002 was compared and does not match (see the accuracy note)."
     }
    },
    "centroid": {
@@ -134751,6 +135129,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-11",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Mission Bay P23 now records why Assessor lot 3940002 is not used.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 3940002",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 3940002"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_p23_chase_landscaped_area",
+      "slug": "p23",
+      "name": "P23",
+      "permalink": "https://pierandpoint.org/parcels/p23/",
+      "api": "https://pierandpoint.org/api/v1/records/p23.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-10-06",
      "kind": "correction",
@@ -135005,8 +135412,9 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- landscaped open land (lawn, curved path, scattered trees) as seen in Esri satellite imagery (an imagery observation; no document cited), outlined as the open ground left between the official street lines and neighbouring mapped shapes and cut by hand by Pier & Point at a point where the shape forks, rather than at a surveyed parcel boundary. Name and operator not confirmed by any source found; a hedged observation from imagery (no source cited) that it visually resembles Bayfront Park's own style and may be a continuation of it.",
-     "digitized_from": "Outlined as the open ground left between DataSF's official street lines and neighbouring mapped shapes around the 499 Illinois St / Bayfront Park area (one piece of 19,181.78 sqm before cutting). Pier & Point split that piece in three at its two natural narrow points (lat 37.7658 and 37.76665) and then cut it by hand the same way as P26: the wide, single 'head' was kept and the thin, branching 'horns' were dropped. Not taken from a surveyed parcel."
+     "accuracy_caveat": "APPROXIMATE -- landscaped open land (lawn, curved path, scattered trees) as seen in Esri satellite imagery (an imagery observation; no document cited), outlined as the open ground left between the official street lines and neighbouring mapped shapes and cut by hand by Pier & Point at a point where the shape forks, rather than at a surveyed parcel boundary. Name and operator not confirmed by any source found; a hedged observation from imagery (no source cited) that it visually resembles Bayfront Park's own style and may be a continuation of it. DataSF's Assessor layer has active lot 3941032 (MB-RA zoning, recorded 2018-10-02, active, 10,721 m2) near this park: 86% of this drawing lies inside it and the drawing covers 53% of the lot; the lot is larger than this park (10,721 m2 against 6,605 m2), so using it would claim ground beyond the park, so the lot is not this park's own and the drawing is kept.",
+     "digitized_from": "Outlined as the open ground left between DataSF's official street lines and neighbouring mapped shapes around the 499 Illinois St / Bayfront Park area (one piece of 19,181.78 sqm before cutting). Pier & Point split that piece in three at its two natural narrow points (lat 37.7658 and 37.76665) and then cut it by hand the same way as P26: the wide, single 'head' was kept and the thin, branching 'horns' were dropped. Not taken from a surveyed parcel.",
+     "why_no_real_parcel": "Open space with no Assessor lot of its own: lot 3941032 was compared and does not match (see the accuracy note)."
     }
    },
    "centroid": {
@@ -135093,6 +135501,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-11",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Mission Bay P24 now records why Assessor lot 3941032 is not used.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 3941032",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 3941032"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_p24_waterfront_park",
+      "slug": "p24",
+      "name": "P24",
+      "permalink": "https://pierandpoint.org/parcels/p24/",
+      "api": "https://pierandpoint.org/api/v1/records/p24.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-10-06",
      "kind": "correction",
@@ -136642,8 +137079,9 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL BUILDING, APPROXIMATE BOUNDARY -- a real, standing structure clearly visible in Esri satellite imagery (not open land): UCSF's Wayne and Gladys Valley Center for Vision at 490 Illinois St. The City's official address point for 490 Illinois St (DataSF Addresses, address ID 743049, on Assessor parcel 8725001) lies inside this outline; UCSF's June 2025 CAC presentation map labels block 33, between Third St and Illinois St, 'VALLEY CENTER FOR VISION (33)'; and SF YIMBY (2020-11-27) places the facilities 'along 3rd Street, immediately across from the UCSF Medical Center'. Boundary is the edge of the open ground left between the official street lines and neighbouring mapped shapes (following the estimated curb radius), with one corner redrawn to the real street angle (see the mapping log), not a hand-traced or surveyed building footprint. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
-     "digitized_from": "Outlined as the ground left between DataSF's official street lines and neighbouring mapped shapes, between 3rd St and Illinois St, south of 16th St. Pier & Point judged that this piece (12,421 sqm before cutting) covers two separate real buildings, not one, and cut it by hand at the visible gap between the two rooflines in Esri satellite imagery (lat 37.76578)."
+     "accuracy_caveat": "REAL BUILDING, APPROXIMATE BOUNDARY -- a real, standing structure clearly visible in Esri satellite imagery (not open land): UCSF's Wayne and Gladys Valley Center for Vision at 490 Illinois St. The City's official address point for 490 Illinois St (DataSF Addresses, address ID 743049, on Assessor parcel 8725001) lies inside this outline; UCSF's June 2025 CAC presentation map labels block 33, between Third St and Illinois St, 'VALLEY CENTER FOR VISION (33)'; and SF YIMBY (2020-11-27) places the facilities 'along 3rd Street, immediately across from the UCSF Medical Center'. Boundary is the edge of the open ground left between the official street lines and neighbouring mapped shapes (following the estimated curb radius), with one corner redrawn to the real street angle (see the mapping log), not a hand-traced or surveyed building footprint. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record). DataSF's Assessor layer has one active lot, 8725001 (480 16th St, MB-RA zoning, recorded 1999-09-21, 15,504 m2), under this building and the two other tracked buildings on this strip between Third St and Illinois St (UCSF Wayne and Gladys Valley Center for Vision, UCSF Bayfront Medical Building and UCSF Illinois Street Garage). No lot separates them, so this outline is a drawing of the building from imagery, kept because the lot is not this building's own.",
+     "digitized_from": "Outlined as the ground left between DataSF's official street lines and neighbouring mapped shapes, between 3rd St and Illinois St, south of 16th St. Pier & Point judged that this piece (12,421 sqm before cutting) covers two separate real buildings, not one, and cut it by hand at the visible gap between the two rooflines in Esri satellite imagery (lat 37.76578).",
+     "why_no_real_parcel": "The strip holds one Assessor lot, 8725001, under three separately drawn buildings (see the accuracy note), so no lot of its own exists for this building."
     }
    },
    "centroid": {
@@ -136787,6 +137225,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-11",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Valley Center for Vision (west) now cites the Assessor lot under it.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8725001",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8725001"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "ucsf_valley_center_for_vision_west",
+      "slug": "ucsf-wayne-and-gladys-valley-center-for-vision",
+      "name": "UCSF Wayne and Gladys Valley Center for Vision",
+      "permalink": "https://pierandpoint.org/parcels/ucsf-wayne-and-gladys-valley-center-for-vision/",
+      "api": "https://pierandpoint.org/api/v1/records/ucsf-wayne-and-gladys-valley-center-for-vision.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-10-11",
      "kind": "correction",
@@ -137812,8 +138279,9 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL BUILDING, APPROXIMATE BOUNDARY -- a real, standing structure clearly visible in Esri satellite imagery (not open land). Boundary is the traced edge of the leftover open ground between the mapped streets (following the street's curb radius) and neighbouring mapped shapes, with the north edge (and, for the garage, the cut from the building to its north) re-aligned to the real street angle -- not a hand-traced or surveyed building footprint. The split between this building and its neighbor follows a visible satellite roofline seam, not a surveyed or permitted lot line -- treat the exact boundary as indicative, not authoritative. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
-     "digitized_from": "Traced as the leftover open ground between 3rd St and Illinois St, south of 16th St, extended down to Mariposa St, after removing the mapped streets (at full street width) and already-tracked neighbouring shapes. Pier & Point identified this area as capturing two separate real buildings, not one, and cut it at the visible gap between the two rooflines in Esri satellite imagery (lat 37.76578) -- the piece north of that cut is the UCSF Valley Center for Vision (west building) record."
+     "accuracy_caveat": "REAL BUILDING, APPROXIMATE BOUNDARY -- a real, standing structure clearly visible in Esri satellite imagery (not open land). Boundary is the traced edge of the leftover open ground between the mapped streets (following the street's curb radius) and neighbouring mapped shapes, with the north edge (and, for the garage, the cut from the building to its north) re-aligned to the real street angle -- not a hand-traced or surveyed building footprint. The split between this building and its neighbor follows a visible satellite roofline seam, not a surveyed or permitted lot line -- treat the exact boundary as indicative, not authoritative. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record). DataSF's Assessor layer has one active lot, 8725001 (480 16th St, MB-RA zoning, recorded 1999-09-21, 15,504 m2), under this building and the two other tracked buildings on this strip between Third St and Illinois St (UCSF Wayne and Gladys Valley Center for Vision, UCSF Bayfront Medical Building and UCSF Illinois Street Garage). No lot separates them, so this outline is a drawing of the building from imagery, kept because the lot is not this building's own.",
+     "digitized_from": "Traced as the leftover open ground between 3rd St and Illinois St, south of 16th St, extended down to Mariposa St, after removing the mapped streets (at full street width) and already-tracked neighbouring shapes. Pier & Point identified this area as capturing two separate real buildings, not one, and cut it at the visible gap between the two rooflines in Esri satellite imagery (lat 37.76578) -- the piece north of that cut is the UCSF Valley Center for Vision (west building) record.",
+     "why_no_real_parcel": "The strip holds one Assessor lot, 8725001, under three separately drawn buildings (see the accuracy note), so no lot of its own exists for this building."
     }
    },
    "centroid": {
@@ -137990,6 +138458,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-11",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "UCSF Bayfront Medical Building now cites the Assessor lot under it.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8725001",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8725001"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "ucsf_bayfront_medical_building",
+      "slug": "ucsf-bayfront-medical-building",
+      "name": "UCSF Bayfront Medical Building",
+      "permalink": "https://pierandpoint.org/parcels/ucsf-bayfront-medical-building/",
+      "api": "https://pierandpoint.org/api/v1/records/ucsf-bayfront-medical-building.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-29",
      "kind": "correction",
@@ -138242,8 +138739,9 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL BUILDING, APPROXIMATE BOUNDARY -- a real, standing structure clearly visible in Esri satellite imagery (not open land). The boundary is the edge of the open ground left between DataSF's official street lines and neighbouring mapped shapes (following the curb radius of the street lines), with the north cap (and, for the garage, the cut from the building to its north) re-aligned to the real street angle -- see the mapping log in the public data repository (https://github.com/pierandpoint/record) -- not a hand-traced or surveyed building footprint. The split between this building and its neighbor follows a visible satellite roofline seam, not a surveyed or permitted lot line -- treat the exact boundary as indicative, not authoritative.",
-     "digitized_from": "Traced as the leftover open ground between DataSF's official street centerlines and neighbouring mapped shapes between 3rd St and Illinois St, south of 16th St, extended down to Mariposa St. Pier & Point identified this piece as capturing two separate real buildings, not one, and cut it at the visible gap between the two rooflines in Esri satellite imagery (lat 37.76578) -- see the record formerly filed as Mission Bay block 33 (now UCSF Valley Center for Vision -- west building) for the piece north of that cut."
+     "accuracy_caveat": "REAL BUILDING, APPROXIMATE BOUNDARY -- a real, standing structure clearly visible in Esri satellite imagery (not open land). The boundary is the edge of the open ground left between DataSF's official street lines and neighbouring mapped shapes (following the curb radius of the street lines), with the north cap (and, for the garage, the cut from the building to its north) re-aligned to the real street angle -- see the mapping log in the public data repository (https://github.com/pierandpoint/record) -- not a hand-traced or surveyed building footprint. The split between this building and its neighbor follows a visible satellite roofline seam, not a surveyed or permitted lot line -- treat the exact boundary as indicative, not authoritative. DataSF's Assessor layer has one active lot, 8725001 (480 16th St, MB-RA zoning, recorded 1999-09-21, 15,504 m2), under this building and the two other tracked buildings on this strip between Third St and Illinois St (UCSF Wayne and Gladys Valley Center for Vision, UCSF Bayfront Medical Building and UCSF Illinois Street Garage). No lot separates them, so this outline is a drawing of the building from imagery, kept because the lot is not this building's own.",
+     "digitized_from": "Traced as the leftover open ground between DataSF's official street centerlines and neighbouring mapped shapes between 3rd St and Illinois St, south of 16th St, extended down to Mariposa St. Pier & Point identified this piece as capturing two separate real buildings, not one, and cut it at the visible gap between the two rooflines in Esri satellite imagery (lat 37.76578) -- see the record formerly filed as Mission Bay block 33 (now UCSF Valley Center for Vision -- west building) for the piece north of that cut.",
+     "why_no_real_parcel": "The strip holds one Assessor lot, 8725001, under three separately drawn buildings (see the accuracy note), so no lot of its own exists for this building."
     }
    },
    "centroid": {
@@ -138328,6 +138826,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-11",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "UCSF Illinois Street Garage now cites the Assessor lot under it.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 8725001",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 8725001"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "ucsf_illinois_street_garage",
+      "slug": "ucsf-illinois-street-garage",
+      "name": "UCSF Illinois Street Garage",
+      "permalink": "https://pierandpoint.org/parcels/ucsf-illinois-street-garage/",
+      "api": "https://pierandpoint.org/api/v1/records/ucsf-illinois-street-garage.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-29",
      "kind": "correction",

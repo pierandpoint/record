@@ -43,7 +43,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- Figure 6.2.3 marks this with a single point symbol and the label 'STACK / EXISTING STRUCTURE (~300')', not a footprint outline, but this polygon has been rebuilt 2026-09-16 (second revision) to trace the structure's actual visible footprint in satellite imagery (an earlier version read it as a fallen or lowered stack, which no source reports: the D4D, the 2018 Draft EIR and the Chronicle of May 22, 2025 all describe a standing ~300-ft Stack retained by the plan, so the polygon may instead trace the imaged lean of the standing Stack rather than its base; unconfirmed; details are in this shape's mapping log in the public data repository, https://github.com/pierandpoint/record) rather than a diagram-derived placeholder. Treat as accurate to roughly 5-10m -- limited mainly by how precisely the lon/lat grid overlay could be read against the image, not by diagram-transform error.",
+    "accuracy_caveat": "APPROXIMATE -- Figure 6.2.3 marks this with a single point symbol and the label 'STACK / EXISTING STRUCTURE (~300')', not a footprint outline, but this polygon has been rebuilt 2026-09-16 (second revision) to trace the structure's actual visible footprint in satellite imagery (an earlier version read it as a fallen or lowered stack, which no source reports: the D4D, the 2018 Draft EIR and the Chronicle of May 22, 2025 all describe a standing ~300-ft Stack retained by the plan, so the polygon may instead trace the imaged lean of the standing Stack rather than its base; unconfirmed; details are in this shape's mapping log in the public data repository, https://github.com/pierandpoint/record) rather than a diagram-derived placeholder. Treat as accurate to roughly 5-10m -- limited mainly by how precisely the lon/lat grid overlay could be read against the image, not by diagram-transform error. the active lots under this drawing are DataSF's active lot 4175028 (21,885 m2, 1241 Delaware St, PPS-MU zoning, recorded 2022-08-30) (253 m2 of it) and two thin roadside strips, 4232016 (614 m2, 71 m2 inside) and 4232015 (972 m2, 37 m2 inside), which are not the stack's own lots. DataSF also lists the retired lot 4232006 (38,592 m2) under it, and retired lots are not used. No active lot is the stack's own, so the drawing is kept.",
     "digitized_from": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
     "why_no_real_parcel": "This is an existing structure without its own subdivided Assessor parcel -- it sits within the larger, largely unaddressed former power-station site. DataSF Parcels (checked 2026-09-29) shows this polygon straddling active lots 4175028 (1241 Delaware St), 4232016 and 4232015; the 2018 Draft EIR lists the Power Station sub-area as Assessor's Block 4175 Lots 002/017 and Block 4232 Lots 001/006.",
     "regulatory_context": "The historic ~300 ft tall smokestack from the power station's Unit 3 generating block, called out on the D4D's own Figure 6.2.3 as 'EXISTING STRUCTURE (~300')' the plan retains (Standard 6.2.1 sets its height limit at its existing height) -- a literal, physical landmark left standing amid the redevelopment, sitting within Block 9's mapped development envelope (see the Potrero Power Station Block 9 record) at the site's waterfront edge. The Block 9 Building Configurations inset on the same figure shows two alternate massing options labeled 'WITH UNIT 3' and 'WITHOUT UNIT 3' -- meaning the adjacent Unit 3 power block building (distinct from the Stack itself) may or may not be retained; the diagram does not draw Unit 3's own footprint distinctly enough to trace separately, so it is not mapped here as its own feature."
@@ -261,6 +261,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-11",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Stack now records the Assessor lots it overlaps.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lots 4175028, 4232010, 4232015, 4232016",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lots 4175028, 4232010, 4232015, 4232016"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_the_stack",
+     "slug": "the-stack-unit-3-smokestack",
+     "name": "The Stack (Unit 3 smokestack)",
+     "permalink": "https://pierandpoint.org/parcels/the-stack-unit-3-smokestack/",
+     "api": "https://pierandpoint.org/api/v1/records/the-stack-unit-3-smokestack.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-29",
     "kind": "correction",
