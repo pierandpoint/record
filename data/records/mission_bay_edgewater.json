@@ -3,7 +3,7 @@
   "names": [
     "Edgewater"
   ],
-  "summary": "A six-story, 193-unit apartment building at 355 Berry Street in Mission Bay North (Assessor block 8707 lot 003, class Apartment 15 Units or more, built 2007). Its footprint is on the north bank of Mission Creek on the OCII land use map and OSM.",
+  "summary": "A six-story, 193-unit apartment building at 355 Berry Street in Mission Bay North (Assessor block 8707 lot 003, class Apartment 15 Units or more, Assessor roll year built 2007; the building permit shows completed 2008-02-14). Its footprint is on the north bank of Mission Creek on the OCII land use map and OSM.",
   "summary_sources": [
     "src-datasf-assessor-8707003",
     "src-osm-edgewater",
@@ -21,14 +21,15 @@
       "approximate": false
     },
     {
-      "date": "2007",
+      "date": "2008-02-14",
       "status": "complete",
-      "text": "Building completed, per DataSF Assessor tax roll",
+      "text": "DBI permit #200502085025 (new construction) is recorded as complete (the permit's completed date, not a certificate of occupancy); the Assessor roll lists 2007 as year built, which is a roll year, not a completion event",
       "sources": [
+        "src-datasf-permit-edgewater",
         "src-datasf-assessor-8707003"
       ],
       "expected": false,
-      "approximate": true
+      "approximate": false
     }
   ],
   "costs": [
@@ -137,7 +138,8 @@
     "Developer and architect not confirmed by any source found as of 2026-09-29, consistent with the notes on this record's map shape.",
     "Precise opening month not available; DataSF's Assessor tax roll gives only a year.",
     "A listing site's '6 units' figure (noted on this record's map shape) reads as a floorplan-type count, not the building's 193-unit total per the Assessor tax roll -- flagged there rather than reconciled here.",
-    "The 2005 construction permit's own unit count (194) is one more than the Assessor's 193 -- likely a manager's unit counted differently between filing and final tax-roll record, not a different building; not further reconciled here."
+    "The 2005 construction permit's own unit count (194) is one more than the Assessor's 193 -- likely a manager's unit counted differently between filing and final tax-roll record, not a different building; not further reconciled here.",
+    "Completion date: the Assessor roll gives 2007 as year built (a roll year, not a completion event), while the building's permit #200502085025 shows a completed date of 2008-02-14 (DataSF i98e-djp9). The roll's current-sale date for the parcel is 2008-03-28. No source gives a certificate-of-occupancy date."
   ],
   "last_verified": "2026-09-29"
 }

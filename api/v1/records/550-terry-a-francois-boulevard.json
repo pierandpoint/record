@@ -29,11 +29,13 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "550 Terry A. Francois Boulevard is a 6-story Class A office building in Mission Bay, built in 2002 per DataSF Assessor records; it once served as Old Navy's headquarters, was bought by DivcoWest from parent company Gap in 2022, and was later subleased to OpenAI.",
+  "summary": "550 Terry A. Francois Boulevard is a 6-story Class A office building in Mission Bay, built in 2002 per DataSF Assessor records; it once served as Old Navy's headquarters, was bought by DivcoWest from parent company Gap in 2022, and was reported in September 2024 to have been taken by OpenAI (reports differ on whether as a lease or a sublease, and on its size; see open questions).",
   "summary_sources": [
    "src-datasf-550terry",
    "src-trd-2024-550terry",
-   "src-rebo-2022-550terry"
+   "src-rebo-2022-550terry",
+   "src-sfstandard-2024-550terry",
+   "src-hoodline-2024-550terry"
   ],
   "shape": {
    "kind": "approximate",
@@ -127,6 +129,35 @@
   ],
   "changes": [
    {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "550 Terry François no longer says the building was 'subleased' to OpenAI. The San Francisco Standard calls it a lease of 350,000 sq ft, Hoodline a lease of 315,000, and The Real Deal a sublease with both figures; these differences are recorded.",
+    "source": "The San Francisco Standard, 2024-09-20; Hoodline, 2024-09-20; The Real Deal, 2024-09-23",
+    "sources": [
+     {
+      "title": "The San Francisco Standard, 2024-09-20; Hoodline, 2024-09-20; The Real Deal, 2024-09-23"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_550_terry_francois",
+     "slug": "550-terry-a-francois-boulevard",
+     "name": "550 Terry A. Francois Boulevard",
+     "permalink": "https://pierandpoint.org/parcels/550-terry-a-francois-boulevard/",
+     "api": "https://pierandpoint.org/api/v1/records/550-terry-a-francois-boulevard.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-29",
     "kind": "correction",
     "kind_label": "Correction",
@@ -205,7 +236,8 @@
   "open_questions": [
    "Exact month/day of the 2002 completion is not sourced, only the year.",
    "The 2000 permit's own block/lot references (spanning several small blocks in the 3839-3851 range, an older pre-redevelopment block grid) differ from the Assessor's current blklot 8721011; the address (550 Terry A. Francois Blvd), six-story office description, and 2002-09-13 permit-completion date (matching the Assessor's 2002 year exactly) line up with this parcel, so this is treated as Mission Bay's redevelopment-era block renumbering, not a different building.",
-   "The building's developer/architect (reported elsewhere as Studios Architecture) was not independently confirmed by any source read as of 2026-09-21 -- left out of this record rather than repeated unsourced."
+   "The building's developer/architect (reported elsewhere as Studios Architecture) was not independently confirmed by any source read as of 2026-09-21 -- left out of this record rather than repeated unsourced.",
+   "OpenAI's deal at 550 Terry A. Francois Blvd: The San Francisco Standard (2024-09-20) says OpenAI \"just finalized a lease for 350,000 square feet\"; Hoodline (2024-09-20) calls it a lease of 315,000 square feet; The Real Deal (2024-09-23) headlines \"OpenAI subleases 350K sf building\" yet says in its text that OpenAI \"plans to occupy a 315,000-square-foot building\" and that terms of the deal with owner DivcoWest were not disclosed. Whether this is a lease from the owner or a sublease, and whether the size is 315,000 or 350,000 sq ft, is not settled by these sources; REBusiness (2022-05-25) gives the building as 320,000 sq ft. No lease record was read."
   ],
   "sources": [
    {
@@ -246,6 +278,22 @@
     "date": "2022-05-25",
     "url": "https://rebusinessonline.com/divcowest-buys-320000-sf-office-building-in-san-franciscos-mission-bay/",
     "accessed": "2026-09-29"
+   },
+   {
+    "id": "src-sfstandard-2024-550terry",
+    "title": "With SF’s biggest lease of the year, OpenAI now occupies nearly 1 million square feet",
+    "publisher": "The San Francisco Standard",
+    "date": "2024-09-20",
+    "url": "https://sfstandard.com/2024/09/20/open-ai-expands-in-mission-bay",
+    "accessed": "2026-10-12"
+   },
+   {
+    "id": "src-hoodline-2024-550terry",
+    "title": "OpenAI Bolsters San Francisco Footprint with Major 315k Square Foot Mission Bay Lease",
+    "publisher": "Hoodline",
+    "date": "2024-09-20",
+    "url": "https://hoodline.com/2024/09/openai-bolsters-san-francisco-footprint-with-major-315k-square-foot-mission-bay-lease/",
+    "accessed": "2026-10-12"
    },
    {
     "id": null,

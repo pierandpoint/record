@@ -40,10 +40,11 @@
   ],
   "positions": [],
   "address": null,
-  "summary": "An accessibility retrofit of the existing, below-grade 22nd Street Caltrain station -- the only regular-service Caltrain station without wheelchair access. The project adds ramps to both platforms plus wayfinding and safety improvements. Design is under way: SFCTA approved $1.3 million for the design phase in April 2026, Caltrain expects to complete design by summer 2027, and it is seeking construction funding to implement the project by June 2029. Sponsored by the Peninsula Corridor Joint Powers Board (Caltrain) with SFCTA (Prop L) and FTA funding.",
+  "summary": "An accessibility retrofit of the existing, below-grade 22nd Street Caltrain station -- the only regular-service Caltrain station without wheelchair access. The project adds ramps to both platforms plus wayfinding and safety improvements. Design is under way: SFCTA approved $1.3 million for the design phase in April 2026, Caltrain expects to complete design by summer 2027, and SFCTA's April 2026 post said Caltrain was then seeking construction funding to implement the project by June 2029. In September 2026 the Federal Transit Administration announced a $14.1 million All Stations Accessibility Program award to Caltrain's board for the station (Trains.com, September 16, 2026). Sponsored by the Peninsula Corridor Joint Powers Board (Caltrain) with SFCTA (Prop L) and FTA funding.",
   "summary_sources": [
    "src-sfcta-blog-2026-04",
-   "src-sfcta-boardpacket-2026-04"
+   "src-sfcta-boardpacket-2026-04",
+   "src-trains-2026-09"
   ],
   "shape": {
    "kind": "approximate",
@@ -101,12 +102,15 @@
    },
    {
     "amount_usd": 14100000,
-    "what": "Federal Transit Administration All Stations Accessibility Program grant to the Peninsula Corridor Joint Powers Board for this project's ADA improvements",
-    "date": "2026-09-10",
+    "what": "Federal Transit Administration All Stations Accessibility Program award announced for this project's ADA improvements (Peninsula Corridor Joint Powers Board); the announcement was in September 2026 (Trains.com, September 16: \"last week\"), and no grant agreement was read",
+    "date": "2026-09",
     "kind": "public_investment",
     "scope": "record",
+    "approximate": true,
     "sources": [
-     "src-trains-2026-09"
+     "src-trains-2026-09",
+     "src-railwaysupply-2026-09",
+     "src-progressiverr-2026-09"
     ]
    }
   ],
@@ -232,13 +236,13 @@
     "relation": "adjacent"
    },
    {
-    "date": "2026-09-10",
-    "date_label": "Sep 10, 2026",
+    "date": "2026-09",
+    "date_label": "~2026",
     "status": null,
     "status_label": null,
-    "text": "The Federal Transit Administration's All Stations Accessibility Program awards the Peninsula Corridor Joint Powers Board $14.1 million for ADA improvements at the 22nd Street station -- matching almost exactly the funding gap SFCTA's own April 2026 plan had left as \"Planned TBD\".",
+    "text": "The Federal Transit Administration announces an All Stations Accessibility Program award of $14.1 million to the Peninsula Corridor Joint Powers Board for ADA improvements at the 22nd Street station (an announced date, not a grant agreement or construction start): Trains.com, published September 16, 2026, says the agency announced the awards \"last week\". Railway Supply (September 12, 2026) says the FTA published its selection list on September 10 and Progressive Railroading is dated September 11; the FTA's own announcement was not read. The amount is close to the funding gap SFCTA's April 2026 plan had left as \"Planned TBD\".",
     "expected": false,
-    "approximate": false,
+    "approximate": true,
     "sources": [
      {
       "id": "src-trains-2026-09",
@@ -247,9 +251,25 @@
       "date": "2026-09-16",
       "url": "https://www.trains.com/pro/passenger/fta-awards-233-million-for-station-accessibility-projects/",
       "accessed": "2026-09-28"
+     },
+     {
+      "id": "src-railwaysupply-2026-09",
+      "title": "All Stations Accessibility Program awards $233M after $686M offer",
+      "publisher": "Railway Supply",
+      "date": "2026-09-12",
+      "url": "https://www.railway.supply/all-stations-accessibility-program-awards-233m-after-686m-offer/",
+      "accessed": "2026-10-12"
+     },
+     {
+      "id": "src-progressiverr-2026-09",
+      "title": "FTA issues $233M for rail accessibility upgrades",
+      "publisher": "Progressive Railroading",
+      "date": "2026-09-11",
+      "url": "https://www.progressiverailroading.com/passenger_rail/news/FTA-issues-233M-for-rail-accessibility-upgrades--77733",
+      "accessed": "2026-10-12"
      }
     ],
-    "source": "Trains.com, 2026-09-16",
+    "source": "Trains.com, 2026-09-16; Railway Supply, 2026-09-12; Progressive Railroading, 2026-09-11",
     "origin": "record",
     "category": "milestone",
     "category_label": "Milestone",
@@ -319,7 +339,7 @@
     "date_label": "~2029",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Caltrain is seeking construction funding to implement the project by June 2029 (SFCTA, April 28, 2026); construction was not yet funded then, so this is a target, not a schedule.",
+    "text": "Target: Caltrain aims to implement the project by June 2029 (SFCTA, April 28, 2026). Construction was not yet funded then; the FTA announced a $14.1 million award in September 2026, but no source gives a construction schedule, so this is an expected target, not a schedule.",
     "expected": true,
     "approximate": true,
     "sources": [
@@ -353,6 +373,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "22nd Street Caltrain: the FTA's $14.1 million award is now dated September 2026 as an announcement (Trains.com, September 16, says it was announced 'last week'), and the summary no longer says funding is still being sought. The 2029 date is a target, not a schedule.",
+    "source": "Trains.com, 2026-09-16; Railway Supply, 2026-09-12; Progressive Railroading, 2026-09-11",
+    "sources": [
+     {
+      "title": "Trains.com, 2026-09-16; Railway Supply, 2026-09-12; Progressive Railroading, 2026-09-11"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "22nd_st_caltrain_ada",
+     "slug": "22nd-st-caltrain-station-ada-access-improvement",
+     "name": "22nd St Caltrain Station ADA Access Improvement",
+     "permalink": "https://pierandpoint.org/parcels/22nd-st-caltrain-station-ada-access-improvement/",
+     "api": "https://pierandpoint.org/api/v1/records/22nd-st-caltrain-station-ada-access-improvement.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "adjacent",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-06",
     "kind": "correction",
@@ -415,7 +464,7 @@
   "images": [],
   "open_questions": [
    "This record's placement under Pier 70 rather than Potrero Power Station reflects a roughly equal real-world distance (about 400-450m to each tracked boundary) plus the station's more established association with the Dogpatch/Pier 70 corridor in transit planning -- not a precise geometry test against a real station footprint (no Assessor parcel or site-plan figure exists to test against; the map shape is a coarse placeholder box; see its accuracy note).",
-   "No construction start date is confirmed beyond the spring 2028 target implied by SFCTA's own milestone table; this could shift given design is only at an early stage as of 2026-09-28.",
+   "No construction start date is confirmed in any source this record can currently cite; design is only at an early stage as of 2026-09-28. (An earlier spring 2028 target came from the April 14, 2026 board packet, which could not be re-read and was removed; see below.)",
    "Corrected 2026-10-06 (accuracy audit, October 2026): the summary and the completion milestone no longer give a spring 2028 construction start, a mid/late 2029 completion or the $19,134,000 total, because the April 14, 2026 SFCTA board packet they came from refuses automated fetches and could not be re-read; they now follow SFCTA's readable April 28, 2026 post (design by summer 2027, construction funding sought to implement the project by June 2029). The $19,134,000 cost entry and its breakdown stay, marked as not re-checked until the packet can be re-read."
   ],
   "sources": [
@@ -451,6 +500,22 @@
     "date": "2026-09-16",
     "url": "https://www.trains.com/pro/passenger/fta-awards-233-million-for-station-accessibility-projects/",
     "accessed": "2026-09-28"
+   },
+   {
+    "id": "src-railwaysupply-2026-09",
+    "title": "All Stations Accessibility Program awards $233M after $686M offer",
+    "publisher": "Railway Supply",
+    "date": "2026-09-12",
+    "url": "https://www.railway.supply/all-stations-accessibility-program-awards-233m-after-686m-offer/",
+    "accessed": "2026-10-12"
+   },
+   {
+    "id": "src-progressiverr-2026-09",
+    "title": "FTA issues $233M for rail accessibility upgrades",
+    "publisher": "Progressive Railroading",
+    "date": "2026-09-11",
+    "url": "https://www.progressiverailroading.com/passenger_rail/news/FTA-issues-233M-for-rail-accessibility-upgrades--77733",
+    "accessed": "2026-10-12"
    }
   ],
   "notes": "Design (PS&E) is scheduled to run April/June 2026 through July/September 2027 (30% complete as of March 2026); construction is not slated to start until spring 2028, with project completion targeted July/September 2029.",

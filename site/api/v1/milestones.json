@@ -5,7 +5,7 @@
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
  "terms": "https://pierandpoint.org/terms/",
- "count": 1172,
+ "count": 1171,
  "milestones": [
   {
    "date": "1885",
@@ -3114,42 +3114,6 @@
    "date_label": "~2007",
    "status": "complete",
    "status_label": "Complete",
-   "text": "Building completed, per DataSF Assessor tax roll",
-   "expected": false,
-   "approximate": true,
-   "sources": [
-    {
-     "id": "src-datasf-assessor-8707003",
-     "title": "Assessor Historical Secured Property Tax Rolls (block 8707, lot 003 -- 355 Berry St)",
-     "publisher": "DataSF / SF Office of the Assessor-Recorder",
-     "url": "https://data.sf.gov/resource/wv5m-vpq2.json",
-     "accessed": "2026-09-21"
-    }
-   ],
-   "source": "DataSF / SF Office of the Assessor-Recorder",
-   "origin": "record",
-   "category": "status",
-   "category_label": "Status",
-   "record": {
-    "id": "mission_bay_edgewater",
-    "slug": "edgewater",
-    "name": "Edgewater",
-    "permalink": "https://pierandpoint.org/parcels/edgewater/",
-    "api": "https://pierandpoint.org/api/v1/records/edgewater.json"
-   },
-   "site": {
-    "slug": "mission-bay",
-    "name": "Mission Bay",
-    "short": "Mission Bay",
-    "url": "https://pierandpoint.org/sites/mission-bay/"
-   },
-   "relation": "tracked"
-  },
-  {
-   "date": "2007",
-   "date_label": "~2007",
-   "status": "complete",
-   "status_label": "Complete",
    "text": "Park Terrace (325 Berry St) completed: the condominium lots carry year built 2007 in the DataSF Assessor roll",
    "expected": false,
    "approximate": true,
@@ -3653,6 +3617,49 @@
     "name": "Radiance",
     "permalink": "https://pierandpoint.org/parcels/radiance/",
     "api": "https://pierandpoint.org/api/v1/records/radiance.json"
+   },
+   "site": {
+    "slug": "mission-bay",
+    "name": "Mission Bay",
+    "short": "Mission Bay",
+    "url": "https://pierandpoint.org/sites/mission-bay/"
+   },
+   "relation": "tracked"
+  },
+  {
+   "date": "2008-02-14",
+   "date_label": "Feb 14, 2008",
+   "status": "complete",
+   "status_label": "Complete",
+   "text": "DBI permit #200502085025 (new construction) is recorded as complete (the permit's completed date, not a certificate of occupancy); the Assessor roll lists 2007 as year built, which is a roll year, not a completion event",
+   "expected": false,
+   "approximate": false,
+   "sources": [
+    {
+     "id": "src-datasf-permit-edgewater",
+     "title": "Building Permits: permit #200502085025 (355 Berry St, block 8707 lot 003), filed 2005-02-08, \"erect 5 stories 194 dwelling units bldg\", completed 2008-02-14",
+     "publisher": "DataSF / SF Department of Building Inspection",
+     "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200502085025",
+     "accessed": "2026-09-21"
+    },
+    {
+     "id": "src-datasf-assessor-8707003",
+     "title": "Assessor Historical Secured Property Tax Rolls (block 8707, lot 003 -- 355 Berry St)",
+     "publisher": "DataSF / SF Office of the Assessor-Recorder",
+     "url": "https://data.sf.gov/resource/wv5m-vpq2.json",
+     "accessed": "2026-09-21"
+    }
+   ],
+   "source": "DataSF / SF Department of Building Inspection; DataSF / SF Office of the Assessor-Recorder",
+   "origin": "record",
+   "category": "status",
+   "category_label": "Status",
+   "record": {
+    "id": "mission_bay_edgewater",
+    "slug": "edgewater",
+    "name": "Edgewater",
+    "permalink": "https://pierandpoint.org/parcels/edgewater/",
+    "api": "https://pierandpoint.org/api/v1/records/edgewater.json"
    },
    "site": {
     "slug": "mission-bay",
@@ -9045,7 +9052,7 @@
    "date_label": "~2016",
    "status": "complete",
    "status_label": "Complete",
-   "text": "This block (701 China Basin St, 188 units) is completed, per DataSF Assessor records and the project architect's own project page",
+   "text": "This block (701 China Basin St) is completed: the Assessor roll (DataSF, parcel 8710009) gives year built 2016 and 188 units, and the architect's project page (Ignition Architecture) gives \"Completion 2016\"; that page gives no unit count for this block",
    "expected": false,
    "approximate": true,
    "sources": [
@@ -20050,6 +20057,59 @@
   {
    "date": "2019-04",
    "date_label": "~2019",
+   "status": null,
+   "status_label": null,
+   "text": "Developer's Phase 1 Phase Submittal (Parcels A, B, F and G) before the Port: the Port's documents say the Developer submitted it on April 4, 2019; the developer's own Phase 1 overview says it was submitted on December 4, 2018 and revised on April 24, 2019 (see open questions)",
+   "expected": false,
+   "approximate": true,
+   "sources": [
+    {
+     "id": "src-port-2023-10",
+     "title": "Request approval of Phase 1 Revised Final Budget, Contribution of Port Capital and Parcel Lease Amendment, Mission Rock (Port Commission Item 8B, Resolution 23-46)",
+     "publisher": "Port of San Francisco",
+     "date": "2023-10-06",
+     "url": "https://www.sfport.com/files/2023-10/101023_8b_mission_rock_budget_port_capital_parcel_lease_amendment_final.pdf",
+     "accessed": "2026-09-17"
+    },
+    {
+     "id": "src-port-2025-03",
+     "title": "Amendments to the Mission Rock Housing Plan, the Parcel A Lease and the Phase 1 Submittal (Port Commission Item 12A, Resolution 25-17)",
+     "publisher": "Port of San Francisco",
+     "date": "2025-03-07",
+     "url": "https://sfport.com/media/10228/download?inline=031125_12a_mission_rock_revised_phase_1_submittal_-_info_and_possible_action.pdf",
+     "accessed": "2026-09-17"
+    },
+    {
+     "id": "src-mrp-2019-07",
+     "title": "Mission Rock Phase 1 Overview, submitted 7/2/2019 by Mission Rock Partners (Port Commission Item 11D, Attachment 1)",
+     "publisher": "Mission Rock Partners (developer's submittal to the Port)",
+     "date": "2019-07-02",
+     "url": "https://www.sfport.com/sites/default/files/Documents/Item%2011D%20Attachment%201%20Mission%20Rock%20Draft%20Phase%201%20Submittal%20Summary_06%2027%2019_2.pdf",
+     "accessed": "2026-09-17"
+    }
+   ],
+   "source": "Port of San Francisco, 2023-10-06; Port of San Francisco, 2025-03-07; Mission Rock Partners (developer's submittal to the Port), 2019-07-02",
+   "origin": "record",
+   "category": "retail",
+   "category_label": "Retail",
+   "record": {
+    "id": "8719A008",
+    "slug": "building-g",
+    "name": "Building G",
+    "permalink": "https://pierandpoint.org/parcels/building-g/",
+    "api": "https://pierandpoint.org/api/v1/records/building-g.json"
+   },
+   "site": {
+    "slug": "mission-rock",
+    "name": "Mission Rock",
+    "short": "Mission Rock",
+    "url": "https://pierandpoint.org/sites/mission-rock/"
+   },
+   "relation": "tracked"
+  },
+  {
+   "date": "2019-04",
+   "date_label": "~2019",
    "status": "planned",
    "status_label": "Planned",
    "text": "Reported as the nearly 2-acre 'Mariposa Bayfront Park (P23/P24)', 'yet to be completed' and expected to be completed by the end of 2019 (SocketSite; the source does not say construction had started); a 2019 forecast: no source read says when the park was actually finished",
@@ -20118,51 +20178,6 @@
     "name": "Mission Bay",
     "short": "Mission Bay",
     "url": "https://pierandpoint.org/sites/mission-bay/"
-   },
-   "relation": "tracked"
-  },
-  {
-   "date": "2019-04-04",
-   "date_label": "Apr 4, 2019",
-   "status": null,
-   "status_label": null,
-   "text": "Developer submits the Phase 1 Phase Submittal (Parcels A, B, F and G) to the Port",
-   "expected": false,
-   "approximate": false,
-   "sources": [
-    {
-     "id": "src-port-2023-10",
-     "title": "Request approval of Phase 1 Revised Final Budget, Contribution of Port Capital and Parcel Lease Amendment, Mission Rock (Port Commission Item 8B, Resolution 23-46)",
-     "publisher": "Port of San Francisco",
-     "date": "2023-10-06",
-     "url": "https://www.sfport.com/files/2023-10/101023_8b_mission_rock_budget_port_capital_parcel_lease_amendment_final.pdf",
-     "accessed": "2026-09-17"
-    },
-    {
-     "id": "src-port-2025-03",
-     "title": "Amendments to the Mission Rock Housing Plan, the Parcel A Lease and the Phase 1 Submittal (Port Commission Item 12A, Resolution 25-17)",
-     "publisher": "Port of San Francisco",
-     "date": "2025-03-07",
-     "url": "https://sfport.com/media/10228/download?inline=031125_12a_mission_rock_revised_phase_1_submittal_-_info_and_possible_action.pdf",
-     "accessed": "2026-09-17"
-    }
-   ],
-   "source": "Port of San Francisco, 2023-10-06; Port of San Francisco, 2025-03-07",
-   "origin": "record",
-   "category": "milestone",
-   "category_label": "Milestone",
-   "record": {
-    "id": "8719A008",
-    "slug": "building-g",
-    "name": "Building G",
-    "permalink": "https://pierandpoint.org/parcels/building-g/",
-    "api": "https://pierandpoint.org/api/v1/records/building-g.json"
-   },
-   "site": {
-    "slug": "mission-rock",
-    "name": "Mission Rock",
-    "short": "Mission Rock",
-    "url": "https://pierandpoint.org/sites/mission-rock/"
    },
    "relation": "tracked"
   },
@@ -25915,7 +25930,7 @@
    "date_label": "~2021",
    "status": "complete",
    "status_label": "Complete",
-   "text": "Both towers complete construction (SF Standard: the four-building campus was initially completed during the pandemic in 2021; Office Snapshots lists a 2021 completion date)",
+   "text": "Both towers complete construction (SF Standard: the four-building campus was initially completed during the pandemic in 2021; no month is sourced)",
    "expected": false,
    "approximate": true,
    "sources": [
@@ -25926,17 +25941,9 @@
      "date": "2023-05-18",
      "url": "https://sfstandard.com/2023/05/18/uber-looks-to-sublease-fully-furnished-san-francisco-office-it-never-occupied/",
      "accessed": "2026-09-29"
-    },
-    {
-     "id": "src-officesnapshots-2022",
-     "title": "Uber Mission Bay Headquarters - San Francisco",
-     "publisher": "Office Snapshots (secondary design press)",
-     "date": "2022-01-24",
-     "url": "https://officesnapshots.com/2022/01/24/uber-mission-bay-headquarters-san-francisco/",
-     "accessed": "2026-09-23"
     }
    ],
-   "source": "The San Francisco Standard, 2023-05-18; Office Snapshots (secondary design press), 2022-01-24",
+   "source": "The San Francisco Standard, 2023-05-18",
    "origin": "record",
    "category": "status",
    "category_label": "Status",
@@ -30135,43 +30142,6 @@
    "relation": "tracked"
   },
   {
-   "date": "2022-07",
-   "date_label": "Jul 2022",
-   "status": "under_construction",
-   "status_label": "Under construction",
-   "text": "Construction begins",
-   "expected": false,
-   "approximate": false,
-   "sources": [
-    {
-     "id": "src-ocii-2023",
-     "title": "400 China Basin: Requesting an Additional $8,000,000 in Gap Funding (Citywide Affordable Housing Loan Committee memorandum)",
-     "publisher": "San Francisco Mayor's Office of Housing and Community Development / OCII (primary city agency document)",
-     "date": "2023-10-20",
-     "url": "https://media.api.sf.gov/documents/Approved_400_China_Basin_Additional_Gap_Funding_-_LC_10-20-23.pdf",
-     "accessed": "2026-09-18"
-    }
-   ],
-   "source": "San Francisco Mayor's Office of Housing and Community Development / OCII (primary city agency document), 2023-10-20",
-   "origin": "record",
-   "category": "status",
-   "category_label": "Status",
-   "record": {
-    "id": "8719008",
-    "slug": "mission-bay-south-block-9a",
-    "name": "Mission Bay South Block 9A",
-    "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-9a/",
-    "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-9a.json"
-   },
-   "site": {
-    "slug": "mission-bay",
-    "name": "Mission Bay",
-    "short": "Mission Bay",
-    "url": "https://pierandpoint.org/sites/mission-bay/"
-   },
-   "relation": "tracked"
-  },
-  {
    "date": "2022-07-12",
    "date_label": "Jul 12, 2022",
    "status": null,
@@ -32986,8 +32956,8 @@
    ],
    "source": "San Francisco Mayor's Office of Housing and Community Development / OCII (primary city agency document), 2023-10-20",
    "origin": "record",
-   "category": "milestone",
-   "category_label": "Milestone",
+   "category": "status",
+   "category_label": "Status",
    "record": {
     "id": "8719008",
     "slug": "mission-bay-south-block-9a",
@@ -37453,6 +37423,51 @@
    "relation": "tracked"
   },
   {
+   "date": "2025-04-29",
+   "date_label": "Apr 29, 2025",
+   "status": null,
+   "status_label": null,
+   "text": "Board of Supervisors adopts Resolution No. 193-25 (File No. 250264), approving the Mission Rock Housing Plan amendment that lowers the minimum percentage of below-market-rate units per Phase from 30% to 20%, by a vote of 11 to 0 (the Land Use and Transportation Committee had recommended it on April 28). This is the Housing Plan amendment on which the Port's March 2025 reduction of Parcel A's units was conditioned; the Parcel A lease amendment is a separate item.",
+   "expected": false,
+   "approximate": false,
+   "sources": [
+    {
+     "id": "src-bos-res-193-25",
+     "title": "Resolution No. 193-25, File No. 250264: Housing Plan Amendments - Mission Rock Project - Seawall Lot 337",
+     "publisher": "San Francisco Board of Supervisors",
+     "date": "2025-04-29",
+     "url": "https://sfbos.org/sites/default/files/r0193-25.pdf",
+     "accessed": "2026-10-12"
+    },
+    {
+     "id": "src-port-2025-03",
+     "title": "Amendments to the Mission Rock Housing Plan, the Parcel A Lease and the Phase 1 Submittal (Port Commission Item 12A, Resolution 25-17)",
+     "publisher": "Port of San Francisco",
+     "date": "2025-03-07",
+     "url": "https://sfport.com/media/10228/download?inline=031125_12a_mission_rock_revised_phase_1_submittal_-_info_and_possible_action.pdf",
+     "accessed": "2026-10-06"
+    }
+   ],
+   "source": "San Francisco Board of Supervisors, 2025-04-29; Port of San Francisco, 2025-03-07",
+   "origin": "record",
+   "category": "milestone",
+   "category_label": "Milestone",
+   "record": {
+    "id": "8719B002",
+    "slug": "the-canyon",
+    "name": "The Canyon",
+    "permalink": "https://pierandpoint.org/parcels/the-canyon/",
+    "api": "https://pierandpoint.org/api/v1/records/the-canyon.json"
+   },
+   "site": {
+    "slug": "mission-rock",
+    "name": "Mission Rock",
+    "short": "Mission Rock",
+    "url": "https://pierandpoint.org/sites/mission-rock/"
+   },
+   "relation": "tracked"
+  },
+  {
    "date": "2025-05-13",
    "date_label": "May 13, 2025",
    "status": null,
@@ -39310,8 +39325,8 @@
    "date_label": "~2026",
    "status": "under_construction",
    "status_label": "Under construction",
-   "text": "Renovation of 409 Illinois St begins: 261,117 gross sq ft converted into UCSF's new School of Dentistry and Interprofessional Education Center (dentistry, medicine, nursing, pharmacy and physical therapy). Suffolk (contractor) and CO Architects (architect) selected via progressive design-build; Construction Dive reports a project cost of about $278,000,000.",
-   "expected": false,
+   "text": "Renovation of 409 Illinois St is expected to begin: 261,117 gross sq ft to be converted into UCSF's new School of Dentistry and Interprofessional Education Center (dentistry, medicine, nursing, pharmacy and physical therapy). American School & University (2026-09-08) says \"renovation work expected to begin in 2026\" and \"Early construction activities are underway\" while final design is completed; Suffolk (contractor) and CO Architects (architect) were selected via progressive design-build. No source read dates the start of the main renovation.",
+   "expected": true,
    "approximate": true,
    "sources": [
     {
@@ -39332,8 +39347,8 @@
    ],
    "source": "American School & University; Construction Dive, 2026-08-27",
    "origin": "record",
-   "category": "status",
-   "category_label": "Status",
+   "category": "coming_up",
+   "category_label": "Coming up",
    "record": {
     "id": "mission_bay_490_499_illinois",
     "slug": "409-499-illinois-street",
@@ -41459,7 +41474,7 @@
    "date_label": "~2026",
    "status": null,
    "status_label": null,
-   "text": "Fieldwork taproom holds its grand opening at 300 Toni Stone Crossing (the press release says 'Saturday, July 26'; July 26, 2026 was a Sunday, so the day is uncertain)",
+   "text": "Fieldwork's Mission Rock taproom at 300 Toni Stone Crossing is open to the public by late July 2026, per the company's July 28 press release (the release gives July 26 but calls it both Saturday and Monday, and July 26, 2026 was a Sunday); the company's September 9 release calls this a soft opening and announces an official grand opening on September 25-27",
    "expected": false,
    "approximate": true,
    "sources": [
@@ -41472,6 +41487,14 @@
      "accessed": "2026-09-29"
     },
     {
+     "id": "src-einpress-fieldwork-2026-09",
+     "title": "Fieldwork Brewing To Celebrate Grand Opening of Mission Rock Taproom With New Beer Honoring Giants Legend Mike Krukow",
+     "publisher": "Fieldwork Brewing Company, via EIN Presswire",
+     "date": "2026-09-09",
+     "url": "https://www.einpresswire.com/article/940776227",
+     "accessed": "2026-10-12"
+    },
+    {
      "id": "src-fieldwork-page",
      "title": "Fieldwork SF Mission Rock taproom page (300 Toni Stone Crossing, 3,750 sq ft ground floor of the Visa building)",
      "publisher": "Fieldwork Brewing Company (tenant's own material)",
@@ -41479,7 +41502,7 @@
      "accessed": "2026-09-17"
     }
    ],
-   "source": "Fieldwork Brewing Co. (press release, EIN Presswire copy), 2026-07-28; Fieldwork Brewing Company (tenant's own material)",
+   "source": "Fieldwork Brewing Co. (press release, EIN Presswire copy), 2026-07-28; Fieldwork Brewing Company, via EIN Presswire, 2026-09-09; Fieldwork Brewing Company (tenant's own material)",
    "origin": "record",
    "category": "retail",
    "category_label": "Retail",
@@ -43561,11 +43584,11 @@
     },
     {
      "id": "src-sfchronicle-2026-08-17",
-     "title": "S.F. students return to school, including brand-new Mission Bay School",
+     "title": "It’s the first day of school in S.F. Some students are stepping into a brand-new campus",
      "publisher": "San Francisco Chronicle",
      "date": "2026-08-17",
      "url": "https://www.sfchronicle.com/sf/article/s-f-students-return-school-mission-bay-school-22385475.php",
-     "accessed": "2026-10-06"
+     "accessed": "2026-10-12"
     }
    ],
    "source": "The San Francisco Standard, 2026-08-06; SFUSD (primary/official); San Francisco Chronicle, 2026-08-17",
@@ -43622,37 +43645,55 @@
   {
    "date": "2026-09",
    "date_label": "~2026",
-   "status": "complete",
-   "status_label": "Complete",
-   "text": "Confirmed already built (oval track, central field and surrounding path clearly visible) during this project's own satellite-imagery review",
+   "status": null,
+   "status_label": null,
+   "text": "The Federal Transit Administration announces an All Stations Accessibility Program award of $14.1 million to the Peninsula Corridor Joint Powers Board for ADA improvements at the 22nd Street station (an announced date, not a grant agreement or construction start): Trains.com, published September 16, 2026, says the agency announced the awards \"last week\". Railway Supply (September 12, 2026) says the FTA published its selection list on September 10 and Progressive Railroading is dated September 11; the FTA's own announcement was not read. The amount is close to the funding gap SFCTA's April 2026 plan had left as \"Planned TBD\".",
    "expected": false,
    "approximate": true,
    "sources": [
     {
-     "id": "src-geom-p27",
-     "title": "Mapping log for this record's shape",
-     "publisher": "Pier & Point public data repository",
-     "accessed": "2026-09-21"
+     "id": "src-trains-2026-09",
+     "title": "FTA Awards $233 Million for Station Accessibility Projects",
+     "publisher": "Trains.com",
+     "date": "2026-09-16",
+     "url": "https://www.trains.com/pro/passenger/fta-awards-233-million-for-station-accessibility-projects/",
+     "accessed": "2026-09-28"
+    },
+    {
+     "id": "src-railwaysupply-2026-09",
+     "title": "All Stations Accessibility Program awards $233M after $686M offer",
+     "publisher": "Railway Supply",
+     "date": "2026-09-12",
+     "url": "https://www.railway.supply/all-stations-accessibility-program-awards-233m-after-686m-offer/",
+     "accessed": "2026-10-12"
+    },
+    {
+     "id": "src-progressiverr-2026-09",
+     "title": "FTA issues $233M for rail accessibility upgrades",
+     "publisher": "Progressive Railroading",
+     "date": "2026-09-11",
+     "url": "https://www.progressiverailroading.com/passenger_rail/news/FTA-issues-233M-for-rail-accessibility-upgrades--77733",
+     "accessed": "2026-10-12"
     }
    ],
-   "source": "Pier & Point public data repository",
+   "source": "Trains.com, 2026-09-16; Railway Supply, 2026-09-12; Progressive Railroading, 2026-09-11",
    "origin": "record",
-   "category": "status",
-   "category_label": "Status",
+   "category": "milestone",
+   "category_label": "Milestone",
    "record": {
-    "id": "mission_bay_p27_track_field",
-    "slug": "p27",
-    "name": "P27",
-    "permalink": "https://pierandpoint.org/parcels/p27/",
-    "api": "https://pierandpoint.org/api/v1/records/p27.json"
+    "id": "22nd_st_caltrain_ada",
+    "slug": "22nd-st-caltrain-station-ada-access-improvement",
+    "name": "22nd St Caltrain Station ADA Access Improvement",
+    "permalink": "https://pierandpoint.org/parcels/22nd-st-caltrain-station-ada-access-improvement/",
+    "api": "https://pierandpoint.org/api/v1/records/22nd-st-caltrain-station-ada-access-improvement.json"
    },
    "site": {
-    "slug": "mission-bay",
-    "name": "Mission Bay",
-    "short": "Mission Bay",
-    "url": "https://pierandpoint.org/sites/mission-bay/"
+    "slug": "pier-70",
+    "name": "Pier 70",
+    "short": "Pier 70",
+    "url": "https://pierandpoint.org/sites/pier-70/"
    },
-   "relation": "tracked"
+   "relation": "adjacent"
   },
   {
    "date": "2026-09",
@@ -43688,43 +43729,6 @@
     "name": "Potrero Power Station",
     "short": "Potrero Station",
     "url": "https://pierandpoint.org/sites/potrero/"
-   },
-   "relation": "adjacent"
-  },
-  {
-   "date": "2026-09-10",
-   "date_label": "Sep 10, 2026",
-   "status": null,
-   "status_label": null,
-   "text": "The Federal Transit Administration's All Stations Accessibility Program awards the Peninsula Corridor Joint Powers Board $14.1 million for ADA improvements at the 22nd Street station -- matching almost exactly the funding gap SFCTA's own April 2026 plan had left as \"Planned TBD\".",
-   "expected": false,
-   "approximate": false,
-   "sources": [
-    {
-     "id": "src-trains-2026-09",
-     "title": "FTA Awards $233 Million for Station Accessibility Projects",
-     "publisher": "Trains.com",
-     "date": "2026-09-16",
-     "url": "https://www.trains.com/pro/passenger/fta-awards-233-million-for-station-accessibility-projects/",
-     "accessed": "2026-09-28"
-    }
-   ],
-   "source": "Trains.com, 2026-09-16",
-   "origin": "record",
-   "category": "milestone",
-   "category_label": "Milestone",
-   "record": {
-    "id": "22nd_st_caltrain_ada",
-    "slug": "22nd-st-caltrain-station-ada-access-improvement",
-    "name": "22nd St Caltrain Station ADA Access Improvement",
-    "permalink": "https://pierandpoint.org/parcels/22nd-st-caltrain-station-ada-access-improvement/",
-    "api": "https://pierandpoint.org/api/v1/records/22nd-st-caltrain-station-ada-access-improvement.json"
-   },
-   "site": {
-    "slug": "pier-70",
-    "name": "Pier 70",
-    "short": "Pier 70",
-    "url": "https://pierandpoint.org/sites/pier-70/"
    },
    "relation": "adjacent"
   },
@@ -44608,7 +44612,7 @@
    "date_label": "~2027",
    "status": "under_construction",
    "status_label": "Under construction",
-   "text": "Phase I construction start targeted (per the developer's own project site; not yet confirmed by an OCII resolution or staff report).",
+   "text": "Phase I construction start targeted for early 2027 (Q1 2027 on the schedule), conditional: the developer's own project site says \"Pending financing availability, Phase I of the development—165 apartments—will begin construction in early 2027\"; not yet confirmed by an OCII resolution or staff report.",
    "expected": true,
    "approximate": true,
    "sources": [
@@ -45249,7 +45253,7 @@
    "date_label": "~2029",
    "status": "complete",
    "status_label": "Complete",
-   "text": "Caltrain is seeking construction funding to implement the project by June 2029 (SFCTA, April 28, 2026); construction was not yet funded then, so this is a target, not a schedule.",
+   "text": "Target: Caltrain aims to implement the project by June 2029 (SFCTA, April 28, 2026). Construction was not yet funded then; the FTA announced a $14.1 million award in September 2026, but no source gives a construction schedule, so this is an expected target, not a schedule.",
    "expected": true,
    "approximate": true,
    "sources": [

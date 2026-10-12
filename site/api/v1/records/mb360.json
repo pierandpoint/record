@@ -101,7 +101,7 @@
     "date_label": "~2016",
     "status": "complete",
     "status_label": "Complete",
-    "text": "This block (701 China Basin St, 188 units) is completed, per DataSF Assessor records and the project architect's own project page",
+    "text": "This block (701 China Basin St) is completed: the Assessor roll (DataSF, parcel 8710009) gives year built 2016 and 188 units, and the architect's project page (Ignition Architecture) gives \"Completion 2016\"; that page gives no unit count for this block",
     "expected": false,
     "approximate": true,
     "sources": [
@@ -141,6 +141,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "MB360's 188 units now cite the Assessor roll alone; the architect's page cited gives no unit count for this block. The 2014 fire is described as CBS News did: the unfinished building was destroyed and demolished.",
+    "source": "DataSF Assessor Secured Roll wv5m-vpq2, parcel 8710009; Ignition Architecture, MB 360º project page; CBS News San Francisco, 2014-05-07",
+    "sources": [
+     {
+      "title": "DataSF Assessor Secured Roll wv5m-vpq2, parcel 8710009; Ignition Architecture, MB 360º project page; CBS News San Francisco, 2014-05-07"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_mb360",
+     "slug": "mb360",
+     "name": "MB360",
+     "permalink": "https://pierandpoint.org/parcels/mb360/",
+     "api": "https://pierandpoint.org/api/v1/records/mb360.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-11",
     "kind": "added",
@@ -260,11 +289,12 @@
   ],
   "open_questions": [
    "Apartment-listing aggregators (Apartments.com, Redfin, ApartmentHomeLiving, among others) give 2014 as this block's construction year, but DataSF Assessor records and the project architect's own project page both give 2016; not resolved which reflects actual first occupancy versus an earlier leasing target that slipped.",
-   "Contemporaneous press (SFGate, CBS News San Francisco) reported a 5-alarm fire on March 11, 2014 that destroyed one of the two under-construction MB360 buildings, requiring a rebuild; no source found specifies which of the two street addresses (701 China Basin St, this record, vs. 1200 4th St) was the one destroyed, so it is not asserted here which block the fire affected.",
+   "Contemporaneous press (SFGate, CBS News San Francisco) reported a 5-alarm fire on March 11, 2014 that destroyed one of the two under-construction MB360 buildings (CBS News: \"The unfinished building was destroyed and demolished in the days following the massive blaze\"); no source found specifies which of the two street addresses (701 China Basin St, this record, vs. 1200 4th St) was the one destroyed, so it is not asserted here which block the fire affected.",
    "Precise month of this block's actual completion/first occupancy is not sourced beyond the bare Assessor year.",
    "Developer of record beyond BRE Properties/Essex Property Trust, and any subsequent sale history: not yet researched.",
    "The Registry's own article (already cited above) reports BRE Properties 'expected a total development cost of $227 million, or $630,000 a unit' -- but that figure covers the whole 360-unit, two-block MB360 development (this record's 701 China Basin St block plus the separate 1200 4th St block) as one project, not this 188-unit block alone. No block-specific figure was found, so no record-scope figure is added here.",
-   "The Apartments.com listing could not be checked on 2026-09-29; an archived copy exists at web.archive.org/web/20211031174227/https://www.apartments.com/mb360-san-francisco-ca/bzdysc8/ (not checked). The 701 China Basin St address is confirmed by the Assessor and OSM."
+   "The Apartments.com listing could not be checked on 2026-09-29; an archived copy exists at web.archive.org/web/20211031174227/https://www.apartments.com/mb360-san-francisco-ca/bzdysc8/ (not checked). The 701 China Basin St address is confirmed by the Assessor and OSM.",
+   "Unit count: the Assessor roll gives 188 units for 701 China Basin St. The architect's project page cited here (Ignition Architecture, which designed two of the five buildings on Block 5) lists \"Units 36\" for the part it designed and no block total; the page of the project's other architect, MVE + Partners, could not be read on 2026-10-12. A 2014 CurbedSF report quoted by LocalWiki gives 172 units for the destroyed building and 188 for the other, which is not tied here to a street address."
   ],
   "sources": [
    {

@@ -168,10 +168,11 @@
   "costs": [
    {
     "amount_usd": 575000000,
-    "what": "Tax-exempt bond financing for the UCSF building via California IBank, sold to Goldman Sachs",
-    "date": "2025-05",
-    "approximate": false,
+    "what": "Ceiling ('not to exceed') on the tax-exempt revenue bonds that California IBank was asked to authorize for the UCSF building; a planned financing limit, not a closed financing or a construction cost. The amount actually issued is not shown",
+    "date": "2025-04",
+    "approximate": true,
     "sources": [
+     "src-ibank-2025-04",
      "src-bisnow-2025-05"
     ],
     "kind": "financing",
@@ -720,6 +721,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Potrero Block 2's $575 million is now shown as a ceiling: California IBank's staff report asked its board to authorize bonds 'not to exceed' that amount, to be sold to underwriters led by Goldman Sachs. It is not a closed financing and not a construction cost.",
+    "source": "California IBank staff report, Campus Facilities Improvement Association, board meeting 2025-04-23 (ibank.ca.gov/wp-content/uploads/2025/04/4a-Campus-Facilities-Staff-Report.pdf)",
+    "sources": [
+     {
+      "title": "California IBank staff report, Campus Facilities Improvement Association, board meeting 2025-04-23 (ibank.ca.gov/wp-content/uploads/2025/04/4a-Campus-Facilities-Staff-Report.pdf)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "4175027",
+     "slug": "block-2",
+     "name": "Block 2",
+     "permalink": "https://pierandpoint.org/parcels/block-2/",
+     "api": "https://pierandpoint.org/api/v1/records/block-2.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-29",
     "kind": "correction",
@@ -1391,7 +1421,8 @@
    "The Real Deal's May 9, 2025 article on the $575M bond issuance is paywalled and could not be checked; Bisnow's coverage of the same financing was used instead.",
    "No source found giving a signed lease date between UCSF and the developer, or the term of that lease.",
    "As of 2026-09-29, the Regents' September 2024 CEQA-findings attachment says the project 'is now being considered for final approval'; no Regents minutes or action record recording adoption (or its date) was found, so the timeline says the findings were put before the Regents.",
-   "As of 2026-09-29, no closing or financing document for the IBank bond structure was found; the ground-lease/sublease arrangement is recorded as the plan Bisnow reported in May 2025."
+   "As of 2026-09-29, no closing or financing document for the IBank bond structure was found; the ground-lease/sublease arrangement is recorded as the plan Bisnow reported in May 2025.",
+   "The $575 million figure is a ceiling: IBank's staff report (board meeting April 23, 2025, Resolution No. 25-09) recommends bonds \"in an aggregate amount not to exceed $575,000,000\" and gives an expected closing date of May 28, 2025, and says the bonds \"will be secured by an Indenture and sold through a public offering to Goldman Sachs & Co., LLC, as representative of the underwriters\". Bisnow (2025-05-13) reports a plan to sell bonds, not a completed sale. No closing document or issued amount was found, so no financing is recorded as closed."
   ],
   "sources": [
    {
@@ -1530,6 +1561,14 @@
     "publisher": "DataSF / SF Office of the Assessor-Recorder",
     "url": "https://data.sf.gov/resource/acdm-wktn.json",
     "accessed": "2026-09-29"
+   },
+   {
+    "id": "src-ibank-2025-04",
+    "title": "Conduit 501(c)(3) Revenue Bond Financing Program Staff Report, Campus Facilities Improvement Association (Resolution No. 25-09)",
+    "publisher": "California Infrastructure and Economic Development Bank (IBank)",
+    "date": "2025-04-23",
+    "url": "https://ibank.ca.gov/wp-content/uploads/2025/04/4a-Campus-Facilities-Staff-Report.pdf",
+    "accessed": "2026-10-12"
    },
    {
     "id": null,
