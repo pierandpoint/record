@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-10-11",
+ "generated": "2026-10-12",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -51,15 +51,15 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- a hand trace of the pier deck's visible outer edge on satellite imagery (accurate to a few metres at best), not a surveyed footprint and not a Port or Assessor geometry. It covers the deck and shed only, not the pilings or aprons beneath or beside it, and the pier's true outline under the shed roof cannot be seen. The Assessor's own outline for the pier is lot 9900054 (see 'Traced from' above); this trace and that lot differ at the edges, with 92% of the trace inside the lot.",
-    "digitized_from": "Outline: a hand trace of the pier deck's outer edge on Esri World Imagery (zoom 20, imagery captured 2025-08-29), read off a latitude/longitude grid and checked by overlaying the trace on the imagery. No Port GIS shapefile or site-plan figure was available to trace from. Assessor lot: Pier 54 is lot 9900054 (block 9900, lot 054). DataSF's 'Parcels - Active and Retired' dataset (acdm-wktn), queried by lot number on 2026-10-10 and read again on 2026-10-11, lists Assessor lot 9900054 in block 9900 (lot 054), marked active and on the Assessor's secured roll, in the copy dated 2026-10-01. Port piers carry no street name in that dataset, so a search for PIER-numbered street names finds none: they are block 9900, with the pier number as the lot. This hand trace lies 92% inside lot 9900054 and covers 89% of it; the lot outline has not been used in its place. The earlier placeholder box was anchored to the 500-599 Terry A. Francois Blvd address range (California State Parks Division of Boating and Waterways lists a combined 'Pier 54 & Pier 52 BLF' boat-launch facility on Terry A. Francois Blvd in this same stretch) and lay in open water south of the pier.",
-    "why_no_real_parcel": "Pier 54 has its own Assessor lot, 9900054 (DataSF Parcels, acdm-wktn, checked 2026-10-10 and again 2026-10-11). This record still draws a hand trace of the deck rather than that lot's outline.",
+    "accuracy_caveat": "The outline is Assessor lot 9900054, so its edges are recorded lot lines, not a trace. DataSF lists the pier as its own lot, 9900054 (block 9900, with the pier number as the lot), and the earlier hand trace lies 92% inside it, so the match is clear; no Port document read names the lot. The lot's edge can run a few metres off the visible deck edge, and the lot is the legal boundary, not the deck and shed. Status and use are as shown on this record.",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 9900054 (recorded ; mapped 1998-07-01; active); cross-checked against Esri World Imagery (zoom 20, imagery captured 2025-08-29).",
+    "why_no_real_parcel": "Pier 54 has its own Assessor lot, 9900054 (DataSF Parcels, acdm-wktn, active), and this record's outline is that lot.",
     "regulatory_context": "Condemned and red-tagged in 2024; the Port announced it would permanently close at the end of 2024, displacing the pier's tenant businesses (SFGate, Sept 2024). The Port's draft Five-Year Capital Improvement Program (FY2027-31, Feb 2026) budgets a 'Pier 54 Shed Demolition' line item totaling $2.0M ($500,000 in FY2026-27 and $1,500,000 in FY2027-28); no line item for full substructure removal appears in that document."
    }
   },
   "centroid": {
-   "lon": -122.384713,
-   "lat": 37.770114
+   "lon": -122.385394,
+   "lat": 37.770257
   },
   "facts": [],
   "costs": [
@@ -206,6 +206,35 @@
     "sources": [
      {
       "title": "DataSF, Parcels - Active and Retired (acdm-wktn), the row for Assessor lot 9900054, read 2026-10-10 and 2026-10-11 (https://data.sf.gov/resource/acdm-wktn.json?blklot=9900054)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier_54",
+     "slug": "pier-54",
+     "name": "Pier 54",
+     "permalink": "https://pierandpoint.org/parcels/pier-54/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-54.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "adjacent",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-10",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Pier 54 now uses real Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 9900054",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 9900054"
      }
     ],
     "category": "correction",
@@ -377,7 +406,7 @@
     "overview": true
    }
   ],
-  "notes": "This is a Port maritime/pier facility, not an OCII Mission Bay South development block -- grouped under the Mission Bay South site here because that is the nearest tracked site and because DataSF's official 'Former San Francisco Redevelopment Agency Project Areas' boundary for Mission Bay South extends north along the Terry A. Francois Blvd shoreline to include this stretch. It is materially farther from Mission Rock's own tracked footprint (Pier 48/50, ~470m away) than from Mission Bay South's nearest tracked features (the UCSF Illinois Street Garage/P24 lawn, ~30m away). Recorded as adjacent rather than tracked because it is Port-jurisdiction maritime infrastructure being demolished, not a Mission Bay OCII development parcel like this site's other tracked records. A derelict timber pier stands just north of this footprint, separate from it (probably Pier 52, a separate Port asset; the identification is not confirmed by a source and it is not part of this record).",
+  "notes": "Pier 54's outline is Assessor lot 9900054 (see the accuracy note). This is a Port maritime/pier facility, not an OCII Mission Bay South development block -- grouped under the Mission Bay South site here because that is the nearest tracked site and because DataSF's official 'Former San Francisco Redevelopment Agency Project Areas' boundary for Mission Bay South extends north along the Terry A. Francois Blvd shoreline to include this stretch. It is materially farther from Mission Rock's own tracked footprint (Pier 48/50, ~470m away) than from Mission Bay South's nearest tracked features (the UCSF Illinois Street Garage/P24 lawn, ~30m away). Recorded as adjacent rather than tracked because it is Port-jurisdiction maritime infrastructure being demolished, not a Mission Bay OCII development parcel like this site's other tracked records. A derelict timber pier stands just north of this footprint, separate from it (probably Pier 52, a separate Port asset; the identification is not confirmed by a source and it is not part of this record).",
   "has_record_file": true,
   "last_verified": "2026-09-28",
   "tenants": [],
@@ -386,28 +415,80 @@
    "coordinates": [
     [
      [
-      -122.38561,
-      37.77066
+      -122.385593216,
+      37.77020751
      ],
      [
-      -122.38313,
-      37.769763
+      -122.38560247,
+      37.770229392
      ],
      [
-      -122.38335,
-      37.76938
+      -122.385612204,
+      37.770251143
      ],
      [
-      -122.38501,
-      37.76998
+      -122.385622414,
+      37.770272757
      ],
      [
-      -122.38557,
-      37.77024
+      -122.385633098,
+      37.770294225
      ],
      [
-      -122.38561,
-      37.77066
+      -122.385644253,
+      37.770315541
+     ],
+     [
+      -122.385655873,
+      37.7703367
+     ],
+     [
+      -122.385667958,
+      37.770357695
+     ],
+     [
+      -122.385680503,
+      37.770378519
+     ],
+     [
+      -122.385693503,
+      37.770399166
+     ],
+     [
+      -122.385708254,
+      37.770421561
+     ],
+     [
+      -122.385807745,
+      37.770569149
+     ],
+     [
+      -122.385724228,
+      37.770591968
+     ],
+     [
+      -122.385558528,
+      37.770637242
+     ],
+     [
+      -122.383155402,
+      37.769708892
+     ],
+     [
+      -122.383375613,
+      37.769332664
+     ],
+     [
+      -122.38556948,
+      37.770179724
+     ],
+     [
+      -122.385584444,
+      37.770185503
+     ],
+     [
+      -122.385593216,
+      37.77020751
      ]
     ]
    ]
