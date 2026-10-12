@@ -39,7 +39,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL lot geometry -- the outline is the union of Assessor lots 8706264 and 8706003 (6,453 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed the surveyed building footprint (DataSF Building Footprints (mblr SF8706264)); 95% of that outline lies inside the lot and it covered 69% of the lot. The building spans two Assessor lots, 8706264 and 8706003, which DataSF's Assessor layer records at the same address (150 Berry St); the roll cites lot 8706264.",
+    "accuracy_caveat": "REAL lot geometry -- the outline is the union of Assessor lots 8706264 and 8706003 (6,453 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed the surveyed building footprint (DataSF Building Footprints (mblr SF8706264)); 95% of that outline lies inside the lot and it covered 69% of the lot. The building spans two Assessor lots, 8706264 and 8706003, which DataSF's parcel layer lists on Berry St (8706264 as 150 Berry St, 8706003 as 150-152 Berry St). The Assessor's secured roll puts the building's data under lot 8706003 (150 Berry St, Multi-Family Residential, 101 units, year built 2002); the roll's entry for lot 8706264 is for 213 King St (Commercial Retail, no units, year built 2003), so the roll does not cite lot 8706264 for this building.",
     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lots 8706264 and 8706003 (mapped 2001-03-20, 2003-08-27; active), joined into one outline; the earlier outline came from: DataSF Building Footprints (mblr SF8706264); name/address from Mission Housing Development Corporation's own project page and press coverage; OpenStreetMap way 679290110 tags the footprint but carries no name/address of its own"
    }
   },
@@ -154,6 +154,35 @@
     "permalink": "https://pierandpoint.org/changes/#record"
    },
    {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Rich Sorro Commons page no longer says the Assessor's year built is 2003: that year belongs to a retail lot at 213 King St. The roll entry for 150 Berry St, under lot 8706003, gives 2002 and 101 units, matching the July 2002 opening.",
+    "source": "DataSF Assessor Historical Secured Property Tax Rolls (wv5m-vpq2), parcels 8706264 and 8706003; DataSF Parcels - Active and Retired (acdm-wktn)",
+    "sources": [
+     {
+      "title": "DataSF Assessor Historical Secured Property Tax Rolls (wv5m-vpq2), parcels 8706264 and 8706003; DataSF Parcels - Active and Retired (acdm-wktn)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_rich_sorro_commons",
+     "slug": "rich-sorro-commons",
+     "name": "Rich Sorro Commons",
+     "permalink": "https://pierandpoint.org/parcels/rich-sorro-commons/",
+     "api": "https://pierandpoint.org/api/v1/records/rich-sorro-commons.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-29",
     "kind": "correction",
     "kind_label": "Correction",
@@ -230,7 +259,7 @@
    }
   ],
   "open_questions": [
-   "DataSF Assessor's own year_property_built field records 2003, one year after Mission Housing's stated July 2002 opening -- likely reflects the tax roll's assessment lag rather than a different construction date; not further reconciled here.",
+   "The DataSF Assessor's secured roll for 150 Berry St (lot 8706003: Multi-Family Residential, 101 units, year_property_built 2002) agrees with Mission Housing's stated July 2002 opening, and gives 101 units where Mission Housing and the permit say 100. The record had earlier read a 2003 year built from lot 8706264, but the roll lists that lot at 213 King St (Commercial Retail, no units, year built 2003), a different property, so that year is not used.",
    "The 2000 construction permit's own block/lot (block 3795B, lot 001, an older pre-redevelopment block grid) differs from the Assessor's current blklot 8706264; the address, 100-unit/5-story description, and October 2002 permit-completion date (matching Mission Housing's July 2002 opening and the Assessor's 2003 year, both within months) line up with this parcel, so this is treated as Mission Bay's redevelopment-era block renumbering, not a different building."
   ],
   "sources": [
@@ -243,10 +272,17 @@
    },
    {
     "id": "src-datasf-8706264",
-    "title": "Assessor Historical Secured Property Tax Rolls (blklot 8706264, 150 Berry St): year_property_built 2003",
+    "title": "Assessor Historical Secured Property Tax Rolls (blklot 8706264, listed on the roll at 213 King St, year_property_built 2003): not this building's roll entry",
     "publisher": "DataSF",
     "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8706264",
     "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-datasf-8706003",
+    "title": "Assessor Historical Secured Property Tax Rolls (blklot 8706003, 150 Berry St): Multi-Family Residential, 101 units, year_property_built 2002",
+    "publisher": "DataSF",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8706003",
+    "accessed": "2026-10-12"
    },
    {
     "id": "src-datasf-permit-richsorro",

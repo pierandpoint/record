@@ -55,9 +55,9 @@
    {
     "date": "2007-05-03",
     "date_label": "May 3, 2007",
-    "status": "under_construction",
-    "status_label": "Under construction",
-    "text": "SF Dept. of Building Inspection permit #200705030366 filed for a temporary tower crane \"for construction of 6 story building\" at this address",
+    "status": null,
+    "status_label": null,
+    "text": "SF Dept. of Building Inspection permit #200705030366 filed (the application date) for a temporary tower crane \"for construction of 6 story building\" at this address; DBI approved it on 2007-09-11 and issued it on 2007-09-20. A crane permit is not a construction start, and no source read dates the start of construction",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -71,8 +71,8 @@
     ],
     "source": "DataSF / SF Department of Building Inspection",
     "origin": "record",
-    "category": "status",
-    "category_label": "Status",
+    "category": "milestone",
+    "category_label": "Milestone",
     "record": {
      "id": "mission_bay_500_terry_francois",
      "slug": "500-terry-a-francois-boulevard",
@@ -142,6 +142,35 @@
     "sources": [
      {
       "title": "DataSF Assessor parcels (acdm-wktn), lot 8721010"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_500_terry_francois",
+     "slug": "500-terry-a-francois-boulevard",
+     "name": "500 Terry A. Francois Boulevard",
+     "permalink": "https://pierandpoint.org/parcels/500-terry-a-francois-boulevard/",
+     "api": "https://pierandpoint.org/api/v1/records/500-terry-a-francois-boulevard.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The 500 Terry A. Francois page no longer shows the building as under construction on the day a crane permit was filed in 2007; the permit was issued in September 2007 and no source gives a construction start date.",
+    "source": "DataSF Building Permits i98e-djp9, permit 200705030366 (data.sf.gov/resource/i98e-djp9.json?permit_number=200705030366)",
+    "sources": [
+     {
+      "title": "DataSF Building Permits i98e-djp9, permit 200705030366 (data.sf.gov/resource/i98e-djp9.json?permit_number=200705030366)"
      }
     ],
     "category": "correction",

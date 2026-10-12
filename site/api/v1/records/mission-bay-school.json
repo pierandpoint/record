@@ -97,8 +97,9 @@
    },
    {
     "key": "enrollment_capacity",
-    "value": "Reported inconsistently: 'more than 400 students' at full build-out (2026 report) vs. 'up to 550' and '600' in 2022 pre-construction reporting -- not reconciled, see open questions",
+    "value": "550 students at full build-out per SFUSD (press release of August 7, 2026: \"grow to a 550-student elementary school serving Pre-K through 5th grade\"); SF Standard (August 6, 2026) says 'more than 400 students' and 2022 pre-construction reporting said 'up to 550' and '600' -- see open questions",
     "sources": [
+     "src-sfusd-pr-2026-08-07",
      "src-sfstandard-2026",
      "src-sfyimby-groundbreak",
      "src-sfyimby-hire"
@@ -199,6 +200,43 @@
      }
     ],
     "source": "The San Francisco Standard, 2026-08-06; Hoodline, 2025-10",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8709025",
+     "slug": "mission-bay-school",
+     "name": "Mission Bay School",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-school/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-school.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2022",
+    "date_label": "~2022",
+    "status": null,
+    "status_label": null,
+    "text": "The school's land parcel is formally transferred from UCSF to SFUSD (SFUSD, August 7, 2026: \"The land parcel was formally transferred from UCSF to SFUSD in 2022\"); the day is not stated",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-sfusd-pr-2026-08-07",
+      "title": "SFUSD Celebrates Milestone Opening of Long-Awaited New School in Mission Bay Neighborhood (press release)",
+      "publisher": "San Francisco Unified School District",
+      "date": "2026-08-07",
+      "url": "https://www.sfusd.edu/about-sfusd/sfusd-news/press-releases/2026-08-07-sfusd-celebrates-milestone-opening-long-awaited-new-school-mission-bay-neighborhood",
+      "accessed": "2026-10-12"
+     }
+    ],
+    "source": "San Francisco Unified School District, 2026-08-07",
     "origin": "record",
     "category": "milestone",
     "category_label": "Milestone",
@@ -576,6 +614,35 @@
     "permalink": "https://pierandpoint.org/changes/#record"
    },
    {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Mission Bay School page now records that SFUSD says the school's land was formally transferred from UCSF to SFUSD in 2022, and gives SFUSD's own figure of 550 students at full build-out.",
+    "source": "SFUSD press release, 2026-08-07 (sfusd.edu/about-sfusd/sfusd-news/press-releases/2026-08-07-sfusd-celebrates-milestone-opening-long-awaited-new-school-mission-bay-neighborhood)",
+    "sources": [
+     {
+      "title": "SFUSD press release, 2026-08-07 (sfusd.edu/about-sfusd/sfusd-news/press-releases/2026-08-07-sfusd-celebrates-milestone-opening-long-awaited-new-school-mission-bay-neighborhood)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8709025",
+     "slug": "mission-bay-school",
+     "name": "Mission Bay School",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-school/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-school.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-10-11",
     "kind": "added",
     "kind_label": "Added",
@@ -896,12 +963,12 @@
    }
   ],
   "open_questions": [
-   "Full-build-out (2032) enrollment capacity is not consistently reported across sources ('more than 400', 'up to 550', '600'); no SFUSD primary-source capacity figure was found.",
+   "Full-build-out (2032) enrollment capacity is reported differently: SFUSD's August 7, 2026 press release says the school will \"grow to a 550-student elementary school serving Pre-K through 5th grade\", SF Standard (August 6, 2026) says more than 400 students, and 2022 pre-construction reports said up to 550 and 600. The district's own figure is 550.",
    "Total project cost is ambiguous: SFUSD's construction contract with McCarthy was $95.39M, but a trade-press piece at the 2026 opening cites $129M as the project total, with no breakdown of the difference found.",
    "No SFUSD document names a square-footage figure officially; the 81,800/82,000 sq ft figures come from trade press, not the district itself.",
    "No openly licensed image was found; none is hosted here.",
    "CORRECTED 2026-09-24: the 2032-08 grade-growth milestone (school growing one grade per year to full TK-5) was tagged with a 'planned' status, which the site's timeline read as the whole record reverting to pre-construction 'planned' status for any date past August 2032 -- even though the school is already built and open. The same error had been found on 'Prequel Park (Power Station sub-area)', and every record was then checked for the same pattern, which found this one. That milestone describes enrollment growth, not a change in construction status, so it should never have carried a status at all; the status was removed. The milestone's date, text and sources are unchanged.",
-   "2026-09-29: no source was found for a 2022 UCSF transfer of the school site to SFUSD or a 1988 set-aside, so both were removed; no post-completion report was found for the January 2026 construction-completion schedule; [Updated 2026-10-12: the first day of school, Monday, August 17, 2026, is now confirmed from a readable source written the same day, after the event: the SF Chronicle (Aug 17, 2026) reports \"A brand-new school had opened. Nearly 200 San Francisco students poured into Mission Bay School\" and describes the first day of class there.]"
+   "The school site's transfer: SFUSD's August 7, 2026 press release says \"The land parcel was formally transferred from UCSF to SFUSD in 2022, although the plan for a school in Mission Bay has been in the works since 1998\" (an event year stated by the district; no day is given). No source was found for a 1988 set-aside, so that was removed on 2026-09-29. No post-completion report was found for the January 2026 construction-completion schedule; [Updated 2026-10-12: the first day of school, Monday, August 17, 2026, is now confirmed from a readable source written the same day, after the event: the SF Chronicle (Aug 17, 2026) reports \"A brand-new school had opened. Nearly 200 San Francisco students poured into Mission Bay School\" and describes the first day of class there.]"
   ],
   "sources": [
    {
@@ -926,6 +993,14 @@
     "date": "2025-10-10",
     "url": "https://www.sfusd.edu/announcements/2025-10-10-mission-bay-school-opens-august-2026",
     "accessed": "2026-09-18"
+   },
+   {
+    "id": "src-sfusd-pr-2026-08-07",
+    "title": "SFUSD Celebrates Milestone Opening of Long-Awaited New School in Mission Bay Neighborhood (press release)",
+    "publisher": "San Francisco Unified School District",
+    "date": "2026-08-07",
+    "url": "https://www.sfusd.edu/about-sfusd/sfusd-news/press-releases/2026-08-07-sfusd-celebrates-milestone-opening-long-awaited-new-school-mission-bay-neighborhood",
+    "accessed": "2026-10-12"
    },
    {
     "id": "src-hoodline-2025",

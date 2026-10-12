@@ -30,10 +30,11 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "1450 Owens Street is a 7-story, ~215,000 sq ft laboratory/office building (133,000 sq ft lab, ~50,000 sq ft office, 2,600 sq ft ground-floor retail) at the Alexandria Center for Science and Technology's Mission Bay Megacampus, developed by Alexandria Real Estate Equities. Sources conflict on when it came online (see open questions); in March 2026 Gladstone Institutes announced a long-term lease of more than 105,000 sq ft as its anchor tenant, with about 20 labs opening there in early 2027.",
+  "summary": "1450 Owens Street is a 7-story laboratory/office building (133,000 sq ft of laboratory, 49,999 sq ft of office and 2,600 sq ft of ground-floor retail, per SF YIMBY in February 2023; sources give different total areas, see open questions) at the Alexandria Center for Science and Technology's Mission Bay Megacampus, developed by Alexandria Real Estate Equities. Sources conflict on when it came online (see open questions); in March 2026 Gladstone Institutes announced a long-term lease of more than 105,000 sq ft as its anchor tenant, with about 20 labs opening there in early 2027.",
   "summary_sources": [
-   "src-cpe-2026",
-   "src-gladstone-2026"
+   "src-sfyimby-2023",
+   "src-gladstone-2026",
+   "src-bisnow-2026"
   ],
   "shape": {
    "kind": "parcel",
@@ -585,6 +586,35 @@
     "sources": [
      {
       "title": "Bisnow, 2026-03-25 (bisnow.com/san-francisco/news/life-sciences/gladstone-institutes-leases-105k-sf-mission-bay-133827); DataSF Building Permits i98e-djp9, permit 202012281760"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8709017",
+     "slug": "1450-owens-street",
+     "name": "1450 Owens Street",
+     "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
+     "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The 1450 Owens page no longer states a single total building area: Bisnow says 208,000 sq ft, a city permit describes about 192,000 gross sq ft and SF YIMBY's components add to about 185,600 sq ft. The earlier 215,000 sq ft figure came from a page that could not be read.",
+    "source": "Bisnow, 2026-03-25; DataSF Building Permits i98e-djp9, permit 202012281760; SF YIMBY, 2023-02 (sfyimby.com/2023/02/construction-tops-out-for-1450-owens-street-in-mission-bay-san-francisco.html)",
+    "sources": [
+     {
+      "title": "Bisnow, 2026-03-25; DataSF Building Permits i98e-djp9, permit 202012281760; SF YIMBY, 2023-02 (sfyimby.com/2023/02/construction-tops-out-for-1450-owens-street-in-mission-bay-san-francisco.html)"
      }
     ],
     "category": "correction",
@@ -1478,6 +1508,7 @@
    }
   ],
   "open_questions": [
+   "Total building area is not settled: Bisnow (2026-03-25) calls it a \"208K SF facility\" (and separately mentions 110K SF of above-ground parking); the DBI new-construction permit 202012281760 describes \"a 7-story, type 1-a, warm shell and core for approximately 192,000 gross square feet\"; SF YIMBY (February 2023) lists 133,000 sq ft of laboratory, 49,999 sq ft of office and 2,600 sq ft of retail, which add to 185,599 sq ft. Commercial Property Executive (2026-03-27) is the source this record had used for \"~215,000 sq ft\"; its page returned HTTP 403 on 2026-10-12, so that figure is not shown.",
    "Exact day of the August 2021 permit issuance is not sourced, only the month.",
    "Exact topping-out date is not sourced; only that it had occurred by the San Francisco YIMBY article's February 2023 publication.",
    "When the building came online is in conflict: this record had taken 2024 from Commercial Property Executive's March 2026 coverage, which could not be read on 2026-10-12 (blocked, HTTP 403), so that year is not verified; Bisnow (2026-03-25) says the property \"is expected to come online in 2027\"; DBI new-construction permit 202012281760 (7-story warm shell and core) has status 'complete' with a completed date of 2025-05-19 (DataSF i98e-djp9), which records the permit's closure, not an opening or occupancy date. No month or day is sourced, and no source read states that the building came online in 2024.",

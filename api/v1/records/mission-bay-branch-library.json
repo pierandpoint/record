@@ -81,6 +81,42 @@
     "relation": "tracked"
    },
    {
+    "date": "2005-04-19",
+    "date_label": "Apr 19, 2005",
+    "status": null,
+    "status_label": null,
+    "text": "DBI issues permit 200407088299 (filed July 8, 2004) for an interior improvement of shell space \"to create branch library\" at 201 Berry St, estimated cost $1,500,000; DBI's record lists its status as expired (status date 2011-11-02), with no completion date",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dbi-200407088299",
+      "title": "DBI Building Permits dataset, permit 200407088299 (interior improvement to create branch library, 201 Berry St, block 8708 lot 006 at filing)",
+      "publisher": "San Francisco Department of Building Inspection via DataSF (i98e-djp9)",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=200407088299",
+      "accessed": "2026-10-12"
+     }
+    ],
+    "source": "San Francisco Department of Building Inspection via DataSF (i98e-djp9)",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "8708110",
+     "slug": "mission-bay-branch-library",
+     "name": "Mission Bay Branch Library",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-branch-library/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-branch-library.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
     "date": "2006-07-08",
     "date_label": "Jul 8, 2006",
     "status": "complete",
@@ -147,9 +183,74 @@
      "url": "https://pierandpoint.org/sites/mission-bay/"
     },
     "relation": "tracked"
+   },
+   {
+    "date": "2007-03-08",
+    "date_label": "Mar 8, 2007",
+    "status": null,
+    "status_label": null,
+    "text": "DBI records the new-construction permit 200208093627 (\"erect 7 story 140 dwelling units, office, library, retail & parking\" at 201 Berry St; filed 2002-08-09, issued 2003-07-29) as completed. This is the permit's completed date for the whole building, not the library's opening",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-dbi-200208093627",
+      "title": "DBI Building Permits dataset, permit 200208093627 (new construction, 201 Berry St, block 8708 lot 006 at filing)",
+      "publisher": "San Francisco Department of Building Inspection via DataSF (i98e-djp9)",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=200208093627",
+      "accessed": "2026-10-12"
+     }
+    ],
+    "source": "San Francisco Department of Building Inspection via DataSF (i98e-djp9)",
+    "origin": "record",
+    "category": "retail",
+    "category_label": "Retail",
+    "record": {
+     "id": "8708110",
+     "slug": "mission-bay-branch-library",
+     "name": "Mission Bay Branch Library",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-branch-library/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-branch-library.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Mission Bay Library page now lists the city building permits for its building at 201 Berry St, including a 2005 permit to create the branch library; the library's own opening date, July 8, 2006, is unchanged.",
+    "source": "DataSF Building Permits i98e-djp9, permits 200208093627 and 200407088299 (data.sfgov.org/resource/i98e-djp9.json?permit_number=...)",
+    "sources": [
+     {
+      "title": "DataSF Building Permits i98e-djp9, permits 200208093627 and 200407088299 (data.sfgov.org/resource/i98e-djp9.json?permit_number=...)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8708110",
+     "slug": "mission-bay-branch-library",
+     "name": "Mission Bay Branch Library",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-branch-library/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-branch-library.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-10",
     "kind": "added",
@@ -343,9 +444,23 @@
   "open_questions": [
    "Pier & Point's own field photos are shown on this record. Its summary is limited to what its cited source was re-read to confirm on 2026-09-27; fuller details shown in this record's map notes (developer, architect, unit count, year built) were left out where that source didn't state them. Not yet researched: no milestones, costs or facts.",
    "Phil'z Coffee at 201 Berry St: DataSF Registered Business Locations gives a registration start of 2007-04-01, which is not an opening date, and no source found dates the opening; the tenant's own locations page (philzcoffee.com/locations) lists the Berry St store as of 2026-09-29.",
-   "The Assessor parcel this record is joined to (8708110) is listed at 201 Berry St, with a 2005 year built, while the library is at 960 4th St. DBI's permit records for 960 4th St show only house-number and street-space permits, so no construction-permit completion date is available. The date shown is the library's own stated opening."
+   "The Assessor parcel this record is joined to (8708110) is listed at 201 Berry St, with a 2005 year built, while the library is at 960 4th St. DBI's permits filed under 960 4th St show only house-number and street-space permits, but permits under the parcel's address 201 Berry St (block 8708, lot 006 when filed, before the lots were renumbered) cover the library: 200208093627 (new construction of a 7-story building with 140 dwelling units, office, library, retail and parking; completed 2007-03-08) and 200407088299 (interior improvement of shell space \\\"to create branch library\\\", issued 2005-04-19, status expired with no completion date). The permits' completion dates are for the building or are absent, and the library's own stated opening (July 8, 2006) falls between them; the date shown as the opening is the library's."
   ],
   "sources": [
+   {
+    "id": "src-dbi-200208093627",
+    "title": "DBI Building Permits dataset, permit 200208093627 (new construction, 201 Berry St, block 8708 lot 006 at filing)",
+    "publisher": "San Francisco Department of Building Inspection via DataSF (i98e-djp9)",
+    "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=200208093627",
+    "accessed": "2026-10-12"
+   },
+   {
+    "id": "src-dbi-200407088299",
+    "title": "DBI Building Permits dataset, permit 200407088299 (interior improvement to create branch library, 201 Berry St, block 8708 lot 006 at filing)",
+    "publisher": "San Francisco Department of Building Inspection via DataSF (i98e-djp9)",
+    "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=200407088299",
+    "accessed": "2026-10-12"
+   },
    {
     "id": "src-datasf-secured-roll",
     "title": "Assessor Historical Secured Property Tax Rolls (blklot 8708110, 2025 roll: class LIBRARY, built 2005, 1 story)",
