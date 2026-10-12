@@ -4,17 +4,17 @@
     {
       "type": "Feature",
       "properties": {
-        "project_name": "Prequel Park (Power Station sub-area)",
+        "project_name": "Prequel Park (interim)",
         "site": "Potrero Power Station",
         "status": "planned",
         "use": "park",
         "geometry_type": "approximate",
         "digitized_from": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 (shoreline shown as 'Waterfront Park'); Port Commission memo of Nov 14, 2025 (Calendar Item 10A) for the ~2-acre interim Prequel Park. (An earlier version also cited a Spring 2026 development-forecast listing that could not be located online and is not relied on.)",
-        "digitization_method": "NEWLY ADDED 2026-09-16 -- user pointed out that the already-tracked 'Prequel Park (Port sub-area)' polygon (0.4 acres, near the pier's point/breakwater) should connect to Blocks 4 and 9 and to Humboldt Street Plaza, and should not overlap Block 9. That file's own regulatory_context already noted it covers only ~0.4 of a ~2-acre 'Prequel Park' interim open-space project (SF Port Commission Resolution 25-70, Nov 18 2025, amending Lease L-16662) -- the other ~1.6 acres sits on Potrero Power Station's own land (not Port jurisdiction), which had never been separately tracked. A construction-pipeline document (Spring 2026 dev forecast) independently describes this same project as a '2-acre Waterfront Park', strongly suggesting this Power-Station-land portion is the same physical shoreline corridor already traced (less precisely, and for a different purpose) as this dataset's separate 'Waterfront Park' feature (a D4D-diagram-labeled, long-term planning feature, sourced and georeferenced completely differently). Built this connector polygon by combining two already-validated sources rather than re-tracing from scratch: (1) the WEST/inner edge uses Block 4, Humboldt Street Plaza, and Block 9's own already-committed corners directly, so it shares an exact boundary with all three and cannot overlap Block 9 by construction; (2) the EAST/shoreline edge reuses Waterfront Park's own previously satellite-color-validated outer-shoreline trace (see that file's digitization_method for how it was built) between Block 4's latitude and Prequel Park (Port sub-area)'s own northernmost point, where the two pieces meet and touch -- except for a ~20m notch in that trace (its own vertices between the point at lon -122.38137/lat 37.75663 and the point at lon -122.38137/lat 37.75629) that pre-dated Block 9's GDAL/TPS correction and dipped into Block 9's real footprint; dropped those points since the west-edge chain now defines that boundary directly. STATUS CORRECTED 2026-09-24: this record's own dossier (data/records/prequel_park_power_station_subarea.json) had, since its creation, carried a summary and milestone history saying no source confirms construction has started, and its own open_questions explicitly flagged this file's 'under_construction' status as wrong ('Recommend planned until a dated source appears') -- that recommendation was never applied. A site visitor caught the resulting bug directly: the site showed 'under construction' today but reverted to 'planned' a couple of years into the future on the timeline scrubber, because the only real dated milestone with a status is the 2020-04-21 entitlement ('planned'), and the record's own future-projection milestone for 2026 is itself expected+'planned' (construction hasn't started yet, per every source), while the live status field alone (read only exactly at 'today') was stuck on the older, unsourced 'under_construction' value. Corrected to 'planned' to match the record's own sourced research and remove the contradiction; sibling record 'Prequel Park (Port sub-area)' already correctly says 'planned'. 2026-09-29 accuracy audit: this file cited no source (source_doc_urls was empty); it now lists the Port Commission memo of Nov 14, 2025 (Calendar Item 10A), the final D4D and the SF Chronicle of May 22, 2025. (1) The Port Commission adopted Resolution 25-70 amending Lease L-16662 on Nov 18, 2025 (Port Commission minutes), and the memo (p.3) says the park covers approximately 2 acres with approximately 0.4 acre on the Port premises; the '~1.6 acres' on Power Station land in the log above is our own subtraction, not a sourced figure. (2) The log above says a Spring 2026 construction-pipeline document independently describes the project as a '2-acre Waterfront Park'; that document could not be located online or checked, so it should not be relied on. The '2-acre' size is supported by the Port memo instead. 2026-10-02: public-text pass. accuracy_caveat, why_no_real_parcel, notes reworded for readers (meaning unchanged; no change to the shape, status, use or geometry_type); previous wording -- accuracy_caveat: 'APPROXIMATE -- this polygon combines two different sourcing methods (see digitization_method) and has not been independently re-verified as a whole against satellite imagery. Its west edge is exact (shared vertices with Block 4/Humboldt Street Plaza/Block 9). Its east/shoreline edge inherits whatever accuracy Waterfront Park's own trace has -- treat it as a reasonable but not freshly-verified approximation of the real shoreline. This is the 'Power Station sub-area' complement to 'Prequel Park (Port sub-area)' -- together they approximate the full ~2-acre interim park project, though the true internal boundary between Port and Power-Station land has not been independently confirmed. The ~2-acre figure is stated in the Port Commission memo of Nov 14, 2025 (Calendar Item 10A, p.3: Prequel Park 'will cover approximately 2 acres, of which approximately .4 acres will be located on the Premises'); the press gives 2.5-2.75 acres.'; why_no_real_parcel: 'Open space with no subdivided Assessor parcel of its own within the largely unaddressed former power-station site. (This is our own parcel-search narration, not something any cited source establishes.)'; notes: 'Newly added 2026-09-16 to complement 'Prequel Park (Port sub-area)' -- see accuracy_caveat.'.",
-        "accuracy_caveat": "APPROXIMATE -- this polygon combines two different sourcing methods (how this shape was traced, including earlier versions, is logged in its data file in the public data repository, https://github.com/pierandpoint/record) and has not been independently re-verified as a whole against satellite imagery. Its west edge is exact (shared vertices with Block 4/Humboldt Street Plaza/Block 9). Its east/shoreline edge inherits whatever accuracy Waterfront Park's own trace has -- treat it as a reasonable but not freshly-verified approximation of the real shoreline. This is the 'Power Station sub-area' complement to 'Prequel Park (Port sub-area)' -- together they approximate the full ~2-acre interim park project, though the true internal boundary between Port and Power-Station land has not been independently confirmed. The ~2-acre figure is stated in the Port Commission memo of Nov 14, 2025 (Calendar Item 10A, p.3: Prequel Park 'will cover approximately 2 acres, of which approximately .4 acres will be located on the Premises'); the press gives 2.5-2.75 acres.",
-        "why_no_real_parcel": "Open space with no subdivided Assessor parcel of its own within the largely unaddressed former power-station site. (This is Pier & Point's own parcel search, not something any cited source establishes.)",
+        "digitization_method": "NEWLY ADDED 2026-09-16 -- user pointed out that the already-tracked 'Prequel Park (Port sub-area)' polygon (0.4 acres, near the pier's point/breakwater) should connect to Blocks 4 and 9 and to Humboldt Street Plaza, and should not overlap Block 9. That file's own regulatory_context already noted it covers only ~0.4 of a ~2-acre 'Prequel Park' interim open-space project (SF Port Commission Resolution 25-70, Nov 18 2025, amending Lease L-16662) -- the other ~1.6 acres sits on Potrero Power Station's own land (not Port jurisdiction), which had never been separately tracked. A construction-pipeline document (Spring 2026 dev forecast) independently describes this same project as a '2-acre Waterfront Park', strongly suggesting this Power-Station-land portion is the same physical shoreline corridor already traced (less precisely, and for a different purpose) as this dataset's separate 'Waterfront Park' feature (a D4D-diagram-labeled, long-term planning feature, sourced and georeferenced completely differently). Built this connector polygon by combining two already-validated sources rather than re-tracing from scratch: (1) the WEST/inner edge uses Block 4, Humboldt Street Plaza, and Block 9's own already-committed corners directly, so it shares an exact boundary with all three and cannot overlap Block 9 by construction; (2) the EAST/shoreline edge reuses Waterfront Park's own previously satellite-color-validated outer-shoreline trace (see that file's digitization_method for how it was built) between Block 4's latitude and Prequel Park (Port sub-area)'s own northernmost point, where the two pieces meet and touch -- except for a ~20m notch in that trace (its own vertices between the point at lon -122.38137/lat 37.75663 and the point at lon -122.38137/lat 37.75629) that pre-dated Block 9's GDAL/TPS correction and dipped into Block 9's real footprint; dropped those points since the west-edge chain now defines that boundary directly. STATUS CORRECTED 2026-09-24: this record's own dossier (data/records/prequel_park_power_station_subarea.json) had, since its creation, carried a summary and milestone history saying no source confirms construction has started, and its own open_questions explicitly flagged this file's 'under_construction' status as wrong ('Recommend planned until a dated source appears') -- that recommendation was never applied. A site visitor caught the resulting bug directly: the site showed 'under construction' today but reverted to 'planned' a couple of years into the future on the timeline scrubber, because the only real dated milestone with a status is the 2020-04-21 entitlement ('planned'), and the record's own future-projection milestone for 2026 is itself expected+'planned' (construction hasn't started yet, per every source), while the live status field alone (read only exactly at 'today') was stuck on the older, unsourced 'under_construction' value. Corrected to 'planned' to match the record's own sourced research and remove the contradiction; sibling record 'Prequel Park (Port sub-area)' already correctly says 'planned'. 2026-09-29 accuracy audit: this file cited no source (source_doc_urls was empty); it now lists the Port Commission memo of Nov 14, 2025 (Calendar Item 10A), the final D4D and the SF Chronicle of May 22, 2025. (1) The Port Commission adopted Resolution 25-70 amending Lease L-16662 on Nov 18, 2025 (Port Commission minutes), and the memo (p.3) says the park covers approximately 2 acres with approximately 0.4 acre on the Port premises; the '~1.6 acres' on Power Station land in the log above is our own subtraction, not a sourced figure. (2) The log above says a Spring 2026 construction-pipeline document independently describes the project as a '2-acre Waterfront Park'; that document could not be located online or checked, so it should not be relied on. The '2-acre' size is supported by the Port memo instead. 2026-10-02: public-text pass. accuracy_caveat, why_no_real_parcel, notes reworded for readers (meaning unchanged; no change to the shape, status, use or geometry_type); previous wording -- accuracy_caveat: 'APPROXIMATE -- this polygon combines two different sourcing methods (see digitization_method) and has not been independently re-verified as a whole against satellite imagery. Its west edge is exact (shared vertices with Block 4/Humboldt Street Plaza/Block 9). Its east/shoreline edge inherits whatever accuracy Waterfront Park's own trace has -- treat it as a reasonable but not freshly-verified approximation of the real shoreline. This is the 'Power Station sub-area' complement to 'Prequel Park (Port sub-area)' -- together they approximate the full ~2-acre interim park project, though the true internal boundary between Port and Power-Station land has not been independently confirmed. The ~2-acre figure is stated in the Port Commission memo of Nov 14, 2025 (Calendar Item 10A, p.3: Prequel Park 'will cover approximately 2 acres, of which approximately .4 acres will be located on the Premises'); the press gives 2.5-2.75 acres.'; why_no_real_parcel: 'Open space with no subdivided Assessor parcel of its own within the largely unaddressed former power-station site. (This is our own parcel-search narration, not something any cited source establishes.)'; notes: 'Newly added 2026-09-16 to complement 'Prequel Park (Port sub-area)' -- see accuracy_caveat.'. CHECKED 2026-10-11: DataSF's active lot 4175028 (21,885 m2, 1241 Delaware St, PPS-MU zoning, recorded 2022-08-30) holds 3,743 m2 of this drawing. It also holds Blocks 3, 4 and 9, Humboldt Street Plaza and parts of Prequel Park and Waterfront Park, so the owner reads it as an undivided parent lot; this park has no lot of its own and the drawing is kept. No change to the shape. REPLACED 2026-10-11 (shape and name; status and use unchanged; at the owner's direction): the Power Station sub-area drawing (5,108 m2) and the Port sub-area drawing (3,936 m2) were merged with the Waterfront Park trace and cut at Block 9's south edge and Block 4's north edge; the band between the cuts, with Block 9, Block 4 and Humboldt Street Plaza, is now this record's shape (13,876 m2). The Port sub-area record (prequel_park_port_subarea) is folded into this one; its shape file is kept in data/manual/ but no longer drawn. ",
+        "accuracy_caveat": "APPROXIMATE -- Pier & Point's own composition, not a drawn plan: no source read draws Prequel Park's boundary (the Port memo's Exhibit 1 is an unscaled schematic of the ownership sub-areas and the interim improvements; the Power Station website's map page shows an aerial rendering with no outline). The shape is the band of shoreline between Block 9's south edge and Block 4's north edge (each extended to the shore), joined with Block 9, Block 4 and Humboldt Street Plaza, which the interim park is read to occupy until those are built. That makes it 13,876 m2 (3.4 acres). Sources give about 2 acres (Port memo, Calendar Item 10A, Nov 14, 2025), 2.5 acres (Power Station website) and 2.75 acres (press), so none of these figures is certain. It overlaps Block 9, Block 4 and the plaza on purpose, and the overlap ends when those are built.",
+        "why_no_real_parcel": "Open space with no Assessor lot of its own: 92% of the shape lies inside DataSF's active lot 4175028 (21,885 m2, 1241 Delaware St), an undivided lot that also holds Blocks 3, 4 and 9, Humboldt Street Plaza, the Stack and parts of the shoreline parks (checked 2026-10-11).",
         "regulatory_context": "The Potrero Power Station-land portion of the ~2-acre Prequel Park interim open-space project (see 'Prequel Park (Port sub-area)' for the Port-jurisdiction portion and its own sourcing; the Port memo of Nov 14, 2025 puts about 0.4 acre on the Port premises). Per the Port memo the park is to include a multi-purpose lawn and sport courts, amphitheater seating, a quarter-mile walking and running track, water access and restrooms. Construction start is targeted for the third quarter of 2026 per the memo's p.4 (p.2 says the first quarter of 2026); no source confirms a start, so the status is 'planned'.",
-        "notes": "Added 2026-09-16 to complement 'Prequel Park (Port sub-area)' -- see the accuracy note for this shape.",
+        "notes": "Added 2026-09-16 to complement 'Prequel Park (Port sub-area)' -- see the accuracy note for this shape. The shoreline strip of this park is read to be the ground the permanent Waterfront Park is built on when the interim park ends, and Blocks 4 and 9 and Humboldt Street Plaza are built over the rest. Since 2026-10-11 this record covers the whole interim Prequel Park (the Power Station and Port sub-areas together) and is shown over Blocks 4 and 9 and Humboldt Street Plaza until they are built.",
         "images": [],
         "source_doc_urls": [
           "https://www.sfport.com/sites/default/files/2025-11/111825_10a_potrero_power_station_lease_amendment_0.pdf",
@@ -27,144 +27,704 @@
         "coordinates": [
           [
             [
+              -122.382427,
+              37.757752
+            ],
+            [
+              -122.382426997,
+              37.757752
+            ],
+            [
               -122.38185,
               37.757771
             ],
             [
-              -122.381801,
-              37.757235
+              -122.38185,
+              37.757771
             ],
             [
-              -122.381751,
-              37.757038
+              -122.381849998,
+              37.757771
             ],
             [
-              -122.381723,
-              37.756744
+              -122.381849998,
+              37.757771
             ],
             [
-              -122.381616,
-              37.756749
+              -122.381645353,
+              37.757777738
             ],
             [
-              -122.381576,
-              37.756326
+              -122.381645351,
+              37.757777738
             ],
             [
-              -122.381603,
-              37.756325
+              -122.381645352,
+              37.757777736
             ],
             [
-              -122.38158,
-              37.756088
+              -122.381683976,
+              37.75771304
             ],
             [
-              -122.381373,
-              37.755812
+              -122.381683978,
+              37.757713036
             ],
             [
-              -122.381296,
-              37.75588
+              -122.381683979,
+              37.757713034
             ],
             [
-              -122.381328,
-              37.755948
+              -122.381683983,
+              37.757713026
             ],
             [
-              -122.381344,
-              37.756016
+              -122.381683986,
+              37.757713017
             ],
             [
-              -122.381349,
-              37.756084
+              -122.381683987,
+              37.757713009
             ],
             [
-              -122.381349,
-              37.756152
+              -122.381683988,
+              37.757713
             ],
             [
-              -122.381365,
-              37.75622
+              -122.381683987,
+              37.757712991
             ],
             [
-              -122.381365,
-              37.756287
+              -122.381683986,
+              37.757712982
             ],
             [
-              -122.381368,
-              37.756627
+              -122.381683983,
+              37.757712974
             ],
             [
-              -122.381365,
-              37.756695
+              -122.381683979,
+              37.757712966
             ],
             [
-              -122.381371,
-              37.756763
+              -122.381683978,
+              37.757712964
             ],
             [
-              -122.381371,
-              37.75683
+              -122.381683976,
+              37.75771296
             ],
             [
-              -122.381395,
-              37.756898
+              -122.381644012,
+              37.75764502
             ],
             [
-              -122.381395,
-              37.756966
+              -122.381644009,
+              37.757645016
             ],
             [
-              -122.3814,
-              37.757034
+              -122.381644008,
+              37.757645014
             ],
             [
-              -122.381406,
-              37.757102
+              -122.381644001,
+              37.757645005
             ],
             [
-              -122.381454,
-              37.75717
+              -122.381643994,
+              37.757644998
             ],
             [
-              -122.381486,
-              37.757238
+              -122.381643985,
+              37.757644991
             ],
             [
-              -122.381486,
-              37.757305
+              -122.381643983,
+              37.757644989
             ],
             [
-              -122.381443,
-              37.757373
+              -122.381643978,
+              37.757644986
             ],
             [
-              -122.381432,
-              37.757441
+              -122.381542002,
+              37.757577002
+            ],
+            [
+              -122.381542001,
+              37.757577001
+            ],
+            [
+              -122.381541999,
+              37.757577
+            ],
+            [
+              -122.381541998,
+              37.757576998
+            ],
+            [
+              -122.381432003,
+              37.757509002
+            ],
+            [
+              -122.381432002,
+              37.757509001
             ],
             [
               -122.381432,
               37.757509
             ],
             [
-              -122.381542,
-              37.757577
+              -122.381432,
+              37.757508998
             ],
             [
-              -122.381644,
-              37.757645
+              -122.381432,
+              37.757508997
             ],
             [
-              -122.381684,
-              37.757713
+              -122.381432,
+              37.757441004
             ],
             [
-              -122.381644,
-              37.75778
+              -122.381432,
+              37.757441001
             ],
             [
-              -122.38185,
-              37.757771
+              -122.381432,
+              37.757440999
+            ],
+            [
+              -122.381432001,
+              37.757440996
+            ],
+            [
+              -122.381442999,
+              37.757373004
+            ],
+            [
+              -122.381443,
+              37.757373002
+            ],
+            [
+              -122.381443,
+              37.757373
+            ],
+            [
+              -122.381443001,
+              37.757372998
+            ],
+            [
+              -122.381443002,
+              37.757372997
+            ],
+            [
+              -122.381485985,
+              37.757305023
+            ],
+            [
+              -122.381485988,
+              37.757305019
+            ],
+            [
+              -122.381485989,
+              37.757305017
+            ],
+            [
+              -122.381485993,
+              37.75730501
+            ],
+            [
+              -122.381485995,
+              37.757305002
+            ],
+            [
+              -122.381485997,
+              37.757304993
+            ],
+            [
+              -122.381485998,
+              37.757304985
+            ],
+            [
+              -122.381485999,
+              37.757304983
+            ],
+            [
+              -122.381485999,
+              37.757304979
+            ],
+            [
+              -122.381485999,
+              37.757238015
+            ],
+            [
+              -122.381485999,
+              37.757238011
+            ],
+            [
+              -122.381485998,
+              37.757238009
+            ],
+            [
+              -122.381485997,
+              37.757238001
+            ],
+            [
+              -122.381485996,
+              37.757237993
+            ],
+            [
+              -122.381485993,
+              37.757237986
+            ],
+            [
+              -122.381485992,
+              37.757237984
+            ],
+            [
+              -122.381485991,
+              37.75723798
+            ],
+            [
+              -122.381457057,
+              37.757176495
+            ],
+            [
+              -122.381457057,
+              37.757176495
+            ],
+            [
+              -122.38145393,
+              37.757169903
+            ],
+            [
+              -122.381453928,
+              37.7571699
+            ],
+            [
+              -122.381453928,
+              37.757169899
+            ],
+            [
+              -122.381453924,
+              37.757169893
+            ],
+            [
+              -122.381453923,
+              37.757169891
+            ],
+            [
+              -122.381453921,
+              37.757169888
+            ],
+            [
+              -122.381446725,
+              37.757159693
+            ],
+            [
+              -122.381446724,
+              37.757159693
+            ],
+            [
+              -122.381405534,
+              37.757101799
+            ],
+            [
+              -122.381405533,
+              37.757101798
+            ],
+            [
+              -122.381405533,
+              37.757101796
+            ],
+            [
+              -122.381405532,
+              37.757101794
+            ],
+            [
+              -122.381405532,
+              37.757101793
+            ],
+            [
+              -122.381401662,
+              37.757052831
+            ],
+            [
+              -122.381401661,
+              37.75705283
+            ],
+            [
+              -122.3814,
+              37.757034
+            ],
+            [
+              -122.3814,
+              37.757034
+            ],
+            [
+              -122.381397698,
+              37.757002692
+            ],
+            [
+              -122.381397698,
+              37.757002692
+            ],
+            [
+              -122.381394804,
+              37.75696608
+            ],
+            [
+              -122.381394804,
+              37.756966079
+            ],
+            [
+              -122.381394804,
+              37.756966077
+            ],
+            [
+              -122.381394804,
+              37.756966076
+            ],
+            [
+              -122.381394804,
+              37.756898234
+            ],
+            [
+              -122.381394803,
+              37.756898229
+            ],
+            [
+              -122.381394803,
+              37.756898227
+            ],
+            [
+              -122.381394802,
+              37.756898219
+            ],
+            [
+              -122.3813948,
+              37.756898211
+            ],
+            [
+              -122.3813948,
+              37.756898209
+            ],
+            [
+              -122.381394799,
+              37.756898205
+            ],
+            [
+              -122.381370665,
+              37.756830363
+            ],
+            [
+              -122.381370664,
+              37.756830362
+            ],
+            [
+              -122.381370664,
+              37.75683036
+            ],
+            [
+              -122.381370664,
+              37.756830358
+            ],
+            [
+              -122.381370664,
+              37.756830357
+            ],
+            [
+              -122.381370664,
+              37.756762505
+            ],
+            [
+              -122.381370664,
+              37.756762502
+            ],
+            [
+              -122.381370663,
+              37.756762499
+            ],
+            [
+              -122.381370663,
+              37.756762496
+            ],
+            [
+              -122.381368147,
+              37.756730671
+            ],
+            [
+              -122.381368147,
+              37.756730671
+            ],
+            [
+              -122.381365,
+              37.756695004
+            ],
+            [
+              -122.381365,
+              37.756695001
+            ],
+            [
+              -122.381365,
+              37.756694999
+            ],
+            [
+              -122.381365,
+              37.756694996
+            ],
+            [
+              -122.381367739,
+              37.756632919
+            ],
+            [
+              -122.381367739,
+              37.756632919
+            ],
+            [
+              -122.381367981,
+              37.756626785
+            ],
+            [
+              -122.381367981,
+              37.756626784
+            ],
+            [
+              -122.381367982,
+              37.756626782
+            ],
+            [
+              -122.381367983,
+              37.756626781
+            ],
+            [
+              -122.381367984,
+              37.756626778
+            ],
+            [
+              -122.381367984,
+              37.756626778
+            ],
+            [
+              -122.381367988,
+              37.756626773
+            ],
+            [
+              -122.381367992,
+              37.756626765
+            ],
+            [
+              -122.381367995,
+              37.756626756
+            ],
+            [
+              -122.381367996,
+              37.756626748
+            ],
+            [
+              -122.381367997,
+              37.756626739
+            ],
+            [
+              -122.381367998,
+              37.756626737
+            ],
+            [
+              -122.381367998,
+              37.756626733
+            ],
+            [
+              -122.381365,
+              37.756287001
+            ],
+            [
+              -122.381365,
+              37.75622001
+            ],
+            [
+              -122.381365,
+              37.756220006
+            ],
+            [
+              -122.381365,
+              37.756220004
+            ],
+            [
+              -122.381364999,
+              37.756219996
+            ],
+            [
+              -122.381364998,
+              37.756219994
+            ],
+            [
+              -122.381364998,
+              37.75621999
+            ],
+            [
+              -122.381349001,
+              37.756152003
+            ],
+            [
+              -122.381349,
+              37.756152002
+            ],
+            [
+              -122.381349,
+              37.756151998
+            ],
+            [
+              -122.381349,
+              37.756151997
+            ],
+            [
+              -122.381349,
+              37.756102569
+            ],
+            [
+              -122.381349,
+              37.756102567
+            ],
+            [
+              -122.381349003,
+              37.756102567
+            ],
+            [
+              -122.38158,
+              37.756088
+            ],
+            [
+              -122.38158,
+              37.756088
+            ],
+            [
+              -122.382023997,
+              37.75606
+            ],
+            [
+              -122.382024,
+              37.75606
+            ],
+            [
+              -122.382024,
+              37.756060002
+            ],
+            [
+              -122.382061991,
+              37.756449911
+            ],
+            [
+              -122.382061993,
+              37.756449919
+            ],
+            [
+              -122.382061995,
+              37.756449928
+            ],
+            [
+              -122.382061999,
+              37.756449936
+            ],
+            [
+              -122.382062003,
+              37.756449944
+            ],
+            [
+              -122.382062009,
+              37.756449952
+            ],
+            [
+              -122.382062015,
+              37.756449959
+            ],
+            [
+              -122.382062022,
+              37.756449966
+            ],
+            [
+              -122.38206203,
+              37.756449972
+            ],
+            [
+              -122.382062039,
+              37.756449977
+            ],
+            [
+              -122.382062049,
+              37.756449982
+            ],
+            [
+              -122.382062059,
+              37.756449986
+            ],
+            [
+              -122.382062069,
+              37.756449989
+            ],
+            [
+              -122.38206208,
+              37.756449992
+            ],
+            [
+              -122.382062091,
+              37.756449993
+            ],
+            [
+              -122.382062102,
+              37.756449994
+            ],
+            [
+              -122.382062113,
+              37.756449993
+            ],
+            [
+              -122.382233997,
+              37.75644
+            ],
+            [
+              -122.382234,
+              37.75644
+            ],
+            [
+              -122.382234,
+              37.756440002
+            ],
+            [
+              -122.382289999,
+              37.757014988
+            ],
+            [
+              -122.38229,
+              37.757014996
+            ],
+            [
+              -122.382290002,
+              37.757015004
+            ],
+            [
+              -122.382290005,
+              37.757015011
+            ],
+            [
+              -122.382377999,
+              37.757212998
+            ],
+            [
+              -122.382378,
+              37.757213
+            ],
+            [
+              -122.382378,
+              37.757213002
+            ],
+            [
+              -122.382427,
+              37.757751998
+            ],
+            [
+              -122.382427,
+              37.757752
             ]
           ]
         ]

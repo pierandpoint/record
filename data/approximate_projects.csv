@@ -13,8 +13,12 @@ project_name,site,geometry_file
 # as properties inside the geometry_file itself (see
 # data/manual/prequel_park_port_subarea.geojson) so the caveats travel
 # with the geometry and can't be edited out of sync with it.
-Prequel Park (Port sub-area),Potrero Power Station,data/manual/prequel_park_port_subarea.geojson
-Prequel Park (Power Station sub-area),Potrero Power Station,data/manual/prequel_park_power_station_subarea.geojson
+# Prequel Park (Port sub-area) FOLDED 2026-10-11 into Prequel Park (interim) (owner's direction): the two sub-area shapes were
+# merged with Waterfront Park and recut (see data/manual/prequel_park_power_station_subarea.geojson's digitization_method).
+# Its record file was merged into prequel_park_power_station_subarea.json. The shape file is kept at
+# data/manual/prequel_park_port_subarea.geojson; uncomment this row to draw it again.
+# Prequel Park (Port sub-area),Potrero Power Station,data/manual/prequel_park_port_subarea.geojson
+Prequel Park (interim),Potrero Power Station,data/manual/prequel_park_power_station_subarea.geojson
 # Noonan Building (Building 11) EXCLUDED from active maps 2026-09-16 (user
 # decision): this project maps the future/planned state of each site, and
 # Noonan is an existing building slated for demolition as part of the Pier
@@ -106,6 +110,8 @@ PG&E Southern Switchyard (outside the project boundary; not part of redevelopmen
 The Stack (Unit 3 smokestack) -- existing structure,Potrero Power Station,data/manual/potrero_the_stack.geojson
 Power Station Park,Potrero Power Station,data/manual/potrero_power_station_park.geojson
 Waterfront Park,Potrero Power Station,data/manual/potrero_waterfront_park.geojson
+The Point,Potrero Power Station,data/manual/potrero_the_point.geojson
+Stack Plaza,Potrero Power Station,data/manual/potrero_stack_plaza.geojson
 Louisiana Paseo,Potrero Power Station,data/manual/potrero_louisiana_paseo.geojson
 Humboldt Street Plaza,Potrero Power Station,data/manual/potrero_humboldt_street_plaza.geojson
 # Added 2026-09-21 (docs/briefs/adjacent-proposals.md): the first `relation: adjacent` record
