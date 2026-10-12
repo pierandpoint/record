@@ -40,13 +40,13 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. The footprint lies in active Assessor parcel 8709022 (1670 Owens St; in the secured roll, class 'Garages (Commercial)', year built 2010, 7 stories, College/University exemption in the 2025 roll), so a block/lot exists that this record could be mapped from; the real OSM building footprint is kept as the geometry. Neither cited source (OSM, the Mission Bay TMA rates page) says the garage is UCSF-owned.",
-    "digitized_from": "OpenStreetMap (way 46263441, 1670 Owens St)"
+    "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 8709022 (8,009 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed the surveyed building footprint (OpenStreetMap (way 46263441, 1670 Owens St)); 100% of that outline lies inside the lot and it covered 57% of the lot. The Assessor secured roll gives lot 8709022 (1670 Owens St) class 'Garages (Commercial)', year built 2010, 7 stories, with a College/University exemption in the 2025 roll. Neither cited source (OSM, the Mission Bay TMA rates page) says the garage is UCSF-owned.",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 8709022 (mapped 2010-01-12; active); the earlier outline came from: OpenStreetMap (way 46263441, 1670 Owens St)"
    }
   },
   "centroid": {
-   "lon": -122.394876,
-   "lat": 37.767435
+   "lon": -122.394639,
+   "lat": 37.76727
   },
   "facts": [
    {
@@ -116,6 +116,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "1670 Owens Garage now uses its Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 8709022",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 8709022"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "ucsf_1670_owens_garage",
+     "slug": "1670-owens-garage",
+     "name": "1670 Owens Garage",
+     "permalink": "https://pierandpoint.org/parcels/1670-owens-garage/",
+     "api": "https://pierandpoint.org/api/v1/records/1670-owens-garage.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-29",
     "kind": "correction",
@@ -279,36 +308,40 @@
    "coordinates": [
     [
      [
-      -122.3950644,
-      37.7678195
+      -122.394249922,
+      37.766894868
      ],
      [
-      -122.3950453,
-      37.7678042
+      -122.394056379,
+      37.76674046
      ],
      [
-      -122.394146,
-      37.7670843
+      -122.39449113,
+      37.766714256
      ],
      [
-      -122.3944662,
-      37.7668344
+      -122.395536625,
+      37.767548325
      ],
      [
-      -122.3945512,
-      37.7669024
+      -122.395120631,
+      37.767876923
      ],
      [
-      -122.3953846,
-      37.7675696
+      -122.395044983,
+      37.767816574
      ],
      [
-      -122.3952878,
-      37.7676452
+      -122.39498691,
+      37.767862444
      ],
      [
-      -122.3950644,
-      37.7678195
+      -122.394010816,
+      37.767083737
+     ],
+     [
+      -122.394249922,
+      37.766894868
      ]
     ]
    ]
