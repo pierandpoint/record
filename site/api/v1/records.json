@@ -59290,15 +59290,15 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "LOW-MODERATE CONFIDENCE -- Figure 3.3.1 is an illustrative, non-dimensioned rendering (no scale-accurate internal boundaries, unlike the D4D's own numbered-parcel figures), so this is a simplified bounding-box trace, not a precise outline. The D4D does name this space: Section 3.10 '20th Street Plaza' (approximately 0.5 acre, with its own Figures 3.10.1-3.10.5); this record's title 'PKN Frontage Open Space (20th Street)' is the earlier location-based placeholder and is kept only as its identifier. Its south, east and west edges were drawn to meet PKN's earlier traced boundary (see the mapping log in the public data repository (https://github.com/pierandpoint/record)). PKN has since been moved to Assessor lot 4110012, so the two outlines no longer touch: the nearest points are now about 8 m apart. About 72% of this strip lies inside Assessor lot 4110009 (Pier & Point's overlay of this outline on DataSF's Assessor layer); the strip itself is still a diagram-based trace, not that lot's outline. its north edge is now ground-truthed against the real 20th St centerline (6.8m curb offset) rather than Figure 3.3.1's own illustrative depth, which turned out to extend past the real street entirely. As drawn, the strip is about 1,090 m2, against the D4D's approximately 0.5 acre (about 2,000 m2) for this space.",
-     "digitized_from": "Pier 70 Design for Development, Figure 3.3.1 - Illustrative Open Space Plan (p.51).",
-     "why_no_real_parcel": "About 72% of the drawn strip lies inside Assessor lot 4110009, but the strip is a trace of the D4D's illustrative figure and no document read names that lot as the plaza, so it is not drawn on the lot lines. The plaza is on the Illinois & 20th Street Parcel (Block 4110/Lot 001 per Port Item 9B), which Port Resolution 17-52 has the Port merge with a vacated piece of Michigan St and subdivide into four parcels including its own 'Plaza Parcel'; that parcel is outside Brookfield's 28-Acre Site, so the earlier statement that it lies within Brookfield's site is withdrawn. Which Assessor lot is the Plaza Parcel has not been confirmed.",
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 4110009 (1,365 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-13 this record showed a bounding-box trace of the Pier 70 Design for Development's Figure 3.3.1 (an illustrative, non-dimensioned plan) trimmed to the real 20th Street centerline; 72% of that outline lies inside the lot and it covered 57% of the lot. No document read names lot 4110009 as the plaza (the Port's plaza parcel is described in Port Resolution 17-52 as a parcel still to be subdivided); the lot is used because it holds most of the earlier drawing (72%), at the owner's direction, and the Design for Development's own name for the space is '20th Street Plaza' (Section 3.10, about 0.5 acre), so the lot's edges are not the plaza's designed edges. The lot is zoned Pier 70 Mixed Use (P70-MU) and was mapped 2019-03-14.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 4110009 (mapped 2019-03-14; active); the earlier outline came from: Pier 70 Design for Development, Figure 3.3.1 - Illustrative Open Space Plan (p.51).",
+     "why_no_real_parcel": "This record now uses Assessor lot 4110009; see the accuracy note for why that lot is used.",
      "regulatory_context": "Part of the Pier 70 D4D's Open Space Network: Section 3.10 '20th Street Plaza', approximately 0.5 acre, an entry plaza with a seating terrace and planted garden along Parcel K North's 20th Street frontage (Figures 3.10.1-3.10.5), shown on Figure 3.3.1 as landscaped open space. Port Item 9B (2017) lists the 20th Street Plaza among the infrastructure obligations retained for the adjacent Illinois Street Parcels."
     }
    },
    "centroid": {
-    "lon": -122.387178,
-    "lat": 37.760454
+    "lon": -122.387069,
+    "lat": 37.760407
    },
    "facts": [
     {
@@ -59473,6 +59473,35 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-13",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "PKN Frontage Open Space (20th Street) now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 4110009",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 4110009"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "pier70_pkn_frontage_plaza",
+      "slug": "pkn-frontage-open-space-20th-street",
+      "name": "PKN Frontage Open Space (20th Street)",
+      "permalink": "https://pierandpoint.org/parcels/pkn-frontage-open-space-20th-street/",
+      "api": "https://pierandpoint.org/api/v1/records/pkn-frontage-open-space-20th-street.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-10-12",
      "kind": "correction",
@@ -59695,24 +59724,32 @@
     "coordinates": [
      [
       [
-       -122.387507116947,
-       37.760492819342
+       -122.387408643,
+       37.760468876
       ],
       [
-       -122.38749408074938,
-       37.7603473121985
+       -122.387236452,
+       37.760479049
       ],
       [
-       -122.386689,
-       37.76040431788392
+       -122.386677298,
+       37.760512081
       ],
       [
-       -122.38669288982496,
-       37.76053173613666
+       -122.386659497,
+       37.760322147
       ],
       [
-       -122.387507116947,
-       37.760492819342
+       -122.386700894,
+       37.760319702
+      ],
+      [
+       -122.387390839,
+       37.760278942
+      ],
+      [
+       -122.387408643,
+       37.760468876
       ]
      ]
     ]
