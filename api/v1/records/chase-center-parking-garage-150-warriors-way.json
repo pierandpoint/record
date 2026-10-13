@@ -30,7 +30,7 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "This 469,726 sq ft parking structure at 150 Warriors Way in Mission Bay South was built in 2009, per DataSF Assessor records. Its height is given two ways: nine stories on the Assessor rolls, seven stories on its building permit (see open questions).",
+  "summary": "This parking structure at 150 Warriors Way in Mission Bay South was built in 2009, per DataSF Assessor records, which give the property a square footage of 469,726 (the Assessor's \"property_area\" field, described only as \"Square footage of property\", not a measured building area). Its height is given two ways: nine stories on the Assessor rolls, seven stories on its building permit (see open questions).",
   "summary_sources": [
    "src-datasf-8721030"
   ],
@@ -52,7 +52,7 @@
   "costs": [
    {
     "amount_usd": 42950000,
-    "what": "SF Department of Building Inspection permit #200705090778's revised construction-cost valuation for the 7-story parking garage (the permit's initial filed estimate was $34,000,000); the Assessor gives the parcel's building area as 469,726 sq ft",
+    "what": "SF Department of Building Inspection permit #200705090778's revised construction-cost valuation for the 7-story parking garage (the permit's initial filed estimate was $34,000,000); the Assessor gives the property's square footage as 469,726",
     "date": "2009-10",
     "kind": "construction",
     "scope": "record",
@@ -69,7 +69,7 @@
     "date_label": "May 9, 2007",
     "status": "planned",
     "status_label": "Planned",
-    "text": "SF Dept. of Building Inspection permit #200705090778 filed to erect the 7-story parking garage at this address",
+    "text": "SF Dept. of Building Inspection permit #200705090778 filed \"to erect parking garage with 7 stories new building\" at this address (a proposal; the Assessor records 9 stories for the built structure, see open questions)",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -138,6 +138,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The 2007 building permit proposed a garage \"with 7 stories\"; Assessor records give 9 stories. The permit was completed on 2009-10-23 (a permit sign-off, not an opening date). The 469,726 figure is the Assessor's \"property_area\" (\"Square footage of property\"), not a measured building area.",
+    "source": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200705090778; https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8721030",
+    "sources": [
+     {
+      "title": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200705090778; https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8721030"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_chase_parking_garage",
+     "slug": "chase-center-parking-garage-150-warriors-way",
+     "name": "Chase Center Parking Garage (150 Warriors Way)",
+     "permalink": "https://pierandpoint.org/parcels/chase-center-parking-garage-150-warriors-way/",
+     "api": "https://pierandpoint.org/api/v1/records/chase-center-parking-garage-150-warriors-way.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-12",
     "kind": "correction",
@@ -274,7 +303,7 @@
   ],
   "open_questions": [
    "Number of stories: the Assessor's secured rolls for parcel 8721030 (2009 to 2025) give \"number_of_stories\":\"9.0\" and \"year_property_built\":\"2009\" for 150 Warriors Way, while DBI permit 200705090778 for the same garage says \"to erect parking garage with 7 stories new building\" (number_of_proposed_stories \"7\"). No source read explains the difference (the Assessor figure is a value as assessed; the permit figure is a proposal), so the record states no single height.",
-   "Exact month/day of the 2009 completion is not sourced, only the year.",
+   "The Assessor gives only the year (2009). DBI permit 200705090778 records a completion date of 2009-10-23 (a permit sign-off date, not an opening or occupancy date); no source read states when the garage opened for use.",
    "The 2007 permit's own block/lot (block 8721, lot 012) differs from the lot the Assessor now uses for this address (lot 030) and its address is given as 450 South St rather than 150 Warriors Way; the parking-garage description and 2009-10-23 permit-completion date (matching the Assessor's 2009 year) line up with this parcel, so this is treated as a lot/address renumbering (Pier & Point's own permit search elsewhere on this block confirms 450 South St and 150 Warriors Way are used interchangeably for this garage), not a different building.",
    "Chase Center's own opening date was not independently sourced for this record, and no cited source states who this garage serves."
   ],

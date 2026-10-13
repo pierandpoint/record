@@ -10,7 +10,8 @@
     "src-port-2023-10",
     "src-sfyimby-2024-04",
     "src-sfyimby-2024-09-verde",
-    "src-port-2024-04"
+    "src-port-2024-04",
+    "src-port-2025-03"
   ],
   "milestones": [
     {
@@ -26,7 +27,7 @@
     },
     {
       "date": "2018-03-06",
-      "text": "Board of Supervisors affirms the EIR certification and project approvals (Resolution 33-18); Notice of Determination filed March 9, 2018",
+      "text": "Board of Supervisors affirms the Planning Commission's EIR certification (the Port's October 2023 memo gives Resolution 33-18; the Notice of Determination gives File No. 171286); Notice of Determination filed March 9, 2018",
       "sources": [
         "src-nod-2018",
         "src-port-2023-10"
@@ -94,8 +95,8 @@
       "approximate": false
     },
     {
-      "date": "2023",
-      "text": "Structural elements topped out (reported as done by October 2023)",
+      "date": "2023-10",
+      "text": "The Port's October 6, 2023 memo reports Building F's structural elements as topped out (the topping-out date itself is not given)",
       "sources": [
         "src-port-2023-10"
       ],
@@ -125,7 +126,7 @@
     {
       "date": "2024-06",
       "status": "complete",
-      "text": "Residents begin moving in (the Port had projected a June 2024 TCO)",
+      "text": "Residents begin moving in (SF YIMBY, September 4, 2024: \"the building has been open to new residents since June\"; the Port's April 2024 memo had forecast move-ins in June 2024, and its March 2025 memo says \"As of February 2025, seven months into lease-up\", which would put lease-up from about July 2024)",
       "sources": [
         "src-sfyimby-2024-09-verde",
         "src-port-2024-04"
@@ -165,6 +166,7 @@
       "date": "2020-10-26",
       "text": "DBI site permit 201910073784 for new construction of Building F (23 stories, 258 residential units with retail, office, restaurant and assembly) approved; filed October 7, 2019",
       "sources": [
+        "src-datasf-permit-201910073784",
         "src-watch-dbi-building-permits"
       ],
       "expected": false
@@ -173,6 +175,7 @@
       "date": "2024-04-10",
       "text": "DBI permit 202312293282, a revision/architectural+MEP addendum for Mission Rock Building F (revision to PA #201910073784 S3 and Port application B-2022-0127), is approved",
       "sources": [
+        "src-datasf-permit-202312293282",
         "src-watch-dbi-building-permits-2"
       ],
       "expected": false
@@ -225,9 +228,10 @@
     },
     {
       "amount_usd": 99907840,
-      "what": "Revised/estimated construction cost on DBI site permit 201910073784 for Building F",
+      "what": "Estimated and revised cost (a filed permit valuation, not a construction cost) on DBI site permit 201910073784 for Building F",
       "kind": "permit_valuation",
       "sources": [
+        "src-datasf-permit-201910073784",
         "src-watch-dbi-building-permits"
       ],
       "date": "2020-10-26"
@@ -237,6 +241,7 @@
       "what": "Revised cost on DBI permit 202312293282, an architectural and MEP addendum revision for Mission Rock Building F",
       "kind": "permit_valuation",
       "sources": [
+        "src-datasf-permit-202312293282",
         "src-watch-dbi-building-permits-2"
       ],
       "date": "2024-04-10"
@@ -253,7 +258,7 @@
     },
     {
       "key": "developer",
-      "value": "Mission Rock Partners (San Francisco Giants and Tishman Speyer) with equity partner Mitsui Fudosan America; vertical owner Mission Rock Parcel F Owner, L.L.C.",
+      "value": "Mission Rock Partners (San Francisco Giants and Tishman Speyer), joined by Mitsui Fudosan America (the April 2024 trade-press article reposted by Mitsui Fudosan America also lists the Port among the partnership's members); the Port's Parcel F lease tenant is Mission Rock Parcel F Owner, L.L.C.",
       "sources": [
         "src-port-2024-04",
         "src-sfexaminer-2024-09",
@@ -338,10 +343,11 @@
     },
     {
       "key": "gross_sqft",
-      "value": "314,508 total per the 2019 Port appraisal table; 287,000 per the developer's 2024 release; 315,000 per the 2026 refinancing report",
+      "value": "314,508 total per the 2019 Port appraisal table; 287,000 per a Yield Pro article of April 30, 2024 reposted by Mitsui Fudosan America; 330,000 per SF YIMBY (March 2022); 315,000 per the 2026 refinancing report (page unreadable, unconfirmed)",
       "sources": [
         "src-port-2019-09",
         "src-mfa-2024-04",
+        "src-sfyimby-2022-03",
         "src-cpe-2026-07"
       ]
     },
@@ -363,7 +369,7 @@
     },
     {
       "key": "leed",
-      "value": "LEED Gold (architect and developer said 'targeting' in 2024; the 2026 refinancing report calls it certified)",
+      "value": "Targeting LEED Gold certification (Mission Rock's April 2024 release, via Yield Pro, and Studio Gang's undated page, written after June 2024, both say \"targeting\"; the 2026 refinancing report is cited as calling it certified, but that page could not be read and is unconfirmed)",
       "sources": [
         "src-studiogang-verde",
         "src-mfa-2024-04",
@@ -397,6 +403,7 @@
       "key": "permitted_units",
       "value": "258 residential units proposed on DBI site permit 201910073784 (as built described elsewhere as 254)",
       "sources": [
+        "src-datasf-permit-201910073784",
         "src-watch-dbi-building-permits"
       ]
     }
@@ -490,14 +497,6 @@
       "overview": true
     },
     {
-      "id": "src-port-2023-09-bonds",
-      "title": "Mission Rock Special Tax District bonds, information and possible action (Port Commission Item 10B, Resolution 23-41)",
-      "publisher": "Port of San Francisco",
-      "date": "2023-09-12",
-      "url": "https://sfport.com/media/9067/download?inline=091223_10b._mission_rock_cfd_bonds_-_information_and_possible_action.pdf",
-      "accessed": "2026-09-17"
-    },
-    {
       "id": "src-port-2023-10",
       "title": "Request approval of Phase 1 Revised Final Budget, Contribution of Port Capital and Parcel Lease Amendment, Mission Rock (Port Commission Item 8B, Resolution 23-46)",
       "publisher": "Port of San Francisco",
@@ -519,14 +518,6 @@
       "publisher": "Port of San Francisco",
       "date": "2025-03-07",
       "url": "https://sfport.com/media/10228/download?inline=031125_12a_mission_rock_revised_phase_1_submittal_-_info_and_possible_action.pdf",
-      "accessed": "2026-09-17"
-    },
-    {
-      "id": "src-port-discl-fy2025",
-      "title": "Port of San Francisco continuing disclosure annual report for the fiscal year ended June 30, 2025 (Port Revenue Bonds, Series 2014A, 2020A and 2020B; mentions Mission Rock CFD bonds only among other obligations), issued March 27, 2026",
-      "publisher": "Port of San Francisco",
-      "date": "2026-03-27",
-      "url": "https://sfport.com/media/11175/download?inline=",
       "accessed": "2026-09-17"
     },
     {
@@ -585,12 +576,18 @@
       "accessed": "2026-09-17"
     },
     {
-      "id": "src-dc-2018",
-      "title": "Mission Rock Design Controls, April 24, 2018 (final; Figure 1.1 - Land Use Plan p.10, Figure 6.2 - Maximum Height Plan p.151, block standards appendix, Table 6.4)",
-      "publisher": "Port of San Francisco",
-      "date": "2018-04-24",
-      "url": "https://www.sfport.com/sites/default/files/2025-07/Mission%20Rock%20Design%20Controls%204.24.18_FINAL_Reduced%20File.pdf",
-      "accessed": "2026-09-19"
+      "id": "src-datasf-permit-201910073784",
+      "title": "Building Permits dataset, permit 201910073784 (Building F, new construction)",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=201910073784",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": "src-datasf-permit-202312293282",
+      "title": "Building Permits dataset, permit 202312293282 (Building F, revision addendum)",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=202312293282",
+      "accessed": "2026-10-12"
     },
     {
       "id": "src-watch-dbi-building-permits",
@@ -618,15 +615,17 @@
   "open_questions": [
     "Commercial Property Executive's July 14, 2026 article (the only source for the $116.2 million Wells Fargo construction loan and the $117.8 million Ares Management loan) returned HTTP 403 on 2026-10-12, and a second page listed in a web search for the same loan (traded.co) did too, so neither amount, lender nor what the Ares loan replaced is confirmed by a page read here.",
     "Jobs Housing Equivalency Fee subsidy received by Parcel F: the Port's September 2019 budget report lists a minimum of 75.6 ($ millions) for Parcel F when it was planned with 106 below-market units (it has 59), and says the residential projects \"will request a proportionate share of the JHEF when the residential building foundations have been completed\"; no source read gives the amount actually paid to Parcel F.",
-    "Construction cost: not stated anywhere read; only the $116.2M Wells Fargo loan is on record.",
-    "Exact TCO date: the Port projected May then June 2024; no document read confirms the issued date.",
+    "Construction cost: no source read states one. DBI permit 201910073784 carries a $99,907,840 estimated and revised cost, which is a filed permit valuation rather than a cost, and the only financing figure is the reported $116.2 million Wells Fargo loan, which is unconfirmed (see the first question).",
+    "Exact TCO date: the Port's October 2023 memo projected a June 2024 TCO, and its April 2024 memo said Parcel F \"is expected to receive a Temporary Certificate of Occupancy (TCO) in May\" with move-ins in June 2024 (both are projections); no document read gives the date the TCO was issued.",
     "Topping-out date: the Port's October 2023 memo only says it had topped out; no dated press item found.",
-    "Total square footage disagrees across sources (287,000 / 314,508 / 315,000); a permit record would settle it.",
+    "Total square footage disagrees across sources (287,000 / 314,508 / 315,000 / 330,000: a trade-press article reposted by Mitsui Fudosan America, the Port's 2019 appraisal table, the 2026 refinancing report, and SF YIMBY in March 2022); no document read says which is the gross floor area, and the DBI permit records read carry no floor area.",
     "Images: no 'before' photo is hosted (until 2020 the parcel was the Seawall Lot 337 surface parking lot) and no rendering is hosted because the architects' renderings are not openly licensed; they are reachable through the architect sources listed here.",
     "A Mapillary storefront photo of Ike's Love & Sandwiches (a sourced retail tenant, see the retail fact above) was hosted briefly and then removed: on review it read as too cluttered (a trash bin, a parked car and several pedestrians in front of the sign) to keep. Still on the shot list for a cleaner frame.",
     "Arsicault Bakery's Verde shop is shown open on a March 11, 2025 release; it has not been re-confirmed since.",
     "A business registration for BVNK at 365 Toni Stone Xing Fl 3 exists since 2025-03-30 (System Pay Services (Us), Inc., no end date, DataSF Registered Business Locations); no source read shows an office open there, so BVNK is not listed as a tenant. Searches found no page that names BVNK at Mission Rock.",
-    "Chipotle Mexican Grill is shown open from 2026-09-23. That date is the 'c_openDate' on Chipotle's own location page for 365 Toni Stone Xing (locations.chipotle.com, whose data carries a timestamp of 2026-09-24 and which was read on 2026-10-12); it is a date the company states, not one confirmed by a news report or a visit. The page lists daily hours of 10:45 a.m. to 10 p.m. and online ordering. DataSF has a registration for Chipotle Mexican Grill #5956 at suite C from 2026-08-25, which is a registration date, not an opening date."
+    "Chipotle Mexican Grill is shown open from 2026-09-23. That date is the 'c_openDate' on Chipotle's own location page for 365 Toni Stone Xing (locations.chipotle.com, whose data carries a timestamp of 2026-09-24 and which was read on 2026-10-12); it is a date the company states, not one confirmed by a news report or a visit. The page lists daily hours of 10:45 a.m. to 10 p.m. and online ordering. DataSF has a registration for Chipotle Mexican Grill #5956 at suite C from 2026-08-25, which is a registration date, not an opening date.",
+    "First move-in month: SF YIMBY (September 4, 2024) says the building \"has been open to new residents since June\", while the Port's March 2025 memo says \"As of February 2025, seven months into lease-up\", which would put the start of lease-up around July 2024. No certificate of occupancy or lease document read dates the first move-in, so \"June 2024\" is approximate.",
+    "Resolution number for the Board of Supervisors' March 6, 2018 action: the Port's October 2023 memo gives Resolution 33-18 for the Board's affirmation of the EIR certification, but the same memo (and the Port's September 2019 and April 2024 reports) also cites Resolution 33-18 for the Board's February 2018 approval of the Development Agreement (with Resolution 42-18 for the DDA); the Notice of Determination gives only File No. 171286."
   ],
   "last_verified": "2026-09-24",
   "site_cost_refs": [

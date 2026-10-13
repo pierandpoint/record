@@ -3,16 +3,28 @@
   "names": [
     "P11 -- landscaped median strip connecting Mission Bay Circle to P11A"
   ],
-  "summary": "A tree-lined median strip running within the road right-of-way, connecting the 'Mission Bay Circle' roundabout east to the P11A half-circle island; per Pier & Point's own reading of satellite imagery (no outside source describes the strip), an already-landscaped median, hand-traced from satellite imagery and fit to a rotated rectangle. OCII's own September 2023 Mission Bay Parks Open Space transition presentation lists 'P11/11A' together among the parcels SF Recreation and Parks will manage (not among the 'when built' parcels), consistent with it being complete by that date.",
+  "summary": "A tree-lined median strip running within the road right-of-way, connecting the 'Mission Bay Circle' roundabout east to the P11A half-circle island; per Pier & Point's own reading of satellite imagery (OCII's December 2019 Land Use Map labels the strip 'P11' but does not describe it), an already-landscaped median, hand-traced from satellite imagery and fit to a rotated rectangle. OCII's own September 2023 Mission Bay Parks Open Space transition presentation lists 'P11/11A' together among the parcels SF Recreation and Parks will manage (not among the 'when built' parcels); that presentation is a plan and does not say whether the strip was built. SF Recreation and Parks' April 2025 timeline says \"P11 opens - Mission Bay Commons (2015)\".",
   "summary_sources": [
     "src-geom-p11",
-    "src-ocii-transition-2023"
+    "src-ocii-transition-2023",
+    "src-ocii-landusemap-2019",
+    "src-recpark-workshop3-2025"
   ],
   "milestones": [
     {
-      "date": "2023-09",
+      "date": "2015",
       "status": "complete",
-      "text": "Listed as 'P11/11A' among the parcels RPD will manage (not among the 'when built' parcels) in OCII's Mission Bay Parks Open Space transition presentation -- an upper bound on when this median was built, not its actual construction date",
+      "text": "SF Recreation and Parks' Mission Bay Parks Community Meeting #3 presentation (April 29, 2025), Timeline slide, lists \"P11 opens - Mission Bay Commons (2015)\" (an event year given in a later retrospective timeline; no month, and the slide does not describe the parcel). OCII's December 2019 Land Use Map labels the thin strip between Mission Bay Circle and P11A \"P11\", which is why that entry is read as this strip",
+      "sources": [
+        "src-recpark-workshop3-2025",
+        "src-ocii-landusemap-2019"
+      ],
+      "expected": false,
+      "approximate": true
+    },
+    {
+      "date": "2023-09",
+      "text": "Listed as 'P11/11A' among the parcels RPD \"will manage\" (not among the 'when built' parcels) in OCII's Mission Bay Parks Open Space transition presentation, with the open space to transfer \"by the end of December 2023\" (an expected date). This is a plan; it does not say the median was complete or when it was built",
       "sources": [
         "src-ocii-transition-2023"
       ],
@@ -68,6 +80,30 @@
   ],
   "sources": [
     {
+      "id": "src-bos-res-574-23",
+      "title": "Resolution No. 574-23 (File 231132): Agreement - Mission Bay Parks and Open Spaces - Maintenance and Operations and Termination of Ground Lease",
+      "publisher": "San Francisco Board of Supervisors",
+      "date": "2023-12-05",
+      "url": "https://sfbos.org/sites/default/files/r0574-23.pdf",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": "src-ocii-landusemap-2019",
+      "title": "Mission Bay Land Use Map",
+      "publisher": "Office of Community Investment and Infrastructure (OCII)",
+      "date": "2019-12",
+      "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": "src-recpark-workshop3-2025",
+      "title": "Mission Bay Parks Community Meeting #3 presentation (April 29, 2025), Timeline slide (PDF p. 15)",
+      "publisher": "San Francisco Recreation and Parks Department",
+      "date": "2025-04-29",
+      "url": "https://sfrecpark.org/DocumentCenter/View/25986/20250429-PRESENTATION-Workshop-3",
+      "accessed": "2026-10-12"
+    },
+    {
       "id": "src-geom-p11",
       "title": "Mapping log for this record's shape (Pier & Point's own mapping narrative, not an outside source)",
       "publisher": "Pier & Point public data repository",
@@ -93,10 +129,10 @@
     }
   ],
   "open_questions": [
-    "No public source names this specific median strip or gives its own construction date; the Sept 2023 OCII document only establishes it existed and was already RPD-managed by that date (grouped with P11A), which is an upper bound, not a build date.",
-    "A separate, later OCII source (the Nov 2024 CAC deck) instead groups the label 'P11' together with P12, P13, P15, P16 and P17 under the still-interim 'Mission Bay Commons' area near 3rd Street and Mission Bay Boulevard -- a different location from this record's median strip near Mission Bay Circle. This record's mapping log describes correcting an earlier, wrong location guess for P11 (made from that same source) to this median strip, on Pier & Point's own reading of the area; the underlying conflict between the two OCII documents' own use of 'P11' is not resolved here, only flagged.",
-    "Owner/operator beyond 'part of RPD's Mission Bay open-space inventory' not confirmed by any source found.",
-    "Identity of P11 is unresolved and rests on Pier & Point's judgment: SF Rec & Park's Workshop 3 deck (p.15 timeline, 2025-04-29) lists 'P11 opens - Mission Bay Commons (2015)', and OCII's Nov 2024 CAC update groups P11 with P12, P13, P15, P16 and P17 as 'Mission Bay Commons'. OCII's Dec 2019 Land Use Map and Nov 2024 p.2 map are reported to place a 'P11' label just east of Mission Bay Circle, where this strip is. Whether P11 is this 4.8 m median or a larger Commons segment has not been settled."
+    "OCII's December 2019 Land Use Map labels this strip \"P11\", and SF Recreation and Parks' April 2025 timeline says \"P11 opens - Mission Bay Commons (2015)\"; neither gives a month or describes the strip. OCII's September 2023 presentation is a plan (RPD \"will manage\" P11/11A) and does not itself say the strip was built.",
+    "OCII's November 2024 CAC update lists \"Mission Bay Commons (P11, P12, P13, P15, P16, P17)\" as one group of parks; its map puts the \"P11\" label at the Mission Bay Circle roundabout, where the December 2019 Land Use Map also draws P11, and shows only P12-P15 as current interim use or pilot sites. This record's mapping log describes correcting an earlier, wrong location guess for P11 to this median strip.",
+    "Operator: OCII's September 2023 presentation says RPD \"will manage\" P11/11A once the open space transfers (planned \"by the end of December 2023\"), and the Board of Supervisors adopted Resolution 574-23 on December 5, 2023 authorizing termination of OCII's ground lease; no source read confirms that the transfer took place or names the strip's current owner or operator.",
+    "The shape of P11 rests on Pier & Point's judgment: SF Rec & Park's April 2025 timeline lists 'P11 opens - Mission Bay Commons (2015)' without describing the parcel, and OCII's November 2024 CAC update groups P11 with P12, P13, P15, P16 and P17 as 'Mission Bay Commons'. OCII's December 2019 Land Use Map draws the 'P11' label on a thin strip just east of Mission Bay Circle, where this strip is. Whether P11 is only this 4.8 m median or a larger Commons segment has not been settled."
   ],
   "last_verified": "2026-09-21"
 }

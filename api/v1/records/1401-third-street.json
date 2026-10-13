@@ -55,7 +55,7 @@
     "date_label": "Apr 27, 2007",
     "status": "planned",
     "status_label": "Planned",
-    "text": "SF Dept. of Building Inspection permit #200704279921 filed to erect a 5-story office/lab building at 455 Mission Bay Blvd South (block 8721, lot 012); its mapped point is about 6 m from the Assessor point for this parcel (1401 Third Street, lot 032), which is our inference for linking the two, not stated by any source",
+    "text": "SF Dept. of Building Inspection permit #200704279921 filed to erect a 5-story office/lab building at 455 Mission Bay Blvd South (block 8721, lot 012); the Assessor's rolls list this parcel (lot 032) at 455 Mission Bay Blvd South for 2009 to 2012 and at 1401 Third Street from 2013, and the permit's mapped point is about 6 m from the Assessor point for the parcel; no source states why the permit's lot (012) differs from lot 032",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -65,9 +65,16 @@
       "publisher": "DataSF / SF Department of Building Inspection",
       "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200704279921",
       "accessed": "2026-09-21"
+     },
+     {
+      "id": "src-datasf-assessor-8721032",
+      "title": "Assessor Historical Secured Property Tax Rolls (block 8721, lot 032 -- 1401 3rd St)",
+      "publisher": "DataSF / SF Office of the Assessor-Recorder",
+      "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8721032",
+      "accessed": "2026-09-21"
      }
     ],
-    "source": "DataSF / SF Department of Building Inspection",
+    "source": "DataSF / SF Department of Building Inspection; DataSF / SF Office of the Assessor-Recorder",
     "origin": "record",
     "category": "status",
     "category_label": "Status",
@@ -124,6 +131,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Assessor's rolls list this parcel at 455 Mission Bay Blvd South through 2012 and at 1401 Third Street from 2013; no source read explains why the 2007 permit gives lot 012 instead of lot 032.",
+    "source": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8721032",
+    "sources": [
+     {
+      "title": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8721032"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_1401_3rd",
+     "slug": "1401-third-street",
+     "name": "1401 Third Street",
+     "permalink": "https://pierandpoint.org/parcels/1401-third-street/",
+     "api": "https://pierandpoint.org/api/v1/records/1401-third-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-12",
     "kind": "correction",
@@ -232,7 +268,7 @@
   "open_questions": [
    "Developer, architect and current/original tenant not confirmed by any source found as of 2026-09-29.",
    "Precise completion month not available; DataSF's Assessor tax roll gives only a year.",
-   "The permit's own block/lot (block 8721, lot 012) at filing time differs from the lot the Assessor uses for 1401 Third Street (lot 032). The permit's location point (about 6 m from the Assessor point), its description (5-story office/lab) and its 2009-11-17 completion date (the Assessor gives year built 2009) are consistent with this parcel, so it is treated as the same building, but no source states that 455 Mission Bay Blvd South was renamed 1401 Third Street or that the lot was renumbered."
+   "The permit's own block/lot (block 8721, lot 012) at filing time differs from the lot the Assessor uses for 1401 Third Street (lot 032). The permit's location point (about 6 m from the Assessor point), its description (5-story office/lab) and its 2009-11-17 completion date (the Assessor gives year built 2009) are consistent with this parcel, so it is treated as the same building. The Assessor's own rolls for lot 032 carry 455 Mission Bay Blvd South through 2012 and 1401 Third Street from 2013, which shows the address change; no source read states that the lot was renumbered from 012 to 032."
   ],
   "sources": [
    {

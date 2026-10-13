@@ -29,11 +29,12 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "A grass, semicircular traffic median immediately east of the 'Mission Bay Circle' roundabout, west of the P12 soccer field (labeled 'SFF Soccer + Fitness Court' in OCII's Nov 2024 CAC update); per Pier & Point's own satellite trace (no outside source describes the median), an already-landscaped median island, hand-traced from satellite imagery and fit to an idealized semicircle. OCII's own September 2023 Mission Bay Parks Open Space transition presentation lists 'P11/11A' together among the parcels SF Recreation and Parks will manage (not among the 'when built' parcels), consistent with it being complete by that date.",
+  "summary": "A grass, semicircular traffic median immediately east of the 'Mission Bay Circle' roundabout, west of the P12 soccer field (labeled 'SFF Soccer + Fitness Court' in OCII's Nov 2024 CAC update); per Pier & Point's own satellite trace (no outside source describes the median), an already-landscaped median island, hand-traced from satellite imagery and fit to an idealized semicircle. OCII's December 2019 Land Use Map labels the half-circle 'P11A'. OCII's own September 2023 Mission Bay Parks Open Space transition presentation lists 'P11/11A' together among the parcels SF Recreation and Parks will manage (not among the 'when built' parcels); that presentation is a plan and does not say whether the median was built.",
   "summary_sources": [
    "src-geom-p11a",
    "src-ocii-transition-2023",
-   "src-ocii-openspace-2024"
+   "src-ocii-openspace-2024",
+   "src-ocii-landusemap-2019"
   ],
   "shape": {
    "kind": "approximate",
@@ -55,9 +56,9 @@
    {
     "date": "2023-09",
     "date_label": "~2023",
-    "status": "complete",
-    "status_label": "Complete",
-    "text": "Listed as 'P11/11A' among the parcels RPD will manage (not among the 'when built' parcels) in OCII's Mission Bay Parks Open Space transition presentation -- an upper bound on when this median was built, not its actual construction date",
+    "status": null,
+    "status_label": null,
+    "text": "Listed as 'P11/11A' among the parcels RPD \"will manage\" (not among the 'when built' parcels) in OCII's Mission Bay Parks Open Space transition presentation, with the open space to transfer \"by the end of December 2023\" (an expected date). This is a plan; it does not say the median was complete or when it was built",
     "expected": false,
     "approximate": true,
     "sources": [
@@ -73,8 +74,8 @@
     ],
     "source": "Office of Community Investment and Infrastructure (sfocii.org), 2023-09",
     "origin": "record",
-    "category": "status",
-    "category_label": "Status",
+    "category": "retail",
+    "category_label": "Retail",
     "record": {
      "id": "mission_bay_p11a_median",
      "slug": "p11a",
@@ -92,6 +93,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "OCII's September 2023 presentation lists P11/11A among the parcels Recreation and Parks \"will manage\", with transfer planned by the end of December 2023; it does not say the median was complete. No source read gives its completion date.",
+    "source": "https://sfocii.org/sites/default/files/inline-files/Item%202%20Mission%20Bay%20Open%20Space%20Transition.pdf ; https://sfbos.org/sites/default/files/r0574-23.pdf ; https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
+    "sources": [
+     {
+      "title": "https://sfocii.org/sites/default/files/inline-files/Item%202%20Mission%20Bay%20Open%20Space%20Transition.pdf ; https://sfbos.org/sites/default/files/r0574-23.pdf ; https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_p11a_median",
+     "slug": "p11a",
+     "name": "P11A",
+     "permalink": "https://pierandpoint.org/parcels/p11a/",
+     "api": "https://pierandpoint.org/api/v1/records/p11a.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-29",
     "kind": "correction",
@@ -169,10 +199,26 @@
    }
   ],
   "open_questions": [
-   "No public source names this specific median island or gives its own construction date; the Sept 2023 OCII document only establishes it existed and was already RPD-managed by that date (grouped with P11), which is an upper bound, not a build date.",
-   "This record was previously only a weak ~33m proximity guess with no real source, before its actual outline was drawn by hand on a satellite image (the mapping log is in the public data repository, https://github.com/pierandpoint/record); the P-number itself, and any name/operator, remain unconfirmed by any independent published source."
+   "No source read gives this median island's own construction date or says it was built. OCII's September 2023 presentation lists it with P11 as parcels RPD \"will manage\" (transfer planned \"by the end of December 2023\"; the Board of Supervisors adopted Resolution 574-23 on December 5, 2023 authorizing termination of OCII's ground lease), which is a plan; no source read confirms the transfer or names the island's current operator.",
+   "This record was previously only a weak ~33m proximity guess with no real source, before its actual outline was drawn by hand on a satellite image (the mapping log is in the public data repository, https://github.com/pierandpoint/record); the 'P11A' label appears on OCII's December 2019 Land Use Map, but no source read gives the island's name, operator or completion date."
   ],
   "sources": [
+   {
+    "id": "src-ocii-landusemap-2019",
+    "title": "Mission Bay Land Use Map",
+    "publisher": "Office of Community Investment and Infrastructure (OCII)",
+    "date": "2019-12",
+    "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
+    "accessed": "2026-10-12"
+   },
+   {
+    "id": "src-bos-res-574-23",
+    "title": "Resolution No. 574-23 (File 231132): Agreement - Mission Bay Parks and Open Spaces - Maintenance and Operations and Termination of Ground Lease",
+    "publisher": "San Francisco Board of Supervisors",
+    "date": "2023-12-05",
+    "url": "https://sfbos.org/sites/default/files/r0574-23.pdf",
+    "accessed": "2026-10-12"
+   },
    {
     "id": "src-geom-p11a",
     "title": "Mapping log for this record's shape (Pier & Point's own mapping narrative, not an outside source)",
@@ -195,11 +241,6 @@
     "date": "2024-11-14",
     "url": "https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf",
     "accessed": "2026-09-29"
-   },
-   {
-    "id": null,
-    "title": "sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
-    "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf"
    }
   ],
   "notes": "Traffic median island, landscaped with grass, immediately adjacent to a thin connector strip (P11) leading to the roundabout.",

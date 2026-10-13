@@ -29,7 +29,7 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "Rich Sorro Commons is a 100-unit affordable housing building at 150 Berry St in Mission Bay, developed by Mission Housing Development Corporation for families and people living with HIV/AIDS. Mission Housing's own project page states it opened in July 2002, the first affordable family housing development in Mission Bay.",
+  "summary": "Rich Sorro Commons is a 100-unit affordable housing building at 150 Berry St in Mission Bay for families and people living with HIV/AIDS, with a project page on Mission Housing's website (the organisation calls itself 'the community's affordable housing developer since 1971'; the page does not say in so many words that it developed this building). That page states the building opened in July 2002, the first affordable family housing development in Mission Bay. The page and DBI's permit give 100 units; the Assessor's roll for the residential lot records 101.",
   "summary_sources": [
    "src-missionhousing-richsorro"
   ],
@@ -98,12 +98,12 @@
      {
       "id": "src-missionhousing-richsorro",
       "title": "Rich Sorro Commons",
-      "publisher": "Mission Housing Development Corporation",
+      "publisher": "Mission Housing",
       "url": "https://www.missionhousing.org/richsorro",
       "accessed": "2026-09-21"
      }
     ],
-    "source": "Mission Housing Development Corporation",
+    "source": "Mission Housing",
     "origin": "record",
     "category": "status",
     "category_label": "Status",
@@ -124,6 +124,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Mission Housing's page lists Rich Sorro Commons at 150 Berry St with 100 units and an opening in July 2002; it does not say in so many words that Mission Housing developed it. The Assessor's roll for the residential lot records 101 units and 2002 as year built.",
+    "source": "https://www.missionhousing.org/richsorro ; https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8706003",
+    "sources": [
+     {
+      "title": "https://www.missionhousing.org/richsorro ; https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=8706003"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_rich_sorro_commons",
+     "slug": "rich-sorro-commons",
+     "name": "Rich Sorro Commons",
+     "permalink": "https://pierandpoint.org/parcels/rich-sorro-commons/",
+     "api": "https://pierandpoint.org/api/v1/records/rich-sorro-commons.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-12",
     "kind": "correction",
@@ -260,13 +289,13 @@
   ],
   "open_questions": [
    "The DataSF Assessor's secured roll for 150 Berry St (lot 8706003: Multi-Family Residential, 101 units, year_property_built 2002) agrees with Mission Housing's stated July 2002 opening, and gives 101 units where Mission Housing and the permit say 100. The record had earlier read a 2003 year built from lot 8706264, but the roll lists that lot at 213 King St (Commercial Retail, no units, year built 2003), a different property, so that year is not used.",
-   "The 2000 construction permit's own block/lot (block 3795B, lot 001, an older pre-redevelopment block grid) differs from the Assessor's current blklot 8706264; the address, 100-unit/5-story description, and October 2002 permit-completion date (matching Mission Housing's July 2002 opening and the Assessor's 2003 year, both within months) line up with this parcel, so this is treated as Mission Bay's redevelopment-era block renumbering, not a different building."
+   "The 2000 construction permit's own block/lot (block 3795B, lot 001, an older pre-redevelopment block grid) differs from the Assessor's current lot for 150 Berry St (blklot 8706003); the address, 100-unit/5-story description, and October 2002 permit-completion date (DBI: completed 2002-10-21; Mission Housing states a July 2002 opening and the Assessor gives 2002 as year built for lot 8706003) line up with this building, so this is treated as Mission Bay's redevelopment-era block renumbering, not a different building. No source read states the renumbering."
   ],
   "sources": [
    {
     "id": "src-missionhousing-richsorro",
     "title": "Rich Sorro Commons",
-    "publisher": "Mission Housing Development Corporation",
+    "publisher": "Mission Housing",
     "url": "https://www.missionhousing.org/richsorro",
     "accessed": "2026-09-21"
    },

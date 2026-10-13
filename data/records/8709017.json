@@ -12,18 +12,19 @@
   ],
   "milestones": [
     {
-      "date": "2021-08",
-      "text": "New building permits issued for the 7-story lab/office building (August 2021, per San Francisco YIMBY); construction estimated at ~$70 million. The source dates the permit, not the start of construction.",
+      "date": "2021-08-31",
+      "text": "New building permits issued for the 7-story lab/office building (August 2021, per San Francisco YIMBY; DBI's record for permit 202012281760 gives an issued date of 2021-08-31); construction estimated at ~$70 million by YIMBY (the permit states $68,000,000). The sources date the permit, not the start of construction.",
       "sources": [
-        "src-sfyimby-2023"
+        "src-sfyimby-2023",
+        "src-datasf-permit-202012281760"
       ],
       "expected": false,
       "approximate": false
     },
     {
-      "date": "2023",
+      "date": "2023-02",
       "status": "under_construction",
-      "text": "Construction topped out on the seven-story structure (reported by San Francisco YIMBY in February 2023; exact topping-out date not stated).",
+      "text": "Construction had topped out on the seven-story structure by February 9, 2023, the date San Francisco YIMBY published its report; the article does not give the topping-out date, which could be earlier.",
       "sources": [
         "src-sfyimby-2023"
       ],
@@ -228,6 +229,13 @@
   ],
   "sources": [
     {
+      "id": "src-datasf-permit-202012281760",
+      "title": "Building Permits: permit 202012281760 (1450 Owens St, 7-story warm shell and core), filed 2020-12-28, approved 2021-06-30, issued 2021-08-31, completed 2025-05-19",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=202012281760",
+      "accessed": "2026-10-12"
+    },
+    {
       "id": "src-cpe-2026",
       "title": "Alexandria Lands Life Science Tenant in San Francisco",
       "publisher": "Commercial Property Executive / Commercial Search",
@@ -369,7 +377,6 @@
   ],
   "open_questions": [
     "Total building area is not settled: Bisnow (2026-03-25) calls it a \"208K SF facility\" (and separately mentions 110K SF of above-ground parking); the DBI new-construction permit 202012281760 describes \"a 7-story, type 1-a, warm shell and core for approximately 192,000 gross square feet\"; SF YIMBY (February 2023) lists 133,000 sq ft of laboratory, 49,999 sq ft of office and 2,600 sq ft of retail, which add to 185,599 sq ft. Commercial Property Executive (2026-03-27) is the source this record had used for \"~215,000 sq ft\"; its page returned HTTP 403 on 2026-10-12, so that figure is not shown.",
-    "Exact day of the August 2021 permit issuance is not sourced, only the month.",
     "Exact topping-out date is not sourced; only that it had occurred by the San Francisco YIMBY article's February 2023 publication.",
     "When the building came online is in conflict: this record had taken 2024 from Commercial Property Executive's March 2026 coverage, which could not be read on 2026-10-12 (blocked, HTTP 403), so that year is not verified; Bisnow (2026-03-25) says the property \"is expected to come online in 2027\"; DBI new-construction permit 202012281760 (7-story warm shell and core) has status 'complete' with a completed date of 2025-05-19 (DataSF i98e-djp9), which records the permit's closure, not an opening or occupancy date. No month or day is sourced, and no source read states that the building came online in 2024.",
     "Corrected 2026-10-06 (accuracy audit, October 2026): the summary dated Gladstone's anchor lease to 2024, a year this record had taken as the building's online year. Gladstone announced the lease on March 25, 2026 (labs opening early 2027) and Commercial Property Executive reported it on March 27, 2026; the summary now says so. Changelog row 542 had reported this fixed in September, but the summary had not changed."

@@ -56,7 +56,6 @@
     "value": "420 23rd Street (Assessor address for the parcel: 249 Craig Ln)",
     "sources": [
      "src-block2-approval-2026",
-     "src-portmemo-10a-2025",
      "src-datasf-parcels-2026-09-29"
     ]
    },
@@ -116,16 +115,18 @@
    },
    {
     "key": "general_contractor",
-    "value": "Webcor Builders",
+    "value": "Webcor Builders per SF YIMBY (February 9, 2026: \"Webcor Builders is the general contractor\"); IBank's April 2025 staff report names \"DPR Associate Capital\" as \"The Construction Company/Developer\", so the contractor is not settled here",
     "sources": [
-     "src-sfyimby-2026-02"
+     "src-sfyimby-2026-02",
+     "src-ibank-2025-04"
     ]
    },
    {
     "key": "ground_lease_structure",
-    "value": "Planned structure as announced in May 2025 (Bisnow): the California IBank would sell more than half a billion dollars in tax-exempt bonds to Goldman Sachs and lend the proceeds to the nonprofit Campus Facilities Improvement Association, which would ground-lease from the Regents of the University of California and sublease to Associate Capital, which would build out the site. No closing or financing document has been found.",
+    "value": "Planned structure as announced in May 2025 (Bisnow): the California IBank would sell more than half a billion dollars in tax-exempt bonds to Goldman Sachs and lend the proceeds to the nonprofit Campus Facilities Improvement Association, which would ground-lease from the Regents of the University of California and sublease to Associate Capital, which would build out the site. IBank's April 23, 2025 staff report (Resolution No. 25-09) describes the bonds as \"sold through a public offering to Goldman Sachs & Co., LLC, as representative of the underwriters\", with an expected closing date of May 28, 2025; no closing or pricing document has been found.",
     "sources": [
-     "src-bisnow-2025-05"
+     "src-bisnow-2025-05",
+     "src-ibank-2025-04"
     ]
    },
    {
@@ -304,7 +305,7 @@
     "sources": [
      {
       "id": "src-ucregents-2024",
-      "title": "California Environmental Quality Act findings in connection with the approval of the UCSF Clinical and Life Sciences Building at Dogpatch Power Station Block 2 Project, San Francisco campus (Attachment 6; the September 2024 Regents meeting and Item F5 are taken from the file's URL path, not stated in its text)",
+      "title": "California Environmental Quality Act findings in connection with the approval of the UCSF Clinical and Life Sciences Building at Dogpatch Power Station Block 2 Project, San Francisco campus (Attachment 6 to Item F5, Finance and Capital Strategies Committee, meeting of September 18, 2024)",
       "publisher": "The Regents of the University of California",
       "date": "2024-09",
       "url": "https://regents.universityofcalifornia.edu/regmeet/sept24/f5attach6.pdf",
@@ -411,7 +412,7 @@
     "date_label": "May 13, 2025",
     "status": null,
     "status_label": null,
-    "text": "Bisnow reports UCSF's announced financing plan: California Infrastructure and Economic Development Bank (IBank) to sell $575 million in tax-exempt bonds ('more than half a billion dollars') to Goldman Sachs and lend the proceeds to nonprofit Campus Facilities Improvement Association, which would ground-lease from the UC Regents and sublease to Associate Capital",
+    "text": "Bisnow reports UCSF's announced financing plan (\"selling $575M in bonds\"): California Infrastructure and Economic Development Bank (IBank) selling \"more than half a billion dollars in tax-exempt bonds to Goldman Sachs\" and lending the proceeds to nonprofit Campus Facilities Improvement Association, which would ground-lease from the UC Regents and sublease to Associate Capital. The date is Bisnow's publication date; IBank's board authorization was requested for April 23, 2025, and its staff report sets $575,000,000 as a \"not to exceed\" amount (estimated bond proceeds $532,185,000)",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -494,7 +495,7 @@
     "date_label": "Jan 27, 2026",
     "status": null,
     "status_label": null,
-    "text": "Planning Director staff memo recommends approval of the Design Review Application (revised plans through Oct 3, 2025 construction documents)",
+    "text": "Planning Director staff memo recommends approval of the Design Review Application",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -721,6 +722,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The $575 million in bonds is a not-to-exceed amount in IBank's April 2025 staff report, with an expected closing date of May 28, 2025; no closing document has been found. Sources name different general contractors (Webcor Builders per SF YIMBY; DPR Associate Capital per IBank's 2025 report). The UC Regents had the project before them as item F5 on September 18, 2024; the outcome is not confirmed. The Regents item says all lease terms are expected to be 30 years.",
+    "source": "https://ibank.ca.gov/wp-content/uploads/2025/04/4a-Campus-Facilities-Staff-Report.pdf ; https://regents.universityofcalifornia.edu/regmeet/sept24/f5.pdf ; https://www.bisnow.com/san-francisco/news/capital-markets/ucsf-charges-up-half-billion-dollar-300000-square-foot-power-station-project-129349 ; https://sfyimby.com/2026/02/excavation-work-underway-for-potrero-power-station-block-2-san-francisco.html",
+    "sources": [
+     {
+      "title": "https://ibank.ca.gov/wp-content/uploads/2025/04/4a-Campus-Facilities-Staff-Report.pdf ; https://regents.universityofcalifornia.edu/regmeet/sept24/f5.pdf ; https://www.bisnow.com/san-francisco/news/capital-markets/ucsf-charges-up-half-billion-dollar-300000-square-foot-power-station-project-129349 ; https://sfyimby.com/2026/02/excavation-work-underway-for-potrero-power-station-block-2-san-francisco.html"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "4175027",
+     "slug": "block-2",
+     "name": "Block 2",
+     "permalink": "https://pierandpoint.org/parcels/block-2/",
+     "api": "https://pierandpoint.org/api/v1/records/block-2.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-12",
     "kind": "correction",
@@ -1415,13 +1445,14 @@
    }
   ],
   "open_questions": [
-   "The UC Regents' approval of the project as a Regents item (rather than only the September 2024 CEQA findings attachment found) was not independently located; the exact Regents meeting date/action is not confirmed beyond the CEQA findings document.",
-   "Reported square footage varies across four dated sources (Aug 2025 SF YIMBY, Feb 2026 SF YIMBY, the Feb 2026 Planning Director memo, and Bisnow) by as much as 15,000-40,000 sq ft; no single figure is treated as final here.",
+   "The UC Regents' Finance and Capital Strategies Committee had the project before it as Action Item F5 for its September 18, 2024 meeting (asked to adopt the CEQA findings, approve Amendment No. 12 to the 2014 Long Range Development Plan and approve the design); no minutes or action record was read, so the outcome of that item is not confirmed.",
+   "Reported square footage varies across four dated sources (Aug 2025 SF YIMBY, Feb 2026 SF YIMBY, the Feb 2026 Planning Director memo, and Bisnow) by up to about 22,000 sq ft (roughly 278,000 sq ft summed from the Planning memo and August 2025 figures, 285,500 in February 2026, about 300,000 in Bisnow), and the figures do not all measure the same thing; no single figure is treated as final here.",
    "Overall completion date is reported inconsistently: Chronicle (Jul 2026) says opening in phases from 2028; Bisnow (May 2025) said completion by 2029; SF YIMBY (Feb 2026) says overall completion expected 2030. Not reconciled.",
    "The Real Deal's May 9, 2025 article on the $575M bond issuance is paywalled and could not be checked; Bisnow's coverage of the same financing was used instead.",
-   "No source found giving a signed lease date between UCSF and the developer, or the term of that lease.",
+   "No source found giving a signed lease date between UCSF and the developer. The UC Regents' September 18, 2024 item F5 says \"All lease terms are expected to be 30 years in duration\", an expected term for the proposed structure, not a signed lease.",
    "As of 2026-09-29, the Regents' September 2024 CEQA-findings attachment says the project 'is now being considered for final approval'; no Regents minutes or action record recording adoption (or its date) was found, so the timeline says the findings were put before the Regents.",
-   "As of 2026-09-29, no closing or financing document for the IBank bond structure was found; the ground-lease/sublease arrangement is recorded as the plan Bisnow reported in May 2025.",
+   "Who the general contractor is: SF YIMBY (February 9, 2026) says \"Webcor Builders is the general contractor\", while IBank's April 2025 staff report says \"The Construction Company/Developer is DPR Associate Capital\". No building-permit contractor of record was checked.",
+   "As of 2026-10-12, no closing or pricing document for the IBank bonds was found. IBank's staff report for its April 23, 2025 board meeting (Resolution No. 25-09) is a request for authorization with an \"Expected Closing Date\" of May 28, 2025; the ground-lease/sublease arrangement is recorded as the plan described there and in Bisnow's May 2025 report.",
    "The $575 million figure is a ceiling: IBank's staff report (board meeting April 23, 2025, Resolution No. 25-09) recommends bonds \"in an aggregate amount not to exceed $575,000,000\" and gives an expected closing date of May 28, 2025, and says the bonds \"will be secured by an Indenture and sold through a public offering to Goldman Sachs & Co., LLC, as representative of the underwriters\". Bisnow (2025-05-13) reports a plan to sell bonds, not a completed sale. No closing document or issued amount was found, so no financing is recorded as closed."
   ],
   "sources": [
@@ -1436,7 +1467,7 @@
    },
    {
     "id": "src-ucregents-2024",
-    "title": "California Environmental Quality Act findings in connection with the approval of the UCSF Clinical and Life Sciences Building at Dogpatch Power Station Block 2 Project, San Francisco campus (Attachment 6; the September 2024 Regents meeting and Item F5 are taken from the file's URL path, not stated in its text)",
+    "title": "California Environmental Quality Act findings in connection with the approval of the UCSF Clinical and Life Sciences Building at Dogpatch Power Station Block 2 Project, San Francisco campus (Attachment 6 to Item F5, Finance and Capital Strategies Committee, meeting of September 18, 2024)",
     "publisher": "The Regents of the University of California",
     "date": "2024-09",
     "url": "https://regents.universityofcalifornia.edu/regmeet/sept24/f5attach6.pdf",
@@ -1557,7 +1588,7 @@
    },
    {
     "id": "src-datasf-parcels-2026-09-29",
-    "title": "Parcels - Active and Retired (block/lot 4175027; data as of 2026-08-12)",
+    "title": "Parcels - Active and Retired (block/lot 4175027; parcel record added 2022-08-30)",
     "publisher": "DataSF / SF Office of the Assessor-Recorder",
     "url": "https://data.sf.gov/resource/acdm-wktn.json",
     "accessed": "2026-09-29"

@@ -93,7 +93,7 @@
   "costs": [
    {
     "amount_usd": 50000000,
-    "what": "Estimated cost stated on interior fit-out permit 201312194614 (self-reported for the permit fee)",
+    "what": "Estimated cost stated on interior fit-out permit 201312194614 (DBI lists estimated and revised cost both at $50,000,000); a permit valuation, not a construction cost",
     "date": "2013-12",
     "kind": "permit_valuation",
     "scope": "record",
@@ -299,6 +299,35 @@
   ],
   "changes": [
    {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "A 2013 SocketSite reader comment calls the building \"a developer building which was already approved by the planning commission and building department\"; it does not name the developer, and no source read says Kaiser bought the building. The $50,000,000 is the cost stated on the interior fit-out permit, a permit valuation and not a construction cost.",
+    "source": "https://socketsite.com/archives/2013/12/kaisers_modern_mission_bay_building_slated_for_2016_ope.html ; https://data.sf.gov/resource/i98e-djp9.json?permit_number=201312194614",
+    "sources": [
+     {
+      "title": "https://socketsite.com/archives/2013/12/kaisers_modern_mission_bay_building_slated_for_2016_ope.html ; https://data.sf.gov/resource/i98e-djp9.json?permit_number=201312194614"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8709020",
+     "slug": "kaiser-permanente-san-francisco-mission-bay-medical-offices",
+     "name": "Kaiser Permanente San Francisco Mission Bay Medical Offices",
+     "permalink": "https://pierandpoint.org/parcels/kaiser-permanente-san-francisco-mission-bay-medical-offices/",
+     "api": "https://pierandpoint.org/api/v1/records/kaiser-permanente-san-francisco-mission-bay-medical-offices.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-10-12",
     "kind": "correction",
     "kind_label": "Correction",
@@ -477,7 +506,7 @@
   "open_questions": [
    "No post-opening source was read: the March 2016 opening rests on Potrero View's February 2016 announcement ('opens next month'), the permit closeout and the Assessor year built. Kaiser's own facility page redirected in a loop and could not be read.",
    "The STUDIOS Architecture project page (cited in the map note for architect, 220,000 sq ft, Whiting-Turner, LEED Platinum and the purchase by Kaiser) returned HTTP 404 to the fetch, so architect, contractor, LEED rating and the sale are not recorded here.",
-   "The developer (map note says Alexandria Real Estate Equities, citing its 3Q14 supplemental) is not named in the pages read: that supplemental lists other Owens Street addresses but not 1600 Owens. SocketSite (2013) reader comments say it was a developer-built building bought by Kaiser; comments are not a source.",
+   "The developer (map note says Alexandria Real Estate Equities, citing its 3Q14 supplemental) is not named in the pages read: that supplemental lists other Owens Street addresses but not 1600 Owens. One SocketSite (2013) reader comment calls it \"a developer building which was already approved by the planning commission and building department\"; the comment does not name the developer, and comments are not a source. No source read says Kaiser bought the building.",
    "Kaiser's sale price and date, and the construction start date, are not stated in any source read.",
    "Stories: Potrero View (2016-02), the 2013 altered site permit (201308083838, reduced from 10 to 9 stories) and the interior fit-out permit (201312194614, a 9-story shell) say nine; the Assessor roll cited here gives number_of_stories 10.0 for parcel 8709020 (DataSF wv5m-vpq2, roll year 2022). The difference is not resolved; the 10 may reflect the original design or a counting convention."
   ],

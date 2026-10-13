@@ -3,9 +3,11 @@
   "names": [
     "Arterra"
   ],
-  "summary": "Arterra, an apartment building at 300 Berry St.",
+  "summary": "Arterra, a residential building at 300 Berry St. OpenStreetMap tags it as an apartment building and the building permit lists apartments, but the Assessor's 2022 roll classes its unit parcels as condominiums.",
   "summary_sources": [
-    "src-osm-arterra"
+    "src-osm-arterra",
+    "src-dbi-permit-200509273964",
+    "src-assessor-arterra"
   ],
   "milestones": [
     {
@@ -61,6 +63,13 @@
       "publisher": "San Francisco Department of Building Inspection, via DataSF",
       "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200509273964",
       "accessed": "2026-10-10"
+    },
+    {
+      "id": "src-assessor-arterra",
+      "title": "Assessor Historical Secured Property Tax Rolls, 2022 roll: unit parcels at 300 Berry St (property class Condominium, year built 2009)",
+      "publisher": "DataSF / SF Office of the Assessor-Recorder",
+      "url": "https://data.sf.gov/resource/wv5m-vpq2.json",
+      "accessed": "2026-10-12"
     }
   ],
   "open_questions": [

@@ -13,7 +13,6 @@
   "api": "https://pierandpoint.org/api/v1/records/madrone.json",
   "names": [
    "Madrone",
-   "Madrone Mission Bay",
    "480 Mission Bay Blvd N"
   ],
   "site": {
@@ -205,9 +204,9 @@
    {
     "date": "2012",
     "date_label": "~2012",
-    "status": "complete",
-    "status_label": "Complete",
-    "text": "Assessor roll lists 2012 as year built for the condominium lots at 420 and 480 Mission Bay Blvd N and 435 China Basin St (Bosa: towers completed 'a few years' after Radiance, 2008)",
+    "status": null,
+    "status_label": null,
+    "text": "Assessor roll lists 2012 as year built for the condominium lots at 420 and 480 Mission Bay Blvd N and 435 China Basin St (a tax-roll value, not a completion or opening event; Bosa: towers completed 'a few years' after Radiance, 2008)",
     "expected": false,
     "approximate": true,
     "sources": [
@@ -228,8 +227,8 @@
     ],
     "source": "DataSF / SF Assessor-Recorder; Bosa Development",
     "origin": "record",
-    "category": "status",
-    "category_label": "Status",
+    "category": "retail",
+    "category_label": "Retail",
     "record": {
      "id": "mission_bay_madrone",
      "slug": "madrone",
@@ -260,8 +259,8 @@
     ],
     "source": "https://data.sf.gov/resource/wv5m-vpq2.json?block=8720; https://bosadevelopment.com/project/radiance-madrone-mission-bay/",
     "origin": "csv",
-    "category": "milestone",
-    "category_label": "Milestone",
+    "category": "status",
+    "category_label": "Status",
     "record": {
      "id": "mission_bay_madrone",
      "slug": "madrone",
@@ -316,8 +315,8 @@
    {
     "date": "2014-10",
     "date_label": "Oct 2014",
-    "status": null,
-    "status_label": null,
+    "status": "complete",
+    "status_label": "Complete",
     "text": "Department of Building Inspection final-inspection permit 201305167126 (filed 2013-05-16) recorded complete on 2014-10-27; new-construction permit 200509274032 recorded complete on 2014-11-12",
     "expected": false,
     "approximate": false,
@@ -358,6 +357,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Assessor's 2012 year built is a tax-roll value, not a completion or opening date; the Department of Building Inspection recorded the final-inspection permit complete on October 27, 2014 and the new-construction permit complete on November 12, 2014.",
+    "source": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=201305167126; https://bosadevelopment.com/project/radiance-madrone-mission-bay/",
+    "sources": [
+     {
+      "title": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=201305167126; https://bosadevelopment.com/project/radiance-madrone-mission-bay/"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_madrone",
+     "slug": "madrone",
+     "name": "Madrone",
+     "permalink": "https://pierandpoint.org/parcels/madrone/",
+     "api": "https://pierandpoint.org/api/v1/records/madrone.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-12",
     "kind": "correction",
@@ -448,7 +476,7 @@
   ],
   "images": [],
   "open_questions": [
-   "No source read names Madrone together with the 435 China Basin St permit: the link rests on Bosa's 'two connected 16-storey towers', the 16-story permit with an 'east tower', and the 2012 Assessor year-built grouping of the 420 and 480 Mission Bay Blvd N and 435 China Basin St lots. The Department of Building Inspection permit 201509036096 for 420 Mission Bay Blvd N refers to '435 china basin str' as an alternate address.",
+   "No source read names Madrone together with the 435 China Basin St permit: the link rests on Bosa's 'two connected 16-storey towers', the 16-story permit, and the 2012 Assessor year-built grouping of the 420 and 480 Mission Bay Blvd N and 435 China Basin St lots. The Department of Building Inspection permit 201509036096 for 420 Mission Bay Blvd N describes the work as \"(a.k.a. 435 china basin street)\".",
    "The 2012 date is the Assessor year built, not an opening month; no sales or move-in announcement was found.",
    "Architect not found in any source read (earlier notes in the geometry file naming one were withdrawn).",
    "Bosa's page was read as extracted text and does not give a completion year for Madrone."

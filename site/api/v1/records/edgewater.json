@@ -29,7 +29,7 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "A six-story, 193-unit apartment building at 355 Berry Street in Mission Bay North (Assessor block 8707 lot 003, class Apartment 15 Units or more, Assessor roll year built 2007; the building permit shows completed 2008-02-14). Its footprint is on the north bank of Mission Creek on the OCII land use map and OSM.",
+  "summary": "A six-story, 193-unit apartment building at 355 Berry Street in Mission Bay North (Assessor block 8707 lot 003, class Apartment 15 Units or more, Assessor roll year built 2007; the building permit shows completed 2008-02-14 and describes 5 stories and 194 units; see open questions). Its footprint is on the north bank of Mission Creek on the OCII land use map and OSM.",
   "summary_sources": [
    "src-datasf-assessor-8707003",
    "src-osm-edgewater",
@@ -53,7 +53,7 @@
   "costs": [
    {
     "amount_usd": 32625000,
-    "what": "SF Department of Building Inspection permit #200502085025's revised construction-cost valuation for the 5-story, 194-unit building at 355 Berry St (the permit's initial filed estimate was $5,000,000)",
+    "what": "SF Department of Building Inspection permit #200502085025's revised construction-cost valuation for the 5-story, 194-unit building at 355 Berry St (the permit's initial filed estimate was $5,000,000); a permit valuation, not a verified construction cost, and the permit gives no date for the valuation (2008-02 is the permit's completion month)",
     "date": "2008-02",
     "kind": "construction",
     "scope": "record",
@@ -145,6 +145,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The 2005 building permit describes 5 stories and 194 dwelling units; the Assessor roll gives 6 stories and 193 units. No source read explains the differences. The $32.6 million figure is a permit valuation with no date of its own, not a verified construction cost.",
+    "source": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200502085025; https://data.sf.gov/resource/wv5m-vpq2.json",
+    "sources": [
+     {
+      "title": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200502085025; https://data.sf.gov/resource/wv5m-vpq2.json"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_edgewater",
+     "slug": "edgewater",
+     "name": "Edgewater",
+     "permalink": "https://pierandpoint.org/parcels/edgewater/",
+     "api": "https://pierandpoint.org/api/v1/records/edgewater.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-12",
     "kind": "correction",
@@ -325,7 +354,7 @@
    "Developer and architect not confirmed by any source found as of 2026-09-29, consistent with the notes on this record's map shape.",
    "Precise opening month not available; DataSF's Assessor tax roll gives only a year.",
    "A listing site's '6 units' figure (noted on this record's map shape) reads as a floorplan-type count, not the building's 193-unit total per the Assessor tax roll -- flagged there rather than reconciled here.",
-   "The 2005 construction permit's own unit count (194) is one more than the Assessor's 193 -- likely a manager's unit counted differently between filing and final tax-roll record, not a different building; not further reconciled here.",
+   "The 2005 construction permit's own unit count (194) is one more than the Assessor's 193, and the permit says 5 stories where the Assessor roll says 6; no source read explains either difference, and they are not reconciled here.",
    "Completion date: the Assessor roll gives 2007 as year built (a roll year, not a completion event), while the building's permit #200502085025 shows a completed date of 2008-02-14 (DataSF i98e-djp9). The roll's current-sale date for the parcel is 2008-03-28. No source gives a certificate-of-occupancy date."
   ],
   "sources": [

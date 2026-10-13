@@ -29,10 +29,11 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "Sister Lillian Murphy Community is a 152-unit affordable housing development at 671-691 China Basin St (DataSF parcel address range; SF YIMBY's article gives 691) in Mission Bay, developed by Mercy Housing and named for Sister Lillian Murphy, who led Mercy Housing for 27 years before retiring in 2014 and died in 2019. San Francisco YIMBY reported the City and Mayor London Breed marking the completed building's dedication in April 2022.",
+  "summary": "Sister Lillian Murphy Community is a 152-unit affordable housing development at 671-691 China Basin St (DataSF parcel address range; SF YIMBY's article gives 691) in Mission Bay, developed by Mercy Housing and named for Sister Lillian Murphy, who led Mercy Housing for 27 years before retiring in 2014 and died in 2019. San Francisco YIMBY, in an article published April 5, 2022, reported the City and Mayor London Breed 'celebrating the inauguration' of the development (it gives no event date); DBI recorded the building permit complete on 2021-10-20, a permit closeout date, not an occupancy date.",
   "summary_sources": [
    "src-sfyimby-sistermurphy",
-   "src-datasf-parcel-8711020"
+   "src-datasf-parcel-8711020",
+   "src-datasf-permit-china-basin"
   ],
   "shape": {
    "kind": "approximate",
@@ -88,24 +89,23 @@
     "relation": "tracked"
    },
    {
-    "date": "2022-04",
-    "date_label": "~2022",
+    "date": "2021-10-20",
+    "date_label": "Oct 20, 2021",
     "status": "complete",
     "status_label": "Complete",
-    "text": "City of San Francisco and Mayor London Breed held a dedication/celebration event for the completed housing development.",
+    "text": "DBI records new-construction permit 201804196818 (691 China Basin St, 7 stories, 152 dwelling units) as complete. A permit's completion date is not an occupancy or opening date.",
     "expected": false,
-    "approximate": true,
+    "approximate": false,
     "sources": [
      {
-      "id": "src-sfyimby-sistermurphy",
-      "title": "Our City, Mayor London Breed Celebrate New Housing At 691 China Basin Street, Mission Bay, San Francisco",
-      "publisher": "San Francisco YIMBY",
-      "url": "https://sfyimby.com/2022/04/our-city-mayor-london-breed-celebrate-new-housing-at-691-china-basin-street-mission-bay-san-francisco.html",
-      "date": "2022-04",
+      "id": "src-datasf-permit-china-basin",
+      "title": "Building Permits: permit #201804196818 (691 China Basin St, block 8711 lot 020), filed 2018-04-19, \"erect a new r-2,e,b 7 stories with 152 dwelling unit ... residential,child developement [sic] center and art activity space\", completed 2021-10-20, estimated cost $90,000,000",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=201804196818",
       "accessed": "2026-09-21"
      }
     ],
-    "source": "San Francisco YIMBY, 2022-04",
+    "source": "DataSF / SF Department of Building Inspection",
     "origin": "record",
     "category": "status",
     "category_label": "Status",
@@ -123,9 +123,75 @@
      "url": "https://pierandpoint.org/sites/mission-bay/"
     },
     "relation": "tracked"
+   },
+   {
+    "date": "2022-04",
+    "date_label": "~2022",
+    "status": null,
+    "status_label": null,
+    "text": "SF YIMBY (article dated April 5, 2022) reports the City and Mayor London Breed 'celebrating the inauguration of a new housing develoment' at 691 China Basin Street; the article gives no event date and still says the development 'will bring 152 units'.",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-sfyimby-sistermurphy",
+      "title": "Our City, Mayor London Breed Celebrate New Housing At 691 China Basin Street, Mission Bay, San Francisco",
+      "publisher": "San Francisco YIMBY",
+      "url": "https://sfyimby.com/2022/04/our-city-mayor-london-breed-celebrate-new-housing-at-691-china-basin-street-mission-bay-san-francisco.html",
+      "date": "2022-04",
+      "accessed": "2026-09-21"
+     }
+    ],
+    "source": "San Francisco YIMBY, 2022-04",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "mission_bay_sister_lillian_murphy",
+     "slug": "sister-lillian-murphy-community",
+     "name": "Sister Lillian Murphy Community",
+     "permalink": "https://pierandpoint.org/parcels/sister-lillian-murphy-community/",
+     "api": "https://pierandpoint.org/api/v1/records/sister-lillian-murphy-community.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "An April 5, 2022 SF YIMBY article says the City and Mayor Breed were celebrating the inauguration of the development; it gives no event date. DBI recorded the building permit complete on 2021-10-20, a permit closeout date, not an occupancy date.",
+    "source": "https://sfyimby.com/2022/04/our-city-mayor-london-breed-celebrate-new-housing-at-691-china-basin-street-mission-bay-san-francisco.html ; https://data.sf.gov/resource/i98e-djp9.json?permit_number=201804196818",
+    "sources": [
+     {
+      "title": "https://sfyimby.com/2022/04/our-city-mayor-london-breed-celebrate-new-housing-at-691-china-basin-street-mission-bay-san-francisco.html ; https://data.sf.gov/resource/i98e-djp9.json?permit_number=201804196818"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_sister_lillian_murphy",
+     "slug": "sister-lillian-murphy-community",
+     "name": "Sister Lillian Murphy Community",
+     "permalink": "https://pierandpoint.org/parcels/sister-lillian-murphy-community/",
+     "api": "https://pierandpoint.org/api/v1/records/sister-lillian-murphy-community.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-29",
     "kind": "correction",
@@ -229,7 +295,7 @@
    }
   ],
   "open_questions": [
-   "The April 2022 event reported by SF YIMBY is a dedication/naming celebration, not necessarily the construction-completion or first-occupancy date; the article's own publication date (2022-04-05) is used as the approximate month since the event date itself is not stated.",
+   "SF YIMBY's April 2022 article describes the City and Mayor 'celebrating the inauguration' of the development. It does not say 'dedication' or 'completed', gives no event date and uses the future tense ('will bring 152 units' is 'develoment'), so the April 2022 milestone uses the article's publication date (2022-04-05) as an approximate month and is not a construction-completion or first-occupancy date.",
    "Mercy Housing's own project page describes an application lottery conducted December 15, 2020, suggesting the building was substantially ready for leasing well before the April 2022 event -- but no source found as of 2026-09-29 gives an exact construction-completion or move-in date, so that earlier date is not used as the milestone."
   ],
   "sources": [
