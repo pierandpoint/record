@@ -31,12 +31,13 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "UCSF's nine-level Building 23B Parking Structure at 1650 3rd Street in Mission Bay, on Block 23 between 3rd and 4th Streets: a $23.3M budget was submitted to the Regents in November 2003 for approval, with construction slated to run March 2004 to July 2005 (no source read reports the actual dates). Designed by Stanley Saitowitz/Natoma Architects; IwamotoScott's \"Cellular Origami\" facade of more than 1,500 aluminum panels was added later (structural engineer Hohbach-Lewin, June 2020). The contractor's page gives 882 parking stalls; the 2003 budget item gave 822 spaces.",
+  "summary": "UCSF's nine-level Building 23B Parking Structure at 1650 3rd Street (the address tag on its OpenStreetMap building) in Mission Bay, on Block 23 between 3rd and 4th Streets: a $23.3M budget was submitted to the Regents in November 2003 for approval, with construction slated to run March 2004 to July 2005 (no source read reports the actual dates). Designed by Stanley Saitowitz/Natoma Architects; IwamotoScott's \"Cellular Origami\" facade of more than 1,500 aluminum panels was added later (structural engineer Hohbach-Lewin, June 2020). The contractor's page gives 882 parking stalls; the 2003 budget item gave 822 spaces.",
   "summary_sources": [
    "src-regents-2003-11",
    "src-saitowitz-23b",
    "src-hohbach-lewin-3rd",
-   "src-overaa-23b"
+   "src-overaa-23b",
+   "src-osm-third-street-garage"
   ],
   "shape": {
    "kind": "approximate",
@@ -54,6 +55,13 @@
   },
   "facts": [
    {
+    "key": "address",
+    "value": "1650 3rd Street (OpenStreetMap address tags on this building: addr:housenumber 1650, addr:street 3rd Street); none of the other sources listed here gives a street address",
+    "sources": [
+     "src-osm-third-street-garage"
+    ]
+   },
+   {
     "key": "architect",
     "value": "Stanley Saitowitz / Natoma Architects (original design, as 'UCSF Gateway Building 23B')",
     "sources": [
@@ -62,9 +70,10 @@
    },
    {
     "key": "gross_sqft",
-    "value": "253,993 (249,140 gsf parking plus 4,853 gsf shelled retail space)",
+    "value": "253,993 as planned in the November 2003 Regents item (249,140 gsf parking plus 4,853 gsf shelled retail space); Overaa Construction's project page gives 256,276 SF; the two figures are not reconciled",
     "sources": [
-     "src-regents-2003-11"
+     "src-regents-2003-11",
+     "src-overaa-23b"
     ]
    },
    {
@@ -181,6 +190,35 @@
     "sources": [
      {
       "title": "Hohbach-Lewin, UCSF Third St. Parking Garage Façade, June 9, 2020 (https://www.hohbach-lewin.com/ucsf-third-st-parking-garage-facade/)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "ucsf_third_street_garage",
+     "slug": "third-street-garage",
+     "name": "Third Street Garage",
+     "permalink": "https://pierandpoint.org/parcels/third-street-garage/",
+     "api": "https://pierandpoint.org/api/v1/records/third-street-garage.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Third Street Garage page now cites OpenStreetMap for its 1650 3rd Street address and labels its 253,993 sq ft as the 2003 planned size beside the contractor's 256,276. Two open questions that contradicted the page were corrected.",
+    "source": "OpenStreetMap way 27369503; UC Regents Item 4-GF, November 2003 (regents.universityofcalifornia.edu/regmeet/nov03/4gf.pdf); Overaa Construction project page",
+    "sources": [
+     {
+      "title": "OpenStreetMap way 27369503; UC Regents Item 4-GF, November 2003 (regents.universityofcalifornia.edu/regmeet/nov03/4gf.pdf); Overaa Construction project page"
      }
     ],
     "category": "correction",
@@ -336,10 +374,10 @@
    }
   ],
   "open_questions": [
-   "No source confirms the garage's actual completion date; the 2005-07 milestone above is the 2003 budget item's projected schedule, not a completion announcement -- a UC construction schedule commonly slips, so this date is flagged approximate.",
+   "No source confirms the garage's actual completion date; the March 2004 start and July 2005 completion are the November 2003 Regents item's projected schedule, stated in the 2003-11 milestone above, not a completion announcement. A UC construction schedule commonly slips, so no completion date is shown.",
    "The 2003 Regents item describes a nine-level, 822-space structure; this record's map data cites OpenStreetMap tagging of 8 levels -- not reconciled here, since OSM levels and the Regents' 'nine levels (including a half level at the top)' description are plausibly the same building described two ways. The building's own general contractor (Overaa, added 2026-09-22) separately gives 882 stalls -- likely the as-built figure versus the Regents' pre-construction budget estimate, but not reconciled here either.",
    "Exact capacity today (after any reconfiguration) is not confirmed by any source found, per this record's map notes.",
-   "The general contractor for the original 2004-2005 construction was not identified as of 2026-09-22.",
+   "Overaa Construction's own project page for this building, which gives no dates, is the only source read that names a general contractor; whether Overaa built the original structure, which the 2003 Regents item projected for 2004 to 2005, is not confirmed by any dated source.",
    "As of 2026-09-29: the earlier '2021 facade replacement' was wrong: Facades+ (March 15, 2021) gives the completion date as January 2020 and says the channel-glass facade was removed in 2015; The Architect's Newspaper article cited before could not be read. The November 2003 Regents item is a request for approval; the committee minutes recording the vote were not found (no 2003 minutes page could be located online).",
    "Corrected 2026-10-06 (accuracy audit, October 2026): the March 2004 construction start and July 2005 completion projected in the November 2003 Regents item were shown as expected milestones (the completion with status complete), two decades past and unconfirmed. Both were removed; the projection is now stated in the budget-item milestone, and the earliest sourced evidence that the garage stood is Facades+'s report that its original facade was removed in 2015. The actual construction start and completion dates are still unknown.",
    "Update 2026-10-12: no source that could be read dates the garage's completion or its facade work. Facades+ (March 15, 2021), cited earlier for the original channel-glass facade being removed in 2015 and the new facade being completed in \"January 2020\", returned HTTP 403 (Cloudflare) on every attempt, as did The Architect's Newspaper and Architizer coverage of the facade, so those two dates were taken off the timeline and are not confirmed. The readable sources are Hohbach-Lewin (June 9, 2020, calls the facade \"new\", no date), Overaa Construction (describes the finished garage, no year) and the November 2003 Regents item (a projection only). The garage is shown with no completion date."
@@ -402,9 +440,11 @@
     "accessed": "2026-10-12"
    },
    {
-    "id": null,
-    "title": "openstreetmap.org/way/27369503",
-    "url": "https://www.openstreetmap.org/way/27369503"
+    "id": "src-osm-third-street-garage",
+    "title": "Third Street Garage (OpenStreetMap way 27369503; tags addr:housenumber 1650, addr:street 3rd Street, building:levels 8)",
+    "publisher": "OpenStreetMap",
+    "url": "https://www.openstreetmap.org/way/27369503",
+    "accessed": "2026-10-12"
    },
    {
     "id": null,

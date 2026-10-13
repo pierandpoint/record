@@ -29,7 +29,7 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "A central utility plant serving the UCSF Mission Bay campus, on Block 16B per CEQA filings; existence is confirmed but construction date, architect and size were not found in any source checked.",
+  "summary": "A utility plant on Block 16B that a 2017 CEQA notice of determination (received August 4, 2017) calls the 'existing Preliminary Utility Plant (PUP)'; the notice concerns new utility lines to the planned Weill Neurosciences Building and does not say the plant is central or which buildings it serves. Construction date, architect and size were not found in any source checked.",
   "summary_sources": [
    "src-ceqa-pup"
   ],
@@ -58,7 +58,7 @@
    },
    {
     "key": "use",
-    "value": "Central utility plant/distribution system for the UCSF Mission Bay campus",
+    "value": "Utility plant: a 2017 CEQA notice calls it the 'existing Preliminary Utility Plant (PUP) on Block 16B' and describes extending mechanical utility lines from connections south of Rock Hall to Byers Hall and the planned Weill Neurosciences Building; the notice does not say the plant is 'central' or which buildings it serves overall",
     "sources": [
      "src-ceqa-pup"
     ]
@@ -67,6 +67,35 @@
   "costs": [],
   "milestones": [],
   "changes": [
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The utilities plant page no longer calls it a central plant serving the campus; a 2017 notice calls it the 'existing Preliminary Utility Plant' on Block 16B and does not say more. The page also corrects a 2021 reference to the 2017 notice.",
+    "source": "CEQAnet SCH 2013092047 document 15 (ceqanet.lci.ca.gov/2013092047/15); UC Regents Item 101C, May 17, 2000; OpenStreetMap way 135103720",
+    "sources": [
+     {
+      "title": "CEQAnet SCH 2013092047 document 15 (ceqanet.lci.ca.gov/2013092047/15); UC Regents Item 101C, May 17, 2000; OpenStreetMap way 135103720"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "ucsf_utilities_plant",
+     "slug": "mission-bay-preliminary-utilities-plant",
+     "name": "Mission Bay Preliminary Utilities Plant",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-preliminary-utilities-plant/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-preliminary-utilities-plant.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-09-29",
     "kind": "correction",
@@ -144,12 +173,13 @@
    }
   ],
   "open_questions": [
-   "Searched again on 2026-09-21 for a dated construction record specifically for this plant (Block 16B), including UC Regents Committee on Grounds and Buildings agenda items (found a May 2000 item for the separate Mission Bay Developmental Biology and Genetics Building (19B), which notes that building got its own 'stand-alone utility plant, due to the lack of central facility support during Phase 1 development at Mission Bay' -- a different, building-specific plant, not this campus-wide one) and a 2021 CEQA addendum describing utility-line connections from 'the existing Preliminary Utility Plant (PUP) on Block 16B' to the Weill Neurosciences Building -- confirming 'PUP' as this plant's standard abbreviation and that it predates the Weill building (opened 2021), but giving no construction date of its own. Still no dated milestone found; none added rather than guessed.",
+   "Searched again on 2026-09-21 for a dated construction record specifically for this plant (Block 16B), including UC Regents Committee on Grounds and Buildings agenda items. Item 101C of May 17, 2000, for the Mission Bay Developmental Biology and Genetics Building (19B) (p. 2), says that building would have 'a stand-alone utility plant, due to the lack of central facility support during Phase 1 development at Mission Bay' -- a plant for that building, not shown to be this one. The only CEQA document read, a Notice of Determination for the UCSF Mission Bay Utility Distribution System Extension (SCH 2013092047; approved July 31, 2017, received August 4, 2017), refers to 'the existing Preliminary Utility Plant (PUP) on Block 16B' and a 'planned Weill Neurosciences Building'; this confirms 'PUP' as the plant's abbreviation and that it existed by July 2017, but gives no construction date of its own. An earlier version of this note described a 2021 CEQA addendum; none was read, and the wording comes from the 2017 notice. Still no dated milestone found; none added rather than guessed.",
    "No construction date, architect, or engineer found in any source checked -- deliberately left undated rather than guessed.",
    "Street address: the OSM tag is 1480 4th St; the cited CEQA filing gives Block 16B but no street address. An earlier version of this record said a CEQA filing gave 1500 Owens St; no record read states that, so it was removed on 2026-09-29 (a 1500 Owens St address exists as a UCSF Health radiology clinic, which is a different use). No street address for the plant is confirmed beyond the OSM tag.",
    "No openly licensed image was found; none is hosted here.",
    "Images: no plan drawing, elevation or openly-licensed photograph was found for this building specifically. Searched: UCSF Real Estate's Mission Bay campus-site and LRDP pages (realestate.ucsf.edu, which could not be read); the UCSF 2014 LRDP EIR's CEQAnet filing (SCH 2013092047, whose pre-2016 attachments aren't hosted on CEQAnet itself); a May 2000 Regents Committee on Grounds and Buildings design-approval item for an early Mission Bay building (text-only, no figures); the 2008 \"UCSF Mission Bay Planning Principles\" appendix (a citywide-scale community map, no individual buildings labeled); and a UCSF wayfinding campus map (not an adopted plan, EIR or permit filing, so not eligible as public-record even though found). Not pursued further as of 2026-09-21; the record's own project sources above remain the citation for the building's history.",
-   "No source gives a completion date. DBI's permit dataset has no new-construction permit at 1480 4th St, and the Assessor roll has no year built for the plant."
+   "No source gives a completion date. DBI's permit dataset has no new-construction permit at 1480 4th St, and the Assessor roll has no year built for the plant.",
+   "OpenStreetMap maps the plant (way 135103720) as a fenced industrial site (tags landuse=industrial and barrier=fence), not as a building, so the outline shown is the compound, not a building footprint."
   ],
   "sources": [
    {
@@ -174,6 +204,14 @@
     "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
     "accessed": "2026-09-24",
     "overview": true
+   },
+   {
+    "id": "src-ucregents-2000-05-101c",
+    "title": "Certification of Addendum to Environmental Impact Report and Approval of Design, Mission Bay Developmental Biology and Genetics Building (19B), San Francisco Campus (Committee on Grounds and Buildings, Item 101C, May 17, 2000, p. 2)",
+    "publisher": "The Regents of the University of California",
+    "date": "2000-05",
+    "url": "https://regents.universityofcalifornia.edu/regmeet/may00/101c.pdf",
+    "accessed": "2026-10-12"
    }
   ],
   "notes": "Existence confirmed (CEQA filings reference a UCSF Mission Bay utility plant/distribution system on Block 16B), but construction date, architect and size were not found in any source checked. The OSM address tag on this feature is 1480 4th St; the CEQA record cited here places the plant on Block 16B but gives no street address. An earlier note that a CEQA record gave 1500 Owens St could not be traced to any record read and was removed on 2026-09-29.",

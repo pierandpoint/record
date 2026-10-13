@@ -29,7 +29,7 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "520 Illinois Street (per Commercial Property Executive), a five-story, ~182,800-sq-ft clinical building (Stantec design, Clark Construction general contractor) on UCSF's Block 34, at the corner of 3rd and Mariposa Streets -- Pier & Point identifies this as the north portion of what it had tracked as one combined \"block 34\" area, split 2026-09-22 along a visible roofline seam from the Illinois Street Garage immediately south of it; per SF YIMBY the clinical building and the garage are both part of UCSF's development of Block 34.",
+  "summary": "520 Illinois Street (per Commercial Property Executive), a five-story clinical building (Stantec design; Clark Construction leading the integrated project delivery team; floor-area figures differ between sources, see open questions) on UCSF's Block 34, at the corner of 3rd and Mariposa Streets -- Pier & Point identifies this as the north portion of what it had tracked as one combined \"block 34\" area, split 2026-09-22 along a visible roofline seam from the Illinois Street Garage immediately south of it; per SF YIMBY the clinical building and the garage are both part of UCSF's development of Block 34.",
   "summary_sources": [
    "src-ucsf-real-estate-bayfront",
    "src-sfyimby-block34-2021",
@@ -54,19 +54,20 @@
   "facts": [
    {
     "key": "architect",
-    "value": "Stantec (project architect), Clark Construction (general contractor)",
+    "value": "Stantec (architecture, per Stantec's own release); Clark Construction (construction manager at risk per Clark's project page; \"leading the integrated project delivery team with Stantec\" per Clark's 2021 release)",
     "sources": [
      "src-stantec-bayfront-2024",
      "src-clark-groundbreaking-2021",
+     "src-clark-project-bayfront",
      "src-sfyimby-block34-2021"
     ]
    },
    {
-    "key": "gross_sqft",
-    "value": "approximately 182,800, five stories",
+    "key": "stories",
+    "value": "5 (Clark: \"The five-story clinical building\"; Stantec: \"a five-story clinic\")",
     "sources": [
-     "src-sfyimby-block34-2021",
-     "src-clark-groundbreaking-2021"
+     "src-clark-groundbreaking-2021",
+     "src-stantec-bayfront-2024"
     ]
    }
   ],
@@ -172,7 +173,7 @@
     "date_label": "~2024",
     "status": "complete",
     "status_label": "Complete",
-    "text": "UCSF Health Bayfront Medical Building opens to patients. Hospital Management's article of August 26, 2024, written the day before, says the building is \"due to start receiving patients on 27 August\"; that is a scheduled date, not a confirmed one, and no source written after the opening could be read, so only the month is shown",
+    "text": "UCSF Health Bayfront Medical Building opens to patients in August 2024. Hospital Management's article of August 26, 2024, written the day before, says the building is \"due to start receiving patients on 27 August\" (a scheduled date, not a confirmed one). Healthcare Facilities Today (August 29, 2024) writes \"UCSF is celebrating the opening of the UCSF Health Bayfront Medical Building\", and Stantec's release (September 17, 2024) writes \"Recently, the UCSF Bayfront Medical Building opened its doors\"; neither gives the opening day, so only the month is shown",
     "expected": false,
     "approximate": true,
     "sources": [
@@ -183,9 +184,25 @@
       "date": "2024-08-26",
       "url": "https://www.hospitalmanagement.net/news/ucsf-launches-mission-bay-building/",
       "accessed": "2026-10-12"
+     },
+     {
+      "id": "src-hft-bayfront-2024",
+      "title": "UCSF Health Opens Bayfront Medical Building (\"UCSF is celebrating the opening of the UCSF Health Bayfront Medical Building\")",
+      "publisher": "Healthcare Facilities Today",
+      "date": "2024-08-29",
+      "url": "https://healthcarefacilitiestoday.com/posts/UCSF-Health-Opens-Bayfront-Medical-Building--29713",
+      "accessed": "2026-10-12"
+     },
+     {
+      "id": "src-stantec-bayfront-2024",
+      "title": "Stantec-designed UCSF Bayfront Medical Building opens on growing Mission Bay campus",
+      "publisher": "Stantec",
+      "date": "2024-09-17",
+      "url": "https://www.stantec.com/en/news/2024/stantec-designed-ucsf-bayfront-medical-building-opens-mission-bay-campus",
+      "accessed": "2026-10-12"
      }
     ],
-    "source": "Hospital Management (hospitalmanagement.net), 2024-08-26",
+    "source": "Hospital Management (hospitalmanagement.net), 2024-08-26; Healthcare Facilities Today, 2024-08-29; Stantec, 2024-09-17",
     "origin": "record",
     "category": "status",
     "category_label": "Status",
@@ -215,6 +232,35 @@
     "sources": [
      {
       "title": "Hospital Management, \"UCSF launches Mission Bay healthcare building\", August 26, 2024 (https://www.hospitalmanagement.net/news/ucsf-launches-mission-bay-building/)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "ucsf_bayfront_medical_building",
+     "slug": "ucsf-bayfront-medical-building",
+     "name": "UCSF Bayfront Medical Building",
+     "permalink": "https://pierandpoint.org/parcels/ucsf-bayfront-medical-building/",
+     "api": "https://pierandpoint.org/api/v1/records/ucsf-bayfront-medical-building.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Bayfront Medical Building page no longer states one floor area, because sources give 181,000 to 190,000 sq ft; it lists them instead. It describes Clark as leading the construction team rather than as general contractor, cites post-opening articles for the August 2024 opening, and drops an unsourced total-cost figure.",
+    "source": "https://sfyimby.com/2021/10/construction-starts-for-ucsf-clinical-building-at-block-34-mission-bay-san-francisco.html; https://healthcarefacilitiestoday.com/posts/UCSF-Health-Opens-Bayfront-Medical-Building--29713; https://www.stantec.com/en/news/2024/stantec-designed-ucsf-bayfront-medical-building-opens-mission-bay-campus; https://www.clarkconstruction.com/our-work/projects/ucsf-bayfront-medical-building-mission-bay; https://www.gb-eng.com/projects/detail/578; https://ophthalmology.ucsf.edu/directions-wgvcv/; https://data.sf.gov/resource/i98e-djp9.json?permit_number=M1227947",
+    "sources": [
+     {
+      "title": "https://sfyimby.com/2021/10/construction-starts-for-ucsf-clinical-building-at-block-34-mission-bay-san-francisco.html; https://healthcarefacilitiestoday.com/posts/UCSF-Health-Opens-Bayfront-Medical-Building--29713; https://www.stantec.com/en/news/2024/stantec-designed-ucsf-bayfront-medical-building-opens-mission-bay-campus; https://www.clarkconstruction.com/our-work/projects/ucsf-bayfront-medical-building-mission-bay; https://www.gb-eng.com/projects/detail/578; https://ophthalmology.ucsf.edu/directions-wgvcv/; https://data.sf.gov/resource/i98e-djp9.json?permit_number=M1227947"
      }
     ],
     "category": "correction",
@@ -372,9 +418,9 @@
   "open_questions": [
    "2026-09-22, corroborating data point: DataSF business registrations whose point-location falls inside this record's shape list '520 Illinois St # D2317' and '520 Illinois St # D1200' as their address -- matching the 520 Illinois St address already sourced from UCSF Real Estate's own project page, not contradicting it. That match is by location only and was not individually confirmed, so this is logged as corroboration, not an independent primary source.",
    "SPLIT 2026-09-22: this record was previously a single OCII plan block 34 record (a probable, geographically-inferred identity for the WHOLE of a mapped area that also included the Illinois Street Garage to its south). This was corrected: UCSF built three real structures where the OCII plan showed two, and Bayfront Medical Building is only the north piece of that area (the Illinois Street Garage record covers the south piece). The split follows a visible satellite roofline seam, not a surveyed or permitted lot line, and its exact boundary should be treated as indicative rather than authoritative.",
-   "Total project cost is reported elsewhere as approximately $335.8 million for the combined clinical building and garage; not broken out per building and not independently verified against a primary UCSF or Regents document, so left out of costs.",
-   "As of 2026-09-29, UCSF Real Estate's project page and Stantec's news page could not be read; the address (520 Illinois St), story count, size, architect, contractor and opening date are now backed by Commercial Property Executive, SF YIMBY and Clark's release. The Regents outcome for the May 2020 Block 34 items was not found (only the committee agenda was read). The construction start is Clark's September 2021 groundbreaking announcement; CPE and Clark say the garage began earlier (April 2021). The 590 Illinois St address given for the Illinois Street Garage is not in any source that could be read. Whether CPE's $228 million includes the garage is not stated.",
-   "Update 2026-10-12: no source written after the opening could be read, so the opening day is not confirmed. Hospital Management (August 26, 2024) says the building was \"due to start receiving patients on 27 August\" (a scheduled date, published the day before); Commercial Property Executive's opening coverage (commercialsearch.com), Stantec's news page and UCSF Real Estate's project page all returned HTTP 403, as did UCSF's news site. The opening is therefore shown at month level. The $228 million figure and the garage \"came online in 2023\" statement also come from the Commercial Property Executive page, which could not be re-read. SF YIMBY (February 8, 2023) had said the building was \"expected to open later this year\"; the sources do not say when the opening date moved."
+   "Floor-area figures disagree and none is shown as this building's size. SF YIMBY (October 2, 2021): \"The structure will span 182,800 square feet of floor area.\" Healthcare Facilities Today (August 29, 2024): \"The five-story, all-electric, 181,000-square-foot building\". Stantec (September 17, 2024): \"the clinic's 183,000 square feet\". Clark's project page: \"The 190,000-square-foot clinical building\". Guttmann & Blaevoet: \"Clinical Building: 190,000 SF\". Some figures are pre-construction plans and some were written after opening, and the sources do not say what each measures. A total project cost of about $335.8 million for the clinical building and garage together was cited in an earlier version of this record with no named source; it could not be traced to one, so it is not shown. Other figures found: Guttmann & Blaevoet gives \"a $210M, 190,000sf clinical building\" and \"a $32M, 500-stall parking garage\" (\"Cost: $242 million\"), and Commercial Property Executive's $228 million (see costs) is attributed to the San Francisco Chronicle; they disagree, and none is a UCSF or Regents document.",
+   "As of 2026-10-12, UCSF Real Estate's project page could not be read (HTTP 403). Stantec's news release (September 17, 2024) and Clark's project page and 2021 release are readable and support the story count, the architect and the construction team; the 520 Illinois St address rests on Commercial Property Executive (unreadable on re-read) and on DBI permit M1227947, which lists \"520 illinois street and 590 illinois street\" for UCSF block 8725, lot 001. The Regents outcome for the May 2020 Block 34 items was not found (only the committee agenda was read). The construction start is Clark's September 2021 groundbreaking announcement; CPE and Clark say the garage began earlier (April 2021). UCSF's Department of Ophthalmology directions page gives \"a UCSF parking structure at 590 Illinois Street (same block as our 490 Illinois Street clinic building)\", and the DBI permit lists 590 Illinois Street beside 520 without saying which building is which; SF YIMBY puts the garage at 499 Illinois Street. Whether CPE's $228 million includes the garage is not stated.",
+   "Update 2026-10-12: the opening is confirmed by sources written after it, but none read names the opening day. Hospital Management (August 26, 2024) says the building was \"due to start receiving patients on 27 August\" (a scheduled date, published the day before); Healthcare Facilities Today (August 29, 2024) and Stantec (September 17, 2024) report it open without giving the day; Commercial Property Executive's opening coverage (commercialsearch.com), UCSF Real Estate's project page and UCSF's news site returned HTTP 403. The opening is therefore shown at month level. The $228 million figure and the garage \"came online in 2023\" statement also come from the Commercial Property Executive page, which could not be re-read. SF YIMBY (February 8, 2023) had said the building was \"expected to open later this year\"; the sources do not say when the opening date moved."
   ],
   "sources": [
    {
@@ -396,9 +442,9 @@
     "id": "src-stantec-bayfront-2024",
     "title": "Stantec-designed UCSF Bayfront Medical Building opens on growing Mission Bay campus",
     "publisher": "Stantec",
-    "date": "2024-08",
+    "date": "2024-09-17",
     "url": "https://www.stantec.com/en/news/2024/stantec-designed-ucsf-bayfront-medical-building-opens-mission-bay-campus",
-    "accessed": "2026-09-21"
+    "accessed": "2026-10-12"
    },
    {
     "id": "src-regents-2020-05-block34",
@@ -456,6 +502,28 @@
     "publisher": "Hospital Management (hospitalmanagement.net)",
     "date": "2024-08-26",
     "url": "https://www.hospitalmanagement.net/news/ucsf-launches-mission-bay-building/",
+    "accessed": "2026-10-12"
+   },
+   {
+    "id": "src-hft-bayfront-2024",
+    "title": "UCSF Health Opens Bayfront Medical Building (\"UCSF is celebrating the opening of the UCSF Health Bayfront Medical Building\")",
+    "publisher": "Healthcare Facilities Today",
+    "date": "2024-08-29",
+    "url": "https://healthcarefacilitiestoday.com/posts/UCSF-Health-Opens-Bayfront-Medical-Building--29713",
+    "accessed": "2026-10-12"
+   },
+   {
+    "id": "src-clark-project-bayfront",
+    "title": "UCSF Bayfront Medical Building at Mission Bay (project page: \"Delivery Method Construction Manager at Risk\"; \"The 190,000-square-foot clinical building\")",
+    "publisher": "Clark Construction",
+    "url": "https://www.clarkconstruction.com/our-work/projects/ucsf-bayfront-medical-building-mission-bay",
+    "accessed": "2026-10-12"
+   },
+   {
+    "id": "src-gb-block34",
+    "title": "UCSF Mission Bay Medical Office Building and Parking Garage at Block 34 (\"a $210M, 190,000sf clinical building\"; \"a $32M, 500-stall parking garage\"; \"Cost: $242 million\")",
+    "publisher": "Guttmann & Blaevoet (engineering firm)",
+    "url": "https://www.gb-eng.com/projects/detail/578",
     "accessed": "2026-10-12"
    }
   ],

@@ -116,6 +116,35 @@
   ],
   "changes": [
    {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The page now notes that a 2021 city permit record lists an existing 8-story public parking garage at 1625 Owens Street. Who built it, and when, is still not known.",
+    "source": "https://data.sf.gov/resource/i98e-djp9.json?$where=block=%278709%27%20and%20lot=%27011%27",
+    "sources": [
+     {
+      "title": "https://data.sf.gov/resource/i98e-djp9.json?$where=block=%278709%27%20and%20lot=%27011%27"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "ucsf_community_center_garage",
+     "slug": "community-center-garage-ucsf-mission-bay",
+     "name": "Community Center Garage (UCSF Mission Bay)",
+     "permalink": "https://pierandpoint.org/parcels/community-center-garage-ucsf-mission-bay/",
+     "api": "https://pierandpoint.org/api/v1/records/community-center-garage-ucsf-mission-bay.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-10-10",
     "kind": "added",
     "kind_label": "Added",
@@ -176,9 +205,9 @@
   ],
   "images": [],
   "open_questions": [
-   "When was the Community Center Garage built, and is it a multi-level structure? UCSF's parking page (undated) offers parking at 1625 Owens St, and the city's address point is inside the outline, but no source read dates its construction or opening.",
-   "STRUCTURE QUESTION: the May 2000 Regents item describes an interim parking lot beside the community center, to be replaced by a parking structure in a later phase. In UCSF's June 12, 2025 Mission Bay CAC figure (an image) the label 'COMMUNITY CENTER GARAGE (21A)' sits beside a flat, building-less parcel with a parking symbol, where it was viewed by eye, not as text. Whether a parking structure was ever built here, or the 'garage' is the surface lot, is not established. The geometry file's rooftop-deck reading comes from the project's own satellite review and is not corroborated by a document.",
-   "The Assessor's 2022 roll has one parcel (8709011, listed '1675 1625 OWENS') for the community center and the garage together, with no year built; a DBI permit search on block 8709 lot 011 returned only two unrelated permits (a street-space permit and a 2021 telecommunications-equipment alteration), so no new-construction permit for a garage was found.",
+   "When was the Community Center Garage built, and is it a multi-level structure? UCSF's parking page (undated) offers parking at 1625 Owens St, and the city's address point is inside the outline, but no source read dates its construction or opening. A 2021 DBI permit record on the lot lists an existing public parking garage of 8 stories (see below).",
+   "STRUCTURE QUESTION: the May 2000 Regents item describes an interim parking lot beside the community center, to be replaced by a parking structure in a later phase. In UCSF's June 12, 2025 Mission Bay CAC figure (an image) the label 'COMMUNITY CENTER GARAGE (21A)' sits beside a flat, building-less parcel with a parking symbol, where it was viewed by eye, not as text. The map label alone does not settle whether a structure stands there. DBI permit 202111081961 (filed 2021-11-08, 1625 Owens St, block 8709 lot 011) records \"existing_use\": \"prkng garage/public\" and \"number_of_existing_stories\": \"8\", which indicates a multi-story public parking garage, but its description is of telecommunications equipment, not of the garage, and no source read gives a construction date. The geometry file's rooftop-deck reading comes from the project's own satellite review and is not corroborated by a document.",
+   "The Assessor's 2022 roll has one parcel (8709011, listed '1675 1625 OWENS') for the community center and the garage together, with no year built; a DBI permit search on block 8709 lot 011 returned two permits: a 2019 street-space permit (M1170767) and permit 202111081961 (filed 2021-11-08), an alteration to an existing T-Mobile telecommunications facility whose record lists the existing use as \"prkng garage/public\" with 8 existing stories. Neither is a new-construction permit for a garage, so no construction permit or date was found.",
    "Architect, builder, space count and operator are not found. UCSF's Parking and Transportation pages were not opened (blocked).",
    "The garage is distinct from the 1670 Owens garage (DBI permit 200801243180, 823 spaces), which has its own record.",
    "No UC Regents capital item for a community-center garage was located."
@@ -212,6 +241,14 @@
     "publisher": "City and County of San Francisco (DataSF)",
     "url": "https://data.sfgov.org/resource/ramy-di5m.json?eas_address_id=731845",
     "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-dbi-202111081961",
+    "title": "Building Permits: permit #202111081961 (1625 Owens St, block 8709 lot 011), filed 2021-11-08: \"existing_use\": \"prkng garage/public\", \"number_of_existing_stories\": \"8\"",
+    "publisher": "DataSF / SF Department of Building Inspection",
+    "date": "2021-11-08",
+    "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=202111081961",
+    "accessed": "2026-10-12"
    },
    {
     "id": null,

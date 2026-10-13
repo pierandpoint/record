@@ -71,11 +71,12 @@
    },
    {
     "key": "stories",
-    "value": "5",
+    "value": "5 (Tutor Perini and Rudolph and Sletten: 'five-story'); OpenStreetMap tags this building 6 levels (height 31), a difference no source read explains",
     "sources": [
      "src-architizer-smith",
      "src-tutorperini-smith",
-     "src-rs-smith"
+     "src-rs-smith",
+     "src-osm-smith"
     ]
    },
    {
@@ -90,12 +91,14 @@
   "costs": [
    {
     "amount_usd": 254000000,
-    "what": "Project cost reported at the May 7, 2008 groundbreaking ('$254 million Cardiovascular Research Institute'); the contractor pages give a $196 million contract amount",
-    "date": "2008-05-14",
+    "what": "Project budget of $254 million (to be funded from gifts $198 million, external financing $42 million and campus funds $14 million) in the capital budget amendment the UC Regents Committee on Grounds and Buildings approved for presentation to the Board on November 13, 2007; Industrial Info Resources' May 14, 2008 report on the May 7, 2008 groundbreaking repeats '$254 million'. The contractor pages give a $196 million contract amount. A budget, not a construction cost or a final cost",
+    "date": "2007-11-13",
     "approximate": false,
     "sources": [
+     "src-ucregents-2007-11-cvrb",
      "src-iir-smith-2008",
-     "src-architizer-smith"
+     "src-tutorperini-smith",
+     "src-rs-smith"
     ],
     "kind": "development",
     "scope": "record"
@@ -124,6 +127,43 @@
     "origin": "record",
     "category": "status",
     "category_label": "Status",
+    "record": {
+     "id": "ucsf_smith_cardiovascular",
+     "slug": "smith-cardiovascular-research-building",
+     "name": "Smith Cardiovascular Research Building",
+     "permalink": "https://pierandpoint.org/parcels/smith-cardiovascular-research-building/",
+     "api": "https://pierandpoint.org/api/v1/records/smith-cardiovascular-research-building.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2007-11-13",
+    "date_label": "Nov 13, 2007",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "UC Regents Committee on Grounds and Buildings 'approved the President's recommendations and voted to present them to the Board', including an amendment of the capital budget to $254 million for the Mission Bay Cardiovascular Research Building (17A/B) (gifts $198 million, external financing $42 million, campus funds $14 million) and approval of the building's design; the minutes record the committee's vote, and the Board's own vote was not read",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-ucregents-2007-11-cvrb",
+      "title": "Amendment of the Budget for Capital Improvements and the Capital Improvement Program, Approval of External and Interim Financing, Adoption of Findings, and Approval of Design, Mission Bay Cardiovascular Research Building (17A/B), San Francisco Campus (Committee on Grounds and Buildings minutes, item G, November 13, 2007)",
+      "publisher": "The Regents of the University of California",
+      "date": "2007-11-13",
+      "url": "https://regents.universityofcalifornia.edu/minutes/2007/gb1107.pdf",
+      "accessed": "2026-10-12"
+     }
+    ],
+    "source": "The Regents of the University of California, 2007-11-13",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
     "record": {
      "id": "ucsf_smith_cardiovascular",
      "slug": "smith-cardiovascular-research-building",
@@ -177,6 +217,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Smith Cardiovascular Research Building page now dates its $254 million to the Regents' November 13, 2007 budget amendment and calls it a budget. It also lists the contractors' conflicting sizes without the unreadable Architizer figures, and notes a six-level tag in OpenStreetMap.",
+    "source": "UC Regents Committee on Grounds and Buildings minutes, November 13, 2007 (regents.universityofcalifornia.edu/minutes/2007/gb1107.pdf); Industrial Info Resources, May 14, 2008; Tutor Perini and Rudolph and Sletten project pages; OpenStreetMap way 135103721",
+    "sources": [
+     {
+      "title": "UC Regents Committee on Grounds and Buildings minutes, November 13, 2007 (regents.universityofcalifornia.edu/minutes/2007/gb1107.pdf); Industrial Info Resources, May 14, 2008; Tutor Perini and Rudolph and Sletten project pages; OpenStreetMap way 135103721"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "ucsf_smith_cardiovascular",
+     "slug": "smith-cardiovascular-research-building",
+     "name": "Smith Cardiovascular Research Building",
+     "permalink": "https://pierandpoint.org/parcels/smith-cardiovascular-research-building/",
+     "api": "https://pierandpoint.org/api/v1/records/smith-cardiovascular-research-building.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-06",
     "kind": "correction",
@@ -286,8 +355,8 @@
    "Exact opening month/day not confirmed by a primary source; a specific Nov 1, 2010 date found in one web-search summary was not traceable to a primary document, so it isn't used here.",
    "No openly licensed image was found; none is hosted here.",
    "Images: no plan drawing, elevation or openly-licensed photograph was found for this building specifically. Searched: UCSF Real Estate's Mission Bay campus-site and LRDP pages (realestate.ucsf.edu, which could not be checked); the UCSF 2014 LRDP EIR's CEQAnet filing (SCH 2013092047, whose pre-2016 attachments aren't hosted on CEQAnet itself); a May 2000 Regents Committee on Grounds and Buildings design-approval item for an early Mission Bay building (text-only, no figures); the 2008 \"UCSF Mission Bay Planning Principles\" appendix (a citywide-scale community map, no individual buildings labeled); and a UCSF wayfinding campus map (not an adopted plan, EIR or permit filing, so not eligible as public-record even though found). Not pursued further; the record's own project sources above remain the citation for the building's history.",
-   "As of 2026-09-21, a May 2008 Regents item amending this project's budget/financing (to $254,000,000, matching this record's own cost figure) has been found, but the original full-approval item's exact date could not be found; the September 2007 preliminary design review, which is dated and clearly building-specific, is used instead as the earlier milestone.",
-   "As of 2026-09-29, the size, cost, architect credits and 'L-shaped' description rest on an Architizer listing that could not be checked; two readable contractor pages (Tutor Perini; Rudolph and Sletten) give 323,000 sq ft, five stories, completion 2010, a $196 million 'contract amount' and the architect as 'SmithGroupJJR', which conflict with 236,000 sq ft and $254 million (the latter matches a May 2008 Regents budget item that could not be re-checked). The September 2007 Regents minutes give no project budget.",
+   "The Regents' full budget and design approval for this project is in the Committee on Grounds and Buildings minutes of November 13, 2007 (item G): a $254 million budget and approval of the design, which the committee voted to present to the Board; the Board's own vote was not read. An earlier version of this note referred to a May 2008 Regents item amending the budget to $254 million; that item could not be located and is not used.",
+   "As of 2026-10-12, an Architizer listing could not be read (HTTP 403), and the architect fact rests on it; two readable contractor pages (Tutor Perini; Rudolph and Sletten) name the architect as 'SmithGroupJJR' and Industrial Info Resources (May 14, 2008) says 'Designed by Detroit's SmithGroup'. Size is not settled: the same contractor pages describe a 'five-story, 232,000-square-foot' building but list 'SIZE 323,000 Square Feet' in their details box, and Industrial Info Resources gives 232,000; no source read explains the 323,000. The contractor pages also give completion 2010 and a $196 million contract amount, which differs from the $254 million budget shown in the costs.",
    "Corrected 2026-10-06 (accuracy audit, October 2026): the gross_sqft fact and summary reported the contractor pages as giving 323,000 sq ft, but those pages' own descriptions say 232,000 (323,000 is only in their details box), matching Industrial Info Resources' May 14, 2008 report of a 232,000-square-foot building. The $254 million cost, which rested only on an unreadable Architizer listing, now cites the same May 2008 report and is dated to it."
   ],
   "sources": [
@@ -358,6 +427,14 @@
     "date": "2008-05-14",
     "url": "https://www.industrialinfo.com/news/article/construction-begins-on-254-million-cardiovascular-research-institute-for-ucsf--132778",
     "accessed": "2026-10-06"
+   },
+   {
+    "id": "src-ucregents-2007-11-cvrb",
+    "title": "Amendment of the Budget for Capital Improvements and the Capital Improvement Program, Approval of External and Interim Financing, Adoption of Findings, and Approval of Design, Mission Bay Cardiovascular Research Building (17A/B), San Francisco Campus (Committee on Grounds and Buildings minutes, item G, November 13, 2007)",
+    "publisher": "The Regents of the University of California",
+    "date": "2007-11-13",
+    "url": "https://regents.universityofcalifornia.edu/minutes/2007/gb1107.pdf",
+    "accessed": "2026-10-12"
    }
   ],
   "notes": "Five stories; size and cost conflict between sources: an Architizer listing credited to SmithGroup (which could not be checked in September 2026) gives ~236,000 sq ft and ~$254 million, while two contractor pages (Tutor Perini; Rudolph and Sletten) give 323,000 sq ft and a $196 million contract amount. Headquarters of the UCSF Cardiovascular Research Institute (UCSF history: opening in 2010) with laboratories, an outpatient clinic and a vivarium. Architect per Architizer SmithGroup with Jim Jennings Architecture (landscape Andrea Cochran Landscape Architecture); the contractor pages say SmithGroupJJR. Opened 2010 (year only; a specific Nov 1, 2010 date found in one search summary was not traceable to a primary document, so not used).",

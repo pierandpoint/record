@@ -29,9 +29,10 @@
     {
       "date": "2020-11",
       "status": "complete",
-      "text": "SF YIMBY reports (2020-11-27) that UCSF's Wayne and Gladys Valley Center for Vision at 490 Illinois Street has opened; the exact opening date is not given",
+      "text": "SF YIMBY, in an article published November 27, 2020 (a publication date, not an event date), says 'A new medical facility has been opened' at 490 Illinois Street for UCSF's Wayne and Gladys Valley Center for Vision, while also describing the building in the future tense ('The structure will contain'); the exact opening date is not given. UCSF's June 2025 Mission Bay CAC presentation (slide 2, 'MISSION BAY - EXISTING PLAN', map updated December 2024) shows 'VALLEY CENTER FOR VISION (33)' on its existing-buildings map",
       "sources": [
-        "src-sfyimby-490illinois"
+        "src-sfyimby-490illinois",
+        "src-ucsf-cac-2025-06"
       ],
       "expected": false,
       "approximate": true
@@ -144,7 +145,7 @@
     },
     {
       "id": "src-ucsf-cac-2025-06",
-      "title": "UCSF Mission Bay Development Overview (CAC presentation, June 12, 2025; p.3 map 'MAP UPDATED: DECEMBER 2024')",
+      "title": "UCSF Mission Bay Development Overview (CAC presentation, June 12, 2025; slide 2 map 'MISSION BAY - EXISTING PLAN (MAP UPDATED: DECEMBER 2024)', labelled in the map image, not in the PDF's text layer)",
       "publisher": "UCSF, via OCII (sfocii.org)",
       "date": "2025-06-12",
       "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf",
@@ -195,13 +196,27 @@
       "publisher": "DataSF / SF Office of the Assessor-Recorder",
       "url": "https://data.sf.gov/resource/acdm-wktn.json?blklot=8725001",
       "accessed": "2026-10-10"
+    },
+    {
+      "id": "src-caffecentral-490-illinois",
+      "title": "490 Illinois Street -- Mission Bay (Caffe Central location page)",
+      "publisher": "Caffe Central (own material)",
+      "url": "https://www.caffecentral.com/490-illinois-street-mission-bay",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": "src-osm-way-84821722",
+      "title": "Building tagged 490 Illinois Street (OpenStreetMap way 84821722; tags building:levels 6, height 28)",
+      "publisher": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/84821722",
+      "accessed": "2026-10-12"
     }
   ],
   "open_questions": [
     "No source read gives the exact opening day: SF YIMBY reported the building open on November 27, 2020, without a date.",
     "The Regents' January 2017 documents describe the proposed Block 33 building as 343,000 gross square feet (275,400 assignable), mainly academic and administrative workspace (200,500 assignable square feet) with 45,200 assignable square feet of vision clinic space. SF YIMBY's 347,500 square feet at opening is a different figure, and no source read explains the difference.",
-    "No opening date was found for Caffe Central at 490 Illinois St: the cafe's own page lists the location and its hours but gives no date.",
-    "OpenStreetMap labels one of the 409/499 Illinois St buildings across Illinois St (way 84821722, 6 levels, 28 m) as 490 Illinois St. The City's address point, UCSF's 2025 campus map and SF YIMBY's description all place the 12-story Valley Center for Vision here instead, so that label is not used.",
+    "No opening date was found for Caffe Central at 490 Illinois St: the cafe's own page (Caffe Central, '490 Illinois Street -- Mission Bay') lists the location and its hours (Monday-Friday 7am-4pm) but gives no date.",
+    "OpenStreetMap labels one of the 409/499 Illinois St buildings across Illinois St (way 84821722; tags addr:housenumber 490, addr:street Illinois Street, building:levels 6, height 28) as 490 Illinois St. The City's address point, UCSF's 2025 campus map and SF YIMBY's description all place the 12-story Valley Center for Vision here instead, so that label is not used.",
     "Geometry: this building's east edge sits close to, but not necessarily exactly on, Illinois St's west curb line; it has not been checked against a building footprint (DataSF Building Footprints, surveyed in 2010, predates the building)."
   ],
   "last_verified": "2026-10-11"

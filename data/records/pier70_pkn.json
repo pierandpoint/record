@@ -5,7 +5,7 @@
     "PKN",
     "20th and Illinois Street parcel (north)"
   ],
-  "summary": "The 1.5-acre former Port parking lot at 20th and Illinois Streets, sold in February 2019 to a TMG Partners / Presidio Bay Ventures joint venture under a Vertical DDA after a competitive offering, generating $24.2 million of land proceeds for the Pier 70 project. Planning approved a 65-ft, 245-unit for-sale condominium building over ground-floor retail (377,506 gsf, Handel Architects) in November 2019; the developers' pages call it fully entitled and Handel lists it 'In Design', and no construction start was found.",
+  "summary": "The 1.5-acre former Port parking lot at 20th and Illinois Streets, sold in February 2019 to a TMG Partners / Presidio Bay Ventures joint venture under a Vertical DDA after a competitive offering, generating $24.2 million of land proceeds for the Pier 70 project. Planning approved the building's schematic design in November 2019. The Port's project page describes a 65-foot, 377,506 gsf building with 245 for-sale residential units over ground-floor amenity and retail space, designed by Handel Architects, while the building permit application says 241 residential units. The developers' pages call it fully entitled, Handel lists it 'In Design', and no construction start was found.",
   "summary_sources": [
     "src-port-pkn",
     "src-legistar-190055",
@@ -13,7 +13,8 @@
     "src-pln-pkn-2019",
     "src-tmg-pkn",
     "src-handel-pkn",
-    "src-port-9b-2017"
+    "src-port-9b-2017",
+    "src-datasf-permits-pkn"
   ],
   "milestones": [
     {
@@ -72,6 +73,15 @@
       "approximate": false
     },
     {
+      "date": "2019-11-25",
+      "text": "Building permit application 201911258098 filed for a new 6-story mixed-use building at 919 Illinois St (Parcel K North) with 241 residential units, a ground-level lobby, and retail and commercial space, estimated cost $150 million; an application, not a start of construction",
+      "sources": [
+        "src-datasf-permits-pkn"
+      ],
+      "expected": false,
+      "approximate": false
+    },
+    {
       "date": "2020",
       "text": "The Port's project page lists '2020 - 2021 Design and Permitting' in its project schedule (a schedule entry; the page does not say the work took place)",
       "sources": [
@@ -79,6 +89,15 @@
       ],
       "expected": false,
       "approximate": true
+    },
+    {
+      "date": "2021-02-25",
+      "text": "San Francisco's permit data shows the application's status as 'approved' on this date, with no issue date, so no issued building permit was found; a 2022 revision (permit 202205053660, approving the building's documented height as 7 stories over a basement) was approved August 5, 2022",
+      "sources": [
+        "src-datasf-permits-pkn"
+      ],
+      "expected": false,
+      "approximate": false
     },
     {
       "date": "2017-09-26",
@@ -116,10 +135,11 @@
     },
     {
       "key": "ownership",
-      "value": "Sold by the Port; described by Presidio Bay as the only privately owned land in the Pier 70 Special Use District",
+      "value": "Sold by the Port. Presidio Bay's own page calls it 'the only privately-owned land in the Pier 70 Special Use District', but the Port's August 2026 Item 11A (p.2) says the Special Use District also includes 'approximately 3 acres owned by PG&E known as the Hoedown Yard', so the developer's wording does not match the Port's description",
       "sources": [
         "src-port-9b-2017",
-        "src-presidiobay-pkn"
+        "src-presidiobay-pkn",
+        "src-port-11a-2026"
       ]
     },
     {
@@ -132,11 +152,13 @@
     },
     {
       "key": "units",
-      "value": "245 for-sale residential units (Port page); developer pages say 245 (TMG) and approximately 241 (Presidio Bay)",
+      "value": "245 for-sale residential units (Port page); the TMG and Handel Architects pages also say 245, Presidio Bay's page says approximately 241, and the building permit application filed in 2019 says 241 residential units. The sources disagree and none is picked here",
       "sources": [
         "src-port-pkn",
         "src-tmg-pkn",
-        "src-presidiobay-pkn"
+        "src-presidiobay-pkn",
+        "src-handel-pkn",
+        "src-datasf-permits-pkn"
       ]
     },
     {
@@ -165,9 +187,10 @@
     },
     {
       "key": "stories",
-      "value": "6 (Handel Architects)",
+      "value": "6 per Handel Architects ('a new 6-story mixed-use development') and the building permit application filed in 2019 ('to erect a 6-story' building); a 2022 permit revision, approved August 5, 2022, documents 7 stories over a basement under the building code's definitions of grade plane and story above grade plane",
       "sources": [
-        "src-handel-pkn"
+        "src-handel-pkn",
+        "src-datasf-permits-pkn"
       ]
     },
     {
@@ -363,13 +386,28 @@
       "url": "https://www.sfport.com/meetings/port-commission-august-11-2026",
       "accessed": "2026-09-29",
       "date": "2026-08-11"
+    },
+    {
+      "id": "src-datasf-permits-pkn",
+      "title": "San Francisco building permits for block 4110 lot 012 (919 Illinois St): permit applications 201911258098 and 202205053660",
+      "publisher": "DataSF, San Francisco Department of Building Inspection permit data (dataset i98e-djp9)",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?block=4110&lot=012",
+      "accessed": "2026-10-12"
+    },
+    {
+      "id": "src-bisnow-2019-06",
+      "title": "How This Waterfront Development Broke Ground In 6 Months",
+      "publisher": "Bisnow (Dean Boerner), citing the San Francisco Business Times",
+      "url": "https://www.bisnow.com/san-francisco/news/state-of-market/how-an-sf-waterfront-development-broke-ground-in-6-months-99374",
+      "accessed": "2026-10-12",
+      "date": "2019-06-10"
     }
   ],
   "open_questions": [
     "The purchase price: the only figure found is the Port's '$24.2 million of land proceeds from the sale of Parcel K North in February 2019'; the executed Vertical DDA and the Budget and Legislative Analyst report attached to File 190055 were not opened.",
-    "No groundbreaking or building permit was found. Bisnow's June 2019 piece says TMG and Presidio Bay 'broke ground after recent purchase', which conflicts with the Port page's 2020-2021 design-and-permitting timeline and no groundbreaking was found in any source read; treat the 2019 claim as unverified. (The November 2025 Potrero View article about Pier 70 housing concerns Brookfield's site and does not mention Parcel K North, so it is not used here.)",
+    "No groundbreaking or issued building permit was found. A new-construction permit application for 919 Illinois St (block 4110, lot 012; permit 201911258098) was filed on Nov 25, 2019 and shows status 'approved' as of Feb 25, 2021, with no issue date in San Francisco's permit data (queried Oct 12, 2026). Bisnow's June 10, 2019 article, citing the San Francisco Business Times, says TMG and Presidio Bay 'are gearing up to break ground on around 250 units of the recently purchased Parcel K North': it reports preparation, not a groundbreaking, which is consistent with the Port page's 2020-2021 design-and-permitting timeline.",
     "Affordable housing on PKN: the 2017 memo calls the units market-rate and the 2026 report says condo projects pay an in-lieu fee toward the stand-alone affordable sites, while the Planning conditions reference Section 415 affordable units; the actual obligation is unresolved.",
-    "Unit and square-footage figures disagree between the Port page (245 units, 377,506 gsf) and the two developer pages (241 units / 411,273 sq ft; 275,000 sq ft residential).",
+    "Unit and square-footage figures disagree between sources: the Port page gives 245 units and 377,506 gsf; TMG's page gives 245 units and 275,000 sq ft residential; Handel Architects' page gives 245 units; Presidio Bay's page gives about 241 units and 411,273 sq ft; and the building permit application says 241 residential units.",
     "No basis for an expected-completion date was found: Parcel K North was sold to a private developer in 2019 and sits outside the 28-Acre Project's DDA phasing plan, so no Development Agreement phase window applies to it; no PKN-specific schedule statement was found (the Port's November 2025 comment reported by Potrero View concerns Pier 70 generally), and the developers' own pages (TMG, Presidio Bay, Handel Architects) give no construction start or completion date, so this record stays undated.",
     "Current build status of Parcel K North: the developers' pages (undated) call it 'fully entitled' and Handel lists 'In Design'; no source dated 2026 that names Parcel K North was found beyond Port Item 11A's mention of the 2019 sale."
   ],
