@@ -10,8 +10,8 @@
         "use": "park",
         "geometry_type": "approximate",
         "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
-        "digitization_method": "Traced from the Potrero Power Station Design for Development's own Figure 6.2.3 (Building Height Plan, p.245), which labels this feature directly (not inferred). Georeferenced using an affine transform fit from 8 control points -- the 4 real-world corners of Block 1 and the 4 real-world corners of Block 12 (both already independently traced and committed elsewhere in this dataset), matched to their pixel positions in this same diagram. Residual error against those 8 control points is roughly 15-24m, consistent with this site's other entries. This is a DIFFERENT (but equivalent-precision) point set than the 9 street-intersection points used for Blocks 1-15 -- both were derived from the same source diagram. CORRECTED 2026-09-15: user-flagged visual check found this polygon sitting mostly in the water, not on the real shoreline -- confirmed by pixel-sampling the actual water/land color transition along the coast at several latitudes, which showed the traced strip running consistently ~12m east of the true shoreline (the 8-control-point transforms residual error, landing on the water side rather than the land side). Shifted the entire polygon 12m west (bearing 266.5, this site's established grid west direction) as a uniform correction, preserving the traced shape's relative geometry -- overlay-confirmed afterward that the shifted strip now sits on the real paved/rocky shoreline strip for its full length, including through the point/breakwater curve at the south end. Not a full re-trace of the curve's own shape -- see accuracy_caveat. SECOND CORRECTION 2026-09-15: user confirmed the 12m uniform shift still left most of the shape (especially the southern point/breakwater curve) sitting in the water -- a single uniform shift could not fix a curving coastline traced from a diagram. Re-traced from scratch directly off satellite color: classified water vs. land per-pixel (water reads distinctly greener/cyan relative to red -- G-R > 12 -- versus this industrial sites darker, warmer-toned dirt and pavement) at zoom 19, scanned every ~8th row for the first sustained water run to get a raw shoreline point per row, then smoothed with a median filter (window 15, then 9) to cancel wave-texture noise while preserving the real curve including the point at the south end. Built the park as an 8m-wide ribbon (this sites established grid bearing, 266.5 degrees, for the inland offset) along that traced shoreline. Overlay-confirmed the full length, including the point curve, now sits on real land. RE-CLIPPED 2026-09-16: user spotted this feature still visibly cutting into Block 9 on the rendered map -- the earlier same-day fix only avoided reusing this trace's bad segment when building the new Prequel Park (Power Station sub-area) connector, but never corrected this file's own geometry, so the original notch (dipping into Block 9's now-corrected footprint) was still here. Clipped this polygon directly against Block 9's own current geometry via shapely difference() -- Block 9's boundary cuts all the way through this thin ribbon at that point, so the result is a MultiPolygon (the ribbon north of Block 9 and the ribbon south of it, both real portions, now with zero overlap into Block 9 by construction rather than by hand-editing vertices). 2026-09-29 accuracy audit: the source_doc_urls entry pointed to the August 22, 2019 public-review draft #2 of the Design for Development (potrero_power_D4D_draft-082219.pdf), which now returns 404 and has no archive snapshot; it has been repointed to the adopted final D4D (February 26, 2020, https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf), where Figure 6.2.3 Building Height Plan is on printed p.245 (PDF p.247) and Table 3.1.1 Permitted Uses on printed p.47, and whose footers carry the February 26, 2020 date; the SF Planning project page (https://sfplanning.org/potrero-power-station) is added as the source for status and phasing. The park's shoreline shape itself was re-traced from satellite imagery as described above, so digitized_from's citation of Figure 6.2.3 covers only the park's name and general location ('WATERFRONT PARK' is labelled vertically along the shoreline east of Block 9 and the Stack in the final figure); the full extent is shown in the final D4D's Figure 4.16.1. 2026-10-02: public-text pass. accuracy_caveat, why_no_real_parcel, notes reworded for readers (meaning unchanged; no change to the shape, status, use or geometry_type); previous wording -- accuracy_caveat: 'APPROXIMATE -- Figure 6.2.3 labels this as a long, curving shoreline strip running the full length of the site's bay frontage (continuing north and south beyond this figure's own page crop in the source PDF). This polygon traces only the portion visible on Figure 6.2.3 itself as a simplified strip (not the full shoreline extent, and not precisely following the actual curving shore/site-boundary line, which was simplified to a handful of vertices). Treat as directionally correct but incomplete and shape-approximate. Same 15-25m positional tolerance as this site's other entries. Position corrected 2026-09-15 (12m uniform shift onto the real shoreline, see digitization_method) -- the strip's own curve/shape still was not independently re-verified vertex-by-vertex against the coastline, only its overall position. Second position correction 2026-09-15: re-traced directly from satellite imagery color (water vs. land pixel classification), not the diagram transform -- now an 8m-wide ribbon on the real shoreline, including the southern point/breakwater curve. Still simplified (does not capture the D4D-labeled strips full north-south extent beyond what is visible here) and the exact width (8m) is an assumption, not measured from any park-design source. NOTE 2026-09-16: this feature's own outer-shoreline trace turned out to substantially overlap the newly-added 'Prequel Park (Power Station sub-area)' -- evidence (a Spring 2026 construction-pipeline listing describing the same corridor as a '2-acre Waterfront Park', which could not be located or checked) suggests both features describe the same physical shoreline strip: this one as the D4D's own long-term planning label, Prequel Park as the interim park (still planned: the Port Commission memo of Nov 14, 2025 says the developer hoped to start construction in the third quarter of 2026, and no source confirms a start). The overlap is expected, not a tracing error -- see Prequel Park (Power Station sub-area)'s own digitization_method. Not merged into one feature since the two have different sourcing/status and either could be independently corrected later.'; notes: 'Simplified partial trace of a long shoreline open space -- see accuracy_caveat; does not capture the strip's full north-south extent.'; why_no_real_parcel: 'Open space with no subdivided Assessor parcel of its own within the largely unaddressed former power-station site. (This is our own parcel-search narration, not something the cited Design for Development can establish; the D4D does not address Assessor parcels.) The Port shoreline premises are Port land under Lease L-16662 (Port Commission memo, Nov 14, 2025); DataSF Parcels (queried 2026-09-29) lists active lots in Assessor blocks 4175 and 4232 added in December 2023 after the Phase 1 Final Map, and whether any of them matches this park was not checked.'. CHECKED 2026-10-11: this drawing lies partly on DataSF's active lot 4175028 (21,885 m2, 1241 Delaware St, PPS-MU zoning, recorded 2022-08-30) (698 m2), on lot 4116007 (313 m2, which the Pier 70 waterfront open space uses as part of its promenade) and on lot 4232010 (87 m2, 401 23rd St, PDR-1-G zoning, 44,309 m2); the rest lies outside every active lot. None is this park's own lot, so the drawing is kept. No change to the shape. REPLACED 2026-10-11 (shape; status and use unchanged; at the owner's direction): the earlier Waterfront Park trace (2,393 m2) was merged with the Prequel Park (Power Station sub-area, 5,108 m2) and Prequel Park (Port sub-area, 3,936 m2) drawings (union 9,471 m2), and that union was cut by the lines along Block 9's south edge and Block 4's north edge. The band between the lines went to Prequel Park (interim); the part south of Block 9's south edge and around the rounded landform went to The Point; the strip beside Stack Plaza and the sliver north of Block 4 stay here (740 m2). 2026-10-12 CORRECTION (text only; no change to the shape, status, use or geometry_type): (1) The 2026-09-29 entry above says the 2019-08-22 draft D4D URL (potrero_power_D4D_draft-082219.pdf) 'now returns 404 and has no archive snapshot'. On 2026-10-12 that URL returned HTTP 200 (application/pdf, content-length 61153595; curl -IL), so the 404 statement is withdrawn; the archive claim was not re-checked. Pointing the record at the final D4D remains right, because the final is the adopted document. (2) The SF Planning project page (https://sfplanning.org/potrero-power-station) was added there 'as the source for status and phasing'. It gives the program ('The ~3-acre waterfront park, which opens up over 1,000 linear feet of shoreline to the public for the first time in 150 years') and general phasing ('built in multiple phases over a 30-year period'), and its approval table lists only the October 2020 Phase 1 approval; it states no status or phase for this park. The October 7, 2020 Phase 1 approval's Table 5 (Phase 1 Application, section 5.1, PDF p.26) lists 'Waterfront Park South' (DA phase 1, proposed 2), 'Waterfront Park North' and 'Waterfront Park West' (DA phase 3, proposed 2), with the footnote '* Waterfront Park South is required to be delivered prior to the City's issuance of the First Certificate of Occupancy for the Building representing 3 million square feet of total development.' (3) The 2026-09-16 note above reports that the Port memo of Nov 14, 2025 'says the developer hoped to start construction in the third quarter of 2026'. The memo gives two sets of expected dates: construction start in the first quarter of 2026 and public opening in the first quarter of 2027 (PDF p.2), and the third quarter of 2026 and the third quarter of 2027 (PDF p.4). Both are expected dates, not events; the third quarter of 2026 ended on 2026-09-30 and this record cites no source reporting a start. (4) The notes said the shape 'does not capture the strip's full north-south extent', and the accuracy_caveat quoted in the 2026-10-02 entry said the strip continues 'north and south beyond this figure's own page crop in the source PDF'. The 2026-10-11 replacement caveat no longer says so, and no page read supports it: Figure 6.2.3 (printed p.245) labels the strip 'Waterfront Park' along the bay side of Blocks 4 and 9, and D4D section 4.19 gives the park's limits as 'generally bounded by the Point to the south, the northern boundary of the Blue Greenway along 23rd Street, the Bay to the east, the northern boundary of Craig Lane Paseo, and the western boundary of the Blue Greenway parallel to the shoreline'; the claim that the strip continues beyond the figure was not supported by the pages read. The notes now describe the shape as the remainder it is. Previous wording -- notes: 'Simplified partial trace of a long shoreline open space -- see the accuracy caveat; does not capture the strip's full north-south extent. Since...'.",
-        "accuracy_caveat": "APPROXIMATE -- what is left of the shoreline strip once Prequel Park (interim), The Point and Stack Plaza have their own shapes: two pieces, one south of Block 9 beside Stack Plaza and one north of Block 4, together 740 m2 (0.18 acre). The Design for Development's Waterfront Park is much larger (the SF Planning project page lists 'The ~3-acre waterfront park'; Figure 4.19.1, printed p.99, draws a Waterfront Park Boundary along the shoreline strip it shows), so this shape is a remainder, not the park. It was formed by merging the earlier Waterfront Park trace with both Prequel Park sub-area drawings and cutting the result at Block 9's south edge and Block 4's north edge. The two pieces are the parts of the strip outside Prequel Park (interim)'s footprint: the permanent waterfront park is read to be built along the shoreline of the interim Prequel Park when that park ends, so that shoreline is Waterfront Park's future ground and is not drawn twice here. Same 15-25 m positional tolerance as this site's other entries.",
+        "digitization_method": "Traced from the Potrero Power Station Design for Development's own Figure 6.2.3 (Building Height Plan, p.245), which labels this feature directly (not inferred). Georeferenced using an affine transform fit from 8 control points -- the 4 real-world corners of Block 1 and the 4 real-world corners of Block 12 (both already independently traced and committed elsewhere in this dataset), matched to their pixel positions in this same diagram. Residual error against those 8 control points is roughly 15-24m, consistent with this site's other entries. This is a DIFFERENT (but equivalent-precision) point set than the 9 street-intersection points used for Blocks 1-15 -- both were derived from the same source diagram. CORRECTED 2026-09-15: user-flagged visual check found this polygon sitting mostly in the water, not on the real shoreline -- confirmed by pixel-sampling the actual water/land color transition along the coast at several latitudes, which showed the traced strip running consistently ~12m east of the true shoreline (the 8-control-point transforms residual error, landing on the water side rather than the land side). Shifted the entire polygon 12m west (bearing 266.5, this site's established grid west direction) as a uniform correction, preserving the traced shape's relative geometry -- overlay-confirmed afterward that the shifted strip now sits on the real paved/rocky shoreline strip for its full length, including through the point/breakwater curve at the south end. Not a full re-trace of the curve's own shape -- see accuracy_caveat. SECOND CORRECTION 2026-09-15: user confirmed the 12m uniform shift still left most of the shape (especially the southern point/breakwater curve) sitting in the water -- a single uniform shift could not fix a curving coastline traced from a diagram. Re-traced from scratch directly off satellite color: classified water vs. land per-pixel (water reads distinctly greener/cyan relative to red -- G-R > 12 -- versus this industrial sites darker, warmer-toned dirt and pavement) at zoom 19, scanned every ~8th row for the first sustained water run to get a raw shoreline point per row, then smoothed with a median filter (window 15, then 9) to cancel wave-texture noise while preserving the real curve including the point at the south end. Built the park as an 8m-wide ribbon (this sites established grid bearing, 266.5 degrees, for the inland offset) along that traced shoreline. Overlay-confirmed the full length, including the point curve, now sits on real land. RE-CLIPPED 2026-09-16: user spotted this feature still visibly cutting into Block 9 on the rendered map -- the earlier same-day fix only avoided reusing this trace's bad segment when building the new Prequel Park (Power Station sub-area) connector, but never corrected this file's own geometry, so the original notch (dipping into Block 9's now-corrected footprint) was still here. Clipped this polygon directly against Block 9's own current geometry via shapely difference() -- Block 9's boundary cuts all the way through this thin ribbon at that point, so the result is a MultiPolygon (the ribbon north of Block 9 and the ribbon south of it, both real portions, now with zero overlap into Block 9 by construction rather than by hand-editing vertices). 2026-09-29 accuracy audit: the source_doc_urls entry pointed to the August 22, 2019 public-review draft #2 of the Design for Development (potrero_power_D4D_draft-082219.pdf), which now returns 404 and has no archive snapshot; it has been repointed to the adopted final D4D (February 26, 2020, https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf), where Figure 6.2.3 Building Height Plan is on printed p.245 (PDF p.247) and Table 3.1.1 Permitted Uses on printed p.47, and whose footers carry the February 26, 2020 date; the SF Planning project page (https://sfplanning.org/potrero-power-station) is added as the source for status and phasing. The park's shoreline shape itself was re-traced from satellite imagery as described above, so digitized_from's citation of Figure 6.2.3 covers only the park's name and general location ('WATERFRONT PARK' is labelled vertically along the shoreline east of Block 9 and the Stack in the final figure); the full extent is shown in the final D4D's Figure 4.16.1. 2026-10-02: public-text pass. accuracy_caveat, why_no_real_parcel, notes reworded for readers (meaning unchanged; no change to the shape, status, use or geometry_type); previous wording -- accuracy_caveat: 'APPROXIMATE -- Figure 6.2.3 labels this as a long, curving shoreline strip running the full length of the site's bay frontage (continuing north and south beyond this figure's own page crop in the source PDF). This polygon traces only the portion visible on Figure 6.2.3 itself as a simplified strip (not the full shoreline extent, and not precisely following the actual curving shore/site-boundary line, which was simplified to a handful of vertices). Treat as directionally correct but incomplete and shape-approximate. Same 15-25m positional tolerance as this site's other entries. Position corrected 2026-09-15 (12m uniform shift onto the real shoreline, see digitization_method) -- the strip's own curve/shape still was not independently re-verified vertex-by-vertex against the coastline, only its overall position. Second position correction 2026-09-15: re-traced directly from satellite imagery color (water vs. land pixel classification), not the diagram transform -- now an 8m-wide ribbon on the real shoreline, including the southern point/breakwater curve. Still simplified (does not capture the D4D-labeled strips full north-south extent beyond what is visible here) and the exact width (8m) is an assumption, not measured from any park-design source. NOTE 2026-09-16: this feature's own outer-shoreline trace turned out to substantially overlap the newly-added 'Prequel Park (Power Station sub-area)' -- evidence (a Spring 2026 construction-pipeline listing describing the same corridor as a '2-acre Waterfront Park', which could not be located or checked) suggests both features describe the same physical shoreline strip: this one as the D4D's own long-term planning label, Prequel Park as the interim park (still planned: the Port Commission memo of Nov 14, 2025 says the developer hoped to start construction in the third quarter of 2026, and no source confirms a start). The overlap is expected, not a tracing error -- see Prequel Park (Power Station sub-area)'s own digitization_method. Not merged into one feature since the two have different sourcing/status and either could be independently corrected later.'; notes: 'Simplified partial trace of a long shoreline open space -- see accuracy_caveat; does not capture the strip's full north-south extent.'; why_no_real_parcel: 'Open space with no subdivided Assessor parcel of its own within the largely unaddressed former power-station site. (This is our own parcel-search narration, not something the cited Design for Development can establish; the D4D does not address Assessor parcels.) The Port shoreline premises are Port land under Lease L-16662 (Port Commission memo, Nov 14, 2025); DataSF Parcels (queried 2026-09-29) lists active lots in Assessor blocks 4175 and 4232 added in December 2023 after the Phase 1 Final Map, and whether any of them matches this park was not checked.'. CHECKED 2026-10-11: this drawing lies partly on DataSF's active lot 4175028 (21,885 m2, 1241 Delaware St, PPS-MU zoning, recorded 2022-08-30) (698 m2), on lot 4116007 (313 m2, which the Pier 70 waterfront open space uses as part of its promenade) and on lot 4232010 (87 m2, 401 23rd St, PDR-1-G zoning, 44,309 m2); the rest lies outside every active lot. None is this park's own lot, so the drawing is kept. No change to the shape. REPLACED 2026-10-11 (shape; status and use unchanged; at the owner's direction): the earlier Waterfront Park trace (2,393 m2) was merged with the Prequel Park (Power Station sub-area, 5,108 m2) and Prequel Park (Port sub-area, 3,936 m2) drawings (union 9,471 m2), and that union was cut by the lines along Block 9's south edge and Block 4's north edge. The band between the lines went to Prequel Park (interim); the part south of Block 9's south edge and around the rounded landform went to The Point; the strip beside Stack Plaza and the sliver north of Block 4 stay here (740 m2). 2026-10-12 CORRECTION (text only; no change to the shape, status, use or geometry_type): (1) The 2026-09-29 entry above says the 2019-08-22 draft D4D URL (potrero_power_D4D_draft-082219.pdf) 'now returns 404 and has no archive snapshot'. On 2026-10-12 that URL returned HTTP 200 (application/pdf, content-length 61153595; curl -IL), so the 404 statement is withdrawn; the archive claim was not re-checked. Pointing the record at the final D4D remains right, because the final is the adopted document. (2) The SF Planning project page (https://sfplanning.org/potrero-power-station) was added there 'as the source for status and phasing'. It gives the program ('The ~3-acre waterfront park, which opens up over 1,000 linear feet of shoreline to the public for the first time in 150 years') and general phasing ('built in multiple phases over a 30-year period'), and its approval table lists only the October 2020 Phase 1 approval; it states no status or phase for this park. The October 7, 2020 Phase 1 approval's Table 5 (Phase 1 Application, section 5.1, PDF p.26) lists 'Waterfront Park South' (DA phase 1, proposed 2), 'Waterfront Park North' and 'Waterfront Park West' (DA phase 3, proposed 2), with the footnote '* Waterfront Park South is required to be delivered prior to the City's issuance of the First Certificate of Occupancy for the Building representing 3 million square feet of total development.' (3) The 2026-09-16 note above reports that the Port memo of Nov 14, 2025 'says the developer hoped to start construction in the third quarter of 2026'. The memo gives two sets of expected dates: construction start in the first quarter of 2026 and public opening in the first quarter of 2027 (PDF p.2), and the third quarter of 2026 and the third quarter of 2027 (PDF p.4). Both are expected dates, not events; the third quarter of 2026 ended on 2026-09-30 and this record cites no source reporting a start. (4) The notes said the shape 'does not capture the strip's full north-south extent', and the accuracy_caveat quoted in the 2026-10-02 entry said the strip continues 'north and south beyond this figure's own page crop in the source PDF'. The 2026-10-11 replacement caveat no longer says so, and no page read supports it: Figure 6.2.3 (printed p.245) labels the strip 'Waterfront Park' along the bay side of Blocks 4 and 9, and D4D section 4.19 gives the park's limits as 'generally bounded by the Point to the south, the northern boundary of the Blue Greenway along 23rd Street, the Bay to the east, the northern boundary of Craig Lane Paseo, and the western boundary of the Blue Greenway parallel to the shoreline'; the claim that the strip continues beyond the figure was not supported by the pages read. The notes now describe the shape as the remainder it is. Previous wording -- notes: 'Simplified partial trace of a long shoreline open space -- see the accuracy caveat; does not capture the strip's full north-south extent. Since...'. TRIMMED 2026-10-13 (shape only; status, use and geometry_type unchanged), at the owner's direction: the northern piece (the 349 m2 sliver north of Block 4) was dropped and the southern piece beside Stack Plaza (390 m2) is kept as drawn. The shape was a MultiPolygon of two pieces (740 m2) and is now one polygon. Previous wording of the caveat's first sentence: 'two pieces, one south of Block 9 beside Stack Plaza and one north of Block 4, together 740 m2 (0.18 acre)'.",
+        "accuracy_caveat": "APPROXIMATE -- what is left of the shoreline strip once Prequel Park (interim), The Point and Stack Plaza have their own shapes: one piece, south of Block 9 beside Stack Plaza, 390 m2 (0.10 acre). The Design for Development's Waterfront Park is much larger (the SF Planning project page lists 'The ~3-acre waterfront park'; Figure 4.19.1, printed p.99, draws a Waterfront Park Boundary along the shoreline strip it shows), so this shape is a remainder, not the park. It was formed by merging the earlier Waterfront Park trace with both Prequel Park sub-area drawings and cutting the result at Block 9's south edge and Block 4's north edge. The two pieces are the parts of the strip outside Prequel Park (interim)'s footprint: the permanent waterfront park is read to be built along the shoreline of the interim Prequel Park when that park ends, so that shoreline is Waterfront Park's future ground and is not drawn twice here. Same 15-25 m positional tolerance as this site's other entries.",
         "why_no_real_parcel": "Open space with no subdivided Assessor parcel of its own within the largely unaddressed former power-station site. (This reflects Pier & Point's own parcel search, not something the cited Design for Development can establish; the D4D does not address Assessor parcels.) The Port shoreline premises are Port land under Lease L-16662 (Port Commission memo, Nov 14, 2025); DataSF Parcels (queried 2026-09-29) lists active lots in Assessor blocks 4175 and 4232 added in December 2023 after the Phase 1 Final Map, and whether any of them matches this park was not checked.",
         "regulatory_context": "The site's shoreline public-access open space, per the D4D's own Figure 6.2.3 label, running along the bay side of Blocks 9 and the Stack, connecting toward Warm Water Cove Park to the south (shown on the same figure, outside the project site boundary).",
         "notes": "Remainder of the shoreline strip once Prequel Park (interim), The Point and Stack Plaza have their own shapes -- see the accuracy caveat. Since 2026-10-11 The Point, Stack Plaza and Prequel Park (interim) are separate records and this record's shape is only the remainder of the shoreline strip.",
@@ -22,122 +22,48 @@
         ]
       },
       "geometry": {
-        "type": "MultiPolygon",
+        "type": "Polygon",
         "coordinates": [
           [
             [
-              [
-                -122.381579999,
-                37.756088
-              ],
-              [
-                -122.381349,
-                37.756102567
-              ],
-              [
-                -122.381348999,
-                37.756083992
-              ],
-              [
-                -122.381343843,
-                37.756016062
-              ],
-              [
-                -122.381327754,
-                37.755948209
-              ],
-              [
-                -122.381295571,
-                37.755880345
-              ],
-              [
-                -122.381290931,
-                37.755873946
-              ],
-              [
-                -122.381225131,
-                37.755860339
-              ],
-              [
-                -122.381409981,
-                37.755861309
-              ],
-              [
-                -122.381579999,
-                37.756088
-              ]
-            ]
-          ],
-          [
+              -122.381579999,
+              37.756088
+            ],
             [
-              [
-                -122.381849992,
-                37.757771
-              ],
-              [
-                -122.38173519,
-                37.757776038
-              ],
-              [
-                -122.381734999,
-                37.7578439
-              ],
-              [
-                -122.381523141,
-                37.757911711
-              ],
-              [
-                -122.381498899,
-                37.7579796
-              ],
-              [
-                -122.381434594,
-                37.75804743
-              ],
-              [
-                -122.381415802,
-                37.758115292
-              ],
-              [
-                -122.3814024,
-                37.7581831
-              ],
-              [
-                -122.381311656,
-                37.75818753
-              ],
-              [
-                -122.381325066,
-                37.758119673
-              ],
-              [
-                -122.381343842,
-                37.758051815
-              ],
-              [
-                -122.381408209,
-                37.757983955
-              ],
-              [
-                -122.381432355,
-                37.757916099
-              ],
-              [
-                -122.381644123,
-                37.757848268
-              ],
-              [
-                -122.381644001,
-                37.75778
-              ],
-              [
-                -122.381645351,
-                37.757777739
-              ],
-              [
-                -122.381849992,
-                37.757771
-              ]
+              -122.381349,
+              37.756102567
+            ],
+            [
+              -122.381348999,
+              37.756083992
+            ],
+            [
+              -122.381343843,
+              37.756016062
+            ],
+            [
+              -122.381327754,
+              37.755948209
+            ],
+            [
+              -122.381295571,
+              37.755880345
+            ],
+            [
+              -122.381290931,
+              37.755873946
+            ],
+            [
+              -122.381225131,
+              37.755860339
+            ],
+            [
+              -122.381409981,
+              37.755861309
+            ],
+            [
+              -122.381579999,
+              37.756088
             ]
           ]
         ]
