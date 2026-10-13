@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-10-12",
+ "generated": "2026-10-13",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -133840,18 +133840,47 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "PARTIALLY REAL -- the outer boundary is a real polygonized city block from real street geometry, not hand-traced. No internal A/B split needed (this label is a single block).",
-     "digitized_from": "Real block boundary: the city block outlined by DataSF's official street centerlines, trimmed back to allow for the full street width."
+     "accuracy_caveat": "PARTIALLY REAL -- the outer boundary is a real polygonized city block from real street geometry, not hand-traced, except the south-west corner: the source outline cut that corner with a diagonal about 63 m long, and it is squared off here by extending the south and west edges until they meet (about 992 m2 added), because the OCII Land Use Map (December 2019) draws the block as a rectangle. The added corner point is a construction, not a surveyed point. No internal A/B split needed (this label is a single block).",
+     "digitized_from": "Real block boundary: the city block outlined by DataSF's official street centerlines, trimmed back to allow for the full street width. The south-west corner is completed by extending the block's south and west edges until they meet (see the accuracy note)."
     }
    },
    "centroid": {
-    "lon": -122.391558,
-    "lat": 37.768203
+    "lon": -122.391607,
+    "lat": 37.76818
    },
    "facts": [],
    "costs": [],
    "milestones": [],
    "changes": [
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Mission Bay Block 22 (park): south-west corner completed.",
+     "source": "OCII Mission Bay Land Use Map (December 2019)",
+     "sources": [
+      {
+       "title": "OCII Mission Bay Land Use Map (December 2019)"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_block_22",
+      "slug": "mission-bay-south-block-22-park",
+      "name": "Mission Bay South Block 22 (park)",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-22-park/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-22-park.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
     {
      "date": "2026-09-29",
      "kind": "correction",
@@ -134044,6 +134073,10 @@
       [
        -122.39203085325647,
        37.76778589187075
+      ],
+      [
+       -122.392496825,
+       37.767757384
       ],
       [
        -122.39253822604715,
