@@ -41,14 +41,14 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- real landscaped/paved open land per Esri satellite imagery, outlined as the open ground left between the official street lines and neighbouring mapped shapes and divided at seams chosen by hand by Pier & Point, rather than a surveyed parcel boundary. Operator: the Port of San Francisco per OCII's Sept 2023 transition presentation ('Port will manage P18, P21, P23 & P24'); SocketSite (April 2019) calls the combined P23/P24 area 'Mariposa Bayfront Park'; no source gives this lawn's own formal name. The remaining ~5,785 sqm of the original fragment (the building-hugging plaza strip, the panhandle, and P24's own dropped horns) is deliberately left off the map, pending further review of whether it is a separate plan parcel. DataSF's Assessor layer has active lot 3940002 (MB-RA|P zoning, active, 4,806 m2) near this park: 57% of this drawing lies inside it and the drawing covers 80% of the lot; the drawing and the lot overlap only in part, so the lot is not this park's own and the drawing is kept.",
+    "accuracy_caveat": "APPROXIMATE -- real landscaped/paved open land per Esri satellite imagery, outlined as the open ground left between the official street lines and neighbouring mapped shapes and divided at seams chosen by hand by Pier & Point, rather than a surveyed parcel boundary. Operator: the Port of San Francisco per OCII's Sept 2023 transition presentation ('Port will manage P18, P21, P23 & P24'); SocketSite (April 2019) calls the combined P23/P24 area 'Mariposa Bayfront Park'; no source gives this lawn's own formal name. The remaining ~5,785 sqm of the original fragment (the building-hugging plaza strip, the panhandle, and P24's own dropped horns) is deliberately left off the map, pending further review of whether it is a separate plan parcel. DataSF's Assessor layer has active lot 3940002 (MB-RA|P zoning, active, 4,806 m2) near this park: 57% of this drawing lies inside it and the drawing covers 80% of the lot; the drawing and the lot overlap only in part, so the lot is not this park's own and the drawing is kept. Since 2026-10-12 the outline stops at the edge of Assessor lot 3940003 (409/499 Illinois Street), which overlapped it by 2,032 m2; that strip is part of the lot, not of this drawing.",
     "digitized_from": "Outlined as the open ground left between DataSF's official street lines and neighbouring mapped shapes around the UCSF Wayne and Gladys Valley Center for Vision / 499 Illinois St / Chase Center area (one piece of 19,181.78 sqm before cutting). Pier & Point split that piece in three at its two natural narrow points (lat 37.7658 and 37.76665) and then combined parts by hand: P23 is the north part (the lawn wedge by the Chase Center roundabout) with its thin building-hugging 'panhandle' dropped, plus the part of the middle piece (the plaza) that lies east of the line where the lawn narrows into that panhandle, extended south. Not taken from a surveyed parcel.",
     "why_no_real_parcel": "Open space with no Assessor lot of its own: lot 3940002 was compared and does not match (see the accuracy note)."
    }
   },
   "centroid": {
-   "lon": -122.386652,
-   "lat": 37.766389
+   "lon": -122.386562,
+   "lat": 37.766421
   },
   "facts": [],
   "costs": [],
@@ -205,6 +205,35 @@
     "sources": [
      {
       "title": "OCII Mission Bay Land Use Map, December 2019 (sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf); repository shapes (mission_bay_creek_park_pavilion, mission_bay_p23_chase_landscaped_area)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_p23_chase_landscaped_area",
+     "slug": "p23",
+     "name": "P23",
+     "permalink": "https://pierandpoint.org/parcels/p23/",
+     "api": "https://pierandpoint.org/api/v1/records/p23.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "P23 park outline no longer overlaps 409/499 Illinois Street's lot.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 3940003",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 3940003"
      }
     ],
     "category": "correction",
@@ -413,55 +442,39 @@
    "coordinates": [
     [
      [
-      -122.386302897,
-      37.766424172
-     ],
-     [
-      -122.38661712191846,
+      -122.386617122,
       37.7658
      ],
      [
-      -122.386948,
+      -122.386815781,
       37.7658
      ],
      [
-      -122.386948,
-      37.765812268941175
+      -122.386802221,
+      37.765822373
      ],
      [
-      -122.3868934,
-      37.7659183
+      -122.386692133,
+      37.766004009
      ],
      [
-      -122.3868934,
-      37.7659184
+      -122.386752708,
+      37.766638024
      ],
      [
-      -122.386948,
-      37.76592830130776
+      -122.386853685,
+      37.766920967
      ],
      [
-      -122.386948,
-      37.766634336435324
+      -122.38691072,
+      37.766917533
      ],
      [
-      -122.38688650959752,
-      37.76665
-     ],
-     [
-      -122.3868606,
-      37.7666566
-     ],
-     [
-      -122.3869482,
-      37.7669116
-     ],
-     [
-      -122.38638971859933,
+      -122.386389719,
       37.767
      ],
      [
-      -122.38619057387052,
+      -122.386190574,
       37.767
      ],
      [
@@ -469,12 +482,16 @@
       37.766699042
      ],
      [
-      -122.38618996903313,
+      -122.386189969,
       37.76665
      ],
      [
       -122.386302897,
       37.766424172
+     ],
+     [
+      -122.386617122,
+      37.7658
      ]
     ]
    ]

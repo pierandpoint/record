@@ -134503,13 +134503,13 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF3940003); not a hand trace or plan estimate. UCSF leased space at 499 Illinois St, occupying 90% of the building, then bought it with 409 Illinois St from Alexandria in Dec 2025 (SF Standard 2025-12-17). OpenStreetMap labels the northern footprint (way 84821722) 490 Illinois St, but the City's address points place 409 Illinois St there and 490 Illinois St, UCSF's Valley Center for Vision, across Illinois St on block 33, so that label is not used. Each wing's own mapping history is logged in this shape's data file in the public data repository (https://github.com/pierandpoint/record).",
-     "digitized_from": "DataSF Building Footprints (mblr SF3940003); addresses from DataSF Addresses: the City's address point for 499 Illinois St falls inside the southern footprint and the one for 409 Illinois St inside the northern footprint."
+     "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 3940003 (15,223 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. The lot is condominium-mapped: 3 Assessor lots share this outline (the map lot 3940003 and 2 per-unit lots), so the outline is the building's shared lot, not any one unit. Until 2026-10-12 this record showed the two surveyed building footprints (DataSF Building Footprints, mblr SF3940003); 98% of that outline lies inside the lot and it covered 55% of the lot. The lot also takes in the courtyard and yard between the two buildings and a strip of the neighbouring parks P23 and P24; those two park outlines were trimmed back to this lot's edge on the same date, so the records no longer overlap.",
+     "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 3940003 (mapped 2009-08-19; active); the earlier outline came from: DataSF Building Footprints (mblr SF3940003); addresses from DataSF Addresses: the City's address point for 499 Illinois St falls inside the southern footprint and the one for 409 Illinois St inside the northern footprint."
     }
    },
    "centroid": {
-    "lon": -122.387461,
-    "lat": 37.766304
+    "lon": -122.387243,
+    "lat": 37.766277
    },
    "facts": [
     {
@@ -134944,6 +134944,35 @@
      "permalink": "https://pierandpoint.org/changes/#record"
     },
     {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "409/499 Illinois Street now uses its Assessor lot lines.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 3940003",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 3940003"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_490_499_illinois",
+      "slug": "409-499-illinois-street",
+      "name": "409/499 Illinois Street",
+      "permalink": "https://pierandpoint.org/parcels/409-499-illinois-street/",
+      "api": "https://pierandpoint.org/api/v1/records/409-499-illinois-street.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-11",
      "kind": "correction",
      "kind_label": "Correction",
@@ -135323,350 +135352,40 @@
    "last_verified": "2026-10-11",
    "tenants": [],
    "geometry": {
-    "type": "MultiPolygon",
+    "type": "Polygon",
     "coordinates": [
      [
       [
-       [
-        -122.3874912,
-        37.7661702
-       ],
-       [
-        -122.3874911,
-        37.7661693
-       ],
-       [
-        -122.3874854,
-        37.7661363
-       ],
-       [
-        -122.3874802,
-        37.7660783
-       ],
-       [
-        -122.3874691,
-        37.7659757
-       ],
-       [
-        -122.387265,
-        37.7659894
-       ],
-       [
-        -122.3870566,
-        37.7659486
-       ],
-       [
-        -122.3870546,
-        37.7659526
-       ],
-       [
-        -122.3870131,
-        37.7659464
-       ],
-       [
-        -122.387013,
-        37.7659463
-       ],
-       [
-        -122.387023,
-        37.7659272
-       ],
-       [
-        -122.3870151,
-        37.7659259
-       ],
-       [
-        -122.3870081,
-        37.7659392
-       ],
-       [
-        -122.3868934,
-        37.7659184
-       ],
-       [
-        -122.3868934,
-        37.7659183
-       ],
-       [
-        -122.3870209,
-        37.7656707
-       ],
-       [
-        -122.387151,
-        37.7656642
-       ],
-       [
-        -122.3871511,
-        37.7656643
-       ],
-       [
-        -122.3871421,
-        37.7656815
-       ],
-       [
-        -122.3871686,
-        37.7656786
-       ],
-       [
-        -122.387177,
-        37.7656622
-       ],
-       [
-        -122.3879104,
-        37.7656161
-       ],
-       [
-        -122.3879105,
-        37.7656163
-       ],
-       [
-        -122.3879417,
-        37.7659446
-       ],
-       [
-        -122.3879423,
-        37.7659508
-       ],
-       [
-        -122.3879594,
-        37.7661306
-       ],
-       [
-        -122.3879257,
-        37.766132
-       ],
-       [
-        -122.3879267,
-        37.7661365
-       ],
-       [
-        -122.3879256,
-        37.7661366
-       ],
-       [
-        -122.3879258,
-        37.7661381
-       ],
-       [
-        -122.3879305,
-        37.7661378
-       ],
-       [
-        -122.3879306,
-        37.766138
-       ],
-       [
-        -122.3879311,
-        37.7661426
-       ],
-       [
-        -122.3879313,
-        37.7661426
-       ],
-       [
-        -122.3879314,
-        37.7661428
-       ],
-       [
-        -122.3879329,
-        37.766178
-       ],
-       [
-        -122.3874973,
-        37.7662062
-       ],
-       [
-        -122.3874912,
-        37.7661702
-       ]
-      ]
-     ],
-     [
+       -122.388009322,
+       37.76685138
+      ],
       [
-       [
-        -122.3874939,
-        37.7663161
-       ],
-       [
-        -122.3874939,
-        37.766316
-       ],
-       [
-        -122.3879455,
-        37.7662924
-       ],
-       [
-        -122.3879483,
-        37.7663261
-       ],
-       [
-        -122.3879486,
-        37.766326
-       ],
-       [
-        -122.3879487,
-        37.7663262
-       ],
-       [
-        -122.3879492,
-        37.7663323
-       ],
-       [
-        -122.3879488,
-        37.7663324
-       ],
-       [
-        -122.3879491,
-        37.7663353
-       ],
-       [
-        -122.3879477,
-        37.7663353
-       ],
-       [
-        -122.3879479,
-        37.7663378
-       ],
-       [
-        -122.3879784,
-        37.7663352
-       ],
-       [
-        -122.3879784,
-        37.7663353
-       ],
-       [
-        -122.3880283,
-        37.766849
-       ],
-       [
-        -122.3875511,
-        37.7668782
-       ],
-       [
-        -122.387551,
-        37.7668781
-       ],
-       [
-        -122.3875499,
-        37.7668575
-       ],
-       [
-        -122.3873621,
-        37.7668687
-       ],
-       [
-        -122.3873618,
-        37.7668896
-       ],
-       [
-        -122.3871637,
-        37.7669
-       ],
-       [
-        -122.3871655,
-        37.7669049
-       ],
-       [
-        -122.3870968,
-        37.766909
-       ],
-       [
-        -122.3870967,
-        37.7669089
-       ],
-       [
-        -122.3870902,
-        37.76689
-       ],
-       [
-        -122.3870815,
-        37.76689
-       ],
-       [
-        -122.3870866,
-        37.7669045
-       ],
-       [
-        -122.3869483,
-        37.7669117
-       ],
-       [
-        -122.3869482,
-        37.7669116
-       ],
-       [
-        -122.3868606,
-        37.7666566
-       ],
-       [
-        -122.3869874,
-        37.7666243
-       ],
-       [
-        -122.386992,
-        37.7666372
-       ],
-       [
-        -122.3870026,
-        37.7666351
-       ],
-       [
-        -122.3869951,
-        37.7666133
-       ],
-       [
-        -122.3870521,
-        37.766601
-       ],
-       [
-        -122.3870521,
-        37.7666011
-       ],
-       [
-        -122.3870541,
-        37.7666064
-       ],
-       [
-        -122.3872169,
-        37.7665632
-       ],
-       [
-        -122.3875237,
-        37.7665511
-       ],
-       [
-        -122.3875087,
-        37.7663583
-       ],
-       [
-        -122.3874975,
-        37.7663589
-       ],
-       [
-        -122.3874974,
-        37.7663585
-       ],
-       [
-        -122.3874962,
-        37.7663586
-       ],
-       [
-        -122.3874961,
-        37.7663585
-       ],
-       [
-        -122.3874956,
-        37.7663523
-       ],
-       [
-        -122.3874961,
-        37.7663523
-       ],
-       [
-        -122.3874939,
-        37.7663161
-       ]
+       -122.386853685,
+       37.766920967
+      ],
+      [
+       -122.386752708,
+       37.766638024
+      ],
+      [
+       -122.386692133,
+       37.766004009
+      ],
+      [
+       -122.386802221,
+       37.765822373
+      ],
+      [
+       -122.386940824,
+       37.765593689
+      ],
+      [
+       -122.387883714,
+       37.765536913
+      ],
+      [
+       -122.388009322,
+       37.76685138
       ]
      ]
     ]
@@ -151946,14 +151665,14 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- real landscaped/paved open land per Esri satellite imagery, outlined as the open ground left between the official street lines and neighbouring mapped shapes and divided at seams chosen by hand by Pier & Point, rather than a surveyed parcel boundary. Operator: the Port of San Francisco per OCII's Sept 2023 transition presentation ('Port will manage P18, P21, P23 & P24'); SocketSite (April 2019) calls the combined P23/P24 area 'Mariposa Bayfront Park'; no source gives this lawn's own formal name. The remaining ~5,785 sqm of the original fragment (the building-hugging plaza strip, the panhandle, and P24's own dropped horns) is deliberately left off the map, pending further review of whether it is a separate plan parcel. DataSF's Assessor layer has active lot 3940002 (MB-RA|P zoning, active, 4,806 m2) near this park: 57% of this drawing lies inside it and the drawing covers 80% of the lot; the drawing and the lot overlap only in part, so the lot is not this park's own and the drawing is kept.",
+     "accuracy_caveat": "APPROXIMATE -- real landscaped/paved open land per Esri satellite imagery, outlined as the open ground left between the official street lines and neighbouring mapped shapes and divided at seams chosen by hand by Pier & Point, rather than a surveyed parcel boundary. Operator: the Port of San Francisco per OCII's Sept 2023 transition presentation ('Port will manage P18, P21, P23 & P24'); SocketSite (April 2019) calls the combined P23/P24 area 'Mariposa Bayfront Park'; no source gives this lawn's own formal name. The remaining ~5,785 sqm of the original fragment (the building-hugging plaza strip, the panhandle, and P24's own dropped horns) is deliberately left off the map, pending further review of whether it is a separate plan parcel. DataSF's Assessor layer has active lot 3940002 (MB-RA|P zoning, active, 4,806 m2) near this park: 57% of this drawing lies inside it and the drawing covers 80% of the lot; the drawing and the lot overlap only in part, so the lot is not this park's own and the drawing is kept. Since 2026-10-12 the outline stops at the edge of Assessor lot 3940003 (409/499 Illinois Street), which overlapped it by 2,032 m2; that strip is part of the lot, not of this drawing.",
      "digitized_from": "Outlined as the open ground left between DataSF's official street lines and neighbouring mapped shapes around the UCSF Wayne and Gladys Valley Center for Vision / 499 Illinois St / Chase Center area (one piece of 19,181.78 sqm before cutting). Pier & Point split that piece in three at its two natural narrow points (lat 37.7658 and 37.76665) and then combined parts by hand: P23 is the north part (the lawn wedge by the Chase Center roundabout) with its thin building-hugging 'panhandle' dropped, plus the part of the middle piece (the plaza) that lies east of the line where the lawn narrows into that panhandle, extended south. Not taken from a surveyed parcel.",
      "why_no_real_parcel": "Open space with no Assessor lot of its own: lot 3940002 was compared and does not match (see the accuracy note)."
     }
    },
    "centroid": {
-    "lon": -122.386652,
-    "lat": 37.766389
+    "lon": -122.386562,
+    "lat": 37.766421
    },
    "facts": [],
    "costs": [],
@@ -152110,6 +151829,35 @@
      "sources": [
       {
        "title": "OCII Mission Bay Land Use Map, December 2019 (sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf); repository shapes (mission_bay_creek_park_pavilion, mission_bay_p23_chase_landscaped_area)"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_p23_chase_landscaped_area",
+      "slug": "p23",
+      "name": "P23",
+      "permalink": "https://pierandpoint.org/parcels/p23/",
+      "api": "https://pierandpoint.org/api/v1/records/p23.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "P23 park outline no longer overlaps 409/499 Illinois Street's lot.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 3940003",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 3940003"
       }
      ],
      "category": "correction",
@@ -152318,55 +152066,39 @@
     "coordinates": [
      [
       [
-       -122.386302897,
-       37.766424172
-      ],
-      [
-       -122.38661712191846,
+       -122.386617122,
        37.7658
       ],
       [
-       -122.386948,
+       -122.386815781,
        37.7658
       ],
       [
-       -122.386948,
-       37.765812268941175
+       -122.386802221,
+       37.765822373
       ],
       [
-       -122.3868934,
-       37.7659183
+       -122.386692133,
+       37.766004009
       ],
       [
-       -122.3868934,
-       37.7659184
+       -122.386752708,
+       37.766638024
       ],
       [
-       -122.386948,
-       37.76592830130776
+       -122.386853685,
+       37.766920967
       ],
       [
-       -122.386948,
-       37.766634336435324
+       -122.38691072,
+       37.766917533
       ],
       [
-       -122.38688650959752,
-       37.76665
-      ],
-      [
-       -122.3868606,
-       37.7666566
-      ],
-      [
-       -122.3869482,
-       37.7669116
-      ],
-      [
-       -122.38638971859933,
+       -122.386389719,
        37.767
       ],
       [
-       -122.38619057387052,
+       -122.386190574,
        37.767
       ],
       [
@@ -152374,12 +152106,16 @@
        37.766699042
       ],
       [
-       -122.38618996903313,
+       -122.386189969,
        37.76665
       ],
       [
        -122.386302897,
        37.766424172
+      ],
+      [
+       -122.386617122,
+       37.7658
       ]
      ]
     ]
@@ -152421,14 +152157,14 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- landscaped open land (lawn, curved path, scattered trees) as seen in Esri satellite imagery (an imagery observation; no document cited), outlined as the open ground left between the official street lines and neighbouring mapped shapes and cut by hand by Pier & Point at a point where the shape forks, rather than at a surveyed parcel boundary. Operator: the Port of San Francisco per OCII's Sept 2023 transition presentation ('Port will manage P18, P21, P23, & P24'); SocketSite (April and June 2019) calls the combined P23/P24 area 'Mariposa Bayfront Park'; no source gives this lawn's own formal name. A hedged observation from imagery (no source cited) is that it visually resembles Bayfront Park's own style and may be a continuation of it. DataSF's Assessor layer has active lot 3941032 (MB-RA zoning, recorded 2018-10-02, active, 10,721 m2) near this park: 86% of this drawing lies inside it and the drawing covers 53% of the lot; the lot is larger than this park (10,721 m2 against 6,605 m2), so using it would claim ground beyond the park, so the lot is not this park's own and the drawing is kept.",
+     "accuracy_caveat": "APPROXIMATE -- landscaped open land (lawn, curved path, scattered trees) as seen in Esri satellite imagery (an imagery observation; no document cited), outlined as the open ground left between the official street lines and neighbouring mapped shapes and cut by hand by Pier & Point at a point where the shape forks, rather than at a surveyed parcel boundary. Operator: the Port of San Francisco per OCII's Sept 2023 transition presentation ('Port will manage P18, P21, P23, & P24'); SocketSite (April and June 2019) calls the combined P23/P24 area 'Mariposa Bayfront Park'; no source gives this lawn's own formal name. A hedged observation from imagery (no source cited) is that it visually resembles Bayfront Park's own style and may be a continuation of it. DataSF's Assessor layer has active lot 3941032 (MB-RA zoning, recorded 2018-10-02, active, 10,721 m2) near this park: 86% of this drawing lies inside it and the drawing covers 53% of the lot; the lot is larger than this park (10,721 m2 against 6,605 m2), so using it would claim ground beyond the park, so the lot is not this park's own and the drawing is kept. Since 2026-10-12 the outline stops at the edge of Assessor lot 3940003 (409/499 Illinois Street), which overlapped it by 509 m2; that strip is part of the lot, not of this drawing. Its north edge is the straight extension of that lot's southern edge to this drawing's west and east edges.",
      "digitized_from": "Outlined as the open ground left between DataSF's official street lines and neighbouring mapped shapes around the 499 Illinois St / Bayfront Park area (one piece of 19,181.78 sqm before cutting). Pier & Point split that piece in three at its two natural narrow points (lat 37.7658 and 37.76665) and then cut it by hand the same way as P26: the wide, single 'head' was kept and the thin, branching 'horns' were dropped. Not taken from a surveyed parcel.",
      "why_no_real_parcel": "Open space with no Assessor lot of its own: lot 3941032 was compared and does not match (see the accuracy note)."
     }
    },
    "centroid": {
-    "lon": -122.387586,
-    "lat": 37.765437
+    "lon": -122.387522,
+    "lat": 37.765239
    },
    "facts": [],
    "costs": [],
@@ -152577,6 +152313,35 @@
      "permalink": "https://pierandpoint.org/changes/#record"
     },
     {
+     "date": "2026-10-13",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "P24's north edge is now one straight line continuing the 409/499 Illinois lot's edge.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 3940003",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 3940003"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_p24_waterfront_park",
+      "slug": "p24",
+      "name": "P24",
+      "permalink": "https://pierandpoint.org/parcels/p24/",
+      "api": "https://pierandpoint.org/api/v1/records/p24.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-12",
      "kind": "correction",
      "kind_label": "Correction",
@@ -152614,6 +152379,35 @@
      "sources": [
       {
        "title": "OCII, Mission Bay Parks Open Space presentation, Sept 2023 (sfocii.org/sites/default/files/inline-files/Item%202%20Mission%20Bay%20Open%20Space%20Transition.pdf); SocketSite, 2019-04-22 (socketsite.com/archives/2019/04/mission-bay-is-nearly-built-out-mission-rock-in-the-wings.html) and 2019-06-03"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_p24_waterfront_park",
+      "slug": "p24",
+      "name": "P24",
+      "permalink": "https://pierandpoint.org/parcels/p24/",
+      "api": "https://pierandpoint.org/api/v1/records/p24.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "P24 park outline no longer overlaps 409/499 Illinois Street's lot.",
+     "source": "DataSF Assessor parcels (acdm-wktn), lot 3940003",
+     "sources": [
+      {
+       "title": "DataSF Assessor parcels (acdm-wktn), lot 3940003"
       }
      ],
      "category": "correction",
@@ -152831,40 +152625,32 @@
     "coordinates": [
      [
       [
-       -122.38673491314253,
-       37.76562
-      ],
-      [
-       -122.38742068545412,
+       -122.387862495,
        37.7648
       ],
       [
-       -122.38786249521132,
+       -122.387933491,
+       37.765533916
+      ],
+      [
+       -122.387883714,
+       37.765536913
+      ],
+      [
+       -122.386940824,
+       37.765593689
+      ],
+      [
+       -122.386747165,
+       37.76560535
+      ],
+      [
+       -122.387420685,
        37.7648
       ],
       [
-       -122.38794181755102,
-       37.76562
-      ],
-      [
-       -122.38791085162961,
-       37.76562
-      ],
-      [
-       -122.3879105,
-       37.7656163
-      ],
-      [
-       -122.3879104,
-       37.7656161
-      ],
-      [
-       -122.38784835531459,
-       37.76562
-      ],
-      [
-       -122.38673491314253,
-       37.76562
+       -122.387862495,
+       37.7648
       ]
      ]
     ]

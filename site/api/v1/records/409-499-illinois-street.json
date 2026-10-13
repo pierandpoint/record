@@ -48,13 +48,13 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF3940003); not a hand trace or plan estimate. UCSF leased space at 499 Illinois St, occupying 90% of the building, then bought it with 409 Illinois St from Alexandria in Dec 2025 (SF Standard 2025-12-17). OpenStreetMap labels the northern footprint (way 84821722) 490 Illinois St, but the City's address points place 409 Illinois St there and 490 Illinois St, UCSF's Valley Center for Vision, across Illinois St on block 33, so that label is not used. Each wing's own mapping history is logged in this shape's data file in the public data repository (https://github.com/pierandpoint/record).",
-    "digitized_from": "DataSF Building Footprints (mblr SF3940003); addresses from DataSF Addresses: the City's address point for 499 Illinois St falls inside the southern footprint and the one for 409 Illinois St inside the northern footprint."
+    "accuracy_caveat": "REAL lot geometry -- the outline is Assessor lot 3940003 (15,223 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. The lot is condominium-mapped: 3 Assessor lots share this outline (the map lot 3940003 and 2 per-unit lots), so the outline is the building's shared lot, not any one unit. Until 2026-10-12 this record showed the two surveyed building footprints (DataSF Building Footprints, mblr SF3940003); 98% of that outline lies inside the lot and it covered 55% of the lot. The lot also takes in the courtyard and yard between the two buildings and a strip of the neighbouring parks P23 and P24; those two park outlines were trimmed back to this lot's edge on the same date, so the records no longer overlap.",
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lot 3940003 (mapped 2009-08-19; active); the earlier outline came from: DataSF Building Footprints (mblr SF3940003); addresses from DataSF Addresses: the City's address point for 499 Illinois St falls inside the southern footprint and the one for 409 Illinois St inside the northern footprint."
    }
   },
   "centroid": {
-   "lon": -122.387461,
-   "lat": 37.766304
+   "lon": -122.387243,
+   "lat": 37.766277
   },
   "facts": [
    {
@@ -489,6 +489,35 @@
     "permalink": "https://pierandpoint.org/changes/#record"
    },
    {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "409/499 Illinois Street now uses its Assessor lot lines.",
+    "source": "DataSF Assessor parcels (acdm-wktn), lot 3940003",
+    "sources": [
+     {
+      "title": "DataSF Assessor parcels (acdm-wktn), lot 3940003"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_490_499_illinois",
+     "slug": "409-499-illinois-street",
+     "name": "409/499 Illinois Street",
+     "permalink": "https://pierandpoint.org/parcels/409-499-illinois-street/",
+     "api": "https://pierandpoint.org/api/v1/records/409-499-illinois-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-10-11",
     "kind": "correction",
     "kind_label": "Correction",
@@ -868,350 +897,40 @@
   "last_verified": "2026-10-11",
   "tenants": [],
   "geometry": {
-   "type": "MultiPolygon",
+   "type": "Polygon",
    "coordinates": [
     [
      [
-      [
-       -122.3874912,
-       37.7661702
-      ],
-      [
-       -122.3874911,
-       37.7661693
-      ],
-      [
-       -122.3874854,
-       37.7661363
-      ],
-      [
-       -122.3874802,
-       37.7660783
-      ],
-      [
-       -122.3874691,
-       37.7659757
-      ],
-      [
-       -122.387265,
-       37.7659894
-      ],
-      [
-       -122.3870566,
-       37.7659486
-      ],
-      [
-       -122.3870546,
-       37.7659526
-      ],
-      [
-       -122.3870131,
-       37.7659464
-      ],
-      [
-       -122.387013,
-       37.7659463
-      ],
-      [
-       -122.387023,
-       37.7659272
-      ],
-      [
-       -122.3870151,
-       37.7659259
-      ],
-      [
-       -122.3870081,
-       37.7659392
-      ],
-      [
-       -122.3868934,
-       37.7659184
-      ],
-      [
-       -122.3868934,
-       37.7659183
-      ],
-      [
-       -122.3870209,
-       37.7656707
-      ],
-      [
-       -122.387151,
-       37.7656642
-      ],
-      [
-       -122.3871511,
-       37.7656643
-      ],
-      [
-       -122.3871421,
-       37.7656815
-      ],
-      [
-       -122.3871686,
-       37.7656786
-      ],
-      [
-       -122.387177,
-       37.7656622
-      ],
-      [
-       -122.3879104,
-       37.7656161
-      ],
-      [
-       -122.3879105,
-       37.7656163
-      ],
-      [
-       -122.3879417,
-       37.7659446
-      ],
-      [
-       -122.3879423,
-       37.7659508
-      ],
-      [
-       -122.3879594,
-       37.7661306
-      ],
-      [
-       -122.3879257,
-       37.766132
-      ],
-      [
-       -122.3879267,
-       37.7661365
-      ],
-      [
-       -122.3879256,
-       37.7661366
-      ],
-      [
-       -122.3879258,
-       37.7661381
-      ],
-      [
-       -122.3879305,
-       37.7661378
-      ],
-      [
-       -122.3879306,
-       37.766138
-      ],
-      [
-       -122.3879311,
-       37.7661426
-      ],
-      [
-       -122.3879313,
-       37.7661426
-      ],
-      [
-       -122.3879314,
-       37.7661428
-      ],
-      [
-       -122.3879329,
-       37.766178
-      ],
-      [
-       -122.3874973,
-       37.7662062
-      ],
-      [
-       -122.3874912,
-       37.7661702
-      ]
-     ]
-    ],
-    [
+      -122.388009322,
+      37.76685138
+     ],
      [
-      [
-       -122.3874939,
-       37.7663161
-      ],
-      [
-       -122.3874939,
-       37.766316
-      ],
-      [
-       -122.3879455,
-       37.7662924
-      ],
-      [
-       -122.3879483,
-       37.7663261
-      ],
-      [
-       -122.3879486,
-       37.766326
-      ],
-      [
-       -122.3879487,
-       37.7663262
-      ],
-      [
-       -122.3879492,
-       37.7663323
-      ],
-      [
-       -122.3879488,
-       37.7663324
-      ],
-      [
-       -122.3879491,
-       37.7663353
-      ],
-      [
-       -122.3879477,
-       37.7663353
-      ],
-      [
-       -122.3879479,
-       37.7663378
-      ],
-      [
-       -122.3879784,
-       37.7663352
-      ],
-      [
-       -122.3879784,
-       37.7663353
-      ],
-      [
-       -122.3880283,
-       37.766849
-      ],
-      [
-       -122.3875511,
-       37.7668782
-      ],
-      [
-       -122.387551,
-       37.7668781
-      ],
-      [
-       -122.3875499,
-       37.7668575
-      ],
-      [
-       -122.3873621,
-       37.7668687
-      ],
-      [
-       -122.3873618,
-       37.7668896
-      ],
-      [
-       -122.3871637,
-       37.7669
-      ],
-      [
-       -122.3871655,
-       37.7669049
-      ],
-      [
-       -122.3870968,
-       37.766909
-      ],
-      [
-       -122.3870967,
-       37.7669089
-      ],
-      [
-       -122.3870902,
-       37.76689
-      ],
-      [
-       -122.3870815,
-       37.76689
-      ],
-      [
-       -122.3870866,
-       37.7669045
-      ],
-      [
-       -122.3869483,
-       37.7669117
-      ],
-      [
-       -122.3869482,
-       37.7669116
-      ],
-      [
-       -122.3868606,
-       37.7666566
-      ],
-      [
-       -122.3869874,
-       37.7666243
-      ],
-      [
-       -122.386992,
-       37.7666372
-      ],
-      [
-       -122.3870026,
-       37.7666351
-      ],
-      [
-       -122.3869951,
-       37.7666133
-      ],
-      [
-       -122.3870521,
-       37.766601
-      ],
-      [
-       -122.3870521,
-       37.7666011
-      ],
-      [
-       -122.3870541,
-       37.7666064
-      ],
-      [
-       -122.3872169,
-       37.7665632
-      ],
-      [
-       -122.3875237,
-       37.7665511
-      ],
-      [
-       -122.3875087,
-       37.7663583
-      ],
-      [
-       -122.3874975,
-       37.7663589
-      ],
-      [
-       -122.3874974,
-       37.7663585
-      ],
-      [
-       -122.3874962,
-       37.7663586
-      ],
-      [
-       -122.3874961,
-       37.7663585
-      ],
-      [
-       -122.3874956,
-       37.7663523
-      ],
-      [
-       -122.3874961,
-       37.7663523
-      ],
-      [
-       -122.3874939,
-       37.7663161
-      ]
+      -122.386853685,
+      37.766920967
+     ],
+     [
+      -122.386752708,
+      37.766638024
+     ],
+     [
+      -122.386692133,
+      37.766004009
+     ],
+     [
+      -122.386802221,
+      37.765822373
+     ],
+     [
+      -122.386940824,
+      37.765593689
+     ],
+     [
+      -122.387883714,
+      37.765536913
+     ],
+     [
+      -122.388009322,
+      37.76685138
      ]
     ]
    ]
