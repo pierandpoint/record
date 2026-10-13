@@ -165357,15 +165357,15 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "APPROXIMATE -- a coarse placeholder box over the existing station's real location, not a traced footprint of the platforms or the planned ramps themselves (one ~305ft ramp on the northbound platform, one ~465ft ramp on the southbound platform, per the project's own design description).",
-     "digitized_from": "No Assessor block/lot exists for the existing 22nd St Caltrain station or its below-grade platforms (active rail right-of-way, the same reasoning already documented for the nearby 4th & King Station in the Mission Bay railyards record -- confirmed here too: DataSF's 'Parcels - Active and Retired' Socrata dataset has no parcel at this location). No Caltrain/Peninsula Corridor Joint Powers Board GIS shapefile or site-plan figure was available, so this is a coarse locational box near the real DataSF street-centerline address range for 22nd St at Pennsylvania Ave/Indiana St (DataSF's official street centerlines), where the existing below-grade station sits.",
-     "why_no_real_parcel": "Active Caltrain rail right-of-way; not on the Assessor's secured roll, the same situation as the existing 4th & King Street Station (mapped in Pier & Point's Mission Bay railyards record).",
+     "accuracy_caveat": "APPROXIMATE -- a coarse placeholder box (60 m by 80 m) under the I-280 viaduct just south of 22nd St, where the owner places the existing below-grade station; not a traced footprint of the platforms or the planned ramps themselves (one ~305ft ramp on the northbound platform, one ~465ft ramp on the southbound platform, per the project's own design description). The platforms are hidden from aerial imagery by the freeway above, so the box's size and exact position are not measured. The box is not clipped against the I-280 street lines: the station is below grade, beneath the viaduct, so the freeway's own footprint is not a reason to cut it.",
+     "digitized_from": "The owner's direction (2026-10-13): the existing station sits under the I-280 viaduct, south of 22nd St. Placement is a coarse locational box in that spot, built from DataSF's official street centerlines: 60 m across (centred on the I-280 corridor between its two carriageway centerlines), running 80 m south from the 22nd St curb line (6.8 m from its centerline). No Caltrain/Peninsula Corridor Joint Powers Board GIS shapefile or site-plan figure was available, and the platforms are hidden from aerial imagery by the elevated freeway, so its size is a placeholder, not a measurement. DataSF's Assessor layer has no lot of its own for the station's tracks (active rail right-of-way); about half of the box lies in active lot 4168011 (zoned Public), which no source read names as the station's lot.",
+     "why_no_real_parcel": "The station's tracks and platforms are active Caltrain rail right-of-way with no lot of their own in the Assessor layer, the same situation as the existing 4th & King Street Station (mapped in Pier & Point's Mission Bay railyards record). About 51% of this placeholder box lies in active lot 4168011 (zoned Public, on the secured roll), a much larger lot of which the box covers 19%; no source read names that lot as the station, so it is not used as the outline.",
      "regulatory_context": "The Caltrain 22nd Street Station is the railroad's only regular-service station that is not wheelchair accessible: its platforms sit about 25 ft below street level, reachable only by stairs. Sponsor: Peninsula Corridor Joint Powers Board (Caltrain); funded in part through SFCTA's Prop L. Total project cost per SFCTA's April 2026 Board Packet: $19,134,000 (Planning/Conceptual Engineering $734,000 already spent via Prop K; Design Engineering $1,300,000 via Prop L, approved by the SFCTA Board 2026-04-14 and given final approval 2026-04-28; Construction $17,100,000, an engineer's estimate at 30% design). The FTA's 'All Stations Accessibility Program' separately awarded the Peninsula Corridor Joint Powers Board $14.1 million for this project's ADA improvements, announced in September 2026 (the day is not given by the sources read) -- matching almost exactly the funding gap SFCTA's own April 2026 plan had left as 'Planned TBD'."
     }
    },
    "centroid": {
-    "lon": -122.39108,
-    "lat": 37.75814
+    "lon": -122.392438,
+    "lat": 37.757199
    },
    "facts": [
     {
@@ -165725,6 +165725,35 @@
      "permalink": "https://pierandpoint.org/changes/#record"
     },
     {
+     "date": "2026-10-13",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The 22nd St Caltrain station box is moved under the I-280 viaduct south of 22nd St.",
+     "source": "DataSF official street centerlines (22nd St, I-280); owner's placement of the station",
+     "sources": [
+      {
+       "title": "DataSF official street centerlines (22nd St, I-280); owner's placement of the station"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "22nd_st_caltrain_ada",
+      "slug": "22nd-st-caltrain-station-ada-access-improvement",
+      "name": "22nd St Caltrain Station ADA Access Improvement",
+      "permalink": "https://pierandpoint.org/parcels/22nd-st-caltrain-station-ada-access-improvement/",
+      "api": "https://pierandpoint.org/api/v1/records/22nd-st-caltrain-station-ada-access-improvement.json"
+     },
+     "site": {
+      "slug": "pier-70",
+      "name": "Pier 70",
+      "short": "Pier 70",
+      "url": "https://pierandpoint.org/sites/pier-70/"
+     },
+     "relation": "adjacent",
+     "permalink": "https://pierandpoint.org/changes/#record"
+    },
+    {
      "date": "2026-10-12",
      "kind": "correction",
      "kind_label": "Correction",
@@ -165915,24 +165944,24 @@
     "coordinates": [
      [
       [
-       -122.3914,
-       37.7579
+       -122.392712402,
+       37.756911537
       ],
       [
-       -122.3914,
-       37.7585
+       -122.39203129,
+       37.756908025
       ],
       [
-       -122.3906,
-       37.7585
+       -122.392025389,
+       37.757629046
       ],
       [
-       -122.3906,
-       37.7579
+       -122.392706507,
+       37.757632558
       ],
       [
-       -122.3914,
-       37.7579
+       -122.392712402,
+       37.756911537
       ]
      ]
     ]
