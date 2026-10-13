@@ -43,8 +43,8 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE but high confidence: every edge is a recorded DataSF lot line (the Assessor has not made Block K its own lot; it is still part of the China Basin Park lot 8719A005 in the most recent DataSF Assessor parcel data checked), and the Design Controls figure trace agrees with those lines within 1.3 m at every corner. Planned, unbuilt residential block (120 ft maximum height). ANGLE CHECK: one corner here is 12.3-12.6 degrees off square, beyond the 12-degree tolerance of Pier & Point's automated shape check. Every vertex of this polygon is a real, recorded DataSF Assessor lot corner (how this shape was traced, including earlier versions, is logged in its data file in the public data repository, https://github.com/pierandpoint/record) -- the deviation is the real lot's own shape (Bridgeview Way's paseo lot 8719A007 and the Exposition Street lot 8719A010 meet the park lot 8719A005 at a corner that is not exactly square), not a shear or a misread trace. Accepted as a known exception.",
-    "digitized_from": "DataSF Assessor lot lines (lots 8719A005, 8719A007, 8719A010, 8719A003) bounding the lobe the plan's Block K occupies, cross-checked against Mission Rock Design Controls Figure 6.2 (p.151) and the Block K standards sheet (Appendix p.198).",
+    "accuracy_caveat": "APPROXIMATE but high confidence: every edge follows a DataSF lot line (one of them, the Exposition Street lot 8719A010, carries a recorded drop date of March 18, 2025 in the Assessor data (DataSF Parcels, read October 12, 2026) while still flagged active; the dataset does not say why; the Assessor has not made Block K its own lot; it is still part of the China Basin Park lot 8719A005 in the most recent DataSF Assessor parcel data checked), and the Design Controls figure trace agrees with those lines within 1.3 m at every corner. Planned, unbuilt residential block (120 ft maximum height). ANGLE CHECK: one corner here is 12.3-12.6 degrees off square, beyond the 12-degree tolerance of Pier & Point's automated shape check. Every vertex of this polygon is a real, recorded DataSF Assessor lot corner (how this shape was traced, including earlier versions, is logged in its data file in the public data repository, https://github.com/pierandpoint/record) -- the deviation is the real lot's own shape (Bridgeview Way's paseo lot 8719A007 and the Exposition Street lot 8719A010 meet the park lot 8719A005 at a corner that is not exactly square), not a shear or a misread trace. Accepted as a known exception.",
+    "digitized_from": "DataSF Assessor lot lines (lots 8719A005, 8719A007, 8719A010, 8719A003) bounding the lobe the plan's Block K occupies (lot 8719A010 carries a recorded drop date of March 18, 2025 in the Assessor data (DataSF Parcels, read October 12, 2026) while still flagged active; the dataset does not say why), cross-checked against Mission Rock Design Controls Figure 6.2 (p.151) and the Block K standards sheet (Appendix p.198).",
     "why_no_real_parcel": "Block K's land is still part of lot 8719A005 (China Basin Park), a lot recorded 2020-06-12 in DataSF's Assessor parcels (the DataSF Parcels dataset); the lot lines around it exist but the Assessor has not split K off in that data. Using lot 8719A005 would show the park and the block as one shape.",
     "regulatory_context": "Residential Mixed Use, fronting China Basin Park and the Pier 48 entry along Terry A. Francois Blvd. Max height 120 ft -- tied for the lowest residential height limit on the site (Flex Blocks H, I and J also allow 120 ft if residential, Figure 6.2 p.151); the March 2012 Revised Proposal's narrative says 'the shortest residential tower would be on Block K facing Mission Rock Park,' preserving sightlines/stepping the skyline down toward the water. Originally slated for Phase 1 (with A, B, G) before a real, Port-confirmed 2019 swap with Block F -- the sponsors proposed changing Phase 1 from {A, B, G, K} to {A, B, G, F} to accelerate ~100 more units (~40 more affordable) and create a four-corner pedestrian intersection instead of a linear one; an interim-parking-preservation rationale sometimes cited for this swap is not supported by any source found."
    }
@@ -557,6 +557,35 @@
     "permalink": "https://pierandpoint.org/changes/#record"
    },
    {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Block K's page now says its edges follow DataSF lot lines, one of which (the Exposition Street lot 8719A010) carries a recorded drop date of March 18, 2025 in the Assessor data while still flagged active. It also no longer says the site is a surface parking lot: the Port's June 2026 memo uses that phrase for the whole project site, and says only that Phase 2 could begin construction as early as 2027. The page also now says which Phase 1 lot-to-building pairings have a source: Verde (8719C001, 1070 Bridgeview Way) does; the Visa building (8719A008), The Canyon and Building B rest on position and area.",
+    "source": "DataSF Parcels - Active and Retired (acdm-wktn), https://data.sf.gov/resource/acdm-wktn.json?block_num=8719A; Port Commission Item 11A memo, June 5, 2026 (sfport.com/sites/default/files/2026-06/item_11a_mission_rock_phase_2_update_and_port_capital.pdf)",
+    "sources": [
+     {
+      "title": "DataSF Parcels - Active and Retired (acdm-wktn), https://data.sf.gov/resource/acdm-wktn.json?block_num=8719A; Port Commission Item 11A memo, June 5, 2026 (sfport.com/sites/default/files/2026-06/item_11a_mission_rock_phase_2_update_and_port_capital.pdf)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_rock_block_k",
+     "slug": "mission-rock-block-k",
+     "name": "Mission Rock Block K",
+     "permalink": "https://pierandpoint.org/parcels/mission-rock-block-k/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-rock-block-k.json"
+    },
+    "site": {
+     "slug": "mission-rock",
+     "name": "Mission Rock",
+     "short": "Mission Rock",
+     "url": "https://pierandpoint.org/sites/mission-rock/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-09-29",
     "kind": "correction",
     "kind_label": "Correction",
@@ -817,7 +846,7 @@
     "url": "https://data.sf.gov/resource/acdm-wktn.json?blklot=8719A005"
    }
   ],
-  "notes": "Approximate polygon for a block of the Mission Rock Design Controls' Land Use Plan (dated April 24, 2018), unbuilt as of the Port's June 2026 Phase 2 update (which describes the site as 'a surface parking lot' and puts Phase 2 construction 'as early as 2027'), with no distinct real parcel yet. See the accuracy note for this shape.",
+  "notes": "Approximate polygon for a block of the Mission Rock Design Controls' Land Use Plan (dated April 24, 2018), no source read reports construction on it. The Port's June 5, 2026 Phase 2 update says the work could 'begin construction as early as 2027' (an expected start, not a scheduled one) and does not name this block; its goal of transforming 'a surface parking lot' describes the Mission Rock project site as a whole, not this block's current condition. There is no distinct real parcel yet. See the accuracy note for this shape.",
   "has_record_file": true,
   "last_verified": "2026-10-10",
   "tenants": [],

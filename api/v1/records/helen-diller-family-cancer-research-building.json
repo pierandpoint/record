@@ -42,7 +42,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against DataSF's Assessor parcel data and tax roll -- e.g. block/lot 8711507 (675 Mission Bay Blvd in DataSF's parcel data) alone is about 12.2 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
+    "accuracy_caveat": "REAL -- OpenStreetMap building footprint (crowd-mapped, not an official survey), not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (in DataSF's Assessor parcel data the active lot 8711509 is about 12.2 acres by its drawn outline (the Assessor roll lists it at 555 Mission Bay Blvd with a lot area of 528,539 sq ft, about 12.1 acres) and contains this building together with the Hearst Tower, North and West buildings), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
     "digitized_from": "OpenStreetMap (way 142845120)"
    }
   },
@@ -201,6 +201,35 @@
     "sources": [
      {
       "title": "Wikipedia, UCSF Helen Diller Family Comprehensive Cancer Center (https://en.wikipedia.org/wiki/UCSF_Helen_Diller_Family_Comprehensive_Cancer_Center); SFGate, May 31, 2009 (https://www.sfgate.com/health/article/135-million-UCSF-cancer-research-site-to-open-3229463.php); SFGate, June 2, 2009 (https://www.sfgate.com/entertainment/article/UCSF-s-Diller-Building-better-inside-than-out-3296397.php)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "ucsf_helen_diller_cancer_research",
+     "slug": "helen-diller-family-cancer-research-building",
+     "name": "Helen Diller Family Cancer Research Building",
+     "permalink": "https://pierandpoint.org/parcels/helen-diller-family-cancer-research-building/",
+     "api": "https://pierandpoint.org/api/v1/records/helen-diller-family-cancer-research-building.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Helen Diller Family Cancer Research Building page now describes its footprint as crowd-mapped OpenStreetMap data, not a survey. Its example of a large Assessor lot is now the lot the building actually stands on, 8711509, which it shares with the Hearst Tower, North and West housing buildings.",
+    "source": "https://www.openstreetmap.org/way/142845120",
+    "sources": [
+     {
+      "title": "https://www.openstreetmap.org/way/142845120"
      }
     ],
     "category": "correction",

@@ -65,7 +65,7 @@
    "display_reason": null,
    "notes": {
     "accuracy_caveat": "REAL Assessor parcel geometry (not approximate), but the map's grey background layer of land and buildings covers an older, slightly smaller area that stops just north of this parcel, so that background is blank immediately around this shape on the map -- cosmetic only; the parcel's own outline and position are exact. The background layer has not yet been extended. That this is a real Assessor parcel rests on DataSF Parcels (acdm-wktn), which lists blklot 4241004 as an active parcel addressed 1215 MICHIGAN; the Chronicle article names the address but does not discuss the parcel.",
-    "digitized_from": "The real DataSF Assessor parcel for blklot 4241004 (1215 Michigan St, 4.07 acres, zoned PDR-1-G), taken directly from DataSF's open data portal (data.sfgov.org/resource/acdm-wktn.json, dataset 'Parcels - Active and Retired') on 2026-09-21. Stored as a separately drawn shape rather than linked by block/lot only because the parcel sits just south of the area covered by this map's local copy of the Assessor parcel data (which stops at latitude 37.7545; this parcel's northern edge is ~37.7542) -- the polygon itself is the real, unmodified Assessor shape, not hand-traced or approximated. A small blklot 4241003 (~0.25 acres) immediately west, also addressed 1215 Michigan St, is not included: the Chronicle's reporting and the Assessor's own lot_area (177,223 sq ft = 4.07 acres) both point to 4241004 as 'the' 4-acre parcel in question."
+    "digitized_from": "The real DataSF Assessor parcel for blklot 4241004 (1215 Michigan St, 4.07 acres, zoned PDR-1-G), taken directly from DataSF's open data portal (data.sfgov.org/resource/acdm-wktn.json, dataset 'Parcels - Active and Retired') on 2026-09-21. Stored as a separately drawn shape rather than linked by block/lot only because the parcel sits just south of the area covered by this map's local copy of the Assessor parcel data (which stops at latitude 37.7545; this parcel's northern edge is ~37.7542) -- the polygon itself is the real, unmodified Assessor shape, not hand-traced or approximated. A small blklot 4241003 (~0.25 acres) immediately west, also addressed 1215 Michigan St, is not included: the Chronicle's reporting and the lot_area in DataSF's Secured Property Tax Rolls (dataset wv5m-vpq2, 2025 roll: 177,223 sq ft = 4.07 acres; the Parcels dataset itself has no area field, and the lot's drawn outline measures about 4.1 acres) both point to 4241004 as 'the' 4-acre parcel in question."
    }
   },
   "centroid": {
@@ -114,6 +114,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The 1215 Michigan St page now says the 177,223 sq ft (4.07 acre) lot area comes from DataSF's Secured Property Tax Rolls, 2025 roll, and that the Parcels dataset itself has no area field.",
+    "source": "DataSF Secured Property Tax Rolls (data.sf.gov/resource/wv5m-vpq2.json?parcel_number=4241004); DataSF Parcels (data.sf.gov/resource/acdm-wktn.json?blklot=4241004)",
+    "sources": [
+     {
+      "title": "DataSF Secured Property Tax Rolls (data.sf.gov/resource/wv5m-vpq2.json?parcel_number=4241004); DataSF Parcels (data.sf.gov/resource/acdm-wktn.json?blklot=4241004)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_1215_michigan_data_center",
+     "slug": "1215-michigan-st",
+     "name": "1215 Michigan St",
+     "permalink": "https://pierandpoint.org/parcels/1215-michigan-st/",
+     "api": "https://pierandpoint.org/api/v1/records/1215-michigan-st.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "adjacent",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-12",
     "kind": "correction",
@@ -236,6 +265,11 @@
     "id": null,
     "title": "data.sf.gov/resource/acdm-wktn.json?blklot=4241004",
     "url": "https://data.sf.gov/resource/acdm-wktn.json?blklot=4241004"
+   },
+   {
+    "id": null,
+    "title": "data.sf.gov/resource/wv5m-vpq2.json?parcel_number=4241004",
+    "url": "https://data.sf.gov/resource/wv5m-vpq2.json?parcel_number=4241004"
    }
   ],
   "notes": "Sheedy Drayage, a crane rental and heavy-hauling company, currently operates on the site under owner R.P. Stagg & Co. LLC (as reported by the San Francisco Chronicle; not independently confirmed against a Recorder deed). The Chronicle reported in Sept 2026 that the exact status of any proposal was unclear and that no plans for a data center appeared to have been filed with the city -- see the record file for what's sourced about the proposal itself. Status is 'existing': the site is an operating industrial yard today, and a data center is only a reported possibility, not a plan of record. Use is 'industrial' for the same reason (the Chronicle describes a crane-rental and heavy-hauling yard); on the map it shows under Other, not as a commercial data center.",

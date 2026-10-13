@@ -53,10 +53,10 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- two hand-traced hull outlines from satellite imagery, accurate to a few metres at best, not a surveyed footprint and not a Port or Assessor geometry. Which hull is Dry Dock No. 2 and which is the Eureka is inferred from their measured lengths against the 900 ft the Port memo gives for Dry Dock No. 2 and the Eureka lengths Mission Local (528 ft) and Potrero View (570 ft) give, which disagree; no source read places them. The outlines cover the two floating hulls only, not the 13-acre shipyard: the Pier 68 wharf arms, the quay, the cranes, the sheds and four unidentified floating tank sections west of the Eureka are left out. Needs replacement with a real digitized footprint if a Port GIS layer or the Dry Dock Memorandum's own site figure becomes available.",
+    "accuracy_caveat": "APPROXIMATE -- two hand-traced hull outlines from satellite imagery, accurate to a few metres at best, not a surveyed footprint and not a Port or Assessor geometry. Which hull is Dry Dock No. 2 and which is the Eureka is inferred from their measured lengths against the 900 ft the Port memo gives for Dry Dock No. 2 and the Eureka lengths Mission Local (528 ft) and Potrero View (570 ft) give, which disagree (Marine Log, 2025-07-24, reporting the Port's request-for-proposals notice for the dry docks, lists the Eureka's length over pontoons as 528 ft and its overall length as 569 ft); no source read places them. The outlines cover the two floating hulls only, not the shipyard as a whole (the Port's July 11, 2017 release describes the shipyard lease as 'nearly 15 acres of land with numerous buildings, over 17 acres of submerged land, and Port-owned equipment'): the Pier 68 wharf arms, the quay, the cranes, the sheds and four unidentified floating tank sections west of the Eureka are left out. Needs replacement with a real digitized footprint if a Port GIS layer or the Dry Dock Memorandum's own site figure becomes available.",
     "digitized_from": "Assessor lot: both hulls lie inside lot 9900068 (98% of the outline). DataSF's 'Parcels - Active and Retired' dataset (acdm-wktn), queried by lot number on 2026-10-10 and read again on 2026-10-11, lists Assessor lot 9900068 in block 9900 (lot 068), marked active, with a recorded drop date of 2018-10-02. The dataset's own description of its recorded-drop-date column reads 'This is the date that the documents related the to dropping/retiring of the parcel was recorded, as tracked by Public Works.' The same row has no map-drop date, is flagged active, and is on the Assessor's secured roll in the copy dated 2026-10-01. The dataset does not say why a recorded drop date and an active flag appear together, so this record states only what the row shows. The lot is the whole shipyard lot, not an outline of the two hulls: the traced hulls cover 18% of it. Port structures carry no street name in that dataset, so a search for PIER-numbered street names finds nothing. Outline: two hand-traced hull outlines -- Dry Dock No. 2 and the Eureka Dry Dock -- on Esri World Imagery (zoom 20, imagery captured 2025-08-29). The earlier placeholder box lay in open water north of the shipyard. Hulls were told apart by length. The Port Commission memo (Calendar Item 9A, 2026-01-09, PDF p. 3) says: 'DD2 is a 900-foot single-section steel floating dry dock constructed by the Bethlehem Steel Corporation in 1970.' Mission Local (2026-02-23) says: 'Dry Dock No. 2, which was built in 1970, ...' and 'The adjacent dry dock, Eureka, which was built in 1945, is 528 feet long'. Potrero View (2026-07-15) gives the Eureka as longer: 'Eureka Drydock is 570 feet.' The sources disagree on the Eureka's length (528 ft is 161 m; 570 ft is 174 m) and agree on its 1945 build. The large eastern hull measures about 283 m (Dry Dock No. 2: 900 ft is 274 m) and the central hull about 169 m including wing walls, so the central hull is the shorter dock whichever Eureka length is right. No source read says which hull sits where, so this match is Pier & Point's own inference. Still no Port GIS layer or site-plan figure to trace from.",
     "why_no_real_parcel": "Both hulls lie inside Assessor lot 9900068, the whole shipyard lot (DataSF Parcels, acdm-wktn, checked 2026-10-10 and again 2026-10-11), which this record does not use as an outline because the hulls cover only 18% of it. That row carries a recorded drop date of 2018-10-02 yet reads active; see 'Traced from' above.",
-    "regulatory_context": "Dry Dock No. 2 (a 900-foot floating dry dock built in 1970) developed excessive listing after hull tears and uncontrolled ballast-tank flooding in November 2025; the Port Commission President and Executive Director declared an emergency on 2025-12-08 (Port Commission memo, Calendar Item 9A, 2026-01-09). Port staff anticipate advertising a demolition-services contract in summer 2026 for Dry Dock No. 2 and the neighboring Eureka Dry Dock (a second floating dry dock at Piers 68/70, formerly USS Steadfast/AFDM-14 -- not the 1890 ferryboat Eureka at Hyde Street Pier/SF Maritime NHP). Total estimated cost of stabilization and disposal is $61.2M (Capital Planning Committee memo, 2026-02-09); see the record file for the funding breakdown and what remains unfunded."
+    "regulatory_context": "Dry Dock No. 2 (a 900-foot floating dry dock built in 1970) developed excessive listing after hull tears and uncontrolled ballast-tank flooding in November 2025; the Port Commission President and Executive Director declared an emergency on 2025-12-08 (Port Commission memo, Calendar Item 9A, 2026-01-09). Port staff anticipate advertising a demolition-services contract in summer 2026 for Dry Dock No. 2 and the neighboring Eureka Dry Dock (a second floating dry dock at Piers 68/70, formerly USS Steadfast/AFDM-14, per Marine Log, 2025-07-24, reporting the Port's request-for-proposals notice, which calls it formerly known as Steadfast (AFDM 14) -- not the 1890 ferryboat Eureka at Hyde Street Pier/SF Maritime NHP). Total estimated cost of stabilization and disposal is $61.2M (Capital Planning Committee memo, 2026-02-09); see the record file for the funding breakdown and what remains unfunded."
    }
   },
   "centroid": {
@@ -554,6 +554,35 @@
     "date": "2026-10-12",
     "kind": "correction",
     "kind_label": "Correction",
+    "text": "The dry docks page no longer calls the shipyard 13 acres, which no source read gives; the Port's 2017 release describes the shipyard lease as nearly 15 acres of land and over 17 acres of submerged land. It now cites Marine Log (2025) for the Eureka's former name, Steadfast, and lists its reported lengths of 528 ft over pontoons and 569 ft overall alongside the other sources' figures.",
+    "source": "Port press release, July 11, 2017 (sfport.com/sites/default/files/PRESS%26MEDIA/7.11.17%20Shipyard%20at%20Pier%2070.pdf); Marine Log, July 24, 2025 (marinelog.com/news/port-of-san-francisco-to-issue-rfp-for-disposal-of-its-two-floating-dry-docks/)",
+    "sources": [
+     {
+      "title": "Port press release, July 11, 2017 (sfport.com/sites/default/files/PRESS%26MEDIA/7.11.17%20Shipyard%20at%20Pier%2070.pdf); Marine Log, July 24, 2025 (marinelog.com/news/port-of-san-francisco-to-issue-rfp-for-disposal-of-its-two-floating-dry-docks/)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_dry_docks",
+     "slug": "piers-68-and-70-dry-docks",
+     "name": "Piers 68 & 70 Dry Docks",
+     "permalink": "https://pierandpoint.org/parcels/piers-68-and-70-dry-docks/",
+     "api": "https://pierandpoint.org/api/v1/records/piers-68-and-70-dry-docks.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "adjacent",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
     "text": "The dry-dock page no longer calls the first $20 million \"secured\" (the Port described it as requested plus settlement funds in hand), lists both the 528 and 570 foot lengths for the Eureka, and drops location, acreage and vessel-history details that no source supports.",
     "source": "Port of San Francisco, memo to Port Commission, 2026-01-09 (https://www.sfport.com/sites/default/files/2026-01/011326_9a_info_on_dry_dock_and_emergency_declaration_for_stabilization_and_future_demolition.docx.pdf); Port of San Francisco, memo to the Capital Planning Committee, 2026-02-09 (https://onesanfrancisco.org/sites/default/files/2026-02/Agenda%20Item%204%20-%20CPC%20Memo%20-%20Port%20-%20Dry%20Docks%20Supplemental_Signed.pdf); Port presentation to the Capital Planning Committee, 2026-02-09 (https://onesanfrancisco.org/sites/default/files/2026-02/Agenda%20Item%204%20-%20PRT%20Supplemental%20Dry%20Dock%202%20Presentation.pdf); Mission Local, 2026-02-23 (https://missionlocal.org/2026/02/port-of-san-francisco-dry-dock-pier-68-70/); Potrero View, 2026-07-15 (https://www.potreroview.net/large-ship-repair-fades-into-san-francisco-history/)",
     "sources": [
@@ -841,9 +870,19 @@
     "date": "2026-07-15",
     "url": "https://www.potreroview.net/large-ship-repair-fades-into-san-francisco-history/",
     "accessed": "2026-10-10"
+   },
+   {
+    "id": null,
+    "title": "marinelog.com/news/port-of-san-francisco-to-issue-rfp-for-disposal-of-its-two-floating-dry-docks",
+    "url": "https://www.marinelog.com/news/port-of-san-francisco-to-issue-rfp-for-disposal-of-its-two-floating-dry-docks/"
+   },
+   {
+    "id": null,
+    "title": "sfport.com/sites/default/files/PRESS%26MEDIA/7.11.17%20Shipyard%20at%20Pier%2070.pdf",
+    "url": "https://sfport.com/sites/default/files/PRESS%26MEDIA/7.11.17%20Shipyard%20at%20Pier%2070.pdf"
    }
   ],
-  "notes": "Distinct from and outside the boundary of Brookfield's tracked 28-acre Pier 70 D4D redevelopment parcel and the separately-delivered Crane Cove Park, per the Port's own description of the Pier 70 shipyard/dry docks as a separate 13-acre facility (closed 2017) at the complex's northeast corner.",
+  "notes": "Distinct from and outside the boundary of Brookfield's tracked 28-acre Pier 70 D4D redevelopment parcel and the separately-delivered Crane Cove Park, per the Port's own description of the Pier 70 shipyard/dry docks as a separate shipyard facility (closed 2017; the Port's July 11, 2017 release gives 'nearly 15 acres of land' and 'over 17 acres of submerged land') at the complex's northeast corner.",
   "has_record_file": true,
   "last_verified": "2026-10-12",
   "tenants": [],

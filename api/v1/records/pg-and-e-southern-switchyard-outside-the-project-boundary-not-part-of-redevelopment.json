@@ -44,7 +44,7 @@
    "notes": {
     "accuracy_caveat": "LOW CONFIDENCE, DIRECTIONAL ONLY -- this is a materially weaker approximation than this site's numbered blocks. This polygon marks the PG&E Southern Switchyard, which the final D4D (p.12, Figure 1.2.1) places outside the project site boundary, between Humboldt and 23rd Streets west of Block 5. The 4.8-acre PG&E parcel at 22nd and Illinois that public reporting and SF Planning describe is the separate Northern Switchyard, which is inside the project boundary and is not what this polygon shows (this dataset represents that area as Blocks 13 and 14). This polygon's reshaped area is ~4.6 acres, but the D4D gives no area for the Southern Switchyard, so that figure is not a check against anything. The D4D diagram does not further subdivide this area (it is entirely outside the project site boundary, so the D4D had no reason to draw its actual fenceline), so the true switchyard footprint may still differ in detail from this trace. Treat this polygon as marking the correct general block and rough shape (including wrapping around Block 5's south side to 23rd St/Georgia Lane), not the switchyard's real surveyed boundary.",
     "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
-    "why_no_real_parcel": "No DataSF Assessor parcel search (by address, by zoning code, or by proximity) turned up a distinctly-shaped, plausibly-switchyard-sized real parcel here -- DataSF's parcel records in this area are either large undifferentiated placeholder shapes (shared across many of this site's D4D blocks, per this dataset's other Potrero entries) or small unrelated lots. Real ownership and the 'not part of the sale' status are well-documented in secondary sources, but a precise Assessor-parcel-level boundary was not found. (This is Pier & Point's own parcel search, not something the cited Design for Development can establish; the D4D does not address Assessor parcels.) The 2018 draft EIR (Vol. 1, Ch. 2) describes the 4.8-acre PG&E sub-area (the Northern Switchyard) as a portion of Assessor's Block 4175/Lot 018, so an Assessor lot reference exists for that one; none was found for the Southern Switchyard drawn here.",
+    "why_no_real_parcel": "DataSF Parcels (checked 2026-10-12) lists an active, addressed lot, 4175499 (1101 Illinois St, about 30,900 m2, recorded 2024-10-15, M-2 and PPS-MU zoning), under about 78% of this drawing. The same lot also lies under about 99% of the Block 13 drawing (the Northern Switchyard area), extends well beyond this drawing, and the dataset does not say who owns it or whether it is a switchyard parcel; this drawing is only a directional placeholder, so it keeps hand-traced approximate geometry. Real ownership and the 'not part of the sale' status are documented in secondary sources, but no source read gives a precise Assessor-parcel boundary for the Southern Switchyard. (This is Pier & Point's own parcel search, not something the cited Design for Development can establish; the D4D does not address Assessor parcels.) The 2018 draft EIR (Vol. 1, Ch. 2, p. 2-5) describes the 4.8-acre PG&E sub-area (the Northern Switchyard) as 'a portion of Assessor's Block 4175/Lot 018 and owned by PG&E'; DataSF now shows lot 4175018 as retired on 2024-10-15, the day lots 4175499 and 4175500 were recorded.",
     "regulatory_context": "The PG&E Southern Switchyard: one of two PG&E switchyards at the western end of the Potrero Power Station site (final D4D p.12, Figure 1.2.1), south of the 4.8-acre Northern Switchyard and north of the Transbay Cable site, outside the project site boundary; labelled 'SWITCHYARDS (PG&E)' on Figure 6.2.3, between Illinois Street and Georgia Lane beside Block 5. The 4.8-acre Northern Switchyard at 22nd and Illinois Streets, 'currently owned and operated by PG&E as an electrical switchyard' (SF Planning project page), is a different feature: it is within the 29-acre master plan and the project boundary, and the D4D sets standards for redevelopment of the entire PG&E Sub-area (this dataset represents that area as Blocks 13 and 14). For the Southern Switchyard drawn here, 'outside the project site boundary' is the D4D's statement; the 1990s CPUC divestiture EIR describes a switchyard in the southwest portion of the plant site along the east side of Illinois Street that 'is not part of the sale, and will be retained by PG&E'. Recorded as existing on the strength of the February 2020 D4D showing it; no more recent source was found. 'Commercial' is the nearest category in this map's use list; the feature is an electrical switchyard, a utility use (the D4D's 'Utility and Infrastructure' category), and the map has no utility category."
    }
   },
@@ -104,6 +104,35 @@
   "costs": [],
   "milestones": [],
   "changes": [
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The PG&E switchyard page no longer says no parcel was found. DataSF lists an active lot at 1101 Illinois Street, recorded October 15, 2024, under about 78 percent of this drawing; it is larger than the drawing and it is not stated who owns it or whether it is a switchyard parcel. The older lot named in the 2018 environmental report (4175018) was retired the same day.",
+    "source": "https://data.sfgov.org/resource/acdm-wktn.json?blklot=4175499 ; https://sfmea.sfplanning.org/2017-011878ENV_DEIR_Volume_1.pdf ; https://sfplanning.org/potrero-power-station",
+    "sources": [
+     {
+      "title": "https://data.sfgov.org/resource/acdm-wktn.json?blklot=4175499 ; https://sfmea.sfplanning.org/2017-011878ENV_DEIR_Volume_1.pdf ; https://sfplanning.org/potrero-power-station"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_pge_switchyard",
+     "slug": "pg-and-e-southern-switchyard-outside-the-project-boundary-not-part-of-redevelopment",
+     "name": "PG&E Southern Switchyard (outside the project boundary; not part of redevelopment)",
+     "permalink": "https://pierandpoint.org/parcels/pg-and-e-southern-switchyard-outside-the-project-boundary-not-part-of-redevelopment/",
+     "api": "https://pierandpoint.org/api/v1/records/pg-and-e-southern-switchyard-outside-the-project-boundary-not-part-of-redevelopment.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-12",
     "kind": "correction",

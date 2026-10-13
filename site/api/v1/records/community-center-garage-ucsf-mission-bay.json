@@ -42,7 +42,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "PARTIALLY REAL -- UCSF's June 2025 CAC map (updated December 2024) labels this 'COMMUNITY CENTER GARAGE (21A)' with a parking symbol and does not list it among the undeveloped parcels, which supports an existing garage here; the rooftop deck and painted parking-space striping are Pier & Point's own reading of satellite imagery (not cited or saved here), and this record's own boundary was traced as the leftover open ground between DataSF's official street lines and neighbouring mapped shapes, as seen in satellite imagery, not a surveyed building footprint or parcel line; DataSF's own Building Footprints dataset does not separate this garage from the Rutter Center building (both fall under one continuous footprint, mblr SF8709011), so there is no official boundary between 21A and 21B -- the dividing line used here is the Rutter Center's own real west wall, extended, which is a reasonable but not authoritative choice.",
+    "accuracy_caveat": "PARTIALLY REAL -- UCSF's June 2025 CAC map (updated December 2024) labels this 'COMMUNITY CENTER GARAGE (21A)' with a parking symbol and does not list it among the undeveloped parcels, which supports an existing garage here; the rooftop deck and painted parking-space striping are Pier & Point's own reading of satellite imagery (not cited or saved here), and this record's own boundary was traced as the leftover open ground between DataSF's official street lines and neighbouring mapped shapes, as seen in satellite imagery, not a surveyed building footprint or parcel line; DataSF's Building Footprints dataset (the copy held in this project's data, loaded October 2026) does not separate this garage from the Rutter Center building: one footprint of about 8,100 sq m (map-block-lot reference SF8709011) covers the Rutter Center and about 40 percent of the area drawn here, so there is no official boundary between 21A and 21B -- the dividing line used here is the Rutter Center's own real west wall, extended, which is a reasonable but not authoritative choice.",
     "digitized_from": "Traced as the leftover open ground between DataSF's official street lines and neighbouring mapped shapes in the Owens St / Rutter Center area, as seen in satellite imagery; several pieces were chosen and combined by hand, not taken from a surveyed parcel. First added on 2026-09-20 as part of the neighboring Rutter Community Center record and split out into this separate record on 2026-09-22."
    }
   },
@@ -115,6 +115,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Community Center Garage page now cites UCSF's Brain Tumor Center parking page, which lists a Community Center Garage at 1625 Owens St, as the source of the address. It also says what DataSF's building-footprint data shows: one footprint runs across the Rutter Center and about 40 percent of the area drawn here, so the data has no boundary between the two. The painted stalls and the rooftop deck remain Pier & Point's own reading of satellite imagery.",
+    "source": "https://braintumorcenter.ucsf.edu/contact/ucsf-mission-bay-campus; https://data.sfgov.org/resource/ramy-di5m.json?eas_address_id=731845",
+    "sources": [
+     {
+      "title": "https://braintumorcenter.ucsf.edu/contact/ucsf-mission-bay-campus; https://data.sfgov.org/resource/ramy-di5m.json?eas_address_id=731845"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "ucsf_community_center_garage",
+     "slug": "community-center-garage-ucsf-mission-bay",
+     "name": "Community Center Garage (UCSF Mission Bay)",
+     "permalink": "https://pierandpoint.org/parcels/community-center-garage-ucsf-mission-bay/",
+     "api": "https://pierandpoint.org/api/v1/records/community-center-garage-ucsf-mission-bay.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-12",
     "kind": "correction",
@@ -261,7 +290,7 @@
     "url": "https://sfocii.org/sites/default/files/2025-06/Item%202%20-%20UCSF%20Mission%20Bay%20Development%20Overview.pdf"
    }
   ],
-  "notes": "A parking garage labeled 'COMMUNITY CENTER GARAGE (21A)' on UCSF's own Dec 2024-updated campus map (June 2025 CAC presentation, page 3), immediately west of the block that map labels 'RUTTER CENTER (21B)'. That it has a rooftop deck and is connected to the Rutter Center by a walkway is Pier & Point's own reading of satellite imagery, not stated on UCSF's map, and the building's full name and operator are not confirmed by a primary source.",
+  "notes": "A parking garage labeled 'COMMUNITY CENTER GARAGE (21A)' on UCSF's own Dec 2024-updated campus map (June 2025 CAC presentation, page 3), immediately west of the block that map labels 'RUTTER CENTER (21B)'. UCSF's Brain Tumor Center parking page (undated) lists a 'Community Center Garage' at 1625 Owens St, which is the source of the address. That it has a rooftop deck and is connected to the Rutter Center by a walkway is Pier & Point's own reading of satellite imagery, not stated on UCSF's map, and the building's full name and operator are not confirmed by a primary source.",
   "has_record_file": true,
   "last_verified": "2026-10-10",
   "tenants": [],

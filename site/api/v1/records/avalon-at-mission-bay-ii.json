@@ -42,7 +42,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- official DataSF Assessor parcel boundary (blklot 8705011), ~6093 sq m, not a hand trace or plan estimate. 301 King St, 313 units and completed in Q4 2006 per AvalonBay's Q4 2006 earnings release (the Assessor roll for parcel 8705011 also shows 313 units and a 2006 year built); architect not confirmed by any source found. This is the whole site/land parcel, not just the building's rooftop -- it includes any courtyard, landscaping or parking within the lot line. The parcel is condo-mapped for ownership purposes across many individually owned per-unit lots sharing this same footprint (confirmed against DataSF's Assessor parcel data), so no single blklot represents one owner and the record cannot be tied to one Assessor lot the way a single-owner parcel can.",
+    "accuracy_caveat": "REAL -- official DataSF Assessor parcel boundary (blklot 8705011), ~6093 sq m, not a hand trace or plan estimate. 301 King St, 313 units and completed in Q4 2006 per AvalonBay's Q4 2006 earnings release (the Assessor roll for parcel 8705011 also shows 313 units and a 2006 year built); architect not confirmed by any source found. This is the whole site/land parcel, not just the building's rooftop -- it includes any courtyard, landscaping or parking within the lot line. In DataSF's Assessor parcel data, four lots (8705011, 8705012, 8705013 and 8705014), all addressed 301 King St, share this footprint, and the Assessor roll lists one parcel, 8705011, with 313 units; no per-unit condominium lots were found. A city building permit for this address (DBI 200105249986) lists 174 dwelling units where the Assessor roll and AvalonBay's release list 313; the difference is unresolved.",
     "digitized_from": "DataSF Parcels -- Active and Retired (blklot 8705011, real cadastral land-parcel boundary)"
    }
   },
@@ -171,6 +171,35 @@
     "sources": [
      {
       "title": "AvalonBay Q4 2006 results (investors.avalonbay.com)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_avalon_phase_ii",
+     "slug": "avalon-at-mission-bay-ii",
+     "name": "Avalon at Mission Bay II",
+     "permalink": "https://pierandpoint.org/parcels/avalon-at-mission-bay-ii/",
+     "api": "https://pierandpoint.org/api/v1/records/avalon-at-mission-bay-ii.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Avalon at Mission Bay II page now says four Assessor lots share its footprint, not many per-unit condominium lots. It also notes that a city permit lists 174 dwelling units where AvalonBay and the Assessor list 313. AvalonBay's release, published January 31, 2007, reports it completed in the fourth quarter of 2006.",
+    "source": "AvalonBay Q4 2006 results release, January 31, 2007 (investors.avalonbay.com ... 4Q06-results.pdf); DataSF Assessor parcel 8705011; DataSF Building Permits i98e-djp9",
+    "sources": [
+     {
+      "title": "AvalonBay Q4 2006 results release, January 31, 2007 (investors.avalonbay.com ... 4Q06-results.pdf); DataSF Assessor parcel 8705011; DataSF Building Permits i98e-djp9"
      }
     ],
     "category": "correction",
@@ -325,11 +354,6 @@
     "publisher": "San Francisco Department of Building Inspection, via DataSF",
     "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200105249986",
     "accessed": "2026-10-10"
-   },
-   {
-    "id": null,
-    "title": "arquitectonica.com/architecture/project/avalon-mission-bay",
-    "url": "https://arquitectonica.com/architecture/project/avalon-mission-bay/"
    },
    {
     "id": null,

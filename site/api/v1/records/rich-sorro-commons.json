@@ -40,7 +40,7 @@
    "display_reason": null,
    "notes": {
     "accuracy_caveat": "REAL lot geometry -- the outline is the union of Assessor lots 8706264 and 8706003 (6,453 m2, active), so its edges are recorded lot lines, not a surveyed building footprint: it includes any yard, setback or plaza inside the lot and can sit a little off the walls. Until 2026-10-12 this record showed the surveyed building footprint (DataSF Building Footprints (mblr SF8706264)); 95% of that outline lies inside the lot and it covered 69% of the lot. The building spans two Assessor lots, 8706264 and 8706003, which DataSF's parcel layer lists on Berry St (8706264 as 150 Berry St, 8706003 as 150-152 Berry St). The Assessor's secured roll puts the building's data under lot 8706003 (150 Berry St, Multi-Family Residential, 101 units, year built 2002); the roll's entry for lot 8706264 is for 213 King St (Commercial Retail, no units, year built 2003), so the roll does not cite lot 8706264 for this building.",
-    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lots 8706264 and 8706003 (mapped 2001-03-20, 2003-08-27; active), joined into one outline; the earlier outline came from: DataSF Building Footprints (mblr SF8706264); name/address from Mission Housing Development Corporation's own project page and press coverage; OpenStreetMap way 679290110 tags the footprint but carries no name/address of its own"
+    "digitized_from": "DataSF Assessor parcels (acdm-wktn), lots 8706264 and 8706003 (mapped 2001-03-20, 2003-08-27; active), joined into one outline; the earlier outline came from: DataSF Building Footprints (mblr SF8706264); name/address from Mission Housing's own project page and press coverage; OpenStreetMap way 679290110 tags the footprint but carries no name/address of its own"
    }
   },
   "centroid": {
@@ -191,6 +191,35 @@
     "sources": [
      {
       "title": "DataSF Assessor Historical Secured Property Tax Rolls (wv5m-vpq2), parcels 8706264 and 8706003; DataSF Parcels - Active and Retired (acdm-wktn)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_rich_sorro_commons",
+     "slug": "rich-sorro-commons",
+     "name": "Rich Sorro Commons",
+     "permalink": "https://pierandpoint.org/parcels/rich-sorro-commons/",
+     "api": "https://pierandpoint.org/api/v1/records/rich-sorro-commons.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The developer is named Mission Housing, as on its own project page. The page gives 100 rental units, 158,000 square feet and a childcare center; the earlier figures of 101 units and 174,100 square feet are not used.",
+    "source": "Mission Housing, Rich Sorro Commons (missionhousing.org/richsorro)",
+    "sources": [
+     {
+      "title": "Mission Housing, Rich Sorro Commons (missionhousing.org/richsorro)"
      }
     ],
     "category": "correction",

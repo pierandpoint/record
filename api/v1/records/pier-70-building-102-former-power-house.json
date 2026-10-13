@@ -44,9 +44,9 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "Real, surveyed building footprint -- high confidence in the outline itself. CORRECTED 2026-09-29: this footprint's area (~1955 m2 / ~21,043 sqft) does not match the building. The National Register nomination gives Building 102's dimensions as 128 ft 6 in by 42 ft 4 in (about 5,440 sqft, ~505 m2 as a rectangle), so this outline is roughly four times the building's own footprint and probably includes neighboring structures or other area; the '11,266 sf' Port figure is not the likely source of the discrepancy. The geometry has been accepted as is and was not changed; the outline should not be read as the building's own footprint.",
+    "accuracy_caveat": "Real, surveyed building footprint -- high confidence in the outline itself. CORRECTED 2026-09-29: this footprint's area (~1955 m2 / ~21,043 sqft) does not match the building. The National Register nomination gives Building 102's dimensions as 128 ft 6 in by 42 ft 4 in (a rectangle of those dimensions is about 5,440 sqft, ~505 m2) and its floor area as 8,428 sq ft over the first floor and basement. No source read gives the building's ground area directly, and sources use 'footprint' for different things: Retrofit magazine (Nov 9, 2020) says a 2,600-square-foot addition brought 'the powerhouse's footprint to just more than 18,000 square feet', which reads as floor area, and the Port gives 11,266 sq ft before and 15,331 sq ft after rehabilitation (Item 12A, Jan 2019). Measured against the nomination's dimensions this outline is roughly four times that rectangle and probably includes neighboring structures or other area (against Retrofit's 18,000 sq ft it would be about 17% larger); the '11,266 sf' Port figure is not the likely source of the discrepancy. The geometry has been accepted as is and was not changed; the outline should not be read as the building's own footprint.",
     "digitized_from": "DataSF Building Footprints dataset (real, surveyed building outline; not tied to an Assessor parcel).",
-    "why_no_real_parcel": "The former Assessor lot blklot 4046001 (which held Buildings 101, 102, 104 and 122/123 in the 2013 HPC packet) was retired on 2018-10-02 (DataSF Assessor parcels, active=false); in DataSF's current layer this footprint falls within active lot 3941041, which has no street address. No cited source ties the building to a current lot, so this feature uses the real building footprint instead, extracted and matched individually.",
+    "why_no_real_parcel": "The former Assessor lot blklot 4046001 (listed in the 2013 HPC packet among the lots holding its ten 20th Street Historic Buildings, without saying which building is on which lot; DataSF's footprints carrying that lot's legacy id were matched to Buildings 101, 102, 104, 122 and 123) was retired on 2018-10-02 (DataSF Assessor parcels, active=false); in DataSF's current layer this footprint falls within active lot 3941041, which has no street address. No cited source ties the building to a current lot, so this feature uses the real building footprint instead, extracted and matched individually.",
     "regulatory_context": "The former Power House, built 1912, part of the same 20th Street Historic Core rehabilitation by Orton Development Inc. (ODI) as Building 101 (HPC packet 2013.1168E, Nov 26 2013 review). Per that packet, Building 102 was 'in fairly good condition' at the time and in use as the powerhouse facility. Port Item 12A (memo dated Jan 4, 2019) names JUUL Labs as the ten-year sublessee of the entire building less the Port's basement electrical equipment room, and Potrero View (Mar 2019) says JUUL 'sublets offices in Building 102'; no source after 2020 confirms a current occupant."
    }
   },
@@ -834,6 +834,35 @@
     "sources": [
      {
       "title": "SF Historic Preservation Commission informational packet, case 2013.1168E (https://default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf); Port of San Francisco, Port Commission Item 12A, 2019-01-04 (https://www.sfport.com/media/4465/download)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_building_102",
+     "slug": "pier-70-building-102-former-power-house",
+     "name": "Pier 70 Building 102 (former Power House)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-102-former-power-house/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-102-former-power-house.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Building 102 page now says sources use 'footprint' for different areas (National Register dimensions give about 5,440 sq ft; Retrofit magazine's 18,000 sq ft reads as floor area; the Port gives 11,266 before and 15,331 after rehabilitation) and that the 2013 Historic Preservation Commission memo lists lot 4046001 for all ten historic buildings, not Building 102 alone.",
+    "source": "NRHP registration form (npgallery.nps.gov/GetAsset/99f11ae6-3834-4f99-840a-0e8a097398e6); Retrofit magazine, Nov 9, 2020 (retrofithomemagazine.com/2020/11/rejuvenation-of-a-historic-powerhouse-brings-new-energy-to-san-franciscos-pier-70/); Port memo to the Historic Preservation Commission, Nov 26, 2013 (default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf)",
+    "sources": [
+     {
+      "title": "NRHP registration form (npgallery.nps.gov/GetAsset/99f11ae6-3834-4f99-840a-0e8a097398e6); Retrofit magazine, Nov 9, 2020 (retrofithomemagazine.com/2020/11/rejuvenation-of-a-historic-powerhouse-brings-new-energy-to-san-franciscos-pier-70/); Port memo to the Historic Preservation Commission, Nov 26, 2013 (default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf)"
      }
     ],
     "category": "correction",

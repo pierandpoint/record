@@ -42,7 +42,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against DataSF's Assessor parcels and tax roll -- e.g. block/lot 8711507 (675 Mission Bay Blvd in DataSF's parcels) alone is about 12.2 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
+    "accuracy_caveat": "REAL -- OpenStreetMap building footprint (crowd-mapped, not an official survey), not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (in DataSF's Assessor parcel data the active lot 8711509 is about 12.2 acres by its drawn outline (the Assessor roll lists it at 555 Mission Bay Blvd with a lot area of 528,539 sq ft, about 12.1 acres) and contains this building together with the Hearst Tower, West and Diller buildings), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
     "digitized_from": "OpenStreetMap (way 84808588, 525 Nelson Rising Lane)"
    }
   },
@@ -158,15 +158,15 @@
     "date_label": "~2009",
     "status": "complete",
     "status_label": "Complete",
-    "text": "UCSF Mission Bay Housing North Building: complete by May 2009, when SFGate reported the campus had four residential buildings; the actual opening date is not sourced (the Nov 2002 UC Regents item had anticipated full occupancy by October 2005)",
+    "text": "UCSF Mission Bay Housing North Building: no source gives its opening date. SFGate, published May 31, 2009 (the date shown is the article's date, not an opening date), said the Mission Bay campus 'now has four research buildings, a community center and four residential buildings' without naming them; this building is one of the four buildings of UCSF's Block 20 housing complex, so it is presumably among them. The November 13, 2002 UC Regents item anticipated full occupancy of the complex by October 2005 (an expected date, not an event)",
     "expected": false,
     "approximate": true,
     "sources": [
      {
-      "title": "https://www.sfgate.com/health/article/135-million-UCSF-cancer-research-site-to-open-3229463.php"
+      "title": "https://www.sfgate.com/health/article/135-million-UCSF-cancer-research-site-to-open-3229463.php ; https://regents.universityofcalifornia.edu/minutes/2002/gbf1102.pdf"
      }
     ],
-    "source": "https://www.sfgate.com/health/article/135-million-UCSF-cancer-research-site-to-open-3229463.php",
+    "source": "https://www.sfgate.com/health/article/135-million-UCSF-cancer-research-site-to-open-3229463.php ; https://regents.universityofcalifornia.edu/minutes/2002/gbf1102.pdf",
     "origin": "csv",
     "category": "milestone",
     "category_label": "Milestone",
@@ -187,6 +187,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "UCSF Mission Bay Housing North Building page now says that sources differ on how many people the four-building housing complex holds (Langan: more than 750 students, postdoctoral scholars and their families; the 2002 UC Regents plan: 717 students and postdoctoral scholars and the family of one manager; arcCA Digest: a 760-bed complex) and on its architect (arcCA Digest: SOM with Fisher Friedman; Langan: Verde Design, Inc.). The timeline date of May 31, 2009 is the date of an SFGate article saying the campus then had four residential buildings, not an opening date; the 2002 Regents item expected full occupancy by October 2005. The footprint is described as crowd-mapped OpenStreetMap data, not a survey.",
+    "source": "https://www.langan.com/portfolio/ucsf-mission-bay-student-housing; https://arccadigest.org/uc-san-francisco-dna-campus/; https://regents.universityofcalifornia.edu/minutes/2002/gbf1102.pdf; https://www.sfgate.com/health/article/135-million-UCSF-cancer-research-site-to-open-3229463.php",
+    "sources": [
+     {
+      "title": "https://www.langan.com/portfolio/ucsf-mission-bay-student-housing; https://arccadigest.org/uc-san-francisco-dna-campus/; https://regents.universityofcalifornia.edu/minutes/2002/gbf1102.pdf; https://www.sfgate.com/health/article/135-million-UCSF-cancer-research-site-to-open-3229463.php"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "ucsf_housing_north",
+     "slug": "ucsf-mission-bay-housing-north-building",
+     "name": "UCSF Mission Bay Housing North Building",
+     "permalink": "https://pierandpoint.org/parcels/ucsf-mission-bay-housing-north-building/",
+     "api": "https://pierandpoint.org/api/v1/records/ucsf-mission-bay-housing-north-building.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-12",
     "kind": "correction",
@@ -416,7 +445,7 @@
     "accessed": "2026-10-06"
    }
   ],
-  "notes": "Part of a single UCSF Mission Bay student housing complex (Hearst Tower plus North, West and South/Student Housing buildings; the building names come from UCSF's housing-office page, which could not be checked in September 2026) -- UC's Block 20 Housing and Retail Project: four buildings totaling 298,800 sq ft housing more than 750 UCSF students, postdoctoral scholars and their families around a shared courtyard (Langan). The November 2002 UC Regents item anticipated full occupancy by October 2005; no source read states the actual opening. Architect Skidmore, Owings & Merrill (SOM) with Fisher Friedman Associates (arcCA Digest: 'student apartment complex by SOM with Fisher-Friedman'). This building: the North Building, 525 Nelson Rising Lane (OpenStreetMap), a 7-10 story mid-rise.",
+  "notes": "Part of a single UCSF Mission Bay student housing complex (Hearst Tower plus North, West and South/Student Housing buildings; the building names come from UCSF's housing-office page, which could not be checked in September 2026) -- UC's Block 20 Housing and Retail Project: four buildings totaling 298,800 sq ft around a shared courtyard (Langan; the November 2002 UC Regents item gives 298,800 residential assignable sq ft). Capacity differs by source: Langan says the buildings house \"more than 750 UCSF students, postdoctoral scholars, and their families\"; the 2002 Regents item, a plan, says \"It will house 717 students and postdoctoral scholars and the family of one manager\"; arcCA Digest calls the complex a \"760-bed student apartment complex\". The November 2002 UC Regents item anticipated full occupancy by October 2005; no source read states the actual opening. The architect is given differently: arcCA Digest says the complex is \"by SOM with Fisher Friedman\" (Skidmore, Owings & Merrill with Fisher Friedman), while Langan's project page lists \"Architect Verde Design, Inc.\"; no source read says how the two relate, so none is chosen. This building: the North Building, 525 Nelson Rising Lane (OpenStreetMap), a 7-10 story mid-rise.",
   "has_record_file": true,
   "last_verified": "2026-09-21",
   "tenants": [],

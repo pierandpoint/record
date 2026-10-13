@@ -43,8 +43,8 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE (planned, unbuilt block): no Assessor lot of its own yet. It sits on lot 8719A006, the ~37,400 m2 undivided remainder of Seawall Lot 337 that also holds Blocks C, D, E, H, I, J, Mission Rock Square, Channel Lane and the unbuilt internal streets. Traced 2026-09-17 from the adopted Design Controls' Figure 6.2 through a transform with 0.7 m RMS residual on 16 real lot corners, with vertices snapped to recorded lot lines where the figure draws the block against one (logged in the mapping log in the public data repository (https://github.com/pierandpoint/record)): treat street-facing and lot-line edges as accurate to ~1 m and interior edges (against unbuilt streets and open spaces) to ~1-3 m. The block's shape is the Design Controls' block, not a building footprint; a building may sit back from these lines.",
-    "digitized_from": "Mission Rock Design Controls (Port of San Francisco, document dated April 24, 2018), Figure 6.2 - Maximum Height Plan (p.151); land use from Figure 1.1 - Land Use Plan (p.10); block corners snapped to the recorded DataSF Assessor lot lines of the 2020 Seawall Lot 337 subdivision where they fall within 3 m.",
+    "accuracy_caveat": "APPROXIMATE (planned, unbuilt block): no Assessor lot of its own yet. It sits on lot 8719A006, the ~37,400 m2 undivided remainder of Seawall Lot 337 that also holds Blocks C, D, E, H, I, J, Mission Rock Square, Channel Lane and the unbuilt internal streets. Traced 2026-09-17 from the adopted Design Controls' Figure 6.2 through a transform with 0.7 m RMS residual on 16 real lot corners, with vertices snapped to recorded lot lines where the figure draws the block against one (logged in the mapping log in the public data repository (https://github.com/pierandpoint/record)): treat street-facing and lot-line edges as accurate to ~1 m and interior edges (against unbuilt streets and open spaces) to ~1-3 m. The block's shape is the Design Controls' block, not a building footprint; a building may sit back from these lines. Two of the lot lines it was snapped to, the Exposition Street lot 8719A010 and lot 8719D001, each carry a recorded drop date of March 18, 2025 in the Assessor data (DataSF Parcels, read October 12, 2026) while still flagged active; the dataset does not say why.",
+    "digitized_from": "Mission Rock Design Controls (Port of San Francisco, document dated April 24, 2018), Figure 6.2 - Maximum Height Plan (p.151); land use from Figure 1.1 - Land Use Plan (p.10); block corners snapped to the recorded DataSF Assessor lot lines of the 2020 Seawall Lot 337 subdivision where they fall within 3 m (two of those lots, 8719A010 and 8719D001, each carry a recorded drop date of March 18, 2025 in the Assessor data (DataSF Parcels, read October 12, 2026) while still flagged active; the dataset does not say why).",
     "why_no_real_parcel": "A real Assessor lot exists under this block -- 8719A006, the undivided remainder of Seawall Lot 337 recorded 2020-06-12 -- but it has not been subdivided per block, so joining status.csv to it would paint the same ~9-acre parking-lot shape for every unbuilt block. Hand-derived geometry is used instead, with the lot's own lines wherever this block touches them.",
     "regulatory_context": "Flex block (Residential MU or Commercial MU), max height 90 ft commercial / 120 ft residential. Sits one row north of Block I, adjacent to Block F -- it does NOT front Mission Rock Square directly, despite some secondary summaries grouping it with the square's surrounding blocks."
    }
@@ -436,6 +436,35 @@
     "sources": [
      {
       "title": "https://www.sfport.com/media/11337/download?inline https://www.sfport.com/sites/default/files/2026-06/item_11a_mission_rock_phase_2_update_and_port_capital.pdf https://www.sfport.com/sites/default/files/Commission/Item%2011A%20Mission%20Rock%20Approvals%20Staff%20Report%201-26-18FINAL.pdf https://www.sfport.com/sites/default/files/2021-07/Mission%20Rock%20Fact%20Sheet_24June2021.pdf"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_rock_block_j",
+     "slug": "mission-rock-block-j",
+     "name": "Mission Rock Block J",
+     "permalink": "https://pierandpoint.org/parcels/mission-rock-block-j/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-rock-block-j.json"
+    },
+    "site": {
+     "slug": "mission-rock",
+     "name": "Mission Rock",
+     "short": "Mission Rock",
+     "url": "https://pierandpoint.org/sites/mission-rock/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Block J's page now says that two of the lot lines its shape was snapped to (the Exposition Street lot 8719A010 and lot 8719D001) carry a recorded drop date of March 18, 2025 in the Assessor data while still flagged active; the dataset does not say why. The page also now says which Phase 1 lot-to-building pairings have a source: Verde (8719C001, 1070 Bridgeview Way) does; the Visa building (8719A008), The Canyon and Building B rest on position and area.",
+    "source": "DataSF Parcels - Active and Retired (acdm-wktn), https://data.sf.gov/resource/acdm-wktn.json?block_num=8719A",
+    "sources": [
+     {
+      "title": "DataSF Parcels - Active and Retired (acdm-wktn), https://data.sf.gov/resource/acdm-wktn.json?block_num=8719A"
      }
     ],
     "category": "correction",

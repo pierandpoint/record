@@ -47,8 +47,8 @@
    "notes": {
     "accuracy_caveat": "Real, surveyed building footprint (DataSF Building Footprints) -- high confidence in the outline itself. The match to 'Building 101' specifically (as opposed to a neighboring structure) rests on position (33.9m from the diagram's own label, closest of any candidate) and shape correspondence, not an address or explicit building-number tag in the footprint dataset itself, since no such attribute exists there.",
     "digitized_from": "DataSF Building Footprints dataset (real, surveyed building outline; not tied to an Assessor parcel).",
-    "why_no_real_parcel": "The HPC packet of Nov 2013 places the building on Assessor's Block 4046, Lot 001 (blklot 4046001), but DataSF shows that lot retired on 2018-10-02 (DataSF Assessor parcels, acdm-wktn); the building's footprint now lies within active lot 3941027, which has no street address in DataSF's Assessor parcels. This feature uses the real building footprint instead, extracted and matched individually.",
-    "regulatory_context": "Bethlehem Steel HQ, a 1917 neoclassical office building designed by Frederick H. Meyer, ~80,000 sf, 5 floors plus 2 lower levels and a penthouse. Rehabbed by Orton Development Inc. (ODI) starting after a Nov 26 2013 Historic Preservation Commission review (sfplanning.org HPC packet 2013.1168E); per that packet, the seismic upgrade uses shear walls, and the rehab preserves the historic exterior elevations while adapting the interior. The Port's Jan 2019 update reported Buildings 101 and 102 still under construction, with completion and occupancy of Building 101 anticipated in 2020. RH San Francisco -- 'The Gallery at the Historic Bethlehem Steel Building' (showroom, Palm Court restaurant and two wine bars, rooftop park) opened May 13, 2022."
+    "why_no_real_parcel": "The HPC packet of Nov 2013 lists Assessor's Block 4046, Lot 001 (blklot 4046001) among the lots holding its ten 20th Street Historic Buildings, without saying which building is on which lot; DataSF's footprint for this building carries that lot as its legacy id (mblr SF4046001). DataSF shows that lot retired on 2018-10-02 (DataSF Assessor parcels, acdm-wktn); the building's footprint now lies within active lot 3941027, which has no street address in DataSF's Assessor parcels. This feature uses the real building footprint instead, extracted and matched individually.",
+    "regulatory_context": "Bethlehem Steel HQ, a 1917 neoclassical office building designed by Frederick H. Meyer. Its size is reported differently: RH's May 13, 2022 release calls it an '80,000-Square-Foot Landmark Building', the National Register nomination says it 'contains 56,268 square feet', and the Port gives 61,311 sq ft before and 60,525 sq ft after rehabilitation (HPC packet, Nov 2013; Port Item 12A, Jan 2019); no source settles the difference. Its floors are described differently too: the HPC packet says 'a five-story above street level office building' with 'two lower levels and a penthouse level', the nomination describes three full stories over a basement and sub-basement with a partial fourth floor and penthouse, and RH says 'five floors'. Rehabbed by Orton Development Inc. (ODI) starting after a Nov 26 2013 Historic Preservation Commission review (sfplanning.org HPC packet 2013.1168E); per that packet, the seismic upgrade uses shear walls, and the rehab preserves the historic exterior elevations while adapting the interior. The Port's Jan 2019 update reported Buildings 101 and 102 still under construction, with completion and occupancy of Building 101 anticipated in 2020. RH announced the opening of RH San Francisco -- 'The Gallery at the Historic Bethlehem Steel Building' (showroom, Palm Court restaurant and two wine bars, rooftop park) in a press release dated May 13, 2022; the release gives no separate opening day, and no independent dated report was read."
    }
   },
   "centroid": {
@@ -793,7 +793,7 @@
     "date_label": "May 13, 2022",
     "status": "complete",
     "status_label": "Complete",
-    "text": "RH San Francisco opens in Building 101",
+    "text": "RH announces the opening of RH San Francisco in Building 101 (press release dated this day; no separate opening day is given)",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -869,6 +869,35 @@
     "sources": [
      {
       "title": "Port of San Francisco, Port Commission Item 12A, 2019-01-04 (https://www.sfport.com/media/4465/download); SF Historic Preservation Commission informational packet, case 2013.1168E (https://default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_building_101",
+     "slug": "pier-70-building-101-bethlehem-steel-hq",
+     "name": "Pier 70 Building 101 (Bethlehem Steel HQ)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-101-bethlehem-steel-hq/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-101-bethlehem-steel-hq.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Building 101 page now shows that its size is reported differently (RH: about 80,000 sq ft; National Register: 56,268; Port: 61,311 before and 60,525 after rehabilitation) and its floors are described differently. It says RH announced the opening in a May 13, 2022 press release that gives no separate opening day, and that the 2013 Historic Preservation Commission memo lists lots for all ten historic buildings together.",
+    "source": "RH press release, May 13, 2022 (ir.rh.com/news-events/detail/18/rh-announces-the-opening-of-rh-san-francisco-the-gallery-at-the-historic-bethlehem-steel-building); NRHP registration form (npgallery.nps.gov/GetAsset/99f11ae6-3834-4f99-840a-0e8a097398e6); Port memo to the Historic Preservation Commission, Nov 26, 2013 (default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf)",
+    "sources": [
+     {
+      "title": "RH press release, May 13, 2022 (ir.rh.com/news-events/detail/18/rh-announces-the-opening-of-rh-san-francisco-the-gallery-at-the-historic-bethlehem-steel-building); NRHP registration form (npgallery.nps.gov/GetAsset/99f11ae6-3834-4f99-840a-0e8a097398e6); Port memo to the Historic Preservation Commission, Nov 26, 2013 (default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf)"
      }
     ],
     "category": "correction",
@@ -1218,7 +1247,7 @@
     "name": "Palm Court Restaurant (RH San Francisco)",
     "category": "food and drink",
     "status": "open",
-    "opened": "2022-05-13",
+    "opened": "2022",
     "closed": null,
     "source": "https://ir.rh.com/news-events/detail/18/rh-announces-the-opening-of-rh-san-francisco-the-gallery-at-the-historic-bethlehem-steel-building",
     "unit_or_address": "Building 101",
@@ -1241,7 +1270,7 @@
     "name": "RH San Francisco",
     "category": "retail goods",
     "status": "open",
-    "opened": "2022-05-13",
+    "opened": "2022",
     "closed": null,
     "source": "https://ir.rh.com/news-events/detail/18/rh-announces-the-opening-of-rh-san-francisco-the-gallery-at-the-historic-bethlehem-steel-building",
     "unit_or_address": "Building 101 (The Gallery at the Historic Bethlehem Steel Building)",

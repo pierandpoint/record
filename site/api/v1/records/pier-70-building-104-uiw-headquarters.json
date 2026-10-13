@@ -47,7 +47,7 @@
    "notes": {
     "accuracy_caveat": "Real, surveyed building footprint -- high confidence in the outline itself and its match to Building 104. Buildings 122 and 123 (two small one-story 'check house' buildings flanking Building 104, per the 2013 HPC packet -- 774 GSF and 400 GSF respectively) are NOT separately represented here or anywhere else in this dataset: no footprint of a matching small size was found immediately adjacent to this one, most likely because DataSF's building-footprint extraction merged them into this building's outline (or Building 102's) given how small and closely attached they are. Their combined ~1,174 GSF (~109 m2) is a small fraction of this footprint's ~1,080 m2 total, so if merged in, they would not meaningfully distort this shape -- but their own individual positions are not confirmed and are not claimed here.",
     "digitized_from": "DataSF Building Footprints dataset (real, surveyed building outline; not tied to an Assessor parcel).",
-    "why_no_real_parcel": "The HPC packet of Nov 2013 places the building on Assessor's Block 4046, Lot 001 (blklot 4046001), but DataSF shows that lot retired on 2018-10-02 (DataSF Assessor parcels, acdm-wktn); the building's footprint now lies within active lot 3941027, which has no street address in DataSF's Assessor parcels. This feature uses the real building footprint instead, extracted and matched individually.",
+    "why_no_real_parcel": "The HPC packet of Nov 2013 lists Assessor's Block 4046, Lot 001 (blklot 4046001) among the lots holding its ten 20th Street Historic Buildings, without saying which building is on which lot; DataSF's footprint for this building carries that lot as its legacy id (mblr SF4046001). DataSF shows that lot retired on 2018-10-02 (DataSF Assessor parcels, acdm-wktn); the building's footprint now lies within active lot 3941027, which has no street address in DataSF's Assessor parcels. This feature uses the real building footprint instead, extracted and matched individually.",
     "regulatory_context": "UIW (Union Iron Works) Headquarters, Building 104, a Renaissance Revival structure built in 1896 with a distinctive clerestory top floor, unreinforced masonry construction. Per the 2013 HPC packet (2013.1168E), it was previously used as a naval hospital/medical office (WWII-era conversion) and was a 'red-tagged,' seismically challenged building at review time; rehab included demolishing demising walls from the WWII conversion. Part of the same 20th Street Historic Core rehabilitation by Orton Development Inc. as Buildings 101/102. The Port's Jan 2019 update gives 45,237 sq ft (the NRHP nomination gives 37,641) and reports a Certificate of Occupancy in June 2017. Named occupants in the sources read: Tea Living (Tea Collection) as sublessee and JUUL Labs as its subtenant from June 2017 (Port Item 12A, Jan 2019; Potrero View, June 2018); no current tenant is confirmed."
    }
   },
@@ -807,6 +807,35 @@
     "sources": [
      {
       "title": "Port of San Francisco, Port Commission Item 12A, 2019-01-04 (https://www.sfport.com/media/4465/download)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_building_104",
+     "slug": "pier-70-building-104-uiw-headquarters",
+     "name": "Pier 70 Building 104 (UIW Headquarters)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-building-104-uiw-headquarters/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-building-104-uiw-headquarters.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Building 104 page now says the 2013 Historic Preservation Commission memo lists Assessor lot 4046001 among the lots under its ten historic buildings without saying which building is on which lot; the link to this building comes from city footprint data.",
+    "source": "Port memo to the Historic Preservation Commission, Nov 26, 2013 (default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf); DataSF Assessor parcels acdm-wktn (data.sfgov.org/resource/acdm-wktn.json)",
+    "sources": [
+     {
+      "title": "Port memo to the Historic Preservation Commission, Nov 26, 2013 (default.sfplanning.org/meetingarchive/planning_dept/commissions.sfplanning.org/hpcpackets/2013.1168E.pdf); DataSF Assessor parcels acdm-wktn (data.sfgov.org/resource/acdm-wktn.json)"
      }
     ],
     "category": "correction",

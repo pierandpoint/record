@@ -40,7 +40,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "MEDIUM CONFIDENCE -- real, community-surveyed OSM polygon for the current interim installation (Parklab Gardens; the wider parcel also hosts Spark Social SF, Stagecoach Greens mini golf, Urban Sprouts community garden and an SFF soccer field per SF Rec & Park's own Future Parks Project page). Marked 'existing' rather than 'complete' because this is explicitly an interim use, not the plan's final build-out: OCII's Mission Bay Future Parks Project will redesign parcels P12/P13/P15 into a permanent, unified extension of the Commons (planning 2024-25, design mid-2026, construction targeted late 2028, public opening targeted early 2030). This feature traces OSM way 446183018 (leisure=park, name 'Parklab', about 14,665 sq m and roughly 420 m long), the whole Parklab park strip: it fully contains the separately mapped Parklab Gardens way (437595662, about 2,212 sq m) and the Spark Social SF way (437591532, about 1,519 sq m), so it is not only the Parklab Gardens sub-area.",
+    "accuracy_caveat": "MEDIUM CONFIDENCE -- real, community-surveyed OSM polygon for the current interim installation (Parklab Gardens; the wider parcel also hosts Spark Social SF, Stagecoach Greens mini golf, Urban Sprouts community garden and an SFF soccer field per SF Rec & Park's own Future Parks Project page). Marked 'existing' rather than 'complete' because this is explicitly an interim use, not the plan's final build-out: the Mission Bay Future Parks Project is planned to redesign parcels P12/P13/P15 into a permanent park (all dates are expected dates and they differ by source: SF Rec & Park's estimated schedule gives planning 2024-2025, design mid 2026, construction begins late 2028 and open to the public early 2030; the same page also says the remaining parks 'are anticipated to be complete by 2028'; OCII's November 2024 update shows a transfer to Rec and Park 'end of 2028, upon completion'; and Rec and Park's Workshop 3 deck shows construction 'mid-2027 thru 2028'). This feature traces OSM way 446183018 (leisure=park, name 'Parklab', about 14,665 sq m and roughly 420 m long), the whole Parklab park strip: it fully contains the separately mapped Parklab Gardens way (437595662, about 2,212 sq m) and the Spark Social SF way (437591532, about 1,519 sq m), so it is not only the Parklab Gardens sub-area.",
     "digitized_from": "OpenStreetMap (way 446183018, leisure=park, name=Parklab, parklab.com)"
    }
   },
@@ -242,15 +242,15 @@
     "date_label": "~2018",
     "status": "existing",
     "status_label": "Existing",
-    "text": "Parklab Gardens (one interim installation inside the mapped Parklab park strip; OCII's Nov 2024 map puts it on P15) opens, per SF Chronicle coverage pairing its opening with Stagecoach Greens mini-golf. Interim-use pilots on the Commons parcels began on P13 in 2016, P15 in 2017 and P12 in 2018 (SF Rec & Park Workshop 3 deck, p.15).",
+    "text": "Parklab Gardens (one interim installation inside the mapped Parklab park strip) is reported as \"opening Friday\" in an SF Chronicle article of Aug 17, 2018 that pairs it with Stagecoach Greens mini-golf; the article is a pre-opening report, so the month is approximate and no later source gives the opening day. OCII's Nov 2024 update labels P15 \"Parklab Gardens & Stagecoach Greens\" on its people-counts map (PDF pp.17-18) but groups \"P13 & P15: Food Truck Park with Outdoor Dining (SPARK Social SF & Parklab Gardens)\" on a survey slide (p.31), so which parcel it sits on is not settled. Interim-use pilots on the Commons parcels began on P13 in 2016, P15 in 2017 and P12 in 2018 (SF Rec & Park Workshop 3 deck, p.15).",
     "expected": false,
     "approximate": true,
     "sources": [
      {
-      "title": "SF Chronicle, \"Outdoor mini golf right here in SF? Yes, and with food trucks and a beer garden\" (Aug 2018); https://sfrecpark.org/DocumentCenter/View/25986/20250429-PRESENTATION-Workshop-3"
+      "title": "SF Chronicle, \"Outdoor mini golf right here in SF? Yes, and with food trucks and a beer garden\" (Amy Graff, Aug 17, 2018; read as republished at https://stagecoachgreens.com/cms/outdoor-mini-golf-right-here-in-sf-yes-and-with-food-trucks-and-a-beer-garden/); OCII Mission Bay Future Parks CAC Update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf); https://sfrecpark.org/DocumentCenter/View/25986/20250429-PRESENTATION-Workshop-3"
      }
     ],
-    "source": "SF Chronicle, \"Outdoor mini golf right here in SF? Yes, and with food trucks and a beer garden\" (Aug 2018); https://sfrecpark.org/DocumentCenter/View/25986/20250429-PRESENTATION-Workshop-3",
+    "source": "SF Chronicle, \"Outdoor mini golf right here in SF? Yes, and with food trucks and a beer garden\" (Amy Graff, Aug 17, 2018; read as republished at https://stagecoachgreens.com/cms/outdoor-mini-golf-right-here-in-sf-yes-and-with-food-trucks-and-a-beer-garden/); OCII Mission Bay Future Parks CAC Update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf); https://sfrecpark.org/DocumentCenter/View/25986/20250429-PRESENTATION-Workshop-3",
     "origin": "csv",
     "category": "milestone",
     "category_label": "Milestone",
@@ -422,7 +422,7 @@
     "date_label": "~2028",
     "status": null,
     "status_label": null,
-    "text": "Mission Bay Future Parks Project construction targeted to begin (\"late 2028\" per sfrecpark.org)",
+    "text": "Mission Bay Future Parks Project construction targeted to begin (\"late 2028\" per sfrecpark.org's estimated schedule; the same page says the remaining parks \"are anticipated to be complete by 2028\" and Rec & Park's Workshop 3 deck (p.15) shows construction \"mid-2027 thru 2028\", so the start differs by source)",
     "expected": true,
     "approximate": true,
     "sources": [
@@ -529,6 +529,35 @@
     "sources": [
      {
       "title": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project; https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_commons_interim_west",
+     "slug": "parklab-gardens-and-mission-bay-commons-interim-west",
+     "name": "Parklab Gardens & Mission Bay Commons (interim, west)",
+     "permalink": "https://pierandpoint.org/parcels/parklab-gardens-and-mission-bay-commons-interim-west/",
+     "api": "https://pierandpoint.org/api/v1/records/parklab-gardens-and-mission-bay-commons-interim-west.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Parklab Gardens and the Commons interim area: all future dates are expected dates and they differ by source. Rec & Park's page gives construction beginning late 2028 and opening early 2030, yet says the remaining parks 'are anticipated to be complete by 2028'; OCII shows a transfer to Rec and Park 'end of 2028, upon completion'; Rec & Park's April 2025 deck shows construction 'mid-2027 thru 2028'. Parklab Gardens' opening is known only from an August 17, 2018 Chronicle article that says it was 'opening Friday', and OCII's November 2024 slides place it on P15 in one slide and on P13 and P15 in another.",
+    "source": "SF Rec & Park, Mission Bay Future Parks Project (https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project); OCII, Mission Bay Future Parks CAC update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf); SF Chronicle, Aug 17, 2018, as republished (https://stagecoachgreens.com/cms/outdoor-mini-golf-right-here-in-sf-yes-and-with-food-trucks-and-a-beer-garden/)",
+    "sources": [
+     {
+      "title": "SF Rec & Park, Mission Bay Future Parks Project (https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project); OCII, Mission Bay Future Parks CAC update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf); SF Chronicle, Aug 17, 2018, as republished (https://stagecoachgreens.com/cms/outdoor-mini-golf-right-here-in-sf-yes-and-with-food-trucks-and-a-beer-garden/)"
      }
     ],
     "category": "correction",

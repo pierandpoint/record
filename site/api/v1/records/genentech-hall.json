@@ -42,7 +42,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against DataSF's Assessor parcel data and tax roll -- e.g. blklot 8711507 at 675 Mission Bay Blvd alone is ~12.2 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
+    "accuracy_caveat": "REAL -- OpenStreetMap building footprint (volunteer-mapped from aerial imagery, not an official survey), not a hand trace or plan estimate. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (in DataSF's Assessor parcel data the active lot 8722003, 1700 4th St, is about 5.8 acres by its drawn outline and contains both this building and Byers Hall; the Assessor roll lists the same lot at 600 16th St), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for each one.",
     "digitized_from": "OpenStreetMap (way 135103725, 600 16th St)"
    }
   },
@@ -204,7 +204,7 @@
     "date_label": "~2003",
     "status": "complete",
     "status_label": "Complete",
-    "text": "Genentech Hall opens -- UCSF's first Mission Bay building (2003 per UCSF's history page and Gladstone's history; the January month is not confirmed)",
+    "text": "Genentech Hall opens (2003 per UCSF's history page; Gladstone's history says UCSF's first Mission Bay building opened in 2003 but does not name it; that Genentech Hall was the first is an inference; the January month is not confirmed)",
     "expected": false,
     "approximate": true,
     "sources": [
@@ -242,6 +242,35 @@
     "sources": [
      {
       "title": "A History of UCSF, 1990-2009 (https://history.library.ucsf.edu/1990.html)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "ucsf_genentech_hall",
+     "slug": "genentech-hall",
+     "name": "Genentech Hall",
+     "permalink": "https://pierandpoint.org/parcels/genentech-hall/",
+     "api": "https://pierandpoint.org/api/v1/records/genentech-hall.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Genentech Hall page now says it is probably UCSF's first Mission Bay building but that no source names it as such (Gladstone's history says UCSF's first Mission Bay building opened in 2003 without naming it; UCSF's history page lists Genentech Hall in 2003 and Rock Hall in 2004). Its size is given with each source: UCSF's history page says more than 400,000 gross square feet, Clark Construction says 435,000 square feet in its text and 415,000 in its size field, and a January 2000 UC Regents item gave a planned 433,828. The footprint is described as crowd-mapped OpenStreetMap data, not a survey, and the example Assessor lot is the one this building actually lies in.",
+    "source": "https://history.library.ucsf.edu/1990.html; https://gladstone.org/about/history; https://www.clarkconstruction.com/our-work/projects/ucsf-mission-bay-campus-genentech-hall; https://regents.universityofcalifornia.edu/regmeet/jan00/3a.pdf",
+    "sources": [
+     {
+      "title": "https://history.library.ucsf.edu/1990.html; https://gladstone.org/about/history; https://www.clarkconstruction.com/our-work/projects/ucsf-mission-bay-campus-genentech-hall; https://regents.universityofcalifornia.edu/regmeet/jan00/3a.pdf"
      }
     ],
     "category": "correction",
@@ -517,7 +546,7 @@
     "accessed": "2026-10-06"
    }
   ],
-  "notes": "OCII plan block 24A/B. UCSF's first Mission Bay building. ~400,000-435,000 sq ft (sources vary), five stories. Architect SmithGroup. Opened in 2003 (UCSF's history page: \"2003 Genentech Hall opens at the Mission Bay campus\"; Gladstone's history also gives 2003). The month is not confirmed: the trade-press page that gave January could not be read.",
+  "notes": "OCII plan block 24A/B. Probably UCSF's first Mission Bay building, though no source read names it as such: Gladstone's history says that UCSF's \"first building opened in 2003\" at Mission Bay without naming it, and UCSF's history page lists Genentech Hall's opening in 2003 and the next Mission Bay building, Rock Hall, in 2004. Size varies by source: UCSF's history page says \"more than 400,000 gross square feet\"; Clark Construction's project page says \"435,000-square-foot\" in its text but \"415,000 Square Feet\" in its size field; a January 2000 UC Regents item (a planning figure, before construction) gave 433,828 gross square feet. Five stories (Clark). Architect SmithGroup (Clark). Opened in 2003 (UCSF's history page: \"2003 Genentech Hall opens at the Mission Bay campus\"; Gladstone's history also gives 2003). The month is not confirmed: the trade-press page that gave January could not be read.",
   "has_record_file": true,
   "last_verified": "2026-10-12",
   "tenants": [],
