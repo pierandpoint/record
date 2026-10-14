@@ -112,6 +112,17 @@ source).
 - Dates are `YYYY`, `YYYY-MM` or `YYYY-MM-DD`. `expected: true` for dates
   that haven't happened; `approximate: true` when only a year or range is
   sourced.
+- `date_kind` on a milestone, optional: `observed` (the date a document,
+  map or listing showed the state, not the date the state began: a land-use
+  map, a property-management-plan listing, an annual report, a resolution's
+  recital, a staff presentation) or `published` (a report's or article's
+  publish date standing in for an event date no source gives). Leave it off
+  when the date is the event's own (an approval, vote, permit issue,
+  completion, construction start or opening). A record page's "since" date
+  reads the earliest milestone of the current status run; if that milestone
+  has a `date_kind`, no since-date is shown (the record's timeline still
+  lists the milestone with its date). `src/validate_records.py` checks the
+  value; in `data/milestones.csv` it is the optional last column.
 - `status` on a milestone, if set, is one of `complete`,
   `under_construction`, `planned`, `existing`, `being_removed`.
 - `basis` is required on a milestone with `expected: true` and `status:

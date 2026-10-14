@@ -1,9 +1,15 @@
 :root {
   --ink: #161d1f; --ink-2: #1d2528; --ink-3: #091d2a; --line: #2a3336; --line-2: #3a4347; --line-3: #4b5559;
   --text: #eae6da; --text-2: #d7d3c7; --soft: #a9b3ae; --faint: #84939a;
-  --brass: #d3a35e; --brass-hi: #e6bd7d; --terracotta: #b4694c;
+  /* Colour roles (design review D-07). Brass = act on this: links, buttons, pressed toggles, the time
+     cursor, focus rings, the map's own clickable site pins. Terracotta = the brand itself: the "&", the
+     mark's stack, the numbered site pins outside the map; never on a map, never for data (it is too close
+     to the Use palette's Residential). Terracotta text is 4.12:1 on ink and 3.51:1 on paper, so it is only
+     for 18.66 px bold and up (the "&" is 20 px bold); smaller terracotta text uses --terracotta-hi (6.13:1
+     on ink). Neutral (--soft, --paper-soft) = data and labels: counts, eyebrows, card headings. */
+  --brass: #d3a35e; --brass-hi: #e6bd7d; --terracotta: #b4694c; --terracotta-hi: #d08a6c;
   --paper: #efece2; --paper-2: #faf8f1; --paper-line: #d8d2bf; --paper-ink: #1c2b30; --paper-soft: #51636b; --paper-faint: #566460; --paper-brass: #7a5527;
-  --complete: #2ca25f; --under_construction: #e08e2b; --planned: #4f7fc0; --existing: #a39e8f; --being_removed: #d73027;
+  --complete: #2ca25f; --under_construction: #e08e2b; --planned: #4f7fc0; --existing: #6f6c64; --being_removed: #d73027;
   --serif: 'Source Serif 4', Georgia, serif; --sans: 'Public Sans', system-ui, sans-serif; --mono: 'IBM Plex Mono', ui-monospace, monospace;
   --gutter: 16px; --max: 1344px;
 }
@@ -25,7 +31,7 @@ p a, li a, dd a, td a { text-decoration: underline; text-decoration-thickness: 1
 img { max-width: 100%; display: block; }
 .wrap { width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin: 0 auto; padding: 0 var(--gutter); }
 .mono { font-family: var(--mono); }
-.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--soft); }
 .skip { position: absolute; left: -999px; top: 8px; background: var(--brass); color: var(--ink); padding: 8px 12px; border-radius: 6px; z-index: 50; }
 .skip:focus { left: 8px; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
@@ -79,6 +85,12 @@ img { max-width: 100%; display: block; }
 .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; display: inline-block; }
 .swatch { width: 11px; height: 11px; border-radius: 3px; flex-shrink: 0; display: inline-block; }
 .swatch.hatch { border: 1px solid currentColor; background: repeating-linear-gradient(45deg, currentColor 0 1.5px, transparent 1.5px 4px); }
+/* "Being removed" is cross-hatched wherever it is drawn (design review D-09): orange and red cannot be told
+   apart reliably by a red-green colour-blind reader at any lightness that still reads as a warning, so
+   the pattern carries it. pages.py's hatch_defs() draws the same x-hatch on the map (x-being_removed). The
+   class beats the inline background the swatch and dot markup also carries. */
+.removed-x { border-radius: 2px; color: var(--being_removed); box-shadow: inset 0 0 0 1.5px currentColor;
+  background: repeating-linear-gradient(45deg, currentColor 0 1.5px, transparent 1.5px 4px), repeating-linear-gradient(-45deg, currentColor 0 1.5px, transparent 1.5px 4px) !important; }
 .swatch.nodate { border: 1.5px dashed #5a676b; }
 .swatch.expected { background: currentColor; opacity: 0.62; border: 1.5px dashed currentColor; }
 .bar { display: flex; gap: 2px; height: 8px; border-radius: 3px; overflow: hidden; }
@@ -104,6 +116,26 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .hero h1 { font: 500 clamp(32px, 5.2vw, 56px)/1.04 var(--serif); letter-spacing: -.015em; margin-top: 12px; max-width: 22ch; }
 .hero .sub { font-size: clamp(16px, 1.6vw, 19px); color: var(--soft); margin-top: 12px; max-width: 60ch; }
 .hero .sub-2 { font-size: 14px; color: var(--faint); margin-top: 10px; max-width: 62ch; }
+/* The whole map in the first screen (design review D-02): on a wide screen the hero is two columns,
+   the headline left and the sub-lines right, and the overview map is capped to the viewport height
+   instead of its width. On a phone the headline is smaller, which moves the map up. */
+@media (min-width: 1100px) {
+  .hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); column-gap: 56px; align-items: start; padding-top: 28px; padding-bottom: 20px; }
+  .hero .eyebrow { grid-column: 1 / -1; }
+  .hero h1 { grid-column: 1; grid-row: 2 / span 2; font-size: 46px; max-width: 18ch; margin-top: 8px; }
+  .hero .sub { grid-column: 2; grid-row: 2; margin-top: 14px; font-size: 18px; }
+  .hero .sub-2 { grid-column: 2; grid-row: 3; font-size: 14px; margin-top: 10px; }
+  /* 360px is the header and hero above the map (335 px at 1100-1440 wide) plus a little air, so the whole
+     frame fits the first screen at 1280x800 and 1440x900, not only on windows 880 px tall or more. */
+  .overview .map-frame { height: min(62vh, 640px, max(320px, calc(100vh - 360px))); }
+  .overview .map-frame .pp-map.ov-wide { height: 100%; }
+}
+@media (max-width: 719px) {
+  .hero { padding-top: 20px; padding-bottom: 16px; }
+  .hero h1 { font-size: 30px; margin-top: 8px; }
+  .hero .sub { font-size: 16px; margin-top: 8px; }
+  .hero .sub-2 { font-size: 13.5px; margin-top: 6px; }
+}
 
 /* maps */
 .pp-map { display: block; width: 100%; height: auto; background: var(--ink-3); }
@@ -255,7 +287,7 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .tenant-card[hidden] { display: none; }
 .tenant-card-close { position: absolute; top: 2px; right: 2px; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border: none; background: none; color: var(--soft); font-size: 18px; line-height: 1; cursor: pointer; border-radius: 6px; }
 .tenant-card-close:hover { color: var(--text); background: var(--ink); }
-.tenant-card-media { width: 100%; height: 100px; border-radius: 6px; overflow: hidden; margin-bottom: 8px; background: var(--ink-3); }
+.tenant-card-media { position: relative; width: 100%; height: 100px; border-radius: 6px; overflow: hidden; margin-bottom: 8px; background: var(--ink-3); }
 .tenant-card-media img { width: 100%; height: 100%; object-fit: cover; }
 .tenant-card-media[hidden] { display: none; }
 .tenant-card-body { padding-right: 20px; }
@@ -360,7 +392,7 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 /* Names which mode a legend belongs to (owner decision 2026-09-28, 8th round), so a visitor
    scrolled down to it doesn't have to scroll back up to the toggle to tell Status from Use. */
 .legend-heading { flex-basis: 100%; margin: 0 0 6px; }
-.legend-note { flex-basis: 100%; margin: 0 0 4px; font-size: 12.5px; color: var(--faint); max-width: 640px; }
+.legend-note { flex-basis: 100%; margin: 0 0 4px; font-size: 12.5px; color: var(--faint); }
 
 /* progress tracker (home page, above the site list) */
 /* padding-top/-bottom, not the `padding` shorthand: this section is also `.wrap` (padding: 0
@@ -400,19 +432,21 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 @media (min-width: 960px) { .sites { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .site-card { display: flex; flex-direction: column; gap: 12px; scroll-margin-top: 110px; min-width: 0; }
 .site-card header { display: flex; align-items: center; gap: 12px; }
-.pin { width: 30px; height: 30px; border-radius: 50%; background: var(--brass); color: var(--ink); display: inline-flex; align-items: center; justify-content: center; font: 500 13px var(--mono); flex-shrink: 0; }
+.pin { width: 30px; height: 30px; border-radius: 50%; background: none; border: 1.5px solid var(--terracotta); color: var(--text); display: inline-flex; align-items: center; justify-content: center; font: 500 13px var(--mono); flex-shrink: 0; }
 .pin.placeholder { background: none; border: 1.5px dashed var(--soft); color: var(--text-2); }
 .site-card h2 { font: 500 24px/1.2 var(--serif); flex-grow: 1; }
 .site-lead-card { margin: 0; }
 .site-lead-card img { width: 100%; height: 150px; object-fit: cover; border-radius: 10px; background: var(--ink-3); }
 .site-lead-card figcaption { margin-top: 4px; }
 .site-card h2 a { color: var(--text); }
-.site-card .meta { display: flex; justify-content: space-between; gap: 12px; font: 12px var(--mono); color: var(--faint); }
-.site-card .meta .done { color: var(--brass); }
+.site-card .meta { display: flex; justify-content: space-between; gap: 12px; font: 12px var(--mono); color: var(--text-2); }
+.site-card .meta .done { color: var(--text-2); font-weight: 600; }
 .site-card .map-frame .pp-map { aspect-ratio: 654 / 380; }
-.tenant-count-line { font: 13px var(--mono); color: var(--brass); margin: -4px 0 0; }
+.tenant-count-line { font: 13px var(--mono); color: var(--text-2); margin: -4px 0 0; }
 .site-card footer { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; font-size: 14px; color: var(--text-2); }
-.site-card footer a { flex-shrink: 0; font-weight: 500; }
+/* "Open site →" is the card's one action, so it is the one thing on the card that looks like a button. */
+.site-card footer > a { flex-shrink: 0; display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border: 1px solid var(--line-3); border-radius: 8px; font-weight: 500; color: var(--brass); white-space: nowrap; }
+.site-card footer > a:hover { border-color: var(--brass); text-decoration: none; }
 .placeholder-panel { aspect-ratio: 654 / 380; border-radius: 12px; border: 1.5px dashed var(--line-3); background: repeating-linear-gradient(45deg, rgba(169,179,174,.07) 0 2px, transparent 2px 12px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 24px; text-align: center; color: var(--faint); }
 .placeholder-panel strong { font: 500 12px var(--mono); letter-spacing: .08em; color: var(--soft); }
 .placeholder-panel p { max-width: 44ch; font-size: 14px; }
@@ -422,7 +456,7 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .light { background: var(--paper); color: var(--paper-ink); }
 .light a { color: var(--paper-brass); }
 .light a:hover { color: #9c6f34; }
-.light .eyebrow { color: var(--paper-brass); }
+.light .eyebrow { color: var(--paper-soft); }
 /* .light a (above) is more specific than .btn-primary, so a primary button on paper got the link
    colour (2.91:1 on brass); its own label colour has to be restated inside .light (audit F2). */
 /* Same cause for the pager: the paper link colour (#7a5527) on a .btn's dark fill measured 2.34:1 (UX-03).
@@ -450,7 +484,15 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .feed .kind.correction { background: #f1e4cd; color: var(--paper-brass); }
 .feed .kind.coverage, .feed .kind.open_space { background: #e3ecdf; color: #2b6a45; }
 .feed .kind.status, .feed .kind.coming_up { background: #f6e3cc; color: #8a4f0d; }
-.feed .body { display: flex; flex-direction: column; gap: 4px; font-size: 15px; }
+.feed .body { display: flex; flex-direction: column; gap: 4px; font-size: 16px; line-height: 1.55; }
+/* A 72-character reading measure for feeds and lists (design review D-05), the same as the prose pages:
+   at 1440 a change entry ran about 150 characters a line. The date, kind and site columns keep their
+   widths; the spare width becomes margin on the right. */
+.feed .body, .questions, .prose, .next-up li, .box-intro, .legend-note { max-width: 72ch; }
+@media (min-width: 1100px) {
+  .feed li { grid-template-columns: 130px 110px minmax(0, 72ch); justify-content: start; }
+  .feed.changes li { grid-template-columns: 110px 96px 100px minmax(0, 72ch); }
+}
 @media (max-width: 719px) { .feed li { grid-template-columns: auto 1fr; } .feed .body { grid-column: 1 / -1; } }
 .section.overdue { padding-top: 0; }
 .overdue-note { max-width: 64ch; margin: -8px 0 20px; }
@@ -539,15 +581,22 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .page-head h1 { font: 500 clamp(32px, 5vw, 56px)/1.04 var(--serif); letter-spacing: -.015em; margin: 12px 0 8px; }
 .page-head .sub { color: var(--paper-soft); font-size: 17px; }
 .feed-links { display: flex; align-items: center; gap: 14px; font-size: 14px !important; }
-.page-status { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 14px; }
+.page-status { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-top: 18px; }
+/* The status is the second thing a reader looks for, after the name (design review D-03): a 16 px
+   label with a square swatch and a border in the status colour (--st, written by pages.py's
+   status_chip()). The border is decoration on paper, not text: the label carries the meaning. */
+.page-head .page-status .chip { font: 600 16px/1.25 var(--sans); white-space: normal; gap: 10px; padding: 9px 14px 9px 12px; border-radius: 6px; border: 1.5px solid var(--st, var(--paper-line)); background: var(--paper-2); }
+.page-head .page-status .chip .dot { width: 14px; height: 14px; border-radius: 3px; }
+/* "since Jan 2022" (recommendation R1): the date of the milestone that set the current status. */
+.page-since { font: 500 16px/1.2 var(--sans); color: var(--paper-ink); }
 .page-fresh { font: 13px var(--mono); color: var(--paper-faint); }
-.page-about { margin-top: 10px; max-width: 72ch; font-size: 14px; color: var(--paper-soft); }
+.page-about { margin-top: 10px; max-width: 72ch; font-size: 13px; color: var(--paper-faint); }
 .page-fallback { font-size: 13px; color: var(--paper-faint); }
 /* What's next (sitegen/pages.py whats_next_block, next_short_html, next_up_section): the earliest
    future expected step, always with "Expected, not confirmed"; a legal deadline reads as a plain,
    quieter box so it never looks like a schedule. */
 .whats-next { margin-top: 14px; max-width: 72ch; padding: 12px 14px; border: 1px solid var(--paper-brass); border-radius: 8px; background: var(--paper-2); color: var(--paper-ink); }
-.whats-next-label { font: 600 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--paper-brass); margin: 0 0 4px; }
+.whats-next-label { font: 600 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--paper-soft); margin: 0 0 4px; }
 .whats-next-main { margin: 0; font-size: 16px; line-height: 1.45; overflow-wrap: anywhere; }
 .whats-next-meta { margin: 6px 0 0; font: 13px var(--mono); color: var(--paper-soft); }
 .whats-next-completion { margin-top: 10px; }
@@ -589,16 +638,25 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
   .page-main { order: 3; }
   .page-aside-rest { order: 4; }
 }
-.card { background: var(--paper-2); border: 1px solid var(--paper-line); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 14px; }
-.card h2 { font: 500 12px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--paper-brass); }
-.facts { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 10px 12px; margin: 0; font-size: 14px; }
-.facts dt { color: var(--paper-faint); }
-.facts dd { margin: 0; overflow-wrap: anywhere; }
+/* One section-heading style on paper (design review D-08): a 24 px serif title, a mono count, a 1 px ink
+   rule under it. At a glance is a section like the others, not a card; "Cite this page" (.cite) keeps its
+   dark card because it is an object to copy, not a section. */
+.card { display: flex; flex-direction: column; gap: 14px; }
+.grid-main h2.h2, .box > .box-head h2, .card > h2, .by-use h3 { font: 500 24px/1.2 var(--serif); letter-spacing: 0; text-transform: none; color: var(--paper-ink); margin: 0 0 14px; padding-bottom: 10px; border-bottom: 1px solid var(--paper-ink); display: flex; align-items: baseline; gap: 10px; }
+.card > h2 { margin-bottom: 0; }
+.box > .box-head h2 { margin-bottom: 0; }
+.grid-main h2.h2 .count, .box > .box-head h2 .count, .card > h2 .count { font: 13px var(--mono); color: var(--paper-faint); }
+/* "At a glance" (design review D-06): a small mono label over a full-width value, a hairline between
+   facts. The old 110 px label column left the values about 200 px (170 px on a phone). */
+.facts { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; margin: 0; font-size: 14px; }
+.facts dt { font: 500 11px/1.2 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--paper-faint); padding-top: 12px; border-top: 1px solid var(--paper-line); }
+.facts dt:first-of-type { border-top: 0; padding-top: 0; }
+.facts dd { margin: 0; padding: 5px 0 12px; line-height: 1.5; overflow-wrap: anywhere; }
 /* "Nearest intersection" (docs/briefs/address-search.md): the distance under the corner's name. */
 .facts .fact-note { display: block; font-size: 12px; color: var(--paper-faint); }
 /* By use (docs/briefs/next-five.md): a site page's records by use category and status, inside At a glance. */
-.by-use { border-top: 1px solid var(--paper-line); padding-top: 14px; }
-.by-use h3 { font: 500 12px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--paper-brass); margin: 0 0 8px; }
+.by-use { padding-top: 14px; }
+.by-use h3 { font-size: 18px; border-bottom-color: var(--paper-line); margin-bottom: 8px; }
 .by-use-table { width: 100%; border-collapse: collapse; font-size: 14px; font-variant-numeric: tabular-nums; }
 .by-use-table th, .by-use-table td { padding: 5px 0; border-bottom: 1px solid var(--paper-line); text-align: right; }
 .by-use-table thead th { font: 12px var(--mono); color: var(--paper-faint); }
@@ -612,7 +670,7 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .feed li.is-new > time::after { content: 'New'; display: block; width: max-content; margin-top: 4px; padding: 1px 6px; border-radius: 999px; font: 600 11px var(--sans); background: var(--paper-brass); color: var(--paper-2); }
 .sources { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; overflow-wrap: anywhere; }
 .cite { background: var(--paper-ink); color: var(--text); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 12px; }
-.cite h2 { font: 500 12px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--brass); }
+.cite h2 { font: 500 12px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--soft); }
 .cite code { font: 12px var(--mono); background: var(--ink); color: var(--soft); padding: 10px 12px; border-radius: 6px; overflow-wrap: anywhere; }
 .cite p { font-size: 14px; color: var(--text-2); }
 .gallery-lead, .gallery-thumbs { display: grid; gap: 16px; }
@@ -623,6 +681,13 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
    on the thumbnail itself carries the same information without a heading of its own. */
 .thumb-kind { position: absolute; left: 6px; bottom: 6px; font: 600 10px var(--mono); letter-spacing: .04em;
               text-transform: uppercase; color: #fff; background: rgba(0, 0, 0, .65); padding: 2px 7px; border-radius: 999px; }
+/* A rendering or a document says so on the image itself (recommendation R4): the same badge a thumbnail
+   has, a little larger on a lead image, on the image's corner and never on the credit line beneath it. */
+.gallery-lead .thumb-kind, .lead-frame .thumb-kind { font-size: 11px; left: 10px; bottom: 10px; padding: 3px 9px; }
+.lead-frame { position: relative; display: block; }
+/* On the 56 px tenant thumbnail the badge is a strip across the foot of the image. */
+.tenant-media { position: relative; }
+.tenant-media .thumb-kind { left: 0; right: 0; bottom: 0; border-radius: 0; text-align: center; font-size: 8.5px; letter-spacing: 0; padding: 2px 0; }
 .gallery-lead img, .gallery-thumbs img { display: block; border-radius: 12px; width: 100%; object-fit: cover; background: var(--paper-line); }
 .gallery-lead img { max-height: 640px; }
 .gallery-frame:hover img, .gallery-frame:focus-visible img { filter: brightness(1.08); }
@@ -717,8 +782,6 @@ details.notes h3 { font: 600 13px var(--mono); color: var(--paper-soft); margin:
    and interactive content inside a <summary> toggles the details on every tap, which is what
    made the pattern's own old peek pills look tappable but do nothing. Collapse/expand and
    category filtering are both app.js state (the box IIFE), not a native open attribute. */
-.box > .box-head h2 { font: 500 22px var(--serif); display: flex; align-items: baseline; gap: 10px; margin: 0; padding-bottom: 8px; border-bottom: 1px solid var(--paper-ink); }
-.box > .box-head h2 .count { font: 13px var(--mono); color: var(--paper-faint); }
 .box-list { padding-top: 16px; }
 /* No margin-top here on purpose: a block margin on a section's first child collapses straight
    through an unpadded wrapping <section>, escaping onto the dark body background between it and

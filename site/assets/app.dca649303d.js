@@ -538,10 +538,15 @@ var ppSearch = (function () {
                    approx ? '4 3' : (a.expected ? '3 2' : ''), a.expected ? '0.62' : '1');
           return;
         }
-        n.setAttribute('fill', outline ? 'none' : (approx ? 'url(#h-' + a.s + ')' : c));
-        n.setAttribute('stroke', (outline || approx) ? c : '#0f1618');
+        // Being removed is always cross-hatched (pages.py's hatch_defs(), design review D-09), so it
+        // survives colour-blindness; an approximate shape being removed shows its own marker as a dash.
+        var removed = a.s === 'being_removed' && !outline;
+        n.setAttribute('fill', outline ? 'none' : (removed ? 'url(#x-being_removed)' : (approx ? 'url(#h-' + a.s + ')' : c)));
+        // An approximate Existing shape's outline is the lighter existingEdge: #6f6c64 alone read as basemap texture.
+        n.setAttribute('stroke', (outline || approx || removed) ? (a.s === 'existing' ? R.existingEdge : c) : '#0f1618');
         n.setAttribute('opacity', a.expected ? '0.62' : (n.getAttribute('data-dim') || '1'));
         if (a.expected) n.setAttribute('stroke-dasharray', '3 2');
+        else if (removed && approx) n.setAttribute('stroke-dasharray', '4 3');
       }
     });
     updateSatFrame(m);
@@ -1305,7 +1310,22 @@ var ppSearch = (function () {
           entry.el.classList.add('tenant-marker-open');
           var t = entry.t;
           var media = card.querySelector('[data-tenant-card-media]');
-          if (t.photo) { media.hidden = false; media.innerHTML = '<img src="' + t.photo.src + '" alt="" style="object-position:' + t.photo.pos + '">'; }
+          // A rendering or a document says so on the image and in its alt text (pages.py's kind_flag()).
+          if (t.photo) {
+            media.hidden = false;
+            media.textContent = '';
+            var shot = document.createElement('img');
+            shot.src = t.photo.src;
+            shot.alt = t.photo.kind ? t.photo.kind + ' of ' + t.name : '';
+            shot.style.objectPosition = t.photo.pos;
+            media.appendChild(shot);
+            if (t.photo.kind) {
+              var flag = document.createElement('span');
+              flag.className = 'thumb-kind';
+              flag.textContent = t.photo.kind;
+              media.appendChild(flag);
+            }
+          }
           else { media.hidden = true; media.innerHTML = ''; }
           card.querySelector('[data-tenant-card-name]').textContent = t.name;
           card.querySelector('[data-tenant-card-meta]').textContent = [t.categoryLabel, STATUS_WORD[t.status] || t.status, t.dateLabel].filter(Boolean).join(' · ');
