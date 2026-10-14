@@ -45,7 +45,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE (planned, unbuilt public square) on the undivided remainder lot 8719A006. North edge is a recorded lot line (~0 m); the other three edges come from the Design Controls figure through a 0.7 m RMS transform (~1-3 m). Traced area 47,724 sf, smaller than the 57,626 sf the 2012 proposal gave -- the tracing is logged in this shape's data file in the public data repository (https://github.com/pierandpoint/record). The July 2019 Phase 1 submittal planned 'two interim pedestrian plazas south of Parcels B and F'; no source read confirms that an interim plaza was built or where it sits, and the Port's June 5, 2026 update does not describe the square's current condition (its goal of transforming 'a surface parking lot' refers to the Mission Rock project site as a whole).",
+    "accuracy_caveat": "APPROXIMATE (planned, unbuilt public square) on the undivided remainder lot 8719A006. North edge is a recorded lot line (~0 m); the other three edges come from the Design Controls figure through a 0.7 m RMS transform (~1-3 m). Traced area 47,724 sf, smaller than the 57,626 sf the 2012 proposal gave -- the tracing is logged in this shape's mapping log. The July 2019 Phase 1 submittal planned 'two interim pedestrian plazas south of Parcels B and F'; no source read confirms that an interim plaza was built or where it sits, and the Port's June 5, 2026 update does not describe the square's current condition (its goal of transforming 'a surface parking lot' refers to the Mission Rock project site as a whole).",
     "digitized_from": "Mission Rock Design Controls, Figure 6.2 - Maximum Height Plan (p.151) and Figure 1.1 - Land Use Plan (p.10); north edge is Verde's recorded lot line (8719C001), south edge is Block E's traced north edge.",
     "why_no_real_parcel": "A real Assessor lot exists under this square -- 8719A006, the undivided remainder of Seawall Lot 337 recorded 2020-06-12 -- but it has not been subdivided per block, so mapping each block from that lot would paint the same ~9-acre parking-lot shape for every unbuilt block. Hand-derived geometry is used instead, with the lot's own lines wherever this square touches them.",
     "regulatory_context": "Dedicated public open space (Design Controls Chapter 3, Section 3.3). Directly framed by Block F/Verde (north) and Block E (south), with the Shared Public Way (west) and Bridgeview Street (east) along its sides; Blocks B, C, I and J are also one street removed (Design Controls Figure 6.2). The Design Controls text states no acreage; the Port's January 2018 approvals report gives 1.1 acres ('a 1.1 acre neighborhood central gathering place called Mission Rock Square'), which matches this record's traced figure; the March 2012 Revised Proposal's parcel table gave 57,626 sf (1.32 ac) for an earlier, deeper layout."
@@ -58,7 +58,7 @@
   "facts": [
    {
     "key": "area",
-    "value": "57,626 sq ft / 1.32 acres (March 2012 Revised Proposal parcel summary; the same proposal's block plan labels the square 0.7 acres); the Port's January 2018 approvals memo describes it as 1.1 acres",
+    "value": "Sources differ (0.7, 1.1 or 1.32 acres)",
     "sources": [
      "src-d4d",
      "src-port-2018-01"
@@ -66,7 +66,7 @@
    },
    {
     "key": "use",
-    "value": "Public open space. March 2012 Revised Proposal (the developer's proposal, not an adopted plan): urban neighborhood park with multi-use lawn, plaza with interactive spray ground, cafe pavilion, bosque with retail kiosks and an arts program site. Adopted Design Controls (Sec. 3.3): a civic 'living room' square with a large flexible open area for temporary uses and events, wind protection through tree planting, one permanent retail and food structure with public restrooms, at least one stormwater treatment garden, and views to the Bay maintained",
+    "value": "Public open space: a civic 'living room' square under the adopted Design Controls (Sec. 3.3)",
     "sources": [
      "src-d4d",
      "src-dc-2018"
@@ -74,14 +74,14 @@
    },
    {
     "key": "design_requirements",
-    "value": "Protected from wind; public restrooms required; at least one iconic feature; views to the water maintained through the square; ground-floor uses on Blocks E and F to engage it",
+    "value": "Required: wind protection, public restrooms, at least one iconic feature, water views through the square, and ground-floor uses on Blocks E and F engaging it",
     "sources": [
      "src-dc-2018"
     ]
    },
    {
     "key": "neighbors",
-    "value": "Framed by Block F (Verde, north) and Block E (south); Blocks C and I are one street away across the Shared Public Way and Bridgeview Street",
+    "value": "Framed by Block F (Verde, north) and Block E (south); Blocks C and I lie across the Shared Public Way and Bridgeview Street",
     "sources": [
      "src-dc-2018"
     ]
@@ -491,6 +491,35 @@
     "permalink": "https://pierandpoint.org/changes/#record"
    },
    {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Long 'At a glance' values were cut to the fact itself (or 'Sources differ'); the disputes, quoted excerpts and hedging moved to this record's open questions, with every source still named. No change to the record's status or shape.",
+    "source": "Pier & Point's own text edit",
+    "sources": [
+     {
+      "title": "Pier & Point's own text edit"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_rock_square",
+     "slug": "mission-rock-square",
+     "name": "Mission Rock Square",
+     "permalink": "https://pierandpoint.org/parcels/mission-rock-square/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-rock-square.json"
+    },
+    "site": {
+     "slug": "mission-rock",
+     "name": "Mission Rock",
+     "short": "Mission Rock",
+     "url": "https://pierandpoint.org/sites/mission-rock/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-10-12",
     "kind": "correction",
     "kind_label": "Correction",
@@ -634,7 +663,8 @@
    "Cost of the square: none published. Phase 1's China Basin Park inland budget line (Port October 2023 memo, Table 1, 'Inland CBP': $39,184,050 to $40,657,253 revised estimates) is the only comparable figure in the Port memos.",
    "The 1.1-acre figure in the 2018 approvals memo, the 1.32 acres in the March 2012 proposal's parcel table and the 0.7 acres its block plan prints beside the square are all unexplained; the traced shape on this record's map is about 1.57 acres after clipping, per its own accuracy note.",
    "Which blocks the December 2022 Phase 2 Submittal covers is not stated in the Port memos read; only the Phase 2 parking garage is named.",
-   "No expected-completion date could be sourced for Mission Rock Square. No document read assigns the square to a phase. The Mission Rock Design Controls (208 pages, checked in full) contain no phasing schedule at all, and the Port's October 2023 memo lists the Phase 1 vertical buildings as Parcels A, B, F and G, so neighboring Block F was built in Phase 1 while no source read says whether the square's own construction was part of it. The DDA text itself (Board File 180092, adopted by the Board of Supervisors as Resolution 42-18 on February 13, 2018) was not read, so its Land Use Table and Schedule of Performance target dates are not cited here. Phase 2 was found 'not currently financially feasible' in October 2023, per this record's own milestones. No later Port memo or news source gives a revised target year for the square or for the Project's full buildout, so no basis (record, phase or project) supports an expected-completion date."
+   "No expected-completion date could be sourced for Mission Rock Square. No document read assigns the square to a phase. The Mission Rock Design Controls (208 pages, checked in full) contain no phasing schedule at all, and the Port's October 2023 memo lists the Phase 1 vertical buildings as Parcels A, B, F and G, so neighboring Block F was built in Phase 1 while no source read says whether the square's own construction was part of it. The DDA text itself (Board File 180092, adopted by the Board of Supervisors as Resolution 42-18 on February 13, 2018) was not read, so its Land Use Table and Schedule of Performance target dates are not cited here. Phase 2 was found 'not currently financially feasible' in October 2023, per this record's own milestones. No later Port memo or news source gives a revised target year for the square or for the Project's full buildout, so no basis (record, phase or project) supports an expected-completion date.",
+   "Area of Mission Rock Square: the March 2012 Revised Proposal's parcel summary gives 57,626 sq ft / 1.32 acres, and the same proposal's block plan labels the square 0.7 acres; the Port's January 2018 approvals memo describes it as 1.1 acres."
   ],
   "sources": [
    {

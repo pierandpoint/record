@@ -43,7 +43,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- this block is not yet built and lies within the PG&E Sub-area, PG&E's roughly 4.8-acre switchyard parcel at 22nd and Illinois Streets, which SF Planning's project page describes as 'currently owned and operated by PG&E as an electrical switchyard' (in the final D4D's Appendix E no-PG&E-Sub-area scenario, Figure E.13.4, printed p.434, Blocks 13 and 14 are replaced by a single 'PG&E Sub-area'), so it is not vacant developer land. DataSF's Assessor roll lists an active, addressed lot, 4175500 (1248 Georgia Ln, 15,829 m2, recorded 2024-10-15), under the whole of this approximate footprint (808 m2); the lot is far larger than the block, and the dataset does not say whether it is PG&E's switchyard parcel. Traced from an adopted regulatory diagram by fitting it to multiple real street points (see the mapping log), but this diagram is dated 2020 and may not reflect later design changes (as already found for the UCSF/Sophie Maxwell area -- see the mapping log). Treat vertex positions as accurate to roughly 10-25m, not survey-grade, and treat the block's applicability itself as somewhat more provisional than Mission Rock's or Pier 70's equivalent entries. Rebuilt 2026-09-16 by re-fitting the diagram to real street points, then corrected the same day after an automated quality check caught a mis-traced angled (chamfered) corner. This block's NE corner is genuinely angled (chamfered) per the source diagram, not a tracing artifact -- do not treat that corner's non-90-degree angle as an error. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
+    "accuracy_caveat": "APPROXIMATE -- this block is not yet built and lies within the PG&E Sub-area, PG&E's roughly 4.8-acre switchyard parcel at 22nd and Illinois Streets, which SF Planning's project page describes as 'currently owned and operated by PG&E as an electrical switchyard' (in the final D4D's Appendix E no-PG&E-Sub-area scenario, Figure E.13.4, printed p.434, Blocks 13 and 14 are replaced by a single 'PG&E Sub-area'), so it is not vacant developer land. DataSF's Assessor roll lists an active, addressed lot, 4175500 (1248 Georgia Ln, 15,829 m2, recorded 2024-10-15), under the whole of this approximate footprint (808 m2); the lot is far larger than the block, and the dataset does not say whether it is PG&E's switchyard parcel. Traced from an adopted regulatory diagram by fitting it to multiple real street points (see the mapping log), but this diagram is dated 2020 and may not reflect later design changes (as already found for the UCSF/Sophie Maxwell area -- see the mapping log). Treat vertex positions as accurate to roughly 10-25m, not survey-grade, and treat the block's applicability itself as somewhat more provisional than Mission Rock's or Pier 70's equivalent entries. Rebuilt 2026-09-16 by re-fitting the diagram to real street points, then corrected the same day after an automated quality check caught a mis-traced angled (chamfered) corner. This block's NE corner is genuinely angled (chamfered) per the source diagram, not a tracing artifact -- do not treat that corner's non-90-degree angle as an error. How this shape was traced, including earlier versions, is logged in its mapping log.",
     "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
     "why_no_real_parcel": "Block 14 lies within PG&E's separate roughly 4.8-acre PG&E Sub-area, not the developer's 21-acre parcel. The 2018 draft EIR (Vol. 1, Ch. 2, p. 2-5) describes that sub-area as 'a portion of Assessor's Block 4175/Lot 018 and owned by PG&E'; DataSF now shows lot 4175018 as retired on 2024-10-15, and an active, addressed lot recorded the same day, 4175500 (1248 Georgia Ln), lies under the whole of this footprint. That lot is far larger than the block and the dataset does not say whether it is PG&E's switchyard parcel; the land has not been subdivided per the masterplan's individual named blocks, so this uses hand-traced approximate geometry instead. (This reflects Pier & Point's own parcel search, not something the cited Design for Development can establish; the D4D does not address Assessor parcels.)",
     "regulatory_context": "Flat 90 ft max height per Figure 6.2.3 (the block is labelled '14 90'' on the colour-coded plan). The final D4D's Table 3.1.1 (printed p.47) permits residential, institutional, retail and non-retail sales/services (office) uses on Block 14 and does not permit laboratory or life-science uses; recorded here as 'mixed' as a summary of that table, not a confirmed program. Block 14 is within the PG&E Sub-area: the D4D's Appendix E says redevelopment of that sub-area is subject to PG&E's long-range facilities planning and that portions of it 'may or may not ultimately be redeveloped', and SF Planning's project page says built-out of the PG&E lands depends on relocation of the switchyard; 'planned' reflects the D4D and the October 2020 Phase 1 approval (Phase 2), not a committed project."
@@ -70,7 +70,7 @@
    },
    {
     "key": "phasing",
-    "value": "Not listed among the six Phase 1 blocks (2, 7, 8, 11, 12, 15) named in the 2024 annual compliance report, which does not mention Block 14 at all; the October 7, 2020 Phase 1 approval places it in Phase 2",
+    "value": "Phase 2 per the October 7, 2020 Phase 1 approval; not mentioned at all in the 2024 annual compliance report",
     "sources": [
      "src-annual-2024",
      "src-phase1-2020"
@@ -78,7 +78,7 @@
    },
    {
     "key": "ownership_context",
-    "value": "Lies within the PG&E Sub-area, PG&E's roughly 4.8-acre switchyard parcel at 22nd and Illinois Streets (in the D4D's no-PG&E-Sub-area scenario, Blocks 13 and 14 are replaced by a single 'PG&E Sub-area'); the D4D says portions of the PG&E Sub-area 'may or may not ultimately be redeveloped'",
+    "value": "Within the PG&E Sub-area (PG&E's roughly 4.8-acre switchyard parcel, 22nd and Illinois Streets); per the D4D, portions 'may or may not ultimately be redeveloped'",
     "sources": [
      "src-d4d-final-figE134",
      "src-sfplanning-pps"
@@ -189,6 +189,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Long 'At a glance' values were cut to the fact itself (or 'Sources differ'); the disputes, quoted excerpts and hedging moved to this record's open questions, with every source still named. No change to the record's status or shape.",
+    "source": "Pier & Point's own text edit",
+    "sources": [
+     {
+      "title": "Pier & Point's own text edit"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_block_14",
+     "slug": "potrero-power-station-block-14",
+     "name": "Potrero Power Station Block 14",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-14/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-14.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-13",
     "kind": "correction",

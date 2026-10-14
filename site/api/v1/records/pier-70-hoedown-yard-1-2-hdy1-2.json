@@ -43,7 +43,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- 'planned' here reflects only that the adopted D4D designates this block; no source read reports a project, a developer or a start date for it. The land is still owned by PG&E: Port Item 9B (Sept 22, 2017, Table 3) says 'The City has an option to purchase the approximately 3-acre Hoedown Yard from PG&E', and Port Item 11A (Aug 7, 2026) lists 'approximately 3 acres owned by PG&E known as the Hoedown Yard' in the Pier 70 Special Use District; none of the sources read says that option has been exercised. It is part of the Hoedown Yard, which the D4D (Section 1) describes as owned by Pacific Gas and Electric (PG&E), with a City option to acquire it, and which is outside Brookfield's 28-Acre Site. The D4D gives the yard's Assessor lots as Block 4120 Lot 002 and Block 4110 Lot 008A (Port Item 9B gives 4120/002 and 4711/008A); DataSF's Assessor layer lists 4120002 and 4110008A (1021 Illinois St) as active lots, and this hand-traced block overlaps them, but the overlay of approximate geometry is not an identification of this block's own lot. Redone 2026-09-14 with a corrected, shear-free transform (see the mapping log) -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects this transform's 1-8m residual error, not a deliberate encroachment. CORRECTED 2026-09-17: fixed an error caused by mismatched image resolutions during tracing, which had gone unnoticed since 2026-09-16. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record). DataSF's active lots 4110008A (6,101 m2) and 4120002 (5,997 m2) are the Hoedown Yard lots (the D4D and Port Item 9B give the yard as Block 4120 Lot 002 and Block 4110 Lot 008A, and the Port memo expects it to be subdivided into three parcels). Lot 4110008A overlaps this drawing by 1,651 m2 and lot 4120002 by 3,017 m2; each also lies under other drawn blocks and the Irish Hill Playground, so neither is this block's own lot, and the drawing is kept until the yard is subdivided.",
+    "accuracy_caveat": "APPROXIMATE -- 'planned' here reflects only that the adopted D4D designates this block; no source read reports a project, a developer or a start date for it. The land is still owned by PG&E: Port Item 9B (Sept 22, 2017, Table 3) says 'The City has an option to purchase the approximately 3-acre Hoedown Yard from PG&E', and Port Item 11A (Aug 7, 2026) lists 'approximately 3 acres owned by PG&E known as the Hoedown Yard' in the Pier 70 Special Use District; none of the sources read says that option has been exercised. It is part of the Hoedown Yard, which the D4D (Section 1) describes as owned by Pacific Gas and Electric (PG&E), with a City option to acquire it, and which is outside Brookfield's 28-Acre Site. The D4D gives the yard's Assessor lots as Block 4120 Lot 002 and Block 4110 Lot 008A (Port Item 9B gives 4120/002 and 4711/008A); DataSF's Assessor layer lists 4120002 and 4110008A (1021 Illinois St) as active lots, and this hand-traced block overlaps them, but the overlay of approximate geometry is not an identification of this block's own lot. Redone 2026-09-14 with a corrected, shear-free transform (see the mapping log) -- treat vertex positions as accurate to roughly 5-15m, not survey-grade. NOTE: this polygon is NOT clipped against real streets or existing buildings -- unlike Potrero's approximate blocks, several of Pier 70's D4D blocks are sited on existing industrial buildings that will be demolished, so overlap with a currently-real building is often expected, not an error; a boundary that appears to touch or slightly cross a street centerline reflects this transform's 1-8m residual error, not a deliberate encroachment. CORRECTED 2026-09-17: fixed an error caused by mismatched image resolutions during tracing, which had gone unnoticed since 2026-09-16. How this shape was traced, including earlier versions, is logged in its mapping log. DataSF's active lots 4110008A (6,101 m2) and 4120002 (5,997 m2) are the Hoedown Yard lots (the D4D and Port Item 9B give the yard as Block 4120 Lot 002 and Block 4110 Lot 008A, and the Port memo expects it to be subdivided into three parcels). Lot 4110008A overlaps this drawing by 1,651 m2 and lot 4120002 by 3,017 m2; each also lies under other drawn blocks and the Irish Hill Playground, so neither is this block's own lot, and the drawing is kept until the yard is subdivided.",
     "digitized_from": "Pier 70 Design for Development, Figure 6.4.2 - Maximum Building Height (p.155).",
     "why_no_real_parcel": "The Hoedown Yard is PG&E's own Assessor land, not part of Brookfield's 28-acre site: the D4D (Section 1) gives it as Assessor's Block 4120/Lot 002 and Block 4110/Lot 008A (Port Item 9B: 4120/002 and 4711/008A), owned by PG&E with a City option to acquire it, and the Port memo says it will be subdivided into three separate parcels. The earlier statement that it is part of Brookfield's site and not subdivided is withdrawn; this record uses hand-traced approximate geometry because the yard has not been subdivided into the D4D's HDY parcels.",
     "regulatory_context": "Flexible use: the D4D's Figure 2.1.1 stripes HDY1/2 Commercial-Office/Residential, its baseline Mid-Point scenario (and the Maximum Office scenario) shows it commercial and only the Maximum Residential scenario shows it residential (Figures 1.5.5-1.5.7); use set to 'mixed' on the map. 65 ft max per Figure 6.4.2. Figure 6.4.2 draws one box labelled 'HDY1/2', but the D4D labels HDY1 and HDY2 separately in Figure 1.5.6 and 'Building HDY1' in Figure 3.12.1, and Port Item 9B says the yard will be subdivided into three separate parcels; this record maps the height figure's single HDY1/2 box. No construction-start source found."
@@ -56,7 +56,7 @@
   "facts": [
    {
     "key": "landowner",
-    "value": "Pacific Gas and Electric Company (approximately 3.6-acre parcel per the D4D, 'approximately 3-acre' per the DDA terms, including a 0.2-acre unbuilt Michigan Street right-of-way easement); the City has an option to purchase",
+    "value": "Pacific Gas and Electric Company; the City has an option to purchase",
     "sources": [
      "src-d4d",
      "src-port-9b-2017"
@@ -64,7 +64,7 @@
    },
    {
     "key": "use",
-    "value": "Flexible: shown as commercial in the D4D Mid-Point and Maximum Office scenarios and residential in the Maximum Residential scenario; Retail and Service frontage for HDY3 and HDY1/2 may be combined on 22nd Street",
+    "value": "Flexible: commercial or residential, depending on the D4D scenario",
     "sources": [
      "src-d4d"
     ]
@@ -85,7 +85,7 @@
    },
    {
     "key": "disposition",
-    "value": "To be subdivided into three separate parcels and offered for sale by the City; the City may ask the Hoedown Yard developer to build Irish Hill Park, paid with special taxes and the Port's share of tax increment (2017 DDA major terms)",
+    "value": "To be subdivided into three separate parcels and offered for sale by the City (2017 DDA major terms)",
     "sources": [
      "src-port-9b-2017"
     ]
@@ -100,7 +100,7 @@
    },
    {
     "key": "financing_district",
-    "value": "Infrastructure and Revitalization Financing District No. 2 (Hoedown Yard, Pier 70), created by Board of Supervisors Ordinance No. 248-18 (File 180772, approved November 2, 2018); its tax increment is meant to fund affordable housing (unlike the Port IFD), and the Port's August 2026 report calls these funding sources 'currently unavailable as market-rate development has yet to occur'",
+    "value": "Infrastructure and Revitalization Financing District No. 2 (Hoedown Yard, Pier 70), created 2018; its tax increment is meant to fund affordable housing",
     "sources": [
      "src-port-9b-2017",
      "src-bos-180772",
@@ -109,7 +109,7 @@
    },
    {
     "key": "name_origin",
-    "value": "Named for the PG&E-owned 'Hoedown Yard' (HDY) parcel at Illinois and 22nd streets; the D4D describes the yard as currently owned by PG&E, with a City option to acquire it if PG&E can find a new location for its heavy industrial use",
+    "value": "Named for the PG&E-owned 'Hoedown Yard' (HDY) parcel at Illinois and 22nd streets",
     "sources": [
      "src-d4d"
     ]
@@ -466,6 +466,35 @@
   ],
   "changes": [
    {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Long 'At a glance' values were cut to the fact itself (or 'Sources differ'); the disputes, quoted excerpts and hedging moved to this record's open questions, with every source still named. No change to the record's status or shape.",
+    "source": "Pier & Point's own text edit",
+    "sources": [
+     {
+      "title": "Pier & Point's own text edit"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "pier70_hdy1_2",
+     "slug": "pier-70-hoedown-yard-1-2-hdy1-2",
+     "name": "Pier 70 Hoedown Yard 1/2 (HDY1/2)",
+     "permalink": "https://pierandpoint.org/parcels/pier-70-hoedown-yard-1-2-hdy1-2/",
+     "api": "https://pierandpoint.org/api/v1/records/pier-70-hoedown-yard-1-2-hdy1-2.json"
+    },
+    "site": {
+     "slug": "pier-70",
+     "name": "Pier 70",
+     "short": "Pier 70",
+     "url": "https://pierandpoint.org/sites/pier-70/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-10-12",
     "kind": "correction",
     "kind_label": "Correction",
@@ -696,7 +725,8 @@
    "Whether the City has exercised its option to buy the Hoedown Yard from PG&E: no source read says. The Port's August 2026 Item 11A (p.2) still describes the yard as 'approximately 3 acres owned by PG&E'. The financing district itself was formed in 2018 (see the milestones).",
    "The Port's 2026 proposed phasing plan (Item 11A, Exhibit A, p.8) shows the Hoedown Yard parcels (HDY1/2 and HDY3) outside every phase outline, since they are not part of the 28-Acre Project, so no phase is recorded here. Parcel K South, by contrast, sits inside the Phase 2B outline.",
    "Assessor block/lot for the yard is given as 4120/002 and 4711/008A in the 2017 memo but 4120/002 and 4110/008A in the D4D; one is a typo, unresolved.",
-   "No basis for an expected-completion date was found: the Port's Aug 3, 2017 staff report (Item 11A, p.21, DDA major terms) says 'Parcel K North and the Hoedown Yard, while in the SUD, are not part of the Project', so the Hoedown Yard is a separate transaction from the 28-Acre Project; the Port's 2026 proposed phasing plan shows it outside every phase outline; no source read gives a schedule for the City's PG&E purchase option, so this record stays undated rather than borrow the 28-Acre Project's buildout target."
+   "No basis for an expected-completion date was found: the Port's Aug 3, 2017 staff report (Item 11A, p.21, DDA major terms) says 'Parcel K North and the Hoedown Yard, while in the SUD, are not part of the Project', so the Hoedown Yard is a separate transaction from the 28-Acre Project; the Port's 2026 proposed phasing plan shows it outside every phase outline; no source read gives a schedule for the City's PG&E purchase option, so this record stays undated rather than borrow the 28-Acre Project's buildout target.",
+   "Size of the Hoedown Yard: the D4D gives approximately 3.6 acres and the DDA terms 'approximately 3-acre', in both cases including a 0.2-acre unbuilt Michigan Street right-of-way easement."
   ],
   "sources": [
    {

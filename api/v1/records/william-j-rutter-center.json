@@ -43,7 +43,7 @@
    "display_reason": null,
    "notes": {
     "accuracy_caveat": "REAL -- surveyed OpenStreetMap building footprint, not a hand trace or plan estimate; the west edge is idealized to a straight line (2 points instead of the OSM trace's 3, dropping a sub-meter digitizing jog), not a surveyed change. This is the opposite situation from Mission Bay's condo-mapped residential towers (Avalon, Radiance, etc.): here, ONE large Assessor land parcel spans SEVERAL UCSF buildings (confirmed against DataSF's Assessor parcel data and tax roll -- e.g. block/lot 8711507 (675 Mission Bay Blvd in DataSF's parcel data) alone is about 12.2 acres, far larger than any single building on it), so using the parcel boundary per building would make multiple records overlap and double-count the same ground. The real building footprint is the only non-overlapping, honest shape for this record.",
-    "digitized_from": "OpenStreetMap (way 84812339: name 'UCSF Community Center', official name 'William J. Rutter Center', address 1675 Owens St). Its own small mid-edge digitizing jog on the west wall was straightened into a clean 4-corner quadrilateral on 2026-09-22. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record)."
+    "digitized_from": "OpenStreetMap (way 84812339: name 'UCSF Community Center', official name 'William J. Rutter Center', address 1675 Owens St). Its own small mid-edge digitizing jog on the west wall was straightened into a clean 4-corner quadrilateral on 2026-09-22. How this shape was traced, including earlier versions, is logged in its mapping log."
    }
   },
   "centroid": {
@@ -219,6 +219,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The shape's note now names the mapping log in words instead of printing a web address. No change to the shape, status or use.",
+    "source": "Pier & Point's own text edit",
+    "sources": [
+     {
+      "title": "Pier & Point's own text edit"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "ucsf_rutter_community_center",
+     "slug": "william-j-rutter-center",
+     "name": "William J. Rutter Center",
+     "permalink": "https://pierandpoint.org/parcels/william-j-rutter-center/",
+     "api": "https://pierandpoint.org/api/v1/records/william-j-rutter-center.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-12",
     "kind": "correction",

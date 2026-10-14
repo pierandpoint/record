@@ -45,7 +45,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- satellite trace by Pier & Point, idealized to a fitted semicircle rather than left as a raw hand-traced outline. Not a surveyed footprint or GIS file from the project team. Deliberately not trimmed to the street line: this is a real traffic median, inherently adjacent to/overlapping the street right-of-way in DataSF's curb data at its crosswalk corner, so trimming it back to the street would cut a real, visible piece of the median rather than correct a positioning error. An accepted exception.",
+    "accuracy_caveat": "APPROXIMATE -- satellite trace by Pier & Point, idealized to a fitted semicircle rather than left as a raw hand-traced outline. Not a surveyed footprint or GIS file from the project team. Deliberately not trimmed to the street line: this is a real traffic median, inherently adjacent to/overlapping the street right-of-way in DataSF's curb data at its crosswalk corner, so trimming it back to the street would cut a real, visible piece of the median rather than correct a positioning error. An accepted exception. Replaces an earlier proximity guess of about 33 m with no source behind it; the outline was then drawn by hand on a satellite image.",
     "digitized_from": "Hand-traced from satellite imagery: an outline drawn by hand on a satellite screenshot was transferred onto the map by matching features between the screenshot and the imagery (rather than re-estimated by eye), then fit to an idealized semicircle following Pier & Point's description of the real shape."
    }
   },
@@ -105,6 +105,35 @@
     "sources": [
      {
       "title": "https://sfocii.org/sites/default/files/inline-files/Item%202%20Mission%20Bay%20Open%20Space%20Transition.pdf ; https://sfbos.org/sites/default/files/r0574-23.pdf ; https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_p11a_median",
+     "slug": "p11a",
+     "name": "P11A",
+     "permalink": "https://pierandpoint.org/parcels/p11a/",
+     "api": "https://pierandpoint.org/api/v1/records/p11a.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Notes on pages that could not be read are now plain statements, and mapping-process detail is left to the shape's own notes. No change to the record's status or shape.",
+    "source": "Pier & Point's own text edit",
+    "sources": [
+     {
+      "title": "Pier & Point's own text edit"
      }
     ],
     "category": "correction",
@@ -262,7 +291,7 @@
   "open_questions": [
    "No source read gives this median island's own construction date or says it was built. OCII's September 2023 presentation lists it with P11 as parcels RPD \"will manage\" (transfer planned \"by the end of December 2023\"; the Board of Supervisors adopted Resolution 574-23 on December 5, 2023 authorizing termination of OCII's ground lease), which is a plan; the draft parks agreement's statement of who holds it is in the next question.",
    "Who built and who holds it: the City's September 22, 2023 draft Mission Bay parks agreement (recital D) lists P10, P11 and P11A among the parks 'completed and accepted' and managed by OCII under its ground lease, and section 5(j) says they 'are not being accepted by RPD, and will remain public rights of way under the jurisdiction of PW' (Public Works), with any CFD funds used by RPD to maintain them on PW's behalf or passed to PW. Recital C says the master developer (Catellus and its successors) was obliged to develop the Mission Bay parks; no source read says who built these three parcels. The Port's October 6, 2023 memo says the Board would need to vacate the public right-of-way status on the park parcels, and the Board's December 5, 2023 resolution (File 231132) approved the agreement and said Port and RPD expected to seek the jurisdictional transfer by a separate ordinance in early 2024. No signed agreement, transfer ordinance or later source on these three parcels was found, so Public Works is the holder per the draft only.",
-   "This record was previously only a weak ~33m proximity guess with no real source, before its actual outline was drawn by hand on a satellite image (the mapping log is in the public data repository, https://github.com/pierandpoint/record); the 'P11A' label appears on OCII's December 2019 Land Use Map, but no source read gives the island's name, operator or completion date."
+   "The 'P11A' label appears on OCII's December 2019 Land Use Map, but no source read gives the island's name, operator or completion date."
   ],
   "sources": [
    {

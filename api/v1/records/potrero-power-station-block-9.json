@@ -43,7 +43,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- this block is not yet built, and it is not vacant land: it is where the Unit 3 Power Block (partly demolished June 2023 to July 2024 per the 2024 annual compliance report) and the 300-ft Stack stand, and where the interim Prequel Park is planned. No Assessor lot of its own was found: DataSF Parcels (checked 2026-09-29) shows its footprint within the much larger active lot 4175028 (1241 Delaware St, about 21,900 sq m, recorded 2022-08-30), which also overlaps the Block 3 and Block 4 footprints. Traced from an adopted regulatory diagram, positioned by matching several points on it to real streets, but this diagram is dated 2020 and may not reflect later design changes (as already found for the UCSF/Sophie Maxwell area). Treat vertex positions as accurate to roughly 10-15m (rebuilt 2026-09-16 with a refined multi-point georeferencing of the site's diagram), and treat the block's applicability itself as somewhat more provisional than Mission Rock's or Pier 70's equivalent entries. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record). DataSF's active lot 4175028 (21,885 m2, 1241 Delaware St, PPS-MU zoning, recorded 2022-08-30) holds 5,041 m2 of this drawing. It also holds Blocks 3, 4 and 9, Humboldt Street Plaza and parts of Prequel Park and Waterfront Park, so Pier & Point reads it as an undivided parent lot; Block 9 has no lot of its own and the drawing is kept.",
+    "accuracy_caveat": "APPROXIMATE -- this block is not yet built, and it is not vacant land: it is where the Unit 3 Power Block (partly demolished June 2023 to July 2024 per the 2024 annual compliance report) and the 300-ft Stack stand, and where the interim Prequel Park is planned. No Assessor lot of its own was found: DataSF Parcels (checked 2026-09-29) shows its footprint within the much larger active lot 4175028 (1241 Delaware St, about 21,900 sq m, recorded 2022-08-30), which also overlaps the Block 3 and Block 4 footprints. Traced from an adopted regulatory diagram, positioned by matching several points on it to real streets, but this diagram is dated 2020 and may not reflect later design changes (as already found for the UCSF/Sophie Maxwell area). Treat vertex positions as accurate to roughly 10-15m (rebuilt 2026-09-16 with a refined multi-point georeferencing of the site's diagram), and treat the block's applicability itself as somewhat more provisional than Mission Rock's or Pier 70's equivalent entries. How this shape was traced, including earlier versions, is logged in its mapping log. DataSF's active lot 4175028 (21,885 m2, 1241 Delaware St, PPS-MU zoning, recorded 2022-08-30) holds 5,041 m2 of this drawing. It also holds Blocks 3, 4 and 9, Humboldt Street Plaza and parts of Prequel Park and Waterfront Park, so Pier & Point reads it as an undivided parent lot; Block 9 has no lot of its own and the drawing is kept.",
     "digitized_from": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
     "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead. DataSF Parcels (checked 2026-09-29) shows this footprint within the much larger active lot 4175028 (1241 Delaware St), not a lot of its own.",
     "regulatory_context": "The D4D's Permitted Uses table (Table 3.1.1) permits Residential, Institutional, Retail (Hotel is permitted, note 10), Non-Retail Sales/Services (office, at the lowest floors only), Entertainment and limited PDR uses on Block 9, and not Laboratory or Life Science. Figure 6.2.3's 'Block 9 Building Configurations' inset shows two alternate massings, by its colour-coded labels: 'with Unit 3' 85 ft, 65 ft and 35 ft plus Unit 3 itself at about 130 ft ('~130''), and 'without Unit 3' 125 ft and 85 ft; the '177'MAX', '110'MAX' and '102'MAX' labels are tick-ended dimension lines, not heights, and Standard 6.2.2 lists Block 9 among the midrise buildings (101-145 ft). This block's real-world area is where Unit 3 and the Stack physically stand (confirmed by the D4D's Standard 6.2.1 and the Chronicle, May 2025; the Stack is mapped separately, as The Stack) and where Prequel Park's approximate interim-park geometry sits (Port Commission memo 10A; also mapped separately, and excluded here via clipping) -- treat this polygon as the block's outer development envelope, not a claim that all of it is buildable independent of those other real features."
@@ -56,7 +56,7 @@
   "facts": [
    {
     "key": "use",
-    "value": "Hotel and/or Residential (D4D final Table 3.1.1: Residential is Permitted; Hotel is Permitted per note 10, unlike most other blocks where Hotel is Not Permitted; Laboratory and Life Science uses are Not Permitted)",
+    "value": "Hotel and/or Residential (both Permitted; Hotel per note 10, unlike most blocks); Laboratory and Life Science Not Permitted (D4D final Table 3.1.1)",
     "sources": [
      "src-d4d-final-table311"
     ]
@@ -77,7 +77,7 @@
    },
    {
     "key": "height_ft",
-    "value": "The D4D final's Figure 6.2.3 shows a separate 'Block 9 Building Configurations' inset with two alternate massings. By its colour-coded labels, 'with Unit 3' is 85 ft, 65 ft and 35 ft plus Unit 3 itself at about 130 ft ('~130''), and 'without Unit 3' is 125 ft and 85 ft. The '177'MAX', '110'MAX' and '102'MAX' labels are dimension lines (plan extents), not heights. Standard 6.2.1 separately states that if Unit 3 is demolished, the height limit for Block 9 would be 125/85 feet",
+    "value": "125/85 ft if Unit 3 is demolished (Standard 6.2.1); with Unit 3, 85, 65 and 35 ft per Figure 6.2.3",
     "sources": [
      "src-d4d-final-fig623",
      "src-d4d-final-6.2.1"
@@ -85,7 +85,7 @@
    },
    {
     "key": "existing_structures_on_site",
-    "value": "As described in the 2018 Draft EIR (before Unit 3's abatement and partial demolition, June 2023 to July 2024, per the 2024 annual compliance report): Unit 3 Power Block (128-ft tall steel-frame boiler structure, highest point 143 ft at the elevator shaft, plus a 40-ft tall turbine-generator-condenser structure and a four-story concrete control room building) and the adjacent 300-ft Boiler Stack (mapped separately in this dataset as The Stack)",
+    "value": "Unit 3 Power Block and the adjacent 300-ft Boiler Stack (mapped separately as The Stack), per the 2018 Draft EIR, before Unit 3's partial demolition",
     "sources": [
      "src-deir-vol1-unit3",
      "src-ar-2024"
@@ -93,7 +93,7 @@
    },
    {
     "key": "rooftop_bar_limit",
-    "value": "'Only one rooftop bar shall be permitted on Block 9' under the adopted D4D (Table 3.1.1, note 10); note 7 separately allows rooftop bars on Blocks 2, 3, 11, 12 and 15, and on Block 9 'if Block 9 is majority non-residential' (the Block 9 row of the table itself cites note 10, not note 7). The Chronicle (July 29, 2026) describes a rule 'limiting the entire 29-acre development to a single rooftop bar' that the developer asked to eliminate in its 2026 Development Agreement amendment request; the source of that project-wide cap is not identified in the sources found",
+    "value": "One rooftop bar permitted on Block 9 (D4D Table 3.1.1, note 10)",
     "sources": [
      "src-d4d-final-table311-notes",
      "src-chronicle-2026-07"
@@ -242,6 +242,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Long 'At a glance' values were cut to the fact itself (or 'Sources differ'); the disputes, quoted excerpts and hedging moved to this record's open questions, with every source still named. No change to the record's status or shape.",
+    "source": "Pier & Point's own text edit",
+    "sources": [
+     {
+      "title": "Pier & Point's own text edit"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_block_9",
+     "slug": "potrero-power-station-block-9",
+     "name": "Potrero Power Station Block 9",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-9/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-9.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-13",
     "kind": "correction",
@@ -425,7 +454,8 @@
    "No source found stating a developer, architect, hotel brand/operator, or construction cost for the Block 9 hotel.",
    "No design review approval or construction-start date found for Block 9; the 2024 annual compliance report's only mention of Block 9 is site photos of 'Block 9 / Unit 3' as of December 2024, with no described construction activity.",
    "Whether Unit 3 will ultimately be retained or demolished as part of the hotel project is not settled in any source found; the D4D provides for both configurations.",
-   "No current schedule found for the Block 9 hotel. SocketSite's October 2020 schedule table lists Block 9 in Phase 2 with vertical development 2029-2030, but the Chronicle (May 2025) reported the hotel's construction could be a decade away, so no completion year is shown; the earlier 2035 expected-completion milestone was removed on 2026-09-29 because the source refers to a possible construction start about a decade out, not a completion, and to the reporter's words, not the developer's."
+   "No current schedule found for the Block 9 hotel. SocketSite's October 2020 schedule table lists Block 9 in Phase 2 with vertical development 2029-2030, but the Chronicle (May 2025) reported the hotel's construction could be a decade away, so no completion year is shown; the earlier 2035 expected-completion milestone was removed on 2026-09-29 because the source refers to a possible construction start about a decade out, not a completion, and to the reporter's words, not the developer's.",
+   "Rooftop bars on Block 9: under the adopted D4D, 'Only one rooftop bar shall be permitted on Block 9' (Table 3.1.1, note 10); note 7 separately allows rooftop bars on Blocks 2, 3, 11, 12 and 15, and on Block 9 'if Block 9 is majority non-residential' (the Block 9 row of the table itself cites note 10, not note 7). The Chronicle (July 29, 2026) describes a rule 'limiting the entire 29-acre development to a single rooftop bar' that the developer asked to eliminate in its 2026 Development Agreement amendment request; the source of that project-wide cap is not identified in the sources found."
   ],
   "sources": [
    {

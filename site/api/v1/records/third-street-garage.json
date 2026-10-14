@@ -70,7 +70,7 @@
    },
    {
     "key": "gross_sqft",
-    "value": "253,993 as planned in the November 2003 Regents item (249,140 gsf parking plus 4,853 gsf shelled retail space); Overaa Construction's project page gives 256,276 SF; the two figures are not reconciled",
+    "value": "Sources differ (253,993 or 256,276)",
     "sources": [
      "src-regents-2003-11",
      "src-overaa-23b"
@@ -85,7 +85,7 @@
    },
    {
     "key": "general_contractor",
-    "value": "Overaa Construction, per its own portfolio page for \"UCSF Mission Bay Building 23B Parking Structure\" -- confirming this is the same building as this record (matching name), and stating 882 parking stalls on nine levels (256,276 sq ft), DNA-bar-code-style custom glass cladding, and an AIA San Francisco Excellence in Architecture award; no completion year given",
+    "value": "Overaa Construction, per its own portfolio page (no completion year given)",
     "sources": [
      "src-overaa-23b"
     ]
@@ -181,6 +181,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Long 'At a glance' values were cut to the fact itself (or 'Sources differ'); the disputes, quoted excerpts and hedging moved to this record's open questions, with every source still named. No change to the record's status or shape.",
+    "source": "Pier & Point's own text edit",
+    "sources": [
+     {
+      "title": "Pier & Point's own text edit"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "ucsf_third_street_garage",
+     "slug": "third-street-garage",
+     "name": "Third Street Garage",
+     "permalink": "https://pierandpoint.org/parcels/third-street-garage/",
+     "api": "https://pierandpoint.org/api/v1/records/third-street-garage.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-12",
     "kind": "correction",
@@ -375,12 +404,13 @@
   ],
   "open_questions": [
    "No source confirms the garage's actual completion date; the March 2004 start and July 2005 completion are the November 2003 Regents item's projected schedule, stated in the 2003-11 milestone above, not a completion announcement. A UC construction schedule commonly slips, so no completion date is shown.",
-   "The 2003 Regents item describes a nine-level, 822-space structure; this record's map data cites OpenStreetMap tagging of 8 levels -- not reconciled here, since OSM levels and the Regents' 'nine levels (including a half level at the top)' description are plausibly the same building described two ways. The building's own general contractor (Overaa, added 2026-09-22) separately gives 882 stalls -- likely the as-built figure versus the Regents' pre-construction budget estimate, but not reconciled here either.",
+   "The 2003 Regents item describes a nine-level, 822-space structure; this record's map data cites OpenStreetMap tagging of 8 levels -- not reconciled here, since OpenStreetMap levels and the Regents' 'nine levels (including a half level at the top)' description are plausibly the same building described two ways. The building's own general contractor (Overaa, added 2026-09-22) separately gives 882 stalls -- likely the as-built figure versus the Regents' pre-construction budget estimate, but not reconciled here either.",
    "Exact capacity today (after any reconfiguration) is not confirmed by any source found, per this record's map notes.",
    "Overaa Construction's own project page for this building, which gives no dates, is the only source read that names a general contractor; whether Overaa built the original structure, which the 2003 Regents item projected for 2004 to 2005, is not confirmed by any dated source.",
    "As of 2026-09-29: the earlier '2021 facade replacement' was wrong: Facades+ (March 15, 2021) gives the completion date as January 2020 and says the channel-glass facade was removed in 2015; The Architect's Newspaper article cited before could not be read. The November 2003 Regents item is a request for approval; the committee minutes recording the vote were not found (no 2003 minutes page could be located online).",
    "Corrected 2026-10-06 (accuracy audit, October 2026): the March 2004 construction start and July 2005 completion projected in the November 2003 Regents item were shown as expected milestones (the completion with status complete), two decades past and unconfirmed. Both were removed; the projection is now stated in the budget-item milestone, and the earliest sourced evidence that the garage stood is Facades+'s report that its original facade was removed in 2015. The actual construction start and completion dates are still unknown.",
-   "Update 2026-10-12: no source that could be read dates the garage's completion or its facade work. Facades+ (March 15, 2021), cited earlier for the original channel-glass facade being removed in 2015 and the new facade being completed in \"January 2020\", returned HTTP 403 (Cloudflare) on every attempt, as did The Architect's Newspaper and Architizer coverage of the facade, so those two dates were taken off the timeline and are not confirmed. The readable sources are Hohbach-Lewin (June 9, 2020, calls the facade \"new\", no date), Overaa Construction (describes the finished garage, no year) and the November 2003 Regents item (a projection only). The garage is shown with no completion date."
+   "Update 2026-10-12: no source that could be read dates the garage's completion or its facade work. Facades+ (March 15, 2021), cited earlier for the original channel-glass facade being removed in 2015 and the new facade being completed in \"January 2020\", refused access (Cloudflare) on every attempt, as did The Architect's Newspaper and Architizer coverage of the facade, so those two dates were taken off the timeline and are not confirmed. The readable sources are Hohbach-Lewin (June 9, 2020, calls the facade \"new\", no date), Overaa Construction (describes the finished garage, no year) and the November 2003 Regents item (a projection only). The garage is shown with no completion date.",
+   "Floor area of the garage: the November 2003 Regents item planned 253,993 gsf (249,140 gsf parking plus 4,853 gsf shelled retail space); Overaa Construction's project page gives 256,276 SF; the two figures are not reconciled."
   ],
   "sources": [
    {

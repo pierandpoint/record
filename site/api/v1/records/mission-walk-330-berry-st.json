@@ -43,7 +43,7 @@
    "display_reason": null,
    "notes": {
     "accuracy_caveat": "REAL -- surveyed DataSF Building Footprints outline (mblr SF8704278), cross-referenced by position against an OpenStreetMap building/address point (way 56656119) for the name and street address, but trimmed against the adjacent, already-committed Arterra footprint to remove a 712 sq m overlap. The trimmed shape may understate this building's true footprint along the shared edge with Arterra; not a hand trace or plan estimate otherwise. Updated 2026-09-20: extended north by a piece of leftover open ground between mapped shapes, sized to this building's own footprint width and cut by hand by Pier & Point -- not independently sourced or verified against a building footprint of its own.",
-    "digitized_from": "DataSF Building Footprints (mblr SF8704278) for the building portion only (about 970 sq m of the ~2,863 sq m polygon, after trimming the Arterra overlap); the remaining ~1,893 sq m is a northward extension over leftover open ground, cut by hand on 2026-09-20, which no footprint or OSM outline supports (how it was traced is logged in this shape's data file in the public data repository, https://github.com/pierandpoint/record); name/address from OpenStreetMap way 56656119 (330 Berry St)"
+    "digitized_from": "DataSF Building Footprints (mblr SF8704278) for the building portion only (about 970 sq m of the ~2,863 sq m polygon, after trimming the Arterra overlap); the remaining ~1,893 sq m is a northward extension over leftover open ground, cut by hand on 2026-09-20, which no footprint or OSM outline supports (how it was traced is logged in this shape's mapping log); name/address from OpenStreetMap way 56656119 (330 Berry St)"
    }
   },
   "centroid": {
@@ -144,6 +144,35 @@
     "sources": [
      {
       "title": "https://socketsite.com/archives/2008/10/mission_walk_330335_berry_applications_now_available_du.html"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_mission_walk_330",
+     "slug": "mission-walk-330-berry-st",
+     "name": "Mission Walk (330 Berry St)",
+     "permalink": "https://pierandpoint.org/parcels/mission-walk-330-berry-st/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-walk-330-berry-st.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The shape's note now names the mapping log in words instead of printing a web address. No change to the shape, status or use.",
+    "source": "Pier & Point's own text edit",
+    "sources": [
+     {
+      "title": "Pier & Point's own text edit"
      }
     ],
     "category": "correction",

@@ -68,14 +68,14 @@
    },
    {
     "key": "business_registration",
-    "value": "DataSF Registered Business Locations: 'Ucsf Child Care At Mission Bay', owner Bright Horizons Childrens Ctrs, 727 Nelson Rising Ln, certificate 0941054 (ttxid 1367181-07-241), location start 2024-01-01. The start date is a registration date, not an opening date.",
+    "value": "'Ucsf Child Care At Mission Bay' (Bright Horizons), 727 Nelson Rising Ln, registered from 2024-01-01 (a registration date, not an opening)",
     "sources": [
      "src-datasf-rbl-0941054"
     ]
    },
    {
     "key": "city_address_point",
-    "value": "DataSF's official address point for 727 Nelson Rising Ln (address ID 743045, parcel 8711007) lies inside this record's outline, 2.7 m from its nearest edge (Pier & Point's own calculation). It is a frontage point, not a building footprint, and the same address also carries a business registration for 'Ucsf Shuttles' (owner Booster Fuels, Inc., certificate 1106713, location start 2026-05-28, a registration date), so the address alone does not single out the childcare center.",
+    "value": "DataSF's address point for 727 Nelson Rising Ln lies inside this outline; the address is shared with a shuttle-service registration",
     "sources": [
      "src-datasf-eas-727-nelson",
      "src-datasf-rbl-0941054"
@@ -94,6 +94,35 @@
     "sources": [
      {
       "title": "Bright Horizons center page (brighthorizons.com); DataSF Registered Business Locations (data.sf.gov/resource/g8m3-pdis.json, certificates 0941054 and 1106713); UCSF CAC presentation 2025-06-12"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_block_18c",
+     "slug": "mission-bay-south-block-18c-ucsf-child-development-center",
+     "name": "Mission Bay South Block 18C (UCSF Child Development Center)",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-18c-ucsf-child-development-center/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-18c-ucsf-child-development-center.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Long 'At a glance' values were cut to the fact itself (or 'Sources differ'); the disputes, quoted excerpts and hedging moved to this record's open questions, with every source still named. No change to the record's status or shape.",
+    "source": "Pier & Point's own text edit",
+    "sources": [
+     {
+      "title": "Pier & Point's own text edit"
      }
     ],
     "category": "correction",
@@ -230,7 +259,7 @@
   "images": [],
   "open_questions": [
    "Is a childcare building standing on Block 18C today? A childcare center is registered and addressed here, and UCSF names a childcare center as 18C's near-term use while still counting the block as undeveloped, but no source read gives the building's footprint or says when it was built or opened.",
-   "'Operating since 2006' (in the geometry file notes) was not found on either Bright Horizons page read; no opening or construction date for the center was found.",
+   "An earlier note that the center had been 'operating since 2006' was not found on either Bright Horizons page read; no opening or construction date for the center was found.",
    "OCII's December 2019 Land Use Map text shows plan blocks 18A and 18B on this row and no 18C; the block number comes from UCSF's own list. How UCSF's 18C relates to OCII's plan blocks was not resolved from text.",
    "No developer, architect, owner of the building or cost was found."
   ],

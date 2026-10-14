@@ -45,7 +45,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE but high confidence: every edge follows a DataSF lot line (one of them, the Exposition Street lot 8719A010, carries a recorded drop date of March 18, 2025 in the Assessor data (DataSF Parcels, read October 12, 2026) while still flagged active; the dataset does not say why; the Assessor has not made Block K its own lot; it is still part of the China Basin Park lot 8719A005 in the most recent DataSF Assessor parcel data checked), and the Design Controls figure trace agrees with those lines within 1.3 m at every corner. Planned, unbuilt residential block (120 ft maximum height). ANGLE CHECK: one corner here is 12.3-12.6 degrees off square, beyond the 12-degree tolerance of Pier & Point's automated shape check. Every vertex of this polygon is a real, recorded DataSF Assessor lot corner (how this shape was traced, including earlier versions, is logged in its data file in the public data repository, https://github.com/pierandpoint/record) -- the deviation is the real lot's own shape (Bridgeview Way's paseo lot 8719A007 and the Exposition Street lot 8719A010 meet the park lot 8719A005 at a corner that is not exactly square), not a shear or a misread trace. Accepted as a known exception.",
+    "accuracy_caveat": "APPROXIMATE but high confidence: every edge follows a DataSF lot line (one of them, the Exposition Street lot 8719A010, carries a recorded drop date of March 18, 2025 in the Assessor data (DataSF Parcels, read October 12, 2026) while still flagged active; the dataset does not say why; the Assessor has not made Block K its own lot; it is still part of the China Basin Park lot 8719A005 in the most recent DataSF Assessor parcel data checked), and the Design Controls figure trace agrees with those lines within 1.3 m at every corner. Planned, unbuilt residential block (120 ft maximum height). ANGLE CHECK: one corner here is 12.3-12.6 degrees off square, beyond the 12-degree tolerance of Pier & Point's automated shape check. Every vertex of this polygon is a real, recorded DataSF Assessor lot corner (how this shape was traced, including earlier versions, is logged in its mapping log) -- the deviation is the real lot's own shape (Bridgeview Way's paseo lot 8719A007 and the Exposition Street lot 8719A010 meet the park lot 8719A005 at a corner that is not exactly square), not a shear or a misread trace. Accepted as a known exception.",
     "digitized_from": "DataSF Assessor lot lines (lots 8719A005, 8719A007, 8719A010, 8719A003) bounding the lobe the plan's Block K occupies (lot 8719A010 carries a recorded drop date of March 18, 2025 in the Assessor data (DataSF Parcels, read October 12, 2026) while still flagged active; the dataset does not say why), cross-checked against Mission Rock Design Controls Figure 6.2 (p.151) and the Block K standards sheet (Appendix p.198).",
     "why_no_real_parcel": "Block K's land is still part of lot 8719A005 (China Basin Park), a lot recorded 2020-06-12 in DataSF's Assessor parcels (the DataSF Parcels dataset); the lot lines around it exist but the Assessor has not split K off in that data. Using lot 8719A005 would show the park and the block as one shape.",
     "regulatory_context": "Residential Mixed Use, fronting China Basin Park and the Pier 48 entry along Terry A. Francois Blvd. Max height 120 ft -- tied for the lowest residential height limit on the site (Flex Blocks H, I and J also allow 120 ft if residential, Figure 6.2 p.151); the March 2012 Revised Proposal's narrative says 'the shortest residential tower would be on Block K facing Mission Rock Park,' preserving sightlines/stepping the skyline down toward the water. Originally slated for Phase 1 (with A, B, G) before a real, Port-confirmed 2019 swap with Block F -- the sponsors proposed changing Phase 1 from {A, B, G, K} to {A, B, G, F} to accelerate ~100 more units (~40 more affordable) and create a four-corner pedestrian intersection instead of a linear one; an interim-parking-preservation rationale sometimes cited for this swap is not supported by any source found."
@@ -101,7 +101,7 @@
    },
    {
     "key": "phase_status",
-    "value": "Not in Phase 1 since the 2019 swap for Parcel F; which later phase includes Block K is not stated in the Port memos read. The Oct 2023 Port memo says the Phase 2 submittal was delivered December 2022 and decelerated in 2023 as infeasible, with a hypothetical Phase 2 start of March 2026 in its repayment model (it does not place K in Phase 2); on June 9, 2026 the Port Commission adopted Resolution 26-34 ($10 million for Phase 2 pre-development), and the Port's June 2026 report puts Phase 2 construction 'as early as 2027'",
+    "value": "Not in Phase 1 since the 2019 swap for Parcel F; which later phase includes it is not stated",
     "sources": [
      "src-port-2023-10",
      "src-port-2026-06-11a",
@@ -562,6 +562,35 @@
     "date": "2026-10-13",
     "kind": "correction",
     "kind_label": "Correction",
+    "text": "Long 'At a glance' values were cut to the fact itself (or 'Sources differ'); the disputes, quoted excerpts and hedging moved to this record's open questions, with every source still named. No change to the record's status or shape.",
+    "source": "Pier & Point's own text edit",
+    "sources": [
+     {
+      "title": "Pier & Point's own text edit"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_rock_block_k",
+     "slug": "mission-rock-block-k",
+     "name": "Mission Rock Block K",
+     "permalink": "https://pierandpoint.org/parcels/mission-rock-block-k/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-rock-block-k.json"
+    },
+    "site": {
+     "slug": "mission-rock",
+     "name": "Mission Rock",
+     "short": "Mission Rock",
+     "url": "https://pierandpoint.org/sites/mission-rock/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
     "text": "The summary for Mission Rock Block K now includes Port's June 2026 Phase 2 pre-development item.",
     "source": "https://www.sfport.com/media/11337/download?inline",
     "sources": [
@@ -722,7 +751,8 @@
    "The Port's January 26, 2018 staff report (Table 3, DDA Major Terms) describes the DDA's outside date for commencing construction of each later Phase as 'the earlier of 5 years after completion of vertical construction of the prior Phase or 14 years after the Entitlement Date for Phase 2, 20 years after the Entitlement Date for Phase 3, and 25 years after the Entitlement Date for Phase 4'. These are legal deadlines, not forecasts. The DDA text itself was not read, so no calendar date is derived here.",
    "No cost, developer capital or land-value figure exists for this block; the Port says Phase 2 appraisals are deferred until the market supports the minimum land values.",
    "Images: no rendering specific to this block exists in the public-record documents read (the Design Controls give only diagrammatic envelopes), and the 2026 aerial serves as the 'before'/'now' view of the parking lot it sits in.",
-   "No expected-completion date could be sourced for Block K. The Mission Rock Design Controls (208 pages, checked in full) contain no phasing schedule at all. The developer's July 2, 2019 Phase 1 overview describes the original Phase 1 as 'A, B, G, and K', and the Port's September 20, 2019 memo says the swap 'moves parcel K to a later phase' without naming which one. The DDA text itself (Board File 180092, adopted by the Board of Supervisors as Resolution 42-18 on February 13, 2018) was not read. No document read states K's post-swap phase number or gives it a target date, and even the pre-swap Phase 1 slot is moot now that K itself was removed from Phase 1, so no basis (record, phase or project) supports a date for this block."
+   "No expected-completion date could be sourced for Block K. The Mission Rock Design Controls (208 pages, checked in full) contain no phasing schedule at all. The developer's July 2, 2019 Phase 1 overview describes the original Phase 1 as 'A, B, G, and K', and the Port's September 20, 2019 memo says the swap 'moves parcel K to a later phase' without naming which one. The DDA text itself (Board File 180092, adopted by the Board of Supervisors as Resolution 42-18 on February 13, 2018) was not read. No document read states K's post-swap phase number or gives it a target date, and even the pre-swap Phase 1 slot is moot now that K itself was removed from Phase 1, so no basis (record, phase or project) supports a date for this block.",
+   "Phase of Block K: the Port memos read do not say which later phase includes Block K. The Oct 2023 Port memo says the Phase 2 submittal was delivered December 2022 and decelerated in 2023 as infeasible, with a hypothetical Phase 2 start of March 2026 in its repayment model (it does not place K in Phase 2); on June 9, 2026 the Port Commission adopted Resolution 26-34 ($10 million for Phase 2 pre-development), and the Port's June 2026 report puts Phase 2 construction 'as early as 2027'."
   ],
   "sources": [
    {

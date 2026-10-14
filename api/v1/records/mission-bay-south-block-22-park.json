@@ -39,7 +39,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "PARTIALLY REAL -- the outer boundary is a real polygonized city block from real street geometry, not hand-traced, except the south-west corner: the source outline cut that corner with a diagonal about 63 m long, and it is squared off here by extending the south and west edges until they meet (about 992 m2 added), because the OCII Land Use Map (December 2019) draws the block as a rectangle. The added corner point is a construction, not a surveyed point. No internal A/B split needed (this label is a single block).",
+    "accuracy_caveat": "PARTIALLY REAL -- the outer boundary is a real polygonized city block from real street geometry, not hand-traced, except the south-west corner: the source outline cut that corner with a diagonal about 63 m long, and it is squared off here by extending the south and west edges until they meet (about 992 m2 added), because the OCII Land Use Map (December 2019) draws the block as a rectangle. The added corner point is a construction, not a surveyed point. No internal A/B split needed (this label is a single block). A check against DataSF's Assessor parcels and building footprints found no building footprint on the site and traced the dominant underlying parcel to a retired 1998 'COMMON_AREAS' placeholder (parcel 8799TBA3, dropped 2005) plus scattered UCSF campus parcel fragments; that is consistent with open, non-built land but does not show when the current landscaping was built.",
     "digitized_from": "Real block boundary: the city block outlined by DataSF's official street centerlines, trimmed back to allow for the full street width. The south-west corner is completed by extending the block's south and west edges until they meet (see the accuracy note)."
    }
   },
@@ -60,6 +60,35 @@
     "sources": [
      {
       "title": "UCSF Mission Bay CAC presentation, 2025-06-12 (sfocii.org)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_block_22",
+     "slug": "mission-bay-south-block-22-park",
+     "name": "Mission Bay South Block 22 (park)",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-22-park/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-22-park.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Notes on pages that could not be read are now plain statements, and mapping-process detail is left to the shape's own notes. No change to the record's status or shape.",
+    "source": "Pier & Point's own text edit",
+    "sources": [
+     {
+      "title": "Pier & Point's own text edit"
      }
     ],
     "category": "correction",
@@ -215,8 +244,7 @@
    }
   ],
   "open_questions": [
-   "No source read confirms a name or completion date for this park (UCSF's June 2025 presentation map labels a park 'KORET QUAD (22)'; see below); the only evidence of its being built is Pier & Point's own satellite-imagery review and its September 2026 on-site confirmation that it is already built, both recorded in the mapping log for this record's shape -- not a substitute for a dated public-record source, so no completion milestone is asserted here.",
-   "Pier & Point's earlier DataSF Assessor Parcels/Building Footprints check (recorded in the same mapping log) traced the dominant underlying parcel to a retired 1998 'COMMON_AREAS' placeholder (blklot 8799TBA3, dropped 2005) plus scattered UCSF campus parcel fragments -- consistent with open, non-built land, but that doesn't establish when the current landscaping was actually built.",
+   "No source read confirms a name or completion date for this park (UCSF's June 2025 presentation map labels a park 'KORET QUAD (22)'; see below); the only evidence of its being built is Pier & Point's own satellite-imagery review and its September 2026 on-site confirmation that it is already built -- not a substitute for a dated public-record source, so no completion milestone is asserted here.",
    "Not clear whether this block corresponds to any of OCII's lettered/numbered open-space plan parcels (P1-P27) tracked elsewhere in this project; no such label was found for it in any source checked.",
    "Possible identity, not confirmed: UCSF's June 12, 2025 CAC presentation (p.3 map, 'MAP UPDATED: DECEMBER 2024', read directly 2026-09-29) labels a park 'KORET QUAD (22)' in the North Campus, and OCII's Nov 14, 2024 'Mission Bay Future Parks' CAC update (p.2 map) is reported to label a completed park 'Koret Quad' in this block's position, and Wikipedia's Mission Bay article lists Koret Quad among parks complete by fall 2010. Whether this block is Koret Quad still needs to be confirmed before the record is renamed or its 'complete' status is sourced to that map; until then the status rests only on Pier & Point's September 2026 site visit.",
    "No source gives a completion date; no source read dates the park."

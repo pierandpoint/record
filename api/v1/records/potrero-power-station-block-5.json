@@ -43,7 +43,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- this block is not yet built (no design-review approval or construction start found; it is not in the 2024 annual compliance report's Phase 1 list) and no Assessor lot of its own was found: DataSF Parcels (checked 2026-09-29) shows about 93% of its footprint within the much larger active lot 4175500 (1248 Georgia Ln, about 15,900 sq m, recorded 2024-10-15). Traced from an adopted regulatory diagram, fitted to real street positions at multiple points, but this diagram is dated 2020 and may not reflect later design changes (as already found for the UCSF/Sophie Maxwell area). Treat vertex positions as accurate to roughly 10-25m, not survey-grade, and treat the block's applicability itself as somewhat more provisional than Mission Rock's or Pier 70's equivalent entries. The shape was rebuilt on 2026-09-16 with a more careful fit of the diagram to the map, re-measured the same day consistently across the whole block layout, and corrected again that day after one mis-measured reference point was fixed. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
+    "accuracy_caveat": "APPROXIMATE -- this block is not yet built (no design-review approval or construction start found; it is not in the 2024 annual compliance report's Phase 1 list) and no Assessor lot of its own was found: DataSF Parcels (checked 2026-09-29) shows about 93% of its footprint within the much larger active lot 4175500 (1248 Georgia Ln, about 15,900 sq m, recorded 2024-10-15). Traced from an adopted regulatory diagram, fitted to real street positions at multiple points, but this diagram is dated 2020 and may not reflect later design changes (as already found for the UCSF/Sophie Maxwell area). Treat vertex positions as accurate to roughly 10-25m, not survey-grade, and treat the block's applicability itself as somewhat more provisional than Mission Rock's or Pier 70's equivalent entries. The shape was rebuilt on 2026-09-16 with a more careful fit of the diagram to the map, re-measured the same day consistently across the whole block layout, and corrected again that day after one mis-measured reference point was fixed. How this shape was traced, including earlier versions, is logged in its mapping log.",
     "digitized_from": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
     "why_no_real_parcel": "A real Assessor parcel may exist under this block (part of the site's larger, largely unaddressed footprint), but it has not been subdivided per the masterplan's individual named blocks -- this uses hand-traced approximate geometry instead. DataSF Parcels (checked 2026-09-29) shows most of this footprint within the much larger active lot 4175500 (1248 Georgia Ln), not a lot of its own.",
     "regulatory_context": "Figure 6.2.3 of the final D4D shows Block 5 (marked '5*', a potential district parking garage/grocery store site, like Blocks 1 and 13) with an 85 ft base and a 220 ft upper height (its colour-coded labels, '220'/85''); the '111'MAX' label sits on a tick-ended dimension line (a plan extent of the tower zone), not a height. Block 7's 240 ft is the tallest limit on the site. The D4D's Permitted Uses table (Table 3.1.1) permits Residential, Institutional, Retail, Non-Retail Sales/Services (office), Entertainment and limited PDR uses on Block 5 and not Laboratory or Life Science. No construction-start source found."
@@ -56,7 +56,7 @@
   "facts": [
    {
     "key": "use",
-    "value": "Residential, Institutional, Retail and Non-Retail Sales/Services uses permitted, plus limited PDR uses at the lowest floors (e.g. Light Manufacturing, Arts Activities, Business Services); Laboratory and Life Science uses Not Permitted under the adopted D4D final Table 3.1.1. The Sept 28, 2026 committee version of the amendment package, which passed the Board on first reading Sept 29, 2026 and is not shown as enacted, marks Laboratory and Life Science as permitted on Block 5 (see open questions)",
+    "value": "Residential, Institutional, Retail and Non-Retail Sales/Services permitted, plus limited PDR at lowest floors; Laboratory and Life Science not permitted under the adopted D4D",
     "sources": [
      "src-d4d-final-table311",
      "src-bos-ver3-260770",
@@ -65,14 +65,14 @@
    },
    {
     "key": "height_ft",
-    "value": "85 ft base with a 220 ft upper tower, per the colour-coded labels in the D4D's Figure 6.2.3 ('220'/85''; the '111'MAX' label is a plan dimension of the tower zone, not a height); Standard 6.2.2 places Block 5 among the 'Highrise towers' (181-240 ft)",
+    "value": "85 ft base with a 220 ft upper tower; a 'Highrise towers' block (181-240 ft)",
     "sources": [
      "src-d4d-final-fig623"
     ]
    },
    {
     "key": "height_ft_2026_amendment",
-    "value": "Revised legislative digest for BOS File 260770 (amended in committee Sept 28, 2026): 'On Block 5 the permitted height of the podium would increase from 85 feet to 130 feet.' Not shown as enacted as of Oct 12, 2026; the adopted 85 ft base and 220 ft tower above still govern until then The Planning Commission's July 30, 2026 executive summary (Resolution No. 21945) lists Block 5's existing maximum as 220 feet and proposes, 'On blocks where residential uses are proposed (which could mean Blocks 1, 4, 5, 7, 8, 9, 12, 13, and 14), increase the maximum height by 8 feet'; Block 5's resulting tower height is not stated in the documents read.",
+    "value": "Proposed podium increase from 85 to 130 feet (committee version, Sept 28, 2026); not shown as enacted as of Oct 12, 2026",
     "sources": [
      "src-bos-digest3-260770",
      "src-pc-res21945-2026"
@@ -80,7 +80,7 @@
    },
    {
     "key": "district_parking_garage_eligible",
-    "value": "One of three blocks (with 1 and 13) eligible to host the project's single permitted district parking garage (max 90 ft, with a publicly accessible rooftop sports field)",
+    "value": "One of three blocks (with 1 and 13) eligible for the project's single district parking garage (max 90 ft, publicly accessible rooftop sports field)",
     "sources": [
      "src-d4d-final-table311-notes-14"
     ]
@@ -361,6 +361,35 @@
   ],
   "changes": [
    {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Long 'At a glance' values were cut to the fact itself (or 'Sources differ'); the disputes, quoted excerpts and hedging moved to this record's open questions, with every source still named. No change to the record's status or shape.",
+    "source": "Pier & Point's own text edit",
+    "sources": [
+     {
+      "title": "Pier & Point's own text edit"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_block_5",
+     "slug": "potrero-power-station-block-5",
+     "name": "Potrero Power Station Block 5",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-5/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-5.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-10-12",
     "kind": "correction",
     "kind_label": "Correction",
@@ -490,7 +519,8 @@
   "open_questions": [
    "No design review approval or construction-start date found for Block 5; it is not one of the six buildings named in the 2024 annual compliance report's Phase 1 list (Blocks 2, 7, 8, 11, 12, 15), and no later-phase design review approval was found either.",
    "The Development Agreement amendment package (BOS Files 260724 and 260770) passed the Board of Supervisors on first reading on Sept 29, 2026; Legistar lists 'Final action: 10/6/2026' and status 'Mayors Office' with the enactment date and number blank (page read Oct 12, 2026), so it is not confirmed as enacted. The Land Use and Transportation Committee's Sept 28, 2026 revisions state that data center uses are not permitted on any block. Whether Block 5's all-PDR flexibility sought in July survived is not settled by the documents read: the committee-amended ordinance text (Leg Ver3 of File 260770) shows Block 5's PDR column under note (4), which limits the listed PDR uses to the basement, ground floor, 2nd floor and mezzanine and makes other PDR uses not permitted, and shows Laboratory and Life Science as permitted; the Sept 28 draft Design for Development attached to the agreement shows Block 5's PDR column as 'P(5)', whose note lists the same PDR uses as permitted with other PDR uses not permitted and states no floor limit. Neither text permits PDR use without limit. The board packets, which hold the final text sent to the Mayor, were not read.",
-   "Block 5's 2031-2034 window comes from a 2020 press table (SocketSite); no current Block 5 schedule was found. The Planning Commission's July 30, 2026 executive summary lists a proposed move of Block 5 from Development Phase 3 to Phase 2 in the 2026 amendment package (not shown as enacted); it gives no new dates."
+   "Block 5's 2031-2034 window comes from a 2020 press table (SocketSite); no current Block 5 schedule was found. The Planning Commission's July 30, 2026 executive summary lists a proposed move of Block 5 from Development Phase 3 to Phase 2 in the 2026 amendment package (not shown as enacted); it gives no new dates.",
+   "Height on Block 5: the 85 ft base and 220 ft tower are read from the colour-coded labels in the D4D's Figure 6.2.3 ('220'/85''; the '111'MAX' label is a plan dimension of the tower zone, not a height); Standard 6.2.2 places Block 5 among the 'Highrise towers' (181-240 ft). The revised legislative digest for BOS File 260770 (amended in committee Sept 28, 2026) says: 'On Block 5 the permitted height of the podium would increase from 85 feet to 130 feet.' It is not shown as enacted as of Oct 12, 2026; the adopted 85 ft base and 220 ft tower above still govern until then. The Planning Commission's July 30, 2026 executive summary (Resolution No. 21945) lists Block 5's existing maximum as 220 feet and proposes, 'On blocks where residential uses are proposed (which could mean Blocks 1, 4, 5, 7, 8, 9, 12, 13, and 14), increase the maximum height by 8 feet'; Block 5's resulting tower height is not stated in the documents read."
   ],
   "sources": [
    {

@@ -44,7 +44,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE (planned, unbuilt block): no Assessor lot of its own yet. It sits on lot 8719A006, the ~37,400 m2 undivided remainder of Seawall Lot 337 that also holds Blocks C, D, E, H, I, J, Mission Rock Square, Channel Lane and the unbuilt internal streets. Traced 2026-09-17 from the adopted Design Controls' Figure 6.2 through a transform with 0.7 m RMS residual on 16 real lot corners, with vertices snapped to recorded lot lines where the figure draws the block against one: treat street-facing and lot-line edges as accurate to ~1 m and interior edges (against unbuilt streets and open spaces) to ~1-3 m. The block's shape is the Design Controls' block, not a building footprint; a building may sit back from these lines. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
+    "accuracy_caveat": "APPROXIMATE (planned, unbuilt block): no Assessor lot of its own yet. It sits on lot 8719A006, the ~37,400 m2 undivided remainder of Seawall Lot 337 that also holds Blocks C, D, E, H, I, J, Mission Rock Square, Channel Lane and the unbuilt internal streets. Traced 2026-09-17 from the adopted Design Controls' Figure 6.2 through a transform with 0.7 m RMS residual on 16 real lot corners, with vertices snapped to recorded lot lines where the figure draws the block against one: treat street-facing and lot-line edges as accurate to ~1 m and interior edges (against unbuilt streets and open spaces) to ~1-3 m. The block's shape is the Design Controls' block, not a building footprint; a building may sit back from these lines. How this shape was traced, including earlier versions, is logged in its mapping log.",
     "digitized_from": "Mission Rock Design Controls (Port of San Francisco, dated April 24, 2018), Figure 6.2 - Maximum Height Plan (p.151); land use from Figure 1.1 - Land Use Plan (p.10); block corners snapped to the recorded DataSF Assessor lot lines of the 2020 Seawall Lot 337 subdivision where they fall within 3 m.",
     "why_no_real_parcel": "A real Assessor lot exists under this block -- 8719A006, the undivided remainder of Seawall Lot 337 recorded 2020-06-12 -- but it has not been subdivided per block, so mapping this record from that lot would paint the same ~9-acre parking-lot shape for every unbuilt block. Hand-derived geometry is used instead, with the lot's own lines wherever this block touches them.",
     "regulatory_context": "Commercial Mixed Use only (no residential option) per the Design Controls' Land Use Plan (Figure 1.1) -- ground-floor retail required. Max building height 190 ft per Figure 6.2, confirmed exactly. Positioned south of Block B, fronting 3rd St to the west and the Shared Public Way (and Mission Rock Square beyond it) to the east. No construction-start source found; the Port's June 2026 Phase 2 update (Item 11A) describes the site as 'a surface parking lot' and puts Phase 2 construction 'as early as 2027'."
@@ -64,7 +64,7 @@
    },
    {
     "key": "max_height_ft",
-    "value": "190 ft upper building; base building maximum 90 ft on the Long Bridge Street side and 60 ft on the Shared Public Way side (Design Controls p.189; the '60.00' MINIMUM' and '30.00' MINIMUM' labels there are horizontal dimensions along the base, not heights)",
+    "value": "190 ft upper building; base maximum 90 ft on the Long Bridge Street side, 60 ft on the Shared Public Way side (Design Controls p.189)",
     "sources": [
      "src-dc-2018"
     ]
@@ -107,7 +107,7 @@
    },
    {
     "key": "phase_status",
-    "value": "Phase 2 submittal delivered December 2022 but decelerated in 2023 as infeasible; the Port's October 2023 repayment model used a hypothetical Phase 2 start of March 2026",
+    "value": "Phase 2 submittal delivered December 2022, decelerated in 2023 as infeasible; the Port's October 2023 repayment model used a hypothetical March 2026 start",
     "sources": [
      "src-port-2023-10"
     ]
@@ -496,6 +496,35 @@
     "sources": [
      {
       "title": "https://www.sfport.com/sites/default/files/2026-06/item_11a_mission_rock_phase_2_update_and_port_capital.pdf ; https://www.sfport.com/sites/default/files/2021-07/Mission%20Rock%20Fact%20Sheet_24June2021.pdf ; https://sfplanning.org/project/mission-rock"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_rock_block_c",
+     "slug": "mission-rock-block-c",
+     "name": "Mission Rock Block C",
+     "permalink": "https://pierandpoint.org/parcels/mission-rock-block-c/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-rock-block-c.json"
+    },
+    "site": {
+     "slug": "mission-rock",
+     "name": "Mission Rock",
+     "short": "Mission Rock",
+     "url": "https://pierandpoint.org/sites/mission-rock/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Long 'At a glance' values were cut to the fact itself (or 'Sources differ'); the disputes, quoted excerpts and hedging moved to this record's open questions, with every source still named. No change to the record's status or shape.",
+    "source": "Pier & Point's own text edit",
+    "sources": [
+     {
+      "title": "Pier & Point's own text edit"
      }
     ],
     "category": "correction",

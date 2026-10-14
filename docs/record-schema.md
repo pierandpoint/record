@@ -75,6 +75,21 @@ other status. Set it only where a source read names the change; a proposal a
 source calls only a possibility does not qualify. `status` itself stays
 `existing`, so maps, counts and colours are unchanged.
 
+## `details` (optional)
+
+Sourced facts that are not gaps or disputes: a full list the "At a glance" value only summarises, the
+wording a source used, a figure with its context. Each item is `{"text": "...", "sources": ["src-id"]}`;
+`sources` is required (at least one id from the record's own `sources`) and the text is written for
+readers. The record page shows them as a collapsed "More detail" list right under "At a glance", each
+with its citation. Do not put them in `open_questions`: that list renders under "Looked for, not found"
+and is only for what we searched for and could not source, and for sources that disagree (name every
+source).
+
+```json
+"details": [{"text": "Features of Crane Cove Park, in full: a pocket beach with Bay access, restored Slipway 4 ...",
+             "sources": ["src-port-park"]}]
+```
+
 ## Rules the validator enforces
 
 - `record_id` matches the filename and exists in the manifest tables.

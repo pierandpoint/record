@@ -43,7 +43,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE -- this block is not yet built and is not vacant land: per SF Planning's project page and the final D4D (Figure 1.2.1, printed p.12) it lies in the 4.8-acre area at 22nd and Illinois Streets that PG&E owns and operates as an electrical switchyard (the D4D's 'PG&E Sub-area'), whose build-out depends on the switchyard's relocation. DataSF Parcels lists an active lot with an address, 4175499 (1101 Illinois St, recorded 2024-10-15), covering nearly all of this approximate footprint; the dataset does not say whether that lot is the switchyard parcel. Traced from an adopted regulatory diagram, positioned by matching several points on it to real streets, but this diagram is dated 2020 and may not reflect later design changes (as already found for the UCSF/Sophie Maxwell area). Treat vertex positions as accurate to roughly 10-25m, not survey-grade, and treat the block's applicability itself as somewhat more provisional than Mission Rock's or Pier 70's equivalent entries. Rebuilt 2026-09-16 with a refined multi-point georeferencing of the diagram, re-measured the same day consistently across the whole block layout, and re-corrected the same day after a mis-measured reference point was fixed. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
+    "accuracy_caveat": "APPROXIMATE -- this block is not yet built and is not vacant land: per SF Planning's project page and the final D4D (Figure 1.2.1, printed p.12) it lies in the 4.8-acre area at 22nd and Illinois Streets that PG&E owns and operates as an electrical switchyard (the D4D's 'PG&E Sub-area'), whose build-out depends on the switchyard's relocation. DataSF Parcels lists an active lot with an address, 4175499 (1101 Illinois St, recorded 2024-10-15), covering nearly all of this approximate footprint; the dataset does not say whether that lot is the switchyard parcel. Traced from an adopted regulatory diagram, positioned by matching several points on it to real streets, but this diagram is dated 2020 and may not reflect later design changes (as already found for the UCSF/Sophie Maxwell area). Treat vertex positions as accurate to roughly 10-25m, not survey-grade, and treat the block's applicability itself as somewhat more provisional than Mission Rock's or Pier 70's equivalent entries. Rebuilt 2026-09-16 with a refined multi-point georeferencing of the diagram, re-measured the same day consistently across the whole block layout, and re-corrected the same day after a mis-measured reference point was fixed. How this shape was traced, including earlier versions, is logged in its mapping log.",
     "digitized_from": "Potrero Power Station Design for Development, final (February 26, 2020), Figure 6.2.3 - Building Height Plan (printed p.245, PDF p.247).",
     "why_no_real_parcel": "Block 13's land is not part of the developer-owned 21-acre Power Station parcel: it is in the 4.8-acre PG&E-owned northern switchyard (final D4D Figure 1.2.1; SF Planning project page), which the Master Plan includes but whose build-out depends on the switchyard's relocation and on the property coming within the Development Agreement's jurisdiction. DataSF Parcels lists an active lot, 4175499 (1101 Illinois St, recorded 2024-10-15), overlapping about 99% of this approximate footprint; whether it is PG&E's switchyard parcel is not established, so this uses hand-traced approximate geometry instead.",
     "regulatory_context": "The D4D's Permitted Uses table (Table 3.1.1) shows Block 13 permits Residential, Institutional, Retail, Non-Retail Sales/Services (office), Entertainment and PDR uses, but the table's notes limit several of them to the lower floors: office to the basement, ground floor and mezzanine (note 8); retail and entertainment to the basement, ground floor, mezzanine and 2nd floor (notes 7 and 9); and PDR to the listed uses at the basement, ground floor, 2nd floor and mezzanine (note 4). Laboratory and Life Science are not permitted. Figure 6.2.3 of the final D4D gives Block 13 two height limits by its colour-coded labels, 85 ft and 125 ft; the '300'MAX' and '280'MAX' labels on the block sit on tick-ended dimension lines (plan extents of the 125 ft zone), not heights, and Standard 6.2.2 lists Block 13 among the midrise buildings (101-145 ft). The tallest limit on the site is Block 7's 240 ft. No construction-start source found."
@@ -56,7 +56,7 @@
   "facts": [
    {
     "key": "use",
-    "value": "Residential, Institutional, Retail, Non-Retail Sales/Services and PDR uses permitted (limited PDR uses at the lowest floors); Laboratory and Life Science uses Not Permitted (D4D final Table 3.1.1)",
+    "value": "Residential, Institutional, Retail, Non-Retail Sales/Services and PDR (limited, lowest floors) permitted; Laboratory and Life Science Not Permitted (D4D final Table 3.1.1)",
     "sources": [
      "src-d4d-final-table311"
     ]
@@ -70,14 +70,14 @@
    },
    {
     "key": "district_parking_garage_eligible",
-    "value": "One of three blocks (with 1 and 5) eligible to host the project's single permitted district parking garage (max 90 ft, with a publicly accessible rooftop sports field)",
+    "value": "One of three blocks (with 1 and 5) eligible for the project's single permitted district parking garage (max 90 ft, publicly accessible rooftop sports field)",
     "sources": [
      "src-d4d-final-table311-notes-14"
     ]
    },
    {
     "key": "design_review_note",
-    "value": "The 2024 annual compliance report's only mention of Block 13 is a preservation design-review requirement for its Illinois Street frontage; no building design review or construction is described",
+    "value": "Only a preservation design-review requirement for its Illinois Street frontage (2024 annual compliance report); no building design review or construction described",
     "sources": [
      "src-annual-2024"
     ]
@@ -91,7 +91,7 @@
    },
    {
     "key": "site_context",
-    "value": "In the 4.8-acre PG&E-owned northern switchyard area at 22nd and Illinois Streets (the D4D's 'PG&E Sub-area'); the Master Plan's build-out of the PG&E lands depends on relocating the switchyard",
+    "value": "In the 4.8-acre PG&E-owned northern switchyard area at 22nd and Illinois (the D4D's 'PG&E Sub-area'); the Master Plan's PG&E build-out depends on relocating the switchyard",
     "sources": [
      "src-sfplanning-pps",
      "src-d4d-final-fig121"
@@ -210,6 +210,35 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Long 'At a glance' values were cut to the fact itself (or 'Sources differ'); the disputes, quoted excerpts and hedging moved to this record's open questions, with every source still named. No change to the record's status or shape.",
+    "source": "Pier & Point's own text edit",
+    "sources": [
+     {
+      "title": "Pier & Point's own text edit"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_block_13",
+     "slug": "potrero-power-station-block-13",
+     "name": "Potrero Power Station Block 13",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-13/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-13.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
    {
     "date": "2026-10-13",
     "kind": "correction",

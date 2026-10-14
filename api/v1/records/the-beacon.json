@@ -64,7 +64,7 @@
    },
    {
     "key": "units",
-    "value": "Permits propose 279 (250 King St) and 307 (260 King St) dwelling units, 586 together; two listing sites give 595 residential units. The counts are not reconciled.",
+    "value": "Sources differ (586 or 595 units)",
     "sources": [
      "src-dbi-beacon-250",
      "src-dbi-beacon-260",
@@ -275,6 +275,35 @@
     "sources": [
      {
       "title": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200011306844"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_the_beacon",
+     "slug": "the-beacon",
+     "name": "The Beacon",
+     "permalink": "https://pierandpoint.org/parcels/the-beacon/",
+     "api": "https://pierandpoint.org/api/v1/records/the-beacon.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Long 'At a glance' values were cut to the fact itself (or 'Sources differ'); the disputes, quoted excerpts and hedging moved to this record's open questions, with every source still named. No change to the record's status or shape.",
+    "source": "Pier & Point's own text edit",
+    "sources": [
+     {
+      "title": "Pier & Point's own text edit"
      }
     ],
     "category": "correction",
@@ -601,13 +630,14 @@
    }
   ],
   "open_questions": [
-   "Developer is stated only by a listing site (SFHighrises); the Catellus Mission Bay page cited in the map's geometry file does not mention The Beacon. No primary source read confirms it.",
+   "Developer is stated only by a listing site (SFHighrises); the Catellus Mission Bay page that was cited for the developer does not mention The Beacon. No primary source read confirms it.",
    "Architect not recorded: Afi + Associates says Skidmore, Owings and Merrill; other attributions seen earlier by the project are unsourced here.",
-   "The permits do not use the name 'The Beacon'; the link from the name to 250 and 260 King St rests on the OpenStreetMap addr:housename tag cited in the geometry file and on SFHighrises and Afi + Associates, which both give 250 and 260 King St.",
+   "The permits do not use the name 'The Beacon'; the link from the name to 250 and 260 King St rests on the OpenStreetMap addr:housename tag cited in About this shape and on SFHighrises and Afi + Associates, which both give 250 and 260 King St.",
    "No construction start date or opening month found; the permit completed date is a closeout date, not an occupancy date.",
    "The building permit for 260 King St has status 'reinstated' in the Department of Building Inspection data; the meaning is not explained in the data.",
-   "The AT&T store at 236 King St is shown as closed on the strength of a Yelp listing that showed it closed as of March 2025 (that is when the listing was seen, not when the store closed); the listing could not be opened again (HTTP 403 on 2026-10-12) and no other page about the store was found. No opening or closing date is known. The address is assigned to The Beacon by Pier & Point; the listing does not name the building.",
-   "Update 2026-10-12, completion year: readable sources conflict. The Department of Building Inspection's data records both new-construction permits as completed on 2004-10-06 and the Assessor roll gives year built 2004 for 593 of 595 lots on King St, while SFHighrises (a listing site) says \"Year Built: 2003\". A permit closeout can follow occupancy, so 2003 is not ruled out and 2004 is not confirmed as the opening year; the timeline shows only the 2004-10 permit closeout, not a 2003 date."
+   "The AT&T store at 236 King St is shown as closed on the strength of a Yelp listing that showed it closed as of March 2025 (that is when the listing was seen, not when the store closed); the listing could not be read again (access refused on 2026-10-12) and no other page about the store was found. No opening or closing date is known. The address is assigned to The Beacon by Pier & Point; the listing does not name the building.",
+   "Update 2026-10-12, completion year: readable sources conflict. The Department of Building Inspection's data records both new-construction permits as completed on 2004-10-06 and the Assessor roll gives year built 2004 for 593 of 595 lots on King St, while SFHighrises (a listing site) says \"Year Built: 2003\". A permit closeout can follow occupancy, so 2003 is not ruled out and 2004 is not confirmed as the opening year; the timeline shows only the 2004-10 permit closeout, not a 2003 date.",
+   "Unit count of The Beacon: permits propose 279 (250 King St) and 307 (260 King St) dwelling units, 586 together; two listing sites give 595 residential units. The counts are not reconciled."
   ],
   "sources": [
    {

@@ -52,7 +52,7 @@
   "facts": [
    {
     "key": "developer",
-    "value": "Curtis Development and Bayview Senior Services (named as the Developers in the April 2026 Notice of Exemption). Development entities: Mission Bay 4 East Associates, L.P. for Phase I (OCII staff memo, September 2024; Resolution No. 02-2026); Mission Bay 4 East Associates 2, L.P. for Phase II (Resolution No. 04-2026)",
+    "value": "Curtis Development and Bayview Senior Services",
     "sources": [
      "src-ocii-memo-2024-09",
      "src-ocii-reso-02-2026",
@@ -76,7 +76,7 @@
    },
    {
     "key": "units",
-    "value": "398 total: Phase I 165 units (163 affordable + 2 manager units, ~160 ft, China Basin St frontage); Phase II 233 units (231 affordable + 2 manager units, ~225 ft, Mission Rock St frontage)",
+    "value": "398: 165 in Phase I (China Basin St, ~160 ft) and 233 in Phase II (Mission Rock St, ~225 ft); 2 manager units each",
     "sources": [
      "src-ocii-reso-02-2026",
      "src-noe-2026-0000027"
@@ -84,7 +84,7 @@
    },
    {
     "key": "affordable_units",
-    "value": "The April 2026 CEQA Notice of Exemption states that all residential units, excluding unrestricted manager units (4 of 398), \"will be dedicated to lower-income households (earning no more than 70% of Area Median Income\" as published by HUD and TCAC, and that recorded TCAC Regulatory Agreements are required before building permits are issued. The 2024 ENA staff memo gives 30-80% of AMI as defined by MOHCD, with a subset of units possibly up to 95% MOHCD AMI; the developer's own project site (mb4e.com) says 35% to approximately 95% of the area's median income. These use different AMI definitions and are not reconciled -- see open_questions.",
+    "value": "394 of 398, all but the manager units; sources differ on the income limits",
     "sources": [
      "src-noe-2026-0000027",
      "src-ocii-memo-2024-09",
@@ -100,7 +100,7 @@
    },
    {
     "key": "blklot",
-    "value": "8711029B (1290 3rd St), confirmed via DataSF's Parcels - Active and Retired dataset; Tentative Parcel Map No. 12743 (dated 2026-03-31, approved by SF Public Works notice of 2026-04-02) would divide it into separate Phase I and Phase II lots; the lot is not yet subdivided in DataSF, which still lists 8711029B as one active lot",
+    "value": "8711029B (1290 3rd St), one active lot; a 2026 tentative parcel map would split it into Phase I and Phase II lots",
     "sources": [
      "src-datasf-parcels-2026-09-28",
      "src-noe-2026-0000027"
@@ -669,6 +669,35 @@
     "sources": [
      {
       "title": "https://media.api.sf.gov/documents/2026-0000027_The_Mission_Bay_South_Block_4_East_Project.pdf ; https://sfocii.org/sites/default/files/2024-08/MEMO_4E%20ENA%20and%20Loan%20Agreement%20with%20Att.pdf ; https://sfocii.org/files/inline-files/2026002.pdf ; https://sfocii.org/files/inline-files/2026004.pdf"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8711029B",
+     "slug": "mb4e",
+     "name": "MB4E",
+     "permalink": "https://pierandpoint.org/parcels/mb4e/",
+     "api": "https://pierandpoint.org/api/v1/records/mb4e.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Long 'At a glance' values were cut to the fact itself (or 'Sources differ'); the disputes, quoted excerpts and hedging moved to this record's open questions, with every source still named. No change to the record's status or shape.",
+    "source": "Pier & Point's own text edit",
+    "sources": [
+     {
+      "title": "Pier & Point's own text edit"
      }
     ],
     "category": "correction",

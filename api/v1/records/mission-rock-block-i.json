@@ -43,7 +43,7 @@
    "display": "fill",
    "display_reason": null,
    "notes": {
-    "accuracy_caveat": "APPROXIMATE (planned, unbuilt block): no Assessor lot of its own yet. It sits on lot 8719A006, the ~37,400 m2 undivided remainder of Seawall Lot 337 that also holds Blocks C, D, E, H, I, J, Mission Rock Square, Channel Lane and the unbuilt internal streets. Traced 2026-09-17 from the adopted Design Controls' Figure 6.2 through a transform with 0.7 m RMS residual on 16 real lot corners, with vertices snapped to recorded lot lines where the figure draws the block against one: treat street-facing and lot-line edges as accurate to ~1 m and interior edges (against unbuilt streets and open spaces) to ~1-3 m. The block's shape is the Design Controls' block, not a building footprint; a building may sit back from these lines. How this shape was traced, including earlier versions, is logged in its data file in the public data repository (https://github.com/pierandpoint/record).",
+    "accuracy_caveat": "APPROXIMATE (planned, unbuilt block): no Assessor lot of its own yet. It sits on lot 8719A006, the ~37,400 m2 undivided remainder of Seawall Lot 337 that also holds Blocks C, D, E, H, I, J, Mission Rock Square, Channel Lane and the unbuilt internal streets. Traced 2026-09-17 from the adopted Design Controls' Figure 6.2 through a transform with 0.7 m RMS residual on 16 real lot corners, with vertices snapped to recorded lot lines where the figure draws the block against one: treat street-facing and lot-line edges as accurate to ~1 m and interior edges (against unbuilt streets and open spaces) to ~1-3 m. The block's shape is the Design Controls' block, not a building footprint; a building may sit back from these lines. How this shape was traced, including earlier versions, is logged in its mapping log.",
     "digitized_from": "Mission Rock Design Controls (Port of San Francisco, document dated April 24, 2018), Figure 6.2 - Maximum Height Plan (p.151); land use from Figure 1.1 - Land Use Plan (p.10); block corners snapped to the recorded DataSF Assessor lot lines of the 2020 Seawall Lot 337 subdivision where they fall within 3 m.",
     "why_no_real_parcel": "A real Assessor lot exists under this block -- 8719A006, the undivided remainder of Seawall Lot 337 recorded 2020-06-12 -- but it has not been subdivided per block, so mapping this record from that lot would paint the same ~9-acre parking-lot shape for every unbuilt block. Hand-derived geometry is used instead, with the lot's own lines wherever this block touches them.",
     "regulatory_context": "Flex block (Residential MU or Commercial MU), max height 90 ft commercial / 120 ft residential, same as Block H. Flanks Mission Rock Square's east edge across Bridgeview St (one street removed from the square rather than directly fronting it, like Blocks B, C and J: Figure 6.2 shows B and C across the Shared Public Way on the west and J and I across Bridgeview Street on the east)."
@@ -63,7 +63,7 @@
    },
    {
     "key": "max_height_ft",
-    "value": "90 if commercial, 120 if residential; base building maximum 60 ft, with a 40 ft maximum along the Terry A. Francois Boulevard side (Appendix p.196; Figure 6.2)",
+    "value": "90 if commercial, 120 if residential; base building maximum 60 ft, 40 ft maximum along Terry A. Francois Boulevard (Appendix p.196; Figure 6.2)",
     "sources": [
      "src-dc-2018"
     ]
@@ -106,7 +106,7 @@
    },
    {
     "key": "phase_status",
-    "value": "The Port's October 2023 report records that the developer sent the Phase 2 Submittal on December 28, 2022, that Phase 2 was 'not currently financially feasible' and that work on it was decelerated, and models a 'hypothetical Phase 2 start date of March 2026' for illustration. The Port's June 5, 2026 report asked the Commission to approve up to $10 million of pre-development funding to accelerate Phase 2 (Resolution 26-34), with construction possible 'as early as 2027'; the June 9, 2026 minutes record Item 11A (Resolution 26-34) as 'Passed unanimously'. Neither report lists which blocks Phase 2 includes.",
+    "value": "Phase 2 was decelerated in 2023; in June 2026 the Port approved up to $10 million to accelerate it. Block I's phase is not stated",
     "sources": [
      "src-port-2023-10",
      "src-port-2026-06-11a",
@@ -457,6 +457,35 @@
     "permalink": "https://pierandpoint.org/changes/#record"
    },
    {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Long 'At a glance' values were cut to the fact itself (or 'Sources differ'); the disputes, quoted excerpts and hedging moved to this record's open questions, with every source still named. No change to the record's status or shape.",
+    "source": "Pier & Point's own text edit",
+    "sources": [
+     {
+      "title": "Pier & Point's own text edit"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_rock_block_i",
+     "slug": "mission-rock-block-i",
+     "name": "Mission Rock Block I",
+     "permalink": "https://pierandpoint.org/parcels/mission-rock-block-i/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-rock-block-i.json"
+    },
+    "site": {
+     "slug": "mission-rock",
+     "name": "Mission Rock",
+     "short": "Mission Rock",
+     "url": "https://pierandpoint.org/sites/mission-rock/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
     "date": "2026-10-12",
     "kind": "correction",
     "kind_label": "Correction",
@@ -563,7 +592,8 @@
    "Images: no rendering specific to this block exists in the public-record documents read (the Design Controls give only diagrammatic envelopes), and the 2026 aerial serves as the 'before'/'now' view of the parking lot it sits in.",
    "No expected-completion date could be sourced for Block I. The Mission Rock Design Controls (208 pages, checked in full) contain no phasing schedule at all. The Draft EIR's illustrative phasing (April 2017) placed Block I in Area 4 (2020-2023), a different scheme from the DDA's four Phases, and no document read states which DDA Phase includes Block I. The DDA text itself (Board File 180092, adopted by the Board of Supervisors as Resolution 42-18 on February 13, 2018) was not read, so its Land Use Table and Schedule of Performance target dates are not cited here. Phase 2 was found 'not currently financially feasible' in October 2023, per this record's own milestones. No later Port memo, Design Controls revision or news source gives a revised target year for the Project's full buildout, so no basis (record, phase or project) supports an expected-completion date for this block.",
    "The Design Controls approval is numbered Resolution 18-04 in the Port's January 26, 2018 staff report (a request) and Resolution 18-05 in its September 20, 2019 memo; the adopted resolution itself was not read.",
-   "Which blocks Phase 2 covers is not stated in the Port's June 5, 2026 report either, so this block's phase is not sourced from it."
+   "Which blocks Phase 2 covers is not stated in the Port's June 5, 2026 report either, so this block's phase is not sourced from it.",
+   "Phase 2 status for Block I: the Port's October 2023 report records that the developer sent the Phase 2 Submittal on December 28, 2022, that Phase 2 was 'not currently financially feasible' and that work on it was decelerated, and models a 'hypothetical Phase 2 start date of March 2026' for illustration. The Port's June 5, 2026 report asked the Commission to approve up to $10 million of pre-development funding to accelerate Phase 2 (Resolution 26-34), with construction possible 'as early as 2027'; the June 9, 2026 minutes record Item 11A (Resolution 26-34) as 'Passed unanimously'. Neither report lists which blocks Phase 2 includes."
   ],
   "sources": [
    {
