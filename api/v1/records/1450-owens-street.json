@@ -30,11 +30,13 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "1450 Owens Street is a 7-story laboratory/office building (133,000 sq ft of laboratory, 49,999 sq ft of office and 2,600 sq ft of ground-floor retail, per SF YIMBY in February 2023; sources give different total areas, see open questions) at the Alexandria Center for Science and Technology's Mission Bay Megacampus, developed by Alexandria Real Estate Equities. Sources conflict on when it came online (see open questions); in March 2026 Gladstone Institutes announced a long-term lease of more than 105,000 sq ft as its anchor tenant, with about 20 labs opening there in early 2027.",
+  "summary": "1450 Owens Street is a 7-story laboratory/office building (133,000 sq ft of laboratory, 49,999 sq ft of office and 2,600 sq ft of ground-floor retail, per SF YIMBY in February 2023; sources give different total areas, see open questions) at the Alexandria Center for Science and Technology's Mission Bay Megacampus, developed by Alexandria Real Estate Equities. Sources conflict on when it came online (see open questions); in March 2026 Gladstone Institutes announced a long-term lease of more than 105,000 sq ft as its anchor tenant, with about 20 labs opening there in early 2027. DBI permit records show a permit to build out offices and R&D labs on levels 1 and 5-7 was issued on July 14, 2026, and a further alterations permit amending it was filed on September 17, 2026 (permit events, not an opening).",
   "summary_sources": [
    "src-sfyimby-2023",
    "src-gladstone-2026",
-   "src-bisnow-2026"
+   "src-bisnow-2026",
+   "src-datasf-permit-202512232555",
+   "src-datasf-permit-202608317416"
   ],
   "shape": {
    "kind": "parcel",
@@ -286,7 +288,7 @@
    },
    {
     "date": "2023-02",
-    "date_label": "~2023",
+    "date_label": "~Feb 2023",
     "status": "under_construction",
     "status_label": "Under construction",
     "text": "Construction had topped out on the seven-story structure by February 9, 2023, the date San Francisco YIMBY published its report; the article does not give the topping-out date, which could be earlier.",
@@ -593,6 +595,35 @@
     "sources": [
      {
       "title": "https://sfyimby.com/2023/02/construction-tops-out-for-1450-owens-street-in-mission-bay-san-francisco.html ; https://data.sf.gov/resource/i98e-djp9.json?permit_number=202012281760"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8709017",
+     "slug": "1450-owens-street",
+     "name": "1450 Owens Street",
+     "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
+     "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The summary for 1450 Owens Street now includes July 2026 office and lab build-out permit.",
+    "source": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=202608317416",
+    "sources": [
+     {
+      "title": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=202608317416"
      }
     ],
     "category": "correction",
@@ -1695,6 +1726,22 @@
     "publisher": "DBI (Building Permits)",
     "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201805290412",
     "accessed": "2026-09-26"
+   },
+   {
+    "id": "src-datasf-permit-202512232555",
+    "title": "Building Permits: permit 202512232555 (1450 Owens St, interior build-out of offices and R&D laboratories, levels 1 and 5-7), filed 2026-01-05, issued 2026-07-14",
+    "publisher": "DataSF / SF Department of Building Inspection",
+    "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=202512232555",
+    "date": "2026-07-16",
+    "accessed": "2026-10-13"
+   },
+   {
+    "id": "src-datasf-permit-202608317416",
+    "title": "Building Permits: permit 202608317416 (1450 Owens St, alterations amending permit 202512232555), filed 2026-09-17",
+    "publisher": "DataSF / SF Department of Building Inspection",
+    "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=202608317416",
+    "date": "2026-09-19",
+    "accessed": "2026-10-13"
    },
    {
     "id": null,

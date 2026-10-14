@@ -662,6 +662,111 @@ var ppSearch = (function () {
 // neither.
 (function () {
   function svgEl(tag) { return document.createElementNS('http://www.w3.org/2000/svg', tag); }
+  // Label legibility (UX-09). Every label holds a constant size on screen (counter-scaled by each map's
+  // updateLabels), which on a phone left site and record labels at 4-8 px, unreadable. A label is never
+  // drawn under MIN_LABEL_PX: it is set to that size, and then dropped (auditLabelBoxes) if at that size
+  // it would sit under the zoom buttons, on another label, or (for a site, water, street or landmark name)
+  // over a tracked record, after trying a few nearby spots. The home page's site-card maps are not
+  // zoomable but follow the same rule (initStaticLabels).
+  var MIN_LABEL_PX = 10;
+  function pxPerUnitOf(svg) { var m = svg.getScreenCTM && svg.getScreenCTM(); return m && m.a > 0 ? m.a : 0; }
+  function labelFontSize(entry, scale, k) {
+    var fs = entry.fontSize * scale;
+    if (k) fs = Math.max(fs, MIN_LABEL_PX / k);
+    return { size: fs.toFixed(2) + 'px', stroke: (entry.strokeWidth * fs / entry.fontSize).toFixed(2) + 'px', fs: fs };
+  }
+  function overlaps(a, b, pad) {
+    return a.left < b.right + pad && a.right > b.left - pad && a.top < b.bottom + pad && a.bottom > b.top - pad;
+  }
+  function attrEntry(el) {
+    return { el: el, fontSize: parseFloat(el.getAttribute('font-size')) || 9, strokeWidth: parseFloat(el.getAttribute('stroke-width')) || 3 };
+  }
+  // Water and street names: kept at their drawn size when it is already legible, raised to the minimum
+  // when it is not.
+  function floorEntries(svg) {
+    return {
+      water: Array.prototype.map.call(svg.querySelectorAll('.water-label'), attrEntry),
+      streets: Array.prototype.map.call(svg.querySelectorAll('.streets text'), attrEntry)
+    };
+  }
+  function applyFloor(entries, k) {
+    entries.forEach(function (entry) {
+      var f = labelFontSize(entry, 1, k);
+      entry.el.style.fontSize = f.size;
+      entry.el.style.strokeWidth = f.stroke;
+      if (entry.el.querySelector('textPath')) entry.el.setAttribute('dy', (f.fs * 0.34).toFixed(2));
+    });
+  }
+  function auditLabelBoxes(svg, frame, all, k) {
+    all.forEach(function (entry) { entry.el.style.visibility = ''; entry.el.style.transform = ''; });
+    if (!k) return;
+    var blockers = [];
+    if (frame) Array.prototype.forEach.call(frame.querySelectorAll('.zoom-controls'), function (c) { if (c.offsetParent !== null) blockers.push(c.getBoundingClientRect()); });
+    var recs = null;
+    function recRects() {
+      if (!recs) recs = Array.prototype.map.call(svg.querySelectorAll('.rec'), function (r) { return r.getBoundingClientRect(); })
+        .filter(function (r) { return r.width > 0 && r.height > 0; });
+      return recs;
+    }
+    var fr = svg.getBoundingClientRect();
+    var placedBoxes = [];
+    all.forEach(function (entry) {
+      var el = entry.el;
+      if (el.classList.contains('wide-only') && window.matchMedia && window.matchMedia('(max-width: 719px)').matches) return;
+      var own = !el.classList.contains('parcel-label');
+      var street = !!el.closest('.streets');
+      var r0 = el.getBoundingClientRect();
+      if (!r0.width || !r0.height) return;
+      // A street name rides its street: if it no longer fits along the line at the minimum size it goes.
+      if (street) {
+        var tp = el.querySelector('textPath'), path = tp && svg.querySelector(tp.getAttribute('href'));
+        if (path && path.getTotalLength && el.getComputedTextLength && el.getComputedTextLength() > path.getTotalLength() * 0.98) { el.style.visibility = 'hidden'; return; }
+      }
+      var avoidRecs = own ? recRects() : [];
+      function clash(r) {
+        return blockers.some(function (b) { return overlaps(r, b, 2); }) || placedBoxes.some(function (b) { return overlaps(r, b, street ? 6 : 1); }) ||
+          avoidRecs.some(function (b) { return overlaps(r, b, -1); });
+      }
+      var h = r0.height, w = r0.width;
+      var tries = [[0, 0]];
+      [0, 1, -1, 2, -2, 3, -3].forEach(function (dy) {
+        [0, -0.6, 0.6, -1.2, 1.2].forEach(function (dx) { if (dx || dy) tries.push([dx * w, dy * h]); });
+      });
+      if (!own || street) tries = tries.slice(0, 1);
+      var found = null;
+      for (var i = 0; i < tries.length && !found; i++) {
+        var r = { left: r0.left + tries[i][0], right: r0.right + tries[i][0], top: r0.top + tries[i][1], bottom: r0.bottom + tries[i][1] };
+        // Stays inside the map frame, too.
+        if (r.left < fr.left || r.right > fr.right || r.top < fr.top || r.bottom > fr.bottom) continue;
+        if (!clash(r)) found = { r: r, t: tries[i] };
+      }
+      if (!found) { el.style.visibility = 'hidden'; return; }
+      if (found.t[0] || found.t[1]) el.style.transform = 'translate(' + (found.t[0] / k).toFixed(2) + 'px,' + (found.t[1] / k).toFixed(2) + 'px)';
+      placedBoxes.push(found.r);
+    });
+  }
+  // Maps that cannot zoom (the home page's site cards) never run updateLabels: give their labels the
+  // same minimum size and audit once, and again if the card is resized.
+  function initStaticLabels() {
+    document.querySelectorAll('svg.pp-map:not(.pp-zoomable)').forEach(function (svg) {
+      var pins = Array.prototype.map.call(svg.querySelectorAll('.site-pin-label, .landmark-label'), attrEntry);
+      var fl = floorEntries(svg);
+      if (!pins.length && !fl.water.length && !fl.streets.length) return;
+      function run() {
+        var k = pxPerUnitOf(svg);
+        if (!k) return;
+        pins.forEach(function (entry) {
+          var f = labelFontSize(entry, 1, k);
+          entry.el.style.fontSize = f.size; entry.el.style.strokeWidth = f.stroke;
+        });
+        applyFloor(fl.water.concat(fl.streets), k);
+        auditLabelBoxes(svg, svg.closest('.map-frame'), pins.concat(fl.water, fl.streets), k);
+      }
+      run();
+      if (window.ResizeObserver) new ResizeObserver(run).observe(svg);
+    });
+  }
+  initStaticLabels();
   function initZoom() {
     document.querySelectorAll('.pp-zoomable').forEach(function (svg) {
       var frame = svg.closest('.map-frame');
@@ -733,9 +838,28 @@ var ppSearch = (function () {
         return { el: a, cx: c ? parseFloat(c.getAttribute('cx')) || 0 : 0, cy: c ? parseFloat(c.getAttribute('cy')) || 0 : 0 };
       });
 
-      function updateLabels() {
+      // Label legibility (UX-09): see legibleLabels() above initZoom. Street and water names are not
+      // counter-scaled (they grow with the map), only held to the minimum size; they are collected here.
+      var floorLabels = floorEntries(svg);
+      function auditLabels(k) {
+        var all = sitePins.concat(floorLabels.water, landmarkLabels, labels.filter(function (entry) { return entry.el.style.opacity === '1'; }), floorLabels.streets);
+        auditLabelBoxes(svg, frame, all, k);
+      }
+      function pxPerUnit() { return pxPerUnitOf(svg); }
+      function labelFont(entry, scale, k) { return labelFontSize(entry, scale, k); }
+
+      // The expensive part (reading every label's and record's box) runs once a gesture settles,
+      // not on each zoom or pan step (measured 1.1 ms -> 15.4 ms a step at 4x CPU throttle).
+      var auditTimer = 0;
+      function scheduleAudit(now) {
+        clearTimeout(auditTimer);
+        if (now) { auditLabels(pxPerUnit()); return; }
+        auditTimer = setTimeout(function () { auditLabels(pxPerUnit()); }, 150);
+      }
+      function updateLabels(now) {
         var show = view.w < LABEL_AT;
         var scale = view.w / base.w;
+        var k = pxPerUnit();
         if (show) {
           // A shape must read big enough on screen at the current zoom to earn a label at
           // all, then the biggest shapes claim it first and any label too close to one
@@ -764,23 +888,26 @@ var ppSearch = (function () {
         labels.forEach(function (entry) {
           var label = entry.el;
           if (!show) { label.style.opacity = ''; return; }
+          var f = labelFont(entry, scale, k);
           label.style.opacity = entry.big ? '1' : '0';
-          label.style.fontSize = (entry.fontSize * scale).toFixed(2) + 'px';
-          label.style.strokeWidth = (entry.strokeWidth * scale).toFixed(2) + 'px';
+          label.style.fontSize = f.size;
+          label.style.strokeWidth = f.stroke;
         });
-        sitePins.forEach(function (entry) {
-          entry.el.style.fontSize = (entry.fontSize * scale).toFixed(2) + 'px';
-          entry.el.style.strokeWidth = (entry.strokeWidth * scale).toFixed(2) + 'px';
-        });
-        landmarkLabels.forEach(function (entry) {
-          entry.el.style.fontSize = (entry.fontSize * scale).toFixed(2) + 'px';
-          entry.el.style.strokeWidth = (entry.strokeWidth * scale).toFixed(2) + 'px';
+        sitePins.concat(landmarkLabels).forEach(function (entry) {
+          var f = labelFont(entry, scale, k);
+          entry.el.style.fontSize = f.size;
+          entry.el.style.strokeWidth = f.stroke;
         });
         pinBadges.forEach(function (entry) {
           entry.el.setAttribute('transform', 'translate(' + entry.cx + ' ' + entry.cy + ') scale(' + scale.toFixed(4) +
             ') translate(' + (-entry.cx) + ' ' + (-entry.cy) + ')');
         });
+        applyFloor(floorLabels.water.concat(floorLabels.streets), k);
+        scheduleAudit(now === true);
       }
+      // The map can be laid out after this runs (the /near/ map starts hidden) or resized by a
+      // rotation: audit again whenever its size changes.
+      if (window.ResizeObserver) new ResizeObserver(function () { updateLabels(true); }).observe(svg);
 
       function apply() {
         svg.setAttribute('viewBox', view.x + ' ' + view.y + ' ' + view.w + ' ' + view.h);
@@ -831,6 +958,69 @@ var ppSearch = (function () {
         zoomAt(e.deltaY < 0 ? 1.15 : 1 / 1.15, p.x, p.y);
       }, { passive: false });
       svg.addEventListener('dblclick', function (e) { e.preventDefault(); reset(); });
+
+      // On a touch screen the first tap on a parcel shows a small card (name, status, "Open record") and
+      // only a second tap on the same parcel opens it (UX-11): the shapes are small, and a mis-tap used
+      // to leave the page with no hint which record it was. A mouse or the keyboard opens it at once.
+      (function () {
+        if (!frame) return;
+        var lastType = '', openHref = '', card = null, cardOpener = null;
+        function closeParcelCard(returnFocus) {
+          openHref = '';
+          var had = card && !card.hidden;
+          if (card) { card.classList.remove('tenant-card-open'); card.hidden = true; }
+          // Escape or the close button hands focus back to the parcel that opened the card; a tap
+          // elsewhere on the map does not steal it.
+          if (had && returnFocus && cardOpener && cardOpener.focus) cardOpener.focus({ preventScroll: true });
+          if (had) cardOpener = null;
+        }
+        function showParcelCard(a) {
+          if (!card) {
+            card = document.createElement('div');
+            card.className = 'tenant-card parcel-card';
+            card.setAttribute('role', 'dialog');
+            card.setAttribute('aria-label', 'Parcel details');
+            card.setAttribute('tabindex', '-1');
+            card.hidden = true;
+            card.innerHTML = '<button type="button" class="tenant-card-close" aria-label="Close">×</button>' +
+              '<div class="tenant-card-body"><p class="tenant-card-name"></p><p class="tenant-card-meta"></p>' +
+              '<p class="tenant-card-links"><a class="tenant-card-open">Open record →</a></p></div>';
+            card.querySelector('.tenant-card-close').addEventListener('click', function () { closeParcelCard(true); });
+            frame.appendChild(card);
+          }
+          var label = a.getAttribute('aria-label') || '';
+          var cut = label.lastIndexOf(', ');
+          var name = cut > 0 ? label.slice(0, cut) : label;
+          var status = cut > 0 ? label.slice(cut + 2) : '';
+          status = status.charAt(0).toUpperCase() + status.slice(1);
+          card.querySelector('.tenant-card-name').textContent = name;
+          card.querySelector('.tenant-card-meta').textContent = status;
+          card.querySelector('.tenant-card-open').setAttribute('href', a.getAttribute('href'));
+          openHref = a.getAttribute('href');
+          cardOpener = a;
+          card.setAttribute('aria-label', name + ', ' + status);
+          // Out of the way of the shape just tapped: along the top when it sits in the lower half.
+          var ar = a.getBoundingClientRect(), fr = frame.getBoundingClientRect();
+          card.classList.toggle('parcel-card-top', ar.top + ar.height / 2 > fr.top + fr.height / 2);
+          card.hidden = false;
+          requestAnimationFrame(function () { card.classList.add('tenant-card-open'); });
+          // Focus moves into the card, so a screen reader announces its name and status (the dialog's
+          // label) and its "Open record" link is the next stop.
+          card.focus({ preventScroll: true });
+        }
+        svg.addEventListener('pointerdown', function (e) {
+          lastType = e.pointerType || '';
+          if (!(e.target.closest && e.target.closest('a[href^="/parcels/"]'))) closeParcelCard(false);
+        }, true);
+        svg.addEventListener('click', function (e) {
+          var a = e.target.closest && e.target.closest('a[href^="/parcels/"]');
+          if (!a || e.detail === 0 || (lastType !== 'touch' && lastType !== 'pen')) return;
+          if (openHref === a.getAttribute('href')) return;
+          e.preventDefault();
+          showParcelCard(a);
+        }, true);
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeParcelCard(true); });
+      })();
 
       var pointers = {}, dragStart = null, pinchStart = null, dragging = false;
       // Below this many px of movement, a single pointer is still a click/tap, not a drag --
@@ -1419,9 +1609,11 @@ var PPPager = (function () {
   var ALL = GROUND.concat(UPKEEP);
   // What the server put in the page: one window of the on-the-ground or the upkeep list.
   var VIEW = list.getAttribute('data-view') === 'upkeep' ? UPKEEP : GROUND;
-  var totals = { all: parseInt(list.getAttribute('data-all-total'), 10) || 0, upkeep: parseInt(list.getAttribute('data-upkeep-total'), 10) || 0 };
+  var totals = { all: parseInt(list.getAttribute('data-all-total'), 10) || 0, upkeep: parseInt(list.getAttribute('data-upkeep-total'), 10) || 0,
+                 expected: parseInt(list.getAttribute('data-expected-total'), 10) || 0 };
   var resetBtn = form.querySelector('[data-filter-reset]');
   var upkeepBox = document.querySelector('[data-include-upkeep]');
+  var expectedBox = document.querySelector('[data-include-expected]');
   var categoryDropdown = form.querySelector('.filter-dropdown');
   var categorySummary = form.querySelector('[data-filter-summary]');
   var fields = {
@@ -1460,7 +1652,7 @@ var PPPager = (function () {
   function readParams(params, dflt) {
     var v = { site: params.get('site') || '', category: params.getAll('category'),
               from: params.get('from') || '', to: params.get('to') || '', record: params.get('record') || '',
-              datetype: params.get('datetype') === 'added' ? 'added' : 'event' };
+              datetype: params.get('datetype') === 'added' ? 'added' : 'event', expected: params.get('expected') === '1' };
     if (!v.category.length && !narrowed(v)) v.category = dflt.slice();
     return v;
   }
@@ -1470,17 +1662,21 @@ var PPPager = (function () {
     fields.from.value = v.from; fields.to.value = v.to;
     if (fields.record) fields.record.value = v.record;
     fields.datetype.forEach(function (r) { r.checked = r.value === v.datetype; });
+    if (expectedBox) expectedBox.querySelector('input').checked = !!v.expected;
   }
   function currentValues() {
     var checkedType = fields.datetype.filter(function (r) { return r.checked; })[0];
     return { site: fields.site.value, category: fields.category.filter(function (cb) { return cb.checked; }).map(function (cb) { return cb.value; }),
              from: fields.from.value, to: fields.to.value, record: fields.record ? fields.record.value : '',
-             datetype: checkedType ? checkedType.value : 'event' };
+             datetype: checkedType ? checkedType.value : 'event',
+             expected: !!(expectedBox && expectedBox.querySelector('input').checked) };
   }
-  function isDefault(v) { return !narrowed(v) && sameSet(v.category, GROUND); }
+  function isDefault(v) { return !narrowed(v) && !v.expected && sameSet(v.category, GROUND); }
   function matches(row, v, ignoreCategory) {
     if (v.site && row.s !== v.site) return false;
     if (v.record && row.r !== v.record) return false;
+    // Expected events (row.x) are forecasts, not changes: out unless asked for.
+    if (row.x && !v.expected) return false;
     if (!ignoreCategory && v.category.length && v.category.indexOf(row.c) === -1) return false;
     // "When it happened" (default) reads the event date (the added date when none was recorded);
     // "When we recorded it" reads the added date (docs/briefs/dates-and-closed.md).
@@ -1493,7 +1689,7 @@ var PPPager = (function () {
   var pager = PPPager.attach(list, {
     state: currentValues,
     match: matches,
-    inWindow: function (v) { return !narrowed(v) && sameSet(v.category, VIEW); },
+    inWindow: function (v) { return !narrowed(v) && !v.expected && sameSet(v.category, VIEW); },
     // Nothing in the address means on the ground, so a view of every category with no other filter is
     // spelled out; a view with a record, site or dates and no category means every category, so that
     // is left unspelled.
@@ -1507,6 +1703,7 @@ var PPPager = (function () {
       if (v.to) params.set('to', v.to);
       if (v.record) params.set('record', v.record);
       if (v.datetype !== 'event') params.set('datetype', v.datetype);
+      if (v.expected) params.set('expected', '1');
     },
     readUrl: function (params, first) { applyToFields(readParams(params, first ? VIEW : GROUND)); },
     countText: function (v, total, first, last) {
@@ -1524,6 +1721,10 @@ var PPPager = (function () {
         var n = data ? data.filter(function (row) { return UPKEEP.indexOf(row.c) !== -1 && matches(row, v, true); }).length : totals.upkeep;
         upkeepBox.querySelector('input').checked = has(v.category.length ? v.category : ALL, UPKEEP);
         upkeepBox.querySelector('[data-upkeep-count]').textContent = fmt(n);
+      }
+      if (expectedBox) {
+        expectedBox.hidden = false;
+        expectedBox.querySelector('[data-expected-count]').textContent = fmt(totals.expected);
       }
       if (resetBtn) resetBtn.hidden = isDefault(v);
       if (categorySummary) categorySummary.textContent = categoryLabel(v.category);
@@ -1544,9 +1745,10 @@ var PPPager = (function () {
     fields.category.forEach(function (cb) { cb.checked = eff.indexOf(cb.value) !== -1; });
     refilter();
   });
+  if (expectedBox) expectedBox.querySelector('input').addEventListener('change', refilter);
   if (resetBtn) {
     resetBtn.addEventListener('click', function () {
-      applyToFields({ site: '', category: GROUND.slice(), from: '', to: '', record: '', datetype: 'event' });
+      applyToFields({ site: '', category: GROUND.slice(), from: '', to: '', record: '', datetype: 'event', expected: false });
       refilter();
     });
   }
@@ -1777,6 +1979,9 @@ function initPagedBox(box, list) {
     if (details && !details.open) details.open = true;
     var box = el.closest('.box');
     if (box && typeof box._ppExpand === 'function') box._ppExpand();
+    // A glossary entry is a short block the browser has already scrolled to the top (site.css's
+    // scroll-margin-top keeps it clear of the edge): centring it left each letter jump mid-screen.
+    if (el.classList.contains('glossary-entry')) return;
     requestAnimationFrame(function () { el.scrollIntoView({ block: 'center' }); });
   }
   window.addEventListener('hashchange', reveal);
@@ -1837,6 +2042,10 @@ function initPagedBox(box, list) {
   var mapFrame = document.getElementById('near-map-frame');
   var svgs = mapFrame ? Array.prototype.slice.call(mapFrame.querySelectorAll('.pp-map')) : [];
   var statusEl = document.getElementById('near-status');
+  var nearestWrap = document.getElementById('near-nearest');
+  var nearestList = document.getElementById('near-nearest-list');
+  var showAllBtn = document.getElementById('near-show-all');
+  var listExpanded = false;
   var closeWrap = document.getElementById('near-close');
   var closeList = document.getElementById('near-close-list');
   var furtherWrap = document.getElementById('near-further-wrap');
@@ -1905,7 +2114,9 @@ function initPagedBox(box, list) {
   function recordItemHtml(r, distanceM) {
     // .near-item, not .record-list's plain "what"/"detail" grid (sitegen/static/site.css):
     // a thumbnail alongside the name breaks that grid at phone width.
-    var thumb = r.image ? '<img class="thumb" src="' + r.image + '" alt="" loading="lazy">' : '<span class="thumb thumb-empty" aria-hidden="true"></span>';
+    // No thumbnail at all when the record has no picture of its own (build.py drops a picture that is
+    // shared by several records, such as one site-plan figure): a grey square helps nobody (UX-12).
+    var thumb = r.image ? '<img class="thumb" src="' + r.image + '" alt="" loading="lazy">' : '';
     var bits = [fmtDistance(distanceM), r.statusLabel, r.use];
     if (r.expectedLabel) bits.push('Expected ' + r.expectedLabel);
     return '<li class="near-item">' + thumb + '<div class="near-item-body"><a href="/parcels/' + r.slug + '/">' + r.name + '</a>' +
@@ -1919,6 +2130,7 @@ function initPagedBox(box, list) {
   }
 
   function resetPanels() {
+    if (nearestWrap) nearestWrap.hidden = true;
     closeWrap.hidden = true;
     farLine.hidden = true;
     furtherWrap.hidden = true;
@@ -1943,7 +2155,17 @@ function initPagedBox(box, list) {
     farList.innerHTML = further.map(function (x) { return recordItemHtml(x.r, x.dist); }).join('');
     furtherCount.textContent = further.length;
     furtherWrap.hidden = further.length === 0;
-    closeWrap.hidden = false;
+    // The three nearest come first, above the map (UX-12); the full list waits behind "Show all".
+    // With nothing close by, the full list's own "Nothing tracked within..." line stays on show.
+    var top = close.slice(0, 3);
+    if (nearestWrap) {
+      nearestList.innerHTML = top.map(function (x) { return recordItemHtml(x.r, x.dist); }).join('');
+      nearestWrap.hidden = top.length === 0;
+      showAllBtn.hidden = listExpanded || ranked.length <= top.length;
+      closeWrap.hidden = top.length > 0 && !listExpanded;
+    } else {
+      closeWrap.hidden = false;
+    }
     farLine.hidden = true;
     // Someone who came here from the header search wants those results, location or not.
     finderSection.hidden = label ? true : !urlQuery;
@@ -1969,6 +2191,7 @@ function initPagedBox(box, list) {
   function showFar(lat, lon, label) {
     var ranked = withDistances(lat, lon);
     var nearest = ranked[0];
+    if (nearestWrap) nearestWrap.hidden = true;
     closeWrap.hidden = true;
     finderSection.hidden = false;
     mapSection.hidden = false;
@@ -2024,7 +2247,10 @@ function initPagedBox(box, list) {
     // plain fallback list over a blip the next reading will likely resolve on its own. Only fall
     // back when there's never been a fix to fall back *from*.
     if (lastFixLat === null) {
-      showStatus('Location unavailable' + (err && err.message ? ' (' + err.message + ')' : '') + ' — showing every tracked record instead.');
+      // Plain words, never the browser's own message (UX-12): code 1 is the visitor (or the browser)
+      // having said no; anything else is a position that could not be found.
+      showStatus(err && err.code === 1 ? 'Location is off for this site. Showing every record instead.'
+        : 'Your location could not be found. Showing every record instead.');
       resetPanels();
       mapSection.hidden = true;
       finderSection.hidden = false;
@@ -2056,6 +2282,15 @@ function initPagedBox(box, list) {
   }
 
   btn.addEventListener('click', locate);
+  if (showAllBtn) showAllBtn.addEventListener('click', function () {
+    listExpanded = true;
+    showAllBtn.hidden = true;
+    closeWrap.hidden = false;
+    closeWrap.scrollIntoView();
+    // The button hid itself, so focus would drop to the page: move it to the list it revealed.
+    var heading = document.getElementById('near-close-heading');
+    if (heading) { try { heading.focus({ preventScroll: true }); } catch (err) { heading.focus(); } }
+  });
 
   // Address and cross-street search (docs/briefs/address-search.md). A typed "1290 3rd St" or
   // "Illinois & 20th" becomes a point from the City's own address list or street corners
@@ -2200,9 +2435,9 @@ function initPagedBox(box, list) {
   }
 })();
 
-// The header search keeps what was typed after it submits, on /near/ (where #q= is read). The
-// form has no name on its field, so with JavaScript off it sends nothing; with it, the query goes
-// into the fragment (ppSearch above) and never to the server.
+// The header search keeps what was typed after it submits, on /near/ (where #q= is read). Its field
+// has no name, so with JavaScript off the form sends no query at all and /near/ opens at its full,
+// unfiltered list; with it, the query goes into the fragment (ppSearch above) and never to the server.
 (function () {
   var input = document.getElementById('header-search-q');
   if (!input) return;
@@ -2242,9 +2477,75 @@ function initPagedBox(box, list) {
     if (el[prop] === undefined) el[prop] = fold(el.getAttribute(attr));
     return el[prop];
   }
+  // Words, not one substring (UX-05): every word of the query has to be found, in any order, in the
+  // record's name, site, address or parcel; "Third" and "3rd", "Street" and "St" and the like are
+  // folded to one spelling on both sides. A name match ranks above an address or other-name match,
+  // and a name that is just the query (plus the fewest extra words) ranks first.
+  var ALIAS = { first: '1st', second: '2nd', third: '3rd', fourth: '4th', fifth: '5th', sixth: '6th', seventh: '7th',
+    eighth: '8th', ninth: '9th', tenth: '10th', street: 'st', avenue: 'ave', boulevard: 'blvd', road: 'rd', drive: 'dr',
+    court: 'ct', place: 'pl', lane: 'ln', highway: 'hwy', saint: 'st' };
+  function words(text) {
+    return fold(text).replace(/['’]/g, '').split(/[^a-z0-9]+/).filter(Boolean).map(function (w) { return ALIAS[w] || w; });
+  }
+  var FOLDED_WORDS = {};
+  Object.keys(ALIAS).forEach(function (k) { FOLDED_WORDS[ALIAS[k]] = true; });
+  // Numbers and the folded street words ("st", "ave") must be a whole word, so "12" does not find "120"
+  // and "st" does not find "station". Any other short word is a start-of-word match while it is typed:
+  // "bui", "pie" and "cha" find building, pier and chase. Longer words match anywhere in a word.
+  function wholeWordOnly(token) { return /\d/.test(token) || FOLDED_WORDS[token] === true; }
+  function tokenFits(token, w) {
+    if (wholeWordOnly(token)) return w === token;
+    return token.length <= 3 ? w.indexOf(token) === 0 : w.indexOf(token) !== -1;
+  }
+  function wordMatches(token, hay) { return hay.some(function (w) { return tokenFits(token, w); }); }
+  function allMatch(tokens, hay) { return tokens.every(function (t) { return wordMatches(t, hay); }); }
+  function phraseAt(tokens, hay, i) {
+    return tokens.every(function (t, k) { return hay[i + k] === t || (!wholeWordOnly(t) && hay[i + k].indexOf(t) === 0); });
+  }
+  // The longest run of consecutive query words that sits as a phrase in the name: "Pier 70 Building 12"
+  // against "Historic Building 12" is 2 ("building 12"); the rest ("pier 70") is found in the site.
+  function phraseCover(tokens, hay) {
+    for (var len = tokens.length; len >= 1; len--) {
+      for (var s0 = 0; s0 + len <= tokens.length; s0++) {
+        var run = tokens.slice(s0, s0 + len);
+        for (var i = 0; i + len <= hay.length; i++) if (phraseAt(run, hay, i)) return len;
+      }
+    }
+    return 0;
+  }
+  items.forEach(function (li, i) {
+    li.__order = i;
+    li.__name = words(li.getAttribute('data-name'));
+    li.__fields = li.__name.concat(words(li.getAttribute('data-site-name')), words(li.getAttribute('data-address')), words(li.getAttribute('data-id')));
+  });
+  // 0 = no match; otherwise lower is better.
+  function rank(li, tokens) {
+    if (!tokens.length) return 1;
+    if (!allMatch(tokens, li.__fields)) return 0;
+    var cover = phraseCover(tokens, li.__name);
+    // Fewest query words left over first, then the most specific (shortest) name: "Historic Building 12"
+    // before "Building 12 Plaza ..." for "Pier 70 Building 12".
+    var extra = Math.max(Math.min(li.__name.length - cover, 29), 0);
+    if (cover >= 2 || (cover === 1 && tokens.length === 1)) return 10 + (tokens.length - cover) * 30 + extra;
+    if (allMatch(tokens, li.__name)) return 400 + extra;
+    return 500;
+  }
+
   // The header search (sitegen/pages.py's HEADER_SEARCH) sends visitors here as /near/#q=...: read
-  // it on load, and again when it changes, so the finder opens already filtered. Name, parcel (the
-  // record id) and address all match.
+  // it on load, and again when it changes, so the finder opens already filtered, then scroll to the
+  // result count and move focus to it, so a screen reader hears "N records shown" (UX-04). Name,
+  // site, parcel (the record id) and address all match.
+  function landOnResults() {
+    var target = (emptyNote && !emptyNote.hidden) ? emptyNote : countEl;
+    if (!target) return;
+    requestAnimationFrame(function () {
+      try { target.focus({ preventScroll: true }); } catch (err) { target.focus(); }
+      // Scroll to the finder block, not the results: the search box with the query stays in view above
+      // the count and the first results.
+      var block = document.getElementById('near-finder') || target;
+      block.scrollIntoView();
+    });
+  }
   var initialQ = ppSearch.get();
   if (initialQ) search.value = initialQ;
   window.addEventListener('hashchange', function () {
@@ -2252,50 +2553,51 @@ function initPagedBox(box, list) {
     if (!q) return;
     search.value = q;
     apply();
-    var section = document.getElementById('near-finder');
-    if (section && !section.hidden) section.scrollIntoView();
+    landOnResults();
   });
 
   function apply() {
-    var q = fold((search.value || '').trim());
+    var tokens = words((search.value || '').trim());
+    var q = tokens.length > 0;
     var site = siteSel.value, status = statusSel.value;
     var shown = 0;
     items.forEach(function (li) {
-      var direct = !q || key(li, 'data-name').indexOf(q) !== -1 || key(li, 'data-address').indexOf(q) !== -1 ||
-        key(li, 'data-id').indexOf(q) !== -1;
+      var score = rank(li, tokens);
       // Otherwise one of its other names or tenants (docs/briefs/search-aliases.md): show the
       // first line that matched, so the visitor sees why this record is listed.
       var via = null;
       Array.prototype.forEach.call(li.querySelectorAll('.finder-match'), function (m) {
-        var hit = !direct && !via && key(m, 'data-match').indexOf(q) !== -1;
+        var hit = !score && !via && allMatch(tokens, words(m.getAttribute('data-match')));
         if (hit) via = m;
         m.hidden = !hit;
       });
+      li.__score = score || (via ? 600 : 0);
       var ok = (!site || li.getAttribute('data-site') === site) &&
-        (!status || li.getAttribute('data-status') === status) && (direct || via !== null);
+        (!status || li.getAttribute('data-status') === status) && li.__score > 0;
       li.hidden = !ok;
       if (ok) shown++;
     });
     if (emptyNote) emptyNote.hidden = shown !== 0;
     // Announced to a screen reader as the filters change (role=status, always in the page so the
     // change is announced); empty when nothing is filtered and the list is simply the whole list.
+    // With no match the empty-state line says it all, so this one is kept for screen readers only.
     if (countEl) {
       var filtered = !!(q || site || status);
       countEl.textContent = filtered ? (shown === 0 ? 'No records match.' : shown === 1 ? '1 record shown.' : shown + ' records shown.') : '';
+      countEl.classList.toggle('sr-only', shown === 0);
     }
     if (resetBtn) resetBtn.hidden = !(q || site || status || sortSel.value);
 
     var by = sortSel.value;
-    if (by) {
-      var sorted = items.slice().sort(function (a, b) {
-        if (by === 'status') return STATUS_ORDER.indexOf(a.getAttribute('data-status')) - STATUS_ORDER.indexOf(b.getAttribute('data-status'));
+    var sorted = items.slice().sort(function (a, b) {
+      if (by === 'status') return STATUS_ORDER.indexOf(a.getAttribute('data-status')) - STATUS_ORDER.indexOf(b.getAttribute('data-status')) || a.__order - b.__order;
+      if (by === 'expected') {
         var ea = a.getAttribute('data-expected') || '9999', eb = b.getAttribute('data-expected') || '9999';
-        return ea < eb ? -1 : ea > eb ? 1 : 0;
-      });
-      sorted.forEach(function (li) { list.appendChild(li); });
-    } else {
-      items.forEach(function (li) { list.appendChild(li); });
-    }
+        return (ea < eb ? -1 : ea > eb ? 1 : 0) || a.__order - b.__order;
+      }
+      return (q ? a.__score - b.__score : 0) || a.__order - b.__order;
+    });
+    sorted.forEach(function (li) { list.appendChild(li); });
   }
   [search, siteSel, statusSel, sortSel].forEach(function (el) {
     el.addEventListener('input', apply);
@@ -2306,6 +2608,7 @@ function initPagedBox(box, list) {
     apply();
   });
   apply();
+  if (initialQ) landOnResults();
 })();
 
 // Image lightbox for a record page's gallery (sitegen/build.py, docs/briefs/site-ux.md): the
