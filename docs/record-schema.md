@@ -552,6 +552,18 @@ actually a dated event" and skips it, so an unknown-timing row can never
 wrongly outrank a genuinely dated one for the one row (Changes and Costs on
 a record or site page) that stays visible while its box is collapsed.
 
+## `data/changelog_batches.csv` and `data/changelog_batch_rows.csv`
+
+Audit batches (`docs/briefs/changelog-batches.md`, `sitegen/batches.py`). A batch is a run of wording or coverage
+rows of `data/changelog.csv` that the Changes pages and the corrections feed show as one summary row linking to
+`/changes/batches/<batch_id>/`, where every row is listed in full. `changelog.csv` itself is never edited.
+`changelog_batches.csv` columns: `batch_id`, `date`, `category` (`correction` or `coverage` only), `kind`, `source`
+(optional exact match), `pattern` (a regex over each member's `summary`), `rule` (public, says why the rows are
+wording-only), `summary` (public; `{n}` becomes the member count). `changelog_batch_rows.csv` columns: `batch_id`,
+`row_key` (a hash of the row's own fields, `batches.row_key()`). A row that changes a status, date, name, number,
+location or opening is never listed. `src/check_changelog_batches.py` fails when a listed row is missing, sits in
+two batches, or does not satisfy its batch's date, category, kind, source and pattern.
+
 ## `data/retail_confirmed.csv`
 
 Confirmed ground-floor tenants: one row per tenant per record. Human-confirmed

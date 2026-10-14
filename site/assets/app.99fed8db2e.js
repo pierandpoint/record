@@ -1673,6 +1673,10 @@ var PPPager = (function () {
   }
   function isDefault(v) { return !narrowed(v) && !v.expected && sameSet(v.category, GROUND); }
   function matches(row, v, ignoreCategory) {
+    // An audit batch (sitegen/batches.py): one summary row (row.b) unless a site or record is chosen, then its member
+    // rows (row.m), which are in this file only for that.
+    if (row.b && (v.site || v.record)) return false;
+    if (row.m && !(v.site || v.record)) return false;
     if (v.site && row.s !== v.site) return false;
     if (v.record && row.r !== v.record) return false;
     // Expected events (row.x) are forecasts, not changes: out unless asked for.
