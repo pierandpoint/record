@@ -1,0 +1,640 @@
+{
+ "api_version": "0",
+ "generated": "2026-10-14",
+ "base_url": "https://pierandpoint.org",
+ "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
+ "docs": "https://pierandpoint.org/method/",
+ "terms": "https://pierandpoint.org/terms/",
+ "record": {
+  "id": "mission_bay_p11a_median",
+  "slug": "mission-bay-open-space-parcel-p11a",
+  "name": "Mission Bay Open Space Parcel P11A",
+  "permalink": "https://pierandpoint.org/parcels/mission-bay-open-space-parcel-p11a/",
+  "api": "https://pierandpoint.org/api/v1/records/mission-bay-open-space-parcel-p11a.json",
+  "names": [
+   "Mission Bay Open Space Parcel P11A",
+   "P11A -- traffic median (half-circle island near Mission Bay Circle)",
+   "P11A"
+  ],
+  "site": {
+   "slug": "mission-bay",
+   "name": "Mission Bay",
+   "short": "Mission Bay",
+   "url": "https://pierandpoint.org/sites/mission-bay/"
+  },
+  "status": "complete",
+  "status_label": "Complete",
+  "use": "park",
+  "relation": "tracked",
+  "adjacent_to": null,
+  "distance_note": null,
+  "how_to_comment": [],
+  "positions": [],
+  "address": null,
+  "summary": "A grass, semicircular traffic median immediately east of the 'Mission Bay Circle' roundabout, west of the P12 soccer field (labeled 'SFF Soccer + Fitness Court' in OCII's Nov 2024 CAC update); per Pier & Point's own satellite trace (no outside source describes the median), an already-landscaped median island, hand-traced from satellite imagery and fit to an idealized semicircle. OCII's December 2019 Land Use Map labels the half-circle 'P11A'. OCII's own September 2023 Mission Bay Parks Open Space transition presentation lists 'P11/11A' together among the parcels SF Recreation and Parks will manage (not among the 'when built' parcels); that presentation is a plan and does not say whether the median was built. The City's September 22, 2023 draft Mission Bay parks agreement lists P11A among the parks 'completed and accepted' and managed by OCII under its ground lease, and says P10, P11 and P11A 'are not being accepted by RPD, and will remain public rights of way under the jurisdiction of PW' (Public Works); the draft says the master developer (Catellus and its successors) was obliged to develop the Mission Bay Parks, but not who built this parcel, and no signed text of the agreement was found.",
+  "summary_sources": [
+   "src-geom-p11a",
+   "src-ocii-transition-2023",
+   "src-ocii-openspace-2024",
+   "src-ocii-landusemap-2019",
+   "src-parks-agreement-draft-2023",
+   "src-port-memo-2023-10-parks",
+   "src-bos-res-574-23"
+  ],
+  "shape": {
+   "kind": "approximate",
+   "parcel": null,
+   "display": "fill",
+   "display_reason": null,
+   "notes": {
+    "accuracy_caveat": "APPROXIMATE -- satellite trace by Pier & Point, idealized to a fitted semicircle rather than left as a raw hand-traced outline. Not a surveyed footprint or GIS file from the project team. Deliberately not trimmed to the street line: this is a real traffic median, inherently adjacent to/overlapping the street right-of-way in DataSF's curb data at its crosswalk corner, so trimming it back to the street would cut a real, visible piece of the median rather than correct a positioning error. An accepted exception. Replaces an earlier proximity guess of about 33 m with no source behind it; the outline was then drawn by hand on a satellite image.",
+    "digitized_from": "Hand-traced from satellite imagery: an outline drawn by hand on a satellite screenshot was transferred onto the map by matching features between the screenshot and the imagery (rather than re-estimated by eye), then fit to an idealized semicircle following Pier & Point's description of the real shape."
+   }
+  },
+  "centroid": {
+   "lon": -122.394796,
+   "lat": 37.770618
+  },
+  "facts": [],
+  "costs": [],
+  "milestones": [
+   {
+    "date": "2023-09",
+    "date_label": "~Sep 2023",
+    "status": null,
+    "status_label": null,
+    "text": "Listed as 'P11/11A' among the parcels RPD \"will manage\" (not among the 'when built' parcels) in OCII's Mission Bay Parks Open Space transition presentation, with the open space to transfer \"by the end of December 2023\" (an expected date). This is a plan; it does not say the median was complete or when it was built",
+    "expected": false,
+    "approximate": true,
+    "sources": [
+     {
+      "id": "src-ocii-transition-2023",
+      "title": "Mission Bay Parks Open Space transition presentation (September 2023; file name 'Item 2 Mission Bay Open Space Transition.pdf')",
+      "publisher": "Office of Community Investment and Infrastructure (sfocii.org)",
+      "url": "https://sfocii.org/sites/default/files/inline-files/Item%202%20Mission%20Bay%20Open%20Space%20Transition.pdf",
+      "date": "2023-09",
+      "accessed": "2026-09-21",
+      "overview": true
+     }
+    ],
+    "source": "Office of Community Investment and Infrastructure (sfocii.org), 2023-09",
+    "origin": "record",
+    "category": "retail",
+    "category_label": "Retail",
+    "record": {
+     "id": "mission_bay_p11a_median",
+     "slug": "mission-bay-open-space-parcel-p11a",
+     "name": "Mission Bay Open Space Parcel P11A",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-open-space-parcel-p11a/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-open-space-parcel-p11a.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
+   }
+  ],
+  "changes": [
+   {
+    "date": "2026-10-14",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The name now says what the place is: The City's draft parks agreement calls P10, P11 and P11A \"Open Space Parcels\", and the official parcel code is kept in the name. No source read gives the parcel a proper name of its own. Shape, status and use are unchanged; the old page address now redirects to the new one, and the old name still finds the record in search.",
+    "source": "City draft Agreement for Maintenance and Operations of Mission Bay Parks and Open Spaces, 22 Sep 2023 draft (https://sfrecpark.org/DocumentCenter/View/21383/Item-5f-Attachment-A-Mission-Bay-Parks-Agreement-DRAFT-101923), section 5(a), page 6: \"P10, P11 and P11A are Open Space Parcels that are and will remain within PW jurisdiction as public right of ways\"",
+    "sources": [
+     {
+      "title": "City draft Agreement for Maintenance and Operations of Mission Bay Parks and Open Spaces, 22 Sep 2023 draft (https://sfrecpark.org/DocumentCenter/View/21383/Item-5f-Attachment-A-Mission-Bay-Parks-Agreement-DRAFT-101923), section 5(a), page 6: \"P10, P11 and P11A are Open Space Parcels that are and will remain within PW jurisdiction as public right of ways\""
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_p11a_median",
+     "slug": "mission-bay-open-space-parcel-p11a",
+     "name": "Mission Bay Open Space Parcel P11A",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-open-space-parcel-p11a/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-open-space-parcel-p11a.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "OCII's September 2023 presentation lists P11/11A among the parcels Recreation and Parks \"will manage\", with transfer planned by the end of December 2023; it does not say the median was complete. No source read gives its completion date.",
+    "source": "https://sfocii.org/sites/default/files/inline-files/Item%202%20Mission%20Bay%20Open%20Space%20Transition.pdf ; https://sfbos.org/sites/default/files/r0574-23.pdf ; https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
+    "sources": [
+     {
+      "title": "https://sfocii.org/sites/default/files/inline-files/Item%202%20Mission%20Bay%20Open%20Space%20Transition.pdf ; https://sfbos.org/sites/default/files/r0574-23.pdf ; https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_p11a_median",
+     "slug": "mission-bay-open-space-parcel-p11a",
+     "name": "Mission Bay Open Space Parcel P11A",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-open-space-parcel-p11a/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-open-space-parcel-p11a.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Notes on pages that could not be read are now plain statements, and mapping-process detail is left to the shape's own notes. No change to the record's status or shape.",
+    "source": "Pier & Point's own text edit",
+    "sources": [
+     {
+      "title": "Pier & Point's own text edit"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_p11a_median",
+     "slug": "mission-bay-open-space-parcel-p11a",
+     "name": "Mission Bay Open Space Parcel P11A",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-open-space-parcel-p11a/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-open-space-parcel-p11a.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-13",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "P11A now says what the 2023 draft parks agreement states about who holds it: Public Works, not Rec and Park.",
+    "source": "City draft Agreement for Maintenance and Operations of Mission Bay Parks and Open Spaces, 22 Sep 2023 draft (https://sfrecpark.org/DocumentCenter/View/21383/Item-5f-Attachment-A-Mission-Bay-Parks-Agreement-DRAFT-101923)",
+    "sources": [
+     {
+      "title": "City draft Agreement for Maintenance and Operations of Mission Bay Parks and Open Spaces, 22 Sep 2023 draft (https://sfrecpark.org/DocumentCenter/View/21383/Item-5f-Attachment-A-Mission-Bay-Parks-Agreement-DRAFT-101923)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_p11a_median",
+     "slug": "mission-bay-open-space-parcel-p11a",
+     "name": "Mission Bay Open Space Parcel P11A",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-open-space-parcel-p11a/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-open-space-parcel-p11a.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-10-12",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The P11A page now cites a September 2023 draft Mission Bay parks maintenance agreement that lists P11A among the parks completed and accepted (a draft, so it may differ from the signed text, and it gives no opening date), and says its description of the island (landscaped with grass) is Pier & Point's own reading of satellite imagery.",
+    "source": "Draft Agreement for Maintenance and Operations of Mission Bay Parks and Open Spaces, 22 Sep 2023 draft (sfrecpark.org/DocumentCenter/View/21383/Item-5f-Attachment-A-Mission-Bay-Parks-Agreement-DRAFT-101923); OCII Mission Bay Long-Range Property Management Plan, Dec 2015 (sfocii.org/sites/default/files/inline-files/02%20Mission%20Bay.pdf)",
+    "sources": [
+     {
+      "title": "Draft Agreement for Maintenance and Operations of Mission Bay Parks and Open Spaces, 22 Sep 2023 draft (sfrecpark.org/DocumentCenter/View/21383/Item-5f-Attachment-A-Mission-Bay-Parks-Agreement-DRAFT-101923); OCII Mission Bay Long-Range Property Management Plan, Dec 2015 (sfocii.org/sites/default/files/inline-files/02%20Mission%20Bay.pdf)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_p11a_median",
+     "slug": "mission-bay-open-space-parcel-p11a",
+     "name": "Mission Bay Open Space Parcel P11A",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-open-space-parcel-p11a/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-open-space-parcel-p11a.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   },
+   {
+    "date": "2026-09-29",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The P11A median's map shape cited no sources. It now lists the OCII Dec 2019 Land Use Map (P11A labeled just east of the circle) and the OCII Sept 2023 transition presentation ('P11/11A' among parcels Rec & Park will manage). The summary and map notes said the median sits west of the Parklab Gardens soccer field; OCII's Nov 2024 update puts the SFF soccer field on P12 and Parklab Gardens on P15, so the wording now says the P12 soccer field. 'Already managed' became 'will manage' to match the deck, the P-number note now cites the 2019 map and 2023 deck instead of saying it rested only on our own identification, and the citation to Pier & Point's own mapping notes is labelled as such. The Wikimedia aerial credit names only the Commons username Firstcultural, and the OCII deck's title no longer says 'CAC Item 2' (that came from its file name).",
+    "source": "OCII Mission Bay Land Use Map, 2019-12 (https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf); OCII, Mission Bay Parks Open Space transition presentation, 2023-09 (https://sfocii.org/sites/default/files/inline-files/Item%202%20Mission%20Bay%20Open%20Space%20Transition.pdf); OCII, Remaining Mission Bay Open Space Parcels Update, Mission Bay CAC, 2024-11-14 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf)",
+    "sources": [
+     {
+      "title": "OCII Mission Bay Land Use Map, 2019-12 (https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf); OCII, Mission Bay Parks Open Space transition presentation, 2023-09 (https://sfocii.org/sites/default/files/inline-files/Item%202%20Mission%20Bay%20Open%20Space%20Transition.pdf); OCII, Remaining Mission Bay Open Space Parcels Update, Mission Bay CAC, 2024-11-14 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_p11a_median",
+     "slug": "mission-bay-open-space-parcel-p11a",
+     "name": "Mission Bay Open Space Parcel P11A",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-open-space-parcel-p11a/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-open-space-parcel-p11a.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record"
+   }
+  ],
+  "images": [
+   {
+    "path": "data/manual/images/mission_bay/naip_2024_site.jpg",
+    "kind": "now",
+    "scope": "site",
+    "taken": "2024-05-20",
+    "credit": "U.S. Department of Agriculture, Farm Production and Conservation Business Center (Geospatial Enterprise Operations), NAIP aerial imagery (2024 flight), via USDA's 'latest NAIP' image service",
+    "license": "public-domain",
+    "source_url": "https://apps.geo.fpac.usda.gov/geo-imagery/rest/services/naip/conus_naip/ImageServer/exportImage?bbox=-122.4073,37.7634,-122.3793,37.7794&bboxSR=4326&imageSR=4326&size=1600,1151&format=jpgpng&f=image",
+    "license_evidence": "https://catalog.data.gov/dataset/national-agriculture-imagery-program-naip-imagery",
+    "license_note": "USDA's data.gov catalog record for NAIP imagery sets the license to the U.S. government public-domain label (usa.gov/publicdomain/label/1.0); the USDA FSA policies page says public-domain information may be freely distributed with credit requested ('U.S. Department of Agriculture, Farm Service Agency'). Read 2026-09-22.",
+    "caption": "USDA NAIP aerial orthophoto (2024 flight), cropped to the Mission Bay project area and its immediate surroundings",
+    "aerial": true,
+    "focus": [
+     0.4,
+     0.05,
+     0.45,
+     0.75
+    ],
+    "appeal": 3,
+    "appeal_note": "A straight-down orthophoto rather than an oblique aerial, but Oracle Park and Chase Center are both clearly recognizable landmarks in the frame, giving anyone who knows the city an immediate fix on the neighborhood.",
+    "url": "https://pierandpoint.org/assets/img/naip_2024_site.jpg"
+   },
+   {
+    "path": "data/manual/images/mission_bay/wikimedia_mission_bay_aerial_2024.jpg",
+    "kind": "now",
+    "scope": "site",
+    "taken": "2024-02-10",
+    "credit": "Firstcultural, via Wikimedia Commons; CC0; downscaled to 1600 px",
+    "license": "cc0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
+    "license_evidence": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_San_Francisco%27s_Mission_Bay,_ballpark,_and_Caltrain_area.jpg",
+    "license_note": "Wikimedia Commons' license box on the file page confirms CC0 (public domain dedication) by Firstcultural. Read 2026-09-23.",
+    "caption": "Aerial view of Mission Bay, Oracle Park and the Caltrain/King Street area",
+    "aerial": true,
+    "focus": [
+     0.35,
+     0.45,
+     0.3,
+     0.25
+    ],
+    "appeal": 5,
+    "appeal_note": "Oracle Park's diamond and Chase Center's dome (with its own logo) are both clearly identifiable landmarks in one colorful frame -- reads far better at card size than the flatter government orthophoto.",
+    "url": "https://pierandpoint.org/assets/img/wikimedia_mission_bay_aerial_2024.jpg"
+   }
+  ],
+  "open_questions": [
+   "No source read gives this median island's own construction date or says it was built. OCII's September 2023 presentation lists it with P11 as parcels RPD \"will manage\" (transfer planned \"by the end of December 2023\"; the Board of Supervisors adopted Resolution 574-23 on December 5, 2023 authorizing termination of OCII's ground lease), which is a plan; the draft parks agreement's statement of who holds it is in the next question.",
+   "Who built and who holds it: the City's September 22, 2023 draft Mission Bay parks agreement (recital D) lists P10, P11 and P11A among the parks 'completed and accepted' and managed by OCII under its ground lease, and section 5(j) says they 'are not being accepted by RPD, and will remain public rights of way under the jurisdiction of PW' (Public Works), with any CFD funds used by RPD to maintain them on PW's behalf or passed to PW. Recital C says the master developer (Catellus and its successors) was obliged to develop the Mission Bay parks; no source read says who built these three parcels. The Port's October 6, 2023 memo says the Board would need to vacate the public right-of-way status on the park parcels, and the Board's December 5, 2023 resolution (File 231132) approved the agreement and said Port and RPD expected to seek the jurisdictional transfer by a separate ordinance in early 2024. No signed agreement, transfer ordinance or later source on these three parcels was found, so Public Works is the holder per the draft only.",
+   "The 'P11A' label appears on OCII's December 2019 Land Use Map, but no source read gives the island's name, operator or completion date."
+  ],
+  "sources": [
+   {
+    "id": "src-ocii-landusemap-2019",
+    "title": "Mission Bay Land Use Map",
+    "publisher": "Office of Community Investment and Infrastructure (OCII)",
+    "date": "2019-12",
+    "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
+    "accessed": "2026-10-12"
+   },
+   {
+    "id": "src-bos-res-574-23",
+    "title": "Resolution No. 574-23 (File 231132): Agreement - Mission Bay Parks and Open Spaces - Maintenance and Operations and Termination of Ground Lease",
+    "publisher": "San Francisco Board of Supervisors",
+    "date": "2023-12-05",
+    "url": "https://sfbos.org/sites/default/files/r0574-23.pdf",
+    "accessed": "2026-10-12"
+   },
+   {
+    "id": "src-geom-p11a",
+    "title": "Mapping log for this record's shape (Pier & Point's own mapping narrative, not an outside source)",
+    "publisher": "Pier & Point public data repository",
+    "accessed": "2026-09-21"
+   },
+   {
+    "id": "src-ocii-transition-2023",
+    "title": "Mission Bay Parks Open Space transition presentation (September 2023; file name 'Item 2 Mission Bay Open Space Transition.pdf')",
+    "publisher": "Office of Community Investment and Infrastructure (sfocii.org)",
+    "url": "https://sfocii.org/sites/default/files/inline-files/Item%202%20Mission%20Bay%20Open%20Space%20Transition.pdf",
+    "date": "2023-09",
+    "accessed": "2026-09-21",
+    "overview": true
+   },
+   {
+    "id": "src-ocii-openspace-2024",
+    "title": "Mission Bay Commons Parks (P12, P13, P15); Active Recreation Parks (P7, P9) -- Mission Bay Future Parks (CAC Update, November 14, 2024)",
+    "publisher": "Office of Community Investment and Infrastructure (sfocii.org)",
+    "date": "2024-11-14",
+    "url": "https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf",
+    "accessed": "2026-09-29"
+   },
+   {
+    "id": "src-parks-agreement-draft-2023",
+    "title": "Agreement for Maintenance and Operations of Mission Bay Parks and Open Spaces, 22 Sep 2023 draft (recitals C and D; sections 5(a) and 5(j))",
+    "publisher": "SF Recreation and Parks Department (Recreation and Park Commission packet, Item 5f, Attachment A)",
+    "date": "2023-09-22",
+    "url": "https://sfrecpark.org/DocumentCenter/View/21383/Item-5f-Attachment-A-Mission-Bay-Parks-Agreement-DRAFT-101923",
+    "accessed": "2026-10-13"
+   },
+   {
+    "id": "src-port-memo-2023-10-parks",
+    "title": "Port Commission memo, Mission Bay Parks agreement with OCII and Recreation and Parks (calendar item 7C)",
+    "publisher": "Port of San Francisco",
+    "date": "2023-10-06",
+    "url": "https://www.sfport.com/media/9124/download",
+    "accessed": "2026-10-13"
+   }
+  ],
+  "notes": "Traffic median island, landscaped with grass, immediately adjacent to a thin connector strip (P11) leading to the roundabout. The 'landscaped with grass' description is Pier & Point's own reading of satellite imagery; no document read describes it. A September 2023 draft Mission Bay parks maintenance agreement lists P11A among the parks 'completed and accepted' (a draft, so not necessarily the signed text; no source read gives an opening date) and says P10, P11 and P11A are not being accepted by Recreation and Parks and will remain public rights of way under Public Works.",
+  "has_record_file": true,
+  "last_verified": "2026-09-21",
+  "tenants": [],
+  "geometry": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.39466462958124,
+      37.77078771107064
+     ],
+     [
+      -122.39467618322739,
+      37.7707873630155
+     ],
+     [
+      -122.39468769706393,
+      37.770786529387216
+     ],
+     [
+      -122.39469913845367,
+      37.77078521254877
+     ],
+     [
+      -122.39471047496471,
+      37.770783416232845
+     ],
+     [
+      -122.39472167446253,
+      37.770781145531295
+     ],
+     [
+      -122.39473270520094,
+      37.77077840688058
+     ],
+     [
+      -122.39474353591204,
+      37.770775208043695
+     ],
+     [
+      -122.39475413589507,
+      37.77077155808801
+     ],
+     [
+      -122.39476447510322,
+      37.77076746735965
+     ],
+     [
+      -122.39477452422886,
+      37.77076294745417
+     ],
+     [
+      -122.39478425478663,
+      37.770758011183645
+     ],
+     [
+      -122.39479363919429,
+      37.7707526725404
+     ],
+     [
+      -122.39480265085065,
+      37.770746946657304
+     ],
+     [
+      -122.39481126421119,
+      37.770740849764906
+     ],
+     [
+      -122.39481945486041,
+      37.77073439914542
+     ],
+     [
+      -122.39482719958104,
+      37.77072761308376
+     ],
+     [
+      -122.39483447641985,
+      37.77072051081563
+     ],
+     [
+      -122.39484126474979,
+      37.77071311247312
+     ],
+     [
+      -122.39484754532864,
+      37.77070543902753
+     ],
+     [
+      -122.39485330035342,
+      37.77069751223001
+     ],
+     [
+      -122.39485851351085,
+      37.770689354549845
+     ],
+     [
+      -122.39486317002371,
+      37.7706809891108
+     ],
+     [
+      -122.39486725669259,
+      37.770672439625535
+     ],
+     [
+      -122.39487076193339,
+      37.77066373032845
+     ],
+     [
+      -122.39487367581013,
+      37.77065488590693
+     ],
+     [
+      -122.3948759900631,
+      37.77064593143143
+     ],
+     [
+      -122.39487769813228,
+      37.77063689228432
+     ],
+     [
+      -122.394878795176,
+      37.77062779408804
+     ],
+     [
+      -122.39487927808455,
+      37.77061866263239
+     ],
+     [
+      -122.39487914548909,
+      37.77060952380145
+     ],
+     [
+      -122.39487839776542,
+      37.770600403500254
+     ],
+     [
+      -122.3948770370331,
+      37.770591327581286
+     ],
+     [
+      -122.39487506714929,
+      37.77058232177126
+     ],
+     [
+      -122.39487249369776,
+      37.77057341159812
+     ],
+     [
+      -122.39486932397332,
+      37.77056462231881
+     ],
+     [
+      -122.39486556696086,
+      37.7705559788475
+     ],
+     [
+      -122.39486123331002,
+      37.77054750568513
+     ],
+     [
+      -122.39485633530508,
+      37.770539226849834
+     ],
+     [
+      -122.39485088682984,
+      37.770531165808976
+     ],
+     [
+      -122.39484490332873,
+      37.7705233454125
+     ],
+     [
+      -122.39483840176257,
+      37.77051578782826
+     ],
+     [
+      -122.39483140056075,
+      37.77050851447913
+     ],
+     [
+      -122.39482391956895,
+      37.7705015459823
+     ],
+     [
+      -122.39481597999284,
+      37.77049490209081
+     ],
+     [
+      -122.39480760433803,
+      37.77048860163759
+     ],
+     [
+      -122.39479881634624,
+      37.770482662482046
+     ],
+     [
+      -122.39478964092795,
+      37.77047710145945
+     ],
+     [
+      -122.39478010409188,
+      37.77047193433322
+     ],
+     [
+      -122.39477023287124,
+      37.7704671757502
+     ],
+     [
+      -122.39476005524709,
+      37.77046283919922
+     ],
+     [
+      -122.39474960006902,
+      37.77045893697275
+     ],
+     [
+      -122.39473889697332,
+      37.77045548013217
+     ],
+     [
+      -122.39472797629911,
+      37.770452478476315
+     ],
+     [
+      -122.39471686900224,
+      37.770449940513764
+     ],
+     [
+      -122.39470560656753,
+      37.7704478734387
+     ],
+     [
+      -122.39469422091955,
+      37.770446283110516
+     ],
+     [
+      -122.39468274433221,
+      37.77044517403719
+     ],
+     [
+      -122.39467120933713,
+      37.77044454936254
+     ],
+     [
+      -122.3946596486315,
+      37.77044441085729
+     ],
+     [
+      -122.39466462958124,
+      37.77078771107064
+     ]
+    ]
+   ]
+  }
+ }
+}
