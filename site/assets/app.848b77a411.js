@@ -1636,6 +1636,18 @@ var PPPager = (function () {
   var expectedBox = document.querySelector('[data-include-expected]');
   var categoryDropdown = form.querySelector('.filter-dropdown');
   var categorySummary = form.querySelector('[data-filter-summary]');
+  // On a phone the form sits behind one control with a line saying what is applied, so the first thing
+  // on the page is the count and the rows (PH-04); wider screens keep the form open as it always was.
+  var panel = document.querySelector('[data-filter-panel]');
+  var panelSummary = panel ? panel.querySelector('[data-filter-panel-summary]') : null;
+  var phoneMq = window.matchMedia ? window.matchMedia('(max-width: 719px)') : { matches: false };
+  function recordName(id) {
+    try { return JSON.parse(fields.record.getAttribute('data-names') || '{}')[id] || 'One record'; } catch (err) { return 'One record'; }
+  }
+  function syncPanel() { if (panel) panel.open = !phoneMq.matches; }
+  syncPanel();
+  if (phoneMq.addEventListener) phoneMq.addEventListener('change', syncPanel);
+  function closePanelOnPhone() { if (panel && phoneMq.matches) panel.open = false; }
   var fields = {
     site: form.querySelector('#cf-site'), category: Array.prototype.slice.call(form.querySelectorAll('input[name="category"]')),
     from: form.querySelector('#cf-from'), to: form.querySelector('#cf-to'), record: form.querySelector('#cf-record'),
@@ -1752,11 +1764,21 @@ var PPPager = (function () {
       }
       if (resetBtn) resetBtn.hidden = isDefault(v);
       if (categorySummary) categorySummary.textContent = categoryLabel(v.category);
+      if (panelSummary) {
+        var bits = [v.record ? recordName(v.record) : (v.site ? fields.site.options[fields.site.selectedIndex].text : 'All sites'), categoryLabel(v.category)];
+        if (v.from || v.to) bits.push(v.from && v.to ? v.from + ' to ' + v.to : v.from ? 'from ' + v.from : 'to ' + v.to);
+        if (v.expected) bits.push('with expected events');
+        bits.push(fmt(res.total) + (res.total === 1 ? ' change' : ' changes'));
+        panelSummary.textContent = bits.join(' · ');
+      }
     }
   });
 
   function refilter() { pager.refresh(false, 'replace', false); }
-  form.addEventListener('submit', function (e) { e.preventDefault(); refilter(); });
+  // Apply (and Clear filters) is the visitor saying "show me": fold the form away on a phone and take them
+  // to the count, with focus on it, so a screen reader hears it too. Changing one field only refilters.
+  function applyAndShow() { closePanelOnPhone(); pager.refresh(false, 'replace', phoneMq.matches); }
+  form.addEventListener('submit', function (e) { e.preventDefault(); applyAndShow(); });
   [fields.site].concat(fields.category, [fields.from, fields.to], fields.datetype).forEach(function (el) {
     el.addEventListener('change', refilter);
   });
@@ -1773,9 +1795,53 @@ var PPPager = (function () {
   if (resetBtn) {
     resetBtn.addEventListener('click', function () {
       applyToFields({ site: '', category: GROUND.slice(), from: '', to: '', record: '', datetype: 'event', expected: false });
-      refilter();
+      applyAndShow();
     });
   }
+})();
+
+// Long rows on a phone (PH-09): the sentence of a Coming up or Decisions ahead row shows two lines and a
+// "More" that opens the rest. Only .row-text folds: the date and its kind, "Expected, not confirmed", the
+// records affected and the source stay in view. Nothing is folded with JavaScript off or from 720 px up.
+(function () {
+  var lists = Array.prototype.slice.call(document.querySelectorAll('[data-clamp]'));
+  if (!lists.length) return;
+  var mq = window.matchMedia ? window.matchMedia('(max-width: 719px)') : { matches: false };
+  function undo(t) {
+    t.classList.remove('is-clamped');
+    if (t.ppFocus) { t.removeEventListener('focusin', t.ppFocus); t.ppFocus = null; }
+    var b = t.nextElementSibling;
+    if (b && b.classList.contains('row-more')) b.remove();
+  }
+  function fold(t) {
+    t.classList.add('is-clamped');
+    if (t.scrollHeight <= t.clientHeight + 1) { t.classList.remove('is-clamped'); return; }
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'row-more'; b.textContent = 'More'; b.setAttribute('aria-expanded', 'false');
+    function setOpen(open) {
+      t.classList.toggle('is-clamped', !open);
+      b.textContent = open ? 'Less' : 'More';
+      b.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    b.addEventListener('click', function () { setOpen(t.classList.contains('is-clamped')); });
+    // A link the fold clips out of view must not take focus unseen: tabbing to it unfolds the row.
+    t.ppFocus = function (ev) {
+      // Chromium scrolls the clipped box to the link before focusin fires, so test scrollTop as well as the boxes.
+      if (!t.classList.contains('is-clamped')) return;
+      if (t.scrollTop > 0 || ev.target.getBoundingClientRect().bottom > t.getBoundingClientRect().bottom + 1) { setOpen(true); t.scrollTop = 0; }
+    };
+    t.addEventListener('focusin', t.ppFocus);
+    t.parentNode.insertBefore(b, t.nextSibling);
+  }
+  function apply() {
+    lists.forEach(function (list) {
+      Array.prototype.forEach.call(list.querySelectorAll('.row-text'), function (t) { undo(t); if (mq.matches) fold(t); });
+    });
+  }
+  apply();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(apply);
+  var timer = null;
+  window.addEventListener('resize', function () { clearTimeout(timer); timer = setTimeout(apply, 150); });
 })();
 
 // The .box pattern (docs/briefs/box-pattern.md): a single-select category chip row, a lead row
@@ -2073,7 +2139,6 @@ function initPagedBox(box, list) {
   var furtherWrap = document.getElementById('near-further-wrap');
   var furtherCount = document.getElementById('near-further-count');
   var farList = document.getElementById('near-far-list');
-  var farLine = document.getElementById('near-far-line');
   var finderSection = document.getElementById('near-finder');
   var urlQuery = ppSearch.get().trim();
   var placeLabel = document.getElementById('near-place-label');
@@ -2163,12 +2228,22 @@ function initPagedBox(box, list) {
     if (!statusEl) return;
     statusEl.hidden = !text;
     statusEl.textContent = text || '';
+    syncLocateOrder();
+  }
+  // CSS shows the button and address form below the records once there is a status or a list; move the
+  // button in the markup to match, so Tab follows what is on screen (the form sits right after the list).
+  function syncLocateOrder() {
+    var form = document.getElementById('near-place-form');
+    if (!locateWrap || !form || !mapSection) return;
+    var result = (statusEl && !statusEl.hidden) || (nearestWrap && !nearestWrap.hidden);
+    var want = result ? form : mapSection.nextSibling;
+    if (result ? locateWrap.nextSibling !== form : locateWrap.previousElementSibling !== mapSection) form.parentNode.insertBefore(locateWrap, want);
   }
 
   function resetPanels() {
     if (nearestWrap) nearestWrap.hidden = true;
-    farLine.hidden = true;
     furtherWrap.hidden = true;
+    syncLocateOrder();
     svgs.forEach(clearOverlay);
   }
 
@@ -2198,7 +2273,7 @@ function initPagedBox(box, list) {
     showAllBtn.hidden = listExpanded || more <= 0;
     showAllBtn.textContent = 'Show ' + more + ' more within ' + CLOSE_M + ' m';
     nearestWrap.hidden = false;
-    farLine.hidden = true;
+    syncLocateOrder();
     // Someone who came here from the header search wants those results, location or not.
     finderSection.hidden = label ? true : !urlQuery;
 
@@ -2233,12 +2308,8 @@ function initPagedBox(box, list) {
       if (svg.ppReset) svg.ppReset();
       if (nearest) drawArrow(svg, deg);
     });
-    if (nearest) {
-      farLine.textContent = (label ? label + ' is ' : 'You are ') + fmtDistance(nearest.dist) + ' ' + compassOf(deg) + ' of ' + nearest.r.siteName + '.';
-      farLine.hidden = false;
-    } else {
-      farLine.hidden = true;
-    }
+    // The sentence goes where every other state's message goes, directly under the map (PH-02).
+    return nearest ? (label ? label + ' is ' : 'You are ') + fmtDistance(nearest.dist) + ' ' + compassOf(deg) + ' of ' + nearest.r.siteName + '.' : '';
   }
 
   // success() runs on every position the watch below reports, not just the first -- re-ranking
@@ -2269,7 +2340,7 @@ function initPagedBox(box, list) {
     syncPlaceLabel();
     var ranked = withDistances(lat, lon);
     if (ranked.length && ranked[0].dist <= NEAR_M) showNear(lat, lon, acc);
-    else showFar(lat, lon);
+    else showStatus(showFar(lat, lon));
   }
   function failure(err) {
     // A continuous watch can hit a transient error mid-walk (signal loss under a bridge or
@@ -2403,12 +2474,28 @@ function initPagedBox(box, list) {
       return res.json();
     }).then(function (j) { placeIndex = j; return j; });
   }
+  // After a successful search the visitor should see the answer, not the end of the list they were
+  // looking at when they tapped (PH-01): scroll the map, with the status line directly under it, to
+  // the top of the screen, unless both are already on it. Where the map sits below the status (wide
+  // screens), the status line is what scrolls. Instant, whatever the motion setting.
+  function revealResult() {
+    var anchor = mapSection && !mapSection.hidden && statusEl && mapSection.getBoundingClientRect().top < statusEl.getBoundingClientRect().top ? mapSection : statusEl;
+    if (!anchor || anchor.hidden) return;
+    requestAnimationFrame(function () {
+      var a = anchor.getBoundingClientRect(), s = statusEl.getBoundingClientRect();
+      if (a.top >= 0 && s.bottom <= window.innerHeight) return;
+      anchor.scrollIntoView({ block: 'start', behavior: 'auto' });
+    });
+  }
   // fromUrl: a header search that happened to be an address. A miss there says nothing and
   // leaves the finder's own name filter to answer, since "Building 12 and 21" is a name.
-  function placeLookup(q, fromUrl) {
+  function placeLookup(q, fromUrl, reveal) {
     return loadIndex().then(function () {
       var hit = findPlace(q);
+      window.ppPlacePending = false;
       if (!hit) {
+        // A header search that was not an address: the finder's own filter answers, so it scrolls to its results now.
+        if (fromUrl && window.ppFinderLand) window.ppFinderLand(true);
         if (!fromUrl) showStatus('No address or street corner matching “' + q + '” near the four sites. Try a number and a street, like 1290 3rd St, or two streets, like Illinois & 20th.');
         return;
       }
@@ -2417,14 +2504,21 @@ function initPagedBox(box, list) {
       showingPlace = true;
       resetPanels();
       var ranked = withDistances(hit.lat, hit.lon);
-      showStatus((hit.note ? hit.note + ' ' : '') + 'Tracked records near ' + hit.label + ':');
-      if (ranked.length && ranked[0].dist <= NEAR_M) showNear(hit.lat, hit.lon, 0, hit.label);
-      else showFar(hit.lat, hit.lon, hit.label);
+      var note = hit.note ? hit.note + ' ' : '';
+      if (ranked.length && ranked[0].dist <= NEAR_M) {
+        showStatus(note + 'Tracked records near ' + hit.label + ':');
+        showNear(hit.lat, hit.lon, 0, hit.label);
+      } else {
+        showStatus(note + showFar(hit.lat, hit.lon, hit.label));
+      }
+      if (reveal) { if (placeInput) placeInput.blur(); revealResult(); }
       if (fromUrl) {
         var fs = document.getElementById('finder-search');
         if (fs) { fs.value = ''; fs.dispatchEvent(new Event('input')); }
       }
     }).catch(function () {
+      window.ppPlacePending = false;
+      if (fromUrl && window.ppFinderLand) window.ppFinderLand(true);
       if (!fromUrl) showStatus('The address list could not be loaded. Try again, or search by name below.');
     });
   }
@@ -2433,20 +2527,24 @@ function initPagedBox(box, list) {
       var q = placeInput.value.trim();
       if (!q) return;
       ev.preventDefault();
-      placeLookup(q, false);
+      placeLookup(q, false, true);
     });
   }
   var urlIsPlace = urlQuery && looksLikePlace(urlQuery);
   if (urlIsPlace) {
     if (placeInput) placeInput.value = urlQuery;
-    placeLookup(urlQuery, true);
+    // The answer is the map and its status line, not the finder: landOnResults() (below) holds back until
+    // this lookup is done, and scrolls only if the query turns out not to be an address.
+    window.ppPlacePending = true;
+    placeLookup(urlQuery, true, true);
   }
   // The header search, used while already on this page, only changes the fragment.
   window.addEventListener('hashchange', function () {
     urlQuery = ppSearch.get().trim();
     if (urlQuery && looksLikePlace(urlQuery)) {
       if (placeInput) placeInput.value = urlQuery;
-      placeLookup(urlQuery, true);
+      window.ppPlacePending = true;
+      placeLookup(urlQuery, true, true);
     }
   });
 
@@ -2483,7 +2581,8 @@ function initPagedBox(box, list) {
     var v = input.value.trim();
     if (!v) return;
     ev.preventDefault();
-    if (onNear) window.location.hash = 'q=' + encodeURIComponent(v);
+    // Same as the address box on the page: the answer is on screen, so the field lets go of the keyboard.
+    if (onNear) { window.location.hash = 'q=' + encodeURIComponent(v); input.blur(); }
     else window.location.assign(ppSearch.url(v));
   });
 })();
@@ -2569,7 +2668,8 @@ function initPagedBox(box, list) {
   // it on load, and again when it changes, so the finder opens already filtered, then scroll to the
   // result count and move focus to it, so a screen reader hears "N records shown" (UX-04). Name,
   // site, parcel (the record id) and address all match.
-  function landOnResults() {
+  function landOnResults(force) {
+    if (!force && window.ppPlacePending) return;
     var target = (emptyNote && !emptyNote.hidden) ? emptyNote : countEl;
     if (!target) return;
     requestAnimationFrame(function () {
@@ -2580,6 +2680,7 @@ function initPagedBox(box, list) {
       block.scrollIntoView();
     });
   }
+  window.ppFinderLand = landOnResults;
   var initialQ = ppSearch.get();
   if (initialQ) search.value = initialQ;
   window.addEventListener('hashchange', function () {
@@ -2621,6 +2722,8 @@ function initPagedBox(box, list) {
       countEl.classList.toggle('sr-only', shown === 0);
     }
     if (resetBtn) resetBtn.hidden = !(q || site || status || sortSel.value);
+    var sortLabel = document.getElementById('finder-sort-label');
+    if (sortLabel) sortLabel.textContent = sortSel.options[sortSel.selectedIndex].text;
 
     var by = sortSel.value;
     var sorted = items.slice().sort(function (a, b) {

@@ -980,8 +980,6 @@ sup.cites a { text-decoration: none; }
 .near-further { margin-top: 16px; }
 .near-further summary { cursor: pointer; font: 600 13px var(--mono); color: var(--paper-brass); }
 .near-further[hidden] { display: none; }
-.near-far-line { font-size: 17px; font-weight: 600; margin: 20px 0; }
-.near-far-line[hidden] { display: none; }
 #near-finder[hidden] { display: none; }
 /* .near-item overrides .record-list li's own grid (name/detail side by side, sized against a
    fixed-width thumbnail) with a simple flex row -- a thumbnail's fixed width otherwise starves
@@ -1014,7 +1012,6 @@ sup.cites a { text-decoration: none; }
 #near-map-section { order: 6; }
 #near-map-notes { order: 7; }
 #near-map-section[hidden] ~ #near-map-notes { display: none; }
-.near-far-line { order: 10; }
 #near-finder { order: 11; }
 .near-accuracy-note { order: 12; }
 @media (max-width: 719px) {
@@ -1023,13 +1020,20 @@ sup.cites a { text-decoration: none; }
   /* Tall enough to read, short enough that the first nearest row peeks in on a 740 px screen. */
   #near-map-frame { height: clamp(250px, 36vh, 320px); }
   #near-map-frame .pp-map.ov-narrow { height: 100%; }
+  /* Map showing, nothing found yet: the button, then "Or type an address" straight after it, then the key.
+     With a result: the status line under the map, the key, the nearest records, and then the button and its
+     address form together ("Or" always follows the button). */
   .near-page:has(> #near-map-section:not([hidden])) > .near-locate { order: 2; padding-top: 12px; }
-  .near-page:has(> #near-map-section:not([hidden])) > .near-status { order: 3; margin-top: 8px; }
-  .near-page:has(> #near-map-section:not([hidden])) > .near-nearest { order: 4; padding-top: 16px; border-bottom: 1px solid var(--paper-line); margin-bottom: 20px; }
-  .near-page:has(> #near-map-section:not([hidden])) > .near-place { order: 5; }
-  .near-page:has(> #near-map-section:not([hidden])) > .page-head { order: 6; margin-top: 12px; }
-  .near-page:has(> #near-map-section:not([hidden])) > #near-map-notes { order: 7; }
-  .near-page:has(> #near-map-section:not([hidden])) > .near-far-line { order: 10; }
+  .near-page:has(> #near-map-section:not([hidden])) > .near-place { order: 3; }
+  .near-page:has(> #near-map-section:not([hidden])) > .near-status { order: 4; margin-top: 8px; }
+  .near-page:has(> #near-map-section:not([hidden])) > #near-map-notes { order: 5; }
+  .near-page:has(> #near-map-section:not([hidden])) > .near-nearest { order: 6; padding-top: 16px; border-bottom: 1px solid var(--paper-line); margin-bottom: 20px; }
+  .near-page:has(> #near-map-section:not([hidden])) > .page-head { order: 7; margin-top: 12px; }
+  .near-page:has(> #near-map-section:not([hidden])):has(> .near-status:not([hidden]), > .near-nearest:not([hidden])) > .near-status { order: 2; }
+  .near-page:has(> #near-map-section:not([hidden])):has(> .near-status:not([hidden]), > .near-nearest:not([hidden])) > #near-map-notes { order: 3; }
+  .near-page:has(> #near-map-section:not([hidden])):has(> .near-status:not([hidden]), > .near-nearest:not([hidden])) > .near-nearest { order: 4; }
+  .near-page:has(> #near-map-section:not([hidden])):has(> .near-status:not([hidden]), > .near-nearest:not([hidden])) > .near-locate { order: 5; }
+  .near-page:has(> #near-map-section:not([hidden])):has(> .near-status:not([hidden]), > .near-nearest:not([hidden])) > .near-place { order: 6; }
   .near-page:has(> #near-map-section:not([hidden])) > #near-finder { order: 11; }
   .near-page:has(> #near-map-section:not([hidden])) > .near-accuracy-note { order: 12; }
 }
@@ -1091,3 +1095,119 @@ sup.cites a { text-decoration: none; }
 .finder-count:focus, #finder-empty:focus { outline: none; }
 /* The parcel tap card takes focus when it opens (so a screen reader announces it); no ring on the card itself. */
 .parcel-card:focus { outline: none; }
+
+/* phone-fix-near-changes (PH-02, PH-03, PH-05): /near/'s key and finder. */
+/* The key and map notes, one row under the map (and under the status line, which says where you are):
+   closed, it shows the status colours as a preview; open, the full key, tenant key and the caption. */
+.near-key { margin-top: 4px; }
+.near-key summary { display: flex; align-items: center; gap: 10px; min-height: 44px; cursor: pointer; font: 600 13px var(--mono); color: var(--paper-brass); }
+.near-key-dots { display: inline-flex; gap: 4px; }
+.near-key-dots .swatch { border-radius: 50%; }
+.near-key[open] summary { border-bottom: 1px solid var(--paper-line); margin-bottom: 4px; }
+/* The finder: Search full width, Site and Status side by side, Sort tucked into one line. */
+.finder-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: end; }
+.finder-controls .finder-search, .finder-controls .finder-sort, .finder-controls .btn { grid-column: 1 / -1; }
+.finder-controls .filter-field { min-width: 0; }
+.finder-controls .filter-field select, .finder-controls .filter-field input { width: 100%; min-height: 44px; }
+.finder-sort summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; gap: 6px; font: 13px var(--mono); color: var(--paper-brass); }
+.finder-sort summary::after { content: '▾'; font-size: 11px; }
+.finder-sort[open] summary::after { content: '▴'; }
+.finder-sort[open] summary { margin-bottom: 4px; }
+@media (min-width: 720px) {
+  .finder-controls { grid-template-columns: 2fr 1fr 1fr; }
+  .finder-controls .finder-search { grid-column: auto; }
+}
+
+/* phone-fix-near-changes (PH-04, PH-09, PH-10, PH-16, PH-18): /changes/ and its tabs, change rows, batch pages. */
+/* PH-04: /changes/all/'s filters. From 720 px up the panel is the open form it always was and its
+   summary is not shown; on a phone app.js folds it behind one control that says what is applied. */
+.filter-panel > summary { display: none; }
+@media (max-width: 719px) {
+  .filter-panel { margin: 14px 0 8px; border: 1px solid var(--paper-line); border-radius: 12px; background: var(--paper-2); }
+  .filter-panel > summary { display: flex; flex-direction: column; justify-content: center; gap: 2px; min-height: 44px; padding: 8px 40px 8px 14px; position: relative; cursor: pointer; list-style: none; }
+  .filter-panel > summary::-webkit-details-marker { display: none; }
+  .filter-panel > summary::after { content: '▾'; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--paper-faint); }
+  .filter-panel[open] > summary::after { content: '▴'; }
+  .filter-panel-label { font: 600 12px var(--mono); color: var(--paper-brass); }
+  .filter-panel-summary { font-size: 14px; color: var(--paper-ink); }
+  .filter-panel-summary:empty { display: none; }
+  .filter-panel[open] > summary { border-bottom: 1px solid var(--paper-line); }
+  .filter-panel .changes-filters { display: grid; grid-template-columns: 1fr 1fr; margin: 0; padding: 14px; border: 0; border-radius: 0; background: none; }
+  .filter-panel .changes-filters > .filter-field:nth-of-type(-n+3), .filter-panel .changes-filters > .btn { grid-column: 1 / -1; }
+  .filter-panel .filter-field { min-width: 0; }
+  .filter-panel .filter-field select, .filter-panel .filter-field input[type="date"], .filter-panel .filter-dropdown summary { width: 100%; min-height: 44px; }
+  .filter-panel .category-legend { margin: 0; padding: 0 14px 14px; }
+  /* Apply takes the visitor to the count; leave the panel's own row above it in view. */
+  .filter-panel ~ .paged > .pager-top { scroll-margin-top: 64px; }
+}
+/* PH-09: Coming up. A rule and space end the intro; a row's sentence folds to two lines (app.js adds .is-clamped
+   and the "More" button only where it overflows, so with JavaScript off every row reads in full). */
+#decisions-ahead > .section-head + .empty-note { margin: 0 0 16px; padding-bottom: 16px; border-bottom: 1px solid var(--paper-line); }
+.row-text.is-clamped { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
+.row-more { display: block; min-width: 44px; padding: 14px 0; margin: -10px 0 -10px; text-align: left; background: none; border: 0; font: 12px var(--mono); color: var(--paper-brass); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+/* PH-10: on a phone a change row's date, kind and site are one wrapping row, then the text. */
+@media (max-width: 719px) {
+  .feed li { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+  .feed li .chip-group { display: contents; }
+  .feed li > .kind { align-self: center; }
+  .feed li > .kind-quiet { display: none; }
+  .feed li > .body { flex: 1 1 100%; }
+}
+/* PH-18: a batch page's list starts under the intro with the list's own rule, not two rules and a blank band. */
+.page-head.batch-head { border-bottom: 0; padding-bottom: 8px; }
+.page-head.batch-head + .section { padding-top: 12px; }
+/* PH-16: from 720 px up, once the map is showing (a position, an address), /near/ leads with it as a phone does:
+   heading, map, then the nearest records right under it. From 1100 px the map and the list sit side by side.
+   Before the map is showing, the order above is unchanged. */
+@media (min-width: 720px) {
+  .near-page:has(> #near-map-section:not([hidden])) > .page-head { order: 1; margin-top: 0; }
+  .near-page:has(> #near-map-section:not([hidden])) > #near-map-section { order: 2; }
+  .near-page:has(> #near-map-section:not([hidden])) > .near-locate { order: 3; }
+  .near-page:has(> #near-map-section:not([hidden])) > .near-place { order: 4; }
+  .near-page:has(> #near-map-section:not([hidden])) > .near-status { order: 5; margin-top: 8px; }
+  .near-page:has(> #near-map-section:not([hidden])) > #near-map-notes { order: 6; }
+  .near-page:has(> #near-map-section:not([hidden])) > .near-nearest { order: 7; padding-top: 16px; }
+  .near-page:has(> #near-map-section:not([hidden])) > #near-finder { order: 11; }
+  .near-page:has(> #near-map-section:not([hidden])) > .near-accuracy-note { order: 12; }
+  .near-page:has(> #near-map-section:not([hidden])) > #near-map-section > #near-map-frame { margin-top: 8px; height: clamp(320px, 46vh, 520px); }
+  .near-page #near-map-frame .pp-map.ov-wide { height: 100%; }
+  /* With a result, the status leads and the button and address form follow the records, together. */
+  .near-page:has(> #near-map-section:not([hidden])):has(> .near-status:not([hidden]), > .near-nearest:not([hidden])) > .near-status { order: 3; }
+  .near-page:has(> #near-map-section:not([hidden])):has(> .near-status:not([hidden]), > .near-nearest:not([hidden])) > #near-map-notes { order: 4; }
+  .near-page:has(> #near-map-section:not([hidden])):has(> .near-status:not([hidden]), > .near-nearest:not([hidden])) > .near-nearest { order: 5; }
+  .near-page:has(> #near-map-section:not([hidden])):has(> .near-status:not([hidden]), > .near-nearest:not([hidden])) > .near-locate { order: 6; }
+  .near-page:has(> #near-map-section:not([hidden])):has(> .near-status:not([hidden]), > .near-nearest:not([hidden])) > .near-place { order: 7; }
+}
+/* From 1100 px the map and the list sit side by side whenever the map shows, located or not: map on the left,
+   status and the nearest records on the right, the key under the map; the button and address form run
+   full width under both. */
+@media (min-width: 1100px) {
+  .near-page:has(> #near-map-section:not([hidden])) { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); grid-template-rows: auto min-content 1fr auto auto auto auto auto; column-gap: 40px; align-items: start; }
+  .near-page:has(> #near-map-section:not([hidden])) > .page-head,
+  .near-page:has(> #near-map-section:not([hidden])) > .near-locate,
+  .near-page:has(> #near-map-section:not([hidden])) > .near-place,
+  .near-page:has(> #near-map-section:not([hidden])) > #near-finder,
+  .near-page:has(> #near-map-section:not([hidden])) > .near-accuracy-note { grid-column: 1 / -1; }
+  .near-page:has(> #near-map-section:not([hidden])) > #near-map-section > #near-map-frame { height: min(62vh, 640px); }
+  .near-page:has(> #near-map-section:not([hidden])) > #near-map-section { grid-column: 1; grid-row: 2 / span 2; }
+  .near-page:has(> #near-map-section:not([hidden])) > .near-status { grid-column: 2; grid-row: 2; }
+  .near-page:has(> #near-map-section:not([hidden])) > .near-nearest { grid-column: 2; grid-row: 3 / span 2; padding-top: 0; }
+  .near-page:has(> #near-map-section:not([hidden])) > #near-map-notes { grid-column: 1; grid-row: 4; }
+  .near-page:has(> #near-map-section:not([hidden])) > .near-locate { grid-row: 5; }
+  .near-page:has(> #near-map-section:not([hidden])) > .near-place { grid-row: 6; }
+  .near-page:has(> #near-map-section:not([hidden])) > #near-finder { grid-row: 7; }
+  .near-page:has(> #near-map-section:not([hidden])) > .near-accuracy-note { grid-row: 8; }
+}
+
+/* Fix-up round: touch targets and Decisions ahead on a phone. */
+.row-more { min-height: 44px; margin: 0; padding: 14px 0; position: relative; z-index: 1; }
+.also-records summary { display: flex; align-items: center; gap: 6px; min-height: 44px; cursor: pointer; list-style: none; }
+.also-records summary::-webkit-details-marker { display: none; }
+.also-records summary::before { content: '\25B8'; color: var(--paper-faint); }
+.also-records[open] > summary::before { content: '\25BE'; }
+#decisions-ahead > .section-head { margin-bottom: 8px; }
+@media (max-width: 719px) {
+  /* The date is its own line, so the separator would only dangle at the end of it. */
+  #decisions-ahead .next-up li > strong { display: block; }
+  #decisions-ahead .next-up li > .row-dot { display: none; }
+}
