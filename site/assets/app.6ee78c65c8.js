@@ -1129,6 +1129,13 @@ var ppSearch = (function () {
       var card = frame ? frame.querySelector('[data-tenant-card]') : null;
       var legendCaption = frame && frame.parentElement ? frame.parentElement.querySelector('[data-tenant-legend]') : null;
       var markersLayer = svg.querySelector('.tenant-markers');
+      // One layer for every badge's tap area, first in the markers group so it sits under all badges and markers.
+      var hitLayer = null;
+      if (markersLayer) {
+        hitLayer = svgEl('g');
+        hitLayer.setAttribute('class', 'tenant-hits');
+        markersLayer.insertBefore(hitLayer, markersLayer.firstChild);
+      }
       var DATA = null;
       if (dataEl) { try { DATA = JSON.parse(dataEl.textContent); } catch (err) { DATA = null; } }
       var parcelIds = DATA ? Object.keys(DATA.parcels) : [];
@@ -1142,6 +1149,7 @@ var ppSearch = (function () {
         // to its smallest comfortable size forever. MAX_MARKER_PX matches the usual ~44px
         // minimum touch-target guideline.
         var MIN_MARKER_PX = 26, MAX_MARKER_PX = 44, GROW_OVER_PX = 200;
+        var HIT_PX = 44; // a badge's tap area, in screen px, whatever its drawn size
         var GRID_SPACING = 2.6; // grid cell spacing, in multiples of the marker's own live radius
         var MIN_RADIUS_SCALE = 0.6; // never shrink a marker below this fraction of its target size
         var STATUS_WORD = { open: 'Open', announced: 'Announced', closed: 'Closed' };
@@ -1203,6 +1211,13 @@ var ppSearch = (function () {
           pillG.setAttribute('tabindex', '-1'); // as the markers above
           pillG.setAttribute('role', 'button');
           pillG.setAttribute('aria-label', n + (n === 1 ? ' tenant' : ' tenants') + ' at ' + d.recordName + ', press to zoom in');
+          // An invisible rect at least HIT_PX square under the badge, so a finger's tap lands on it
+          // (the badge itself is about 37x20 px on a phone; PH-13). Sized in updateTenantMarkers().
+          // All of them live in one layer beneath every badge (hitLayer), so a neighbour's larger
+          // hit area never covers a badge that is drawn.
+          var hit = svgEl('rect');
+          hit.setAttribute('class', 'tenant-pill-hit');
+          hitLayer.appendChild(hit);
           var rect = svgEl('rect');
           rect.setAttribute('class', 'tenant-pill-bg');
           pillG.appendChild(rect);
@@ -1211,10 +1226,11 @@ var ppSearch = (function () {
           text.setAttribute('text-anchor', 'middle');
           pillG.appendChild(text);
           markersLayer.appendChild(pillG);
-          var pill = { el: pillG, rect: rect, text: text, ox: 0, oy: 0, hide: false, mergedCount: n };
+          var pill = { el: pillG, rect: rect, hit: hit, text: text, ox: 0, oy: 0, hide: false, mergedCount: n };
           var p = { id: id, cx: d.cx, cy: d.cy, count: n, cols: cols, rows: rows, record: d.record, split: false,
                    bboxWidth: bboxScreenW, bboxFit: bboxFit, markers: markers, pill: pill };
           pillG.addEventListener('click', function () { zoomToParcel(p); });
+          hit.addEventListener('click', function () { zoomToParcel(p); });
           pillG.addEventListener('keydown', function (e) {
             if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); zoomToParcel(p); }
           });
@@ -1271,7 +1287,7 @@ var ppSearch = (function () {
           }
           visible.forEach(function (p) {
             var pill = p.pill;
-            pill.el.style.display = pill.hide ? 'none' : '';
+            pill.el.style.display = pill.hit.style.display = pill.hide ? 'none' : '';
             if (pill.hide) return;
             var m = p.metrics, cx = p.cx + pill.ox, cy = p.cy + pill.oy;
             pill.rect.setAttribute('x', (cx - m.w / 2).toFixed(1));
@@ -1279,6 +1295,11 @@ var ppSearch = (function () {
             pill.rect.setAttribute('width', m.w.toFixed(1));
             pill.rect.setAttribute('height', m.h.toFixed(1));
             pill.rect.setAttribute('rx', (m.h / 2).toFixed(1));
+            var hw = Math.max(m.w, pxPerUnit ? HIT_PX / pxPerUnit : 0), hh = Math.max(m.h, pxPerUnit ? HIT_PX / pxPerUnit : 0);
+            pill.hit.setAttribute('x', (cx - hw / 2).toFixed(1));
+            pill.hit.setAttribute('y', (cy - hh / 2).toFixed(1));
+            pill.hit.setAttribute('width', hw.toFixed(1));
+            pill.hit.setAttribute('height', hh.toFixed(1));
             pill.text.setAttribute('x', cx.toFixed(1));
             pill.text.setAttribute('y', (cy + m.fs * 0.34).toFixed(1));
             pill.text.setAttribute('font-size', m.fs.toFixed(2));
@@ -1386,7 +1407,7 @@ var ppSearch = (function () {
             var split = pxPerUnit > 0 && parcelPx >= SPLIT_PX;
             if (p.split && !split && openMarker && openMarker.parcelId === p.id) closeCard();
             p.split = split;
-            p.pill.el.style.display = split ? 'none' : '';
+            p.pill.el.style.display = p.pill.hit.style.display = split ? 'none' : '';
             if (!split) {
               p.markers.forEach(function (m) { m.el.style.display = 'none'; });
               return;

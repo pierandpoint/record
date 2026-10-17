@@ -1096,6 +1096,102 @@ sup.cites a { text-decoration: none; }
 /* The parcel tap card takes focus when it opens (so a screen reader announces it); no ring on the card itself. */
 .parcel-card:focus { outline: none; }
 
+/* ===== Phone fixes, sitewide (docs/briefs/phone-fix-sitewide.md): PH-11, PH-15, PH-20 =====
+   One block, so it can be read and merged on its own. Rules here come last and restate only what
+   they change. Visible sizes stay as designed wherever a control is small on purpose; the hit area is
+   padded to 44 px with an invisible ::after instead (WCAG 2.5.5 and the owner's own standard). */
+
+/* PH-11: a 44 px hit area. The ::after sits inside its neighbours' gaps so two hit areas never overlap.
+   An absolutely placed ::after is positioned from the padding box, inside any border, so a bordered
+   control's inset is one pixel more than the padding it adds. */
+.site-nav a { position: relative; display: flex; align-items: center; min-height: 44px; padding: 0; }
+.site-nav a::after { content: ''; position: absolute; inset: 0 -8px; }
+.site-nav a.beta { min-height: 0; }
+.beta { position: relative; }
+.beta::after { content: ''; position: absolute; inset: -8px 0; }
+/* `.site-nav a::after` (0,1,2) outranks `.beta::after` (0,1,1) and gave the desktop pill a 34 px hit area. */
+.site-nav a.beta::after { inset: -8px -6px; }
+@media (max-width: 719px) {
+  /* 12 px text makes the "Beta · Feedback" pill 129 px; with the 44 px search target it needs the
+     tighter padding to stay on the logo's row at 390 px (it wrapped to a second row without). */
+  .beta-mobile { padding: 5px 7px; }
+  .header-search label { width: 44px; height: 44px; }
+  .header-search:focus-within label { width: auto; height: auto; }
+  .header-search:focus-within button { height: 44px; }
+  /* 48 px was the pill's old height; with the 44 px button inside it the button touched the border.
+     56 px leaves 5 px above and below it, and the same centre line (top 4 + 28 = 8 + 24). */
+  .header-search:focus-within { top: 4px; height: 56px; }
+}
+.header-search input { height: 44px; }
+.toggle-seg, .toggle-chip, .zoom-btn, .lightbox-kind { position: relative; }
+.toggle-seg::after { content: ''; position: absolute; inset: -8px -3px; }
+.toggle-chip::after { content: ''; position: absolute; inset: -5px 0; }
+.map-toolbar { row-gap: 8px; }
+.zoom-controls { gap: 12px; }
+.zoom-btn::after { content: ''; position: absolute; inset: -6px; }
+.lightbox-close { width: 44px; height: 44px; }
+@media (max-width: 479px) { .lightbox-prev, .lightbox-next { width: 44px; height: 44px; } }
+.lightbox-kind { padding: 8px 12px; }
+.lightbox-kind::after { content: ''; position: absolute; inset: -7px 0; }
+.lightbox-kinds { row-gap: 14px; }
+/* Footer links and the feed menu: real padding, since they stack in a column with nothing to spare. */
+@media (max-width: 899px), (pointer: coarse) {
+  .site-footer nav { gap: 0; }
+  .site-footer nav a { display: flex; align-items: center; min-height: 44px; }
+  .site-footer .feed-menu summary { min-height: 44px; align-items: center; }
+}
+/* Disclosure summaries. The 13 px summaries are 20 px of text, so 12 px each side makes 44. */
+.feed-details summary, .category-legend summary, .near-further summary, .tenant-closed summary { padding: 13px 0; min-height: 44px; }
+.filter-dropdown summary { min-height: 44px; }
+.bx-bar { min-height: 44px; }
+/* .bx-bar sets display: flex, which beat the hidden attribute: an empty bar showed on every box with
+   nothing to expand (seen with JavaScript off, PH-15). */
+.bx-bar[hidden] { display: none; }
+
+/* PH-20: a 12 px floor for text people read. Map text is a separate item (UX-09). */
+.brand-text small { font-size: 12px; letter-spacing: .3em; }
+.beta-mobile, .sat-credit, .timeline .hint, .timeline .years, .tracker-site-name .pin, .filter-dropdown summary::after,
+.site-footer .feed-menu summary::after, .gallery-lead .thumb-kind, .lead-frame .thumb-kind, .lightbox-kind { font-size: 12px; }
+.thumb-kind, .tenant-media .thumb-kind, .facts dt, .figure-scope, .section-jump a .n, .tenant-icon, sup.cites { font-size: 12px; }
+/* The brand "&": #b4694c is 4.12:1 on the header's #161d1f. #b87156 computes to 4.5009:1, which rounds
+   to the 4.5 line with nothing to spare; #b97156 is 4.52:1. The logo mark itself, and --terracotta
+   elsewhere, are untouched. */
+.brand-text strong span { color: #b97156; }
+
+/* PH-13: the tenant badge's tap area (app.js adds an invisible rect of at least 44 px under it). */
+.tenant-pill-hit { fill: transparent; }
+
+/* PH-15: with JavaScript off these cannot do anything (the site has no server), so they are not shown.
+   Unsupported browsers ignore the query and show them, as before. */
+@media (scripting: none) {
+  .header-search, .near-locate, .near-place-row, .near-place > label, .near-place > .near-privacy,
+  .changes-filters, .bx-bar { display: none; }
+  /* /changes/all/ wraps the form in details.filter-panel (phone-fix-near-changes); its
+     `.filter-panel .changes-filters { display: grid }` has the same specificity as `.changes-filters` above,
+     so the form came back, and its "Filters" summary would be left with nothing under it. These carry one
+     more element in the selector so they win whichever block comes last. The category legend inside
+     the panel is reading, not a control, and stays. */
+  details.filter-panel .changes-filters, details.filter-panel > summary { display: none; }
+  /* The same for /near/'s finder: phone-fix-near-changes gives `.finder-controls` display: grid. */
+  .changes-filters.finder-controls { display: none; }
+}
+
+/* Review round: hit areas that were still under 44 px. Each is an invisible ::after (or a taller
+   box that costs no layout), so the drawn control keeps its size. */
+.brand { min-height: 44px; }
+.timeline input[type=range] { top: 8px; height: 44px; }
+.timeline input[type=range]::-webkit-slider-runnable-track { height: 44px; }
+.timeline input[type=range]::-webkit-slider-thumb { margin-top: 11px; }
+.section-jump { row-gap: 18px; }
+.section-jump a { position: relative; }
+.section-jump a::after { content: ''; position: absolute; inset: -9px 0; }
+.filter-field select, .filter-field input, .pager-per select { min-height: 44px; }
+.site-card footer > a { min-height: 44px; }
+.footer-policy a, .spot-error > a, .follow a, .feed-links > a { position: relative; }
+.footer-policy a::after, .follow a::after, .feed-links > a::after { content: ''; position: absolute; inset: -14px -4px; }
+/* The fallback link sits about 9 px under "Spot an error?", so its pad grows upward and stops short of it. */
+.spot-error > a::after { content: ''; position: absolute; inset: -18px -4px -8px; }
+
 /* ==== Phone fixes for record and site pages (docs/briefs/phone-fix-records-sites.md): PH-06, 07, 08, 12, 14, 19 ====
    Everything below belongs to that thread; the rules above are left as they were and these override them. */
 
