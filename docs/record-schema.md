@@ -111,7 +111,12 @@ source).
   that qualifies.
 - Dates are `YYYY`, `YYYY-MM` or `YYYY-MM-DD`. `expected: true` for dates
   that haven't happened; `approximate: true` when only a year or range is
-  sourced.
+  sourced. One exception: a **scheduled meeting or Clerk-listed hearing date
+  that has passed with no outcome found** keeps `expected: true` and its
+  `event` slug (so the event stays on "Decisions ahead" as "No outcome found
+  yet" instead of vanishing); the day it was scheduled is not an event that
+  happened. Add the outcome as a second milestone with the same `event` and
+  `expected: false` once a source written after the date gives it.
 - `date_kind` on a milestone, optional: `observed` (the date a document,
   map or listing showed the state, not the date the state began: a land-use
   map, a property-management-plan listing, an annual report, a resolution's
@@ -122,7 +127,7 @@ source).
   reads the earliest milestone of the current status run; if that milestone
   has a `date_kind`, no since-date is shown (the record's timeline still
   lists the milestone with its date). `src/validate_records.py` checks the
-  value; in `data/milestones.csv` it is the optional last column.
+  value; in `data/milestones.csv` it is an optional column (before `stage` and `event`).
 - `status` on a milestone, if set, is one of `complete`,
   `under_construction`, `planned`, `existing`, `being_removed`.
 - `basis` is required on a milestone with `expected: true` and `status:
@@ -150,6 +155,57 @@ source).
   (not a schedule): 2042") in the milestone list and in What's next, never as an
   expected completion; the existing `status` in the file is left alone. Retagging
   a milestone gets a `correction` row in `data/changelog.csv`.
+- `stage` is optional, on a milestone of a record that is Planned: one of `proposed`, `approved`,
+  `start_announced` (below). It says where the project stands, and only the milestone's **own cited source** may say
+  it; it is never inferred from wording elsewhere, from a later or earlier milestone, or from the absence of news.
+  - `proposed`: a source describes the project as proposed or under review, and no source read records an approval.
+  - `approved`: a source records a vote or sign-off that approves it (a commission, a board, a planning director,
+    a regents' approval), whether or not funding or a start date exists.
+  - `start_announced`: a source states when construction is expected to start. An expected date, not a confirmed
+    start (the milestone **must** be `expected: true`; the validator requires it). If the source makes the start
+    conditional, put its condition in `stage_condition` (short, in the source's words: `pending financing`), and the
+    stage text carries it ("Start announced for ~2027, pending financing"). It expires: once the announced date has
+    passed (a year-only date: that year's end) with no construction-start milestone, the record falls back to its
+    next furthest stage and `src/check_events.py` lists it (sitegen/events.py, `start_expired()`).
+  A record's stage is the furthest one any of its milestones carries (`proposed` < `approved` < `start_announced`);
+  equal stages take the later date. It shows after "Planned" on the record page's status line with that
+  milestone's own date ("Planned · Approved May 2026") and on the record list's detail line in brackets
+  ("Planned (approved May 2026) · Surveyed outline"), and only while the record is Planned. A Planned record whose
+  milestones carry no stage shows plain "Planned": that is expected and correct. A stage is never set project-wide:
+  a source that approves a whole project does not, by that, name each parcel in it. A dossier may carry
+  `stage_note` (top level, a plain sentence for readers, e.g. "No source we have read names this parcel in an
+  approval.") that shows under the status line of a Planned record with no stage; write it only where it is true
+  of that record's sources. There is no map colour for a stage.
+  A milestone that is later contradicted (an approval withdrawn) loses its `stage` in the same change and gets a
+  `correction` row.
+- `event` is optional, on any milestone about one hearing, vote or legal deadline: a slug of lower-case words,
+  digits and single hyphens, at least one hyphen, up to 60 characters, naming the place or process and the year
+  (`p70-dda-amendment-2026`). Milestones on different records that share a slug are one event: Coming up's
+  "Decisions ahead" and a site page's "Next up" show one row for it, listing every record. Within an event the
+  milestone still ahead is `expected: true` (its date is what a source expects, or a legal deadline when
+  `basis: legal_deadline`); a milestone with the same slug and `expected: false` is the **outcome**. Never give the
+  slug to an earlier, different hearing on the same subject, or it would count as the outcome of this one. A
+  milestone with no `event` is never listed as a decision, even if its text mentions a Commission.
+  **One event is one body's step.** A source that sends one item to two bodies (the Port Commission, then the Board
+  of Supervisors) gets one slug per body, so an outcome at one never closes the other. Rows on the same date sort by
+  slug, so number the steps in their real order (`p70-dda-amendment-1-port-2026`, `p70-dda-amendment-2-bos-2026`).
+- `window_end` is optional on an `expected: true` milestone whose source gives a window instead of a date ("by the
+  end of this year or early next year"): the end of the latest period the source's words allow (a date, not
+  before the milestone's `date`). The milestone's `date` is the window's early end; the row stays "ahead" until
+  `window_end`'s period ends, so it never reads "date passed" inside the window (this is page mechanics: say it here and in
+  the PR, never in a milestone's public text); it shows "Dec 2026 to 2027", or "late 2026 or early 2027" when the text names
+  those two seasons, and its full wording. Where the source gives no end, use the end of the year its wording points to, and say so in the text.
+- On "Decisions ahead" an event's date reads as what it is. A full-day date that is not a legal deadline is shown as
+  **Scheduled** (an agenda or Clerk listing, a Board hearing, a Commission item; once past, "Scheduled for Oct 6, 2026 ·
+  No outcome found yet"); a `basis: legal_deadline` is a **Legal deadline**; anything else (a month, a year, a window)
+  is **Expected, not confirmed**. A date set by an agreement or an extension (the end of an agreed delay, say) is none of
+  these and has no tag of its own: it stays an ordinary expected milestone with no `event`, so it is not listed as a
+  decision. A row's source line names the source (publisher or title) without a date, so the same event reads the same
+  whichever record's copy of the source is picked.
+- Once an event's date has passed (a year-only date at the end of that year, a month-only date at the end of that
+  month) with no outcome milestone, it leaves the "ahead" list and reads "No outcome found yet" (never "missed").
+  `src/check_events.py` lists these (warn-only in `src/check_all.py`) so the outcome, or a new date, can be added.
+  The CSV (`data/milestones.csv`) has `stage` and `event` columns that follow the same rules.
 - What's next (record pages, /near/ rows, site pages' "Next up"): the earliest
   `expected` milestone whose date has not passed, with its date, `basis` in plain
   words (`record` "this building", `phase` "this phase", `project` "whole
