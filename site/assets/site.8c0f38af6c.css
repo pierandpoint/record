@@ -1000,30 +1000,38 @@ sup.cites a { text-decoration: none; }
    a filtered-out row stays on screen: every finder search showed all records until 2026-10-11. */
 .record-list li.finder-item[hidden] { display: none; }
 #finder-controls .btn[hidden] { display: none; }
-/* Map first on a phone (near-mobile): .near-page becomes a flex column and the map leads it (its
-   toolbar above it), then the locate button, the nearest records, then the legend and caption, the
-   heading and the rest. The map section drops its box (display: contents) so its pieces can be
-   ordered separately. app.js shows the section on a phone before a position arrives; with
-   JavaScript off it stays hidden and the page keeps its plain order. */
+/* /near/ order. The markup is the phone's order (map, locate button, nearest, address search, heading,
+   legend and caption), so keyboard and screen-reader order match what a phone shows. From 720 px up
+   .near-page is a flex column that puts the page back in the older order: heading, locate button,
+   address search, status, nearest, then the map, its legend, the finder. A phone does that too until
+   app.js shows the map section (with JavaScript off it stays hidden and the heading leads). */
+.near-page { display: flex; flex-direction: column; }
+.near-page > .page-head { order: 1; }
+.near-locate { order: 2; }
+.near-place { order: 3; }
+.near-status { order: 4; }
+.near-nearest { order: 5; }
+#near-map-section { order: 6; }
+#near-map-notes { order: 7; }
+#near-map-section[hidden] ~ #near-map-notes { display: none; }
+.near-far-line { order: 10; }
+#near-finder { order: 11; }
+.near-accuracy-note { order: 12; }
 @media (max-width: 719px) {
-  .near-page { display: flex; flex-direction: column; }
-  #near-map-section:not([hidden]) { display: contents; }
-  #near-map-section > * { order: 6; }
-  #near-map-section > .map-toolbar, #near-map-section > #near-map-frame { order: 1; }
-  #near-map-section > #near-map-frame { margin-top: 8px; }
+  .near-page:has(> #near-map-section:not([hidden])) > #near-map-section { order: 1; }
+  .near-page:has(> #near-map-section:not([hidden])) > #near-map-section > #near-map-frame { margin-top: 8px; }
   /* Tall enough to read, short enough that the first nearest row peeks in on a 740 px screen. */
   #near-map-frame { height: clamp(250px, 36vh, 320px); }
   #near-map-frame .pp-map.ov-narrow { height: 100%; }
-  .near-locate { order: 2; padding-top: 12px; }
-  .near-status { order: 3; margin-top: 8px; }
-  .near-nearest { order: 4; padding-top: 16px; border-bottom: 1px solid var(--paper-line); margin-bottom: 20px; }
-  .near-page > .page-head { order: 7; margin-top: 12px; }
-  .near-place { order: 8; }
-  .near-far-line { order: 10; }
-  #near-finder { order: 11; }
-  .near-accuracy-note { order: 12; }
-}
-.near-accuracy-note { order: 12; }
+  .near-page:has(> #near-map-section:not([hidden])) > .near-locate { order: 2; padding-top: 12px; }
+  .near-page:has(> #near-map-section:not([hidden])) > .near-status { order: 3; margin-top: 8px; }
+  .near-page:has(> #near-map-section:not([hidden])) > .near-nearest { order: 4; padding-top: 16px; border-bottom: 1px solid var(--paper-line); margin-bottom: 20px; }
+  .near-page:has(> #near-map-section:not([hidden])) > .near-place { order: 5; }
+  .near-page:has(> #near-map-section:not([hidden])) > .page-head { order: 6; margin-top: 12px; }
+  .near-page:has(> #near-map-section:not([hidden])) > #near-map-notes { order: 7; }
+  .near-page:has(> #near-map-section:not([hidden])) > .near-far-line { order: 10; }
+  .near-page:has(> #near-map-section:not([hidden])) > #near-finder { order: 11; }
+  .near-page:has(> #near-map-section:not([hidden])) > .near-accuracy-note { order: 12; }
 }
 .near-accuracy-note { color: var(--paper-faint); font-size: 13px; max-width: 62ch; margin-top: 32px; padding-bottom: 8px; }
 
