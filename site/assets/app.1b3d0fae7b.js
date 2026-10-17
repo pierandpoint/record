@@ -989,7 +989,7 @@ var ppSearch = (function () {
             card.hidden = true;
             card.innerHTML = '<button type="button" class="tenant-card-close" aria-label="Close">×</button>' +
               '<div class="tenant-card-body"><p class="tenant-card-name"></p><p class="tenant-card-meta"></p>' +
-              '<p class="tenant-card-links"><a class="tenant-card-open">Open record →</a></p></div>';
+              '<p class="tenant-card-links"><a class="tenant-card-open">Open<span class="tenant-card-open-rest"> record →</span></a></p></div>';
             card.querySelector('.tenant-card-close').addEventListener('click', function () { closeParcelCard(true); });
             frame.appendChild(card);
           }
@@ -999,7 +999,16 @@ var ppSearch = (function () {
           var status = cut > 0 ? label.slice(cut + 2) : '';
           status = status.charAt(0).toUpperCase() + status.slice(1);
           card.querySelector('.tenant-card-name').textContent = name;
-          card.querySelector('.tenant-card-meta').textContent = status;
+          // The tenant count ("· 3 tenants") goes in a span of its own so the phone strip can drop it and keep the name.
+          var meta = card.querySelector('.tenant-card-meta');
+          var dot = status.indexOf(' · ');
+          meta.textContent = dot > 0 ? status.slice(0, dot) : status;
+          if (dot > 0) {
+            var cnt = document.createElement('span');
+            cnt.className = 'tenant-card-count';
+            cnt.textContent = status.slice(dot);
+            meta.appendChild(cnt);
+          }
           card.querySelector('.tenant-card-open').setAttribute('href', a.getAttribute('href'));
           openHref = a.getAttribute('href');
           cardOpener = a;
@@ -1286,7 +1295,8 @@ var ppSearch = (function () {
           var screenPt = pt.matrixTransform(ctm);
           var frameRect = frame.getBoundingClientRect();
           var x = screenPt.x - frameRect.left, y = screenPt.y - frameRect.top;
-          var dock = frameRect.width > 0 && frameRect.width < 480;
+          // Same breakpoint as the strip rules in site.css (max-width: 719px): by viewport, so JS and CSS cannot disagree.
+          var dock = frameRect.width > 0 && window.innerWidth < 720;
           card.classList.toggle('tenant-card-dock', dock);
           if (dock) { card.style.left = ''; card.style.top = ''; return; }
           var cw = card.offsetWidth || 240, ch = card.offsetHeight || 150;
@@ -2806,6 +2816,17 @@ function initPagedBox(box, list) {
   var prevBtn = overlay.querySelector('.lightbox-prev');
   var nextBtn = overlay.querySelector('.lightbox-next');
   var current = 0, lastFocused = null;
+  // On a phone the zoom buttons sit on the picture's lower corner, not at the bottom of the screen (PH-14).
+  var zoomEl = overlay.querySelector('.lightbox-zoom');
+  function placeZoom() {
+    if (window.innerWidth >= 720) { zoomEl.style.top = ''; zoomEl.style.bottom = ''; return; }
+    var r = imgEl.getBoundingClientRect();
+    if (!r.height) return;
+    zoomEl.style.bottom = 'auto';
+    zoomEl.style.top = Math.max(0, r.bottom - 52) + 'px';
+  }
+  imgEl.addEventListener('load', placeZoom);
+  window.addEventListener('resize', placeZoom);
 
   function show(i) {
     current = (i + frames.length) % frames.length;
@@ -2832,6 +2853,7 @@ function initPagedBox(box, list) {
     lastFocused = document.activeElement;
     show(i);
     overlay.hidden = false;
+    placeZoom();
     document.body.style.overflow = 'hidden';
     closeBtn.focus();
     document.addEventListener('keydown', onKey);
@@ -3034,3 +3056,39 @@ function initPagedBox(box, list) {
   try { if (/^\d{4}-\d{2}-\d{2}$/.test(today)) window.localStorage.setItem(key, today); } catch (err) { /* storage blocked: nothing to remember */ }
 })();
 
+
+
+// "What's next" (PH-08): the whole box (next step and completion line) is capped at three lines with a "More" button. Without JavaScript the
+// whole text shows, since the cap and the button both come from here. The button appears only when the text is
+// really longer than three lines at this width, and the cap is re-measured when the width changes.
+(function () {
+  var paras = Array.prototype.slice.call(document.querySelectorAll('.whats-next-body[data-clamp]'));
+  if (!paras.length) return;
+  paras.forEach(function (p) {
+    var btn = null;
+    function measure() {
+      if (p.classList.contains('is-open')) return;
+      p.classList.add('is-clamped');
+      var long = p.scrollHeight > p.clientHeight + 1;
+      if (!long) { p.classList.remove('is-clamped'); if (btn) { btn.remove(); btn = null; } return; }
+      if (btn) return;
+      btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'whats-next-more';
+      btn.textContent = 'More';
+      btn.setAttribute('aria-expanded', 'false');
+      if (!p.id) p.id = 'whats-next-body';
+      btn.setAttribute('aria-controls', p.id);
+      btn.addEventListener('click', function () {
+        var open = p.classList.toggle('is-open');
+        btn.textContent = open ? 'Less' : 'More';
+        btn.setAttribute('aria-expanded', String(open));
+      });
+      p.insertAdjacentElement('afterend', btn);
+    }
+    measure();
+    var w = window.innerWidth;
+    window.addEventListener('resize', function () { if (window.innerWidth !== w) { w = window.innerWidth; measure(); } });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+  });
+})();

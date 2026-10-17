@@ -140,7 +140,7 @@ source).
   over `phase` over `project`: use the weakest basis the documents actually
   support, never a stronger label than the source justifies. A future
   completion with no `basis` fails validation. A fourth value, `legal_deadline`,
-  is not a forecast at all (below).
+  is not a forecast at all (below), and a fifth, `agreement`, is a date the parties fixed (below).
 - `legal_deadline` is for a contractual or statutory outer date: a DDA or DA
   outside date, a development-agreement term, a lease end. Tag a milestone this
   way **only** when its own cited source explicitly calls the date an outside
@@ -155,6 +155,16 @@ source).
   (not a schedule): 2042") in the milestone list and in What's next, never as an
   expected completion; the existing `status` in the file is left alone. Retagging
   a milestone gets a `correction` row in `data/changelog.csv`.
+- `agreement` is for a future date that the parties to an agreement have themselves fixed: the end of an agreed
+  extension or delay, say. It is not a forecast, so it must not read "Expected, not confirmed", and it is not a
+  legal deadline unless the source calls it one, so it must not read "deadline". Tag a milestone this way **only**
+  when its own cited source states the agreed date, and put the source's own words in quotation marks in
+  `basis_note` (required; the validator checks for the quotes, for `expected: true` and that the date has not passed). It is
+  never an expected completion (`status: complete` is refused). It is shown with its own
+  plain label, **Date set by agreement**, in What's next, in the `/near/` rows, in "Next up" and in the milestone
+  list, where "Expected, not confirmed" appears for other future dates. Unlike a legal deadline it keeps the
+  milestone's `status` (a date set by agreement usually has none), and it still counts as the record's next
+  step. First used for the Pier 70 Phase 1 down-market-delay end date (Port Item 11A, Aug 7, 2026, p.4).
 - `stage` is optional, on a milestone of a record that is Planned: one of `proposed`, `approved`,
   `start_announced` (below). It says where the project stands, and only the milestone's **own cited source** may say
   it; it is never inferred from wording elsewhere, from a later or earlier milestone, or from the absence of news.
@@ -199,8 +209,8 @@ source).
   **Scheduled** (an agenda or Clerk listing, a Board hearing, a Commission item; once past, "Scheduled for Oct 6, 2026 ·
   No outcome found yet"); a `basis: legal_deadline` is a **Legal deadline**; anything else (a month, a year, a window)
   is **Expected, not confirmed**. A date set by an agreement or an extension (the end of an agreed delay, say) is none of
-  these and has no tag of its own: it stays an ordinary expected milestone with no `event`, so it is not listed as a
-  decision. A row's source line names the source (publisher or title) without a date, so the same event reads the same
+  these: it carries `basis: agreement` and the label **Date set by agreement** (see `basis`, below), stays an ordinary
+  expected milestone with no `event`, and so is not listed as a decision. A row's source line names the source (publisher or title) without a date, so the same event reads the same
   whichever record's copy of the source is picked.
 - Once an event's date has passed (a year-only date at the end of that year, a month-only date at the end of that
   month) with no outcome milestone, it leaves the "ahead" list and reads "No outcome found yet" (never "missed").
@@ -219,10 +229,12 @@ source).
   (sitegen/pages.py) whose basis is not `legal_deadline`. Three or more fail the
   build, one or two print a warning and label the bar's end ("2038+ · 1 record
   expected later (2041)").
-- `basis_note` is required alongside `basis: phase`, `basis: project` or `basis: legal_deadline`: one
+- `basis_note` is required alongside `basis: phase`, `basis: project`, `basis: legal_deadline` or `basis: agreement`: one
   sentence naming the phase or the buildout target and its document, e.g.
   "Phase 3 in the 2018 Development Agreement's phasing schedule, Exhibit N;
-  not a parcel-specific date". Optional (usually omitted) for `basis:
+  not a parcel-specific date". For `basis: agreement` it is the source and the
+  source's own quoted words only: the page prints the label "Date set by agreement"
+  itself, so the note does not repeat it. Optional (usually omitted) for `basis:
   record`, since the milestone's own `sources` already name the document.
 - A paused project doesn't get its expected completion deleted or
   silently re-dated: add a separate, sourced milestone (`status:

@@ -598,7 +598,7 @@ abbr[title] { text-decoration: underline dotted; text-decoration-color: currentC
 .whats-next { margin-top: 14px; max-width: 72ch; padding: 12px 14px; border: 1px solid var(--paper-brass); border-radius: 8px; background: var(--paper-2); color: var(--paper-ink); }
 .whats-next-label { font: 600 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--paper-soft); margin: 0 0 4px; }
 .whats-next-main { margin: 0; font-size: 16px; line-height: 1.45; overflow-wrap: anywhere; }
-.whats-next-meta { margin: 6px 0 0; font: 13px var(--mono); color: var(--paper-soft); }
+.whats-next-meta { margin: 4px 0 6px; font: 13px var(--mono); color: var(--paper-soft); }
 .whats-next-completion { margin-top: 10px; }
 .whats-next-legal { border-style: dashed; border-color: var(--paper-line); }
 .whats-next-legal .whats-next-label { color: var(--paper-soft); }
@@ -1095,6 +1095,88 @@ sup.cites a { text-decoration: none; }
 .finder-count:focus, #finder-empty:focus { outline: none; }
 /* The parcel tap card takes focus when it opens (so a screen reader announces it); no ring on the card itself. */
 .parcel-card:focus { outline: none; }
+
+/* ==== Phone fixes for record and site pages (docs/briefs/phone-fix-records-sites.md): PH-06, 07, 08, 12, 14, 19 ====
+   Everything below belongs to that thread; the rules above are left as they were and these override them. */
+
+/* Header (PH-06, PH-07). The markup is now in reading order (title, status, What's next, lead image, summary,
+   independence note, documents, jump nav), the same order on a phone and for the Tab key. On a wide screen the
+   lead image still sits in a right-hand column: a grid puts it there without moving it in the markup. */
+.page-head-lead { display: block; }
+.page-head-lead .page-head-text { display: grid; grid-template-columns: minmax(0, 1fr); }
+.page-head-text > .gallery-lead { margin-top: 16px; }
+.page-head-lead .site-lead-page { max-width: none; }
+.page-head-top { padding-bottom: 20px; border-bottom: 0; }
+.page-head-after-map { padding-top: 28px; }
+.page-head .summary { margin-top: 16px; }
+.page-about { margin-top: 14px; }
+@media (min-width: 720px) {
+  .page-head-lead .page-head-text { grid-template-columns: minmax(0, 1fr) minmax(240px, 320px); column-gap: 32px; }
+  .page-head-lead .page-head-text > * { grid-column: 1; }
+  .page-head-lead .page-head-text > .gallery-lead { grid-column: 2; grid-row: 1 / span 8; align-self: start; margin-top: 0; }
+}
+
+/* What's next (PH-08): three lines and "More" (app.js adds the button only when the text is longer), and the
+   date's label as a chip of its own: it qualifies the date, so it must never read as the end of the sentence. */
+.whats-next-body.is-clamped:not(.is-open) { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.whats-next-more { display: inline-flex; align-items: center; min-height: 44px; margin: 2px 0 -6px; padding: 0; border: 0; background: none;
+                   font: 600 14px var(--sans); color: var(--paper-brass); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.exp-chip { display: inline-block; font: 12px/1.3 var(--mono); color: var(--paper-soft); border: 1px solid var(--paper-line); border-radius: 999px; padding: 2px 9px; background: var(--paper); }
+.whats-next-meta .exp-chip { font-size: 13px; }
+.next-qual { display: block; margin-top: 4px; font: 12px/1.6 var(--mono); color: var(--paper-faint); }
+.next-up .next-qual { font-size: 12px; }
+
+/* Costs (PH-19): on a phone the amount and the date share the first line and the description runs full width beneath. */
+@media (max-width: 599px) {
+  .costs, .costs tbody { display: block; }
+  .costs tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--paper-line); }
+  .costs tr:first-child { border-top: 1px solid var(--paper-ink); }
+  .costs td, .costs tr:first-child td { display: block; padding: 0; border: 0; }
+  .costs .amount { grid-column: 1; grid-row: 1; }
+  .costs .when { grid-column: 2; grid-row: 1; }
+  .costs td:not(.amount):not(.when) { grid-column: 1 / -1; grid-row: 2; margin-top: 4px; }
+}
+
+/* Parcel and tenant cards on a phone map (PH-12): a one-line (parcel) or two-line (tenant) strip along the bottom of
+   the map, not a panel over half of it. The close button keeps its 44 px target. */
+@media (max-width: 719px) {
+  .tenant-card.parcel-card, .tenant-card.tenant-card-dock { left: 8px !important; right: 8px; bottom: 8px; top: auto !important; width: auto; max-width: none; padding: 0 0 0 12px; border-radius: 8px; transform: none; }
+  .tenant-card.parcel-card-top { top: 8px !important; bottom: auto; right: 56px; }
+  .tenant-card .tenant-card-body { display: flex; align-items: center; gap: 4px 10px; padding-right: 44px; min-height: 48px; }
+  .tenant-card .tenant-card-name { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  /* Parcel strip: name · status · Open, on one line; the name gives way first (ellipsis). */
+  .parcel-card .tenant-card-meta { flex: 0 0 auto; margin: 0; font-size: 12px; white-space: nowrap; }
+  .parcel-card .tenant-card-open-rest, .parcel-card .tenant-card-count { display: none; }
+  /* The name may take two lines before it is cut: the strip is as high as 48 px allows, and the name is what the reader needs. */
+  .parcel-card .tenant-card-name { font-size: 13px; line-height: 1.25; white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .tenant-card .tenant-card-links { margin: 0; flex: 0 0 auto; }
+  .tenant-card .tenant-card-links a { padding: 0 6px; min-height: 44px; color: var(--brass-hi); }
+  .tenant-card .tenant-card-close { top: 2px; right: 2px; width: 44px; height: 44px; }
+  .tenant-card-media { display: none; }
+  /* Tenant card: name and links on the first line, the category and status on the second. */
+  .tenant-card.tenant-card-dock .tenant-card-body { flex-wrap: wrap; row-gap: 0; min-height: 0; }
+  .tenant-card.tenant-card-dock .tenant-card-name { flex: 1 1 calc(100% - 190px); }
+  .tenant-card.tenant-card-dock .tenant-card-meta, .tenant-card.tenant-card-dock .tenant-card-loc { flex: 0 1 auto; margin: 0 0 8px; order: 3; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .tenant-card.tenant-card-dock .tenant-card-name { order: 1; }
+  .tenant-card.tenant-card-dock .tenant-card-links { order: 2; }
+  .tenant-card.tenant-card-dock .tenant-card-loc { display: none; } /* the parent complex is on the record the card opens */
+  .tenant-card.tenant-card-dock .tenant-card-links { margin-left: auto; }
+}
+
+/* Lightbox (PH-14): the photo fits the screen and the controls sit on it, 44 px. On a phone the picture runs edge to
+   edge and as tall as the screen allows; the zoom buttons are placed on its lower corner by app.js. */
+.lightbox-close, .lightbox-prev, .lightbox-next { width: 44px; height: 44px; }
+.lightbox figcaption { font-size: 12px; }
+@media (max-width: 719px) {
+  .lightbox { padding: 52px 0 12px; }
+  .lightbox figure { max-width: 100%; width: 100%; }
+  .lightbox img { max-height: calc(100vh - 150px); max-height: calc(100dvh - 150px); width: 100%; border-radius: 0; }
+  .lightbox figcaption, .lightbox-count { padding: 0 16px; }
+  .lightbox-prev, .lightbox-next { width: 44px; height: 44px; font-size: 24px; background: rgba(29,37,40,.8); }
+  .lightbox-prev { left: 8px; } .lightbox-next { right: 8px; }
+  .lightbox-close { top: 4px; right: 8px; }
+  .lightbox-zoom { right: 8px; }
+}
 
 /* phone-fix-near-changes (PH-02, PH-03, PH-05): /near/'s key and finder. */
 /* The key and map notes, one row under the map (and under the status line, which says where you are):
