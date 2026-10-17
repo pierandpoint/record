@@ -959,7 +959,8 @@ sup.cites a { text-decoration: none; }
 .near-privacy { font-size: 13px; color: var(--paper-faint); max-width: 58ch; }
 /* Address and cross-street search (docs/briefs/address-search.md), under the locate button. */
 .near-place { display: flex; flex-direction: column; gap: 8px; padding: 14px 0 4px; }
-.near-place label { font: 500 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--paper-brass); }
+/* The same neutral form-label style as the finder's filter labels (.filter-field label): brass is for what to act on (D-07). */
+.near-place label { font-size: 13px; font-weight: 600; color: var(--paper-faint); }
 .near-place-row { display: flex; gap: 8px; flex-wrap: wrap; max-width: 560px; }
 .near-place-row input { flex: 1 1 240px; min-width: 0; min-height: 44px; padding: 0 12px; border-radius: 8px; border: 1px solid var(--paper-line); background: var(--paper-2); color: var(--paper-ink); font: 16px var(--sans); }
 .near-status { font-size: 14px; font-weight: 600; color: var(--paper-brass); }
@@ -969,9 +970,13 @@ sup.cites a { text-decoration: none; }
 .near-accuracy-ring { fill: rgba(211, 163, 94, .18); stroke: var(--brass); stroke-width: 1px; vector-effect: non-scaling-stroke; }
 .pp-map .rec.near-highlight { stroke: var(--brass-hi) !important; stroke-width: 2.6px !important; }
 .near-arrow path { fill: var(--brass); }
-.near-close { padding: 24px 0 8px; }
-.near-close[hidden] { display: none; }
-.near-close .record-list { margin-top: 12px; }
+/* One nearby list: the nearest few, a quiet full-width control for the rest within 250 m, then "Further away". */
+.near-nearest { padding: 24px 0 8px; }
+.near-nearest[hidden] { display: none; }
+.near-nearest .record-list { margin-top: 12px; }
+.record-list li.near-extra[hidden] { display: none; }
+.near-more { display: block; width: 100%; min-height: 44px; margin-top: 4px; padding: 10px 0; background: none; border: 0; border-top: 1px solid var(--paper-line); color: var(--paper-ink); font: 600 15px var(--sans); text-align: left; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.near-more[hidden] { display: none; }
 .near-further { margin-top: 16px; }
 .near-further summary { cursor: pointer; font: 600 13px var(--mono); color: var(--paper-brass); }
 .near-further[hidden] { display: none; }
@@ -995,6 +1000,31 @@ sup.cites a { text-decoration: none; }
    a filtered-out row stays on screen: every finder search showed all records until 2026-10-11. */
 .record-list li.finder-item[hidden] { display: none; }
 #finder-controls .btn[hidden] { display: none; }
+/* Map first on a phone (near-mobile): .near-page becomes a flex column and the map leads it (its
+   toolbar above it), then the locate button, the nearest records, then the legend and caption, the
+   heading and the rest. The map section drops its box (display: contents) so its pieces can be
+   ordered separately. app.js shows the section on a phone before a position arrives; with
+   JavaScript off it stays hidden and the page keeps its plain order. */
+@media (max-width: 719px) {
+  .near-page { display: flex; flex-direction: column; }
+  #near-map-section:not([hidden]) { display: contents; }
+  #near-map-section > * { order: 6; }
+  #near-map-section > .map-toolbar, #near-map-section > #near-map-frame { order: 1; }
+  #near-map-section > #near-map-frame { margin-top: 8px; }
+  /* Tall enough to read, short enough that the first nearest row peeks in on a 740 px screen. */
+  #near-map-frame { height: clamp(250px, 36vh, 320px); }
+  #near-map-frame .pp-map.ov-narrow { height: 100%; }
+  .near-locate { order: 2; padding-top: 12px; }
+  .near-status { order: 3; margin-top: 8px; }
+  .near-nearest { order: 4; padding-top: 16px; border-bottom: 1px solid var(--paper-line); margin-bottom: 20px; }
+  .near-page > .page-head { order: 7; margin-top: 12px; }
+  .near-place { order: 8; }
+  .near-far-line { order: 10; }
+  #near-finder { order: 11; }
+  .near-accuracy-note { order: 12; }
+}
+.near-accuracy-note { order: 12; }
+}
 .near-accuracy-note { color: var(--paper-faint); font-size: 13px; max-width: 62ch; margin-top: 32px; padding-bottom: 8px; }
 
 /* founder portrait on the independence page */

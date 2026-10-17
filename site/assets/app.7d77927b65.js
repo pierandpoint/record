@@ -2056,7 +2056,7 @@ function initPagedBox(box, list) {
   function compassOf(deg) { return COMPASS[Math.round(deg / 45) % 8]; }
   function fmtDistance(m) { return m < 1000 ? Math.round(m) + ' m' : (m / 1000).toFixed(m < 10000 ? 1 : 0) + ' km'; }
 
-  var NEAR_M = 1500, CLOSE_M = 250, MAP_WIDTH_M = 400;
+  var NEAR_M = 1500, CLOSE_M = 250, MAP_WIDTH_M = 400, SHOWN_FIRST = 3;
   var watchId = null;
   // mapSection (build.py's #near-map-section) wraps the map-toolbar (Status/Use/Satellite),
   // the map-frame itself and its caption as one unit -- hidden/shown together, so the toggle
@@ -2070,14 +2070,26 @@ function initPagedBox(box, list) {
   var nearestList = document.getElementById('near-nearest-list');
   var showAllBtn = document.getElementById('near-show-all');
   var listExpanded = false;
-  var closeWrap = document.getElementById('near-close');
-  var closeList = document.getElementById('near-close-list');
   var furtherWrap = document.getElementById('near-further-wrap');
   var furtherCount = document.getElementById('near-further-count');
   var farList = document.getElementById('near-far-list');
   var farLine = document.getElementById('near-far-line');
   var finderSection = document.getElementById('near-finder');
   var urlQuery = ppSearch.get().trim();
+  var placeLabel = document.getElementById('near-place-label');
+  var phoneMq = window.matchMedia ? window.matchMedia('(max-width: 719px)') : { matches: false };
+
+  // "Or" only makes sense while the "Use my location" button it follows is on screen.
+  function syncPlaceLabel() {
+    if (placeLabel) placeLabel.textContent = (locateWrap && !locateWrap.hidden ? 'Or type' : 'Type') + ' an address or cross streets';
+  }
+  syncPlaceLabel();
+  // On a phone the map is the first thing under the header, located or not (near-mobile): before a
+  // position arrives it is the overview of the four sites. Wider screens keep it for the first fix.
+  function syncDefaultMap() {
+    if (lastFixLat == null && !showingPlace) mapSection.hidden = !phoneMq.matches;
+  }
+  if (phoneMq.addEventListener) phoneMq.addEventListener('change', syncDefaultMap);
 
   function svgEl(tag) { return document.createElementNS('http://www.w3.org/2000/svg', tag); }
 
@@ -2136,14 +2148,14 @@ function initPagedBox(box, list) {
   }
 
   function recordItemHtml(r, distanceM) {
-    // .near-item, not .record-list's plain "what"/"detail" grid (sitegen/static/site.css):
-    // a thumbnail alongside the name breaks that grid at phone width.
-    // No thumbnail at all when the record has no picture of its own (build.py drops a picture that is
-    // shared by several records, such as one site-plan figure): a grey square helps nobody (UX-12).
-    var thumb = r.image ? '<img class="thumb" src="' + r.image + '" alt="" loading="lazy">' : '';
+    // .near-item, not .record-list's plain "what"/"detail" grid (sitegen/static/site.css).
+    // No thumbnails in these short lists: only some records have a picture of their own, so a
+    // thumbnail on some rows and none on others left the names starting at different x positions
+    // (near-mobile). Distance and status are what a visitor standing outside needs here; the
+    // finder list further down keeps its thumbnails. A grey placeholder square helps nobody (UX-12).
     var bits = [fmtDistance(distanceM), r.statusLabel, r.use];
     if (r.expectedLabel) bits.push('Expected ' + r.expectedLabel);
-    return '<li class="near-item">' + thumb + '<div class="near-item-body"><a href="/parcels/' + r.slug + '/">' + r.name + '</a>' +
+    return '<li class="near-item"><div class="near-item-body"><a href="/parcels/' + r.slug + '/">' + r.name + '</a>' +
       '<span class="detail">' + bits.join(' · ') + '</span>' + (r.nextHtml || '') + '</div></li>';
   }
 
@@ -2155,7 +2167,6 @@ function initPagedBox(box, list) {
 
   function resetPanels() {
     if (nearestWrap) nearestWrap.hidden = true;
-    closeWrap.hidden = true;
     farLine.hidden = true;
     furtherWrap.hidden = true;
     svgs.forEach(clearOverlay);
@@ -2174,22 +2185,19 @@ function initPagedBox(box, list) {
     var ranked = withDistances(lat, lon);
     var close = ranked.filter(function (x) { return x.dist <= CLOSE_M; });
     var further = ranked.filter(function (x) { return x.dist > CLOSE_M; });
-    closeList.innerHTML = close.length ? close.map(function (x) { return recordItemHtml(x.r, x.dist); }).join('')
-      : '<li><div class="what">Nothing tracked within ' + CLOSE_M + ' m.</div></li>';
     farList.innerHTML = further.map(function (x) { return recordItemHtml(x.r, x.dist); }).join('');
     furtherCount.textContent = further.length;
     furtherWrap.hidden = further.length === 0;
-    // The three nearest come first, above the map (UX-12); the full list waits behind "Show all".
-    // With nothing close by, the full list's own "Nothing tracked within..." line stays on show.
-    var top = close.slice(0, 3);
-    if (nearestWrap) {
-      nearestList.innerHTML = top.map(function (x) { return recordItemHtml(x.r, x.dist); }).join('');
-      nearestWrap.hidden = top.length === 0;
-      showAllBtn.hidden = listExpanded || ranked.length <= top.length;
-      closeWrap.hidden = top.length > 0 && !listExpanded;
-    } else {
-      closeWrap.hidden = false;
-    }
+    // One list (near-mobile): the three nearest, then a quiet control that opens the rest of the
+    // records within CLOSE_M in place. "Further away" stays a disclosure at the end.
+    nearestList.innerHTML = close.length ? close.map(function (x, i) {
+      var li = recordItemHtml(x.r, x.dist);
+      return i < SHOWN_FIRST || listExpanded ? li : li.replace('<li class="near-item"', '<li class="near-item near-extra" hidden');
+    }).join('') : '<li><div class="what">Nothing tracked within ' + CLOSE_M + ' m.</div></li>';
+    var more = close.length - SHOWN_FIRST;
+    showAllBtn.hidden = listExpanded || more <= 0;
+    showAllBtn.textContent = 'Show ' + more + ' more within ' + CLOSE_M + ' m';
+    nearestWrap.hidden = false;
     farLine.hidden = true;
     // Someone who came here from the header search wants those results, location or not.
     finderSection.hidden = label ? true : !urlQuery;
@@ -2215,8 +2223,7 @@ function initPagedBox(box, list) {
   function showFar(lat, lon, label) {
     var ranked = withDistances(lat, lon);
     var nearest = ranked[0];
-    if (nearestWrap) nearestWrap.hidden = true;
-    closeWrap.hidden = true;
+    nearestWrap.hidden = true;
     finderSection.hidden = false;
     mapSection.hidden = false;
     var deg = nearest ? bearing(nearest.r.lat, nearest.r.lon, lat, lon) : 0;
@@ -2259,6 +2266,7 @@ function initPagedBox(box, list) {
     // wherever locate() isn't re-run automatically below (permission not yet granted, or
     // withdrawn since).
     if (locateWrap) locateWrap.hidden = true;
+    syncPlaceLabel();
     var ranked = withDistances(lat, lon);
     if (ranked.length && ranked[0].dist <= NEAR_M) showNear(lat, lon, acc);
     else showFar(lat, lon);
@@ -2276,7 +2284,7 @@ function initPagedBox(box, list) {
       showStatus(err && err.code === 1 ? 'Location is off for this site. Showing every record instead.'
         : 'Your location could not be found. Showing every record instead.');
       resetPanels();
-      mapSection.hidden = true;
+      syncDefaultMap();
       finderSection.hidden = false;
     }
     // PERMISSION_DENIED (code 1) is terminal for this watch -- the browser won't grant itself
@@ -2309,11 +2317,11 @@ function initPagedBox(box, list) {
   if (showAllBtn) showAllBtn.addEventListener('click', function () {
     listExpanded = true;
     showAllBtn.hidden = true;
-    closeWrap.hidden = false;
-    closeWrap.scrollIntoView();
-    // The button hid itself, so focus would drop to the page: move it to the list it revealed.
-    var heading = document.getElementById('near-close-heading');
-    if (heading) { try { heading.focus({ preventScroll: true }); } catch (err) { heading.focus(); } }
+    var extra = nearestList.querySelectorAll('.near-extra');
+    Array.prototype.forEach.call(extra, function (li) { li.hidden = false; });
+    // The button hid itself, so focus would drop to the page: move it to the first row it revealed.
+    var first = extra[0] && extra[0].querySelector('a');
+    if (first) { try { first.focus({ preventScroll: true }); } catch (err) { first.focus(); } first.scrollIntoView({ block: 'nearest' }); }
   });
 
   // Address and cross-street search (docs/briefs/address-search.md). A typed "1290 3rd St" or
@@ -2441,6 +2449,8 @@ function initPagedBox(box, list) {
       placeLookup(urlQuery, true);
     }
   });
+
+  if (!urlIsPlace) syncDefaultMap();
 
   // If this browser already granted pierandpoint.org geolocation access -- from an earlier visit,
   // or an earlier click this same session -- skip straight to the map on the next load instead of
