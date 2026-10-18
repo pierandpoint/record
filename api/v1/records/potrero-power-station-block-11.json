@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-10-17",
+ "generated": "2026-10-18",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -29,7 +29,7 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "Planned office building on the Potrero Power Station masterplan (office, laboratory and life science uses are permitted there), paired with Block 12 (the project's engineer describes the two together as about 430,000 sq ft of office, while the Planning Department's October 2020 Phase 1 approval lists about 219,000 sq ft of commercial space for Block 11 and 177,000 for Block 12); design was under review as of the March 2025 annual compliance report. In a request reported July 29, 2026, the developer asked to raise Block 11's height by 15 feet; the Planning Commission approved the amendment unanimously (reported Aug 3, 2026) and the Board of Supervisors passed the amended development agreement on first reading on Sept 29, 2026, and Legistar lists it enacted on Oct 13, 2026 (Mayor 'APPROVED'). No construction start found.",
+  "summary": "Planned office building on the Potrero Power Station masterplan (office, laboratory and life science uses are permitted there), paired with Block 12 (the project's engineer describes the two together as about 430,000 sq ft of office, while the Planning Department's October 2020 Phase 1 approval lists about 219,000 sq ft of commercial space for Block 11 and 177,000 for Block 12); design was under review as of the March 2025 annual compliance report. In a request reported July 29, 2026, the developer asked to raise Block 11's height by 15 feet; the Planning Commission approved the amendment unanimously (reported Aug 3, 2026) and the Board of Supervisors passed the amended development agreement on first reading on Sept 29, 2026, and Legistar lists it enacted on Oct 13, 2026 (Mayor 'APPROVED'); the enacted height map gives Block 11 145 ft (130 ft in the adopted rules), taking effect Nov 13, 2026 by our count. No construction start found.",
   "summary_sources": [
    "src-meyersplus",
    "src-phase1-2020",
@@ -65,14 +65,14 @@
    },
    {
     "key": "height_ft",
-    "value": "flat 130 ft max per the D4D's Figure 6.2.3",
+    "value": "130 ft until the 2026 amendment takes effect (adopted D4D, Figure 6.2.3)",
     "sources": [
      "src-d4d-final-fig623"
     ]
    },
    {
     "key": "height_ft_2026_amendment",
-    "value": "145 ft in the Sept 28, 2026 draft D4D (adopted 2020: 130 ft); the package was enacted Oct 13, 2026, and the final ordinances say 'This ordinance shall become effective on the 31st day after enactment' (File 260770 §5(a), p. 56 of its 'Leg Final' attachment; File 260724, p. 10 of its attachment), which makes the effective date November 13, 2026 by our count (a legal date computed by Pier & Point, not a date printed in the text); the heights in the enacted text have not yet been checked against this record",
+    "value": "145 ft on the enacted height map (effective Nov 13, 2026, our count); adopted 2020: 130 ft",
     "sources": [
      "src-legistar-260724-final",
      "src-legistar-260770-final",
@@ -215,6 +215,44 @@
      }
     ],
     "source": "California Barrel Company LLC, submitted to SF Planning Department, 2020-06-07",
+    "origin": "record",
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_block_11",
+     "slug": "potrero-power-station-block-11",
+     "name": "Potrero Power Station Block 11",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-11/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-11.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked"
+   },
+   {
+    "date": "2020-10-07",
+    "date_label": "Oct 7, 2020",
+    "status": "planned",
+    "status_label": "Planned",
+    "text": "Planning Department approves the Phase 1 Development Phase Application, which includes Block 11 (Development Phase Approval dated October 7, 2020, Case No. 2017-011878PHA, signed by Planning Director Rich Hillis): the approval lists 'Block 11 – Includes construction of approximately 219,000 square feet of commercial, 5,000 square feet of retail, 6,000 square feet of PDR, 6,000 square feet of childcare, and approximately 48,500 square feet of accessory parking uses' (PDF p. 16), says the first phase consists of 'vertical improvements to Blocks 2, 7, 8, 11, 12, and 15' (PDF p. 2), and its Decision reads 'approves the Phase 1 Plan Application dated October 6, 2020' (PDF p. 4). The approval moves 'the construction of commercial buildings on Blocks 11, 12, and 15' into Development Phase 1 (PDF p. 3). The date is the approval's own date, an event date. This approves the development phase, not Block 11's building design; no design review approval has been found for the block.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-phase1-2020",
+      "title": "Potrero Power Station Phase 1 and Phasing Plan Amendment Applications: Development Phase Approval (October 7, 2020)",
+      "publisher": "SF Planning",
+      "date": "2020-10-07",
+      "url": "https://sfplanning.org/potrero-power-station",
+      "accessed": "2026-09-20",
+      "overview": true
+     }
+    ],
+    "source": "SF Planning, 2020-10-07",
     "origin": "record",
     "category": "milestone",
     "category_label": "Milestone",
@@ -606,6 +644,66 @@
     "batch": null
    },
    {
+    "date": "2026-10-17",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Board's ordinance as enacted on October 13, 2026 sets new height limits for Block 11: 145 ft. They take effect 31 days after enactment, November 13, 2026 by our count; until then the earlier limits (130 ft) apply.",
+    "source": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'",
+    "sources": [
+     {
+      "title": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_block_11",
+     "slug": "potrero-power-station-block-11",
+     "name": "Potrero Power Station Block 11",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-11/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-11.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
+   {
+    "date": "2026-10-17",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "The Planning Department's October 7, 2020 Phase 1 approval includes Block 11, so the record now shows 'Planned · Approved'. This is approval of the development phase, not of the building's design, which has not been approved as far as we found.",
+    "source": "Planning Department, Potrero Power Station Phase 1 and Phasing Plan Amendment Applications: Development Phase Approval, Oct 7, 2020 (149 pages; sfplanning.org Potrero Power Station page, M-Files link), PDF p. 4: \"approves the Phase 1 Plan Application dated October 6, 2020\"",
+    "sources": [
+     {
+      "title": "Planning Department, Potrero Power Station Phase 1 and Phasing Plan Amendment Applications: Development Phase Approval, Oct 7, 2020 (149 pages; sfplanning.org Potrero Power Station page, M-Files link), PDF p. 4: \"approves the Phase 1 Plan Application dated October 6, 2020\""
+     }
+    ],
+    "category": "milestone",
+    "category_label": "Milestone",
+    "record": {
+     "id": "potrero_block_11",
+     "slug": "potrero-power-station-block-11",
+     "name": "Potrero Power Station Block 11",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-11/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-11.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
+   {
     "date": "2026-10-14",
     "kind": "correction",
     "kind_label": "Correction",
@@ -918,7 +1016,7 @@
   "open_questions": [
    "No design review approval or construction-start date found for Block 11; the most recent primary source found (the 2024 annual compliance report) describes design as 'under review', not approved.",
    "The combined 430,000 sq ft figure for Blocks 11+12 comes from the project's MEP engineer (Meyers+). The Planning Department's October 7, 2020 Phase 1 approval lists approximately 219,000 sq ft of commercial space for Block 11 and 177,000 for Block 12 (about 396,000 together, plus retail, PDR, childcare and other uses); no source reconciles the two figures.",
-   "The Chronicle's July 2026 report of a proposed +15 ft height increase is tied to the Development Agreement and Planning Code amendment package (BOS Files 260724 and 260770), which passed the Board of Supervisors on first reading on Sept 29, 2026 and finally on Oct 6, 2026 (11 ayes), and Legistar lists it enacted on Oct 13, 2026 (Legistar: Mayor 'APPROVED'; enactment numbers 208-26 and 209-26; page read Oct 14, 2026). The final ordinances say 'This ordinance shall become effective on the 31st day after enactment' (File 260770 §5(a), p. 56 of its 'Leg Final' attachment; File 260724, p. 10 of its attachment), which makes the effective date November 13, 2026 by our count (a legal date computed by Pier & Point, not a date printed in the text). The heights and uses in the enacted text have not yet been checked against this record, so this record's height fact still shows the adopted limit.",
+   "The Chronicle's July 2026 report of a proposed +15 ft height increase is tied to the Development Agreement and Planning Code amendment package (BOS Files 260724 and 260770), which passed the Board of Supervisors on first reading on Sept 29, 2026 and finally on Oct 6, 2026 (11 ayes), and Legistar lists it enacted on Oct 13, 2026 (Legistar: Mayor 'APPROVED'; enactment numbers 208-26 and 209-26; page read Oct 14, 2026). The enacted height map labels Block 11 \"145'\" (File 260770 'Leg Final' attachment, p. 29), the 15 ft the Chronicle reported, effective November 13, 2026 by our count (a legal date computed by Pier & Point, not printed in the text). No construction or design review date for the taller building has been found.",
    "This record's map outline is DataSF Assessor lot 4232021 (active, unaddressed, recorded 2022-08-30), chosen because 77% of our earlier trace of the D4D figure lies inside it; that this lot is Block 11's own parcel is an inference from location, shape and size, and no document read names the lot."
   ],
   "sources": [

@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-10-17",
+ "generated": "2026-10-18",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -207,8 +207,8 @@
    {
     "date": "2019-05-17",
     "date_label": "May 17, 2019",
-    "status": "complete",
-    "status_label": "Complete",
+    "status": null,
+    "status_label": null,
     "text": "DBI demolition permit 201712055462, to 'demolish 1 story storage bldg' at 385 Channel, is recorded as complete (filed Dec 5, 2017; approved Feb 16, 2018; issued Feb 22, 2018), clearing the one-story warehouse structure from the parcel",
     "expected": false,
     "approximate": false,
@@ -223,8 +223,8 @@
     ],
     "source": "DBI (Building Permits)",
     "origin": "record",
-    "category": "status",
-    "category_label": "Status",
+    "category": "milestone",
+    "category_label": "Milestone",
     "record": {
      "id": "8710006",
      "slug": "mission-bay-south-block-12-west",
@@ -305,8 +305,8 @@
     ],
     "source": "OCII (primary city agency document, presented to the Mission Bay CAC), 2026-08-13",
     "origin": "record",
-    "category": "status",
-    "category_label": "Status",
+    "category": "milestone",
+    "category_label": "Milestone",
     "record": {
      "id": "8710006",
      "slug": "mission-bay-south-block-12-west",
@@ -418,6 +418,36 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-17",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The demolition permit for the old storage building at 385 Channel is still on the timeline, but it no longer marks the whole Block 12 West parcel as complete. The parcel stays Planned.",
+    "source": "src-watch-dbi-building-permits-3 (DBI permit 201712055462, recorded as complete; filed Dec 5, 2017, issued Feb 22, 2018)",
+    "sources": [
+     {
+      "title": "src-watch-dbi-building-permits-3 (DBI permit 201712055462, recorded as complete; filed Dec 5, 2017, issued Feb 22, 2018)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8710006",
+     "slug": "mission-bay-south-block-12-west",
+     "name": "Mission Bay South Block 12 West",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-12-west/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-12-west.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-14",
     "kind": "correction",

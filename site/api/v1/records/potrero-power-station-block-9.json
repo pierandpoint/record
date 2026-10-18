@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-10-17",
+ "generated": "2026-10-18",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -77,7 +77,7 @@
    },
    {
     "key": "height_ft",
-    "value": "125/85 ft if Unit 3 is demolished (Standard 6.2.1); with Unit 3, 85, 65 and 35 ft per Figure 6.2.3",
+    "value": "Until Nov 13, 2026: 125/85 ft if Unit 3 is demolished; with Unit 3, 85, 65 and 35 ft (adopted D4D)",
     "sources": [
      "src-d4d-final-fig623",
      "src-d4d-final-6.2.1"
@@ -97,6 +97,14 @@
     "sources": [
      "src-d4d-final-table311-notes",
      "src-chronicle-2026-07"
+    ]
+   },
+   {
+    "key": "height_ft_2026_amendment",
+    "value": "133 ft and 93 ft with or without Unit 3 on the enacted map; 125 ft if majority hotel (effective Nov 13, 2026, our count)",
+    "sources": [
+     "src-legistar-260770-final",
+     "src-legistar-260724-final"
     ]
    }
   ],
@@ -242,6 +250,36 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-17",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Board's ordinance as enacted on October 13, 2026 sets new height limits for Block 9: 133 ft and 93 ft with or without Unit 3, 125 ft if the building is majority hotel (Note 3). They take effect 31 days after enactment, November 13, 2026 by our count; until then the earlier limits (125/85 ft, or 85, 65 and 35 ft with Unit 3) apply.",
+    "source": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'",
+    "sources": [
+     {
+      "title": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_block_9",
+     "slug": "potrero-power-station-block-9",
+     "name": "Potrero Power Station Block 9",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-9/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-9.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-13",
     "kind": "correction",
@@ -578,6 +616,22 @@
     "date": "2026-07-29",
     "url": "https://www.sfchronicle.com/realestate/article/one-s-f-s-biggest-developments-changing-plans-22365461.php",
     "accessed": "2026-09-29"
+   },
+   {
+    "id": "src-legistar-260770-final",
+    "title": "BOS File 260770, 'Leg Final' attachment: the ordinance as finally passed, with the Clerk of the Board's certificate (FINALLY PASSED 10/6/2026, Ayes: 11; height map p. 29; effective-date section p. 56; certificate pp. 58-59)",
+    "publisher": "SF Board of Supervisors (Legistar)",
+    "date": "2026-10-07",
+    "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063746&GUID=9EA91A49-BBF9-4471-9EA9-6E7BD33A4353",
+    "accessed": "2026-10-17"
+   },
+   {
+    "id": "src-legistar-260724-final",
+    "title": "BOS File 260724, 'Leg Final' attachment: the ordinance as finally passed (effective-date section p. 10)",
+    "publisher": "SF Board of Supervisors (Legistar)",
+    "date": "2026-10-07",
+    "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063745&GUID=68B0CE5F-84C2-4368-BF8D-EEA7D8B92E55",
+    "accessed": "2026-10-17"
    }
   ],
   "notes": "Approximate polygon for a real, D4D-adopted block (final D4D, Feb 26, 2020: Table 3.1.1 and Figure 6.2.3) -- see the accuracy caveat. Status 'planned': the hotel is approved, but the Chronicle (May 2025) reported its construction could be a decade away and an interim park is planned. Use 'mixed': Table 3.1.1 permits residential, hotel and other retail, office and entertainment uses on Block 9.",

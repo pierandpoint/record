@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-10-17",
+ "generated": "2026-10-18",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -93,9 +93,9 @@
    {
     "date": "2015-12",
     "date_label": "Dec 2015",
-    "status": "planned",
-    "status_label": "Planned",
-    "text": "Successor Agency's Approved Long-Range Property Management Plan for Mission Bay lists Park P2 (\"Vacant Lot/Land\") as a designated Open Space Park Parcel under the 1998 OPA, assigned to the Phase II Future Parks group (the plan's estimated lease-termination date for that phase was 2019, not a construction or opening date; the Mission Creek Park South Extension project now has its own schedule)",
+    "status": null,
+    "status_label": null,
+    "text": "The land is planned as a park: the Successor Agency's Approved Long-Range Property Management Plan for Mission Bay lists Park P2 (\"Vacant Lot/Land\") as a designated Open Space Park Parcel under the 1998 OPA, assigned to the Phase II Future Parks group; this is about the land planned as a park, the planned extension, and does not say what stands on P2 today (the plan's estimated lease-termination date for that phase was 2019, not a construction or opening date; the Mission Creek Park South Extension project now has its own schedule)",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -105,8 +105,8 @@
     ],
     "source": "Mission Bay North and South Approved Long-Range Property Management Plan, Dec 2015",
     "origin": "csv",
-    "category": "status",
-    "category_label": "Status",
+    "category": "retail",
+    "category_label": "Retail",
     "record": {
      "id": "mission_bay_p2_creek_channel",
      "slug": "mission-creek-park-south-extension-parcel-p2",
@@ -165,9 +165,84 @@
      "url": "https://pierandpoint.org/sites/mission-bay/"
     },
     "relation": "tracked"
+   },
+   {
+    "date": "2026-10-17",
+    "date_label": "Oct 17, 2026",
+    "status": "existing",
+    "status_label": "Existing",
+    "text": "Rec and Park's schematic design (undated) calls Huffaker Park \"existing\" and says it \"will be preserved and incorporated into the park design\", and gives \"The existing community garden is 11,500 square feet.\" It also says \"the existing Huffaker Park path will remain in the same location and width while the paving material will be required to be improved to city standards\". Hoodline, April 6, 2018, mentions residents getting involved \"at nearby Huffaker Park\". This date is when the schematic was read, not when the park was built. The park stands today but is not at its final size: the planned extension builds around it and may rework part of it. No City page found says in its own words that the park is open today.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-rp-schematic-p2p8",
+      "title": "Mission Bay P2-P8, Preliminary Concept - Schematic Design (undated; includes a plan sheet dated June 23, 2006)",
+      "publisher": "San Francisco Recreation and Parks Department (document names Catellus and the San Francisco Redevelopment Agency)",
+      "url": "https://sfrecpark.org/DocumentCenter/View/25950/Mission-Creek-Park-South-Extension-Project---Schematic-P2-P8",
+      "accessed": "2026-10-10",
+      "overview": true
+     },
+     {
+      "id": "src-hoodline-2018",
+      "title": "Life on a Houseboat Is Mostly Ups, Few Downs",
+      "publisher": "Hoodline",
+      "date": "2018-04-06",
+      "url": "https://hoodline.com/2018/04/life-on-a-houseboat-is-mostly-ups-few-downs/",
+      "accessed": "2026-10-18"
+     }
+    ],
+    "source": "San Francisco Recreation and Parks Department (document names Catellus and the San Francisco Redevelopment Agency); Hoodline, 2018-04-06",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
+    "record": {
+     "id": "mission_bay_p2_creek_channel",
+     "slug": "mission-creek-park-south-extension-parcel-p2",
+     "name": "Mission Creek Park South Extension, Parcel P2",
+     "permalink": "https://pierandpoint.org/parcels/mission-creek-park-south-extension-parcel-p2/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-creek-park-south-extension-parcel-p2.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked"
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-18",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "P2 shows 'existing' because Huffaker Park stands there today; the planned extension builds around it and may rework part of it. The 2015 plan entry on the timeline now describes the land planned as a park and no longer reads as P2's status.",
+    "source": "Hoodline, 'Life on a Houseboat Is Mostly Ups, Few Downs', Apr 6, 2018 (https://hoodline.com/2018/04/life-on-a-houseboat-is-mostly-ups-few-downs/): \"getting involved at nearby Huffaker Park\"; Rec and Park schematic design for P2/P8 (undated): \"The existing Huffaker Park will be preserved and incorporated into the park design\"",
+    "sources": [
+     {
+      "title": "Hoodline, 'Life on a Houseboat Is Mostly Ups, Few Downs', Apr 6, 2018 (https://hoodline.com/2018/04/life-on-a-houseboat-is-mostly-ups-few-downs/): \"getting involved at nearby Huffaker Park\"; Rec and Park schematic design for P2/P8 (undated): \"The existing Huffaker Park will be preserved and incorporated into the park design\""
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_p2_creek_channel",
+     "slug": "mission-creek-park-south-extension-parcel-p2",
+     "name": "Mission Creek Park South Extension, Parcel P2",
+     "permalink": "https://pierandpoint.org/parcels/mission-creek-park-south-extension-parcel-p2/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-creek-park-south-extension-parcel-p2.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-17",
     "kind": "correction",
@@ -177,6 +252,36 @@
     "sources": [
      {
       "title": "San Francisco Recreation and Parks Department, Mission Creek Park South Extension Project (https://sfrecpark.org/1833/Mission-Creek-Park-South-Extension-Proje), Estimated Project Schedule: \"Construction begins , Late 2026 / Early 2027\"; \"Open to the Public , TBD\""
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_p2_creek_channel",
+     "slug": "mission-creek-park-south-extension-parcel-p2",
+     "name": "Mission Creek Park South Extension, Parcel P2",
+     "permalink": "https://pierandpoint.org/parcels/mission-creek-park-south-extension-parcel-p2/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-creek-park-south-extension-parcel-p2.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
+   {
+    "date": "2026-10-17",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "P2 shows 'existing' for the Huffaker Park path and community garden that stand there today, from Rec and Park's schematic design (undated). The planned Mission Creek Park South Extension on P2 and P8 is not built. The timeline now carries a matching entry, dated only by when we read the document.",
+    "source": "San Francisco Recreation and Parks Department, Mission Creek Park South Extension Project - Schematic P2/P8 (https://sfrecpark.org/DocumentCenter/View/25950/Mission-Creek-Park-South-Extension-Project---Schematic-P2-P8): \"The existing Huffaker Park will be preserved and incorporated into the park design\"; \"The existing community garden is 11,500 square feet.\"",
+    "sources": [
+     {
+      "title": "San Francisco Recreation and Parks Department, Mission Creek Park South Extension Project - Schematic P2/P8 (https://sfrecpark.org/DocumentCenter/View/25950/Mission-Creek-Park-South-Extension-Project---Schematic-P2-P8): \"The existing Huffaker Park will be preserved and incorporated into the park design\"; \"The existing community garden is 11,500 square feet.\""
      }
     ],
     "category": "correction",
@@ -618,6 +723,14 @@
     "date": "2015-12",
     "url": "https://sfocii.org/sites/default/files/inline-files/02%20Mission%20Bay.pdf",
     "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-hoodline-2018",
+    "title": "Life on a Houseboat Is Mostly Ups, Few Downs",
+    "publisher": "Hoodline",
+    "date": "2018-04-06",
+    "url": "https://hoodline.com/2018/04/life-on-a-houseboat-is-mostly-ups-few-downs/",
+    "accessed": "2026-10-18"
    },
    {
     "id": null,

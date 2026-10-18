@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-10-17",
+ "generated": "2026-10-18",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -29,7 +29,7 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "Planned residential block on the Potrero Power Station masterplan with a stepped height envelope of 65 ft and 85 ft; no design review approval or construction start found. The Board of Supervisors approved the project and Development Agreement on April 21, 2020 (Ordinance No. 62-20; the agreement's effective date is May 25, 2020).",
+  "summary": "Planned residential block on the Potrero Power Station masterplan with a stepped height envelope of 65 ft and 85 ft (73 ft and 93 ft on the enacted height map, taking effect Nov 13, 2026 by our count); no design review approval or construction start found. The Board of Supervisors approved the project and Development Agreement on April 21, 2020 (Ordinance No. 62-20; the agreement's effective date is May 25, 2020).",
   "summary_sources": [
    "src-d4d-final-fig623",
    "src-d4d-final-table311",
@@ -61,7 +61,7 @@
    },
    {
     "key": "height_ft",
-    "value": "Stepped envelope of 65 ft and 85 ft; a 'Lowrise buildings' block (up to 100 feet)",
+    "value": "Until Nov 13, 2026: stepped 65 ft and 85 ft; a 'Lowrise buildings' block (up to 100 feet)",
     "sources": [
      "src-d4d-final-fig623"
     ]
@@ -78,6 +78,14 @@
     "value": "Named in the D4D's Figure 1.6.4 text among the 'differentiated buildings' that stand out from the general urban fabric (Block 4, on the waterfront)",
     "sources": [
      "src-d4d-fig164"
+    ]
+   },
+   {
+    "key": "height_ft_2026_amendment",
+    "value": "93 ft and 73 ft on the enacted height map (effective Nov 13, 2026, our count); adopted 2020: 85 and 65 ft",
+    "sources": [
+     "src-legistar-260770-final",
+     "src-legistar-260724-final"
     ]
    }
   ],
@@ -184,6 +192,36 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-17",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Board's ordinance as enacted on October 13, 2026 sets new height limits for Block 4: 73 ft and 93 ft. They take effect 31 days after enactment, November 13, 2026 by our count; until then the earlier limits (65 ft and 85 ft) apply.",
+    "source": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'",
+    "sources": [
+     {
+      "title": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_block_4",
+     "slug": "potrero-power-station-block-4",
+     "name": "Potrero Power Station Block 4",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-4/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-4.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-13",
     "kind": "correction",
@@ -448,6 +486,22 @@
     "date": "2020-02-26",
     "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
     "accessed": "2026-09-29"
+   },
+   {
+    "id": "src-legistar-260770-final",
+    "title": "BOS File 260770, 'Leg Final' attachment: the ordinance as finally passed, with the Clerk of the Board's certificate (FINALLY PASSED 10/6/2026, Ayes: 11; height map p. 29; effective-date section p. 56; certificate pp. 58-59)",
+    "publisher": "SF Board of Supervisors (Legistar)",
+    "date": "2026-10-07",
+    "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063746&GUID=9EA91A49-BBF9-4471-9EA9-6E7BD33A4353",
+    "accessed": "2026-10-17"
+   },
+   {
+    "id": "src-legistar-260724-final",
+    "title": "BOS File 260724, 'Leg Final' attachment: the ordinance as finally passed (effective-date section p. 10)",
+    "publisher": "SF Board of Supervisors (Legistar)",
+    "date": "2026-10-07",
+    "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063745&GUID=68B0CE5F-84C2-4368-BF8D-EEA7D8B92E55",
+    "accessed": "2026-10-17"
    }
   ],
   "notes": "Approximate polygon for a real, D4D-adopted block (final D4D, Feb 26, 2020: Table 3.1.1 and Figure 6.2.3) -- see the accuracy caveat. Status 'planned': shown in the final D4D, and SocketSite's October 2020 schedule table lists Block 4 in Phase 2 (vertical development 2028-2029). Use 'residential': residential is permitted and laboratory/life science are not (D4D Table 3.1.1).",

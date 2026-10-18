@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-10-17",
+ "generated": "2026-10-18",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -19745,8 +19745,8 @@
     {
      "date": "2019-05-17",
      "date_label": "May 17, 2019",
-     "status": "complete",
-     "status_label": "Complete",
+     "status": null,
+     "status_label": null,
      "text": "DBI demolition permit 201712055462, to 'demolish 1 story storage bldg' at 385 Channel, is recorded as complete (filed Dec 5, 2017; approved Feb 16, 2018; issued Feb 22, 2018), clearing the one-story warehouse structure from the parcel",
      "expected": false,
      "approximate": false,
@@ -19761,8 +19761,8 @@
      ],
      "source": "DBI (Building Permits)",
      "origin": "record",
-     "category": "status",
-     "category_label": "Status",
+     "category": "milestone",
+     "category_label": "Milestone",
      "record": {
       "id": "8710006",
       "slug": "mission-bay-south-block-12-west",
@@ -19843,8 +19843,8 @@
      ],
      "source": "OCII (primary city agency document, presented to the Mission Bay CAC), 2026-08-13",
      "origin": "record",
-     "category": "status",
-     "category_label": "Status",
+     "category": "milestone",
+     "category_label": "Milestone",
      "record": {
       "id": "8710006",
       "slug": "mission-bay-south-block-12-west",
@@ -19956,6 +19956,36 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-17",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The demolition permit for the old storage building at 385 Channel is still on the timeline, but it no longer marks the whole Block 12 West parcel as complete. The parcel stays Planned.",
+     "source": "src-watch-dbi-building-permits-3 (DBI permit 201712055462, recorded as complete; filed Dec 5, 2017, issued Feb 22, 2018)",
+     "sources": [
+      {
+       "title": "src-watch-dbi-building-permits-3 (DBI permit 201712055462, recorded as complete; filed Dec 5, 2017, issued Feb 22, 2018)"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "8710006",
+      "slug": "mission-bay-south-block-12-west",
+      "name": "Mission Bay South Block 12 West",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-12-west/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-12-west.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
     {
      "date": "2026-10-14",
      "kind": "correction",
@@ -46559,6 +46589,36 @@
    ],
    "changes": [
     {
+     "date": "2026-10-17",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "This record said the amended development agreement (File 260724) was noticed on September 11, 2026. The Board finally passed it on October 6 and it was enacted on October 13, 2026; the record now says so.",
+     "source": "Legistar, BOS File 260724: \"Final action: 10/13/2026\"; \"Enactment date: 10/13/2026\"; \"Enactment #: 208-26\"; history row \"10/13/2026 ... Mayor ... APPROVED\"",
+     "sources": [
+      {
+       "title": "Legistar, BOS File 260724: \"Final action: 10/13/2026\"; \"Enactment date: 10/13/2026\"; \"Enactment #: 208-26\"; history row \"10/13/2026 ... Mayor ... APPROVED\""
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "prequel_park_power_station_subarea",
+      "slug": "prequel-park-interim",
+      "name": "Prequel Park (interim)",
+      "permalink": "https://pierandpoint.org/parcels/prequel-park-interim/",
+      "api": "https://pierandpoint.org/api/v1/records/prequel-park-interim.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
+    {
      "date": "2026-10-13",
      "kind": "correction",
      "kind_label": "Correction",
@@ -47042,7 +47102,7 @@
     "Whether the 2024 annual report's temporary activation east of Delaware Street and Stack Plaza ('Delaware East Park/Stack Plaza'; Andrea Cochran Landscape Architecture, schematic design from Aug 2024, construction then expected Q1 2026) is the same scheme later branded Prequel Park with Heatherwick Studio is not stated by any source.",
     "Application filing: Chronicle (May 22, 2025) says the application was expected to be filed 'on Thursday'; SF YIMBY (Oct 2025) says 'In May, the developer submitted plans'. No Planning case number found.",
     "Cost: the developer's own $15-20 million estimate (Chronicle, Potrero View) is the only figure for the whole park. DataSF building-permit applications for Prequel Park, all with status 'filed' and no issued date in the data read on 2026-10-12, list estimated costs of $4,000,000 (202512051053, block 9 landscape and exterior work, filed 2026-07-01), $1,500,000 (202512051066, Unit 3, filed 2026-07-01) and $1,500,000 (202512081182, admin building level 1, filed 2026-01-15): about $7.0 million for those three scopes. These are applicants' estimates for permit scopes, not contract values or the cost of the park; no construction contract was found.",
-    "BOS File 260724 (Amended and Restated DA, noticed Sept 11, 2026) amends the Phasing Plan; whether it changes hotel or interim-park obligations is not stated in the legislative digest, and the draft DA text was not read.",
+    "BOS File 260724 (Amended and Restated DA; Board of Supervisors final passage Oct 6, 2026, enacted Oct 13, 2026 per Legistar's 'Enactment date') amends the Phasing Plan; whether it changes hotel or interim-park obligations is not stated in the legislative digest, and the draft DA text was not read.",
     "Has Prequel Park construction started, and has the 2026 start been rescheduled? No dated source confirms that construction has started as of 2026-09-17 (searched sfport.com, sfplanning.org, Chronicle, SF YIMBY, Potrero View, SF Standard, developer site, ICA SF); as of 2026-10-10 no source read reports a groundbreaking or a new start date, and the developer's site still describes the park without reporting construction. DataSF's building-permit data read on 2026-10-12 shows the three Prequel Park applications (202512051053, 202512051066, 202512081182) as 'filed', with no issued date, and the BCDC permit tracker shows only the June 26, 2026 issuance of Non-Material Amendment 2019.006.02. The map status of this record is 'planned'.",
     "BCDC amendment 2019.006.02: this record's mapping notes and timeline said it was 'issued June 19, 2025' (corrected 2026-09-29). The BCDC permit tracker gives June 19, 2025 as the date the application was RECEIVED and June 26, 2026 as the date ISSUED. The amendment document itself was not found on bcdc.ca.gov (2018-2019 DRB/Commission URLs now return 404; the tracker is an embedded table that could not be saved as text). Treat 2025-06-19 as application date, 2026-06-26 as issuance.",
     "Port memo 10A is internally inconsistent: p.2 says construction start Q1 2026 / opening Q1 2027; p.4 says Q3 2026 / Q3 2027. Both are recorded; the p.4 dates follow the DBI-submittal sentence and are the more detailed statement.",
@@ -92865,7 +92925,7 @@
    "how_to_comment": [],
    "positions": [],
    "address": null,
-   "summary": "Planned mixed-use block on the Potrero Power Station masterplan with a stepped height envelope up to 180 ft, one of three blocks (with 5 and 13) eligible to host the project's single permitted district parking garage; no design review approval or construction start found. The amended and restated development agreement, which includes Phasing Plan amendments, passed the Board of Supervisors on first reading on Sept 29, 2026 and Legistar lists it enacted on Oct 13, 2026 (Mayor 'APPROVED'); its effect on Block 1's timing has not been read.",
+   "summary": "Planned mixed-use block on the Potrero Power Station masterplan with a stepped height envelope up to 180 ft (188 ft on the enacted height map, taking effect Nov 13, 2026 by our count), one of three blocks (with 5 and 13) eligible to host the project's single permitted district parking garage; no design review approval or construction start found. The amended and restated development agreement, which includes Phasing Plan amendments, passed the Board of Supervisors on first reading on Sept 29, 2026 and Legistar lists it enacted on Oct 13, 2026 (Mayor 'APPROVED'); its effect on Block 1's timing has not been read.",
    "summary_sources": [
     "src-d4d-final-fig623",
     "src-annual-2024",
@@ -92897,7 +92957,7 @@
     },
     {
      "key": "height_ft",
-     "value": "Stepped: 180 ft maximum with an 85 ft maximum base on the west part of the block; 85 ft on the east part",
+     "value": "Until Nov 13, 2026: 180 ft maximum over an 85 ft base on the west part; 85 ft on the east part",
      "sources": [
       "src-d4d-final-fig623",
       "src-d4d-final-6.2.2"
@@ -92923,6 +92983,14 @@
      "value": "Public Library option space moved here (Phase 2) from Block 15 (Phase 4) by the October 7, 2020 Phase 1 approval; not a committed branch",
      "sources": [
       "src-phase1-2020"
+     ]
+    },
+    {
+     "key": "height_ft_2026_amendment",
+     "value": "188 ft over a 120 ft base west, 120 ft east, on the enacted map (effective Nov 13, 2026, our count)",
+     "sources": [
+      "src-legistar-260770-final",
+      "src-legistar-260724-final"
      ]
     }
    ],
@@ -93054,6 +93122,36 @@
      "sources": [
       {
        "title": "SF Board of Supervisors, Legistar, BOS File 260724 and File 260770 (https://sfgov.legistar.com/LegislationDetail.aspx?ID=8127453&GUID=CC4AC1DD-BF51-4585-86E8-0A5D44AA3745); Clerk of the Board's 'Leg Final' attachments: https://sfgov.legistar.com/View.ashx?M=F&ID=16063745&GUID=68B0CE5F-84C2-4368-BF8D-EEA7D8B92E55 and https://sfgov.legistar.com/View.ashx?M=F&ID=16063746&GUID=9EA91A49-BBF9-4471-9EA9-6E7BD33A4353"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_block_1",
+      "slug": "potrero-power-station-block-1",
+      "name": "Potrero Power Station Block 1",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-1/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-1.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
+    {
+     "date": "2026-10-17",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The Board's ordinance as enacted on October 13, 2026 sets new height limits for Block 1: 188 ft over a 120 ft base on the west part and 120 ft on the east part. They take effect 31 days after enactment, November 13, 2026 by our count; until then the earlier limits (180 ft over 85 ft, and 85 ft) apply.",
+     "source": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'",
+     "sources": [
+      {
+       "title": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'"
       }
      ],
      "category": "correction",
@@ -93397,6 +93495,22 @@
      "accessed": "2026-09-22",
      "date": "2020-02-26",
      "overview": true
+    },
+    {
+     "id": "src-legistar-260770-final",
+     "title": "BOS File 260770, 'Leg Final' attachment: the ordinance as finally passed, with the Clerk of the Board's certificate (FINALLY PASSED 10/6/2026, Ayes: 11; height map p. 29; effective-date section p. 56; certificate pp. 58-59)",
+     "publisher": "SF Board of Supervisors (Legistar)",
+     "date": "2026-10-07",
+     "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063746&GUID=9EA91A49-BBF9-4471-9EA9-6E7BD33A4353",
+     "accessed": "2026-10-17"
+    },
+    {
+     "id": "src-legistar-260724-final",
+     "title": "BOS File 260724, 'Leg Final' attachment: the ordinance as finally passed (effective-date section p. 10)",
+     "publisher": "SF Board of Supervisors (Legistar)",
+     "date": "2026-10-07",
+     "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063745&GUID=68B0CE5F-84C2-4368-BF8D-EEA7D8B92E55",
+     "accessed": "2026-10-17"
     },
     {
      "id": null,
@@ -93982,7 +94096,7 @@
    "how_to_comment": [],
    "positions": [],
    "address": null,
-   "summary": "Planned residential block on the Potrero Power Station masterplan with a stepped height envelope of 65 ft and 85 ft; no design review approval or construction start found. The Board of Supervisors approved the project and Development Agreement on April 21, 2020 (Ordinance No. 62-20; the agreement's effective date is May 25, 2020).",
+   "summary": "Planned residential block on the Potrero Power Station masterplan with a stepped height envelope of 65 ft and 85 ft (73 ft and 93 ft on the enacted height map, taking effect Nov 13, 2026 by our count); no design review approval or construction start found. The Board of Supervisors approved the project and Development Agreement on April 21, 2020 (Ordinance No. 62-20; the agreement's effective date is May 25, 2020).",
    "summary_sources": [
     "src-d4d-final-fig623",
     "src-d4d-final-table311",
@@ -94014,7 +94128,7 @@
     },
     {
      "key": "height_ft",
-     "value": "Stepped envelope of 65 ft and 85 ft; a 'Lowrise buildings' block (up to 100 feet)",
+     "value": "Until Nov 13, 2026: stepped 65 ft and 85 ft; a 'Lowrise buildings' block (up to 100 feet)",
      "sources": [
       "src-d4d-final-fig623"
      ]
@@ -94031,6 +94145,14 @@
      "value": "Named in the D4D's Figure 1.6.4 text among the 'differentiated buildings' that stand out from the general urban fabric (Block 4, on the waterfront)",
      "sources": [
       "src-d4d-fig164"
+     ]
+    },
+    {
+     "key": "height_ft_2026_amendment",
+     "value": "93 ft and 73 ft on the enacted height map (effective Nov 13, 2026, our count); adopted 2020: 85 and 65 ft",
+     "sources": [
+      "src-legistar-260770-final",
+      "src-legistar-260724-final"
      ]
     }
    ],
@@ -94137,6 +94259,36 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-17",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The Board's ordinance as enacted on October 13, 2026 sets new height limits for Block 4: 73 ft and 93 ft. They take effect 31 days after enactment, November 13, 2026 by our count; until then the earlier limits (65 ft and 85 ft) apply.",
+     "source": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'",
+     "sources": [
+      {
+       "title": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_block_4",
+      "slug": "potrero-power-station-block-4",
+      "name": "Potrero Power Station Block 4",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-4/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-4.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
     {
      "date": "2026-10-13",
      "kind": "correction",
@@ -94401,6 +94553,22 @@
      "date": "2020-02-26",
      "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
      "accessed": "2026-09-29"
+    },
+    {
+     "id": "src-legistar-260770-final",
+     "title": "BOS File 260770, 'Leg Final' attachment: the ordinance as finally passed, with the Clerk of the Board's certificate (FINALLY PASSED 10/6/2026, Ayes: 11; height map p. 29; effective-date section p. 56; certificate pp. 58-59)",
+     "publisher": "SF Board of Supervisors (Legistar)",
+     "date": "2026-10-07",
+     "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063746&GUID=9EA91A49-BBF9-4471-9EA9-6E7BD33A4353",
+     "accessed": "2026-10-17"
+    },
+    {
+     "id": "src-legistar-260724-final",
+     "title": "BOS File 260724, 'Leg Final' attachment: the ordinance as finally passed (effective-date section p. 10)",
+     "publisher": "SF Board of Supervisors (Legistar)",
+     "date": "2026-10-07",
+     "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063745&GUID=68B0CE5F-84C2-4368-BF8D-EEA7D8B92E55",
+     "accessed": "2026-10-17"
     }
    ],
    "notes": "Approximate polygon for a real, D4D-adopted block (final D4D, Feb 26, 2020: Table 3.1.1 and Figure 6.2.3) -- see the accuracy caveat. Status 'planned': shown in the final D4D, and SocketSite's October 2020 schedule table lists Block 4 in Phase 2 (vertical development 2028-2029). Use 'residential': residential is permitted and laboratory/life science are not (D4D Table 3.1.1).",
@@ -94459,7 +94627,7 @@
    "how_to_comment": [],
    "positions": [],
    "address": null,
-   "summary": "Planned residential highrise tower on the Potrero Power Station masterplan, up to 220 ft; a July 2026 Development Agreement amendment request sought flexibility to make Block 5 all PDR space (the developer described a possible 'small data center'), and on Sept 18, 2026 the Chronicle reported the developer planned to retract that part of the amendment; the amendment package passed the Board of Supervisors on first reading on Sept 29, 2026, after committee revisions stating that data center uses are not permitted on any block, and the amendment package was enacted on Oct 13, 2026 (Legistar: Mayor 'APPROVED'; enactment numbers 208-26 and 209-26; page read Oct 14, 2026); no construction start found to date.",
+   "summary": "Planned residential highrise tower on the Potrero Power Station masterplan, up to 220 ft (228 ft on the enacted height map, taking effect Nov 13, 2026 by our count); a July 2026 Development Agreement amendment request sought flexibility to make Block 5 all PDR space (the developer described a possible 'small data center'), and on Sept 18, 2026 the Chronicle reported the developer planned to retract that part of the amendment; the amendment package passed the Board of Supervisors on first reading on Sept 29, 2026, after committee revisions stating that data center uses are not permitted on any block, and the amendment package was enacted on Oct 13, 2026 (Legistar: Mayor 'APPROVED'; enactment numbers 208-26 and 209-26; page read Oct 14, 2026); no construction start found to date.",
    "summary_sources": [
     "src-bos-mods-092826",
     "src-chronicle-2026-07",
@@ -94495,14 +94663,14 @@
     },
     {
      "key": "height_ft",
-     "value": "85 ft base with a 220 ft upper tower; a 'Highrise towers' block (181-240 ft)",
+     "value": "Until Nov 13, 2026: 85 ft base, 220 ft tower (adopted D4D, Figure 6.2.3); a 'Highrise towers' block",
      "sources": [
       "src-d4d-final-fig623"
      ]
     },
     {
      "key": "height_ft_2026_amendment",
-     "value": "Podium increase from 85 to 130 feet in the committee version of Sept 28, 2026; the package was enacted Oct 13, 2026, and the final ordinances say 'This ordinance shall become effective on the 31st day after enactment' (File 260770 §5(a), p. 56 of its 'Leg Final' attachment; File 260724, p. 10 of its attachment), which makes the effective date November 13, 2026 by our count (a legal date computed by Pier & Point, not a date printed in the text); the heights in the enacted text have not yet been checked against this record",
+     "value": "228 ft tower, 138 ft base on the enacted map (220 and 130 ft if majority non-residential); effective Nov 13, 2026, our count",
      "sources": [
       "src-legistar-260724-final",
       "src-legistar-260770-final",
@@ -94945,6 +95113,36 @@
      "batch": null
     },
     {
+     "date": "2026-10-17",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The Board's ordinance as enacted on October 13, 2026 sets new height limits for Block 5: a 228 ft tower over a 138 ft base, or 220 ft and 130 ft if the building is majority non-residential (Note 1). They take effect 31 days after enactment, November 13, 2026 by our count; until then the earlier limits (85 ft base, 220 ft tower) apply.",
+     "source": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'",
+     "sources": [
+      {
+       "title": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_block_5",
+      "slug": "potrero-power-station-block-5",
+      "name": "Potrero Power Station Block 5",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-5/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-5.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
+    {
      "date": "2026-10-14",
      "kind": "correction",
      "kind_label": "Correction",
@@ -95138,7 +95336,7 @@
     "No design review approval or construction-start date found for Block 5; it is not one of the six buildings named in the 2024 annual compliance report's Phase 1 list (Blocks 2, 7, 8, 11, 12, 15), and no later-phase design review approval was found either.",
     "The Development Agreement amendment package (BOS Files 260724 and 260770) passed the Board of Supervisors on first reading on Sept 29, 2026 and finally on Oct 6, 2026 (11 ayes), and Legistar lists it enacted on Oct 13, 2026 (Legistar: Mayor 'APPROVED'; enactment numbers 208-26 and 209-26; page read Oct 14, 2026). The Clerk of the Board's certificate in each file's 'Leg Final' attachment shows the final passage (File 260724 attachment pp. 11-12; File 260770 attachment pp. 58-59), although the Legistar web page's 10/6/2026 history row carries no action text. The Land Use and Transportation Committee's Sept 28, 2026 revisions state that data center uses are not permitted on any block. Whether Block 5's all-PDR flexibility sought in July survived is not settled by the documents read: the committee-amended ordinance text (Leg Ver3 of File 260770) shows Block 5's PDR column under note (4), which limits the listed PDR uses to the basement, ground floor, 2nd floor and mezzanine and makes other PDR uses not permitted, and shows Laboratory and Life Science as permitted; the Sept 28 draft Design for Development attached to the agreement shows Block 5's PDR column as 'P(5)', whose note lists the same PDR uses as permitted with other PDR uses not permitted and states no floor limit. Neither text permits PDR use without limit. The board packets, which hold the final text sent to the Mayor, were not read.",
     "Block 5's 2031-2034 window comes from a 2020 press table (SocketSite); no current Block 5 schedule was found. The Planning Commission's July 30, 2026 executive summary lists a proposed move of Block 5 from Development Phase 3 to Phase 2 in the 2026 amendment package, which Legistar lists as enacted on Oct 13, 2026 (the enacted text has not yet been checked for this move, so whether it is in it is not confirmed); the summary gives no new dates.",
-    "Height on Block 5: the 85 ft base and 220 ft tower are read from the colour-coded labels in the D4D's Figure 6.2.3 ('220'/85''; the '111'MAX' label is a plan dimension of the tower zone, not a height); Standard 6.2.2 places Block 5 among the 'Highrise towers' (181-240 ft). The revised legislative digest for BOS File 260770 (amended in committee Sept 28, 2026) says: 'On Block 5 the permitted height of the podium would increase from 85 feet to 130 feet.' The package that digest describes was enacted on Oct 13, 2026 per Legistar (Enactment Nos. 208-26 and 209-26); the final ordinances say 'This ordinance shall become effective on the 31st day after enactment' (November 13, 2026 by our count: a legal date computed by us, not printed in the text); the enacted text has not yet been checked against this record, so this record still shows the adopted 85 ft base and 220 ft tower above. The Planning Commission's July 30, 2026 executive summary (Resolution No. 21945) lists Block 5's existing maximum as 220 feet and proposes, 'On blocks where residential uses are proposed (which could mean Blocks 1, 4, 5, 7, 8, 9, 12, 13, and 14), increase the maximum height by 8 feet'; Block 5's resulting tower height is not stated in the documents read."
+    "Height on Block 5: the enacted map labels the block \"228'/138'\" and \"138'\", with a 220 ft tower and 130 ft southern portion if the building is majority non-residential (File 260770 'Leg Final' attachment, p. 29; effective November 13, 2026 by our count, a legal date computed by Pier & Point and not printed in the text). Until then the adopted 85 ft base and 220 ft tower apply, read from the colour-coded labels in the D4D's Figure 6.2.3 (\"220'/85'\"; the \"111'MAX\" label is a plan dimension of the tower zone, not a height). How the map's \"138'\" base relates to the digest's 'podium' wording is not stated in the documents read; the Planning Commission's July 30, 2026 executive summary (Resolution No. 21945) proposed an 8 ft increase on blocks with residential uses."
    ],
    "sources": [
     {
@@ -95451,7 +95649,7 @@
     },
     {
      "key": "d4d_max_height_ft",
-     "value": "240 (highrise tower, Block 7; base 85 ft; D4D 6.2.2)",
+     "value": "240 (highrise tower, Block 7; base 85 ft; D4D 6.2.2), until Nov 13, 2026",
      "sources": [
       "src-d4d-final",
       "src-dr-7a-2022"
@@ -95509,6 +95707,14 @@
      "sources": [
       "src-ar-2024",
       "src-socketsite-2021-07"
+     ]
+    },
+    {
+     "key": "enacted_max_height_ft",
+     "value": "248 ft maximum over a 93 ft base on the enacted height map (effective Nov 13, 2026, our count)",
+     "sources": [
+      "src-legistar-260770-final",
+      "src-legistar-260724-final"
      ]
     }
    ],
@@ -96223,6 +96429,36 @@
      "batch": null
     },
     {
+     "date": "2026-10-17",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The Board's ordinance as enacted on October 13, 2026 sets new height limits for Block 7: 248 ft over a 93 ft base. They take effect 31 days after enactment, November 13, 2026 by our count; until then the earlier limits (240 ft) apply.",
+     "source": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'",
+     "sources": [
+      {
+       "title": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_block_7remaining",
+      "slug": "potrero-power-station-block-7-remaining-portion",
+      "name": "Potrero Power Station Block 7 (remaining portion)",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-7-remaining-portion/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-7-remaining-portion.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
+    {
      "date": "2026-10-14",
      "kind": "correction",
      "kind_label": "Correction",
@@ -96519,7 +96755,7 @@
    ],
    "open_questions": [
     "Construction start: none found. Searched the 2021-2024 DA compliance reports (the 2024 report says no market-rate building permits have been submitted), SF YIMBY through Sept 2026, the Chronicle (Jul 29 and Aug 3, 2026), SF Standard (Oct 2025) and Potrero View (Oct 2025). SocketSite (Jul 2021) said construction was 'slated to commence in 2023'; SF YIMBY (Mar 2021) said Block 7 construction was expected to start 'by 2023, with completion by 2026'. Neither happened.",
-    "The July 2026 Chronicle line 'tallest residential tower would be permitted to reach 248 feet' does not name a block. The Planning Commission's July 30, 2026 executive summary (Resolution No. 21945, attached to BOS File 260724) says the amendment would 'increase the maximum height by 8 feet' on residential blocks, 'from 240 feet to 248 feet on Block 7', and lists Block 5's existing maximum as 220 feet; Block 7 includes 7A, whose design review approval is about 237 ft. The committee-amended ordinance text (Leg Ver3 of BOS File 260770, Sept 28, 2026) shows a 'HIGHRISE TOWERS ON BLOCKS 5 AND 7' column with the range changed from 181'-240' to 191'-248'. The ordinance passed the Board of Supervisors on first reading on Sept 29, 2026 and finally on Oct 6, 2026 (11 ayes), and Legistar lists it enacted on Oct 13, 2026 (Mayor 'APPROVED'; enactment number 209-26). The final ordinances say 'This ordinance shall become effective on the 31st day after enactment' (File 260770 §5(a), p. 56 of its 'Leg Final' attachment; File 260724, p. 10 of its attachment), which makes the effective date November 13, 2026 by our count (a legal date computed by Pier & Point, not a date printed in the text). The heights and uses in the enacted text have not yet been checked against this record, so 240 ft is the adopted limit this record still cites.",
+    "The July 2026 Chronicle line 'tallest residential tower would be permitted to reach 248 feet' does not name a block. The Planning Commission's July 30, 2026 executive summary (Resolution No. 21945, attached to BOS File 260724) says the amendment would 'increase the maximum height by 8 feet' on residential blocks, 'from 240 feet to 248 feet on Block 7', and lists Block 5's existing maximum as 220 feet; Block 7 includes 7A, whose design review approval is about 237 ft. The enacted height map (BOS File 260770 'Leg Final' attachment, p. 29) labels Block 7 \"248'/93'\", and its bulk table (p. 32) shows the 'Highrise towers on Blocks 5 and 7' range as 191'-248'. The ordinance passed the Board of Supervisors on first reading on Sept 29, 2026 and finally on Oct 6, 2026 (11 ayes), and Legistar lists it enacted on Oct 13, 2026 (Mayor 'APPROVED'; enactment number 209-26); it takes effect on the 31st day after enactment, November 13, 2026 by our count (a legal date computed by Pier & Point, not printed in the text). Until then 240 ft is the limit in force.",
     "Unit count drift: 277 (press 2021) -> 325 (approval 2022) -> 319 (compliance reports' LBE appendix); the Planning Commission slides (July 2021) show '315' only on the 'Previous Phase 1' map inside Block 8 and '420' for Block 7 (7A with 7b) on the 'Current Phase 1' slide, so no slide gives a 7A-only count. Which figure a future permit will carry is unknown.",
     "The SF Standard (Oct 15, 2025) says Associate Capital 'will move on to constructing a 300-unit market-rate apartment building and a waterfront park at the adjoining site'. The SF Standard (Aug 3, 2026) calls a 342-unit apartment complex Fifth Space's 'next building at the site', and DBI permit 202205194622 (151 Humboldt St, description '(block 8)', 342 residential units) is for Block 8, so Block 7A does not appear to be the next building.",
     "Ground-floor childcare is assigned to Block 7 in the compliance reports. The April 25, 2023 Planning Director approval of the childcare amendment changed the Phasing Plan from two 6,000-sq-ft facilities in Phase 1 to 'two or three child care facilities' of at least 4,000 sq ft each, totaling at least 12,000 sq ft, with at least one in Phase 1; the Planning Commission's July 30, 2026 executive summary describes the existing control as 'Childcare Facilities may be provided on any Block' and proposes 'on any Block or within one mile of the Project'. Which facility goes on Block 7A is therefore not fixed by those documents; the design review approval shows about 6,270 sq ft of childcare in the building.",
@@ -96877,7 +97113,7 @@
     },
     {
      "key": "height_ft",
-     "value": "125/85 ft if Unit 3 is demolished (Standard 6.2.1); with Unit 3, 85, 65 and 35 ft per Figure 6.2.3",
+     "value": "Until Nov 13, 2026: 125/85 ft if Unit 3 is demolished; with Unit 3, 85, 65 and 35 ft (adopted D4D)",
      "sources": [
       "src-d4d-final-fig623",
       "src-d4d-final-6.2.1"
@@ -96897,6 +97133,14 @@
      "sources": [
       "src-d4d-final-table311-notes",
       "src-chronicle-2026-07"
+     ]
+    },
+    {
+     "key": "height_ft_2026_amendment",
+     "value": "133 ft and 93 ft with or without Unit 3 on the enacted map; 125 ft if majority hotel (effective Nov 13, 2026, our count)",
+     "sources": [
+      "src-legistar-260770-final",
+      "src-legistar-260724-final"
      ]
     }
    ],
@@ -97042,6 +97286,36 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-17",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The Board's ordinance as enacted on October 13, 2026 sets new height limits for Block 9: 133 ft and 93 ft with or without Unit 3, 125 ft if the building is majority hotel (Note 3). They take effect 31 days after enactment, November 13, 2026 by our count; until then the earlier limits (125/85 ft, or 85, 65 and 35 ft with Unit 3) apply.",
+     "source": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'",
+     "sources": [
+      {
+       "title": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_block_9",
+      "slug": "potrero-power-station-block-9",
+      "name": "Potrero Power Station Block 9",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-9/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-9.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
     {
      "date": "2026-10-13",
      "kind": "correction",
@@ -97378,6 +97652,22 @@
      "date": "2026-07-29",
      "url": "https://www.sfchronicle.com/realestate/article/one-s-f-s-biggest-developments-changing-plans-22365461.php",
      "accessed": "2026-09-29"
+    },
+    {
+     "id": "src-legistar-260770-final",
+     "title": "BOS File 260770, 'Leg Final' attachment: the ordinance as finally passed, with the Clerk of the Board's certificate (FINALLY PASSED 10/6/2026, Ayes: 11; height map p. 29; effective-date section p. 56; certificate pp. 58-59)",
+     "publisher": "SF Board of Supervisors (Legistar)",
+     "date": "2026-10-07",
+     "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063746&GUID=9EA91A49-BBF9-4471-9EA9-6E7BD33A4353",
+     "accessed": "2026-10-17"
+    },
+    {
+     "id": "src-legistar-260724-final",
+     "title": "BOS File 260724, 'Leg Final' attachment: the ordinance as finally passed (effective-date section p. 10)",
+     "publisher": "SF Board of Supervisors (Legistar)",
+     "date": "2026-10-07",
+     "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063745&GUID=68B0CE5F-84C2-4368-BF8D-EEA7D8B92E55",
+     "accessed": "2026-10-17"
     }
    ],
    "notes": "Approximate polygon for a real, D4D-adopted block (final D4D, Feb 26, 2020: Table 3.1.1 and Figure 6.2.3) -- see the accuracy caveat. Status 'planned': the hotel is approved, but the Chronicle (May 2025) reported its construction could be a decade away and an interim park is planned. Use 'mixed': Table 3.1.1 permits residential, hotel and other retail, office and entertainment uses on Block 9.",
@@ -97460,7 +97750,7 @@
    "how_to_comment": [],
    "positions": [],
    "address": null,
-   "summary": "Planned office building on the Potrero Power Station masterplan (office, laboratory and life science uses are permitted there), paired with Block 12 (the project's engineer describes the two together as about 430,000 sq ft of office, while the Planning Department's October 2020 Phase 1 approval lists about 219,000 sq ft of commercial space for Block 11 and 177,000 for Block 12); design was under review as of the March 2025 annual compliance report. In a request reported July 29, 2026, the developer asked to raise Block 11's height by 15 feet; the Planning Commission approved the amendment unanimously (reported Aug 3, 2026) and the Board of Supervisors passed the amended development agreement on first reading on Sept 29, 2026, and Legistar lists it enacted on Oct 13, 2026 (Mayor 'APPROVED'). No construction start found.",
+   "summary": "Planned office building on the Potrero Power Station masterplan (office, laboratory and life science uses are permitted there), paired with Block 12 (the project's engineer describes the two together as about 430,000 sq ft of office, while the Planning Department's October 2020 Phase 1 approval lists about 219,000 sq ft of commercial space for Block 11 and 177,000 for Block 12); design was under review as of the March 2025 annual compliance report. In a request reported July 29, 2026, the developer asked to raise Block 11's height by 15 feet; the Planning Commission approved the amendment unanimously (reported Aug 3, 2026) and the Board of Supervisors passed the amended development agreement on first reading on Sept 29, 2026, and Legistar lists it enacted on Oct 13, 2026 (Mayor 'APPROVED'); the enacted height map gives Block 11 145 ft (130 ft in the adopted rules), taking effect Nov 13, 2026 by our count. No construction start found.",
    "summary_sources": [
     "src-meyersplus",
     "src-phase1-2020",
@@ -97496,14 +97786,14 @@
     },
     {
      "key": "height_ft",
-     "value": "flat 130 ft max per the D4D's Figure 6.2.3",
+     "value": "130 ft until the 2026 amendment takes effect (adopted D4D, Figure 6.2.3)",
      "sources": [
       "src-d4d-final-fig623"
      ]
     },
     {
      "key": "height_ft_2026_amendment",
-     "value": "145 ft in the Sept 28, 2026 draft D4D (adopted 2020: 130 ft); the package was enacted Oct 13, 2026, and the final ordinances say 'This ordinance shall become effective on the 31st day after enactment' (File 260770 §5(a), p. 56 of its 'Leg Final' attachment; File 260724, p. 10 of its attachment), which makes the effective date November 13, 2026 by our count (a legal date computed by Pier & Point, not a date printed in the text); the heights in the enacted text have not yet been checked against this record",
+     "value": "145 ft on the enacted height map (effective Nov 13, 2026, our count); adopted 2020: 130 ft",
      "sources": [
       "src-legistar-260724-final",
       "src-legistar-260770-final",
@@ -97646,6 +97936,44 @@
       }
      ],
      "source": "California Barrel Company LLC, submitted to SF Planning Department, 2020-06-07",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "potrero_block_11",
+      "slug": "potrero-power-station-block-11",
+      "name": "Potrero Power Station Block 11",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-11/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-11.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2020-10-07",
+     "date_label": "Oct 7, 2020",
+     "status": "planned",
+     "status_label": "Planned",
+     "text": "Planning Department approves the Phase 1 Development Phase Application, which includes Block 11 (Development Phase Approval dated October 7, 2020, Case No. 2017-011878PHA, signed by Planning Director Rich Hillis): the approval lists 'Block 11 – Includes construction of approximately 219,000 square feet of commercial, 5,000 square feet of retail, 6,000 square feet of PDR, 6,000 square feet of childcare, and approximately 48,500 square feet of accessory parking uses' (PDF p. 16), says the first phase consists of 'vertical improvements to Blocks 2, 7, 8, 11, 12, and 15' (PDF p. 2), and its Decision reads 'approves the Phase 1 Plan Application dated October 6, 2020' (PDF p. 4). The approval moves 'the construction of commercial buildings on Blocks 11, 12, and 15' into Development Phase 1 (PDF p. 3). The date is the approval's own date, an event date. This approves the development phase, not Block 11's building design; no design review approval has been found for the block.",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-phase1-2020",
+       "title": "Potrero Power Station Phase 1 and Phasing Plan Amendment Applications: Development Phase Approval (October 7, 2020)",
+       "publisher": "SF Planning",
+       "date": "2020-10-07",
+       "url": "https://sfplanning.org/potrero-power-station",
+       "accessed": "2026-09-20",
+       "overview": true
+      }
+     ],
+     "source": "SF Planning, 2020-10-07",
      "origin": "record",
      "category": "milestone",
      "category_label": "Milestone",
@@ -98037,6 +98365,66 @@
      "batch": null
     },
     {
+     "date": "2026-10-17",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The Board's ordinance as enacted on October 13, 2026 sets new height limits for Block 11: 145 ft. They take effect 31 days after enactment, November 13, 2026 by our count; until then the earlier limits (130 ft) apply.",
+     "source": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'",
+     "sources": [
+      {
+       "title": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_block_11",
+      "slug": "potrero-power-station-block-11",
+      "name": "Potrero Power Station Block 11",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-11/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-11.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
+    {
+     "date": "2026-10-17",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "The Planning Department's October 7, 2020 Phase 1 approval includes Block 11, so the record now shows 'Planned · Approved'. This is approval of the development phase, not of the building's design, which has not been approved as far as we found.",
+     "source": "Planning Department, Potrero Power Station Phase 1 and Phasing Plan Amendment Applications: Development Phase Approval, Oct 7, 2020 (149 pages; sfplanning.org Potrero Power Station page, M-Files link), PDF p. 4: \"approves the Phase 1 Plan Application dated October 6, 2020\"",
+     "sources": [
+      {
+       "title": "Planning Department, Potrero Power Station Phase 1 and Phasing Plan Amendment Applications: Development Phase Approval, Oct 7, 2020 (149 pages; sfplanning.org Potrero Power Station page, M-Files link), PDF p. 4: \"approves the Phase 1 Plan Application dated October 6, 2020\""
+      }
+     ],
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "potrero_block_11",
+      "slug": "potrero-power-station-block-11",
+      "name": "Potrero Power Station Block 11",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-11/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-11.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
+    {
      "date": "2026-10-14",
      "kind": "correction",
      "kind_label": "Correction",
@@ -98349,7 +98737,7 @@
    "open_questions": [
     "No design review approval or construction-start date found for Block 11; the most recent primary source found (the 2024 annual compliance report) describes design as 'under review', not approved.",
     "The combined 430,000 sq ft figure for Blocks 11+12 comes from the project's MEP engineer (Meyers+). The Planning Department's October 7, 2020 Phase 1 approval lists approximately 219,000 sq ft of commercial space for Block 11 and 177,000 for Block 12 (about 396,000 together, plus retail, PDR, childcare and other uses); no source reconciles the two figures.",
-    "The Chronicle's July 2026 report of a proposed +15 ft height increase is tied to the Development Agreement and Planning Code amendment package (BOS Files 260724 and 260770), which passed the Board of Supervisors on first reading on Sept 29, 2026 and finally on Oct 6, 2026 (11 ayes), and Legistar lists it enacted on Oct 13, 2026 (Legistar: Mayor 'APPROVED'; enactment numbers 208-26 and 209-26; page read Oct 14, 2026). The final ordinances say 'This ordinance shall become effective on the 31st day after enactment' (File 260770 §5(a), p. 56 of its 'Leg Final' attachment; File 260724, p. 10 of its attachment), which makes the effective date November 13, 2026 by our count (a legal date computed by Pier & Point, not a date printed in the text). The heights and uses in the enacted text have not yet been checked against this record, so this record's height fact still shows the adopted limit.",
+    "The Chronicle's July 2026 report of a proposed +15 ft height increase is tied to the Development Agreement and Planning Code amendment package (BOS Files 260724 and 260770), which passed the Board of Supervisors on first reading on Sept 29, 2026 and finally on Oct 6, 2026 (11 ayes), and Legistar lists it enacted on Oct 13, 2026 (Legistar: Mayor 'APPROVED'; enactment numbers 208-26 and 209-26; page read Oct 14, 2026). The enacted height map labels Block 11 \"145'\" (File 260770 'Leg Final' attachment, p. 29), the 15 ft the Chronicle reported, effective November 13, 2026 by our count (a legal date computed by Pier & Point, not printed in the text). No construction or design review date for the taller building has been found.",
     "This record's map outline is DataSF Assessor lot 4232021 (active, unaddressed, recorded 2022-08-30), chosen because 77% of our earlier trace of the D4D figure lies inside it; that this lot is Block 11's own parcel is an inference from location, shape and size, and no document read names the lot."
    ],
    "sources": [
@@ -98557,7 +98945,7 @@
    "how_to_comment": [],
    "positions": [],
    "address": null,
-   "summary": "Planned commercial block on the Potrero Power Station masterplan (the design guidelines permit office and laboratory/life-science uses), paired with Block 11 in the project engineer's description of about 430,000 sq ft of office with below-grade parking (the Planning Department's October 2020 Phase 1 approval lists about 177,000 sq ft of commercial space for Block 12 and 219,000 for Block 11, about 396,000 together; the sources differ and are not reconciled). Design was under review as of the March 2025 annual compliance report. In a request reported July 29, 2026, the developer asked to raise Block 12's height by 23 feet and let it become residential or commercial; the Planning Commission approved the amendment unanimously (reported Aug 3, 2026) and the Board of Supervisors passed the amended development agreement on first reading on Sept 29, 2026, and Legistar lists it enacted on Oct 13, 2026 (Mayor 'APPROVED'). No construction start found.",
+   "summary": "Planned commercial block on the Potrero Power Station masterplan (the design guidelines permit office and laboratory/life-science uses), paired with Block 11 in the project engineer's description of about 430,000 sq ft of office with below-grade parking (the Planning Department's October 2020 Phase 1 approval lists about 177,000 sq ft of commercial space for Block 12 and 219,000 for Block 11, about 396,000 together; the sources differ and are not reconciled). Design was under review as of the March 2025 annual compliance report. In a request reported July 29, 2026, the developer asked to raise Block 12's height by 23 feet and let it become residential or commercial; the Planning Commission approved the amendment unanimously (reported Aug 3, 2026) and the Board of Supervisors passed the amended development agreement on first reading on Sept 29, 2026, and Legistar lists it enacted on Oct 13, 2026 (Mayor 'APPROVED'); the enacted height map gives Block 12 123 ft, or 115 ft if majority non-residential (100 ft in the adopted rules), taking effect Nov 13, 2026 by our count. No construction start found.",
    "summary_sources": [
     "src-meyersplus",
     "src-phase1-2020",
@@ -98597,14 +98985,14 @@
     },
     {
      "key": "height_ft",
-     "value": "flat 100 ft max per the D4D's Figure 6.2.3",
+     "value": "100 ft until the 2026 amendment takes effect (adopted D4D, Figure 6.2.3)",
      "sources": [
       "src-d4d-final-fig623"
      ]
     },
     {
      "key": "height_ft_2026_amendment",
-     "value": "123 ft residential, 115 ft commercial in the Sept 28, 2026 draft; the package was enacted Oct 13, 2026, and the final ordinances say 'This ordinance shall become effective on the 31st day after enactment' (File 260770 §5(a), p. 56 of its 'Leg Final' attachment; File 260724, p. 10 of its attachment), which makes the effective date November 13, 2026 by our count (a legal date computed by Pier & Point, not a date printed in the text); the heights in the enacted text have not yet been checked against this record, so the adopted 100 ft is the limit this record still shows",
+     "value": "123 ft on the enacted height map, 115 ft if majority non-residential (effective Nov 13, 2026, our count); adopted 2020: 100 ft",
      "sources": [
       "src-legistar-260724-final",
       "src-legistar-260770-final",
@@ -98738,6 +99126,44 @@
       }
      ],
      "source": "California Barrel Company LLC, submitted to SF Planning Department, 2020-06-07",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "potrero_block_12",
+      "slug": "potrero-power-station-block-12",
+      "name": "Potrero Power Station Block 12",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-12/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-12.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2020-10-07",
+     "date_label": "Oct 7, 2020",
+     "status": "planned",
+     "status_label": "Planned",
+     "text": "Planning Department approves the Phase 1 Development Phase Application, which includes Block 12 (Development Phase Approval dated October 7, 2020, Case No. 2017-011878PHA, signed by Planning Director Rich Hillis): the approval lists 'Block 12 – Includes construction of approximately 177,000 square feet of commercial, 6,000 square feet of PDR, 25,000 square feet of entertainment, arts and recreation, and 27,000 square feet of accessory parking uses' (PDF p. 16), says the first phase consists of 'vertical improvements to Blocks 2, 7, 8, 11, 12, and 15' (PDF p. 2), and its Decision reads 'approves the Phase 1 Plan Application dated October 6, 2020' (PDF p. 4). The approval moves 'the construction of commercial buildings on Blocks 11, 12, and 15' into Development Phase 1 (PDF p. 3). The date is the approval's own date, an event date. This approves the development phase, not Block 12's building design; no design review approval has been found for the block.",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-phase1-2020",
+       "title": "Potrero Power Station Phase 1 and Phasing Plan Amendment Applications: Development Phase Approval (October 7, 2020)",
+       "publisher": "SF Planning",
+       "date": "2020-10-07",
+       "url": "https://sfplanning.org/potrero-power-station",
+       "accessed": "2026-09-20",
+       "overview": true
+      }
+     ],
+     "source": "SF Planning, 2020-10-07",
      "origin": "record",
      "category": "milestone",
      "category_label": "Milestone",
@@ -99121,6 +99547,66 @@
      "batch": null
     },
     {
+     "date": "2026-10-17",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The Board's ordinance as enacted on October 13, 2026 sets new height limits for Block 12: 123 ft, or 115 ft if the building is majority non-residential (Note 2). They take effect 31 days after enactment, November 13, 2026 by our count; until then the earlier limits (100 ft) apply.",
+     "source": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'",
+     "sources": [
+      {
+       "title": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_block_12",
+      "slug": "potrero-power-station-block-12",
+      "name": "Potrero Power Station Block 12",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-12/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-12.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
+    {
+     "date": "2026-10-17",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "The Planning Department's October 7, 2020 Phase 1 approval includes Block 12, so the record now shows 'Planned · Approved'. This is approval of the development phase, not of the building's design, which has not been approved as far as we found.",
+     "source": "Planning Department, Potrero Power Station Phase 1 and Phasing Plan Amendment Applications: Development Phase Approval, Oct 7, 2020 (149 pages; sfplanning.org Potrero Power Station page, M-Files link), PDF p. 4: \"approves the Phase 1 Plan Application dated October 6, 2020\"",
+     "sources": [
+      {
+       "title": "Planning Department, Potrero Power Station Phase 1 and Phasing Plan Amendment Applications: Development Phase Approval, Oct 7, 2020 (149 pages; sfplanning.org Potrero Power Station page, M-Files link), PDF p. 4: \"approves the Phase 1 Plan Application dated October 6, 2020\""
+      }
+     ],
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "potrero_block_12",
+      "slug": "potrero-power-station-block-12",
+      "name": "Potrero Power Station Block 12",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-12/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-12.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
+    {
      "date": "2026-10-14",
      "kind": "correction",
      "kind_label": "Correction",
@@ -99462,7 +99948,7 @@
    "open_questions": [
     "No design review approval or construction-start date found for Block 12; the most recent primary source found (the 2024 annual compliance report) describes design as 'under review', not approved.",
     "The combined 430,000 sq ft figure for Blocks 11+12 comes from the project's MEP engineer (Meyers+). The Planning Department's October 7, 2020 Phase 1 approval lists approximately 177,000 sq ft of commercial space for Block 12 and 219,000 for Block 11 (about 396,000 together, plus PDR, retail and other uses); no source reconciles the two figures.",
-    "The Chronicle's July 2026 report of a proposed +23 ft height increase and added residential flexibility is tied to the Development Agreement and Planning Code amendment package (BOS Files 260724 and 260770), which passed the Board of Supervisors on first reading on Sept 29, 2026 and finally on Oct 6, 2026 (11 ayes), and Legistar lists it enacted on Oct 13, 2026 (Legistar: Mayor 'APPROVED'; enactment numbers 208-26 and 209-26; page read Oct 14, 2026). The final ordinances say 'This ordinance shall become effective on the 31st day after enactment' (File 260770 §5(a), p. 56 of its 'Leg Final' attachment; File 260724, p. 10 of its attachment), which makes the effective date November 13, 2026 by our count (a legal date computed by Pier & Point, not a date printed in the text). The heights and uses in the enacted text have not yet been checked against this record, so this record's height and use facts still show the adopted limits.",
+    "The Chronicle's July 2026 report of a proposed +23 ft height increase and added residential flexibility is tied to the Development Agreement and Planning Code amendment package (BOS Files 260724 and 260770), which passed the Board of Supervisors on first reading on Sept 29, 2026 and finally on Oct 6, 2026 (11 ayes), and Legistar lists it enacted on Oct 13, 2026 (Legistar: Mayor 'APPROVED'; enactment numbers 208-26 and 209-26; page read Oct 14, 2026). The enacted height map labels Block 12 \"123'\" with a 115 ft limit for a majority non-residential building (File 260770 'Leg Final' attachment, p. 29), the 23 ft the Chronicle reported, effective November 13, 2026 by our count (a legal date computed by Pier & Point, not printed in the text). The enacted use rules (residential on Block 12) have not yet been checked against this record, so its use fact still shows the adopted rule.",
     "Whether Blocks 11 and 12 are described as a life-science campus anywhere: the Meyers+ page, which pairs them, describes about 430,000 sq ft of office (its list of uses for the wider project includes laboratory), and the 2024 annual compliance report treats them together in a single 'Blocks 11 and 12 Design Review Application' without calling them a life-science campus; the D4D permits laboratory/life-science use on Block 12, and the Chronicle (July 29, 2026) quotes developer Enrique Landa saying all commercial parcels can be 'all PDR, all offices, all life sciences or all labs', but no cited source says that is the plan for Block 12.",
     "Corrected 2026-10-06 (accuracy audit, October 2026): the July 2026 Development Agreement amendment request was shown as an expected event after it had been made and heard; it is now shown as having happened, with the Planning Commission's unanimous approval (SF Standard, August 3, 2026). Update 2026-10-12: the Board of Supervisors passed the amendment package on first reading on Sept 29, 2026 (see milestones). Update 2026-10-17: Legistar lists the package as approved by the Mayor and enacted on Oct 13, 2026 (Enactment Nos. 208-26 and 209-26; page read Oct 17, 2026); the Board's final passage on Oct 6, 2026 (Ayes: 11) is shown by the Clerk of the Board's certificate in each file's 'Leg Final' attachment (File 260724 attachment pp. 11-12; File 260770 attachment pp. 58-59), although the Legistar web page's 10/6/2026 history row carries no action text."
    ],
@@ -99744,6 +100230,14 @@
       "src-sfplanning-pps",
       "src-d4d-final-fig121"
      ]
+    },
+    {
+     "key": "height_ft_2026_amendment",
+     "value": "93 ft and 133 ft on the enacted height map (effective Nov 13, 2026, our count); adopted 2020: 85 and 125 ft",
+     "sources": [
+      "src-legistar-260770-final",
+      "src-legistar-260724-final"
+     ]
     }
    ],
    "costs": [],
@@ -99858,6 +100352,36 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-17",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The Board's ordinance as enacted on October 13, 2026 sets new height limits for Block 13: 93 ft and 133 ft. They take effect 31 days after enactment, November 13, 2026 by our count; until then the earlier limits (85 ft and 125 ft) apply.",
+     "source": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'",
+     "sources": [
+      {
+       "title": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_block_13",
+      "slug": "potrero-power-station-block-13",
+      "name": "Potrero Power Station Block 13",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-13/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-13.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
     {
      "date": "2026-10-13",
      "kind": "correction",
@@ -100052,7 +100576,8 @@
     "No design review approval or construction-start date found for Block 13; it is not one of the six buildings named in the 2024 annual compliance report's Phase 1 list (Blocks 2, 7, 8, 11, 12, 15), and no later-phase design review approval was found either.",
     "Corrected 2026-09-29: an earlier version of this dossier read the '300'MAX' and '280'MAX' labels on Figure 6.2.3 as heights and reported a conflict with Standard 6.2.2; they are dimension lines (plan extents), and the block's heights are 85 ft and 125 ft, within the midrise range. The D4D's Appendix A.12 is titled 'Block 13 Controls (Low-rise Building)' while Standard 6.2.2 lists Block 13 as midrise (101-145 ft); the difference in labels is unexplained.",
     "Block 13's 2031-2035 window comes from a 2020 press table (SocketSite) and is contingent on the PG&E switchyard's relocation; no current Block 13 schedule was found.",
-    "DataSF Parcels lists an active addressed lot (4175499, 1101 Illinois St) over this block's approximate footprint; whether it is PG&E's switchyard parcel is not established, and whether this record's map shape should follow it has not been decided."
+    "DataSF Parcels lists an active addressed lot (4175499, 1101 Illinois St) over this block's approximate footprint; whether it is PG&E's switchyard parcel is not established, and whether this record's map shape should follow it has not been decided.",
+    "Enacted heights on Block 13: the enacted height map (BOS File 260770 'Leg Final' attachment, p. 29, Figure 249.87-2) labels the block \"93'\" and \"133'\"; its \"300'MAX\" and \"280'MAX\" labels are dimension lines, not heights. The map is read from the rendered page, whose text layer is unreliable. The ordinance takes effect on the 31st day after enactment ('This ordinance shall become effective on the 31st day after enactment', §5(a), p. 56), November 13, 2026 by our count, a legal date computed by Pier & Point and not printed in the text; until then the adopted 85 ft and 125 ft apply."
    ],
    "sources": [
     {
@@ -100145,6 +100670,22 @@
      "date": "2020-02-26",
      "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
      "accessed": "2026-09-29"
+    },
+    {
+     "id": "src-legistar-260770-final",
+     "title": "BOS File 260770, 'Leg Final' attachment: the ordinance as finally passed, with the Clerk of the Board's certificate (FINALLY PASSED 10/6/2026, Ayes: 11; height map p. 29; effective-date section p. 56; certificate pp. 58-59)",
+     "publisher": "SF Board of Supervisors (Legistar)",
+     "date": "2026-10-07",
+     "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063746&GUID=9EA91A49-BBF9-4471-9EA9-6E7BD33A4353",
+     "accessed": "2026-10-17"
+    },
+    {
+     "id": "src-legistar-260724-final",
+     "title": "BOS File 260724, 'Leg Final' attachment: the ordinance as finally passed (effective-date section p. 10)",
+     "publisher": "SF Board of Supervisors (Legistar)",
+     "date": "2026-10-07",
+     "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063745&GUID=68B0CE5F-84C2-4368-BF8D-EEA7D8B92E55",
+     "accessed": "2026-10-17"
     }
    ],
    "notes": "Approximate polygon for a real, D4D-adopted block (final D4D, Feb 26, 2020: Table 3.1.1 and Figure 6.2.3) -- see the accuracy caveat. Status 'planned' is contingent: the D4D's Appendix E says portions of the PG&E Sub-area 'may or may not ultimately be redeveloped', and the SF Planning project page says build-out of the PG&E lands depends on relocating the switchyard; SocketSite (Oct 2020) lists Block 13 in Phase 3. Use 'mixed': residential, retail, office and PDR uses are permitted (D4D Table 3.1.1).",
@@ -100203,7 +100744,7 @@
    "how_to_comment": [],
    "positions": [],
    "address": null,
-   "summary": "Small planned mixed-use block on the Potrero Power Station masterplan with a flat 90 ft height limit, located within PG&E's switchyard sub-area (whose redevelopment depends on PG&E's long-range facilities planning); program not confirmed beyond the D4D's generic use table, and no design review approval or construction start found. The Board of Supervisors approved the project and Development Agreement on April 21, 2020 (Ordinance No. 62-20; the agreement's effective date is May 25, 2020).",
+   "summary": "Small planned mixed-use block on the Potrero Power Station masterplan with a flat 90 ft height limit (98 ft on the enacted height map, taking effect Nov 13, 2026 by our count), located within PG&E's switchyard sub-area (whose redevelopment depends on PG&E's long-range facilities planning); program not confirmed beyond the D4D's generic use table, and no design review approval or construction start found. The Board of Supervisors approved the project and Development Agreement on April 21, 2020 (Ordinance No. 62-20; the agreement's effective date is May 25, 2020).",
    "summary_sources": [
     "src-d4d-final-fig623",
     "src-d4d-final-table311",
@@ -100237,7 +100778,7 @@
     },
     {
      "key": "height_ft",
-     "value": "flat 90 ft max per the D4D's Figure 6.2.3",
+     "value": "90 ft until Nov 13, 2026 (adopted D4D, Figure 6.2.3)",
      "sources": [
       "src-d4d-final-fig623"
      ]
@@ -100256,6 +100797,14 @@
      "sources": [
       "src-d4d-final-figE134",
       "src-sfplanning-pps"
+     ]
+    },
+    {
+     "key": "height_ft_2026_amendment",
+     "value": "98 ft on the enacted height map (effective Nov 13, 2026, our count); adopted 2020: 90 ft",
+     "sources": [
+      "src-legistar-260770-final",
+      "src-legistar-260724-final"
      ]
     }
    ],
@@ -100363,6 +100912,36 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-17",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The Board's ordinance as enacted on October 13, 2026 sets new height limits for Block 14: 98 ft. They take effect 31 days after enactment, November 13, 2026 by our count; until then the earlier limits (90 ft) apply.",
+     "source": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'",
+     "sources": [
+      {
+       "title": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_block_14",
+      "slug": "potrero-power-station-block-14",
+      "name": "Potrero Power Station Block 14",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-14/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-14.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
     {
      "date": "2026-10-13",
      "kind": "correction",
@@ -100602,6 +101181,22 @@
      "date": "2020-02-26",
      "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
      "accessed": "2026-09-29"
+    },
+    {
+     "id": "src-legistar-260770-final",
+     "title": "BOS File 260770, 'Leg Final' attachment: the ordinance as finally passed, with the Clerk of the Board's certificate (FINALLY PASSED 10/6/2026, Ayes: 11; height map p. 29; effective-date section p. 56; certificate pp. 58-59)",
+     "publisher": "SF Board of Supervisors (Legistar)",
+     "date": "2026-10-07",
+     "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063746&GUID=9EA91A49-BBF9-4471-9EA9-6E7BD33A4353",
+     "accessed": "2026-10-17"
+    },
+    {
+     "id": "src-legistar-260724-final",
+     "title": "BOS File 260724, 'Leg Final' attachment: the ordinance as finally passed (effective-date section p. 10)",
+     "publisher": "SF Board of Supervisors (Legistar)",
+     "date": "2026-10-07",
+     "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063745&GUID=68B0CE5F-84C2-4368-BF8D-EEA7D8B92E55",
+     "accessed": "2026-10-17"
     }
    ],
    "notes": "Approximate polygon for a real, D4D-adopted block (Block 14 is listed in the final D4D's Table 3.1.1, printed p.47) -- see the accuracy caveat.",
@@ -100662,7 +101257,7 @@
    "how_to_comment": [],
    "positions": [],
    "address": null,
-   "summary": "Adaptive reuse of the 1901-02 Station A turbine hall into an approximately 456,000 gsf office building with an eight-story vertical addition, approved by the Planning Director on March 2, 2022 (the Planning Commission granted its office allocation on October 22, 2020); as of the 2024 annual compliance report, construction of the addition had not started (only 2024 brick stabilization work is described). In a request reported July 29, 2026, the developer asked to raise Station A's height by 30 feet; the Planning Commission approved the amendment unanimously (reported Aug 3, 2026) and the Board of Supervisors passed the amended development agreement on first reading on Sept 29, 2026, and Legistar lists it as approved by the Mayor and enacted on Oct 13, 2026 (Enactment Nos. 208-26 and 209-26 for the agreement and its zoning ordinance).",
+   "summary": "Adaptive reuse of the 1901-02 Station A turbine hall into an approximately 456,000 gsf office building with an eight-story vertical addition, approved by the Planning Director on March 2, 2022 (the Planning Commission granted its office allocation on October 22, 2020); as of the 2024 annual compliance report, construction of the addition had not started (only 2024 brick stabilization work is described). In a request reported July 29, 2026, the developer asked to raise Station A's height by 30 feet; the Planning Commission approved the amendment unanimously (reported Aug 3, 2026) and the Board of Supervisors passed the amended development agreement on first reading on Sept 29, 2026, and Legistar lists it as approved by the Mayor and enacted on Oct 13, 2026 (Enactment Nos. 208-26 and 209-26 for the agreement and its zoning ordinance); the enacted height map gives 175 ft on the northern half and 190 ft on the southern half (145 and 160 ft in the adopted rules), taking effect Nov 13, 2026 by our count.",
    "summary_sources": [
     "src-deir-vol1",
     "src-block15-approval-2022",
@@ -100725,7 +101320,7 @@
     },
     {
      "key": "height_ft",
-     "value": "205 ft total (existing base plus 8-story addition) per the 2022 approval; the adopted design rules allow 145 ft north and 160 ft south",
+     "value": "205 ft total per the 2022 approval; adopted D4D allows 145 ft north, 160 ft south until Nov 13, 2026",
      "sources": [
       "src-block15-approval-2022",
       "src-d4d-final-fig623"
@@ -100733,7 +101328,7 @@
     },
     {
      "key": "height_ft_2026_amendment",
-     "value": "175 ft north and 190 ft south in the Sept 28, 2026 draft; the package was enacted Oct 13, 2026, and the final ordinances say 'This ordinance shall become effective on the 31st day after enactment' (File 260770 §5(a), p. 56 of its 'Leg Final' attachment; File 260724, p. 10 of its attachment), which makes the effective date November 13, 2026 by our count (a legal date computed by Pier & Point, not a date printed in the text); the heights in the enacted text have not yet been checked against this record, so the adopted 145 and 160 ft are the limits this record still shows",
+     "value": "175 ft north and 190 ft south on the enacted height map (effective Nov 13, 2026, our count); adopted 2020: 145 and 160 ft",
      "sources": [
       "src-legistar-260724-final",
       "src-legistar-260770-final",
@@ -101492,6 +102087,36 @@
      "batch": null
     },
     {
+     "date": "2026-10-17",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The Board's ordinance as enacted on October 13, 2026 sets new height limits for Block 15 (Station A): 175 ft north, 190 ft south. They take effect 31 days after enactment, November 13, 2026 by our count; until then the earlier limits (145 ft north, 160 ft south) apply.",
+     "source": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'",
+     "sources": [
+      {
+       "title": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_block_15",
+      "slug": "potrero-power-station-block-15-station-a",
+      "name": "Potrero Power Station Block 15 / Station A",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-15-station-a/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-15-station-a.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
+    {
      "date": "2026-10-14",
      "kind": "correction",
      "kind_label": "Correction",
@@ -102170,8 +102795,8 @@
    ],
    "open_questions": [
     "No construction-start date for the vertical addition is stated in any source found; the most recent primary source found (the 2024 annual compliance report, submitted March 2025) describes design approval and 2024 brick stabilization work, not adaptive-reuse construction. The Oct 22, 2020 Planning Commission minutes were not found at a checkable URL; the Design Review Approval memo is cited for that hearing instead.",
-    "The 2022 design review approval describes a 205-ft total height for the Station A addition, while the adopted D4D (section 6.14.5) allows new construction on Station A up to 145 feet on the northern half and 160 feet on the southern half; how the 205 ft relates to those limits (for example whether it includes the existing walls or rooftop elements) is not stated in the sources read. The '230'MAX' label in the D4D's Figure 6.2.3 is a dimension marker along the 160-ft strip, not a height.",
-    "The Chronicle's July 2026 report of a proposed +30 ft height increase for Station A is tied to the Development Agreement amendment (BOS File 260724) and Planning Code ordinance (File 260770), which passed the Board of Supervisors on first reading on Sept 29, 2026 and finally on Oct 6, 2026 (11 ayes), and Legistar lists it enacted on Oct 13, 2026 (Legistar: Mayor 'APPROVED'; enactment numbers 208-26 and 209-26; page read Oct 14, 2026). The final ordinances say 'This ordinance shall become effective on the 31st day after enactment' (File 260770 §5(a), p. 56 of its 'Leg Final' attachment; File 260724, p. 10 of its attachment), which makes the effective date November 13, 2026 by our count (a legal date computed by Pier & Point, not a date printed in the text). The heights and uses in the enacted text have not yet been checked against this record, so the change is recorded here as the draft's wording, not as a limit in force: the Sept 28, 2026 draft D4D would allow 175 and 190 feet where the adopted D4D allows 145 and 160.",
+    "The 2022 design review approval describes a 205-ft total height for the Station A addition, while the adopted D4D (section 6.14.5) allows new construction on Station A up to 145 feet on the northern half and 160 feet on the southern half; how the 205 ft relates to those limits (for example whether it includes the existing walls or rooftop elements) is not stated in the sources read. The '230'MAX' label in the D4D's Figure 6.2.3, which also appears on the enacted map along the southern strip, is a dimension marker, not a height.",
+    "The Chronicle's July 2026 report of a proposed +30 ft height increase for Station A is tied to the Development Agreement amendment (BOS File 260724) and Planning Code ordinance (File 260770), which passed the Board of Supervisors on first reading on Sept 29, 2026 and finally on Oct 6, 2026 (11 ayes), and Legistar lists it enacted on Oct 13, 2026 (Legistar: Mayor 'APPROVED'; enactment numbers 208-26 and 209-26; page read Oct 14, 2026). The enacted height map labels the strips \"175'\" and \"190'\" (File 260770 'Leg Final' attachment, p. 29), 30 ft above the adopted 145 and 160, effective November 13, 2026 by our count (a legal date computed by Pier & Point, not printed in the text). Whether the 2022 design review approval (205 ft total) is affected by the new limits is not stated in the sources read.",
     "No source found stating a cost estimate for Station A's rehabilitation and vertical addition.",
     "The Draft EIR image shown here as a 'before' view is not a single photograph -- it is a composite DEIR report page carrying six separate existing-conditions photos of Station A's turbine hall and machine shop, each with its own caption. It may be better described as a document than as a single before photo.",
     "The February 17, 2020 photo is shown as a current ('now') view rather than a 'before' view because the most recent primary source found (the 2024 annual compliance report, submitted March 2025) describes no adaptive-reuse construction on Station A (only 2024 brick stabilization), so the building's exterior likely hasn't changed much since. If construction has started since 2026-09-24, this photo is out of date.",
@@ -102489,7 +103114,7 @@
     },
     {
      "key": "d4d_max_height_ft",
-     "value": "125 (midrise building, 101-145 ft class; D4D 6.2.2 and A.8 Block 8 controls)",
+     "value": "125 until Nov 13, 2026 (midrise building, 101-145 ft class; D4D 6.2.2 and A.8 Block 8 controls)",
      "sources": [
       "src-d4d-final",
       "src-dr-8-2022"
@@ -102557,6 +103182,14 @@
      "sources": [
       "src-ar-2024",
       "src-chron-2026-08"
+     ]
+    },
+    {
+     "key": "enacted_max_height_ft",
+     "value": "133 ft and 93 ft on the enacted height map (effective Nov 13, 2026, our count); adopted 2020: 125 and 85 ft",
+     "sources": [
+      "src-legistar-260770-final",
+      "src-legistar-260724-final"
      ]
     }
    ],
@@ -102993,6 +103626,36 @@
    ],
    "changes": [
     {
+     "date": "2026-10-17",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The Board's ordinance as enacted on October 13, 2026 sets new height limits for Block 8: 133 ft and 93 ft. They take effect 31 days after enactment, November 13, 2026 by our count; until then the earlier limits (125 ft and 85 ft) apply.",
+     "source": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'",
+     "sources": [
+      {
+       "title": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_block_8",
+      "slug": "potrero-power-station-block-8",
+      "name": "Potrero Power Station Block 8",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-8/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-8.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
+    {
      "date": "2026-10-13",
      "kind": "correction",
      "kind_label": "Correction",
@@ -103333,6 +103996,22 @@
      "date": "2026-08-03",
      "url": "https://sfstandard.com/2026/08/03/jpm-sf-housing-potrero-power-station/",
      "accessed": "2026-10-12"
+    },
+    {
+     "id": "src-legistar-260770-final",
+     "title": "BOS File 260770, 'Leg Final' attachment: the ordinance as finally passed, with the Clerk of the Board's certificate (FINALLY PASSED 10/6/2026, Ayes: 11; height map p. 29; effective-date section p. 56; certificate pp. 58-59)",
+     "publisher": "SF Board of Supervisors (Legistar)",
+     "date": "2026-10-07",
+     "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063746&GUID=9EA91A49-BBF9-4471-9EA9-6E7BD33A4353",
+     "accessed": "2026-10-17"
+    },
+    {
+     "id": "src-legistar-260724-final",
+     "title": "BOS File 260724, 'Leg Final' attachment: the ordinance as finally passed (effective-date section p. 10)",
+     "publisher": "SF Board of Supervisors (Legistar)",
+     "date": "2026-10-07",
+     "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063745&GUID=68B0CE5F-84C2-4368-BF8D-EEA7D8B92E55",
+     "accessed": "2026-10-17"
     }
    ],
    "notes": "Block 8 of the Potrero Power Station Design for Development, shown as Assessor lot 4232022 (see the accuracy note). Approximate polygon for a real, D4D-adopted block (final D4D, Feb 26, 2020: Table 3.1.1 and Figure 6.2.3) -- see the accuracy note for this shape. Status 'planned': not started as of March 2025, and the Chronicle (Aug 3, 2026) expects construction to begin in the fall. Use 'residential': Table 3.1.1 permits residential, and the design review approved a 339-unit residential building.",
@@ -109661,8 +110340,8 @@
     {
      "date": "2024-08",
      "date_label": "Aug 2024",
-     "status": "complete",
-     "status_label": "Complete",
+     "status": null,
+     "status_label": null,
      "text": "Station A brick stabilization (Singular Builders, plan by SGH) completed; work ran June-August 2024",
      "expected": false,
      "approximate": false,
@@ -109678,8 +110357,8 @@
      ],
      "source": "California Barrel Company LLC (developer's compliance report, posted by SF Planning, M-Files), 2025-03",
      "origin": "record",
-     "category": "status",
-     "category_label": "Status",
+     "category": "milestone",
+     "category_label": "Milestone",
      "record": {
       "id": "potrero_louisiana_paseo",
       "slug": "louisiana-paseo",
@@ -109743,6 +110422,36 @@
      "sources": [
       {
        "title": "SF Board of Supervisors, Legistar, BOS File 260724 and File 260770 (https://sfgov.legistar.com/LegislationDetail.aspx?ID=8127453&GUID=CC4AC1DD-BF51-4585-86E8-0A5D44AA3745); Clerk of the Board's 'Leg Final' attachments: https://sfgov.legistar.com/View.ashx?M=F&ID=16063745&GUID=68B0CE5F-84C2-4368-BF8D-EEA7D8B92E55 and https://sfgov.legistar.com/View.ashx?M=F&ID=16063746&GUID=9EA91A49-BBF9-4471-9EA9-6E7BD33A4353"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_louisiana_paseo",
+      "slug": "louisiana-paseo",
+      "name": "Louisiana Paseo",
+      "permalink": "https://pierandpoint.org/parcels/louisiana-paseo/",
+      "api": "https://pierandpoint.org/api/v1/records/louisiana-paseo.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
+    {
+     "date": "2026-10-17",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The 2024 brick stabilisation was work on Station A, the building beside the paseo, so the paseo's timeline no longer marks it complete. The paseo stays Planned.",
+     "source": "src-ar-2024 (2024 annual compliance report: 'Station A brick stabilization ... completed; work ran June-August 2024')",
+     "sources": [
+      {
+       "title": "src-ar-2024 (2024 annual compliance report: 'Station A brick stabilization ... completed; work ran June-August 2024')"
       }
      ],
      "category": "correction",
@@ -157390,9 +158099,9 @@
     {
      "date": "2015-12",
      "date_label": "Dec 2015",
-     "status": "planned",
-     "status_label": "Planned",
-     "text": "Successor Agency's Approved Long-Range Property Management Plan for Mission Bay lists Park P2 (\"Vacant Lot/Land\") as a designated Open Space Park Parcel under the 1998 OPA, assigned to the Phase II Future Parks group (the plan's estimated lease-termination date for that phase was 2019, not a construction or opening date; the Mission Creek Park South Extension project now has its own schedule)",
+     "status": null,
+     "status_label": null,
+     "text": "The land is planned as a park: the Successor Agency's Approved Long-Range Property Management Plan for Mission Bay lists Park P2 (\"Vacant Lot/Land\") as a designated Open Space Park Parcel under the 1998 OPA, assigned to the Phase II Future Parks group; this is about the land planned as a park, the planned extension, and does not say what stands on P2 today (the plan's estimated lease-termination date for that phase was 2019, not a construction or opening date; the Mission Creek Park South Extension project now has its own schedule)",
      "expected": false,
      "approximate": false,
      "sources": [
@@ -157402,8 +158111,8 @@
      ],
      "source": "Mission Bay North and South Approved Long-Range Property Management Plan, Dec 2015",
      "origin": "csv",
-     "category": "status",
-     "category_label": "Status",
+     "category": "retail",
+     "category_label": "Retail",
      "record": {
       "id": "mission_bay_p2_creek_channel",
       "slug": "mission-creek-park-south-extension-parcel-p2",
@@ -157462,9 +158171,84 @@
       "url": "https://pierandpoint.org/sites/mission-bay/"
      },
      "relation": "tracked"
+    },
+    {
+     "date": "2026-10-17",
+     "date_label": "Oct 17, 2026",
+     "status": "existing",
+     "status_label": "Existing",
+     "text": "Rec and Park's schematic design (undated) calls Huffaker Park \"existing\" and says it \"will be preserved and incorporated into the park design\", and gives \"The existing community garden is 11,500 square feet.\" It also says \"the existing Huffaker Park path will remain in the same location and width while the paving material will be required to be improved to city standards\". Hoodline, April 6, 2018, mentions residents getting involved \"at nearby Huffaker Park\". This date is when the schematic was read, not when the park was built. The park stands today but is not at its final size: the planned extension builds around it and may rework part of it. No City page found says in its own words that the park is open today.",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-rp-schematic-p2p8",
+       "title": "Mission Bay P2-P8, Preliminary Concept - Schematic Design (undated; includes a plan sheet dated June 23, 2006)",
+       "publisher": "San Francisco Recreation and Parks Department (document names Catellus and the San Francisco Redevelopment Agency)",
+       "url": "https://sfrecpark.org/DocumentCenter/View/25950/Mission-Creek-Park-South-Extension-Project---Schematic-P2-P8",
+       "accessed": "2026-10-10",
+       "overview": true
+      },
+      {
+       "id": "src-hoodline-2018",
+       "title": "Life on a Houseboat Is Mostly Ups, Few Downs",
+       "publisher": "Hoodline",
+       "date": "2018-04-06",
+       "url": "https://hoodline.com/2018/04/life-on-a-houseboat-is-mostly-ups-few-downs/",
+       "accessed": "2026-10-18"
+      }
+     ],
+     "source": "San Francisco Recreation and Parks Department (document names Catellus and the San Francisco Redevelopment Agency); Hoodline, 2018-04-06",
+     "origin": "record",
+     "category": "status",
+     "category_label": "Status",
+     "record": {
+      "id": "mission_bay_p2_creek_channel",
+      "slug": "mission-creek-park-south-extension-parcel-p2",
+      "name": "Mission Creek Park South Extension, Parcel P2",
+      "permalink": "https://pierandpoint.org/parcels/mission-creek-park-south-extension-parcel-p2/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-creek-park-south-extension-parcel-p2.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-18",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "P2 shows 'existing' because Huffaker Park stands there today; the planned extension builds around it and may rework part of it. The 2015 plan entry on the timeline now describes the land planned as a park and no longer reads as P2's status.",
+     "source": "Hoodline, 'Life on a Houseboat Is Mostly Ups, Few Downs', Apr 6, 2018 (https://hoodline.com/2018/04/life-on-a-houseboat-is-mostly-ups-few-downs/): \"getting involved at nearby Huffaker Park\"; Rec and Park schematic design for P2/P8 (undated): \"The existing Huffaker Park will be preserved and incorporated into the park design\"",
+     "sources": [
+      {
+       "title": "Hoodline, 'Life on a Houseboat Is Mostly Ups, Few Downs', Apr 6, 2018 (https://hoodline.com/2018/04/life-on-a-houseboat-is-mostly-ups-few-downs/): \"getting involved at nearby Huffaker Park\"; Rec and Park schematic design for P2/P8 (undated): \"The existing Huffaker Park will be preserved and incorporated into the park design\""
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_p2_creek_channel",
+      "slug": "mission-creek-park-south-extension-parcel-p2",
+      "name": "Mission Creek Park South Extension, Parcel P2",
+      "permalink": "https://pierandpoint.org/parcels/mission-creek-park-south-extension-parcel-p2/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-creek-park-south-extension-parcel-p2.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
     {
      "date": "2026-10-17",
      "kind": "correction",
@@ -157474,6 +158258,36 @@
      "sources": [
       {
        "title": "San Francisco Recreation and Parks Department, Mission Creek Park South Extension Project (https://sfrecpark.org/1833/Mission-Creek-Park-South-Extension-Proje), Estimated Project Schedule: \"Construction begins , Late 2026 / Early 2027\"; \"Open to the Public , TBD\""
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_p2_creek_channel",
+      "slug": "mission-creek-park-south-extension-parcel-p2",
+      "name": "Mission Creek Park South Extension, Parcel P2",
+      "permalink": "https://pierandpoint.org/parcels/mission-creek-park-south-extension-parcel-p2/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-creek-park-south-extension-parcel-p2.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
+    {
+     "date": "2026-10-17",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "P2 shows 'existing' for the Huffaker Park path and community garden that stand there today, from Rec and Park's schematic design (undated). The planned Mission Creek Park South Extension on P2 and P8 is not built. The timeline now carries a matching entry, dated only by when we read the document.",
+     "source": "San Francisco Recreation and Parks Department, Mission Creek Park South Extension Project - Schematic P2/P8 (https://sfrecpark.org/DocumentCenter/View/25950/Mission-Creek-Park-South-Extension-Project---Schematic-P2-P8): \"The existing Huffaker Park will be preserved and incorporated into the park design\"; \"The existing community garden is 11,500 square feet.\"",
+     "sources": [
+      {
+       "title": "San Francisco Recreation and Parks Department, Mission Creek Park South Extension Project - Schematic P2/P8 (https://sfrecpark.org/DocumentCenter/View/25950/Mission-Creek-Park-South-Extension-Project---Schematic-P2-P8): \"The existing Huffaker Park will be preserved and incorporated into the park design\"; \"The existing community garden is 11,500 square feet.\""
       }
      ],
      "category": "correction",
@@ -157915,6 +158729,14 @@
      "date": "2015-12",
      "url": "https://sfocii.org/sites/default/files/inline-files/02%20Mission%20Bay.pdf",
      "accessed": "2026-10-10"
+    },
+    {
+     "id": "src-hoodline-2018",
+     "title": "Life on a Houseboat Is Mostly Ups, Few Downs",
+     "publisher": "Hoodline",
+     "date": "2018-04-06",
+     "url": "https://hoodline.com/2018/04/life-on-a-houseboat-is-mostly-ups-few-downs/",
+     "accessed": "2026-10-18"
     },
     {
      "id": null,
@@ -173165,8 +173987,8 @@
     {
      "date": "2025",
      "date_label": "~2025",
-     "status": "complete",
-     "status_label": "Complete",
+     "status": null,
+     "status_label": null,
      "text": "The Port's project page lists \"2025 Phase 2a Marine Demolition and Mattress (complete)\" (the page is undated, so the completion date is not known; SFCTA, April 28, 2026, describes the earlier work as \"the removal of former Pier 64 and other underwater preparatory work\").",
      "expected": false,
      "approximate": true,
@@ -173182,8 +174004,8 @@
      ],
      "source": "Port of San Francisco",
      "origin": "record",
-     "category": "status",
-     "category_label": "Status",
+     "category": "milestone",
+     "category_label": "Milestone",
      "record": {
       "id": "mission_bay_ferry_landing",
       "slug": "mission-bay-ferry-landing",
@@ -173221,6 +174043,51 @@
      "origin": "record",
      "category": "retail",
      "category_label": "Retail",
+     "record": {
+      "id": "mission_bay_ferry_landing",
+      "slug": "mission-bay-ferry-landing",
+      "name": "Mission Bay Ferry Landing",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-ferry-landing/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-ferry-landing.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "adjacent"
+    },
+    {
+     "date": "2026-10-17",
+     "date_label": "Oct 17, 2026",
+     "status": "under_construction",
+     "status_label": "Under construction",
+     "text": "The Port's project schedule, read on this date (the page is undated), lists \"2026/2027 Phase 2b Mission Bay Ferry Landing and Agua Vista Park (in progress)\" after three phases marked \"(complete)\"; SFCTA, April 28, 2026, says the Port \"has completed earlier phases of construction\" and that its Prop L funds \"will support the installation of piles, gangways, fixed piers, canopies, utilities, and landside improvements\". This date is when the page was read, not when Phase 2b began.",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-sfport-ferrylanding",
+       "title": "Mission Bay Ferry Landing",
+       "publisher": "Port of San Francisco",
+       "url": "https://www.sfport.com/projects-programs/mission-bay-ferry-landing",
+       "accessed": "2026-09-28",
+       "overview": true
+      },
+      {
+       "id": "src-sfcta-blog-2026",
+       "title": "$9.8 Million in Sales Tax Funds Approved to Support Downtown Revitalization, Caltrain Station ADA...",
+       "publisher": "San Francisco County Transportation Authority",
+       "date": "2026-04",
+       "url": "https://www.sfcta.org/blogs/98-million-sales-tax-funds-approved-support-downtown-revitalization-caltrain-station-ada",
+       "accessed": "2026-10-06"
+      }
+     ],
+     "source": "Port of San Francisco; San Francisco County Transportation Authority, 2026-04",
+     "origin": "record",
+     "category": "status",
+     "category_label": "Status",
      "record": {
       "id": "mission_bay_ferry_landing",
       "slug": "mission-bay-ferry-landing",
@@ -173275,6 +174142,36 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-17",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The Port's schedule lists the marine demolition phase as complete, but that is one phase, not the ferry landing. The record still shows the landing as under construction, and its timeline no longer marks the landing complete. One open question notes that the Port and SFCTA word the state of the current phase differently.",
+     "source": "Port of San Francisco, Mission Bay Ferry Landing (https://www.sfport.com/projects-programs/mission-bay-ferry-landing), Project Schedule: \"2025 Phase 2a Marine Demolition and Mattress (complete)\"; \"2026/2027 Phase 2b Mission Bay Ferry Landing and Agua Vista Park (in progress)\". SFCTA, April 28, 2026: \"the Port of San Francisco has completed earlier phases of construction\"",
+     "sources": [
+      {
+       "title": "Port of San Francisco, Mission Bay Ferry Landing (https://www.sfport.com/projects-programs/mission-bay-ferry-landing), Project Schedule: \"2025 Phase 2a Marine Demolition and Mattress (complete)\"; \"2026/2027 Phase 2b Mission Bay Ferry Landing and Agua Vista Park (in progress)\". SFCTA, April 28, 2026: \"the Port of San Francisco has completed earlier phases of construction\""
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_ferry_landing",
+      "slug": "mission-bay-ferry-landing",
+      "name": "Mission Bay Ferry Landing",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-ferry-landing/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-ferry-landing.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "adjacent",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
     {
      "date": "2026-10-13",
      "kind": "correction",
@@ -173519,6 +174416,7 @@
    "images": [],
    "open_questions": [
     "Whether the Port's draft Five-Year CIP line item \"Pier 64 Sediment Cleanup\" covers the same area as this project is not established by the sources read; the City's 2018 environmental review places the project area at the former Pier 64.",
+    "Whether Phase 2b is already under way is stated differently by two sources: the Port's undated project page lists it as \"(in progress)\", while SFCTA's April 28, 2026 post says its Prop L funds \"will support the installation of piles, gangways, fixed piers, canopies, utilities, and landside improvements\", which reads as work still ahead. The record's \"under construction\" status rests on the completed earlier phases and the Port's \"in progress\"; no source dates the start of Phase 2b.",
     "The project's total is stated differently across sources: SFCTA's April 28, 2026 post says \"a new $77.1 million ferry landing\", while SFCTA's Prop L five-year prioritization program (approved June 25, 2024) shows a total project cost of $82,450,000 ($4,500,000 Prop L and $77,950,000 other funds; construction $74,330,000). Neither is reconciled here, and only the $4.5M Prop L allocation (April 2026) is recorded as a cost figure. Corrected 2026-10-06 (accuracy audit, October 2026): this record earlier gave the allocation as $9.8M, which is the total SFCTA approved for three projects.",
     "The structure sizes and positions here are from the City's 2018 design. No later site plan was found, so whether the design changed before construction is not established.",
     "Exact construction start and phase-by-phase dates for Phase 2b (ferry landing plus upland improvements) beyond the year-end-2027 expected completion are not established here; the Port's page lists Phase 2b as \"in progress\" without a start date."

@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-10-17",
+ "generated": "2026-10-18",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -112,7 +112,7 @@
    },
    {
     "key": "d4d_max_height_ft",
-    "value": "240 (highrise tower, Block 7; base 85 ft; D4D 6.2.2)",
+    "value": "240 (highrise tower, Block 7; base 85 ft; D4D 6.2.2), until Nov 13, 2026",
     "sources": [
      "src-d4d-final",
      "src-dr-7a-2022"
@@ -170,6 +170,14 @@
     "sources": [
      "src-ar-2024",
      "src-socketsite-2021-07"
+    ]
+   },
+   {
+    "key": "enacted_max_height_ft",
+    "value": "248 ft maximum over a 93 ft base on the enacted height map (effective Nov 13, 2026, our count)",
+    "sources": [
+     "src-legistar-260770-final",
+     "src-legistar-260724-final"
     ]
    }
   ],
@@ -884,6 +892,36 @@
     "batch": null
    },
    {
+    "date": "2026-10-17",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Board's ordinance as enacted on October 13, 2026 sets new height limits for Block 7: 248 ft over a 93 ft base. They take effect 31 days after enactment, November 13, 2026 by our count; until then the earlier limits (240 ft) apply.",
+    "source": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'",
+    "sources": [
+     {
+      "title": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_block_7remaining",
+     "slug": "potrero-power-station-block-7-remaining-portion",
+     "name": "Potrero Power Station Block 7 (remaining portion)",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-7-remaining-portion/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-7-remaining-portion.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
+   {
     "date": "2026-10-14",
     "kind": "correction",
     "kind_label": "Correction",
@@ -1180,7 +1218,7 @@
   ],
   "open_questions": [
    "Construction start: none found. Searched the 2021-2024 DA compliance reports (the 2024 report says no market-rate building permits have been submitted), SF YIMBY through Sept 2026, the Chronicle (Jul 29 and Aug 3, 2026), SF Standard (Oct 2025) and Potrero View (Oct 2025). SocketSite (Jul 2021) said construction was 'slated to commence in 2023'; SF YIMBY (Mar 2021) said Block 7 construction was expected to start 'by 2023, with completion by 2026'. Neither happened.",
-   "The July 2026 Chronicle line 'tallest residential tower would be permitted to reach 248 feet' does not name a block. The Planning Commission's July 30, 2026 executive summary (Resolution No. 21945, attached to BOS File 260724) says the amendment would 'increase the maximum height by 8 feet' on residential blocks, 'from 240 feet to 248 feet on Block 7', and lists Block 5's existing maximum as 220 feet; Block 7 includes 7A, whose design review approval is about 237 ft. The committee-amended ordinance text (Leg Ver3 of BOS File 260770, Sept 28, 2026) shows a 'HIGHRISE TOWERS ON BLOCKS 5 AND 7' column with the range changed from 181'-240' to 191'-248'. The ordinance passed the Board of Supervisors on first reading on Sept 29, 2026 and finally on Oct 6, 2026 (11 ayes), and Legistar lists it enacted on Oct 13, 2026 (Mayor 'APPROVED'; enactment number 209-26). The final ordinances say 'This ordinance shall become effective on the 31st day after enactment' (File 260770 §5(a), p. 56 of its 'Leg Final' attachment; File 260724, p. 10 of its attachment), which makes the effective date November 13, 2026 by our count (a legal date computed by Pier & Point, not a date printed in the text). The heights and uses in the enacted text have not yet been checked against this record, so 240 ft is the adopted limit this record still cites.",
+   "The July 2026 Chronicle line 'tallest residential tower would be permitted to reach 248 feet' does not name a block. The Planning Commission's July 30, 2026 executive summary (Resolution No. 21945, attached to BOS File 260724) says the amendment would 'increase the maximum height by 8 feet' on residential blocks, 'from 240 feet to 248 feet on Block 7', and lists Block 5's existing maximum as 220 feet; Block 7 includes 7A, whose design review approval is about 237 ft. The enacted height map (BOS File 260770 'Leg Final' attachment, p. 29) labels Block 7 \"248'/93'\", and its bulk table (p. 32) shows the 'Highrise towers on Blocks 5 and 7' range as 191'-248'. The ordinance passed the Board of Supervisors on first reading on Sept 29, 2026 and finally on Oct 6, 2026 (11 ayes), and Legistar lists it enacted on Oct 13, 2026 (Mayor 'APPROVED'; enactment number 209-26); it takes effect on the 31st day after enactment, November 13, 2026 by our count (a legal date computed by Pier & Point, not printed in the text). Until then 240 ft is the limit in force.",
    "Unit count drift: 277 (press 2021) -> 325 (approval 2022) -> 319 (compliance reports' LBE appendix); the Planning Commission slides (July 2021) show '315' only on the 'Previous Phase 1' map inside Block 8 and '420' for Block 7 (7A with 7b) on the 'Current Phase 1' slide, so no slide gives a 7A-only count. Which figure a future permit will carry is unknown.",
    "The SF Standard (Oct 15, 2025) says Associate Capital 'will move on to constructing a 300-unit market-rate apartment building and a waterfront park at the adjoining site'. The SF Standard (Aug 3, 2026) calls a 342-unit apartment complex Fifth Space's 'next building at the site', and DBI permit 202205194622 (151 Humboldt St, description '(block 8)', 342 residential units) is for Block 8, so Block 7A does not appear to be the next building.",
    "Ground-floor childcare is assigned to Block 7 in the compliance reports. The April 25, 2023 Planning Director approval of the childcare amendment changed the Phasing Plan from two 6,000-sq-ft facilities in Phase 1 to 'two or three child care facilities' of at least 4,000 sq ft each, totaling at least 12,000 sq ft, with at least one in Phase 1; the Planning Commission's July 30, 2026 executive summary describes the existing control as 'Childcare Facilities may be provided on any Block' and proposes 'on any Block or within one mile of the Project'. Which facility goes on Block 7A is therefore not fixed by those documents; the design review approval shows about 6,270 sq ft of childcare in the building.",

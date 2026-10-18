@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-10-17",
+ "generated": "2026-10-18",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -29,7 +29,7 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "Planned mixed-use block on the Potrero Power Station masterplan with a stepped height envelope up to 180 ft, one of three blocks (with 5 and 13) eligible to host the project's single permitted district parking garage; no design review approval or construction start found. The amended and restated development agreement, which includes Phasing Plan amendments, passed the Board of Supervisors on first reading on Sept 29, 2026 and Legistar lists it enacted on Oct 13, 2026 (Mayor 'APPROVED'); its effect on Block 1's timing has not been read.",
+  "summary": "Planned mixed-use block on the Potrero Power Station masterplan with a stepped height envelope up to 180 ft (188 ft on the enacted height map, taking effect Nov 13, 2026 by our count), one of three blocks (with 5 and 13) eligible to host the project's single permitted district parking garage; no design review approval or construction start found. The amended and restated development agreement, which includes Phasing Plan amendments, passed the Board of Supervisors on first reading on Sept 29, 2026 and Legistar lists it enacted on Oct 13, 2026 (Mayor 'APPROVED'); its effect on Block 1's timing has not been read.",
   "summary_sources": [
    "src-d4d-final-fig623",
    "src-annual-2024",
@@ -61,7 +61,7 @@
    },
    {
     "key": "height_ft",
-    "value": "Stepped: 180 ft maximum with an 85 ft maximum base on the west part of the block; 85 ft on the east part",
+    "value": "Until Nov 13, 2026: 180 ft maximum over an 85 ft base on the west part; 85 ft on the east part",
     "sources": [
      "src-d4d-final-fig623",
      "src-d4d-final-6.2.2"
@@ -87,6 +87,14 @@
     "value": "Public Library option space moved here (Phase 2) from Block 15 (Phase 4) by the October 7, 2020 Phase 1 approval; not a committed branch",
     "sources": [
      "src-phase1-2020"
+    ]
+   },
+   {
+    "key": "height_ft_2026_amendment",
+    "value": "188 ft over a 120 ft base west, 120 ft east, on the enacted map (effective Nov 13, 2026, our count)",
+    "sources": [
+     "src-legistar-260770-final",
+     "src-legistar-260724-final"
     ]
    }
   ],
@@ -218,6 +226,36 @@
     "sources": [
      {
       "title": "SF Board of Supervisors, Legistar, BOS File 260724 and File 260770 (https://sfgov.legistar.com/LegislationDetail.aspx?ID=8127453&GUID=CC4AC1DD-BF51-4585-86E8-0A5D44AA3745); Clerk of the Board's 'Leg Final' attachments: https://sfgov.legistar.com/View.ashx?M=F&ID=16063745&GUID=68B0CE5F-84C2-4368-BF8D-EEA7D8B92E55 and https://sfgov.legistar.com/View.ashx?M=F&ID=16063746&GUID=9EA91A49-BBF9-4471-9EA9-6E7BD33A4353"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_block_1",
+     "slug": "potrero-power-station-block-1",
+     "name": "Potrero Power Station Block 1",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-1/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-1.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
+   {
+    "date": "2026-10-17",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Board's ordinance as enacted on October 13, 2026 sets new height limits for Block 1: 188 ft over a 120 ft base on the west part and 120 ft on the east part. They take effect 31 days after enactment, November 13, 2026 by our count; until then the earlier limits (180 ft over 85 ft, and 85 ft) apply.",
+    "source": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'",
+    "sources": [
+     {
+      "title": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'"
      }
     ],
     "category": "correction",
@@ -561,6 +599,22 @@
     "accessed": "2026-09-22",
     "date": "2020-02-26",
     "overview": true
+   },
+   {
+    "id": "src-legistar-260770-final",
+    "title": "BOS File 260770, 'Leg Final' attachment: the ordinance as finally passed, with the Clerk of the Board's certificate (FINALLY PASSED 10/6/2026, Ayes: 11; height map p. 29; effective-date section p. 56; certificate pp. 58-59)",
+    "publisher": "SF Board of Supervisors (Legistar)",
+    "date": "2026-10-07",
+    "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063746&GUID=9EA91A49-BBF9-4471-9EA9-6E7BD33A4353",
+    "accessed": "2026-10-17"
+   },
+   {
+    "id": "src-legistar-260724-final",
+    "title": "BOS File 260724, 'Leg Final' attachment: the ordinance as finally passed (effective-date section p. 10)",
+    "publisher": "SF Board of Supervisors (Legistar)",
+    "date": "2026-10-07",
+    "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063745&GUID=68B0CE5F-84C2-4368-BF8D-EEA7D8B92E55",
+    "accessed": "2026-10-17"
    },
    {
     "id": null,

@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-10-17",
+ "generated": "2026-10-18",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -96,8 +96,8 @@
    {
     "date": "2025",
     "date_label": "~2025",
-    "status": "complete",
-    "status_label": "Complete",
+    "status": null,
+    "status_label": null,
     "text": "The Port's project page lists \"2025 Phase 2a Marine Demolition and Mattress (complete)\" (the page is undated, so the completion date is not known; SFCTA, April 28, 2026, describes the earlier work as \"the removal of former Pier 64 and other underwater preparatory work\").",
     "expected": false,
     "approximate": true,
@@ -113,8 +113,8 @@
     ],
     "source": "Port of San Francisco",
     "origin": "record",
-    "category": "status",
-    "category_label": "Status",
+    "category": "milestone",
+    "category_label": "Milestone",
     "record": {
      "id": "mission_bay_ferry_landing",
      "slug": "mission-bay-ferry-landing",
@@ -152,6 +152,51 @@
     "origin": "record",
     "category": "retail",
     "category_label": "Retail",
+    "record": {
+     "id": "mission_bay_ferry_landing",
+     "slug": "mission-bay-ferry-landing",
+     "name": "Mission Bay Ferry Landing",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-ferry-landing/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-ferry-landing.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "adjacent"
+   },
+   {
+    "date": "2026-10-17",
+    "date_label": "Oct 17, 2026",
+    "status": "under_construction",
+    "status_label": "Under construction",
+    "text": "The Port's project schedule, read on this date (the page is undated), lists \"2026/2027 Phase 2b Mission Bay Ferry Landing and Agua Vista Park (in progress)\" after three phases marked \"(complete)\"; SFCTA, April 28, 2026, says the Port \"has completed earlier phases of construction\" and that its Prop L funds \"will support the installation of piles, gangways, fixed piers, canopies, utilities, and landside improvements\". This date is when the page was read, not when Phase 2b began.",
+    "expected": false,
+    "approximate": false,
+    "sources": [
+     {
+      "id": "src-sfport-ferrylanding",
+      "title": "Mission Bay Ferry Landing",
+      "publisher": "Port of San Francisco",
+      "url": "https://www.sfport.com/projects-programs/mission-bay-ferry-landing",
+      "accessed": "2026-09-28",
+      "overview": true
+     },
+     {
+      "id": "src-sfcta-blog-2026",
+      "title": "$9.8 Million in Sales Tax Funds Approved to Support Downtown Revitalization, Caltrain Station ADA...",
+      "publisher": "San Francisco County Transportation Authority",
+      "date": "2026-04",
+      "url": "https://www.sfcta.org/blogs/98-million-sales-tax-funds-approved-support-downtown-revitalization-caltrain-station-ada",
+      "accessed": "2026-10-06"
+     }
+    ],
+    "source": "Port of San Francisco; San Francisco County Transportation Authority, 2026-04",
+    "origin": "record",
+    "category": "status",
+    "category_label": "Status",
     "record": {
      "id": "mission_bay_ferry_landing",
      "slug": "mission-bay-ferry-landing",
@@ -206,6 +251,36 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-17",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Port's schedule lists the marine demolition phase as complete, but that is one phase, not the ferry landing. The record still shows the landing as under construction, and its timeline no longer marks the landing complete. One open question notes that the Port and SFCTA word the state of the current phase differently.",
+    "source": "Port of San Francisco, Mission Bay Ferry Landing (https://www.sfport.com/projects-programs/mission-bay-ferry-landing), Project Schedule: \"2025 Phase 2a Marine Demolition and Mattress (complete)\"; \"2026/2027 Phase 2b Mission Bay Ferry Landing and Agua Vista Park (in progress)\". SFCTA, April 28, 2026: \"the Port of San Francisco has completed earlier phases of construction\"",
+    "sources": [
+     {
+      "title": "Port of San Francisco, Mission Bay Ferry Landing (https://www.sfport.com/projects-programs/mission-bay-ferry-landing), Project Schedule: \"2025 Phase 2a Marine Demolition and Mattress (complete)\"; \"2026/2027 Phase 2b Mission Bay Ferry Landing and Agua Vista Park (in progress)\". SFCTA, April 28, 2026: \"the Port of San Francisco has completed earlier phases of construction\""
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "mission_bay_ferry_landing",
+     "slug": "mission-bay-ferry-landing",
+     "name": "Mission Bay Ferry Landing",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-ferry-landing/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-ferry-landing.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "adjacent",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-13",
     "kind": "correction",
@@ -450,6 +525,7 @@
   "images": [],
   "open_questions": [
    "Whether the Port's draft Five-Year CIP line item \"Pier 64 Sediment Cleanup\" covers the same area as this project is not established by the sources read; the City's 2018 environmental review places the project area at the former Pier 64.",
+   "Whether Phase 2b is already under way is stated differently by two sources: the Port's undated project page lists it as \"(in progress)\", while SFCTA's April 28, 2026 post says its Prop L funds \"will support the installation of piles, gangways, fixed piers, canopies, utilities, and landside improvements\", which reads as work still ahead. The record's \"under construction\" status rests on the completed earlier phases and the Port's \"in progress\"; no source dates the start of Phase 2b.",
    "The project's total is stated differently across sources: SFCTA's April 28, 2026 post says \"a new $77.1 million ferry landing\", while SFCTA's Prop L five-year prioritization program (approved June 25, 2024) shows a total project cost of $82,450,000 ($4,500,000 Prop L and $77,950,000 other funds; construction $74,330,000). Neither is reconciled here, and only the $4.5M Prop L allocation (April 2026) is recorded as a cost figure. Corrected 2026-10-06 (accuracy audit, October 2026): this record earlier gave the allocation as $9.8M, which is the total SFCTA approved for three projects.",
    "The structure sizes and positions here are from the City's 2018 design. No later site plan was found, so whether the design changed before construction is not established.",
    "Exact construction start and phase-by-phase dates for Phase 2b (ferry landing plus upland improvements) beyond the year-end-2027 expected completion are not established here; the Port's page lists Phase 2b as \"in progress\" without a start date."

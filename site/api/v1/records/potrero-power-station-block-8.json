@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-10-17",
+ "generated": "2026-10-18",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -114,7 +114,7 @@
    },
    {
     "key": "d4d_max_height_ft",
-    "value": "125 (midrise building, 101-145 ft class; D4D 6.2.2 and A.8 Block 8 controls)",
+    "value": "125 until Nov 13, 2026 (midrise building, 101-145 ft class; D4D 6.2.2 and A.8 Block 8 controls)",
     "sources": [
      "src-d4d-final",
      "src-dr-8-2022"
@@ -182,6 +182,14 @@
     "sources": [
      "src-ar-2024",
      "src-chron-2026-08"
+    ]
+   },
+   {
+    "key": "enacted_max_height_ft",
+    "value": "133 ft and 93 ft on the enacted height map (effective Nov 13, 2026, our count); adopted 2020: 125 and 85 ft",
+    "sources": [
+     "src-legistar-260770-final",
+     "src-legistar-260724-final"
     ]
    }
   ],
@@ -618,6 +626,36 @@
   ],
   "changes": [
    {
+    "date": "2026-10-17",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "The Board's ordinance as enacted on October 13, 2026 sets new height limits for Block 8: 133 ft and 93 ft. They take effect 31 days after enactment, November 13, 2026 by our count; until then the earlier limits (125 ft and 85 ft) apply.",
+    "source": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'",
+    "sources": [
+     {
+      "title": "BOS File 260770 'Leg Final' attachment, p. 29 (Figure 249.87-2 'Building Heights Maximum') and p. 56 (§5(a): 'This ordinance shall become effective on the 31st day after enactment'); Legistar: Final action and Enactment date 10/13/2026, Enactment # 209-26. File 260724 attachment p. 10: 'This ordinance shall become effective on the 31st day after enactment.'"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_block_8",
+     "slug": "potrero-power-station-block-8",
+     "name": "Potrero Power Station Block 8",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-8/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-8.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
+   {
     "date": "2026-10-13",
     "kind": "correction",
     "kind_label": "Correction",
@@ -958,6 +996,22 @@
     "date": "2026-08-03",
     "url": "https://sfstandard.com/2026/08/03/jpm-sf-housing-potrero-power-station/",
     "accessed": "2026-10-12"
+   },
+   {
+    "id": "src-legistar-260770-final",
+    "title": "BOS File 260770, 'Leg Final' attachment: the ordinance as finally passed, with the Clerk of the Board's certificate (FINALLY PASSED 10/6/2026, Ayes: 11; height map p. 29; effective-date section p. 56; certificate pp. 58-59)",
+    "publisher": "SF Board of Supervisors (Legistar)",
+    "date": "2026-10-07",
+    "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063746&GUID=9EA91A49-BBF9-4471-9EA9-6E7BD33A4353",
+    "accessed": "2026-10-17"
+   },
+   {
+    "id": "src-legistar-260724-final",
+    "title": "BOS File 260724, 'Leg Final' attachment: the ordinance as finally passed (effective-date section p. 10)",
+    "publisher": "SF Board of Supervisors (Legistar)",
+    "date": "2026-10-07",
+    "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063745&GUID=68B0CE5F-84C2-4368-BF8D-EEA7D8B92E55",
+    "accessed": "2026-10-17"
    }
   ],
   "notes": "Block 8 of the Potrero Power Station Design for Development, shown as Assessor lot 4232022 (see the accuracy note). Approximate polygon for a real, D4D-adopted block (final D4D, Feb 26, 2020: Table 3.1.1 and Figure 6.2.3) -- see the accuracy note for this shape. Status 'planned': not started as of March 2025, and the Chronicle (Aug 3, 2026) expects construction to begin in the fall. Use 'residential': Table 3.1.1 permits residential, and the design review approved a 339-unit residential building.",
