@@ -51,7 +51,15 @@
    "lon": -122.388365,
    "lat": 37.764439
   },
-  "facts": [],
+  "facts": [
+   {
+    "key": "address",
+    "value": "590 Illinois St",
+    "sources": [
+     "src-datasf-address-2026-10-17"
+    ]
+   }
+  ],
   "costs": [],
   "milestones": [
    {
@@ -130,6 +138,36 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-17",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "The record had no address. The City's Enterprise Addressing System has an address point for 590 Illinois St (address ID 869729) inside this record's outline. Added as the record's address.",
+    "source": "https://data.sf.gov/resource/3mea-di5p.json?eas_address_id=869729",
+    "sources": [
+     {
+      "title": "https://data.sf.gov/resource/3mea-di5p.json?eas_address_id=869729"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "ucsf_illinois_street_garage",
+     "slug": "ucsf-illinois-street-garage",
+     "name": "UCSF Illinois Street Garage",
+     "permalink": "https://pierandpoint.org/parcels/ucsf-illinois-street-garage/",
+     "api": "https://pierandpoint.org/api/v1/records/ucsf-illinois-street-garage.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-13",
     "kind": "correction",
@@ -361,6 +399,13 @@
     "publisher": "UCSF Department of Ophthalmology",
     "url": "https://ophthalmology.ucsf.edu/directions-wgvcv/",
     "accessed": "2026-10-12"
+   },
+   {
+    "id": "src-datasf-address-2026-10-17",
+    "title": "DataSF Addresses (EAS): 590 Illinois St (address ID 869729); the City's address point falls inside this record's outline",
+    "publisher": "City and County of San Francisco (DataSF)",
+    "url": "https://data.sf.gov/resource/3mea-di5p.json?eas_address_id=869729",
+    "accessed": "2026-10-17"
    }
   ],
   "notes": "OCII plan block 34 (south portion, extending to Mariposa St). 9 stories, 500 parking spaces, part of the same UCSF project as the Bayfront Medical Building to its north. Address: 590 Illinois St per UCSF's project page (not readable in October 2026); SF YIMBY gives 499 Illinois St. Reported open by Feb 8 2023 (SF YIMBY); the May 15 2023 opening date in UCSF's page could not be checked, so the opening date is unconfirmed.",

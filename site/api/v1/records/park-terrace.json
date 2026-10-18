@@ -48,7 +48,15 @@
    "lon": -122.395656,
    "lat": 37.773395
   },
-  "facts": [],
+  "facts": [
+   {
+    "key": "address",
+    "value": "325 Berry St",
+    "sources": [
+     "src-datasf-address-2026-10-17"
+    ]
+   }
+  ],
   "costs": [],
   "milestones": [
    {
@@ -153,6 +161,36 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-17",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "The record had no address. The Assessor's active lot 8707009 lists the address 325 Berry St. Added as the record's address.",
+    "source": "https://data.sf.gov/resource/acdm-wktn.json?blklot=8707009",
+    "sources": [
+     {
+      "title": "https://data.sf.gov/resource/acdm-wktn.json?blklot=8707009"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "mission_bay_park_terrace",
+     "slug": "park-terrace",
+     "name": "Park Terrace",
+     "permalink": "https://pierandpoint.org/parcels/park-terrace/",
+     "api": "https://pierandpoint.org/api/v1/records/park-terrace.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-12",
     "kind": "correction",
@@ -290,6 +328,13 @@
     "publisher": "San Francisco Department of Building Inspection, via DataSF",
     "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200504180213",
     "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-datasf-address-2026-10-17",
+    "title": "DataSF Parcels - Active and Retired (Assessor): lot 8707009, active, address range 325 Berry St",
+    "publisher": "DataSF / SF Office of the Assessor-Recorder",
+    "url": "https://data.sf.gov/resource/acdm-wktn.json?blklot=8707009",
+    "accessed": "2026-10-17"
    },
    {
     "id": null,

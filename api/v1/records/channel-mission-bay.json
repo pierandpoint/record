@@ -51,7 +51,15 @@
    "lon": -122.39134,
    "lat": 37.774101
   },
-  "facts": [],
+  "facts": [
+   {
+    "key": "address",
+    "value": "1101-1135 4th St",
+    "sources": [
+     "src-datasf-address-2026-10-17"
+    ]
+   }
+  ],
   "costs": [],
   "milestones": [
    {
@@ -143,6 +151,36 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-17",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "The record had no address. The Assessor's active lot 8711023C lists the address 1101-1135 4th St. Added as the record's address.",
+    "source": "https://data.sf.gov/resource/acdm-wktn.json?blklot=8711023C",
+    "sources": [
+     {
+      "title": "https://data.sf.gov/resource/acdm-wktn.json?blklot=8711023C"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "mission_bay_channel",
+     "slug": "channel-mission-bay",
+     "name": "Channel Mission Bay",
+     "permalink": "https://pierandpoint.org/parcels/channel-mission-bay/",
+     "api": "https://pierandpoint.org/api/v1/records/channel-mission-bay.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-13",
     "kind": "correction",
@@ -525,6 +563,13 @@
     "date": "2014-06-10",
     "url": "https://tablehopper.com/chatterbox/mission-bay-getting-a-huge-grocery-complex-and-restaurant",
     "accessed": "2026-10-12"
+   },
+   {
+    "id": "src-datasf-address-2026-10-17",
+    "title": "DataSF Parcels - Active and Retired (Assessor): lot 8711023C, active, address range 1101-1135 4th St",
+    "publisher": "DataSF / SF Office of the Assessor-Recorder",
+    "url": "https://data.sf.gov/resource/acdm-wktn.json?blklot=8711023C",
+    "accessed": "2026-10-17"
    },
    {
     "id": null,

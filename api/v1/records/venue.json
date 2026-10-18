@@ -50,7 +50,15 @@
    "lon": -122.390874,
    "lat": 37.773326
   },
-  "facts": [],
+  "facts": [
+   {
+    "key": "address",
+    "value": "1151-1155 4th St",
+    "sources": [
+     "src-datasf-address-2026-10-17"
+    ]
+   }
+  ],
   "costs": [],
   "milestones": [
    {
@@ -134,6 +142,36 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-17",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "The record had no address. The Assessor's active lot 8711025 lists the address 1151-1155 4th St. Added as the record's address.",
+    "source": "https://data.sf.gov/resource/acdm-wktn.json?blklot=8711025",
+    "sources": [
+     {
+      "title": "https://data.sf.gov/resource/acdm-wktn.json?blklot=8711025"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "mission_bay_venue",
+     "slug": "venue",
+     "name": "Venue",
+     "permalink": "https://pierandpoint.org/parcels/venue/",
+     "api": "https://pierandpoint.org/api/v1/records/venue.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-13",
     "kind": "correction",
@@ -367,6 +405,13 @@
     "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
     "accessed": "2026-09-24",
     "overview": true
+   },
+   {
+    "id": "src-datasf-address-2026-10-17",
+    "title": "DataSF Parcels - Active and Retired (Assessor): lot 8711025, active, address range 1151-1155 4th St",
+    "publisher": "DataSF / SF Office of the Assessor-Recorder",
+    "url": "https://data.sf.gov/resource/acdm-wktn.json?blklot=8711025",
+    "accessed": "2026-10-17"
    },
    {
     "id": null,

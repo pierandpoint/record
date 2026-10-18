@@ -53,7 +53,15 @@
    "lon": -122.389911,
    "lat": 37.771484
   },
-  "facts": [],
+  "facts": [
+   {
+    "key": "address",
+    "value": "540 Mission Bay Blvd North",
+    "sources": [
+     "src-datasf-address-2026-10-17"
+    ]
+   }
+  ],
   "costs": [],
   "milestones": [
    {
@@ -154,6 +162,36 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-17",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "The record had no address. The City's Enterprise Addressing System has an address point for 540 Mission Bay Blvd North (address ID 729905) inside this record's outline. Added as the record's address.",
+    "source": "https://data.sf.gov/resource/3mea-di5p.json?eas_address_id=729905",
+    "sources": [
+     {
+      "title": "https://data.sf.gov/resource/3mea-di5p.json?eas_address_id=729905"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "mission_bay_family_house",
+     "slug": "nancy-and-stephen-grand-family-house",
+     "name": "Nancy & Stephen Grand Family House",
+     "permalink": "https://pierandpoint.org/parcels/nancy-and-stephen-grand-family-house/",
+     "api": "https://pierandpoint.org/api/v1/records/nancy-and-stephen-grand-family-house.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-13",
     "kind": "correction",
@@ -448,6 +486,13 @@
     "publisher": "ProPublica (IRS data)",
     "url": "https://projects.propublica.org/nonprofits/organizations/942722663",
     "accessed": "2026-10-12"
+   },
+   {
+    "id": "src-datasf-address-2026-10-17",
+    "title": "DataSF Addresses (EAS): 540 Mission Bay Blvd North (address ID 729905); the City's address point falls inside this record's outline",
+    "publisher": "City and County of San Francisco (DataSF)",
+    "url": "https://data.sf.gov/resource/3mea-di5p.json?eas_address_id=729905",
+    "accessed": "2026-10-17"
    },
    {
     "id": null,

@@ -50,7 +50,15 @@
    "lon": -122.399206,
    "lat": 37.771726
   },
-  "facts": [],
+  "facts": [
+   {
+    "key": "address",
+    "value": "420 Berry St",
+    "sources": [
+     "src-datasf-address-2026-10-17"
+    ]
+   }
+  ],
   "costs": [
    {
     "amount_usd": 26700000,
@@ -139,6 +147,36 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-17",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "The record had no address. The Assessor's active lot 8703006 lists the address 420 Berry St. Added as the record's address.",
+    "source": "https://data.sf.gov/resource/acdm-wktn.json?blklot=8703006",
+    "sources": [
+     {
+      "title": "https://data.sf.gov/resource/acdm-wktn.json?blklot=8703006"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "mission_bay_crescent_cove",
+     "slug": "crescent-cove",
+     "name": "Crescent Cove",
+     "permalink": "https://pierandpoint.org/parcels/crescent-cove/",
+     "api": "https://pierandpoint.org/api/v1/records/crescent-cove.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-12",
     "kind": "correction",
@@ -332,6 +370,13 @@
     "url": "https://sfocii.org/sites/default/files/inline-files/Att%201%20Mission%20Bay%20Land%20Use%20Map.pdf",
     "accessed": "2026-09-24",
     "overview": true
+   },
+   {
+    "id": "src-datasf-address-2026-10-17",
+    "title": "DataSF Parcels - Active and Retired (Assessor): lot 8703006, active, address range 420 Berry St",
+    "publisher": "DataSF / SF Office of the Assessor-Recorder",
+    "url": "https://data.sf.gov/resource/acdm-wktn.json?blklot=8703006",
+    "accessed": "2026-10-17"
    },
    {
     "id": null,

@@ -51,7 +51,15 @@
    "lon": -122.394292,
    "lat": 37.775609
   },
-  "facts": [],
+  "facts": [
+   {
+    "key": "address",
+    "value": "301 King St",
+    "sources": [
+     "src-datasf-address-2026-10-17"
+    ]
+   }
+  ],
   "costs": [],
   "milestones": [
    {
@@ -163,6 +171,36 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-17",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "The record had no address. The Assessor's active lot 8705011 lists the address 301 King St. Added as the record's address.",
+    "source": "https://data.sf.gov/resource/acdm-wktn.json?blklot=8705011",
+    "sources": [
+     {
+      "title": "https://data.sf.gov/resource/acdm-wktn.json?blklot=8705011"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "mission_bay_avalon_phase_ii",
+     "slug": "avalon-at-mission-bay-ii",
+     "name": "Avalon at Mission Bay II",
+     "permalink": "https://pierandpoint.org/parcels/avalon-at-mission-bay-ii/",
+     "api": "https://pierandpoint.org/api/v1/records/avalon-at-mission-bay-ii.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-13",
     "kind": "correction",
@@ -359,6 +397,13 @@
     "publisher": "San Francisco Department of Building Inspection, via DataSF",
     "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200105249986",
     "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-datasf-address-2026-10-17",
+    "title": "DataSF Parcels - Active and Retired (Assessor): lot 8705011, active, address range 301 King St",
+    "publisher": "DataSF / SF Office of the Assessor-Recorder",
+    "url": "https://data.sf.gov/resource/acdm-wktn.json?blklot=8705011",
+    "accessed": "2026-10-17"
    },
    {
     "id": null,

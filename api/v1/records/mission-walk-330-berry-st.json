@@ -51,7 +51,15 @@
    "lon": -122.396656,
    "lat": 37.773503
   },
-  "facts": [],
+  "facts": [
+   {
+    "key": "address",
+    "value": "330 Berry St",
+    "sources": [
+     "src-datasf-address-2026-10-17"
+    ]
+   }
+  ],
   "costs": [],
   "milestones": [
    {
@@ -136,6 +144,36 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-17",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "The record had no address. The City's Enterprise Addressing System has an address point for 330 Berry St (address ID 702079) inside this record's outline. Added as the record's address.",
+    "source": "https://data.sf.gov/resource/3mea-di5p.json?eas_address_id=702079",
+    "sources": [
+     {
+      "title": "https://data.sf.gov/resource/3mea-di5p.json?eas_address_id=702079"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "mission_bay_mission_walk_330",
+     "slug": "mission-walk-330-berry-st",
+     "name": "Mission Walk (330 Berry St)",
+     "permalink": "https://pierandpoint.org/parcels/mission-walk-330-berry-st/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-walk-330-berry-st.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-13",
     "kind": "correction",
@@ -417,6 +455,13 @@
     "date": "2010-03-18",
     "url": "https://socketsite.com/archives/2010/03/relaxing_bmr_rules_at_mission_walk_to_compete_with_bank.html",
     "accessed": "2026-10-13"
+   },
+   {
+    "id": "src-datasf-address-2026-10-17",
+    "title": "DataSF Addresses (EAS): 330 Berry St (address ID 702079); the City's address point falls inside this record's outline",
+    "publisher": "City and County of San Francisco (DataSF)",
+    "url": "https://data.sf.gov/resource/3mea-di5p.json?eas_address_id=702079",
+    "accessed": "2026-10-17"
    },
    {
     "id": null,

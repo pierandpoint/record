@@ -48,7 +48,15 @@
    "lon": -122.390944,
    "lat": 37.77492
   },
-  "facts": [],
+  "facts": [
+   {
+    "key": "address",
+    "value": "1000 3rd St and 110 Channel St",
+    "sources": [
+     "src-datasf-eas-1000-3rd-110-channel"
+    ]
+   }
+  ],
   "costs": [],
   "milestones": [
    {
@@ -164,6 +172,36 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-17",
+    "kind": "added",
+    "kind_label": "Added",
+    "text": "The record had no address. It covers two buildings, and the City's address data places one address point for each inside the outline: 1000 3rd St (address ID 735435) and 110 Channel St (address ID 735436), both on Assessor parcel 8715004. Added as the record's address.",
+    "source": "https://data.sf.gov/resource/3mea-di5p.json?parcel_number=8715004",
+    "sources": [
+     {
+      "title": "https://data.sf.gov/resource/3mea-di5p.json?parcel_number=8715004"
+     }
+    ],
+    "category": "coverage",
+    "category_label": "Coverage",
+    "record": {
+     "id": "mission_bay_one_mission_bay",
+     "slug": "one-mission-bay",
+     "name": "One Mission Bay",
+     "permalink": "https://pierandpoint.org/parcels/one-mission-bay/",
+     "api": "https://pierandpoint.org/api/v1/records/one-mission-bay.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-13",
     "kind": "correction",
@@ -384,6 +422,13 @@
     "publisher": "San Francisco Department of Building Inspection, via DataSF",
     "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=201408133775",
     "accessed": "2026-10-10"
+   },
+   {
+    "id": "src-datasf-eas-1000-3rd-110-channel",
+    "title": "DataSF Addresses (EAS): address ID 735435, 1000 03RD ST (point -122.39009862, 37.77551745, parcel 8715004) and address ID 735436, 110 CHANNEL ST (point -122.39110231, 37.77461450, parcel 8715004); both points lie inside this record's outline",
+    "publisher": "DataSF / City and County of San Francisco, Enterprise Addressing System",
+    "url": "https://data.sf.gov/resource/3mea-di5p.json?parcel_number=8715004",
+    "accessed": "2026-10-18"
    },
    {
     "id": null,
