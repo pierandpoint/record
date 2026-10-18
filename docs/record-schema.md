@@ -55,6 +55,23 @@ doesn't exist in `status.csv` or `approximate_projects.csv` fails validation.
 }
 ```
 
+## `names` and `search_aliases`
+
+`names` lists the names the record is known by. The page title is not taken from it: it comes
+from `status.csv` or `approximate_projects.csv` (for example 8719008's first name is "400 China
+Basin" while its title is "Mission Bay South Block 9A"). Every entry that differs from the title
+shows on the record page as "Also known as ...", so each should be a real alternative name: a
+short name, a place name. A name that should not be shown (it repeats the title, or is the
+previous name) goes in `search_aliases`.
+
+`search_aliases` (optional, a non-empty list; omit it when there are none) holds names that
+should find the record in search and in the API and the SQLite export, but are not shown on
+the page: the record's previous name after a rename, an older wording of the current name,
+or a name that carries a parenthetical or a note ("(UCSF planned)", "-- landscaped median").
+A name is listed in `names` or in `search_aliases`, not both; `src/validate_records.py`
+checks this. The finder on `/near/` matches both lists, and labels a match on `names` "Also known as" and a match on `search_aliases` "Earlier name". `/api/v1/` carries both
+(`names`, `search_aliases`).
+
 ## `planned_change` (optional)
 
 For a record whose status is `existing` and whose own source names a change
