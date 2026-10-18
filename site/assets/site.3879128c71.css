@@ -1389,3 +1389,27 @@ sup.cites a { text-decoration: none; }
   #decisions-ahead .next-up li > strong { display: block; }
   #decisions-ahead .next-up li > .row-dot { display: none; }
 }
+
+/* Phone leftovers (tap targets under 44 px, and the year control away from its map). Phones only: a
+   mouse needs none of it. Each rule says what it pushes down. */
+@media (max-width: 719px) {
+  /* Nearest rows: the whole row is the link (a row-sized hit area), so the list is no longer than before. */
+  .record-list li.near-item { position: relative; }
+  .near-item-body > a::after { content: ''; position: absolute; inset: 0; }
+  /* A row can carry a second link ("What we looked for"); it stays its own target, above the row link. */
+  .near-item-body .next-line a { position: relative; z-index: 1; display: inline-block; padding: 12px 0; margin: -12px 0; }
+  /* Breadcrumbs: padding that is cancelled by an equal negative margin, so the hit area is 44 px tall
+     and nothing moves. */
+  .crumbs a { position: relative; padding: 15px 8px; margin: -15px -8px; }
+  /* Glossary A-Z: 44 px squares; the index is about three rows taller. */
+  .glossary-jump a, .glossary-jump span { min-width: 44px; min-height: 44px; }
+  /* Record-page filter chips: 44 px tall, about 19 px more per row of chips. */
+  button.bx-chip { min-height: 44px; display: inline-flex; align-items: center; }
+  /* The compact year control under a site map (app.js makes it): Play, the slider and the date. */
+  .map-year { display: flex; align-items: center; gap: 12px; margin-top: 12px; }
+  .map-year[hidden] { display: none; }
+  .map-year .btn { min-width: 44px; padding: 0 14px; flex: none; }
+  .map-year input[type=range] { flex: 1 1 auto; min-width: 0; height: 44px; margin: 0; accent-color: var(--brass); }
+  .map-year-date { flex: none; min-width: 5.5em; text-align: right; font: 500 14px var(--mono); }
+}
+@media (min-width: 720px) { .map-year { display: none; } }

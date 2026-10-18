@@ -386,6 +386,7 @@ var ppSearch = (function () {
   // takes its place so the date being shown is still on screen, with a link back up to change it.
   // It only ever shows below 720px, and in Status mode (setViewVisibility: Use has no date).
   var miniDate = null;
+  var yearBar = null, yearRange = null, yearOut = null, yearPlay = null;
   var mapDate = null;
   var mainFrame = readDate && document.querySelector('#map-band .map-frame');
   if (mainFrame) {
@@ -401,6 +402,7 @@ var ppSearch = (function () {
     mini.className = 'timeline-mini';
     mini.setAttribute('data-view-mode', 'status');
     mini.innerHTML = '<div class="wrap"><span class="timeline-mini-date" aria-hidden="true"></span><a href="#timeline">Change date</a></div>';
+    mini.hidden = mode === 'use'; // created after the first setViewVisibility(), so take the page's current mode
     document.body.appendChild(mini);
     miniDate = mini.querySelector('.timeline-mini-date');
     new IntersectionObserver(function (entries) {
@@ -587,6 +589,7 @@ var ppSearch = (function () {
     if (mapDate) { mapDate.textContent = label; mapDate.hidden = m === TODAY; }
     slider.setAttribute('aria-valuetext', label + ', ' + phase);
     if (yearJump) yearJump.value = String(yearOptionFor(m));
+    if (yearRange) { yearRange.value = m; yearRange.setAttribute('aria-valuetext', label + ', ' + phase); yearOut.textContent = label; }
   }
 
   // play (pp-play): also part of timeline()'s own widget, absent on /near/ for the same reason
@@ -625,6 +628,7 @@ var ppSearch = (function () {
   function stop() {
     if (timer) { clearInterval(timer); timer = null; syncYearParam(); }
     if (play) { play.setAttribute('aria-pressed', 'false'); play.querySelector('span').textContent = 'Play'; }
+    syncYearPlay();
   }
   function startTimer() {
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -642,6 +646,7 @@ var ppSearch = (function () {
     if (+slider.value >= MAX) slider.value = 0;
     play.setAttribute('aria-pressed', 'true'); play.querySelector('span').textContent = 'Pause';
     startTimer();
+    syncYearPlay();
   });
   if (speedBtn) speedBtn.addEventListener('click', function () {
     speedIdx = (speedIdx + 1) % SPEEDS.length;
@@ -650,6 +655,40 @@ var ppSearch = (function () {
     if (timer) { clearInterval(timer); startTimer(); } // re-pace an already-running play without touching its pressed state
   });
   if (yearJump) yearJump.addEventListener('change', function () { stop(); slider.value = yearJump.value; paint(+yearJump.value); syncYearParam(); });
+  // On a phone the full timeline sits well below the map it drives (the site page's prose comes between), so a
+  // compact copy of the year control goes directly under the map: Play, a year slider and the date. It drives the
+  // real slider (same events, so the address, Play and every count follow) and is the only one of the two a
+  // visitor at the map needs; the full timeline stays where it was. site.css shows it below 720 px only.
+  if (readDate && mainFrame) {
+    yearBar = document.createElement('div');
+    yearBar.className = 'map-year';
+    yearBar.setAttribute('data-view-mode', 'status');
+    yearBar.innerHTML = '<button class="btn" type="button" aria-pressed="false"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 1.5v9l8-4.5z" fill="currentColor"/></svg><span>Play</span></button>' +
+      '<label class="sr-only" for="pp-year-range">Map date: show the record as of a month</label>' +
+      '<input id="pp-year-range" type="range" min="0" max="' + MAX + '" step="1" value="' + slider.value + '">' +
+      '<strong class="map-year-date" aria-hidden="true"></strong>';
+    yearBar.hidden = mode === 'use'; // setViewVisibility() has already run for the page's first mode
+    mainFrame.insertAdjacentElement('afterend', yearBar);
+    // "Skip map" lands right after the map's own Tab stops, so the year control (which drives the map) is not skipped.
+    var afterMap = document.getElementById('after-map');
+    if (afterMap) mainFrame.insertAdjacentElement('afterend', afterMap);
+    yearPlay = yearBar.querySelector('button');
+    yearRange = yearBar.querySelector('input');
+    yearOut = yearBar.querySelector('.map-year-date');
+    syncYearPlay();
+    var miniLink = document.querySelector('.timeline-mini a');
+    if (miniLink) miniLink.setAttribute('href', '#pp-year-range'); // the mini bar only shows on phones, where the control under the map is the nearer one
+    yearRange.addEventListener('input', function () { slider.value = yearRange.value; slider.dispatchEvent(new Event('input')); });
+    yearRange.addEventListener('change', function () { slider.dispatchEvent(new Event('change')); });
+    yearPlay.addEventListener('click', function () { play.click(); syncYearPlay(); });
+  }
+  function syncYearPlay() {
+    if (!yearPlay || !play) return;
+    yearPlay.setAttribute('aria-pressed', play.getAttribute('aria-pressed') || 'false');
+    var label = play.querySelector('span').textContent;
+    yearPlay.querySelector('span').textContent = label;
+    yearPlay.setAttribute('aria-label', label + ' the map through time'); // the full timeline's button is just "Play"
+  }
   document.querySelectorAll('.timeline').forEach(function (t) { t.hidden = false; });
   if (toggle) toggle.hidden = false;
   if (readDate) {
