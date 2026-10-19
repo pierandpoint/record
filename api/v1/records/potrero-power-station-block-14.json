@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-10-18",
+ "generated": "2026-10-19",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -30,7 +30,7 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "Small planned mixed-use block on the Potrero Power Station masterplan with a flat 90 ft height limit (98 ft on the enacted height map, taking effect Nov 13, 2026 by our count), located within PG&E's switchyard sub-area (whose redevelopment depends on PG&E's long-range facilities planning); program not confirmed beyond the D4D's generic use table, and no design review approval or construction start found. The Board of Supervisors approved the project and Development Agreement on April 21, 2020 (Ordinance No. 62-20; the agreement's effective date is May 25, 2020).",
+  "summary": "Small planned mixed-use block on the Potrero Power Station masterplan with a 98 ft height limit on the enacted height map, taking effect Nov 13, 2026 by our count, outside the PG&E Sub-Area since the October 2026 ordinance redrew that area (its new Map 249.87-1 puts the sub-area west of Georgia Street and Block 14 east of it; the 2020 Design for Development's Appendix E, per that source, treats Block 14 as part of the sub-area); program not confirmed beyond the D4D's generic use table, and no design review approval or construction start found. The Board of Supervisors approved the project and Development Agreement on April 21, 2020 (Ordinance No. 62-20; the agreement's effective date is May 25, 2020).",
   "summary_sources": [
    "src-d4d-final-fig623",
    "src-d4d-final-table311",
@@ -47,7 +47,7 @@
     "accuracy_caveat": "APPROXIMATE -- this block is not yet built and lies within the PG&E Sub-area, PG&E's roughly 4.8-acre switchyard parcel at 22nd and Illinois Streets, which SF Planning's project page describes as 'currently owned and operated by PG&E as an electrical switchyard' (in the final D4D's Appendix E no-PG&E-Sub-area scenario, Figure E.13.4, printed p.434, Blocks 13 and 14 are replaced by a single 'PG&E Sub-area'), so it is not vacant developer land. DataSF's Assessor roll lists an active, addressed lot, 4175500 (1248 Georgia Ln, 15,829 m2, recorded 2024-10-15), under the whole of this approximate footprint (808 m2); the lot is far larger than the block, and the dataset does not say whether it is PG&E's switchyard parcel. Traced from an adopted regulatory diagram by fitting it to multiple real street points (see the mapping log), but this diagram is dated 2020 and may not reflect later design changes (as already found for the UCSF/Sophie Maxwell area -- see the mapping log). Treat vertex positions as accurate to roughly 10-25m, not survey-grade, and treat the block's applicability itself as somewhat more provisional than Mission Rock's or Pier 70's equivalent entries. Rebuilt 2026-09-16 by re-fitting the diagram to real street points, then corrected the same day after an automated quality check caught a mis-traced angled (chamfered) corner. This block's NE corner is genuinely angled (chamfered) per the source diagram, not a tracing artifact -- do not treat that corner's non-90-degree angle as an error. How this shape was traced, including earlier versions, is logged in its mapping log.",
     "digitized_from": "Potrero Power Station Design for Development, Figure 6.2.3 - Building Height Plan (p.245).",
     "why_no_real_parcel": "Block 14 lies within PG&E's separate roughly 4.8-acre PG&E Sub-area, not the developer's 21-acre parcel. The 2018 draft EIR (Vol. 1, Ch. 2, p. 2-5) describes that sub-area as 'a portion of Assessor's Block 4175/Lot 018 and owned by PG&E'; DataSF now shows lot 4175018 as retired on 2024-10-15, and an active, addressed lot recorded the same day, 4175500 (1248 Georgia Ln), lies under the whole of this footprint. That lot is far larger than the block and the dataset does not say whether it is PG&E's switchyard parcel; the land has not been subdivided per the masterplan's individual named blocks, so this uses hand-traced approximate geometry instead. (This reflects Pier & Point's own parcel search, not something the cited Design for Development can establish; the D4D does not address Assessor parcels.)",
-    "regulatory_context": "Flat 90 ft max height per Figure 6.2.3 (the block is labelled '14 90'' on the colour-coded plan). The final D4D's Table 3.1.1 (printed p.47) permits residential, institutional, retail and non-retail sales/services (office) uses on Block 14 and does not permit laboratory or life-science uses; recorded here as 'mixed' as a summary of that table, not a confirmed program. Block 14 is within the PG&E Sub-area: the D4D's Appendix E says redevelopment of that sub-area is subject to PG&E's long-range facilities planning and that portions of it 'may or may not ultimately be redeveloped', and SF Planning's project page says built-out of the PG&E lands depends on relocation of the switchyard; 'planned' reflects the D4D and the October 2020 Phase 1 approval (Phase 2), not a committed project."
+    "regulatory_context": "Height: 98 ft on the enacted height map of the October 2026 ordinance (BOS File 260770 'Leg Final', p. 29), taking effect Nov 13, 2026 by our count; the 2020 D4D plan (Figure 6.2.3) labels the block '14 90'', but the block then lay inside the PG&E Sub-area, where the controls were not operative. The final D4D's Table 3.1.1 (printed p.47) permits residential, institutional, retail and non-retail sales/services (office) uses on Block 14 and does not permit laboratory or life-science uses; recorded here as 'mixed' as a summary of that table, not a confirmed program. Block 14 was within the PG&E Sub-area under the D4D and the earlier Map 249.87-1; the October 2026 ordinance redrew the sub-area and the block is now outside it (BOS File 260770, pp. 53-54). The D4D's Appendix E says redevelopment of that sub-area is subject to PG&E's long-range facilities planning and that portions of it 'may or may not ultimately be redeveloped', and SF Planning's project page says built-out of the PG&E lands depends on relocation of the switchyard; 'planned' reflects the D4D and the October 2020 Phase 1 approval (Phase 2), not a committed project."
    }
   },
   "centroid": {
@@ -63,13 +63,6 @@
     ]
    },
    {
-    "key": "height_ft",
-    "value": "90 ft until Nov 13, 2026 (adopted D4D, Figure 6.2.3)",
-    "sources": [
-     "src-d4d-final-fig623"
-    ]
-   },
-   {
     "key": "phasing",
     "value": "Phase 2 per the October 7, 2020 Phase 1 approval; not mentioned at all in the 2024 annual compliance report",
     "sources": [
@@ -79,15 +72,16 @@
    },
    {
     "key": "ownership_context",
-    "value": "Within the PG&E Sub-area (PG&E's roughly 4.8-acre switchyard parcel, 22nd and Illinois Streets); per the D4D, portions 'may or may not ultimately be redeveloped'",
+    "value": "Inside the PG&E Sub-area per the 2020 D4D; outside it since the October 2026 ordinance redrew the sub-area",
     "sources": [
      "src-d4d-final-figE134",
-     "src-sfplanning-pps"
+     "src-sfplanning-pps",
+     "src-legistar-260770-final"
     ]
    },
    {
     "key": "height_ft_2026_amendment",
-    "value": "98 ft on the enacted height map (effective Nov 13, 2026, our count); adopted 2020: 90 ft",
+    "value": "98 ft on the enacted height map, effective Nov 13, 2026 (our count); the D4D's 90 ft label did not apply (PG&E Sub-Area)",
     "sources": [
      "src-legistar-260770-final",
      "src-legistar-260724-final"
@@ -198,6 +192,36 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-18",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Block 14's page said the block is inside PG&E's switchyard area. The ordinance enacted in October 2026 redrew that area: its new map puts the PG&E Sub-Area west of Georgia Street and Block 14 outside it, where the 2020 design document had treated the block as part of the area. Only the new 98 ft limit, from November 13, 2026, applies; the 2020 design's 90 ft label never took effect there.",
+    "source": "BOS File 260770 'Leg Final' attachment, pp. 53-56; BOS File 260724 'Leg Final' attachment, p. 2; Potrero Power Station Design for Development, final (Feb 26, 2020), Figure E.13.4 (printed p. 434) and Figure 1.2.1 (printed p. 12)",
+    "sources": [
+     {
+      "title": "BOS File 260770 'Leg Final' attachment, pp. 53-56; BOS File 260724 'Leg Final' attachment, p. 2; Potrero Power Station Design for Development, final (Feb 26, 2020), Figure E.13.4 (printed p. 434) and Figure 1.2.1 (printed p. 12)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_block_14",
+     "slug": "potrero-power-station-block-14",
+     "name": "Potrero Power Station Block 14",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-14/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-14.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-17",
     "kind": "correction",
@@ -389,6 +413,7 @@
   ],
   "open_questions": [
    "No design review approval or construction-start date found for Block 14; it is not one of the six buildings named in the 2024 annual compliance report's Phase 1 list (Blocks 2, 7, 8, 11, 12, 15), and no later-phase design review approval was found either.",
+   "The October 2026 ordinance redrew the PG&E Sub-Area. BOS File 260770's 'Leg Final' attachment shows the earlier Map 249.87-1 on p. 53 with a diagonal strikethrough, which the ordinance says marks an image proposed for deletion (\"Images proposed for deletion are shown with a diagonal strikethrough and rectangular border\", p. 56); that map shows no Block 14. Its PG&E Sub-area outline runs to the diagonal edge that ends at Craig Lane, the same diagonal that forms Block 14's hypotenuse in the D4D's Figure 6.2.3 (compared by eye), so under the earlier map Block 14 was inside the sub-area, where Section 249.87(t), existing text (p. 52), kept the controls from becoming operative (no source read shows a Notice of Joinder or a conveyance); the D4D's 90 ft label therefore did not apply to it. The replacement on p. 54, a rectangular-bordered image of the kind the ordinance says is proposed for addition (p. 55; it has no caption of its own and sits directly after the struck map), labels \"PG&E Sub-Area\" (printed in capitals) west of Georgia Street and shows Block 14 east of it, outside the sub-area, so the operative-date condition in Section 249.87(t) (p. 52) and Section 5(c) (p. 56) does not apply to Block 14. The 2020 D4D's Figure E.13.4 (printed p. 434) shows the earlier layout in its no-PG&E-Sub-area scenario: it labels the area \"PG&E Sub-area\" and shows no Block 14. Why the sub-area was redrawn is not stated in the sources read. File 260724's recital (d) (p. 2) gives the PG&E Sub-Area as \"approximately 3.8 acres\", against the 4.8 acres in the D4D (Figure 1.2.1, printed p. 12); the difference is not explained.",
    "No source found for a specific intended use of Block 14 beyond the D4D's generic permitted-uses table; it is the smallest block on the site per the D4D's own Land Use Plan figure.",
    "No block-specific schedule found beyond the 2020 forecast in SocketSite's table (Block 14 vertical development 2029-2030, Phase 2), which depends on PG&E relocating its switchyard; no PG&E relocation date was found."
   ],
@@ -466,15 +491,15 @@
     "publisher": "SF Planning (document adopted by the Planning Commission; the D4D names no publisher)",
     "date": "2020-02-26",
     "url": "https://sfplanning.org/sites/default/files/documents/citywide/potreropower_D4D_final.pdf",
-    "accessed": "2026-09-29"
+    "accessed": "2026-10-18"
    },
    {
     "id": "src-legistar-260770-final",
-    "title": "BOS File 260770, 'Leg Final' attachment: the ordinance as finally passed, with the Clerk of the Board's certificate (FINALLY PASSED 10/6/2026, Ayes: 11; height map p. 29; effective-date section p. 56; certificate pp. 58-59)",
+    "title": "BOS File 260770, 'Leg Final' attachment: the ordinance as finally passed, with the Clerk of the Board's certificate (FINALLY PASSED 10/6/2026, Ayes: 11; height map p. 29; operative-date section p. 52; Map 249.87-1 pp. 53-54; effective-date section p. 56; certificate pp. 58-59)",
     "publisher": "SF Board of Supervisors (Legistar)",
     "date": "2026-10-07",
     "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063746&GUID=9EA91A49-BBF9-4471-9EA9-6E7BD33A4353",
-    "accessed": "2026-10-17"
+    "accessed": "2026-10-19"
    },
    {
     "id": "src-legistar-260724-final",
@@ -482,12 +507,12 @@
     "publisher": "SF Board of Supervisors (Legistar)",
     "date": "2026-10-07",
     "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063745&GUID=68B0CE5F-84C2-4368-BF8D-EEA7D8B92E55",
-    "accessed": "2026-10-17"
+    "accessed": "2026-10-18"
    }
   ],
   "notes": "Approximate polygon for a real, D4D-adopted block (Block 14 is listed in the final D4D's Table 3.1.1, printed p.47) -- see the accuracy caveat.",
   "has_record_file": true,
-  "last_verified": "2026-09-20",
+  "last_verified": "2026-10-19",
   "tenants": [],
   "geometry": {
    "type": "Polygon",

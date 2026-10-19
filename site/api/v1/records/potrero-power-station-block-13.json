@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-10-18",
+ "generated": "2026-10-19",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -30,7 +30,7 @@
   "how_to_comment": [],
   "positions": [],
   "address": null,
-  "summary": "Planned mixed-use block on the Potrero Power Station masterplan, in the 4.8-acre area at 22nd and Illinois Streets that PG&E owns and operates as an electrical switchyard; the D4D's Figure 6.2.3 gives it 85 ft and 125 ft height limits, and its build-out depends on the switchyard's relocation. The Board of Supervisors approved the project and Development Agreement on April 21, 2020 (Ordinance No. 62-20; the agreement's effective date is May 25, 2020).",
+  "summary": "Planned mixed-use block on the Potrero Power Station masterplan, in the 4.8-acre area at 22nd and Illinois Streets that PG&E owns and operates as an electrical switchyard; the D4D's Figure 6.2.3 gives it 85 ft and 125 ft height limits, and its build-out depends on the switchyard's relocation. The October 2026 height ordinance's map labels the block 93 ft and 133 ft, but the block is in the PG&E Sub-Area, where the zoning controls (the 2020 limits as well as the new ones) are not operative until a Notice of Joinder to the Development Agreement is recorded or the land is conveyed to the Developer; no source read shows either, so on the sources read neither set of limits has taken effect on this land. The Board of Supervisors approved the project and Development Agreement on April 21, 2020 (Ordinance No. 62-20; the agreement's effective date is May 25, 2020).",
   "summary_sources": [
    "src-d4d-final-fig623",
    "src-d4d-final-6.2.2",
@@ -64,7 +64,7 @@
    },
    {
     "key": "height_ft",
-    "value": "85 ft and 125 ft (Figure 6.2.3, colour-coded height labels); Standard 6.2.2 lists Block 13 among the midrise buildings (101-145 ft)",
+    "value": "85 ft and 125 ft on the adopted D4D plan (Figure 6.2.3), but not operative: Block 13 is in the PG&E Sub-Area",
     "sources": [
      "src-d4d-final-fig623"
     ]
@@ -100,7 +100,7 @@
    },
    {
     "key": "height_ft_2026_amendment",
-    "value": "93 ft and 133 ft on the enacted height map (effective Nov 13, 2026, our count); adopted 2020: 85 and 125 ft",
+    "value": "93 ft and 133 ft on the enacted height map; not operative until a Notice of Joinder is recorded or the land is conveyed",
     "sources": [
      "src-legistar-260770-final",
      "src-legistar-260724-final"
@@ -132,8 +132,8 @@
       "title": "Potrero Power Station project page (program elements, approval timeline, implementation milestones)",
       "publisher": "SF Planning",
       "url": "https://sfplanning.org/potrero-power-station",
-      "accessed": "2026-10-13",
-      "note": "The page shows no publication or update date. Read 2026-10-13; no date recorded."
+      "accessed": "2026-10-18",
+      "note": "The page shows no publication or update date. Read 2026-10-13 and again 2026-10-18; no date recorded."
      },
      {
       "id": "src-d4d-final-table311",
@@ -194,8 +194,8 @@
       "title": "Potrero Power Station project page (program elements, approval timeline, implementation milestones)",
       "publisher": "SF Planning",
       "url": "https://sfplanning.org/potrero-power-station",
-      "accessed": "2026-10-13",
-      "note": "The page shows no publication or update date. Read 2026-10-13; no date recorded."
+      "accessed": "2026-10-18",
+      "note": "The page shows no publication or update date. Read 2026-10-13 and again 2026-10-18; no date recorded."
      }
     ],
     "source": "SocketSite, 2020-10-09; SF Planning, 2020-10-07; SF Planning",
@@ -219,6 +219,36 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-18",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Block 13's new 93 ft and 133 ft limits do not apply yet. The block is in the PG&E Sub-Area, where the ordinance takes effect only after a Notice of Joinder to the Development Agreement is recorded or the land is conveyed to the Developer. We found no sign that either has happened. The same condition applied to the earlier 85 ft and 125 ft limits, so they have not been in force on this land either. The earlier note giving November 13, 2026 for Block 13 was wrong.",
+    "source": "BOS File 260770 'Leg Final' attachment, pp. 52, 54, 56; BOS File 260724 'Leg Final' attachment, pp. 2 and 10; SF Planning, Potrero Power Station project page (read 2026-10-18)",
+    "sources": [
+     {
+      "title": "BOS File 260770 'Leg Final' attachment, pp. 52, 54, 56; BOS File 260724 'Leg Final' attachment, pp. 2 and 10; SF Planning, Potrero Power Station project page (read 2026-10-18)"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_block_13",
+     "slug": "potrero-power-station-block-13",
+     "name": "Potrero Power Station Block 13",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-13/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-13.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-17",
     "kind": "correction",
@@ -444,7 +474,7 @@
    "Corrected 2026-09-29: an earlier version of this dossier read the '300'MAX' and '280'MAX' labels on Figure 6.2.3 as heights and reported a conflict with Standard 6.2.2; they are dimension lines (plan extents), and the block's heights are 85 ft and 125 ft, within the midrise range. The D4D's Appendix A.12 is titled 'Block 13 Controls (Low-rise Building)' while Standard 6.2.2 lists Block 13 as midrise (101-145 ft); the difference in labels is unexplained.",
    "Block 13's 2031-2035 window comes from a 2020 press table (SocketSite) and is contingent on the PG&E switchyard's relocation; no current Block 13 schedule was found.",
    "DataSF Parcels lists an active addressed lot (4175499, 1101 Illinois St) over this block's approximate footprint; whether it is PG&E's switchyard parcel is not established, and whether this record's map shape should follow it has not been decided.",
-   "Enacted heights on Block 13: the enacted height map (BOS File 260770 'Leg Final' attachment, p. 29, Figure 249.87-2) labels the block \"93'\" and \"133'\"; its \"300'MAX\" and \"280'MAX\" labels are dimension lines, not heights. The map is read from the rendered page, whose text layer is unreliable. The ordinance takes effect on the 31st day after enactment ('This ordinance shall become effective on the 31st day after enactment', §5(a), p. 56), November 13, 2026 by our count, a legal date computed by Pier & Point and not printed in the text; until then the adopted 85 ft and 125 ft apply."
+   "Block 13's enacted heights (93 ft and 133 ft, File 260770 'Leg Final' attachment, p. 29) are not yet operative: Block 13 is in the PG&E Sub-Area, and Section 249.87(t) (p. 52) says the zoning controls \"shall not become operative as to the PG&E Sub-Area ... or any portion thereof, until a Notice of Joinder to the Development Agreement has been recorded, or until the PG&E Sub-Area, or any portion thereof, is conveyed to the Developer\" (Section 5(c), p. 56, says the same of the ordinance). The Nov 13, 2026 effective date that applies to the other Potrero blocks does not apply here. Section 249.87(t) is existing text (p. 52), so the adopted 85 ft and 125 ft limits were subject to the same condition and, on the sources read, were never operative on this land. No source read shows a Notice of Joinder recorded or the land conveyed: SF Planning's project page (undated; read Oct 18, 2026) still says the switchyard parcel is \"currently owned and operated by PG&E\" and that build-out \"will depend on the relocation of the switchyard and the property coming within the legal jurisdiction of the Development Agreement\", and File 260724's recital (d) (p. 2) says PG&E \"owns approximately 3.8 acres\" in the PG&E Sub-Area. The County Recorder's records were not searched. The 3.8 acres in that recital differs from the 4.8 acres on SF Planning's page; the difference is not explained in the sources read."
   ],
   "sources": [
    {
@@ -518,8 +548,8 @@
     "title": "Potrero Power Station project page (program elements, approval timeline, implementation milestones)",
     "publisher": "SF Planning",
     "url": "https://sfplanning.org/potrero-power-station",
-    "accessed": "2026-10-13",
-    "note": "The page shows no publication or update date. Read 2026-10-13; no date recorded."
+    "accessed": "2026-10-18",
+    "note": "The page shows no publication or update date. Read 2026-10-13 and again 2026-10-18; no date recorded."
    },
    {
     "id": "src-d4d-fig161",
@@ -540,11 +570,11 @@
    },
    {
     "id": "src-legistar-260770-final",
-    "title": "BOS File 260770, 'Leg Final' attachment: the ordinance as finally passed, with the Clerk of the Board's certificate (FINALLY PASSED 10/6/2026, Ayes: 11; height map p. 29; effective-date section p. 56; certificate pp. 58-59)",
+    "title": "BOS File 260770, 'Leg Final' attachment: the ordinance as finally passed, with the Clerk of the Board's certificate (FINALLY PASSED 10/6/2026, Ayes: 11; height map p. 29; operative-date section p. 52; Map 249.87-1 pp. 53-54; effective-date section p. 56; certificate pp. 58-59)",
     "publisher": "SF Board of Supervisors (Legistar)",
     "date": "2026-10-07",
     "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063746&GUID=9EA91A49-BBF9-4471-9EA9-6E7BD33A4353",
-    "accessed": "2026-10-17"
+    "accessed": "2026-10-19"
    },
    {
     "id": "src-legistar-260724-final",
@@ -552,12 +582,12 @@
     "publisher": "SF Board of Supervisors (Legistar)",
     "date": "2026-10-07",
     "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=16063745&GUID=68B0CE5F-84C2-4368-BF8D-EEA7D8B92E55",
-    "accessed": "2026-10-17"
+    "accessed": "2026-10-18"
    }
   ],
   "notes": "Approximate polygon for a real, D4D-adopted block (final D4D, Feb 26, 2020: Table 3.1.1 and Figure 6.2.3) -- see the accuracy caveat. Status 'planned' is contingent: the D4D's Appendix E says portions of the PG&E Sub-area 'may or may not ultimately be redeveloped', and the SF Planning project page says build-out of the PG&E lands depends on relocating the switchyard; SocketSite (Oct 2020) lists Block 13 in Phase 3. Use 'mixed': residential, retail, office and PDR uses are permitted (D4D Table 3.1.1).",
   "has_record_file": true,
-  "last_verified": "2026-09-20",
+  "last_verified": "2026-10-19",
   "tenants": [],
   "geometry": {
    "type": "Polygon",
