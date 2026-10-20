@@ -937,6 +937,13 @@ sup.cites a { text-decoration: none; }
 .costs td { padding: 12px 12px 12px 0; border-bottom: 1px solid var(--paper-line); vertical-align: top; }
 .costs tr:first-child td { border-top: 1px solid var(--paper-ink); }
 .costs .amount { font: 500 15px var(--mono); white-space: nowrap; }
+/* The site page's Costs box: two groups, each under a small subheading (the box chips are the
+   standard .bx-chip row; docs/briefs/costs-box-pills.md). */
+.costs-group[hidden] { display: none; }
+.costs-pane-head { margin: 16px 0 8px; font: 600 15px var(--sans); }
+.costs-pane-head .count { font: 13px var(--mono); color: var(--paper-faint); }
+.costs .cost-covers { display: block; font-size: 13px; color: var(--paper-soft); margin-bottom: 2px; }
+.costs .cost-kind { font: 12px var(--mono); color: var(--paper-soft); border: 1px solid var(--paper-line); border-radius: 999px; padding: 1px 8px; white-space: nowrap; }
 .costs .when { font: 13px var(--mono); color: var(--paper-faint); white-space: nowrap; text-align: right; padding-right: 0; }
 /* Building permits (docs/briefs/watch-rules.md): reuses the .costs table wholesale (same row
    shape -- a date column, a description column); this is the one addition, a muted inline label
@@ -1405,6 +1412,7 @@ sup.cites a { text-decoration: none; }
   .glossary-jump a, .glossary-jump span { min-width: 44px; min-height: 44px; }
   /* Record-page filter chips: 44 px tall, about 19 px more per row of chips. */
   button.bx-chip { min-height: 44px; display: inline-flex; align-items: center; }
+  button.bx-chip[hidden] { display: none; }
   /* The compact year control under a site map (app.js makes it): Play, the slider and the date. */
   .map-year { display: flex; align-items: center; gap: 12px; margin-top: 12px; }
   .map-year[hidden] { display: none; }

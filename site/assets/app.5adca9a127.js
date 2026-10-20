@@ -2063,7 +2063,7 @@ function initPagedBox(box, list) {
       // stayed a static server-rendered number regardless of which chip was active): shown with
       // its full count when no chip is selected, narrowed to just the active category's closed
       // tenants when one is, and hidden entirely once that leaves nothing to show.
-      list.querySelectorAll('.tenant-group, .tenant-closed').forEach(function (g) {
+      list.querySelectorAll('.tenant-group, .tenant-closed, [data-box-group]').forEach(function (g) {
         var visible = g.querySelectorAll('[data-box-item]:not([hidden])').length;
         g.hidden = visible === 0;
         if (g.classList.contains('tenant-closed')) {
@@ -2099,12 +2099,15 @@ function initPagedBox(box, list) {
       if (status) status.textContent = 'Showing ' + shown + ' of ' + count + '.';
     }
 
+    // Collapsing a long list leaves the reader far below the box: bring its top back.
+    function backIntoView() { if (box.getBoundingClientRect().top < 0) box.scrollIntoView({ block: 'start' }); }
     chipButtons.forEach(function (btn) {
       btn.addEventListener('click', function () {
         var cat = btn.getAttribute('data-cat');
         if (activeCat === cat) { activeCat = ''; expanded = !hasBar; } // tapping the selected chip again collapses
         else activeCat = cat;
         render();
+        if (!activeCat && !expanded) backIntoView();
       });
     });
     if (hasBar) {
@@ -2113,6 +2116,7 @@ function initPagedBox(box, list) {
         if (activeCat) { activeCat = ''; expanded = true; } // "Show all N" clears the filter and expands
         else expanded = !expanded;
         render();
+        if (!expanded && !activeCat) backIntoView();
       });
     }
     // The citation-jump and jump-nav reveal (below) calls this to force a collapsed box open
