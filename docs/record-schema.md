@@ -144,7 +144,13 @@ source).
   reads the earliest milestone of the current status run; if that milestone
   has a `date_kind`, no since-date is shown (the record's timeline still
   lists the milestone with its date). `src/validate_records.py` checks the
-  value; in `data/milestones.csv` it is an optional column (before `stage` and `event`).
+  value, and that an `observed` or `published` date matches (to the date's own precision: a
+  month matches any day in it) the `date` of at least one source the milestone cites; a source's
+  `accessed` date never counts. A date that matches no cited source is dated to the source, or
+  loses its `date_kind` if it is the event's own date and a source written after the event gives
+  it. A vote or decision date takes no `date_kind`. The match is not run on `data/milestones.csv`
+  rows: their sources are free text with no date. In `data/milestones.csv` it is an optional
+  column (before `stage` and `event`).
 - `status` on a milestone, if set, is one of `complete`,
   `under_construction`, `planned`, `existing`, `being_removed`.
 - `basis` is required on a milestone with `expected: true` and `status:

@@ -1923,6 +1923,24 @@ var PPPager = (function () {
 // box_bar(), against its own threshold -- Costs uses 1, not the shared BOX_THRESHOLD, so it
 // still collapses past a single entry): this only ever checks whether that markup exists, never
 // re-derives the threshold itself, so the two can't drift out of sync with each other.
+// Box scroll helpers. A site page's sticky timeline covers the top of the viewport, so "the box's
+// top" means just below it. Collapsing a long list ("Show less", clearing a chip) leaves the reader
+// far below the box, and a jump link or #hash should land with the heading in view, not mid-list.
+function stickyTopOffset() {
+  var off = 0, t = document.querySelector('.timeline');
+  if (t && window.getComputedStyle(t).position === 'sticky') off = t.getBoundingClientRect().height;
+  // Below 720px the timeline is static and a fixed one-line bar takes its place; site.css reserves
+  // its height in the root's scroll-padding-top, which window.scrollTo() does not apply by itself.
+  var pad = parseFloat(window.getComputedStyle(document.documentElement).scrollPaddingTop);
+  return Math.max(off, isNaN(pad) ? 0 : pad);
+}
+function scrollBoxToTop(box) {
+  var y = box.getBoundingClientRect().top + window.pageYOffset - stickyTopOffset() - 8;
+  window.scrollTo(0, Math.max(0, y));
+}
+function boxBackIntoView(box) {
+  if (box.getBoundingClientRect().top < stickyTopOffset()) scrollBoxToTop(box);
+}
 // A box whose list is paged (the pager component above: a site or record page's Changes box with more
 // than one page of rows). It holds one page of rows and fetches the rest when a chip or a page turn
 // needs it. While collapsed with no chip it shows only the lead row, which is its own list
@@ -1977,6 +1995,7 @@ function initPagedBox(box, list) {
       if (activeCat === cat) { activeCat = ''; expanded = !hasBar; } // tapping the selected chip again collapses
       else activeCat = cat;
       render();
+      if (!activeCat && !expanded) boxBackIntoView(box);
     });
   });
   if (hasBar) {
@@ -1985,6 +2004,7 @@ function initPagedBox(box, list) {
       if (activeCat) { activeCat = ''; expanded = true; } // "Show all N" clears the filter and expands
       else expanded = !expanded;
       render();
+      if (!expanded && !activeCat) boxBackIntoView(box);
     });
   }
   box._ppExpand = function () { activeCat = ''; expanded = true; render(); };
@@ -2086,7 +2106,7 @@ function initPagedBox(box, list) {
           left = previewCount + ' example' + (previewCount === 1 ? '' : 's') + ' of ' + count;
           right = (allLabel || 'Show all ' + count) + ' ▾';
         } else if (lead) {
-          left = '+' + (count - leadEls.length) + (leadCount > 1 ? ' more' : ' earlier');
+          left = '+' + (count - leadEls.length) + ' ' + (box.getAttribute('data-lead-word') || (leadCount > 1 ? 'more' : 'earlier'));
           right = 'Show all ▾';
         } else {
           left = 'All ' + count;
@@ -2100,7 +2120,7 @@ function initPagedBox(box, list) {
     }
 
     // Collapsing a long list leaves the reader far below the box: bring its top back.
-    function backIntoView() { if (box.getBoundingClientRect().top < 0) box.scrollIntoView({ block: 'start' }); }
+    function backIntoView() { boxBackIntoView(box); }
     chipButtons.forEach(function (btn) {
       btn.addEventListener('click', function () {
         var cat = btn.getAttribute('data-cat');
@@ -2143,6 +2163,9 @@ function initPagedBox(box, list) {
     if (details && !details.open) details.open = true;
     var box = el.closest('.box');
     if (box && typeof box._ppExpand === 'function') box._ppExpand();
+    // A link to the box itself (a jump-nav entry, #site-changes, #site-costs) lands on its top, with
+    // the heading and chips in view; centring the expanded box landed mid-list.
+    if (box && el === box) { requestAnimationFrame(function () { scrollBoxToTop(box); }); return; }
     // A glossary entry is a short block the browser has already scrolled to the top (site.css's
     // scroll-margin-top keeps it clear of the edge): centring it left each letter jump mid-screen.
     if (el.classList.contains('glossary-entry')) return;

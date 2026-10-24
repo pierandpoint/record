@@ -1,39 +1,39 @@
 {
  "snapshot_version": "0",
  "api_version": "0",
- "date": "2026-10-23",
- "commit": "4a775f45473937e52e03cc8cf2fe9457d28a724e",
+ "date": "2026-10-24",
+ "commit": "244948b5d0c0f0786ba50706dd72085bf9f4e5db",
  "tree": "clean",
- "records_sha256": "17710b08fa68275f2b201df5c3de9c14167cba10ebb3769c419629d286d561ef",
- "llms_sha256": "f6168793438267b8f3898509e90e97e5c113c9ad92ee5b69ab01cba247252088",
+ "records_sha256": "b3e8f9d214cad10d26b4fe297e9ccfb1eb670d1c4761184d266328edba164bb7",
+ "llms_sha256": "854d29677f8f5082b7cf2a79066c7a7db8a0f37a0c2a02a9e57b81bf47e4ccc0",
  "record_count": 184,
  "files": {
   "api/v1/records.json": {
-   "sha256": "17710b08fa68275f2b201df5c3de9c14167cba10ebb3769c419629d286d561ef",
-   "bytes": 7904126
+   "sha256": "b3e8f9d214cad10d26b4fe297e9ccfb1eb670d1c4761184d266328edba164bb7",
+   "bytes": 7911989
   },
   "api/v1/sites.json": {
-   "sha256": "59bd331f51f69ff53db45896213946781ac3ace52c28473c230ca6c41b42ecbf",
+   "sha256": "6bccc778c2092f0bcbd206cd2c1645d5da280acf8efcfd2a18fade69ee95975d",
    "bytes": 69752
   },
   "api/v1/milestones.json": {
-   "sha256": "d6e6ef72e3838f6a77161f5c9472bba90f636d196cc47823a9b7cd461644a5da",
-   "bytes": 2152213
+   "sha256": "abeffce956fa53b7af75243d91bbe912e45c5c85fd0b004c641448a5dcc82d15",
+   "bytes": 2153713
   },
   "api/v1/changes.json": {
-   "sha256": "138b0ab12b797e95f175cc561ad24dcfe817e5a6774f4026b8c712cd440e5b7c",
-   "bytes": 2674953
+   "sha256": "e512a8f738a502e56a7f77d3c0cedb6e61d40ccb7eb28becf34d829215238e83",
+   "bytes": 2679978
   },
   "api/v1/feed.xml": {
-   "sha256": "b75d5147849c181661970587fcd4d4ce2e2fb0a2a7aba9ab8365321a807ab201",
+   "sha256": "20576be064d2ba80a067238aaae66f9bcb830826e1365f69c5b95e92065b0db8",
    "bytes": 128349
   },
   "api/v1/pierandpoint.sqlite": {
-   "sha256": "d0e878d515711c9329abe0f4eb379d131e33cb1fd6ccc71252bf8b45deb1a00c",
-   "bytes": 4595712
+   "sha256": "14b01b81b896da7641b07de23f77404113f9ee2fa6d330d2e03d0437cd13f4c9",
+   "bytes": 4599808
   },
   "llms.txt": {
-   "sha256": "f6168793438267b8f3898509e90e97e5c113c9ad92ee5b69ab01cba247252088",
+   "sha256": "854d29677f8f5082b7cf2a79066c7a7db8a0f37a0c2a02a9e57b81bf47e4ccc0",
    "bytes": 46277
   }
  },
@@ -45,6 +45,15 @@
  "note": "commit is git HEAD when this build ran, in the private pipeline repository; it is not itself published. records_sha256 and llms_sha256 are the hashes pierandpoint/record's attest workflow signs on publish; reproduce them by rebuilding this commit with PP_TODAY=date.",
  "signature": null,
  "recent_publishes": [
+  {
+   "date": "2026-10-23",
+   "commit": "0e77cd1aa234b379ec438a61d55071270bd71e5d",
+   "tree": "088bbbbaceb93b02f10ce99a8ef591b779eaed73",
+   "records_sha256": "17710b08fa68275f2b201df5c3de9c14167cba10ebb3769c419629d286d561ef",
+   "llms_sha256": "f6168793438267b8f3898509e90e97e5c113c9ad92ee5b69ab01cba247252088",
+   "records": "184",
+   "bundle": "https://github.com/pierandpoint/record/blob/main/attestations/2026-10-23-0e77cd1.sigstore.json"
+  },
   {
    "date": "2026-10-20",
    "commit": "b191e2270c496cf0b151179adff920d198ed1a37",
@@ -80,15 +89,6 @@
    "llms_sha256": "399a74319c560f5cb18d98ac0244a02c269c35b45eadbf29294b4cb7651428b8",
    "records": "184",
    "bundle": "https://github.com/pierandpoint/record/blob/main/attestations/2026-10-18-1578771.sigstore.json"
-  },
-  {
-   "date": "2026-10-18",
-   "commit": "82c9795c08963389c032d0ef9551a0fa85f4cd0a",
-   "tree": "34b76f0b0635579fb79931ebc7aeacf66df634c4",
-   "records_sha256": "ff214a015c6737d9ac5676433e555f2e5ba377eb2bc625d989b3e7c082ced986",
-   "llms_sha256": "399a74319c560f5cb18d98ac0244a02c269c35b45eadbf29294b4cb7651428b8",
-   "records": "184",
-   "bundle": "https://github.com/pierandpoint/record/blob/main/attestations/2026-10-18-82c9795.sigstore.json"
   }
  ],
  "recent_publishes_status": "ok"
