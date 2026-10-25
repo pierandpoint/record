@@ -1026,7 +1026,9 @@ sup.cites a { text-decoration: none; }
 #near-finder { order: 11; }
 .near-accuracy-note { order: 12; }
 @media (max-width: 719px) {
-  .near-page:has(> #near-map-section:not([hidden])) > #near-map-section { order: 1; }
+  /* The map section leads the page here, so it needs the room under the header that .page-head's own
+     36px top padding gives every other page (the control row sat flush against the nav's underline). */
+  .near-page:has(> #near-map-section:not([hidden])) > #near-map-section { order: 1; padding-top: 36px; }
   .near-page:has(> #near-map-section:not([hidden])) > #near-map-section > #near-map-frame { margin-top: 8px; }
   /* Tall enough to read, short enough that the first nearest row peeks in on a 740 px screen. */
   #near-map-frame { height: clamp(250px, 36vh, 320px); }
