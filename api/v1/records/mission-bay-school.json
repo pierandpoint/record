@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-10-24",
+ "generated": "2026-10-25",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -156,24 +156,6 @@
     ],
     "kind": "development",
     "scope": "record"
-   },
-   {
-    "amount_usd": 102600,
-    "what": "Revised cost on OTC alterations permit 202408027795 for installation of a new fire water line from Owens Street to the new building at 1415 Owens St",
-    "kind": "permit_valuation",
-    "sources": [
-     "src-watch-dbi-building-permits"
-    ],
-    "date": "2024-08-02"
-   },
-   {
-    "amount_usd": 102600,
-    "what": "OTC alterations permit 202412056214 to revise the fire department connection from a 2-way to a 4-way detail at 1415 Owens St (estimated and revised cost)",
-    "kind": "permit_valuation",
-    "sources": [
-     "src-watch-dbi-building-permits-2"
-    ],
-    "date": "2024-12-05"
    }
   ],
   "milestones": [
@@ -326,42 +308,6 @@
     "origin": "record",
     "category": "status",
     "category_label": "Status",
-    "record": {
-     "id": "8709025",
-     "slug": "mission-bay-school",
-     "name": "Mission Bay School",
-     "permalink": "https://pierandpoint.org/parcels/mission-bay-school/",
-     "api": "https://pierandpoint.org/api/v1/records/mission-bay-school.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2024-08-02",
-    "date_label": "Aug 2, 2024",
-    "status": null,
-    "status_label": null,
-    "text": "OTC alterations permit 202408027795 issued for installation of a new fire water line from Owens Street to the new building",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-watch-dbi-building-permits",
-      "title": "Permit 202408027795 (issued) -- 1415 Owens St",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202408027795",
-      "accessed": "2026-09-24"
-     }
-    ],
-    "source": "DBI (Building Permits)",
-    "origin": "record",
-    "category": "milestone",
-    "category_label": "Milestone",
     "record": {
      "id": "8709025",
      "slug": "mission-bay-school",
@@ -628,6 +574,36 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-24",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "One routine building permit (alterations, revisions, deferred submittals, fire or utility work and similar) now appears under Building permits in this record's research notes instead of on its timeline. Two permit cost figures now show as the valuation of the matching permit entries under Building permits, not under Costs. Earlier change-log entries about these permits stay in the log until it is archived at launch.",
+    "source": "Pier & Point editorial decision",
+    "sources": [
+     {
+      "title": "Pier & Point editorial decision"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8709025",
+     "slug": "mission-bay-school",
+     "name": "Mission Bay School",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-school/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-school.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-13",
     "kind": "correction",

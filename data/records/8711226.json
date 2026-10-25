@@ -29,89 +29,9 @@
       ],
       "expected": false,
       "approximate": true
-    },
-    {
-      "date": "2017-02-13",
-      "text": "Permit 201611183132 for a solar hot water heating system recorded complete",
-      "sources": [
-        "src-watch-dbi-building-permits-8"
-      ],
-      "expected": false
-    },
-    {
-      "date": "2017-02-13",
-      "text": "Permit 201612205457 to clarify the support structure of the solar hot water storage tank recorded complete",
-      "sources": [
-        "src-watch-dbi-building-permits-12"
-      ],
-      "expected": false
     }
   ],
-  "costs": [
-    {
-      "amount_usd": 75000,
-      "what": "Interior tenant improvement permit (new cabinetry, non-bearing walls, partitions, break room, floors, ceiling, mechanical and electrical work) for medical/dental clinic space at 1365 04th St",
-      "kind": "permit_valuation",
-      "sources": [
-        "src-watch-dbi-building-permits"
-      ],
-      "date": "2019-06-10"
-    },
-    {
-      "amount_usd": 175000,
-      "what": "Ground-floor tenant improvement converting retail space to a food service establishment (permit 202203099583)",
-      "kind": "permit_valuation",
-      "sources": [
-        "src-watch-dbi-building-permits-2"
-      ],
-      "date": "2022-04-26"
-    },
-    {
-      "amount_usd": 600000,
-      "what": "Interior tenant improvement permit (restrooms, breakroom, teller line, doors, millwork, flooring and MEP) at 1335 04th St; permit issued, no completion recorded",
-      "kind": "permit_valuation",
-      "sources": [
-        "src-watch-dbi-building-permits-4"
-      ],
-      "date": "2019-04-18"
-    },
-    {
-      "amount_usd": 8000000,
-      "what": "Permit 202506037829: excavate and shore tunnels beneath the pile-supported podium slab to replace plumbing main trunk lines at 588 Mission Bay Blvd North (revised cost)",
-      "kind": "permit_valuation",
-      "sources": [
-        "src-watch-dbi-building-permits-5"
-      ],
-      "date": "2025-10-31"
-    },
-    {
-      "amount_usd": 300000,
-      "what": "Tenant improvement for ground-floor fitness studio with retail (install HVAC, two ADA bathrooms, workout studio, lighting and AV systems)",
-      "kind": "permit_valuation",
-      "sources": [
-        "src-watch-dbi-building-permits-7"
-      ],
-      "date": "2019-06-26"
-    },
-    {
-      "amount_usd": 310000,
-      "what": "Installation of a solar hot water heating system at 588 Mission Bay Blvd North (permit 201611183132)",
-      "kind": "permit_valuation",
-      "sources": [
-        "src-watch-dbi-building-permits-8"
-      ],
-      "date": "2017-01-30"
-    },
-    {
-      "amount_usd": 185000,
-      "what": "Revised cost of an over-the-counter alterations permit (202006158766) to install a demising partition dividing an existing vacant ground-floor retail space into two retail spaces",
-      "kind": "permit_valuation",
-      "sources": [
-        "src-watch-dbi-building-permits-10"
-      ],
-      "date": "2020-08-20"
-    }
-  ],
+  "costs": [],
   "facts": [
     {
       "key": "alternate_address",
@@ -398,7 +318,13 @@
     }
   ],
   "details": [
-    {"text": "Change of use at 1335 4th St: over-the-counter alterations permit 201902284052 was issued 2019-04-18 with no completion recorded; the related shop-drawings permit 201908088230 was issued 2019-08-08, also with no completion recorded.", "sources": ["src-watch-dbi-building-permits-4", "src-watch-dbi-building-permits-9"]}
+    {
+      "text": "Change of use at 1335 4th St: over-the-counter alterations permit 201902284052 was issued 2019-04-18 with no completion recorded; the related shop-drawings permit 201908088230 was issued 2019-08-08, also with no completion recorded.",
+      "sources": [
+        "src-watch-dbi-building-permits-4",
+        "src-watch-dbi-building-permits-9"
+      ]
+    }
   ],
   "open_questions": [
     "Number of stories: SocketSite (January 28, 2015) calls it a \"four-story development\" (and describes the west portion on 4th Street as \"four stories of residential uses above a ground floor podium\"); David Baker Architects' project page says \"The high-density building steps down from five stories at the west to four stories at the east\"; DBI permits on this lot (for example 201611183132 and 202506037829) list 5 existing and 5 proposed stories. The record states no single height.",
@@ -438,7 +364,8 @@
       "completed_date": "2020-07-14",
       "sources": [
         "src-watch-dbi-building-permits-7"
-      ]
+      ],
+      "valuation": 300000
     },
     {
       "permit_number": "201912200102",
@@ -565,6 +492,75 @@
       "valuation": 15476.0,
       "sources": [
         "src-watch-dbi-building-permits-22"
+      ]
+    },
+    {
+      "permit_number": "201611183132",
+      "permit_type": "additions alterations or repairs",
+      "description": "Permit 201611183132 for a solar hot water heating system recorded complete",
+      "filed_date": "2016-11-18",
+      "issued_date": "2017-01-30",
+      "completed_date": "2017-02-13",
+      "sources": [
+        "src-watch-dbi-building-permits-8"
+      ],
+      "valuation": 310000
+    },
+    {
+      "permit_number": "201612205457",
+      "permit_type": "otc alterations permit",
+      "description": "Permit 201612205457 to clarify the support structure of the solar hot water storage tank recorded complete",
+      "filed_date": "2016-12-20",
+      "issued_date": "2016-12-29",
+      "completed_date": "2017-02-13",
+      "sources": [
+        "src-watch-dbi-building-permits-12"
+      ]
+    },
+    {
+      "permit_number": "201906102971",
+      "permit_type": "otc alterations permit",
+      "description": "Interior tenant improvement permit (new cabinetry, non-bearing walls, partitions, break room, floors, ceiling, mechanical and electrical work) for medical/dental clinic space at 1365 04th St",
+      "filed_date": "2019-06-10",
+      "issued_date": "2019-06-13",
+      "completed_date": "2021-09-08",
+      "valuation": 75000,
+      "sources": [
+        "src-watch-dbi-building-permits"
+      ]
+    },
+    {
+      "permit_number": "202203099583",
+      "permit_type": "otc alterations permit",
+      "description": "Ground-floor tenant improvement converting retail space to a food service establishment (permit 202203099583)",
+      "filed_date": "2022-03-09",
+      "issued_date": "2022-04-26",
+      "valuation": 175000,
+      "sources": [
+        "src-watch-dbi-building-permits-2"
+      ]
+    },
+    {
+      "permit_number": "201902284052",
+      "permit_type": "otc alterations permit",
+      "description": "Interior tenant improvement permit (restrooms, breakroom, teller line, doors, millwork, flooring and MEP) at 1335 04th St; permit issued, no completion recorded",
+      "filed_date": "2019-02-28",
+      "issued_date": "2019-04-18",
+      "valuation": 600000,
+      "sources": [
+        "src-watch-dbi-building-permits-4"
+      ]
+    },
+    {
+      "permit_number": "202006158766",
+      "permit_type": "otc alterations permit",
+      "description": "Revised cost of an over-the-counter alterations permit (202006158766) to install a demising partition dividing an existing vacant ground-floor retail space into two retail spaces",
+      "filed_date": "2020-06-15",
+      "issued_date": "2020-08-20",
+      "completed_date": "2020-10-16",
+      "valuation": 185000,
+      "sources": [
+        "src-watch-dbi-building-permits-10"
       ]
     }
   ]

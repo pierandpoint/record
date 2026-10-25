@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-10-24",
+ "generated": "2026-10-25",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -1082,42 +1082,6 @@
     "relation": "tracked"
    },
    {
-    "date": "2025-08-25",
-    "date_label": "Aug 25, 2025",
-    "status": null,
-    "status_label": null,
-    "text": "OTC alterations permit issued (filed August 1, 2025) for a temporary parking lot at 1212 Maryland St to serve the Sophie Maxwell Building housing development, providing 63 parking spaces with fencing, an all-access gate and an artificial turf dog area (vacant lot to parking lot)",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-watch-dbi-building-permits",
-      "title": "Permit 202508012157 (issued) -- 1212 Maryland St",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202508012157",
-      "accessed": "2026-09-24"
-     }
-    ],
-    "source": "DBI (Building Permits)",
-    "origin": "record",
-    "category": "milestone",
-    "category_label": "Milestone",
-    "record": {
-     "id": "4232020",
-     "slug": "sophie-maxwell-building",
-     "name": "Sophie Maxwell Building",
-     "permalink": "https://pierandpoint.org/parcels/sophie-maxwell-building/",
-     "api": "https://pierandpoint.org/api/v1/records/sophie-maxwell-building.json"
-    },
-    "site": {
-     "slug": "potrero",
-     "name": "Potrero Power Station",
-     "short": "Potrero Station",
-     "url": "https://pierandpoint.org/sites/potrero/"
-    },
-    "relation": "tracked"
-   },
-   {
     "date": "2025-10-15",
     "date_label": "Oct 15, 2025",
     "status": null,
@@ -1412,6 +1376,36 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-24",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "One routine building permit (alterations, revisions, deferred submittals, fire or utility work and similar) now appears under Building permits in this record's research notes instead of on its timeline. Earlier change-log entries about these permits stay in the log until it is archived at launch.",
+    "source": "Pier & Point editorial decision",
+    "sources": [
+     {
+      "title": "Pier & Point editorial decision"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "4232020",
+     "slug": "sophie-maxwell-building",
+     "name": "Sophie Maxwell Building",
+     "permalink": "https://pierandpoint.org/parcels/sophie-maxwell-building/",
+     "api": "https://pierandpoint.org/api/v1/records/sophie-maxwell-building.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-13",
     "kind": "correction",

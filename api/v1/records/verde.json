@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-10-24",
+ "generated": "2026-10-25",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -267,16 +267,6 @@
      "src-watch-dbi-building-permits"
     ],
     "date": "2020-10-26"
-   },
-   {
-    "amount_usd": 896904,
-    "what": "Revised cost on DBI permit 202312293282, an architectural and MEP addendum revision for Mission Rock Building F",
-    "kind": "permit_valuation",
-    "sources": [
-     "src-datasf-permit-202312293282",
-     "src-watch-dbi-building-permits-2"
-    ],
-    "date": "2024-04-10"
    }
   ],
   "milestones": [
@@ -794,49 +784,6 @@
     "relation": "tracked"
    },
    {
-    "date": "2024-04-10",
-    "date_label": "Apr 10, 2024",
-    "status": null,
-    "status_label": null,
-    "text": "DBI permit 202312293282, a revision/architectural+MEP addendum for Mission Rock Building F (revision to PA #201910073784 S3 and Port application B-2022-0127), is approved",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-datasf-permit-202312293282",
-      "title": "Building Permits dataset, permit 202312293282 (Building F, revision addendum)",
-      "publisher": "DataSF / SF Department of Building Inspection",
-      "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=202312293282",
-      "accessed": "2026-10-12"
-     },
-     {
-      "id": "src-watch-dbi-building-permits-2",
-      "title": "Permit 202312293282 (approved) -- 365 Toni Stone Cg",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202312293282",
-      "accessed": "2026-09-24"
-     }
-    ],
-    "source": "DataSF / SF Department of Building Inspection; DBI (Building Permits)",
-    "origin": "record",
-    "category": "milestone",
-    "category_label": "Milestone",
-    "record": {
-     "id": "8719C001",
-     "slug": "verde",
-     "name": "Verde",
-     "permalink": "https://pierandpoint.org/parcels/verde/",
-     "api": "https://pierandpoint.org/api/v1/records/verde.json"
-    },
-    "site": {
-     "slug": "mission-rock",
-     "name": "Mission Rock",
-     "short": "Mission Rock",
-     "url": "https://pierandpoint.org/sites/mission-rock/"
-    },
-    "relation": "tracked"
-   },
-   {
     "date": "2024-04-23",
     "date_label": "Apr 23, 2024",
     "status": null,
@@ -1079,6 +1026,36 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-24",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "One routine building permit (alterations, revisions, deferred submittals, fire or utility work and similar) now appears under Building permits in this record's research notes instead of on its timeline. One permit cost figure now shows as the valuation of the matching permit entry under Building permits, not under Costs. Earlier change-log entries about these permits stay in the log until it is archived at launch.",
+    "source": "Pier & Point editorial decision",
+    "sources": [
+     {
+      "title": "Pier & Point editorial decision"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8719C001",
+     "slug": "verde",
+     "name": "Verde",
+     "permalink": "https://pierandpoint.org/parcels/verde/",
+     "api": "https://pierandpoint.org/api/v1/records/verde.json"
+    },
+    "site": {
+     "slug": "mission-rock",
+     "name": "Mission Rock",
+     "short": "Mission Rock",
+     "url": "https://pierandpoint.org/sites/mission-rock/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-13",
     "kind": "correction",

@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-10-24",
+ "generated": "2026-10-25",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -269,16 +269,6 @@
       "src-watch-dbi-building-permits"
      ],
      "date": "2020-10-26"
-    },
-    {
-     "amount_usd": 896904,
-     "what": "Revised cost on DBI permit 202312293282, an architectural and MEP addendum revision for Mission Rock Building F",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-datasf-permit-202312293282",
-      "src-watch-dbi-building-permits-2"
-     ],
-     "date": "2024-04-10"
     }
    ],
    "milestones": [
@@ -796,49 +786,6 @@
      "relation": "tracked"
     },
     {
-     "date": "2024-04-10",
-     "date_label": "Apr 10, 2024",
-     "status": null,
-     "status_label": null,
-     "text": "DBI permit 202312293282, a revision/architectural+MEP addendum for Mission Rock Building F (revision to PA #201910073784 S3 and Port application B-2022-0127), is approved",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-datasf-permit-202312293282",
-       "title": "Building Permits dataset, permit 202312293282 (Building F, revision addendum)",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=202312293282",
-       "accessed": "2026-10-12"
-      },
-      {
-       "id": "src-watch-dbi-building-permits-2",
-       "title": "Permit 202312293282 (approved) -- 365 Toni Stone Cg",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202312293282",
-       "accessed": "2026-09-24"
-      }
-     ],
-     "source": "DataSF / SF Department of Building Inspection; DBI (Building Permits)",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8719C001",
-      "slug": "verde",
-      "name": "Verde",
-      "permalink": "https://pierandpoint.org/parcels/verde/",
-      "api": "https://pierandpoint.org/api/v1/records/verde.json"
-     },
-     "site": {
-      "slug": "mission-rock",
-      "name": "Mission Rock",
-      "short": "Mission Rock",
-      "url": "https://pierandpoint.org/sites/mission-rock/"
-     },
-     "relation": "tracked"
-    },
-    {
      "date": "2024-04-23",
      "date_label": "Apr 23, 2024",
      "status": null,
@@ -1081,6 +1028,36 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-24",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "One routine building permit (alterations, revisions, deferred submittals, fire or utility work and similar) now appears under Building permits in this record's research notes instead of on its timeline. One permit cost figure now shows as the valuation of the matching permit entry under Building permits, not under Costs. Earlier change-log entries about these permits stay in the log until it is archived at launch.",
+     "source": "Pier & Point editorial decision",
+     "sources": [
+      {
+       "title": "Pier & Point editorial decision"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "8719C001",
+      "slug": "verde",
+      "name": "Verde",
+      "permalink": "https://pierandpoint.org/parcels/verde/",
+      "api": "https://pierandpoint.org/api/v1/records/verde.json"
+     },
+     "site": {
+      "slug": "mission-rock",
+      "name": "Mission Rock",
+      "short": "Mission Rock",
+      "url": "https://pierandpoint.org/sites/mission-rock/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
     {
      "date": "2026-10-13",
      "kind": "correction",
@@ -5954,24 +5931,6 @@
      "scope": "record"
     },
     {
-     "amount_usd": 210000,
-     "what": "Permit 202308295553: deferred free-standing demountable partitions (DIRTT) on levels 2, 3 and 4 of the office building",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits"
-     ],
-     "date": "2024-02-22"
-    },
-    {
-     "amount_usd": 168000,
-     "what": "Filed building permit 202401194265 for Visa phase 3 tenant improvements: deferred free-standing demountable partitions (DIRTT) on level 12",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-2"
-     ],
-     "date": "2024-01-19"
-    },
-    {
      "amount_usd": 79835080,
      "what": "Estimated/revised cost on DBI new-construction permit 201910073785 for Building G",
      "kind": "permit_valuation",
@@ -6706,6 +6665,36 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-24",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Two permit cost figures now show as the valuation of the matching permit entries under Building permits, not under Costs. Earlier change-log entries about these permits stay in the log until it is archived at launch.",
+     "source": "Pier & Point editorial decision",
+     "sources": [
+      {
+       "title": "Pier & Point editorial decision"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "8719A008",
+      "slug": "building-g",
+      "name": "Building G",
+      "permalink": "https://pierandpoint.org/parcels/building-g/",
+      "api": "https://pierandpoint.org/api/v1/records/building-g.json"
+     },
+     "site": {
+      "slug": "mission-rock",
+      "name": "Mission Rock",
+      "short": "Mission Rock",
+      "url": "https://pierandpoint.org/sites/mission-rock/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
     {
      "date": "2026-10-13",
      "kind": "correction",
@@ -8777,24 +8766,6 @@
       "src-watch-dbi-building-permits"
      ],
      "date": "2021-05-19"
-    },
-    {
-     "amount_usd": 32500000,
-     "what": "Tenant improvement build-out of floors 5, 6, 7 and 8, including architectural, MEP and structural work, a full prep kitchen and satellite food service stations (permit 202511079166)",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-2"
-     ],
-     "date": "2025-12-16"
-    },
-    {
-     "amount_usd": 11245700,
-     "what": "Revised cost on approved permit 202412247382 for office tenant improvement on levels 3 and 4 (estimated cost at filing was $6,583,515)",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-4"
-     ],
-     "date": "2025-05-19"
     }
    ],
    "milestones": [
@@ -9572,6 +9543,36 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-24",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Two permit cost figures now show as the valuation of the matching permit entries under Building permits, not under Costs. Earlier change-log entries about these permits stay in the log until it is archived at launch.",
+     "source": "Pier & Point editorial decision",
+     "sources": [
+      {
+       "title": "Pier & Point editorial decision"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "8719C003",
+      "slug": "building-b",
+      "name": "Building B",
+      "permalink": "https://pierandpoint.org/parcels/building-b/",
+      "api": "https://pierandpoint.org/api/v1/records/building-b.json"
+     },
+     "site": {
+      "slug": "mission-rock",
+      "name": "Mission Rock",
+      "short": "Mission Rock",
+      "url": "https://pierandpoint.org/sites/mission-rock/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
     {
      "date": "2026-10-13",
      "kind": "correction",
@@ -15672,42 +15673,6 @@
      "relation": "tracked"
     },
     {
-     "date": "2025-08-25",
-     "date_label": "Aug 25, 2025",
-     "status": null,
-     "status_label": null,
-     "text": "OTC alterations permit issued (filed August 1, 2025) for a temporary parking lot at 1212 Maryland St to serve the Sophie Maxwell Building housing development, providing 63 parking spaces with fencing, an all-access gate and an artificial turf dog area (vacant lot to parking lot)",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits",
-       "title": "Permit 202508012157 (issued) -- 1212 Maryland St",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202508012157",
-       "accessed": "2026-09-24"
-      }
-     ],
-     "source": "DBI (Building Permits)",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "4232020",
-      "slug": "sophie-maxwell-building",
-      "name": "Sophie Maxwell Building",
-      "permalink": "https://pierandpoint.org/parcels/sophie-maxwell-building/",
-      "api": "https://pierandpoint.org/api/v1/records/sophie-maxwell-building.json"
-     },
-     "site": {
-      "slug": "potrero",
-      "name": "Potrero Power Station",
-      "short": "Potrero Station",
-      "url": "https://pierandpoint.org/sites/potrero/"
-     },
-     "relation": "tracked"
-    },
-    {
      "date": "2025-10-15",
      "date_label": "Oct 15, 2025",
      "status": null,
@@ -16002,6 +15967,36 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-24",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "One routine building permit (alterations, revisions, deferred submittals, fire or utility work and similar) now appears under Building permits in this record's research notes instead of on its timeline. Earlier change-log entries about these permits stay in the log until it is archived at launch.",
+     "source": "Pier & Point editorial decision",
+     "sources": [
+      {
+       "title": "Pier & Point editorial decision"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "4232020",
+      "slug": "sophie-maxwell-building",
+      "name": "Sophie Maxwell Building",
+      "permalink": "https://pierandpoint.org/parcels/sophie-maxwell-building/",
+      "api": "https://pierandpoint.org/api/v1/records/sophie-maxwell-building.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
     {
      "date": "2026-10-13",
      "kind": "correction",
@@ -24182,15 +24177,6 @@
      "scope": "record"
     },
     {
-     "amount_usd": 37800,
-     "what": "Permitted cost of additional rooftop PV installation (42 Boviet 450W panels, 18.9 kW) at 410 China Basin St",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-2"
-     ],
-     "date": "2023-04-19"
-    },
-    {
      "amount_usd": 42000000,
      "what": "Permit 201901281440 estimated and revised construction cost for the 141-unit, 4-story building",
      "kind": "permit_valuation",
@@ -24198,24 +24184,6 @@
       "src-watch-dbi-building-permits-3"
      ],
      "date": "2019"
-    },
-    {
-     "amount_usd": 3500000,
-     "what": "Alterations permit (202203180314) to remove and replace water-damaged finishes in modular units, corridors and stairwells on levels 1-4 -- revised cost",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-4"
-     ],
-     "date": "2022-03-22"
-    },
-    {
-     "amount_usd": 286000,
-     "what": "Revised cost on OTC alterations permit 202008312996 for a solar hot water heating system at the apartment building",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-5"
-     ],
-     "date": "2020-11-02"
     }
    ],
    "milestones": [
@@ -24468,42 +24436,6 @@
      "relation": "tracked"
     },
     {
-     "date": "2022-03-22",
-     "date_label": "Mar 22, 2022",
-     "status": null,
-     "status_label": null,
-     "text": "Over-the-counter alterations permit issued to remove and replace water-damaged finishes in modular residential units, corridors and stairwells on levels 1-4, to comply with a notice of violation",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-4",
-       "title": "Permit 202203180314 (issued) -- 410 China Basin St",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202203180314",
-       "accessed": "2026-09-24"
-      }
-     ],
-     "source": "DBI (Building Permits)",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8719003",
-      "slug": "mission-bay-south-block-9",
-      "name": "Mission Bay South Block 9",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-9/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-9.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
      "date": "2023-04-24",
      "date_label": "Apr 24, 2023",
      "status": "complete",
@@ -24541,6 +24473,36 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-24",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "One routine building permit (alterations, revisions, deferred submittals, fire or utility work and similar) now appears under Building permits in this record's research notes instead of on its timeline. Three permit cost figures now show as the valuation of the matching permit entries under Building permits, not under Costs. Earlier change-log entries about these permits stay in the log until it is archived at launch.",
+     "source": "Pier & Point editorial decision",
+     "sources": [
+      {
+       "title": "Pier & Point editorial decision"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "8719003",
+      "slug": "mission-bay-south-block-9",
+      "name": "Mission Bay South Block 9",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-south-block-9/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-south-block-9.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
     {
      "date": "2026-10-13",
      "kind": "correction",
@@ -26217,24 +26179,6 @@
      ],
      "kind": "development",
      "scope": "record"
-    },
-    {
-     "amount_usd": 102600,
-     "what": "Revised cost on OTC alterations permit 202408027795 for installation of a new fire water line from Owens Street to the new building at 1415 Owens St",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits"
-     ],
-     "date": "2024-08-02"
-    },
-    {
-     "amount_usd": 102600,
-     "what": "OTC alterations permit 202412056214 to revise the fire department connection from a 2-way to a 4-way detail at 1415 Owens St (estimated and revised cost)",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-2"
-     ],
-     "date": "2024-12-05"
     }
    ],
    "milestones": [
@@ -26387,42 +26331,6 @@
      "origin": "record",
      "category": "status",
      "category_label": "Status",
-     "record": {
-      "id": "8709025",
-      "slug": "mission-bay-school",
-      "name": "Mission Bay School",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-school/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-school.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2024-08-02",
-     "date_label": "Aug 2, 2024",
-     "status": null,
-     "status_label": null,
-     "text": "OTC alterations permit 202408027795 issued for installation of a new fire water line from Owens Street to the new building",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits",
-       "title": "Permit 202408027795 (issued) -- 1415 Owens St",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202408027795",
-       "accessed": "2026-09-24"
-      }
-     ],
-     "source": "DBI (Building Permits)",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
      "record": {
       "id": "8709025",
       "slug": "mission-bay-school",
@@ -26689,6 +26597,36 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-24",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "One routine building permit (alterations, revisions, deferred submittals, fire or utility work and similar) now appears under Building permits in this record's research notes instead of on its timeline. Two permit cost figures now show as the valuation of the matching permit entries under Building permits, not under Costs. Earlier change-log entries about these permits stay in the log until it is archived at launch.",
+     "source": "Pier & Point editorial decision",
+     "sources": [
+      {
+       "title": "Pier & Point editorial decision"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "8709025",
+      "slug": "mission-bay-school",
+      "name": "Mission Bay School",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-school/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-school.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
     {
      "date": "2026-10-13",
      "kind": "correction",
@@ -32683,42 +32621,6 @@
    ],
    "milestones": [
     {
-     "date": "2013-08-08",
-     "date_label": "Aug 8, 2013",
-     "status": null,
-     "status_label": null,
-     "text": "Altered site permit application 201308083838 filed to change occupancy to business (office) and reduce the building from 10 stories to 9 stories (original site permit 2007/11/09/7802)",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-dbi-kaiser-site",
-       "title": "Building permit 201308083838, altered site permit, 1600 Owens St",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201308083838",
-       "accessed": "2026-10-10"
-      }
-     ],
-     "source": "DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709020",
-      "slug": "kaiser-permanente-san-francisco-mission-bay-medical-offices",
-      "name": "Kaiser Permanente San Francisco Mission Bay Medical Offices",
-      "permalink": "https://pierandpoint.org/parcels/kaiser-permanente-san-francisco-mission-bay-medical-offices/",
-      "api": "https://pierandpoint.org/api/v1/records/kaiser-permanente-san-francisco-mission-bay-medical-offices.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
      "date": "2013-12",
      "date_label": "Dec 2013",
      "status": null,
@@ -32876,6 +32778,36 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-24",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "One routine building permit (alterations, revisions, deferred submittals, fire or utility work and similar) now appears under Building permits in this record's research notes instead of on its timeline.",
+     "source": "Pier & Point editorial decision",
+     "sources": [
+      {
+       "title": "Pier & Point editorial decision"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "8709020",
+      "slug": "kaiser-permanente-san-francisco-mission-bay-medical-offices",
+      "name": "Kaiser Permanente San Francisco Mission Bay Medical Offices",
+      "permalink": "https://pierandpoint.org/parcels/kaiser-permanente-san-francisco-mission-bay-medical-offices/",
+      "api": "https://pierandpoint.org/api/v1/records/kaiser-permanente-san-francisco-mission-bay-medical-offices.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
     {
      "date": "2026-10-13",
      "kind": "correction",
@@ -33405,71 +33337,7 @@
      ]
     }
    ],
-   "costs": [
-    {
-     "amount_usd": 75000,
-     "what": "Interior tenant improvement permit (new cabinetry, non-bearing walls, partitions, break room, floors, ceiling, mechanical and electrical work) for medical/dental clinic space at 1365 04th St",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits"
-     ],
-     "date": "2019-06-10"
-    },
-    {
-     "amount_usd": 175000,
-     "what": "Ground-floor tenant improvement converting retail space to a food service establishment (permit 202203099583)",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-2"
-     ],
-     "date": "2022-04-26"
-    },
-    {
-     "amount_usd": 600000,
-     "what": "Interior tenant improvement permit (restrooms, breakroom, teller line, doors, millwork, flooring and MEP) at 1335 04th St; permit issued, no completion recorded",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-4"
-     ],
-     "date": "2019-04-18"
-    },
-    {
-     "amount_usd": 8000000,
-     "what": "Permit 202506037829: excavate and shore tunnels beneath the pile-supported podium slab to replace plumbing main trunk lines at 588 Mission Bay Blvd North (revised cost)",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-5"
-     ],
-     "date": "2025-10-31"
-    },
-    {
-     "amount_usd": 300000,
-     "what": "Tenant improvement for ground-floor fitness studio with retail (install HVAC, two ADA bathrooms, workout studio, lighting and AV systems)",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-7"
-     ],
-     "date": "2019-06-26"
-    },
-    {
-     "amount_usd": 310000,
-     "what": "Installation of a solar hot water heating system at 588 Mission Bay Blvd North (permit 201611183132)",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-8"
-     ],
-     "date": "2017-01-30"
-    },
-    {
-     "amount_usd": 185000,
-     "what": "Revised cost of an over-the-counter alterations permit (202006158766) to install a demising partition dividing an existing vacant ground-floor retail space into two retail spaces",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-10"
-     ],
-     "date": "2020-08-20"
-    }
-   ],
+   "costs": [],
    "milestones": [
     {
      "date": "2015-01",
@@ -33544,81 +33412,39 @@
       "url": "https://pierandpoint.org/sites/mission-bay/"
      },
      "relation": "tracked"
-    },
-    {
-     "date": "2017-02-13",
-     "date_label": "Feb 13, 2017",
-     "status": null,
-     "status_label": null,
-     "text": "Permit 201611183132 for a solar hot water heating system recorded complete",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-8",
-       "title": "Permit 201611183132 (complete) -- 588 Mission Bay Blvd North Bl",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201611183132",
-       "accessed": "2026-09-24"
-      }
-     ],
-     "source": "DBI (Building Permits)",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8711226",
-      "slug": "five88-mission-bay-south-block-7-west",
-      "name": "Five88 (Mission Bay South Block 7 West)",
-      "permalink": "https://pierandpoint.org/parcels/five88-mission-bay-south-block-7-west/",
-      "api": "https://pierandpoint.org/api/v1/records/five88-mission-bay-south-block-7-west.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2017-02-13",
-     "date_label": "Feb 13, 2017",
-     "status": null,
-     "status_label": null,
-     "text": "Permit 201612205457 to clarify the support structure of the solar hot water storage tank recorded complete",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-12",
-       "title": "Permit 201612205457 (complete) -- 588 Mission Bay Blvd North Bl",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201612205457",
-       "accessed": "2026-09-26"
-      }
-     ],
-     "source": "DBI (Building Permits)",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8711226",
-      "slug": "five88-mission-bay-south-block-7-west",
-      "name": "Five88 (Mission Bay South Block 7 West)",
-      "permalink": "https://pierandpoint.org/parcels/five88-mission-bay-south-block-7-west/",
-      "api": "https://pierandpoint.org/api/v1/records/five88-mission-bay-south-block-7-west.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-24",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Two routine building permits (alterations, revisions, deferred submittals, fire or utility work and similar) now appear under Building permits in this record's research notes instead of on its timeline. 7 permit cost figures now show as the valuation of the matching permit entries under Building permits, not under Costs. Earlier change-log entries about these permits stay in the log until it is archived at launch.",
+     "source": "Pier & Point editorial decision",
+     "sources": [
+      {
+       "title": "Pier & Point editorial decision"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "8711226",
+      "slug": "five88-mission-bay-south-block-7-west",
+      "name": "Five88 (Mission Bay South Block 7 West)",
+      "permalink": "https://pierandpoint.org/parcels/five88-mission-bay-south-block-7-west/",
+      "api": "https://pierandpoint.org/api/v1/records/five88-mission-bay-south-block-7-west.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
     {
      "date": "2026-10-13",
      "kind": "correction",
@@ -37243,15 +37069,6 @@
    "facts": [],
    "costs": [
     {
-     "amount_usd": 30000,
-     "what": "OTC alterations permit 202209061935 for a new 8-inch fire sprinkler water service connecting to an existing 8-inch main in the street (estimated and revised cost)",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-2"
-     ],
-     "date": "2022-09-13"
-    },
-    {
      "amount_usd": 68000000,
      "what": "Permit-stated construction cost for the 7-story warm shell and core (permit 202012281760)",
      "kind": "permit_valuation",
@@ -37259,33 +37076,6 @@
       "src-watch-dbi-building-permits-4"
      ],
      "date": "2021-08"
-    },
-    {
-     "amount_usd": 110000,
-     "what": "Revised cost on OTC alterations permit 202112063791 for a test section of planned stone column ground improvements",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-6"
-     ],
-     "date": "2022-01-26"
-    },
-    {
-     "amount_usd": 120000,
-     "what": "Revised cost on permit 202112214798 for the pile load test program for augered cast-in-place piles at 1450 Owens St (initially estimated at $10,000)",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-8"
-     ],
-     "date": "2022-01-26"
-    },
-    {
-     "amount_usd": 26400000,
-     "what": "Estimated/revised cost of interior tenant improvement permit for offices, R&D laboratories and support spaces at levels 1 and 5-7",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-9"
-     ],
-     "date": "2026-07-14"
     }
    ],
    "milestones": [
@@ -37315,114 +37105,6 @@
       }
      ],
      "source": "San Francisco YIMBY, 2023-02; DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709017",
-      "slug": "1450-owens-street",
-      "name": "1450 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2021-10-21",
-     "date_label": "Oct 21, 2021",
-     "status": null,
-     "status_label": null,
-     "text": "Grading permit (202107194655) issued for site grading in support of the planned 7-story shell & core lab/office high rise; filed July 19, 2021.",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-10",
-       "title": "Permit 202107194655 (complete) -- 1450 Owens St",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202107194655",
-       "accessed": "2026-09-24"
-      }
-     ],
-     "source": "DBI (Building Permits)",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709017",
-      "slug": "1450-owens-street",
-      "name": "1450 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2022-01-26",
-     "date_label": "Jan 26, 2022",
-     "status": null,
-     "status_label": null,
-     "text": "OTC alterations permit (202112063791) issued for a test section of planned stone column ground improvements at the site.",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-6",
-       "title": "Permit 202112063791 (complete) -- 1450 Owens St",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202112063791",
-       "accessed": "2026-09-24"
-      }
-     ],
-     "source": "DBI (Building Permits)",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709017",
-      "slug": "1450-owens-street",
-      "name": "1450 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2022-01-26",
-     "date_label": "Jan 26, 2022",
-     "status": null,
-     "status_label": null,
-     "text": "Over-the-counter alterations permit issued for a pile load test program for augered cast-in-place piles supporting the planned 7-story shell-and-core office/lab building (filed 2021-12-21).",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-8",
-       "title": "Permit 202112214798 (complete) -- 1450 Owens St",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202112214798",
-       "accessed": "2026-09-24"
-      }
-     ],
-     "source": "DBI (Building Permits)",
      "origin": "record",
      "category": "milestone",
      "category_label": "Milestone",
@@ -37499,186 +37181,6 @@
      "origin": "record",
      "category": "status",
      "category_label": "Status",
-     "record": {
-      "id": "8709017",
-      "slug": "1450-owens-street",
-      "name": "1450 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2023-06-01",
-     "date_label": "Jun 1, 2023",
-     "status": null,
-     "status_label": null,
-     "text": "Alterations permit 202306018964 filed and issued on 2023-06-01 for 31 evacuation plan maps covering floors 1-7 and the penthouse, for fire review only.",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-11",
-       "title": "Permit 202306018964 (complete) -- 1450 Owens St",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202306018964",
-       "accessed": "2026-09-26"
-      }
-     ],
-     "source": "DBI (Building Permits)",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709017",
-      "slug": "1450-owens-street",
-      "name": "1450 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2024-01-30",
-     "date_label": "Jan 30, 2024",
-     "status": null,
-     "status_label": null,
-     "text": "Fire sprinkler water service permit (202209061935, filed September 2022 and issued September 13, 2022) reached complete status.",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-2",
-       "title": "Permit 202209061935 (complete) -- 1450 Owens St",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202209061935",
-       "accessed": "2026-09-24"
-      }
-     ],
-     "source": "DBI (Building Permits)",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709017",
-      "slug": "1450-owens-street",
-      "name": "1450 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2024-03-14",
-     "date_label": "Mar 14, 2024",
-     "status": null,
-     "status_label": null,
-     "text": "Grading/excavation permit 202107194655 recorded as complete.",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-10",
-       "title": "Permit 202107194655 (complete) -- 1450 Owens St",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202107194655",
-       "accessed": "2026-09-24"
-      }
-     ],
-     "source": "DBI (Building Permits)",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709017",
-      "slug": "1450-owens-street",
-      "name": "1450 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2024-04-10",
-     "date_label": "Apr 10, 2024",
-     "status": null,
-     "status_label": null,
-     "text": "Alterations permit 202403087397 issued for revisions to incorporate final scp changes required by landscape & public art coordination.",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-12",
-       "title": "Permit 202403087397 (complete) -- 1450 Owens St",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202403087397",
-       "accessed": "2026-09-26"
-      }
-     ],
-     "source": "DBI (Building Permits)",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709017",
-      "slug": "1450-owens-street",
-      "name": "1450 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2024-06-26",
-     "date_label": "Jun 26, 2024",
-     "status": null,
-     "status_label": null,
-     "text": "Over-the-counter alterations permit 202306018964 (evacuation plan maps) recorded as complete.",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-11",
-       "title": "Permit 202306018964 (complete) -- 1450 Owens St",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202306018964",
-       "accessed": "2026-09-26"
-      }
-     ],
-     "source": "DBI (Building Permits)",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
      "record": {
       "id": "8709017",
       "slug": "1450-owens-street",
@@ -37777,6 +37279,36 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-24",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Six routine building permits (alterations, revisions, deferred submittals, fire or utility work and similar) now appear under Building permits in this record's research notes instead of on its timeline. Four permit cost figures now show as the valuation of the matching permit entries under Building permits, not under Costs. Earlier change-log entries about these permits stay in the log until it is archived at launch.",
+     "source": "Pier & Point editorial decision",
+     "sources": [
+      {
+       "title": "Pier & Point editorial decision"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "8709017",
+      "slug": "1450-owens-street",
+      "name": "1450 Owens Street",
+      "permalink": "https://pierandpoint.org/parcels/1450-owens-street/",
+      "api": "https://pierandpoint.org/api/v1/records/1450-owens-street.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
     {
      "date": "2026-10-13",
      "kind": "correction",
@@ -39508,86 +39040,6 @@
    ],
    "costs": [
     {
-     "amount_usd": 65000,
-     "what": "Revised cost of OTC alterations permit #201904178265 for installation of cable barriers",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits",
-      "src-datasf-permits-1470-owens-all"
-     ],
-     "date": "2019"
-    },
-    {
-     "amount_usd": 10369,
-     "what": "Revised cost on DBI permit #201811024884 for 6\" fire water service and underground sprinklers at 1470 Owens St",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-4",
-      "src-datasf-permits-1470-owens-all"
-     ],
-     "date": "2018-11"
-    },
-    {
-     "amount_usd": 130000,
-     "what": "Revised cost on OTC alterations permit #201905241647 for installation of metal stairs associated with the parking garage permit app #201806010826",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-5",
-      "src-datasf-permits-1470-owens-all"
-     ],
-     "date": "2019-06-17"
-    },
-    {
-     "amount_usd": 100000,
-     "what": "Revised cost on OTC alterations permit #201810173418 for demolition of existing surface and grading in preparation of the new parking lot",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-8",
-      "src-datasf-permits-1470-owens-all"
-     ],
-     "date": "2018-10-17"
-    },
-    {
-     "amount_usd": 50000,
-     "what": "Revised cost on DBI permit #201810254096 for the auger cast pile load test and indicator pile program (estimated cost $25,000 at filing)",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-12",
-      "src-datasf-permits-1470-owens-all"
-     ],
-     "date": "2018-10-25"
-    },
-    {
-     "amount_usd": 10000,
-     "what": "Revised cost of OTC alterations permit #201908219414 for parking signage at the garage",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-16",
-      "src-datasf-permits-1470-owens-all"
-     ],
-     "date": "2019"
-    },
-    {
-     "amount_usd": 20000,
-     "what": "Revised cost of OTC alteration permit #202002215136 for the ejector pump revision at the 1470 Owens Street parking garage",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-18",
-      "src-datasf-permits-1470-owens-all"
-     ],
-     "date": "2020-03-16"
-    },
-    {
-     "amount_usd": 2300000,
-     "what": "Revised cost on DBI permit #201902062205 for production auger cast piles (initially estimated at $900,000)",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-20",
-      "src-datasf-permits-1470-owens-all"
-     ],
-     "date": "2019-02-06"
-    },
-    {
      "amount_usd": 6000000,
      "what": "Revised (and estimated) cost on DBI permit #201806010826 to erect the parking garage",
      "kind": "permit_valuation",
@@ -39596,26 +39048,6 @@
       "src-datasf-permits-1470-owens-all"
      ],
      "date": "2018-06-01"
-    },
-    {
-     "amount_usd": 16000,
-     "what": "Revised cost of OTC alterations permit #202001232577 to add wind screens at the 4th-floor elevators",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-24",
-      "src-datasf-permits-1470-owens-all"
-     ],
-     "date": "2020-02-25"
-    },
-    {
-     "amount_usd": 5000,
-     "what": "Revised cost of the permit to install a ground non-electric double-faced sign",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-26",
-      "src-datasf-permits-1470-owens-all"
-     ],
-     "date": "2019-10-17"
     }
    ],
    "milestones": [
@@ -39699,651 +39131,6 @@
      "relation": "tracked"
     },
     {
-     "date": "2018-10-22",
-     "date_label": "Oct 22, 2018",
-     "status": null,
-     "status_label": null,
-     "text": "OTC alterations permit #201810173418 issued for demolition of the existing surface and grading in preparation of the new parking lot, associated with permit 201806010826",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-8",
-       "title": "DBI permit-tracking page for permit 201810173418 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201810173418",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2018-10-30",
-     "date_label": "Oct 30, 2018",
-     "status": null,
-     "status_label": null,
-     "text": "DBI OTC alterations permit #201810254096 issued for design-build construction of an auger cast pile load test and indicator pile program on the then-vacant lot (proposed use: public parking garage)",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-12",
-       "title": "DBI permit-tracking page for permit 201810254096 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201810254096",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2018-11-06",
-     "date_label": "Nov 6, 2018",
-     "status": null,
-     "status_label": null,
-     "text": "DBI permit #201811024884 issued for 6\" fire water service and underground sprinklers per NFPA 24, tied to the garage permit 201806010826 addendum 3",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-4",
-       "title": "DBI permit-tracking page for permit 201811024884 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201811024884",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2018-12-04",
-     "date_label": "Dec 4, 2018",
-     "status": null,
-     "status_label": null,
-     "text": "Deferred plumbing permit #201811065169 for the new building issued (filed 2018-11-06)",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-21",
-       "title": "DBI permit-tracking page for permit 201811065169 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201811065169",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2019-02-11",
-     "date_label": "Feb 11, 2019",
-     "status": null,
-     "status_label": null,
-     "text": "DBI OTC alterations permit #201901241151 issued — a revision to permit #201806010826-S1 covering pile cap revisions, grade beam reinforcement clarifications and supplemental reinforcement for the parking garage",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-19",
-       "title": "DBI permit-tracking page for permit 201901241151 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201901241151",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2019-02-11",
-     "date_label": "Feb 11, 2019",
-     "status": null,
-     "status_label": null,
-     "text": "DBI over-the-counter alterations permit #201902062205 issued for production auger cast piles at the site (existing use: vacant lot; proposed use: public parking garage)",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-20",
-       "title": "DBI permit-tracking page for permit 201902062205 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201902062205",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2019-05-30",
-     "date_label": "May 30, 2019",
-     "status": null,
-     "status_label": null,
-     "text": "Permit #201904178265 issued for installation of cable barriers at the parking garage.",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits",
-       "title": "DBI permit-tracking page for permit 201904178265 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201904178265",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2019-05-30",
-     "date_label": "May 30, 2019",
-     "status": null,
-     "status_label": null,
-     "text": "SF Dept. of Building Inspection OTC alterations permit #201904198486 issued for installation of curtain walls, a deferred submittal to permit application 201806010826",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-2",
-       "title": "DBI permit-tracking page for permit 201904198486 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201904198486",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2019-05-30",
-     "date_label": "May 30, 2019",
-     "status": null,
-     "status_label": null,
-     "text": "OTC alterations permit #201904107626 issued, revising permit #201806010826 to include a fire pump room, configuration and security screen changes, and landscaping",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-14",
-       "title": "DBI permit-tracking page for permit 201904107626 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201904107626",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2019-07-16",
-     "date_label": "Jul 16, 2019",
-     "status": null,
-     "status_label": null,
-     "text": "DBI over-the-counter alterations permit #201907025019 issued, a deferred submittal to the garage erection permit (#201806010826) covering the \"metal stud wall system\" cold-formed steel framing; permit signed off complete 2020-03-12.",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-6",
-       "title": "DBI permit-tracking page for permit 201907025019 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201907025019",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2019-07-16",
-     "date_label": "Jul 16, 2019",
-     "status": null,
-     "status_label": null,
-     "text": "DBI over-the-counter alterations permit #201907025020 issued -- a deferred submittal to permit #201806010826 for \"miscellaneous metal rails\"",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-10",
-       "title": "DBI permit-tracking page for permit 201907025020 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201907025020",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2019-07-16",
-     "date_label": "Jul 16, 2019",
-     "status": null,
-     "status_label": null,
-     "text": "Deferred-submittal permit for the aluminum fin facade (201907025015, tied to permit 201806010826) issued",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-11",
-       "title": "DBI permit-tracking page for permit 201907025015 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201907025015",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2019-08-14",
-     "date_label": "Aug 14, 2019",
-     "status": null,
-     "status_label": null,
-     "text": "Over-the-counter alterations permit #201908078130 issued as a deferred submittal to PA 2018-0601-0826 (item #15, aluminum composite panels) for the parking garage",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-25",
-       "title": "DBI permit-tracking page for permit 201908078130 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201908078130",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2019-11-01",
-     "date_label": "Nov 1, 2019",
-     "status": null,
-     "status_label": null,
-     "text": "OTC alterations permit #201910316042 issued, revising the garage permit to add security cameras, emergency blue phones (levels 2-4, adjacent to the elevators), card readers at a number of doors, and smoke detectors.",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-22",
-       "title": "DBI permit-tracking page for permit 201910316042 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201910316042",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2019-12-26",
-     "date_label": "Dec 26, 2019",
-     "status": null,
-     "status_label": null,
-     "text": "OTC alterations permit #201912260673 filed and issued as an administrative permit to demonstrate passing test coverage and that no ERRCS is required for the parking structure, related to site permit app #201806010826",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-17",
-       "title": "DBI permit-tracking page for permit 201912260673 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201912260673",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
      "date": "2020",
      "date_label": "~2020",
      "status": "complete",
@@ -40371,866 +39158,6 @@
      "origin": "record",
      "category": "status",
      "category_label": "Status",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2020-02-14",
-     "date_label": "Feb 14, 2020",
-     "status": null,
-     "status_label": null,
-     "text": "OTC alterations permit #201905241647, for installation of metal stairs associated with the garage permit app #201806010826, recorded complete (filed 2019-05-24, issued 2019-06-17)",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-5",
-       "title": "DBI permit-tracking page for permit 201905241647 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201905241647",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2020-02-14",
-     "date_label": "Feb 14, 2020",
-     "status": null,
-     "status_label": null,
-     "text": "OTC alterations permit #201908078129 -- deferred submittal to permit application 2018-0601-0826 for the security screen system -- reached 'complete' status (issued 2019-08-14).",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-13",
-       "title": "DBI permit-tracking page for permit 201908078129 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201908078129",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2020-02-14",
-     "date_label": "Feb 14, 2020",
-     "status": null,
-     "status_label": null,
-     "text": "Over-the-counter alterations permit #201908219414 for parking signage (associated with garage permit #201806010826) completed; filed 2019-08-21 and issued 2019-12-20.",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-16",
-       "title": "DBI permit-tracking page for permit 201908219414 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201908219414",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2020-02-18",
-     "date_label": "Feb 18, 2020",
-     "status": null,
-     "status_label": null,
-     "text": "Curtain wall installation permit (#201904198486) marked complete by the Dept. of Building Inspection",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-2",
-       "title": "DBI permit-tracking page for permit 201904198486 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201904198486",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2020-02-25",
-     "date_label": "Feb 25, 2020",
-     "status": null,
-     "status_label": null,
-     "text": "OTC alterations permit #202001232577 issued -- revision to permit 2018-0601-0826 to add wind screens at the 4th-floor elevators",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-24",
-       "title": "DBI permit-tracking page for permit 202001232577 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202001232577",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2020-03-12",
-     "date_label": "Mar 12, 2020",
-     "status": null,
-     "status_label": null,
-     "text": "Deferred-submittal metal rails permit #201907025020 recorded as complete by DBI",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-10",
-       "title": "DBI permit-tracking page for permit 201907025020 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201907025020",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2020-03-12",
-     "date_label": "Mar 12, 2020",
-     "status": null,
-     "status_label": null,
-     "text": "OTC alterations permit #201907025015, a deferred submittal to the garage permit #201806010826 for the aluminum fin facade, reached 'complete' status",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-11",
-       "title": "DBI permit-tracking page for permit 201907025015 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201907025015",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2020-03-12",
-     "date_label": "Mar 12, 2020",
-     "status": null,
-     "status_label": null,
-     "text": "DBI permit #201902062205 (auger cast piles) reached status 'complete'",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-20",
-       "title": "DBI permit-tracking page for permit 201902062205 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201902062205",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2020-03-12",
-     "date_label": "Mar 12, 2020",
-     "status": null,
-     "status_label": null,
-     "text": "Permit #202001232577 (wind screens at 4th-floor elevators) recorded as complete",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-24",
-       "title": "DBI permit-tracking page for permit 202001232577 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202001232577",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2020-06-09",
-     "date_label": "Jun 9, 2020",
-     "status": null,
-     "status_label": null,
-     "text": "OTC alterations permit #201904178265 for installation of cable barriers (deferred submittal referencing permit 201806010826) reached complete status.",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits",
-       "title": "DBI permit-tracking page for permit 201904178265 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201904178265",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2020-06-09",
-     "date_label": "Jun 9, 2020",
-     "status": null,
-     "status_label": null,
-     "text": "DBI permit #201810254096 (auger cast pile load test and indicator pile program) recorded as complete",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-12",
-       "title": "DBI permit-tracking page for permit 201810254096 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201810254096",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2020-06-09",
-     "date_label": "Jun 9, 2020",
-     "status": null,
-     "status_label": null,
-     "text": "Revision permit #201904107626 (fire pump room, security screens, landscape) recorded as complete",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-14",
-       "title": "DBI permit-tracking page for permit 201904107626 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201904107626",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2020-06-09",
-     "date_label": "Jun 9, 2020",
-     "status": null,
-     "status_label": null,
-     "text": "Revision permit #201901241151 (structural clarifications to the 1470 Owens parking garage) reached 'complete' status",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-19",
-       "title": "DBI permit-tracking page for permit 201901241151 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201901241151",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2020-06-09",
-     "date_label": "Jun 9, 2020",
-     "status": null,
-     "status_label": null,
-     "text": "Revision permit #201910316042 to the garage permit (#201806010826), covering security camera, emergency blue phone, card reader and smoke detector additions (DBI's description places the blue phones on levels 2-4, adjacent to the elevators, and the card readers at a number of doors), reached 'complete' status.",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-22",
-       "title": "DBI permit-tracking page for permit 201910316042 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201910316042",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2020-06-16",
-     "date_label": "Jun 16, 2020",
-     "status": null,
-     "status_label": null,
-     "text": "OTC alterations permit #201904238730 -- a revision relocating the back flow preventer and revising the fire department connection -- signed off as complete",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-15",
-       "title": "DBI permit-tracking page for permit 201904238730 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201904238730",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2020-06-16",
-     "date_label": "Jun 16, 2020",
-     "status": null,
-     "status_label": null,
-     "text": "OTC alteration permit #202002215136 -- a revision to permit app. #201806010826 adding an ejector pump to move waste water out to the manhole -- was filed 2020-02-21, issued 2020-03-16 and completed.",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-18",
-       "title": "DBI permit-tracking page for permit 202002215136 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202002215136",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2020-06-17",
-     "date_label": "Jun 17, 2020",
-     "status": null,
-     "status_label": null,
-     "text": "DBI over-the-counter alterations permit #201811024884 (6\" fire water service and underground sprinklers for the parking garage) reached 'complete' status",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-4",
-       "title": "DBI permit-tracking page for permit 201811024884 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201811024884",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2020-06-17",
-     "date_label": "Jun 17, 2020",
-     "status": null,
-     "status_label": null,
-     "text": "DBI over-the-counter alterations permit #201910083943 for evacuation signage (referencing plan PA 2018-0601-0826) recorded as complete; filed October 2019 and issued November 1, 2019.",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-9",
-       "title": "DBI permit-tracking page for permit 201910083943 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201910083943",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2020-08-25",
-     "date_label": "Aug 25, 2020",
-     "status": null,
-     "status_label": null,
-     "text": "OTC alterations permit #201909252653 -- deferred submittal to PA 2018-0601-0826 for a green screen -- filed 2019-09-25, issued 2019-09-26 and recorded complete 2020-08-25.",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-7",
-       "title": "DBI permit-tracking page for permit 201909252653 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201909252653",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8709019",
-      "slug": "1470-owens-street",
-      "name": "1470 Owens Street",
-      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
-      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2020-10-06",
-     "date_label": "Oct 6, 2020",
-     "status": null,
-     "status_label": null,
-     "text": "DBI permit #201811065169, a deferred plumbing permit for the new building (related to PA #2018-0601-0826, stormwater plan review), reached 'complete' status",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-21",
-       "title": "DBI permit-tracking page for permit 201811065169 -- 1470 Owens St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201811065169",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-1470-owens-all",
-       "title": "Building Permits: the permits cited on this record (1470 Owens St), with description, filed, issued, completed and cost fields",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?$where=permit_number%20in('201904178265','201904198486','202205023408','201811024884','201905241647','201907025019','201909252653','201810173418','201910083943','201907025020','201907025015','201810254096','201908078129','201904107626','201904238730','201908219414','201912260673','202002215136','201901241151','201902062205','201811065169','201910316042','201806010826','202001232577','201908078130','201909181910')&$limit=200",
-       "accessed": "2026-10-12"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
      "record": {
       "id": "8709019",
       "slug": "1470-owens-street",
@@ -41291,6 +39218,36 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-24",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "23 routine building permits (alterations, revisions, deferred submittals, fire or utility work and similar) now appear under Building permits in this record's research notes instead of on its timeline. 10 permit cost figures now show as the valuation of the matching permit entries under Building permits, not under Costs. Earlier change-log entries about these permits stay in the log until it is archived at launch.",
+     "source": "Pier & Point editorial decision",
+     "sources": [
+      {
+       "title": "Pier & Point editorial decision"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "8709019",
+      "slug": "1470-owens-street",
+      "name": "1470 Owens Street",
+      "permalink": "https://pierandpoint.org/parcels/1470-owens-street/",
+      "api": "https://pierandpoint.org/api/v1/records/1470-owens-street.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
     {
      "date": "2026-10-13",
      "kind": "correction",
@@ -43776,16 +41733,6 @@
    "facts": [],
    "costs": [
     {
-     "amount_usd": 45750,
-     "what": "Revised cost on DBI permit #201608124922 to install a new 6-inch fire service off the 12-inch main on Berry St for the 360 Berry St apartment building",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-3",
-      "src-datasf-permits-360berry-all"
-     ],
-     "date": "2016-08-16"
-    },
-    {
      "amount_usd": 34925500,
      "what": "Revised construction cost on DBI permit #201312265046 to erect the 5-story, 129-unit residential building at 360 Berry St",
      "kind": "permit_valuation",
@@ -43794,16 +41741,6 @@
       "src-datasf-permits-360berry-all"
      ],
      "date": "2013-12-26"
-    },
-    {
-     "amount_usd": 150000,
-     "what": "Revision permit #201507151572 for steel and foundation details for the entry trellis at 360 Berry St (revised cost)",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-5",
-      "src-datasf-permits-360berry-all"
-     ],
-     "date": "2015-10-28"
     }
    ],
    "milestones": [
@@ -43932,94 +41869,6 @@
      "relation": "tracked"
     },
     {
-     "date": "2016-08-16",
-     "date_label": "Aug 16, 2016",
-     "status": null,
-     "status_label": null,
-     "text": "DBI permit #201608124922 issued for installation of a new 6-inch fire service off the 12-inch main on Berry St (filed 2016-08-12), for the 129-unit apartment project at 360 Berry St",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-3",
-       "title": "DBI permit-tracking page for permit 201608124922 -- 360 Berry St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201608124922",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-360berry-all",
-       "title": "Building Permits: all permits on block 8704 lot 004 (360 Berry St), with description, filed, issued, completed and cost fields (dataset rows as of 2025-08-07, per the rows' data_as_of field)",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?block=8704&lot=004",
-       "accessed": "2026-10-12",
-       "date": "2025-08-07"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection, 2025-08-07",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8704004",
-      "slug": "mission-bay-by-windsor",
-      "name": "Mission Bay by Windsor",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-by-windsor/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-by-windsor.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2016-11-14",
-     "date_label": "Nov 14, 2016",
-     "status": null,
-     "status_label": null,
-     "text": "DBI permit #201507151572 (revision to addendum #1 of #201312265046 for steel and foundation details for the entry trellis at 360 Berry St) completed",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-5",
-       "title": "DBI permit-tracking page for permit 201507151572 -- 360 Berry St (plans and addenda summary only)",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201507151572",
-       "accessed": "2026-09-24"
-      },
-      {
-       "id": "src-datasf-permits-360berry-all",
-       "title": "Building Permits: all permits on block 8704 lot 004 (360 Berry St), with description, filed, issued, completed and cost fields (dataset rows as of 2025-08-07, per the rows' data_as_of field)",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?block=8704&lot=004",
-       "accessed": "2026-10-12",
-       "date": "2025-08-07"
-      }
-     ],
-     "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection, 2025-08-07",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "8704004",
-      "slug": "mission-bay-by-windsor",
-      "name": "Mission Bay by Windsor",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-by-windsor/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-by-windsor.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
      "date": "2017",
      "date_label": "~2017",
      "status": "complete",
@@ -44108,6 +41957,36 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-24",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Two routine building permits (alterations, revisions, deferred submittals, fire or utility work and similar) now appear under Building permits in this record's research notes instead of on its timeline. Two permit cost figures now show as the valuation of the matching permit entries under Building permits, not under Costs. Earlier change-log entries about these permits stay in the log until it is archived at launch.",
+     "source": "Pier & Point editorial decision",
+     "sources": [
+      {
+       "title": "Pier & Point editorial decision"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "8704004",
+      "slug": "mission-bay-by-windsor",
+      "name": "Mission Bay by Windsor",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-by-windsor/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-by-windsor.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
     {
      "date": "2026-10-13",
      "kind": "correction",
@@ -102186,26 +100065,7 @@
      ]
     }
    ],
-   "costs": [
-    {
-     "amount_usd": 5000,
-     "what": "Revised cost on DBI demolition permit 202007200487 to demolish the 1-story building identified as the Station A gate house (estimated cost $2,750)",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits"
-     ],
-     "date": "2021-05-10"
-    },
-    {
-     "amount_usd": 80000,
-     "what": "Revised cost on OTC alterations permit 202406053802 for emergency stabilization repair to Station A's historical western facade (estimated cost at filing was $12,000)",
-     "kind": "permit_valuation",
-     "sources": [
-      "src-watch-dbi-building-permits-2"
-     ],
-     "date": "2024"
-    }
-   ],
+   "costs": [],
    "milestones": [
     {
      "date": "1901",
@@ -102444,42 +100304,6 @@
      "relation": "tracked"
     },
     {
-     "date": "2021-05-10",
-     "date_label": "May 10, 2021",
-     "status": null,
-     "status_label": null,
-     "text": "DBI demolition permit 202007200487 (filed July 20, 2020; approved December 4, 2020; issued December 18, 2020) to demolish a 1-story unoccupied building identified on the drawings as the Station A gate house -- one of 5 buildings to be demolished on the lot -- reaches 'complete' status",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits",
-       "title": "Permit 202007200487 (complete) -- 420 23rd St",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202007200487",
-       "accessed": "2026-09-24"
-      }
-     ],
-     "source": "DBI (Building Permits)",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "potrero_block_15",
-      "slug": "potrero-power-station-block-15-station-a",
-      "name": "Potrero Power Station Block 15 / Station A",
-      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-15-station-a/",
-      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-15-station-a.json"
-     },
-     "site": {
-      "slug": "potrero",
-      "name": "Potrero Power Station",
-      "short": "Potrero Station",
-      "url": "https://pierandpoint.org/sites/potrero/"
-     },
-     "relation": "tracked"
-    },
-    {
      "date": "2022-03-02",
      "date_label": "Mar 2, 2022",
      "status": null,
@@ -102536,42 +100360,6 @@
       }
      ],
      "source": "SF Planning Commission, 2022-07-28",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "potrero_block_15",
-      "slug": "potrero-power-station-block-15-station-a",
-      "name": "Potrero Power Station Block 15 / Station A",
-      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-15-station-a/",
-      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-15-station-a.json"
-     },
-     "site": {
-      "slug": "potrero",
-      "name": "Potrero Power Station",
-      "short": "Potrero Station",
-      "url": "https://pierandpoint.org/sites/potrero/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2024-11-20",
-     "date_label": "Nov 20, 2024",
-     "status": null,
-     "status_label": null,
-     "text": "OTC alterations permit 202406053802 for emergency stabilization repair of Station A's historical western facade (filed June 5, 2024; issued June 10, 2024) reaches 'complete' status; the repair is described as temporary and required to abate imminent life-safety concerns on the unoccupied building",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-watch-dbi-building-permits-2",
-       "title": "Permit 202406053802 (complete) -- 1201 Illinois St",
-       "publisher": "DBI (Building Permits)",
-       "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202406053802",
-       "accessed": "2026-09-24"
-      }
-     ],
-     "source": "DBI (Building Permits)",
      "origin": "record",
      "category": "milestone",
      "category_label": "Milestone",
@@ -102841,6 +100629,36 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-24",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Two routine building permits (alterations, revisions, deferred submittals, fire or utility work and similar) now appear under Building permits in this record's research notes instead of on its timeline. Two permit cost figures now show as the valuation of the matching permit entries under Building permits, not under Costs. Earlier change-log entries about these permits stay in the log until it is archived at launch.",
+     "source": "Pier & Point editorial decision",
+     "sources": [
+      {
+       "title": "Pier & Point editorial decision"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "potrero_block_15",
+      "slug": "potrero-power-station-block-15-station-a",
+      "name": "Potrero Power Station Block 15 / Station A",
+      "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-15-station-a/",
+      "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-15-station-a.json"
+     },
+     "site": {
+      "slug": "potrero",
+      "name": "Potrero Power Station",
+      "short": "Potrero Station",
+      "url": "https://pierandpoint.org/sites/potrero/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
     {
      "date": "2026-10-18",
      "kind": "correction",
@@ -122080,47 +119898,11 @@
      "relation": "tracked"
     },
     {
-     "date": "2012-05-17",
-     "date_label": "May 17, 2012",
-     "status": null,
-     "status_label": null,
-     "text": "Permit 201205170704 filed to correct the record to 329 units for the work approved under 200509274032",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-dbi-435cb-units",
-       "title": "Building permit 201205170704, unit count correction, 435 China Basin St",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201205170704",
-       "accessed": "2026-10-10"
-      }
-     ],
-     "source": "DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "mission_bay_madrone",
-      "slug": "madrone",
-      "name": "Madrone",
-      "permalink": "https://pierandpoint.org/parcels/madrone/",
-      "api": "https://pierandpoint.org/api/v1/records/madrone.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
      "date": "2014-10",
      "date_label": "Oct 2014",
      "status": "complete",
      "status_label": "Complete",
-     "text": "Department of Building Inspection final-inspection permit 201305167126 (filed 2013-05-16) recorded complete on 2014-10-27; new-construction permit 200509274032 recorded complete on 2014-11-12",
+     "text": "Department of Building Inspection final-inspection permit 201305167126 (filed 2013-05-16) recorded complete on 2014-10-27; new-construction permit 200509274032 recorded complete on 2014-11-12. The final-inspection date is used here as evidence of completion; it is not an occupancy or opening date",
      "expected": false,
      "approximate": false,
      "sources": [
@@ -122160,6 +119942,36 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-24",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "One routine building permit (alterations, revisions, deferred submittals, fire or utility work and similar) now appears under Building permits in this record's research notes instead of on its timeline. The timeline entry for the final inspection (October 2014) now says that this date is used as evidence of completion, not as an occupancy or opening date.",
+     "source": "Pier & Point editorial decision",
+     "sources": [
+      {
+       "title": "Pier & Point editorial decision"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_madrone",
+      "slug": "madrone",
+      "name": "Madrone",
+      "permalink": "https://pierandpoint.org/parcels/madrone/",
+      "api": "https://pierandpoint.org/api/v1/records/madrone.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
     {
      "date": "2026-10-13",
      "kind": "correction",
@@ -142672,42 +140484,6 @@
    "costs": [],
    "milestones": [
     {
-     "date": "2007-05-03",
-     "date_label": "May 3, 2007",
-     "status": null,
-     "status_label": null,
-     "text": "SF Dept. of Building Inspection permit #200705030366 filed (the application date) for a temporary tower crane \"for construction of 6 story building\" at this address; DBI approved it on 2007-09-11 and issued it on 2007-09-20. A crane permit is not a construction start, and no source read dates the start of construction",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-datasf-permit-500terry",
-       "title": "Building Permits: permit #200705030366 (500 Terry A. Francois, block 8721 lot 001 at filing), filed 2007-05-03, \"temporary tower crane for construction of 6 story building\", completed 2008-04-24",
-       "publisher": "DataSF / SF Department of Building Inspection",
-       "url": "https://data.sf.gov/resource/i98e-djp9.json?permit_number=200705030366",
-       "accessed": "2026-09-21"
-      }
-     ],
-     "source": "DataSF / SF Department of Building Inspection",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "mission_bay_500_terry_francois",
-      "slug": "500-terry-a-francois-boulevard",
-      "name": "500 Terry A. Francois Boulevard",
-      "permalink": "https://pierandpoint.org/parcels/500-terry-a-francois-boulevard/",
-      "api": "https://pierandpoint.org/api/v1/records/500-terry-a-francois-boulevard.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
      "date": "2008",
      "date_label": "~2008",
      "status": "complete",
@@ -142752,6 +140528,36 @@
     }
    ],
    "changes": [
+    {
+     "date": "2026-10-24",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "One routine building permit (alterations, revisions, deferred submittals, fire or utility work and similar) now appears under Building permits in this record's research notes instead of on its timeline.",
+     "source": "Pier & Point editorial decision",
+     "sources": [
+      {
+       "title": "Pier & Point editorial decision"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_500_terry_francois",
+      "slug": "500-terry-a-francois-boulevard",
+      "name": "500 Terry A. Francois Boulevard",
+      "permalink": "https://pierandpoint.org/parcels/500-terry-a-francois-boulevard/",
+      "api": "https://pierandpoint.org/api/v1/records/500-terry-a-francois-boulevard.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
     {
      "date": "2026-10-13",
      "kind": "correction",

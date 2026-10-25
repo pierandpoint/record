@@ -68,14 +68,6 @@
       ],
       "status": "complete",
       "expected": false
-    },
-    {
-      "date": "2022-03-22",
-      "text": "Over-the-counter alterations permit issued to remove and replace water-damaged finishes in modular residential units, corridors and stairwells on levels 1-4, to comply with a notice of violation",
-      "sources": [
-        "src-watch-dbi-building-permits-4"
-      ],
-      "expected": false
     }
   ],
   "costs": [
@@ -102,15 +94,6 @@
       "scope": "record"
     },
     {
-      "amount_usd": 37800,
-      "what": "Permitted cost of additional rooftop PV installation (42 Boviet 450W panels, 18.9 kW) at 410 China Basin St",
-      "kind": "permit_valuation",
-      "sources": [
-        "src-watch-dbi-building-permits-2"
-      ],
-      "date": "2023-04-19"
-    },
-    {
       "amount_usd": 42000000,
       "what": "Permit 201901281440 estimated and revised construction cost for the 141-unit, 4-story building",
       "kind": "permit_valuation",
@@ -118,24 +101,6 @@
         "src-watch-dbi-building-permits-3"
       ],
       "date": "2019"
-    },
-    {
-      "amount_usd": 3500000,
-      "what": "Alterations permit (202203180314) to remove and replace water-damaged finishes in modular units, corridors and stairwells on levels 1-4 -- revised cost",
-      "kind": "permit_valuation",
-      "sources": [
-        "src-watch-dbi-building-permits-4"
-      ],
-      "date": "2022-03-22"
-    },
-    {
-      "amount_usd": 286000,
-      "what": "Revised cost on OTC alterations permit 202008312996 for a solar hot water heating system at the apartment building",
-      "kind": "permit_valuation",
-      "sources": [
-        "src-watch-dbi-building-permits-5"
-      ],
-      "date": "2020-11-02"
     }
   ],
   "facts": [
@@ -431,8 +396,20 @@
     }
   ],
   "details": [
-    {"text": "Financing, full list: 4% low-income housing tax credits/tax-exempt bond financing, competitive state tax credits, Federal Home Loan Bank of San Francisco Affordable Housing Program, an OCII loan, California Tax Credit Allocation Committee, California Debt Limit Allocation Committee, National Equity Fund Inc., Wells Fargo, SF Dept. of Homelessness and Supportive Housing, and MOHCD's Local Operating Subsidy Program.", "sources": ["src-bridge-page", "src-potreroview-2021"]},
-    {"text": "Property manager, source wording: BRIDGE's property page lists 'Community Housing Partnership' in its partner list and says 'HomeRise is the property manager and service provider'.", "sources": ["src-bridge-page", "src-homerise-page"]}
+    {
+      "text": "Financing, full list: 4% low-income housing tax credits/tax-exempt bond financing, competitive state tax credits, Federal Home Loan Bank of San Francisco Affordable Housing Program, an OCII loan, California Tax Credit Allocation Committee, California Debt Limit Allocation Committee, National Equity Fund Inc., Wells Fargo, SF Dept. of Homelessness and Supportive Housing, and MOHCD's Local Operating Subsidy Program.",
+      "sources": [
+        "src-bridge-page",
+        "src-potreroview-2021"
+      ]
+    },
+    {
+      "text": "Property manager, source wording: BRIDGE's property page lists 'Community Housing Partnership' in its partner list and says 'HomeRise is the property manager and service provider'.",
+      "sources": [
+        "src-bridge-page",
+        "src-homerise-page"
+      ]
+    }
   ],
   "open_questions": [
     "Exact opening/occupancy month is not confirmed; no source read gives one. In January 2021 Potrero View said the building 'is expected to welcome inhabitants as early as January 2022' (an expected date); HomeRise's own site gives only 'Opened: 2022'; the landscape architect's page reads 'STATUS: Completed, 2023'; DBI records permit 201901281440 complete on 2023-04-24 (a permit closeout, not an opening date); and this record's map notes give 'late 2022' per sfchronicle.com, which could not be read. The milestone is recorded as the bare year 2022, approximate.",
@@ -455,7 +432,8 @@
       "issued_date": "2023-04-19",
       "sources": [
         "src-watch-dbi-building-permits-2"
-      ]
+      ],
+      "valuation": 37800
     },
     {
       "permit_number": "202008192108",
@@ -467,6 +445,29 @@
       "valuation": 66600.0,
       "sources": [
         "src-watch-dbi-building-permits-6"
+      ]
+    },
+    {
+      "permit_number": "202203180314",
+      "permit_type": "otc alterations permit",
+      "description": "Over-the-counter alterations permit issued to remove and replace water-damaged finishes in modular residential units, corridors and stairwells on levels 1-4, to comply with a notice of violation",
+      "filed_date": "2022-03-18",
+      "issued_date": "2022-03-22",
+      "sources": [
+        "src-watch-dbi-building-permits-4"
+      ],
+      "valuation": 3500000
+    },
+    {
+      "permit_number": "202008312996",
+      "permit_type": "otc alterations permit",
+      "description": "Revised cost on OTC alterations permit 202008312996 for a solar hot water heating system at the apartment building",
+      "filed_date": "2020-08-31",
+      "issued_date": "2020-11-02",
+      "completed_date": "2023-01-24",
+      "valuation": 286000,
+      "sources": [
+        "src-watch-dbi-building-permits-5"
       ]
     }
   ]

@@ -279,7 +279,8 @@ source).
     payments), `fee_or_subsidy` (impact fees, jobs-housing fees,
     affordable-housing subsidies), `permit_valuation` (docs/briefs/
     watch-rules.md: a DBI building permit's own self-reported valuation,
-    kept as a cost only when the permit itself is kept as a milestone --
+    kept as a cost only when the permit itself is kept as a milestone,
+    which since 2026-10-24 means a status-eligible permit only --
     excluded from every aggregation exactly like `financing`, since a
     permit's valuation is stated for the permit fee, not vetted as a real
     development-cost figure), or `other` (requires a one-sentence
@@ -428,19 +429,24 @@ source).
 - Keys in `facts` are free text but stay lowercase snake_case so they can be
   compared across records (`developer`, `architect`, `units`, `gross_sqft`,
   `height_ft`, `affordable_units`, `ground_lease_term`, ...).
-- `permits` is an optional top-level array (docs/briefs/watch-rules.md):
-  a minor building permit that documents real activity on the record but
-  isn't itself a milestone -- an OTC alteration, a tenant-improvement
-  revision, a deferred submittal, a grading/shoring permit, an MEP or
-  fire-system permit, signage, or any other permit outside the record's own
-  construction window (the span from its first under_construction/
-  site-permit/new-construction-permit date to its first complete date; see
-  the brief for the exact rule). A permit that's either status-eligible
-  (new construction, a primary-structure demolition, a site permit, a
-  first TCO/CFC, or an agency stage change -- these can carry a milestone
-  `status` at any time) or that falls inside the window (real construction
-  progress, even from a minor permit -- stays a milestone, just never with
-  a `status` tag) belongs in `milestones` instead, not here.
+- `permits` is an optional top-level array (docs/briefs/watch-rules.md,
+  docs/briefs/permits-out-of-milestones.md): every DBI building permit that
+  documents real activity on the record but isn't itself an event in the
+  life of the project -- an OTC alteration, a tenant-improvement revision,
+  a deferred submittal, a grading/shoring permit, a pile or load test, an
+  MEP or fire-system permit, signage -- **whenever it was issued, including
+  inside the record's construction period**. Only a status-eligible permit
+  stays a milestone: new construction, a primary-structure demolition, a
+  site permit, a first TCO/CFC, or an agency stage change (these can carry a
+  milestone `status` at any time), together with the rest of that same
+  permit's own lifecycle (issued, first construction document, complete).
+  A permit milestone never carries a `status` unless it is one of those.
+  (Until 2026-10-24 a permit issued inside the construction window, from
+  the first under_construction/site-permit/new-construction-permit date to
+  the first complete date, stayed a status-less "progress" milestone; the
+  owner retired that rule. See the 2026-10-24 note in watch-rules.md.)
+  `src/validate_records.py` fails a milestone sourced to a DBI permit whose
+  permit has no status-eligible entry.
 
   ```json
   {"permit_number": "201908078130", "permit_type": "otc alterations permit",
@@ -450,12 +456,11 @@ source).
   ```
 
   `permit_number`, `permit_type` and `description` are required.
-  `filed_date`/`issued_date`/`completed_date` are each optional and follow
-  the usual date rule; `valuation` is an optional number (the permit's own
-  stated cost -- writes no entry in `costs`, unlike a status- or
-  progress-milestone permit's valuation, which becomes a `permit_valuation`
-  cost). `sources` is required, same "no source, no claim" rule as
-  everywhere else.
+  `filed_date`/`approved_date`/`issued_date`/`completed_date` are each
+  optional (DataSF's own fields of those names) and follow the usual date rule; `valuation` is an optional number (the permit's own
+  stated cost -- writes no entry in `costs`, unlike a status-eligible
+  permit's valuation, which becomes a `permit_valuation` cost). `sources`
+  is required, same "no source, no claim" rule as everywhere else.
 
   Rendered as a "Building permits" subsection inside a record page's
   Research notes (`sitegen/build.py`, box-pattern's `collapsible_box()`),

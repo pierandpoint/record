@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-10-24",
+ "generated": "2026-10-25",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -51,16 +51,6 @@
   "facts": [],
   "costs": [
    {
-    "amount_usd": 45750,
-    "what": "Revised cost on DBI permit #201608124922 to install a new 6-inch fire service off the 12-inch main on Berry St for the 360 Berry St apartment building",
-    "kind": "permit_valuation",
-    "sources": [
-     "src-watch-dbi-building-permits-3",
-     "src-datasf-permits-360berry-all"
-    ],
-    "date": "2016-08-16"
-   },
-   {
     "amount_usd": 34925500,
     "what": "Revised construction cost on DBI permit #201312265046 to erect the 5-story, 129-unit residential building at 360 Berry St",
     "kind": "permit_valuation",
@@ -69,16 +59,6 @@
      "src-datasf-permits-360berry-all"
     ],
     "date": "2013-12-26"
-   },
-   {
-    "amount_usd": 150000,
-    "what": "Revision permit #201507151572 for steel and foundation details for the entry trellis at 360 Berry St (revised cost)",
-    "kind": "permit_valuation",
-    "sources": [
-     "src-watch-dbi-building-permits-5",
-     "src-datasf-permits-360berry-all"
-    ],
-    "date": "2015-10-28"
    }
   ],
   "milestones": [
@@ -207,94 +187,6 @@
     "relation": "tracked"
    },
    {
-    "date": "2016-08-16",
-    "date_label": "Aug 16, 2016",
-    "status": null,
-    "status_label": null,
-    "text": "DBI permit #201608124922 issued for installation of a new 6-inch fire service off the 12-inch main on Berry St (filed 2016-08-12), for the 129-unit apartment project at 360 Berry St",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-watch-dbi-building-permits-3",
-      "title": "DBI permit-tracking page for permit 201608124922 -- 360 Berry St (plans and addenda summary only)",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201608124922",
-      "accessed": "2026-09-24"
-     },
-     {
-      "id": "src-datasf-permits-360berry-all",
-      "title": "Building Permits: all permits on block 8704 lot 004 (360 Berry St), with description, filed, issued, completed and cost fields (dataset rows as of 2025-08-07, per the rows' data_as_of field)",
-      "publisher": "DataSF / SF Department of Building Inspection",
-      "url": "https://data.sf.gov/resource/i98e-djp9.json?block=8704&lot=004",
-      "accessed": "2026-10-12",
-      "date": "2025-08-07"
-     }
-    ],
-    "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection, 2025-08-07",
-    "origin": "record",
-    "category": "milestone",
-    "category_label": "Milestone",
-    "record": {
-     "id": "8704004",
-     "slug": "mission-bay-by-windsor",
-     "name": "Mission Bay by Windsor",
-     "permalink": "https://pierandpoint.org/parcels/mission-bay-by-windsor/",
-     "api": "https://pierandpoint.org/api/v1/records/mission-bay-by-windsor.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2016-11-14",
-    "date_label": "Nov 14, 2016",
-    "status": null,
-    "status_label": null,
-    "text": "DBI permit #201507151572 (revision to addendum #1 of #201312265046 for steel and foundation details for the entry trellis at 360 Berry St) completed",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-watch-dbi-building-permits-5",
-      "title": "DBI permit-tracking page for permit 201507151572 -- 360 Berry St (plans and addenda summary only)",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=201507151572",
-      "accessed": "2026-09-24"
-     },
-     {
-      "id": "src-datasf-permits-360berry-all",
-      "title": "Building Permits: all permits on block 8704 lot 004 (360 Berry St), with description, filed, issued, completed and cost fields (dataset rows as of 2025-08-07, per the rows' data_as_of field)",
-      "publisher": "DataSF / SF Department of Building Inspection",
-      "url": "https://data.sf.gov/resource/i98e-djp9.json?block=8704&lot=004",
-      "accessed": "2026-10-12",
-      "date": "2025-08-07"
-     }
-    ],
-    "source": "DBI (Building Permits); DataSF / SF Department of Building Inspection, 2025-08-07",
-    "origin": "record",
-    "category": "milestone",
-    "category_label": "Milestone",
-    "record": {
-     "id": "8704004",
-     "slug": "mission-bay-by-windsor",
-     "name": "Mission Bay by Windsor",
-     "permalink": "https://pierandpoint.org/parcels/mission-bay-by-windsor/",
-     "api": "https://pierandpoint.org/api/v1/records/mission-bay-by-windsor.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    },
-    "relation": "tracked"
-   },
-   {
     "date": "2017",
     "date_label": "~2017",
     "status": "complete",
@@ -383,6 +275,36 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-24",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Two routine building permits (alterations, revisions, deferred submittals, fire or utility work and similar) now appear under Building permits in this record's research notes instead of on its timeline. Two permit cost figures now show as the valuation of the matching permit entries under Building permits, not under Costs. Earlier change-log entries about these permits stay in the log until it is archived at launch.",
+    "source": "Pier & Point editorial decision",
+    "sources": [
+     {
+      "title": "Pier & Point editorial decision"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8704004",
+     "slug": "mission-bay-by-windsor",
+     "name": "Mission Bay by Windsor",
+     "permalink": "https://pierandpoint.org/parcels/mission-bay-by-windsor/",
+     "api": "https://pierandpoint.org/api/v1/records/mission-bay-by-windsor.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-13",
     "kind": "correction",

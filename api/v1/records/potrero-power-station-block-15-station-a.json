@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-10-24",
+ "generated": "2026-10-25",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -176,26 +176,7 @@
     ]
    }
   ],
-  "costs": [
-   {
-    "amount_usd": 5000,
-    "what": "Revised cost on DBI demolition permit 202007200487 to demolish the 1-story building identified as the Station A gate house (estimated cost $2,750)",
-    "kind": "permit_valuation",
-    "sources": [
-     "src-watch-dbi-building-permits"
-    ],
-    "date": "2021-05-10"
-   },
-   {
-    "amount_usd": 80000,
-    "what": "Revised cost on OTC alterations permit 202406053802 for emergency stabilization repair to Station A's historical western facade (estimated cost at filing was $12,000)",
-    "kind": "permit_valuation",
-    "sources": [
-     "src-watch-dbi-building-permits-2"
-    ],
-    "date": "2024"
-   }
-  ],
+  "costs": [],
   "milestones": [
    {
     "date": "1901",
@@ -434,42 +415,6 @@
     "relation": "tracked"
    },
    {
-    "date": "2021-05-10",
-    "date_label": "May 10, 2021",
-    "status": null,
-    "status_label": null,
-    "text": "DBI demolition permit 202007200487 (filed July 20, 2020; approved December 4, 2020; issued December 18, 2020) to demolish a 1-story unoccupied building identified on the drawings as the Station A gate house -- one of 5 buildings to be demolished on the lot -- reaches 'complete' status",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-watch-dbi-building-permits",
-      "title": "Permit 202007200487 (complete) -- 420 23rd St",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202007200487",
-      "accessed": "2026-09-24"
-     }
-    ],
-    "source": "DBI (Building Permits)",
-    "origin": "record",
-    "category": "milestone",
-    "category_label": "Milestone",
-    "record": {
-     "id": "potrero_block_15",
-     "slug": "potrero-power-station-block-15-station-a",
-     "name": "Potrero Power Station Block 15 / Station A",
-     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-15-station-a/",
-     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-15-station-a.json"
-    },
-    "site": {
-     "slug": "potrero",
-     "name": "Potrero Power Station",
-     "short": "Potrero Station",
-     "url": "https://pierandpoint.org/sites/potrero/"
-    },
-    "relation": "tracked"
-   },
-   {
     "date": "2022-03-02",
     "date_label": "Mar 2, 2022",
     "status": null,
@@ -526,42 +471,6 @@
      }
     ],
     "source": "SF Planning Commission, 2022-07-28",
-    "origin": "record",
-    "category": "milestone",
-    "category_label": "Milestone",
-    "record": {
-     "id": "potrero_block_15",
-     "slug": "potrero-power-station-block-15-station-a",
-     "name": "Potrero Power Station Block 15 / Station A",
-     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-15-station-a/",
-     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-15-station-a.json"
-    },
-    "site": {
-     "slug": "potrero",
-     "name": "Potrero Power Station",
-     "short": "Potrero Station",
-     "url": "https://pierandpoint.org/sites/potrero/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2024-11-20",
-    "date_label": "Nov 20, 2024",
-    "status": null,
-    "status_label": null,
-    "text": "OTC alterations permit 202406053802 for emergency stabilization repair of Station A's historical western facade (filed June 5, 2024; issued June 10, 2024) reaches 'complete' status; the repair is described as temporary and required to abate imminent life-safety concerns on the unoccupied building",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "id": "src-watch-dbi-building-permits-2",
-      "title": "Permit 202406053802 (complete) -- 1201 Illinois St",
-      "publisher": "DBI (Building Permits)",
-      "url": "https://dbiweb02.sfgov.org/dbipts/?page=Permit&PermitNumber=202406053802",
-      "accessed": "2026-09-24"
-     }
-    ],
-    "source": "DBI (Building Permits)",
     "origin": "record",
     "category": "milestone",
     "category_label": "Milestone",
@@ -831,6 +740,36 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-24",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Two routine building permits (alterations, revisions, deferred submittals, fire or utility work and similar) now appear under Building permits in this record's research notes instead of on its timeline. Two permit cost figures now show as the valuation of the matching permit entries under Building permits, not under Costs. Earlier change-log entries about these permits stay in the log until it is archived at launch.",
+    "source": "Pier & Point editorial decision",
+    "sources": [
+     {
+      "title": "Pier & Point editorial decision"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "potrero_block_15",
+     "slug": "potrero-power-station-block-15-station-a",
+     "name": "Potrero Power Station Block 15 / Station A",
+     "permalink": "https://pierandpoint.org/parcels/potrero-power-station-block-15-station-a/",
+     "api": "https://pierandpoint.org/api/v1/records/potrero-power-station-block-15-station-a.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-18",
     "kind": "correction",

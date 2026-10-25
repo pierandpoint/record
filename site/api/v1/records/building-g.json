@@ -1,6 +1,6 @@
 {
  "api_version": "0",
- "generated": "2026-10-24",
+ "generated": "2026-10-25",
  "base_url": "https://pierandpoint.org",
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
@@ -224,24 +224,6 @@
     ],
     "kind": "fee_or_subsidy",
     "scope": "record"
-   },
-   {
-    "amount_usd": 210000,
-    "what": "Permit 202308295553: deferred free-standing demountable partitions (DIRTT) on levels 2, 3 and 4 of the office building",
-    "kind": "permit_valuation",
-    "sources": [
-     "src-watch-dbi-building-permits"
-    ],
-    "date": "2024-02-22"
-   },
-   {
-    "amount_usd": 168000,
-    "what": "Filed building permit 202401194265 for Visa phase 3 tenant improvements: deferred free-standing demountable partitions (DIRTT) on level 12",
-    "kind": "permit_valuation",
-    "sources": [
-     "src-watch-dbi-building-permits-2"
-    ],
-    "date": "2024-01-19"
    },
    {
     "amount_usd": 79835080,
@@ -978,6 +960,36 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-24",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "Two permit cost figures now show as the valuation of the matching permit entries under Building permits, not under Costs. Earlier change-log entries about these permits stay in the log until it is archived at launch.",
+    "source": "Pier & Point editorial decision",
+    "sources": [
+     {
+      "title": "Pier & Point editorial decision"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8719A008",
+     "slug": "building-g",
+     "name": "Building G",
+     "permalink": "https://pierandpoint.org/parcels/building-g/",
+     "api": "https://pierandpoint.org/api/v1/records/building-g.json"
+    },
+    "site": {
+     "slug": "mission-rock",
+     "name": "Mission Rock",
+     "short": "Mission Rock",
+     "url": "https://pierandpoint.org/sites/mission-rock/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-13",
     "kind": "correction",
