@@ -950,6 +950,10 @@ sup.cites a { text-decoration: none; }
    so a permit's own declared valuation doesn't read as a vetted cost figure like the Costs box
    above it. */
 .permit-valuation { font-size: 13px; color: var(--paper-faint); }
+/* Every date a permit has, each labelled (docs/briefs/permit-dates.md). Under the description, so it
+   wraps with the text on a phone; each date stays whole and the " · " between them is the break point. */
+.permit-dates { display: block; margin-top: 4px; font: 13px/1.6 var(--mono); color: var(--paper-faint); }
+.permit-date { white-space: nowrap; }
 .questions, .questions li, .prose ul, .prose-page li, .feed .body, .page-head .summary { overflow-wrap: anywhere; }
 .questions { margin: 0 0 12px; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.55; color: var(--paper-soft); }
 .gallery-kind { font: 600 13px var(--mono); color: var(--paper-soft); margin: 4px 0 -4px; }
