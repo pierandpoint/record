@@ -2746,7 +2746,9 @@ function initPagedBox(box, list) {
   items.forEach(function (li, i) {
     li.__order = i;
     li.__name = words(li.getAttribute('data-name'));
-    li.__fields = li.__name.concat(words(li.getAttribute('data-site-name')), words(li.getAttribute('data-address')), words(li.getAttribute('data-id')));
+    // Without the address: when a record is listed only because of its address, the row says so.
+    li.__plain = li.__name.concat(words(li.getAttribute('data-site-name')), words(li.getAttribute('data-id')));
+    li.__fields = li.__plain.concat(words(li.getAttribute('data-address')));
   });
   // 0 = no match; otherwise lower is better.
   function rank(li, tokens) {
@@ -2798,8 +2800,10 @@ function initPagedBox(box, list) {
       // Otherwise one of its other names or tenants (docs/briefs/search-aliases.md): show the
       // first line that matched, so the visitor sees why this record is listed.
       var via = null;
+      var viaAddress = q && score && !allMatch(tokens, li.__plain);
       Array.prototype.forEach.call(li.querySelectorAll('.finder-match'), function (m) {
-        var hit = !score && !via && allMatch(tokens, words(m.getAttribute('data-match')));
+        var isAddress = m.getAttribute('data-kind') === 'address';
+        var hit = isAddress ? viaAddress : (!score && !via && allMatch(tokens, words(m.getAttribute('data-match'))));
         if (hit) via = m;
         m.hidden = !hit;
       });

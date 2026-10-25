@@ -72,6 +72,26 @@ A name is listed in `names` or in `search_aliases`, not both; `src/validate_reco
 checks this. The finder on `/near/` matches both lists, and labels a match on `names` "Also known as" and a match on `search_aliases` "Earlier name". `/api/v1/` carries both
 (`names`, `search_aliases`).
 
+## `address`: the record's street address
+
+A record's `address` (the finder, `/api/v1/`, the SQLite file and the schema.org markup) is its
+sourced `address` fact **when that is a plain street address**: a number or number range and a
+street, optionally joined with "and" ("150-152 Berry St", "1655 3rd St and 1725 3rd St", "250 and
+260 King St"). A citation note in parentheses ("(Assessor lots)", "(per the Chronicle, Aug 2026)") and a
+trailing ", San Francisco, CA 94107" are dropped (`load.plain_address`); a note that hedges or gives another
+address makes the fact not one address, so it is not used. A fact that hedges ("Very likely ...", "Sources differ (...)"), reads as a
+sentence, or names a source (Assessor, OpenStreetMap, a report) is not used: it still shows, cited,
+in "At a glance", but search and the data carry the name-derived address if the record has one,
+else none. To get a record found by address, write the `address` fact as a plain address and put
+what a source says about it in `details` or `open_questions`.
+
+Without a usable fact, a status.csv record keeps the address split from its name ("Sophie Maxwell
+Building, 1212 Maryland St"), with notes in parentheses dropped. The API's `address_sources` lists
+the sources the fact cites (`id`, `title`, `publisher`, `url`); it is empty for a name-derived address.
+The finder on `/near/` matches an address and labels the row "Address: ...". The record page, its
+subtitle and the map cards are unchanged: they show the address only as the cited "At a glance" fact
+(or the status.csv one).
+
 ## `planned_change` (optional)
 
 For a record whose status is `existing` and whose own source names a change
