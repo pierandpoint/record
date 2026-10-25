@@ -532,8 +532,8 @@
    {
     "date": "2026-02",
     "date_label": "~Feb 2026",
-    "status": null,
-    "status_label": null,
+    "status": "under_construction",
+    "status_label": "Under construction",
     "text": "Excavation/foundation work underway; subterranean work expected to continue through 2027, vertical work to follow",
     "expected": false,
     "approximate": true,
@@ -549,38 +549,6 @@
     ],
     "source": "San Francisco YIMBY, 2026-02-09",
     "origin": "record",
-    "category": "milestone",
-    "category_label": "Milestone",
-    "record": {
-     "id": "4175027",
-     "slug": "block-2",
-     "name": "Block 2",
-     "permalink": "https://pierandpoint.org/parcels/block-2/",
-     "api": "https://pierandpoint.org/api/v1/records/block-2.json"
-    },
-    "site": {
-     "slug": "potrero",
-     "name": "Potrero Power Station",
-     "short": "Potrero Station",
-     "url": "https://pierandpoint.org/sites/potrero/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2026-02",
-    "date_label": "Feb 2026",
-    "status": "under_construction",
-    "status_label": "Under construction",
-    "text": "Foundation work reported underway (SF YIMBY, Feb 9, 2026); the same article says construction started in August 2025",
-    "expected": false,
-    "approximate": false,
-    "sources": [
-     {
-      "title": "https://sfyimby.com/2026/02/excavation-work-underway-for-potrero-power-station-block-2-san-francisco.html"
-     }
-    ],
-    "source": "https://sfyimby.com/2026/02/excavation-work-underway-for-potrero-power-station-block-2-san-francisco.html",
-    "origin": "csv",
     "category": "status",
     "category_label": "Status",
     "record": {
@@ -691,6 +659,36 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-25",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "On the Block 2 timeline, the February 2026 excavation report used to appear twice, from two tables with different wording; it now appears once. The entry that stays now sets the status to under construction and marks its date as the report's publication date, as the removed one did. Dates and statuses are unchanged and no source was dropped.",
+    "source": "Pier & Point editorial decision",
+    "sources": [
+     {
+      "title": "Pier & Point editorial decision"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "4175027",
+     "slug": "block-2",
+     "name": "Block 2",
+     "permalink": "https://pierandpoint.org/parcels/block-2/",
+     "api": "https://pierandpoint.org/api/v1/records/block-2.json"
+    },
+    "site": {
+     "slug": "potrero",
+     "name": "Potrero Power Station",
+     "short": "Potrero Station",
+     "url": "https://pierandpoint.org/sites/potrero/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-13",
     "kind": "correction",

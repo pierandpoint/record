@@ -202,7 +202,7 @@
     "date_label": "Sep 6, 2016",
     "status": null,
     "status_label": null,
-    "text": "SocketSite reports pile drivers arriving and permit paperwork filed to start driving piles for Uber's headquarters",
+    "text": "SocketSite reports pile drivers arriving and permit paperwork filed to start driving piles for Uber's headquarters; the post date is a publication date, not a construction start, and DataSF shows the pile permit (201606039047) issued October 18, 2016 and the new-construction permit (201508245062) issued November 3, 2016",
     "expected": false,
     "approximate": false,
     "sources": [
@@ -213,42 +213,24 @@
       "date": "2016-09-06",
       "url": "https://socketsite.com/archives/2016/09/uber-about-to-start-building-new-san-francisco-hq.html",
       "accessed": "2026-10-10"
-     }
-    ],
-    "source": "SocketSite, 2016-09-06",
-    "origin": "record",
-    "category": "milestone",
-    "category_label": "Milestone",
-    "record": {
-     "id": "8721029",
-     "slug": "uber-headquarters-at-1515-3rd-st",
-     "name": "Uber Headquarters at 1515 3rd St",
-     "permalink": "https://pierandpoint.org/parcels/uber-headquarters-at-1515-3rd-st/",
-     "api": "https://pierandpoint.org/api/v1/records/uber-headquarters-at-1515-3rd-st.json"
-    },
-    "site": {
-     "slug": "mission-bay",
-     "name": "Mission Bay",
-     "short": "Mission Bay",
-     "url": "https://pierandpoint.org/sites/mission-bay/"
-    },
-    "relation": "tracked"
-   },
-   {
-    "date": "2016-09-06",
-    "date_label": "~Sep 2016",
-    "status": null,
-    "status_label": null,
-    "text": "SocketSite (post dated September 6, 2016) reports that pile drivers for Uber's Mission Bay headquarters (1455 & 1515 3rd St) 'have arrived and are being assembled' and that the permit paperwork to start driving the piles had been filed; the post date is a publication date, not a construction start, and DataSF shows the pile permit (201606039047) issued October 18, 2016 and the new-construction permit (201508245062) issued November 3, 2016",
-    "expected": false,
-    "approximate": true,
-    "sources": [
+     },
      {
-      "title": "https://socketsite.com/archives/2016/09/uber-about-to-start-building-new-san-francisco-hq.html; https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201606039047; https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201508245062"
+      "id": "src-dbi-1515-piles",
+      "title": "Building permit 201606039047, pile installation, 1515 3rd St",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201606039047",
+      "accessed": "2026-10-10"
+     },
+     {
+      "id": "src-dbi-1515-newcon",
+      "title": "Building permit 201508245062, new construction, 1515 3rd St (block 8721 lot 029)",
+      "publisher": "DataSF / SF Department of Building Inspection",
+      "url": "https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201508245062",
+      "accessed": "2026-10-10"
      }
     ],
-    "source": "https://socketsite.com/archives/2016/09/uber-about-to-start-building-new-san-francisco-hq.html; https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201606039047; https://data.sfgov.org/resource/i98e-djp9.json?permit_number=201508245062",
-    "origin": "csv",
+    "source": "SocketSite, 2016-09-06; DataSF / SF Department of Building Inspection; DataSF / SF Department of Building Inspection",
+    "origin": "record",
     "category": "milestone",
     "category_label": "Milestone",
     "record": {
@@ -452,6 +434,36 @@
    }
   ],
   "changes": [
+   {
+    "date": "2026-10-25",
+    "kind": "correction",
+    "kind_label": "Correction",
+    "text": "On the Uber Headquarters at 1515 3rd St timeline, the September 6, 2016 pile-driving report used to appear twice, from two tables with different wording; it now appears once. The entry that stays now also says the post date is a publication date and cites the two DataSF permit records. Dates and statuses are unchanged and no source was dropped.",
+    "source": "Pier & Point editorial decision",
+    "sources": [
+     {
+      "title": "Pier & Point editorial decision"
+     }
+    ],
+    "category": "correction",
+    "category_label": "Correction",
+    "record": {
+     "id": "8721029",
+     "slug": "uber-headquarters-at-1515-3rd-st",
+     "name": "Uber Headquarters at 1515 3rd St",
+     "permalink": "https://pierandpoint.org/parcels/uber-headquarters-at-1515-3rd-st/",
+     "api": "https://pierandpoint.org/api/v1/records/uber-headquarters-at-1515-3rd-st.json"
+    },
+    "site": {
+     "slug": "mission-bay",
+     "name": "Mission Bay",
+     "short": "Mission Bay",
+     "url": "https://pierandpoint.org/sites/mission-bay/"
+    },
+    "relation": "tracked",
+    "permalink": "https://pierandpoint.org/changes/#record",
+    "batch": null
+   },
    {
     "date": "2026-10-14",
     "kind": "correction",
