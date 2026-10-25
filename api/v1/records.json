@@ -5,7 +5,7 @@
  "coverage": "Pier & Point covers four sites on San Francisco's central waterfront: Mission Rock, Mission Bay, Pier 70 and Potrero Power Station. A parcel that is not in this data is outside coverage, not \"no activity\".",
  "docs": "https://pierandpoint.org/method/",
  "terms": "https://pierandpoint.org/terms/",
- "count": 184,
+ "count": 186,
  "records": [
   {
    "id": "8719C001",
@@ -116262,19 +116262,15 @@
    }
   },
   {
-   "id": "mission_bay_commons_interim_west",
-   "slug": "mission-bay-commons-parcels-p12-p13-and-p15",
-   "name": "Mission Bay Commons, Parcels P12, P13 and P15",
-   "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-parcels-p12-p13-and-p15/",
-   "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-parcels-p12-p13-and-p15.json",
+   "id": "mission_bay_commons_p12",
+   "slug": "mission-bay-commons-p12-sff-soccer-and-fitness-court",
+   "name": "Mission Bay Commons P12: SFF Soccer and Fitness Court",
+   "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p12-sff-soccer-and-fitness-court/",
+   "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p12-sff-soccer-and-fitness-court.json",
    "names": [
-    "Mission Bay Commons, Parcels P12, P13 and P15"
+    "Mission Bay Commons P12: SFF Soccer and Fitness Court"
    ],
-   "search_aliases": [
-    "Parklab Gardens & Mission Bay Commons (interim, west)",
-    "Parklab Gardens",
-    "Mission Bay Commons parcels P12, P13, P15"
-   ],
+   "search_aliases": [],
    "site": {
     "slug": "mission-bay",
     "name": "Mission Bay",
@@ -116290,8 +116286,9 @@
    "how_to_comment": [],
    "positions": [],
    "address": null,
-   "summary": "The three westernmost parcels of Mission Bay Commons (P12, P13 and P15) host interim uses – Spark Social SF, Stagecoach Greens mini golf, Urban Sprouts community garden and soccer fields – which Rec and Park says were 'initially launched as interim uses'; a project fully funded through OCII will renovate them into a permanent park, with construction beginning late 2028 and opening early 2030 on Rec and Park's estimated schedule (expected dates; the same page says the remaining parks are anticipated to be complete by 2028, and OCII's November 2024 timeline shows construction from mid-2027 through 2028).",
+   "summary": "Parcel P12, the westernmost of the three west Mission Bay Commons parcels (between Long Bridge St and Merrimac St), holds the SFF Soccer and Fitness Court, as OCII's November 14, 2024 update (PDF p.17 legend) labels its current use. It began as an interim use (OCII's timeline gives 2018 for the P12 pilot), pending the Mission Bay Future Parks Project, which Rec and Park says will renovate parcels P12, P13 and P15 into a permanent park. The permanent park is one project for P12, P13 and P15 together, so the schedule shown here (construction beginning late 2028 and opening early 2030 on Rec and Park's estimated schedule, expected dates that differ by source) is the project's, not specific to this parcel.",
    "summary_sources": [
+    "src-ocii-parks-2024",
     "src-rpd-futureparks"
    ],
    "shape": {
@@ -116300,18 +116297,18 @@
     "display": "fill",
     "display_reason": null,
     "notes": {
-     "accuracy_caveat": "MEDIUM CONFIDENCE -- real, community-surveyed OSM polygon for the current interim installation (Parklab Gardens; the wider parcel also hosts Spark Social SF, Stagecoach Greens mini golf, Urban Sprouts community garden and an SFF soccer field per SF Rec & Park's own Future Parks Project page). Marked 'existing' rather than 'complete' because this is explicitly an interim use, not the plan's final build-out: the Mission Bay Future Parks Project is planned to redesign parcels P12/P13/P15 into a permanent park (all dates are expected dates and they differ by source: SF Rec & Park's estimated schedule gives planning 2024-2025, design mid 2026, construction begins late 2028 and open to the public early 2030; the same page also says the remaining parks 'are anticipated to be complete by 2028'; OCII's November 2024 update shows a transfer to Rec and Park 'end of 2028, upon completion'; and Rec and Park's Workshop 3 deck shows construction 'mid-2027 thru 2028'). This feature traces OSM way 446183018 (leisure=park, name 'Parklab', about 14,665 sq m and roughly 420 m long), the whole Parklab park strip: it fully contains the separately mapped Parklab Gardens way (437595662, about 2,212 sq m) and the Spark Social SF way (437591532, about 1,519 sq m), so it is not only the Parklab Gardens sub-area.",
-     "digitized_from": "OpenStreetMap (way 446183018, leisure=park, name=Parklab, parklab.com)"
+     "accuracy_caveat": "The shape is approximate but its outer edge is real. The outer edge is OpenStreetMap way 446183018 (leisure=park, name 'Parklab', community-surveyed). The lines between the three parcels are not surveyed parcel lines: they are drawn at DataSF's official street centerlines for Merrimac St and 4th St, which are roadways across the strip, offset 6.8 m each side (checked on satellite imagery; at Merrimac St the paved crossing is only about 10-11 m wide with the centerline near its east edge, so the line on the P13 side falls about 2-3 m inside the community garden beds, leaving about 70-100 sq m of them out of P13), and the order of the parcels, P12 then P13 then P15 from west to east, is from OCII's November 14, 2024 update (PDF p.17), whose drawing is not to scale. This parcel is the westernmost of the three, from the OSM outline's west end to Merrimac St, about 4,780 sq m. The shape is not clipped to the street layer (street_clip_exempt): clipping a drawn outline against DataSF centerline buffers would cut P12 in two along DataSF's Long Bridge St segment, which crosses the soccer field where imagery shows no roadway, and would trim the north edges of P12 and P15, so the processed shape is the drawn one. This parcel has no Assessor lot of its own: Assessor lot 8710003 (17,562 sq m, active) contains all of this parcel, which is only about 27% of that lot, so the lot is a larger shared lot, not this parcel's own. The interim uses here are as OCII labels them (OCII's legend label \"SFF Soccer + Fitness Court\"); they are interim pending the Mission Bay Future Parks Project, which is planned to redesign parcels P12, P13 and P15 into a permanent park (expected dates differ by source; see the record page).",
+     "digitized_from": "OpenStreetMap way 446183018 (leisure=park, name=Parklab) outer edge, cut at DataSF's official centerlines of Merrimac St and 4th St, plus and minus 6.8 m (4th St's roadway is excluded; the Merrimac St line falls about 2-3 m inside P13's community garden beds) into OCII's parcels P12, P13 and P15 (OCII Nov 14, 2024 update, PDF p.17)"
     }
    },
    "centroid": {
-    "lon": -122.392076,
-    "lat": 37.770761
+    "lon": -122.393946,
+    "lat": 37.770641
    },
    "facts": [
     {
      "key": "parcels",
-     "value": "P12, P13 and P15 (Rec and Park), part of Mission Bay Commons",
+     "value": "P12 (Rec and Park), part of Mission Bay Commons",
      "sources": [
       "src-rpd-futureparks",
       "src-ocii-parks-2024"
@@ -116319,10 +116316,10 @@
     },
     {
      "key": "interim_uses",
-     "value": "Sources differ (both name soccer, a community garden, Spark Social SF and Stagecoach Greens)",
+     "value": "SFF Soccer + Fitness Court (OCII's label); soccer fields (Rec and Park)",
      "sources": [
-      "src-rpd-futureparks",
-      "src-ocii-parks-2024"
+      "src-ocii-parks-2024",
+      "src-rpd-futureparks"
      ]
     },
     {
@@ -116343,129 +116340,11 @@
    "costs": [],
    "milestones": [
     {
-     "date": "2016",
-     "date_label": "~2016",
-     "status": null,
-     "status_label": null,
-     "text": "Interim-use pilot begins on parcel P13 (OCII's November 14, 2024 Future Parks update, slide 9 timeline: \"MB Commons interim use pilots begin on P13 (2016), P15 (2017), P12 (2018)\"); the slide does not say which use is on which parcel",
-     "expected": false,
-     "approximate": true,
-     "sources": [
-      {
-       "id": "src-ocii-parks-2024",
-       "title": "Mission Bay Future Parks, CAC Update (Remaining Mission Bay Open Space Parcels Update)",
-       "publisher": "Office of Community Investment and Infrastructure (OCII)",
-       "date": "2024-11-14",
-       "url": "https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf",
-       "accessed": "2026-10-10"
-      }
-     ],
-     "source": "Office of Community Investment and Infrastructure (OCII), 2024-11-14",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "mission_bay_commons_interim_west",
-      "slug": "mission-bay-commons-parcels-p12-p13-and-p15",
-      "name": "Mission Bay Commons, Parcels P12, P13 and P15",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-parcels-p12-p13-and-p15/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-parcels-p12-p13-and-p15.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2016-05",
-     "date_label": "May 2016",
-     "status": "existing",
-     "status_label": "Existing",
-     "text": "Spark Social SF, one of the interim uses on these parcels, launches at 601 Mission Bay Blvd. North (Parklab's project page: 'launch date: May 2016'). The page covers Spark Social only; OCII's timeline dates the interim-use pilots by parcel in the entries below (without saying which use is on which parcel)",
-     "expected": false,
-     "approximate": false,
-     "sources": [
-      {
-       "id": "src-parklab-spark",
-       "title": "SPARK Social SF",
-       "publisher": "Parklab, Inc.",
-       "url": "https://www.parklab.com/spark-social-sf",
-       "accessed": "2026-10-10"
-      },
-      {
-       "id": "src-rpd-futureparks",
-       "title": "Mission Bay Future Parks Project",
-       "publisher": "San Francisco Recreation and Park Department",
-       "url": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
-       "accessed": "2026-10-10",
-       "overview": true
-      }
-     ],
-     "source": "Parklab, Inc.; San Francisco Recreation and Park Department",
-     "origin": "record",
-     "category": "status",
-     "category_label": "Status",
-     "record": {
-      "id": "mission_bay_commons_interim_west",
-      "slug": "mission-bay-commons-parcels-p12-p13-and-p15",
-      "name": "Mission Bay Commons, Parcels P12, P13 and P15",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-parcels-p12-p13-and-p15/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-parcels-p12-p13-and-p15.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2017",
-     "date_label": "~2017",
-     "status": null,
-     "status_label": null,
-     "text": "Interim-use pilot begins on parcel P15 (same OCII slide 9 timeline)",
-     "expected": false,
-     "approximate": true,
-     "sources": [
-      {
-       "id": "src-ocii-parks-2024",
-       "title": "Mission Bay Future Parks, CAC Update (Remaining Mission Bay Open Space Parcels Update)",
-       "publisher": "Office of Community Investment and Infrastructure (OCII)",
-       "date": "2024-11-14",
-       "url": "https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf",
-       "accessed": "2026-10-10"
-      }
-     ],
-     "source": "Office of Community Investment and Infrastructure (OCII), 2024-11-14",
-     "origin": "record",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "mission_bay_commons_interim_west",
-      "slug": "mission-bay-commons-parcels-p12-p13-and-p15",
-      "name": "Mission Bay Commons, Parcels P12, P13 and P15",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-parcels-p12-p13-and-p15/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-parcels-p12-p13-and-p15.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
      "date": "2018",
      "date_label": "~2018",
      "status": null,
      "status_label": null,
-     "text": "Interim-use pilot begins on parcel P12 (same OCII slide 9 timeline)",
+     "text": "Interim-use pilot begins on parcel P12 (OCII's November 14, 2024 Future Parks update, slide 9 timeline: \"MB Commons interim use pilots begin on P13 (2016), P15 (2017), P12 (2018)\"); the slide names no uses, and the PDF p.17 legend labels P12 \"SFF Soccer + Fitness Court\"",
      "expected": false,
      "approximate": true,
      "sources": [
@@ -116475,7 +116354,7 @@
        "publisher": "Office of Community Investment and Infrastructure (OCII)",
        "date": "2024-11-14",
        "url": "https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf",
-       "accessed": "2026-10-10"
+       "accessed": "2026-10-24"
       }
      ],
      "source": "Office of Community Investment and Infrastructure (OCII), 2024-11-14",
@@ -116483,43 +116362,11 @@
      "category": "milestone",
      "category_label": "Milestone",
      "record": {
-      "id": "mission_bay_commons_interim_west",
-      "slug": "mission-bay-commons-parcels-p12-p13-and-p15",
-      "name": "Mission Bay Commons, Parcels P12, P13 and P15",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-parcels-p12-p13-and-p15/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-parcels-p12-p13-and-p15.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked"
-    },
-    {
-     "date": "2018-08",
-     "date_label": "~Aug 2018",
-     "status": "existing",
-     "status_label": "Existing",
-     "text": "Parklab Gardens (one interim installation inside the mapped Parklab park strip) is reported as \"opening Friday\" in an SF Chronicle article of Aug 17, 2018 that pairs it with Stagecoach Greens mini-golf; the article is a pre-opening report, so the month is approximate and no later source gives the opening day. OCII's Nov 2024 update labels P15 \"Parklab Gardens & Stagecoach Greens\" on its people-counts map (PDF pp.17-18) but groups \"P13 & P15: Food Truck Park with Outdoor Dining (SPARK Social SF & Parklab Gardens)\" on a survey slide (p.31), so which parcel it sits on is not settled. Interim-use pilots on the Commons parcels began on P13 in 2016, P15 in 2017 and P12 in 2018 (SF Rec & Park Workshop 3 deck, p.15).",
-     "expected": false,
-     "approximate": true,
-     "sources": [
-      {
-       "title": "SF Chronicle, \"Outdoor mini golf right here in SF? Yes, and with food trucks and a beer garden\" (Amy Graff, Aug 17, 2018; read as republished at https://stagecoachgreens.com/cms/outdoor-mini-golf-right-here-in-sf-yes-and-with-food-trucks-and-a-beer-garden/); OCII Mission Bay Future Parks CAC Update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf); https://sfrecpark.org/DocumentCenter/View/25986/20250429-PRESENTATION-Workshop-3"
-      }
-     ],
-     "source": "SF Chronicle, \"Outdoor mini golf right here in SF? Yes, and with food trucks and a beer garden\" (Amy Graff, Aug 17, 2018; read as republished at https://stagecoachgreens.com/cms/outdoor-mini-golf-right-here-in-sf-yes-and-with-food-trucks-and-a-beer-garden/); OCII Mission Bay Future Parks CAC Update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf); https://sfrecpark.org/DocumentCenter/View/25986/20250429-PRESENTATION-Workshop-3",
-     "origin": "csv",
-     "category": "milestone",
-     "category_label": "Milestone",
-     "record": {
-      "id": "mission_bay_commons_interim_west",
-      "slug": "mission-bay-commons-parcels-p12-p13-and-p15",
-      "name": "Mission Bay Commons, Parcels P12, P13 and P15",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-parcels-p12-p13-and-p15/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-parcels-p12-p13-and-p15.json"
+      "id": "mission_bay_commons_p12",
+      "slug": "mission-bay-commons-p12-sff-soccer-and-fitness-court",
+      "name": "Mission Bay Commons P12: SFF Soccer and Fitness Court",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p12-sff-soccer-and-fitness-court/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p12-sff-soccer-and-fitness-court.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -116543,7 +116390,7 @@
        "title": "Mission Bay Future Parks Project",
        "publisher": "San Francisco Recreation and Park Department",
        "url": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
-       "accessed": "2026-10-10",
+       "accessed": "2026-10-24",
        "overview": true
       }
      ],
@@ -116552,11 +116399,11 @@
      "category": "milestone",
      "category_label": "Milestone",
      "record": {
-      "id": "mission_bay_commons_interim_west",
-      "slug": "mission-bay-commons-parcels-p12-p13-and-p15",
-      "name": "Mission Bay Commons, Parcels P12, P13 and P15",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-parcels-p12-p13-and-p15/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-parcels-p12-p13-and-p15.json"
+      "id": "mission_bay_commons_p12",
+      "slug": "mission-bay-commons-p12-sff-soccer-and-fitness-court",
+      "name": "Mission Bay Commons P12: SFF Soccer and Fitness Court",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p12-sff-soccer-and-fitness-court/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p12-sff-soccer-and-fitness-court.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -116581,7 +116428,7 @@
        "publisher": "Office of Community Investment and Infrastructure (OCII)",
        "date": "2024-11-14",
        "url": "https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf",
-       "accessed": "2026-10-10"
+       "accessed": "2026-10-24"
       }
      ],
      "source": "Office of Community Investment and Infrastructure (OCII), 2024-11-14",
@@ -116589,11 +116436,11 @@
      "category": "milestone",
      "category_label": "Milestone",
      "record": {
-      "id": "mission_bay_commons_interim_west",
-      "slug": "mission-bay-commons-parcels-p12-p13-and-p15",
-      "name": "Mission Bay Commons, Parcels P12, P13 and P15",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-parcels-p12-p13-and-p15/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-parcels-p12-p13-and-p15.json"
+      "id": "mission_bay_commons_p12",
+      "slug": "mission-bay-commons-p12-sff-soccer-and-fitness-court",
+      "name": "Mission Bay Commons P12: SFF Soccer and Fitness Court",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p12-sff-soccer-and-fitness-court/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p12-sff-soccer-and-fitness-court.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -116617,7 +116464,7 @@
        "title": "Mission Bay Future Parks Project",
        "publisher": "San Francisco Recreation and Park Department",
        "url": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
-       "accessed": "2026-10-10",
+       "accessed": "2026-10-24",
        "overview": true
       }
      ],
@@ -116626,11 +116473,11 @@
      "category": "milestone",
      "category_label": "Milestone",
      "record": {
-      "id": "mission_bay_commons_interim_west",
-      "slug": "mission-bay-commons-parcels-p12-p13-and-p15",
-      "name": "Mission Bay Commons, Parcels P12, P13 and P15",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-parcels-p12-p13-and-p15/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-parcels-p12-p13-and-p15.json"
+      "id": "mission_bay_commons_p12",
+      "slug": "mission-bay-commons-p12-sff-soccer-and-fitness-court",
+      "name": "Mission Bay Commons P12: SFF Soccer and Fitness Court",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p12-sff-soccer-and-fitness-court/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p12-sff-soccer-and-fitness-court.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -116654,7 +116501,7 @@
        "title": "Mission Bay Future Parks Project",
        "publisher": "San Francisco Recreation and Park Department",
        "url": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
-       "accessed": "2026-10-10",
+       "accessed": "2026-10-24",
        "overview": true
       }
      ],
@@ -116663,11 +116510,11 @@
      "category": "coming_up",
      "category_label": "Coming up",
      "record": {
-      "id": "mission_bay_commons_interim_west",
-      "slug": "mission-bay-commons-parcels-p12-p13-and-p15",
-      "name": "Mission Bay Commons, Parcels P12, P13 and P15",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-parcels-p12-p13-and-p15/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-parcels-p12-p13-and-p15.json"
+      "id": "mission_bay_commons_p12",
+      "slug": "mission-bay-commons-p12-sff-soccer-and-fitness-court",
+      "name": "Mission Bay Commons P12: SFF Soccer and Fitness Court",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p12-sff-soccer-and-fitness-court/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p12-sff-soccer-and-fitness-court.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -116695,11 +116542,11 @@
      "category": "coming_up",
      "category_label": "Coming up",
      "record": {
-      "id": "mission_bay_commons_interim_west",
-      "slug": "mission-bay-commons-parcels-p12-p13-and-p15",
-      "name": "Mission Bay Commons, Parcels P12, P13 and P15",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-parcels-p12-p13-and-p15/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-parcels-p12-p13-and-p15.json"
+      "id": "mission_bay_commons_p12",
+      "slug": "mission-bay-commons-p12-sff-soccer-and-fitness-court",
+      "name": "Mission Bay Commons P12: SFF Soccer and Fitness Court",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p12-sff-soccer-and-fitness-court/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p12-sff-soccer-and-fitness-court.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -116723,7 +116570,7 @@
        "title": "Mission Bay Future Parks Project",
        "publisher": "San Francisco Recreation and Park Department",
        "url": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
-       "accessed": "2026-10-10",
+       "accessed": "2026-10-24",
        "overview": true
       }
      ],
@@ -116732,11 +116579,11 @@
      "category": "coming_up",
      "category_label": "Coming up",
      "record": {
-      "id": "mission_bay_commons_interim_west",
-      "slug": "mission-bay-commons-parcels-p12-p13-and-p15",
-      "name": "Mission Bay Commons, Parcels P12, P13 and P15",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-parcels-p12-p13-and-p15/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-parcels-p12-p13-and-p15.json"
+      "id": "mission_bay_commons_p12",
+      "slug": "mission-bay-commons-p12-sff-soccer-and-fitness-court",
+      "name": "Mission Bay Commons P12: SFF Soccer and Fitness Court",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p12-sff-soccer-and-fitness-court/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p12-sff-soccer-and-fitness-court.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -116764,11 +116611,11 @@
      "category": "coming_up",
      "category_label": "Coming up",
      "record": {
-      "id": "mission_bay_commons_interim_west",
-      "slug": "mission-bay-commons-parcels-p12-p13-and-p15",
-      "name": "Mission Bay Commons, Parcels P12, P13 and P15",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-parcels-p12-p13-and-p15/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-parcels-p12-p13-and-p15.json"
+      "id": "mission_bay_commons_p12",
+      "slug": "mission-bay-commons-p12-sff-soccer-and-fitness-court",
+      "name": "Mission Bay Commons P12: SFF Soccer and Fitness Court",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p12-sff-soccer-and-fitness-court/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p12-sff-soccer-and-fitness-court.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -116781,260 +116628,24 @@
    ],
    "changes": [
     {
-     "date": "2026-10-17",
+     "date": "2026-10-24",
      "kind": "correction",
      "kind_label": "Correction",
-     "text": "Rec and Park's Mission Bay Future Parks page calls the three parcels \"Mission Bay Commons: Parcels P12, P13, and P15\", and OCII's November 2024 update titles a slide \"Mission Bay Commons Parks (P12, P13, P15)\". The new name follows them and stays different from the Mission Bay Commons record. That the parcels hold interim uses today, and are to be rebuilt, is in the record's text. Shape, status and use are unchanged; the old page address redirects to the new one, and the old name still finds the record in search.",
-     "source": "San Francisco Recreation and Parks, Mission Bay Future Parks Project (https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project): \"Mission Bay Commons: Parcels P12, P13, and P15\"; OCII, Mission Bay Future Parks CAC Update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf), slide 1: \"Mission Bay Commons Parks (P12, P13, P15)\"",
+     "text": "Split out of the single record for the west Commons strip (now the record for parcel P15). P12 is the westernmost parcel, from the west end of the OpenStreetMap park outline to DataSF's Merrimac St centerline plus 6.8 m, labelled \"SFF Soccer + Fitness Court\" by OCII. Its shape is approximate: the outer edge is OpenStreetMap's, the cut at Merrimac St is drawn from the street centerline and OCII's drawing. P12 has no Assessor lot of its own.",
+     "source": "OCII, Mission Bay Future Parks CAC Update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf), PDF p.17 legend: \"P12 SFF Soccer + Fitness Court\", \"P13 Community Garden & SPARK Social SF\", \"P15 Parklab Gardens & Stagecoach Greens\"",
      "sources": [
       {
-       "title": "San Francisco Recreation and Parks, Mission Bay Future Parks Project (https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project): \"Mission Bay Commons: Parcels P12, P13, and P15\"; OCII, Mission Bay Future Parks CAC Update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf), slide 1: \"Mission Bay Commons Parks (P12, P13, P15)\""
+       "title": "OCII, Mission Bay Future Parks CAC Update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf), PDF p.17 legend: \"P12 SFF Soccer + Fitness Court\", \"P13 Community Garden & SPARK Social SF\", \"P15 Parklab Gardens & Stagecoach Greens\""
       }
      ],
      "category": "correction",
      "category_label": "Correction",
      "record": {
-      "id": "mission_bay_commons_interim_west",
-      "slug": "mission-bay-commons-parcels-p12-p13-and-p15",
-      "name": "Mission Bay Commons, Parcels P12, P13 and P15",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-parcels-p12-p13-and-p15/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-parcels-p12-p13-and-p15.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked",
-     "permalink": "https://pierandpoint.org/changes/#record",
-     "batch": null
-    },
-    {
-     "date": "2026-10-13",
-     "kind": "correction",
-     "kind_label": "Correction",
-     "text": "Rec and Park's project page gives estimated construction from late 2028 and opening in early 2030, but also says the remaining parks are anticipated to be complete by 2028; OCII's November 2024 timeline shows construction from mid-2027 through 2028. All are expected dates. In August 2025 Rec and Park said a design team \"should be selected by mid-October\" (expected); no source read says whether one was selected.",
-     "source": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project; https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf",
-     "sources": [
-      {
-       "title": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project; https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf"
-      }
-     ],
-     "category": "correction",
-     "category_label": "Correction",
-     "record": {
-      "id": "mission_bay_commons_interim_west",
-      "slug": "mission-bay-commons-parcels-p12-p13-and-p15",
-      "name": "Mission Bay Commons, Parcels P12, P13 and P15",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-parcels-p12-p13-and-p15/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-parcels-p12-p13-and-p15.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked",
-     "permalink": "https://pierandpoint.org/changes/#record",
-     "batch": null
-    },
-    {
-     "date": "2026-10-13",
-     "kind": "correction",
-     "kind_label": "Correction",
-     "text": "Long 'At a glance' values were cut to the fact itself (or 'Sources differ'); the disputes, quoted excerpts and hedging moved to this record's open questions, with every source still named. No change to the record's status or shape.",
-     "source": "Pier & Point's own text edit",
-     "sources": [
-      {
-       "title": "Pier & Point's own text edit"
-      }
-     ],
-     "category": "correction",
-     "category_label": "Correction",
-     "record": {
-      "id": "mission_bay_commons_interim_west",
-      "slug": "mission-bay-commons-parcels-p12-p13-and-p15",
-      "name": "Mission Bay Commons, Parcels P12, P13 and P15",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-parcels-p12-p13-and-p15/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-parcels-p12-p13-and-p15.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked",
-     "permalink": "https://pierandpoint.org/changes/#record",
-     "batch": "https://pierandpoint.org/changes/batches/2026-10-13-text-edit/"
-    },
-    {
-     "date": "2026-10-12",
-     "kind": "correction",
-     "kind_label": "Correction",
-     "text": "Parklab Gardens and the Commons interim area: all future dates are expected dates and they differ by source. Rec & Park's page gives construction beginning late 2028 and opening early 2030, yet says the remaining parks 'are anticipated to be complete by 2028'; OCII shows a transfer to Rec and Park 'end of 2028, upon completion'; Rec & Park's April 2025 deck shows construction 'mid-2027 thru 2028'. Parklab Gardens' opening is known only from an August 17, 2018 Chronicle article that says it was 'opening Friday', and OCII's November 2024 slides place it on P15 in one slide and on P13 and P15 in another.",
-     "source": "SF Rec & Park, Mission Bay Future Parks Project (https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project); OCII, Mission Bay Future Parks CAC update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf); SF Chronicle, Aug 17, 2018, as republished (https://stagecoachgreens.com/cms/outdoor-mini-golf-right-here-in-sf-yes-and-with-food-trucks-and-a-beer-garden/)",
-     "sources": [
-      {
-       "title": "SF Rec & Park, Mission Bay Future Parks Project (https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project); OCII, Mission Bay Future Parks CAC update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf); SF Chronicle, Aug 17, 2018, as republished (https://stagecoachgreens.com/cms/outdoor-mini-golf-right-here-in-sf-yes-and-with-food-trucks-and-a-beer-garden/)"
-      }
-     ],
-     "category": "correction",
-     "category_label": "Correction",
-     "record": {
-      "id": "mission_bay_commons_interim_west",
-      "slug": "mission-bay-commons-parcels-p12-p13-and-p15",
-      "name": "Mission Bay Commons, Parcels P12, P13 and P15",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-parcels-p12-p13-and-p15/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-parcels-p12-p13-and-p15.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked",
-     "permalink": "https://pierandpoint.org/changes/#record",
-     "batch": null
-    },
-    {
-     "date": "2026-10-11",
-     "kind": "added",
-     "kind_label": "Added",
-     "text": "The status label now reads 'Existing · change planned' because a source names a planned change.",
-     "source": "",
-     "sources": [],
-     "category": "coverage",
-     "category_label": "Coverage",
-     "record": {
-      "id": "mission_bay_commons_interim_west",
-      "slug": "mission-bay-commons-parcels-p12-p13-and-p15",
-      "name": "Mission Bay Commons, Parcels P12, P13 and P15",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-parcels-p12-p13-and-p15/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-parcels-p12-p13-and-p15.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked",
-     "permalink": "https://pierandpoint.org/changes/#record",
-     "batch": null
-    },
-    {
-     "date": "2026-10-10",
-     "kind": "added",
-     "kind_label": "Added",
-     "text": "Added a sourced dossier for Parklab Gardens & Mission Bay Commons (interim, west).",
-     "source": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
-     "sources": [
-      {
-       "title": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project"
-      }
-     ],
-     "category": "coverage",
-     "category_label": "Coverage",
-     "record": {
-      "id": "mission_bay_commons_interim_west",
-      "slug": "mission-bay-commons-parcels-p12-p13-and-p15",
-      "name": "Mission Bay Commons, Parcels P12, P13 and P15",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-parcels-p12-p13-and-p15/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-parcels-p12-p13-and-p15.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked",
-     "permalink": "https://pierandpoint.org/changes/#record",
-     "batch": "https://pierandpoint.org/changes/batches/2026-10-10-dossiers-added/"
-    },
-    {
-     "date": "2026-09-29",
-     "kind": "correction",
-     "kind_label": "Correction",
-     "text": "The map notes said the shape traces only the Parklab Gardens sub-area; it is OpenStreetMap's whole 'Parklab' park strip (about 14,665 sq m), which contains both the Parklab Gardens and Spark Social SF areas, and it is tagged as a park, not a garden. The notes also said P15's concept matches Spark Social SF's use of that parcel; OCII's Nov 2024 CAC update puts Spark Social SF and the community garden on P13 and Parklab Gardens and Stagecoach Greens on P15, and the Workshop 3 deck dates interim-use pilots to P13 (2016), P15 (2017) and P12 (2018). The claim that a design team was selected through an August 2025 RFQ now says what SF Rec & Park reports: an RFQ was released and a team was expected by mid-October. The 'early 2030' opening milestone is relabelled as a whole-project estimate, with a note that Workshop 3 shows an earlier construction window. The map notes carry a dated correction, and the shape's notes and source description were corrected.",
-     "source": "OpenStreetMap way 446183018 (https://www.openstreetmap.org/way/446183018); OCII, Remaining Mission Bay Open Space Parcels Update, Mission Bay CAC, 2024-11-14 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf); SF Rec & Park, Mission Bay Future Parks Project (https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project); SF Rec & Park, Workshop 3 presentation, 2025-04-29 (https://sfrecpark.org/DocumentCenter/View/25986/20250429-PRESENTATION-Workshop-3)",
-     "sources": [
-      {
-       "title": "OpenStreetMap way 446183018 (https://www.openstreetmap.org/way/446183018); OCII, Remaining Mission Bay Open Space Parcels Update, Mission Bay CAC, 2024-11-14 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf); SF Rec & Park, Mission Bay Future Parks Project (https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project); SF Rec & Park, Workshop 3 presentation, 2025-04-29 (https://sfrecpark.org/DocumentCenter/View/25986/20250429-PRESENTATION-Workshop-3)"
-      }
-     ],
-     "category": "correction",
-     "category_label": "Correction",
-     "record": {
-      "id": "mission_bay_commons_interim_west",
-      "slug": "mission-bay-commons-parcels-p12-p13-and-p15",
-      "name": "Mission Bay Commons, Parcels P12, P13 and P15",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-parcels-p12-p13-and-p15/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-parcels-p12-p13-and-p15.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked",
-     "permalink": "https://pierandpoint.org/changes/#record",
-     "batch": null
-    },
-    {
-     "date": "2026-09-24",
-     "kind": "added",
-     "kind_label": "Added",
-     "text": "SPARK Social SF operates at 601 Mission Bay Blvd North.",
-     "source": "https://visitsparksocial.com/san-francisco/",
-     "sources": [
-      {
-       "title": "https://visitsparksocial.com/san-francisco/"
-      }
-     ],
-     "category": "retail",
-     "category_label": "Retail",
-     "record": {
-      "id": "mission_bay_commons_interim_west",
-      "slug": "mission-bay-commons-parcels-p12-p13-and-p15",
-      "name": "Mission Bay Commons, Parcels P12, P13 and P15",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-parcels-p12-p13-and-p15/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-parcels-p12-p13-and-p15.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     },
-     "relation": "tracked",
-     "permalink": "https://pierandpoint.org/changes/#record",
-     "batch": null
-    },
-    {
-     "date": "2026-09-23",
-     "kind": "added",
-     "kind_label": "Added",
-     "text": "SF Rec & Park's three community-workshop decks were added as sources for the interim parcels P12, P13 and P15 (OCII's Nov 2024 CAC update labels P13 as Community Garden & SPARK Social SF, P15 as Parklab Gardens & Stagecoach Greens and P12 as the SFF Soccer + Fitness Court), each checked against the PDF itself. Community Meeting #3 (Apr 29, 2025, 83 pages) has individually labeled concept-plan pages for P12, P13 and P15 (food trucks, outdoor dining and a pavilion on P15; soccer pitches and outdoor fitness on P12), plus an alternative option for P12. These are design-workshop concepts, not an adopted final plan: SF Rec & Park's Future Parks page later reported (August 2025) that a design-team RFQ had been released and a team was expected to be selected by mid-October; no selection is reported there.",
-     "source": "https://sfrecpark.org/DocumentCenter/View/25986/20250429-PRESENTATION-Workshop-3",
-     "sources": [
-      {
-       "title": "https://sfrecpark.org/DocumentCenter/View/25986/20250429-PRESENTATION-Workshop-3"
-      }
-     ],
-     "category": "coverage",
-     "category_label": "Coverage",
-     "record": {
-      "id": "mission_bay_commons_interim_west",
-      "slug": "mission-bay-commons-parcels-p12-p13-and-p15",
-      "name": "Mission Bay Commons, Parcels P12, P13 and P15",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-parcels-p12-p13-and-p15/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-parcels-p12-p13-and-p15.json"
+      "id": "mission_bay_commons_p12",
+      "slug": "mission-bay-commons-p12-sff-soccer-and-fitness-court",
+      "name": "Mission Bay Commons P12: SFF Soccer and Fitness Court",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p12-sff-soccer-and-fitness-court/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p12-sff-soccer-and-fitness-court.json"
      },
      "site": {
       "slug": "mission-bay",
@@ -117049,13 +116660,12 @@
    ],
    "images": [],
    "open_questions": [
+    "No official parcel boundary was found for P12: The outline is the OpenStreetMap park strip named Parklab (way 446183018), cut at Merrimac St along DataSF's street centerline plus 6.8 m; the lines between parcels are drawn from OCII's November 2024 drawing (PDF pp.5 and 17), which is not to scale, not from a survey. This parcel has no Assessor lot of its own: lot 8710003 (17,562 sq m) holds all of P12, but P12 is only about 27% of that lot.",
+    "The start of the soccer use is not settled: SFF Soccer's About page says \"In 2013, the ground was broken, the turf was laid, the lights went up\" and speaks of \"The fields at Mission Bay\" without naming a parcel, while OCII's slide 9 gives 2018 for the P12 pilot. No source ties the 2013 fields to P12, so no opening date is stated.",
+    "The Fitness Court is named only in OCII's legend (\"P12 SFF Soccer + Fitness Court\"); Rec and Park's page lists \"SFF soccer fields\" and no fitness court, and no source read says who runs or when it opened.",
+    "OCII's drawing places P12 between Long Bridge St and Merrimac St, but DataSF's Long Bridge St centerline crosses the mapped strip under the soccer field, where satellite imagery shows no roadway; the west end of this outline is as OpenStreetMap has it.",
     "The schedule differs between sources and is not resolved: Rec and Park's project page gives \"Construction begins, Late 2028\" and \"Open to the Public, Early 2030\" but also says the remaining parks \"are anticipated to be complete by 2028\", and slide 9 of OCII's November 14, 2024 update reads \"Construction (mid-2027 thru 2028)\" and \"Transfer to SF Rec Park and Park (end of 2028, upon completion)\". All of these are expected dates.",
-    "Which interim use started in which year is not stated: OCII's November 2024 timeline gives start years by parcel (P13 2016, P15 2017, P12 2018) but names no uses, and the only use-specific date is Spark Social's May 2016 launch, from a page that does not say which parcel it is on. Beyond those parcel-level pilot start years, no opening dates were found for the soccer fields, community garden, Stagecoach Greens or Parklab Gardens.",
-    "The mapped polygon (an OpenStreetMap park strip named Parklab) was not checked against the P12/P13/P15 parcel boundaries; the match is inferred.",
-    "The Rec and Park project page is undated and shows 'Project update, October 2026' alongside August 2025; the schedule on it may be revised.",
-    "The OCII November 2024 deck's timeline (slide 9) is an image with no text layer; it was read on 2026-10-12 from a rendering of the slide. It gives \\\"Construction (mid-2027 thru 2028)\\\" and \\\"Transfer to SF Rec Park and Park (end of 2028, upon completion)\\\", which differ from Rec and Park's later page (construction beginning late 2028, opening early 2030).",
-    "Parcels of the west interim uses: OCII's November 2024 update lists P12, P13 and P15 within 'Mission Bay Commons (P11, P12, P13, P15, P16, P17)'. Which interim use sits on which parcel is not stated in the sources read.",
-    "Interim uses on the west parcels: Rec and Park names Spark Social SF, Stagecoach Greens Mini Golf, Urban Sprouts Community Garden and SFF soccer fields; OCII's November 2024 legend labels the uses \"SFF Soccer + Fitness Court\", \"Community Garden & SPARK Social SF\" and \"Parklab Gardens & Stagecoach Greens\", so the sources do not list the same set of uses."
+    "The OCII November 2024 deck's timeline (slide 9) is an image with no text layer; it was read on 2026-10-12 from a rendering of the slide. It gives \"Construction (mid-2027 thru 2028)\" and \"Transfer to SF Rec Park and Park (end of 2028, upon completion)\", which differ from Rec and Park's later page (construction beginning late 2028, opening early 2030)."
    ],
    "sources": [
     {
@@ -117063,7 +116673,7 @@
      "title": "Mission Bay Future Parks Project",
      "publisher": "San Francisco Recreation and Park Department",
      "url": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
-     "accessed": "2026-10-10",
+     "accessed": "2026-10-24",
      "overview": true
     },
     {
@@ -117072,133 +116682,29 @@
      "publisher": "Office of Community Investment and Infrastructure (OCII)",
      "date": "2024-11-14",
      "url": "https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf",
-     "accessed": "2026-10-10"
+     "accessed": "2026-10-24"
     },
     {
-     "id": "src-parklab-spark",
-     "title": "SPARK Social SF",
-     "publisher": "Parklab, Inc.",
-     "url": "https://www.parklab.com/spark-social-sf",
-     "accessed": "2026-10-10"
+     "id": "src-sff-about",
+     "title": "About",
+     "publisher": "SFF Soccer",
+     "url": "https://sffsoccer.com/about",
+     "accessed": "2026-10-24"
     },
     {
      "id": null,
      "title": "openstreetmap.org/way/446183018",
      "url": "https://www.openstreetmap.org/way/446183018"
-    },
-    {
-     "id": null,
-     "title": "parklab.com",
-     "url": "https://www.parklab.com/"
-    },
-    {
-     "id": null,
-     "title": "sfrecpark.org/DocumentCenter/View/25988/20240602-Workshop-1-Deck",
-     "url": "https://sfrecpark.org/DocumentCenter/View/25988/20240602-Workshop-1-Deck"
-    },
-    {
-     "id": null,
-     "title": "sfrecpark.org/DocumentCenter/View/25989/20241029-Presentation-Workshop-2",
-     "url": "https://sfrecpark.org/DocumentCenter/View/25989/20241029-Presentation-Workshop-2"
-    },
-    {
-     "id": null,
-     "title": "sfrecpark.org/DocumentCenter/View/25986/20250429-PRESENTATION-Workshop-3",
-     "url": "https://sfrecpark.org/DocumentCenter/View/25986/20250429-PRESENTATION-Workshop-3"
     }
    ],
-   "notes": "Interim open-space use on the future P12/P13/P15 parcels; will be rebuilt as part of the Mission Bay Future Parks Project. SF Rec & Park's project page gives planning 2024-2025, design mid-2026, construction beginning late 2028 and public opening early 2030; the same page also says the remaining parks 'are anticipated to be complete by 2028', OCII's Nov 14, 2024 CAC update lists 'Transfer to SF Rec Park and Park (end of 2028, upon completion)', and the Workshop 3 deck (p.15) shows construction 'mid-2027 thru 2028', so the schedules differ. All are expected dates, not events.",
+   "notes": "Interim use pending the Mission Bay Future Parks Project; see the record page for the expected schedule and its sources.",
    "has_record_file": true,
-   "last_verified": "2026-10-10",
-   "tenants": [
-    {
-     "slug": "spark-social-sf",
-     "name": "SPARK Social SF",
-     "category": "food and drink",
-     "status": "open",
-     "opened": null,
-     "closed": null,
-     "source": "https://visitsparksocial.com/san-francisco/",
-     "unit_or_address": "601 Mission Bay Blvd North",
-     "record": {
-      "id": "mission_bay_commons_interim_west",
-      "slug": "mission-bay-commons-parcels-p12-p13-and-p15",
-      "name": "Mission Bay Commons, Parcels P12, P13 and P15",
-      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-parcels-p12-p13-and-p15/",
-      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-parcels-p12-p13-and-p15.json"
-     },
-     "site": {
-      "slug": "mission-bay",
-      "name": "Mission Bay",
-      "short": "Mission Bay",
-      "url": "https://pierandpoint.org/sites/mission-bay/"
-     }
-    }
-   ],
+   "last_verified": "2026-10-24",
+   "tenants": [],
    "geometry": {
     "type": "Polygon",
     "coordinates": [
      [
-      [
-       -122.3897955,
-       37.7710407
-      ],
-      [
-       -122.3897363,
-       37.7710337
-      ],
-      [
-       -122.3897067,
-       37.7710029
-      ],
-      [
-       -122.3896979,
-       37.7709112
-      ],
-      [
-       -122.3896858,
-       37.7707859
-      ],
-      [
-       -122.3897164,
-       37.7707516
-      ],
-      [
-       -122.389747,
-       37.7707173
-      ],
-      [
-       -122.3903332,
-       37.7706817
-      ],
-      [
-       -122.3905941,
-       37.7706658
-      ],
-      [
-       -122.3910174,
-       37.7706401
-      ],
-      [
-       -122.3913669,
-       37.77062
-      ],
-      [
-       -122.3915561,
-       37.7706085
-      ],
-      [
-       -122.3918355,
-       37.7705916
-      ],
-      [
-       -122.3924995,
-       37.7705512
-      ],
-      [
-       -122.3926992,
-       37.7705391
-      ],
       [
        -122.3930236,
        37.7705247
@@ -117260,8 +116766,561 @@
        37.7708395
       ],
       [
-       -122.3927979,
-       37.7708431
+       -122.3929305,
+       37.7708415
+      ],
+      [
+       -122.3929008,
+       37.7705302
+      ],
+      [
+       -122.3930236,
+       37.7705247
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "mission_bay_commons_p13",
+   "slug": "mission-bay-commons-p13-community-garden-and-spark-social-sf",
+   "name": "Mission Bay Commons P13: Community Garden and SPARK Social SF",
+   "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p13-community-garden-and-spark-social-sf/",
+   "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p13-community-garden-and-spark-social-sf.json",
+   "names": [
+    "Mission Bay Commons P13: Community Garden and SPARK Social SF"
+   ],
+   "search_aliases": [
+    "Spark Social SF"
+   ],
+   "site": {
+    "slug": "mission-bay",
+    "name": "Mission Bay",
+    "short": "Mission Bay",
+    "url": "https://pierandpoint.org/sites/mission-bay/"
+   },
+   "status": "existing",
+   "status_label": "Existing · change planned",
+   "use": "park",
+   "relation": "tracked",
+   "adjacent_to": null,
+   "distance_note": null,
+   "how_to_comment": [],
+   "positions": [],
+   "address": null,
+   "summary": "Parcel P13, the middle of the three west Mission Bay Commons parcels (between Merrimac St and 4th St), holds a community garden and SPARK Social SF, as OCII's November 14, 2024 update (PDF p.17 legend) labels its current uses. They began as interim uses (OCII's timeline gives 2016 for the P13 pilot), pending the Mission Bay Future Parks Project, which Rec and Park says will renovate parcels P12, P13 and P15 into a permanent park. The permanent park is one project for P12, P13 and P15 together, so the schedule shown here (construction beginning late 2028 and opening early 2030 on Rec and Park's estimated schedule, expected dates that differ by source) is the project's, not specific to this parcel.",
+   "summary_sources": [
+    "src-ocii-parks-2024",
+    "src-rpd-futureparks"
+   ],
+   "shape": {
+    "kind": "approximate",
+    "parcel": null,
+    "display": "fill",
+    "display_reason": null,
+    "notes": {
+     "accuracy_caveat": "The shape is approximate but its outer edge is real. The outer edge is OpenStreetMap way 446183018 (leisure=park, name 'Parklab', community-surveyed). The lines between the three parcels are not surveyed parcel lines: they are drawn at DataSF's official street centerlines for Merrimac St and 4th St, which are roadways across the strip, offset 6.8 m each side (checked on satellite imagery; at Merrimac St the paved crossing is only about 10-11 m wide with the centerline near its east edge, so the line on the P13 side falls about 2-3 m inside the community garden beds, leaving about 70-100 sq m of them out of P13), and the order of the parcels, P12 then P13 then P15 from west to east, is from OCII's November 14, 2024 update (PDF p.17), whose drawing is not to scale. This parcel is the middle one, between Merrimac St and 4th St, about 4,480 sq m. The shape is not clipped to the street layer (street_clip_exempt): clipping a drawn outline against DataSF centerline buffers would cut P12 in two along DataSF's Long Bridge St segment, which crosses the soccer field where imagery shows no roadway, and would trim the north edges of P12 and P15, so the processed shape is the drawn one. This parcel has no Assessor lot of its own: Assessor lot 8710003 (17,562 sq m, active) holds about 68% of this parcel (and this parcel is only about 17% of that lot); the rest of the parcel is on no lot that matches it, so none of them is this parcel's own. The interim uses here are as OCII labels them (OCII's legend label \"Community Garden & SPARK Social SF\"); they are interim pending the Mission Bay Future Parks Project, which is planned to redesign parcels P12, P13 and P15 into a permanent park (expected dates differ by source; see the record page).",
+     "digitized_from": "OpenStreetMap way 446183018 (leisure=park, name=Parklab) outer edge, cut at DataSF's official centerlines of Merrimac St and 4th St, plus and minus 6.8 m (4th St's roadway is excluded; the Merrimac St line falls about 2-3 m inside P13's community garden beds) into OCII's parcels P12, P13 and P15 (OCII Nov 14, 2024 update, PDF p.17)"
+    }
+   },
+   "centroid": {
+    "lon": -122.391907,
+    "lat": 37.770718
+   },
+   "facts": [
+    {
+     "key": "parcels",
+     "value": "P13 (Rec and Park), part of Mission Bay Commons",
+     "sources": [
+      "src-rpd-futureparks",
+      "src-ocii-parks-2024"
+     ]
+    },
+    {
+     "key": "interim_uses",
+     "value": "Community Garden and SPARK Social SF (OCII's label)",
+     "sources": [
+      "src-ocii-parks-2024"
+     ]
+    },
+    {
+     "key": "funding",
+     "value": "Design and construction of the permanent project 'fully funded through OCII' (Rec and Park); Rec and Park will own and operate the parks on completion",
+     "sources": [
+      "src-rpd-futureparks"
+     ]
+    },
+    {
+     "key": "planned_schedule",
+     "value": "Planning 2024-2025, design mid 2026, construction begins late 2028, open to the public early 2030 (Rec and Park estimated schedule)",
+     "sources": [
+      "src-rpd-futureparks"
+     ]
+    }
+   ],
+   "costs": [],
+   "milestones": [
+    {
+     "date": "2016",
+     "date_label": "~2016",
+     "status": null,
+     "status_label": null,
+     "text": "Interim-use pilot begins on parcel P13 (OCII's November 14, 2024 Future Parks update, slide 9 timeline: \"MB Commons interim use pilots begin on P13 (2016), P15 (2017), P12 (2018)\"); the slide names no uses, and the PDF p.17 legend labels P13 \"Community Garden & SPARK Social SF\"",
+     "expected": false,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-ocii-parks-2024",
+       "title": "Mission Bay Future Parks, CAC Update (Remaining Mission Bay Open Space Parcels Update)",
+       "publisher": "Office of Community Investment and Infrastructure (OCII)",
+       "date": "2024-11-14",
+       "url": "https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf",
+       "accessed": "2026-10-24"
+      }
+     ],
+     "source": "Office of Community Investment and Infrastructure (OCII), 2024-11-14",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "mission_bay_commons_p13",
+      "slug": "mission-bay-commons-p13-community-garden-and-spark-social-sf",
+      "name": "Mission Bay Commons P13: Community Garden and SPARK Social SF",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p13-community-garden-and-spark-social-sf/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p13-community-garden-and-spark-social-sf.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2016-05",
+     "date_label": "May 2016",
+     "status": "existing",
+     "status_label": "Existing",
+     "text": "SPARK Social SF, one of the uses OCII labels on P13, launches at 601 Mission Bay Blvd. North (Parklab's project page: 'launch date: May 2016'); the page covers Spark Social only",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-parklab-spark",
+       "title": "SPARK Social SF",
+       "publisher": "Parklab, Inc.",
+       "url": "https://www.parklab.com/spark-social-sf",
+       "accessed": "2026-10-24"
+      },
+      {
+       "id": "src-ocii-parks-2024",
+       "title": "Mission Bay Future Parks, CAC Update (Remaining Mission Bay Open Space Parcels Update)",
+       "publisher": "Office of Community Investment and Infrastructure (OCII)",
+       "date": "2024-11-14",
+       "url": "https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf",
+       "accessed": "2026-10-24"
+      }
+     ],
+     "source": "Parklab, Inc.; Office of Community Investment and Infrastructure (OCII), 2024-11-14",
+     "origin": "record",
+     "category": "status",
+     "category_label": "Status",
+     "record": {
+      "id": "mission_bay_commons_p13",
+      "slug": "mission-bay-commons-p13-community-garden-and-spark-social-sf",
+      "name": "Mission Bay Commons P13: Community Garden and SPARK Social SF",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p13-community-garden-and-spark-social-sf/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p13-community-garden-and-spark-social-sf.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2023-07-01",
+     "date_label": "Jul 1, 2023",
+     "status": null,
+     "status_label": null,
+     "text": "Rec and Park assumes management and maintenance of Mission Bay's park spaces",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-rpd-futureparks",
+       "title": "Mission Bay Future Parks Project",
+       "publisher": "San Francisco Recreation and Park Department",
+       "url": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
+       "accessed": "2026-10-24",
+       "overview": true
+      }
+     ],
+     "source": "San Francisco Recreation and Park Department",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "mission_bay_commons_p13",
+      "slug": "mission-bay-commons-p13-community-garden-and-spark-social-sf",
+      "name": "Mission Bay Commons P13: Community Garden and SPARK Social SF",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p13-community-garden-and-spark-social-sf/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p13-community-garden-and-spark-social-sf.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2024-11-14",
+     "date_label": "Nov 14, 2024",
+     "status": null,
+     "status_label": null,
+     "text": "OCII's Mission Bay Future Parks update to its Citizens Advisory Committee names the Commons (P11, P12, P13, P15, P16, P17) among the parks being planned and shows a transfer to Rec and Park 'end of 2028, upon completion'",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-ocii-parks-2024",
+       "title": "Mission Bay Future Parks, CAC Update (Remaining Mission Bay Open Space Parcels Update)",
+       "publisher": "Office of Community Investment and Infrastructure (OCII)",
+       "date": "2024-11-14",
+       "url": "https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf",
+       "accessed": "2026-10-24"
+      }
+     ],
+     "source": "Office of Community Investment and Infrastructure (OCII), 2024-11-14",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "mission_bay_commons_p13",
+      "slug": "mission-bay-commons-p13-community-garden-and-spark-social-sf",
+      "name": "Mission Bay Commons P13: Community Garden and SPARK Social SF",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p13-community-garden-and-spark-social-sf/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p13-community-garden-and-spark-social-sf.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2025-08",
+     "date_label": "~Aug 2025",
+     "status": null,
+     "status_label": null,
+     "text": "Rec and Park reports the Future Parks project moving into design: an RFQ (request for qualifications) 'was released in early August' (reported event) and a design team 'should be selected by mid-October' (an expected date; no source read says whether a team was selected)",
+     "expected": false,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-rpd-futureparks",
+       "title": "Mission Bay Future Parks Project",
+       "publisher": "San Francisco Recreation and Park Department",
+       "url": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
+       "accessed": "2026-10-24",
+       "overview": true
+      }
+     ],
+     "source": "San Francisco Recreation and Park Department",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "mission_bay_commons_p13",
+      "slug": "mission-bay-commons-p13-community-garden-and-spark-social-sf",
+      "name": "Mission Bay Commons P13: Community Garden and SPARK Social SF",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p13-community-garden-and-spark-social-sf/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p13-community-garden-and-spark-social-sf.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2028",
+     "date_label": "~2028",
+     "status": null,
+     "status_label": null,
+     "text": "Construction of the permanent park expected to begin 'late 2028' (Rec and Park estimated schedule)",
+     "expected": true,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-rpd-futureparks",
+       "title": "Mission Bay Future Parks Project",
+       "publisher": "San Francisco Recreation and Park Department",
+       "url": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
+       "accessed": "2026-10-24",
+       "overview": true
+      }
+     ],
+     "source": "San Francisco Recreation and Park Department",
+     "origin": "record",
+     "category": "coming_up",
+     "category_label": "Coming up",
+     "record": {
+      "id": "mission_bay_commons_p13",
+      "slug": "mission-bay-commons-p13-community-garden-and-spark-social-sf",
+      "name": "Mission Bay Commons P13: Community Garden and SPARK Social SF",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p13-community-garden-and-spark-social-sf/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p13-community-garden-and-spark-social-sf.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2028-10",
+     "date_label": "~Oct 2028",
+     "status": null,
+     "status_label": null,
+     "text": "Mission Bay Future Parks Project construction targeted to begin (\"late 2028\" per sfrecpark.org's estimated schedule; the same page says the remaining parks \"are anticipated to be complete by 2028\" and Rec & Park's Workshop 3 deck (p.15) shows construction \"mid-2027 thru 2028\", so the start differs by source)",
+     "expected": true,
+     "approximate": true,
+     "sources": [
+      {
+       "title": "sfrecpark.org/1832/Mission-Bay-Future-Parks-Project"
+      }
+     ],
+     "source": "sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
+     "origin": "csv",
+     "category": "coming_up",
+     "category_label": "Coming up",
+     "record": {
+      "id": "mission_bay_commons_p13",
+      "slug": "mission-bay-commons-p13-community-garden-and-spark-social-sf",
+      "name": "Mission Bay Commons P13: Community Garden and SPARK Social SF",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p13-community-garden-and-spark-social-sf/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p13-community-garden-and-spark-social-sf.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2030",
+     "date_label": "~2030",
+     "status": null,
+     "status_label": null,
+     "text": "Permanent park expected to open to the public 'early 2030' (Rec and Park estimated schedule); the same page also says the remaining parks 'are anticipated to be complete by 2028'",
+     "expected": true,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-rpd-futureparks",
+       "title": "Mission Bay Future Parks Project",
+       "publisher": "San Francisco Recreation and Park Department",
+       "url": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
+       "accessed": "2026-10-24",
+       "overview": true
+      }
+     ],
+     "source": "San Francisco Recreation and Park Department",
+     "origin": "record",
+     "category": "coming_up",
+     "category_label": "Coming up",
+     "record": {
+      "id": "mission_bay_commons_p13",
+      "slug": "mission-bay-commons-p13-community-garden-and-spark-social-sf",
+      "name": "Mission Bay Commons P13: Community Garden and SPARK Social SF",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p13-community-garden-and-spark-social-sf/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p13-community-garden-and-spark-social-sf.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2030-02",
+     "date_label": "~Feb 2030",
+     "status": "complete",
+     "status_label": "Complete",
+     "text": "Mission Bay Future Parks Project public opening targeted (\"early 2030\" per sfrecpark.org)",
+     "expected": true,
+     "approximate": true,
+     "sources": [
+      {
+       "title": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project"
+      }
+     ],
+     "source": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
+     "origin": "csv",
+     "category": "coming_up",
+     "category_label": "Coming up",
+     "record": {
+      "id": "mission_bay_commons_p13",
+      "slug": "mission-bay-commons-p13-community-garden-and-spark-social-sf",
+      "name": "Mission Bay Commons P13: Community Garden and SPARK Social SF",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p13-community-garden-and-spark-social-sf/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p13-community-garden-and-spark-social-sf.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    }
+   ],
+   "changes": [
+    {
+     "date": "2026-10-24",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Split out of the single record for the west Commons strip (now the record for parcel P15). P13 is the middle parcel, between DataSF's Merrimac St and 4th St centerlines, each plus or minus 6.8 m (the Merrimac line falls about 2-3 m inside the community garden beds), labelled \"Community Garden & SPARK Social SF\" by OCII; the SPARK Social SF tenant entry moved here from the old record. Its shape is approximate: the outer edge is OpenStreetMap's, the cuts are drawn from street centerlines and OCII's drawing. P13 has no Assessor lot of its own.",
+     "source": "OCII, Mission Bay Future Parks CAC Update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf), PDF p.17 legend: \"P12 SFF Soccer + Fitness Court\", \"P13 Community Garden & SPARK Social SF\", \"P15 Parklab Gardens & Stagecoach Greens\"",
+     "sources": [
+      {
+       "title": "OCII, Mission Bay Future Parks CAC Update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf), PDF p.17 legend: \"P12 SFF Soccer + Fitness Court\", \"P13 Community Garden & SPARK Social SF\", \"P15 Parklab Gardens & Stagecoach Greens\""
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_commons_p13",
+      "slug": "mission-bay-commons-p13-community-garden-and-spark-social-sf",
+      "name": "Mission Bay Commons P13: Community Garden and SPARK Social SF",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p13-community-garden-and-spark-social-sf/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p13-community-garden-and-spark-social-sf.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    }
+   ],
+   "images": [],
+   "open_questions": [
+    "No official parcel boundary was found for P13: The outline is the OpenStreetMap park strip named Parklab (way 446183018), cut at Merrimac St and 4th St along DataSF's street centerlines plus 6.8 m; the lines between parcels are drawn from OCII's November 2024 drawing (PDF pp.5 and 17), which is not to scale, not from a survey. This parcel has no Assessor lot of its own: lot 8710003 (17,562 sq m) holds about 68% of P13, and P13 is only about 17% of that lot. At Merrimac St the paved crossing is only about 10-11 m wide with the centerline near its east edge, so the P13 edge falls about 2-3 m inside the community garden beds, leaving about 70-100 sq m of them out.",
+    "Which community garden is on P13 is not stated: Rec and Park's page lists an \"Urban Sprouts Community Garden\" among the uses on P12, P13 and P15 without saying which parcel, and OCII's legend says only \"Community Garden\" for P13.",
+    "Which parcel Spark Social SF sits on is given two ways by OCII's deck: the legend (PDF p.17) reads \"P13 Community Garden & SPARK Social SF\", while a survey slide (PDF p.31) reads \"P13 & P15: Food Truck Park with Outdoor Dining (SPARK Social SF & Parklab Gardens)\". This record follows the legend.",
+    "No opening date for the community garden was found; the only dates for P13 are the parcel-level pilot start (2016, OCII slide 9) and Spark Social's May 2016 launch on the operator's page.",
+    "The schedule differs between sources and is not resolved: Rec and Park's project page gives \"Construction begins, Late 2028\" and \"Open to the Public, Early 2030\" but also says the remaining parks \"are anticipated to be complete by 2028\", and slide 9 of OCII's November 14, 2024 update reads \"Construction (mid-2027 thru 2028)\" and \"Transfer to SF Rec Park and Park (end of 2028, upon completion)\". All of these are expected dates.",
+    "The OCII November 2024 deck's timeline (slide 9) is an image with no text layer; it was read on 2026-10-12 from a rendering of the slide. It gives \"Construction (mid-2027 thru 2028)\" and \"Transfer to SF Rec Park and Park (end of 2028, upon completion)\", which differ from Rec and Park's later page (construction beginning late 2028, opening early 2030)."
+   ],
+   "sources": [
+    {
+     "id": "src-rpd-futureparks",
+     "title": "Mission Bay Future Parks Project",
+     "publisher": "San Francisco Recreation and Park Department",
+     "url": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
+     "accessed": "2026-10-24",
+     "overview": true
+    },
+    {
+     "id": "src-ocii-parks-2024",
+     "title": "Mission Bay Future Parks, CAC Update (Remaining Mission Bay Open Space Parcels Update)",
+     "publisher": "Office of Community Investment and Infrastructure (OCII)",
+     "date": "2024-11-14",
+     "url": "https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf",
+     "accessed": "2026-10-24"
+    },
+    {
+     "id": "src-parklab-spark",
+     "title": "SPARK Social SF",
+     "publisher": "Parklab, Inc.",
+     "url": "https://www.parklab.com/spark-social-sf",
+     "accessed": "2026-10-24"
+    },
+    {
+     "id": null,
+     "title": "openstreetmap.org/way/446183018",
+     "url": "https://www.openstreetmap.org/way/446183018"
+    }
+   ],
+   "notes": "Interim use pending the Mission Bay Future Parks Project; see the record page for the expected schedule and its sources.",
+   "has_record_file": true,
+   "last_verified": "2026-10-24",
+   "tenants": [
+    {
+     "slug": "spark-social-sf",
+     "name": "SPARK Social SF",
+     "category": "food and drink",
+     "status": "open",
+     "opened": null,
+     "closed": null,
+     "source": "https://visitsparksocial.com/san-francisco/",
+     "unit_or_address": "601 Mission Bay Blvd North",
+     "record": {
+      "id": "mission_bay_commons_p13",
+      "slug": "mission-bay-commons-p13-community-garden-and-spark-social-sf",
+      "name": "Mission Bay Commons P13: Community Garden and SPARK Social SF",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p13-community-garden-and-spark-social-sf/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p13-community-garden-and-spark-social-sf.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     }
+    }
+   ],
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -122.3913669,
+       37.77062
+      ],
+      [
+       -122.3915561,
+       37.7706085
+      ],
+      [
+       -122.3918355,
+       37.7705916
+      ],
+      [
+       -122.3924995,
+       37.7705512
+      ],
+      [
+       -122.3926992,
+       37.7705391
+      ],
+      [
+       -122.3927466,
+       37.770537
+      ],
+      [
+       -122.3927759,
+       37.7708438
       ],
       [
        -122.3925255,
@@ -117278,6 +117337,885 @@
       [
        -122.3913654,
        37.7709245
+      ],
+      [
+       -122.3912698,
+       37.7709366
+      ],
+      [
+       -122.3912403,
+       37.7706273
+      ],
+      [
+       -122.3913669,
+       37.77062
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "mission_bay_commons_interim_west",
+   "slug": "mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens",
+   "name": "Mission Bay Commons P15: Parklab Gardens and Stagecoach Greens",
+   "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens/",
+   "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens.json",
+   "names": [
+    "Mission Bay Commons P15: Parklab Gardens and Stagecoach Greens"
+   ],
+   "search_aliases": [
+    "Mission Bay Commons, Parcels P12, P13 and P15",
+    "Parklab Gardens & Mission Bay Commons (interim, west)",
+    "Mission Bay Commons parcels P12, P13, P15",
+    "Parklab Gardens"
+   ],
+   "site": {
+    "slug": "mission-bay",
+    "name": "Mission Bay",
+    "short": "Mission Bay",
+    "url": "https://pierandpoint.org/sites/mission-bay/"
+   },
+   "status": "existing",
+   "status_label": "Existing · change planned",
+   "use": "park",
+   "relation": "tracked",
+   "adjacent_to": null,
+   "distance_note": null,
+   "how_to_comment": [],
+   "positions": [],
+   "address": null,
+   "summary": "Parcel P15, the eastern of the three west Mission Bay Commons parcels (between 4th St and 3rd St), holds Parklab Gardens and Stagecoach Greens mini golf, as OCII's November 14, 2024 update (PDF p.17 legend) labels its current uses. They began as interim uses (OCII's timeline gives 2017 for the P15 pilot), pending the Mission Bay Future Parks Project, which Rec and Park says will renovate parcels P12, P13 and P15 into a permanent park, with construction beginning late 2028 and opening early 2030 on Rec and Park's estimated schedule (expected dates, which differ by source). P12 and P13 have their own records.",
+   "summary_sources": [
+    "src-ocii-parks-2024",
+    "src-rpd-futureparks"
+   ],
+   "shape": {
+    "kind": "approximate",
+    "parcel": null,
+    "display": "fill",
+    "display_reason": null,
+    "notes": {
+     "accuracy_caveat": "The shape is approximate but its outer edge is real. The outer edge is OpenStreetMap way 446183018 (leisure=park, name 'Parklab', community-surveyed). The lines between the three parcels are not surveyed parcel lines: they are drawn at DataSF's official street centerlines for Merrimac St and 4th St, which are roadways across the strip, offset 6.8 m each side (checked on satellite imagery; at Merrimac St the paved crossing is only about 10-11 m wide with the centerline near its east edge, so the line on the P13 side falls about 2-3 m inside the community garden beds, leaving about 70-100 sq m of them out of P13), and the order of the parcels, P12 then P13 then P15 from west to east, is from OCII's November 14, 2024 update (PDF p.17), whose drawing is not to scale. This parcel is the easternmost of the three, between 4th St and the OSM outline's east end near 3rd St, about 4,450 sq m. The shape is not clipped to the street layer (street_clip_exempt): clipping a drawn outline against DataSF centerline buffers would cut P12 in two along DataSF's Long Bridge St segment, which crosses the soccer field where imagery shows no roadway, and would trim the north edges of P12 and P15, so the processed shape is the drawn one. This parcel has no Assessor lot of its own: Assessor lots 8732001 (1,415 sq m) and 8711005 (2,953 sq m), both active, each hold part of this parcel (about 19% and 45% of it; the parcel is about 61% and 68% of those lots), so neither lot is this parcel's own. The interim uses here are as OCII labels them (OCII's legend label \"Parklab Gardens & Stagecoach Greens\"); they are interim pending the Mission Bay Future Parks Project, which is planned to redesign parcels P12, P13 and P15 into a permanent park (expected dates differ by source; see the record page).",
+     "digitized_from": "OpenStreetMap way 446183018 (leisure=park, name=Parklab) outer edge, cut at DataSF's official centerlines of Merrimac St and 4th St, plus and minus 6.8 m (4th St's roadway is excluded; the Merrimac St line falls about 2-3 m inside P13's community garden beds) into OCII's parcels P12, P13 and P15 (OCII Nov 14, 2024 update, PDF p.17)"
+    }
+   },
+   "centroid": {
+    "lon": -122.390277,
+    "lat": 37.770879
+   },
+   "facts": [
+    {
+     "key": "parcels",
+     "value": "P15 (Rec and Park), part of Mission Bay Commons",
+     "sources": [
+      "src-rpd-futureparks",
+      "src-ocii-parks-2024"
+     ]
+    },
+    {
+     "key": "interim_uses",
+     "value": "Parklab Gardens and Stagecoach Greens (OCII's label)",
+     "sources": [
+      "src-ocii-parks-2024"
+     ]
+    },
+    {
+     "key": "funding",
+     "value": "Design and construction of the permanent project 'fully funded through OCII' (Rec and Park); Rec and Park will own and operate the parks on completion",
+     "sources": [
+      "src-rpd-futureparks"
+     ]
+    },
+    {
+     "key": "planned_schedule",
+     "value": "Planning 2024-2025, design mid 2026, construction begins late 2028, open to the public early 2030 (Rec and Park estimated schedule)",
+     "sources": [
+      "src-rpd-futureparks"
+     ]
+    }
+   ],
+   "costs": [],
+   "milestones": [
+    {
+     "date": "2017",
+     "date_label": "~2017",
+     "status": null,
+     "status_label": null,
+     "text": "Interim-use pilot begins on parcel P15 (OCII's November 14, 2024 Future Parks update, slide 9 timeline: \"MB Commons interim use pilots begin on P13 (2016), P15 (2017), P12 (2018)\"); the slide names no uses, and the PDF p.17 legend labels P15 \"Parklab Gardens & Stagecoach Greens\"",
+     "expected": false,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-ocii-parks-2024",
+       "title": "Mission Bay Future Parks, CAC Update (Remaining Mission Bay Open Space Parcels Update)",
+       "publisher": "Office of Community Investment and Infrastructure (OCII)",
+       "date": "2024-11-14",
+       "url": "https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf",
+       "accessed": "2026-10-24"
+      }
+     ],
+     "source": "Office of Community Investment and Infrastructure (OCII), 2024-11-14",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "mission_bay_commons_interim_west",
+      "slug": "mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens",
+      "name": "Mission Bay Commons P15: Parklab Gardens and Stagecoach Greens",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2018-08",
+     "date_label": "~Aug 2018",
+     "status": "existing",
+     "status_label": "Existing",
+     "text": "Stagecoach Greens mini golf, one of the two uses OCII's November 2024 legend labels on P15 (with Parklab Gardens), is reported open: Hoodline, published August 20, 2018, says \"San Francisco's first outdoor mini-golf course, Stagecoach Greens, is now open at 1379 4th St. in Mission Bay\". The month is approximate because the report does not give the opening day, and no source written after the opening was found for Parklab Gardens' own opening, so this date is Stagecoach Greens' only.",
+     "expected": false,
+     "approximate": true,
+     "sources": [
+      {
+       "title": "Hoodline, \"Now open in Mission Bay: SF's first outdoor mini-golf course\" (Kathleen Ngo, published Aug 20, 2018; https://hoodline.com/2018/08/now-open-in-mission-bay-sf-s-first-outdoor-mini-golf-course/); OCII Mission Bay Future Parks CAC Update, Nov 14, 2024, PDF p.17 legend (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf)"
+      }
+     ],
+     "source": "Hoodline, \"Now open in Mission Bay: SF's first outdoor mini-golf course\" (Kathleen Ngo, published Aug 20, 2018; https://hoodline.com/2018/08/now-open-in-mission-bay-sf-s-first-outdoor-mini-golf-course/); OCII Mission Bay Future Parks CAC Update, Nov 14, 2024, PDF p.17 legend (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf)",
+     "origin": "csv",
+     "category": "status",
+     "category_label": "Status",
+     "record": {
+      "id": "mission_bay_commons_interim_west",
+      "slug": "mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens",
+      "name": "Mission Bay Commons P15: Parklab Gardens and Stagecoach Greens",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2023-07-01",
+     "date_label": "Jul 1, 2023",
+     "status": null,
+     "status_label": null,
+     "text": "Rec and Park assumes management and maintenance of Mission Bay's park spaces",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-rpd-futureparks",
+       "title": "Mission Bay Future Parks Project",
+       "publisher": "San Francisco Recreation and Park Department",
+       "url": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
+       "accessed": "2026-10-24",
+       "overview": true
+      }
+     ],
+     "source": "San Francisco Recreation and Park Department",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "mission_bay_commons_interim_west",
+      "slug": "mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens",
+      "name": "Mission Bay Commons P15: Parklab Gardens and Stagecoach Greens",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2024-11-14",
+     "date_label": "Nov 14, 2024",
+     "status": null,
+     "status_label": null,
+     "text": "OCII's Mission Bay Future Parks update to its Citizens Advisory Committee names the Commons (P11, P12, P13, P15, P16, P17) among the parks being planned and shows a transfer to Rec and Park 'end of 2028, upon completion'",
+     "expected": false,
+     "approximate": false,
+     "sources": [
+      {
+       "id": "src-ocii-parks-2024",
+       "title": "Mission Bay Future Parks, CAC Update (Remaining Mission Bay Open Space Parcels Update)",
+       "publisher": "Office of Community Investment and Infrastructure (OCII)",
+       "date": "2024-11-14",
+       "url": "https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf",
+       "accessed": "2026-10-24"
+      }
+     ],
+     "source": "Office of Community Investment and Infrastructure (OCII), 2024-11-14",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "mission_bay_commons_interim_west",
+      "slug": "mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens",
+      "name": "Mission Bay Commons P15: Parklab Gardens and Stagecoach Greens",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2025-08",
+     "date_label": "~Aug 2025",
+     "status": null,
+     "status_label": null,
+     "text": "Rec and Park reports the Future Parks project moving into design: an RFQ (request for qualifications) 'was released in early August' (reported event) and a design team 'should be selected by mid-October' (an expected date; no source read says whether a team was selected)",
+     "expected": false,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-rpd-futureparks",
+       "title": "Mission Bay Future Parks Project",
+       "publisher": "San Francisco Recreation and Park Department",
+       "url": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
+       "accessed": "2026-10-24",
+       "overview": true
+      }
+     ],
+     "source": "San Francisco Recreation and Park Department",
+     "origin": "record",
+     "category": "milestone",
+     "category_label": "Milestone",
+     "record": {
+      "id": "mission_bay_commons_interim_west",
+      "slug": "mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens",
+      "name": "Mission Bay Commons P15: Parklab Gardens and Stagecoach Greens",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2028",
+     "date_label": "~2028",
+     "status": null,
+     "status_label": null,
+     "text": "Construction of the permanent park expected to begin 'late 2028' (Rec and Park estimated schedule)",
+     "expected": true,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-rpd-futureparks",
+       "title": "Mission Bay Future Parks Project",
+       "publisher": "San Francisco Recreation and Park Department",
+       "url": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
+       "accessed": "2026-10-24",
+       "overview": true
+      }
+     ],
+     "source": "San Francisco Recreation and Park Department",
+     "origin": "record",
+     "category": "coming_up",
+     "category_label": "Coming up",
+     "record": {
+      "id": "mission_bay_commons_interim_west",
+      "slug": "mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens",
+      "name": "Mission Bay Commons P15: Parklab Gardens and Stagecoach Greens",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2028-10",
+     "date_label": "~Oct 2028",
+     "status": null,
+     "status_label": null,
+     "text": "Mission Bay Future Parks Project construction targeted to begin (\"late 2028\" per sfrecpark.org's estimated schedule; the same page says the remaining parks \"are anticipated to be complete by 2028\" and Rec & Park's Workshop 3 deck (p.15) shows construction \"mid-2027 thru 2028\", so the start differs by source)",
+     "expected": true,
+     "approximate": true,
+     "sources": [
+      {
+       "title": "sfrecpark.org/1832/Mission-Bay-Future-Parks-Project"
+      }
+     ],
+     "source": "sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
+     "origin": "csv",
+     "category": "coming_up",
+     "category_label": "Coming up",
+     "record": {
+      "id": "mission_bay_commons_interim_west",
+      "slug": "mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens",
+      "name": "Mission Bay Commons P15: Parklab Gardens and Stagecoach Greens",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2030",
+     "date_label": "~2030",
+     "status": null,
+     "status_label": null,
+     "text": "Permanent park expected to open to the public 'early 2030' (Rec and Park estimated schedule); the same page also says the remaining parks 'are anticipated to be complete by 2028'",
+     "expected": true,
+     "approximate": true,
+     "sources": [
+      {
+       "id": "src-rpd-futureparks",
+       "title": "Mission Bay Future Parks Project",
+       "publisher": "San Francisco Recreation and Park Department",
+       "url": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
+       "accessed": "2026-10-24",
+       "overview": true
+      }
+     ],
+     "source": "San Francisco Recreation and Park Department",
+     "origin": "record",
+     "category": "coming_up",
+     "category_label": "Coming up",
+     "record": {
+      "id": "mission_bay_commons_interim_west",
+      "slug": "mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens",
+      "name": "Mission Bay Commons P15: Parklab Gardens and Stagecoach Greens",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    },
+    {
+     "date": "2030-02",
+     "date_label": "~Feb 2030",
+     "status": "complete",
+     "status_label": "Complete",
+     "text": "Mission Bay Future Parks Project public opening targeted (\"early 2030\" per sfrecpark.org)",
+     "expected": true,
+     "approximate": true,
+     "sources": [
+      {
+       "title": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project"
+      }
+     ],
+     "source": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
+     "origin": "csv",
+     "category": "coming_up",
+     "category_label": "Coming up",
+     "record": {
+      "id": "mission_bay_commons_interim_west",
+      "slug": "mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens",
+      "name": "Mission Bay Commons P15: Parklab Gardens and Stagecoach Greens",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked"
+    }
+   ],
+   "changes": [
+    {
+     "date": "2026-10-25",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The status line 'since about Aug 2018' came from an SF Chronicle piece that said Parklab Gardens was 'opening Friday', a report written before the opening. An opening needs a source written after it. The line now rests on Hoodline's report, published August 20, 2018, that Stagecoach Greens, which OCII's November 2024 legend places on P15, 'is now open'. The month stays approximate because that report gives no opening day. No source written after the opening was found for Parklab Gardens, so it has no opening date here.",
+     "source": "Hoodline, \"Now open in Mission Bay: SF's first outdoor mini-golf course\" (Aug 20, 2018, https://hoodline.com/2018/08/now-open-in-mission-bay-sf-s-first-outdoor-mini-golf-course/): \"San Francisco’s first outdoor mini-golf course, Stagecoach Greens, is now open at 1379 4th St. in Mission Bay.\"; OCII, Mission Bay Future Parks CAC Update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf), PDF p.17 legend: \"P15 Parklab Gardens & Stagecoach Greens\"",
+     "sources": [
+      {
+       "title": "Hoodline, \"Now open in Mission Bay: SF's first outdoor mini-golf course\" (Aug 20, 2018, https://hoodline.com/2018/08/now-open-in-mission-bay-sf-s-first-outdoor-mini-golf-course/): \"San Francisco’s first outdoor mini-golf course, Stagecoach Greens, is now open at 1379 4th St. in Mission Bay.\"; OCII, Mission Bay Future Parks CAC Update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf), PDF p.17 legend: \"P15 Parklab Gardens & Stagecoach Greens\""
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_commons_interim_west",
+      "slug": "mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens",
+      "name": "Mission Bay Commons P15: Parklab Gardens and Stagecoach Greens",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
+    {
+     "date": "2026-10-25",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The 2026-09-24 retail row 'SPARK Social SF operates at 601 Mission Bay Blvd North' was filed on this record when it covered all three west Commons parcels. OCII's November 2024 legend puts SPARK Social SF on P13 (\"P13 Community Garden & SPARK Social SF\"), so the tenant is now listed on the P13 record, and the entry on this page is not about a P15 tenant. Another page of the same deck (PDF p.31) groups \"P13 & P15: Food Truck Park with Outdoor Dining (SPARK Social SF & Parklab Gardens)\"; this page follows the legend.",
+     "source": "OCII, Mission Bay Future Parks CAC Update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf), PDF p.17 legend: \"P13 Community Garden & SPARK Social SF\"",
+     "sources": [
+      {
+       "title": "OCII, Mission Bay Future Parks CAC Update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf), PDF p.17 legend: \"P13 Community Garden & SPARK Social SF\""
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_commons_interim_west",
+      "slug": "mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens",
+      "name": "Mission Bay Commons P15: Parklab Gardens and Stagecoach Greens",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
+    {
+     "date": "2026-10-24",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The one record for the three west Commons parcels is now three, one per parcel, each named for its parcel and the uses OCII's November 2024 update lists on it. This record keeps its address history and now covers parcel P15 (Parklab Gardens and Stagecoach Greens) only, between 4th St and 3rd St. Its shape was the whole Parklab park strip from OpenStreetMap; it is now that strip's P15 part, cut at 4th St along DataSF's street centerline plus 6.8 m, and is marked approximate because the parcel lines are drawn from OCII's drawing, not surveyed. P15 has no Assessor lot of its own. The old page address redirects here, and the old names still find it in search.",
+     "source": "OCII, Mission Bay Future Parks CAC Update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf), PDF p.17 legend: \"P12 SFF Soccer + Fitness Court\", \"P13 Community Garden & SPARK Social SF\", \"P15 Parklab Gardens & Stagecoach Greens\"",
+     "sources": [
+      {
+       "title": "OCII, Mission Bay Future Parks CAC Update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf), PDF p.17 legend: \"P12 SFF Soccer + Fitness Court\", \"P13 Community Garden & SPARK Social SF\", \"P15 Parklab Gardens & Stagecoach Greens\""
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_commons_interim_west",
+      "slug": "mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens",
+      "name": "Mission Bay Commons P15: Parklab Gardens and Stagecoach Greens",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
+    {
+     "date": "2026-10-17",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Rec and Park's Mission Bay Future Parks page calls the three parcels \"Mission Bay Commons: Parcels P12, P13, and P15\", and OCII's November 2024 update titles a slide \"Mission Bay Commons Parks (P12, P13, P15)\". The new name follows them and stays different from the Mission Bay Commons record. That the parcels hold interim uses today, and are to be rebuilt, is in the record's text. Shape, status and use are unchanged; the old page address redirects to the new one, and the old name still finds the record in search.",
+     "source": "San Francisco Recreation and Parks, Mission Bay Future Parks Project (https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project): \"Mission Bay Commons: Parcels P12, P13, and P15\"; OCII, Mission Bay Future Parks CAC Update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf), slide 1: \"Mission Bay Commons Parks (P12, P13, P15)\"",
+     "sources": [
+      {
+       "title": "San Francisco Recreation and Parks, Mission Bay Future Parks Project (https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project): \"Mission Bay Commons: Parcels P12, P13, and P15\"; OCII, Mission Bay Future Parks CAC Update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf), slide 1: \"Mission Bay Commons Parks (P12, P13, P15)\""
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_commons_interim_west",
+      "slug": "mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens",
+      "name": "Mission Bay Commons P15: Parklab Gardens and Stagecoach Greens",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
+    {
+     "date": "2026-10-13",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Rec and Park's project page gives estimated construction from late 2028 and opening in early 2030, but also says the remaining parks are anticipated to be complete by 2028; OCII's November 2024 timeline shows construction from mid-2027 through 2028. All are expected dates. In August 2025 Rec and Park said a design team \"should be selected by mid-October\" (expected); no source read says whether one was selected.",
+     "source": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project; https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf",
+     "sources": [
+      {
+       "title": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project; https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_commons_interim_west",
+      "slug": "mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens",
+      "name": "Mission Bay Commons P15: Parklab Gardens and Stagecoach Greens",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
+    {
+     "date": "2026-10-13",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Long 'At a glance' values were cut to the fact itself (or 'Sources differ'); the disputes, quoted excerpts and hedging moved to this record's open questions, with every source still named. No change to the record's status or shape.",
+     "source": "Pier & Point's own text edit",
+     "sources": [
+      {
+       "title": "Pier & Point's own text edit"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_commons_interim_west",
+      "slug": "mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens",
+      "name": "Mission Bay Commons P15: Parklab Gardens and Stagecoach Greens",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": "https://pierandpoint.org/changes/batches/2026-10-13-text-edit/"
+    },
+    {
+     "date": "2026-10-12",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "Parklab Gardens and the Commons interim area: all future dates are expected dates and they differ by source. Rec & Park's page gives construction beginning late 2028 and opening early 2030, yet says the remaining parks 'are anticipated to be complete by 2028'; OCII shows a transfer to Rec and Park 'end of 2028, upon completion'; Rec & Park's April 2025 deck shows construction 'mid-2027 thru 2028'. Parklab Gardens' opening is known only from an August 17, 2018 Chronicle article that says it was 'opening Friday', and OCII's November 2024 slides place it on P15 in one slide and on P13 and P15 in another.",
+     "source": "SF Rec & Park, Mission Bay Future Parks Project (https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project); OCII, Mission Bay Future Parks CAC update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf); SF Chronicle, Aug 17, 2018, as republished (https://stagecoachgreens.com/cms/outdoor-mini-golf-right-here-in-sf-yes-and-with-food-trucks-and-a-beer-garden/)",
+     "sources": [
+      {
+       "title": "SF Rec & Park, Mission Bay Future Parks Project (https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project); OCII, Mission Bay Future Parks CAC update, Nov 14, 2024 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf); SF Chronicle, Aug 17, 2018, as republished (https://stagecoachgreens.com/cms/outdoor-mini-golf-right-here-in-sf-yes-and-with-food-trucks-and-a-beer-garden/)"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_commons_interim_west",
+      "slug": "mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens",
+      "name": "Mission Bay Commons P15: Parklab Gardens and Stagecoach Greens",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
+    {
+     "date": "2026-10-11",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "The status label now reads 'Existing · change planned' because a source names a planned change.",
+     "source": "",
+     "sources": [],
+     "category": "coverage",
+     "category_label": "Coverage",
+     "record": {
+      "id": "mission_bay_commons_interim_west",
+      "slug": "mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens",
+      "name": "Mission Bay Commons P15: Parklab Gardens and Stagecoach Greens",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
+    {
+     "date": "2026-10-10",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "Added a sourced dossier for Parklab Gardens & Mission Bay Commons (interim, west).",
+     "source": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
+     "sources": [
+      {
+       "title": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project"
+      }
+     ],
+     "category": "coverage",
+     "category_label": "Coverage",
+     "record": {
+      "id": "mission_bay_commons_interim_west",
+      "slug": "mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens",
+      "name": "Mission Bay Commons P15: Parklab Gardens and Stagecoach Greens",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": "https://pierandpoint.org/changes/batches/2026-10-10-dossiers-added/"
+    },
+    {
+     "date": "2026-09-29",
+     "kind": "correction",
+     "kind_label": "Correction",
+     "text": "The map notes said the shape traces only the Parklab Gardens sub-area; it is OpenStreetMap's whole 'Parklab' park strip (about 14,665 sq m), which contains both the Parklab Gardens and Spark Social SF areas, and it is tagged as a park, not a garden. The notes also said P15's concept matches Spark Social SF's use of that parcel; OCII's Nov 2024 CAC update puts Spark Social SF and the community garden on P13 and Parklab Gardens and Stagecoach Greens on P15, and the Workshop 3 deck dates interim-use pilots to P13 (2016), P15 (2017) and P12 (2018). The claim that a design team was selected through an August 2025 RFQ now says what SF Rec & Park reports: an RFQ was released and a team was expected by mid-October. The 'early 2030' opening milestone is relabelled as a whole-project estimate, with a note that Workshop 3 shows an earlier construction window. The map notes carry a dated correction, and the shape's notes and source description were corrected.",
+     "source": "OpenStreetMap way 446183018 (https://www.openstreetmap.org/way/446183018); OCII, Remaining Mission Bay Open Space Parcels Update, Mission Bay CAC, 2024-11-14 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf); SF Rec & Park, Mission Bay Future Parks Project (https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project); SF Rec & Park, Workshop 3 presentation, 2025-04-29 (https://sfrecpark.org/DocumentCenter/View/25986/20250429-PRESENTATION-Workshop-3)",
+     "sources": [
+      {
+       "title": "OpenStreetMap way 446183018 (https://www.openstreetmap.org/way/446183018); OCII, Remaining Mission Bay Open Space Parcels Update, Mission Bay CAC, 2024-11-14 (https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf); SF Rec & Park, Mission Bay Future Parks Project (https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project); SF Rec & Park, Workshop 3 presentation, 2025-04-29 (https://sfrecpark.org/DocumentCenter/View/25986/20250429-PRESENTATION-Workshop-3)"
+      }
+     ],
+     "category": "correction",
+     "category_label": "Correction",
+     "record": {
+      "id": "mission_bay_commons_interim_west",
+      "slug": "mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens",
+      "name": "Mission Bay Commons P15: Parklab Gardens and Stagecoach Greens",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
+    {
+     "date": "2026-09-24",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "SPARK Social SF operates at 601 Mission Bay Blvd North.",
+     "source": "https://visitsparksocial.com/san-francisco/",
+     "sources": [
+      {
+       "title": "https://visitsparksocial.com/san-francisco/"
+      }
+     ],
+     "category": "retail",
+     "category_label": "Retail",
+     "record": {
+      "id": "mission_bay_commons_interim_west",
+      "slug": "mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens",
+      "name": "Mission Bay Commons P15: Parklab Gardens and Stagecoach Greens",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    },
+    {
+     "date": "2026-09-23",
+     "kind": "added",
+     "kind_label": "Added",
+     "text": "SF Rec & Park's three community-workshop decks were added as sources for the interim parcels P12, P13 and P15 (OCII's Nov 2024 CAC update labels P13 as Community Garden & SPARK Social SF, P15 as Parklab Gardens & Stagecoach Greens and P12 as the SFF Soccer + Fitness Court), each checked against the PDF itself. Community Meeting #3 (Apr 29, 2025, 83 pages) has individually labeled concept-plan pages for P12, P13 and P15 (food trucks, outdoor dining and a pavilion on P15; soccer pitches and outdoor fitness on P12), plus an alternative option for P12. These are design-workshop concepts, not an adopted final plan: SF Rec & Park's Future Parks page later reported (August 2025) that a design-team RFQ had been released and a team was expected to be selected by mid-October; no selection is reported there.",
+     "source": "https://sfrecpark.org/DocumentCenter/View/25986/20250429-PRESENTATION-Workshop-3",
+     "sources": [
+      {
+       "title": "https://sfrecpark.org/DocumentCenter/View/25986/20250429-PRESENTATION-Workshop-3"
+      }
+     ],
+     "category": "coverage",
+     "category_label": "Coverage",
+     "record": {
+      "id": "mission_bay_commons_interim_west",
+      "slug": "mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens",
+      "name": "Mission Bay Commons P15: Parklab Gardens and Stagecoach Greens",
+      "permalink": "https://pierandpoint.org/parcels/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens/",
+      "api": "https://pierandpoint.org/api/v1/records/mission-bay-commons-p15-parklab-gardens-and-stagecoach-greens.json"
+     },
+     "site": {
+      "slug": "mission-bay",
+      "name": "Mission Bay",
+      "short": "Mission Bay",
+      "url": "https://pierandpoint.org/sites/mission-bay/"
+     },
+     "relation": "tracked",
+     "permalink": "https://pierandpoint.org/changes/#record",
+     "batch": null
+    }
+   ],
+   "images": [],
+   "open_questions": [
+    "The schedule differs between sources and is not resolved: Rec and Park's project page gives \"Construction begins, Late 2028\" and \"Open to the Public, Early 2030\" but also says the remaining parks \"are anticipated to be complete by 2028\", and slide 9 of OCII's November 14, 2024 update reads \"Construction (mid-2027 thru 2028)\" and \"Transfer to SF Rec Park and Park (end of 2028, upon completion)\". All of these are expected dates.",
+    "Which interim use on P15 started when is not settled: OCII's November 2024 timeline (slide 9) gives \"MB Commons interim use pilots begin on P13 (2016), P15 (2017), P12 (2018)\" and names no uses. Hoodline, published August 20, 2018, reports \"San Francisco's first outdoor mini-golf course, Stagecoach Greens, is now open at 1379 4th St. in Mission Bay\"; no source written after the event was found for the opening of Parklab Gardens, so it has no opening date here.",
+    "Which parcel Parklab Gardens sits on is given two ways by the same deck: the people-counts legend (PDF p.17) reads \"P15 Parklab Gardens & Stagecoach Greens\", while a survey slide (PDF p.31) reads \"P13 & P15: Food Truck Park with Outdoor Dining (SPARK Social SF & Parklab Gardens)\". This record follows the legend.",
+    "No official parcel boundary was found for P15: The outline is the OpenStreetMap park strip named Parklab (way 446183018), cut at 4th St along DataSF's street centerline plus 6.8 m; the lines between parcels are drawn from OCII's November 2024 drawing (PDF pp.5 and 17), which is not to scale, not from a survey. This parcel has no Assessor lot of its own: lots 8732001 and 8711005 each hold part of P15 (about 19% and 45% of it), and P15 is about 61% and 68% of those lots. Its east end is as OpenStreetMap has it: about 10.6 m from the centerline of 3rd St and 3-4 m from that street's west curb.",
+    "The Rec and Park project page is undated and shows 'Project update, October 2026' alongside August 2025; the schedule on it may be revised.",
+    "The OCII November 2024 deck's timeline (slide 9) is an image with no text layer; it was read on 2026-10-12 from a rendering of the slide. It gives \"Construction (mid-2027 thru 2028)\" and \"Transfer to SF Rec Park and Park (end of 2028, upon completion)\", which differ from Rec and Park's later page (construction beginning late 2028, opening early 2030)."
+   ],
+   "sources": [
+    {
+     "id": "src-rpd-futureparks",
+     "title": "Mission Bay Future Parks Project",
+     "publisher": "San Francisco Recreation and Park Department",
+     "url": "https://sfrecpark.org/1832/Mission-Bay-Future-Parks-Project",
+     "accessed": "2026-10-24",
+     "overview": true
+    },
+    {
+     "id": "src-ocii-parks-2024",
+     "title": "Mission Bay Future Parks, CAC Update (Remaining Mission Bay Open Space Parcels Update)",
+     "publisher": "Office of Community Investment and Infrastructure (OCII)",
+     "date": "2024-11-14",
+     "url": "https://sfocii.org/sites/default/files/2024-11/Item%205%20-%20Remaining%20Mission%20Bay%20Open%20Space%20Parcels%20Update.pdf",
+     "accessed": "2026-10-24"
+    },
+    {
+     "id": null,
+     "title": "openstreetmap.org/way/446183018",
+     "url": "https://www.openstreetmap.org/way/446183018"
+    },
+    {
+     "id": null,
+     "title": "parklab.com",
+     "url": "https://www.parklab.com/"
+    },
+    {
+     "id": null,
+     "title": "sfrecpark.org/DocumentCenter/View/25988/20240602-Workshop-1-Deck",
+     "url": "https://sfrecpark.org/DocumentCenter/View/25988/20240602-Workshop-1-Deck"
+    },
+    {
+     "id": null,
+     "title": "sfrecpark.org/DocumentCenter/View/25989/20241029-Presentation-Workshop-2",
+     "url": "https://sfrecpark.org/DocumentCenter/View/25989/20241029-Presentation-Workshop-2"
+    },
+    {
+     "id": null,
+     "title": "sfrecpark.org/DocumentCenter/View/25986/20250429-PRESENTATION-Workshop-3",
+     "url": "https://sfrecpark.org/DocumentCenter/View/25986/20250429-PRESENTATION-Workshop-3"
+    }
+   ],
+   "notes": "Interim use pending the Mission Bay Future Parks Project; see the record page for the expected schedule and its sources.",
+   "has_record_file": true,
+   "last_verified": "2026-10-25",
+   "tenants": [],
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -122.3897363,
+       37.7710337
+      ],
+      [
+       -122.3897067,
+       37.7710029
+      ],
+      [
+       -122.3896979,
+       37.7709112
+      ],
+      [
+       -122.3896858,
+       37.7707859
+      ],
+      [
+       -122.3897164,
+       37.7707516
+      ],
+      [
+       -122.389747,
+       37.7707173
+      ],
+      [
+       -122.3903332,
+       37.7706817
+      ],
+      [
+       -122.3905941,
+       37.7706658
+      ],
+      [
+       -122.3910174,
+       37.7706401
+      ],
+      [
+       -122.3910863,
+       37.7706361
+      ],
+      [
+       -122.3911168,
+       37.7709559
       ],
       [
        -122.3910477,
@@ -117302,6 +118240,10 @@
       [
        -122.3897955,
        37.7710407
+      ],
+      [
+       -122.3897363,
+       37.7710337
       ]
      ]
     ]
