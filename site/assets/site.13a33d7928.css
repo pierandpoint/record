@@ -1333,7 +1333,7 @@ sup.cites a { text-decoration: none; }
 }
 /* PH-09: Coming up. A rule and space end the intro; a row's sentence folds to two lines (app.js adds .is-clamped
    and the "More" button only where it overflows, so with JavaScript off every row reads in full). */
-#decisions-ahead > .section-head + .empty-note { margin: 0 0 16px; padding-bottom: 16px; border-bottom: 1px solid var(--paper-line); }
+#decisions-ahead > .section-head + .empty-note, #milestones-ahead > .section-head + .empty-note { margin: 0 0 16px; }
 .row-text.is-clamped { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
 .row-more { display: block; min-width: 44px; padding: 14px 0; margin: -10px 0 -10px; text-align: left; background: none; border: 0; font: 12px var(--mono); color: var(--paper-brass); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 /* PH-10: on a phone a change row's date, kind and site are one wrapping row, then the text. */
@@ -1427,3 +1427,28 @@ sup.cites a { text-decoration: none; }
   .map-year-date { flex: none; min-width: 5.5em; text-align: right; font: 500 14px var(--mono); }
 }
 @media (min-width: 720px) { .map-year { display: none; } }
+
+/* Phone polish 2 (LO-03): on a site page the map and its Play/slider/date row end inside the first screen of a
+   phone with its browser bars showing (390x664, 360x640). Nothing is hidden or overlaid: the space above the map is
+   tightened and the map is a little shorter, as Near me's is. The map's own height was set by its width alone
+   (269 px at 390), so the row sat at 722-748 px. Site pages only (#page-head holds .page-head-top there); below 720 px. */
+@media (max-width: 719px) {
+  #page-head:has(.page-head-top) .page-head-top { padding-top: 14px; padding-bottom: 10px; }
+  #page-head:has(.page-head-top) h1 { margin: 6px 0 2px; }
+  #page-head:has(.page-head-top) .sub { line-height: 1.35; }
+  #page-head:has(.page-head-top) .page-status { margin-top: 10px; gap: 6px 12px; }
+  #page-head:has(.page-head-top) .page-status .chip { font-size: 14px; padding: 6px 12px 6px 10px; }
+  #page-head:has(.page-head-top) + #map-band { padding-top: 12px; }
+  #page-head:has(.page-head-top) + #map-band .map-toolbar { margin-bottom: 8px; }
+  /* The height is on the map itself, not the frame: the frame also holds the satellite credit strip under the
+     photo, which a fixed frame height clipped. */
+  #page-head:has(.page-head-top) + #map-band .map-frame .pp-map { height: clamp(190px, 32vh, 269px); }
+  #page-head:has(.page-head-top) + #map-band .map-year { margin-top: 6px; }
+}
+
+/* Phone polish 2: Coming up reads as two sections. Both lists carry the same rule above them and the same
+   row separators (Decisions ahead's rows had none), and a rule with space ends the first section. */
+#decisions-ahead .next-up { gap: 0; border-top: 1px solid var(--paper-ink); }
+#decisions-ahead .next-up li { padding: 18px 0; border-bottom: 1px solid var(--paper-line); }
+#decisions-ahead + #milestones-ahead { margin-top: 8px; padding-top: 48px; border-top: 1px solid var(--paper-ink); }
+#milestones-ahead > .section-head { margin-bottom: 8px; }

@@ -713,10 +713,13 @@ var ppSearch = (function () {
   // over a tracked record, after trying a few nearby spots. The home page's site-card maps are not
   // zoomable but follow the same rule (initStaticLabels).
   var MIN_LABEL_PX = 10;
+  // Landmark and water names on a screen under 380 px wide: 9 px, so "Oracle Park" and "San Francisco Bay"
+  // still find a clear spot on a 360 px phone instead of being dropped by the collision audit.
+  var MIN_LABEL_PX_SMALL = 9;
   function pxPerUnitOf(svg) { var m = svg.getScreenCTM && svg.getScreenCTM(); return m && m.a > 0 ? m.a : 0; }
   function labelFontSize(entry, scale, k) {
     var fs = entry.fontSize * scale;
-    if (k) fs = Math.max(fs, MIN_LABEL_PX / k);
+    if (k) fs = Math.max(fs, (entry.small && window.innerWidth < 380 ? MIN_LABEL_PX_SMALL : MIN_LABEL_PX) / k);
     return { size: fs.toFixed(2) + 'px', stroke: (entry.strokeWidth * fs / entry.fontSize).toFixed(2) + 'px', fs: fs };
   }
   function overlaps(a, b, pad) {
@@ -729,7 +732,7 @@ var ppSearch = (function () {
   // when it is not.
   function floorEntries(svg) {
     return {
-      water: Array.prototype.map.call(svg.querySelectorAll('.water-label'), attrEntry),
+      water: Array.prototype.map.call(svg.querySelectorAll('.water-label'), function (el) { var e = attrEntry(el); e.small = true; return e; }),
       streets: Array.prototype.map.call(svg.querySelectorAll('.streets text'), attrEntry)
     };
   }
@@ -811,6 +814,23 @@ var ppSearch = (function () {
     });
   }
   initStaticLabels();
+  // The phone view is 4:3, but the frame's real shape is not: site.css sets its height from the screen's
+  // (clamp on vh), so at 390x664 it is about 1.7:1 and at 390x844 about 1.33:1. The svg is "slice", so a
+  // view narrower than the frame cropped its top and bottom (phone-polish-2 review: Mission Bay lost three
+  // parcels). Grow the view, centred, until it has the frame's own shape: everything the 4:3 view holds
+  // stays inside it. A map within 2% of 4:3 (a record page's) keeps the view as is. The map's own height is
+  // set in site.css, so the frame around it (and the imagery credit under it) sizes itself.
+  function fitToFrame(view, svg) {
+    var v = view.split(' ').map(Number);
+    var box = svg ? svg.getBoundingClientRect() : null;
+    var fw = box ? box.width : 0, fh = box ? box.height : 0;
+    if (!fw || !fh || v.length !== 4) return view;
+    var want = fw / fh, have = v[2] / v[3];
+    if (Math.abs(want / have - 1) < 0.02) return view;
+    if (want > have) { var w = v[3] * want; v[0] -= (w - v[2]) / 2; v[2] = w; }
+    else { var h = v[2] / want; v[1] -= (h - v[3]) / 2; v[3] = h; }
+    return v.map(function (n) { return Math.round(n * 10) / 10; }).join(' ');
+  }
   function initZoom() {
     document.querySelectorAll('.pp-zoomable').forEach(function (svg) {
       var frame = svg.closest('.map-frame');
@@ -820,7 +840,7 @@ var ppSearch = (function () {
       // fitted view below is read, so zoom, reset and the satellite layer all start from it.
       var narrowView = svg.getAttribute('data-narrow-view');
       if (narrowView && window.matchMedia && window.matchMedia('(max-width: 719px)').matches) {
-        svg.setAttribute('viewBox', narrowView);
+        svg.setAttribute('viewBox', fitToFrame(narrowView, svg));
         // The water label's phone position (pages.py's site_map), clamped into this view.
         Array.prototype.forEach.call(svg.querySelectorAll('.water-label[data-narrow-x]'), function (t) {
           t.setAttribute('x', t.getAttribute('data-narrow-x'));
@@ -861,14 +881,14 @@ var ppSearch = (function () {
       // cluster is this" stays legible at any zoom instead of shrinking to nothing on the way
       // out to the four-site overview or ballooning at the default fitted-in view.
       var sitePins = Array.prototype.map.call(svg.querySelectorAll('.site-pin-label'), function (label) {
-        return { el: label, fontSize: parseFloat(label.getAttribute('font-size')) || 9,
+        return { el: label, small: true, fontSize: parseFloat(label.getAttribute('font-size')) || 9,
                  strokeWidth: parseFloat(label.getAttribute('stroke-width')) || 3 };
       });
       // Landmark names (sitegen/pages.py's landmark_layer(), class landmark-label): same deal as
       // the site-name pins above -- always visible, counter-scaled so "ORACLE PARK" reads at a
       // constant size rather than growing with the shape as the map zooms in.
       var landmarkLabels = Array.prototype.map.call(svg.querySelectorAll('.landmark-label'), function (label) {
-        return { el: label, fontSize: parseFloat(label.getAttribute('font-size')) || 9,
+        return { el: label, small: true, fontSize: parseFloat(label.getAttribute('font-size')) || 9,
                  strokeWidth: parseFloat(label.getAttribute('stroke-width')) || 3 };
       });
 
@@ -951,7 +971,23 @@ var ppSearch = (function () {
       }
       // The map can be laid out after this runs (the /near/ map starts hidden) or resized by a
       // rotation: audit again whenever its size changes.
-      if (window.ResizeObserver) new ResizeObserver(function () { updateLabels(true); }).observe(svg);
+      // A phone turned on its side (or a window resized) changes the map's shape. While the phone view is showing,
+      // the saved fitted view (base, which Reset returns to, and the zoom limits taken from it) is always fitted to
+      // the new shape again; the view on screen moves with it only when it was unzoomed, so a zoomed map stays
+      // where the visitor put it and a later Reset lands on the current fit, not the one from before the turn.
+      function refitPhoneView() {
+        if (!narrowView || !window.matchMedia || !window.matchMedia('(max-width: 719px)').matches) return false;
+        var p = fitToFrame(narrowView, svg).split(' ').map(Number);
+        if (p.length !== 4 || p.some(isNaN) || (p[0] === base.x && p[1] === base.y && p[2] === base.w && p[3] === base.h)) return false;
+        var unzoomed = view.x === base.x && view.y === base.y && view.w === base.w && view.h === base.h;
+        base.x = p[0]; base.y = p[1]; base.w = p[2]; base.h = p[3];
+        MIN_W = base.w / (parseFloat(svg.getAttribute('data-max-zoom')) || 8); LABEL_AT = base.w * 0.45;
+        MAX_W = outer.w; // outer is base itself on a map with no data-outer
+        if (unzoomed) { view = { x: base.x, y: base.y, w: base.w, h: base.h }; apply(); }
+        else updateLabels(true);
+        return true;
+      }
+      if (window.ResizeObserver) new ResizeObserver(function () { if (!refitPhoneView()) updateLabels(true); }).observe(svg);
 
       function apply() {
         svg.setAttribute('viewBox', view.x + ' ' + view.y + ' ' + view.w + ' ' + view.h);
